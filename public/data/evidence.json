@@ -41,6 +41,14 @@
       "sha256": "d6e16ea089a1716e80621f99a26e130a2379f0a81d945dc22e4f80dc49dcdc78"
     },
     {
+      "id": "rp1-peripherals",
+      "title": "Raspberry Pi RP1 Peripherals",
+      "revision": "build b9b6f74-clean · 2023-11-07",
+      "file": "rp1-peripherals.pdf",
+      "url": "https://datasheets.raspberrypi.com/rp1/rp1-peripherals.pdf",
+      "sha256": "87fb7b24e8d9add075b849d095a107827610c0409ea194785af624c1ea986c3d"
+    },
+    {
       "id": "pi-gpio",
       "title": "Raspberry Pi GPIO documentation",
       "revision": "0fb416315f8f6c1949c0614989075d3e5805104b",
@@ -609,6 +617,22 @@
       "url": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008248-DS-1-bcm2711-peripherals.pdf#page=79",
       "page": 79,
       "locator": "§5.3 · Table 94 · GPIO alternate function ALT0–ALT5",
+      "method": "pdf-table"
+    },
+    "rp1-alt-p16": {
+      "document": "rp1-peripherals",
+      "title": "Raspberry Pi RP1 Peripherals",
+      "url": "https://datasheets.raspberrypi.com/rp1/rp1-peripherals.pdf#page=16",
+      "page": 16,
+      "locator": "§3.1.1 · Table 4 · GPIO function selection a0–a8",
+      "method": "pdf-table"
+    },
+    "rp1-alt-p17": {
+      "document": "rp1-peripherals",
+      "title": "Raspberry Pi RP1 Peripherals",
+      "url": "https://datasheets.raspberrypi.com/rp1/rp1-peripherals.pdf#page=17",
+      "page": 17,
+      "locator": "§3.1.1 · Table 4 · GPIO function selection a0–a8",
       "method": "pdf-table"
     },
     "rp2040-bank0-p13": {

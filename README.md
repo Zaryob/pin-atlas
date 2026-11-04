@@ -11,7 +11,7 @@ An English-first pin guide with Turkish localization built from manufacturer doc
 The library lists each physical layout once and names its compatible boards:
 
 - **Raspberry Pi Pico family:** Pico, Pico W, Pico 2, and Pico 2 W share one 40-pin layout with 26 exposed GPIOs. Select the RP2040 function reference for Pico / Pico W, or RP2350A for Pico 2 / Pico 2 W inside that layout.
-- **Raspberry Pi 40-pin GPIO:** B+, A+, Pi 2/3/4/5, Zero models, and 400/500 share one header entry. Choose common GPIO/power/ground connections or the verified BCM2711 alternate functions for Pi 4 in the same view. This excludes older 26-pin boards and Compute Modules; some Zero headers are unpopulated and keyboard models have a rotated header.
+- **Raspberry Pi 40-pin GPIO:** B+, A+, Pi 2/3/4/5, Zero models, and 400/500 share one header entry. Choose common GPIO/power/ground connections, the verified BCM2711 alternate functions for Pi 4, or the verified RP1 alternate functions for Pi 5 in the same view. This excludes older 26-pin boards and Compute Modules; some Zero headers are unpopulated and keyboard models have a rotated header.
 - **NVIDIA Jetson Orin Nano:** the NVIDIA P3768 developer-kit carrier’s 40-pin J12 header, with SPI, I²C, UART, I²S, PWM and clock capabilities from the carrier specification. This is a separate pin map from Raspberry Pi; header signal names and pinmux requirements differ.
 - **STM32 Blue Pill:** the STM32-base community reference with two 20-pin side headers and four SWD connections. H1/H2/SWD positions are distinct from MCU package pins; the diagram includes the MCU pin mapping and shared LED, crystal, USB and debug connections. Check clone wiring and chip markings.
 - **STM32F103 packages:** separate LQFP-48 (STM32F103C8T6 / STM32F103CBT6 with 37 GPIOs), LQFP-64 (STM32F103RBT6 / STM32F103R8T6 with 51 GPIOs), and LQFP-100 (STM32F103VBT6 / STM32F103V8T6 with 82 GPIOs) views with raw MCU functions and full AFIO remap conditions from RM0008.
@@ -29,7 +29,7 @@ The library lists each physical layout once and names its compatible boards:
 
 The Pico drawing represents the common header and does not claim identical wireless, LED or internal board wiring. Processor references change alternate functions, not physical pin positions. Plans are saved per reference; old model links, exported JSON files, and saved plans remain supported. If multiple old model plans exist for the same processor, they remain available in the function-reference selector without being merged.
 
-The dataset contains 1,504 physical pin records across thirty-two source profiles backing twenty-two library layouts and 4,769 pin/function assignments. The central GND pad on each RP2350 package sits outside the perimeter pin count. The schematic drawings show pin positions and are not mechanical CAD layouts.
+The dataset contains 1,544 physical pin records across thirty-three source profiles backing twenty-two library layouts and 5,005 pin/function assignments. The central GND pad on each RP2350 package sits outside the perimeter pin count. The schematic drawings show pin positions and are not mechanical CAD layouts.
 
 ## Usage
 

@@ -1,7 +1,7 @@
 {
   "verifiedOn": "2026-11-04",
-  "physicalPins": 1504,
-  "functionAssignments": 4769,
+  "physicalPins": 1544,
+  "functionAssignments": 5005,
   "documents": [
     {
       "id": "rp2350",
@@ -37,6 +37,13 @@
       "revision": "Release 4 · 2022-01-18",
       "url": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008248-DS-1-bcm2711-peripherals.pdf",
       "sha256": "d6e16ea089a1716e80621f99a26e130a2379f0a81d945dc22e4f80dc49dcdc78"
+    },
+    {
+      "id": "rp1-peripherals",
+      "title": "Raspberry Pi RP1 Peripherals",
+      "revision": "build b9b6f74-clean · 2023-11-07",
+      "url": "https://datasheets.raspberrypi.com/rp1/rp1-peripherals.pdf",
+      "sha256": "87fb7b24e8d9add075b849d095a107827610c0409ea194785af624c1ea986c3d"
     },
     {
       "id": "pi-gpio",
@@ -447,6 +454,15 @@
       ]
     },
     {
+      "id": "raspberry-pi-5",
+      "physicalPins": 40,
+      "functionAssignments": 236,
+      "physicalSourceMethods": [
+        "manufacturer-source-table",
+        "schematic-net-labels+visual-power"
+      ]
+    },
+    {
       "id": "pico",
       "physicalPins": 40,
       "functionAssignments": 214,
@@ -727,7 +743,7 @@
   "qualifications": [
     "Figure-only Pico physical labels were visually checked; they are not machine-readable PDF table cells.",
     "The QFN-60 IOVDD discrepancy in RP2350 Release 8 Table 1679 is resolved using Figures 2 and 152.",
-    "The common Raspberry Pi 40-pin profile contains physical connections only; Pi 4 BCM2711 alternate functions remain in a separate model-specific profile. Pins 27/28 are reserved for the HAT EEPROM.",
+    "The common Raspberry Pi 40-pin profile contains physical connections only; Pi 4 BCM2711 and Pi 5 RP1 alternate functions remain in separate model-specific profiles. Pins 27/28 are reserved for the HAT EEPROM.",
     "Pico and Pico W use independently extracted RP2040 functions, not RP2350 selectors. Pico 2 and Pico 2 W use RP2350A functions.",
     "ST table snapshots record raw PDF table cells from the locked document hashes; CI can regenerate pin data from those snapshots when the ST CDN is unavailable. Default verification rereads the original ST PDFs.",
     "UNO and Nano families group verified main-header positions; MCU functions, BOOT/NC differences and optional programming contacts remain reference-specific. Leonardo I2C/SPI, Every A6/A7 and dual-port TWI, and R4 DAC/CAN mappings are independently extracted.",

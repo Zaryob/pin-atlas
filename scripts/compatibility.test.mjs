@@ -17,12 +17,13 @@ test('compatible model links stay within their verified source profiles',()=>{
     }
   }
 });
-test('Pi 5 and Zero models open the common pinout, never the Pi 4 mux reference',()=>{
+test('Pi 4 and Pi 5 open their verified mux references; Zero models open the common pinout',()=>{
   const models=compatibleModels(layouts.find(layout=>layout.id==='raspberry-pi-40'));
-  for(const model of models.filter(model=>model.id!=='raspberry-pi-4')){
+  for(const model of models.filter(model=>!['raspberry-pi-4','raspberry-pi-5'].includes(model.id))){
     assert.equal(model.profileId,'raspberry-pi-40');assert.equal(model.kind,'physical');
   }
   assert.equal(models.find(model=>model.id==='raspberry-pi-4').profileId,'raspberry-pi-4');
+  assert.equal(models.find(model=>model.id==='raspberry-pi-5').profileId,'raspberry-pi-5');
   assert.equal(filterCompatibleModels(models,' ZERO ').length,3);
 });
 test('Pico model slots and memory-restricted ESP references remain separately addressable',()=>{

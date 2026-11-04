@@ -2,7 +2,7 @@
 
 [English](VERIFICATION.md) · [Türkçe](VERIFICATION.tr.md)
 
-Kontrol tarihi: **4 Kasım 2026**. Kapsam: otuz iki kart, başlık ve çip profili, **1.504 fiziksel pin kaydı ve 4.769 alternatif işlev ataması**. Ortak bağlantılar profil başına sayılır. Sayımda uygulamanın soyut `GPIO` seçeneği ve numarasız QFN merkez GND pedi yoktur. Aynı sinyalin farklı pinlerde bulunması ayrı bir atamadır.
+Kontrol tarihi: **4 Kasım 2026**. Kapsam: otuz üç kart, başlık ve çip profili, **1.544 fiziksel pin kaydı ve 5.005 alternatif işlev ataması**. Ortak bağlantılar profil başına sayılır. Sayımda uygulamanın soyut `GPIO` seçeneği ve numarasız QFN merkez GND pedi yoktur. Aynı sinyalin farklı pinlerde bulunması ayrı bir atamadır.
 
 ## Her haritanın dayanağı
 
@@ -20,6 +20,13 @@ Kontrol tarihi: **4 Kasım 2026**. Kapsam: otuz iki kart, başlık ve çip profi
 - Alternatif işlevler: [BCM2711 ARM Peripherals, §5.3, Table 94](https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008248-DS-1-bcm2711-peripherals.pdf#page=78), basılı s. 77–78 / PDF s. 78–79. GPIO0–27 üzerindeki ALT0–ALT5 hücreleri okunur; boş ve `<reserved>` hücreler işlev olarak sunulmaz.
 - `GPx` dokümantasyon adları uygulamada `GPIOx` olarak açılır. `SDA1 → I2C1 SDA`, `TXD0 → UART0 TX` gibi okunabilir ad dönüşümlerinde üretici sinyali ayrıca `functions[].signal` içinde korunur. `PWM0_0` ve `PWM0_1` isimleri aynen korunur.
 - Fiziksel 27/28, GPIO0/GPIO1 ve ID_SD/ID_SC hatlarıdır; HAT EEPROM’a ayrılmıştır. Bu haritanın BCM2711 alternatifleri Pi 5/RP1’e genellenmez. Fiziksel header çizimi, kartın tüm bileşenlerini gösteren bir çizim değildir.
+
+### Raspberry Pi 5 / J8
+
+- Fiziksel 40 pin: [resmî GPIO dokümantasyonundaki](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc) standart 40-pin başlık tablosu.
+- Alternatif işlevler: GPIO0–27 için ALT0–ALT8 (a0–a8) seçicileriyle [Raspberry Pi RP1 Peripherals, §3.1.1, Tablo 4, PDF s. 16–17](https://datasheets.raspberrypi.com/rp1/rp1-peripherals.pdf#page=16).
+- 27 ve 28 numaralı pinler HAT kimlik EEPROM hattı için ayrılmıştır.
+- RP1 G/Ç denetleyicisinin sunduğu UART, SPI, I2C, I2S, PWM, PIO, DPI, SDIO ve PCM ses seçenekleri BCM2711'den bağımsız olarak doğrulanır.
 
 ### RP2350A / QFN-60
 
@@ -58,11 +65,11 @@ Pico, Pico W ve Pico 2’nin fiziksel pinleri, her modelin veri sayfasının PDF
 
 Ortak Raspberry Pi 40-pin profili, üreticinin GPIO tablosunu kullanır: B+ ve sonrası, Zero ailesi ve klavyeli modellerin fiziksel düzenini kapsar. Klavyeli modellerde yön ters olabilir; bazı Zero başlıkları lehimli değildir. Eski 26-pin kartlar ve Compute Module dahil değildir. Bu profil işlemciye özgü alternatif işlev içermez; BCM2711 için Pi 4 profili ayrı tutulur.
 
-Kırk yedi üretici belgesi veya kaynak dosyası ve üç Blue Pill topluluk referansı SHA-256 ile kilitlidir. 1.504 fiziksel pin kaydı ortak bağlantıları profil başına sayar. Ayrıntılı model kaynakları [İngilizce doğrulama kaydında](VERIFICATION.md) bulunur.
+Kırk sekiz üretici belgesi veya kaynak dosyası ve üç Blue Pill topluluk referansı SHA-256 ile kilitlidir. 1.544 fiziksel pin kaydı ortak bağlantıları profil başına sayar. Ayrıntılı model kaynakları [İngilizce doğrulama kaydında](VERIFICATION.md) bulunur.
 
 ## Ortak düzen kütüphanesi
 
-Otuz iki kaynak profili yirmi iki fiziksel düzende sunulur. UNO biçimindeki kartların 32 ana kontağı, Nano ailesinin 30 yan kontağı ve ESP32/S3 bellek varyantlarının ortak başlıkları tek kayıtta gruplanır. İsteğe bağlı bağlantılar ve işlemci işlevleri seçilen referansa aittir. Gruplama fiziksel konumları karşılaştırır; BOOT/NC ve analog giriş/GPIO farkları ayrıca korunur. Eski bağlantılar ve planlar özgün işlemci referansına açılır.
+Otuz üç kaynak profili yirmi iki fiziksel düzende sunulur. UNO biçimindeki kartların 32 ana kontağı, Nano ailesinin 30 yan kontağı ve ESP32/S3 bellek varyantlarının ortak başlıkları tek kayıtta gruplanır. İsteğe bağlı bağlantılar ve işlemci işlevleri seçilen referansa aittir. Gruplama fiziksel konumları karşılaştırır; BOOT/NC ve analog giriş/GPIO farkları ayrıca korunur. Eski bağlantılar ve planlar özgün işlemci referansına açılır.
 
 ## NVIDIA Jetson Orin Nano · J12
 

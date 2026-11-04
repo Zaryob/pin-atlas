@@ -9,15 +9,15 @@ export function compatibleModels(layout) {
       ['pi-2','Raspberry Pi 2 Model B'],
       ['pi-3','Raspberry Pi 3 family'],
       ['raspberry-pi-4','Raspberry Pi 4 Model B'],
-      ['pi-5','Raspberry Pi 5'],
+      ['raspberry-pi-5','Raspberry Pi 5'],
       ['pi-zero','Raspberry Pi Zero'],
       ['pi-zero-w','Raspberry Pi Zero W'],
       ['pi-zero-2-w','Raspberry Pi Zero 2 W'],
       ['pi-400','Raspberry Pi 400'],
       ['pi-500','Raspberry Pi 500']
-    ].map(([id,name]) => ({id,name,profileId:id === 'raspberry-pi-4' ? id : 'raspberry-pi-40',
-      kind:id === 'raspberry-pi-4' ? 'reference' : 'physical',
-      detailKey:id === 'raspberry-pi-4' ? 'bcm2711Reference' : 'commonReference'}));
+    ].map(([id,name]) => ({id,name,profileId:['raspberry-pi-4','raspberry-pi-5'].includes(id) ? id : 'raspberry-pi-40',
+      kind:['raspberry-pi-4','raspberry-pi-5'].includes(id) ? 'reference' : 'physical',
+      detailKey:id === 'raspberry-pi-4' ? 'bcm2711Reference' : (id === 'raspberry-pi-5' ? 'rp1Reference' : 'commonReference')}));
   }
   if (layout.id === 'stm32f103c8t6') {
     return [

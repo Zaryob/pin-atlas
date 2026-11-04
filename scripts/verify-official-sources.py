@@ -67,7 +67,8 @@ def category(name):
     if name.startswith(('CLOCK','GPCLK','TRACE')):return 'CLOCK'
     if name.startswith('ARM_'):return 'JTAG'
     if name.startswith(('DPI','LCD','PCLK','DE')):return 'DPI'
-    if re.match(r'SD[01]_',name):return 'SDIO'
+    if re.match(r'SD(?:IO)?[01]_',name):return 'SDIO'
+    if name.startswith(('AUDIO_IN_', 'AUDIO_OUT_')):return 'PCM'
     if re.match(r'(SA\d|SD\d|SOE|SWE)',name):return 'SMI'
     return 'SYSTEM'
 
@@ -235,6 +236,35 @@ def pi4():
         assert found==set(range(28))
     return list(pins.values())
 
+def pi5():
+    source=(CACHE/'pi-gpio.adoc').read_text()
+    table=source.split('.Pin names, types, and typical functions',1)[1].split('|===')[1]
+    pins={};block=[]
+    rows=table.splitlines()
+    for line in rows:
+        if not line.startswith('|'):continue
+        if re.fullmatch(r'\| \d+',line):
+            if block:parse_pi_row(block,pins)
+            block=[line[2:]]
+        elif block:block.append(line[1:].strip())
+    if block:parse_pi_row(block,pins)
+    assert set(pins)==set(range(1,41))
+    for number,name in OBS['pi4-fixed-pins']['pins'].items():assert pins[int(number)]['name']==name
+    with pdfplumber.open(CACHE/'rp1-peripherals.pdf') as pdf:
+        found=set()
+        for index in (15,16):
+            for t in pdf.pages[index].extract_tables():
+                for row in t:
+                    if not row or not row[0] or not clean(row[0]).isdigit():continue
+                    gp=int(clean(row[0]))
+                    if gp>27:continue
+                    found.add(gp)
+                    pin=next(p for p in pins.values() if p['name']=='GPIO'+str(gp))
+                    evidence=ref(f'rp1-alt-p{index+1}','rp1-peripherals',index+1,'§3.1.1 · Table 4 · GPIO function selection a0–a8')
+                    pin['functions']=[function(clean(value),alt,evidence,True) for alt,value in enumerate(row[1:]) if clean(value)]
+        assert found==set(range(28))
+    return list(pins.values())
+
 def parse_pi_row(row,pins):
     assert len(row)==4,row
     n=int(row[0]);name=row[1].strip('`').replace('GP','GPIO') if row[1].startswith('`GP') else row[1].strip('`')
@@ -306,7 +336,8 @@ def build(use_snapshots=False):
     bank0,packages=rp_tables()
     board_base={'family':'Raspberry Pi','voltage':'3.3 V I/O','verifiedOn':MANIFEST['verifiedOn']}
     boards=[{**board_base,'id':'pico2w','name':'Raspberry Pi Pico 2 W','shortName':'Pico 2 W','subtitle':'RP2350A · 40-pin geliştirme kartı','layout':'pico','packagePins':40,'gpioCount':26,'mcu':'RP2350A','processor':'Cortex-M33 / Hazard3','clock':'150 MHz','wireless':True,'source':DOCS['pico2w-pinout']['url'],'datasheet':DOCS['pico2w']['url'],'pins':pico(bank0)},
-        {**board_base,'id':'raspberry-pi-4','scopeKey':'pi4Scope','name':'Raspberry Pi 4 Model B','shortName':'Pi 4 Model B','subtitle':'J8 · 40 pin · BCM2711 alternatif işlevleri','layout':'header','packagePins':40,'gpioCount':28,'reservedGPIOCount':2,'mcu':'BCM2711','processor':'BCM2711','clock':'BCM numaralandırma','source':DOCS['pi4-schematic']['url'],'datasheet':DOCS['bcm2711']['url'],'pins':pi4()}]
+        {**board_base,'id':'raspberry-pi-4','scopeKey':'pi4Scope','name':'Raspberry Pi 4 Model B','shortName':'Pi 4 Model B','subtitle':'J8 · 40 pin · BCM2711 alternatif işlevleri','layout':'header','packagePins':40,'gpioCount':28,'reservedGPIOCount':2,'mcu':'BCM2711','processor':'BCM2711','clock':'BCM numaralandırma','source':DOCS['pi4-schematic']['url'],'datasheet':DOCS['bcm2711']['url'],'pins':pi4()},
+        {**board_base,'id':'raspberry-pi-5','scopeKey':'pi5Scope','name':'Raspberry Pi 5','shortName':'Pi 5','subtitle':'J8 · 40 pin · RP1 alternatif işlevleri','layout':'header','packagePins':40,'gpioCount':28,'reservedGPIOCount':2,'mcu':'BCM2712 / RP1','processor':'BCM2712 / RP1','clock':'BCM numaralandırma','source':DOCS['rp1-peripherals']['url'],'datasheet':DOCS['rp1-peripherals']['url'],'pins':pi5()}]
     bank2040=rp2040_functions()
     for id,name,mcu,wireless in [('pico','Pico','RP2040',False),('picow','Pico W','RP2040',True),('pico2','Pico 2','RP2350A',False)]:
         boards.append({**board_base,'id':id,'name':'Raspberry Pi '+name,'shortName':name,'subtitle':mcu+' · 40-pin development board','layout':'pico','packagePins':40,'gpioCount':26,'mcu':mcu,'processor':'Cortex-M0+' if mcu=='RP2040' else 'Cortex-M33 / Hazard3','clock':'133 MHz' if mcu=='RP2040' else '150 MHz','wireless':wireless,'source':DOCS[id]['url']+'#page=5','datasheet':DOCS[id]['url'],'pins':pico_variant(id,bank2040 if mcu=='RP2040' else bank0)})
@@ -328,7 +359,7 @@ def build(use_snapshots=False):
 
 def outputs(boards):
     physical=sum(len(b['pins']) for b in boards);functions=sum(len(p['functions']) for b in boards for p in b['pins'])
-    report={'verifiedOn':MANIFEST['verifiedOn'],'physicalPins':physical,'functionAssignments':functions,'documents':[{k:v for k,v in d.items() if k!='file'} for d in DOCS.values()], 'boards':[{'id':b['id'],'physicalPins':len(b['pins']),'functionAssignments':sum(len(p['functions']) for p in b['pins']),'physicalSourceMethods':sorted({REFS[r]['method'] for p in b['pins'] for r in p['evidence']})} for b in boards], 'qualifications':['Figure-only Pico physical labels were visually checked; they are not machine-readable PDF table cells.','The QFN-60 IOVDD discrepancy in RP2350 Release 8 Table 1679 is resolved using Figures 2 and 152.','The common Raspberry Pi 40-pin profile contains physical connections only; Pi 4 BCM2711 alternate functions remain in a separate model-specific profile. Pins 27/28 are reserved for the HAT EEPROM.', 'Pico and Pico W use independently extracted RP2040 functions, not RP2350 selectors. Pico 2 and Pico 2 W use RP2350A functions.', 'ST table snapshots record raw PDF table cells from the locked document hashes; CI can regenerate pin data from those snapshots when the ST CDN is unavailable. Default verification rereads the original ST PDFs.', 'UNO and Nano families group verified main-header positions; MCU functions, BOOT/NC differences and optional programming contacts remain reference-specific. Leonardo I2C/SPI, Every A6/A7 and dual-port TWI, and R4 DAC/CAN mappings are independently extracted.', 'Espressif profiles name exact DevKit revisions and fitted modules. GPIO matrix options describe routing capability, not firmware defaults; input-only pads and flash/PSRAM restrictions remain explicit. S3 v1.1 RGB uses GPIO38 and GPIO46 is bidirectional.', 'ATmega package pin numbers are independent of Arduino headers. ATmega328P PDIP PC0 is pin 23 (Figure 5-1 corrects Table 6-1); reset/clock fuses qualify GPIO use. ATmega2560 TQFP100 functions exclude 64-pin PDI/PDO and resolve CLK0 to CLKO using Figure 1-1.', 'Arduino AVR header contacts include duplicate nets; unique GPIO counts exclude repeated SDA/SCL and ICSP contacts. Nano A6/A7 are analog-only. Current Arduino connector-table typos and Mega D0/D1 PWM marks are resolved using the full pinouts and pinned official AVR core. Functions cover Arduino APIs, not every raw MCU alternate function.', 'Blue Pill board positions use a community reference, not ST manufacturer board documentation. STM32 chip pins and function/remap conditions use ST DS5319 and RM0008. H1/H2/SWD connector labels differ from MCU package pin numbers; clone wiring may differ.', 'Jetson Orin Nano uses NVIDIA P3768 carrier J12 names from Figure 3-1 and Table 3-3; peripheral names are carrier signals, not Linux bus numbers. Table spellings SPI1_CSI1*/CSI0* are resolved using the figure and CS1_N/CS0_N SoC names. Listed capabilities require appropriate pinmux/Jetson-IO configuration and do not assert an active runtime configuration.']}
+    report={'verifiedOn':MANIFEST['verifiedOn'],'physicalPins':physical,'functionAssignments':functions,'documents':[{k:v for k,v in d.items() if k!='file'} for d in DOCS.values()], 'boards':[{'id':b['id'],'physicalPins':len(b['pins']),'functionAssignments':sum(len(p['functions']) for p in b['pins']),'physicalSourceMethods':sorted({REFS[r]['method'] for p in b['pins'] for r in p['evidence']})} for b in boards], 'qualifications':['Figure-only Pico physical labels were visually checked; they are not machine-readable PDF table cells.','The QFN-60 IOVDD discrepancy in RP2350 Release 8 Table 1679 is resolved using Figures 2 and 152.','The common Raspberry Pi 40-pin profile contains physical connections only; Pi 4 BCM2711 and Pi 5 RP1 alternate functions remain in separate model-specific profiles. Pins 27/28 are reserved for the HAT EEPROM.', 'Pico and Pico W use independently extracted RP2040 functions, not RP2350 selectors. Pico 2 and Pico 2 W use RP2350A functions.', 'ST table snapshots record raw PDF table cells from the locked document hashes; CI can regenerate pin data from those snapshots when the ST CDN is unavailable. Default verification rereads the original ST PDFs.', 'UNO and Nano families group verified main-header positions; MCU functions, BOOT/NC differences and optional programming contacts remain reference-specific. Leonardo I2C/SPI, Every A6/A7 and dual-port TWI, and R4 DAC/CAN mappings are independently extracted.', 'Espressif profiles name exact DevKit revisions and fitted modules. GPIO matrix options describe routing capability, not firmware defaults; input-only pads and flash/PSRAM restrictions remain explicit. S3 v1.1 RGB uses GPIO38 and GPIO46 is bidirectional.', 'ATmega package pin numbers are independent of Arduino headers. ATmega328P PDIP PC0 is pin 23 (Figure 5-1 corrects Table 6-1); reset/clock fuses qualify GPIO use. ATmega2560 TQFP100 functions exclude 64-pin PDI/PDO and resolve CLK0 to CLKO using Figure 1-1.', 'Arduino AVR header contacts include duplicate nets; unique GPIO counts exclude repeated SDA/SCL and ICSP contacts. Nano A6/A7 are analog-only. Current Arduino connector-table typos and Mega D0/D1 PWM marks are resolved using the full pinouts and pinned official AVR core. Functions cover Arduino APIs, not every raw MCU alternate function.', 'Blue Pill board positions use a community reference, not ST manufacturer board documentation. STM32 chip pins and function/remap conditions use ST DS5319 and RM0008. H1/H2/SWD connector labels differ from MCU package pin numbers; clone wiring may differ.', 'Jetson Orin Nano uses NVIDIA P3768 carrier J12 names from Figure 3-1 and Table 3-3; peripheral names are carrier signals, not Linux bus numbers. Table spellings SPI1_CSI1*/CSI0* are resolved using the figure and CS1_N/CS0_N SoC names. Listed capabilities require appropriate pinmux/Jetson-IO configuration and do not assert an active runtime configuration.']}
     buf=io.StringIO();writer=csv.writer(buf,lineterminator='\n');writer.writerow(['board','physical_pin','pin_name','pin_type','function','selector','manufacturer_signal','physical_evidence','function_evidence'])
     for b in boards:
         for p in b['pins']:

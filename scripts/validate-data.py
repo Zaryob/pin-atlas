@@ -28,7 +28,7 @@ for b in boards:
                 assert f['configuration']['field'] and f['configuration']['values']
                 assert not f.get('alt')
             if 'alt' in f:
-                assert f['selector']==('ALT' if b['id']=='raspberry-pi-4' else 'F')+str(f['alt'])
+                assert f['selector']==('ALT' if b['id'] in ('raspberry-pi-4','raspberry-pi-5') else 'F')+str(f['alt'])
 lookup={b['id']:{p['number']:p for p in b['pins']} for b in boards}
 assert lookup['pico2w'][1]['name']=='GP0' and lookup['pico2w'][40]['name']=='VBUS'
 assert not any(p['name'] in {'GP23','GP24','GP25','GP29'} for p in lookup['pico2w'].values())
@@ -36,8 +36,11 @@ assert lookup['rp2350a'][1]['name']=='IOVDD' and lookup['rp2350a'][54]['name']==
 assert lookup['rp2350b'][15]['name']=='IOVDD' and lookup['rp2350b'][49]['name']=='GPIO40_ADC0'
 assert not any(f['group']=='ADC' for f in lookup['rp2350b'][27]['functions'])
 assert all(lookup['raspberry-pi-4'][n]['reserved'] for n in (27,28))
+assert all(lookup['raspberry-pi-5'][n]['reserved'] for n in (27,28))
 assert any(f['signal']=='PWM0_0' and f['alt']==0 for f in lookup['raspberry-pi-4'][32]['functions'])
 assert any(f['signal']=='PWM0_1' and f['alt']==0 for f in lookup['raspberry-pi-4'][33]['functions'])
+assert any(f['signal']=='PWM0[0]' and f['selector']=='ALT0' for f in lookup['raspberry-pi-5'][32]['functions'])
+assert any(f['signal']=='PIO[0]' and f['selector']=='ALT7' for f in lookup['raspberry-pi-5'][27]['functions'])
 assert sum(len(b['pins']) for b in boards)==report['physicalPins']
 assert sum(len(p['functions']) for b in boards for p in b['pins'])==report['functionAssignments']
 # Model families share physical positions, but not their processor function sets.
@@ -49,6 +52,7 @@ for id in ('pico','picow'):
     assert any(f['name']=='USB OVCUR DET' and f['selector']=='F9' for f in lookup[id][1]['functions'])
 assert any(f['name']=='USB OVCUR DET' and f['selector']=='F10' for f in lookup['pico2'][1]['functions'])
 assert [p['name'] for p in lookup['raspberry-pi-40'].values()]==[p['name'] for p in lookup['raspberry-pi-4'].values()]
+assert [p['name'] for p in lookup['raspberry-pi-5'].values()]==[p['name'] for p in lookup['raspberry-pi-4'].values()]
 assert all(not p['functions'] for p in lookup['raspberry-pi-40'].values())
 assert all(lookup['raspberry-pi-40'][n]['reserved'] for n in (27,28))
 jetson=lookup['jetson-orin-nano']

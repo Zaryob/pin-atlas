@@ -2,7 +2,7 @@
 
 [English](VERIFICATION.md) · [Türkçe](VERIFICATION.tr.md)
 
-Reviewed on **4 November 2026**. The review covers thirty-two board, header, and chip profiles, **1,504 physical pin records, and 4,769 function assignments**. Shared physical pins are counted once per profile. The count excludes the app’s generic `GPIO` planning option and the unnumbered QFN center GND pads. Each placement of a signal on a different pin counts separately.
+Reviewed on **4 November 2026**. The review covers thirty-three board, header, and chip profiles, **1,544 physical pin records, and 5,005 function assignments**. Shared physical pins are counted once per profile. The count excludes the app’s generic `GPIO` planning option and the unnumbered QFN center GND pads. Each placement of a signal on a different pin counts separately.
 
 ## Sources by pin map
 
@@ -32,6 +32,13 @@ The common profile uses only the physical pin table in the pinned Raspberry Pi G
 - The alternate function data comes from GPIO0–27, ALT0–ALT5, in [BCM2711 ARM Peripherals, §5.3, Table 94, PDF pages 78–79](https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008248-DS-1-bcm2711-peripherals.pdf#page=78). The extraction skips blank and `<reserved>` cells.
 - The app expands `GPx` to `GPIOx`. Display names such as `I2C1 SDA` for `SDA1` or `UART0 TX` for `TXD0` retain the original manufacturer signal in `functions[].signal`. `PWM0_0` and `PWM0_1` retain their source names.
 - Physical pins 27 and 28 carry GPIO0 and GPIO1, also called ID_SD and ID_SC. They are reserved for the HAT identification EEPROM. This pin map describes the BCM2711 alternate functions on the Pi 4.
+
+### Raspberry Pi 5 / J8
+
+- All 40 physical pins share the standard physical pin layout from the [pinned Raspberry Pi GPIO documentation](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc).
+- Alternate functions come from GPIO0–27, ALT0–ALT8 (a0–a8), in [Raspberry Pi RP1 Peripherals, §3.1.1, Table 4, PDF pages 16–17](https://datasheets.raspberrypi.com/rp1/rp1-peripherals.pdf#page=16).
+- Physical pins 27 and 28 carry GPIO0 and GPIO1, reserved for the HAT identification EEPROM.
+- RP1 alternate functions provide UART, SPI, I2C, I2S, PWM, PIO, DPI, SDIO, and PCM audio options distinct from BCM2711.
 
 ### RP2350A / QFN-60
 
