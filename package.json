@@ -1,6 +1,6 @@
 {
   "name": "pin-atlas",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "description": "English-first pinout explorer for development boards and chips, with Turkish localization",
   "scripts": {
