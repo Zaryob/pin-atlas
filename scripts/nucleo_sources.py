@@ -93,8 +93,11 @@ def build_nucleo(cache, docs, ref, chip, model):
         'PC14': 'nucleoLse', 'PC15': 'nucleoLse',
         'PD0': 'nucleoHse', 'PD1': 'nucleoHse', 'PH0': 'nucleoF4Hse', 'PH1': 'nucleoF4Hse',
     }
+    drawing_page = 30 if model == 'f103rb' else 32
+    drawing_ref = ref(f'{board_id}-top-view', document, drawing_page,
+                      'MB1136 top view · connector positions, rows and numbering', 'visual-diagram')
     pins = []
-    for index, (header, contacts) in enumerate(connectors.items()):
+    for header, contacts in connectors.items():
         for number, (label, raw, evidence) in sorted(contacts.items()):
             raw = ' '.join(raw.split())
             signal = re.sub(r'\(\d+\)', '', raw).split(' or ')[0].strip()
@@ -110,7 +113,7 @@ def build_nucleo(cache, docs, ref, chip, model):
             # Board labels identify connector signals; package names identify the silicon pads.
             pin.update(number=len(pins) + 1, name=signal, net=signal, connector=header,
                        connectorPin=number, physicalLabel=f'{header}.{number}')
-            pin['evidence'].insert(0, evidence)
+            pin['evidence'][:0] = [evidence, drawing_ref]
             if label:
                 pin['boardLabel'] = label
             if source:
@@ -125,8 +128,16 @@ def build_nucleo(cache, docs, ref, chip, model):
             if note:
                 pin['boardCircuitKey'] = note
                 pin['evidence'].append(bridges_ref)
-            pin['position'] = {'x': 260 + (index // 3) * 300, 'y': 60 + (number - 1 + (0, 40, 52)[index % 3]) * 24,
-                               'side': 'left' if index < 3 else 'right'}
+            if header in ('CN7', 'CN10'):
+                x = (148 if header == 'CN7' else 724) + 28 * ((number - 1) % 2)
+                y = 240 + 24 * ((number - 1) // 2)
+                side = 'left' if number % 2 else 'right'
+            else:
+                x = 310 if header in ('CN6', 'CN8') else 590
+                y = {'CN6': 336 + 24 * (number - 1), 'CN8': 552 + 24 * (number - 1),
+                     'CN5': 252 + 24 * (10 - number), 'CN9': 504 + 24 * (8 - number)}[header]
+                side = 'right' if header in ('CN6', 'CN8') else 'left'
+            pin['position'] = {'x': x, 'y': y, 'side': side}
             pins.append(pin)
     for pin in pins:
         if pin['type'] == 'GPIO':
@@ -135,10 +146,11 @@ def build_nucleo(cache, docs, ref, chip, model):
     return {
         'id': board_id, 'name': board_id.upper(), 'family': 'STM32', 'shortName': board_id.upper(),
         'subtitle': 'Nucleo-64 · MB1136 · Arduino Uno and ST Morpho', 'layout': 'custom',
-        'diagram': {'width': 820, 'height': 1550, 'artwork': 'assets/boards/nucleo-mb1136.svg', 'minWidth': 640},
+        'diagram': {'width': 900, 'height': 720, 'artwork': 'assets/boards/nucleo-mb1136.svg', 'minWidth': 760},
         'packagePins': len(pins), 'gpioCount': sum(pin['type'] == 'GPIO' for pin in pins),
         'uniqueGPIOCount': len({pin['net'] for pin in pins if pin['type'] == 'GPIO'}),
         'voltage': '3.3 V I/O', 'mcu': chip['mcu'], 'processor': chip['processor'], 'clock': chip['clock'],
         'verifiedOn': chip['verifiedOn'], 'scopeKey': 'nucleoF103Scope', 'source': f'{url}#page={arduino_pages[0]}',
-        'datasheet': chip['datasheet'], 'pins': pins,
+        'datasheet': chip['datasheet'], 'orientation': 'usb', 'pins': pins,
+        **({'mcuProfile': chip['id']} if 'id' in chip else {}),
     }

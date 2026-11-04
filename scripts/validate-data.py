@@ -139,6 +139,18 @@ for board in boards:
 nucleo=lookup['nucleo-f103rb']
 contacts={pin['physicalLabel']:pin for pin in nucleo.values()}
 assert len(contacts)==len(nucleo)==108
+board_by_id={board['id']:board for board in boards}
+assert board_by_id['nucleo-f103rb']['mcuProfile']=='stm32f103rbt6'
+for pin in nucleo.values():
+    if 'mcuPin' in pin:
+        pad=stm64[pin['mcuPin']]
+        assert pad['name']=={'RESET':'NRST','AVDD':'VDDA','PD0':'OSC_IN','PD1':'OSC_OUT'}.get(pin['name'],pin['name'])
+for header in ('CN7','CN10'):
+    first, second, last = (contacts[f'{header}.{number}']['position'] for number in (1,2,38))
+    assert first['x']<second['x']==last['x'] and first['y']==second['y']<last['y']
+for header, size in (('CN5',10),('CN9',8)):
+    assert contacts[f'{header}.{size}']['position']['y']<contacts[f'{header}.1']['position']['y']
+
 for label in ('CN5.6','CN10.11'):
     pin=contacts[label]
     assert (pin['name'],pin['net'],pin['mcuPin'])==('PA5','PA5',21)

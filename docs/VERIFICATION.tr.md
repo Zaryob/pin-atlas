@@ -91,7 +91,7 @@ ST belgeleri önce resmî `www.st.com.cn`, ardından `www.st.com` adresinden ind
 
 ## NUCLEO-F103RB / F401RE / F411RE · MB1136
 
-Arduino ve ST Morpho kontakları, SHA-256 ile kilitlenen ST UM1724 Rev 14 belgesinin 12 ve 27 numaralı tablolarından alınır. MCU pinleri ve işlevleri STM32F103RB LQFP64 profilinden gelir. Haritada A4/A5 için analog yönlendirme gösterilir. Alternatif I²C bağlantısı ile saat, seri port ve LED köprüleri Tablo 10’a göre açıklanır. F401RE ve F411RE konnektörleri için Tablo 16 ve 29, paket pinleri ve AF seçicileri için kilitli STM32CubeMX verisi kullanılır.
+Arduino ve ST Morpho kontakları, SHA-256 ile kilitlenen ST UM1724 Rev 14 belgesinin 12 ve 27 numaralı tablolarından alınır. MCU pinleri ve işlevleri STM32F103RB LQFP64 profilinden gelir. Haritada A4/A5 için analog yönlendirme gösterilir. Alternatif I²C bağlantısı ile saat, seri port ve LED köprüleri Tablo 10’a göre açıklanır. Kart çizimi Şekil 14, 18 ve 19’daki konnektör yerleşimi ve sıra numaralarını izler. NUCLEO-F103RB’de bir kontak seçildiğinde ayrı STM32F103RBT6 LQFP-64 çizimindeki karşılık gelen bacak vurgulanır. F401RE ve F411RE konnektörleri için Tablo 16 ve 29, paket pinleri ve AF seçicileri için kilitli STM32CubeMX verisi kullanılır.
 
 ## Arduino AVR
 

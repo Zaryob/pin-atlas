@@ -180,20 +180,30 @@ function choosePin(number, reveal = true) {
  history.replaceState(null, '', `#${new URLSearchParams({board:layout.id,profile:board.id,pin:selected})}`);
 }
 function pinGroup(pin, x, y, side, opts = {}) {
- const active = pin.number === selected, match = matches(pin), assigned = assignments[pin.number];
+ const active = pin.number === (opts.preview ? opts.activePin : selected);
+ const match = opts.preview || matches(pin), assigned = opts.preview ? null : assignments[pin.number];
  const color = colors[pin.type] || colors.SYSTEM;
- const matchingFunctions = pin.functions.filter(f => filters.has(f.group) || (search.trim() && f.name.toLowerCase().includes(search.trim().toLowerCase())));
+ const matchingFunctions = opts.preview ? [] : pin.functions.filter(f => filters.has(f.group) || (search.trim() && f.name.toLowerCase().includes(search.trim().toLowerCase())));
  const fn = matchingFunctions[0];
  const label = opts.showConnectorLabel && pin.boardLabel ? pin.boardLabel : pin.name.replace('_ADC', '/A');
  const func = assigned?.label || assigned?.function || matchingFunctions.slice(0,2).map(f=>f.name).join(' · ') || (label !== pin.name && opts.showConnectorLabel ? pin.name : '');
  const left = side === 'left';
  const xSign = left ? -1 : 1;
  let body = `<rect class="pin-hit" x="${left ? -222 : 10}" y="-10" width="212" height="20" rx="4" fill="transparent"/><path d="M0 0h${xSign * 24}" stroke="${active ? 'var(--accent)' : 'var(--line)'}" stroke-width="1"/><circle class="pin-node" r="4.4" fill="${pin.type === 'GPIO' ? '#e2eccc' : '#f2eee6'}" stroke="${color}" stroke-width="1.3"/><text class="pin-number" x="${xSign * 17}" y="3" text-anchor="middle">${esc(pin.connectorPin ?? pin.physicalLabel ?? pin.number)}</text><rect x="${left ? -99 : 30}" y="-8.5" width="69" height="17" rx="3" fill="${color}" fill-opacity="${active ? '.2' : '.09'}"/><text class="pin-label" x="${xSign * 64}" y="3.7" fill="${color}" text-anchor="middle">${esc(label)}</text>${func ? `<text class="pin-function" x="${xSign * 111}" y="3" text-anchor="${left ? 'end' : 'start'}" fill="${assigned ? 'var(--success)' : colors[fn?.group] || color}">${esc(func.length > 24 ? func.slice(0,23)+'…' : func)}</text>` : ''}${assigned ? `<circle r="2" cx="${xSign * 215}" fill="var(--success)"/>` : ''}`;
- if (opts.compact) {
+ if (opts.connector) {
+   const contactLabel = label === pin.name ? pin.name : `${label} · ${pin.name}`;
+   body = `<rect class="pin-hit" x="${left ? -111 : -12}" y="-10" width="123" height="20" rx="3" fill="transparent"/>
+     <rect class="pin-node" x="-10" y="-9" width="20" height="18" rx="3" stroke="${color}" stroke-width="1.4"/>
+     <text class="connector-pin-number" x="0" y="3.5" text-anchor="middle">${pin.connectorPin}</text>
+     <text class="connector-signal" x="${xSign * 15}" y="4" text-anchor="${left ? 'end' : 'start'}" fill="var(--ink)">${esc(contactLabel)}</text>`;
+ } else if (opts.compact) {
    const w=opts.padWidth;
    body=`<rect class="pin-hit" x="${-w/2}" y="-17" width="${w}" height="54" rx="4" fill="var(--surface)" stroke="var(--line)"/><circle class="pin-node" cy="-7" r="4.4" stroke="${color}" stroke-width="1.3"/><text class="pad-number" y="13" text-anchor="middle">${esc(pin.connectorPin)}</text><text class="pad-label" y="28" fill="${color}" text-anchor="middle">${esc(pin.name)}</text>`;
  }
- return `<g class="pin-group ${opts.connected ? 'net-contact' : ''} ${active ? 'selected' : ''} ${match ? '' : 'dimmed'} ${assigned ? 'assigned' : ''}" data-pin="${pin.number}" role="button" tabindex="0" aria-label="${esc(t('selectPin', { pin: physicalLabel(pin), name: label !== pin.name && opts.showConnectorLabel ? `${label} · ${pin.name}` : pin.name }))}${func ? ', '+esc(func) : ''}"${active ? ' aria-current="true"' : ''} transform="translate(${x} ${y})${opts.angle ? ` rotate(${opts.angle})` : ''}"><title>Pin ${esc(pin.physicalLabel || pin.number)} · ${esc(pin.name)}${func ? ' · '+esc(func) : ''}</title><g aria-hidden="true">${body}</g></g>`;
+ if (opts.preview) {
+   return `<g class="pin-group ${active ? 'selected package-pad' : ''}" transform="translate(${x} ${y})${opts.angle ? ` rotate(${opts.angle})` : ''}">${body}</g>`;
+ }
+ return `<g class="pin-group ${opts.connected ? 'net-contact' : ''} ${active ? 'selected' : ''} ${match ? '' : 'dimmed'} ${assigned ? 'assigned' : ''}" data-pin="${pin.number}" role="button" tabindex="0" aria-label="${esc(t('selectPin', { pin: physicalLabel(pin), name: label !== pin.name && opts.showConnectorLabel ? `${label} · ${pin.name}` : pin.name }))}${func && !opts.connector ? ', '+esc(func) : ''}"${active ? ' aria-current="true"' : ''} transform="translate(${x} ${y})${opts.angle ? ` rotate(${opts.angle})` : ''}"><title>Pin ${esc(pin.physicalLabel || pin.number)} · ${esc(pin.name)}${func ? ' · '+esc(func) : ''}</title><g aria-hidden="true">${body}</g></g>`;
 }
 function picoArt() {
  const pads=Array.from({length:20},(_,i)=>[278,402].map(x=>`<circle cx="${x}" cy="${48+i*23}" r="5" fill="var(--paper)" stroke="var(--accent)" stroke-width="1.2"/>`).join('')).join('');
@@ -232,21 +242,22 @@ function renderDip() {
  }
  return `<svg role="group" viewBox="0 0 800 ${h}" aria-label="${esc(t('diagramLabel',{board:board.name}))}"><g class="board-art" transform="${flipped?'translate(800 0) scale(-1 1)':''}"><g transform="${rotated?`rotate(180 400 ${h/2})`:''}"><rect x="312" y="48" width="176" height="${h-96}" rx="7" fill="#34433a" stroke="#7f9175"/><path d="M382 48a18 18 0 0 0 36 0" fill="var(--paper)" stroke="#7f9175"/><circle cx="327" cy="79" r="5" fill="#a9b796"/><text x="400" y="${h/2-10}" text-anchor="middle" fill="#dce6d0" font-size="19">${esc(board.mcu)}</text><text x="400" y="${h/2+20}" text-anchor="middle" fill="#9db08f" font-size="13">${esc(board.packageName)}</text></g></g>${pins}</svg>`;
 }
-function renderQfn() {
- const n=board.packagePins/4,size=board.packagePins>=100?1056:800,c=size/2,end=size-220,span=size-464,pitch=span/(n-1),body=size-434;
- const packageName=board.packageName || `${board.layout==='lqfp'?'LQFP':'QFN'}-${board.packagePins}`;
+function renderQfn(profile = board, activePin = selected) {
+ const preview = profile !== board;
+ const n=profile.packagePins/4,size=profile.packagePins>=100?1056:800,c=size/2,end=size-220,span=size-464,pitch=span/(n-1),body=size-434;
+ const packageName=profile.packageName || `${profile.layout==='lqfp'?'LQFP':'QFN'}-${profile.packagePins}`;
  let pins='';
- for(const pin of board.pins){
+ for(const pin of profile.pins){
    const sideIndex=Math.floor((pin.number-1)/n),i=(pin.number-1)%n;
    let pos={x:220,y:232+i*pitch,side:'left',angle:0};
    if(sideIndex===1)pos={x:232+i*pitch,y:end,side:'right',angle:90};
    if(sideIndex===2)pos={x:end,y:size-232-i*pitch,side:'right',angle:0};
    if(sideIndex===3)pos={x:size-232-i*pitch,y:220,side:'left',angle:90};
-   if(rotated){pos.x=size-pos.x;pos.y=size-pos.y;pos.side=pos.side==='left'?'right':'left';}
-   if(flipped){pos.x=size-pos.x;if(!pos.angle)pos.side=pos.side==='left'?'right':'left';}
-   pins+=pinGroup(pin,pos.x,pos.y,pos.side,{angle:pos.angle});
+   if(!preview && rotated){pos.x=size-pos.x;pos.y=size-pos.y;pos.side=pos.side==='left'?'right':'left';}
+   if(!preview && flipped){pos.x=size-pos.x;if(!pos.angle)pos.side=pos.side==='left'?'right':'left';}
+   pins+=pinGroup(pin,pos.x,pos.y,pos.side,{angle:pos.angle,preview,activePin});
  }
- return `<svg role="group" viewBox="0 0 ${size} ${size}" ${size>800?'style="min-width:1000px;max-height:none"':''} aria-label="${esc(t('diagramLabel',{board:`${board.mcu} ${packageName}`}))}"><g class="board-art" transform="${flipped?`translate(${size} 0) scale(-1 1)`:''}"><g transform="${rotated?`rotate(180 ${c} ${c})`:''}"><rect x="217" y="217" width="${body}" height="${body}" rx="9" fill="#34433a" stroke="#26352b" stroke-width="3"/><rect x="231" y="231" width="${body-28}" height="${body-28}" rx="5" fill="none" stroke="#7f9175" stroke-width=".6"/><circle cx="246" cy="247" r="6" fill="#a9b796"/>${board.layout==='qfn'?`<rect x="${c-97}" y="${c-97}" width="194" height="194" rx="5" fill="#3b4d40" stroke="#637a58" stroke-dasharray="4 5"/>`:''}<text x="${c}" y="${c-23}" text-anchor="middle" fill="#dce6d0" font-size="${board.layout==='lqfp'?21:29}">${esc(board.mcu)}</text><text x="${c}" y="${c+6}" text-anchor="middle" fill="#9db08f" font-size="12" letter-spacing="3">${esc(packageName)}</text>${board.layout==='qfn'?`<text x="${c}" y="${c+43}" text-anchor="middle" fill="#819975" font-size="9">EP · GND</text>`:''}<text x="${c}" y="${size-268}" text-anchor="middle" fill="#839b76" font-size="8" letter-spacing="3">${esc(board.family.toUpperCase())}</text></g></g>${pins}</svg>`;
+ return `<svg role="${preview ? 'img' : 'group'}" viewBox="0 0 ${size} ${size}" ${size>800?'style="min-width:1000px;max-height:none"':''} aria-label="${esc(t('diagramLabel',{board:`${profile.mcu} ${packageName}`}))}"><g class="board-art" transform="${!preview && flipped?`translate(${size} 0) scale(-1 1)`:''}"><g transform="${!preview && rotated?`rotate(180 ${c} ${c})`:''}"><rect x="217" y="217" width="${body}" height="${body}" rx="9" fill="#34433a" stroke="#26352b" stroke-width="3"/><rect x="231" y="231" width="${body-28}" height="${body-28}" rx="5" fill="none" stroke="#7f9175" stroke-width=".6"/><circle cx="246" cy="247" r="6" fill="#a9b796"/>${profile.layout==='qfn'?`<rect x="${c-97}" y="${c-97}" width="194" height="194" rx="5" fill="#3b4d40" stroke="#637a58" stroke-dasharray="4 5"/>`:''}<text x="${c}" y="${c-23}" text-anchor="middle" fill="#dce6d0" font-size="${profile.layout==='lqfp'?21:29}">${esc(profile.mcu)}</text><text x="${c}" y="${c+6}" text-anchor="middle" fill="#9db08f" font-size="12" letter-spacing="3">${esc(packageName)}</text>${profile.layout==='qfn'?`<text x="${c}" y="${c+43}" text-anchor="middle" fill="#819975" font-size="9">EP · GND</text>`:''}<text x="${c}" y="${size-268}" text-anchor="middle" fill="#839b76" font-size="8" letter-spacing="3">${esc(profile.family.toUpperCase())}</text></g></g>${pins}</svg>`;
 }
 function renderCustom() {
  const {width,height,artwork} = board.diagram;
@@ -259,7 +270,7 @@ function renderCustom() {
    let {x,y,side,angle=0,compact=false,padWidth=62} = pin.position;
    if(rotated){ x=width-x;y=height-y;side=side==='left'?'right':'left'; }
    if(flipped){x=width-x;if(!angle)side=side==='left'?'right':'left';}
-   return pinGroup(pin,x,y,side,{angle,compact,padWidth,showConnectorLabel,connected:connected.has(pin.physicalLabel)});
+   return pinGroup(pin,x,y,side,{angle,compact,padWidth,showConnectorLabel,connector:showConnectorLabel,connected:connected.has(pin.physicalLabel)});
  }).join('');
  return `<svg role="group" viewBox="0 0 ${width} ${height}" ${board.diagram.minWidth ? `style="min-width:${board.diagram.minWidth}px;max-height:none"` : ''} aria-label="${esc(t('diagramLabel', { board: layoutTitle(layout) }))}"><g transform="${flipped?`translate(${width} 0) scale(-1 1)`:''}"><g transform="${rotated?`rotate(180 ${width/2} ${height/2})`:''}">${image}</g></g>${pins}</svg>`;
 }
@@ -270,9 +281,28 @@ function renderMap() {
  $('#orientation').innerHTML = `${t(flipped ? 'bottomView' : 'topView')} <span>${board.layout==='pico' || board.orientation?.startsWith('usb') ? `USB ${board.orientation==='usb-bottom' ? (rotated?'↑':'↓') : (rotated?'↓':'↑')}` : rotated ? '180°' : '0°'}</span>`;
  $('#diagram').classList.toggle('qfn-diagram',isChip(board));
  $('#diagram').classList.toggle('board-diagram',board.layout === 'custom');
- const oldScroll = $('#diagram').scrollLeft;
- $('#diagram').innerHTML = renderers[board.layout]();
- if(innerWidth<=640) $('#diagram').scrollLeft = oldScroll || ($('#diagram').scrollWidth - $('#diagram').clientWidth)/2;
+ const diagram = $('#diagram');
+ const oldBoardScroll = $('.nucleo-board-map', diagram)?.scrollLeft;
+ const oldScroll = diagram.scrollLeft;
+ const drawing = renderers[board.layout]();
+ const mcu = boards.find(profile => profile.id === board.mcuProfile);
+ diagram.classList.toggle('board-with-package', Boolean(mcu));
+ if (mcu) {
+   const pin = pinByNumber(selected);
+   const pad = mcu.pins.find(candidate => candidate.number === pin.mcuPin);
+   const selection = pad ? `${physicalLabel(pin)} · ${t('mcuPin', {pin:pad.number})} · ${pad.name}` : t('noMcuPad');
+   diagram.innerHTML = `<div class="nucleo-board-map">${drawing}</div>
+     <section class="mcu-package-map" aria-label="${esc(mcu.name)}">
+       <h3>${esc(mcu.name)} · ${esc(mcu.packageName || 'LQFP-' + mcu.packagePins)}</h3>
+       <p aria-live="polite">${esc(selection)}</p>
+       ${renderQfn(mcu, pad?.number ?? 0)}
+     </section>`;
+   const boardMap = $('.nucleo-board-map', diagram);
+   if (oldBoardScroll !== undefined) boardMap.scrollLeft = oldBoardScroll;
+ } else {
+   diagram.innerHTML = drawing;
+   if(innerWidth<=640) diagram.scrollLeft = oldScroll || (diagram.scrollWidth - diagram.clientWidth)/2;
+ }
  const count=board.pins.filter(matches).length;
  $('#match-count').textContent = (search || filters.size) ? t('matchCount', { count, total: board.pins.length }) : '';
  $('#no-matches').hidden = count!==0;
@@ -769,8 +799,8 @@ $('#rotate-button').addEventListener('click',()=>{rotated=!rotated;renderMap();}
 $('#reset-view').addEventListener('click',()=>{flipped=rotated=false;renderMap();});
 $('#map-view').addEventListener('click',()=>setView('map'));$('#table-view').addEventListener('click',()=>setView('table'));
 for(const element of [$('#diagram'),$('#table-content')]) {
- element.addEventListener('click',e=>{const p=e.target.closest('[data-pin]');if(p)choosePin(p.dataset.pin);});
- element.addEventListener('keydown',e=>{const p=e.target.closest('[data-pin]');if(p&&p.tagName.toLowerCase()!=='button'&&['Enter',' '].includes(e.key)){e.preventDefault();choosePin(p.dataset.pin); if(!$('#details-dialog').open) $(`[data-pin="${p.dataset.pin}"]`,element)?.focus();}});
+ element.addEventListener('click',e=>{const p=e.target.closest('[data-pin]');if(p)choosePin(p.dataset.pin, element !== $('#diagram') || !board.mcuProfile);});
+ element.addEventListener('keydown',e=>{const p=e.target.closest('[data-pin]');if(p&&p.tagName.toLowerCase()!=='button'&&['Enter',' '].includes(e.key)){e.preventDefault();choosePin(p.dataset.pin, element !== $('#diagram') || !board.mcuProfile); if(!$('#details-dialog').open) $(`[data-pin="${p.dataset.pin}"]`,element)?.focus();}});
 }
 function renderDetailPreservingDraft() {
  const label = $('#custom-label')?.value;

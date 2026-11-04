@@ -567,3 +567,59 @@
 .pin-group.net-contact:focus-visible .pin-hit {
   stroke-width: 2;
 }
+
+.pin-group .connector-pin-number {
+  fill: var(--ink);
+  font: 500 10px var(--mono);
+}
+.pin-group.net-contact .connector-pin-number {
+  fill: var(--paper);
+}
+.pin-group .connector-signal {
+  font: 11px var(--mono);
+  paint-order: stroke;
+  stroke: var(--paper);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+}
+.pin-group.package-pad .pin-node {
+  fill: var(--accent);
+  stroke: var(--accent);
+  stroke-width: 3;
+}
+#diagram.board-with-package {
+  display: grid;
+  align-items: start;
+  gap: 12px;
+}
+.nucleo-board-map {
+  min-width: 0;
+  overflow-x: auto;
+}
+.nucleo-board-map > svg,
+.mcu-package-map > svg {
+  display: block;
+  width: 100%;
+}
+.mcu-package-map {
+  min-width: 0;
+  padding: 12px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+.mcu-package-map h3,
+.mcu-package-map p {
+  margin: 0 0 6px;
+  font-size: 12px;
+}
+.mcu-package-map p {
+  color: var(--accent);
+}
+.mcu-package-map .pin-group {
+  cursor: default;
+}
+@media (min-width: 1450px) {
+  #diagram.board-with-package {
+    grid-template-columns: minmax(760px, 2fr) minmax(290px, 1fr);
+  }
+}

@@ -120,6 +120,7 @@
     "board.stm32f103c8t6": ["LQFP-48 · Cortex-M3 · 72 MHz", "LQFP-48 · Cortex-M3 · 72 MHz"],
     "board.stm32f103rbt6": ["LQFP-64 · Cortex-M3 · 72 MHz", "LQFP-64 · Cortex-M3 · 72 MHz"],
     "board.stm32f103vbt6": ["LQFP-100 · Cortex-M3 · 72 MHz", "LQFP-100 · Cortex-M3 · 72 MHz"],
+    "noMcuPad": ["Bu konnektör kontağı için doğrudan MCU bacağı eşlemesi yok.", "This connector contact has no direct MCU pad mapping."],
     "mcuPin": ["MCU pin {pin}", "MCU pin {pin}"],
     "bluepillCompatible": ["STM32-base Blue Pill referans kartı · STM32F103C8T6", "STM32-base Blue Pill reference board · STM32F103C8T6"],
     "bluepillScope": ["Kart pinleri topluluk referansına, işlemci işlevleri ST belgelerine dayanır. Klonların yongasını ve bağlantılarını kontrol et. USB üstte: H2 solda, H1 sağda, SWD altta. H1/H2/SWD numaraları çip pin numaraları değildir. HSE/LSE, LED, USB ve debug hatları kart üzerindeki devrelerle paylaşılır. AFIO remap ayarları çevre birimi genelinde uygulanır; pin seçimleri birlikte yapılandırılmalıdır.", "Board pins follow a community reference; MCU functions follow ST documentation. Check chip markings and wiring on clones. With USB at the top: H2 left, H1 right, SWD below. H1/H2/SWD positions are not chip pin numbers. Oscillators, LED, USB and debug lines share board circuitry. AFIO remap settings apply to whole peripherals; configure selected pins consistently."],

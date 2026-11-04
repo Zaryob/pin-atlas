@@ -594,7 +594,8 @@
       "physicalPins": 108,
       "functionAssignments": 174,
       "physicalSourceMethods": [
-        "pdf-table"
+        "pdf-table",
+        "visual-diagram"
       ]
     },
     {
@@ -603,7 +604,8 @@
       "functionAssignments": 261,
       "physicalSourceMethods": [
         "manufacturer-xml",
-        "pdf-table"
+        "pdf-table",
+        "visual-diagram"
       ]
     },
     {
@@ -612,7 +614,8 @@
       "functionAssignments": 332,
       "physicalSourceMethods": [
         "manufacturer-xml",
-        "pdf-table"
+        "pdf-table",
+        "visual-diagram"
       ]
     },
     {

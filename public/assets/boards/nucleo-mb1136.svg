@@ -1,10 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 1550">
-  <rect x="232" y="28" width="356" height="1510" rx="16" fill="#273b34" stroke="#718577"/>
-  <g fill="#e0ecd9" font-family="monospace" font-size="14" text-anchor="middle">
-    <text x="260" y="45">CN7</text><text x="560" y="45">CN10</text>
-    <text x="260" y="1003">CN6</text><text x="560" y="1003">CN5</text>
-    <text x="260" y="1291">CN8</text><text x="560" y="1291">CN9</text>
-    <text x="410" y="726" font-size="22">NUCLEO-64</text>
-    <text x="410" y="752">MB1136 · connector map</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 720">
+  <path d="M146 24h608a12 12 0 0 1 12 12v640l-20 22H154l-20-22V36a12 12 0 0 1 12-12Z" fill="#263d36" stroke="#849c8d" stroke-width="2"/>
+  <path d="M135 205h630" stroke="#c1d2bd" stroke-width="2" stroke-dasharray="10 7"/>
+  <g fill="#132822" stroke="#536a61">
+    <rect x="137" y="228" width="50" height="456" rx="4"/>
+    <rect x="713" y="228" width="50" height="456" rx="4"/>
+    <rect x="299" y="324" width="22" height="192" rx="4"/>
+    <rect x="299" y="540" width="22" height="144" rx="4"/>
+    <rect x="579" y="240" width="22" height="240" rx="4"/>
+    <rect x="579" y="492" width="22" height="192" rx="4"/>
+  </g>
+  <g fill="#d6dfdd" stroke="#8ca2a0">
+    <rect x="625" y="14" width="68" height="55" rx="4"/>
+    <path d="M632 24h54v15h-54z" fill="#10221d"/>
+  </g>
+  <g fill="#19241f" stroke="#81968a">
+    <rect x="380" y="91" width="73" height="61" rx="3"/>
+    <rect x="425" y="432" width="50" height="50" rx="4"/>
+    <rect x="206" y="257" width="29" height="29" rx="4"/>
+    <rect x="658" y="201" width="29" height="29" rx="4"/>
+  </g>
+  <g stroke="#b8c7b9" stroke-width="1.5">
+    <path d="M430 429h40m-40 56h40m-48-48v40m56-40v40" stroke-dasharray="1.5 2.6" stroke-width="6"/>
+    <circle cx="431" cy="438" r="2.5" fill="#c1d2bd"/>
+  </g>
+  <g fill="#d9e5dc" font-family="monospace" text-anchor="middle">
+    <text x="415" y="119" font-size="12">ST-LINK</text>
+    <text x="450" y="194" font-size="13">MB1136 · NUCLEO-64</text>
+    <text x="450" y="464" font-size="13">U5</text>
+    <text x="162" y="222" font-size="13">CN7</text>
+    <text x="738" y="222" font-size="13">CN10</text>
+    <text x="310" y="318" font-size="13">CN6</text>
+    <text x="310" y="534" font-size="13">CN8</text>
+    <text x="590" y="234" font-size="13">CN5</text>
+    <text x="590" y="487" font-size="13">CN9</text>
   </g>
 </svg>

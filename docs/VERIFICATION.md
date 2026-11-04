@@ -111,7 +111,7 @@ ST source downloads prefer the official `www.st.com.cn` mirror and fall back to 
 
 ## NUCLEO-F103RB / F401RE / F411RE · MB1136
 
-The connector map uses Tables 12 and 27 of the hash-locked ST UM1724 Rev 14 PDF. MCU pin numbers and functions come from the STM32F103RB LQFP64 profile. The map shows the analog A4/A5 routing and labels the alternate I²C route and configurable clock, serial and LED connections using Table 10. The diagram groups contacts by connector. F401RE and F411RE connector assignments use Tables 16 and 29, with package pin numbers and AF selectors from the locked STM32CubeMX pin data.
+The connector map uses Tables 12 and 27 of the hash-locked ST UM1724 Rev 14 PDF. MCU pin numbers and functions come from the STM32F103RB LQFP64 profile. The map shows the analog A4/A5 routing and labels the alternate I²C route and configurable clock, serial and LED connections using Table 10. The board drawing follows the connector positions and row numbering in Figures 14, 18 and 19. Selecting a contact on NUCLEO-F103RB highlights the corresponding pad in the separate STM32F103RBT6 LQFP-64 drawing. F401RE and F411RE connector assignments use Tables 16 and 29, with package pin numbers and AF selectors from the locked STM32CubeMX pin data.
 
 ## Arduino AVR boards
 

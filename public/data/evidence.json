@@ -1032,6 +1032,14 @@
       "locator": "Table 27 · ST Morpho headers",
       "method": "pdf-table"
     },
+    "nucleo-f103rb-top-view": {
+      "document": "nucleo-um1724-r14",
+      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
+      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=30",
+      "page": 30,
+      "locator": "MB1136 top view · connector positions, rows and numbering",
+      "method": "visual-diagram"
+    },
     "f401re-package": {
       "document": "f401re-package",
       "title": "STM32F401RE CubeMX package data",
@@ -1072,6 +1080,14 @@
       "locator": "Table 29 · ST Morpho headers",
       "method": "pdf-table"
     },
+    "nucleo-f401re-top-view": {
+      "document": "nucleo-um1724-r14",
+      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
+      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=32",
+      "page": 32,
+      "locator": "MB1136 top view · connector positions, rows and numbering",
+      "method": "visual-diagram"
+    },
     "f411re-package": {
       "document": "f411re-package",
       "title": "STM32F411RE CubeMX package data",
@@ -1111,6 +1127,14 @@
       "page": 58,
       "locator": "Table 29 · ST Morpho headers",
       "method": "pdf-table"
+    },
+    "nucleo-f411re-top-view": {
+      "document": "nucleo-um1724-r14",
+      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
+      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=32",
+      "page": 32,
+      "locator": "MB1136 top view · connector positions, rows and numbering",
+      "method": "visual-diagram"
     },
     "arduino-uno-r3-core": {
       "document": "arduino-avr-standard",
