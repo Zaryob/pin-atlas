@@ -21,6 +21,7 @@
     "familyArduino": ["Arduino", "Arduino"],
     "familyEspressif": ["Espressif", "Espressif"],
     "familyStm32": ["STM32", "STM32"],
+    "familyStm32Nucleo": ["STM32 Nucleo", "STM32 Nucleo"],
     "nucleoCatalogDetail": ["Nucleo-64 · Arduino ve ST Morpho başlıkları · {mcu}", "Nucleo-64 · Arduino and ST Morpho headers · {mcu}"],
     "catalogOpenBoard": ["Kartı aç · {name}", "Open board · {name}"],
     "catalogOpenMcu": ["MCU paketini aç · {name}", "Open MCU package · {name}"],

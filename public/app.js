@@ -556,14 +556,20 @@ const boardFamilies = [
     nameKey: 'familyStm32',
     items: [
       { type: 'layout', id: 'blue-pill' },
-      { type: 'layout', id: 'nucleo-f103rb' },
-      { type: 'layout', id: 'nucleo-f401re' },
-      { type: 'layout', id: 'nucleo-f411re' },
       { type: 'layout', id: 'stm32f103c8t6' },
       { type: 'layout', id: 'stm32f103rbt6' },
       { type: 'layout', id: 'stm32f103vbt6' },
       { type: 'layout', id: 'stm32f401ret6' },
       { type: 'layout', id: 'stm32f411ret6' }
+    ]
+  },
+  {
+    id: 'stm32-nucleo',
+    nameKey: 'familyStm32Nucleo',
+    items: [
+      { type: 'layout', id: 'nucleo-f103rb' },
+      { type: 'layout', id: 'nucleo-f401re' },
+      { type: 'layout', id: 'nucleo-f411re' }
     ]
   },
   {
