@@ -7206,6 +7206,182 @@ adafruit-feather-rp2040,25,D13,GPIO,USB VBUS DET,F9,USB VBUS DET,feather-rp2040-
 adafruit-feather-rp2040,26,VBUS,POWER,,,,feather-rp2040-pinout | feather-rp2040-top-view,
 adafruit-feather-rp2040,27,EN,SYSTEM,,,,feather-rp2040-pinout | feather-rp2040-top-view,
 adafruit-feather-rp2040,28,VBAT,POWER,,,,feather-rp2040-pinout | feather-rp2040-top-view,
+teensy-41,1,GND,GND,,,,teensy41-front,
+teensy-41,2,0,GPIO,UART1 RX,,RX1,teensy41-front,teensy41-front
+teensy-41,2,0,GPIO,CAN2 RX,,CRX2,teensy41-front,teensy41-front
+teensy-41,2,0,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,2,0,GPIO,GPIO interrupt,,GPIO6[3],teensy41-front,teensy41-front
+teensy-41,3,1,GPIO,UART1 TX,,TX1,teensy41-front,teensy41-front
+teensy-41,3,1,GPIO,CAN2 TX,,CTX2,teensy41-front,teensy41-front
+teensy-41,3,1,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,3,1,GPIO,GPIO interrupt,,GPIO6[2],teensy41-front,teensy41-front
+teensy-41,4,2,GPIO,I2S2 OUT2,,OUT2,teensy41-front,teensy41-front
+teensy-41,4,2,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,4,2,GPIO,GPIO interrupt,,GPIO9[4],teensy41-front,teensy41-front
+teensy-41,5,3,GPIO,I2S2 LRCLK2,,LRCLK2,teensy41-front,teensy41-front
+teensy-41,5,3,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,5,3,GPIO,GPIO interrupt,,GPIO9[5],teensy41-front,teensy41-front
+teensy-41,6,4,GPIO,I2S2 BCLK2,,BCLK2,teensy41-front,teensy41-front
+teensy-41,6,4,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,6,4,GPIO,GPIO interrupt,,GPIO9[6],teensy41-front,teensy41-front
+teensy-41,7,5,GPIO,I2S2 IN2,,IN2,teensy41-front,teensy41-front
+teensy-41,7,5,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,7,5,GPIO,GPIO interrupt,,GPIO9[8],teensy41-front,teensy41-front
+teensy-41,8,6,GPIO,I2S1 OUT1D,,OUT1D,teensy41-front,teensy41-front
+teensy-41,8,6,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,8,6,GPIO,GPIO interrupt,,GPIO7[10],teensy41-front,teensy41-front
+teensy-41,9,7,GPIO,UART2 RX,,RX2,teensy41-front,teensy41-front
+teensy-41,9,7,GPIO,I2S1 OUT1A,,OUT1A,teensy41-front,teensy41-front
+teensy-41,9,7,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,9,7,GPIO,GPIO interrupt,,GPIO7[17],teensy41-front,teensy41-front
+teensy-41,10,8,GPIO,UART2 TX,,TX2,teensy41-front,teensy41-front
+teensy-41,10,8,GPIO,I2S1 IN1,,IN1,teensy41-front,teensy41-front
+teensy-41,10,8,GPIO,GPIO interrupt,,GPIO7[16],teensy41-front,teensy41-front
+teensy-41,11,9,GPIO,I2S1 OUT1C,,OUT1C,teensy41-front,teensy41-front
+teensy-41,11,9,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,11,9,GPIO,GPIO interrupt,,GPIO7[11],teensy41-front,teensy41-front
+teensy-41,12,10,GPIO,SPI0 CS,,CS,teensy41-front,teensy41-front
+teensy-41,12,10,GPIO,MQSR,,MQSR,teensy41-front,teensy41-front
+teensy-41,12,10,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,12,10,GPIO,GPIO interrupt,,GPIO7[0],teensy41-front,teensy41-front
+teensy-41,13,11,GPIO,SPI0 MOSI,,MOSI,teensy41-front,teensy41-front
+teensy-41,13,11,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,13,11,GPIO,GPIO interrupt,,GPIO7[2],teensy41-front,teensy41-front
+teensy-41,14,12,GPIO,SPI0 MISO,,MISO,teensy41-front,teensy41-front
+teensy-41,14,12,GPIO,MQSL,,MQSL,teensy41-front,teensy41-front
+teensy-41,14,12,GPIO,GPIO interrupt,,GPIO7[1],teensy41-front,teensy41-front
+teensy-41,15,3.3V,POWER,,,,teensy41-front,
+teensy-41,16,24,GPIO,ADC1_CH10,,A10,teensy41-front,teensy41-front
+teensy-41,16,24,GPIO,UART6 TX,,TX6,teensy41-front,teensy41-front
+teensy-41,16,24,GPIO,I2C2 SCL,,SCL2,teensy41-front,teensy41-front
+teensy-41,16,24,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,16,24,GPIO,GPIO interrupt,,GPIO6[12],teensy41-front,teensy41-front
+teensy-41,17,25,GPIO,ADC1_CH11,,A11,teensy41-front,teensy41-front
+teensy-41,17,25,GPIO,UART6 RX,,RX6,teensy41-front,teensy41-front
+teensy-41,17,25,GPIO,I2C2 SDA,,SDA2,teensy41-front,teensy41-front
+teensy-41,17,25,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,17,25,GPIO,GPIO interrupt,,GPIO6[13],teensy41-front,teensy41-front
+teensy-41,18,26,GPIO,ADC1_CH12,,A12,teensy41-front,teensy41-front
+teensy-41,18,26,GPIO,SPI1 MOSI,,MOSI1,teensy41-front,teensy41-front
+teensy-41,18,26,GPIO,GPIO interrupt,,GPIO6[30],teensy41-front,teensy41-front
+teensy-41,19,27,GPIO,ADC1_CH13,,A13,teensy41-front,teensy41-front
+teensy-41,19,27,GPIO,SPI1 SCK,,SCK1,teensy41-front,teensy41-front
+teensy-41,19,27,GPIO,GPIO interrupt,,GPIO6[31],teensy41-front,teensy41-front
+teensy-41,20,28,GPIO,UART7 RX,,RX7,teensy41-front,teensy41-front
+teensy-41,20,28,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,20,28,GPIO,GPIO interrupt,,GPIO8[18],teensy41-front,teensy41-front
+teensy-41,21,29,GPIO,UART7 TX,,TX7,teensy41-front,teensy41-front
+teensy-41,21,29,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,21,29,GPIO,GPIO interrupt,,GPIO9[31],teensy41-front,teensy41-front
+teensy-41,22,30,GPIO,CAN3 RX,,CRX3,teensy41-front,teensy41-front
+teensy-41,22,30,GPIO,GPIO interrupt,,GPIO8[23],teensy41-front,teensy41-front
+teensy-41,23,31,GPIO,CAN3 TX,,CTX3,teensy41-front,teensy41-front
+teensy-41,23,31,GPIO,GPIO interrupt,,GPIO8[22],teensy41-front,teensy41-front
+teensy-41,24,32,GPIO,I2S1 OUT1B,,OUT1B,teensy41-front,teensy41-front
+teensy-41,24,32,GPIO,GPIO interrupt,,GPIO7[12],teensy41-front,teensy41-front
+teensy-41,25,VIN,POWER,,,,teensy41-front,
+teensy-41,26,GND,GND,,,,teensy41-front,
+teensy-41,27,3.3V,POWER,,,,teensy41-front,
+teensy-41,28,23,GPIO,ADC1_CH9,,A9,teensy41-front,teensy41-front
+teensy-41,28,23,GPIO,CAN1 RX,,CRX1,teensy41-front,teensy41-front
+teensy-41,28,23,GPIO,I2S1 MCLK1,,MCLK1,teensy41-front,teensy41-front
+teensy-41,28,23,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,28,23,GPIO,GPIO interrupt,,GPIO6[25],teensy41-front,teensy41-front
+teensy-41,29,22,GPIO,ADC1_CH8,,A8,teensy41-front,teensy41-front
+teensy-41,29,22,GPIO,CAN1 TX,,CTX1,teensy41-front,teensy41-front
+teensy-41,29,22,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,29,22,GPIO,GPIO interrupt,,GPIO6[24],teensy41-front,teensy41-front
+teensy-41,30,21,GPIO,ADC1_CH7,,A7,teensy41-front,teensy41-front
+teensy-41,30,21,GPIO,UART5 RX,,RX5,teensy41-front,teensy41-front
+teensy-41,30,21,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,30,21,GPIO,GPIO interrupt,,GPIO6[27],teensy41-front,teensy41-front
+teensy-41,31,20,GPIO,ADC1_CH6,,A6,teensy41-front,teensy41-front
+teensy-41,31,20,GPIO,UART5 TX,,TX5,teensy41-front,teensy41-front
+teensy-41,31,20,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,31,20,GPIO,GPIO interrupt,,GPIO6[26],teensy41-front,teensy41-front
+teensy-41,32,19,GPIO,ADC1_CH5,,A5,teensy41-front,teensy41-front
+teensy-41,32,19,GPIO,I2C0 SCL,,SCL,teensy41-front,teensy41-front
+teensy-41,32,19,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,32,19,GPIO,GPIO interrupt,,GPIO6[16],teensy41-front,teensy41-front
+teensy-41,33,18,GPIO,ADC1_CH4,,A4,teensy41-front,teensy41-front
+teensy-41,33,18,GPIO,I2C0 SDA,,SDA,teensy41-front,teensy41-front
+teensy-41,33,18,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,33,18,GPIO,GPIO interrupt,,GPIO6[17],teensy41-front,teensy41-front
+teensy-41,34,17,GPIO,ADC1_CH3,,A3,teensy41-front,teensy41-front
+teensy-41,34,17,GPIO,UART4 TX,,TX4,teensy41-front,teensy41-front
+teensy-41,34,17,GPIO,I2C1 SDA,,SDA1,teensy41-front,teensy41-front
+teensy-41,34,17,GPIO,GPIO interrupt,,GPIO6[22],teensy41-front,teensy41-front
+teensy-41,35,16,GPIO,ADC1_CH2,,A2,teensy41-front,teensy41-front
+teensy-41,35,16,GPIO,UART4 RX,,RX4,teensy41-front,teensy41-front
+teensy-41,35,16,GPIO,I2C1 SCL,,SCL1,teensy41-front,teensy41-front
+teensy-41,35,16,GPIO,GPIO interrupt,,GPIO6[23],teensy41-front,teensy41-front
+teensy-41,36,15,GPIO,ADC1_CH1,,A1,teensy41-front,teensy41-front
+teensy-41,36,15,GPIO,UART3 RX,,RX3,teensy41-front,teensy41-front
+teensy-41,36,15,GPIO,SPDIF IN,,SPDIF_IN,teensy41-front,teensy41-front
+teensy-41,36,15,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,36,15,GPIO,GPIO interrupt,,GPIO6[19],teensy41-front,teensy41-front
+teensy-41,37,14,GPIO,ADC1_CH0,,A0,teensy41-front,teensy41-front
+teensy-41,37,14,GPIO,UART3 TX,,TX3,teensy41-front,teensy41-front
+teensy-41,37,14,GPIO,SPDIF OUT,,SPDIF_OUT,teensy41-front,teensy41-front
+teensy-41,37,14,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,37,14,GPIO,GPIO interrupt,,GPIO6[18],teensy41-front,teensy41-front
+teensy-41,38,13,GPIO,SPI0 SCK,,SCK,teensy41-front,teensy41-front
+teensy-41,38,13,GPIO,LED,,LED_BUILTIN,teensy41-front,teensy41-front
+teensy-41,38,13,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,38,13,GPIO,GPIO interrupt,,GPIO7[3],teensy41-front,teensy41-front
+teensy-41,39,GND,GND,,,,teensy41-front,
+teensy-41,40,41,GPIO,ADC2_CH17,,A17,teensy41-front,teensy41-front
+teensy-41,40,41,GPIO,SPI1 MISO,,MISO1,teensy41-front,teensy41-front
+teensy-41,40,41,GPIO,UART8 RX,,RX8,teensy41-front,teensy41-front
+teensy-41,40,41,GPIO,GPIO interrupt,,GPIO6[21],teensy41-front,teensy41-front
+teensy-41,41,40,GPIO,ADC2_CH16,,A16,teensy41-front,teensy41-front
+teensy-41,41,40,GPIO,SPI1 CS,,CS1,teensy41-front,teensy41-front
+teensy-41,41,40,GPIO,UART8 TX,,TX8,teensy41-front,teensy41-front
+teensy-41,41,40,GPIO,GPIO interrupt,,GPIO6[20],teensy41-front,teensy41-front
+teensy-41,42,39,GPIO,ADC2_CH15,,A15,teensy41-front,teensy41-front
+teensy-41,42,39,GPIO,I2S2 MCLK2,,MCLK2,teensy41-front,teensy41-front
+teensy-41,42,39,GPIO,GPIO interrupt,,GPIO8[16],teensy41-front,teensy41-front
+teensy-41,43,38,GPIO,ADC2_CH14,,A14,teensy41-front,teensy41-front
+teensy-41,43,38,GPIO,I2S1 IN1,,IN1,teensy41-front,teensy41-front
+teensy-41,43,38,GPIO,SPI1 CS,,CS1,teensy41-front,teensy41-front
+teensy-41,43,38,GPIO,GPIO interrupt,,GPIO8[17],teensy41-front,teensy41-front
+teensy-41,44,37,GPIO,SPI0 CS,,CS,teensy41-front,teensy41-front
+teensy-41,44,37,GPIO,GPIO interrupt,,GPIO8[12],teensy41-front,teensy41-front
+teensy-41,45,36,GPIO,SPI0 CS,,CS,teensy41-front,teensy41-front
+teensy-41,45,36,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,45,36,GPIO,GPIO interrupt,,GPIO8[13],teensy41-front,teensy41-front
+teensy-41,46,35,GPIO,I2S1 BCLK1,,BCLK1,teensy41-front,teensy41-front
+teensy-41,46,35,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,46,35,GPIO,GPIO interrupt,,GPIO8[14],teensy41-front,teensy41-front
+teensy-41,47,34,GPIO,I2S1 LRCLK1,,LRCLK1,teensy41-front,teensy41-front
+teensy-41,47,34,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,47,34,GPIO,GPIO interrupt,,GPIO8[15],teensy41-front,teensy41-front
+teensy-41,48,33,GPIO,I2S1 OUT1A,,OUT1A,teensy41-front,teensy41-front
+teensy-41,48,33,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,48,33,GPIO,GPIO interrupt,,GPIO9[7],teensy41-front,teensy41-front
+teensy-41,49,5V,POWER,USB Host 5V,,5V,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,50,D-,SYSTEM,USB Host D-,,USB_HOST_DM,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,51,D+,SYSTEM,USB Host D+,,USB_HOST_DP,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,52,GND,GND,USB Host GND,,GND,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,53,GND,GND,USB Host GND,,GND,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,54,RX+,SYSTEM,Ethernet RX+,,ETH_RX+,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,55,RX-,SYSTEM,Ethernet RX-,,ETH_RX-,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,56,LED,SYSTEM,Ethernet LED,,ETH_LED,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,57,GND,GND,Ethernet GND,,GND,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,58,TX-,SYSTEM,Ethernet TX-,,ETH_TX-,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,59,TX+,SYSTEM,Ethernet TX+,,ETH_TX+,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,60,42,GPIO,SDIO DAT1,,DAT1,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,60,42,GPIO,GPIO interrupt,,GPIO6[28],teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,61,43,GPIO,SDIO DAT0,,DAT0,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,61,43,GPIO,GPIO interrupt,,GPIO6[29],teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,62,CLK,SYSTEM,SDIO CLK,,CLK,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,63,3.3V,POWER,SDIO 3.3V,,3.3V,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,64,CMD,SYSTEM,SDIO CMD,,CMD,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,65,GND,GND,SDIO GND,,GND,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,66,46,GPIO,SDIO DAT3,,DAT3,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,66,46,GPIO,GPIO interrupt,,GPIO6[15],teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,67,47,GPIO,SDIO DAT2,,DAT2,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,67,47,GPIO,GPIO interrupt,,GPIO6[14],teensy41-back | teensy41-schematic,teensy41-back
 rp2350a,1,IOVDD,POWER,,,,rp2350a-iovdd,
 rp2350a,2,GPIO0,GPIO,SPI0 RX,F1,SPI0 RX,rp-pin-list-p1333,rp-bank0-p18
 rp2350a,2,GPIO0,GPIO,UART0 TX,F2,UART0 TX,rp-pin-list-p1333,rp-bank0-p18

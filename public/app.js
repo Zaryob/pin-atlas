@@ -567,6 +567,13 @@ const boardFamilies = [
     ]
   },
   {
+    id: 'teensy',
+    nameKey: 'familyTeensy',
+    items: [
+      { type: 'layout', id: 'teensy-41' }
+    ]
+  },
+  {
     id: 'microbit',
     nameKey: 'familyMicrobit',
     items: [

@@ -299,6 +299,33 @@
       "sha256": "d9c7353428741a9b2e7148155570224e37f79004db70b64dd6a0d90721e8ae93"
     },
     {
+      "id": "teensy41-card11a",
+      "title": "Teensy 4.1 Pinout and Reference Card (Front)",
+      "publisher": "PJRC",
+      "revision": "Card 11a Rev 4",
+      "file": "teensy41-card11a.pdf",
+      "url": "https://www.pjrc.com/teensy/card11a_rev4_web.pdf",
+      "sha256": "d8e8f77658a43eddd3254fcf7c248e200f8a83a398b990382ee1f71f500debf0"
+    },
+    {
+      "id": "teensy41-card11b",
+      "title": "Teensy 4.1 Pinout and Reference Card (Back)",
+      "publisher": "PJRC",
+      "revision": "Card 11b Rev 4",
+      "file": "teensy41-card11b.pdf",
+      "url": "https://www.pjrc.com/teensy/card11b_rev4_web.pdf",
+      "sha256": "9b258db98f6ef2a4afe21af4820fb599f1362adc1f600536955c3cd4f283c273"
+    },
+    {
+      "id": "teensy41-schematic",
+      "title": "Teensy 4.1 Schematic",
+      "publisher": "PJRC",
+      "revision": "Rev D",
+      "file": "teensy41-schematic.png",
+      "url": "https://www.pjrc.com/teensy/schematic41.png",
+      "sha256": "8c5d04dad66906ca9ff4de95a6db3102620eef971f92c7598dc5f522a701c132"
+    },
+    {
       "id": "arduino-uno-r4-minima-pinout",
       "title": "Arduino uno-r4-minima full pinout",
       "publisher": "Arduino",
@@ -2030,6 +2057,30 @@
       "page": 1,
       "locator": "Adafruit Feather RP2040 top view & dimensions",
       "method": "visual-diagram"
+    },
+    "teensy41-front": {
+      "document": "teensy41-card11a",
+      "title": "Teensy 4.1 Pinout and Reference Card (Front)",
+      "url": "https://www.pjrc.com/teensy/card11a_rev4_web.pdf#page=1",
+      "page": 1,
+      "locator": "Teensy 4.1 Card 11a · Front pinout, alternate functions and PWM",
+      "method": "visual-diagram"
+    },
+    "teensy41-back": {
+      "document": "teensy41-card11b",
+      "title": "Teensy 4.1 Pinout and Reference Card (Back)",
+      "url": "https://www.pjrc.com/teensy/card11b_rev4_web.pdf#page=1",
+      "page": 1,
+      "locator": "Teensy 4.1 Card 11b · Back features, SD card, USB Host, Ethernet and QSPI memory",
+      "method": "visual-diagram"
+    },
+    "teensy41-schematic": {
+      "document": "teensy41-schematic",
+      "title": "Teensy 4.1 Schematic",
+      "url": "https://www.pjrc.com/teensy/schematic41.png",
+      "page": null,
+      "locator": "Teensy 4.1 Schematic Rev D · Power, USB, Ethernet and MCU wiring",
+      "method": "schematic"
     },
     "arduino-uno-r3-package-schematic": {
       "document": "arduino-uno-r3-schematic",

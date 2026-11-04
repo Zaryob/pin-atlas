@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="840" viewBox="0 0 820 840">
+<g font-family="monospace" text-anchor="middle">
+<rect x="270" y="65" width="280" height="715" rx="12" fill="#1b2832" stroke="#486577" stroke-width="2"/>
+<rect x="285" y="80" width="250" height="685" rx="6" fill="none" stroke="#2c424f" stroke-dasharray="4 6"/>
+<rect x="378" y="35" width="64" height="45" rx="4" fill="#d7dddf" stroke="#53696c" stroke-width="2"/>
+<text x="410" y="62" font-size="11" fill="#29464d">USB</text>
+<text x="410" y="130" font-size="20" font-weight="bold" fill="#e8f3ef">TEENSY 4.1</text>
+<text x="410" y="152" font-size="11" fill="#88b2c2">NXP i.MX RT1062 · 600 MHz · 3.3V</text>
+<rect x="345" y="210" width="130" height="130" rx="4" fill="#0d1820" stroke="#5a7d91"/>
+<text x="410" y="265" font-size="14" font-weight="bold" fill="#e5edeb">MIMXRT1062</text>
+<text x="410" y="287" font-size="10" fill="#88adb6">Arm Cortex-M7</text>
+<text x="410" y="307" font-size="10" fill="#6a919a">600 MHz · 1024K RAM</text>
+<rect x="340" y="370" width="60" height="50" rx="3" fill="#132029" stroke="#385465"/>
+<text x="370" y="398" font-size="9" fill="#9ecad1">8MB QSPI</text>
+<rect x="420" y="370" width="60" height="50" rx="3" fill="#132029" stroke="#385465"/>
+<text x="450" y="398" font-size="9" fill="#9ecad1">PSRAM PAD</text>
+<rect x="350" y="450" width="120" height="35" rx="3" fill="#132029" stroke="#385465"/>
+<text x="410" y="472" font-size="9" fill="#9ecad1">USB HOST (5-PIN)</text>
+<rect x="350" y="510" width="120" height="35" rx="3" fill="#132029" stroke="#385465"/>
+<text x="410" y="532" font-size="9" fill="#9ecad1">ETHERNET (6-PIN)</text>
+<rect x="350" y="580" width="120" height="85" rx="4" fill="#0d1820" stroke="#385465"/>
+<text x="410" y="625" font-size="11" font-weight="bold" fill="#d0e2e8">MICRO SD CARD</text>
+<circle cx="330" cy="180" r="10" fill="#b84233" stroke="#e06253"/>
+<text x="330" y="184" font-size="8" font-weight="bold" fill="#ffffff">PROG</text>
+</g></svg>

@@ -1,7 +1,7 @@
 {
   "verifiedOn": "2026-11-04",
-  "physicalPins": 2363,
-  "functionAssignments": 8696,
+  "physicalPins": 2430,
+  "functionAssignments": 8866,
   "documents": [
     {
       "id": "rp2350",
@@ -268,6 +268,30 @@
       "url": "https://raw.githubusercontent.com/arduino/ArduinoCore-mbed/b4ad4e7218a691989acf6c4479112eae183a5a50/variants/ARDUINO_NANO33BLE/variant.cpp",
       "viewUrl": "https://github.com/arduino/ArduinoCore-mbed/blob/b4ad4e7218a691989acf6c4479112eae183a5a50/variants/ARDUINO_NANO33BLE/variant.cpp",
       "sha256": "d9c7353428741a9b2e7148155570224e37f79004db70b64dd6a0d90721e8ae93"
+    },
+    {
+      "id": "teensy41-card11a",
+      "title": "Teensy 4.1 Pinout and Reference Card (Front)",
+      "publisher": "PJRC",
+      "revision": "Card 11a Rev 4",
+      "url": "https://www.pjrc.com/teensy/card11a_rev4_web.pdf",
+      "sha256": "d8e8f77658a43eddd3254fcf7c248e200f8a83a398b990382ee1f71f500debf0"
+    },
+    {
+      "id": "teensy41-card11b",
+      "title": "Teensy 4.1 Pinout and Reference Card (Back)",
+      "publisher": "PJRC",
+      "revision": "Card 11b Rev 4",
+      "url": "https://www.pjrc.com/teensy/card11b_rev4_web.pdf",
+      "sha256": "9b258db98f6ef2a4afe21af4820fb599f1362adc1f600536955c3cd4f283c273"
+    },
+    {
+      "id": "teensy41-schematic",
+      "title": "Teensy 4.1 Schematic",
+      "publisher": "PJRC",
+      "revision": "Rev D",
+      "url": "https://www.pjrc.com/teensy/schematic41.png",
+      "sha256": "8c5d04dad66906ca9ff4de95a6db3102620eef971f92c7598dc5f522a701c132"
     },
     {
       "id": "arduino-uno-r4-minima-pinout",
@@ -993,6 +1017,15 @@
       "functionAssignments": 175,
       "physicalSourceMethods": [
         "pdf-table",
+        "visual-diagram"
+      ]
+    },
+    {
+      "id": "teensy-41",
+      "physicalPins": 67,
+      "functionAssignments": 170,
+      "physicalSourceMethods": [
+        "schematic",
         "visual-diagram"
       ]
     },
