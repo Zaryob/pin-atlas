@@ -57,6 +57,8 @@ python3 scripts/verify-official-sources.py
 
 Bu komut on altı kilitli kaynağı (on üç üretici belgesi ve açıkça işaretlenmiş üç Blue Pill topluluk referansı) indirir, SHA-256 değerlerini kontrol eder, PDF ve kaynak tablolarını yeniden okur ve yayımlanan veriyle karşılaştırır. Kaynaklar `.cache/primary-sources/` altında tutulur; PDF’ler depoda dağıtılmaz. Bir hash veya pin kaydı değişirse kontrol başarısız olur.
 
+GitHub Actions, ST CDN’i yayın sunucularında zaman aşımına düşebildiği için `python3 scripts/verify-official-sources.py --table-snapshots` komutunu kullanır. Bu mod ST PDF’lerinden çıkarılıp `sources/extracted/` altında kaydedilen ham tablo hücrelerini kullanır. Kayıtların ve özgün PDF’lerin hash’leri manifestte kilitlidir. Bütün pin ve işlevler yine yeniden üretilip karşılaştırılır; diğer on dört kaynak indirilir. Yukarıdaki varsayılan komut doğrudan özgün ST PDF’lerini kontrol eder.
+
 Şekil olarak yayımlanan ve metin hücresi içermeyen fiziksel pinler, `sources/manual-observations.json` içindeki açıkça işaretlenmiş görsel gözlemlerle kontrol edilir. Bu bölüm otomatik OCR veya bağımsız donanım ölçümü olarak sunulmaz. RP2350 Release 8 içindeki IOVDD tablo/şekil tutarsızlığı da aynı kayıtta gerekçelendirilir. Tam yöntem [doğrulama kaydında](docs/VERIFICATION.tr.md).
 
 Kaynak incelemesinden sonra bilinçli bir güncelleme yapmak için:

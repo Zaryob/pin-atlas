@@ -1,5 +1,5 @@
 """STM32F103C8/CB package facts and the community Blue Pill reference layout."""
-import copy,re
+import copy,re,json,hashlib
 from html.parser import HTMLParser
 import pdfplumber
 
@@ -25,7 +25,29 @@ class BoardTables(HTMLParser):
             self.row=None
         if tag=='table' and self.table is not None:self.tables[self.heading]=self.table;self.table=None
 
-def build_stm32(cache,docs,observations,ref,verified_on):
+def verify_snapshot(doc,root):
+    spec=doc['tableSnapshot'];path=root/spec['file']
+    raw=path.read_bytes()
+    assert hashlib.sha256(raw).hexdigest()==spec['sha256'], 'ST table snapshot hash mismatch'
+    data=json.loads(raw)
+    assert data['schema']==1 and data['document']==doc['id']
+    assert data['sourceSha256']==doc['sha256'], 'ST table snapshot references a different PDF'
+    return data
+
+class SnapshotPage:
+    def __init__(self,data):self.data=data
+    def extract_tables(self):return self.data['tables']
+    def extract_text(self):return ' '.join(self.data.get('tokens',[]))
+
+class SnapshotDocument:
+    def __init__(self,data):self.pages={int(number)-1:SnapshotPage(page) for number,page in data['pages'].items()}
+    def __enter__(self):return self
+    def __exit__(self,*args):return False
+
+def build_stm32(cache,docs,observations,ref,verified_on,use_snapshots=False):
+    def open_source(id):
+        if use_snapshots:return SnapshotDocument(verify_snapshot(docs[id],cache.parents[1]))
+        return pdfplumber.open(cache/docs[id]['file'])
     compact=lambda value:re.sub(r'\s+','',re.sub(r'\(\d+\)','',value or ''))
     configs={}
     # Only remap columns supported on the 48-pin medium-density part are used.
@@ -39,7 +61,7 @@ def build_stm32(cache,docs,observations,ref,verified_on):
            (181,0,54,'USART1_REMAP',['0','1'],[1,2]),
            (181,1,55,'I2C1_REMAP',['0','1'],[1,2]),
            (181,2,56,'SPI1_REMAP',['0','1'],[1,2])]
-    with pdfplumber.open(cache/docs['stm32-rm0008']['file']) as rm:
+    with open_source('stm32-rm0008') as rm:
         for page,index,table_no,field,values,columns in specs:
             table=rm.pages[page-1].extract_tables()[index]
             assert field in compact(''.join(c or '' for c in table[0]))
@@ -77,7 +99,7 @@ def build_stm32(cache,docs,observations,ref,verified_on):
         if signal in ('PD0','PD1'):return 'GPIO'
         return 'SYSTEM'
     pins=[]
-    with pdfplumber.open(cache/docs['stm32f103']['file']) as ds:
+    with open_source('stm32f103') as ds:
         for page in range(28,34):
             table=ds.pages[page-1].extract_tables()[0]
             assert len(table[0])==13 and '84PFQL' in compact(table[1][2])

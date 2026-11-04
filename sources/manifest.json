@@ -102,7 +102,11 @@
       "downloadUrls": [
         "https://www.st.com.cn/resource/en/datasheet/stm32f103c8.pdf",
         "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf"
-      ]
+      ],
+      "tableSnapshot": {
+        "file": "sources/extracted/stm32f103.json",
+        "sha256": "5d95a98fc77bcbae850073d07a8e09572a518f4f9968d5bdf3546c3689097fe0"
+      }
     },
     {
       "id": "stm32-rm0008",
@@ -115,7 +119,11 @@
       "downloadUrls": [
         "https://www.st.com.cn/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf",
         "https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf"
-      ]
+      ],
+      "tableSnapshot": {
+        "file": "sources/extracted/stm32-rm0008.json",
+        "sha256": "eb10936066126b4ca8587d4ab4d4ca81a785f2d172b43235ed0f0994e020f63d"
+      }
     },
     {
       "id": "bluepill-board",

@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """Rebuild/check pin facts against hash-locked manufacturer documents.
 
-Tables are extracted afresh with pdfplumber. Outline-only diagrams are represented
-by explicitly recorded visual observations, never by silent OCR assumptions.
+Tables are extracted afresh with pdfplumber, or from hash-locked raw ST table
+snapshots when requested. Outline-only diagrams use recorded visual observations.
 """
 import argparse,copy,csv,hashlib,io,json,re,subprocess,sys
 from pathlib import Path
 try:
     import pdfplumber
-    from stm32_sources import build_stm32
+    from stm32_sources import build_stm32,verify_snapshot
 except ImportError:
     sys.exit('Install source verification dependencies: python3 -m pip install -r requirements-source-verification.txt')
 ROOT=Path(__file__).resolve().parents[1]
@@ -25,9 +25,12 @@ def ref(key,doc,page,locator,method='pdf-table'):
     REFS[key]=entry
     return key
 
-def acquire():
+def acquire(use_snapshots=False):
     CACHE.mkdir(parents=True,exist_ok=True)
     for doc in DOCS.values():
+        if use_snapshots and doc.get('tableSnapshot'):
+            verify_snapshot(doc,ROOT)
+            continue
         path=CACHE/doc['file']
         if not path.exists():
             temporary=path.with_suffix(path.suffix+'.download')
@@ -295,7 +298,7 @@ def jetson_orin_nano():
         pins.append(pin)
     return {'id':'jetson-orin-nano','name':'NVIDIA Jetson Orin Nano','shortName':'Jetson Orin Nano','family':'NVIDIA Jetson','subtitle':'J12 · P3768 carrier · 40-pin expansion header','layout':'header','packagePins':40,'gpioCount':28,'voltage':'3.3 V I/O','mcu':'Tegra234','processor':'Jetson Orin Nano','verifiedOn':MANIFEST['verifiedOn'],'scopeKey':'jetsonScope','compatibleKey':'jetsonCompatible','headerLabel':'J12','source':DOCS[doc]['url']+'#page=25','datasheet':DOCS[doc]['url'],'searchTerms':'Jetson Orin Nano NVIDIA P3768 J12 Tegra234','pins':pins}
 
-def build():
+def build(use_snapshots=False):
     bank0,packages=rp_tables()
     board_base={'family':'Raspberry Pi','voltage':'3.3 V I/O','verifiedOn':MANIFEST['verifiedOn']}
     boards=[{**board_base,'id':'pico2w','name':'Raspberry Pi Pico 2 W','shortName':'Pico 2 W','subtitle':'RP2350A · 40-pin geliştirme kartı','layout':'pico','packagePins':40,'gpioCount':26,'mcu':'RP2350A','processor':'Cortex-M33 / Hazard3','clock':'150 MHz','wireless':True,'source':DOCS['pico2w-pinout']['url'],'datasheet':DOCS['pico2w']['url'],'pins':pico(bank0)},
@@ -310,14 +313,14 @@ def build():
         if pin.get('reserved'):pin['note']='Reserved for HAT identification EEPROM.'
     boards.append({**board_base,'id':'raspberry-pi-40','name':'Raspberry Pi · 40-pin GPIO','shortName':'40-pin GPIO (common)','subtitle':'Common physical layout · model-specific alternate functions excluded','layout':'header','scopeKey':'commonHeaderScope','packagePins':40,'gpioCount':28,'reservedGPIOCount':2,'mcu':'Common GPIO','source':DOCS['pi-gpio']['viewUrl'],'datasheet':DOCS['pi-gpio']['viewUrl'],'searchTerms':'Pi B+ A+ Pi 2 Pi 3 Pi 4 Pi 5 Zero Zero W Zero 2 W 400 500','pins':common_pins})
     boards.append(jetson_orin_nano())
-    boards.extend(build_stm32(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn']))
+    boards.extend(build_stm32(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn'],use_snapshots))
     for total,chip in [(60,'rp2350a'),(80,'rp2350b')]:
         boards.append({**board_base,'id':chip,'name':chip.upper(),'family':'Raspberry Pi','subtitle':f'QFN-{total} · RP2350 · Release 8','layout':'qfn','packagePins':total,'gpioCount':30 if total==60 else 48,'voltage':'1.8–3.3 V I/O','mcu':chip.upper(),'processor':'Cortex-M33 / Hazard3','clock':'150 MHz','source':DOCS['rp2350']['url']+f'#page={16 if total==60 else 17}','datasheet':DOCS['rp2350']['url'],'pins':[packages[total][n] for n in sorted(packages[total])]})
     return boards
 
 def outputs(boards):
     physical=sum(len(b['pins']) for b in boards);functions=sum(len(p['functions']) for b in boards for p in b['pins'])
-    report={'verifiedOn':MANIFEST['verifiedOn'],'physicalPins':physical,'functionAssignments':functions,'documents':[{k:v for k,v in d.items() if k!='file'} for d in DOCS.values()], 'boards':[{'id':b['id'],'physicalPins':len(b['pins']),'functionAssignments':sum(len(p['functions']) for p in b['pins']),'physicalSourceMethods':sorted({REFS[r]['method'] for p in b['pins'] for r in p['evidence']})} for b in boards], 'qualifications':['Figure-only Pico physical labels were visually checked; they are not machine-readable PDF table cells.','The QFN-60 IOVDD discrepancy in RP2350 Release 8 Table 1679 is resolved using Figures 2 and 152.','The common Raspberry Pi 40-pin profile contains physical connections only; Pi 4 BCM2711 alternate functions remain in a separate model-specific profile. Pins 27/28 are reserved for the HAT EEPROM.', 'Pico and Pico W use independently extracted RP2040 functions, not RP2350 selectors. Pico 2 and Pico 2 W use RP2350A functions.', 'Blue Pill board positions use a community reference, not ST manufacturer board documentation. STM32 chip pins and function/remap conditions use ST DS5319 and RM0008. H1/H2/SWD connector labels differ from MCU package pin numbers; clone wiring may differ.', 'Jetson Orin Nano uses NVIDIA P3768 carrier J12 names from Figure 3-1 and Table 3-3; peripheral names are carrier signals, not Linux bus numbers. Table spellings SPI1_CSI1*/CSI0* are resolved using the figure and CS1_N/CS0_N SoC names. Listed capabilities require appropriate pinmux/Jetson-IO configuration and do not assert an active runtime configuration.']}
+    report={'verifiedOn':MANIFEST['verifiedOn'],'physicalPins':physical,'functionAssignments':functions,'documents':[{k:v for k,v in d.items() if k!='file'} for d in DOCS.values()], 'boards':[{'id':b['id'],'physicalPins':len(b['pins']),'functionAssignments':sum(len(p['functions']) for p in b['pins']),'physicalSourceMethods':sorted({REFS[r]['method'] for p in b['pins'] for r in p['evidence']})} for b in boards], 'qualifications':['Figure-only Pico physical labels were visually checked; they are not machine-readable PDF table cells.','The QFN-60 IOVDD discrepancy in RP2350 Release 8 Table 1679 is resolved using Figures 2 and 152.','The common Raspberry Pi 40-pin profile contains physical connections only; Pi 4 BCM2711 alternate functions remain in a separate model-specific profile. Pins 27/28 are reserved for the HAT EEPROM.', 'Pico and Pico W use independently extracted RP2040 functions, not RP2350 selectors. Pico 2 and Pico 2 W use RP2350A functions.', 'ST table snapshots record raw PDF table cells from the locked document hashes; CI can regenerate pin data from those snapshots when the ST CDN is unavailable. Default verification rereads the original ST PDFs.', 'Blue Pill board positions use a community reference, not ST manufacturer board documentation. STM32 chip pins and function/remap conditions use ST DS5319 and RM0008. H1/H2/SWD connector labels differ from MCU package pin numbers; clone wiring may differ.', 'Jetson Orin Nano uses NVIDIA P3768 carrier J12 names from Figure 3-1 and Table 3-3; peripheral names are carrier signals, not Linux bus numbers. Table spellings SPI1_CSI1*/CSI0* are resolved using the figure and CS1_N/CS0_N SoC names. Listed capabilities require appropriate pinmux/Jetson-IO configuration and do not assert an active runtime configuration.']}
     buf=io.StringIO();writer=csv.writer(buf,lineterminator='\n');writer.writerow(['board','physical_pin','pin_name','pin_type','function','selector','manufacturer_signal','physical_evidence','function_evidence'])
     for b in boards:
         for p in b['pins']:
@@ -326,8 +329,8 @@ def outputs(boards):
     return {'dist/data/boards.json':js(boards),'dist/data/evidence.json':js({'documents':MANIFEST['documents'],'references':REFS}),'dist/data/verification.json':js(report),'sources/pin-verification.csv':buf.getvalue()}
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--write',action='store_true');args=parser.parse_args()
-    acquire();boards=build();generated=outputs(boards)
+    parser=argparse.ArgumentParser();parser.add_argument('--write',action='store_true');parser.add_argument('--table-snapshots',action='store_true',help='Use recorded, hash-locked ST table extractions instead of downloading ST PDFs');args=parser.parse_args()
+    acquire(args.table_snapshots);boards=build(args.table_snapshots);generated=outputs(boards)
     for name,content in generated.items():
         p=ROOT/name
         if args.write:p.parent.mkdir(parents=True,exist_ok=True);p.write_text(content)

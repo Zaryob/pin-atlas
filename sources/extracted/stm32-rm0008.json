@@ -1,0 +1,632 @@
+{
+  "schema": 1,
+  "document": "stm32-rm0008",
+  "sourceSha256": "4c1b8ac2729cc1f45a4685eea9e91e6139e24e58804fba21e27201dfcc2ad149",
+  "pages": {
+    "175": {
+      "tables": [],
+      "tokens": [
+        "PD01_REMAP"
+      ]
+    },
+    "176": {
+      "tables": [
+        [
+          [
+            "Alternate function(1)",
+            "CAN_REMAP[1:0] =\n“00”",
+            "CAN_REMAP[1:0] =\n“10” (2)",
+            "CAN_REMAP[1:0] =\n“11”(3)"
+          ],
+          [
+            "CAN1_RX or CAN_RX",
+            "PA11",
+            "PB8",
+            "PD0"
+          ],
+          [
+            "CAN1_TX or CAN_RX",
+            "PA12",
+            "PB9",
+            "PD1"
+          ]
+        ],
+        [
+          [
+            "Alternate function",
+            "CAN2_REMAP = “0”",
+            "CAN2_REMAP = “1”"
+          ],
+          [
+            "CAN2_RX",
+            "PB12",
+            "PB5"
+          ],
+          [
+            "CAN2_TX",
+            "PB13",
+            "PB6"
+          ]
+        ],
+        [
+          [
+            "Alternate function",
+            "GPIO port"
+          ],
+          [
+            "JTMS / SWDIO",
+            "PA13"
+          ],
+          [
+            "JTCK / SWCLK",
+            "PA14"
+          ],
+          [
+            "JTDI",
+            "PA15"
+          ],
+          [
+            "JTDO / TRACESWO",
+            "PB3"
+          ],
+          [
+            "NJTRST",
+            "PB4"
+          ],
+          [
+            "TRACECK",
+            "PE2"
+          ],
+          [
+            "TRACED0",
+            "PE3"
+          ],
+          [
+            "TRACED1",
+            "PE4"
+          ],
+          [
+            "TRACED2",
+            "PE5"
+          ],
+          [
+            "TRACED3",
+            "PE6"
+          ]
+        ]
+      ],
+      "tokens": []
+    },
+    "177": {
+      "tables": [
+        [
+          [
+            "SWJ _CFG\n[2:0]",
+            "Available debug ports",
+            "SWJ I/O pin assigned",
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            "PA13 /\nJTMS/\nSWDIO",
+            "PA14 /\nJTCK/S\nWCLK",
+            "PA15 /\nJTDI",
+            "PB3 / JTDO/\nTRACE\nSWO",
+            "PB4/\nNJTRST"
+          ],
+          [
+            "000",
+            "Full SWJ (JTAG-DP + SW-DP)\n(Reset state)",
+            "X",
+            "X",
+            "X",
+            "X",
+            "X"
+          ],
+          [
+            "001",
+            "Full SWJ (JTAG-DP + SW-DP)\nbut without NJTRST",
+            "X",
+            "X",
+            "X",
+            "x",
+            "Free"
+          ],
+          [
+            "010",
+            "JTAG-DP Disabled and\nSW-DP Enabled",
+            "X",
+            "X",
+            "Free",
+            "Free(1)",
+            "Free"
+          ],
+          [
+            "100",
+            "JTAG-DP Disabled and\nSW-DP Disabled",
+            "Free",
+            "Free",
+            "Free",
+            "Free",
+            "Free"
+          ],
+          [
+            "Other",
+            "Forbidden",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-"
+          ]
+        ],
+        [
+          [
+            "Alternate function",
+            "ADC1_ETRGINJ_REMAP = 0",
+            "ADC1_ETRGINJ_REMAP = 1"
+          ],
+          [
+            "ADC1 external trigger\ninjected conversion",
+            "ADC1 external trigger injected\nconversion is connected to EXTI15",
+            "ADC1 external trigger injected\nconversion is connected to\nTIM8_CH4"
+          ]
+        ],
+        [
+          [
+            "Alternate function",
+            "ADC1_ETRGREG_REMAP = 0",
+            "ADC1_ETRGREG_REMAP = 1"
+          ],
+          [
+            "ADC1 external trigger\nregular conversion",
+            "ADC1 external trigger regular\nconversion is connected to EXTI11",
+            "ADC1 external trigger regular\nconversion is connected to\nTIM8_TRGO"
+          ]
+        ],
+        [
+          [
+            "Alternate function",
+            "ADC2_ETRGINJ_REMAP = 0",
+            "ADC2_ETRGINJ_REMAP = 1"
+          ],
+          [
+            "ADC2 external trigger\ninjected conversion",
+            "ADC2 external trigger injected\nconversion is connected to EXTI 15",
+            "ADC2 external trigger injected\nconversion is connected to\nTIM8_CH4"
+          ]
+        ]
+      ],
+      "tokens": []
+    },
+    "178": {
+      "tables": [
+        [
+          [
+            "Alternate function",
+            "ADC2_ETRGREG_REG = 0",
+            "ADC2_ETRGREG_REG = 1"
+          ],
+          [
+            "ADC2 external trigger regular\nconversion",
+            "ADC2 external trigger regular\nconversion is connected to\nEXTI11",
+            "ADC2 external trigger regular\nconversion is connected to\nTIM8_TRGO"
+          ]
+        ],
+        [
+          [
+            "Alternate function",
+            "TIM5CH4_IREMAP = 0",
+            "TIM5CH4_IREMAP = 1"
+          ],
+          [
+            "TIM5_CH4",
+            "TIM5 Channel4 is\nconnected to PA3",
+            "LSI internal clock is connected to TIM5_CH4\ninput for calibration purpose."
+          ]
+        ],
+        [
+          [
+            "Alternate function",
+            "TIM4_REMAP = 0",
+            "TIM4_REMAP = 1(1)"
+          ],
+          [
+            "TIM4_CH1",
+            "PB6",
+            "PD12"
+          ],
+          [
+            "TIM4_CH2",
+            "PB7",
+            "PD13"
+          ],
+          [
+            "TIM4_CH3",
+            "PB8",
+            "PD14"
+          ],
+          [
+            "TIM4_CH4",
+            "PB9",
+            "PD15"
+          ]
+        ],
+        [
+          [
+            "Alternate function",
+            "TIM3_REMAP[1:0] =\n“00” (no remap)",
+            "TIM3_REMAP[1:0] =\n“10” (partial remap)",
+            "TIM3_REMAP[1:0] =\n“11” (full remap) (1)"
+          ],
+          [
+            "TIM3_CH1",
+            "PA6",
+            "PB4",
+            "PC6"
+          ],
+          [
+            "TIM3_CH2",
+            "PA7",
+            "PB5",
+            "PC7"
+          ],
+          [
+            "TIM3_CH3",
+            "PB0",
+            null,
+            "PC8"
+          ],
+          [
+            "TIM3_CH4",
+            "PB1",
+            null,
+            "PC9"
+          ]
+        ]
+      ],
+      "tokens": []
+    },
+    "179": {
+      "tables": [
+        [
+          [
+            "Alternate\nfunction",
+            "TIM2_REMAP\n[1:0] = “00”\n(no remap)",
+            "TIM2_REMAP\n[1:0] = “01”\n(partial remap)",
+            "TIM2_REMAP\n[1:0] = “10”\n(partial remap)(1)",
+            "TIM2_REMAP\n[1:0] = “11”\n(full remap)(1)"
+          ],
+          [
+            "TIM2_CH1_ETR(2)",
+            "PA0",
+            "PA15",
+            "PA0",
+            "PA15"
+          ],
+          [
+            "TIM2_CH2",
+            "PA1",
+            "PB3",
+            "PA1",
+            "PB3"
+          ],
+          [
+            "TIM2_CH3",
+            "PA2",
+            null,
+            "PB10",
+            null
+          ],
+          [
+            "TIM2_CH4",
+            "PA3",
+            null,
+            "PB11",
+            null
+          ]
+        ],
+        [
+          [
+            "Alternate functions\nmapping",
+            "TIM1_REMAP[1:0] =\n“00” (no remap)",
+            "TIM1_REMAP[1:0] =\n“01” (partial remap)",
+            "TIM1_REMAP[1:0] =\n“11” (full remap)(1)"
+          ],
+          [
+            "TIM1_ETR",
+            "PA12",
+            null,
+            "PE7"
+          ],
+          [
+            "TIM1_CH1",
+            "PA8",
+            null,
+            "PE9"
+          ],
+          [
+            "TIM1_CH2",
+            "PA9",
+            null,
+            "PE11"
+          ],
+          [
+            "TIM1_CH3",
+            "PA10",
+            null,
+            "PE13"
+          ],
+          [
+            "TIM1_CH4",
+            "PA11",
+            null,
+            "PE14"
+          ],
+          [
+            "TIM1_BKIN",
+            "PB12(2)",
+            "PA6",
+            "PE15"
+          ],
+          [
+            "TIM1_CH1N",
+            "PB13",
+            "PA7",
+            "PE8"
+          ],
+          [
+            "TIM1_CH2N",
+            "PB14 2)",
+            "PB0",
+            "PE10"
+          ],
+          [
+            "TIM1_CH3N",
+            "PB15(2)",
+            "PB1",
+            "PE12"
+          ]
+        ],
+        [
+          [
+            "Alternate function",
+            "TIM9_REMAP = 0",
+            "TIM9_REMAP = 1"
+          ],
+          [
+            "TIM9_CH1",
+            "PA2",
+            "PE5"
+          ],
+          [
+            "TIM9_CH2",
+            "PA3",
+            "PE6"
+          ]
+        ],
+        [
+          [
+            "Alternate function",
+            "TIM10_REMAP = 0",
+            "TIM10_REMAP = 1"
+          ],
+          [
+            "TIM10_CH1",
+            "PB8",
+            "PF6"
+          ]
+        ]
+      ],
+      "tokens": []
+    },
+    "180": {
+      "tables": [
+        [
+          [
+            "Alternate function",
+            "TIM11_REMAP = 0",
+            "TIM11_REMAP = 1"
+          ],
+          [
+            "TIM11_CH1",
+            "PB9",
+            "PF7"
+          ]
+        ],
+        [
+          [
+            "Alternate function",
+            "TIM13_REMAP = 0",
+            "TIM13_REMAP = 1"
+          ],
+          [
+            "TIM13_CH1",
+            "PA6",
+            "PF8"
+          ]
+        ],
+        [
+          [
+            "Alternate function",
+            "TIM14_REMAP = 0",
+            "TIM14_REMAP = 1"
+          ],
+          [
+            "TIM14_CH1",
+            "PA7",
+            "PF9"
+          ]
+        ],
+        [
+          [
+            "Alternate function",
+            "USART3_REMAP[1:0]\n= “00” (no remap)",
+            "USART3_REMAP[1:0] =\n“01” (partial remap) (1)",
+            "USART3_REMAP[1:0]\n= “11” (full remap) (2)"
+          ],
+          [
+            "USART3_TX",
+            "PB10",
+            "PC10",
+            "PD8"
+          ],
+          [
+            "USART3_RX",
+            "PB11",
+            "PC11",
+            "PD9"
+          ],
+          [
+            "USART3_CK",
+            "PB12",
+            "PC12",
+            "PD10"
+          ],
+          [
+            "USART3_CTS",
+            "PB13",
+            null,
+            "PD11"
+          ],
+          [
+            "USART3_RTS",
+            "PB14",
+            null,
+            "PD12"
+          ]
+        ],
+        [
+          [
+            "Alternate functions",
+            "USART2_REMAP = 0",
+            "USART2_REMAP = 1(1)"
+          ],
+          [
+            "USART2_CTS",
+            "PA0",
+            "PD3"
+          ],
+          [
+            "USART2_RTS",
+            "PA1",
+            "PD4"
+          ],
+          [
+            "USART2_TX",
+            "PA2",
+            "PD5"
+          ],
+          [
+            "USART2_RX",
+            "PA3",
+            "PD6"
+          ],
+          [
+            "USART2_CK",
+            "PA4",
+            "PD7"
+          ]
+        ]
+      ],
+      "tokens": []
+    },
+    "181": {
+      "tables": [
+        [
+          [
+            "Alternate function",
+            "USART1_REMAP = 0",
+            "USART1_REMAP = 1"
+          ],
+          [
+            "USART1_TX",
+            "PA9",
+            "PB6"
+          ],
+          [
+            "USART1_RX",
+            "PA10",
+            "PB7"
+          ]
+        ],
+        [
+          [
+            "Alternate function",
+            "I2C1_REMAP = 0",
+            "I2C1_REMAP = 1(1)"
+          ],
+          [
+            "I2C1_SCL",
+            "PB6",
+            "PB8"
+          ],
+          [
+            "I2C1_SDA",
+            "PB7",
+            "PB9"
+          ]
+        ],
+        [
+          [
+            "Alternate function",
+            "SPI1_REMAP = 0",
+            "SPI1_REMAP = 1"
+          ],
+          [
+            "SPI1_NSS",
+            "PA4",
+            "PA15"
+          ],
+          [
+            "SPI1_SCK",
+            "PA5",
+            "PB3"
+          ],
+          [
+            "SPI1_MISO",
+            "PA6",
+            "PB4"
+          ],
+          [
+            "SPI1_MOSI",
+            "PA7",
+            "PB5"
+          ]
+        ],
+        [
+          [
+            "Alternate function",
+            "SPI3_REMAP = 0",
+            "SPI3_REMAP = 1"
+          ],
+          [
+            "SPI3_NSS / I2S3_WS",
+            "PA15",
+            "PA4"
+          ],
+          [
+            "SPI3_SCK / I2S3_CK",
+            "PB3",
+            "PC10"
+          ],
+          [
+            "SPI3_MISO",
+            "PB4",
+            "PC11"
+          ],
+          [
+            "SPI3_MOSI / I2S3_SD",
+            "PB5",
+            "PC12"
+          ]
+        ]
+      ],
+      "tokens": []
+    }
+  }
+}
