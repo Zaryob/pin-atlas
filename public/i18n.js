@@ -26,7 +26,6 @@
     "featurePlannerDesc": ["Pinlere özel fonksiyon ve proje etiketleri atayın, sinyal çakışmalarını engelleyin ve planınızı tek tıkla URL linki veya JSON ile paylaşın.", "Assign dedicated pin functions, add custom labels, avoid bus signal collisions, and share your wiring plan via URL or JSON."],
     "featureClientTitle": ["İki Dilli ve Sıfır Bağımlılık", "Bilingual & Zero Backend"],
     "featureClientDesc": ["Türkçe ve İngilizce tam yerelleştirme, tarayıcıda yerel saklama, sıfır izleyici ve tam veri gizliliği sunan statik mimari.", "Full Turkish and English localization, client-side browser storage, zero tracking, and complete privacy with a pure static architecture."],
-    "backToHome": ["← Ana Sayfa / Tüm Kartlar", "← Home / All Boards"],
     "openBoardWorkspace": ["Çalışma Alanını Aç →", "Open Workspace →"],
     "allFamilies": ["Tümü", "All"],
     "familyChips": ["Mikrodenetleyici Kılıfları (IC)", "Microcontroller Packages (IC)"],

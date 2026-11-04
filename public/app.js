@@ -1270,11 +1270,6 @@ $('#home-breadcrumb-link')?.addEventListener('click', e => {
   location.hash = '#home';
   showHomeView();
 });
-$$('.back-to-home-btn').forEach(btn => btn.addEventListener('click', e => {
-  e.preventDefault();
-  location.hash = '#home';
-  showHomeView();
-}));
 $('#home-search')?.addEventListener('input', e => {
   homeSearchQuery = e.target.value.toLowerCase().trim();
   renderHomeCatalog();
