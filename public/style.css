@@ -562,14 +562,15 @@
   opacity: 1;
 }
 .pin-group.net-contact .pin-hit {
-  fill: var(--selection);
   stroke: var(--accent);
-  stroke-width: 1;
+  stroke-width: 1.5;
 }
 .pin-group.net-contact .pin-node {
-  fill: var(--accent);
-  stroke: var(--paper);
+  stroke: var(--accent);
   stroke-width: 2;
+}
+.nucleo-board-map .pin-group.selected .pin-node {
+  fill: var(--accent);
 }
 .pin-group.net-contact.selected .pin-hit,
 .pin-group.net-contact:focus-visible .pin-hit {
@@ -580,7 +581,7 @@
   fill: var(--ink);
   font: 500 10px var(--mono);
 }
-.pin-group.net-contact .connector-pin-number {
+.pin-group.selected .connector-pin-number {
   fill: var(--paper);
 }
 .pin-group .connector-signal {
@@ -626,8 +627,66 @@
 .mcu-package-map .pin-group {
   cursor: default;
 }
+.mcu-package-map [data-mcu-pin] {
+  cursor: pointer;
+}
+.mcu-package-map [data-mcu-pin]:focus-visible .pin-hit {
+  stroke: var(--accent);
+  stroke-width: 3;
+}
+.connector-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 12px;
+}
+.connector-tools select {
+  min-height: 40px;
+  padding: 4px 8px;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--control-border);
+}
+.connector-tools:not([hidden]) + .orientation {
+  position: static;
+  margin: 10px 16px 0;
+}
+.connector-tools:not([hidden]) ~ #diagram {
+  padding-top: 8px;
+}
+.connector-tools .connector-bridge-note {
+  flex-basis: 100%;
+  margin: 0;
+}
+.mcu-package-map .connector-bridge-note {
+  color: var(--muted);
+}
+.nucleo-board-map.connector-zoom > svg {
+  width: min(100%, 590px);
+  margin-inline: auto;
+}
 @media (min-width: 1450px) {
   #diagram.board-with-package {
     grid-template-columns: minmax(760px, 2fr) minmax(290px, 1fr);
   }
+  .map-content:has(.mcu-package-map) #connector-bridge-note { display: none; }
+}
+@media (max-width: 970px) {
+  .mobile-workbar:has(#mobile-mcu:not([hidden])) { flex-wrap: wrap; }
+  #mobile-mcu {
+    flex: 1 0 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 11px;
+    color: var(--accent);
+  }
+  #mobile-mcu button { flex: 0 0 auto; }
+  body:has(#mobile-mcu:not([hidden])) .shell { padding-bottom: 128px; }
+  body:has(#mobile-mcu:not([hidden])) #toast { bottom: 132px; }
 }

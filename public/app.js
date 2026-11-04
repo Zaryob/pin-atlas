@@ -47,6 +47,8 @@ let boards, layouts, layout, board, selected = 1, selectedFn, filters = new Set(
 const storageKey = 'pin-atlas:plans:v1';
 const rememberedProfiles = new Map();
 let compatibilityModels = [], compatibilityQuery = '';
+const connectorGroups = { arduino: ['CN5', 'CN6', 'CN8', 'CN9'], cn7: ['CN7'], cn10: ['CN10'] };
+let connectorZoom = '';
 const layoutTitle = item => item.nameKey ? t(item.nameKey) : item.name;
 const layoutSubtitle = item => item.subtitleKey ? t(item.subtitleKey) : subtitle(item);
 function readSavedPlans(fallback = {}) {
@@ -69,6 +71,7 @@ function persist() {
  }
 }
 function pinByNumber(n) { return board.pins.find(p => p.number === Number(n)); }
+function inConnectorZoom(pin) { return !connectorZoom || connectorGroups[connectorZoom].includes(pin.connector); }
 function matches(pin) { const text = [pin.number, pin.name, pin.physicalLabel, pin.boardLabel, pin.mcuPort, pin.arduinoPin !== undefined ? `D${pin.arduinoPin}` : '', ...pin.functions.flatMap(f => [f.name,f.signal]), assignments[pin.number]?.label].join(' ').toLowerCase(); return text.includes(search.toLowerCase().trim()) && (!filters.size || pin.functions.some(f => filters.has(f.group))); }
 function setBoard(id, initial = false, preferredProfile) {
  const next = resolveProfile(layouts, id, preferredProfile);
@@ -81,7 +84,7 @@ function setBoard(id, initial = false, preferredProfile) {
    assignments = validatePlan(savedPlans[board.id] || {}, board, t, { allowDuplicateSignals: true, ignoreLegacyHseAssignments: true });
  } catch { assignments = {}; }
  selectedFn = assignments[selected]?.function || options(pinByNumber(selected))[0].name;
- if (!sameLayout) { filters = new Set(); search = ''; $('#pin-search').value = ''; flipped = rotated = false; compatibilityQuery=''; $('#compatible-boards').open=false; }
+ if (!sameLayout) { filters = new Set(); search = ''; $('#pin-search').value = ''; flipped = rotated = false; connectorZoom = ''; compatibilityQuery=''; $('#compatible-boards').open=false; }
  const available = new Set(board.pins.flatMap(pin => pin.functions.map(fn => fn.group)));
  filters = new Set([...filters].filter(group => available.has(group)));
  renderBoard();
@@ -174,6 +177,7 @@ function renderFilters() {
 }
 function choosePin(number, reveal = true) {
  selected = Number(number); const p = pinByNumber(selected);
+ if (!inConnectorZoom(p)) connectorZoom = '';
  selectedFn = assignments[selected]?.function || options(p)[0].name;
  renderMap(); renderDetail();
  if (reveal) showDetails('pin');
@@ -201,7 +205,10 @@ function pinGroup(pin, x, y, side, opts = {}) {
    body=`<rect class="pin-hit" x="${-w/2}" y="-17" width="${w}" height="54" rx="4" fill="var(--surface)" stroke="var(--line)"/><circle class="pin-node" cy="-7" r="4.4" stroke="${color}" stroke-width="1.3"/><text class="pad-number" y="13" text-anchor="middle">${esc(pin.connectorPin)}</text><text class="pad-label" y="28" fill="${color}" text-anchor="middle">${esc(pin.name)}</text>`;
  }
  if (opts.preview) {
-   return `<g class="pin-group ${active ? 'selected package-pad' : ''}" transform="translate(${x} ${y})${opts.angle ? ` rotate(${opts.angle})` : ''}">${body}</g>`;
+   const action = opts.contacts?.length
+     ? `data-mcu-pin="${pin.number}" role="button" tabindex="${opts.tabStop ? '0' : '-1'}" aria-label="${esc(t('selectMcuPad', {pin: pin.number, name: pin.name, contacts: opts.contacts.map(physicalLabel).join(', ')}))}"${active ? ' aria-current="true"' : ''}`
+     : 'aria-hidden="true"';
+   return `<g class="pin-group ${active ? 'selected package-pad' : ''}" ${action} transform="translate(${x} ${y})${opts.angle ? ` rotate(${opts.angle})` : ''}">${body}</g>`;
  }
  return `<g class="pin-group ${opts.connected ? 'net-contact' : ''} ${active ? 'selected' : ''} ${match ? '' : 'dimmed'} ${assigned ? 'assigned' : ''}" data-pin="${pin.number}" role="button" tabindex="0" aria-label="${esc(t('selectPin', { pin: physicalLabel(pin), name: label !== pin.name && opts.showConnectorLabel ? `${label} · ${pin.name}` : pin.name }))}${func && !opts.connector ? ', '+esc(func) : ''}"${active ? ' aria-current="true"' : ''} transform="translate(${x} ${y})${opts.angle ? ` rotate(${opts.angle})` : ''}"><title>Pin ${esc(pin.physicalLabel || pin.number)} · ${esc(pin.name)}${func ? ' · '+esc(func) : ''}</title><g aria-hidden="true">${body}</g></g>`;
 }
@@ -242,8 +249,9 @@ function renderDip() {
  }
  return `<svg role="group" viewBox="0 0 800 ${h}" aria-label="${esc(t('diagramLabel',{board:board.name}))}"><g class="board-art" transform="${flipped?'translate(800 0) scale(-1 1)':''}"><g transform="${rotated?`rotate(180 400 ${h/2})`:''}"><rect x="312" y="48" width="176" height="${h-96}" rx="7" fill="#34433a" stroke="#7f9175"/><path d="M382 48a18 18 0 0 0 36 0" fill="var(--paper)" stroke="#7f9175"/><circle cx="327" cy="79" r="5" fill="#a9b796"/><text x="400" y="${h/2-10}" text-anchor="middle" fill="#dce6d0" font-size="19">${esc(board.mcu)}</text><text x="400" y="${h/2+20}" text-anchor="middle" fill="#9db08f" font-size="13">${esc(board.packageName)}</text></g></g>${pins}</svg>`;
 }
-function renderQfn(profile = board, activePin = selected) {
+function renderQfn(profile = board, activePin = selected, contactsByPad = new Map()) {
  const preview = profile !== board;
+ const tabPad = contactsByPad.has(activePin) ? activePin : profile.pins.find(pin => contactsByPad.has(pin.number))?.number;
  const n=profile.packagePins/4,size=profile.packagePins>=100?1056:800,c=size/2,end=size-220,span=size-464,pitch=span/(n-1),body=size-434;
  const packageName=profile.packageName || `${profile.layout==='lqfp'?'LQFP':'QFN'}-${profile.packagePins}`;
  let pins='';
@@ -255,9 +263,9 @@ function renderQfn(profile = board, activePin = selected) {
    if(sideIndex===3)pos={x:size-232-i*pitch,y:220,side:'left',angle:90};
    if(!preview && rotated){pos.x=size-pos.x;pos.y=size-pos.y;pos.side=pos.side==='left'?'right':'left';}
    if(!preview && flipped){pos.x=size-pos.x;if(!pos.angle)pos.side=pos.side==='left'?'right':'left';}
-   pins+=pinGroup(pin,pos.x,pos.y,pos.side,{angle:pos.angle,preview,activePin});
+   pins+=pinGroup(pin,pos.x,pos.y,pos.side,{angle:pos.angle,preview,activePin,contacts:contactsByPad.get(pin.number),tabStop:pin.number===tabPad});
  }
- return `<svg role="${preview ? 'img' : 'group'}" viewBox="0 0 ${size} ${size}" ${size>800?'style="min-width:1000px;max-height:none"':''} aria-label="${esc(t('diagramLabel',{board:`${profile.mcu} ${packageName}`}))}"><g class="board-art" transform="${!preview && flipped?`translate(${size} 0) scale(-1 1)`:''}"><g transform="${!preview && rotated?`rotate(180 ${c} ${c})`:''}"><rect x="217" y="217" width="${body}" height="${body}" rx="9" fill="#34433a" stroke="#26352b" stroke-width="3"/><rect x="231" y="231" width="${body-28}" height="${body-28}" rx="5" fill="none" stroke="#7f9175" stroke-width=".6"/><circle cx="246" cy="247" r="6" fill="#a9b796"/>${profile.layout==='qfn'?`<rect x="${c-97}" y="${c-97}" width="194" height="194" rx="5" fill="#3b4d40" stroke="#637a58" stroke-dasharray="4 5"/>`:''}<text x="${c}" y="${c-23}" text-anchor="middle" fill="#dce6d0" font-size="${profile.layout==='lqfp'?21:29}">${esc(profile.mcu)}</text><text x="${c}" y="${c+6}" text-anchor="middle" fill="#9db08f" font-size="12" letter-spacing="3">${esc(packageName)}</text>${profile.layout==='qfn'?`<text x="${c}" y="${c+43}" text-anchor="middle" fill="#819975" font-size="9">EP · GND</text>`:''}<text x="${c}" y="${size-268}" text-anchor="middle" fill="#839b76" font-size="8" letter-spacing="3">${esc(profile.family.toUpperCase())}</text></g></g>${pins}</svg>`;
+ return `<svg role="group" viewBox="0 0 ${size} ${size}" ${size>800?'style="min-width:1000px;max-height:none"':''} aria-label="${esc(t('diagramLabel',{board:`${profile.mcu} ${packageName}`}))}"><g class="board-art" transform="${!preview && flipped?`translate(${size} 0) scale(-1 1)`:''}"><g transform="${!preview && rotated?`rotate(180 ${c} ${c})`:''}"><rect x="217" y="217" width="${body}" height="${body}" rx="9" fill="#34433a" stroke="#26352b" stroke-width="3"/><rect x="231" y="231" width="${body-28}" height="${body-28}" rx="5" fill="none" stroke="#7f9175" stroke-width=".6"/><circle cx="246" cy="247" r="6" fill="#a9b796"/>${profile.layout==='qfn'?`<rect x="${c-97}" y="${c-97}" width="194" height="194" rx="5" fill="#3b4d40" stroke="#637a58" stroke-dasharray="4 5"/>`:''}<text x="${c}" y="${c-23}" text-anchor="middle" fill="#dce6d0" font-size="${profile.layout==='lqfp'?21:29}">${esc(profile.mcu)}</text><text x="${c}" y="${c+6}" text-anchor="middle" fill="#9db08f" font-size="12" letter-spacing="3">${esc(packageName)}</text>${profile.layout==='qfn'?`<text x="${c}" y="${c+43}" text-anchor="middle" fill="#819975" font-size="9">EP · GND</text>`:''}<text x="${c}" y="${size-268}" text-anchor="middle" fill="#839b76" font-size="8" letter-spacing="3">${esc(profile.family.toUpperCase())}</text></g></g>${pins}</svg>`;
 }
 function renderCustom() {
  const {width,height,artwork} = board.diagram;
@@ -266,16 +274,35 @@ function renderCustom() {
  const selectedPin = pinByNumber(selected);
  const connected = new Set(selectedPin?.sharedWith || []);
  if (connected.size) connected.add(selectedPin.physicalLabel);
- const pins = board.pins.map(pin => {
+ const contacts = board.pins.filter(inConnectorZoom).map(pin => {
    let {x,y,side,angle=0,compact=false,padWidth=62} = pin.position;
    if(rotated){ x=width-x;y=height-y;side=side==='left'?'right':'left'; }
    if(flipped){x=width-x;if(!angle)side=side==='left'?'right':'left';}
-   return pinGroup(pin,x,y,side,{angle,compact,padWidth,showConnectorLabel,connector:showConnectorLabel,connected:connected.has(pin.physicalLabel)});
- }).join('');
- return `<svg role="group" viewBox="0 0 ${width} ${height}" ${board.diagram.minWidth ? `style="min-width:${board.diagram.minWidth}px;max-height:none"` : ''} aria-label="${esc(t('diagramLabel', { board: layoutTitle(layout) }))}"><g transform="${flipped?`translate(${width} 0) scale(-1 1)`:''}"><g transform="${rotated?`rotate(180 ${width/2} ${height/2})`:''}">${image}</g></g>${pins}</svg>`;
+   return {pin,x,y,side,angle,compact,padWidth};
+ });
+ const pins = contacts.map(({pin,x,y,side,angle,compact,padWidth}) =>
+   pinGroup(pin,x,y,side,{angle,compact,padWidth,showConnectorLabel,connector:showConnectorLabel,connected:connected.has(pin.physicalLabel)})
+ ).join('');
+ let viewBox = [0, 0, width, height];
+ if (connectorZoom) {
+   const left = Math.max(0, Math.min(...contacts.map(({x,side}) => x - (side === 'left' ? 122 : 22))));
+   const right = Math.min(width, Math.max(...contacts.map(({x,side}) => x + (side === 'right' ? 122 : 22))));
+   const top = Math.max(0, Math.min(...contacts.map(({y}) => y)) - 38);
+   const bottom = Math.min(height, Math.max(...contacts.map(({y}) => y)) + 24);
+   viewBox = [left, top, right - left, bottom - top];
+ }
+ const minWidth = connectorZoom ? (connectorZoom === 'arduino' ? 540 : 340) : board.diagram.minWidth;
+ return `<svg role="group" viewBox="${viewBox.join(' ')}" ${minWidth ? `style="min-width:${minWidth}px;max-height:none"` : ''} aria-label="${esc(t('diagramLabel', { board: layoutTitle(layout) }))}"><g transform="${flipped?`translate(${width} 0) scale(-1 1)`:''}"><g transform="${rotated?`rotate(180 ${width/2} ${height/2})`:''}">${image}</g></g>${pins}</svg>`;
 }
 const renderers = {pico:renderPico,qfn:renderQfn,lqfp:renderQfn,dip:renderDip,header:renderHeader,custom:renderCustom};
 function renderMap() {
+ const nucleo = board.id.startsWith('nucleo-');
+ const pin = pinByNumber(selected);
+ $('#connector-tools').hidden = !nucleo;
+ $('#connector-zoom').value = connectorZoom;
+ const bridgeNote = $('#connector-bridge-note');
+ bridgeNote.hidden = !nucleo || !pin.boardCircuitKey;
+ bridgeNote.textContent = bridgeNote.hidden ? '' : `${physicalLabel(pin)} · ${t('bridgeNote')} · ${t(pin.boardCircuitKey)}`;
  $('#flip-button').setAttribute('aria-pressed',flipped); $('#rotate-button').setAttribute('aria-pressed',rotated);
  $('.desktop-hint').textContent=t(board.diagram?.minWidth || board.packagePins>=100 ? 'panPin' : 'clickPin');
  $('#orientation').innerHTML = `${t(flipped ? 'bottomView' : 'topView')} <span>${board.layout==='pico' || board.orientation?.startsWith('usb') ? `USB ${board.orientation==='usb-bottom' ? (rotated?'↑':'↓') : (rotated?'↓':'↑')}` : rotated ? '180°' : '0°'}</span>`;
@@ -286,25 +313,38 @@ function renderMap() {
  const oldScroll = diagram.scrollLeft;
  const drawing = renderers[board.layout]();
  const mcu = boards.find(profile => profile.id === board.mcuProfile);
+ const pad = mcu?.pins.find(candidate => candidate.number === pin.mcuPin);
+ $('#mobile-mcu').hidden = !mcu;
+ $('#open-mcu').hidden = !pad;
+ const contact = pin.boardLabel || physicalLabel(pin);
+ $('#mobile-mcu-label').textContent = pad ? `${contact} · ${pad.name} · ${t('mcuPin', {pin: pad.number})}` : `${contact} · ${t('noMcuPadShort')}`;
  diagram.classList.toggle('board-with-package', Boolean(mcu));
- if (mcu) {
-   const pin = pinByNumber(selected);
-   const pad = mcu.pins.find(candidate => candidate.number === pin.mcuPin);
-   const selection = pad ? `${physicalLabel(pin)} · ${t('mcuPin', {pin:pad.number})} · ${pad.name}` : t('noMcuPad');
-   diagram.innerHTML = `<div class="nucleo-board-map">${drawing}</div>
+ if (nucleo) {
+   const contactsByPad = new Map();
+   if (mcu) {
+     for (const contact of board.pins) {
+       if (!contact.mcuPin) continue;
+       if (!contactsByPad.has(contact.mcuPin)) contactsByPad.set(contact.mcuPin, []);
+       contactsByPad.get(contact.mcuPin).push(contact);
+     }
+   }
+   const selection = pad ? `${pad.name} · ${t('mcuPin', {pin:pad.number})} · ${contactsByPad.get(pad.number).map(physicalLabel).join(' / ')}` : t('noMcuPad');
+   diagram.innerHTML = `<div class="nucleo-board-map${connectorZoom ? ' connector-zoom' : ''}">${drawing}</div>${mcu ? `
      <section class="mcu-package-map" aria-label="${esc(mcu.name)}">
        <h3>${esc(mcu.name)} · ${esc(mcu.packageName || 'LQFP-' + mcu.packagePins)}</h3>
        <p aria-live="polite">${esc(selection)}</p>
-       ${renderQfn(mcu, pad?.number ?? 0)}
-     </section>`;
+       ${bridgeNote.hidden ? '' : `<p class="connector-bridge-note">${esc(bridgeNote.textContent)}</p>`}
+       ${renderQfn(mcu, pad?.number ?? 0, contactsByPad)}
+     </section>` : ''}`;
    const boardMap = $('.nucleo-board-map', diagram);
    if (oldBoardScroll !== undefined) boardMap.scrollLeft = oldBoardScroll;
  } else {
    diagram.innerHTML = drawing;
    if(innerWidth<=640) diagram.scrollLeft = oldScroll || (diagram.scrollWidth - diagram.clientWidth)/2;
  }
- const count=board.pins.filter(matches).length;
- $('#match-count').textContent = (search || filters.size) ? t('matchCount', { count, total: board.pins.length }) : '';
+ const visiblePins = board.pins.filter(inConnectorZoom);
+ const count=visiblePins.filter(matches).length;
+ $('#match-count').textContent = (search || filters.size || connectorZoom) ? t('matchCount', { count, total: visiblePins.length }) : '';
  $('#no-matches').hidden = count!==0;
  renderTable();
 }
@@ -389,6 +429,12 @@ $('#details-dialog').addEventListener('close', () => {
 });
 $('#open-pin').addEventListener('click', () => showDetails('pin'));
 $('#open-plan').addEventListener('click', () => showDetails('plan'));
+$('#open-mcu').addEventListener('click', () => {
+ setView('map');
+ const pad = $('.mcu-package-map [aria-current="true"]');
+ pad?.focus({preventScroll:true});
+ pad?.scrollIntoView({block:'center', inline:'nearest'});
+});
 function planEntry(pin, assignment) {
  const phys = pin ? physicalLabel(pin) : '';
  const name = pin?.name || '';
@@ -811,8 +857,39 @@ $('#reset-filters').addEventListener('click', () => {
 $('#pin-search').addEventListener('input',e=>{search=e.target.value;renderMap();renderDetailPreservingDraft();});
 $('#flip-button').addEventListener('click',()=>{flipped=!flipped;renderMap();});
 $('#rotate-button').addEventListener('click',()=>{rotated=!rotated;renderMap();});
-$('#reset-view').addEventListener('click',()=>{flipped=rotated=false;renderMap();});
+$('#reset-view').addEventListener('click',()=>{flipped=rotated=false;connectorZoom='';renderMap();});
+$('#connector-zoom').addEventListener('change', e => {
+ connectorZoom = e.target.value;
+ renderMap();
+ $('.nucleo-board-map').scrollLeft = 0;
+});
 $('#map-view').addEventListener('click',()=>setView('map'));$('#table-view').addEventListener('click',()=>setView('table'));
+function selectPackagePad(number) {
+ const contacts = board.pins.filter(pin => pin.mcuPin === Number(number));
+ const contact = contacts.find(pin => pin.number === selected && inConnectorZoom(pin))
+   || contacts.find(inConnectorZoom) || contacts[0];
+ if (!contact) return;
+ choosePin(contact.number, false);
+ $(`#diagram [data-mcu-pin="${number}"]`)?.focus({preventScroll:true});
+}
+$('#diagram').addEventListener('click', e => {
+ const pad = e.target.closest('[data-mcu-pin]');
+ if (pad) selectPackagePad(pad.dataset.mcuPin);
+});
+$('#diagram').addEventListener('keydown', e => {
+ const pad = e.target.closest('[data-mcu-pin]');
+ if (!pad) return;
+ const pads = $$('[data-mcu-pin]', $('#diagram'));
+ const index = pads.indexOf(pad);
+ const step = {ArrowRight:1, ArrowDown:1, ArrowLeft:-1, ArrowUp:-1}[e.key];
+ const target = step ? pads[(index+step+pads.length)%pads.length]
+   : e.key === 'Home' ? pads[0] : e.key === 'End' ? pads.at(-1)
+   : ['Enter',' '].includes(e.key) ? pad : null;
+ if (target) {
+   e.preventDefault();
+   selectPackagePad(target.dataset.mcuPin);
+ }
+});
 for(const element of [$('#diagram'),$('#table-content')]) {
  element.addEventListener('click',e=>{const p=e.target.closest('[data-pin]');if(p)choosePin(p.dataset.pin, element !== $('#diagram') || !board.mcuProfile);});
  element.addEventListener('keydown',e=>{const p=e.target.closest('[data-pin]');if(p&&p.tagName.toLowerCase()!=='button'&&['Enter',' '].includes(e.key)){e.preventDefault();choosePin(p.dataset.pin, element !== $('#diagram') || !board.mcuProfile); if(!$('#details-dialog').open) $(`[data-pin="${p.dataset.pin}"]`,element)?.focus();}});
