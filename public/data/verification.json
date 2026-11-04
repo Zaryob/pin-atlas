@@ -1,7 +1,7 @@
 {
   "verifiedOn": "2026-11-04",
-  "physicalPins": 2301,
-  "functionAssignments": 8372,
+  "physicalPins": 2363,
+  "functionAssignments": 8696,
   "documents": [
     {
       "id": "rp2350",
@@ -245,6 +245,31 @@
       "sha256": "80e42abe28b0b78a1b2f2ca683029861dcf7b5c2f85ac6211bf0d99cd2572f35"
     },
     {
+      "id": "arduino-nano-33-ble-sense-rev2-pinout",
+      "title": "Arduino Nano 33 BLE Sense Rev2 full pinout",
+      "publisher": "Arduino",
+      "revision": "2022-12-22",
+      "url": "https://docs.arduino.cc/resources/pinouts/ABX00069-full-pinout.pdf",
+      "sha256": "ef39158198f440c89aaba1412e56af93da83a4af3f44f30ba601b90d020ee879"
+    },
+    {
+      "id": "arduino-nano-33-ble-sense-rev2-schematic",
+      "title": "Arduino Nano 33 BLE Sense Rev2 schematic",
+      "publisher": "Arduino",
+      "revision": "Rev2",
+      "url": "https://docs.arduino.cc/resources/schematics/ABX00069-schematics.pdf",
+      "sha256": "83cdcd696e8f2855bf34fb5cbe004a37d73027e87203cd195f81ef5e72e66063"
+    },
+    {
+      "id": "arduino-nano-33-ble-sense-rev2-variant",
+      "title": "Arduino mbed core · variants/ARDUINO_NANO33BLE/variant.cpp",
+      "publisher": "Arduino",
+      "revision": "b4ad4e7218a691989acf6c4479112eae183a5a50",
+      "url": "https://raw.githubusercontent.com/arduino/ArduinoCore-mbed/b4ad4e7218a691989acf6c4479112eae183a5a50/variants/ARDUINO_NANO33BLE/variant.cpp",
+      "viewUrl": "https://github.com/arduino/ArduinoCore-mbed/blob/b4ad4e7218a691989acf6c4479112eae183a5a50/variants/ARDUINO_NANO33BLE/variant.cpp",
+      "sha256": "d9c7353428741a9b2e7148155570224e37f79004db70b64dd6a0d90721e8ae93"
+    },
+    {
       "id": "arduino-uno-r4-minima-pinout",
       "title": "Arduino uno-r4-minima full pinout",
       "publisher": "Arduino",
@@ -416,6 +441,32 @@
       "revision": "Snapshot reviewed 2026-11-04",
       "url": "https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf",
       "sha256": "2d5a7cb7fd559d8d972bd88db32669c0196d23f22d7afaafb0f63d099b589a3f"
+    },
+    {
+      "id": "esp32c6-devkit-guide",
+      "title": "esp32-c6-devkitc-1 official user guide",
+      "publisher": "Espressif",
+      "revision": "5c06bf1835329d6525f316475f7218aab6acfe79",
+      "url": "https://raw.githubusercontent.com/espressif/esp-dev-kits/5c06bf1835329d6525f316475f7218aab6acfe79/docs/en/esp32-c6-devkitc-1/user_guide.rst",
+      "sha256": "0c5d5b143e380f9e34844f1782a38a23558eba04a36574d0a7679e184c8d607d",
+      "viewUrl": "https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32c6/esp32-c6-devkitc-1/user_guide.html"
+    },
+    {
+      "id": "esp32c6-devkit-photo",
+      "title": "esp32-c6-devkitc-1 official front/pin-layout image",
+      "publisher": "Espressif",
+      "revision": "5c06bf1835329d6525f316475f7218aab6acfe79",
+      "url": "https://raw.githubusercontent.com/espressif/esp-dev-kits/5c06bf1835329d6525f316475f7218aab6acfe79/docs/_static/esp32-c6-devkitc-1/esp32-c6-devkitc-1-v1.2-annotated-photo.png",
+      "sha256": "448ca640ea3cc2c09ae36f7b4a188a0f7bded5faece80d362fcc1fa4bf9b8404",
+      "viewUrl": "https://github.com/espressif/esp-dev-kits/blob/5c06bf1835329d6525f316475f7218aab6acfe79/docs/_static/esp32-c6-devkitc-1/esp32-c6-devkitc-1-v1.2-annotated-photo.png"
+    },
+    {
+      "id": "esp32c6-datasheet",
+      "title": "ESP32C6 series datasheet",
+      "publisher": "Espressif",
+      "revision": "Snapshot reviewed 2026-11-04",
+      "url": "https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf",
+      "sha256": "372a5b42b2900c83ef4309149c8835e9ae2d1be19244995bf2fb83af4dc5edf1"
     },
     {
       "id": "atmega328p-datasheet",
@@ -769,6 +820,15 @@
       ]
     },
     {
+      "id": "arduino-nano-33-ble-sense-rev2",
+      "physicalPins": 30,
+      "functionAssignments": 52,
+      "physicalSourceMethods": [
+        "source-code",
+        "visual-diagram"
+      ]
+    },
+    {
       "id": "arduino-uno-r4-minima",
       "physicalPins": 38,
       "functionAssignments": 31,
@@ -830,6 +890,16 @@
       "id": "esp32-s3-devkitc-1-octal",
       "physicalPins": 44,
       "functionAssignments": 413,
+      "physicalSourceMethods": [
+        "pdf-table",
+        "source-table",
+        "visual-diagram"
+      ]
+    },
+    {
+      "id": "esp32-c6-devkitc-1",
+      "physicalPins": 32,
+      "functionAssignments": 272,
       "physicalSourceMethods": [
         "pdf-table",
         "source-table",

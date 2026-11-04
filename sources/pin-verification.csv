@@ -4069,9 +4069,9 @@ arduino-leonardo,11,A2,GPIO,ADC5,,ADC5,arduino-leonardo-headers | arduino-leonar
 arduino-leonardo,12,A3,GPIO,ADC4,,ADC4,arduino-leonardo-headers | arduino-leonardo-core,arduino-leonardo-core
 arduino-leonardo,13,A4,GPIO,ADC1,,ADC1,arduino-leonardo-headers | arduino-leonardo-core,arduino-leonardo-core
 arduino-leonardo,14,A5,GPIO,ADC0,,ADC0,arduino-leonardo-headers | arduino-leonardo-core,arduino-leonardo-core
-arduino-leonardo,15,D0,GPIO,Serial1 RX,,RXD1,arduino-leonardo-headers | arduino-leonardo-core,arduino-leonardo-core
+arduino-leonardo,15,D0,GPIO,Serial1 RX,,RX,arduino-leonardo-headers | arduino-leonardo-core,arduino-leonardo-core
 arduino-leonardo,15,D0,GPIO,INT2,,INT2,arduino-leonardo-headers | arduino-leonardo-core,arduino-leonardo-signals
-arduino-leonardo,16,D1,GPIO,Serial1 TX,,TXD1,arduino-leonardo-headers | arduino-leonardo-core,arduino-leonardo-core
+arduino-leonardo,16,D1,GPIO,Serial1 TX,,TX,arduino-leonardo-headers | arduino-leonardo-core,arduino-leonardo-core
 arduino-leonardo,16,D1,GPIO,INT3,,INT3,arduino-leonardo-headers | arduino-leonardo-core,arduino-leonardo-signals
 arduino-leonardo,17,D2,GPIO,I2C SDA,,SDA,arduino-leonardo-headers | arduino-leonardo-core,arduino-leonardo-core
 arduino-leonardo,17,D2,GPIO,INT1,,INT1,arduino-leonardo-headers | arduino-leonardo-core,arduino-leonardo-signals
@@ -4140,9 +4140,9 @@ arduino-micro,28,D2,GPIO,I2C SDA,,SDA,arduino-micro-headers | arduino-micro-core
 arduino-micro,28,D2,GPIO,INT1,,INT1,arduino-micro-headers | arduino-micro-core,arduino-micro-signals
 arduino-micro,29,GND,GND,,,,arduino-micro-headers,
 arduino-micro,30,RESET,SYSTEM,,,,arduino-micro-headers,
-arduino-micro,31,D0,GPIO,Serial1 RX,,RXD1,arduino-micro-headers | arduino-micro-core,arduino-micro-core
+arduino-micro,31,D0,GPIO,Serial1 RX,,RX,arduino-micro-headers | arduino-micro-core,arduino-micro-core
 arduino-micro,31,D0,GPIO,INT2,,INT2,arduino-micro-headers | arduino-micro-core,arduino-micro-signals
-arduino-micro,32,D1,GPIO,Serial1 TX,,TXD1,arduino-micro-headers | arduino-micro-core,arduino-micro-core
+arduino-micro,32,D1,GPIO,Serial1 TX,,TX,arduino-micro-headers | arduino-micro-core,arduino-micro-core
 arduino-micro,32,D1,GPIO,INT3,,INT3,arduino-micro-headers | arduino-micro-core,arduino-micro-signals
 arduino-micro,33,SS,GPIO,SPI SS,,SS,arduino-micro-headers | arduino-micro-core,arduino-micro-core
 arduino-micro,34,COPI,GPIO,SPI COPI / MOSI,,MOSI,arduino-micro-headers | arduino-micro-core,arduino-micro-core
@@ -4153,56 +4153,116 @@ arduino-micro,38,COPI,GPIO,SPI COPI / MOSI,,MOSI,arduino-micro-headers | arduino
 arduino-micro,39,RESET,SYSTEM,,,,arduino-micro-headers,
 arduino-micro,40,GND,GND,,,,arduino-micro-headers,
 arduino-nano-every,1,D13,GPIO,SPI SCK,,SCK,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
-arduino-nano-every,1,D13,GPIO,PORT interrupt,,PE2,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
+arduino-nano-every,1,D13,GPIO,GPIO interrupt,,PE2,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
 arduino-nano-every,2,3V3,POWER,,,,arduino-nano-every-headers,
 arduino-nano-every,3,AREF,SYSTEM,,,,arduino-nano-every-headers,
 arduino-nano-every,4,A0,GPIO,ADC3,,ADC3,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
-arduino-nano-every,4,A0,GPIO,PORT interrupt,,PD3,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
+arduino-nano-every,4,A0,GPIO,GPIO interrupt,,PD3,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
 arduino-nano-every,5,A1,GPIO,ADC2,,ADC2,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
-arduino-nano-every,5,A1,GPIO,PORT interrupt,,PD2,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
+arduino-nano-every,5,A1,GPIO,GPIO interrupt,,PD2,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
 arduino-nano-every,6,A2,GPIO,ADC1,,ADC1,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
-arduino-nano-every,6,A2,GPIO,PORT interrupt,,PD1,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
+arduino-nano-every,6,A2,GPIO,GPIO interrupt,,PD1,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
 arduino-nano-every,7,A3,GPIO,ADC0,,ADC0,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
-arduino-nano-every,7,A3,GPIO,PORT interrupt,,PD0,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
+arduino-nano-every,7,A3,GPIO,GPIO interrupt,,PD0,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
 arduino-nano-every,8,A4,GPIO,I2C SDA,,SDA,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
 arduino-nano-every,8,A4,GPIO,ADC12,,ADC12,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
-arduino-nano-every,8,A4,GPIO,PORT interrupt,,PF2,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
+arduino-nano-every,8,A4,GPIO,GPIO interrupt,,PF2,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
 arduino-nano-every,9,A5,GPIO,I2C SCL,,SCL,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
 arduino-nano-every,9,A5,GPIO,ADC13,,ADC13,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
-arduino-nano-every,9,A5,GPIO,PORT interrupt,,PF3,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
+arduino-nano-every,9,A5,GPIO,GPIO interrupt,,PF3,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
 arduino-nano-every,10,A6,GPIO,ADC4,,ADC4,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
-arduino-nano-every,10,A6,GPIO,PORT interrupt,,PD4,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
+arduino-nano-every,10,A6,GPIO,GPIO interrupt,,PD4,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
 arduino-nano-every,11,A7,GPIO,ADC5,,ADC5,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
-arduino-nano-every,11,A7,GPIO,PORT interrupt,,PD5,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
+arduino-nano-every,11,A7,GPIO,GPIO interrupt,,PD5,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
 arduino-nano-every,12,5V,POWER,,,,arduino-nano-every-headers,
 arduino-nano-every,13,RESET,SYSTEM,,,,arduino-nano-every-headers,
 arduino-nano-every,14,GND,GND,,,,arduino-nano-every-headers,
 arduino-nano-every,15,VIN,POWER,,,,arduino-nano-every-headers,
 arduino-nano-every,16,D12,GPIO,SPI CIPO / MISO,,MISO,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
-arduino-nano-every,16,D12,GPIO,PORT interrupt,,PE1,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
+arduino-nano-every,16,D12,GPIO,GPIO interrupt,,PE1,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
 arduino-nano-every,17,D11,GPIO,SPI COPI / MOSI,,MOSI,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
-arduino-nano-every,17,D11,GPIO,PORT interrupt,,PE0,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
+arduino-nano-every,17,D11,GPIO,GPIO interrupt,,PE0,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
 arduino-nano-every,18,D10,GPIO,PWM,,PWM,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
-arduino-nano-every,18,D10,GPIO,PORT interrupt,,PB1,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
+arduino-nano-every,18,D10,GPIO,GPIO interrupt,,PB1,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
 arduino-nano-every,19,D9,GPIO,PWM,,PWM,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
-arduino-nano-every,19,D9,GPIO,PORT interrupt,,PB0,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
+arduino-nano-every,19,D9,GPIO,GPIO interrupt,,PB0,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
 arduino-nano-every,20,D8,GPIO,SPI SS,,SS,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
-arduino-nano-every,20,D8,GPIO,PORT interrupt,,PE3,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
-arduino-nano-every,21,D7,GPIO,PORT interrupt,,PA1,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
+arduino-nano-every,20,D8,GPIO,GPIO interrupt,,PE3,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
+arduino-nano-every,21,D7,GPIO,GPIO interrupt,,PA1,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
 arduino-nano-every,22,D6,GPIO,PWM,,PWM,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
-arduino-nano-every,22,D6,GPIO,PORT interrupt,,PF4,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
+arduino-nano-every,22,D6,GPIO,GPIO interrupt,,PF4,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
 arduino-nano-every,23,D5,GPIO,PWM,,PWM,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
-arduino-nano-every,23,D5,GPIO,PORT interrupt,,PB2,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
-arduino-nano-every,24,D4,GPIO,PORT interrupt,,PC6,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
+arduino-nano-every,23,D5,GPIO,GPIO interrupt,,PB2,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
+arduino-nano-every,24,D4,GPIO,GPIO interrupt,,PC6,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
 arduino-nano-every,25,D3,GPIO,PWM,,PWM,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
-arduino-nano-every,25,D3,GPIO,PORT interrupt,,PF5,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
-arduino-nano-every,26,D2,GPIO,PORT interrupt,,PA0,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
+arduino-nano-every,25,D3,GPIO,GPIO interrupt,,PF5,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
+arduino-nano-every,26,D2,GPIO,GPIO interrupt,,PA0,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
 arduino-nano-every,27,GND,GND,,,,arduino-nano-every-headers,
 arduino-nano-every,28,RESET,SYSTEM,,,,arduino-nano-every-headers,
-arduino-nano-every,29,D0,GPIO,Serial1 RX,,RXD1,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
-arduino-nano-every,29,D0,GPIO,PORT interrupt,,PC5,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
-arduino-nano-every,30,D1,GPIO,Serial1 TX,,TXD1,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
-arduino-nano-every,30,D1,GPIO,PORT interrupt,,PC4,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
+arduino-nano-every,29,D0,GPIO,Serial1 RX,,RX,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
+arduino-nano-every,29,D0,GPIO,GPIO interrupt,,PC5,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
+arduino-nano-every,30,D1,GPIO,Serial1 TX,,TX,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
+arduino-nano-every,30,D1,GPIO,GPIO interrupt,,PC4,arduino-nano-every-headers | arduino-nano-every-core,arduino-nano-every-core
+arduino-nano-33-ble-sense-rev2,1,D13,GPIO,SPI SCK,,SCK,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,1,D13,GPIO,PWM,,PWM,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,1,D13,GPIO,GPIO interrupt,,P0.13,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,2,3V3,POWER,,,,arduino-nano-33-ble-sense-rev2-headers,
+arduino-nano-33-ble-sense-rev2,3,AREF,SYSTEM,,,,arduino-nano-33-ble-sense-rev2-headers,
+arduino-nano-33-ble-sense-rev2,4,A0,GPIO,AIN2,,AIN2,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-headers
+arduino-nano-33-ble-sense-rev2,4,A0,GPIO,GPIO interrupt,,P0.04,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,5,A1,GPIO,AIN3,,AIN3,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-headers
+arduino-nano-33-ble-sense-rev2,5,A1,GPIO,GPIO interrupt,,P0.05,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,6,A2,GPIO,AIN6,,AIN6,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-headers
+arduino-nano-33-ble-sense-rev2,6,A2,GPIO,GPIO interrupt,,P0.30,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,7,A3,GPIO,AIN5,,AIN5,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-headers
+arduino-nano-33-ble-sense-rev2,7,A3,GPIO,GPIO interrupt,,P0.29,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,8,A4,GPIO,I2C SDA,,SDA,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,8,A4,GPIO,AIN7,,AIN7,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-headers
+arduino-nano-33-ble-sense-rev2,8,A4,GPIO,GPIO interrupt,,P0.31,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,9,A5,GPIO,I2C SCL,,SCL,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,9,A5,GPIO,AIN0,,AIN0,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-headers
+arduino-nano-33-ble-sense-rev2,9,A5,GPIO,GPIO interrupt,,P0.02,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,10,A6,GPIO,AIN4,,AIN4,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-headers
+arduino-nano-33-ble-sense-rev2,10,A6,GPIO,GPIO interrupt,,P0.28,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,11,A7,GPIO,AIN1,,AIN1,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-headers
+arduino-nano-33-ble-sense-rev2,11,A7,GPIO,GPIO interrupt,,P0.03,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,12,5V,POWER,,,,arduino-nano-33-ble-sense-rev2-headers,
+arduino-nano-33-ble-sense-rev2,13,RESET,SYSTEM,,,,arduino-nano-33-ble-sense-rev2-headers,
+arduino-nano-33-ble-sense-rev2,14,GND,GND,,,,arduino-nano-33-ble-sense-rev2-headers,
+arduino-nano-33-ble-sense-rev2,15,VIN,POWER,,,,arduino-nano-33-ble-sense-rev2-headers,
+arduino-nano-33-ble-sense-rev2,16,D12,GPIO,SPI CIPO / MISO,,MISO,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,16,D12,GPIO,PWM,,PWM,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,16,D12,GPIO,GPIO interrupt,,P1.08,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,17,D11,GPIO,SPI COPI / MOSI,,MOSI,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,17,D11,GPIO,PWM,,PWM,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,17,D11,GPIO,GPIO interrupt,,P1.01,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,18,D10,GPIO,SPI SS,,SS,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,18,D10,GPIO,PWM,,PWM,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,18,D10,GPIO,GPIO interrupt,,P1.02,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,19,D9,GPIO,PWM,,PWM,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,19,D9,GPIO,GPIO interrupt,,P0.27,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,20,D8,GPIO,PWM,,PWM,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,20,D8,GPIO,GPIO interrupt,,P0.21,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,21,D7,GPIO,PWM,,PWM,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,21,D7,GPIO,GPIO interrupt,,P0.23,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,22,D6,GPIO,PWM,,PWM,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,22,D6,GPIO,GPIO interrupt,,P1.14,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,23,D5,GPIO,PWM,,PWM,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,23,D5,GPIO,GPIO interrupt,,P1.13,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,24,D4,GPIO,PWM,,PWM,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,24,D4,GPIO,GPIO interrupt,,P1.15,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,25,D3,GPIO,PWM,,PWM,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,25,D3,GPIO,GPIO interrupt,,P1.12,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,26,D2,GPIO,PWM,,PWM,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,26,D2,GPIO,GPIO interrupt,,P1.11,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,27,GND,GND,,,,arduino-nano-33-ble-sense-rev2-headers,
+arduino-nano-33-ble-sense-rev2,28,RESET,SYSTEM,,,,arduino-nano-33-ble-sense-rev2-headers,
+arduino-nano-33-ble-sense-rev2,29,D1,GPIO,Serial1 RX,,RX,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,29,D1,GPIO,PWM,,PWM,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,29,D1,GPIO,GPIO interrupt,,P1.10,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,30,D0,GPIO,Serial1 TX,,TX,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,30,D0,GPIO,PWM,,PWM,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
+arduino-nano-33-ble-sense-rev2,30,D0,GPIO,GPIO interrupt,,P1.03,arduino-nano-33-ble-sense-rev2-headers | arduino-nano-33-ble-sense-rev2-variant,arduino-nano-33-ble-sense-rev2-variant
 arduino-uno-r4-minima,1,BOOT,SYSTEM,,,,arduino-uno-r4-minima-headers,
 arduino-uno-r4-minima,2,IOREF,POWER,,,,arduino-uno-r4-minima-headers,
 arduino-uno-r4-minima,3,RESET,SYSTEM,,,,arduino-uno-r4-minima-headers,
@@ -5912,6 +5972,287 @@ esp32-s3-devkitc-1-octal,42,GPIO19,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,e
 esp32-s3-devkitc-1-octal,42,GPIO19,GPIO,GPIO interrupt,,GPIO19,esp32-s3-devkitc-1-header | esp32-s3-devkitc-1-orientation,esp32-s3-devkitc-1-matrix
 esp32-s3-devkitc-1-octal,43,GND,GND,,,,esp32-s3-devkitc-1-header | esp32-s3-devkitc-1-orientation,
 esp32-s3-devkitc-1-octal,44,GND,GND,,,,esp32-s3-devkitc-1-header | esp32-s3-devkitc-1-orientation,
+esp32-c6-devkitc-1,1,3V3,POWER,,,,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,
+esp32-c6-devkitc-1,2,RST,SYSTEM,,,,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,
+esp32-c6-devkitc-1,3,GPIO4,GPIO,MTMS,,MTMS,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,3,GPIO4,GPIO,LP_UART_RXD,,LP_UART_RXD,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,3,GPIO4,GPIO,ADC1_CH4,,ADC1_CH4,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,3,GPIO4,GPIO,FSPIHD,,FSPIHD,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,3,GPIO4,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,3,GPIO4,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,3,GPIO4,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,3,GPIO4,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,3,GPIO4,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,3,GPIO4,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,3,GPIO4,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,3,GPIO4,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,3,GPIO4,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,3,GPIO4,GPIO,GPIO interrupt,,GPIO4,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,4,GPIO5,GPIO,MTDI,,MTDI,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,4,GPIO5,GPIO,LP_UART_TXD,,LP_UART_TXD,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,4,GPIO5,GPIO,ADC1_CH5,,ADC1_CH5,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,4,GPIO5,GPIO,FSPIWP,,FSPIWP,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,4,GPIO5,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,4,GPIO5,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,4,GPIO5,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,4,GPIO5,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,4,GPIO5,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,4,GPIO5,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,4,GPIO5,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,4,GPIO5,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,4,GPIO5,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,4,GPIO5,GPIO,GPIO interrupt,,GPIO5,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,5,GPIO6,GPIO,MTCK,,MTCK,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,5,GPIO6,GPIO,LP_I2C_SDA,,LP_I2C_SDA,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,5,GPIO6,GPIO,ADC1_CH6,,ADC1_CH6,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,5,GPIO6,GPIO,FSPICLK,,FSPICLK,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,5,GPIO6,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,5,GPIO6,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,5,GPIO6,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,5,GPIO6,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,5,GPIO6,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,5,GPIO6,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,5,GPIO6,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,5,GPIO6,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,5,GPIO6,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,5,GPIO6,GPIO,GPIO interrupt,,GPIO6,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,6,GPIO7,GPIO,MTDO,,MTDO,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,6,GPIO7,GPIO,LP_I2C_SCL,,LP_I2C_SCL,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,6,GPIO7,GPIO,FSPID,,FSPID,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,6,GPIO7,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,6,GPIO7,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,6,GPIO7,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,6,GPIO7,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,6,GPIO7,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,6,GPIO7,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,6,GPIO7,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,6,GPIO7,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,6,GPIO7,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,6,GPIO7,GPIO,GPIO interrupt,,GPIO7,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,7,GPIO0,GPIO,XTAL_32K_P,,XTAL_32K_P,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,7,GPIO0,GPIO,LP_UART_DTRN,,LP_UART_DTRN,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,7,GPIO0,GPIO,ADC1_CH0,,ADC1_CH0,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,7,GPIO0,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,7,GPIO0,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,7,GPIO0,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,7,GPIO0,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,7,GPIO0,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,7,GPIO0,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,7,GPIO0,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,7,GPIO0,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,7,GPIO0,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,7,GPIO0,GPIO,GPIO interrupt,,GPIO0,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,8,GPIO1,GPIO,XTAL_32K_N,,XTAL_32K_N,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,8,GPIO1,GPIO,LP_UART_DSRN,,LP_UART_DSRN,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,8,GPIO1,GPIO,ADC1_CH1,,ADC1_CH1,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,8,GPIO1,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,8,GPIO1,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,8,GPIO1,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,8,GPIO1,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,8,GPIO1,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,8,GPIO1,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,8,GPIO1,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,8,GPIO1,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,8,GPIO1,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,8,GPIO1,GPIO,GPIO interrupt,,GPIO1,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,9,GPIO8,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,9,GPIO8,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,9,GPIO8,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,9,GPIO8,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,9,GPIO8,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,9,GPIO8,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,9,GPIO8,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,9,GPIO8,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,9,GPIO8,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,9,GPIO8,GPIO,GPIO interrupt,,GPIO8,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,10,GPIO10,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,10,GPIO10,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,10,GPIO10,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,10,GPIO10,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,10,GPIO10,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,10,GPIO10,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,10,GPIO10,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,10,GPIO10,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,10,GPIO10,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,10,GPIO10,GPIO,GPIO interrupt,,GPIO10,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,11,GPIO11,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,11,GPIO11,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,11,GPIO11,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,11,GPIO11,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,11,GPIO11,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,11,GPIO11,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,11,GPIO11,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,11,GPIO11,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,11,GPIO11,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,11,GPIO11,GPIO,GPIO interrupt,,GPIO11,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,12,GPIO2,GPIO,LP_UART_RTSN,,LP_UART_RTSN,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,12,GPIO2,GPIO,ADC1_CH2,,ADC1_CH2,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,12,GPIO2,GPIO,FSPIQ,,FSPIQ,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,12,GPIO2,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,12,GPIO2,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,12,GPIO2,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,12,GPIO2,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,12,GPIO2,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,12,GPIO2,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,12,GPIO2,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,12,GPIO2,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,12,GPIO2,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,12,GPIO2,GPIO,GPIO interrupt,,GPIO2,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,13,GPIO3,GPIO,LP_UART_CTSN,,LP_UART_CTSN,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,13,GPIO3,GPIO,ADC1_CH3,,ADC1_CH3,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,13,GPIO3,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,13,GPIO3,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,13,GPIO3,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,13,GPIO3,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,13,GPIO3,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,13,GPIO3,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,13,GPIO3,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,13,GPIO3,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,13,GPIO3,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,13,GPIO3,GPIO,GPIO interrupt,,GPIO3,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,14,5V,POWER,,,,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,
+esp32-c6-devkitc-1,15,GND,GND,,,,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,
+esp32-c6-devkitc-1,16,NC,SYSTEM,,,,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,
+esp32-c6-devkitc-1,17,GND,GND,,,,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,
+esp32-c6-devkitc-1,18,GPIO16,GPIO,U0TXD,,U0TXD,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,18,GPIO16,GPIO,FSPICS0,,FSPICS0,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,18,GPIO16,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,18,GPIO16,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,18,GPIO16,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,18,GPIO16,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,18,GPIO16,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,18,GPIO16,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,18,GPIO16,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,18,GPIO16,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,18,GPIO16,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,18,GPIO16,GPIO,GPIO interrupt,,GPIO16,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,19,GPIO17,GPIO,U0RXD,,U0RXD,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,19,GPIO17,GPIO,FSPICS1,,FSPICS1,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,19,GPIO17,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,19,GPIO17,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,19,GPIO17,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,19,GPIO17,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,19,GPIO17,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,19,GPIO17,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,19,GPIO17,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,19,GPIO17,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,19,GPIO17,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,19,GPIO17,GPIO,GPIO interrupt,,GPIO17,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,20,GPIO15,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,20,GPIO15,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,20,GPIO15,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,20,GPIO15,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,20,GPIO15,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,20,GPIO15,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,20,GPIO15,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,20,GPIO15,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,20,GPIO15,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,20,GPIO15,GPIO,GPIO interrupt,,GPIO15,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,21,GPIO23,GPIO,SDIO_DATA3,,SDIO_DATA3,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,21,GPIO23,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,21,GPIO23,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,21,GPIO23,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,21,GPIO23,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,21,GPIO23,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,21,GPIO23,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,21,GPIO23,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,21,GPIO23,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,21,GPIO23,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,21,GPIO23,GPIO,GPIO interrupt,,GPIO23,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,22,GPIO22,GPIO,SDIO_DATA2,,SDIO_DATA2,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,22,GPIO22,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,22,GPIO22,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,22,GPIO22,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,22,GPIO22,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,22,GPIO22,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,22,GPIO22,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,22,GPIO22,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,22,GPIO22,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,22,GPIO22,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,22,GPIO22,GPIO,GPIO interrupt,,GPIO22,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,23,GPIO21,GPIO,SDIO_DATA1,,SDIO_DATA1,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,23,GPIO21,GPIO,FSPICS5,,FSPICS5,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,23,GPIO21,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,23,GPIO21,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,23,GPIO21,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,23,GPIO21,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,23,GPIO21,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,23,GPIO21,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,23,GPIO21,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,23,GPIO21,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,23,GPIO21,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,23,GPIO21,GPIO,GPIO interrupt,,GPIO21,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,24,GPIO20,GPIO,SDIO_DATA0,,SDIO_DATA0,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,24,GPIO20,GPIO,FSPICS4,,FSPICS4,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,24,GPIO20,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,24,GPIO20,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,24,GPIO20,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,24,GPIO20,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,24,GPIO20,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,24,GPIO20,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,24,GPIO20,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,24,GPIO20,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,24,GPIO20,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,24,GPIO20,GPIO,GPIO interrupt,,GPIO20,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,25,GPIO19,GPIO,SDIO_CLK,,SDIO_CLK,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,25,GPIO19,GPIO,FSPICS3,,FSPICS3,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,25,GPIO19,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,25,GPIO19,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,25,GPIO19,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,25,GPIO19,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,25,GPIO19,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,25,GPIO19,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,25,GPIO19,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,25,GPIO19,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,25,GPIO19,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,25,GPIO19,GPIO,GPIO interrupt,,GPIO19,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,26,GPIO18,GPIO,SDIO_CMD,,SDIO_CMD,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,26,GPIO18,GPIO,FSPICS2,,FSPICS2,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,26,GPIO18,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,26,GPIO18,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,26,GPIO18,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,26,GPIO18,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,26,GPIO18,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,26,GPIO18,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,26,GPIO18,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,26,GPIO18,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,26,GPIO18,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,26,GPIO18,GPIO,GPIO interrupt,,GPIO18,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,27,GPIO9,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,27,GPIO9,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,27,GPIO9,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,27,GPIO9,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,27,GPIO9,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,27,GPIO9,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,27,GPIO9,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,27,GPIO9,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,27,GPIO9,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,27,GPIO9,GPIO,GPIO interrupt,,GPIO9,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation | esp32-c6-devkitc-1-strapping,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,28,GND,GND,,,,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,
+esp32-c6-devkitc-1,29,GPIO13,GPIO,USB_D+,,USB_D+,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,29,GPIO13,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,29,GPIO13,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,29,GPIO13,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,29,GPIO13,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,29,GPIO13,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,29,GPIO13,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,29,GPIO13,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,29,GPIO13,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,29,GPIO13,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,29,GPIO13,GPIO,GPIO interrupt,,GPIO13,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,30,GPIO12,GPIO,USB_D-,,USB_D-,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-header
+esp32-c6-devkitc-1,30,GPIO12,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,30,GPIO12,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,30,GPIO12,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,30,GPIO12,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,30,GPIO12,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,30,GPIO12,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,30,GPIO12,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,30,GPIO12,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,30,GPIO12,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,30,GPIO12,GPIO,GPIO interrupt,,GPIO12,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
+esp32-c6-devkitc-1,31,GND,GND,,,,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,
+esp32-c6-devkitc-1,32,NC,SYSTEM,,,,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,
 atmega328p-pdip28,1,PC6,GPIO,PCINT14,,PCINT14,atmega328p-pdip28-physical | atmega328p-mux-19 | atmega328p-reset-fuse,atmega328p-mux-19
 atmega328p-pdip28,1,PC6,GPIO,GPIO,RSTDISBL programmed,PC6,atmega328p-pdip28-physical | atmega328p-mux-19 | atmega328p-reset-fuse,atmega328p-reset-fuse
 atmega328p-pdip28,2,PD0,GPIO,PCINT16,,PCINT16,atmega328p-pdip28-physical | atmega328p-mux-20,atmega328p-mux-20

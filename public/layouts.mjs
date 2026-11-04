@@ -38,11 +38,12 @@ export function buildLayouts(boards) {
     {
       id: 'arduino-nano', nameKey: 'nanoLayout', subtitleKey: 'nanoLayoutSubtitle',
       compatibleKey: 'nanoCompatible',
-      profileIds: ['arduino-nano-classic', 'arduino-nano-every'], defaultProfile: 'arduino-nano-classic',
+      profileIds: ['arduino-nano-classic', 'arduino-nano-every', 'arduino-nano-33-ble-sense-rev2'], defaultProfile: 'arduino-nano-classic',
       geometryConnectors: ['L', 'R'], sharedContactCount: 30,
       references: [
         {key: 'nanoClassicReference', profileIds: ['arduino-nano-classic']},
-        {key: 'nanoEveryReference', profileIds: ['arduino-nano-every']}
+        {key: 'nanoEveryReference', profileIds: ['arduino-nano-every']},
+        {key: 'nano33BleSenseRev2Reference', profileIds: ['arduino-nano-33-ble-sense-rev2']}
       ]
     },
     {
