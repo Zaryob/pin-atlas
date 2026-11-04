@@ -43,7 +43,7 @@ Jetson çevre birimleri uygun pinmux/Jetson-IO yapılandırması ve yazılım de
 
 STM32F1 için uydurma AF0–AF15 seçicileri kullanılmaz; RM0008’deki AFIO remap alanları ve değerleri gösterilir. Remap çevre birimi genelindedir; tüm sinyaller birlikte yapılandırılmalı, gereken JTAG pinleri bırakılmalıdır. Plan tüm yazmaç ve kart devresi kısıtlamalarını doğrulamaz.
 
-Planlar tarayıcıda `pin-atlas:plans:v1` anahtarında saklanır. Paylaşım bağlantısı kaydedilmiş planı URL fragment içinde taşır; açılması ilgili kartın yerel planını günceller. GPIO0/GPIO1 (Pi 4 fiziksel 27/28) HAT EEPROM için ayrıldığı için normal proje planına eklenmez. Uygulama elektriksel tasarım veya firmware doğrulaması yapmaz.
+Planlar tarayıcıda `pin-atlas:plans:v1` anahtarında saklanır. Paylaşım bağlantısı kaydedilmiş planı URL fragment içinde taşır. Bağlantılar ve JSON dosyaları önce önizlenir. Mevcut plan yalnızca değiştirmeyi seçtiğinde güncellenir. GPIO0/GPIO1 (Pi 4 fiziksel 27/28) HAT EEPROM için ayrıldığı için normal proje planına eklenmez. Uygulama elektriksel tasarım veya firmware doğrulaması yapmaz.
 
 ## Yerel çalıştırma
 

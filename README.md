@@ -47,7 +47,7 @@ ESP GPIO matrix options describe configurable peripheral routes, not default fir
 
 **Compatible boards** opens a numbered model index with processor/reference details, the active reference and saved-plan indicators. Select a model directly; longer lists can be searched. Physical-only compatibility links open the common pinout rather than another board’s alternate-function map.
 
-The browser stores plans under `pin-atlas:plans:v1`. Share links carry the saved plan in the URL fragment. Opening one updates the local plan for that board. Pi 4 physical pins 27 and 28 are reserved for the HAT EEPROM and excluded from regular wiring plans. Check electrical compatibility and firmware configuration against the manufacturer documentation.
+The browser stores plans under `pin-atlas:plans:v1`. Share links carry the saved plan in the URL fragment. Links and JSON imports open a preview. Saving replaces an existing plan only after you choose to replace it. Pi 4 physical pins 27 and 28 are reserved for the HAT EEPROM and excluded from regular wiring plans. Check electrical compatibility and firmware configuration against the manufacturer documentation.
 
 ## Run locally
 
