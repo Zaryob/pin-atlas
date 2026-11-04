@@ -2,7 +2,7 @@
 
 [English](VERIFICATION.md) · [Türkçe](VERIFICATION.tr.md)
 
-Kontrol tarihi: **4 Kasım 2026**. Kapsam: yirmi dokuz kart, başlık ve çip profili, **1.276 fiziksel pin kaydı ve 4.431 alternatif işlev ataması**. Ortak bağlantılar profil başına sayılır. Sayımda uygulamanın soyut `GPIO` seçeneği ve numarasız QFN merkez GND pedi yoktur. Aynı sinyalin farklı pinlerde bulunması ayrı bir atamadır.
+Kontrol tarihi: **4 Kasım 2026**. Kapsam: otuz bir kart, başlık ve çip profili, **1.440 fiziksel pin kaydı ve 4.688 alternatif işlev ataması**. Ortak bağlantılar profil başına sayılır. Sayımda uygulamanın soyut `GPIO` seçeneği ve numarasız QFN merkez GND pedi yoktur. Aynı sinyalin farklı pinlerde bulunması ayrı bir atamadır.
 
 ## Her haritanın dayanağı
 
@@ -58,11 +58,11 @@ Pico, Pico W ve Pico 2’nin fiziksel pinleri, her modelin veri sayfasının PDF
 
 Ortak Raspberry Pi 40-pin profili, üreticinin GPIO tablosunu kullanır: B+ ve sonrası, Zero ailesi ve klavyeli modellerin fiziksel düzenini kapsar. Klavyeli modellerde yön ters olabilir; bazı Zero başlıkları lehimli değildir. Eski 26-pin kartlar ve Compute Module dahil değildir. Bu profil işlemciye özgü alternatif işlev içermez; BCM2711 için Pi 4 profili ayrı tutulur.
 
-Kırk yedi üretici belgesi veya kaynak dosyası ve üç Blue Pill topluluk referansı SHA-256 ile kilitlidir. 1.276 fiziksel pin kaydı ortak bağlantıları profil başına sayar. Ayrıntılı model kaynakları [İngilizce doğrulama kaydında](VERIFICATION.md) bulunur.
+Kırk yedi üretici belgesi veya kaynak dosyası ve üç Blue Pill topluluk referansı SHA-256 ile kilitlidir. 1.440 fiziksel pin kaydı ortak bağlantıları profil başına sayar. Ayrıntılı model kaynakları [İngilizce doğrulama kaydında](VERIFICATION.md) bulunur.
 
 ## Ortak düzen kütüphanesi
 
-Yirmi dokuz kaynak profili on dokuz fiziksel düzende sunulur. UNO biçimindeki kartların 32 ana kontağı, Nano ailesinin 30 yan kontağı ve ESP32/S3 bellek varyantlarının ortak başlıkları tek kayıtta gruplanır. İsteğe bağlı bağlantılar ve işlemci işlevleri seçilen referansa aittir. Gruplama fiziksel konumları karşılaştırır; BOOT/NC ve analog giriş/GPIO farkları ayrıca korunur. Eski bağlantılar ve planlar özgün işlemci referansına açılır.
+Otuz bir kaynak profili yirmi bir fiziksel düzende sunulur. UNO biçimindeki kartların 32 ana kontağı, Nano ailesinin 30 yan kontağı ve ESP32/S3 bellek varyantlarının ortak başlıkları tek kayıtta gruplanır. İsteğe bağlı bağlantılar ve işlemci işlevleri seçilen referansa aittir. Gruplama fiziksel konumları karşılaştırır; BOOT/NC ve analog giriş/GPIO farkları ayrıca korunur. Eski bağlantılar ve planlar özgün işlemci referansına açılır.
 
 ## NVIDIA Jetson Orin Nano · J12
 

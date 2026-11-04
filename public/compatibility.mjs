@@ -21,8 +21,26 @@ export function compatibleModels(layout) {
   }
   if (layout.id === 'stm32f103c8t6') {
     return [
-      {id:'stm32f103c8t6',name:'STM32F103C8T6',profileId:'stm32f103c8t6',kind:'reference',detail:'LQFP-48'},
-      {id:'stm32f103cbt6',name:'STM32F103CBT6',profileId:'stm32f103c8t6',kind:'physical',detail:'LQFP-48'}
+      {id:'stm32f103c8t6',name:'STM32F103C8T6',profileId:'stm32f103c8t6',kind:'reference',detail:'LQFP-48 · 64 KB Flash'},
+      {id:'stm32f103cbt6',name:'STM32F103CBT6',profileId:'stm32f103c8t6',kind:'physical',detail:'LQFP-48 · 128 KB Flash'}
+    ];
+  }
+  if (layout.id === 'stm32f103rbt6') {
+    return [
+      {id:'stm32f103rbt6',name:'STM32F103RBT6',profileId:'stm32f103rbt6',kind:'reference',detail:'LQFP-64 · 128 KB Flash'},
+      {id:'stm32f103r8t6',name:'STM32F103R8T6',profileId:'stm32f103rbt6',kind:'physical',detail:'LQFP-64 · 64 KB Flash'}
+    ];
+  }
+  if (layout.id === 'stm32f103vbt6') {
+    return [
+      {id:'stm32f103vbt6',name:'STM32F103VBT6',profileId:'stm32f103vbt6',kind:'reference',detail:'LQFP-100 · 128 KB Flash'},
+      {id:'stm32f103v8t6',name:'STM32F103V8T6',profileId:'stm32f103vbt6',kind:'physical',detail:'LQFP-100 · 64 KB Flash'}
+    ];
+  }
+  if (layout.id === 'atmega2560-tqfp100') {
+    return [
+      {id:'atmega2560-tqfp100',name:'ATmega2560',profileId:'atmega2560-tqfp100',kind:'reference',detail:'TQFP-100 · 256 KB Flash'},
+      {id:'atmega1280-tqfp100',name:'ATmega1280',profileId:'atmega2560-tqfp100',kind:'physical',detail:'TQFP-100 · 128 KB Flash'}
     ];
   }
   const modelNames = {

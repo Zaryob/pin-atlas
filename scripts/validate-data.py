@@ -62,6 +62,11 @@ assert not jetson[15]['functions'] # A PWM substring in a SoC pad name is not a 
 assert not any('alt' in f or f['group']=='ADC' for p in jetson.values() for f in p['functions'])
 assert [n for n,p in jetson.items() if p['type']=='GND']==[6,9,14,20,25,30,34,39]
 stm=lookup['stm32f103c8t6'];blue=lookup['blue-pill']
+stm64=lookup['stm32f103rbt6'];stm100=lookup['stm32f103vbt6']
+assert len(stm64)==64 and sum(p['type']=='GPIO' for p in stm64.values())==51
+assert len(stm100)==100 and sum(p['type']=='GPIO' for p in stm100.values())==82
+assert any(f['name']=='ADC12_IN10' for f in stm64[8]['functions'])
+assert any(f['name']=='USART3_TX' for f in stm64[51]['functions'])
 assert stm[1]['name']=='VBAT' and stm[34]['name']=='PA13' and stm[44]['name']=='BOOT0'
 assert stm[5]['functions'][0]['name']=='PD0' and stm[5]['baseFunction']=='OSC_IN'
 assert all('alt' not in f for p in stm.values() for f in p['functions'])

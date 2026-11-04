@@ -803,54 +803,6 @@
       "locator": "§9.3.5 · Table 37 · SWJ_CFG debug-port release conditions",
       "method": "pdf-table"
     },
-    "stm32-pin-table-p28": {
-      "document": "stm32f103",
-      "title": "STM32F103x8 / STM32F103xB datasheet",
-      "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf#page=28",
-      "page": 28,
-      "locator": "§3 · Table 5 · LQFP48 column, pin names, I/O tolerance and alternate functions",
-      "method": "pdf-table"
-    },
-    "stm32-pin-table-p29": {
-      "document": "stm32f103",
-      "title": "STM32F103x8 / STM32F103xB datasheet",
-      "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf#page=29",
-      "page": 29,
-      "locator": "§3 · Table 5 · LQFP48 column, pin names, I/O tolerance and alternate functions",
-      "method": "pdf-table"
-    },
-    "stm32-pin-table-p30": {
-      "document": "stm32f103",
-      "title": "STM32F103x8 / STM32F103xB datasheet",
-      "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf#page=30",
-      "page": 30,
-      "locator": "§3 · Table 5 · LQFP48 column, pin names, I/O tolerance and alternate functions",
-      "method": "pdf-table"
-    },
-    "stm32-pin-table-p31": {
-      "document": "stm32f103",
-      "title": "STM32F103x8 / STM32F103xB datasheet",
-      "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf#page=31",
-      "page": 31,
-      "locator": "§3 · Table 5 · LQFP48 column, pin names, I/O tolerance and alternate functions",
-      "method": "pdf-table"
-    },
-    "stm32-pin-table-p32": {
-      "document": "stm32f103",
-      "title": "STM32F103x8 / STM32F103xB datasheet",
-      "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf#page=32",
-      "page": 32,
-      "locator": "§3 · Table 5 · LQFP48 column, pin names, I/O tolerance and alternate functions",
-      "method": "pdf-table"
-    },
-    "stm32-pin-table-p33": {
-      "document": "stm32f103",
-      "title": "STM32F103x8 / STM32F103xB datasheet",
-      "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf#page=33",
-      "page": 33,
-      "locator": "§3 · Table 5 · LQFP48 column, pin names, I/O tolerance and alternate functions",
-      "method": "pdf-table"
-    },
     "stm32-electrical-notes": {
       "document": "stm32f103",
       "title": "STM32F103x8 / STM32F103xB datasheet",
@@ -865,6 +817,70 @@
       "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf#page=26",
       "page": 26,
       "locator": "§3 · Figure 8 · LQFP48 perimeter numbering; no exposed center pad",
+      "method": "pdf-table"
+    },
+    "stm32-pin-table-p28": {
+      "document": "stm32f103",
+      "title": "STM32F103x8 / STM32F103xB datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf#page=28",
+      "page": 28,
+      "locator": "§3 · Table 5 · LQFP columns, pin names, I/O tolerance and alternate functions",
+      "method": "pdf-table"
+    },
+    "stm32-pin-table-p29": {
+      "document": "stm32f103",
+      "title": "STM32F103x8 / STM32F103xB datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf#page=29",
+      "page": 29,
+      "locator": "§3 · Table 5 · LQFP columns, pin names, I/O tolerance and alternate functions",
+      "method": "pdf-table"
+    },
+    "stm32-pin-table-p30": {
+      "document": "stm32f103",
+      "title": "STM32F103x8 / STM32F103xB datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf#page=30",
+      "page": 30,
+      "locator": "§3 · Table 5 · LQFP columns, pin names, I/O tolerance and alternate functions",
+      "method": "pdf-table"
+    },
+    "stm32-pin-table-p31": {
+      "document": "stm32f103",
+      "title": "STM32F103x8 / STM32F103xB datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf#page=31",
+      "page": 31,
+      "locator": "§3 · Table 5 · LQFP columns, pin names, I/O tolerance and alternate functions",
+      "method": "pdf-table"
+    },
+    "stm32-pin-table-p32": {
+      "document": "stm32f103",
+      "title": "STM32F103x8 / STM32F103xB datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf#page=32",
+      "page": 32,
+      "locator": "§3 · Table 5 · LQFP columns, pin names, I/O tolerance and alternate functions",
+      "method": "pdf-table"
+    },
+    "stm32-pin-table-p33": {
+      "document": "stm32f103",
+      "title": "STM32F103x8 / STM32F103xB datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf#page=33",
+      "page": 33,
+      "locator": "§3 · Table 5 · LQFP columns, pin names, I/O tolerance and alternate functions",
+      "method": "pdf-table"
+    },
+    "stm32-lqfp64": {
+      "document": "stm32f103",
+      "title": "STM32F103x8 / STM32F103xB datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf#page=25",
+      "page": 25,
+      "locator": "§3 · Figure 7 · LQFP64 perimeter numbering; no exposed center pad",
+      "method": "pdf-table"
+    },
+    "stm32-lqfp100": {
+      "document": "stm32f103",
+      "title": "STM32F103x8 / STM32F103xB datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf#page=24",
+      "page": 24,
+      "locator": "§3 · Figure 6 · LQFP100 perimeter numbering; no exposed center pad",
       "method": "pdf-table"
     },
     "bluepill-schematic": {

@@ -2,7 +2,7 @@
 
 [English](VERIFICATION.md) · [Türkçe](VERIFICATION.tr.md)
 
-Reviewed on **4 November 2026**. The review covers twenty-nine board, header, and chip profiles, **1,276 physical pin records, and 4,431 function assignments**. Shared physical pins are counted once per profile. The count excludes the app’s generic `GPIO` planning option and the unnumbered QFN center GND pads. Each placement of a signal on a different pin counts separately.
+Reviewed on **4 November 2026**. The review covers thirty-one board, header, and chip profiles, **1,440 physical pin records, and 4,688 function assignments**. Shared physical pins are counted once per profile. The count excludes the app’s generic `GPIO` planning option and the unnumbered QFN center GND pads. Each placement of a signal on a different pin counts separately.
 
 ## Sources by pin map
 
@@ -78,11 +78,11 @@ The source is NVIDIA’s SHA-256-locked **Jetson Orin Nano Developer Kit Carrier
 - Electrical notes cite Table 3-3: 3.3 V signals; direct open-drain I²C on 3/5 and 27/28, with 2.2 kΩ / 1.5 kΩ pull-ups and ±2 mA listed drive; other signal pins use TXB0108 translators with ±20 µA listed weak drive and external pulls greater than 50 kΩ. These are not Raspberry Pi GPIO electrical characteristics.
 - J12 pins 27/28 are I2C0_SDA/SCL and are not given the Raspberry Pi HAT EEPROM reservation. No ADC or unverified numeric mux selectors are added.
 
-The manufacturer PDF is cached for verification and is not distributed in the repository. The complete source set now covers 1,276 physical pin records and 4,431 function assignments.
+The manufacturer PDF is cached for verification and is not distributed in the repository. The complete source set now covers 1,440 physical pin records and 4,688 function assignments.
 
-## STM32F103C8/CB · LQFP48
+## STM32F103 packages · LQFP48, LQFP64, LQFP100
 
-ST **DS5319 Rev 20 (July 2025)** Table 5, PDF pp. 28–33, supplies the LQFP48 pin positions, I/O tolerance and functions. Figure 8, PDF p. 26, was inspected for the physical perimeter arrangement. The 48-pin LQFP has no exposed center pad. GPIO-capable OSC_IN/OSC_OUT remain oscillator functions after reset; PD0/PD1 require the software remap described in the datasheet footnote and RM0008 §9.3.1.
+ST **DS5319 Rev 20 (July 2025)** Table 5, PDF pp. 28–33, supplies the LQFP48, LQFP64, and LQFP100 pin positions, I/O tolerance and functions. Figures 6–8, PDF pp. 24–26, were inspected for the physical perimeter arrangements. These LQFP packages have no exposed center pad. GPIO-capable OSC_IN/OSC_OUT remain oscillator functions after reset; PD0/PD1 require the software remap described in the datasheet footnote and RM0008 §9.3.1.
 
 **RM0008 Rev 21**, §9.3, Tables 34, 43–46 and 52–56, supplies actual CAN, timer, USART, I²C1 and SPI1 remap conditions. Merged table cells are expanded before assigning allowed values. Package restrictions exclude unavailable full-remap destinations; no larger-package ports or higher-density-only peripherals are injected. JTAG/SWD mapping is supported by Tables 36–37. The F1 architecture has no AF0–AF15 pin selector model; function records carry AFIO field/value conditions and a separate configuration reference. These are capabilities, not a claim that every combination of selected functions is simultaneously usable.
 

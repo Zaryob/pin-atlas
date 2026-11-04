@@ -14,7 +14,7 @@ The library lists each physical layout once and names its compatible boards:
 - **Raspberry Pi 40-pin GPIO:** B+, A+, Pi 2/3/4/5, Zero models, and 400/500 share one header entry. Choose common GPIO/power/ground connections or the verified BCM2711 alternate functions for Pi 4 in the same view. This excludes older 26-pin boards and Compute Modules; some Zero headers are unpopulated and keyboard models have a rotated header.
 - **NVIDIA Jetson Orin Nano:** the NVIDIA P3768 developer-kit carrier’s 40-pin J12 header, with SPI, I²C, UART, I²S, PWM and clock capabilities from the carrier specification. This is a separate pin map from Raspberry Pi; header signal names and pinmux requirements differ.
 - **STM32 Blue Pill:** the STM32-base community reference with two 20-pin side headers and four SWD connections. H1/H2/SWD positions are distinct from MCU package pins; the diagram includes the MCU pin mapping and shared LED, crystal, USB and debug connections. Check clone wiring and chip markings.
-- **STM32F103C8T6:** the 48-pin LQFP processor, with 37 GPIO-capable pins (including PD0/PD1 after releasing HSE). The STM32F103CBT6 uses the same package pinout.
+- **STM32F103 packages:** separate LQFP-48 (STM32F103C8T6 / STM32F103CBT6 with 37 GPIOs), LQFP-64 (STM32F103RBT6 / STM32F103R8T6 with 51 GPIOs), and LQFP-100 (STM32F103VBT6 / STM32F103V8T6 with 82 GPIOs) views with raw MCU functions and full AFIO remap conditions from RM0008.
 - **Arduino UNO-format headers:** UNO R3, Leonardo, UNO R4 Minima and UNO R4 WiFi share 32 main-header positions in one entry. Choose the MCU reference for the correct I²C, SPI, ADC, PWM, DAC and CAN signals. Each reference includes its six-contact main-MCU SPI/ICSP connector; BOOT replaces NC on R4.
 - **Arduino Nano headers:** classic Nano and Nano Every share 30 side contacts in one entry. Classic Nano adds six ICSP contacts and has analog-only A6/A7; Every has digital-capable A6/A7, different PWM support and no ICSP in this map.
 - **Arduino Mega 2560 Rev3:** 92 header contacts including the end header and main MCU ICSP, 70 independent GPIOs, 16 analog inputs and 15 PWM outputs. SPI uses D50–D53.
@@ -29,7 +29,7 @@ The library lists each physical layout once and names its compatible boards:
 
 The Pico drawing represents the common header and does not claim identical wireless, LED or internal board wiring. Processor references change alternate functions, not physical pin positions. Plans are saved per reference; old model links, exported JSON files, and saved plans remain supported. If multiple old model plans exist for the same processor, they remain available in the function-reference selector without being merged.
 
-The dataset contains 1,276 physical pin records across twenty-nine source profiles backing nineteen library layouts and 4,431 pin/function assignments. The central GND pad on each RP2350 package sits outside the perimeter pin count. The schematic drawings show pin positions and are not mechanical CAD layouts.
+The dataset contains 1,440 physical pin records across thirty-one source profiles backing twenty-one library layouts and 4,688 pin/function assignments. The central GND pad on each RP2350 package sits outside the perimeter pin count. The schematic drawings show pin positions and are not mechanical CAD layouts.
 
 ## Usage
 

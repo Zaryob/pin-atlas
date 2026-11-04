@@ -82,5 +82,5 @@ def build_avr_packages(cache,docs,observations,ref,verified_on):
         elif name=='AREF':pin['noteKey']='avrArefNote'
         pins.append(pin)
     assert sum(p['type']=='GPIO' for p in pins)==86
-    out.append({'id':'atmega2560-tqfp100','name':'ATmega2560 · TQFP-100','shortName':'ATmega2560 TQFP-100','family':'Microchip AVR','subtitle':'TQFP-100 · bare MCU · up to 16 MHz','layout':'lqfp','packageName':'TQFP-100','packagePins':100,'gpioCount':86,'voltage':'4.5–5.5 V (16 MHz grade)','mcu':'ATmega2560','processor':'8-bit AVR','clock':'Up to 16 MHz','scopeKey':'atmega2560PackageScope','verifiedOn':verified_on,'source':docs[source]['url']+'#page=2','datasheet':docs[source]['url'],'pins':pins})
+    out.append({'id':'atmega2560-tqfp100','name':'ATmega2560 · TQFP-100','shortName':'ATmega2560 TQFP-100','family':'Microchip AVR','subtitle':'TQFP-100 · bare MCU · up to 16 MHz','layout':'lqfp','packageName':'TQFP-100','packagePins':100,'gpioCount':86,'voltage':'4.5–5.5 V (16 MHz grade)','mcu':'ATmega2560','processor':'8-bit AVR','clock':'Up to 16 MHz','scopeKey':'atmega2560PackageScope','compatibleKey':'atmega2560Compatible','verifiedOn':verified_on,'source':docs[source]['url']+'#page=2','datasheet':docs[source]['url'],'pins':pins})
     return out

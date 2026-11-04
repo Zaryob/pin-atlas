@@ -1,7 +1,7 @@
 {
   "verifiedOn": "2026-11-04",
-  "physicalPins": 1276,
-  "functionAssignments": 4431,
+  "physicalPins": 1440,
+  "functionAssignments": 4688,
   "documents": [
     {
       "id": "rp2350",
@@ -505,6 +505,22 @@
       "id": "stm32f103c8t6",
       "physicalPins": 48,
       "functionAssignments": 99,
+      "physicalSourceMethods": [
+        "pdf-table"
+      ]
+    },
+    {
+      "id": "stm32f103rbt6",
+      "physicalPins": 64,
+      "functionAssignments": 113,
+      "physicalSourceMethods": [
+        "pdf-table"
+      ]
+    },
+    {
+      "id": "stm32f103vbt6",
+      "physicalPins": 100,
+      "functionAssignments": 144,
       "physicalSourceMethods": [
         "pdf-table"
       ]

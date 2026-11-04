@@ -1377,10 +1377,10 @@ blue-pill,36,PA8,GPIO,MCO,,MCO,bluepill-h2 | bluepill-schematic | bluepill-orien
 blue-pill,37,PB15,GPIO,SPI2_MOSI,,SPI2_MOSI,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
 blue-pill,37,PB15,GPIO,TIM1_CH3N,TIM1_REMAP=00,TIM1_CH3N,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-46
 blue-pill,38,PB14,GPIO,SPI2_MISO,,SPI2_MISO,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
-blue-pill,38,PB14,GPIO,USART3_RTS,USART3_REMAP=00,USART3_RTS,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+blue-pill,38,PB14,GPIO,USART3_RTS,USART3_REMAP=00|01,USART3_RTS,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
 blue-pill,38,PB14,GPIO,TIM1_CH2N,TIM1_REMAP=00,TIM1_CH2N,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-46
 blue-pill,39,PB13,GPIO,SPI2_SCK,,SPI2_SCK,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
-blue-pill,39,PB13,GPIO,USART3_CTS,USART3_REMAP=00,USART3_CTS,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+blue-pill,39,PB13,GPIO,USART3_CTS,USART3_REMAP=00|01,USART3_CTS,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
 blue-pill,39,PB13,GPIO,TIM1_CH1N,TIM1_REMAP=00,TIM1_CH1N,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-46
 blue-pill,40,PB12,GPIO,SPI2_NSS,,SPI2_NSS,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
 blue-pill,40,PB12,GPIO,I2C2_SMBAl,,I2C2_SMBAl,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
@@ -1447,10 +1447,10 @@ stm32f103c8t6,25,PB12,GPIO,I2C2_SMBAl,,I2C2_SMBAl,stm32-lqfp48 | stm32-pin-table
 stm32f103c8t6,25,PB12,GPIO,USART3_CK,USART3_REMAP=00,USART3_CK,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
 stm32f103c8t6,25,PB12,GPIO,TIM1_BKIN,TIM1_REMAP=00,TIM1_BKIN,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-46
 stm32f103c8t6,26,PB13,GPIO,SPI2_SCK,,SPI2_SCK,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
-stm32f103c8t6,26,PB13,GPIO,USART3_CTS,USART3_REMAP=00,USART3_CTS,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+stm32f103c8t6,26,PB13,GPIO,USART3_CTS,USART3_REMAP=00|01,USART3_CTS,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
 stm32f103c8t6,26,PB13,GPIO,TIM1_CH1N,TIM1_REMAP=00,TIM1_CH1N,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-46
 stm32f103c8t6,27,PB14,GPIO,SPI2_MISO,,SPI2_MISO,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
-stm32f103c8t6,27,PB14,GPIO,USART3_RTS,USART3_REMAP=00,USART3_RTS,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+stm32f103c8t6,27,PB14,GPIO,USART3_RTS,USART3_REMAP=00|01,USART3_RTS,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
 stm32f103c8t6,27,PB14,GPIO,TIM1_CH2N,TIM1_REMAP=00,TIM1_CH2N,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-46
 stm32f103c8t6,28,PB15,GPIO,SPI2_MOSI,,SPI2_MOSI,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
 stm32f103c8t6,28,PB15,GPIO,TIM1_CH3N,TIM1_REMAP=00,TIM1_CH3N,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-46
@@ -1503,6 +1503,297 @@ stm32f103c8t6,46,PB9,GPIO,I2C1_SDA,I2C1_REMAP=1,I2C1_SDA,stm32-lqfp48 | stm32-pi
 stm32f103c8t6,46,PB9,GPIO,CANTX,CAN_REMAP=10,CANTX,stm32-lqfp48 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-34
 stm32f103c8t6,47,VSS_3,GND,,,,stm32-lqfp48 | stm32-pin-table-p33,
 stm32f103c8t6,48,VDD_3,POWER,,,,stm32-lqfp48 | stm32-pin-table-p33,
+stm32f103rbt6,1,VBAT,POWER,,,,stm32-lqfp64 | stm32-pin-table-p28,
+stm32f103rbt6,2,PC13,GPIO,TAMPER-RTC,,TAMPER-RTC,stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28
+stm32f103rbt6,3,PC14,GPIO,OSC32_IN,,OSC32_IN,stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28
+stm32f103rbt6,4,PC15,GPIO,OSC32_OUT,,OSC32_OUT,stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28
+stm32f103rbt6,5,OSC_IN,GPIO,PD0,PD01_REMAP=1,PD0,stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28 | stm32-osc-remap
+stm32f103rbt6,6,OSC_OUT,GPIO,PD1,PD01_REMAP=1,PD1,stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28 | stm32-osc-remap
+stm32f103rbt6,7,NRST,SYSTEM,,,,stm32-lqfp64 | stm32-pin-table-p28,
+stm32f103rbt6,8,PC0,GPIO,ADC12_IN10,,ADC12_IN10,stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28
+stm32f103rbt6,9,PC1,GPIO,ADC12_IN11,,ADC12_IN11,stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28
+stm32f103rbt6,10,PC2,GPIO,ADC12_IN12,,ADC12_IN12,stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28
+stm32f103rbt6,11,PC3,GPIO,ADC12_IN13,,ADC12_IN13,stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28
+stm32f103rbt6,12,VSSA,GND,,,,stm32-lqfp64 | stm32-pin-table-p28,
+stm32f103rbt6,13,VDDA,POWER,,,,stm32-lqfp64 | stm32-pin-table-p28,
+stm32f103rbt6,14,PA0,GPIO,WKUP,,WKUP,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103rbt6,14,PA0,GPIO,USART2_CTS,USART2_REMAP=0,USART2_CTS,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
+stm32f103rbt6,14,PA0,GPIO,ADC12_IN0,,ADC12_IN0,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103rbt6,14,PA0,GPIO,TIM2_CH1_ETR,TIM2_REMAP=00|10,TIM2_CH1_ETR,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-45
+stm32f103rbt6,15,PA1,GPIO,USART2_RTS,USART2_REMAP=0,USART2_RTS,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
+stm32f103rbt6,15,PA1,GPIO,ADC12_IN1,,ADC12_IN1,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103rbt6,15,PA1,GPIO,TIM2_CH2,TIM2_REMAP=00|10,TIM2_CH2,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-45
+stm32f103rbt6,16,PA2,GPIO,USART2_TX,USART2_REMAP=0,USART2_TX,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
+stm32f103rbt6,16,PA2,GPIO,ADC12_IN2,,ADC12_IN2,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103rbt6,16,PA2,GPIO,TIM2_CH3,TIM2_REMAP=00|01,TIM2_CH3,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-45
+stm32f103rbt6,17,PA3,GPIO,USART2_RX,USART2_REMAP=0,USART2_RX,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
+stm32f103rbt6,17,PA3,GPIO,ADC12_IN3,,ADC12_IN3,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103rbt6,17,PA3,GPIO,TIM2_CH4,TIM2_REMAP=00|01,TIM2_CH4,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-45
+stm32f103rbt6,18,VSS_4,GND,,,,stm32-lqfp64 | stm32-pin-table-p29,
+stm32f103rbt6,19,VDD_4,POWER,,,,stm32-lqfp64 | stm32-pin-table-p29,
+stm32f103rbt6,20,PA4,GPIO,SPI1_NSS,SPI1_REMAP=0,SPI1_NSS,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-56
+stm32f103rbt6,20,PA4,GPIO,USART2_CK,USART2_REMAP=0,USART2_CK,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
+stm32f103rbt6,20,PA4,GPIO,ADC12_IN4,,ADC12_IN4,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103rbt6,21,PA5,GPIO,SPI1_SCK,SPI1_REMAP=0,SPI1_SCK,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-56
+stm32f103rbt6,21,PA5,GPIO,ADC12_IN5,,ADC12_IN5,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103rbt6,22,PA6,GPIO,SPI1_MISO,SPI1_REMAP=0,SPI1_MISO,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-56
+stm32f103rbt6,22,PA6,GPIO,ADC12_IN6,,ADC12_IN6,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103rbt6,22,PA6,GPIO,TIM3_CH1,TIM3_REMAP=00,TIM3_CH1,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-44
+stm32f103rbt6,22,PA6,GPIO,TIM1_BKIN,TIM1_REMAP=01,TIM1_BKIN,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-46
+stm32f103rbt6,23,PA7,GPIO,SPI1_MOSI,SPI1_REMAP=0,SPI1_MOSI,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-56
+stm32f103rbt6,23,PA7,GPIO,ADC12_IN7,,ADC12_IN7,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103rbt6,23,PA7,GPIO,TIM3_CH2,TIM3_REMAP=00,TIM3_CH2,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-44
+stm32f103rbt6,23,PA7,GPIO,TIM1_CH1N,TIM1_REMAP=01,TIM1_CH1N,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-46
+stm32f103rbt6,24,PC4,GPIO,ADC12_IN14,,ADC12_IN14,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103rbt6,25,PC5,GPIO,ADC12_IN15,,ADC12_IN15,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103rbt6,26,PB0,GPIO,ADC12_IN8,,ADC12_IN8,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103rbt6,26,PB0,GPIO,TIM3_CH3,TIM3_REMAP=00|10,TIM3_CH3,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-44
+stm32f103rbt6,26,PB0,GPIO,TIM1_CH2N,TIM1_REMAP=01,TIM1_CH2N,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-46
+stm32f103rbt6,27,PB1,GPIO,ADC12_IN9,,ADC12_IN9,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103rbt6,27,PB1,GPIO,TIM3_CH4,TIM3_REMAP=00|10,TIM3_CH4,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-44
+stm32f103rbt6,27,PB1,GPIO,TIM1_CH3N,TIM1_REMAP=01,TIM1_CH3N,stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-46
+stm32f103rbt6,28,PB2,GPIO,,,,stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,
+stm32f103rbt6,29,PB10,GPIO,I2C2_SCL,,I2C2_SCL,stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+stm32f103rbt6,29,PB10,GPIO,USART3_TX,USART3_REMAP=00,USART3_TX,stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+stm32f103rbt6,29,PB10,GPIO,TIM2_CH3,TIM2_REMAP=10|11,TIM2_CH3,stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-45
+stm32f103rbt6,30,PB11,GPIO,I2C2_SDA,,I2C2_SDA,stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+stm32f103rbt6,30,PB11,GPIO,USART3_RX,USART3_REMAP=00,USART3_RX,stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+stm32f103rbt6,30,PB11,GPIO,TIM2_CH4,TIM2_REMAP=10|11,TIM2_CH4,stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-45
+stm32f103rbt6,31,VSS_1,GND,,,,stm32-lqfp64 | stm32-pin-table-p30,
+stm32f103rbt6,32,VDD_1,POWER,,,,stm32-lqfp64 | stm32-pin-table-p30,
+stm32f103rbt6,33,PB12,GPIO,SPI2_NSS,,SPI2_NSS,stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+stm32f103rbt6,33,PB12,GPIO,I2C2_SMBAl,,I2C2_SMBAl,stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+stm32f103rbt6,33,PB12,GPIO,USART3_CK,USART3_REMAP=00,USART3_CK,stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+stm32f103rbt6,33,PB12,GPIO,TIM1_BKIN,TIM1_REMAP=00,TIM1_BKIN,stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-46
+stm32f103rbt6,34,PB13,GPIO,SPI2_SCK,,SPI2_SCK,stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+stm32f103rbt6,34,PB13,GPIO,USART3_CTS,USART3_REMAP=00|01,USART3_CTS,stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+stm32f103rbt6,34,PB13,GPIO,TIM1_CH1N,TIM1_REMAP=00,TIM1_CH1N,stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-46
+stm32f103rbt6,35,PB14,GPIO,SPI2_MISO,,SPI2_MISO,stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+stm32f103rbt6,35,PB14,GPIO,USART3_RTS,USART3_REMAP=00|01,USART3_RTS,stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+stm32f103rbt6,35,PB14,GPIO,TIM1_CH2N,TIM1_REMAP=00,TIM1_CH2N,stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-46
+stm32f103rbt6,36,PB15,GPIO,SPI2_MOSI,,SPI2_MOSI,stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+stm32f103rbt6,36,PB15,GPIO,TIM1_CH3N,TIM1_REMAP=00,TIM1_CH3N,stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-46
+stm32f103rbt6,37,PC6,GPIO,TIM3_CH1,TIM3_REMAP=11,TIM3_CH1,stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-44
+stm32f103rbt6,38,PC7,GPIO,TIM3_CH2,TIM3_REMAP=11,TIM3_CH2,stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-44
+stm32f103rbt6,39,PC8,GPIO,TIM3_CH3,TIM3_REMAP=11,TIM3_CH3,stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-44
+stm32f103rbt6,40,PC9,GPIO,TIM3_CH4,TIM3_REMAP=11,TIM3_CH4,stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-44
+stm32f103rbt6,41,PA8,GPIO,USART1_CK,,USART1_CK,stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+stm32f103rbt6,41,PA8,GPIO,TIM1_CH1,TIM1_REMAP=00|01,TIM1_CH1,stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+stm32f103rbt6,41,PA8,GPIO,MCO,,MCO,stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+stm32f103rbt6,42,PA9,GPIO,USART1_TX,USART1_REMAP=0,USART1_TX,stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-54
+stm32f103rbt6,42,PA9,GPIO,TIM1_CH2,TIM1_REMAP=00|01,TIM1_CH2,stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+stm32f103rbt6,43,PA10,GPIO,USART1_RX,USART1_REMAP=0,USART1_RX,stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-54
+stm32f103rbt6,43,PA10,GPIO,TIM1_CH3,TIM1_REMAP=00|01,TIM1_CH3,stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+stm32f103rbt6,44,PA11,GPIO,USART1_CTS,,USART1_CTS,stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+stm32f103rbt6,44,PA11,GPIO,CANRX,CAN_REMAP=00,CANRX,stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-34
+stm32f103rbt6,44,PA11,GPIO,USBDM,,USBDM,stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+stm32f103rbt6,44,PA11,GPIO,TIM1_CH4,TIM1_REMAP=00|01,TIM1_CH4,stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+stm32f103rbt6,45,PA12,GPIO,USART1_RTS,,USART1_RTS,stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+stm32f103rbt6,45,PA12,GPIO,CANTX,CAN_REMAP=00,CANTX,stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-34
+stm32f103rbt6,45,PA12,GPIO,USBDP,,USBDP,stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+stm32f103rbt6,45,PA12,GPIO,TIM1_ETR,TIM1_REMAP=00|01,TIM1_ETR,stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+stm32f103rbt6,46,PA13,GPIO,JTMS,,JTMS,stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-debug-mapping
+stm32f103rbt6,46,PA13,GPIO,SWDIO,,SWDIO,stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-debug-mapping
+stm32f103rbt6,47,VSS_2,GND,,,,stm32-lqfp64 | stm32-pin-table-p31,
+stm32f103rbt6,48,VDD_2,POWER,,,,stm32-lqfp64 | stm32-pin-table-p31,
+stm32f103rbt6,49,PA14,GPIO,JTCK,,JTCK,stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+stm32f103rbt6,49,PA14,GPIO,SWCLK,,SWCLK,stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+stm32f103rbt6,50,PA15,GPIO,TIM2_CH1_ETR,TIM2_REMAP=01|11,TIM2_CH1_ETR,stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-45
+stm32f103rbt6,50,PA15,GPIO,SPI1_NSS,SPI1_REMAP=1,SPI1_NSS,stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-56
+stm32f103rbt6,50,PA15,GPIO,JTDI,,JTDI,stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+stm32f103rbt6,51,PC10,GPIO,USART3_TX,USART3_REMAP=01,USART3_TX,stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-52
+stm32f103rbt6,52,PC11,GPIO,USART3_RX,USART3_REMAP=01,USART3_RX,stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-52
+stm32f103rbt6,53,PC12,GPIO,USART3_CK,USART3_REMAP=01,USART3_CK,stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-52
+stm32f103rbt6,54,PD2,GPIO,TIM3_ETR,,TIM3_ETR,stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32
+stm32f103rbt6,55,PB3,GPIO,TIM2_CH2,TIM2_REMAP=01|11,TIM2_CH2,stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-45
+stm32f103rbt6,55,PB3,GPIO,TRACESWO,,TRACESWO,stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+stm32f103rbt6,55,PB3,GPIO,SPI1_SCK,SPI1_REMAP=1,SPI1_SCK,stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-56
+stm32f103rbt6,55,PB3,GPIO,JTDO,,JTDO,stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+stm32f103rbt6,56,PB4,GPIO,TIM3_CH1,TIM3_REMAP=10,TIM3_CH1,stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-44
+stm32f103rbt6,56,PB4,GPIO,SPI1_MISO,SPI1_REMAP=1,SPI1_MISO,stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-56
+stm32f103rbt6,56,PB4,GPIO,JNTRST,,JNTRST,stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+stm32f103rbt6,57,PB5,GPIO,I2C1_SMBAl,,I2C1_SMBAl,stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32
+stm32f103rbt6,57,PB5,GPIO,TIM3_CH2,TIM3_REMAP=10,TIM3_CH2,stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-44
+stm32f103rbt6,57,PB5,GPIO,SPI1_MOSI,SPI1_REMAP=1,SPI1_MOSI,stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-56
+stm32f103rbt6,58,PB6,GPIO,I2C1_SCL,I2C1_REMAP=0,I2C1_SCL,stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-55
+stm32f103rbt6,58,PB6,GPIO,TIM4_CH1,TIM4_REMAP=0,TIM4_CH1,stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-43
+stm32f103rbt6,58,PB6,GPIO,USART1_TX,USART1_REMAP=1,USART1_TX,stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-54
+stm32f103rbt6,59,PB7,GPIO,I2C1_SDA,I2C1_REMAP=0,I2C1_SDA,stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-55
+stm32f103rbt6,59,PB7,GPIO,TIM4_CH2,TIM4_REMAP=0,TIM4_CH2,stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-43
+stm32f103rbt6,59,PB7,GPIO,USART1_RX,USART1_REMAP=1,USART1_RX,stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-54
+stm32f103rbt6,60,BOOT0,SYSTEM,,,,stm32-lqfp64 | stm32-pin-table-p32,
+stm32f103rbt6,61,PB8,GPIO,TIM4_CH3,TIM4_REMAP=0,TIM4_CH3,stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-43
+stm32f103rbt6,61,PB8,GPIO,I2C1_SCL,I2C1_REMAP=1,I2C1_SCL,stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-55
+stm32f103rbt6,61,PB8,GPIO,CANRX,CAN_REMAP=10,CANRX,stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-34
+stm32f103rbt6,62,PB9,GPIO,TIM4_CH4,TIM4_REMAP=0,TIM4_CH4,stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-43
+stm32f103rbt6,62,PB9,GPIO,I2C1_SDA,I2C1_REMAP=1,I2C1_SDA,stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-55
+stm32f103rbt6,62,PB9,GPIO,CANTX,CAN_REMAP=10,CANTX,stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-34
+stm32f103rbt6,63,VSS_3,GND,,,,stm32-lqfp64 | stm32-pin-table-p33,
+stm32f103rbt6,64,VDD_3,POWER,,,,stm32-lqfp64 | stm32-pin-table-p33,
+stm32f103vbt6,1,PE2,GPIO,TRACECK,,TRACECK,stm32-lqfp100 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28 | stm32-debug-mapping
+stm32f103vbt6,2,PE3,GPIO,TRACED0,,TRACED0,stm32-lqfp100 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28 | stm32-debug-mapping
+stm32f103vbt6,3,PE4,GPIO,TRACED1,,TRACED1,stm32-lqfp100 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28 | stm32-debug-mapping
+stm32f103vbt6,4,PE5,GPIO,TRACED2,,TRACED2,stm32-lqfp100 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28 | stm32-debug-mapping
+stm32f103vbt6,5,PE6,GPIO,TRACED3,,TRACED3,stm32-lqfp100 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28 | stm32-debug-mapping
+stm32f103vbt6,6,VBAT,POWER,,,,stm32-lqfp100 | stm32-pin-table-p28,
+stm32f103vbt6,7,PC13,GPIO,TAMPER-RTC,,TAMPER-RTC,stm32-lqfp100 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28
+stm32f103vbt6,8,PC14,GPIO,OSC32_IN,,OSC32_IN,stm32-lqfp100 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28
+stm32f103vbt6,9,PC15,GPIO,OSC32_OUT,,OSC32_OUT,stm32-lqfp100 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28
+stm32f103vbt6,10,VSS_5,GND,,,,stm32-lqfp100 | stm32-pin-table-p28,
+stm32f103vbt6,11,VDD_5,POWER,,,,stm32-lqfp100 | stm32-pin-table-p28,
+stm32f103vbt6,12,OSC_IN,GPIO,PD0,PD01_REMAP=1,PD0,stm32-lqfp100 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28 | stm32-osc-remap
+stm32f103vbt6,13,OSC_OUT,GPIO,PD1,PD01_REMAP=1,PD1,stm32-lqfp100 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28 | stm32-osc-remap
+stm32f103vbt6,14,NRST,SYSTEM,,,,stm32-lqfp100 | stm32-pin-table-p28,
+stm32f103vbt6,15,PC0,GPIO,ADC12_IN10,,ADC12_IN10,stm32-lqfp100 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28
+stm32f103vbt6,16,PC1,GPIO,ADC12_IN11,,ADC12_IN11,stm32-lqfp100 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28
+stm32f103vbt6,17,PC2,GPIO,ADC12_IN12,,ADC12_IN12,stm32-lqfp100 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28
+stm32f103vbt6,18,PC3,GPIO,ADC12_IN13,,ADC12_IN13,stm32-lqfp100 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28
+stm32f103vbt6,19,VSSA,GND,,,,stm32-lqfp100 | stm32-pin-table-p28,
+stm32f103vbt6,20,VREF-,SYSTEM,,,,stm32-lqfp100 | stm32-pin-table-p28,
+stm32f103vbt6,21,VREF+,SYSTEM,,,,stm32-lqfp100 | stm32-pin-table-p28,
+stm32f103vbt6,22,VDDA,POWER,,,,stm32-lqfp100 | stm32-pin-table-p28,
+stm32f103vbt6,23,PA0,GPIO,WKUP,,WKUP,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103vbt6,23,PA0,GPIO,USART2_CTS,USART2_REMAP=0,USART2_CTS,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
+stm32f103vbt6,23,PA0,GPIO,ADC12_IN0,,ADC12_IN0,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103vbt6,23,PA0,GPIO,TIM2_CH1_ETR,TIM2_REMAP=00|10,TIM2_CH1_ETR,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-45
+stm32f103vbt6,24,PA1,GPIO,USART2_RTS,USART2_REMAP=0,USART2_RTS,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
+stm32f103vbt6,24,PA1,GPIO,ADC12_IN1,,ADC12_IN1,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103vbt6,24,PA1,GPIO,TIM2_CH2,TIM2_REMAP=00|10,TIM2_CH2,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-45
+stm32f103vbt6,25,PA2,GPIO,USART2_TX,USART2_REMAP=0,USART2_TX,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
+stm32f103vbt6,25,PA2,GPIO,ADC12_IN2,,ADC12_IN2,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103vbt6,25,PA2,GPIO,TIM2_CH3,TIM2_REMAP=00|01,TIM2_CH3,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-45
+stm32f103vbt6,26,PA3,GPIO,USART2_RX,USART2_REMAP=0,USART2_RX,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
+stm32f103vbt6,26,PA3,GPIO,ADC12_IN3,,ADC12_IN3,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103vbt6,26,PA3,GPIO,TIM2_CH4,TIM2_REMAP=00|01,TIM2_CH4,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-45
+stm32f103vbt6,27,VSS_4,GND,,,,stm32-lqfp100 | stm32-pin-table-p29,
+stm32f103vbt6,28,VDD_4,POWER,,,,stm32-lqfp100 | stm32-pin-table-p29,
+stm32f103vbt6,29,PA4,GPIO,SPI1_NSS,SPI1_REMAP=0,SPI1_NSS,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-56
+stm32f103vbt6,29,PA4,GPIO,USART2_CK,USART2_REMAP=0,USART2_CK,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
+stm32f103vbt6,29,PA4,GPIO,ADC12_IN4,,ADC12_IN4,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103vbt6,30,PA5,GPIO,SPI1_SCK,SPI1_REMAP=0,SPI1_SCK,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-56
+stm32f103vbt6,30,PA5,GPIO,ADC12_IN5,,ADC12_IN5,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103vbt6,31,PA6,GPIO,SPI1_MISO,SPI1_REMAP=0,SPI1_MISO,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-56
+stm32f103vbt6,31,PA6,GPIO,ADC12_IN6,,ADC12_IN6,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103vbt6,31,PA6,GPIO,TIM3_CH1,TIM3_REMAP=00,TIM3_CH1,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-44
+stm32f103vbt6,31,PA6,GPIO,TIM1_BKIN,TIM1_REMAP=01,TIM1_BKIN,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-46
+stm32f103vbt6,32,PA7,GPIO,SPI1_MOSI,SPI1_REMAP=0,SPI1_MOSI,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-56
+stm32f103vbt6,32,PA7,GPIO,ADC12_IN7,,ADC12_IN7,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103vbt6,32,PA7,GPIO,TIM3_CH2,TIM3_REMAP=00,TIM3_CH2,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-44
+stm32f103vbt6,32,PA7,GPIO,TIM1_CH1N,TIM1_REMAP=01,TIM1_CH1N,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-46
+stm32f103vbt6,33,PC4,GPIO,ADC12_IN14,,ADC12_IN14,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103vbt6,34,PC5,GPIO,ADC12_IN15,,ADC12_IN15,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103vbt6,35,PB0,GPIO,ADC12_IN8,,ADC12_IN8,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103vbt6,35,PB0,GPIO,TIM3_CH3,TIM3_REMAP=00|10,TIM3_CH3,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-44
+stm32f103vbt6,35,PB0,GPIO,TIM1_CH2N,TIM1_REMAP=01,TIM1_CH2N,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-46
+stm32f103vbt6,36,PB1,GPIO,ADC12_IN9,,ADC12_IN9,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103vbt6,36,PB1,GPIO,TIM3_CH4,TIM3_REMAP=00|10,TIM3_CH4,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-44
+stm32f103vbt6,36,PB1,GPIO,TIM1_CH3N,TIM1_REMAP=01,TIM1_CH3N,stm32-lqfp100 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-46
+stm32f103vbt6,37,PB2,GPIO,,,,stm32-lqfp100 | stm32-pin-table-p30 | stm32-electrical-notes,
+stm32f103vbt6,38,PE7,GPIO,TIM1_ETR,,TIM1_ETR,stm32-lqfp100 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+stm32f103vbt6,39,PE8,GPIO,TIM1_CH1N,,TIM1_CH1N,stm32-lqfp100 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+stm32f103vbt6,40,PE9,GPIO,TIM1_CH1,,TIM1_CH1,stm32-lqfp100 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+stm32f103vbt6,41,PE10,GPIO,TIM1_CH2N,,TIM1_CH2N,stm32-lqfp100 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+stm32f103vbt6,42,PE11,GPIO,TIM1_CH2,,TIM1_CH2,stm32-lqfp100 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+stm32f103vbt6,43,PE12,GPIO,TIM1_CH3N,,TIM1_CH3N,stm32-lqfp100 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+stm32f103vbt6,44,PE13,GPIO,TIM1_CH3,,TIM1_CH3,stm32-lqfp100 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+stm32f103vbt6,45,PE14,GPIO,TIM1_CH4,,TIM1_CH4,stm32-lqfp100 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+stm32f103vbt6,46,PE15,GPIO,TIM1_BKIN,,TIM1_BKIN,stm32-lqfp100 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+stm32f103vbt6,47,PB10,GPIO,I2C2_SCL,,I2C2_SCL,stm32-lqfp100 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+stm32f103vbt6,47,PB10,GPIO,USART3_TX,USART3_REMAP=00,USART3_TX,stm32-lqfp100 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+stm32f103vbt6,47,PB10,GPIO,TIM2_CH3,TIM2_REMAP=10|11,TIM2_CH3,stm32-lqfp100 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-45
+stm32f103vbt6,48,PB11,GPIO,I2C2_SDA,,I2C2_SDA,stm32-lqfp100 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+stm32f103vbt6,48,PB11,GPIO,USART3_RX,USART3_REMAP=00,USART3_RX,stm32-lqfp100 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+stm32f103vbt6,48,PB11,GPIO,TIM2_CH4,TIM2_REMAP=10|11,TIM2_CH4,stm32-lqfp100 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-45
+stm32f103vbt6,49,VSS_1,GND,,,,stm32-lqfp100 | stm32-pin-table-p30,
+stm32f103vbt6,50,VDD_1,POWER,,,,stm32-lqfp100 | stm32-pin-table-p30,
+stm32f103vbt6,51,PB12,GPIO,SPI2_NSS,,SPI2_NSS,stm32-lqfp100 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+stm32f103vbt6,51,PB12,GPIO,I2C2_SMBAl,,I2C2_SMBAl,stm32-lqfp100 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+stm32f103vbt6,51,PB12,GPIO,USART3_CK,USART3_REMAP=00,USART3_CK,stm32-lqfp100 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+stm32f103vbt6,51,PB12,GPIO,TIM1_BKIN,TIM1_REMAP=00,TIM1_BKIN,stm32-lqfp100 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-46
+stm32f103vbt6,52,PB13,GPIO,SPI2_SCK,,SPI2_SCK,stm32-lqfp100 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+stm32f103vbt6,52,PB13,GPIO,USART3_CTS,USART3_REMAP=00|01,USART3_CTS,stm32-lqfp100 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+stm32f103vbt6,52,PB13,GPIO,TIM1_CH1N,TIM1_REMAP=00,TIM1_CH1N,stm32-lqfp100 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-46
+stm32f103vbt6,53,PB14,GPIO,SPI2_MISO,,SPI2_MISO,stm32-lqfp100 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+stm32f103vbt6,53,PB14,GPIO,USART3_RTS,USART3_REMAP=00|01,USART3_RTS,stm32-lqfp100 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+stm32f103vbt6,53,PB14,GPIO,TIM1_CH2N,TIM1_REMAP=00,TIM1_CH2N,stm32-lqfp100 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-46
+stm32f103vbt6,54,PB15,GPIO,SPI2_MOSI,,SPI2_MOSI,stm32-lqfp100 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+stm32f103vbt6,54,PB15,GPIO,TIM1_CH3N,TIM1_REMAP=00,TIM1_CH3N,stm32-lqfp100 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-46
+stm32f103vbt6,55,PD8,GPIO,USART3_TX,USART3_REMAP=11,USART3_TX,stm32-lqfp100 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+stm32f103vbt6,56,PD9,GPIO,USART3_RX,USART3_REMAP=11,USART3_RX,stm32-lqfp100 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+stm32f103vbt6,57,PD10,GPIO,USART3_CK,USART3_REMAP=11,USART3_CK,stm32-lqfp100 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-52
+stm32f103vbt6,58,PD11,GPIO,USART3_CTS,USART3_REMAP=11,USART3_CTS,stm32-lqfp100 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-52
+stm32f103vbt6,59,PD12,GPIO,TIM4_CH1,TIM4_REMAP=1,TIM4_CH1,stm32-lqfp100 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-43
+stm32f103vbt6,59,PD12,GPIO,USART3_RTS,USART3_REMAP=11,USART3_RTS,stm32-lqfp100 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-52
+stm32f103vbt6,60,PD13,GPIO,TIM4_CH2,TIM4_REMAP=1,TIM4_CH2,stm32-lqfp100 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-43
+stm32f103vbt6,61,PD14,GPIO,TIM4_CH3,TIM4_REMAP=1,TIM4_CH3,stm32-lqfp100 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-43
+stm32f103vbt6,62,PD15,GPIO,TIM4_CH4,TIM4_REMAP=1,TIM4_CH4,stm32-lqfp100 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-43
+stm32f103vbt6,63,PC6,GPIO,TIM3_CH1,TIM3_REMAP=11,TIM3_CH1,stm32-lqfp100 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-44
+stm32f103vbt6,64,PC7,GPIO,TIM3_CH2,TIM3_REMAP=11,TIM3_CH2,stm32-lqfp100 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-44
+stm32f103vbt6,65,PC8,GPIO,TIM3_CH3,TIM3_REMAP=11,TIM3_CH3,stm32-lqfp100 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-44
+stm32f103vbt6,66,PC9,GPIO,TIM3_CH4,TIM3_REMAP=11,TIM3_CH4,stm32-lqfp100 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-44
+stm32f103vbt6,67,PA8,GPIO,USART1_CK,,USART1_CK,stm32-lqfp100 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+stm32f103vbt6,67,PA8,GPIO,TIM1_CH1,TIM1_REMAP=00|01,TIM1_CH1,stm32-lqfp100 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+stm32f103vbt6,67,PA8,GPIO,MCO,,MCO,stm32-lqfp100 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+stm32f103vbt6,68,PA9,GPIO,USART1_TX,USART1_REMAP=0,USART1_TX,stm32-lqfp100 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-54
+stm32f103vbt6,68,PA9,GPIO,TIM1_CH2,TIM1_REMAP=00|01,TIM1_CH2,stm32-lqfp100 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+stm32f103vbt6,69,PA10,GPIO,USART1_RX,USART1_REMAP=0,USART1_RX,stm32-lqfp100 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-54
+stm32f103vbt6,69,PA10,GPIO,TIM1_CH3,TIM1_REMAP=00|01,TIM1_CH3,stm32-lqfp100 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+stm32f103vbt6,70,PA11,GPIO,USART1_CTS,,USART1_CTS,stm32-lqfp100 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+stm32f103vbt6,70,PA11,GPIO,CANRX,CAN_REMAP=00,CANRX,stm32-lqfp100 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-34
+stm32f103vbt6,70,PA11,GPIO,USBDM,,USBDM,stm32-lqfp100 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+stm32f103vbt6,70,PA11,GPIO,TIM1_CH4,TIM1_REMAP=00|01,TIM1_CH4,stm32-lqfp100 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+stm32f103vbt6,71,PA12,GPIO,USART1_RTS,,USART1_RTS,stm32-lqfp100 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+stm32f103vbt6,71,PA12,GPIO,CANTX,CAN_REMAP=00,CANTX,stm32-lqfp100 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-34
+stm32f103vbt6,71,PA12,GPIO,USBDP,,USBDP,stm32-lqfp100 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+stm32f103vbt6,71,PA12,GPIO,TIM1_ETR,TIM1_REMAP=00|01,TIM1_ETR,stm32-lqfp100 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+stm32f103vbt6,72,PA13,GPIO,JTMS,,JTMS,stm32-lqfp100 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-debug-mapping
+stm32f103vbt6,72,PA13,GPIO,SWDIO,,SWDIO,stm32-lqfp100 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-debug-mapping
+stm32f103vbt6,73,Notconnected,SYSTEM,,,,stm32-lqfp100 | stm32-pin-table-p31,
+stm32f103vbt6,74,VSS_2,GND,,,,stm32-lqfp100 | stm32-pin-table-p31,
+stm32f103vbt6,75,VDD_2,POWER,,,,stm32-lqfp100 | stm32-pin-table-p31,
+stm32f103vbt6,76,PA14,GPIO,JTCK,,JTCK,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+stm32f103vbt6,76,PA14,GPIO,SWCLK,,SWCLK,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+stm32f103vbt6,77,PA15,GPIO,TIM2_CH1_ETR,TIM2_REMAP=01|11,TIM2_CH1_ETR,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-45
+stm32f103vbt6,77,PA15,GPIO,SPI1_NSS,SPI1_REMAP=1,SPI1_NSS,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-56
+stm32f103vbt6,77,PA15,GPIO,JTDI,,JTDI,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+stm32f103vbt6,78,PC10,GPIO,USART3_TX,USART3_REMAP=01,USART3_TX,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-52
+stm32f103vbt6,79,PC11,GPIO,USART3_RX,USART3_REMAP=01,USART3_RX,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-52
+stm32f103vbt6,80,PC12,GPIO,USART3_CK,USART3_REMAP=01,USART3_CK,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-52
+stm32f103vbt6,81,PD0,GPIO,CANRX,CAN_REMAP=11,CANRX,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-34
+stm32f103vbt6,82,PD1,GPIO,CANTX,CAN_REMAP=11,CANTX,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-34
+stm32f103vbt6,83,PD2,GPIO,TIM3_ETR,,TIM3_ETR,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32
+stm32f103vbt6,84,PD3,GPIO,USART2_CTS,USART2_REMAP=1,USART2_CTS,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-53
+stm32f103vbt6,85,PD4,GPIO,USART2_RTS,USART2_REMAP=1,USART2_RTS,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-53
+stm32f103vbt6,86,PD5,GPIO,USART2_TX,USART2_REMAP=1,USART2_TX,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-53
+stm32f103vbt6,87,PD6,GPIO,USART2_RX,USART2_REMAP=1,USART2_RX,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-53
+stm32f103vbt6,88,PD7,GPIO,USART2_CK,USART2_REMAP=1,USART2_CK,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-53
+stm32f103vbt6,89,PB3,GPIO,TIM2_CH2,TIM2_REMAP=01|11,TIM2_CH2,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-45
+stm32f103vbt6,89,PB3,GPIO,TRACESWO,,TRACESWO,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+stm32f103vbt6,89,PB3,GPIO,SPI1_SCK,SPI1_REMAP=1,SPI1_SCK,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-56
+stm32f103vbt6,89,PB3,GPIO,JTDO,,JTDO,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+stm32f103vbt6,90,PB4,GPIO,TIM3_CH1,TIM3_REMAP=10,TIM3_CH1,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-44
+stm32f103vbt6,90,PB4,GPIO,SPI1_MISO,SPI1_REMAP=1,SPI1_MISO,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-56
+stm32f103vbt6,90,PB4,GPIO,JNTRST,,JNTRST,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+stm32f103vbt6,91,PB5,GPIO,I2C1_SMBAl,,I2C1_SMBAl,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32
+stm32f103vbt6,91,PB5,GPIO,TIM3_CH2,TIM3_REMAP=10,TIM3_CH2,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-44
+stm32f103vbt6,91,PB5,GPIO,SPI1_MOSI,SPI1_REMAP=1,SPI1_MOSI,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-56
+stm32f103vbt6,92,PB6,GPIO,I2C1_SCL,I2C1_REMAP=0,I2C1_SCL,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-55
+stm32f103vbt6,92,PB6,GPIO,TIM4_CH1,TIM4_REMAP=0,TIM4_CH1,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-43
+stm32f103vbt6,92,PB6,GPIO,USART1_TX,USART1_REMAP=1,USART1_TX,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-54
+stm32f103vbt6,93,PB7,GPIO,I2C1_SDA,I2C1_REMAP=0,I2C1_SDA,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-55
+stm32f103vbt6,93,PB7,GPIO,TIM4_CH2,TIM4_REMAP=0,TIM4_CH2,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-43
+stm32f103vbt6,93,PB7,GPIO,USART1_RX,USART1_REMAP=1,USART1_RX,stm32-lqfp100 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-54
+stm32f103vbt6,94,BOOT0,SYSTEM,,,,stm32-lqfp100 | stm32-pin-table-p32,
+stm32f103vbt6,95,PB8,GPIO,TIM4_CH3,TIM4_REMAP=0,TIM4_CH3,stm32-lqfp100 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-43
+stm32f103vbt6,95,PB8,GPIO,I2C1_SCL,I2C1_REMAP=1,I2C1_SCL,stm32-lqfp100 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-55
+stm32f103vbt6,95,PB8,GPIO,CANRX,CAN_REMAP=10,CANRX,stm32-lqfp100 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-34
+stm32f103vbt6,96,PB9,GPIO,TIM4_CH4,TIM4_REMAP=0,TIM4_CH4,stm32-lqfp100 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-43
+stm32f103vbt6,96,PB9,GPIO,I2C1_SDA,I2C1_REMAP=1,I2C1_SDA,stm32-lqfp100 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-55
+stm32f103vbt6,96,PB9,GPIO,CANTX,CAN_REMAP=10,CANTX,stm32-lqfp100 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-34
+stm32f103vbt6,97,PE0,GPIO,TIM4_ETR,,TIM4_ETR,stm32-lqfp100 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33
+stm32f103vbt6,98,PE1,GPIO,,,,stm32-lqfp100 | stm32-pin-table-p33 | stm32-electrical-notes,
+stm32f103vbt6,99,VSS_3,GND,,,,stm32-lqfp100 | stm32-pin-table-p33,
+stm32f103vbt6,100,VDD_3,POWER,,,,stm32-lqfp100 | stm32-pin-table-p33,
 arduino-uno-r3,1,NC,SYSTEM,,,,arduino-uno-r3-headers | arduino-uno-r3-connector-tables,
 arduino-uno-r3,2,IOREF,POWER,,,,arduino-uno-r3-headers | arduino-uno-r3-connector-tables,
 arduino-uno-r3,3,RESET,SYSTEM,,,,arduino-uno-r3-headers | arduino-uno-r3-connector-tables,
