@@ -1,3 +1,4 @@
+import { buildLayouts, resolveProfile } from './layouts.mjs';
 const { t, verificationUrl } = window.ZaryobI18n;
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -39,8 +40,11 @@ const familyName = type => t(familyKeys[type] || type);
 const subtitle = item => t(`board.${item.id}`, {}, item.subtitle);
 const groups = ['SPI','I2C','UART','PWM','ADC','HSTX','PIO','PCM','CLOCK','JTAG','DPI','SDIO','SMI'];
 let evidence = {references:{}};
-let boards, board, selected = 1, selectedFn, filters = new Set(), search = '', flipped = false, rotated = false, view = 'map', assignments = {}, toastTimer;
+let boards, layouts, layout, board, selected = 1, selectedFn, filters = new Set(), search = '', flipped = false, rotated = false, view = 'map', assignments = {}, toastTimer;
 const storageKey = 'pin-atlas:plans:v1';
+const rememberedProfiles = new Map();
+const layoutTitle = item => item.nameKey ? t(item.nameKey) : item.name;
+const layoutSubtitle = item => item.subtitleKey ? t(item.subtitleKey) : subtitle(item);
 let savedPlans = {};
 try { savedPlans = JSON.parse(localStorage.getItem(storageKey) || '{}'); if (!savedPlans || typeof savedPlans !== 'object' || Array.isArray(savedPlans)) savedPlans = {}; } catch { savedPlans = {}; }
 function toast(message) { $('#toast').textContent = message; $('#toast').classList.add('visible'); clearTimeout(toastTimer); toastTimer = setTimeout(() => $('#toast').classList.remove('visible'), 3500); }
@@ -58,35 +62,70 @@ function validatePlan(data, target) {
 function persist() { savedPlans[board.id] = assignments; try { localStorage.setItem(storageKey, JSON.stringify(savedPlans)); } catch { toast(t('storageUnavailable')); } }
 function pinByNumber(n) { return board.pins.find(p => p.number === Number(n)); }
 function matches(pin) { const text = [pin.number, pin.name, ...pin.functions.map(f => f.name), assignments[pin.number]?.label].join(' ').toLowerCase(); return text.includes(search.toLowerCase().trim()) && (!filters.size || pin.functions.some(f => filters.has(f.group))); }
-function setBoard(id, initial = false) {
- board = boards.find(b => b.id === id) || boards[0]; selected = board.pins.find(p => p.type === 'GPIO')?.number || 1;
+function setBoard(id, initial = false, preferredProfile) {
+ const next = resolveProfile(layouts, id, preferredProfile);
+ const sameLayout = layout?.id === next.layout.id;
+ const previousPin = selected;
+ layout = next.layout; board = next.profile;
+ rememberedProfiles.set(layout.id, board.id);
+ selected = sameLayout && board.pins.some(pin => pin.number === previousPin) ? previousPin : board.pins.find(p => p.type === 'GPIO')?.number || 1;
  try { assignments = validatePlan(savedPlans[board.id] || {}, board); } catch { assignments = {}; }
  selectedFn = assignments[selected]?.function || options(pinByNumber(selected))[0].name;
- if (!initial) { filters = new Set(); search = ''; $('#pin-search').value = ''; flipped = rotated = false; }
+ if (!sameLayout) { filters = new Set(); search = ''; $('#pin-search').value = ''; flipped = rotated = false; }
+ const available = new Set(board.pins.flatMap(pin => pin.functions.map(fn => fn.group)));
+ filters = new Set([...filters].filter(group => available.has(group)));
  renderBoard();
- if (!initial) history.replaceState(null, '', `#board=${board.id}`);
+ if (!initial) history.replaceState(null, '', `#${new URLSearchParams({board:layout.id,profile:board.id})}`);
  if ($('#details-dialog').open) $('#details-dialog').close();
  setDetailTab('pin');
 }
+function openLayout(id) {
+ const target = layouts.find(item => item.id === id);
+ if (!target) return;
+ // Reopen the last function reference, including legacy saved model plans.
+ const savedProfile = target.profiles.find(profile => Object.keys(savedPlans[profile.id] || {}).length)?.id;
+ setBoard(id, false, rememberedProfiles.get(id) || savedProfile);
+}
 function renderBoard() {
- document.title = `${board.name} Pinout — Pin Atlas`;
- $('#board-title').textContent = board.name;
- $('#board-scope').hidden = !board.scopeKey;
- $('#board-scope').textContent = board.scopeKey ? t(board.scopeKey) : '';
- $('#library-count').textContent = boards.length;
- $('#board-subtitle').textContent = subtitle(board);
- $('#crumb').textContent = board.shortName || board.name;
+ document.title = `${layoutTitle(layout)} Pinout — Pin Atlas`;
+ $('#board-title').textContent = layoutTitle(layout);
+ const scope = layout.scopeKey ? t(layout.scopeKey) : '';
+ $('#board-scope').hidden = !scope;
+ $('#board-scope').textContent = scope;
+ $('#compatible-boards').hidden = !layout.compatibleKey;
+ $('#compatible-boards').textContent = layout.compatibleKey ? `${t('compatibleBoards')}: ${t(layout.compatibleKey)}` : '';
+ $('#library-count').textContent = layouts.length;
+ $('#board-subtitle').textContent = layoutSubtitle(layout);
+ $('#crumb').textContent = layoutTitle(layout);
  $('#board-family').textContent = board.family;
  $('#datasheet').href = board.datasheet;
  $('#reference-link').href = board.source;
  $('#reference-link').innerHTML = `${t('officialSource')} <span>↗</span>`;
  $('#pin-count').textContent = t('pinCount', { count: board.packagePins });
- $('#specs').innerHTML = `<span>${icon('chip')}<b>${board.layout === 'header' ? '2 × 20' : esc(board.mcu || 'RP2350')}</b>${board.layout === 'qfn' ? `QFN-${board.packagePins}` : board.layout === 'header' ? t('gpioHeader') : t('microcontroller')}</span><span>${icon('board')}<b>${board.gpioCount}</b>GPIO${board.reservedGPIOCount ? ` (${t('reservedCount', { count: board.reservedGPIOCount })})` : ''}</span><span>${icon('bolt')}<b>${esc(board.voltage)}</b></span><span>${icon(board.layout === 'pico' ? 'wifi' : 'clock')}<b>${board.layout === 'pico' ? (board.wireless ? 'Wi-Fi + Bluetooth' : t('wired')) : esc(board.layout === 'header' ? t('bcmNumbering') : board.clock)}</b></span>`;
- renderNav(); renderFilters(); renderMap(); renderDetail(); renderPlan();
+ $('#specs').innerHTML = `<span>${icon('board')}<b>${board.packagePins}</b>${t('physicalPins')}</span><span>${icon('chip')}<b>${board.gpioCount}</b>GPIO${board.reservedGPIOCount ? ` (${t('reservedCount', { count: board.reservedGPIOCount })})` : ''}</span><span>${icon('bolt')}<b>${esc(board.voltage)}</b></span>`;
+ renderNav(); renderFunctionReference(); renderFilters(); renderMap(); renderDetail(); renderPlan();
 }
-function boardGroup(item) { return item.layout === 'pico' ? 'picoFamily' : item.layout === 'header' ? 'piHeaders' : 'chips'; }
+function renderFunctionReference() {
+ $('#function-reference-bar').hidden = !layout.references.length;
+ $('#reference-note').textContent = layout.id === 'raspberry-pi-40' ? t(board.id === 'raspberry-pi-4' ? 'pi4ReferenceNote' : 'commonReferenceNote') : t('picoReferenceNote');
+ const choices = layout.references.flatMap(reference => {
+   const hasSavedPlan = id => Object.keys(savedPlans[id] || {}).length > 0;
+   const selectedId = reference.profileIds.includes(board.id) ? board.id : reference.profileIds.find(hasSavedPlan) || reference.profileIds[0];
+   const result = [{id:selectedId, label:t(reference.key)}];
+   // If both old model slots contain plans, expose them rather than merge or hide data.
+   for (const id of reference.profileIds.filter(id => id !== selectedId && hasSavedPlan(id))) {
+     const profile = boards.find(item => item.id === id);
+     result.push({id, label:`${t(reference.key)} · ${t('savedModelPlan', {model:profile.shortName})}`});
+   }
+   return result;
+ });
+ $('#function-reference').innerHTML = choices.map(choice => `<option value="${choice.id}" ${choice.id === board.id ? 'selected' : ''}>${esc(choice.label)}</option>`).join('');
+}
 function renderNav() {
- $('#board-nav').innerHTML = ['picoFamily','piHeaders','chips'].map(group => `<div class="nav-section">${t(group)}</div>${boards.filter(b => boardGroup(b) === group).map(b => `<button class="board-nav-item ${b.id === board.id ? 'active' : ''}" data-board="${b.id}" ${b.id === board.id ? 'aria-current="page"' : ''}>${icon(b.layout === 'qfn' ? 'chip' : 'board')}<span>${esc(b.shortName || b.name)}<small>${b.layout === 'qfn' ? `QFN-${b.packagePins}` : `${esc(b.mcu || 'GPIO')} · ${t('pinCount', { count: b.packagePins })}`}</small></span></button>`).join('')}`).join('');
+ $('#board-nav').innerHTML = ['layouts','chips'].map(group => {
+   const entries = layouts.filter(item => (item.layout === 'qfn' ? 'chips' : 'layouts') === group);
+   return `<div class="nav-section">${t(group)}</div>${entries.map(item => `<button class="board-nav-item ${item.id === layout.id ? 'active' : ''}" data-layout="${item.id}" ${item.id === layout.id ? 'aria-current="page"' : ''}>${icon(item.layout === 'qfn' ? 'chip' : 'board')}<span>${esc(layoutTitle(item))}<small>${esc(layoutSubtitle(item))}</small></span></button>`).join('')}`;
+ }).join('');
 }
 function renderFilters() {
  const available = new Set(board.pins.flatMap(p => p.functions.map(f => f.group)));
@@ -113,7 +152,7 @@ function pinGroup(pin, x, y, side, opts = {}) {
 }
 function picoArt() {
  const pads=Array.from({length:20},(_,i)=>[278,402].map(x=>`<circle cx="${x}" cy="${48+i*23}" r="5" fill="var(--paper)" stroke="var(--accent)" stroke-width="1.2"/>`).join('')).join('');
- return `<g class="board-art"><rect x="273" y="32" width="134" height="475" rx="6" fill="var(--surface)" stroke="var(--accent)" stroke-width="1.3"/><rect x="288" y="43" width="104" height="452" rx="2" fill="none" stroke="var(--line)" stroke-dasharray="3 4"/>${pads}<rect x="314" y="19" width="52" height="39" rx="2" fill="var(--paper)" stroke="var(--accent)"/><path d="M322 19v8h36v-8" fill="none" stroke="var(--line)"/><text x="340" y="44" fill="var(--accent)" text-anchor="middle" font-size="9">USB</text><text x="340" y="87" fill="var(--ink)" text-anchor="middle" font-size="9">${esc(board.shortName.toUpperCase())}</text><text x="340" y="104" fill="var(--muted)" text-anchor="middle" font-size="6">40-PIN / 3.3 V IO</text><path d="M340 122v36m0 87v48m0 70v39" stroke="var(--line)" stroke-width="1.3"/><rect x="302" y="158" width="76" height="87" fill="var(--paper)" stroke="var(--accent)"/><text x="340" y="190" fill="var(--ink)" text-anchor="middle" font-size="11">${esc(board.mcu)}</text><text x="340" y="210" fill="var(--muted)" text-anchor="middle" font-size="7">MCU / BANK 0</text><path d="M313 224h54" stroke="var(--line)"/><rect x="302" y="293" width="76" height="70" fill="var(--paper)" stroke="var(--line)"/><text x="340" y="321" fill="var(--ink)" text-anchor="middle" font-size="9">${board.wireless ? 'CYW43439' : 'QSPI FLASH'}</text><text x="340" y="340" fill="var(--muted)" text-anchor="middle" font-size="7">${board.wireless ? 'RADIO' : 'STORAGE'}</text><path d="M340 402v15m-17-12 17 12 17-12m-27 2 10 7 10-7" fill="none" stroke="var(--accent)"/><text x="340" y="461" fill="var(--muted)" text-anchor="middle" font-size="7">${t('schematic')}</text><text x="340" y="477" fill="var(--muted)" text-anchor="middle" font-size="5.5">${t('notToScale')}</text></g>`;
+ return `<g class="board-art"><rect x="273" y="32" width="134" height="475" rx="6" fill="var(--surface)" stroke="var(--accent)" stroke-width="1.3"/><rect x="288" y="43" width="104" height="452" rx="2" fill="none" stroke="var(--line)" stroke-dasharray="3 4"/>${pads}<rect x="314" y="19" width="52" height="39" rx="2" fill="var(--paper)" stroke="var(--accent)"/><path d="M322 19v8h36v-8" fill="none" stroke="var(--line)"/><text x="340" y="44" fill="var(--accent)" text-anchor="middle" font-size="9">USB</text><text x="340" y="87" fill="var(--ink)" text-anchor="middle" font-size="9">${esc(t('picoFamily').toUpperCase())}</text><text x="340" y="104" fill="var(--muted)" text-anchor="middle" font-size="6">40-PIN / 3.3 V IO</text><path d="M340 122v36m0 87v48m0 70v39" stroke="var(--line)" stroke-width="1.3"/><rect x="302" y="158" width="76" height="87" fill="var(--paper)" stroke="var(--accent)"/><text x="340" y="190" fill="var(--ink)" text-anchor="middle" font-size="11">${esc(board.mcu)}</text><text x="340" y="210" fill="var(--muted)" text-anchor="middle" font-size="7">MCU / BANK 0</text><path d="M313 224h54" stroke="var(--line)"/><rect x="302" y="293" width="76" height="70" fill="var(--paper)" stroke="var(--line)"/><text x="340" y="321" fill="var(--ink)" text-anchor="middle" font-size="9">QSPI FLASH</text><text x="340" y="340" fill="var(--muted)" text-anchor="middle" font-size="7">STORAGE</text><path d="M340 402v15m-17-12 17 12 17-12m-27 2 10 7 10-7" fill="none" stroke="var(--accent)"/><text x="340" y="461" fill="var(--muted)" text-anchor="middle" font-size="7">${t('schematic')}</text><text x="340" y="477" fill="var(--muted)" text-anchor="middle" font-size="5.5">${t('notToScale')}</text></g>`;
 }
 function renderPico() {
  let pins = '';
@@ -124,7 +163,7 @@ function renderPico() {
    if (flipped) { x=680-x; side=side==='left'?'right':'left'; }
    pins += pinGroup(pin,x,y,side);
  }
- return `<svg viewBox="0 0 680 540" aria-label="${esc(t('diagramLabel', { board: board.name }))}"><g transform="${flipped ? 'translate(680 0) scale(-1 1)' : ''}"><g transform="${rotated ? 'rotate(180 340 269.5)' : ''}">${picoArt()}</g></g>${pins}</svg>`;
+ return `<svg viewBox="0 0 680 540" aria-label="${esc(t('diagramLabel', { board: layoutTitle(layout) }))}"><g transform="${flipped ? 'translate(680 0) scale(-1 1)' : ''}"><g transform="${rotated ? 'rotate(180 340 269.5)' : ''}">${picoArt()}</g></g>${pins}</svg>`;
 }
 function renderHeader() {
  let pins = '';
@@ -135,7 +174,7 @@ function renderHeader() {
    if (flipped) { x=680-x; side=side==='left'?'right':'left'; }
    pins += pinGroup(pin,x,y,side);
  }
- return `<svg viewBox="0 0 680 540" aria-label="${esc(t('diagramLabel', { board: board.name }))}"><rect x="308" y="29" width="64" height="480" rx="6" fill="#26372c"/><rect x="315" y="37" width="50" height="464" rx="3" fill="#384c3a"/>${pins}<text x="340" y="530" fill="#869b75" font-family="var(--mono)" font-size="7" text-anchor="middle">${t('headerLegend')}</text></svg>`;
+ return `<svg viewBox="0 0 680 540" aria-label="${esc(t('diagramLabel', { board: layoutTitle(layout) }))}"><rect x="308" y="29" width="64" height="480" rx="6" fill="#26372c"/><rect x="315" y="37" width="50" height="464" rx="3" fill="#384c3a"/>${pins}<text x="340" y="530" fill="#869b75" font-family="var(--mono)" font-size="7" text-anchor="middle">${t('headerLegend')}</text></svg>`;
 }
 function renderQfn() {
  const n=board.packagePins/4, pitch=336/(n-1);
@@ -162,7 +201,7 @@ function renderCustom() {
    if(flipped){x=width-x;if(!angle)side=side==='left'?'right':'left';}
    return pinGroup(pin,x,y,side,{angle});
  }).join('');
- return `<svg viewBox="0 0 ${width} ${height}" aria-label="${esc(t('diagramLabel', { board: board.name }))}"><g transform="${flipped?`translate(${width} 0) scale(-1 1)`:''}"><g transform="${rotated?`rotate(180 ${width/2} ${height/2})`:''}">${image}</g></g>${pins}</svg>`;
+ return `<svg viewBox="0 0 ${width} ${height}" aria-label="${esc(t('diagramLabel', { board: layoutTitle(layout) }))}"><g transform="${flipped?`translate(${width} 0) scale(-1 1)`:''}"><g transform="${rotated?`rotate(180 ${width/2} ${height/2})`:''}">${image}</g></g>${pins}</svg>`;
 }
 const renderers = {pico:renderPico,qfn:renderQfn,header:renderHeader,custom:renderCustom};
 function renderMap() {
@@ -254,14 +293,15 @@ function addToPlan() {
 }
 function showCatalog() { $('#catalog-search').value=''; renderCatalog(); $('#library-dialog').showModal(); }
 function renderCatalog() {
- const query=$('#catalog-search').value.toLowerCase().trim(); const results=boards.filter(b=>(b.name+' '+b.family+' '+subtitle(b)+' '+(b.searchTerms || '')).toLowerCase().includes(query));
- $('#catalog-grid').innerHTML=results.length?results.map(b=>`<button class="catalog-card" data-board="${b.id}"><span class="mini-art">${icon(b.layout==='qfn'?'chip':'board')}</span><span class="card-arrow">↗</span><b>${esc(b.name)}</b><small>${esc(subtitle(b))}</small><span class="card-meta">${b.packagePins} PIN <span> / </span> ${b.gpioCount} GPIO</span></button>`).join(''):`<p class="catalog-note">${t('noBoard')}</p>`;
+ const query=$('#catalog-search').value.toLowerCase().trim();
+ const results=layouts.filter(item => [layoutTitle(item),layoutSubtitle(item),item.compatibleKey ? t(item.compatibleKey) : '',...item.profiles.map(profile => `${profile.name} ${profile.mcu} ${profile.searchTerms || ''}`)].join(' ').toLowerCase().includes(query));
+ $('#catalog-grid').innerHTML=results.length?results.map(item=>`<button class="catalog-card" data-layout="${item.id}"><span class="mini-art">${icon(item.layout==='qfn'?'chip':'board')}</span><span class="card-arrow">↗</span><b>${esc(layoutTitle(item))}</b><small>${esc(item.compatibleKey ? t(item.compatibleKey) : layoutSubtitle(item))}</small><span class="card-meta">${item.packagePins} PIN <span> / </span> ${item.gpioCount} GPIO</span></button>`).join(''):`<p class="catalog-note">${t('noBoard')}</p>`;
 }
 function planPayload() { return {version:1,board:board.id,pins:assignments}; }
 function encode(value) { return btoa(Array.from(new TextEncoder().encode(JSON.stringify(value)),b=>String.fromCharCode(b)).join('')); }
 function decode(value) { if(value.length>16000) throw new Error(t('linkTooLong')); return JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(value),c=>c.charCodeAt(0)))); }
 async function share() {
- const params=new URLSearchParams({board:board.id,pin:String(selected),plan:encode(planPayload())});
+ const params=new URLSearchParams({board:layout.id,profile:board.id,pin:String(selected),plan:encode(planPayload())});
  const url=new URL(location.href);
  url.searchParams.set('lang', document.documentElement.lang);
  url.hash=params.toString();
@@ -278,14 +318,15 @@ function loadHash() {
    try { payload=decode(params.get('plan'));if(payload.version!==1||!boards.some(b=>b.id===payload.board)) throw new Error(t('unsupportedFormat'));target=payload.board; const b=boards.find(b=>b.id===target);payload.pins=validatePlan(payload.pins,b); }
    catch(error){toast(t('shareFailed', { error: error.message }));payload=null;}
  }
- setBoard(target||boards[0].id,true);
+ setBoard(target||layouts[0].id,true,payload ? payload.board : params.get('profile'));
  if(payload){assignments=payload.pins;persist();renderPlan();}
  if(params.has('pin')&&pinByNumber(params.get('pin'))) selected=Number(params.get('pin'));
  selectedFn=assignments[selected]?.function||options(pinByNumber(selected))[0].name;renderDetail();renderMap();
 }
-$('#board-nav').addEventListener('click',e=>{const b=e.target.closest('[data-board]');if(b)setBoard(b.dataset.board);});
+$('#board-nav').addEventListener('click',e=>{const b=e.target.closest('[data-layout]');if(b)openLayout(b.dataset.layout);});
 $('#library-button').addEventListener('click',showCatalog);
-$('#catalog-grid').addEventListener('click',e=>{const b=e.target.closest('[data-board]');if(b){setBoard(b.dataset.board);$('#library-dialog').close();}});
+$('#function-reference').addEventListener('change', e => setBoard(layout.id, false, e.target.value));
+$('#catalog-grid').addEventListener('click',e=>{const b=e.target.closest('[data-layout]');if(b){openLayout(b.dataset.layout);$('#library-dialog').close();}});
 $('#catalog-search').addEventListener('input',renderCatalog);
 $('#help-button').addEventListener('click',()=>$('#help-dialog').showModal());
 $$('[data-close]').forEach(b=>b.addEventListener('click',()=>b.closest('dialog').close()));
@@ -336,5 +377,5 @@ window.addEventListener('hashchange',()=>{if(boards && location.hash!=='#main')l
 try {
  const [boardResult, evidenceResult] = await Promise.all(['boards.json','evidence.json'].map(name=>fetch(new URL('./data/'+name,appBase))));
  if(!boardResult.ok || !evidenceResult.ok)throw new Error(t('loadFailed'));
- [boards,evidence] = await Promise.all([boardResult.json(),evidenceResult.json()]);loadHash();
+ [boards,evidence] = await Promise.all([boardResult.json(),evidenceResult.json()]);layouts=buildLayouts(boards);loadHash();
 } catch(error) { $('#diagram').innerHTML=`<p data-i18n="reloadHint" style="padding:40px;line-height:2">${t('reloadHint')}</p>`;toast(error.message); }

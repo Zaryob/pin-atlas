@@ -6,15 +6,18 @@
 
 Üretici belgelerinden derlenen, İngilizce öncelikli ve Türkçe destekli pin rehberi. Fiziksel pin düzenini, alternatif işlevleri ve bağlantı planlarını aynı çalışma alanında gösterir. Arayüz, çizimler ve uygulama kodu bu proje için hazırlanmıştır. Konsol teması kişisel sitemin ortak temasıdır.
 
-## Kartlar
+## Pin düzenleri
 
-- Raspberry Pi Pico, Pico W, Pico 2 ve Pico 2 W: model başına 40 fiziksel pin ve 26 GPIO. Pico / Pico W, RP2040; Pico 2 / Pico 2 W, RP2350A işlevlerini kullanır. Kablosuz donanım yalnızca W modellerinde gösterilir.
-- Raspberry Pi 40-pin GPIO: B+, A+, Pi 2/3/4/5, Zero ailesi ve 400/500 için ortak fiziksel bağlantılar. Bu profil GPIO, güç ve toprağı içerir; işlemciye özgü alternatif işlevler ayrı model profillerindedir. 26-pin kartlar ve Compute Module dahil değildir.
-- Raspberry Pi 4 Model B: J8 üzerinde 40 fiziksel pin; 26 proje GPIO’su ve HAT EEPROM için ayrılmış 2 hat. Alternatif işlevler BCM2711’e aittir; Pi 5 için geçerli olduğu iddia edilmez.
-- RP2350A: QFN-60, 30 Bank 0 GPIO.
-- RP2350B: QFN-80, 48 Bank 0 GPIO.
+Kütüphanede her fiziksel düzen bir kez listelenir; uyumlu kartlar aynı kayıtta belirtilir:
 
-Sekiz profil boyunca toplam 380 fiziksel pin kaydı ve 2.011 pin/alternatif işlev kaydı bulunur. RP2350 paketlerinin merkez GND pedi çevre pin sayısına dahil değildir. Çizimler şematiktir; mekanik CAD yerleşimi veya gerçek komponent konumları olarak kullanılmaz.
+- **Raspberry Pi Pico ailesi:** Pico, Pico W, Pico 2 ve Pico 2 W için ortak 40-pin düzeni ve 26 GPIO. Aynı ekrandan Pico / Pico W için RP2040, Pico 2 / Pico 2 W için RP2350A işlev referansı seçilir.
+- **Raspberry Pi 40-pin GPIO:** B+, A+, Pi 2/3/4/5, Zero ailesi ve 400/500 tek başlık kaydını paylaşır. Ortak GPIO/güç/toprak veya Pi 4 için doğrulanmış BCM2711 alternatif işlevleri aynı ekrandan seçilir. 26-pin kartlar ve Compute Module dahil değildir. Bazı Zero başlıkları lehimli değildir; klavyeli modellerde yönü kontrol edin.
+- **RP2350A:** QFN-60, 30 Bank 0 GPIO.
+- **RP2350B:** QFN-80, 48 Bank 0 GPIO.
+
+Pico çizimi ortak başlığı gösterir; modellerin kablosuz, LED ve dahili bağlantılarının aynı olduğunu iddia etmez. İşlev referansı değişince fiziksel pinler aynı kalır. Planlar referans bazında saklanır. Eski model bağlantıları, JSON dosyaları ve kayıtlı planlar desteklenir; aynı işlemci için birden fazla eski plan varsa birleştirilmeden referans seçicisinde erişilebilir kalır.
+
+Dört kütüphane düzeninin sekiz kaynak profili boyunca toplam 380 fiziksel pin kaydı ve 2.011 pin/alternatif işlev kaydı bulunur. RP2350 paketlerinin merkez GND pedi çevre pin sayısına dahil değildir. Çizimler şematiktir; mekanik CAD yerleşimi veya gerçek komponent konumları olarak kullanılmaz.
 
 ## Kullanım
 

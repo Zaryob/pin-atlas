@@ -6,15 +6,18 @@
 
 An English-first pin guide with Turkish localization built from manufacturer documentation. View physical pin positions, alternate functions, and wiring plans in one workspace. The interface, schematic drawings, and application code were made for this project. The console theme is shared with my personal site.
 
-## Boards
+## Pin layouts
 
-- Raspberry Pi Pico, Pico W, Pico 2, and Pico 2 W each have 40 physical pins and 26 exposed GPIOs. Pico / Pico W use RP2040 functions; Pico 2 / Pico 2 W use RP2350A functions. Wireless hardware appears only on the W models.
-- Raspberry Pi 40-pin GPIO provides the common physical layout for B+, A+, Pi 2/3/4/5, Zero models, and 400/500. This profile includes GPIO, power and ground; processor-specific alternate functions belong to separate model profiles. It excludes older 26-pin boards and Compute Modules.
-- Raspberry Pi 4 Model B has 40 physical pins on J8, with 26 general-purpose GPIOs and two lines reserved for the HAT identification EEPROM. The alternate functions are specific to the BCM2711.
-- RP2350A has a QFN-60 package and 30 Bank 0 GPIOs.
-- RP2350B has a QFN-80 package and 48 Bank 0 GPIOs.
+The library lists each physical layout once and names its compatible boards:
 
-The dataset contains 380 physical pin records across eight profiles and 2,011 pin/function assignments. The central GND pad on each RP2350 package sits outside the perimeter pin count. The schematic drawings show pin positions and are not mechanical CAD layouts.
+- **Raspberry Pi Pico family:** Pico, Pico W, Pico 2, and Pico 2 W share one 40-pin layout with 26 exposed GPIOs. Select the RP2040 function reference for Pico / Pico W, or RP2350A for Pico 2 / Pico 2 W inside that layout.
+- **Raspberry Pi 40-pin GPIO:** B+, A+, Pi 2/3/4/5, Zero models, and 400/500 share one header entry. Choose common GPIO/power/ground connections or the verified BCM2711 alternate functions for Pi 4 in the same view. This excludes older 26-pin boards and Compute Modules; some Zero headers are unpopulated and keyboard models have a rotated header.
+- **RP2350A:** QFN-60, 30 Bank 0 GPIOs.
+- **RP2350B:** QFN-80, 48 Bank 0 GPIOs.
+
+The Pico drawing represents the common header and does not claim identical wireless, LED or internal board wiring. Processor references change alternate functions, not physical pin positions. Plans are saved per reference; old model links, exported JSON files, and saved plans remain supported. If multiple old model plans exist for the same processor, they remain available in the function-reference selector without being merged.
+
+The dataset contains 380 physical pin records across eight source profiles backing four library layouts and 2,011 pin/function assignments. The central GND pad on each RP2350 package sits outside the perimeter pin count. The schematic drawings show pin positions and are not mechanical CAD layouts.
 
 ## Usage
 

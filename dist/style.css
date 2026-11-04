@@ -197,3 +197,17 @@
   .specs { flex-wrap: wrap; row-gap: 8px; }
   .page-heading h1 { font-size: 20px; }
 }
+
+/* One physical map per family, with processor functions chosen in place. */
+.compatible-boards { margin: -4px 0 18px; font-size: 13px; line-height: 1.8; color: var(--ink); }
+.function-reference-bar { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 12px; padding: 12px 18px; border-bottom: 1px solid var(--line); background: var(--surface); }
+.function-reference-bar label { font-size: 12px; color: var(--ink); }
+.function-reference-bar select { min-width: 0; max-width: 100%; min-height: 40px; padding: 7px 10px; font-size: 13px; border: 1px solid var(--control-border); border-radius: 0; background: var(--paper); }
+.function-reference-bar p { flex-basis: 100%; margin: 0; font-size: 12px; color: var(--muted); line-height: 1.6; }
+#board-nav .board-nav-item small { line-height: 1.6; }
+@media (max-width: 640px) {
+  .compatible-boards { font-size: 12px; margin-bottom: 14px; }
+  .function-reference-bar { padding: 12px; }
+  .function-reference-bar select { width: 100%; font-size: 16px; }
+  .function-reference-bar p { font-size: 12px; }
+}

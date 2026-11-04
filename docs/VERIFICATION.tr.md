@@ -58,3 +58,7 @@ Pico, Pico W ve Pico 2’nin fiziksel pinleri, her modelin veri sayfasının PDF
 Ortak Raspberry Pi 40-pin profili, üreticinin GPIO tablosunu kullanır: B+ ve sonrası, Zero ailesi ve klavyeli modellerin fiziksel düzenini kapsar. Klavyeli modellerde yön ters olabilir; bazı Zero başlıkları lehimli değildir. Eski 26-pin kartlar ve Compute Module dahil değildir. Bu profil işlemciye özgü alternatif işlev içermez; BCM2711 için Pi 4 profili ayrı tutulur.
 
 On üretici kaynağı SHA-256 ile kilitlidir. 380 fiziksel pin kaydı ortak bağlantıları profil başına sayar. Ayrıntılı model kaynakları [İngilizce doğrulama kaydında](VERIFICATION.md) bulunur.
+
+## Ortak düzen kütüphanesi
+
+Sekiz kaynak profili dört fiziksel düzende sunulur: Pico ailesi, Raspberry Pi 40-pin başlığı ve iki farklı RP2350 paketi. Gruplanan profillerin pin numaraları, adları ve türleri uygulama tarafından karşılaştırılır. İşlemci işlevleri ve kaynakları aynı ekrandaki referans seçicisinde korunur. Eski profil kimlikleri kayıtlı plan ve paylaşımlarda desteklenir.

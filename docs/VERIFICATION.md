@@ -61,3 +61,7 @@ The verified QFN-60 IOVDD list uses **1,11,20,30,38,45** from the two figures. T
 6. GitHub Actions runs the same comparison against the manufacturer sources before deployment.
 
 The app uses its own SVG schematics. Manufacturer documents are linked from the evidence records. Software and font licensing notices are maintained separately.
+
+## Shared layout catalog
+
+The eight source profiles are presented as four physical layouts: one Pico family entry, one Raspberry Pi 40-pin header entry, and the two distinct RP2350 packages. The application checks that grouped profiles agree on pin numbers, names and types before grouping them. A function-reference selector retains the verified processor-specific function tables and evidence. Grouping does not claim that RP2040, RP2350A and BCM2711 have interchangeable alternate functions. Legacy profile IDs remain valid for saved plans and shared links.
