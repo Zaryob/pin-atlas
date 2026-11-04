@@ -1,6 +1,22 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
 (() => {
   const messages = {
+    "Home": ["Ana sayfa", "Home"],
+    "Switch project": ["Proje değiştir", "Switch project"],
+    "Zaryob projects": ["Zaryob projeleri", "Zaryob projects"],
+    "Zaryob home": ["Zaryob ana sayfa", "Zaryob home"],
+    "Zaryob navigation": ["Zaryob gezinme", "Zaryob navigation"],
+    "Search Zaryob content": ["Zaryob içeriklerinde ara", "Search Zaryob content"],
+    "Search": ["Ara", "Search"],
+    "Theme": ["Tema", "Theme"],
+    "Color theme": ["Renk teması", "Color theme"],
+    "System": ["Sistem", "System"],
+    "Dark": ["Koyu", "Dark"],
+    "Light": ["Açık", "Light"],
+    "Language": ["Dil", "Language"],
+    "Open menu": ["Menüyü aç", "Open menu"],
+    "Close menu": ["Menüyü kapat", "Close menu"],
+    "Skip to content": ["İçeriğe geç", "Skip to content"],
     "familyRaspberryPi": ["Raspberry Pi", "Raspberry Pi"],
     "familyArduino": ["Arduino", "Arduino"],
     "familyEspressif": ["Espressif", "Espressif"],
