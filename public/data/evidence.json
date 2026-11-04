@@ -725,6 +725,56 @@
       "publisher": "Micro:bit Educational Foundation",
       "revision": "V2.0.0_S · 2020-09-02",
       "sha256": "094e004ece2e2d6e12f77603a7365f4ab310a48a2ce359fb0de3000e497adad0"
+    },
+    {
+      "id": "h723zg-package",
+      "title": "STM32H723ZGTx CubeMX package data",
+      "file": "h723zg-package.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/master/mcu/STM32H723ZGTx.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/master/mcu/STM32H723ZGTx.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "master",
+      "sha256": "289dc09cbcd64209d7e3d44d0265057eaef079ae167724372d3893b3a93b0242"
+    },
+    {
+      "id": "h723zg-modes",
+      "title": "STM32H723 GPIO modes XML definition",
+      "file": "h723zg-modes.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/master/mcu/IP/GPIO-STM32H723_gpio_v1_0_Modes.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/master/mcu/IP/GPIO-STM32H723_gpio_v1_0_Modes.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "master",
+      "sha256": "3589056b6537a909d273b6cd2a3acc3fe3faf8c07139ab02f95309ca0ee4c0bd"
+    },
+    {
+      "id": "nucleo-h723zg-ioc",
+      "title": "NUCLEO-H723ZG STM32Cube board configuration (.ioc)",
+      "file": "nucleo-h723zg.ioc",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/master/boards/G75_Nucleo_NUCLEO-H723ZG_STM32H723ZGT_Board_AllConfig.ioc",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/master/boards/G75_Nucleo_NUCLEO-H723ZG_STM32H723ZGT_Board_AllConfig.ioc",
+      "publisher": "STMicroelectronics",
+      "revision": "master",
+      "sha256": "9be2313dd619ca07be1dd51cc4d8bc54ab4f253e990227fa1dddfbe33ade437f"
+    },
+    {
+      "id": "nucleo-h723zg-variant-h",
+      "title": "NUCLEO-H723ZG official variant pin mapping header",
+      "file": "variant_nucleo_h723zg.h",
+      "url": "https://raw.githubusercontent.com/stm32duino/Arduino_Core_STM32/b18163265c827fc3b1f1396c4d09221b4821a405/variants/STM32H7xx/H723Z(E-G)T_H730ZBT_H733ZGT/variant_NUCLEO_H723ZG.h",
+      "viewUrl": "https://github.com/stm32duino/Arduino_Core_STM32/blob/b18163265c827fc3b1f1396c4d09221b4821a405/variants/STM32H7xx/H723Z(E-G)T_H730ZBT_H733ZGT/variant_NUCLEO_H723ZG.h",
+      "publisher": "STMicroelectronics",
+      "revision": "b18163265c827fc3b1f1396c4d09221b4821a405",
+      "sha256": "caaf9806c3372b5d1ec465cbf3faa103f0dc27c185b378a4342c2e5b73f3f246"
+    },
+    {
+      "id": "nucleo-h723zg-variant-cpp",
+      "title": "NUCLEO-H723ZG official digitalPin table implementation",
+      "file": "variant_nucleo_h723zg.cpp",
+      "url": "https://raw.githubusercontent.com/stm32duino/Arduino_Core_STM32/b18163265c827fc3b1f1396c4d09221b4821a405/variants/STM32H7xx/H723Z(E-G)T_H730ZBT_H733ZGT/variant_NUCLEO_H723ZG.cpp",
+      "viewUrl": "https://github.com/stm32duino/Arduino_Core_STM32/blob/b18163265c827fc3b1f1396c4d09221b4821a405/variants/STM32H7xx/H723Z(E-G)T_H730ZBT_H733ZGT/variant_NUCLEO_H723ZG.cpp",
+      "publisher": "STMicroelectronics",
+      "revision": "b18163265c827fc3b1f1396c4d09221b4821a405",
+      "sha256": "b8398bc713a4c4a9aefe4a7d7c5b3d83e378208cb8cd23e26da6ea75c5d337ae"
     }
   ],
   "references": {
@@ -1390,6 +1440,54 @@
       "url": "https://www.st.com/resource/en/user_manual/um2505-stm32g4-nucleo64-boards-stmicroelectronics.pdf#page=24",
       "page": 24,
       "locator": "MB1367 top view · connector positions, rows and numbering",
+      "method": "visual-diagram"
+    },
+    "h723zg-package": {
+      "document": "h723zg-package",
+      "title": "STM32H723ZGTx CubeMX package data",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/master/mcu/STM32H723ZGTx.xml",
+      "page": null,
+      "locator": "LQFP144 package pin numbers and signals",
+      "method": "manufacturer-xml"
+    },
+    "h723zg-modes": {
+      "document": "h723zg-modes",
+      "title": "STM32H723 GPIO modes XML definition",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/master/mcu/IP/GPIO-STM32H723_gpio_v1_0_Modes.xml",
+      "page": null,
+      "locator": "GPIO alternate function selectors",
+      "method": "manufacturer-xml"
+    },
+    "nucleo-h723zg-variant-h": {
+      "document": "nucleo-h723zg-variant-h",
+      "title": "NUCLEO-H723ZG official variant pin mapping header",
+      "url": "https://github.com/stm32duino/Arduino_Core_STM32/blob/b18163265c827fc3b1f1396c4d09221b4821a405/variants/STM32H7xx/H723Z(E-G)T_H730ZBT_H733ZGT/variant_NUCLEO_H723ZG.h",
+      "page": null,
+      "locator": "STMicroelectronics official NUCLEO-H723ZG pin mappings",
+      "method": "code-variant"
+    },
+    "nucleo-h723zg-variant-cpp": {
+      "document": "nucleo-h723zg-variant-cpp",
+      "title": "NUCLEO-H723ZG official digitalPin table implementation",
+      "url": "https://github.com/stm32duino/Arduino_Core_STM32/blob/b18163265c827fc3b1f1396c4d09221b4821a405/variants/STM32H7xx/H723Z(E-G)T_H730ZBT_H733ZGT/variant_NUCLEO_H723ZG.cpp",
+      "page": null,
+      "locator": "STMicroelectronics official digitalPin table",
+      "method": "code-variant"
+    },
+    "nucleo-h723zg-ioc": {
+      "document": "nucleo-h723zg-ioc",
+      "title": "NUCLEO-H723ZG STM32Cube board configuration (.ioc)",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/master/boards/G75_Nucleo_NUCLEO-H723ZG_STM32H723ZGT_Board_AllConfig.ioc",
+      "page": null,
+      "locator": "STMicroelectronics official board configuration",
+      "method": "hardware-spec"
+    },
+    "nucleo-h723zg-top-view": {
+      "document": "nucleo-h723zg-ioc",
+      "title": "NUCLEO-H723ZG STM32Cube board configuration (.ioc)",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/master/boards/G75_Nucleo_NUCLEO-H723ZG_STM32H723ZGT_Board_AllConfig.ioc",
+      "page": null,
+      "locator": "MB1364 top view · ST Zio and Morpho connector layout",
       "method": "visual-diagram"
     },
     "arduino-uno-r3-core": {

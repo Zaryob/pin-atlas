@@ -341,3 +341,227 @@ def build_nucleo_g474(cache, docs, ref, chip, use_snapshots=False):
         'datasheet': chip['datasheet'], 'orientation': 'usb', 'pins': pins,
         'mcuProfile': chip['id'],
     }
+
+
+def read_h7_chip(cache, docs, ref, verified_on, category):
+    package_id, modes_id = 'h723zg-package', 'h723zg-modes'
+    package_doc, modes_doc = docs[package_id], docs[modes_id]
+    package = ET.parse(cache / package_doc['file']).getroot()
+    modes = ET.parse(cache / modes_doc['file']).getroot()
+    assert package.get('Package') == 'LQFP144'
+    pin_ref = ref(package_id, package_id, None, 'LQFP144 package pin numbers and signals', 'manufacturer-xml')
+    mode_ref = ref(modes_id, modes_id, None, 'GPIO alternate function selectors', 'manufacturer-xml')
+    selectors = {}
+    for pad in modes.findall('{*}GPIO_Pin'):
+        port = re.match(r'P[A-H]\d+(?:_C)?', pad.get('Name'))
+        if not port:
+            continue
+        for signal in pad.findall('{*}PinSignal'):
+            value = signal.findtext("{*}SpecificParameter[@Name='GPIO_AF']/{*}PossibleValue", '')
+            match = re.match(r'GPIO_(AF\d+)_', value)
+            if match:
+                selectors[port[0], signal.get('Name')] = match[1]
+    pins = []
+    for pad in package.findall('{*}Pin'):
+        name = pad.get('Name')
+        port = re.match(r'P[A-H]\d+(?:_C)?', name)
+        clean_name = port[0] if port else name
+        pad_type = pad.get('Type')
+        if port:
+            pin_type = 'GPIO'
+        elif clean_name.startswith('VSS'):
+            pin_type = 'GND'
+        elif pad_type == 'Power' or clean_name in ('VDD', 'VDDA', 'VBAT', 'VCAP', 'VDD33USB', 'PDR_ON', 'VREF+'):
+            pin_type = 'POWER'
+        else:
+            pin_type = 'SYSTEM'
+        functions = []
+        for signal in pad.findall('{*}Signal'):
+            signal = signal.get('Name')
+            if signal == 'GPIO':
+                continue
+            group = category(signal)
+            if signal.startswith('USART') or signal.startswith('UART'):
+                group = 'UART'
+            elif signal.startswith('TIM'):
+                group = 'PWM' if re.search(r'_CH[1-4]', signal) else 'TIMER'
+            selector = selectors.get((clean_name, signal))
+            function = {'name': signal, 'signal': signal, 'group': group, 'evidence': pin_ref}
+            if selector:
+                function.update(selector=selector, configurationEvidence=mode_ref)
+            functions.append(function)
+        pins.append({'number': int(pad.get('Position')), 'name': clean_name, 'type': pin_type,
+                     'functions': functions, 'evidence': [pin_ref]})
+    assert sorted(pin['number'] for pin in pins) == list(range(1, 145))
+    name = 'STM32H723ZGT6'
+    clock = '550 MHz'
+    return {'id': name.lower(), 'name': name, 'shortName': name, 'mcu': name,
+            'family': 'STMicroelectronics', 'processor': 'Arm Cortex-M7',
+            'subtitle': f'LQFP-144 · Cortex-M7 · {clock}', 'clock': clock, 'verifiedOn': verified_on,
+            'layout': 'lqfp', 'packageName': 'LQFP-144', 'packagePins': len(pins),
+            'gpioCount': sum(pin['type'] == 'GPIO' for pin in pins), 'voltage': '1.62–3.6 V',
+            'source': package_doc['viewUrl'], 'datasheet': 'https://www.st.com/resource/en/datasheet/stm32h723zg.pdf',
+            'pins': pins}
+
+
+def build_nucleo_h723(cache, docs, ref, chip):
+    board_id = 'nucleo-h723zg'
+    h_doc = docs['nucleo-h723zg-variant-h']
+    cpp_doc = docs['nucleo-h723zg-variant-cpp']
+    ioc_doc = docs['nucleo-h723zg-ioc']
+    h_ref = ref('nucleo-h723zg-variant-h', 'nucleo-h723zg-variant-h', None,
+                'STMicroelectronics official NUCLEO-H723ZG pin mappings', 'code-variant')
+    cpp_ref = ref('nucleo-h723zg-variant-cpp', 'nucleo-h723zg-variant-cpp', None,
+                  'STMicroelectronics official digitalPin table', 'code-variant')
+    ioc_ref = ref('nucleo-h723zg-ioc', 'nucleo-h723zg-ioc', None,
+                  'STMicroelectronics official board configuration', 'hardware-spec')
+    drawing_ref = ref(f'{board_id}-top-view', 'nucleo-h723zg-ioc', None,
+                      'MB1364 top view · ST Zio and Morpho connector layout', 'visual-diagram')
+
+    circuit_notes = {
+        'PB0': 'nucleoH7LedGreen',
+        'PE1': 'nucleoH7LedYellow',
+        'PB14': 'nucleoH7LedRed',
+        'PC13': 'nucleoH7Button',
+        'PD8': 'nucleoH7VcpTx',
+        'PD9': 'nucleoH7VcpRx',
+        'PA1': 'nucleoH7Rmii', 'PA2': 'nucleoH7Rmii', 'PA7': 'nucleoH7Rmii',
+        'PC1': 'nucleoH7Rmii', 'PC4': 'nucleoH7Rmii', 'PC5': 'nucleoH7Rmii',
+        'PB13': 'nucleoH7Rmii', 'PG11': 'nucleoH7Rmii', 'PG13': 'nucleoH7Rmii',
+        'PA9': 'nucleoH7Usb', 'PA10': 'nucleoH7Usb', 'PA11': 'nucleoH7Usb', 'PA12': 'nucleoH7Usb',
+        'PD10': 'nucleoH7Usb', 'PG7': 'nucleoH7Usb',
+    }
+
+    by_name = {pin['name']: pin for pin in chip['pins']}
+    sections = {
+        '// CN7 right Arduino Uno connector': ('CN7', 1),
+        '// CN7 left': ('CN7', 0),
+        '// CN7 right': ('CN7', 1),
+        '// CN8 right': ('CN8', 1),
+        '// CN8 left': ('CN8', 0),
+        '// CN7 left (analog part)': ('CN7', 0),
+        '// ST morpho': ('MORPHO', 0),
+    }
+
+    raw_items = []
+    power_pins_cn7 = [
+        ('NC', 'SYSTEM', 'NC', True),
+        ('IOREF', 'POWER', 'IOREF', False),
+        ('NRST', 'SYSTEM', 'RESET', False),
+        ('+3.3V', 'POWER', '3V3', False),
+        ('+5V', 'POWER', '5V', False),
+        ('GND', 'GND', 'GND', False),
+        ('GND', 'GND', 'GND', False),
+        ('VIN', 'POWER', 'VIN', False),
+        ('VREF+', 'POWER', 'VREF+', False),
+    ]
+    for name, ptype, blabel, res in power_pins_cn7:
+        raw_items.append({'header': 'CN7', 'name': name, 'type': ptype, 'boardLabel': blabel,
+                          'reserved': res, 'functions': [], 'mcuPin': None, 'col': 0})
+
+    with open(cache / h_doc['file']) as f:
+        lines = f.readlines()
+
+    cur_hdr, cur_col = None, 0
+    morpho_count = 0
+    for line in lines:
+        sline = line.strip()
+        if sline in sections:
+            cur_hdr, cur_col = sections[sline]
+        elif cur_hdr and sline.startswith('#define P'):
+            m = re.match(r'#define\s+(P[A-H]\d+(?:_C)?)\s+([A-Za-z0-9_]+)(?:\s*//\s*(.*))?', sline)
+            if m:
+                port, aid, comm = m.groups()
+                blabel = f'D{aid}' if aid.isdigit() else f'A{aid[5:]}' if aid.startswith('PIN_A') else aid
+                mcu_p = by_name[port]
+                col = cur_col
+                if cur_hdr == 'MORPHO':
+                    col = 0 if morpho_count < 21 else 1
+                    morpho_count += 1
+                raw_items.append({
+                    'header': cur_hdr, 'name': port, 'type': 'GPIO',
+                    'boardLabel': blabel, 'functions': copy.deepcopy(mcu_p['functions']),
+                    'mcuPin': mcu_p['number'], 'col': col, 'comment': comm or ''
+                })
+
+    power_pins_cn8 = [
+        ('AGND', 'GND', 'AGND', False),
+        ('AVDD', 'POWER', 'AVDD', False),
+        ('GND', 'GND', 'GND', False),
+    ]
+    for name, ptype, blabel, res in power_pins_cn8:
+        raw_items.append({'header': 'CN8', 'name': name, 'type': ptype, 'boardLabel': blabel,
+                          'reserved': res, 'functions': [], 'mcuPin': None, 'col': 1})
+
+    power_pins_morpho = [
+        ('+3.3V', 'POWER', '+3.3V', False),
+        ('+5V', 'POWER', '+5V', False),
+        ('VDD', 'POWER', 'VDD', False),
+        ('GND', 'GND', 'GND', False),
+        ('GND', 'GND', 'GND', False),
+    ]
+    for name, ptype, blabel, res in power_pins_morpho:
+        raw_items.append({'header': 'MORPHO', 'name': name, 'type': ptype, 'boardLabel': blabel,
+                          'reserved': res, 'functions': [], 'mcuPin': None, 'col': 1})
+
+    header_counts = {}
+    col_row_counts = {}
+    pins = []
+    for idx, item in enumerate(raw_items):
+        hdr = item['header']
+        header_counts[hdr] = header_counts.get(hdr, 0) + 1
+        pnum = header_counts[hdr]
+        col = item['col']
+        row = col_row_counts.get((hdr, col), 0)
+        col_row_counts[(hdr, col)] = row + 1
+
+        if hdr == 'CN7':
+            x = 240 if col == 0 else 268
+            y = 220 + 19 * row
+            side = 'left' if col == 0 else 'right'
+        elif hdr == 'CN8':
+            x = 692 if col == 0 else 720
+            y = 220 + 19 * row
+            side = 'left' if col == 0 else 'right'
+        else:
+            x = 110 if col == 0 else 850
+            y = 220 + 23 * row
+            side = 'left' if col == 0 else 'right'
+
+        pin = {
+            'number': idx + 1,
+            'name': item['name'],
+            'type': item['type'],
+            'connector': hdr,
+            'connectorPin': pnum,
+            'physicalLabel': f'{hdr}.{pnum}',
+            'boardLabel': item['boardLabel'],
+            'functions': item['functions'],
+            'evidence': [h_ref, cpp_ref, ioc_ref, drawing_ref],
+            'position': {'x': x, 'y': y, 'side': side}
+        }
+        if item.get('reserved'):
+            pin['reserved'] = True
+        if item.get('mcuPin'):
+            pin['mcuPin'] = item['mcuPin']
+            note = circuit_notes.get(item['name'])
+            if note:
+                pin['boardCircuitKey'] = note
+        pins.append(pin)
+
+    for pin in pins:
+        if pin.get('mcuPin'):
+            pin['sharedWith'] = [other['physicalLabel'] for other in pins
+                                 if other is not pin and other.get('mcuPin') == pin['mcuPin']]
+
+    return {
+        'id': board_id, 'name': 'NUCLEO-H723ZG', 'family': 'STM32', 'shortName': 'NUCLEO-H723ZG',
+        'subtitle': 'Nucleo-144 · MB1364 · ST Zio and ST Morpho', 'layout': 'custom',
+        'diagram': {'width': 960, 'height': 840, 'artwork': 'assets/boards/nucleo-h723zg.svg', 'minWidth': 800},
+        'packagePins': len(pins), 'gpioCount': sum(pin['type'] == 'GPIO' for pin in pins),
+        'uniqueGPIOCount': len({pin['name'] for pin in pins if pin['type'] == 'GPIO'}),
+        'voltage': '3.3 V I/O', 'mcu': chip['mcu'], 'processor': chip['processor'], 'clock': chip['clock'],
+        'verifiedOn': chip['verifiedOn'], 'source': h_doc['viewUrl'],
+        'datasheet': chip['datasheet'], 'orientation': 'usb', 'pins': pins,
+        'mcuProfile': chip['id'],
+    }
