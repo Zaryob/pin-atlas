@@ -571,7 +571,11 @@
       "viewUrl": "https://www.st.com/resource/en/user_manual/um2505-stm32g4-nucleo64-boards-stmicroelectronics.pdf",
       "publisher": "STMicroelectronics",
       "revision": "UM2505 Rev 2 · October 2019",
-      "sha256": "d862980338d3b393f5f880790cc7c56105cff0a6931ca89b20b3967542feb685"
+      "sha256": "d862980338d3b393f5f880790cc7c56105cff0a6931ca89b20b3967542feb685",
+      "tableSnapshot": {
+        "file": "sources/extracted/nucleo-g4-um2505.json",
+        "sha256": "2410eacc0a3bd31539a270b7bb075f027ae0223a2a2470ffb6636bc01a173668"
+      }
     },
     {
       "id": "g474re-package",
@@ -585,8 +589,8 @@
     {
       "id": "g474re-modes",
       "title": "STM32G474RE CubeMX modes data",
-      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/master/mcu/IP/GPIO-STM32G474_gpio_v1_0_Modes.xml",
-      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/master/mcu/IP/GPIO-STM32G474_gpio_v1_0_Modes.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/master/mcu/IP/GPIO-STM32G47x_gpio_v1_0_Modes.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/master/mcu/IP/GPIO-STM32G47x_gpio_v1_0_Modes.xml",
       "publisher": "STMicroelectronics",
       "revision": "master",
       "sha256": "9e1cb7917a51c1f1dd5b8b143d4f1ca31af1146694e0137064f6e731157c4c0c"
@@ -643,7 +647,8 @@
     {
       "id": "microbit-v2-schematic",
       "title": "BBC micro:bit V2 Schematic",
-      "url": "https://tech.microbit.org/hardware/schematic/",
+      "url": "https://raw.githubusercontent.com/microbit-foundation/microbit-v2-hardware/main/V2.00/MicroBit_V2.0.0_S_schematic.PDF",
+      "viewUrl": "https://tech.microbit.org/hardware/schematic/",
       "publisher": "Micro:bit Educational Foundation",
       "revision": "V2.0.0_S · 2020-09-02",
       "sha256": "094e004ece2e2d6e12f77603a7365f4ab310a48a2ce359fb0de3000e497adad0"

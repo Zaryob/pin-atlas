@@ -422,7 +422,7 @@ def build(use_snapshots=False):
         boards.append(build_nucleo(CACHE,DOCS,ref,chip,model))
         f4_chips.append(chip)
     g4_chip=read_g4_chip(CACHE,DOCS,ref,MANIFEST['verifiedOn'],category)
-    boards.append(build_nucleo_g474(CACHE,DOCS,ref,g4_chip))
+    boards.append(build_nucleo_g474(CACHE,DOCS,ref,g4_chip,use_snapshots=use_snapshots))
     boards.extend(build_arduino(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn']))
     boards.extend(build_expanded_arduino(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn'],boards))
     boards.extend(build_espressif(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn']))

@@ -84,7 +84,7 @@ def build_microbit(cache, docs, observations, ref, verified_on):
             'artwork': 'assets/boards/microbit-v2.svg'
         },
         'source': 'https://tech.microbit.org/hardware/edgeconnector/',
-        'datasheet': docs['microbit-v2-schematic']['url'],
+        'datasheet': docs['microbit-v2-schematic'].get('viewUrl', docs['microbit-v2-schematic']['url']),
         'verifiedOn': verified_on,
         'pins': pins
     }

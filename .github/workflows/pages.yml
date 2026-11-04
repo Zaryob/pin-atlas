@@ -28,6 +28,8 @@ jobs:
         with:
           path: .cache/primary-sources
           key: official-sources-${{ hashFiles('sources/manifest.json') }}
+          restore-keys: |
+            official-sources-
       - name: Install source verification tools
         run: python -m pip install -r requirements-source-verification.txt
       - name: Verify pin facts against pinned sources and ST table snapshots

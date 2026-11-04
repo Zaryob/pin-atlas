@@ -4,6 +4,7 @@ import re
 import xml.etree.ElementTree as ET
 
 import pdfplumber
+from stm32_sources import SnapshotDocument, verify_snapshot
 
 
 def read_f4_chip(cache, docs, ref, model, verified_on, category):
@@ -231,13 +232,18 @@ def read_g4_chip(cache, docs, ref, verified_on, category):
             'pins': pins}
 
 
-def build_nucleo_g474(cache, docs, ref, chip):
+def build_nucleo_g474(cache, docs, ref, chip, use_snapshots=False):
     document = 'nucleo-g4-um2505'
     board_id = 'nucleo-g474re'
     url = docs[document]['viewUrl']
     connectors = {name: {} for name in ('CN7', 'CN6', 'CN8', 'CN10', 'CN5', 'CN9')}
     bridges_ref = ref('nucleo-g474-bridges', document, 27, 'Table 13 · Solder bridge control (p. 27)')
-    with pdfplumber.open(cache / docs[document]['file']) as pdf:
+    def open_source():
+        if use_snapshots and docs[document].get('tableSnapshot'):
+            return SnapshotDocument(verify_snapshot(docs[document], cache.parents[1]))
+        return pdfplumber.open(cache / docs[document]['file'])
+
+    with open_source() as pdf:
         for page in (30, 31):
             evidence = ref(f'{board_id}-arduino-{page}', document, page, 'Table 15 · Arduino connectors pinout')
             table = pdf.pages[page - 1].extract_tables()[0]

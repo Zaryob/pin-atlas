@@ -1,0 +1,581 @@
+{
+  "schema": 1,
+  "document": "nucleo-g4-um2505",
+  "sourceSha256": "d862980338d3b393f5f880790cc7c56105cff0a6931ca89b20b3967542feb685",
+  "pages": {
+    "30": {
+      "tables": [
+        [
+          [
+            "Connector",
+            "Pin number",
+            "Pin name",
+            "Signal name",
+            "STM32 pin(1)",
+            "Function(1)"
+          ],
+          [
+            "CN6",
+            "1",
+            "NC",
+            "-",
+            "-",
+            "Reserved for test"
+          ],
+          [
+            null,
+            "2",
+            "IOREF",
+            "-",
+            "-",
+            "I/O reference"
+          ],
+          [
+            null,
+            "3",
+            "NRST",
+            "NRST",
+            "PG10-NRST",
+            "RESET"
+          ],
+          [
+            null,
+            "4",
+            "3V3",
+            "-",
+            "-",
+            "3V3 input/output"
+          ],
+          [
+            null,
+            "5",
+            "5V",
+            "-",
+            "-",
+            "5 V output"
+          ],
+          [
+            null,
+            "6",
+            "GND",
+            "-",
+            "-",
+            "GND"
+          ],
+          [
+            null,
+            "7",
+            "GND",
+            "-",
+            "-",
+            "GND"
+          ],
+          [
+            null,
+            "8",
+            "VIN",
+            "-",
+            "-",
+            "7 V - 12 V input power"
+          ],
+          [
+            "CN8",
+            "1",
+            "A0",
+            "ADC",
+            "PA0",
+            "ADC12_IN1"
+          ],
+          [
+            null,
+            "2",
+            "A1",
+            "ADC",
+            "PA1",
+            "ADC12_IN2"
+          ],
+          [
+            null,
+            "3",
+            "A2",
+            "ADC",
+            "PA4",
+            "ADC2_IN17"
+          ],
+          [
+            null,
+            "4",
+            "A3",
+            "ADC",
+            "PB0",
+            "ADC3_IN12 or ADC1_IN15"
+          ],
+          [
+            null,
+            "5",
+            "A4",
+            "ADC",
+            "PC1/\nPB9",
+            "ADC12_IN7/\nI2C1_SDA"
+          ],
+          [
+            null,
+            "6",
+            "A5",
+            "ADC",
+            "PC0/\nPA15",
+            "ADC12_IN6/\nI2C1_SCL"
+          ]
+        ],
+        [
+          [
+            "",
+            "UM2505 - Rev 2 page 30/43",
+            ""
+          ],
+          [
+            null,
+            "",
+            null
+          ]
+        ]
+      ]
+    },
+    "31": {
+      "tables": [
+        [
+          [
+            "Connector",
+            "Pin number",
+            "Pin name",
+            "Signal name",
+            "STM32 pin(1)",
+            "Function(1)"
+          ],
+          [
+            "CN5",
+            "10",
+            "SCL/D15",
+            "ARD_D15",
+            "PB8",
+            "I2C1_SCL"
+          ],
+          [
+            null,
+            "9",
+            "SDA/D14",
+            "ARD_D14",
+            "PB9",
+            "I2C1_SDA"
+          ],
+          [
+            null,
+            "8",
+            "VREFP",
+            "VREFP",
+            "VREF+",
+            "Voltage reference"
+          ],
+          [
+            null,
+            "7",
+            "GND",
+            "-",
+            "-",
+            "GND"
+          ],
+          [
+            null,
+            "6",
+            "SCK/D13",
+            "ARD_D13",
+            "PA5",
+            "SPI1_SCK"
+          ],
+          [
+            null,
+            "5",
+            "MISO/D12",
+            "ARD_D12",
+            "PA6",
+            "SPI1_MISO"
+          ],
+          [
+            null,
+            "4",
+            "PWM/MOSI/D11",
+            "ARD_D11",
+            "PA7",
+            "TIM3_CH2/SPI1_MOSI"
+          ],
+          [
+            null,
+            "3",
+            "PWM/CS/D10",
+            "ARD_D10",
+            "PB6",
+            "TIM4_CH1/SPIx_CS"
+          ],
+          [
+            null,
+            "2",
+            "PWM/D9",
+            "ARD_D9",
+            "PC7",
+            "TIM3_CH2 or TIM8_CH2"
+          ],
+          [
+            null,
+            "1",
+            "D8",
+            "ARD_D8",
+            "PA9",
+            "IO"
+          ],
+          [
+            "CN9",
+            "8",
+            "D7",
+            "ARD_D7",
+            "PA8",
+            "IO"
+          ],
+          [
+            null,
+            "7",
+            "PWM/D6",
+            "ARD_D6",
+            "PB10",
+            "TIM2_CH3"
+          ],
+          [
+            null,
+            "6",
+            "PWM/D5",
+            "ARD_D5",
+            "PB4",
+            "TIM3_CH1"
+          ],
+          [
+            null,
+            "5",
+            "D4",
+            "ARD_D4",
+            "PB5",
+            "IO"
+          ],
+          [
+            null,
+            "4",
+            "PWM/D3",
+            "ARD_D3",
+            "PB3",
+            "TIM2_CH2"
+          ],
+          [
+            null,
+            "3",
+            "D2",
+            "ARD_D2",
+            "PA10",
+            "IO"
+          ],
+          [
+            null,
+            "2",
+            "TX/D1",
+            "ARD_D1",
+            "PA2 /\nPC4",
+            "LPUSART1_TX /\nUSART1_TX"
+          ],
+          [
+            null,
+            "1",
+            "RX/D0",
+            "ARD_D0",
+            "PA3 /\nPC5",
+            "LPUSART1_RX /\nUSART1_RX"
+          ]
+        ],
+        [
+          [
+            "",
+            "UM2505 - Rev 2 page 31/43",
+            ""
+          ],
+          [
+            null,
+            "",
+            null
+          ]
+        ]
+      ]
+    },
+    "32": {
+      "tables": [
+        [
+          [
+            "CN7 odd pins",
+            null,
+            "CN7 even pins",
+            null,
+            "CN10 odd pins",
+            null,
+            "CN10 even pins",
+            null
+          ],
+          [
+            "Pin nbr",
+            "Pin name",
+            "Pin nbr",
+            "Pin name(1)",
+            "Pin nbr",
+            "Pin name(1)",
+            "Pin nbr",
+            "Pin name"
+          ],
+          [
+            "1",
+            "PC10",
+            "2",
+            "PC11",
+            "1",
+            "PC9",
+            "2",
+            "PC8"
+          ],
+          [
+            "3",
+            "PC12",
+            "4",
+            "PD2",
+            "3",
+            "PB8",
+            "4",
+            "PC6"
+          ],
+          [
+            "5",
+            "VDD",
+            "6",
+            "E5V",
+            "5",
+            "PB9",
+            "6",
+            "PC5"
+          ],
+          [
+            "7",
+            "BOOT0(2)",
+            "8",
+            "GND",
+            "7",
+            "VREFP(3)",
+            "8",
+            "5V_USB_CHGR(4)"
+          ],
+          [
+            "9",
+            "NC",
+            "10",
+            "NC",
+            "9",
+            "GND",
+            "10",
+            "NC"
+          ],
+          [
+            "11",
+            "NC",
+            "12",
+            "IOREF",
+            "11",
+            "PA5",
+            "12",
+            "PA12"
+          ],
+          [
+            "13",
+            "PA13(5)",
+            "14",
+            "NRST",
+            "13",
+            "PA6",
+            "14",
+            "PA11"
+          ],
+          [
+            "15",
+            "PA14(5)",
+            "16",
+            "3V3",
+            "15",
+            "PA7",
+            "16",
+            "PB12"
+          ],
+          [
+            "17",
+            "PA15",
+            "18",
+            "5V",
+            "17",
+            "PB6",
+            "18",
+            "PB11"
+          ]
+        ],
+        [
+          [
+            "",
+            "UM2505 - Rev 2 page 32/43",
+            ""
+          ],
+          [
+            null,
+            "",
+            null
+          ]
+        ]
+      ]
+    },
+    "33": {
+      "tables": [
+        [
+          [
+            "CN7 odd pins",
+            null,
+            "CN7 even pins",
+            null,
+            "CN10 odd pins",
+            null,
+            "CN10 even pins",
+            null
+          ],
+          [
+            "Pin nbr",
+            "Pin name",
+            "Pin nbr",
+            "Pin name(1)",
+            "Pin nbr",
+            "Pin name(1)",
+            "Pin nbr",
+            "Pin name"
+          ],
+          [
+            "19",
+            "GND",
+            "20",
+            "GND",
+            "19",
+            "PC7",
+            "20",
+            "GND"
+          ],
+          [
+            "21",
+            "PB7",
+            "22",
+            "GND",
+            "21",
+            "PA9",
+            "22",
+            "PB2"
+          ],
+          [
+            "23",
+            "PC13",
+            "24",
+            "VIN",
+            "23",
+            "PA8",
+            "24",
+            "PB1"
+          ],
+          [
+            "25",
+            "PC14",
+            "26",
+            "NC",
+            "25",
+            "PB10",
+            "26",
+            "PB15"
+          ],
+          [
+            "27",
+            "PC15",
+            "28",
+            "PA0",
+            "27",
+            "PB4",
+            "28",
+            "PB14"
+          ],
+          [
+            "29",
+            "PF0",
+            "30",
+            "PA1",
+            "29",
+            "PB5",
+            "30",
+            "PB13"
+          ],
+          [
+            "31",
+            "PF1",
+            "32",
+            "PA4",
+            "31",
+            "PB3",
+            "32",
+            "AGND"
+          ],
+          [
+            "33",
+            "VBAT",
+            "34",
+            "PB0",
+            "33",
+            "PA10",
+            "34",
+            "PC4"
+          ],
+          [
+            "35",
+            "PC2",
+            "36",
+            "PC1/PB9",
+            "35",
+            "PA2 / PC4",
+            "36",
+            "NC"
+          ],
+          [
+            "37",
+            "PC3",
+            "38",
+            "PC0/PA15",
+            "37",
+            "PA3 / PC5",
+            "38",
+            "NC"
+          ]
+        ],
+        [
+          [
+            "",
+            "UM2505 - Rev 2 page 33/43",
+            ""
+          ],
+          [
+            null,
+            "",
+            null
+          ]
+        ]
+      ]
+    }
+  }
+}
