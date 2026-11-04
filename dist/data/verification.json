@@ -1,0 +1,93 @@
+{
+  "verifiedOn": "2026-11-03",
+  "physicalPins": 220,
+  "functionAssignments": 1310,
+  "documents": [
+    {
+      "id": "rp2350",
+      "title": "RP2350 Datasheet",
+      "revision": "Release 8 · 2026-10-01",
+      "url": "https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf",
+      "sha256": "a638d6780da919162660691bfa02c6dcf7c2a0b6e9f18e2d7519c80b664a2e39"
+    },
+    {
+      "id": "pico2w",
+      "title": "Raspberry Pi Pico 2 W Datasheet",
+      "revision": "Release 2 · 2026-07-03",
+      "url": "https://pip-assets.raspberrypi.com/categories/1088-raspberry-pi-pico-2-w/documents/RP-008304-DS-3-pico-2-w-datasheet.pdf",
+      "sha256": "8f519b945e9f7078ffd3fee464992fca376d8037ebcd1f83bd2a021241717eb2"
+    },
+    {
+      "id": "pico2w-pinout",
+      "title": "Raspberry Pi Pico 2 W Pinout",
+      "revision": "RP-008305-DS-1",
+      "url": "https://pip-assets.raspberrypi.com/categories/1088-raspberry-pi-pico-2-w/documents/RP-008305-DS-1-pico-2-w-pinout.pdf",
+      "sha256": "42d3092e901ef10846ae5eea5f4b3f73e1b577985ad6baa1b145d05559cc9f89"
+    },
+    {
+      "id": "pi4-schematic",
+      "title": "Raspberry Pi 4 Model B Reduced Schematics",
+      "revision": "RPI-4B · Rev 4 · 2019-06-18",
+      "url": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008345-DS-1-raspberry-pi-4-reduced-schematics.pdf",
+      "sha256": "0ee3fd2b4976b1d614fc817b0d28564226d3ee8656a9108ccb69c099715d2374"
+    },
+    {
+      "id": "bcm2711",
+      "title": "BCM2711 ARM Peripherals",
+      "revision": "Release 4 · 2022-01-18",
+      "url": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008248-DS-1-bcm2711-peripherals.pdf",
+      "sha256": "d6e16ea089a1716e80621f99a26e130a2379f0a81d945dc22e4f80dc49dcdc78"
+    },
+    {
+      "id": "pi-gpio",
+      "title": "Raspberry Pi GPIO documentation",
+      "revision": "0fb416315f8f6c1949c0614989075d3e5805104b",
+      "url": "https://raw.githubusercontent.com/raspberrypi/documentation/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc",
+      "viewUrl": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc",
+      "sha256": "2c6d14324ae8e4972b63e93d7e653c7117189ec9f061d033631a99bf3ca2519f"
+    }
+  ],
+  "boards": [
+    {
+      "id": "pico2w",
+      "physicalPins": 40,
+      "functionAssignments": 273,
+      "physicalSourceMethods": [
+        "pdf-table",
+        "visual-diagram"
+      ]
+    },
+    {
+      "id": "raspberry-pi-4",
+      "physicalPins": 40,
+      "functionAssignments": 164,
+      "physicalSourceMethods": [
+        "manufacturer-source-table",
+        "schematic-net-labels+visual-power"
+      ]
+    },
+    {
+      "id": "rp2350a",
+      "physicalPins": 60,
+      "functionAssignments": 348,
+      "physicalSourceMethods": [
+        "pdf-table",
+        "visual-diagram"
+      ]
+    },
+    {
+      "id": "rp2350b",
+      "physicalPins": 80,
+      "functionAssignments": 525,
+      "physicalSourceMethods": [
+        "pdf-table",
+        "visual-diagram"
+      ]
+    }
+  ],
+  "qualifications": [
+    "Figure-only Pico physical labels were visually checked; they are not machine-readable PDF table cells.",
+    "The QFN-60 IOVDD discrepancy in RP2350 Release 8 Table 1679 is resolved using Figures 2 and 152.",
+    "Raspberry Pi alternate functions apply specifically to the Pi 4 BCM2711. Pins 27/28 are reserved for the HAT EEPROM."
+  ]
+}

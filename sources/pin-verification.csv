@@ -1,0 +1,1383 @@
+board,physical_pin,pin_name,pin_type,function,selector,manufacturer_signal,physical_evidence,function_evidence
+pico2w,1,GP0,GPIO,SPI0 RX,F1,SPI0 RX,pico-header,rp-bank0-p18
+pico2w,1,GP0,GPIO,UART0 TX,F2,UART0 TX,pico-header,rp-bank0-p18
+pico2w,1,GP0,GPIO,I2C0 SDA,F3,I2C0 SDA,pico-header,rp-bank0-p18
+pico2w,1,GP0,GPIO,PWM0 A,F4,PWM0 A,pico-header,rp-bank0-p18
+pico2w,1,GP0,GPIO,SIO,F5,SIO,pico-header,rp-bank0-p18
+pico2w,1,GP0,GPIO,PIO0,F6,PIO0,pico-header,rp-bank0-p18
+pico2w,1,GP0,GPIO,PIO1,F7,PIO1,pico-header,rp-bank0-p18
+pico2w,1,GP0,GPIO,PIO2,F8,PIO2,pico-header,rp-bank0-p18
+pico2w,1,GP0,GPIO,QMI CS1n,F9,QMI CS1n,pico-header,rp-bank0-p18
+pico2w,1,GP0,GPIO,USB OVCUR DET,F10,USB OVCUR DET,pico-header,rp-bank0-p18
+pico2w,2,GP1,GPIO,SPI0 CSn,F1,SPI0 CSn,pico-header,rp-bank0-p18
+pico2w,2,GP1,GPIO,UART0 RX,F2,UART0 RX,pico-header,rp-bank0-p18
+pico2w,2,GP1,GPIO,I2C0 SCL,F3,I2C0 SCL,pico-header,rp-bank0-p18
+pico2w,2,GP1,GPIO,PWM0 B,F4,PWM0 B,pico-header,rp-bank0-p18
+pico2w,2,GP1,GPIO,SIO,F5,SIO,pico-header,rp-bank0-p18
+pico2w,2,GP1,GPIO,PIO0,F6,PIO0,pico-header,rp-bank0-p18
+pico2w,2,GP1,GPIO,PIO1,F7,PIO1,pico-header,rp-bank0-p18
+pico2w,2,GP1,GPIO,PIO2,F8,PIO2,pico-header,rp-bank0-p18
+pico2w,2,GP1,GPIO,TRACECLK,F9,TRACECLK,pico-header,rp-bank0-p18
+pico2w,2,GP1,GPIO,USB VBUS DET,F10,USB VBUS DET,pico-header,rp-bank0-p18
+pico2w,3,GND,GND,,,,pico-header,
+pico2w,4,GP2,GPIO,SPI0 SCK,F1,SPI0 SCK,pico-header,rp-bank0-p18
+pico2w,4,GP2,GPIO,UART0 CTS,F2,UART0 CTS,pico-header,rp-bank0-p18
+pico2w,4,GP2,GPIO,I2C1 SDA,F3,I2C1 SDA,pico-header,rp-bank0-p18
+pico2w,4,GP2,GPIO,PWM1 A,F4,PWM1 A,pico-header,rp-bank0-p18
+pico2w,4,GP2,GPIO,SIO,F5,SIO,pico-header,rp-bank0-p18
+pico2w,4,GP2,GPIO,PIO0,F6,PIO0,pico-header,rp-bank0-p18
+pico2w,4,GP2,GPIO,PIO1,F7,PIO1,pico-header,rp-bank0-p18
+pico2w,4,GP2,GPIO,PIO2,F8,PIO2,pico-header,rp-bank0-p18
+pico2w,4,GP2,GPIO,TRACEDATA0,F9,TRACEDATA0,pico-header,rp-bank0-p18
+pico2w,4,GP2,GPIO,USB VBUS EN,F10,USB VBUS EN,pico-header,rp-bank0-p18
+pico2w,4,GP2,GPIO,UART0 TX,F11,UART0 TX,pico-header,rp-bank0-p18
+pico2w,5,GP3,GPIO,SPI0 TX,F1,SPI0 TX,pico-header,rp-bank0-p18
+pico2w,5,GP3,GPIO,UART0 RTS,F2,UART0 RTS,pico-header,rp-bank0-p18
+pico2w,5,GP3,GPIO,I2C1 SCL,F3,I2C1 SCL,pico-header,rp-bank0-p18
+pico2w,5,GP3,GPIO,PWM1 B,F4,PWM1 B,pico-header,rp-bank0-p18
+pico2w,5,GP3,GPIO,SIO,F5,SIO,pico-header,rp-bank0-p18
+pico2w,5,GP3,GPIO,PIO0,F6,PIO0,pico-header,rp-bank0-p18
+pico2w,5,GP3,GPIO,PIO1,F7,PIO1,pico-header,rp-bank0-p18
+pico2w,5,GP3,GPIO,PIO2,F8,PIO2,pico-header,rp-bank0-p18
+pico2w,5,GP3,GPIO,TRACEDATA1,F9,TRACEDATA1,pico-header,rp-bank0-p18
+pico2w,5,GP3,GPIO,USB OVCUR DET,F10,USB OVCUR DET,pico-header,rp-bank0-p18
+pico2w,5,GP3,GPIO,UART0 RX,F11,UART0 RX,pico-header,rp-bank0-p18
+pico2w,6,GP4,GPIO,SPI0 RX,F1,SPI0 RX,pico-header,rp-bank0-p18
+pico2w,6,GP4,GPIO,UART1 TX,F2,UART1 TX,pico-header,rp-bank0-p18
+pico2w,6,GP4,GPIO,I2C0 SDA,F3,I2C0 SDA,pico-header,rp-bank0-p18
+pico2w,6,GP4,GPIO,PWM2 A,F4,PWM2 A,pico-header,rp-bank0-p18
+pico2w,6,GP4,GPIO,SIO,F5,SIO,pico-header,rp-bank0-p18
+pico2w,6,GP4,GPIO,PIO0,F6,PIO0,pico-header,rp-bank0-p18
+pico2w,6,GP4,GPIO,PIO1,F7,PIO1,pico-header,rp-bank0-p18
+pico2w,6,GP4,GPIO,PIO2,F8,PIO2,pico-header,rp-bank0-p18
+pico2w,6,GP4,GPIO,TRACEDATA2,F9,TRACEDATA2,pico-header,rp-bank0-p18
+pico2w,6,GP4,GPIO,USB VBUS DET,F10,USB VBUS DET,pico-header,rp-bank0-p18
+pico2w,7,GP5,GPIO,SPI0 CSn,F1,SPI0 CSn,pico-header,rp-bank0-p18
+pico2w,7,GP5,GPIO,UART1 RX,F2,UART1 RX,pico-header,rp-bank0-p18
+pico2w,7,GP5,GPIO,I2C0 SCL,F3,I2C0 SCL,pico-header,rp-bank0-p18
+pico2w,7,GP5,GPIO,PWM2 B,F4,PWM2 B,pico-header,rp-bank0-p18
+pico2w,7,GP5,GPIO,SIO,F5,SIO,pico-header,rp-bank0-p18
+pico2w,7,GP5,GPIO,PIO0,F6,PIO0,pico-header,rp-bank0-p18
+pico2w,7,GP5,GPIO,PIO1,F7,PIO1,pico-header,rp-bank0-p18
+pico2w,7,GP5,GPIO,PIO2,F8,PIO2,pico-header,rp-bank0-p18
+pico2w,7,GP5,GPIO,TRACEDATA3,F9,TRACEDATA3,pico-header,rp-bank0-p18
+pico2w,7,GP5,GPIO,USB VBUS EN,F10,USB VBUS EN,pico-header,rp-bank0-p18
+pico2w,8,GND,GND,,,,pico-header,
+pico2w,9,GP6,GPIO,SPI0 SCK,F1,SPI0 SCK,pico-header,rp-bank0-p18
+pico2w,9,GP6,GPIO,UART1 CTS,F2,UART1 CTS,pico-header,rp-bank0-p18
+pico2w,9,GP6,GPIO,I2C1 SDA,F3,I2C1 SDA,pico-header,rp-bank0-p18
+pico2w,9,GP6,GPIO,PWM3 A,F4,PWM3 A,pico-header,rp-bank0-p18
+pico2w,9,GP6,GPIO,SIO,F5,SIO,pico-header,rp-bank0-p18
+pico2w,9,GP6,GPIO,PIO0,F6,PIO0,pico-header,rp-bank0-p18
+pico2w,9,GP6,GPIO,PIO1,F7,PIO1,pico-header,rp-bank0-p18
+pico2w,9,GP6,GPIO,PIO2,F8,PIO2,pico-header,rp-bank0-p18
+pico2w,9,GP6,GPIO,USB OVCUR DET,F10,USB OVCUR DET,pico-header,rp-bank0-p18
+pico2w,9,GP6,GPIO,UART1 TX,F11,UART1 TX,pico-header,rp-bank0-p18
+pico2w,10,GP7,GPIO,SPI0 TX,F1,SPI0 TX,pico-header,rp-bank0-p18
+pico2w,10,GP7,GPIO,UART1 RTS,F2,UART1 RTS,pico-header,rp-bank0-p18
+pico2w,10,GP7,GPIO,I2C1 SCL,F3,I2C1 SCL,pico-header,rp-bank0-p18
+pico2w,10,GP7,GPIO,PWM3 B,F4,PWM3 B,pico-header,rp-bank0-p18
+pico2w,10,GP7,GPIO,SIO,F5,SIO,pico-header,rp-bank0-p18
+pico2w,10,GP7,GPIO,PIO0,F6,PIO0,pico-header,rp-bank0-p18
+pico2w,10,GP7,GPIO,PIO1,F7,PIO1,pico-header,rp-bank0-p18
+pico2w,10,GP7,GPIO,PIO2,F8,PIO2,pico-header,rp-bank0-p18
+pico2w,10,GP7,GPIO,USB VBUS DET,F10,USB VBUS DET,pico-header,rp-bank0-p18
+pico2w,10,GP7,GPIO,UART1 RX,F11,UART1 RX,pico-header,rp-bank0-p18
+pico2w,11,GP8,GPIO,SPI1 RX,F1,SPI1 RX,pico-header,rp-bank0-p18
+pico2w,11,GP8,GPIO,UART1 TX,F2,UART1 TX,pico-header,rp-bank0-p18
+pico2w,11,GP8,GPIO,I2C0 SDA,F3,I2C0 SDA,pico-header,rp-bank0-p18
+pico2w,11,GP8,GPIO,PWM4 A,F4,PWM4 A,pico-header,rp-bank0-p18
+pico2w,11,GP8,GPIO,SIO,F5,SIO,pico-header,rp-bank0-p18
+pico2w,11,GP8,GPIO,PIO0,F6,PIO0,pico-header,rp-bank0-p18
+pico2w,11,GP8,GPIO,PIO1,F7,PIO1,pico-header,rp-bank0-p18
+pico2w,11,GP8,GPIO,PIO2,F8,PIO2,pico-header,rp-bank0-p18
+pico2w,11,GP8,GPIO,QMI CS1n,F9,QMI CS1n,pico-header,rp-bank0-p18
+pico2w,11,GP8,GPIO,USB VBUS EN,F10,USB VBUS EN,pico-header,rp-bank0-p18
+pico2w,12,GP9,GPIO,SPI1 CSn,F1,SPI1 CSn,pico-header,rp-bank0-p18
+pico2w,12,GP9,GPIO,UART1 RX,F2,UART1 RX,pico-header,rp-bank0-p18
+pico2w,12,GP9,GPIO,I2C0 SCL,F3,I2C0 SCL,pico-header,rp-bank0-p18
+pico2w,12,GP9,GPIO,PWM4 B,F4,PWM4 B,pico-header,rp-bank0-p18
+pico2w,12,GP9,GPIO,SIO,F5,SIO,pico-header,rp-bank0-p18
+pico2w,12,GP9,GPIO,PIO0,F6,PIO0,pico-header,rp-bank0-p18
+pico2w,12,GP9,GPIO,PIO1,F7,PIO1,pico-header,rp-bank0-p18
+pico2w,12,GP9,GPIO,PIO2,F8,PIO2,pico-header,rp-bank0-p18
+pico2w,12,GP9,GPIO,USB OVCUR DET,F10,USB OVCUR DET,pico-header,rp-bank0-p18
+pico2w,13,GND,GND,,,,pico-header,
+pico2w,14,GP10,GPIO,SPI1 SCK,F1,SPI1 SCK,pico-header,rp-bank0-p18
+pico2w,14,GP10,GPIO,UART1 CTS,F2,UART1 CTS,pico-header,rp-bank0-p18
+pico2w,14,GP10,GPIO,I2C1 SDA,F3,I2C1 SDA,pico-header,rp-bank0-p18
+pico2w,14,GP10,GPIO,PWM5 A,F4,PWM5 A,pico-header,rp-bank0-p18
+pico2w,14,GP10,GPIO,SIO,F5,SIO,pico-header,rp-bank0-p18
+pico2w,14,GP10,GPIO,PIO0,F6,PIO0,pico-header,rp-bank0-p18
+pico2w,14,GP10,GPIO,PIO1,F7,PIO1,pico-header,rp-bank0-p18
+pico2w,14,GP10,GPIO,PIO2,F8,PIO2,pico-header,rp-bank0-p18
+pico2w,14,GP10,GPIO,USB VBUS DET,F10,USB VBUS DET,pico-header,rp-bank0-p18
+pico2w,14,GP10,GPIO,UART1 TX,F11,UART1 TX,pico-header,rp-bank0-p18
+pico2w,15,GP11,GPIO,SPI1 TX,F1,SPI1 TX,pico-header,rp-bank0-p19
+pico2w,15,GP11,GPIO,UART1 RTS,F2,UART1 RTS,pico-header,rp-bank0-p19
+pico2w,15,GP11,GPIO,I2C1 SCL,F3,I2C1 SCL,pico-header,rp-bank0-p19
+pico2w,15,GP11,GPIO,PWM5 B,F4,PWM5 B,pico-header,rp-bank0-p19
+pico2w,15,GP11,GPIO,SIO,F5,SIO,pico-header,rp-bank0-p19
+pico2w,15,GP11,GPIO,PIO0,F6,PIO0,pico-header,rp-bank0-p19
+pico2w,15,GP11,GPIO,PIO1,F7,PIO1,pico-header,rp-bank0-p19
+pico2w,15,GP11,GPIO,PIO2,F8,PIO2,pico-header,rp-bank0-p19
+pico2w,15,GP11,GPIO,USB VBUS EN,F10,USB VBUS EN,pico-header,rp-bank0-p19
+pico2w,15,GP11,GPIO,UART1 RX,F11,UART1 RX,pico-header,rp-bank0-p19
+pico2w,16,GP12,GPIO,HSTX,F0,HSTX,pico-header,rp-bank0-p19
+pico2w,16,GP12,GPIO,SPI1 RX,F1,SPI1 RX,pico-header,rp-bank0-p19
+pico2w,16,GP12,GPIO,UART0 TX,F2,UART0 TX,pico-header,rp-bank0-p19
+pico2w,16,GP12,GPIO,I2C0 SDA,F3,I2C0 SDA,pico-header,rp-bank0-p19
+pico2w,16,GP12,GPIO,PWM6 A,F4,PWM6 A,pico-header,rp-bank0-p19
+pico2w,16,GP12,GPIO,SIO,F5,SIO,pico-header,rp-bank0-p19
+pico2w,16,GP12,GPIO,PIO0,F6,PIO0,pico-header,rp-bank0-p19
+pico2w,16,GP12,GPIO,PIO1,F7,PIO1,pico-header,rp-bank0-p19
+pico2w,16,GP12,GPIO,PIO2,F8,PIO2,pico-header,rp-bank0-p19
+pico2w,16,GP12,GPIO,CLOCK GPIN0,F9,CLOCK GPIN0,pico-header,rp-bank0-p19
+pico2w,16,GP12,GPIO,USB OVCUR DET,F10,USB OVCUR DET,pico-header,rp-bank0-p19
+pico2w,17,GP13,GPIO,HSTX,F0,HSTX,pico-header,rp-bank0-p19
+pico2w,17,GP13,GPIO,SPI1 CSn,F1,SPI1 CSn,pico-header,rp-bank0-p19
+pico2w,17,GP13,GPIO,UART0 RX,F2,UART0 RX,pico-header,rp-bank0-p19
+pico2w,17,GP13,GPIO,I2C0 SCL,F3,I2C0 SCL,pico-header,rp-bank0-p19
+pico2w,17,GP13,GPIO,PWM6 B,F4,PWM6 B,pico-header,rp-bank0-p19
+pico2w,17,GP13,GPIO,SIO,F5,SIO,pico-header,rp-bank0-p19
+pico2w,17,GP13,GPIO,PIO0,F6,PIO0,pico-header,rp-bank0-p19
+pico2w,17,GP13,GPIO,PIO1,F7,PIO1,pico-header,rp-bank0-p19
+pico2w,17,GP13,GPIO,PIO2,F8,PIO2,pico-header,rp-bank0-p19
+pico2w,17,GP13,GPIO,CLOCK GPOUT0,F9,CLOCK GPOUT0,pico-header,rp-bank0-p19
+pico2w,17,GP13,GPIO,USB VBUS DET,F10,USB VBUS DET,pico-header,rp-bank0-p19
+pico2w,18,GND,GND,,,,pico-header,
+pico2w,19,GP14,GPIO,HSTX,F0,HSTX,pico-header,rp-bank0-p19
+pico2w,19,GP14,GPIO,SPI1 SCK,F1,SPI1 SCK,pico-header,rp-bank0-p19
+pico2w,19,GP14,GPIO,UART0 CTS,F2,UART0 CTS,pico-header,rp-bank0-p19
+pico2w,19,GP14,GPIO,I2C1 SDA,F3,I2C1 SDA,pico-header,rp-bank0-p19
+pico2w,19,GP14,GPIO,PWM7 A,F4,PWM7 A,pico-header,rp-bank0-p19
+pico2w,19,GP14,GPIO,SIO,F5,SIO,pico-header,rp-bank0-p19
+pico2w,19,GP14,GPIO,PIO0,F6,PIO0,pico-header,rp-bank0-p19
+pico2w,19,GP14,GPIO,PIO1,F7,PIO1,pico-header,rp-bank0-p19
+pico2w,19,GP14,GPIO,PIO2,F8,PIO2,pico-header,rp-bank0-p19
+pico2w,19,GP14,GPIO,CLOCK GPIN1,F9,CLOCK GPIN1,pico-header,rp-bank0-p19
+pico2w,19,GP14,GPIO,USB VBUS EN,F10,USB VBUS EN,pico-header,rp-bank0-p19
+pico2w,19,GP14,GPIO,UART0 TX,F11,UART0 TX,pico-header,rp-bank0-p19
+pico2w,20,GP15,GPIO,HSTX,F0,HSTX,pico-header,rp-bank0-p19
+pico2w,20,GP15,GPIO,SPI1 TX,F1,SPI1 TX,pico-header,rp-bank0-p19
+pico2w,20,GP15,GPIO,UART0 RTS,F2,UART0 RTS,pico-header,rp-bank0-p19
+pico2w,20,GP15,GPIO,I2C1 SCL,F3,I2C1 SCL,pico-header,rp-bank0-p19
+pico2w,20,GP15,GPIO,PWM7 B,F4,PWM7 B,pico-header,rp-bank0-p19
+pico2w,20,GP15,GPIO,SIO,F5,SIO,pico-header,rp-bank0-p19
+pico2w,20,GP15,GPIO,PIO0,F6,PIO0,pico-header,rp-bank0-p19
+pico2w,20,GP15,GPIO,PIO1,F7,PIO1,pico-header,rp-bank0-p19
+pico2w,20,GP15,GPIO,PIO2,F8,PIO2,pico-header,rp-bank0-p19
+pico2w,20,GP15,GPIO,CLOCK GPOUT1,F9,CLOCK GPOUT1,pico-header,rp-bank0-p19
+pico2w,20,GP15,GPIO,USB OVCUR DET,F10,USB OVCUR DET,pico-header,rp-bank0-p19
+pico2w,20,GP15,GPIO,UART0 RX,F11,UART0 RX,pico-header,rp-bank0-p19
+pico2w,21,GP16,GPIO,HSTX,F0,HSTX,pico-header,rp-bank0-p19
+pico2w,21,GP16,GPIO,SPI0 RX,F1,SPI0 RX,pico-header,rp-bank0-p19
+pico2w,21,GP16,GPIO,UART0 TX,F2,UART0 TX,pico-header,rp-bank0-p19
+pico2w,21,GP16,GPIO,I2C0 SDA,F3,I2C0 SDA,pico-header,rp-bank0-p19
+pico2w,21,GP16,GPIO,PWM0 A,F4,PWM0 A,pico-header,rp-bank0-p19
+pico2w,21,GP16,GPIO,SIO,F5,SIO,pico-header,rp-bank0-p19
+pico2w,21,GP16,GPIO,PIO0,F6,PIO0,pico-header,rp-bank0-p19
+pico2w,21,GP16,GPIO,PIO1,F7,PIO1,pico-header,rp-bank0-p19
+pico2w,21,GP16,GPIO,PIO2,F8,PIO2,pico-header,rp-bank0-p19
+pico2w,21,GP16,GPIO,USB VBUS DET,F10,USB VBUS DET,pico-header,rp-bank0-p19
+pico2w,22,GP17,GPIO,HSTX,F0,HSTX,pico-header,rp-bank0-p19
+pico2w,22,GP17,GPIO,SPI0 CSn,F1,SPI0 CSn,pico-header,rp-bank0-p19
+pico2w,22,GP17,GPIO,UART0 RX,F2,UART0 RX,pico-header,rp-bank0-p19
+pico2w,22,GP17,GPIO,I2C0 SCL,F3,I2C0 SCL,pico-header,rp-bank0-p19
+pico2w,22,GP17,GPIO,PWM0 B,F4,PWM0 B,pico-header,rp-bank0-p19
+pico2w,22,GP17,GPIO,SIO,F5,SIO,pico-header,rp-bank0-p19
+pico2w,22,GP17,GPIO,PIO0,F6,PIO0,pico-header,rp-bank0-p19
+pico2w,22,GP17,GPIO,PIO1,F7,PIO1,pico-header,rp-bank0-p19
+pico2w,22,GP17,GPIO,PIO2,F8,PIO2,pico-header,rp-bank0-p19
+pico2w,22,GP17,GPIO,USB VBUS EN,F10,USB VBUS EN,pico-header,rp-bank0-p19
+pico2w,23,GND,GND,,,,pico-header,
+pico2w,24,GP18,GPIO,HSTX,F0,HSTX,pico-header,rp-bank0-p19
+pico2w,24,GP18,GPIO,SPI0 SCK,F1,SPI0 SCK,pico-header,rp-bank0-p19
+pico2w,24,GP18,GPIO,UART0 CTS,F2,UART0 CTS,pico-header,rp-bank0-p19
+pico2w,24,GP18,GPIO,I2C1 SDA,F3,I2C1 SDA,pico-header,rp-bank0-p19
+pico2w,24,GP18,GPIO,PWM1 A,F4,PWM1 A,pico-header,rp-bank0-p19
+pico2w,24,GP18,GPIO,SIO,F5,SIO,pico-header,rp-bank0-p19
+pico2w,24,GP18,GPIO,PIO0,F6,PIO0,pico-header,rp-bank0-p19
+pico2w,24,GP18,GPIO,PIO1,F7,PIO1,pico-header,rp-bank0-p19
+pico2w,24,GP18,GPIO,PIO2,F8,PIO2,pico-header,rp-bank0-p19
+pico2w,24,GP18,GPIO,USB OVCUR DET,F10,USB OVCUR DET,pico-header,rp-bank0-p19
+pico2w,24,GP18,GPIO,UART0 TX,F11,UART0 TX,pico-header,rp-bank0-p19
+pico2w,25,GP19,GPIO,HSTX,F0,HSTX,pico-header,rp-bank0-p19
+pico2w,25,GP19,GPIO,SPI0 TX,F1,SPI0 TX,pico-header,rp-bank0-p19
+pico2w,25,GP19,GPIO,UART0 RTS,F2,UART0 RTS,pico-header,rp-bank0-p19
+pico2w,25,GP19,GPIO,I2C1 SCL,F3,I2C1 SCL,pico-header,rp-bank0-p19
+pico2w,25,GP19,GPIO,PWM1 B,F4,PWM1 B,pico-header,rp-bank0-p19
+pico2w,25,GP19,GPIO,SIO,F5,SIO,pico-header,rp-bank0-p19
+pico2w,25,GP19,GPIO,PIO0,F6,PIO0,pico-header,rp-bank0-p19
+pico2w,25,GP19,GPIO,PIO1,F7,PIO1,pico-header,rp-bank0-p19
+pico2w,25,GP19,GPIO,PIO2,F8,PIO2,pico-header,rp-bank0-p19
+pico2w,25,GP19,GPIO,QMI CS1n,F9,QMI CS1n,pico-header,rp-bank0-p19
+pico2w,25,GP19,GPIO,USB VBUS DET,F10,USB VBUS DET,pico-header,rp-bank0-p19
+pico2w,25,GP19,GPIO,UART0 RX,F11,UART0 RX,pico-header,rp-bank0-p19
+pico2w,26,GP20,GPIO,SPI0 RX,F1,SPI0 RX,pico-header,rp-bank0-p19
+pico2w,26,GP20,GPIO,UART1 TX,F2,UART1 TX,pico-header,rp-bank0-p19
+pico2w,26,GP20,GPIO,I2C0 SDA,F3,I2C0 SDA,pico-header,rp-bank0-p19
+pico2w,26,GP20,GPIO,PWM2 A,F4,PWM2 A,pico-header,rp-bank0-p19
+pico2w,26,GP20,GPIO,SIO,F5,SIO,pico-header,rp-bank0-p19
+pico2w,26,GP20,GPIO,PIO0,F6,PIO0,pico-header,rp-bank0-p19
+pico2w,26,GP20,GPIO,PIO1,F7,PIO1,pico-header,rp-bank0-p19
+pico2w,26,GP20,GPIO,PIO2,F8,PIO2,pico-header,rp-bank0-p19
+pico2w,26,GP20,GPIO,CLOCK GPIN0,F9,CLOCK GPIN0,pico-header,rp-bank0-p19
+pico2w,26,GP20,GPIO,USB VBUS EN,F10,USB VBUS EN,pico-header,rp-bank0-p19
+pico2w,27,GP21,GPIO,SPI0 CSn,F1,SPI0 CSn,pico-header,rp-bank0-p19
+pico2w,27,GP21,GPIO,UART1 RX,F2,UART1 RX,pico-header,rp-bank0-p19
+pico2w,27,GP21,GPIO,I2C0 SCL,F3,I2C0 SCL,pico-header,rp-bank0-p19
+pico2w,27,GP21,GPIO,PWM2 B,F4,PWM2 B,pico-header,rp-bank0-p19
+pico2w,27,GP21,GPIO,SIO,F5,SIO,pico-header,rp-bank0-p19
+pico2w,27,GP21,GPIO,PIO0,F6,PIO0,pico-header,rp-bank0-p19
+pico2w,27,GP21,GPIO,PIO1,F7,PIO1,pico-header,rp-bank0-p19
+pico2w,27,GP21,GPIO,PIO2,F8,PIO2,pico-header,rp-bank0-p19
+pico2w,27,GP21,GPIO,CLOCK GPOUT0,F9,CLOCK GPOUT0,pico-header,rp-bank0-p19
+pico2w,27,GP21,GPIO,USB OVCUR DET,F10,USB OVCUR DET,pico-header,rp-bank0-p19
+pico2w,28,GND,GND,,,,pico-header,
+pico2w,29,GP22,GPIO,SPI0 SCK,F1,SPI0 SCK,pico-header,rp-bank0-p19
+pico2w,29,GP22,GPIO,UART1 CTS,F2,UART1 CTS,pico-header,rp-bank0-p19
+pico2w,29,GP22,GPIO,I2C1 SDA,F3,I2C1 SDA,pico-header,rp-bank0-p19
+pico2w,29,GP22,GPIO,PWM3 A,F4,PWM3 A,pico-header,rp-bank0-p19
+pico2w,29,GP22,GPIO,SIO,F5,SIO,pico-header,rp-bank0-p19
+pico2w,29,GP22,GPIO,PIO0,F6,PIO0,pico-header,rp-bank0-p19
+pico2w,29,GP22,GPIO,PIO1,F7,PIO1,pico-header,rp-bank0-p19
+pico2w,29,GP22,GPIO,PIO2,F8,PIO2,pico-header,rp-bank0-p19
+pico2w,29,GP22,GPIO,CLOCK GPIN1,F9,CLOCK GPIN1,pico-header,rp-bank0-p19
+pico2w,29,GP22,GPIO,USB VBUS DET,F10,USB VBUS DET,pico-header,rp-bank0-p19
+pico2w,29,GP22,GPIO,UART1 TX,F11,UART1 TX,pico-header,rp-bank0-p19
+pico2w,30,RUN,SYSTEM,,,,pico-header | pico-special,
+pico2w,31,GP26,GPIO,SPI1 SCK,F1,SPI1 SCK,pico-header,rp-bank0-p19
+pico2w,31,GP26,GPIO,UART1 CTS,F2,UART1 CTS,pico-header,rp-bank0-p19
+pico2w,31,GP26,GPIO,I2C1 SDA,F3,I2C1 SDA,pico-header,rp-bank0-p19
+pico2w,31,GP26,GPIO,PWM5 A,F4,PWM5 A,pico-header,rp-bank0-p19
+pico2w,31,GP26,GPIO,SIO,F5,SIO,pico-header,rp-bank0-p19
+pico2w,31,GP26,GPIO,PIO0,F6,PIO0,pico-header,rp-bank0-p19
+pico2w,31,GP26,GPIO,PIO1,F7,PIO1,pico-header,rp-bank0-p19
+pico2w,31,GP26,GPIO,PIO2,F8,PIO2,pico-header,rp-bank0-p19
+pico2w,31,GP26,GPIO,USB VBUS EN,F10,USB VBUS EN,pico-header,rp-bank0-p19
+pico2w,31,GP26,GPIO,UART1 TX,F11,UART1 TX,pico-header,rp-bank0-p19
+pico2w,31,GP26,GPIO,ADC0,,ADC0,pico-header,pico-adc
+pico2w,32,GP27,GPIO,SPI1 TX,F1,SPI1 TX,pico-header,rp-bank0-p19
+pico2w,32,GP27,GPIO,UART1 RTS,F2,UART1 RTS,pico-header,rp-bank0-p19
+pico2w,32,GP27,GPIO,I2C1 SCL,F3,I2C1 SCL,pico-header,rp-bank0-p19
+pico2w,32,GP27,GPIO,PWM5 B,F4,PWM5 B,pico-header,rp-bank0-p19
+pico2w,32,GP27,GPIO,SIO,F5,SIO,pico-header,rp-bank0-p19
+pico2w,32,GP27,GPIO,PIO0,F6,PIO0,pico-header,rp-bank0-p19
+pico2w,32,GP27,GPIO,PIO1,F7,PIO1,pico-header,rp-bank0-p19
+pico2w,32,GP27,GPIO,PIO2,F8,PIO2,pico-header,rp-bank0-p19
+pico2w,32,GP27,GPIO,USB OVCUR DET,F10,USB OVCUR DET,pico-header,rp-bank0-p19
+pico2w,32,GP27,GPIO,UART1 RX,F11,UART1 RX,pico-header,rp-bank0-p19
+pico2w,32,GP27,GPIO,ADC1,,ADC1,pico-header,pico-adc
+pico2w,33,AGND,GND,,,,pico-header | pico-special,
+pico2w,34,GP28,GPIO,SPI1 RX,F1,SPI1 RX,pico-header,rp-bank0-p19
+pico2w,34,GP28,GPIO,UART0 TX,F2,UART0 TX,pico-header,rp-bank0-p19
+pico2w,34,GP28,GPIO,I2C0 SDA,F3,I2C0 SDA,pico-header,rp-bank0-p19
+pico2w,34,GP28,GPIO,PWM6 A,F4,PWM6 A,pico-header,rp-bank0-p19
+pico2w,34,GP28,GPIO,SIO,F5,SIO,pico-header,rp-bank0-p19
+pico2w,34,GP28,GPIO,PIO0,F6,PIO0,pico-header,rp-bank0-p19
+pico2w,34,GP28,GPIO,PIO1,F7,PIO1,pico-header,rp-bank0-p19
+pico2w,34,GP28,GPIO,PIO2,F8,PIO2,pico-header,rp-bank0-p19
+pico2w,34,GP28,GPIO,USB VBUS DET,F10,USB VBUS DET,pico-header,rp-bank0-p19
+pico2w,34,GP28,GPIO,ADC2,,ADC2,pico-header,pico-adc
+pico2w,35,ADC_VREF,ADC,,,,pico-header | pico-special,
+pico2w,36,3V3(OUT),POWER,,,,pico-header | pico-special,
+pico2w,37,3V3_EN,SYSTEM,,,,pico-header | pico-special,
+pico2w,38,GND,GND,,,,pico-header,
+pico2w,39,VSYS,POWER,,,,pico-header | pico-special,
+pico2w,40,VBUS,POWER,,,,pico-header | pico-special,
+raspberry-pi-4,1,3V3,POWER,,,,pi-header-doc | pi4-j8,
+raspberry-pi-4,2,5V,POWER,,,,pi-header-doc | pi4-j8,
+raspberry-pi-4,3,GPIO2,GPIO,I2C1 SDA,ALT0,SDA1,pi-header-doc | pi4-j8,bcm2711-alt-p78
+raspberry-pi-4,3,GPIO2,GPIO,SA3,ALT1,SA3,pi-header-doc | pi4-j8,bcm2711-alt-p78
+raspberry-pi-4,3,GPIO2,GPIO,LCD_VSYNC,ALT2,LCD_VSYNC,pi-header-doc | pi4-j8,bcm2711-alt-p78
+raspberry-pi-4,3,GPIO2,GPIO,SPI3_MOSI,ALT3,SPI3_MOSI,pi-header-doc | pi4-j8,bcm2711-alt-p78
+raspberry-pi-4,3,GPIO2,GPIO,UART2 CTS,ALT4,CTS2,pi-header-doc | pi4-j8,bcm2711-alt-p78
+raspberry-pi-4,3,GPIO2,GPIO,I2C3 SDA,ALT5,SDA3,pi-header-doc | pi4-j8,bcm2711-alt-p78
+raspberry-pi-4,4,5V,POWER,,,,pi-header-doc | pi4-j8,
+raspberry-pi-4,5,GPIO3,GPIO,I2C1 SCL,ALT0,SCL1,pi-header-doc | pi4-j8,bcm2711-alt-p78
+raspberry-pi-4,5,GPIO3,GPIO,SA2,ALT1,SA2,pi-header-doc | pi4-j8,bcm2711-alt-p78
+raspberry-pi-4,5,GPIO3,GPIO,LCD_HSYNC,ALT2,LCD_HSYNC,pi-header-doc | pi4-j8,bcm2711-alt-p78
+raspberry-pi-4,5,GPIO3,GPIO,SPI3_SCLK,ALT3,SPI3_SCLK,pi-header-doc | pi4-j8,bcm2711-alt-p78
+raspberry-pi-4,5,GPIO3,GPIO,UART2 RTS,ALT4,RTS2,pi-header-doc | pi4-j8,bcm2711-alt-p78
+raspberry-pi-4,5,GPIO3,GPIO,I2C3 SCL,ALT5,SCL3,pi-header-doc | pi4-j8,bcm2711-alt-p78
+raspberry-pi-4,6,GND,GND,,,,pi-header-doc | pi4-j8,
+raspberry-pi-4,7,GPIO4,GPIO,GPCLK0,ALT0,GPCLK0,pi-header-doc | pi4-j8,bcm2711-alt-p78
+raspberry-pi-4,7,GPIO4,GPIO,SA1,ALT1,SA1,pi-header-doc | pi4-j8,bcm2711-alt-p78
+raspberry-pi-4,7,GPIO4,GPIO,DPI_D0,ALT2,DPI_D0,pi-header-doc | pi4-j8,bcm2711-alt-p78
+raspberry-pi-4,7,GPIO4,GPIO,SPI4_CE0_N,ALT3,SPI4_CE0_N,pi-header-doc | pi4-j8,bcm2711-alt-p78
+raspberry-pi-4,7,GPIO4,GPIO,UART3 TX,ALT4,TXD3,pi-header-doc | pi4-j8,bcm2711-alt-p78
+raspberry-pi-4,7,GPIO4,GPIO,I2C3 SDA,ALT5,SDA3,pi-header-doc | pi4-j8,bcm2711-alt-p78
+raspberry-pi-4,8,GPIO14,GPIO,UART0 TX,ALT0,TXD0,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,8,GPIO14,GPIO,SD6,ALT1,SD6,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,8,GPIO14,GPIO,DPI_D10,ALT2,DPI_D10,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,8,GPIO14,GPIO,SPI5_MOSI,ALT3,SPI5_MOSI,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,8,GPIO14,GPIO,UART5 CTS,ALT4,CTS5,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,8,GPIO14,GPIO,UART1 TX,ALT5,TXD1,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,9,GND,GND,,,,pi-header-doc | pi4-j8,
+raspberry-pi-4,10,GPIO15,GPIO,UART0 RX,ALT0,RXD0,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,10,GPIO15,GPIO,SD7,ALT1,SD7,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,10,GPIO15,GPIO,DPI_D11,ALT2,DPI_D11,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,10,GPIO15,GPIO,SPI5_SCLK,ALT3,SPI5_SCLK,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,10,GPIO15,GPIO,UART5 RTS,ALT4,RTS5,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,10,GPIO15,GPIO,UART1 RX,ALT5,RXD1,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,11,GPIO17,GPIO,SD9,ALT1,SD9,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,11,GPIO17,GPIO,DPI_D13,ALT2,DPI_D13,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,11,GPIO17,GPIO,UART0 RTS,ALT3,RTS0,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,11,GPIO17,GPIO,SPI1_CE1_N,ALT4,SPI1_CE1_N,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,11,GPIO17,GPIO,UART1 RTS,ALT5,RTS1,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,12,GPIO18,GPIO,PCM_CLK,ALT0,PCM_CLK,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,12,GPIO18,GPIO,SD10,ALT1,SD10,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,12,GPIO18,GPIO,DPI_D14,ALT2,DPI_D14,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,12,GPIO18,GPIO,SPI6_CE0_N,ALT3,SPI6_CE0_N,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,12,GPIO18,GPIO,SPI1_CE0_N,ALT4,SPI1_CE0_N,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,12,GPIO18,GPIO,PWM0_0,ALT5,PWM0_0,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,13,GPIO27,GPIO,SD0_DAT3,ALT0,SD0_DAT3,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,13,GPIO27,GPIO,DPI_D23,ALT2,DPI_D23,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,13,GPIO27,GPIO,SD1_DAT3,ALT3,SD1_DAT3,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,13,GPIO27,GPIO,ARM_TMS,ALT4,ARM_TMS,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,13,GPIO27,GPIO,SPI6_CE1_N,ALT5,SPI6_CE1_N,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,14,GND,GND,,,,pi-header-doc | pi4-j8,
+raspberry-pi-4,15,GPIO22,GPIO,SD0_CLK,ALT0,SD0_CLK,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,15,GPIO22,GPIO,SD14,ALT1,SD14,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,15,GPIO22,GPIO,DPI_D18,ALT2,DPI_D18,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,15,GPIO22,GPIO,SD1_CLK,ALT3,SD1_CLK,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,15,GPIO22,GPIO,ARM_TRST,ALT4,ARM_TRST,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,15,GPIO22,GPIO,I2C6 SDA,ALT5,SDA6,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,16,GPIO23,GPIO,SD0_CMD,ALT0,SD0_CMD,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,16,GPIO23,GPIO,SD15,ALT1,SD15,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,16,GPIO23,GPIO,DPI_D19,ALT2,DPI_D19,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,16,GPIO23,GPIO,SD1_CMD,ALT3,SD1_CMD,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,16,GPIO23,GPIO,ARM_RTCK,ALT4,ARM_RTCK,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,16,GPIO23,GPIO,I2C6 SCL,ALT5,SCL6,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,17,3V3,POWER,,,,pi-header-doc | pi4-j8,
+raspberry-pi-4,18,GPIO24,GPIO,SD0_DAT0,ALT0,SD0_DAT0,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,18,GPIO24,GPIO,SD16,ALT1,SD16,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,18,GPIO24,GPIO,DPI_D20,ALT2,DPI_D20,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,18,GPIO24,GPIO,SD1_DAT0,ALT3,SD1_DAT0,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,18,GPIO24,GPIO,ARM_TDO,ALT4,ARM_TDO,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,18,GPIO24,GPIO,SPI3_CE1_N,ALT5,SPI3_CE1_N,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,19,GPIO10,GPIO,SPI0_MOSI,ALT0,SPI0_MOSI,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,19,GPIO10,GPIO,SD2,ALT1,SD2,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,19,GPIO10,GPIO,DPI_D6,ALT2,DPI_D6,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,19,GPIO10,GPIO,BSCSL SDA / MOSI,ALT3,BSCSL SDA / MOSI,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,19,GPIO10,GPIO,UART4 CTS,ALT4,CTS4,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,19,GPIO10,GPIO,I2C5 SDA,ALT5,SDA5,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,20,GND,GND,,,,pi-header-doc | pi4-j8,
+raspberry-pi-4,21,GPIO9,GPIO,SPI0_MISO,ALT0,SPI0_MISO,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,21,GPIO9,GPIO,SD1,ALT1,SD1,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,21,GPIO9,GPIO,DPI_D5,ALT2,DPI_D5,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,21,GPIO9,GPIO,BSCSL / MISO,ALT3,BSCSL / MISO,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,21,GPIO9,GPIO,UART4 RX,ALT4,RXD4,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,21,GPIO9,GPIO,I2C4 SCL,ALT5,SCL4,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,22,GPIO25,GPIO,SD0_DAT1,ALT0,SD0_DAT1,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,22,GPIO25,GPIO,SD17,ALT1,SD17,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,22,GPIO25,GPIO,DPI_D21,ALT2,DPI_D21,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,22,GPIO25,GPIO,SD1_DAT1,ALT3,SD1_DAT1,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,22,GPIO25,GPIO,ARM_TCK,ALT4,ARM_TCK,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,22,GPIO25,GPIO,SPI4_CE1_N,ALT5,SPI4_CE1_N,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,23,GPIO11,GPIO,SPI0_SCLK,ALT0,SPI0_SCLK,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,23,GPIO11,GPIO,SD3,ALT1,SD3,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,23,GPIO11,GPIO,DPI_D7,ALT2,DPI_D7,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,23,GPIO11,GPIO,BSCSL SCL / SCLK,ALT3,BSCSL SCL / SCLK,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,23,GPIO11,GPIO,UART4 RTS,ALT4,RTS4,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,23,GPIO11,GPIO,I2C5 SCL,ALT5,SCL5,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,24,GPIO8,GPIO,SPI0_CE0_N,ALT0,SPI0_CE0_N,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,24,GPIO8,GPIO,SD0,ALT1,SD0,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,24,GPIO8,GPIO,DPI_D4,ALT2,DPI_D4,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,24,GPIO8,GPIO,BSCSL / CE_N,ALT3,BSCSL / CE_N,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,24,GPIO8,GPIO,UART4 TX,ALT4,TXD4,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,24,GPIO8,GPIO,I2C4 SDA,ALT5,SDA4,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,25,GND,GND,,,,pi-header-doc | pi4-j8,
+raspberry-pi-4,26,GPIO7,GPIO,SPI0_CE1_N,ALT0,SPI0_CE1_N,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,26,GPIO7,GPIO,SWE_N / SRW_N,ALT1,SWE_N / SRW_N,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,26,GPIO7,GPIO,DPI_D3,ALT2,DPI_D3,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,26,GPIO7,GPIO,SPI4_SCLK,ALT3,SPI4_SCLK,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,26,GPIO7,GPIO,UART3 RTS,ALT4,RTS3,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,26,GPIO7,GPIO,I2C4 SCL,ALT5,SCL4,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,27,GPIO0,GPIO,I2C0 SDA,ALT0,SDA0,pi-header-doc | pi4-j8,bcm2711-alt-p78
+raspberry-pi-4,27,GPIO0,GPIO,SA5,ALT1,SA5,pi-header-doc | pi4-j8,bcm2711-alt-p78
+raspberry-pi-4,27,GPIO0,GPIO,PCLK,ALT2,PCLK,pi-header-doc | pi4-j8,bcm2711-alt-p78
+raspberry-pi-4,27,GPIO0,GPIO,SPI3_CE0_N,ALT3,SPI3_CE0_N,pi-header-doc | pi4-j8,bcm2711-alt-p78
+raspberry-pi-4,27,GPIO0,GPIO,UART2 TX,ALT4,TXD2,pi-header-doc | pi4-j8,bcm2711-alt-p78
+raspberry-pi-4,27,GPIO0,GPIO,I2C6 SDA,ALT5,SDA6,pi-header-doc | pi4-j8,bcm2711-alt-p78
+raspberry-pi-4,28,GPIO1,GPIO,I2C0 SCL,ALT0,SCL0,pi-header-doc | pi4-j8,bcm2711-alt-p78
+raspberry-pi-4,28,GPIO1,GPIO,SA4,ALT1,SA4,pi-header-doc | pi4-j8,bcm2711-alt-p78
+raspberry-pi-4,28,GPIO1,GPIO,DE,ALT2,DE,pi-header-doc | pi4-j8,bcm2711-alt-p78
+raspberry-pi-4,28,GPIO1,GPIO,SPI3_MISO,ALT3,SPI3_MISO,pi-header-doc | pi4-j8,bcm2711-alt-p78
+raspberry-pi-4,28,GPIO1,GPIO,UART2 RX,ALT4,RXD2,pi-header-doc | pi4-j8,bcm2711-alt-p78
+raspberry-pi-4,28,GPIO1,GPIO,I2C6 SCL,ALT5,SCL6,pi-header-doc | pi4-j8,bcm2711-alt-p78
+raspberry-pi-4,29,GPIO5,GPIO,GPCLK1,ALT0,GPCLK1,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,29,GPIO5,GPIO,SA0,ALT1,SA0,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,29,GPIO5,GPIO,DPI_D1,ALT2,DPI_D1,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,29,GPIO5,GPIO,SPI4_MISO,ALT3,SPI4_MISO,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,29,GPIO5,GPIO,UART3 RX,ALT4,RXD3,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,29,GPIO5,GPIO,I2C3 SCL,ALT5,SCL3,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,30,GND,GND,,,,pi-header-doc | pi4-j8,
+raspberry-pi-4,31,GPIO6,GPIO,GPCLK2,ALT0,GPCLK2,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,31,GPIO6,GPIO,SOE_N / SE,ALT1,SOE_N / SE,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,31,GPIO6,GPIO,DPI_D2,ALT2,DPI_D2,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,31,GPIO6,GPIO,SPI4_MOSI,ALT3,SPI4_MOSI,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,31,GPIO6,GPIO,UART3 CTS,ALT4,CTS3,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,31,GPIO6,GPIO,I2C4 SDA,ALT5,SDA4,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,32,GPIO12,GPIO,PWM0_0,ALT0,PWM0_0,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,32,GPIO12,GPIO,SD4,ALT1,SD4,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,32,GPIO12,GPIO,DPI_D8,ALT2,DPI_D8,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,32,GPIO12,GPIO,SPI5_CE0_N,ALT3,SPI5_CE0_N,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,32,GPIO12,GPIO,UART5 TX,ALT4,TXD5,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,32,GPIO12,GPIO,I2C5 SDA,ALT5,SDA5,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,33,GPIO13,GPIO,PWM0_1,ALT0,PWM0_1,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,33,GPIO13,GPIO,SD5,ALT1,SD5,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,33,GPIO13,GPIO,DPI_D9,ALT2,DPI_D9,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,33,GPIO13,GPIO,SPI5_MISO,ALT3,SPI5_MISO,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,33,GPIO13,GPIO,UART5 RX,ALT4,RXD5,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,33,GPIO13,GPIO,I2C5 SCL,ALT5,SCL5,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,34,GND,GND,,,,pi-header-doc | pi4-j8,
+raspberry-pi-4,35,GPIO19,GPIO,PCM_FS,ALT0,PCM_FS,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,35,GPIO19,GPIO,SD11,ALT1,SD11,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,35,GPIO19,GPIO,DPI_D15,ALT2,DPI_D15,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,35,GPIO19,GPIO,SPI6_MISO,ALT3,SPI6_MISO,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,35,GPIO19,GPIO,SPI1_MISO,ALT4,SPI1_MISO,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,35,GPIO19,GPIO,PWM0_1,ALT5,PWM0_1,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,36,GPIO16,GPIO,SD8,ALT1,SD8,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,36,GPIO16,GPIO,DPI_D12,ALT2,DPI_D12,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,36,GPIO16,GPIO,UART0 CTS,ALT3,CTS0,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,36,GPIO16,GPIO,SPI1_CE2_N,ALT4,SPI1_CE2_N,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,36,GPIO16,GPIO,UART1 CTS,ALT5,CTS1,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,37,GPIO26,GPIO,SD0_DAT2,ALT0,SD0_DAT2,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,37,GPIO26,GPIO,DPI_D22,ALT2,DPI_D22,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,37,GPIO26,GPIO,SD1_DAT2,ALT3,SD1_DAT2,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,37,GPIO26,GPIO,ARM_TDI,ALT4,ARM_TDI,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,37,GPIO26,GPIO,SPI5_CE1_N,ALT5,SPI5_CE1_N,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,38,GPIO20,GPIO,PCM_DIN,ALT0,PCM_DIN,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,38,GPIO20,GPIO,SD12,ALT1,SD12,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,38,GPIO20,GPIO,DPI_D16,ALT2,DPI_D16,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,38,GPIO20,GPIO,SPI6_MOSI,ALT3,SPI6_MOSI,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,38,GPIO20,GPIO,SPI1_MOSI,ALT4,SPI1_MOSI,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,38,GPIO20,GPIO,GPCLK0,ALT5,GPCLK0,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,39,GND,GND,,,,pi-header-doc | pi4-j8,
+raspberry-pi-4,40,GPIO21,GPIO,PCM_DOUT,ALT0,PCM_DOUT,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,40,GPIO21,GPIO,SD13,ALT1,SD13,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,40,GPIO21,GPIO,DPI_D17,ALT2,DPI_D17,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,40,GPIO21,GPIO,SPI6_SCLK,ALT3,SPI6_SCLK,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,40,GPIO21,GPIO,SPI1_SCLK,ALT4,SPI1_SCLK,pi-header-doc | pi4-j8,bcm2711-alt-p79
+raspberry-pi-4,40,GPIO21,GPIO,GPCLK1,ALT5,GPCLK1,pi-header-doc | pi4-j8,bcm2711-alt-p79
+rp2350a,1,IOVDD,POWER,,,,rp2350a-iovdd,
+rp2350a,2,GPIO0,GPIO,SPI0 RX,F1,SPI0 RX,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,2,GPIO0,GPIO,UART0 TX,F2,UART0 TX,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,2,GPIO0,GPIO,I2C0 SDA,F3,I2C0 SDA,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,2,GPIO0,GPIO,PWM0 A,F4,PWM0 A,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,2,GPIO0,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,2,GPIO0,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,2,GPIO0,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,2,GPIO0,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,2,GPIO0,GPIO,QMI CS1n,F9,QMI CS1n,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,2,GPIO0,GPIO,USB OVCUR DET,F10,USB OVCUR DET,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,3,GPIO1,GPIO,SPI0 CSn,F1,SPI0 CSn,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,3,GPIO1,GPIO,UART0 RX,F2,UART0 RX,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,3,GPIO1,GPIO,I2C0 SCL,F3,I2C0 SCL,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,3,GPIO1,GPIO,PWM0 B,F4,PWM0 B,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,3,GPIO1,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,3,GPIO1,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,3,GPIO1,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,3,GPIO1,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,3,GPIO1,GPIO,TRACECLK,F9,TRACECLK,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,3,GPIO1,GPIO,USB VBUS DET,F10,USB VBUS DET,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,4,GPIO2,GPIO,SPI0 SCK,F1,SPI0 SCK,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,4,GPIO2,GPIO,UART0 CTS,F2,UART0 CTS,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,4,GPIO2,GPIO,I2C1 SDA,F3,I2C1 SDA,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,4,GPIO2,GPIO,PWM1 A,F4,PWM1 A,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,4,GPIO2,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,4,GPIO2,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,4,GPIO2,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,4,GPIO2,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,4,GPIO2,GPIO,TRACEDATA0,F9,TRACEDATA0,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,4,GPIO2,GPIO,USB VBUS EN,F10,USB VBUS EN,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,4,GPIO2,GPIO,UART0 TX,F11,UART0 TX,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,5,GPIO3,GPIO,SPI0 TX,F1,SPI0 TX,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,5,GPIO3,GPIO,UART0 RTS,F2,UART0 RTS,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,5,GPIO3,GPIO,I2C1 SCL,F3,I2C1 SCL,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,5,GPIO3,GPIO,PWM1 B,F4,PWM1 B,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,5,GPIO3,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,5,GPIO3,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,5,GPIO3,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,5,GPIO3,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,5,GPIO3,GPIO,TRACEDATA1,F9,TRACEDATA1,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,5,GPIO3,GPIO,USB OVCUR DET,F10,USB OVCUR DET,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,5,GPIO3,GPIO,UART0 RX,F11,UART0 RX,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,6,DVDD,POWER,,,,rp-pin-list-p1335,
+rp2350a,7,GPIO4,GPIO,SPI0 RX,F1,SPI0 RX,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,7,GPIO4,GPIO,UART1 TX,F2,UART1 TX,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,7,GPIO4,GPIO,I2C0 SDA,F3,I2C0 SDA,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,7,GPIO4,GPIO,PWM2 A,F4,PWM2 A,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,7,GPIO4,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,7,GPIO4,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,7,GPIO4,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,7,GPIO4,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,7,GPIO4,GPIO,TRACEDATA2,F9,TRACEDATA2,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,7,GPIO4,GPIO,USB VBUS DET,F10,USB VBUS DET,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,8,GPIO5,GPIO,SPI0 CSn,F1,SPI0 CSn,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,8,GPIO5,GPIO,UART1 RX,F2,UART1 RX,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,8,GPIO5,GPIO,I2C0 SCL,F3,I2C0 SCL,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,8,GPIO5,GPIO,PWM2 B,F4,PWM2 B,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,8,GPIO5,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,8,GPIO5,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,8,GPIO5,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,8,GPIO5,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,8,GPIO5,GPIO,TRACEDATA3,F9,TRACEDATA3,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,8,GPIO5,GPIO,USB VBUS EN,F10,USB VBUS EN,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,9,GPIO6,GPIO,SPI0 SCK,F1,SPI0 SCK,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,9,GPIO6,GPIO,UART1 CTS,F2,UART1 CTS,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,9,GPIO6,GPIO,I2C1 SDA,F3,I2C1 SDA,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,9,GPIO6,GPIO,PWM3 A,F4,PWM3 A,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,9,GPIO6,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,9,GPIO6,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,9,GPIO6,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,9,GPIO6,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,9,GPIO6,GPIO,USB OVCUR DET,F10,USB OVCUR DET,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,9,GPIO6,GPIO,UART1 TX,F11,UART1 TX,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,10,GPIO7,GPIO,SPI0 TX,F1,SPI0 TX,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,10,GPIO7,GPIO,UART1 RTS,F2,UART1 RTS,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,10,GPIO7,GPIO,I2C1 SCL,F3,I2C1 SCL,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,10,GPIO7,GPIO,PWM3 B,F4,PWM3 B,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,10,GPIO7,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,10,GPIO7,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,10,GPIO7,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,10,GPIO7,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,10,GPIO7,GPIO,USB VBUS DET,F10,USB VBUS DET,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,10,GPIO7,GPIO,UART1 RX,F11,UART1 RX,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,11,IOVDD,POWER,,,,rp2350a-iovdd,
+rp2350a,12,GPIO8,GPIO,SPI1 RX,F1,SPI1 RX,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,12,GPIO8,GPIO,UART1 TX,F2,UART1 TX,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,12,GPIO8,GPIO,I2C0 SDA,F3,I2C0 SDA,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,12,GPIO8,GPIO,PWM4 A,F4,PWM4 A,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,12,GPIO8,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,12,GPIO8,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,12,GPIO8,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,12,GPIO8,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,12,GPIO8,GPIO,QMI CS1n,F9,QMI CS1n,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,12,GPIO8,GPIO,USB VBUS EN,F10,USB VBUS EN,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,13,GPIO9,GPIO,SPI1 CSn,F1,SPI1 CSn,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,13,GPIO9,GPIO,UART1 RX,F2,UART1 RX,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,13,GPIO9,GPIO,I2C0 SCL,F3,I2C0 SCL,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,13,GPIO9,GPIO,PWM4 B,F4,PWM4 B,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,13,GPIO9,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,13,GPIO9,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,13,GPIO9,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,13,GPIO9,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,13,GPIO9,GPIO,USB OVCUR DET,F10,USB OVCUR DET,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,14,GPIO10,GPIO,SPI1 SCK,F1,SPI1 SCK,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,14,GPIO10,GPIO,UART1 CTS,F2,UART1 CTS,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,14,GPIO10,GPIO,I2C1 SDA,F3,I2C1 SDA,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,14,GPIO10,GPIO,PWM5 A,F4,PWM5 A,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,14,GPIO10,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,14,GPIO10,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,14,GPIO10,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,14,GPIO10,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,14,GPIO10,GPIO,USB VBUS DET,F10,USB VBUS DET,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,14,GPIO10,GPIO,UART1 TX,F11,UART1 TX,rp-pin-list-p1333,rp-bank0-p18
+rp2350a,15,GPIO11,GPIO,SPI1 TX,F1,SPI1 TX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,15,GPIO11,GPIO,UART1 RTS,F2,UART1 RTS,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,15,GPIO11,GPIO,I2C1 SCL,F3,I2C1 SCL,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,15,GPIO11,GPIO,PWM5 B,F4,PWM5 B,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,15,GPIO11,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,15,GPIO11,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,15,GPIO11,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,15,GPIO11,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,15,GPIO11,GPIO,USB VBUS EN,F10,USB VBUS EN,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,15,GPIO11,GPIO,UART1 RX,F11,UART1 RX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,16,GPIO12,GPIO,HSTX,F0,HSTX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,16,GPIO12,GPIO,SPI1 RX,F1,SPI1 RX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,16,GPIO12,GPIO,UART0 TX,F2,UART0 TX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,16,GPIO12,GPIO,I2C0 SDA,F3,I2C0 SDA,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,16,GPIO12,GPIO,PWM6 A,F4,PWM6 A,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,16,GPIO12,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,16,GPIO12,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,16,GPIO12,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,16,GPIO12,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,16,GPIO12,GPIO,CLOCK GPIN0,F9,CLOCK GPIN0,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,16,GPIO12,GPIO,USB OVCUR DET,F10,USB OVCUR DET,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,17,GPIO13,GPIO,HSTX,F0,HSTX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,17,GPIO13,GPIO,SPI1 CSn,F1,SPI1 CSn,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,17,GPIO13,GPIO,UART0 RX,F2,UART0 RX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,17,GPIO13,GPIO,I2C0 SCL,F3,I2C0 SCL,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,17,GPIO13,GPIO,PWM6 B,F4,PWM6 B,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,17,GPIO13,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,17,GPIO13,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,17,GPIO13,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,17,GPIO13,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,17,GPIO13,GPIO,CLOCK GPOUT0,F9,CLOCK GPOUT0,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,17,GPIO13,GPIO,USB VBUS DET,F10,USB VBUS DET,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,18,GPIO14,GPIO,HSTX,F0,HSTX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,18,GPIO14,GPIO,SPI1 SCK,F1,SPI1 SCK,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,18,GPIO14,GPIO,UART0 CTS,F2,UART0 CTS,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,18,GPIO14,GPIO,I2C1 SDA,F3,I2C1 SDA,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,18,GPIO14,GPIO,PWM7 A,F4,PWM7 A,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,18,GPIO14,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,18,GPIO14,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,18,GPIO14,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,18,GPIO14,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,18,GPIO14,GPIO,CLOCK GPIN1,F9,CLOCK GPIN1,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,18,GPIO14,GPIO,USB VBUS EN,F10,USB VBUS EN,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,18,GPIO14,GPIO,UART0 TX,F11,UART0 TX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,19,GPIO15,GPIO,HSTX,F0,HSTX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,19,GPIO15,GPIO,SPI1 TX,F1,SPI1 TX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,19,GPIO15,GPIO,UART0 RTS,F2,UART0 RTS,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,19,GPIO15,GPIO,I2C1 SCL,F3,I2C1 SCL,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,19,GPIO15,GPIO,PWM7 B,F4,PWM7 B,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,19,GPIO15,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,19,GPIO15,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,19,GPIO15,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,19,GPIO15,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,19,GPIO15,GPIO,CLOCK GPOUT1,F9,CLOCK GPOUT1,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,19,GPIO15,GPIO,USB OVCUR DET,F10,USB OVCUR DET,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,19,GPIO15,GPIO,UART0 RX,F11,UART0 RX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,20,IOVDD,POWER,,,,rp2350a-iovdd,
+rp2350a,21,XIN,SYSTEM,,,,rp-pin-list-p1335,
+rp2350a,22,XOUT,SYSTEM,,,,rp-pin-list-p1335,
+rp2350a,23,DVDD,POWER,,,,rp-pin-list-p1335,
+rp2350a,24,SWCLK,SYSTEM,,,,rp-pin-list-p1335,
+rp2350a,25,SWDIO,SYSTEM,,,,rp-pin-list-p1335,
+rp2350a,26,RUN,SYSTEM,,,,rp-pin-list-p1335,
+rp2350a,27,GPIO16,GPIO,HSTX,F0,HSTX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,27,GPIO16,GPIO,SPI0 RX,F1,SPI0 RX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,27,GPIO16,GPIO,UART0 TX,F2,UART0 TX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,27,GPIO16,GPIO,I2C0 SDA,F3,I2C0 SDA,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,27,GPIO16,GPIO,PWM0 A,F4,PWM0 A,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,27,GPIO16,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,27,GPIO16,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,27,GPIO16,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,27,GPIO16,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,27,GPIO16,GPIO,USB VBUS DET,F10,USB VBUS DET,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,28,GPIO17,GPIO,HSTX,F0,HSTX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,28,GPIO17,GPIO,SPI0 CSn,F1,SPI0 CSn,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,28,GPIO17,GPIO,UART0 RX,F2,UART0 RX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,28,GPIO17,GPIO,I2C0 SCL,F3,I2C0 SCL,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,28,GPIO17,GPIO,PWM0 B,F4,PWM0 B,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,28,GPIO17,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,28,GPIO17,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,28,GPIO17,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,28,GPIO17,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,28,GPIO17,GPIO,USB VBUS EN,F10,USB VBUS EN,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,29,GPIO18,GPIO,HSTX,F0,HSTX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,29,GPIO18,GPIO,SPI0 SCK,F1,SPI0 SCK,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,29,GPIO18,GPIO,UART0 CTS,F2,UART0 CTS,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,29,GPIO18,GPIO,I2C1 SDA,F3,I2C1 SDA,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,29,GPIO18,GPIO,PWM1 A,F4,PWM1 A,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,29,GPIO18,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,29,GPIO18,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,29,GPIO18,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,29,GPIO18,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,29,GPIO18,GPIO,USB OVCUR DET,F10,USB OVCUR DET,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,29,GPIO18,GPIO,UART0 TX,F11,UART0 TX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,30,IOVDD,POWER,,,,rp2350a-iovdd,
+rp2350a,31,GPIO19,GPIO,HSTX,F0,HSTX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,31,GPIO19,GPIO,SPI0 TX,F1,SPI0 TX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,31,GPIO19,GPIO,UART0 RTS,F2,UART0 RTS,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,31,GPIO19,GPIO,I2C1 SCL,F3,I2C1 SCL,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,31,GPIO19,GPIO,PWM1 B,F4,PWM1 B,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,31,GPIO19,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,31,GPIO19,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,31,GPIO19,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,31,GPIO19,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,31,GPIO19,GPIO,QMI CS1n,F9,QMI CS1n,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,31,GPIO19,GPIO,USB VBUS DET,F10,USB VBUS DET,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,31,GPIO19,GPIO,UART0 RX,F11,UART0 RX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,32,GPIO20,GPIO,SPI0 RX,F1,SPI0 RX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,32,GPIO20,GPIO,UART1 TX,F2,UART1 TX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,32,GPIO20,GPIO,I2C0 SDA,F3,I2C0 SDA,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,32,GPIO20,GPIO,PWM2 A,F4,PWM2 A,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,32,GPIO20,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,32,GPIO20,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,32,GPIO20,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,32,GPIO20,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,32,GPIO20,GPIO,CLOCK GPIN0,F9,CLOCK GPIN0,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,32,GPIO20,GPIO,USB VBUS EN,F10,USB VBUS EN,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,33,GPIO21,GPIO,SPI0 CSn,F1,SPI0 CSn,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,33,GPIO21,GPIO,UART1 RX,F2,UART1 RX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,33,GPIO21,GPIO,I2C0 SCL,F3,I2C0 SCL,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,33,GPIO21,GPIO,PWM2 B,F4,PWM2 B,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,33,GPIO21,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,33,GPIO21,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,33,GPIO21,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,33,GPIO21,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,33,GPIO21,GPIO,CLOCK GPOUT0,F9,CLOCK GPOUT0,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,33,GPIO21,GPIO,USB OVCUR DET,F10,USB OVCUR DET,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,34,GPIO22,GPIO,SPI0 SCK,F1,SPI0 SCK,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,34,GPIO22,GPIO,UART1 CTS,F2,UART1 CTS,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,34,GPIO22,GPIO,I2C1 SDA,F3,I2C1 SDA,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,34,GPIO22,GPIO,PWM3 A,F4,PWM3 A,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,34,GPIO22,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,34,GPIO22,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,34,GPIO22,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,34,GPIO22,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,34,GPIO22,GPIO,CLOCK GPIN1,F9,CLOCK GPIN1,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,34,GPIO22,GPIO,USB VBUS DET,F10,USB VBUS DET,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,34,GPIO22,GPIO,UART1 TX,F11,UART1 TX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,35,GPIO23,GPIO,SPI0 TX,F1,SPI0 TX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,35,GPIO23,GPIO,UART1 RTS,F2,UART1 RTS,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,35,GPIO23,GPIO,I2C1 SCL,F3,I2C1 SCL,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,35,GPIO23,GPIO,PWM3 B,F4,PWM3 B,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,35,GPIO23,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,35,GPIO23,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,35,GPIO23,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,35,GPIO23,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,35,GPIO23,GPIO,CLOCK GPOUT1,F9,CLOCK GPOUT1,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,35,GPIO23,GPIO,USB VBUS EN,F10,USB VBUS EN,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,35,GPIO23,GPIO,UART1 RX,F11,UART1 RX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,36,GPIO24,GPIO,SPI1 RX,F1,SPI1 RX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,36,GPIO24,GPIO,UART1 TX,F2,UART1 TX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,36,GPIO24,GPIO,I2C0 SDA,F3,I2C0 SDA,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,36,GPIO24,GPIO,PWM4 A,F4,PWM4 A,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,36,GPIO24,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,36,GPIO24,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,36,GPIO24,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,36,GPIO24,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,36,GPIO24,GPIO,CLOCK GPOUT2,F9,CLOCK GPOUT2,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,36,GPIO24,GPIO,USB OVCUR DET,F10,USB OVCUR DET,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,37,GPIO25,GPIO,SPI1 CSn,F1,SPI1 CSn,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,37,GPIO25,GPIO,UART1 RX,F2,UART1 RX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,37,GPIO25,GPIO,I2C0 SCL,F3,I2C0 SCL,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,37,GPIO25,GPIO,PWM4 B,F4,PWM4 B,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,37,GPIO25,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,37,GPIO25,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,37,GPIO25,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,37,GPIO25,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,37,GPIO25,GPIO,CLOCK GPOUT3,F9,CLOCK GPOUT3,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,37,GPIO25,GPIO,USB VBUS DET,F10,USB VBUS DET,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,38,IOVDD,POWER,,,,rp2350a-iovdd,
+rp2350a,39,DVDD,POWER,,,,rp-pin-list-p1335,
+rp2350a,40,GPIO26_ADC0,GPIO,SPI1 SCK,F1,SPI1 SCK,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,40,GPIO26_ADC0,GPIO,UART1 CTS,F2,UART1 CTS,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,40,GPIO26_ADC0,GPIO,I2C1 SDA,F3,I2C1 SDA,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,40,GPIO26_ADC0,GPIO,PWM5 A,F4,PWM5 A,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,40,GPIO26_ADC0,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,40,GPIO26_ADC0,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,40,GPIO26_ADC0,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,40,GPIO26_ADC0,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,40,GPIO26_ADC0,GPIO,USB VBUS EN,F10,USB VBUS EN,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,40,GPIO26_ADC0,GPIO,UART1 TX,F11,UART1 TX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,40,GPIO26_ADC0,GPIO,ADC0,,ADC0,rp-pin-list-p1333,rp-pin-list-p1333
+rp2350a,41,GPIO27_ADC1,GPIO,SPI1 TX,F1,SPI1 TX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,41,GPIO27_ADC1,GPIO,UART1 RTS,F2,UART1 RTS,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,41,GPIO27_ADC1,GPIO,I2C1 SCL,F3,I2C1 SCL,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,41,GPIO27_ADC1,GPIO,PWM5 B,F4,PWM5 B,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,41,GPIO27_ADC1,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,41,GPIO27_ADC1,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,41,GPIO27_ADC1,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,41,GPIO27_ADC1,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,41,GPIO27_ADC1,GPIO,USB OVCUR DET,F10,USB OVCUR DET,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,41,GPIO27_ADC1,GPIO,UART1 RX,F11,UART1 RX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,41,GPIO27_ADC1,GPIO,ADC1,,ADC1,rp-pin-list-p1333,rp-pin-list-p1333
+rp2350a,42,GPIO28_ADC2,GPIO,SPI1 RX,F1,SPI1 RX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,42,GPIO28_ADC2,GPIO,UART0 TX,F2,UART0 TX,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,42,GPIO28_ADC2,GPIO,I2C0 SDA,F3,I2C0 SDA,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,42,GPIO28_ADC2,GPIO,PWM6 A,F4,PWM6 A,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,42,GPIO28_ADC2,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,42,GPIO28_ADC2,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,42,GPIO28_ADC2,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,42,GPIO28_ADC2,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,42,GPIO28_ADC2,GPIO,USB VBUS DET,F10,USB VBUS DET,rp-pin-list-p1333,rp-bank0-p19
+rp2350a,42,GPIO28_ADC2,GPIO,ADC2,,ADC2,rp-pin-list-p1333,rp-pin-list-p1333
+rp2350a,43,GPIO29_ADC3,GPIO,SPI1 CSn,F1,SPI1 CSn,rp-pin-list-p1334,rp-bank0-p19
+rp2350a,43,GPIO29_ADC3,GPIO,UART0 RX,F2,UART0 RX,rp-pin-list-p1334,rp-bank0-p19
+rp2350a,43,GPIO29_ADC3,GPIO,I2C0 SCL,F3,I2C0 SCL,rp-pin-list-p1334,rp-bank0-p19
+rp2350a,43,GPIO29_ADC3,GPIO,PWM6 B,F4,PWM6 B,rp-pin-list-p1334,rp-bank0-p19
+rp2350a,43,GPIO29_ADC3,GPIO,SIO,F5,SIO,rp-pin-list-p1334,rp-bank0-p19
+rp2350a,43,GPIO29_ADC3,GPIO,PIO0,F6,PIO0,rp-pin-list-p1334,rp-bank0-p19
+rp2350a,43,GPIO29_ADC3,GPIO,PIO1,F7,PIO1,rp-pin-list-p1334,rp-bank0-p19
+rp2350a,43,GPIO29_ADC3,GPIO,PIO2,F8,PIO2,rp-pin-list-p1334,rp-bank0-p19
+rp2350a,43,GPIO29_ADC3,GPIO,USB VBUS EN,F10,USB VBUS EN,rp-pin-list-p1334,rp-bank0-p19
+rp2350a,43,GPIO29_ADC3,GPIO,ADC3,,ADC3,rp-pin-list-p1334,rp-pin-list-p1334
+rp2350a,44,ADC_AVDD,POWER,,,,rp-pin-list-p1335,
+rp2350a,45,IOVDD,POWER,,,,rp2350a-iovdd,
+rp2350a,46,VREG_AVDD,POWER,,,,rp-pin-list-p1335,
+rp2350a,47,VREG_PGND,GND,,,,rp-pin-list-p1335,
+rp2350a,48,VREG_LX,SYSTEM,,,,rp-pin-list-p1335,
+rp2350a,49,VREG_VIN,POWER,,,,rp-pin-list-p1335,
+rp2350a,50,VREG_FB,SYSTEM,,,,rp-pin-list-p1336,
+rp2350a,51,USB_DM,SYSTEM,UART1 RX,F2,UART1 RX,rp-pin-list-p1335,rp-bank1
+rp2350a,51,USB_DM,SYSTEM,I2C0 SCL,F3,I2C0 SCL,rp-pin-list-p1335,rp-bank1
+rp2350a,51,USB_DM,SYSTEM,SIO,F5,SIO,rp-pin-list-p1335,rp-bank1
+rp2350a,52,USB_DP,SYSTEM,UART1 TX,F2,UART1 TX,rp-pin-list-p1335,rp-bank1
+rp2350a,52,USB_DP,SYSTEM,I2C0 SDA,F3,I2C0 SDA,rp-pin-list-p1335,rp-bank1
+rp2350a,52,USB_DP,SYSTEM,SIO,F5,SIO,rp-pin-list-p1335,rp-bank1
+rp2350a,53,USB_OTP_VDD,POWER,,,,rp-pin-list-p1335,
+rp2350a,54,QSPI_IOVDD,POWER,,,,rp-pin-list-p1335,
+rp2350a,55,QSPI_SD3,SYSTEM,QMI SD3,F0,QMI SD3,rp-pin-list-p1334,rp-bank1
+rp2350a,55,QSPI_SD3,SYSTEM,UART0 RTS,F2,UART0 RTS,rp-pin-list-p1334,rp-bank1
+rp2350a,55,QSPI_SD3,SYSTEM,I2C1 SCL,F3,I2C1 SCL,rp-pin-list-p1334,rp-bank1
+rp2350a,55,QSPI_SD3,SYSTEM,SIO,F5,SIO,rp-pin-list-p1334,rp-bank1
+rp2350a,55,QSPI_SD3,SYSTEM,UART0 RX,F11,UART0 RX,rp-pin-list-p1334,rp-bank1
+rp2350a,56,QSPI_SCLK,SYSTEM,QMI SCK,F0,QMI SCK,rp-pin-list-p1334,rp-bank1
+rp2350a,56,QSPI_SCLK,SYSTEM,UART1 CTS,F2,UART1 CTS,rp-pin-list-p1334,rp-bank1
+rp2350a,56,QSPI_SCLK,SYSTEM,I2C1 SDA,F3,I2C1 SDA,rp-pin-list-p1334,rp-bank1
+rp2350a,56,QSPI_SCLK,SYSTEM,SIO,F5,SIO,rp-pin-list-p1334,rp-bank1
+rp2350a,56,QSPI_SCLK,SYSTEM,UART1 TX,F11,UART1 TX,rp-pin-list-p1334,rp-bank1
+rp2350a,57,QSPI_SD0,SYSTEM,QMI SD0,F0,QMI SD0,rp-pin-list-p1334,rp-bank1
+rp2350a,57,QSPI_SD0,SYSTEM,UART0 TX,F2,UART0 TX,rp-pin-list-p1334,rp-bank1
+rp2350a,57,QSPI_SD0,SYSTEM,I2C0 SDA,F3,I2C0 SDA,rp-pin-list-p1334,rp-bank1
+rp2350a,57,QSPI_SD0,SYSTEM,SIO,F5,SIO,rp-pin-list-p1334,rp-bank1
+rp2350a,58,QSPI_SD2,SYSTEM,QMI SD2,F0,QMI SD2,rp-pin-list-p1334,rp-bank1
+rp2350a,58,QSPI_SD2,SYSTEM,UART0 CTS,F2,UART0 CTS,rp-pin-list-p1334,rp-bank1
+rp2350a,58,QSPI_SD2,SYSTEM,I2C1 SDA,F3,I2C1 SDA,rp-pin-list-p1334,rp-bank1
+rp2350a,58,QSPI_SD2,SYSTEM,SIO,F5,SIO,rp-pin-list-p1334,rp-bank1
+rp2350a,58,QSPI_SD2,SYSTEM,UART0 TX,F11,UART0 TX,rp-pin-list-p1334,rp-bank1
+rp2350a,59,QSPI_SD1,SYSTEM,QMI SD1,F0,QMI SD1,rp-pin-list-p1334,rp-bank1
+rp2350a,59,QSPI_SD1,SYSTEM,UART0 RX,F2,UART0 RX,rp-pin-list-p1334,rp-bank1
+rp2350a,59,QSPI_SD1,SYSTEM,I2C0 SCL,F3,I2C0 SCL,rp-pin-list-p1334,rp-bank1
+rp2350a,59,QSPI_SD1,SYSTEM,SIO,F5,SIO,rp-pin-list-p1334,rp-bank1
+rp2350a,60,QSPI_SS,SYSTEM,QMI CS0n,F0,QMI CS0n,rp-pin-list-p1334,rp-bank1
+rp2350a,60,QSPI_SS,SYSTEM,UART1 RTS,F2,UART1 RTS,rp-pin-list-p1334,rp-bank1
+rp2350a,60,QSPI_SS,SYSTEM,I2C1 SCL,F3,I2C1 SCL,rp-pin-list-p1334,rp-bank1
+rp2350a,60,QSPI_SS,SYSTEM,SIO,F5,SIO,rp-pin-list-p1334,rp-bank1
+rp2350a,60,QSPI_SS,SYSTEM,UART1 RX,F11,UART1 RX,rp-pin-list-p1334,rp-bank1
+rp2350b,1,GPIO4,GPIO,SPI0 RX,F1,SPI0 RX,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,1,GPIO4,GPIO,UART1 TX,F2,UART1 TX,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,1,GPIO4,GPIO,I2C0 SDA,F3,I2C0 SDA,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,1,GPIO4,GPIO,PWM2 A,F4,PWM2 A,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,1,GPIO4,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,1,GPIO4,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,1,GPIO4,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,1,GPIO4,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,1,GPIO4,GPIO,TRACEDATA2,F9,TRACEDATA2,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,1,GPIO4,GPIO,USB VBUS DET,F10,USB VBUS DET,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,2,GPIO5,GPIO,SPI0 CSn,F1,SPI0 CSn,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,2,GPIO5,GPIO,UART1 RX,F2,UART1 RX,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,2,GPIO5,GPIO,I2C0 SCL,F3,I2C0 SCL,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,2,GPIO5,GPIO,PWM2 B,F4,PWM2 B,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,2,GPIO5,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,2,GPIO5,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,2,GPIO5,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,2,GPIO5,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,2,GPIO5,GPIO,TRACEDATA3,F9,TRACEDATA3,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,2,GPIO5,GPIO,USB VBUS EN,F10,USB VBUS EN,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,3,GPIO6,GPIO,SPI0 SCK,F1,SPI0 SCK,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,3,GPIO6,GPIO,UART1 CTS,F2,UART1 CTS,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,3,GPIO6,GPIO,I2C1 SDA,F3,I2C1 SDA,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,3,GPIO6,GPIO,PWM3 A,F4,PWM3 A,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,3,GPIO6,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,3,GPIO6,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,3,GPIO6,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,3,GPIO6,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,3,GPIO6,GPIO,USB OVCUR DET,F10,USB OVCUR DET,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,3,GPIO6,GPIO,UART1 TX,F11,UART1 TX,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,4,GPIO7,GPIO,SPI0 TX,F1,SPI0 TX,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,4,GPIO7,GPIO,UART1 RTS,F2,UART1 RTS,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,4,GPIO7,GPIO,I2C1 SCL,F3,I2C1 SCL,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,4,GPIO7,GPIO,PWM3 B,F4,PWM3 B,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,4,GPIO7,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,4,GPIO7,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,4,GPIO7,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,4,GPIO7,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,4,GPIO7,GPIO,USB VBUS DET,F10,USB VBUS DET,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,4,GPIO7,GPIO,UART1 RX,F11,UART1 RX,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,5,IOVDD,POWER,,,,rp2350b-iovdd,
+rp2350b,6,GPIO8,GPIO,SPI1 RX,F1,SPI1 RX,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,6,GPIO8,GPIO,UART1 TX,F2,UART1 TX,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,6,GPIO8,GPIO,I2C0 SDA,F3,I2C0 SDA,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,6,GPIO8,GPIO,PWM4 A,F4,PWM4 A,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,6,GPIO8,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,6,GPIO8,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,6,GPIO8,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,6,GPIO8,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,6,GPIO8,GPIO,QMI CS1n,F9,QMI CS1n,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,6,GPIO8,GPIO,USB VBUS EN,F10,USB VBUS EN,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,7,GPIO9,GPIO,SPI1 CSn,F1,SPI1 CSn,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,7,GPIO9,GPIO,UART1 RX,F2,UART1 RX,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,7,GPIO9,GPIO,I2C0 SCL,F3,I2C0 SCL,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,7,GPIO9,GPIO,PWM4 B,F4,PWM4 B,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,7,GPIO9,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,7,GPIO9,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,7,GPIO9,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,7,GPIO9,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,7,GPIO9,GPIO,USB OVCUR DET,F10,USB OVCUR DET,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,8,GPIO10,GPIO,SPI1 SCK,F1,SPI1 SCK,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,8,GPIO10,GPIO,UART1 CTS,F2,UART1 CTS,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,8,GPIO10,GPIO,I2C1 SDA,F3,I2C1 SDA,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,8,GPIO10,GPIO,PWM5 A,F4,PWM5 A,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,8,GPIO10,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,8,GPIO10,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,8,GPIO10,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,8,GPIO10,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,8,GPIO10,GPIO,USB VBUS DET,F10,USB VBUS DET,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,8,GPIO10,GPIO,UART1 TX,F11,UART1 TX,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,9,GPIO11,GPIO,SPI1 TX,F1,SPI1 TX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,9,GPIO11,GPIO,UART1 RTS,F2,UART1 RTS,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,9,GPIO11,GPIO,I2C1 SCL,F3,I2C1 SCL,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,9,GPIO11,GPIO,PWM5 B,F4,PWM5 B,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,9,GPIO11,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,9,GPIO11,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,9,GPIO11,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,9,GPIO11,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,9,GPIO11,GPIO,USB VBUS EN,F10,USB VBUS EN,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,9,GPIO11,GPIO,UART1 RX,F11,UART1 RX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,10,DVDD,POWER,,,,rp-pin-list-p1335,
+rp2350b,11,GPIO12,GPIO,HSTX,F0,HSTX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,11,GPIO12,GPIO,SPI1 RX,F1,SPI1 RX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,11,GPIO12,GPIO,UART0 TX,F2,UART0 TX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,11,GPIO12,GPIO,I2C0 SDA,F3,I2C0 SDA,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,11,GPIO12,GPIO,PWM6 A,F4,PWM6 A,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,11,GPIO12,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,11,GPIO12,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,11,GPIO12,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,11,GPIO12,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,11,GPIO12,GPIO,CLOCK GPIN0,F9,CLOCK GPIN0,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,11,GPIO12,GPIO,USB OVCUR DET,F10,USB OVCUR DET,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,12,GPIO13,GPIO,HSTX,F0,HSTX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,12,GPIO13,GPIO,SPI1 CSn,F1,SPI1 CSn,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,12,GPIO13,GPIO,UART0 RX,F2,UART0 RX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,12,GPIO13,GPIO,I2C0 SCL,F3,I2C0 SCL,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,12,GPIO13,GPIO,PWM6 B,F4,PWM6 B,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,12,GPIO13,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,12,GPIO13,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,12,GPIO13,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,12,GPIO13,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,12,GPIO13,GPIO,CLOCK GPOUT0,F9,CLOCK GPOUT0,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,12,GPIO13,GPIO,USB VBUS DET,F10,USB VBUS DET,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,13,GPIO14,GPIO,HSTX,F0,HSTX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,13,GPIO14,GPIO,SPI1 SCK,F1,SPI1 SCK,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,13,GPIO14,GPIO,UART0 CTS,F2,UART0 CTS,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,13,GPIO14,GPIO,I2C1 SDA,F3,I2C1 SDA,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,13,GPIO14,GPIO,PWM7 A,F4,PWM7 A,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,13,GPIO14,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,13,GPIO14,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,13,GPIO14,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,13,GPIO14,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,13,GPIO14,GPIO,CLOCK GPIN1,F9,CLOCK GPIN1,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,13,GPIO14,GPIO,USB VBUS EN,F10,USB VBUS EN,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,13,GPIO14,GPIO,UART0 TX,F11,UART0 TX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,14,GPIO15,GPIO,HSTX,F0,HSTX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,14,GPIO15,GPIO,SPI1 TX,F1,SPI1 TX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,14,GPIO15,GPIO,UART0 RTS,F2,UART0 RTS,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,14,GPIO15,GPIO,I2C1 SCL,F3,I2C1 SCL,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,14,GPIO15,GPIO,PWM7 B,F4,PWM7 B,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,14,GPIO15,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,14,GPIO15,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,14,GPIO15,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,14,GPIO15,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,14,GPIO15,GPIO,CLOCK GPOUT1,F9,CLOCK GPOUT1,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,14,GPIO15,GPIO,USB OVCUR DET,F10,USB OVCUR DET,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,14,GPIO15,GPIO,UART0 RX,F11,UART0 RX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,15,IOVDD,POWER,,,,rp2350b-iovdd,
+rp2350b,16,GPIO16,GPIO,HSTX,F0,HSTX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,16,GPIO16,GPIO,SPI0 RX,F1,SPI0 RX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,16,GPIO16,GPIO,UART0 TX,F2,UART0 TX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,16,GPIO16,GPIO,I2C0 SDA,F3,I2C0 SDA,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,16,GPIO16,GPIO,PWM0 A,F4,PWM0 A,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,16,GPIO16,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,16,GPIO16,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,16,GPIO16,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,16,GPIO16,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,16,GPIO16,GPIO,USB VBUS DET,F10,USB VBUS DET,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,17,GPIO17,GPIO,HSTX,F0,HSTX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,17,GPIO17,GPIO,SPI0 CSn,F1,SPI0 CSn,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,17,GPIO17,GPIO,UART0 RX,F2,UART0 RX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,17,GPIO17,GPIO,I2C0 SCL,F3,I2C0 SCL,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,17,GPIO17,GPIO,PWM0 B,F4,PWM0 B,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,17,GPIO17,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,17,GPIO17,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,17,GPIO17,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,17,GPIO17,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,17,GPIO17,GPIO,USB VBUS EN,F10,USB VBUS EN,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,18,GPIO18,GPIO,HSTX,F0,HSTX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,18,GPIO18,GPIO,SPI0 SCK,F1,SPI0 SCK,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,18,GPIO18,GPIO,UART0 CTS,F2,UART0 CTS,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,18,GPIO18,GPIO,I2C1 SDA,F3,I2C1 SDA,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,18,GPIO18,GPIO,PWM1 A,F4,PWM1 A,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,18,GPIO18,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,18,GPIO18,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,18,GPIO18,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,18,GPIO18,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,18,GPIO18,GPIO,USB OVCUR DET,F10,USB OVCUR DET,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,18,GPIO18,GPIO,UART0 TX,F11,UART0 TX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,19,GPIO19,GPIO,HSTX,F0,HSTX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,19,GPIO19,GPIO,SPI0 TX,F1,SPI0 TX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,19,GPIO19,GPIO,UART0 RTS,F2,UART0 RTS,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,19,GPIO19,GPIO,I2C1 SCL,F3,I2C1 SCL,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,19,GPIO19,GPIO,PWM1 B,F4,PWM1 B,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,19,GPIO19,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,19,GPIO19,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,19,GPIO19,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,19,GPIO19,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,19,GPIO19,GPIO,QMI CS1n,F9,QMI CS1n,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,19,GPIO19,GPIO,USB VBUS DET,F10,USB VBUS DET,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,19,GPIO19,GPIO,UART0 RX,F11,UART0 RX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,20,GPIO20,GPIO,SPI0 RX,F1,SPI0 RX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,20,GPIO20,GPIO,UART1 TX,F2,UART1 TX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,20,GPIO20,GPIO,I2C0 SDA,F3,I2C0 SDA,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,20,GPIO20,GPIO,PWM2 A,F4,PWM2 A,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,20,GPIO20,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,20,GPIO20,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,20,GPIO20,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,20,GPIO20,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,20,GPIO20,GPIO,CLOCK GPIN0,F9,CLOCK GPIN0,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,20,GPIO20,GPIO,USB VBUS EN,F10,USB VBUS EN,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,21,GPIO21,GPIO,SPI0 CSn,F1,SPI0 CSn,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,21,GPIO21,GPIO,UART1 RX,F2,UART1 RX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,21,GPIO21,GPIO,I2C0 SCL,F3,I2C0 SCL,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,21,GPIO21,GPIO,PWM2 B,F4,PWM2 B,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,21,GPIO21,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,21,GPIO21,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,21,GPIO21,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,21,GPIO21,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,21,GPIO21,GPIO,CLOCK GPOUT0,F9,CLOCK GPOUT0,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,21,GPIO21,GPIO,USB OVCUR DET,F10,USB OVCUR DET,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,22,GPIO22,GPIO,SPI0 SCK,F1,SPI0 SCK,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,22,GPIO22,GPIO,UART1 CTS,F2,UART1 CTS,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,22,GPIO22,GPIO,I2C1 SDA,F3,I2C1 SDA,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,22,GPIO22,GPIO,PWM3 A,F4,PWM3 A,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,22,GPIO22,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,22,GPIO22,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,22,GPIO22,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,22,GPIO22,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,22,GPIO22,GPIO,CLOCK GPIN1,F9,CLOCK GPIN1,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,22,GPIO22,GPIO,USB VBUS DET,F10,USB VBUS DET,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,22,GPIO22,GPIO,UART1 TX,F11,UART1 TX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,23,GPIO23,GPIO,SPI0 TX,F1,SPI0 TX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,23,GPIO23,GPIO,UART1 RTS,F2,UART1 RTS,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,23,GPIO23,GPIO,I2C1 SCL,F3,I2C1 SCL,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,23,GPIO23,GPIO,PWM3 B,F4,PWM3 B,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,23,GPIO23,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,23,GPIO23,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,23,GPIO23,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,23,GPIO23,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,23,GPIO23,GPIO,CLOCK GPOUT1,F9,CLOCK GPOUT1,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,23,GPIO23,GPIO,USB VBUS EN,F10,USB VBUS EN,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,23,GPIO23,GPIO,UART1 RX,F11,UART1 RX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,24,IOVDD,POWER,,,,rp2350b-iovdd,
+rp2350b,25,GPIO24,GPIO,SPI1 RX,F1,SPI1 RX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,25,GPIO24,GPIO,UART1 TX,F2,UART1 TX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,25,GPIO24,GPIO,I2C0 SDA,F3,I2C0 SDA,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,25,GPIO24,GPIO,PWM4 A,F4,PWM4 A,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,25,GPIO24,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,25,GPIO24,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,25,GPIO24,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,25,GPIO24,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,25,GPIO24,GPIO,CLOCK GPOUT2,F9,CLOCK GPOUT2,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,25,GPIO24,GPIO,USB OVCUR DET,F10,USB OVCUR DET,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,26,GPIO25,GPIO,SPI1 CSn,F1,SPI1 CSn,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,26,GPIO25,GPIO,UART1 RX,F2,UART1 RX,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,26,GPIO25,GPIO,I2C0 SCL,F3,I2C0 SCL,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,26,GPIO25,GPIO,PWM4 B,F4,PWM4 B,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,26,GPIO25,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,26,GPIO25,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,26,GPIO25,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,26,GPIO25,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,26,GPIO25,GPIO,CLOCK GPOUT3,F9,CLOCK GPOUT3,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,26,GPIO25,GPIO,USB VBUS DET,F10,USB VBUS DET,rp-pin-list-p1333,rp-bank0-p19
+rp2350b,27,GPIO26,GPIO,SPI1 SCK,F1,SPI1 SCK,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,27,GPIO26,GPIO,UART1 CTS,F2,UART1 CTS,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,27,GPIO26,GPIO,I2C1 SDA,F3,I2C1 SDA,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,27,GPIO26,GPIO,PWM5 A,F4,PWM5 A,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,27,GPIO26,GPIO,SIO,F5,SIO,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,27,GPIO26,GPIO,PIO0,F6,PIO0,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,27,GPIO26,GPIO,PIO1,F7,PIO1,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,27,GPIO26,GPIO,PIO2,F8,PIO2,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,27,GPIO26,GPIO,USB VBUS EN,F10,USB VBUS EN,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,27,GPIO26,GPIO,UART1 TX,F11,UART1 TX,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,28,GPIO27,GPIO,SPI1 TX,F1,SPI1 TX,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,28,GPIO27,GPIO,UART1 RTS,F2,UART1 RTS,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,28,GPIO27,GPIO,I2C1 SCL,F3,I2C1 SCL,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,28,GPIO27,GPIO,PWM5 B,F4,PWM5 B,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,28,GPIO27,GPIO,SIO,F5,SIO,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,28,GPIO27,GPIO,PIO0,F6,PIO0,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,28,GPIO27,GPIO,PIO1,F7,PIO1,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,28,GPIO27,GPIO,PIO2,F8,PIO2,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,28,GPIO27,GPIO,USB OVCUR DET,F10,USB OVCUR DET,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,28,GPIO27,GPIO,UART1 RX,F11,UART1 RX,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,29,IOVDD,POWER,,,,rp2350b-iovdd,
+rp2350b,30,XIN,SYSTEM,,,,rp-pin-list-p1335,
+rp2350b,31,XOUT,SYSTEM,,,,rp-pin-list-p1335,
+rp2350b,32,DVDD,POWER,,,,rp-pin-list-p1335,
+rp2350b,33,SWCLK,SYSTEM,,,,rp-pin-list-p1335,
+rp2350b,34,SWDIO,SYSTEM,,,,rp-pin-list-p1335,
+rp2350b,35,RUN,SYSTEM,,,,rp-pin-list-p1335,
+rp2350b,36,GPIO28,GPIO,SPI1 RX,F1,SPI1 RX,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,36,GPIO28,GPIO,UART0 TX,F2,UART0 TX,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,36,GPIO28,GPIO,I2C0 SDA,F3,I2C0 SDA,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,36,GPIO28,GPIO,PWM6 A,F4,PWM6 A,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,36,GPIO28,GPIO,SIO,F5,SIO,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,36,GPIO28,GPIO,PIO0,F6,PIO0,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,36,GPIO28,GPIO,PIO1,F7,PIO1,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,36,GPIO28,GPIO,PIO2,F8,PIO2,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,36,GPIO28,GPIO,USB VBUS DET,F10,USB VBUS DET,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,37,GPIO29,GPIO,SPI1 CSn,F1,SPI1 CSn,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,37,GPIO29,GPIO,UART0 RX,F2,UART0 RX,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,37,GPIO29,GPIO,I2C0 SCL,F3,I2C0 SCL,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,37,GPIO29,GPIO,PWM6 B,F4,PWM6 B,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,37,GPIO29,GPIO,SIO,F5,SIO,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,37,GPIO29,GPIO,PIO0,F6,PIO0,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,37,GPIO29,GPIO,PIO1,F7,PIO1,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,37,GPIO29,GPIO,PIO2,F8,PIO2,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,37,GPIO29,GPIO,USB VBUS EN,F10,USB VBUS EN,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,38,GPIO30,GPIO,SPI1 SCK,F1,SPI1 SCK,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,38,GPIO30,GPIO,UART0 CTS,F2,UART0 CTS,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,38,GPIO30,GPIO,I2C1 SDA,F3,I2C1 SDA,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,38,GPIO30,GPIO,PWM7 A,F4,PWM7 A,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,38,GPIO30,GPIO,SIO,F5,SIO,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,38,GPIO30,GPIO,PIO0,F6,PIO0,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,38,GPIO30,GPIO,PIO1,F7,PIO1,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,38,GPIO30,GPIO,PIO2,F8,PIO2,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,38,GPIO30,GPIO,USB OVCUR DET,F10,USB OVCUR DET,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,38,GPIO30,GPIO,UART0 TX,F11,UART0 TX,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,39,GPIO31,GPIO,SPI1 TX,F1,SPI1 TX,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,39,GPIO31,GPIO,UART0 RTS,F2,UART0 RTS,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,39,GPIO31,GPIO,I2C1 SCL,F3,I2C1 SCL,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,39,GPIO31,GPIO,PWM7 B,F4,PWM7 B,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,39,GPIO31,GPIO,SIO,F5,SIO,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,39,GPIO31,GPIO,PIO0,F6,PIO0,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,39,GPIO31,GPIO,PIO1,F7,PIO1,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,39,GPIO31,GPIO,PIO2,F8,PIO2,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,39,GPIO31,GPIO,USB VBUS DET,F10,USB VBUS DET,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,39,GPIO31,GPIO,UART0 RX,F11,UART0 RX,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,40,GPIO32,GPIO,SPI0 RX,F1,SPI0 RX,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,40,GPIO32,GPIO,UART0 TX,F2,UART0 TX,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,40,GPIO32,GPIO,I2C0 SDA,F3,I2C0 SDA,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,40,GPIO32,GPIO,PWM8 A,F4,PWM8 A,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,40,GPIO32,GPIO,SIO,F5,SIO,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,40,GPIO32,GPIO,PIO0,F6,PIO0,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,40,GPIO32,GPIO,PIO1,F7,PIO1,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,40,GPIO32,GPIO,PIO2,F8,PIO2,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,40,GPIO32,GPIO,USB VBUS EN,F10,USB VBUS EN,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,41,IOVDD,POWER,,,,rp2350b-iovdd,
+rp2350b,42,GPIO33,GPIO,SPI0 CSn,F1,SPI0 CSn,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,42,GPIO33,GPIO,UART0 RX,F2,UART0 RX,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,42,GPIO33,GPIO,I2C0 SCL,F3,I2C0 SCL,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,42,GPIO33,GPIO,PWM8 B,F4,PWM8 B,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,42,GPIO33,GPIO,SIO,F5,SIO,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,42,GPIO33,GPIO,PIO0,F6,PIO0,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,42,GPIO33,GPIO,PIO1,F7,PIO1,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,42,GPIO33,GPIO,PIO2,F8,PIO2,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,42,GPIO33,GPIO,USB OVCUR DET,F10,USB OVCUR DET,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,43,GPIO34,GPIO,SPI0 SCK,F1,SPI0 SCK,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,43,GPIO34,GPIO,UART0 CTS,F2,UART0 CTS,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,43,GPIO34,GPIO,I2C1 SDA,F3,I2C1 SDA,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,43,GPIO34,GPIO,PWM9 A,F4,PWM9 A,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,43,GPIO34,GPIO,SIO,F5,SIO,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,43,GPIO34,GPIO,PIO0,F6,PIO0,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,43,GPIO34,GPIO,PIO1,F7,PIO1,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,43,GPIO34,GPIO,PIO2,F8,PIO2,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,43,GPIO34,GPIO,USB VBUS DET,F10,USB VBUS DET,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,43,GPIO34,GPIO,UART0 TX,F11,UART0 TX,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,44,GPIO35,GPIO,SPI0 TX,F1,SPI0 TX,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,44,GPIO35,GPIO,UART0 RTS,F2,UART0 RTS,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,44,GPIO35,GPIO,I2C1 SCL,F3,I2C1 SCL,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,44,GPIO35,GPIO,PWM9 B,F4,PWM9 B,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,44,GPIO35,GPIO,SIO,F5,SIO,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,44,GPIO35,GPIO,PIO0,F6,PIO0,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,44,GPIO35,GPIO,PIO1,F7,PIO1,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,44,GPIO35,GPIO,PIO2,F8,PIO2,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,44,GPIO35,GPIO,USB VBUS EN,F10,USB VBUS EN,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,44,GPIO35,GPIO,UART0 RX,F11,UART0 RX,rp-pin-list-p1334,rp-bank0-p19
+rp2350b,45,GPIO36,GPIO,SPI0 RX,F1,SPI0 RX,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,45,GPIO36,GPIO,UART1 TX,F2,UART1 TX,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,45,GPIO36,GPIO,I2C0 SDA,F3,I2C0 SDA,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,45,GPIO36,GPIO,PWM10 A,F4,PWM10 A,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,45,GPIO36,GPIO,SIO,F5,SIO,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,45,GPIO36,GPIO,PIO0,F6,PIO0,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,45,GPIO36,GPIO,PIO1,F7,PIO1,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,45,GPIO36,GPIO,PIO2,F8,PIO2,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,45,GPIO36,GPIO,USB OVCUR DET,F10,USB OVCUR DET,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,46,GPIO37,GPIO,SPI0 CSn,F1,SPI0 CSn,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,46,GPIO37,GPIO,UART1 RX,F2,UART1 RX,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,46,GPIO37,GPIO,I2C0 SCL,F3,I2C0 SCL,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,46,GPIO37,GPIO,PWM10 B,F4,PWM10 B,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,46,GPIO37,GPIO,SIO,F5,SIO,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,46,GPIO37,GPIO,PIO0,F6,PIO0,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,46,GPIO37,GPIO,PIO1,F7,PIO1,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,46,GPIO37,GPIO,PIO2,F8,PIO2,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,46,GPIO37,GPIO,USB VBUS DET,F10,USB VBUS DET,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,47,GPIO38,GPIO,SPI0 SCK,F1,SPI0 SCK,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,47,GPIO38,GPIO,UART1 CTS,F2,UART1 CTS,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,47,GPIO38,GPIO,I2C1 SDA,F3,I2C1 SDA,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,47,GPIO38,GPIO,PWM11 A,F4,PWM11 A,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,47,GPIO38,GPIO,SIO,F5,SIO,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,47,GPIO38,GPIO,PIO0,F6,PIO0,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,47,GPIO38,GPIO,PIO1,F7,PIO1,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,47,GPIO38,GPIO,PIO2,F8,PIO2,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,47,GPIO38,GPIO,USB VBUS EN,F10,USB VBUS EN,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,47,GPIO38,GPIO,UART1 TX,F11,UART1 TX,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,48,GPIO39,GPIO,SPI0 TX,F1,SPI0 TX,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,48,GPIO39,GPIO,UART1 RTS,F2,UART1 RTS,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,48,GPIO39,GPIO,I2C1 SCL,F3,I2C1 SCL,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,48,GPIO39,GPIO,PWM11 B,F4,PWM11 B,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,48,GPIO39,GPIO,SIO,F5,SIO,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,48,GPIO39,GPIO,PIO0,F6,PIO0,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,48,GPIO39,GPIO,PIO1,F7,PIO1,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,48,GPIO39,GPIO,PIO2,F8,PIO2,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,48,GPIO39,GPIO,USB OVCUR DET,F10,USB OVCUR DET,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,48,GPIO39,GPIO,UART1 RX,F11,UART1 RX,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,49,GPIO40_ADC0,GPIO,SPI1 RX,F1,SPI1 RX,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,49,GPIO40_ADC0,GPIO,UART1 TX,F2,UART1 TX,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,49,GPIO40_ADC0,GPIO,I2C0 SDA,F3,I2C0 SDA,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,49,GPIO40_ADC0,GPIO,PWM8 A,F4,PWM8 A,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,49,GPIO40_ADC0,GPIO,SIO,F5,SIO,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,49,GPIO40_ADC0,GPIO,PIO0,F6,PIO0,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,49,GPIO40_ADC0,GPIO,PIO1,F7,PIO1,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,49,GPIO40_ADC0,GPIO,PIO2,F8,PIO2,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,49,GPIO40_ADC0,GPIO,USB VBUS DET,F10,USB VBUS DET,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,49,GPIO40_ADC0,GPIO,ADC0,,ADC0,rp-pin-list-p1334,rp-pin-list-p1334
+rp2350b,50,IOVDD,POWER,,,,rp2350b-iovdd,
+rp2350b,51,DVDD,POWER,,,,rp-pin-list-p1335,
+rp2350b,52,GPIO41_ADC1,GPIO,SPI1 CSn,F1,SPI1 CSn,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,52,GPIO41_ADC1,GPIO,UART1 RX,F2,UART1 RX,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,52,GPIO41_ADC1,GPIO,I2C0 SCL,F3,I2C0 SCL,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,52,GPIO41_ADC1,GPIO,PWM8 B,F4,PWM8 B,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,52,GPIO41_ADC1,GPIO,SIO,F5,SIO,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,52,GPIO41_ADC1,GPIO,PIO0,F6,PIO0,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,52,GPIO41_ADC1,GPIO,PIO1,F7,PIO1,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,52,GPIO41_ADC1,GPIO,PIO2,F8,PIO2,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,52,GPIO41_ADC1,GPIO,USB VBUS EN,F10,USB VBUS EN,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,52,GPIO41_ADC1,GPIO,ADC1,,ADC1,rp-pin-list-p1334,rp-pin-list-p1334
+rp2350b,53,GPIO42_ADC2,GPIO,SPI1 SCK,F1,SPI1 SCK,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,53,GPIO42_ADC2,GPIO,UART1 CTS,F2,UART1 CTS,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,53,GPIO42_ADC2,GPIO,I2C1 SDA,F3,I2C1 SDA,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,53,GPIO42_ADC2,GPIO,PWM9 A,F4,PWM9 A,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,53,GPIO42_ADC2,GPIO,SIO,F5,SIO,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,53,GPIO42_ADC2,GPIO,PIO0,F6,PIO0,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,53,GPIO42_ADC2,GPIO,PIO1,F7,PIO1,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,53,GPIO42_ADC2,GPIO,PIO2,F8,PIO2,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,53,GPIO42_ADC2,GPIO,USB OVCUR DET,F10,USB OVCUR DET,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,53,GPIO42_ADC2,GPIO,UART1 TX,F11,UART1 TX,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,53,GPIO42_ADC2,GPIO,ADC2,,ADC2,rp-pin-list-p1334,rp-pin-list-p1334
+rp2350b,54,GPIO43_ADC3,GPIO,SPI1 TX,F1,SPI1 TX,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,54,GPIO43_ADC3,GPIO,UART1 RTS,F2,UART1 RTS,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,54,GPIO43_ADC3,GPIO,I2C1 SCL,F3,I2C1 SCL,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,54,GPIO43_ADC3,GPIO,PWM9 B,F4,PWM9 B,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,54,GPIO43_ADC3,GPIO,SIO,F5,SIO,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,54,GPIO43_ADC3,GPIO,PIO0,F6,PIO0,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,54,GPIO43_ADC3,GPIO,PIO1,F7,PIO1,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,54,GPIO43_ADC3,GPIO,PIO2,F8,PIO2,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,54,GPIO43_ADC3,GPIO,USB VBUS DET,F10,USB VBUS DET,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,54,GPIO43_ADC3,GPIO,UART1 RX,F11,UART1 RX,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,54,GPIO43_ADC3,GPIO,ADC3,,ADC3,rp-pin-list-p1334,rp-pin-list-p1334
+rp2350b,55,GPIO44_ADC4,GPIO,SPI1 RX,F1,SPI1 RX,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,55,GPIO44_ADC4,GPIO,UART0 TX,F2,UART0 TX,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,55,GPIO44_ADC4,GPIO,I2C0 SDA,F3,I2C0 SDA,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,55,GPIO44_ADC4,GPIO,PWM10 A,F4,PWM10 A,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,55,GPIO44_ADC4,GPIO,SIO,F5,SIO,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,55,GPIO44_ADC4,GPIO,PIO0,F6,PIO0,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,55,GPIO44_ADC4,GPIO,PIO1,F7,PIO1,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,55,GPIO44_ADC4,GPIO,PIO2,F8,PIO2,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,55,GPIO44_ADC4,GPIO,USB VBUS EN,F10,USB VBUS EN,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,55,GPIO44_ADC4,GPIO,ADC4,,ADC4,rp-pin-list-p1334,rp-pin-list-p1334
+rp2350b,56,GPIO45_ADC5,GPIO,SPI1 CSn,F1,SPI1 CSn,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,56,GPIO45_ADC5,GPIO,UART0 RX,F2,UART0 RX,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,56,GPIO45_ADC5,GPIO,I2C0 SCL,F3,I2C0 SCL,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,56,GPIO45_ADC5,GPIO,PWM10 B,F4,PWM10 B,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,56,GPIO45_ADC5,GPIO,SIO,F5,SIO,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,56,GPIO45_ADC5,GPIO,PIO0,F6,PIO0,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,56,GPIO45_ADC5,GPIO,PIO1,F7,PIO1,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,56,GPIO45_ADC5,GPIO,PIO2,F8,PIO2,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,56,GPIO45_ADC5,GPIO,USB OVCUR DET,F10,USB OVCUR DET,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,56,GPIO45_ADC5,GPIO,ADC5,,ADC5,rp-pin-list-p1334,rp-pin-list-p1334
+rp2350b,57,GPIO46_ADC6,GPIO,SPI1 SCK,F1,SPI1 SCK,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,57,GPIO46_ADC6,GPIO,UART0 CTS,F2,UART0 CTS,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,57,GPIO46_ADC6,GPIO,I2C1 SDA,F3,I2C1 SDA,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,57,GPIO46_ADC6,GPIO,PWM11 A,F4,PWM11 A,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,57,GPIO46_ADC6,GPIO,SIO,F5,SIO,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,57,GPIO46_ADC6,GPIO,PIO0,F6,PIO0,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,57,GPIO46_ADC6,GPIO,PIO1,F7,PIO1,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,57,GPIO46_ADC6,GPIO,PIO2,F8,PIO2,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,57,GPIO46_ADC6,GPIO,USB VBUS DET,F10,USB VBUS DET,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,57,GPIO46_ADC6,GPIO,UART0 TX,F11,UART0 TX,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,57,GPIO46_ADC6,GPIO,ADC6,,ADC6,rp-pin-list-p1334,rp-pin-list-p1334
+rp2350b,58,GPIO47_ADC7,GPIO,SPI1 TX,F1,SPI1 TX,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,58,GPIO47_ADC7,GPIO,UART0 RTS,F2,UART0 RTS,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,58,GPIO47_ADC7,GPIO,I2C1 SCL,F3,I2C1 SCL,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,58,GPIO47_ADC7,GPIO,PWM11 B,F4,PWM11 B,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,58,GPIO47_ADC7,GPIO,SIO,F5,SIO,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,58,GPIO47_ADC7,GPIO,PIO0,F6,PIO0,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,58,GPIO47_ADC7,GPIO,PIO1,F7,PIO1,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,58,GPIO47_ADC7,GPIO,PIO2,F8,PIO2,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,58,GPIO47_ADC7,GPIO,QMI CS1n,F9,QMI CS1n,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,58,GPIO47_ADC7,GPIO,USB VBUS EN,F10,USB VBUS EN,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,58,GPIO47_ADC7,GPIO,UART0 RX,F11,UART0 RX,rp-pin-list-p1334,rp-bank0-p20
+rp2350b,58,GPIO47_ADC7,GPIO,ADC7,,ADC7,rp-pin-list-p1334,rp-pin-list-p1334
+rp2350b,59,ADC_AVDD,POWER,,,,rp-pin-list-p1335,
+rp2350b,60,IOVDD,POWER,,,,rp2350b-iovdd,
+rp2350b,61,VREG_AVDD,POWER,,,,rp-pin-list-p1335,
+rp2350b,62,VREG_PGND,GND,,,,rp-pin-list-p1335,
+rp2350b,63,VREG_LX,SYSTEM,,,,rp-pin-list-p1335,
+rp2350b,64,VREG_VIN,POWER,,,,rp-pin-list-p1335,
+rp2350b,65,VREG_FB,SYSTEM,,,,rp-pin-list-p1336,
+rp2350b,66,USB_DM,SYSTEM,UART1 RX,F2,UART1 RX,rp-pin-list-p1335,rp-bank1
+rp2350b,66,USB_DM,SYSTEM,I2C0 SCL,F3,I2C0 SCL,rp-pin-list-p1335,rp-bank1
+rp2350b,66,USB_DM,SYSTEM,SIO,F5,SIO,rp-pin-list-p1335,rp-bank1
+rp2350b,67,USB_DP,SYSTEM,UART1 TX,F2,UART1 TX,rp-pin-list-p1335,rp-bank1
+rp2350b,67,USB_DP,SYSTEM,I2C0 SDA,F3,I2C0 SDA,rp-pin-list-p1335,rp-bank1
+rp2350b,67,USB_DP,SYSTEM,SIO,F5,SIO,rp-pin-list-p1335,rp-bank1
+rp2350b,68,USB_OTP_VDD,POWER,,,,rp-pin-list-p1335,
+rp2350b,69,QSPI_IOVDD,POWER,,,,rp-pin-list-p1335,
+rp2350b,70,QSPI_SD3,SYSTEM,QMI SD3,F0,QMI SD3,rp-pin-list-p1334,rp-bank1
+rp2350b,70,QSPI_SD3,SYSTEM,UART0 RTS,F2,UART0 RTS,rp-pin-list-p1334,rp-bank1
+rp2350b,70,QSPI_SD3,SYSTEM,I2C1 SCL,F3,I2C1 SCL,rp-pin-list-p1334,rp-bank1
+rp2350b,70,QSPI_SD3,SYSTEM,SIO,F5,SIO,rp-pin-list-p1334,rp-bank1
+rp2350b,70,QSPI_SD3,SYSTEM,UART0 RX,F11,UART0 RX,rp-pin-list-p1334,rp-bank1
+rp2350b,71,QSPI_SCLK,SYSTEM,QMI SCK,F0,QMI SCK,rp-pin-list-p1334,rp-bank1
+rp2350b,71,QSPI_SCLK,SYSTEM,UART1 CTS,F2,UART1 CTS,rp-pin-list-p1334,rp-bank1
+rp2350b,71,QSPI_SCLK,SYSTEM,I2C1 SDA,F3,I2C1 SDA,rp-pin-list-p1334,rp-bank1
+rp2350b,71,QSPI_SCLK,SYSTEM,SIO,F5,SIO,rp-pin-list-p1334,rp-bank1
+rp2350b,71,QSPI_SCLK,SYSTEM,UART1 TX,F11,UART1 TX,rp-pin-list-p1334,rp-bank1
+rp2350b,72,QSPI_SD0,SYSTEM,QMI SD0,F0,QMI SD0,rp-pin-list-p1334,rp-bank1
+rp2350b,72,QSPI_SD0,SYSTEM,UART0 TX,F2,UART0 TX,rp-pin-list-p1334,rp-bank1
+rp2350b,72,QSPI_SD0,SYSTEM,I2C0 SDA,F3,I2C0 SDA,rp-pin-list-p1334,rp-bank1
+rp2350b,72,QSPI_SD0,SYSTEM,SIO,F5,SIO,rp-pin-list-p1334,rp-bank1
+rp2350b,73,QSPI_SD2,SYSTEM,QMI SD2,F0,QMI SD2,rp-pin-list-p1334,rp-bank1
+rp2350b,73,QSPI_SD2,SYSTEM,UART0 CTS,F2,UART0 CTS,rp-pin-list-p1334,rp-bank1
+rp2350b,73,QSPI_SD2,SYSTEM,I2C1 SDA,F3,I2C1 SDA,rp-pin-list-p1334,rp-bank1
+rp2350b,73,QSPI_SD2,SYSTEM,SIO,F5,SIO,rp-pin-list-p1334,rp-bank1
+rp2350b,73,QSPI_SD2,SYSTEM,UART0 TX,F11,UART0 TX,rp-pin-list-p1334,rp-bank1
+rp2350b,74,QSPI_SD1,SYSTEM,QMI SD1,F0,QMI SD1,rp-pin-list-p1334,rp-bank1
+rp2350b,74,QSPI_SD1,SYSTEM,UART0 RX,F2,UART0 RX,rp-pin-list-p1334,rp-bank1
+rp2350b,74,QSPI_SD1,SYSTEM,I2C0 SCL,F3,I2C0 SCL,rp-pin-list-p1334,rp-bank1
+rp2350b,74,QSPI_SD1,SYSTEM,SIO,F5,SIO,rp-pin-list-p1334,rp-bank1
+rp2350b,75,QSPI_SS,SYSTEM,QMI CS0n,F0,QMI CS0n,rp-pin-list-p1334,rp-bank1
+rp2350b,75,QSPI_SS,SYSTEM,UART1 RTS,F2,UART1 RTS,rp-pin-list-p1334,rp-bank1
+rp2350b,75,QSPI_SS,SYSTEM,I2C1 SCL,F3,I2C1 SCL,rp-pin-list-p1334,rp-bank1
+rp2350b,75,QSPI_SS,SYSTEM,SIO,F5,SIO,rp-pin-list-p1334,rp-bank1
+rp2350b,75,QSPI_SS,SYSTEM,UART1 RX,F11,UART1 RX,rp-pin-list-p1334,rp-bank1
+rp2350b,76,IOVDD,POWER,,,,rp2350b-iovdd,
+rp2350b,77,GPIO0,GPIO,SPI0 RX,F1,SPI0 RX,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,77,GPIO0,GPIO,UART0 TX,F2,UART0 TX,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,77,GPIO0,GPIO,I2C0 SDA,F3,I2C0 SDA,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,77,GPIO0,GPIO,PWM0 A,F4,PWM0 A,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,77,GPIO0,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,77,GPIO0,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,77,GPIO0,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,77,GPIO0,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,77,GPIO0,GPIO,QMI CS1n,F9,QMI CS1n,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,77,GPIO0,GPIO,USB OVCUR DET,F10,USB OVCUR DET,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,78,GPIO1,GPIO,SPI0 CSn,F1,SPI0 CSn,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,78,GPIO1,GPIO,UART0 RX,F2,UART0 RX,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,78,GPIO1,GPIO,I2C0 SCL,F3,I2C0 SCL,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,78,GPIO1,GPIO,PWM0 B,F4,PWM0 B,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,78,GPIO1,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,78,GPIO1,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,78,GPIO1,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,78,GPIO1,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,78,GPIO1,GPIO,TRACECLK,F9,TRACECLK,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,78,GPIO1,GPIO,USB VBUS DET,F10,USB VBUS DET,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,79,GPIO2,GPIO,SPI0 SCK,F1,SPI0 SCK,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,79,GPIO2,GPIO,UART0 CTS,F2,UART0 CTS,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,79,GPIO2,GPIO,I2C1 SDA,F3,I2C1 SDA,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,79,GPIO2,GPIO,PWM1 A,F4,PWM1 A,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,79,GPIO2,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,79,GPIO2,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,79,GPIO2,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,79,GPIO2,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,79,GPIO2,GPIO,TRACEDATA0,F9,TRACEDATA0,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,79,GPIO2,GPIO,USB VBUS EN,F10,USB VBUS EN,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,79,GPIO2,GPIO,UART0 TX,F11,UART0 TX,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,80,GPIO3,GPIO,SPI0 TX,F1,SPI0 TX,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,80,GPIO3,GPIO,UART0 RTS,F2,UART0 RTS,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,80,GPIO3,GPIO,I2C1 SCL,F3,I2C1 SCL,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,80,GPIO3,GPIO,PWM1 B,F4,PWM1 B,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,80,GPIO3,GPIO,SIO,F5,SIO,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,80,GPIO3,GPIO,PIO0,F6,PIO0,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,80,GPIO3,GPIO,PIO1,F7,PIO1,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,80,GPIO3,GPIO,PIO2,F8,PIO2,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,80,GPIO3,GPIO,TRACEDATA1,F9,TRACEDATA1,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,80,GPIO3,GPIO,USB OVCUR DET,F10,USB OVCUR DET,rp-pin-list-p1333,rp-bank0-p18
+rp2350b,80,GPIO3,GPIO,UART0 RX,F11,UART0 RX,rp-pin-list-p1333,rp-bank0-p18

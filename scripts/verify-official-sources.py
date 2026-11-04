@@ -1,0 +1,214 @@
+#!/usr/bin/env python3
+"""Rebuild/check pin facts against hash-locked manufacturer documents.
+
+Tables are extracted afresh with pdfplumber. Outline-only diagrams are represented
+by explicitly recorded visual observations, never by silent OCR assumptions.
+"""
+import argparse,copy,csv,hashlib,io,json,re,subprocess,sys
+from pathlib import Path
+try:
+    import pdfplumber
+except ImportError:
+    sys.exit('Install source verification dependencies: python3 -m pip install -r requirements-source-verification.txt')
+ROOT=Path(__file__).resolve().parents[1]
+CACHE=ROOT/'.cache/primary-sources'
+MANIFEST=json.loads((ROOT/'sources/manifest.json').read_text())
+OBS=json.loads((ROOT/'sources/manual-observations.json').read_text())
+DOCS={s['id']:s for s in MANIFEST['documents']}
+REFS={}
+
+def clean(value):return ' '.join((value or '').split())
+def ref(key,doc,page,locator,method='pdf-table'):
+    entry={'document':doc,'title':DOCS[doc]['title'],'url':DOCS[doc].get('viewUrl',DOCS[doc]['url'])+(f'#page={page}' if page else ''),'page':page,'locator':locator,'method':method}
+    assert key not in REFS or REFS[key]==entry,key
+    REFS[key]=entry
+    return key
+
+def acquire():
+    CACHE.mkdir(parents=True,exist_ok=True)
+    for doc in DOCS.values():
+        path=CACHE/doc['file']
+        if not path.exists():
+            subprocess.run(['curl','-fsSL','--retry','2','--max-time','120',doc['url'],'-o',str(path)],check=True)
+        actual=hashlib.sha256(path.read_bytes()).hexdigest()
+        if actual!=doc['sha256']:
+            sys.exit(f"Source hash mismatch: {doc['id']}. Review the new manufacturer revision; do not silently update the lock.")
+
+def category(name):
+    if name.startswith('SPI'):return 'SPI'
+    if re.match(r'(I2C|SDA\d|SCL\d)',name):return 'I2C'
+    if re.match(r'(UART|TXD\d|RXD\d|CTS\d|RTS\d)',name):return 'UART'
+    for key in ('PWM','HSTX','PIO','USB','QMI','SIO','ADC','PCM'):
+        if name.startswith(key):return key
+    if name.startswith(('CLOCK','GPCLK','TRACE')):return 'CLOCK'
+    if name.startswith('ARM_'):return 'JTAG'
+    if name.startswith(('DPI','LCD','PCLK','DE')):return 'DPI'
+    if re.match(r'SD[01]_',name):return 'SDIO'
+    if re.match(r'(SA\d|SD\d|SOE|SWE)',name):return 'SMI'
+    return 'SYSTEM'
+
+def function(signal,alt,evidence,pi=False):
+    name=signal
+    if pi:
+        m=re.fullmatch(r'(SDA|SCL)(\d+)',signal)
+        if m:name=f'I2C{m[2]} {m[1]}'
+        m=re.fullmatch(r'(TXD|RXD|CTS|RTS)(\d+)',signal)
+        if m:name=f"UART{m[2]} {dict(TXD='TX',RXD='RX',CTS='CTS',RTS='RTS')[m[1]]}"
+    row={'name':name,'group':category(signal),'signal':signal,'evidence':evidence}
+    if alt is not None:row['alt']=alt;row['selector']=('ALT' if pi else 'F')+str(alt)
+    return row
+
+def kind(name):
+    if name in ('GND','AGND','VREG_PGND'):return 'GND'
+    if name.startswith(('GPIO','GP')):return 'GPIO'
+    if name=='ADC_VREF':return 'ADC'
+    if name in ('VBUS','VSYS','3V3(OUT)','3V3','5V','DVDD','IOVDD','QSPI_IOVDD','USB_OTP_VDD','ADC_AVDD','VREG_AVDD','VREG_VIN'):return 'POWER'
+    return 'SYSTEM'
+
+def rp_tables():
+    bank0={};bank1={};package={60:{},80:{}}
+    with pdfplumber.open(CACHE/'rp2350.pdf') as pdf:
+        for index in (17,18,19):
+            for table in pdf.pages[index].extract_tables():
+                if len(table[0])!=13:continue
+                for row in table:
+                    if not (row[0] or '').isdigit():continue
+                    number=int(row[0]);assert number not in bank0
+                    evidence=ref(f'rp-bank0-p{index+1}','rp2350',index+1,'§1.2.3 · Table 3 · Bank 0 function selector F0–F11')
+                    bank0[number]=[function(clean(value),alt,evidence) for alt,value in enumerate(row[1:]) if clean(value)]
+        assert set(bank0)==set(range(48))
+        bank1_names={'USB DP':'USB_DP','USB DM':'USB_DM','QSPI SCK':'QSPI_SCLK','QSPI CSn':'QSPI_SS','QSPI SD0':'QSPI_SD0','QSPI SD1':'QSPI_SD1','QSPI SD2':'QSPI_SD2','QSPI SD3':'QSPI_SD3'}
+        for table in pdf.pages[20].extract_tables():
+            if len(table[0])==13:
+                for row in table[1:]:
+                    evidence=ref('rp-bank1','rp2350',21,'§1.2.4 · Table 5 · Bank 1 function selector F0–F11')
+                    bank1[bank1_names[clean(row[0])]]=[function(clean(value),alt,evidence) for alt,value in enumerate(row[1:]) if clean(value)]
+        assert len(bank1)==8
+        for index in (1332,1333,1334,1335):
+            for table in pdf.pages[index].extract_tables():
+                for row in table:
+                    name=clean(row[0]);
+                    if len(row)<3 or not re.fullmatch(r'(GPIO\d+(?:_ADC\d)?|QSPI_\w+|XIN|XOUT|RUN|SWCLK|SWDIO|USB_DP|USB_DM|DVDD|IOVDD|USB_OTP_VDD|ADC_AVDD|VREG_\w+)',name):continue
+                    if name=='IOVDD':continue # Verified visual override for the documented Table 1679 inconsistency.
+                    for col,total in [(1,60),(2,80)]:
+                        ns=clean(row[col])
+                        if ns=='-':continue
+                        assert re.fullmatch(r'\d+(?:, \d+)*',ns),(name,ns)
+                        for n in map(int,ns.split(', ')):
+                            assert n not in package[total],(name,n)
+                            evidence=ref(f'rp-pin-list-p{index+1}','rp2350',index+1,'§14.8.2.2 · Tables 1674–1679 · package pin list')
+                            fs=[]
+                            if name.startswith('GPIO'):
+                                gp=int(re.match(r'GPIO(\d+)',name)[1]);fs=copy.deepcopy(bank0[gp])
+                                if '_ADC' in name:
+                                    adc=name.split('_')[1];fs.append(function(adc,None,evidence))
+                            elif name in bank1:fs=copy.deepcopy(bank1[name])
+                            package[total][n]={'number':n,'name':name,'type':kind(name),'functions':fs,'evidence':[evidence]}
+        for total,chip,page in [(60,'rp2350a',16),(80,'rp2350b',17)]:
+            evidence=ref(f'{chip}-iovdd','rp2350',page,'§1.2.1 · '+('Figure 2' if total==60 else 'Figure 3')+' · IOVDD pads (Table 1679 discrepancy reviewed)','visual-diagram')
+            for n in OBS['rp2350-iovdd'][chip]:
+                assert n not in package[total]
+                package[total][n]={'number':n,'name':'IOVDD','type':'POWER','functions':[],'evidence':[evidence]}
+            assert set(package[total])==set(range(1,total+1)),(total,sorted(set(range(1,total+1))-set(package[total])))
+    return bank0,package
+
+def pico(bank0):
+    physical=ref('pico-header','pico2w-pinout',1,'Manufacturer 40-pin diagram; physical pin names visually checked','visual-diagram')
+    details=ref('pico-special','pico2w',9,'§2.1 · special supply / analogue / RUN pins')
+    pins=[]
+    notes={30:'RUN düşük seviyeye çekildiğinde RP2350 sıfırlanır.',33:'ADC devresinin analog toprak referansı.',35:'ADC besleme / referans bağlantısı; GPIO değildir.',36:'Kartın regüle 3.3 V çıkışı.',37:'Regülatör etkinleştirme girişidir; genel amaçlı GPIO değildir.',39:'Ana besleme girişi: 1.8–5.5 V.',40:'USB VBUS hattı; USB ile beslenirken nominal 5 V.'}
+    for n,name in enumerate(OBS['pico2w']['pins'],1):
+        fs=[];ev=[physical]
+        if re.fullmatch(r'GP\d+',name):
+            gp=int(name[2:]);fs=copy.deepcopy(bank0[gp])
+            if 26<=gp<=28:fs.append(function('ADC'+str(gp-26),None,ref('pico-adc','pico2w',5,'Figure 2 · GPIO26/27/28 to ADC0/1/2','visual-diagram')))
+        if n in notes:ev.append(details)
+        pin={'number':n,'name':name,'type':kind(name),'functions':fs,'evidence':ev}
+        if n in notes:pin['note']=notes[n]
+        pins.append(pin)
+    # Text independently confirms the seven special header connections in §2.1.
+    with pdfplumber.open(CACHE/'pico2w.pdf') as p:
+        text=p.pages[7].extract_text()+'\n'+p.pages[8].extract_text()
+        for number,name in [(40,'VBUS'),(39,'VSYS'),(37,'3V3_EN'),(36,'3V3'),(35,'ADC_VREF'),(33,'AGND'),(30,'RUN')]:
+            assert re.search(r'PIN'+str(number)+r'\s+'+re.escape(name),text), (number,name)
+    return pins
+
+def pi4():
+    source=(CACHE/'pi-gpio.adoc').read_text()
+    table=source.split('.Pin names, types, and typical functions',1)[1].split('|===')[1]
+    pins={};block=[]
+    rows=table.splitlines()
+    for line in rows:
+        if not line.startswith('|'):continue
+        if re.fullmatch(r'\| \d+',line):
+            if block:parse_pi_row(block,pins)
+            block=[line[2:]]
+        elif block:block.append(line[1:].strip())
+    if block:parse_pi_row(block,pins)
+    assert set(pins)==set(range(1,41))
+    for number,name in OBS['pi4-fixed-pins']['pins'].items():assert pins[int(number)]['name']==name
+    # Cross-check every named GPIO net against its row in the manufacturer J8 schematic.
+    with pdfplumber.open(CACHE/'pi4-schematic.pdf') as pdf:
+        words=pdf.pages[0].crop((45,305,175,414)).extract_words(x_tolerance=1,y_tolerance=1)
+        numbers=[w for w in words if w['text'].isdigit() and 95<w['x0']<131]
+        assert len(numbers)==40
+        checked=0
+        for w in words:
+            if not (w['text'].startswith('GPIO') or w['text'] in ('ID_SD','ID_SC')):continue
+            left=w['x0']<100
+            number=min((z for z in numbers if (int(z['text'])%2==1)==left),key=lambda z:abs(z['top']-w['top']))
+            name={'ID_SD':'GPIO0','ID_SC':'GPIO1'}.get(w['text'],w['text'])
+            assert pins[int(number['text'])]['name']==name,(number,name)
+            checked+=1
+        assert checked==28,checked
+    with pdfplumber.open(CACHE/'bcm2711.pdf') as pdf:
+        found=set()
+        for index in (77,78):
+            for t in pdf.pages[index].extract_tables():
+                if len(t[0])!=8:continue
+                for row in t:
+                    match=re.fullmatch(r'GPIO(\d+)',clean(row[0]))
+                    if not match or int(match[1])>27:continue
+                    gp=int(match[1]);found.add(gp)
+                    pin=next(p for p in pins.values() if p['name']=='GPIO'+str(gp))
+                    evidence=ref(f'bcm2711-alt-p{index+1}','bcm2711',index+1,'§5.3 · Table 94 · GPIO alternate function ALT0–ALT5')
+                    pin['functions']=[function(clean(value),alt,evidence,True) for alt,value in enumerate(row[2:]) if clean(value) and not clean(value).startswith('<')]
+        assert found==set(range(28))
+    return list(pins.values())
+
+def parse_pi_row(row,pins):
+    assert len(row)==4,row
+    n=int(row[0]);name=row[1].strip('`').replace('GP','GPIO') if row[1].startswith('`GP') else row[1].strip('`')
+    evidence=ref('pi-header-doc','pi-gpio',None,'Pin names, types, and typical functions · all 40 header rows','manufacturer-source-table')
+    schematic=ref('pi4-j8','pi4-schematic',1,'GPIO EXPANSION · J8 · net labels, power rails and ground','schematic-net-labels+visual-power')
+    pins[n]={'number':n,'name':name,'type':kind(name),'functions':[],'evidence':[evidence,schematic]}
+    if n in (27,28):pins[n]['note']='HAT kimlik EEPROM hattına ayrılmıştır; normal proje GPIO’su olarak planlamayın.';pins[n]['reserved']=True
+
+def build():
+    bank0,packages=rp_tables()
+    board_base={'family':'Raspberry Pi','voltage':'3.3 V I/O','verifiedOn':MANIFEST['verifiedOn']}
+    boards=[{**board_base,'id':'pico2w','name':'Raspberry Pi Pico 2 W','shortName':'Pico 2 W','subtitle':'RP2350A · 40-pin geliştirme kartı','layout':'pico','packagePins':40,'gpioCount':26,'mcu':'RP2350A','processor':'Cortex-M33 / Hazard3','clock':'150 MHz','source':DOCS['pico2w-pinout']['url'],'datasheet':DOCS['pico2w']['url'],'pins':pico(bank0)},
+        {**board_base,'id':'raspberry-pi-4','name':'Raspberry Pi 4 Model B','shortName':'Pi 4 Model B','subtitle':'J8 · 40 pin · BCM2711 alternatif işlevleri','layout':'header','packagePins':40,'gpioCount':28,'reservedGPIOCount':2,'mcu':'BCM2711','processor':'BCM2711','clock':'BCM numaralandırma','source':DOCS['pi4-schematic']['url'],'datasheet':DOCS['bcm2711']['url'],'pins':pi4()}]
+    for total,chip in [(60,'rp2350a'),(80,'rp2350b')]:
+        boards.append({**board_base,'id':chip,'name':chip.upper(),'family':'Raspberry Pi','subtitle':f'QFN-{total} · RP2350 · Release 8','layout':'qfn','packagePins':total,'gpioCount':30 if total==60 else 48,'voltage':'1.8–3.3 V I/O','mcu':chip.upper(),'processor':'Cortex-M33 / Hazard3','clock':'150 MHz','source':DOCS['rp2350']['url']+f'#page={16 if total==60 else 17}','datasheet':DOCS['rp2350']['url'],'pins':[packages[total][n] for n in sorted(packages[total])]})
+    return boards
+
+def outputs(boards):
+    physical=sum(len(b['pins']) for b in boards);functions=sum(len(p['functions']) for b in boards for p in b['pins'])
+    report={'verifiedOn':MANIFEST['verifiedOn'],'physicalPins':physical,'functionAssignments':functions,'documents':[{k:v for k,v in d.items() if k!='file'} for d in DOCS.values()], 'boards':[{'id':b['id'],'physicalPins':len(b['pins']),'functionAssignments':sum(len(p['functions']) for p in b['pins']),'physicalSourceMethods':sorted({REFS[r]['method'] for p in b['pins'] for r in p['evidence']})} for b in boards], 'qualifications':['Figure-only Pico physical labels were visually checked; they are not machine-readable PDF table cells.','The QFN-60 IOVDD discrepancy in RP2350 Release 8 Table 1679 is resolved using Figures 2 and 152.','Raspberry Pi alternate functions apply specifically to the Pi 4 BCM2711. Pins 27/28 are reserved for the HAT EEPROM.']}
+    buf=io.StringIO();writer=csv.writer(buf,lineterminator='\n');writer.writerow(['board','physical_pin','pin_name','pin_type','function','selector','manufacturer_signal','physical_evidence','function_evidence'])
+    for b in boards:
+        for p in b['pins']:
+            for f in p['functions'] or [{}]:writer.writerow([b['id'],p['number'],p['name'],p['type'],f.get('name',''),f.get('selector',''),f.get('signal',''),' | '.join(p['evidence']),f.get('evidence','')])
+    js=lambda value:json.dumps(value,ensure_ascii=False,indent=2)+'\n'
+    return {'dist/data/boards.json':js(boards),'dist/data/evidence.json':js({'documents':MANIFEST['documents'],'references':REFS}),'dist/data/verification.json':js(report),'sources/pin-verification.csv':buf.getvalue()}
+
+def main():
+    parser=argparse.ArgumentParser();parser.add_argument('--write',action='store_true');args=parser.parse_args()
+    acquire();boards=build();generated=outputs(boards)
+    for name,content in generated.items():
+        p=ROOT/name
+        if args.write:p.parent.mkdir(parents=True,exist_ok=True);p.write_text(content)
+        elif not p.exists() or p.read_text()!=content:sys.exit(f'Official source verification failed: {name} differs. Review and run --write deliberately.')
+    print(f"Official source verification passed: {sum(len(b['pins']) for b in boards)} physical pins; {sum(len(p['functions']) for b in boards for p in b['pins'])} function assignments; {len(DOCS)} hash-locked manufacturer sources.")
+if __name__=='__main__':main()
