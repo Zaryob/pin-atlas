@@ -1,7 +1,7 @@
 {
   "verifiedOn": "2026-11-04",
-  "physicalPins": 2430,
-  "functionAssignments": 8866,
+  "physicalPins": 2522,
+  "functionAssignments": 9347,
   "documents": [
     {
       "id": "rp2350",
@@ -292,6 +292,14 @@
       "revision": "Rev D",
       "url": "https://www.pjrc.com/teensy/schematic41.png",
       "sha256": "8c5d04dad66906ca9ff4de95a6db3102620eef971f92c7598dc5f522a701c132"
+    },
+    {
+      "id": "beaglebone-black-p8-p9",
+      "title": "BeagleBone Black System Reference Manual · Chapter 7 Expansion Headers P8/P9",
+      "publisher": "BeagleBoard.org",
+      "revision": "Chapter 7 Tables 87-88",
+      "url": "https://docs.beagleboard.org/boards/beaglebone/black/ch07.html",
+      "sha256": "cb1a7b5c30ed53c1367966fad6ecc4b200812e6f4122c6eb164d4dd0362504ba"
     },
     {
       "id": "arduino-uno-r4-minima-pinout",
@@ -1027,6 +1035,14 @@
       "physicalSourceMethods": [
         "schematic",
         "visual-diagram"
+      ]
+    },
+    {
+      "id": "beaglebone-black",
+      "physicalPins": 92,
+      "functionAssignments": 481,
+      "physicalSourceMethods": [
+        "source-table"
       ]
     },
     {

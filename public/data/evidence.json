@@ -326,6 +326,15 @@
       "sha256": "8c5d04dad66906ca9ff4de95a6db3102620eef971f92c7598dc5f522a701c132"
     },
     {
+      "id": "beaglebone-black-p8-p9",
+      "title": "BeagleBone Black System Reference Manual · Chapter 7 Expansion Headers P8/P9",
+      "publisher": "BeagleBoard.org",
+      "revision": "Chapter 7 Tables 87-88",
+      "file": "beaglebone-black-p8-p9.html",
+      "url": "https://docs.beagleboard.org/boards/beaglebone/black/ch07.html",
+      "sha256": "cb1a7b5c30ed53c1367966fad6ecc4b200812e6f4122c6eb164d4dd0362504ba"
+    },
+    {
       "id": "arduino-uno-r4-minima-pinout",
       "title": "Arduino uno-r4-minima full pinout",
       "publisher": "Arduino",
@@ -2081,6 +2090,14 @@
       "page": null,
       "locator": "Teensy 4.1 Schematic Rev D · Power, USB, Ethernet and MCU wiring",
       "method": "schematic"
+    },
+    "bbb-p8-p9-table": {
+      "document": "beaglebone-black-p8-p9",
+      "title": "BeagleBone Black System Reference Manual · Chapter 7 Expansion Headers P8/P9",
+      "url": "https://docs.beagleboard.org/boards/beaglebone/black/ch07.html",
+      "page": null,
+      "locator": "BeagleBone Black SRM Chapter 7 · Expansion Headers P8 and P9 Pinout and Mode Muxing",
+      "method": "source-table"
     },
     "arduino-uno-r3-package-schematic": {
       "document": "arduino-uno-r3-schematic",

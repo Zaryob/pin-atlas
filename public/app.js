@@ -574,6 +574,13 @@ const boardFamilies = [
     ]
   },
   {
+    id: 'beagleboard',
+    nameKey: 'familyBeagleBoard',
+    items: [
+      { type: 'layout', id: 'beaglebone-black' }
+    ]
+  },
+  {
     id: 'microbit',
     nameKey: 'familyMicrobit',
     items: [

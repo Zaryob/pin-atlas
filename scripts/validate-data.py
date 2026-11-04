@@ -11,7 +11,7 @@ for r in refs.values():
     assert r['document'] in docids
     host=urlsplit(r['url']).hostname
     if r['document']=='nucleo-um1724-r14':assert host=='evo.net.ua'
-    else:assert host in {'pip-assets.raspberrypi.com','datasheets.raspberrypi.com','developer.nvidia.com','www.st.com','stm32-base.org','github.com','docs.arduino.cc','docs.espressif.com','www.espressif.com','ww1.microchip.com','files.seeedstudio.com','wiki.seeedstudio.com','tech.microbit.org','www.pjrc.com'},host
+    else:assert host in {'pip-assets.raspberrypi.com','datasheets.raspberrypi.com','developer.nvidia.com','www.st.com','stm32-base.org','github.com','docs.arduino.cc','docs.espressif.com','www.espressif.com','ww1.microchip.com','files.seeedstudio.com','wiki.seeedstudio.com','tech.microbit.org','www.pjrc.com','docs.beagleboard.org'},host
     if host=='github.com':assert any(repo in r['url'] for repo in ['/raspberrypi/documentation/','/arduino/ArduinoCore-avr/','/arduino/ArduinoCore-renesas/','/arduino/ArduinoCore-megaavr/','/arduino/ArduinoCore-mbed/','/espressif/esp-dev-kits/','/STMicroelectronics/STM32_open_pin_data/','/adafruit/'])
 for b in boards:
     assert len(b['pins'])==b['packagePins']

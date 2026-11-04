@@ -7382,6 +7382,505 @@ teensy-41,66,46,GPIO,SDIO DAT3,,DAT3,teensy41-back | teensy41-schematic,teensy41
 teensy-41,66,46,GPIO,GPIO interrupt,,GPIO6[15],teensy41-back | teensy41-schematic,teensy41-back
 teensy-41,67,47,GPIO,SDIO DAT2,,DAT2,teensy41-back | teensy41-schematic,teensy41-back
 teensy-41,67,47,GPIO,GPIO interrupt,,GPIO6[14],teensy41-back | teensy41-schematic,teensy41-back
+beaglebone-black,1,GND,GND,,,,bbb-p8-p9-table,
+beaglebone-black,2,GND,GND,,,,bbb-p8-p9-table,
+beaglebone-black,3,GPIO1_6,GPIO,gpmc_ad6 (Mode 0),Mode 0,gpmc_ad6,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,3,GPIO1_6,GPIO,mmc1_dat6 (Mode 1),Mode 1,mmc1_dat6,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,3,GPIO1_6,GPIO,gpio1[6] (Mode 7),Mode 7,gpio1[6],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,3,GPIO1_6,GPIO,GPIO interrupt,,gpio1[6],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,4,GPIO1_7,GPIO,gpmc_ad7 (Mode 0),Mode 0,gpmc_ad7,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,4,GPIO1_7,GPIO,mmc1_dat7 (Mode 1),Mode 1,mmc1_dat7,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,4,GPIO1_7,GPIO,gpio1[7] (Mode 7),Mode 7,gpio1[7],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,4,GPIO1_7,GPIO,GPIO interrupt,,gpio1[7],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,5,GPIO1_2,GPIO,gpmc_ad2 (Mode 0),Mode 0,gpmc_ad2,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,5,GPIO1_2,GPIO,mmc1_dat2 (Mode 1),Mode 1,mmc1_dat2,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,5,GPIO1_2,GPIO,gpio1[2] (Mode 7),Mode 7,gpio1[2],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,5,GPIO1_2,GPIO,GPIO interrupt,,gpio1[2],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,6,GPIO1_3,GPIO,gpmc_ad3 (Mode 0),Mode 0,gpmc_ad3,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,6,GPIO1_3,GPIO,mmc1_dat3 (Mode 1),Mode 1,mmc1_dat3,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,6,GPIO1_3,GPIO,gpio1[3] (Mode 7),Mode 7,gpio1[3],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,6,GPIO1_3,GPIO,GPIO interrupt,,gpio1[3],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,7,TIMER4,GPIO,gpmc_advn_ale (Mode 0),Mode 0,gpmc_advn_ale,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,7,TIMER4,GPIO,timer4 (Mode 2),Mode 2,timer4,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,7,TIMER4,GPIO,gpio2[2] (Mode 7),Mode 7,gpio2[2],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,7,TIMER4,GPIO,GPIO interrupt,,gpio2[2],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,8,TIMER7,GPIO,gpmc_oen_ren (Mode 0),Mode 0,gpmc_oen_ren,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,8,TIMER7,GPIO,timer7 (Mode 2),Mode 2,timer7,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,8,TIMER7,GPIO,gpio2[3] (Mode 7),Mode 7,gpio2[3],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,8,TIMER7,GPIO,GPIO interrupt,,gpio2[3],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,9,TIMER5,GPIO,gpmc_be0n_cle (Mode 0),Mode 0,gpmc_be0n_cle,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,9,TIMER5,GPIO,timer5 (Mode 2),Mode 2,timer5,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,9,TIMER5,GPIO,gpio2[5] (Mode 7),Mode 7,gpio2[5],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,9,TIMER5,GPIO,GPIO interrupt,,gpio2[5],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,10,TIMER6,GPIO,gpmc_wen (Mode 0),Mode 0,gpmc_wen,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,10,TIMER6,GPIO,timer6 (Mode 2),Mode 2,timer6,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,10,TIMER6,GPIO,gpio2[4] (Mode 7),Mode 7,gpio2[4],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,10,TIMER6,GPIO,GPIO interrupt,,gpio2[4],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,11,GPIO1_13,GPIO,gpmc_ad13 (Mode 0),Mode 0,gpmc_ad13,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,11,GPIO1_13,GPIO,lcd_data18 (Mode 1),Mode 1,lcd_data18,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,11,GPIO1_13,GPIO,mmc1_dat5 (Mode 2),Mode 2,mmc1_dat5,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,11,GPIO1_13,GPIO,mmc2_dat1 (Mode 3),Mode 3,mmc2_dat1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,11,GPIO1_13,GPIO,eQEP2B_in (Mode 4),Mode 4,eQEP2B_in,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,11,GPIO1_13,GPIO,pr1_pru0_pru_r30_15 (Mode 6),Mode 6,pr1_pru0_pru_r30_15,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,11,GPIO1_13,GPIO,gpio1[13] (Mode 7),Mode 7,gpio1[13],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,11,GPIO1_13,GPIO,GPIO interrupt,,gpio1[13],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,12,GPIO1_12,GPIO,gpmc_ad12 (Mode 0),Mode 0,gpmc_ad12,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,12,GPIO1_12,GPIO,lcd_data19 (Mode 1),Mode 1,lcd_data19,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,12,GPIO1_12,GPIO,mmc1_dat4 (Mode 2),Mode 2,mmc1_dat4,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,12,GPIO1_12,GPIO,mmc2_dat0 (Mode 3),Mode 3,mmc2_dat0,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,12,GPIO1_12,GPIO,eQEP2a_in (Mode 4),Mode 4,eQEP2a_in,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,12,GPIO1_12,GPIO,pr1_pru0_pru_r30_14 (Mode 6),Mode 6,pr1_pru0_pru_r30_14,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,12,GPIO1_12,GPIO,gpio1[12] (Mode 7),Mode 7,gpio1[12],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,12,GPIO1_12,GPIO,GPIO interrupt,,gpio1[12],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,13,EHRPWM2B,GPIO,gpmc_ad9 (Mode 0),Mode 0,gpmc_ad9,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,13,EHRPWM2B,GPIO,lcd_data22 (Mode 1),Mode 1,lcd_data22,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,13,EHRPWM2B,GPIO,mmc1_dat1 (Mode 2),Mode 2,mmc1_dat1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,13,EHRPWM2B,GPIO,mmc2_dat5 (Mode 3),Mode 3,mmc2_dat5,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,13,EHRPWM2B,GPIO,ehrpwm2B (Mode 4),Mode 4,ehrpwm2B,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,13,EHRPWM2B,GPIO,gpio0[23] (Mode 7),Mode 7,gpio0[23],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,13,EHRPWM2B,GPIO,GPIO interrupt,,gpio0[23],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,14,GPIO0_26,GPIO,gpmc_ad10 (Mode 0),Mode 0,gpmc_ad10,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,14,GPIO0_26,GPIO,lcd_data21 (Mode 1),Mode 1,lcd_data21,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,14,GPIO0_26,GPIO,mmc1_dat2 (Mode 2),Mode 2,mmc1_dat2,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,14,GPIO0_26,GPIO,mmc2_dat6 (Mode 3),Mode 3,mmc2_dat6,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,14,GPIO0_26,GPIO,ehrpwm2_tripzone_in (Mode 4),Mode 4,ehrpwm2_tripzone_in,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,14,GPIO0_26,GPIO,gpio0[26] (Mode 7),Mode 7,gpio0[26],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,14,GPIO0_26,GPIO,GPIO interrupt,,gpio0[26],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,15,GPIO1_15,GPIO,gpmc_ad15 (Mode 0),Mode 0,gpmc_ad15,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,15,GPIO1_15,GPIO,lcd_data16 (Mode 1),Mode 1,lcd_data16,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,15,GPIO1_15,GPIO,mmc1_dat7 (Mode 2),Mode 2,mmc1_dat7,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,15,GPIO1_15,GPIO,mmc2_dat3 (Mode 3),Mode 3,mmc2_dat3,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,15,GPIO1_15,GPIO,eQEP2_strobe (Mode 4),Mode 4,eQEP2_strobe,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,15,GPIO1_15,GPIO,pr1_pru0_pru_r31_15 (Mode 6),Mode 6,pr1_pru0_pru_r31_15,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,15,GPIO1_15,GPIO,gpio1[15] (Mode 7),Mode 7,gpio1[15],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,15,GPIO1_15,GPIO,GPIO interrupt,,gpio1[15],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,16,GPIO1_14,GPIO,gpmc_ad14 (Mode 0),Mode 0,gpmc_ad14,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,16,GPIO1_14,GPIO,lcd_data17 (Mode 1),Mode 1,lcd_data17,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,16,GPIO1_14,GPIO,mmc1_dat6 (Mode 2),Mode 2,mmc1_dat6,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,16,GPIO1_14,GPIO,mmc2_dat2 (Mode 3),Mode 3,mmc2_dat2,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,16,GPIO1_14,GPIO,eQEP2_index (Mode 4),Mode 4,eQEP2_index,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,16,GPIO1_14,GPIO,pr1_pru0_pru_r31_14 (Mode 6),Mode 6,pr1_pru0_pru_r31_14,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,16,GPIO1_14,GPIO,gpio1[14] (Mode 7),Mode 7,gpio1[14],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,16,GPIO1_14,GPIO,GPIO interrupt,,gpio1[14],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,17,GPIO0_27,GPIO,gpmc_ad11 (Mode 0),Mode 0,gpmc_ad11,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,17,GPIO0_27,GPIO,lcd_data20 (Mode 1),Mode 1,lcd_data20,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,17,GPIO0_27,GPIO,mmc1_dat3 (Mode 2),Mode 2,mmc1_dat3,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,17,GPIO0_27,GPIO,mmc2_dat7 (Mode 3),Mode 3,mmc2_dat7,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,17,GPIO0_27,GPIO,ehrpwm0_synco (Mode 4),Mode 4,ehrpwm0_synco,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,17,GPIO0_27,GPIO,gpio0[27] (Mode 7),Mode 7,gpio0[27],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,17,GPIO0_27,GPIO,GPIO interrupt,,gpio0[27],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,18,GPIO2_1,GPIO,gpmc_clk_mux0 (Mode 0),Mode 0,gpmc_clk_mux0,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,18,GPIO2_1,GPIO,lcd_memory_clk (Mode 1),Mode 1,lcd_memory_clk,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,18,GPIO2_1,GPIO,gpmc_wait1 (Mode 2),Mode 2,gpmc_wait1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,18,GPIO2_1,GPIO,mmc2_clk (Mode 3),Mode 3,mmc2_clk,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,18,GPIO2_1,GPIO,mcasp0_fsr (Mode 6),Mode 6,mcasp0_fsr,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,18,GPIO2_1,GPIO,gpio2[1] (Mode 7),Mode 7,gpio2[1],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,18,GPIO2_1,GPIO,GPIO interrupt,,gpio2[1],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,19,EHRPWM2A,GPIO,gpmc_ad8 (Mode 0),Mode 0,gpmc_ad8,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,19,EHRPWM2A,GPIO,lcd_data23 (Mode 1),Mode 1,lcd_data23,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,19,EHRPWM2A,GPIO,mmc1_dat0 (Mode 2),Mode 2,mmc1_dat0,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,19,EHRPWM2A,GPIO,mmc2_dat4 (Mode 3),Mode 3,mmc2_dat4,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,19,EHRPWM2A,GPIO,ehrpwm2A (Mode 4),Mode 4,ehrpwm2A,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,19,EHRPWM2A,GPIO,gpio0[22] (Mode 7),Mode 7,gpio0[22],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,19,EHRPWM2A,GPIO,GPIO interrupt,,gpio0[22],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,20,GPIO1_31,GPIO,gpmc_csn2 (Mode 0),Mode 0,gpmc_csn2,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,20,GPIO1_31,GPIO,gpmc_be1n (Mode 1),Mode 1,gpmc_be1n,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,20,GPIO1_31,GPIO,mmc1_cmd (Mode 2),Mode 2,mmc1_cmd,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,20,GPIO1_31,GPIO,pr1_pru1_pru_r30_13 (Mode 5),Mode 5,pr1_pru1_pru_r30_13,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,20,GPIO1_31,GPIO,pr1_pru1_pru_r31_13 (Mode 6),Mode 6,pr1_pru1_pru_r31_13,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,20,GPIO1_31,GPIO,gpio1[31] (Mode 7),Mode 7,gpio1[31],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,20,GPIO1_31,GPIO,GPIO interrupt,,gpio1[31],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,21,GPIO1_30,GPIO,gpmc_csn1 (Mode 0),Mode 0,gpmc_csn1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,21,GPIO1_30,GPIO,gpmc_clk (Mode 1),Mode 1,gpmc_clk,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,21,GPIO1_30,GPIO,mmc1_clk (Mode 2),Mode 2,mmc1_clk,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,21,GPIO1_30,GPIO,pr1_pru1_pru_r30_12 (Mode 5),Mode 5,pr1_pru1_pru_r30_12,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,21,GPIO1_30,GPIO,pr1_pru1_pru_r31_12 (Mode 6),Mode 6,pr1_pru1_pru_r31_12,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,21,GPIO1_30,GPIO,gpio1[30] (Mode 7),Mode 7,gpio1[30],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,21,GPIO1_30,GPIO,GPIO interrupt,,gpio1[30],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,22,GPIO1_5,GPIO,gpmc_ad5 (Mode 0),Mode 0,gpmc_ad5,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,22,GPIO1_5,GPIO,mmc1_dat5 (Mode 1),Mode 1,mmc1_dat5,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,22,GPIO1_5,GPIO,gpio1[5] (Mode 7),Mode 7,gpio1[5],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,22,GPIO1_5,GPIO,GPIO interrupt,,gpio1[5],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,23,GPIO1_4,GPIO,gpmc_ad4 (Mode 0),Mode 0,gpmc_ad4,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,23,GPIO1_4,GPIO,mmc1_dat4 (Mode 1),Mode 1,mmc1_dat4,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,23,GPIO1_4,GPIO,gpio1[4] (Mode 7),Mode 7,gpio1[4],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,23,GPIO1_4,GPIO,GPIO interrupt,,gpio1[4],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,24,GPIO1_1,GPIO,gpmc_ad1 (Mode 0),Mode 0,gpmc_ad1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,24,GPIO1_1,GPIO,mmc1_dat1 (Mode 1),Mode 1,mmc1_dat1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,24,GPIO1_1,GPIO,gpio1[1] (Mode 7),Mode 7,gpio1[1],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,24,GPIO1_1,GPIO,GPIO interrupt,,gpio1[1],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,25,GPIO1_0,GPIO,gpmc_ad0 (Mode 0),Mode 0,gpmc_ad0,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,25,GPIO1_0,GPIO,mmc1_dat0 (Mode 1),Mode 1,mmc1_dat0,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,25,GPIO1_0,GPIO,gpio1[0] (Mode 7),Mode 7,gpio1[0],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,25,GPIO1_0,GPIO,GPIO interrupt,,gpio1[0],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,26,GPIO1_29,GPIO,gpmc_csn0 (Mode 0),Mode 0,gpmc_csn0,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,26,GPIO1_29,GPIO,gpio1[29] (Mode 7),Mode 7,gpio1[29],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,26,GPIO1_29,GPIO,GPIO interrupt,,gpio1[29],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,27,GPIO2_22,GPIO,lcd_vsync (Mode 0),Mode 0,lcd_vsync,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,27,GPIO2_22,GPIO,gpmc_a8 (Mode 1),Mode 1,gpmc_a8,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,27,GPIO2_22,GPIO,pr1_pru1_pru_r30_8 (Mode 5),Mode 5,pr1_pru1_pru_r30_8,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,27,GPIO2_22,GPIO,pr1_pru1_pru_r31_8 (Mode 6),Mode 6,pr1_pru1_pru_r31_8,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,27,GPIO2_22,GPIO,gpio2[22] (Mode 7),Mode 7,gpio2[22],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,27,GPIO2_22,GPIO,GPIO interrupt,,gpio2[22],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,28,GPIO2_24,GPIO,lcd_pclk (Mode 0),Mode 0,lcd_pclk,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,28,GPIO2_24,GPIO,gpmc_a10 (Mode 1),Mode 1,gpmc_a10,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,28,GPIO2_24,GPIO,pr1_pru1_pru_r30_10 (Mode 5),Mode 5,pr1_pru1_pru_r30_10,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,28,GPIO2_24,GPIO,pr1_pru1_pru_r31_10 (Mode 6),Mode 6,pr1_pru1_pru_r31_10,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,28,GPIO2_24,GPIO,gpio2[24] (Mode 7),Mode 7,gpio2[24],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,28,GPIO2_24,GPIO,GPIO interrupt,,gpio2[24],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,29,GPIO2_23,GPIO,lcd_hsync (Mode 0),Mode 0,lcd_hsync,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,29,GPIO2_23,GPIO,gpmc_a9 (Mode 1),Mode 1,gpmc_a9,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,29,GPIO2_23,GPIO,pr1_pru1_pru_r30_9 (Mode 5),Mode 5,pr1_pru1_pru_r30_9,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,29,GPIO2_23,GPIO,pr1_pru1_pru_r31_9 (Mode 6),Mode 6,pr1_pru1_pru_r31_9,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,29,GPIO2_23,GPIO,gpio2[23] (Mode 7),Mode 7,gpio2[23],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,29,GPIO2_23,GPIO,GPIO interrupt,,gpio2[23],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,30,GPIO2_25,GPIO,lcd_ac_bias_en (Mode 0),Mode 0,lcd_ac_bias_en,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,30,GPIO2_25,GPIO,gpmc_a11 (Mode 1),Mode 1,gpmc_a11,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,30,GPIO2_25,GPIO,gpio2[25] (Mode 7),Mode 7,gpio2[25],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,30,GPIO2_25,GPIO,GPIO interrupt,,gpio2[25],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,31,UART5_CTSN,GPIO,lcd_data14 (Mode 0),Mode 0,lcd_data14,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,31,UART5_CTSN,GPIO,gpmc_a18 (Mode 1),Mode 1,gpmc_a18,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,31,UART5_CTSN,GPIO,eQEP1_index (Mode 2),Mode 2,eQEP1_index,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,31,UART5_CTSN,GPIO,mcasp0_axr1 (Mode 3),Mode 3,mcasp0_axr1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,31,UART5_CTSN,GPIO,uart5_rxd (Mode 4),Mode 4,uart5_rxd,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,31,UART5_CTSN,GPIO,uart5_ctsn (Mode 6),Mode 6,uart5_ctsn,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,31,UART5_CTSN,GPIO,gpio0[10] (Mode 7),Mode 7,gpio0[10],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,31,UART5_CTSN,GPIO,GPIO interrupt,,gpio0[10],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,32,UART5_RTSN,GPIO,lcd_data15 (Mode 0),Mode 0,lcd_data15,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,32,UART5_RTSN,GPIO,gpmc_a19 (Mode 1),Mode 1,gpmc_a19,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,32,UART5_RTSN,GPIO,eQEP1_strobe (Mode 2),Mode 2,eQEP1_strobe,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,32,UART5_RTSN,GPIO,mcasp0_ahclkx (Mode 3),Mode 3,mcasp0_ahclkx,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,32,UART5_RTSN,GPIO,mcasp0_axr3 (Mode 4),Mode 4,mcasp0_axr3,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,32,UART5_RTSN,GPIO,uart5_rtsn (Mode 6),Mode 6,uart5_rtsn,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,32,UART5_RTSN,GPIO,gpio0[11] (Mode 7),Mode 7,gpio0[11],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,32,UART5_RTSN,GPIO,GPIO interrupt,,gpio0[11],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,33,UART4_RTSN,GPIO,lcd_data13 (Mode 0),Mode 0,lcd_data13,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,33,UART4_RTSN,GPIO,gpmc_a17 (Mode 1),Mode 1,gpmc_a17,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,33,UART4_RTSN,GPIO,eQEP1B_in (Mode 2),Mode 2,eQEP1B_in,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,33,UART4_RTSN,GPIO,mcasp0_fsr (Mode 3),Mode 3,mcasp0_fsr,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,33,UART4_RTSN,GPIO,mcasp0_axr3 (Mode 4),Mode 4,mcasp0_axr3,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,33,UART4_RTSN,GPIO,uart4_rtsn (Mode 6),Mode 6,uart4_rtsn,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,33,UART4_RTSN,GPIO,gpio0[9] (Mode 7),Mode 7,gpio0[9],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,33,UART4_RTSN,GPIO,GPIO interrupt,,gpio0[9],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,34,UART3_RTSN,GPIO,lcd_data11 (Mode 0),Mode 0,lcd_data11,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,34,UART3_RTSN,GPIO,gpmc_a15 (Mode 1),Mode 1,gpmc_a15,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,34,UART3_RTSN,GPIO,ehrpwm1B (Mode 2),Mode 2,ehrpwm1B,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,34,UART3_RTSN,GPIO,mcasp0_ahclkr (Mode 3),Mode 3,mcasp0_ahclkr,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,34,UART3_RTSN,GPIO,mcasp0_axr2 (Mode 4),Mode 4,mcasp0_axr2,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,34,UART3_RTSN,GPIO,uart3_rtsn (Mode 6),Mode 6,uart3_rtsn,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,34,UART3_RTSN,GPIO,gpio2[17] (Mode 7),Mode 7,gpio2[17],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,34,UART3_RTSN,GPIO,GPIO interrupt,,gpio2[17],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,35,UART4_CTSN,GPIO,lcd_data12 (Mode 0),Mode 0,lcd_data12,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,35,UART4_CTSN,GPIO,gpmc_a16 (Mode 1),Mode 1,gpmc_a16,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,35,UART4_CTSN,GPIO,eQEP1A_in (Mode 2),Mode 2,eQEP1A_in,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,35,UART4_CTSN,GPIO,mcasp0_aclkr (Mode 3),Mode 3,mcasp0_aclkr,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,35,UART4_CTSN,GPIO,mcasp0_axr2 (Mode 4),Mode 4,mcasp0_axr2,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,35,UART4_CTSN,GPIO,uart4_ctsn (Mode 6),Mode 6,uart4_ctsn,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,35,UART4_CTSN,GPIO,gpio0[8] (Mode 7),Mode 7,gpio0[8],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,35,UART4_CTSN,GPIO,GPIO interrupt,,gpio0[8],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,36,UART3_CTSN,GPIO,lcd_data10 (Mode 0),Mode 0,lcd_data10,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,36,UART3_CTSN,GPIO,gpmc_a14 (Mode 1),Mode 1,gpmc_a14,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,36,UART3_CTSN,GPIO,ehrpwm1A (Mode 2),Mode 2,ehrpwm1A,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,36,UART3_CTSN,GPIO,mcasp0_axr0 (Mode 3),Mode 3,mcasp0_axr0,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,36,UART3_CTSN,GPIO,uart3_ctsn (Mode 6),Mode 6,uart3_ctsn,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,36,UART3_CTSN,GPIO,gpio2[16] (Mode 7),Mode 7,gpio2[16],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,36,UART3_CTSN,GPIO,GPIO interrupt,,gpio2[16],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,37,UART5_TXD,GPIO,lcd_data8 (Mode 0),Mode 0,lcd_data8,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,37,UART5_TXD,GPIO,gpmc_a12 (Mode 1),Mode 1,gpmc_a12,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,37,UART5_TXD,GPIO,ehrpwm1_tripzone_in (Mode 2),Mode 2,ehrpwm1_tripzone_in,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,37,UART5_TXD,GPIO,mcasp0_aclkx (Mode 3),Mode 3,mcasp0_aclkx,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,37,UART5_TXD,GPIO,uart5_txd (Mode 4),Mode 4,uart5_txd,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,37,UART5_TXD,GPIO,uart2_ctsn (Mode 6),Mode 6,uart2_ctsn,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,37,UART5_TXD,GPIO,gpio2[14] (Mode 7),Mode 7,gpio2[14],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,37,UART5_TXD,GPIO,GPIO interrupt,,gpio2[14],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,38,UART5_RXD,GPIO,lcd_data9 (Mode 0),Mode 0,lcd_data9,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,38,UART5_RXD,GPIO,gpmc_a13 (Mode 1),Mode 1,gpmc_a13,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,38,UART5_RXD,GPIO,ehrpwm0_synco (Mode 2),Mode 2,ehrpwm0_synco,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,38,UART5_RXD,GPIO,mcasp0_fsx (Mode 3),Mode 3,mcasp0_fsx,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,38,UART5_RXD,GPIO,uart5_rxd (Mode 4),Mode 4,uart5_rxd,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,38,UART5_RXD,GPIO,uart2_rtsn (Mode 6),Mode 6,uart2_rtsn,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,38,UART5_RXD,GPIO,gpio2[15] (Mode 7),Mode 7,gpio2[15],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,38,UART5_RXD,GPIO,GPIO interrupt,,gpio2[15],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,39,GPIO2_12,GPIO,lcd_data6 (Mode 0),Mode 0,lcd_data6,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,39,GPIO2_12,GPIO,gpmc_a6 (Mode 1),Mode 1,gpmc_a6,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,39,GPIO2_12,GPIO,eQEP2_index (Mode 3),Mode 3,eQEP2_index,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,39,GPIO2_12,GPIO,pr1_pru1_pru_r30_6 (Mode 5),Mode 5,pr1_pru1_pru_r30_6,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,39,GPIO2_12,GPIO,pr1_pru1_pru_r31_6 (Mode 6),Mode 6,pr1_pru1_pru_r31_6,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,39,GPIO2_12,GPIO,gpio2[12] (Mode 7),Mode 7,gpio2[12],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,39,GPIO2_12,GPIO,GPIO interrupt,,gpio2[12],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,40,GPIO2_13,GPIO,lcd_data7 (Mode 0),Mode 0,lcd_data7,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,40,GPIO2_13,GPIO,gpmc_a7 (Mode 1),Mode 1,gpmc_a7,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,40,GPIO2_13,GPIO,eQEP2_strobe (Mode 3),Mode 3,eQEP2_strobe,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,40,GPIO2_13,GPIO,pr1_edio_data_out7 (Mode 4),Mode 4,pr1_edio_data_out7,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,40,GPIO2_13,GPIO,pr1_pru1_pru_r30_7 (Mode 5),Mode 5,pr1_pru1_pru_r30_7,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,40,GPIO2_13,GPIO,pr1_pru1_pru_r31_7 (Mode 6),Mode 6,pr1_pru1_pru_r31_7,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,40,GPIO2_13,GPIO,gpio2[13] (Mode 7),Mode 7,gpio2[13],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,40,GPIO2_13,GPIO,GPIO interrupt,,gpio2[13],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,41,GPIO2_10,GPIO,lcd_data4 (Mode 0),Mode 0,lcd_data4,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,41,GPIO2_10,GPIO,gpmc_a4 (Mode 1),Mode 1,gpmc_a4,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,41,GPIO2_10,GPIO,eQEP2A_in (Mode 3),Mode 3,eQEP2A_in,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,41,GPIO2_10,GPIO,pr1_pru1_pru_r30_4 (Mode 5),Mode 5,pr1_pru1_pru_r30_4,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,41,GPIO2_10,GPIO,pr1_pru1_pru_r31_4 (Mode 6),Mode 6,pr1_pru1_pru_r31_4,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,41,GPIO2_10,GPIO,gpio2[10] (Mode 7),Mode 7,gpio2[10],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,41,GPIO2_10,GPIO,GPIO interrupt,,gpio2[10],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,42,GPIO2_11,GPIO,lcd_data5 (Mode 0),Mode 0,lcd_data5,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,42,GPIO2_11,GPIO,gpmc_a5 (Mode 1),Mode 1,gpmc_a5,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,42,GPIO2_11,GPIO,eQEP2B_in (Mode 3),Mode 3,eQEP2B_in,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,42,GPIO2_11,GPIO,pr1_pru1_pru_r30_5 (Mode 5),Mode 5,pr1_pru1_pru_r30_5,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,42,GPIO2_11,GPIO,pr1_pru1_pru_r31_5 (Mode 6),Mode 6,pr1_pru1_pru_r31_5,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,42,GPIO2_11,GPIO,gpio2[11] (Mode 7),Mode 7,gpio2[11],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,42,GPIO2_11,GPIO,GPIO interrupt,,gpio2[11],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,43,GPIO2_8,GPIO,lcd_data2 (Mode 0),Mode 0,lcd_data2,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,43,GPIO2_8,GPIO,gpmc_a2 (Mode 1),Mode 1,gpmc_a2,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,43,GPIO2_8,GPIO,ehrpwm2_tripzone_in (Mode 3),Mode 3,ehrpwm2_tripzone_in,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,43,GPIO2_8,GPIO,pr1_pru1_pru_r30_2 (Mode 5),Mode 5,pr1_pru1_pru_r30_2,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,43,GPIO2_8,GPIO,pr1_pru1_pru_r31_2 (Mode 6),Mode 6,pr1_pru1_pru_r31_2,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,43,GPIO2_8,GPIO,gpio2[8] (Mode 7),Mode 7,gpio2[8],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,43,GPIO2_8,GPIO,GPIO interrupt,,gpio2[8],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,44,GPIO2_9,GPIO,lcd_data3 (Mode 0),Mode 0,lcd_data3,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,44,GPIO2_9,GPIO,gpmc_a3 (Mode 1),Mode 1,gpmc_a3,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,44,GPIO2_9,GPIO,ehrpwm0_synco (Mode 3),Mode 3,ehrpwm0_synco,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,44,GPIO2_9,GPIO,pr1_pru1_pru_r30_3 (Mode 5),Mode 5,pr1_pru1_pru_r30_3,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,44,GPIO2_9,GPIO,pr1_pru1_pru_r31_3 (Mode 6),Mode 6,pr1_pru1_pru_r31_3,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,44,GPIO2_9,GPIO,gpio2[9] (Mode 7),Mode 7,gpio2[9],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,44,GPIO2_9,GPIO,GPIO interrupt,,gpio2[9],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,45,GPIO2_6,GPIO,lcd_data0 (Mode 0),Mode 0,lcd_data0,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,45,GPIO2_6,GPIO,gpmc_a0 (Mode 1),Mode 1,gpmc_a0,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,45,GPIO2_6,GPIO,ehrpwm2A (Mode 3),Mode 3,ehrpwm2A,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,45,GPIO2_6,GPIO,pr1_pru1_pru_r30_0 (Mode 5),Mode 5,pr1_pru1_pru_r30_0,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,45,GPIO2_6,GPIO,pr1_pru1_pru_r31_0 (Mode 6),Mode 6,pr1_pru1_pru_r31_0,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,45,GPIO2_6,GPIO,gpio2[6] (Mode 7),Mode 7,gpio2[6],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,45,GPIO2_6,GPIO,GPIO interrupt,,gpio2[6],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,46,GPIO2_7,GPIO,lcd_data1 (Mode 0),Mode 0,lcd_data1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,46,GPIO2_7,GPIO,gpmc_a1 (Mode 1),Mode 1,gpmc_a1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,46,GPIO2_7,GPIO,ehrpwm2B (Mode 3),Mode 3,ehrpwm2B,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,46,GPIO2_7,GPIO,pr1_pru1_pru_r30_1 (Mode 5),Mode 5,pr1_pru1_pru_r30_1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,46,GPIO2_7,GPIO,pr1_pru1_pru_r31_1 (Mode 6),Mode 6,pr1_pru1_pru_r31_1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,46,GPIO2_7,GPIO,gpio2[7] (Mode 7),Mode 7,gpio2[7],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,46,GPIO2_7,GPIO,GPIO interrupt,,gpio2[7],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,47,GND,GND,,,,bbb-p8-p9-table,
+beaglebone-black,48,GND,GND,,,,bbb-p8-p9-table,
+beaglebone-black,49,DC_3.3V,POWER,,,,bbb-p8-p9-table,
+beaglebone-black,50,DC_3.3V,POWER,,,,bbb-p8-p9-table,
+beaglebone-black,51,VDD_5V,POWER,,,,bbb-p8-p9-table,
+beaglebone-black,52,VDD_5V,POWER,,,,bbb-p8-p9-table,
+beaglebone-black,53,SYS_5V,POWER,,,,bbb-p8-p9-table,
+beaglebone-black,54,SYS_5V,POWER,,,,bbb-p8-p9-table,
+beaglebone-black,55,PWR_BUT,SYSTEM,,,,bbb-p8-p9-table,
+beaglebone-black,56,SYS_RESETn,SYSTEM,,,,bbb-p8-p9-table,
+beaglebone-black,57,UART4_RXD,GPIO,gpmc_wait0 (Mode 0),Mode 0,gpmc_wait0,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,57,UART4_RXD,GPIO,mii2_crs (Mode 1),Mode 1,mii2_crs,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,57,UART4_RXD,GPIO,gpmc_csn4 (Mode 2),Mode 2,gpmc_csn4,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,57,UART4_RXD,GPIO,rmii2_crs_dv (Mode 3),Mode 3,rmii2_crs_dv,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,57,UART4_RXD,GPIO,mmc1_sdcd (Mode 4),Mode 4,mmc1_sdcd,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,57,UART4_RXD,GPIO,uart4_rxd_mux2 (Mode 6),Mode 6,uart4_rxd_mux2,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,57,UART4_RXD,GPIO,gpio0[30] (Mode 7),Mode 7,gpio0[30],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,57,UART4_RXD,GPIO,GPIO interrupt,,gpio0[30],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,58,GPIO1_28,GPIO,gpmc_be1n (Mode 0),Mode 0,gpmc_be1n,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,58,GPIO1_28,GPIO,mii2_col (Mode 1),Mode 1,mii2_col,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,58,GPIO1_28,GPIO,gpmc_csn6 (Mode 2),Mode 2,gpmc_csn6,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,58,GPIO1_28,GPIO,mmc2_dat3 (Mode 3),Mode 3,mmc2_dat3,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,58,GPIO1_28,GPIO,gpmc_dir (Mode 4),Mode 4,gpmc_dir,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,58,GPIO1_28,GPIO,mcasp0_aclkr_mux3 (Mode 6),Mode 6,mcasp0_aclkr_mux3,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,58,GPIO1_28,GPIO,gpio1[28] (Mode 7),Mode 7,gpio1[28],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,58,GPIO1_28,GPIO,GPIO interrupt,,gpio1[28],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,59,UART4_TXD,GPIO,gpmc_wpn (Mode 0),Mode 0,gpmc_wpn,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,59,UART4_TXD,GPIO,mii_rxerr (Mode 1),Mode 1,mii_rxerr,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,59,UART4_TXD,GPIO,gpmc_csn5 (Mode 2),Mode 2,gpmc_csn5,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,59,UART4_TXD,GPIO,rmii2_rxerr (Mode 3),Mode 3,rmii2_rxerr,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,59,UART4_TXD,GPIO,mmc2_sdcd (Mode 4),Mode 4,mmc2_sdcd,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,59,UART4_TXD,GPIO,uart4_txd_mux2 (Mode 6),Mode 6,uart4_txd_mux2,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,59,UART4_TXD,GPIO,gpio0[31] (Mode 7),Mode 7,gpio0[31],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,59,UART4_TXD,GPIO,GPIO interrupt,,gpio0[31],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,60,EHRPWM1A,GPIO,gpmc_a2 (Mode 0),Mode 0,gpmc_a2,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,60,EHRPWM1A,GPIO,mii2_txd3 (Mode 1),Mode 1,mii2_txd3,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,60,EHRPWM1A,GPIO,rgmii2_td3 (Mode 2),Mode 2,rgmii2_td3,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,60,EHRPWM1A,GPIO,mmc2_dat1 (Mode 3),Mode 3,mmc2_dat1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,60,EHRPWM1A,GPIO,gpmc_a18 (Mode 4),Mode 4,gpmc_a18,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,60,EHRPWM1A,GPIO,ehrpwm1A_mux1 (Mode 6),Mode 6,ehrpwm1A_mux1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,60,EHRPWM1A,GPIO,gpio1[18] (Mode 7),Mode 7,gpio1[18],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,60,EHRPWM1A,GPIO,GPIO interrupt,,gpio1[18],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,61,GPIO1_16,GPIO,gpmc_a0 (Mode 0),Mode 0,gpmc_a0,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,61,GPIO1_16,GPIO,gmii2_txen (Mode 1),Mode 1,gmii2_txen,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,61,GPIO1_16,GPIO,rmii2_tctl (Mode 2),Mode 2,rmii2_tctl,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,61,GPIO1_16,GPIO,mii2_txen (Mode 3),Mode 3,mii2_txen,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,61,GPIO1_16,GPIO,gpmc_a16 (Mode 4),Mode 4,gpmc_a16,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,61,GPIO1_16,GPIO,ehrpwm1_tripzone_input (Mode 6),Mode 6,ehrpwm1_tripzone_input,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,61,GPIO1_16,GPIO,gpio1[16] (Mode 7),Mode 7,gpio1[16],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,61,GPIO1_16,GPIO,GPIO interrupt,,gpio1[16],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,62,EHRPWM1B,GPIO,gpmc_a3 (Mode 0),Mode 0,gpmc_a3,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,62,EHRPWM1B,GPIO,mii2_txd2 (Mode 1),Mode 1,mii2_txd2,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,62,EHRPWM1B,GPIO,rgmii2_td2 (Mode 2),Mode 2,rgmii2_td2,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,62,EHRPWM1B,GPIO,mmc2_dat2 (Mode 3),Mode 3,mmc2_dat2,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,62,EHRPWM1B,GPIO,gpmc_a19 (Mode 4),Mode 4,gpmc_a19,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,62,EHRPWM1B,GPIO,ehrpwm1B_mux1 (Mode 6),Mode 6,ehrpwm1B_mux1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,62,EHRPWM1B,GPIO,gpio1[19] (Mode 7),Mode 7,gpio1[19],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,62,EHRPWM1B,GPIO,GPIO interrupt,,gpio1[19],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,63,I2C1_SCL,GPIO,spi0_cs0 (Mode 0),Mode 0,spi0_cs0,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,63,I2C1_SCL,GPIO,mmc2_sdwp (Mode 1),Mode 1,mmc2_sdwp,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,63,I2C1_SCL,GPIO,I2C1_SCL (Mode 2),Mode 2,I2C1_SCL,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,63,I2C1_SCL,GPIO,ehrpwm0_synci (Mode 3),Mode 3,ehrpwm0_synci,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,63,I2C1_SCL,GPIO,pr1_uart0_txd (Mode 4),Mode 4,pr1_uart0_txd,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,63,I2C1_SCL,GPIO,gpio0[5] (Mode 7),Mode 7,gpio0[5],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,63,I2C1_SCL,GPIO,GPIO interrupt,,gpio0[5],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,64,I2C1_SDA,GPIO,spi0_d1 (Mode 0),Mode 0,spi0_d1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,64,I2C1_SDA,GPIO,mmc1_sdwp (Mode 1),Mode 1,mmc1_sdwp,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,64,I2C1_SDA,GPIO,I2C1_SDA (Mode 2),Mode 2,I2C1_SDA,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,64,I2C1_SDA,GPIO,ehrpwm0_tripzone (Mode 3),Mode 3,ehrpwm0_tripzone,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,64,I2C1_SDA,GPIO,pr1_uart0_rxd (Mode 4),Mode 4,pr1_uart0_rxd,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,64,I2C1_SDA,GPIO,gpio0[4] (Mode 7),Mode 7,gpio0[4],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,64,I2C1_SDA,GPIO,GPIO interrupt,,gpio0[4],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,65,I2C2_SCL,GPIO,uart1_rtsn (Mode 0),Mode 0,uart1_rtsn,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,65,I2C2_SCL,GPIO,timer5 (Mode 1),Mode 1,timer5,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,65,I2C2_SCL,GPIO,dcan0_rx (Mode 2),Mode 2,dcan0_rx,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,65,I2C2_SCL,GPIO,I2C2_SCL (Mode 3),Mode 3,I2C2_SCL,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,65,I2C2_SCL,GPIO,spi1_cs1 (Mode 4),Mode 4,spi1_cs1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,65,I2C2_SCL,GPIO,pr1_uart0_rts_n (Mode 5),Mode 5,pr1_uart0_rts_n,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,65,I2C2_SCL,GPIO,gpio0[13] (Mode 7),Mode 7,gpio0[13],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,65,I2C2_SCL,GPIO,GPIO interrupt,,gpio0[13],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,66,I2C2_SDA,GPIO,uart1_ctsn (Mode 0),Mode 0,uart1_ctsn,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,66,I2C2_SDA,GPIO,timer6 (Mode 1),Mode 1,timer6,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,66,I2C2_SDA,GPIO,dcan0_tx (Mode 2),Mode 2,dcan0_tx,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,66,I2C2_SDA,GPIO,I2C2_SDA (Mode 3),Mode 3,I2C2_SDA,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,66,I2C2_SDA,GPIO,spi1_cs0 (Mode 4),Mode 4,spi1_cs0,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,66,I2C2_SDA,GPIO,pr1_uart0_cts_n (Mode 5),Mode 5,pr1_uart0_cts_n,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,66,I2C2_SDA,GPIO,gpio0[12] (Mode 7),Mode 7,gpio0[12],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,66,I2C2_SDA,GPIO,GPIO interrupt,,gpio0[12],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,67,UART2_TXD,GPIO,spi0_d0 (Mode 0),Mode 0,spi0_d0,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,67,UART2_TXD,GPIO,uart2_txd (Mode 1),Mode 1,uart2_txd,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,67,UART2_TXD,GPIO,I2C2_SCL (Mode 2),Mode 2,I2C2_SCL,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,67,UART2_TXD,GPIO,ehrpwm0B (Mode 3),Mode 3,ehrpwm0B,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,67,UART2_TXD,GPIO,pr1_uart0_rts_n (Mode 4),Mode 4,pr1_uart0_rts_n,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,67,UART2_TXD,GPIO,EMU3_mux1 (Mode 6),Mode 6,EMU3_mux1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,67,UART2_TXD,GPIO,gpio0[3] (Mode 7),Mode 7,gpio0[3],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,67,UART2_TXD,GPIO,GPIO interrupt,,gpio0[3],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,68,UART2_RXD,GPIO,spi0_sclk (Mode 0),Mode 0,spi0_sclk,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,68,UART2_RXD,GPIO,uart2_rxd (Mode 1),Mode 1,uart2_rxd,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,68,UART2_RXD,GPIO,I2C2_SDA (Mode 2),Mode 2,I2C2_SDA,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,68,UART2_RXD,GPIO,ehrpwm0A (Mode 3),Mode 3,ehrpwm0A,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,68,UART2_RXD,GPIO,pr1_uart0_cts_n (Mode 4),Mode 4,pr1_uart0_cts_n,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,68,UART2_RXD,GPIO,EMU2_mux1 (Mode 6),Mode 6,EMU2_mux1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,68,UART2_RXD,GPIO,gpio0[2] (Mode 7),Mode 7,gpio0[2],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,68,UART2_RXD,GPIO,GPIO interrupt,,gpio0[2],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,69,GPIO1_17,GPIO,gpmc_a1 (Mode 0),Mode 0,gpmc_a1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,69,GPIO1_17,GPIO,gmii2_rxdv (Mode 1),Mode 1,gmii2_rxdv,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,69,GPIO1_17,GPIO,rgmii2_rxdv (Mode 2),Mode 2,rgmii2_rxdv,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,69,GPIO1_17,GPIO,mmc2_dat0 (Mode 3),Mode 3,mmc2_dat0,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,69,GPIO1_17,GPIO,gpmc_a17 (Mode 4),Mode 4,gpmc_a17,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,69,GPIO1_17,GPIO,ehrpwm0_synco (Mode 6),Mode 6,ehrpwm0_synco,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,69,GPIO1_17,GPIO,gpio1[17] (Mode 7),Mode 7,gpio1[17],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,69,GPIO1_17,GPIO,GPIO interrupt,,gpio1[17],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,70,UART1_TXD,GPIO,uart1_txd (Mode 0),Mode 0,uart1_txd,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,70,UART1_TXD,GPIO,mmc2_sdwp (Mode 1),Mode 1,mmc2_sdwp,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,70,UART1_TXD,GPIO,dcan1_rx (Mode 2),Mode 2,dcan1_rx,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,70,UART1_TXD,GPIO,I2C1_SCL (Mode 3),Mode 3,I2C1_SCL,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,70,UART1_TXD,GPIO,pr1_uart0_txd (Mode 5),Mode 5,pr1_uart0_txd,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,70,UART1_TXD,GPIO,pr1_pru0_pru_r31_16 (Mode 6),Mode 6,pr1_pru0_pru_r31_16,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,70,UART1_TXD,GPIO,gpio0[15] (Mode 7),Mode 7,gpio0[15],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,70,UART1_TXD,GPIO,GPIO interrupt,,gpio0[15],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,71,GPIO3_21,GPIO,mcasp0_ahclkx (Mode 0),Mode 0,mcasp0_ahclkx,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,71,GPIO3_21,GPIO,eQEP0_strobe (Mode 1),Mode 1,eQEP0_strobe,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,71,GPIO3_21,GPIO,mcasp0_axr3 (Mode 2),Mode 2,mcasp0_axr3,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,71,GPIO3_21,GPIO,mcasp1_axr1 (Mode 3),Mode 3,mcasp1_axr1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,71,GPIO3_21,GPIO,EMU4_mux2 (Mode 4),Mode 4,EMU4_mux2,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,71,GPIO3_21,GPIO,pr1_pru0_pru_r30_7 (Mode 5),Mode 5,pr1_pru0_pru_r30_7,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,71,GPIO3_21,GPIO,pr1_pru0_pru_r31_7 (Mode 6),Mode 6,pr1_pru0_pru_r31_7,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,71,GPIO3_21,GPIO,gpio3[21] (Mode 7),Mode 7,gpio3[21],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,71,GPIO3_21,GPIO,GPIO interrupt,,gpio3[21],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,72,UART1_RXD,GPIO,uart1_rxd (Mode 0),Mode 0,uart1_rxd,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,72,UART1_RXD,GPIO,mmc1_sdwp (Mode 1),Mode 1,mmc1_sdwp,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,72,UART1_RXD,GPIO,dcan1_tx (Mode 2),Mode 2,dcan1_tx,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,72,UART1_RXD,GPIO,I2C1_SDA (Mode 3),Mode 3,I2C1_SDA,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,72,UART1_RXD,GPIO,pr1_uart0_rxd (Mode 5),Mode 5,pr1_uart0_rxd,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,72,UART1_RXD,GPIO,pr1_pru1_pru_r31_16 (Mode 6),Mode 6,pr1_pru1_pru_r31_16,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,72,UART1_RXD,GPIO,gpio0[14] (Mode 7),Mode 7,gpio0[14],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,72,UART1_RXD,GPIO,GPIO interrupt,,gpio0[14],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,73,GPIO3_19,GPIO,mcasp0_fsr (Mode 0),Mode 0,mcasp0_fsr,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,73,GPIO3_19,GPIO,eQEP0B_in (Mode 1),Mode 1,eQEP0B_in,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,73,GPIO3_19,GPIO,mcasp0_axr3 (Mode 2),Mode 2,mcasp0_axr3,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,73,GPIO3_19,GPIO,mcasp1_fsx (Mode 3),Mode 3,mcasp1_fsx,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,73,GPIO3_19,GPIO,EMU2_mux2 (Mode 4),Mode 4,EMU2_mux2,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,73,GPIO3_19,GPIO,pr1_pru0_pru_r30_5 (Mode 5),Mode 5,pr1_pru0_pru_r30_5,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,73,GPIO3_19,GPIO,pr1_pru0_pru_r31_5 (Mode 6),Mode 6,pr1_pru0_pru_r31_5,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,73,GPIO3_19,GPIO,gpio3[19] (Mode 7),Mode 7,gpio3[19],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,73,GPIO3_19,GPIO,GPIO interrupt,,gpio3[19],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,74,SPI1_CS0,GPIO,mcasp0_ahclkr (Mode 0),Mode 0,mcasp0_ahclkr,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,74,SPI1_CS0,GPIO,ehrpwm0_synci (Mode 1),Mode 1,ehrpwm0_synci,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,74,SPI1_CS0,GPIO,mcasp0_axr2 (Mode 2),Mode 2,mcasp0_axr2,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,74,SPI1_CS0,GPIO,spi1_cs0 (Mode 3),Mode 3,spi1_cs0,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,74,SPI1_CS0,GPIO,eCAP2_in_PWM2_out (Mode 4),Mode 4,eCAP2_in_PWM2_out,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,74,SPI1_CS0,GPIO,pr1_pru0_pru_r30_3 (Mode 5),Mode 5,pr1_pru0_pru_r30_3,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,74,SPI1_CS0,GPIO,pr1_pru0_pru_r31_3 (Mode 6),Mode 6,pr1_pru0_pru_r31_3,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,74,SPI1_CS0,GPIO,gpio3[17] (Mode 7),Mode 7,gpio3[17],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,74,SPI1_CS0,GPIO,GPIO interrupt,,gpio3[17],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,75,SPI1_D0,GPIO,mcasp0_fsx (Mode 0),Mode 0,mcasp0_fsx,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,75,SPI1_D0,GPIO,ehrpwm0B (Mode 1),Mode 1,ehrpwm0B,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,75,SPI1_D0,GPIO,spi1_d0 (Mode 3),Mode 3,spi1_d0,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,75,SPI1_D0,GPIO,mmc1_sdcd_mux1 (Mode 4),Mode 4,mmc1_sdcd_mux1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,75,SPI1_D0,GPIO,pr1_pru0_pru_r30_1 (Mode 5),Mode 5,pr1_pru0_pru_r30_1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,75,SPI1_D0,GPIO,pr1_pru0_pru_r31_1 (Mode 6),Mode 6,pr1_pru0_pru_r31_1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,75,SPI1_D0,GPIO,gpio3[15] (Mode 7),Mode 7,gpio3[15],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,75,SPI1_D0,GPIO,GPIO interrupt,,gpio3[15],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,76,SPI1_D1,GPIO,mcasp0_axr0 (Mode 0),Mode 0,mcasp0_axr0,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,76,SPI1_D1,GPIO,ehrpwm0_tripzone (Mode 1),Mode 1,ehrpwm0_tripzone,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,76,SPI1_D1,GPIO,spi1_d1 (Mode 3),Mode 3,spi1_d1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,76,SPI1_D1,GPIO,mmc2_sdcd_mux1 (Mode 4),Mode 4,mmc2_sdcd_mux1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,76,SPI1_D1,GPIO,pr1_pru0_pru_r30_2 (Mode 5),Mode 5,pr1_pru0_pru_r30_2,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,76,SPI1_D1,GPIO,pr1_pru0_pru_r31_2 (Mode 6),Mode 6,pr1_pru0_pru_r31_2,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,76,SPI1_D1,GPIO,gpio3[16] (Mode 7),Mode 7,gpio3[16],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,76,SPI1_D1,GPIO,GPIO interrupt,,gpio3[16],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,77,SPI1_SCLK,GPIO,mcasp0_aclkx (Mode 0),Mode 0,mcasp0_aclkx,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,77,SPI1_SCLK,GPIO,ehrpwm0A (Mode 1),Mode 1,ehrpwm0A,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,77,SPI1_SCLK,GPIO,spi1_sclk (Mode 3),Mode 3,spi1_sclk,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,77,SPI1_SCLK,GPIO,mmc0_sdcd_mux1 (Mode 4),Mode 4,mmc0_sdcd_mux1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,77,SPI1_SCLK,GPIO,pr1_pru0_pru_r30_0 (Mode 5),Mode 5,pr1_pru0_pru_r30_0,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,77,SPI1_SCLK,GPIO,pr1_pru0_pru_r31_0 (Mode 6),Mode 6,pr1_pru0_pru_r31_0,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,77,SPI1_SCLK,GPIO,gpio3[14] (Mode 7),Mode 7,gpio3[14],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,77,SPI1_SCLK,GPIO,GPIO interrupt,,gpio3[14],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,78,VADC,POWER,,,,bbb-p8-p9-table,
+beaglebone-black,79,AIN4,ADC,ADC AIN4,,AIN4,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,80,AGND,GND,,,,bbb-p8-p9-table,
+beaglebone-black,81,AIN6,ADC,ADC AIN6,,AIN6,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,82,AIN5,ADC,ADC AIN5,,AIN5,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,83,AIN2,ADC,ADC AIN2,,AIN2,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,84,AIN3,ADC,ADC AIN3,,AIN3,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,85,AIN0,ADC,ADC AIN0,,AIN0,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,86,AIN1,ADC,ADC AIN1,,AIN1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,87,CLKOUT2,GPIO,xdma_event_intr1 (Mode 0),Mode 0,xdma_event_intr1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,87,CLKOUT2,GPIO,tclkin (Mode 2),Mode 2,tclkin,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,87,CLKOUT2,GPIO,clkout2 (Mode 3),Mode 3,clkout2,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,87,CLKOUT2,GPIO,timer7_mux1 (Mode 4),Mode 4,timer7_mux1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,87,CLKOUT2,GPIO,pr1_pru0_pru_r31_16 (Mode 5),Mode 5,pr1_pru0_pru_r31_16,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,87,CLKOUT2,GPIO,EMU3_mux0 (Mode 6),Mode 6,EMU3_mux0,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,87,CLKOUT2,GPIO,gpio0[20] (Mode 7),Mode 7,gpio0[20],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,87,CLKOUT2,GPIO,mcasp0_axr1 (Mode 0),Mode 0,mcasp0_axr1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,87,CLKOUT2,GPIO,eQEP0_index (Mode 1),Mode 1,eQEP0_index,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,87,CLKOUT2,GPIO,mcasp1_axr0 (Mode 3),Mode 3,mcasp1_axr0,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,87,CLKOUT2,GPIO,emu3 (Mode 4),Mode 4,emu3,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,87,CLKOUT2,GPIO,pr1_pru0_pru_r30_6 (Mode 5),Mode 5,pr1_pru0_pru_r30_6,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,87,CLKOUT2,GPIO,pr1_pru0_pru_r31_6 (Mode 6),Mode 6,pr1_pru0_pru_r31_6,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,87,CLKOUT2,GPIO,gpio3[20] (Mode 7),Mode 7,gpio3[20],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,87,CLKOUT2,GPIO,GPIO interrupt,,gpio3[20],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,88,GPIO0_7,GPIO,eCAP0_in_PWM0_out (Mode 0),Mode 0,eCAP0_in_PWM0_out,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,88,GPIO0_7,GPIO,uart3_txd (Mode 1),Mode 1,uart3_txd,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,88,GPIO0_7,GPIO,spi1_cs1 (Mode 2),Mode 2,spi1_cs1,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,88,GPIO0_7,GPIO,pr1_ecap0_ecap_capin_apwm_o (Mode 3),Mode 3,pr1_ecap0_ecap_capin_apwm_o,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,88,GPIO0_7,GPIO,spi1_sclk (Mode 4),Mode 4,spi1_sclk,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,88,GPIO0_7,GPIO,mmc0_sdwp (Mode 5),Mode 5,mmc0_sdwp,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,88,GPIO0_7,GPIO,xdma_event_intr2 (Mode 6),Mode 6,xdma_event_intr2,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,88,GPIO0_7,GPIO,gpio0[7] (Mode 7),Mode 7,gpio0[7],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,88,GPIO0_7,GPIO,mcasp0_aclkr (Mode 0),Mode 0,mcasp0_aclkr,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,88,GPIO0_7,GPIO,eQEP0A_in (Mode 1),Mode 1,eQEP0A_in,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,88,GPIO0_7,GPIO,mcasp0_axr2 (Mode 2),Mode 2,mcasp0_axr2,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,88,GPIO0_7,GPIO,mcasp1_aclkx (Mode 3),Mode 3,mcasp1_aclkx,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,88,GPIO0_7,GPIO,pr1_pru0_pru_r30_4 (Mode 5),Mode 5,pr1_pru0_pru_r30_4,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,88,GPIO0_7,GPIO,pr1_pru0_pru_r31_4 (Mode 6),Mode 6,pr1_pru0_pru_r31_4,bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,88,GPIO0_7,GPIO,gpio3[18] (Mode 7),Mode 7,gpio3[18],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,88,GPIO0_7,GPIO,GPIO interrupt,,gpio3[18],bbb-p8-p9-table,bbb-p8-p9-table
+beaglebone-black,89,GND,GND,,,,bbb-p8-p9-table,
+beaglebone-black,90,GND,GND,,,,bbb-p8-p9-table,
+beaglebone-black,91,GND,GND,,,,bbb-p8-p9-table,
+beaglebone-black,92,GND,GND,,,,bbb-p8-p9-table,
 rp2350a,1,IOVDD,POWER,,,,rp2350a-iovdd,
 rp2350a,2,GPIO0,GPIO,SPI0 RX,F1,SPI0 RX,rp-pin-list-p1333,rp-bank0-p18
 rp2350a,2,GPIO0,GPIO,UART0 TX,F2,UART0 TX,rp-pin-list-p1333,rp-bank0-p18
