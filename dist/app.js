@@ -33,12 +33,12 @@ const icons = {
 const icon = name => `<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">${icons[name] || icons.chip}</svg>`;
 function hydrateIcons(root = document) { $$('[data-icon]', root).forEach(el => el.innerHTML = icon(el.dataset.icon)); }
 hydrateIcons();
-const colors = Object.fromEntries(['GPIO','POWER','GND','SYSTEM','SPI','I2C','UART','PWM','ADC','HSTX','PIO','USB','QMI','SIO','PCM','CLOCK','JTAG','DPI','SDIO','SMI'].map(group => [group, `var(--pin-${group.toLowerCase()})`]));
+const colors = Object.fromEntries(['GPIO','POWER','GND','SYSTEM','SPI','I2C','UART','PWM','ADC','HSTX','PIO','USB','QMI','SIO','PCM','I2S','CLOCK','JTAG','DPI','SDIO','SMI'].map(group => [group, `var(--pin-${group.toLowerCase()})`]));
 const appBase = new URL('./', import.meta.url);
 const familyKeys = { GPIO: 'generalIO', POWER: 'power', GND: 'ground', SYSTEM: 'system', ADC: 'analog' };
 const familyName = type => t(familyKeys[type] || type);
 const subtitle = item => t(`board.${item.id}`, {}, item.subtitle);
-const groups = ['SPI','I2C','UART','PWM','ADC','HSTX','PIO','PCM','CLOCK','JTAG','DPI','SDIO','SMI'];
+const groups = ['SPI','I2C','UART','PWM','ADC','HSTX','PIO','PCM','I2S','CLOCK','JTAG','DPI','SDIO','SMI'];
 let evidence = {references:{}};
 let boards, layouts, layout, board, selected = 1, selectedFn, filters = new Set(), search = '', flipped = false, rotated = false, view = 'map', assignments = {}, toastTimer;
 const storageKey = 'pin-atlas:plans:v1';
@@ -174,7 +174,7 @@ function renderHeader() {
    if (flipped) { x=680-x; side=side==='left'?'right':'left'; }
    pins += pinGroup(pin,x,y,side);
  }
- return `<svg viewBox="0 0 680 540" aria-label="${esc(t('diagramLabel', { board: layoutTitle(layout) }))}"><rect x="308" y="29" width="64" height="480" rx="6" fill="#26372c"/><rect x="315" y="37" width="50" height="464" rx="3" fill="#384c3a"/>${pins}<text x="340" y="530" fill="#869b75" font-family="var(--mono)" font-size="7" text-anchor="middle">${t('headerLegend')}</text></svg>`;
+ return `<svg viewBox="0 0 680 540" aria-label="${esc(t('diagramLabel', { board: layoutTitle(layout) }))}"><rect x="308" y="29" width="64" height="480" rx="6" fill="#26372c"/><rect x="315" y="37" width="50" height="464" rx="3" fill="#384c3a"/>${pins}<text x="340" y="530" fill="#869b75" font-family="var(--mono)" font-size="7" text-anchor="middle">${board.headerLabel ? esc(board.headerLabel)+' · ' : ''}${t('headerLegend')}</text></svg>`;
 }
 function renderQfn() {
  const n=board.packagePins/4, pitch=336/(n-1);
@@ -224,7 +224,7 @@ function renderDetail() {
  const pin=pinByNumber(selected), opts=options(pin);
  const descriptions = { GPIO: 'gpioDescription', GND: 'groundDescription', POWER: 'powerDescription', SYSTEM: 'systemDescription', ADC: 'analogDescription' };
  const noteBoard = board.layout === 'pico' ? 'pico2w' : board.id;
- let description = pin.reserved ? t('reservedNote') : t(`note.${noteBoard}.${pin.number}`, {}, pin.note || t(descriptions[pin.type] || 'systemDescription'));
+ let description = pin.reserved ? t('reservedNote') : pin.noteKey ? t(pin.noteKey) : t(`note.${noteBoard}.${pin.number}`, {}, pin.note || t(descriptions[pin.type] || 'systemDescription'));
  if (board.mcu === 'RP2040' && pin.number === 30) description = description.replace('RP2350', 'RP2040');
  const query = search.trim().toLowerCase();
  const relevant = f => filters.has(f.group) || (query && f.name.toLowerCase().includes(query));

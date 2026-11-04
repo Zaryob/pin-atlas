@@ -10,7 +10,7 @@ refs=evidence['references'];docids={d['id'] for d in manifest['documents']}
 for r in refs.values():
     assert r['document'] in docids
     host=urlsplit(r['url']).hostname
-    assert host in {'pip-assets.raspberrypi.com','datasheets.raspberrypi.com','github.com'},host
+    assert host in {'pip-assets.raspberrypi.com','datasheets.raspberrypi.com','developer.nvidia.com','github.com'},host
     if host=='github.com':assert '/raspberrypi/documentation/' in r['url']
 for b in boards:
     assert len(b['pins'])==b['packagePins']
@@ -47,4 +47,14 @@ assert any(f['name']=='USB OVCUR DET' and f['selector']=='F10' for f in lookup['
 assert [p['name'] for p in lookup['raspberry-pi-40'].values()]==[p['name'] for p in lookup['raspberry-pi-4'].values()]
 assert all(not p['functions'] for p in lookup['raspberry-pi-40'].values())
 assert all(lookup['raspberry-pi-40'][n]['reserved'] for n in (27,28))
+jetson=lookup['jetson-orin-nano']
+assert jetson[1]['name']=='3V3' and jetson[2]['name']=='5V'
+assert jetson[16]['name']=='SPI1_CS1*' and jetson[18]['name']=='SPI1_CS0*'
+assert jetson[27]['name']=='I2C0_SDA' and not jetson[27].get('reserved')
+assert jetson[28]['name']=='I2C0_SCL' and not jetson[28].get('reserved')
+assert all(jetson[n]['functions'][0]['group']=='I2S' for n in (12,35,38,40))
+assert all(jetson[n]['functions'][0]['group']=='PWM' for n in (32,33))
+assert not jetson[15]['functions'] # A PWM substring in a SoC pad name is not a verified header capability.
+assert not any('alt' in f or f['group']=='ADC' for p in jetson.values() for f in p['functions'])
+assert [n for n,p in jetson.items() if p['type']=='GND']==[6,9,14,20,25,30,34,39]
 print(f"Checked {report['physicalPins']} pins, {report['functionAssignments']} function references and model-specific corner cases.")

@@ -1,6 +1,5 @@
 {
   "verifiedOn": "2026-11-04",
-  "publisher": "Raspberry Pi Ltd",
   "documents": [
     {
       "id": "rp2350",
@@ -82,6 +81,19 @@
       "file": "pico2.pdf",
       "url": "https://datasheets.raspberrypi.com/pico/pico-2-datasheet.pdf",
       "sha256": "cbcfaf881018c686495a2e53c7bd281e7e0a8217d79447d73eda7c8f74b7f675"
+    },
+    {
+      "id": "jetson-orin-nano-carrier",
+      "publisher": "NVIDIA",
+      "title": "Jetson Orin Nano Developer Kit Carrier Board Specification",
+      "revision": "SP-11324-001_v1.3 · December 2024",
+      "file": "jetson-orin-nano-carrier.pdf",
+      "url": "https://developer.nvidia.com/downloads/assets/embedded/secure/jetson/orin_nano/docs/jetson_orin_nano_devkit_carrier_board_specification_sp.pdf",
+      "sha256": "4a0f7ba948bce4881e176f0f8636ef3dbd40e3df9dd33134e6a7433359d18c02"
     }
+  ],
+  "publishers": [
+    "Raspberry Pi Ltd",
+    "NVIDIA"
   ]
 }

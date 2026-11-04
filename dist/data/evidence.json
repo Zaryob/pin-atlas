@@ -80,6 +80,15 @@
       "file": "pico2.pdf",
       "url": "https://datasheets.raspberrypi.com/pico/pico-2-datasheet.pdf",
       "sha256": "cbcfaf881018c686495a2e53c7bd281e7e0a8217d79447d73eda7c8f74b7f675"
+    },
+    {
+      "id": "jetson-orin-nano-carrier",
+      "publisher": "NVIDIA",
+      "title": "Jetson Orin Nano Developer Kit Carrier Board Specification",
+      "revision": "SP-11324-001_v1.3 · December 2024",
+      "file": "jetson-orin-nano-carrier.pdf",
+      "url": "https://developer.nvidia.com/downloads/assets/embedded/secure/jetson/orin_nano/docs/jetson_orin_nano_devkit_carrier_board_specification_sp.pdf",
+      "sha256": "4a0f7ba948bce4881e176f0f8636ef3dbd40e3df9dd33134e6a7433359d18c02"
     }
   ],
   "references": {
@@ -281,6 +290,38 @@
       "url": "https://datasheets.raspberrypi.com/pico/pico-2-datasheet.pdf#page=9",
       "page": 9,
       "locator": "§2.1 · special supply / analogue / RUN pins",
+      "method": "pdf-table"
+    },
+    "jetson-j12-p26": {
+      "document": "jetson-orin-nano-carrier",
+      "title": "Jetson Orin Nano Developer Kit Carrier Board Specification",
+      "url": "https://developer.nvidia.com/downloads/assets/embedded/secure/jetson/orin_nano/docs/jetson_orin_nano_devkit_carrier_board_specification_sp.pdf#page=26",
+      "page": 26,
+      "locator": "§3.3 · Table 3-3 · J12 physical pins, carrier signals and alternate functionality",
+      "method": "pdf-table"
+    },
+    "jetson-j12-p27": {
+      "document": "jetson-orin-nano-carrier",
+      "title": "Jetson Orin Nano Developer Kit Carrier Board Specification",
+      "url": "https://developer.nvidia.com/downloads/assets/embedded/secure/jetson/orin_nano/docs/jetson_orin_nano_devkit_carrier_board_specification_sp.pdf#page=27",
+      "page": 27,
+      "locator": "§3.3 · Table 3-3 · J12 physical pins, carrier signals and alternate functionality",
+      "method": "pdf-table"
+    },
+    "jetson-j12-figure": {
+      "document": "jetson-orin-nano-carrier",
+      "title": "Jetson Orin Nano Developer Kit Carrier Board Specification",
+      "url": "https://developer.nvidia.com/downloads/assets/embedded/secure/jetson/orin_nano/docs/jetson_orin_nano_devkit_carrier_board_specification_sp.pdf#page=25",
+      "page": 25,
+      "locator": "§3.3 · Figure 3-1 · all 40 J12 pin positions and carrier signal names",
+      "method": "pdf-diagram-text"
+    },
+    "jetson-j12-electrical": {
+      "document": "jetson-orin-nano-carrier",
+      "title": "Jetson Orin Nano Developer Kit Carrier Board Specification",
+      "url": "https://developer.nvidia.com/downloads/assets/embedded/secure/jetson/orin_nano/docs/jetson_orin_nano_devkit_carrier_board_specification_sp.pdf#page=27",
+      "page": 27,
+      "locator": "Table 3-3 notes · 3.3V signals, open-drain I2C and TXB0108 level translators",
       "method": "pdf-table"
     }
   }

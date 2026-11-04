@@ -2,7 +2,7 @@
 
 [English](VERIFICATION.md) · [Türkçe](VERIFICATION.tr.md)
 
-Reviewed on **4 November 2026**. The review covers eight board, header, and chip profiles, **380 physical pin records, and 2,011 function assignments**. Shared physical pins are counted once per profile. The count excludes the app’s generic `GPIO` planning option and the unnumbered QFN center GND pads. Each placement of a signal on a different pin counts separately.
+Reviewed on **4 November 2026**. The review covers nine board, header, and chip profiles, **420 physical pin records, and 2,038 function assignments**. Shared physical pins are counted once per profile. The count excludes the app’s generic `GPIO` planning option and the unnumbered QFN center GND pads. Each placement of a signal on a different pin counts separately.
 
 ## Sources by pin map
 
@@ -64,4 +64,17 @@ The app uses its own SVG schematics. Manufacturer documents are linked from the 
 
 ## Shared layout catalog
 
-The eight source profiles are presented as four physical layouts: one Pico family entry, one Raspberry Pi 40-pin header entry, and the two distinct RP2350 packages. The application checks that grouped profiles agree on pin numbers, names and types before grouping them. A function-reference selector retains the verified processor-specific function tables and evidence. Grouping does not claim that RP2040, RP2350A and BCM2711 have interchangeable alternate functions. Legacy profile IDs remain valid for saved plans and shared links.
+The nine source profiles are presented as five physical layouts: one Pico family entry, one Raspberry Pi 40-pin header entry, one NVIDIA Jetson Orin Nano J12 entry, and the two distinct RP2350 packages. The application checks that grouped profiles agree on pin numbers, names and types before grouping them. A function-reference selector retains the verified processor-specific function tables and evidence. Grouping does not claim that RP2040, RP2350A and BCM2711 have interchangeable alternate functions. Legacy profile IDs remain valid for saved plans and shared links.
+
+## NVIDIA Jetson Orin Nano · J12
+
+The source is NVIDIA’s SHA-256-locked **Jetson Orin Nano Developer Kit Carrier Board Specification, SP-11324-001_v1.3 (December 2024)**. This map covers J12 on the NVIDIA P3768 carrier board, not the module’s 260-pin connector or third-party carriers.
+
+- All 40 positions are extracted from Figure 3-1 (printed p. 21 / PDF p. 25) and independently matched to Table 3-3 (printed pp. 22–23 / PDF pp. 26–27). Supply pins and all eight grounds are checked against their table descriptions. All 28 signal pins can be configured for GPIO according to §3.3.
+- Peripheral signals use the carrier/module names in those sources. GPIO09’s audio primary clock, GPIO01/GPIO11’s general-purpose clocks and GPIO07/GPIO13’s PWM entries come from the alternate-function column. GPIO12 is kept as GPIO; its SoC pad name containing PWM does not establish a supported header PWM function.
+- Table 3-3 spells pins 16/18 as `SPI1_CSI1*` / `SPI1_CSI0*`. The corresponding Figure 3-1 labels are `SPI1_CS1*` / `SPI1_CS0*`, consistent with the same table rows’ SoC CS1_N/CS0_N names. The generator checks the exact discrepancies before using the figure names. The UART1_RTS* module/SoC label is retained despite its alternate-description cell saying UART #2; Linux bus and gpiochip mappings are outside this record.
+- Function records describe documented capabilities, not the currently flashed pinmux or driver configuration. The PWM entries do not assert that every JetPack image enables hardware PWM on those pins. Use NVIDIA’s [Jetson-IO configuration guide](https://docs.nvidia.com/jetson/archives/r36.4.3/DeveloperGuide/HR/ConfiguringTheJetsonExpansionHeaders.html) and the appropriate pinmux for the target software release.
+- Electrical notes cite Table 3-3: 3.3 V signals; direct open-drain I²C on 3/5 and 27/28, with 2.2 kΩ / 1.5 kΩ pull-ups and ±2 mA listed drive; other signal pins use TXB0108 translators with ±20 µA listed weak drive and external pulls greater than 50 kΩ. These are not Raspberry Pi GPIO electrical characteristics.
+- J12 pins 27/28 are I2C0_SDA/SCL and are not given the Raspberry Pi HAT EEPROM reservation. No ADC or unverified numeric mux selectors are added.
+
+The manufacturer PDF is cached for verification and is not distributed in the repository. Eleven source documents now cover 420 physical pin records and 2,038 alternate-function assignments.

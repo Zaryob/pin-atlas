@@ -211,3 +211,6 @@
   .function-reference-bar select { width: 100%; font-size: 16px; }
   .function-reference-bar p { font-size: 12px; }
 }
+
+:root { --pin-i2s: #315f92; }
+:root[data-theme="dark"] { --pin-i2s: #a3c8f0; }

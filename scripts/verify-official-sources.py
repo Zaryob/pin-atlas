@@ -36,6 +36,7 @@ def acquire():
 
 def category(name):
     if name.startswith('SPI'):return 'SPI'
+    if name.startswith('I2S'):return 'I2S'
     if re.match(r'(I2C|SDA\d|SCL\d)',name):return 'I2C'
     if re.match(r'(UART|TXD\d|RXD\d|CTS\d|RTS\d)',name):return 'UART'
     for key in ('PWM','HSTX','PIO','USB','QMI','SIO','ADC','PCM'):
@@ -219,6 +220,65 @@ def parse_pi_row(row,pins):
     pins[n]={'number':n,'name':name,'type':kind(name),'functions':[],'evidence':[evidence,schematic]}
     if n in (27,28):pins[n]['note']='HAT kimlik EEPROM hattına ayrılmıştır; normal proje GPIO’su olarak planlamayın.';pins[n]['reserved']=True
 
+def jetson_orin_nano():
+    doc='jetson-orin-nano-carrier'
+    rows={};figure={}
+    normalize=lambda name:{'3.3V':'3V3','5.0V':'5V'}.get(name,name)
+    # Figure 3-1 is text-readable; cross-check all 40 positions independently
+    # against Table 3-3, rather than transplanting the Raspberry Pi labels.
+    with pdfplumber.open(CACHE/DOCS[doc]['file']) as pdf:
+        text=pdf.pages[24].extract_text()
+        assert '3.3V levels' in text and 'configured as' in text and '>50 k' in text
+        for line in text.split('Figure 3-1.',1)[1].splitlines():
+            match=re.fullmatch(r'(\S+) (\d+) (\d+) (\S+)',line.strip())
+            if not match:continue
+            left,odd,even,right=match.groups()
+            assert int(odd)%2==1 and int(even)==int(odd)+1
+            figure[int(odd)]=normalize(left);figure[int(even)]=normalize(right)
+        assert set(figure)==set(range(1,41))
+        for index in (25,26):
+            tables=pdf.pages[index].extract_tables()
+            assert len(tables[0][0])==12
+            evidence=ref(f'jetson-j12-p{index+1}',doc,index+1,'§3.3 · Table 3-3 · J12 physical pins, carrier signals and alternate functionality')
+            for row in tables[0]:
+                if not (row[0] or '').isdigit():continue
+                n=int(row[0]);assert n not in rows
+                rows[n]=(row,evidence)
+    assert set(rows)==set(range(1,41))
+    physical=ref('jetson-j12-figure',doc,25,'§3.3 · Figure 3-1 · all 40 J12 pin positions and carrier signal names','pdf-diagram-text')
+    rules=ref('jetson-j12-electrical',doc,27,'Table 3-3 notes · 3.3V signals, open-drain I2C and TXB0108 level translators')
+    pins=[]
+    # These two Table 3-3 spellings contain an extra I. Figure 3-1 and the
+    # same rows' SoC CS1_N/CS0_N names identify the chip-select signals.
+    corrections={16:('SPI1_CSI1*','SPI1_CS1*'),18:('SPI1_CSI0*','SPI1_CS0*')}
+    for n in range(1,41):
+        row,evidence=rows[n];name=figure[n];fs=[]
+        default,alternate=clean(row[4]),clean(row[5])
+        if name in ('3V3','5V'):
+            assert ('3.3V' if name=='3V3' else '5.0V') in default
+            pin_type='POWER'
+        elif name=='GND':
+            assert default=='Ground';pin_type='GND'
+        else:
+            table_name=clean(row[1])
+            if n in corrections:
+                assert (table_name,name)==corrections[n]
+                assert ('CS1' if n==16 else 'CS0') in clean(row[3])
+            else:assert table_name==name,(n,table_name,name)
+            pin_type='GPIO'
+            if not name.startswith('GPIO'):
+                fs.append(function(name,None,evidence))
+            elif alternate not in ('','–','GPIO'):
+                f=function(alternate,None,evidence)
+                f['group']='PWM' if alternate=='PWM' else 'CLOCK'
+                fs.append(f)
+        pin={'number':n,'name':name,'type':pin_type,'functions':fs,'evidence':[physical,evidence]}
+        if pin_type=='GPIO':
+            pin['evidence'].append(rules)
+            pin['noteKey']='jetsonI2cNote' if n in (3,5,27,28) else 'jetsonBufferedNote'
+        pins.append(pin)
+    return {'id':'jetson-orin-nano','name':'NVIDIA Jetson Orin Nano','shortName':'Jetson Orin Nano','family':'NVIDIA Jetson','subtitle':'J12 · P3768 carrier · 40-pin expansion header','layout':'header','packagePins':40,'gpioCount':28,'voltage':'3.3 V I/O','mcu':'Tegra234','processor':'Jetson Orin Nano','verifiedOn':MANIFEST['verifiedOn'],'scopeKey':'jetsonScope','compatibleKey':'jetsonCompatible','headerLabel':'J12','source':DOCS[doc]['url']+'#page=25','datasheet':DOCS[doc]['url'],'searchTerms':'Jetson Orin Nano NVIDIA P3768 J12 Tegra234','pins':pins}
+
 def build():
     bank0,packages=rp_tables()
     board_base={'family':'Raspberry Pi','voltage':'3.3 V I/O','verifiedOn':MANIFEST['verifiedOn']}
@@ -233,13 +293,14 @@ def build():
         pin['evidence']=['pi-header-doc']
         if pin.get('reserved'):pin['note']='Reserved for HAT identification EEPROM.'
     boards.append({**board_base,'id':'raspberry-pi-40','name':'Raspberry Pi · 40-pin GPIO','shortName':'40-pin GPIO (common)','subtitle':'Common physical layout · model-specific alternate functions excluded','layout':'header','scopeKey':'commonHeaderScope','packagePins':40,'gpioCount':28,'reservedGPIOCount':2,'mcu':'Common GPIO','source':DOCS['pi-gpio']['viewUrl'],'datasheet':DOCS['pi-gpio']['viewUrl'],'searchTerms':'Pi B+ A+ Pi 2 Pi 3 Pi 4 Pi 5 Zero Zero W Zero 2 W 400 500','pins':common_pins})
+    boards.append(jetson_orin_nano())
     for total,chip in [(60,'rp2350a'),(80,'rp2350b')]:
         boards.append({**board_base,'id':chip,'name':chip.upper(),'family':'Raspberry Pi','subtitle':f'QFN-{total} · RP2350 · Release 8','layout':'qfn','packagePins':total,'gpioCount':30 if total==60 else 48,'voltage':'1.8–3.3 V I/O','mcu':chip.upper(),'processor':'Cortex-M33 / Hazard3','clock':'150 MHz','source':DOCS['rp2350']['url']+f'#page={16 if total==60 else 17}','datasheet':DOCS['rp2350']['url'],'pins':[packages[total][n] for n in sorted(packages[total])]})
     return boards
 
 def outputs(boards):
     physical=sum(len(b['pins']) for b in boards);functions=sum(len(p['functions']) for b in boards for p in b['pins'])
-    report={'verifiedOn':MANIFEST['verifiedOn'],'physicalPins':physical,'functionAssignments':functions,'documents':[{k:v for k,v in d.items() if k!='file'} for d in DOCS.values()], 'boards':[{'id':b['id'],'physicalPins':len(b['pins']),'functionAssignments':sum(len(p['functions']) for p in b['pins']),'physicalSourceMethods':sorted({REFS[r]['method'] for p in b['pins'] for r in p['evidence']})} for b in boards], 'qualifications':['Figure-only Pico physical labels were visually checked; they are not machine-readable PDF table cells.','The QFN-60 IOVDD discrepancy in RP2350 Release 8 Table 1679 is resolved using Figures 2 and 152.','The common Raspberry Pi 40-pin profile contains physical connections only; Pi 4 BCM2711 alternate functions remain in a separate model-specific profile. Pins 27/28 are reserved for the HAT EEPROM.', 'Pico and Pico W use independently extracted RP2040 functions, not RP2350 selectors. Pico 2 and Pico 2 W use RP2350A functions.']}
+    report={'verifiedOn':MANIFEST['verifiedOn'],'physicalPins':physical,'functionAssignments':functions,'documents':[{k:v for k,v in d.items() if k!='file'} for d in DOCS.values()], 'boards':[{'id':b['id'],'physicalPins':len(b['pins']),'functionAssignments':sum(len(p['functions']) for p in b['pins']),'physicalSourceMethods':sorted({REFS[r]['method'] for p in b['pins'] for r in p['evidence']})} for b in boards], 'qualifications':['Figure-only Pico physical labels were visually checked; they are not machine-readable PDF table cells.','The QFN-60 IOVDD discrepancy in RP2350 Release 8 Table 1679 is resolved using Figures 2 and 152.','The common Raspberry Pi 40-pin profile contains physical connections only; Pi 4 BCM2711 alternate functions remain in a separate model-specific profile. Pins 27/28 are reserved for the HAT EEPROM.', 'Pico and Pico W use independently extracted RP2040 functions, not RP2350 selectors. Pico 2 and Pico 2 W use RP2350A functions.', 'Jetson Orin Nano uses NVIDIA P3768 carrier J12 names from Figure 3-1 and Table 3-3; peripheral names are carrier signals, not Linux bus numbers. Table spellings SPI1_CSI1*/CSI0* are resolved using the figure and CS1_N/CS0_N SoC names. Listed capabilities require appropriate pinmux/Jetson-IO configuration and do not assert an active runtime configuration.']}
     buf=io.StringIO();writer=csv.writer(buf,lineterminator='\n');writer.writerow(['board','physical_pin','pin_name','pin_type','function','selector','manufacturer_signal','physical_evidence','function_evidence'])
     for b in boards:
         for p in b['pins']:

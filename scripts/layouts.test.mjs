@@ -7,7 +7,7 @@ const boards = JSON.parse(readFileSync(new URL('../dist/data/boards.json', impor
 const layouts = buildLayouts(boards);
 
 test('catalog contains one entry per shared footprint', () => {
-  assert.deepEqual(layouts.map(layout => layout.id), ['pico-family', 'raspberry-pi-40', 'rp2350a', 'rp2350b']);
+  assert.deepEqual(layouts.map(layout => layout.id), ['pico-family', 'raspberry-pi-40', 'jetson-orin-nano', 'rp2350a', 'rp2350b']);
   assert.equal(layouts[0].profiles.length, 4);
   assert.equal(layouts[1].profiles.length, 2);
   assert.equal(new Set(layouts.flatMap(layout => layout.profileIds)).size, boards.length);
@@ -41,4 +41,13 @@ test('a shared layout retains distinct processor selectors and scope', () => {
   const pi4 = resolveProfile(layouts, 'raspberry-pi-40', 'raspberry-pi-4').profile;
   assert(common.pins.every(pin => pin.functions.length === 0));
   assert(pi4.pins.some(pin => pin.functions.some(fn => fn.selector === 'ALT0')));
+});
+
+test('Jetson J12 stays distinct from the Raspberry Pi header', () => {
+  const jetson = resolveProfile(layouts, 'jetson-orin-nano');
+  const pi = resolveProfile(layouts, 'raspberry-pi-40');
+  assert.notEqual(jetson.layout.id, pi.layout.id);
+  assert.equal(jetson.profile.pins[26].name, 'I2C0_SDA');
+  assert.equal(pi.profile.pins[26].name, 'GPIO0');
+  assert(!jetson.profile.pins[26].reserved);
 });

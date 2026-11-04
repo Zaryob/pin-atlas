@@ -1,6 +1,11 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
 (() => {
   const messages = {
+    "board.jetson-orin-nano": ["J12 · P3768 taşıyıcı kart · 40-pin genişleme başlığı", "J12 · P3768 carrier · 40-pin expansion header"],
+    "jetsonCompatible": ["Jetson Orin Nano Developer Kit · NVIDIA P3768 taşıyıcı kart", "Jetson Orin Nano Developer Kit · NVIDIA P3768 carrier board"],
+    "jetsonScope": ["NVIDIA taşıyıcı kartının J12 başlığı; 260-pin modül bağlantısı veya başka üreticinin taşıyıcı kartı değildir. Sinyaller 3.3 V seviyesindedir. Çevre birimleri için Jetson-IO/pinmux yapılandırması gerekir; bu plan cihazı yapılandırmaz. İşlev adları taşıyıcı kart sinyalleridir, Linux veri yolu numaraları değildir.", "J12 on the NVIDIA carrier board; excludes the 260-pin module connector and third-party carrier boards. Signals use 3.3 V levels. Peripherals require Jetson-IO/pinmux configuration; this plan does not configure the device. Function names are carrier signals, not Linux bus numbers."],
+    "jetsonI2cNote": ["Bu I²C hattı doğrudan SoC’ye bağlıdır ve açık drenajlıdır. NVIDIA tablosuna göre en fazla ±2 mA sürüş; 3/5 pinlerinde 2.2 kΩ, 27/28 pinlerinde 1.5 kΩ pull-up vardır. GPIO/SFIO kullanımı pinmux yapılandırmasına bağlıdır.", "This I²C line connects directly to the SoC and is open-drain. NVIDIA lists ±2 mA maximum drive, with 2.2 kΩ pull-ups on pins 3/5 and 1.5 kΩ on pins 27/28. GPIO/SFIO use depends on pinmux configuration."],
+    "jetsonBufferedNote": ["Bu 3.3 V hattı TXB0108 seviye çeviricisine bağlıdır. NVIDIA zayıf sürüş (±20 µA) belirtir; harici pull-up/pull-down dirençleri 50 kΩ üzerinde olmalıdır. İşlevin kullanılabilirliği pinmux/Jetson-IO ve yazılım sürümüne bağlıdır; GPIO sürücüsüyle yük sürmeyin.", "This 3.3 V line passes through a TXB0108 level translator. NVIDIA lists weak drive (±20 µA); external pull-up/pull-down resistors must exceed 50 kΩ. Function availability depends on pinmux/Jetson-IO and software support; use an appropriate external driver for loads."],
     "picoLayout": ["Raspberry Pi Pico ailesi", "Raspberry Pi Pico family"],
     "picoLayoutSubtitle": ["Ortak 40-pin düzeni · 26 GPIO", "Shared 40-pin layout · 26 GPIOs"],
     "piLayout": ["Raspberry Pi 40-pin GPIO", "Raspberry Pi 40-pin GPIO"],

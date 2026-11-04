@@ -1245,6 +1245,46 @@ raspberry-pi-40,37,GPIO26,GPIO,,,,pi-header-doc,
 raspberry-pi-40,38,GPIO20,GPIO,,,,pi-header-doc,
 raspberry-pi-40,39,GND,GND,,,,pi-header-doc,
 raspberry-pi-40,40,GPIO21,GPIO,,,,pi-header-doc,
+jetson-orin-nano,1,3V3,POWER,,,,jetson-j12-figure | jetson-j12-p26,
+jetson-orin-nano,2,5V,POWER,,,,jetson-j12-figure | jetson-j12-p26,
+jetson-orin-nano,3,I2C1_SDA,GPIO,I2C1_SDA,,I2C1_SDA,jetson-j12-figure | jetson-j12-p26 | jetson-j12-electrical,jetson-j12-p26
+jetson-orin-nano,4,5V,POWER,,,,jetson-j12-figure | jetson-j12-p26,
+jetson-orin-nano,5,I2C1_SCL,GPIO,I2C1_SCL,,I2C1_SCL,jetson-j12-figure | jetson-j12-p26 | jetson-j12-electrical,jetson-j12-p26
+jetson-orin-nano,6,GND,GND,,,,jetson-j12-figure | jetson-j12-p26,
+jetson-orin-nano,7,GPIO09,GPIO,Audio Primary Clock,,Audio Primary Clock,jetson-j12-figure | jetson-j12-p26 | jetson-j12-electrical,jetson-j12-p26
+jetson-orin-nano,8,UART1_TXD,GPIO,UART1_TXD,,UART1_TXD,jetson-j12-figure | jetson-j12-p26 | jetson-j12-electrical,jetson-j12-p26
+jetson-orin-nano,9,GND,GND,,,,jetson-j12-figure | jetson-j12-p26,
+jetson-orin-nano,10,UART1_RXD,GPIO,UART1_RXD,,UART1_RXD,jetson-j12-figure | jetson-j12-p26 | jetson-j12-electrical,jetson-j12-p26
+jetson-orin-nano,11,UART1_RTS*,GPIO,UART1_RTS*,,UART1_RTS*,jetson-j12-figure | jetson-j12-p26 | jetson-j12-electrical,jetson-j12-p26
+jetson-orin-nano,12,I2S0_SCLK,GPIO,I2S0_SCLK,,I2S0_SCLK,jetson-j12-figure | jetson-j12-p26 | jetson-j12-electrical,jetson-j12-p26
+jetson-orin-nano,13,SPI1_SCK,GPIO,SPI1_SCK,,SPI1_SCK,jetson-j12-figure | jetson-j12-p26 | jetson-j12-electrical,jetson-j12-p26
+jetson-orin-nano,14,GND,GND,,,,jetson-j12-figure | jetson-j12-p26,
+jetson-orin-nano,15,GPIO12,GPIO,,,,jetson-j12-figure | jetson-j12-p26 | jetson-j12-electrical,
+jetson-orin-nano,16,SPI1_CS1*,GPIO,SPI1_CS1*,,SPI1_CS1*,jetson-j12-figure | jetson-j12-p26 | jetson-j12-electrical,jetson-j12-p26
+jetson-orin-nano,17,3V3,POWER,,,,jetson-j12-figure | jetson-j12-p26,
+jetson-orin-nano,18,SPI1_CS0*,GPIO,SPI1_CS0*,,SPI1_CS0*,jetson-j12-figure | jetson-j12-p26 | jetson-j12-electrical,jetson-j12-p26
+jetson-orin-nano,19,SPI0_MOSI,GPIO,SPI0_MOSI,,SPI0_MOSI,jetson-j12-figure | jetson-j12-p26 | jetson-j12-electrical,jetson-j12-p26
+jetson-orin-nano,20,GND,GND,,,,jetson-j12-figure | jetson-j12-p26,
+jetson-orin-nano,21,SPI0_MISO,GPIO,SPI0_MISO,,SPI0_MISO,jetson-j12-figure | jetson-j12-p26 | jetson-j12-electrical,jetson-j12-p26
+jetson-orin-nano,22,SPI1_MISO,GPIO,SPI1_MISO,,SPI1_MISO,jetson-j12-figure | jetson-j12-p26 | jetson-j12-electrical,jetson-j12-p26
+jetson-orin-nano,23,SPI0_SCK,GPIO,SPI0_SCK,,SPI0_SCK,jetson-j12-figure | jetson-j12-p26 | jetson-j12-electrical,jetson-j12-p26
+jetson-orin-nano,24,SPI0_CS0*,GPIO,SPI0_CS0*,,SPI0_CS0*,jetson-j12-figure | jetson-j12-p26 | jetson-j12-electrical,jetson-j12-p26
+jetson-orin-nano,25,GND,GND,,,,jetson-j12-figure | jetson-j12-p27,
+jetson-orin-nano,26,SPI0_CS1*,GPIO,SPI0_CS1*,,SPI0_CS1*,jetson-j12-figure | jetson-j12-p27 | jetson-j12-electrical,jetson-j12-p27
+jetson-orin-nano,27,I2C0_SDA,GPIO,I2C0_SDA,,I2C0_SDA,jetson-j12-figure | jetson-j12-p27 | jetson-j12-electrical,jetson-j12-p27
+jetson-orin-nano,28,I2C0_SCL,GPIO,I2C0_SCL,,I2C0_SCL,jetson-j12-figure | jetson-j12-p27 | jetson-j12-electrical,jetson-j12-p27
+jetson-orin-nano,29,GPIO01,GPIO,General Purpose Clock #0,,General Purpose Clock #0,jetson-j12-figure | jetson-j12-p27 | jetson-j12-electrical,jetson-j12-p27
+jetson-orin-nano,30,GND,GND,,,,jetson-j12-figure | jetson-j12-p27,
+jetson-orin-nano,31,GPIO11,GPIO,General Purpose Clock #1,,General Purpose Clock #1,jetson-j12-figure | jetson-j12-p27 | jetson-j12-electrical,jetson-j12-p27
+jetson-orin-nano,32,GPIO07,GPIO,PWM,,PWM,jetson-j12-figure | jetson-j12-p27 | jetson-j12-electrical,jetson-j12-p27
+jetson-orin-nano,33,GPIO13,GPIO,PWM,,PWM,jetson-j12-figure | jetson-j12-p27 | jetson-j12-electrical,jetson-j12-p27
+jetson-orin-nano,34,GND,GND,,,,jetson-j12-figure | jetson-j12-p27,
+jetson-orin-nano,35,I2S0_FS,GPIO,I2S0_FS,,I2S0_FS,jetson-j12-figure | jetson-j12-p27 | jetson-j12-electrical,jetson-j12-p27
+jetson-orin-nano,36,UART1_CTS*,GPIO,UART1_CTS*,,UART1_CTS*,jetson-j12-figure | jetson-j12-p27 | jetson-j12-electrical,jetson-j12-p27
+jetson-orin-nano,37,SPI1_MOSI,GPIO,SPI1_MOSI,,SPI1_MOSI,jetson-j12-figure | jetson-j12-p27 | jetson-j12-electrical,jetson-j12-p27
+jetson-orin-nano,38,I2S0_DIN,GPIO,I2S0_DIN,,I2S0_DIN,jetson-j12-figure | jetson-j12-p27 | jetson-j12-electrical,jetson-j12-p27
+jetson-orin-nano,39,GND,GND,,,,jetson-j12-figure | jetson-j12-p27,
+jetson-orin-nano,40,I2S0_DOUT,GPIO,I2S0_DOUT,,I2S0_DOUT,jetson-j12-figure | jetson-j12-p27 | jetson-j12-electrical,jetson-j12-p27
 rp2350a,1,IOVDD,POWER,,,,rp2350a-iovdd,
 rp2350a,2,GPIO0,GPIO,SPI0 RX,F1,SPI0 RX,rp-pin-list-p1333,rp-bank0-p18
 rp2350a,2,GPIO0,GPIO,UART0 TX,F2,UART0 TX,rp-pin-list-p1333,rp-bank0-p18
