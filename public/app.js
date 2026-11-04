@@ -857,6 +857,11 @@ const homeFilterChips = [
   { id: 'chips', labelKey: 'familyChips' }
 ];
 
+function updateLibraryCount() {
+  const el = $('#library-count');
+  if (el && layouts) el.textContent = layouts.length;
+}
+
 function showHomeView() {
   currentView = 'home';
   $('#home-view').hidden = false;
@@ -868,6 +873,7 @@ function showHomeView() {
   $('#crumb-sep-2').hidden = true;
   $('#crumb').hidden = true;
   document.title = `Pin Atlas — ${t('homeBadge')}`;
+  updateLibraryCount();
   renderHome();
 }
 
@@ -893,14 +899,17 @@ function renderHome() {
 
 function renderHomeStats() {
   if (!boards) return;
+  updateLibraryCount();
   const lang = document.documentElement.lang || 'tr';
   const totalPins = boards.reduce((acc, b) => acc + (b.pins?.length || 0), 0);
   const totalFns = boards.reduce((acc, b) => acc + b.pins.reduce((sum, p) => sum + (p.functions?.length || 0), 0), 0);
   const totalSources = evidence?.documents?.length || 62;
+  if ($('#home-stat-boards')) $('#home-stat-boards').textContent = boards.length;
   if ($('#home-stat-families')) $('#home-stat-families').textContent = boardFamilies.length;
   if ($('#home-stat-pins')) $('#home-stat-pins').textContent = new Intl.NumberFormat(lang).format(totalPins);
   if ($('#home-stat-functions')) $('#home-stat-functions').textContent = new Intl.NumberFormat(lang).format(totalFns);
   if ($('#home-stat-sources')) $('#home-stat-sources').textContent = totalSources;
+  if ($('#browse-all-boards-desc')) $('#browse-all-boards-desc').textContent = t('browseAllBoardsDesc', { layouts: layouts?.length || 30, boards: boards?.length || 42 });
 }
 
 function renderHomeFilterChips() {
@@ -1316,5 +1325,5 @@ window.addEventListener('hashchange',()=>{if(boards && location.hash!=='#main')l
 try {
  const [boardResult, evidenceResult] = await Promise.all(['boards.json','evidence.json'].map(name=>fetch(new URL('./data/'+name,appBase))));
  if(!boardResult.ok || !evidenceResult.ok)throw new Error(t('loadFailed'));
- [boards,evidence] = await Promise.all([boardResult.json(),evidenceResult.json()]);layouts=buildLayouts(boards);loadHash();
+ [boards,evidence] = await Promise.all([boardResult.json(),evidenceResult.json()]);layouts=buildLayouts(boards);updateLibraryCount();loadHash();
 } catch(error) { $('#diagram').innerHTML=`<p data-i18n="reloadHint" style="padding:40px;line-height:2">${t('reloadHint')}</p>`;toast(error.message); }

@@ -8,7 +8,7 @@ title: Pin Atlas — Source-verified pin guide
     <button id="menu-button" class="button primary board-picker-btn" aria-haspopup="dialog" aria-label="Open board library" data-i18n-aria-label="chooseBoard">
       <span data-icon="grid"></span>
       <span data-i18n="boardLibrary">Board library</span>
-      <span class="count" id="library-count"></span>
+      <span class="count" id="library-count">30</span>
     </button>
     <div class="breadcrumbs">
       <a href="#home" id="home-breadcrumb-link" class="home-crumb"><span data-icon="home"></span><span data-i18n="home">Home</span></a>
@@ -47,19 +47,23 @@ title: Pin Atlas — Source-verified pin guide
     <!-- STATS BAR -->
     <div class="home-stats" aria-label="Pin Atlas istatistikleri">
       <div class="home-stat-item">
-        <strong class="stat-number" id="home-stat-families">8</strong>
+        <strong class="stat-number" id="home-stat-boards">42</strong>
+        <span class="stat-label" data-i18n="statBoards">Kart &amp; Yonga</span>
+      </div>
+      <div class="home-stat-item">
+        <strong class="stat-number" id="home-stat-families">9</strong>
         <span class="stat-label" data-i18n="statFamilies">Kart Ailesi</span>
       </div>
       <div class="home-stat-item">
-        <strong class="stat-number" id="home-stat-pins">2.080</strong>
+        <strong class="stat-number" id="home-stat-pins">2.101</strong>
         <span class="stat-label" data-i18n="statPins">Doğrulanmış Pin</span>
       </div>
       <div class="home-stat-item">
-        <strong class="stat-number" id="home-stat-functions">6.619</strong>
+        <strong class="stat-number" id="home-stat-functions">6.681</strong>
         <span class="stat-label" data-i18n="statFunctions">İşlev Ataması</span>
       </div>
       <div class="home-stat-item">
-        <strong class="stat-number" id="home-stat-sources">61</strong>
+        <strong class="stat-number" id="home-stat-sources">62</strong>
         <span class="stat-label" data-i18n="statSources">Kilitli Belge (SHA-256)</span>
       </div>
     </div>
@@ -80,7 +84,7 @@ title: Pin Atlas — Source-verified pin guide
       <div class="home-section-header">
         <div>
           <h2 class="home-section-title"><span data-i18n="browseAllBoards">Tüm Kartlar ve Mikrodenetleyiciler</span></h2>
-          <p class="home-section-desc" data-i18n="browseAllBoardsDesc">Ortak kütüphane düzenlerine göre gruplanmış 29 fiziksel kart biçimi ve 41 kaynak profili.</p>
+          <p class="home-section-desc" id="browse-all-boards-desc" data-i18n="browseAllBoardsDesc">Ortak kütüphane düzenlerine göre gruplanmış 30 fiziksel kart biçimi ve 42 kaynak profili.</p>
         </div>
       </div>
       <div id="home-catalog-container"></div>
