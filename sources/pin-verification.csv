@@ -1285,6 +1285,224 @@ jetson-orin-nano,37,SPI1_MOSI,GPIO,SPI1_MOSI,,SPI1_MOSI,jetson-j12-figure | jets
 jetson-orin-nano,38,I2S0_DIN,GPIO,I2S0_DIN,,I2S0_DIN,jetson-j12-figure | jetson-j12-p27 | jetson-j12-electrical,jetson-j12-p27
 jetson-orin-nano,39,GND,GND,,,,jetson-j12-figure | jetson-j12-p27,
 jetson-orin-nano,40,I2S0_DOUT,GPIO,I2S0_DOUT,,I2S0_DOUT,jetson-j12-figure | jetson-j12-p27 | jetson-j12-electrical,jetson-j12-p27
+blue-pill,1,VBAT,POWER,,,,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p28,
+blue-pill,2,PC13,GPIO,TAMPER-RTC,,TAMPER-RTC,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28
+blue-pill,3,PC14,GPIO,OSC32_IN,,OSC32_IN,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28
+blue-pill,4,PC15,GPIO,OSC32_OUT,,OSC32_OUT,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28
+blue-pill,5,PA0,GPIO,WKUP,,WKUP,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+blue-pill,5,PA0,GPIO,USART2_CTS,USART2_REMAP=0,USART2_CTS,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
+blue-pill,5,PA0,GPIO,ADC12_IN0,,ADC12_IN0,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+blue-pill,5,PA0,GPIO,TIM2_CH1_ETR,TIM2_REMAP=00|10,TIM2_CH1_ETR,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-45
+blue-pill,6,PA1,GPIO,USART2_RTS,USART2_REMAP=0,USART2_RTS,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
+blue-pill,6,PA1,GPIO,ADC12_IN1,,ADC12_IN1,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+blue-pill,6,PA1,GPIO,TIM2_CH2,TIM2_REMAP=00|10,TIM2_CH2,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-45
+blue-pill,7,PA2,GPIO,USART2_TX,USART2_REMAP=0,USART2_TX,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
+blue-pill,7,PA2,GPIO,ADC12_IN2,,ADC12_IN2,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+blue-pill,7,PA2,GPIO,TIM2_CH3,TIM2_REMAP=00|01,TIM2_CH3,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-45
+blue-pill,8,PA3,GPIO,USART2_RX,USART2_REMAP=0,USART2_RX,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
+blue-pill,8,PA3,GPIO,ADC12_IN3,,ADC12_IN3,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+blue-pill,8,PA3,GPIO,TIM2_CH4,TIM2_REMAP=00|01,TIM2_CH4,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-45
+blue-pill,9,PA4,GPIO,SPI1_NSS,SPI1_REMAP=0,SPI1_NSS,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-56
+blue-pill,9,PA4,GPIO,USART2_CK,USART2_REMAP=0,USART2_CK,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
+blue-pill,9,PA4,GPIO,ADC12_IN4,,ADC12_IN4,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+blue-pill,10,PA5,GPIO,SPI1_SCK,SPI1_REMAP=0,SPI1_SCK,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-56
+blue-pill,10,PA5,GPIO,ADC12_IN5,,ADC12_IN5,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+blue-pill,11,PA6,GPIO,SPI1_MISO,SPI1_REMAP=0,SPI1_MISO,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-56
+blue-pill,11,PA6,GPIO,ADC12_IN6,,ADC12_IN6,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+blue-pill,11,PA6,GPIO,TIM3_CH1,TIM3_REMAP=00,TIM3_CH1,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-44
+blue-pill,11,PA6,GPIO,TIM1_BKIN,TIM1_REMAP=01,TIM1_BKIN,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-46
+blue-pill,12,PA7,GPIO,SPI1_MOSI,SPI1_REMAP=0,SPI1_MOSI,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-56
+blue-pill,12,PA7,GPIO,ADC12_IN7,,ADC12_IN7,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+blue-pill,12,PA7,GPIO,TIM3_CH2,TIM3_REMAP=00,TIM3_CH2,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-44
+blue-pill,12,PA7,GPIO,TIM1_CH1N,TIM1_REMAP=01,TIM1_CH1N,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-46
+blue-pill,13,PB0,GPIO,ADC12_IN8,,ADC12_IN8,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+blue-pill,13,PB0,GPIO,TIM3_CH3,TIM3_REMAP=00|10,TIM3_CH3,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-44
+blue-pill,13,PB0,GPIO,TIM1_CH2N,TIM1_REMAP=01,TIM1_CH2N,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-46
+blue-pill,14,PB1,GPIO,ADC12_IN9,,ADC12_IN9,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+blue-pill,14,PB1,GPIO,TIM3_CH4,TIM3_REMAP=00|10,TIM3_CH4,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-44
+blue-pill,14,PB1,GPIO,TIM1_CH3N,TIM1_REMAP=01,TIM1_CH3N,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-46
+blue-pill,15,PB10,GPIO,I2C2_SCL,,I2C2_SCL,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+blue-pill,15,PB10,GPIO,USART3_TX,USART3_REMAP=00,USART3_TX,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+blue-pill,15,PB10,GPIO,TIM2_CH3,TIM2_REMAP=10|11,TIM2_CH3,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-45
+blue-pill,16,PB11,GPIO,I2C2_SDA,,I2C2_SDA,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+blue-pill,16,PB11,GPIO,USART3_RX,USART3_REMAP=00,USART3_RX,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+blue-pill,16,PB11,GPIO,TIM2_CH4,TIM2_REMAP=10|11,TIM2_CH4,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-45
+blue-pill,17,NRST,SYSTEM,,,,bluepill-h1 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p28,
+blue-pill,18,3V3,POWER,,,,bluepill-h1 | bluepill-schematic | bluepill-orientation,
+blue-pill,19,GND,GND,,,,bluepill-h1 | bluepill-schematic | bluepill-orientation,
+blue-pill,20,GND,GND,,,,bluepill-h1 | bluepill-schematic | bluepill-orientation,
+blue-pill,21,3V3,POWER,,,,bluepill-h2 | bluepill-schematic | bluepill-orientation,
+blue-pill,22,GND,GND,,,,bluepill-h2 | bluepill-schematic | bluepill-orientation,
+blue-pill,23,5V,POWER,,,,bluepill-h2 | bluepill-schematic | bluepill-orientation,
+blue-pill,24,PB9,GPIO,TIM4_CH4,TIM4_REMAP=0,TIM4_CH4,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-43
+blue-pill,24,PB9,GPIO,I2C1_SDA,I2C1_REMAP=1,I2C1_SDA,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-55
+blue-pill,24,PB9,GPIO,CANTX,CAN_REMAP=10,CANTX,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-34
+blue-pill,25,PB8,GPIO,TIM4_CH3,TIM4_REMAP=0,TIM4_CH3,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-43
+blue-pill,25,PB8,GPIO,I2C1_SCL,I2C1_REMAP=1,I2C1_SCL,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-55
+blue-pill,25,PB8,GPIO,CANRX,CAN_REMAP=10,CANRX,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-34
+blue-pill,26,PB7,GPIO,I2C1_SDA,I2C1_REMAP=0,I2C1_SDA,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-55
+blue-pill,26,PB7,GPIO,TIM4_CH2,TIM4_REMAP=0,TIM4_CH2,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-43
+blue-pill,26,PB7,GPIO,USART1_RX,USART1_REMAP=1,USART1_RX,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-54
+blue-pill,27,PB6,GPIO,I2C1_SCL,I2C1_REMAP=0,I2C1_SCL,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-55
+blue-pill,27,PB6,GPIO,TIM4_CH1,TIM4_REMAP=0,TIM4_CH1,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-43
+blue-pill,27,PB6,GPIO,USART1_TX,USART1_REMAP=1,USART1_TX,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-54
+blue-pill,28,PB5,GPIO,I2C1_SMBAl,,I2C1_SMBAl,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32
+blue-pill,28,PB5,GPIO,TIM3_CH2,TIM3_REMAP=10,TIM3_CH2,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-44
+blue-pill,28,PB5,GPIO,SPI1_MOSI,SPI1_REMAP=1,SPI1_MOSI,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-56
+blue-pill,29,PB4,GPIO,TIM3_CH1,TIM3_REMAP=10,TIM3_CH1,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-44
+blue-pill,29,PB4,GPIO,SPI1_MISO,SPI1_REMAP=1,SPI1_MISO,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-56
+blue-pill,29,PB4,GPIO,JNTRST,,JNTRST,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+blue-pill,30,PB3,GPIO,TIM2_CH2,TIM2_REMAP=01|11,TIM2_CH2,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-45
+blue-pill,30,PB3,GPIO,TRACESWO,,TRACESWO,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+blue-pill,30,PB3,GPIO,SPI1_SCK,SPI1_REMAP=1,SPI1_SCK,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-56
+blue-pill,30,PB3,GPIO,JTDO,,JTDO,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+blue-pill,31,PA15,GPIO,TIM2_CH1_ETR,TIM2_REMAP=01|11,TIM2_CH1_ETR,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-45
+blue-pill,31,PA15,GPIO,SPI1_NSS,SPI1_REMAP=1,SPI1_NSS,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-56
+blue-pill,31,PA15,GPIO,JTDI,,JTDI,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+blue-pill,32,PA12,GPIO,USART1_RTS,,USART1_RTS,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+blue-pill,32,PA12,GPIO,CANTX,CAN_REMAP=00,CANTX,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-34
+blue-pill,32,PA12,GPIO,USBDP,,USBDP,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+blue-pill,32,PA12,GPIO,TIM1_ETR,TIM1_REMAP=00|01,TIM1_ETR,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+blue-pill,33,PA11,GPIO,USART1_CTS,,USART1_CTS,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+blue-pill,33,PA11,GPIO,CANRX,CAN_REMAP=00,CANRX,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-34
+blue-pill,33,PA11,GPIO,USBDM,,USBDM,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+blue-pill,33,PA11,GPIO,TIM1_CH4,TIM1_REMAP=00|01,TIM1_CH4,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+blue-pill,34,PA10,GPIO,USART1_RX,USART1_REMAP=0,USART1_RX,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-54
+blue-pill,34,PA10,GPIO,TIM1_CH3,TIM1_REMAP=00|01,TIM1_CH3,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+blue-pill,35,PA9,GPIO,USART1_TX,USART1_REMAP=0,USART1_TX,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-54
+blue-pill,35,PA9,GPIO,TIM1_CH2,TIM1_REMAP=00|01,TIM1_CH2,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+blue-pill,36,PA8,GPIO,USART1_CK,,USART1_CK,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+blue-pill,36,PA8,GPIO,TIM1_CH1,TIM1_REMAP=00|01,TIM1_CH1,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+blue-pill,36,PA8,GPIO,MCO,,MCO,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+blue-pill,37,PB15,GPIO,SPI2_MOSI,,SPI2_MOSI,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+blue-pill,37,PB15,GPIO,TIM1_CH3N,TIM1_REMAP=00,TIM1_CH3N,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-46
+blue-pill,38,PB14,GPIO,SPI2_MISO,,SPI2_MISO,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+blue-pill,38,PB14,GPIO,USART3_RTS,USART3_REMAP=00,USART3_RTS,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+blue-pill,38,PB14,GPIO,TIM1_CH2N,TIM1_REMAP=00,TIM1_CH2N,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-46
+blue-pill,39,PB13,GPIO,SPI2_SCK,,SPI2_SCK,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+blue-pill,39,PB13,GPIO,USART3_CTS,USART3_REMAP=00,USART3_CTS,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+blue-pill,39,PB13,GPIO,TIM1_CH1N,TIM1_REMAP=00,TIM1_CH1N,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-46
+blue-pill,40,PB12,GPIO,SPI2_NSS,,SPI2_NSS,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+blue-pill,40,PB12,GPIO,I2C2_SMBAl,,I2C2_SMBAl,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+blue-pill,40,PB12,GPIO,USART3_CK,USART3_REMAP=00,USART3_CK,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+blue-pill,40,PB12,GPIO,TIM1_BKIN,TIM1_REMAP=00,TIM1_BKIN,bluepill-h2 | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-46
+blue-pill,41,3V3,POWER,,,,bluepill-swd | bluepill-schematic | bluepill-orientation,
+blue-pill,42,PA13,GPIO,JTMS,,JTMS,bluepill-swd | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-debug-mapping
+blue-pill,42,PA13,GPIO,SWDIO,,SWDIO,bluepill-swd | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-debug-mapping
+blue-pill,43,PA14,GPIO,JTCK,,JTCK,bluepill-swd | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+blue-pill,43,PA14,GPIO,SWCLK,,SWCLK,bluepill-swd | bluepill-schematic | bluepill-orientation | stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+blue-pill,44,GND,GND,,,,bluepill-swd | bluepill-schematic | bluepill-orientation,
+stm32f103c8t6,1,VBAT,POWER,,,,stm32-lqfp48 | stm32-pin-table-p28,
+stm32f103c8t6,2,PC13,GPIO,TAMPER-RTC,,TAMPER-RTC,stm32-lqfp48 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28
+stm32f103c8t6,3,PC14,GPIO,OSC32_IN,,OSC32_IN,stm32-lqfp48 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28
+stm32f103c8t6,4,PC15,GPIO,OSC32_OUT,,OSC32_OUT,stm32-lqfp48 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28
+stm32f103c8t6,5,OSC_IN,GPIO,PD0,PD01_REMAP=1,PD0,stm32-lqfp48 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28 | stm32-osc-remap
+stm32f103c8t6,6,OSC_OUT,GPIO,PD1,PD01_REMAP=1,PD1,stm32-lqfp48 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28 | stm32-osc-remap
+stm32f103c8t6,7,NRST,SYSTEM,,,,stm32-lqfp48 | stm32-pin-table-p28,
+stm32f103c8t6,8,VSSA,GND,,,,stm32-lqfp48 | stm32-pin-table-p28,
+stm32f103c8t6,9,VDDA,POWER,,,,stm32-lqfp48 | stm32-pin-table-p28,
+stm32f103c8t6,10,PA0,GPIO,WKUP,,WKUP,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103c8t6,10,PA0,GPIO,USART2_CTS,USART2_REMAP=0,USART2_CTS,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
+stm32f103c8t6,10,PA0,GPIO,ADC12_IN0,,ADC12_IN0,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103c8t6,10,PA0,GPIO,TIM2_CH1_ETR,TIM2_REMAP=00|10,TIM2_CH1_ETR,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-45
+stm32f103c8t6,11,PA1,GPIO,USART2_RTS,USART2_REMAP=0,USART2_RTS,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
+stm32f103c8t6,11,PA1,GPIO,ADC12_IN1,,ADC12_IN1,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103c8t6,11,PA1,GPIO,TIM2_CH2,TIM2_REMAP=00|10,TIM2_CH2,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-45
+stm32f103c8t6,12,PA2,GPIO,USART2_TX,USART2_REMAP=0,USART2_TX,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
+stm32f103c8t6,12,PA2,GPIO,ADC12_IN2,,ADC12_IN2,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103c8t6,12,PA2,GPIO,TIM2_CH3,TIM2_REMAP=00|01,TIM2_CH3,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-45
+stm32f103c8t6,13,PA3,GPIO,USART2_RX,USART2_REMAP=0,USART2_RX,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
+stm32f103c8t6,13,PA3,GPIO,ADC12_IN3,,ADC12_IN3,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103c8t6,13,PA3,GPIO,TIM2_CH4,TIM2_REMAP=00|01,TIM2_CH4,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-45
+stm32f103c8t6,14,PA4,GPIO,SPI1_NSS,SPI1_REMAP=0,SPI1_NSS,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-56
+stm32f103c8t6,14,PA4,GPIO,USART2_CK,USART2_REMAP=0,USART2_CK,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
+stm32f103c8t6,14,PA4,GPIO,ADC12_IN4,,ADC12_IN4,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103c8t6,15,PA5,GPIO,SPI1_SCK,SPI1_REMAP=0,SPI1_SCK,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-56
+stm32f103c8t6,15,PA5,GPIO,ADC12_IN5,,ADC12_IN5,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103c8t6,16,PA6,GPIO,SPI1_MISO,SPI1_REMAP=0,SPI1_MISO,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-56
+stm32f103c8t6,16,PA6,GPIO,ADC12_IN6,,ADC12_IN6,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103c8t6,16,PA6,GPIO,TIM3_CH1,TIM3_REMAP=00,TIM3_CH1,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-44
+stm32f103c8t6,16,PA6,GPIO,TIM1_BKIN,TIM1_REMAP=01,TIM1_BKIN,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-46
+stm32f103c8t6,17,PA7,GPIO,SPI1_MOSI,SPI1_REMAP=0,SPI1_MOSI,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-56
+stm32f103c8t6,17,PA7,GPIO,ADC12_IN7,,ADC12_IN7,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103c8t6,17,PA7,GPIO,TIM3_CH2,TIM3_REMAP=00,TIM3_CH2,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-44
+stm32f103c8t6,17,PA7,GPIO,TIM1_CH1N,TIM1_REMAP=01,TIM1_CH1N,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-46
+stm32f103c8t6,18,PB0,GPIO,ADC12_IN8,,ADC12_IN8,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103c8t6,18,PB0,GPIO,TIM3_CH3,TIM3_REMAP=00|10,TIM3_CH3,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-44
+stm32f103c8t6,18,PB0,GPIO,TIM1_CH2N,TIM1_REMAP=01,TIM1_CH2N,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-46
+stm32f103c8t6,19,PB1,GPIO,ADC12_IN9,,ADC12_IN9,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+stm32f103c8t6,19,PB1,GPIO,TIM3_CH4,TIM3_REMAP=00|10,TIM3_CH4,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-44
+stm32f103c8t6,19,PB1,GPIO,TIM1_CH3N,TIM1_REMAP=01,TIM1_CH3N,stm32-lqfp48 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-46
+stm32f103c8t6,20,PB2,GPIO,,,,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,
+stm32f103c8t6,21,PB10,GPIO,I2C2_SCL,,I2C2_SCL,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+stm32f103c8t6,21,PB10,GPIO,USART3_TX,USART3_REMAP=00,USART3_TX,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+stm32f103c8t6,21,PB10,GPIO,TIM2_CH3,TIM2_REMAP=10|11,TIM2_CH3,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-45
+stm32f103c8t6,22,PB11,GPIO,I2C2_SDA,,I2C2_SDA,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+stm32f103c8t6,22,PB11,GPIO,USART3_RX,USART3_REMAP=00,USART3_RX,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+stm32f103c8t6,22,PB11,GPIO,TIM2_CH4,TIM2_REMAP=10|11,TIM2_CH4,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-45
+stm32f103c8t6,23,VSS_1,GND,,,,stm32-lqfp48 | stm32-pin-table-p30,
+stm32f103c8t6,24,VDD_1,POWER,,,,stm32-lqfp48 | stm32-pin-table-p30,
+stm32f103c8t6,25,PB12,GPIO,SPI2_NSS,,SPI2_NSS,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+stm32f103c8t6,25,PB12,GPIO,I2C2_SMBAl,,I2C2_SMBAl,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+stm32f103c8t6,25,PB12,GPIO,USART3_CK,USART3_REMAP=00,USART3_CK,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+stm32f103c8t6,25,PB12,GPIO,TIM1_BKIN,TIM1_REMAP=00,TIM1_BKIN,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-46
+stm32f103c8t6,26,PB13,GPIO,SPI2_SCK,,SPI2_SCK,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+stm32f103c8t6,26,PB13,GPIO,USART3_CTS,USART3_REMAP=00,USART3_CTS,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+stm32f103c8t6,26,PB13,GPIO,TIM1_CH1N,TIM1_REMAP=00,TIM1_CH1N,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-46
+stm32f103c8t6,27,PB14,GPIO,SPI2_MISO,,SPI2_MISO,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+stm32f103c8t6,27,PB14,GPIO,USART3_RTS,USART3_REMAP=00,USART3_RTS,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+stm32f103c8t6,27,PB14,GPIO,TIM1_CH2N,TIM1_REMAP=00,TIM1_CH2N,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-46
+stm32f103c8t6,28,PB15,GPIO,SPI2_MOSI,,SPI2_MOSI,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+stm32f103c8t6,28,PB15,GPIO,TIM1_CH3N,TIM1_REMAP=00,TIM1_CH3N,stm32-lqfp48 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-46
+stm32f103c8t6,29,PA8,GPIO,USART1_CK,,USART1_CK,stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+stm32f103c8t6,29,PA8,GPIO,TIM1_CH1,TIM1_REMAP=00|01,TIM1_CH1,stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+stm32f103c8t6,29,PA8,GPIO,MCO,,MCO,stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+stm32f103c8t6,30,PA9,GPIO,USART1_TX,USART1_REMAP=0,USART1_TX,stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-54
+stm32f103c8t6,30,PA9,GPIO,TIM1_CH2,TIM1_REMAP=00|01,TIM1_CH2,stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+stm32f103c8t6,31,PA10,GPIO,USART1_RX,USART1_REMAP=0,USART1_RX,stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-54
+stm32f103c8t6,31,PA10,GPIO,TIM1_CH3,TIM1_REMAP=00|01,TIM1_CH3,stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+stm32f103c8t6,32,PA11,GPIO,USART1_CTS,,USART1_CTS,stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+stm32f103c8t6,32,PA11,GPIO,CANRX,CAN_REMAP=00,CANRX,stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-34
+stm32f103c8t6,32,PA11,GPIO,USBDM,,USBDM,stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+stm32f103c8t6,32,PA11,GPIO,TIM1_CH4,TIM1_REMAP=00|01,TIM1_CH4,stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+stm32f103c8t6,33,PA12,GPIO,USART1_RTS,,USART1_RTS,stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+stm32f103c8t6,33,PA12,GPIO,CANTX,CAN_REMAP=00,CANTX,stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-34
+stm32f103c8t6,33,PA12,GPIO,USBDP,,USBDP,stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+stm32f103c8t6,33,PA12,GPIO,TIM1_ETR,TIM1_REMAP=00|01,TIM1_ETR,stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+stm32f103c8t6,34,PA13,GPIO,JTMS,,JTMS,stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-debug-mapping
+stm32f103c8t6,34,PA13,GPIO,SWDIO,,SWDIO,stm32-lqfp48 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-debug-mapping
+stm32f103c8t6,35,VSS_2,GND,,,,stm32-lqfp48 | stm32-pin-table-p31,
+stm32f103c8t6,36,VDD_2,POWER,,,,stm32-lqfp48 | stm32-pin-table-p31,
+stm32f103c8t6,37,PA14,GPIO,JTCK,,JTCK,stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+stm32f103c8t6,37,PA14,GPIO,SWCLK,,SWCLK,stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+stm32f103c8t6,38,PA15,GPIO,TIM2_CH1_ETR,TIM2_REMAP=01|11,TIM2_CH1_ETR,stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-45
+stm32f103c8t6,38,PA15,GPIO,SPI1_NSS,SPI1_REMAP=1,SPI1_NSS,stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-56
+stm32f103c8t6,38,PA15,GPIO,JTDI,,JTDI,stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+stm32f103c8t6,39,PB3,GPIO,TIM2_CH2,TIM2_REMAP=01|11,TIM2_CH2,stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-45
+stm32f103c8t6,39,PB3,GPIO,TRACESWO,,TRACESWO,stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+stm32f103c8t6,39,PB3,GPIO,SPI1_SCK,SPI1_REMAP=1,SPI1_SCK,stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-56
+stm32f103c8t6,39,PB3,GPIO,JTDO,,JTDO,stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+stm32f103c8t6,40,PB4,GPIO,TIM3_CH1,TIM3_REMAP=10,TIM3_CH1,stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-44
+stm32f103c8t6,40,PB4,GPIO,SPI1_MISO,SPI1_REMAP=1,SPI1_MISO,stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-56
+stm32f103c8t6,40,PB4,GPIO,JNTRST,,JNTRST,stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+stm32f103c8t6,41,PB5,GPIO,I2C1_SMBAl,,I2C1_SMBAl,stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32
+stm32f103c8t6,41,PB5,GPIO,TIM3_CH2,TIM3_REMAP=10,TIM3_CH2,stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-44
+stm32f103c8t6,41,PB5,GPIO,SPI1_MOSI,SPI1_REMAP=1,SPI1_MOSI,stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-56
+stm32f103c8t6,42,PB6,GPIO,I2C1_SCL,I2C1_REMAP=0,I2C1_SCL,stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-55
+stm32f103c8t6,42,PB6,GPIO,TIM4_CH1,TIM4_REMAP=0,TIM4_CH1,stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-43
+stm32f103c8t6,42,PB6,GPIO,USART1_TX,USART1_REMAP=1,USART1_TX,stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-54
+stm32f103c8t6,43,PB7,GPIO,I2C1_SDA,I2C1_REMAP=0,I2C1_SDA,stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-55
+stm32f103c8t6,43,PB7,GPIO,TIM4_CH2,TIM4_REMAP=0,TIM4_CH2,stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-43
+stm32f103c8t6,43,PB7,GPIO,USART1_RX,USART1_REMAP=1,USART1_RX,stm32-lqfp48 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-54
+stm32f103c8t6,44,BOOT0,SYSTEM,,,,stm32-lqfp48 | stm32-pin-table-p32,
+stm32f103c8t6,45,PB8,GPIO,TIM4_CH3,TIM4_REMAP=0,TIM4_CH3,stm32-lqfp48 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-43
+stm32f103c8t6,45,PB8,GPIO,I2C1_SCL,I2C1_REMAP=1,I2C1_SCL,stm32-lqfp48 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-55
+stm32f103c8t6,45,PB8,GPIO,CANRX,CAN_REMAP=10,CANRX,stm32-lqfp48 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-34
+stm32f103c8t6,46,PB9,GPIO,TIM4_CH4,TIM4_REMAP=0,TIM4_CH4,stm32-lqfp48 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-43
+stm32f103c8t6,46,PB9,GPIO,I2C1_SDA,I2C1_REMAP=1,I2C1_SDA,stm32-lqfp48 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-55
+stm32f103c8t6,46,PB9,GPIO,CANTX,CAN_REMAP=10,CANTX,stm32-lqfp48 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-34
+stm32f103c8t6,47,VSS_3,GND,,,,stm32-lqfp48 | stm32-pin-table-p33,
+stm32f103c8t6,48,VDD_3,POWER,,,,stm32-lqfp48 | stm32-pin-table-p33,
 rp2350a,1,IOVDD,POWER,,,,rp2350a-iovdd,
 rp2350a,2,GPIO0,GPIO,SPI0 RX,F1,SPI0 RX,rp-pin-list-p1333,rp-bank0-p18
 rp2350a,2,GPIO0,GPIO,UART0 TX,F2,UART0 TX,rp-pin-list-p1333,rp-bank0-p18

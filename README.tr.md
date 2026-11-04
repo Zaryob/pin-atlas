@@ -13,12 +13,14 @@ Kütüphanede her fiziksel düzen bir kez listelenir; uyumlu kartlar aynı kayı
 - **Raspberry Pi Pico ailesi:** Pico, Pico W, Pico 2 ve Pico 2 W için ortak 40-pin düzeni ve 26 GPIO. Aynı ekrandan Pico / Pico W için RP2040, Pico 2 / Pico 2 W için RP2350A işlev referansı seçilir.
 - **Raspberry Pi 40-pin GPIO:** B+, A+, Pi 2/3/4/5, Zero ailesi ve 400/500 tek başlık kaydını paylaşır. Ortak GPIO/güç/toprak veya Pi 4 için doğrulanmış BCM2711 alternatif işlevleri aynı ekrandan seçilir. 26-pin kartlar ve Compute Module dahil değildir. Bazı Zero başlıkları lehimli değildir; klavyeli modellerde yönü kontrol edin.
 - **NVIDIA Jetson Orin Nano:** NVIDIA P3768 geliştirme kiti taşıyıcı kartının J12 40-pin başlığı. SPI, I²C, UART, I²S, PWM ve saat işlevleri taşıyıcı kart belgesinden alınır. Raspberry Pi’den farklı sinyal adları ve pinmux gereksinimleri olduğundan ayrı haritadır.
+- **STM32 Blue Pill:** STM32-base topluluk referansı; iki 20-pin yan başlık ve dört SWD bağlantısı. H1/H2/SWD konumları MCU paket pinlerinden ayrıdır; LED, kristal, USB ve debug bağlantıları belirtilir. Klon yongaları ve bağlantıları kontrol edilmelidir.
+- **STM32F103C8T6:** 48-pin LQFP işlemci; HSE bırakıldığında PD0/PD1 dahil 37 GPIO olanağı. STM32F103CBT6 aynı paket pin düzenini kullanır.
 - **RP2350A:** QFN-60, 30 Bank 0 GPIO.
 - **RP2350B:** QFN-80, 48 Bank 0 GPIO.
 
 Pico çizimi ortak başlığı gösterir; modellerin kablosuz, LED ve dahili bağlantılarının aynı olduğunu iddia etmez. İşlev referansı değişince fiziksel pinler aynı kalır. Planlar referans bazında saklanır. Eski model bağlantıları, JSON dosyaları ve kayıtlı planlar desteklenir; aynı işlemci için birden fazla eski plan varsa birleştirilmeden referans seçicisinde erişilebilir kalır.
 
-Beş kütüphane düzeninin dokuz kaynak profili boyunca toplam 420 fiziksel pin kaydı ve 2.038 pin/alternatif işlev kaydı bulunur. RP2350 paketlerinin merkez GND pedi çevre pin sayısına dahil değildir. Çizimler şematiktir; mekanik CAD yerleşimi veya gerçek komponent konumları olarak kullanılmaz.
+Yedi kütüphane düzeninin on bir kaynak profili boyunca toplam 512 fiziksel pin kaydı ve 2.234 pin/alternatif işlev kaydı bulunur. RP2350 paketlerinin merkez GND pedi çevre pin sayısına dahil değildir. Çizimler şematiktir; mekanik CAD yerleşimi veya gerçek komponent konumları olarak kullanılmaz.
 
 ## Kullanım
 
@@ -29,6 +31,8 @@ Her pinin detayında, fiziksel bağlantıyı ve alternatif işlevlerini destekle
 Filtreler başlangıçta kapalıdır. Pin detayında ilgili işlevler öne çıkarılır; diğer işlevler ve kaynaklar açılır bölümlerdedir. Planın ayrı sekmesi vardır. Küçük ekranlarda pine dokunmak, kaydetme düğmesi sabit kalan bir detay paneli açar.
 
 Jetson çevre birimleri uygun pinmux/Jetson-IO yapılandırması ve yazılım desteği gerektirir; plan kaydetmek cihazı yapılandırmaz. Sinyaller 3.3 V seviyesindedir; açık drenajlı I²C ve zayıf TXB0108 sürüşü için pin detayındaki elektriksel notlara bakın. Jetson adları taşıyıcı kart sinyalleridir; Linux veri yolu numaraları veya F/ALT seçicileri değildir.
+
+STM32F1 için uydurma AF0–AF15 seçicileri kullanılmaz; RM0008’deki AFIO remap alanları ve değerleri gösterilir. Remap çevre birimi genelindedir; tüm sinyaller birlikte yapılandırılmalı, gereken JTAG pinleri bırakılmalıdır. Plan tüm yazmaç ve kart devresi kısıtlamalarını doğrulamaz.
 
 Planlar tarayıcıda `pin-atlas:plans:v1` anahtarında saklanır. Paylaşım bağlantısı kaydedilmiş planı URL fragment içinde taşır; açılması ilgili kartın yerel planını günceller. GPIO0/GPIO1 (Pi 4 fiziksel 27/28) HAT EEPROM için ayrıldığı için normal proje planına eklenmez. Uygulama elektriksel tasarım veya firmware doğrulaması yapmaz.
 
@@ -51,7 +55,7 @@ python3 -m pip install -r requirements-source-verification.txt
 python3 scripts/verify-official-sources.py
 ```
 
-Bu komut on bir kilitli kaynağı üreticinin sunucusundan indirir, SHA-256 değerlerini kontrol eder, PDF ve kaynak tablolarını yeniden okur ve yayımlanan veriyle karşılaştırır. Kaynaklar `.cache/primary-sources/` altında tutulur; PDF’ler depoda dağıtılmaz. Bir hash veya pin kaydı değişirse kontrol başarısız olur.
+Bu komut on altı kilitli kaynağı (on üç üretici belgesi ve açıkça işaretlenmiş üç Blue Pill topluluk referansı) indirir, SHA-256 değerlerini kontrol eder, PDF ve kaynak tablolarını yeniden okur ve yayımlanan veriyle karşılaştırır. Kaynaklar `.cache/primary-sources/` altında tutulur; PDF’ler depoda dağıtılmaz. Bir hash veya pin kaydı değişirse kontrol başarısız olur.
 
 Şekil olarak yayımlanan ve metin hücresi içermeyen fiziksel pinler, `sources/manual-observations.json` içindeki açıkça işaretlenmiş görsel gözlemlerle kontrol edilir. Bu bölüm otomatik OCR veya bağımsız donanım ölçümü olarak sunulmaz. RP2350 Release 8 içindeki IOVDD tablo/şekil tutarsızlığı da aynı kayıtta gerekçelendirilir. Tam yöntem [doğrulama kaydında](docs/VERIFICATION.tr.md).
 
@@ -66,9 +70,9 @@ npm run check
 
 ## Yeni kart ekleme
 
-STM32 henüz kütüphaneye dahil değildir. Yeni kart eklerken üretici/model/revizyon, fiziksel bağlantılar, alternatif işlevler ve bunların resmî belge konumları birlikte eklenmelidir. Mevcut profillerin üretilmiş JSON dosyasını tek başına elle değiştirmek kaynak doğrulamasından geçmez; veri üreticisini ve ilgili kaynak kayıtlarını birlikte güncelleyin.
+Blue Pill ve STM32F103C8/CB LQFP48 işlemcisi desteklenir; diğer STM32 kartları ve paketleri ayrı kaynak kayıtları gerektirir. Yeni kart eklerken üretici/model/revizyon, fiziksel bağlantılar, alternatif işlevler ve bunların resmî belge konumları birlikte eklenmelidir. Mevcut profillerin üretilmiş JSON dosyasını tek başına elle değiştirmek kaynak doğrulamasından geçmez; veri üreticisini ve ilgili kaynak kayıtlarını birlikte güncelleyin.
 
-Çizici türleri `pico`, `header`, `qfn` ve `custom` olarak ayrılır. `custom` kartlar yerel bir SVG tuvali ve `pins[].position` koordinatları ile tanımlanabilir. SVG yolu uygulamanın tabanına göre çözülür; `/pin-atlas/` gibi bir alt yol desteklenir. Pin koordinatları bağlantı merkezini, `side` etiket yönünü, `angle` isteğe bağlı dönüşü belirtir.
+Çizici türleri `pico`, `header`, `qfn`, `lqfp` ve `custom` olarak ayrılır. `custom` kartlar yerel bir SVG tuvali ve `pins[].position` koordinatları ile tanımlanabilir. SVG yolu uygulamanın tabanına göre çözülür; `/pin-atlas/` gibi bir alt yol desteklenir. Pin koordinatları bağlantı merkezini, `side` etiket yönünü, `angle` isteğe bağlı dönüşü belirtir.
 
 ## GitHub Pages
 

@@ -1,7 +1,7 @@
 {
   "verifiedOn": "2026-11-04",
-  "physicalPins": 420,
-  "functionAssignments": 2038,
+  "physicalPins": 512,
+  "functionAssignments": 2234,
   "documents": [
     {
       "id": "rp2350",
@@ -81,6 +81,46 @@
       "revision": "SP-11324-001_v1.3 · December 2024",
       "url": "https://developer.nvidia.com/downloads/assets/embedded/secure/jetson/orin_nano/docs/jetson_orin_nano_devkit_carrier_board_specification_sp.pdf",
       "sha256": "4a0f7ba948bce4881e176f0f8636ef3dbd40e3df9dd33134e6a7433359d18c02"
+    },
+    {
+      "id": "stm32f103",
+      "title": "STM32F103x8 / STM32F103xB datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf",
+      "publisher": "STMicroelectronics",
+      "revision": "DS5319 Rev 20 · July 2025",
+      "sha256": "1e54ce18e6c34c5b4a78986f26e245e143748c721009fc9af5953795c30686bc"
+    },
+    {
+      "id": "stm32-rm0008",
+      "title": "STM32F10xxx reference manual",
+      "url": "https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf",
+      "publisher": "STMicroelectronics",
+      "revision": "RM0008 Rev 21",
+      "sha256": "4c1b8ac2729cc1f45a4685eea9e91e6139e24e58804fba21e27201dfcc2ad149"
+    },
+    {
+      "id": "bluepill-board",
+      "title": "Blue Pill STM32F103C8T6 board reference (community)",
+      "url": "https://stm32-base.org/boards/STM32F103C8T6-Blue-Pill.html",
+      "publisher": "STM32-base community",
+      "revision": "Snapshot reviewed 2026-11-04",
+      "sha256": "f4494ea52e1cf538b90d32660f1ddc65fb3d2221e69c478dc16abd75211dbbe5"
+    },
+    {
+      "id": "bluepill-schematic",
+      "title": "Blue Pill reference schematic (community mirror)",
+      "url": "https://stm32-base.org/assets/pdf/boards/original-schematic-STM32F103C8T6-Blue_Pill.pdf",
+      "publisher": "Community design mirrored by STM32-base",
+      "revision": "2016-01-26 reference schematic",
+      "sha256": "cb8520d7f1b58d4e91a6c79141cc1e422036ab91c20a7c60839bd1d4d6dd8ad0"
+    },
+    {
+      "id": "bluepill-photo",
+      "title": "Blue Pill reference top-view photo (community)",
+      "url": "https://stm32-base.org/assets/img/boards/STM32F103C8T6_Blue_Pill-2.jpg",
+      "publisher": "STM32-base community",
+      "revision": "Top view reviewed 2026-11-04",
+      "sha256": "62b9bc61c0334a1c70ea4f43aad579fb71b36dcca6d6d9b4202bdc99b81b6426"
     }
   ],
   "boards": [
@@ -147,6 +187,25 @@
       ]
     },
     {
+      "id": "blue-pill",
+      "physicalPins": 44,
+      "functionAssignments": 97,
+      "physicalSourceMethods": [
+        "community-schematic",
+        "community-source-table",
+        "pdf-table",
+        "visual-photo"
+      ]
+    },
+    {
+      "id": "stm32f103c8t6",
+      "physicalPins": 48,
+      "functionAssignments": 99,
+      "physicalSourceMethods": [
+        "pdf-table"
+      ]
+    },
+    {
       "id": "rp2350a",
       "physicalPins": 60,
       "functionAssignments": 348,
@@ -170,6 +229,7 @@
     "The QFN-60 IOVDD discrepancy in RP2350 Release 8 Table 1679 is resolved using Figures 2 and 152.",
     "The common Raspberry Pi 40-pin profile contains physical connections only; Pi 4 BCM2711 alternate functions remain in a separate model-specific profile. Pins 27/28 are reserved for the HAT EEPROM.",
     "Pico and Pico W use independently extracted RP2040 functions, not RP2350 selectors. Pico 2 and Pico 2 W use RP2350A functions.",
+    "Blue Pill board positions use a community reference, not ST manufacturer board documentation. STM32 chip pins and function/remap conditions use ST DS5319 and RM0008. H1/H2/SWD connector labels differ from MCU package pin numbers; clone wiring may differ.",
     "Jetson Orin Nano uses NVIDIA P3768 carrier J12 names from Figure 3-1 and Table 3-3; peripheral names are carrier signals, not Linux bus numbers. Table spellings SPI1_CSI1*/CSI0* are resolved using the figure and CS1_N/CS0_N SoC names. Listed capabilities require appropriate pinmux/Jetson-IO configuration and do not assert an active runtime configuration."
   ]
 }

@@ -89,6 +89,51 @@
       "file": "jetson-orin-nano-carrier.pdf",
       "url": "https://developer.nvidia.com/downloads/assets/embedded/secure/jetson/orin_nano/docs/jetson_orin_nano_devkit_carrier_board_specification_sp.pdf",
       "sha256": "4a0f7ba948bce4881e176f0f8636ef3dbd40e3df9dd33134e6a7433359d18c02"
+    },
+    {
+      "id": "stm32f103",
+      "title": "STM32F103x8 / STM32F103xB datasheet",
+      "file": "stm32f103c8.pdf",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf",
+      "publisher": "STMicroelectronics",
+      "revision": "DS5319 Rev 20 · July 2025",
+      "sha256": "1e54ce18e6c34c5b4a78986f26e245e143748c721009fc9af5953795c30686bc"
+    },
+    {
+      "id": "stm32-rm0008",
+      "title": "STM32F10xxx reference manual",
+      "file": "stm32-rm0008.pdf",
+      "url": "https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf",
+      "publisher": "STMicroelectronics",
+      "revision": "RM0008 Rev 21",
+      "sha256": "4c1b8ac2729cc1f45a4685eea9e91e6139e24e58804fba21e27201dfcc2ad149"
+    },
+    {
+      "id": "bluepill-board",
+      "title": "Blue Pill STM32F103C8T6 board reference (community)",
+      "file": "bluepill-board.html",
+      "url": "https://stm32-base.org/boards/STM32F103C8T6-Blue-Pill.html",
+      "publisher": "STM32-base community",
+      "revision": "Snapshot reviewed 2026-11-04",
+      "sha256": "f4494ea52e1cf538b90d32660f1ddc65fb3d2221e69c478dc16abd75211dbbe5"
+    },
+    {
+      "id": "bluepill-schematic",
+      "title": "Blue Pill reference schematic (community mirror)",
+      "file": "bluepill.pdf",
+      "url": "https://stm32-base.org/assets/pdf/boards/original-schematic-STM32F103C8T6-Blue_Pill.pdf",
+      "publisher": "Community design mirrored by STM32-base",
+      "revision": "2016-01-26 reference schematic",
+      "sha256": "cb8520d7f1b58d4e91a6c79141cc1e422036ab91c20a7c60839bd1d4d6dd8ad0"
+    },
+    {
+      "id": "bluepill-photo",
+      "title": "Blue Pill reference top-view photo (community)",
+      "file": "bluepill-top.jpg",
+      "url": "https://stm32-base.org/assets/img/boards/STM32F103C8T6_Blue_Pill-2.jpg",
+      "publisher": "STM32-base community",
+      "revision": "Top view reviewed 2026-11-04",
+      "sha256": "62b9bc61c0334a1c70ea4f43aad579fb71b36dcca6d6d9b4202bdc99b81b6426"
     }
   ],
   "references": {
@@ -323,6 +368,206 @@
       "page": 27,
       "locator": "Table 3-3 notes · 3.3V signals, open-drain I2C and TXB0108 level translators",
       "method": "pdf-table"
+    },
+    "stm32-remap-34": {
+      "document": "stm32-rm0008",
+      "title": "STM32F10xxx reference manual",
+      "url": "https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf#page=176",
+      "page": 176,
+      "locator": "§9.3 · Table 34 · CAN_REMAP · 48-pin package restrictions applied",
+      "method": "pdf-table"
+    },
+    "stm32-remap-43": {
+      "document": "stm32-rm0008",
+      "title": "STM32F10xxx reference manual",
+      "url": "https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf#page=178",
+      "page": 178,
+      "locator": "§9.3 · Table 43 · TIM4_REMAP · 48-pin package restrictions applied",
+      "method": "pdf-table"
+    },
+    "stm32-remap-44": {
+      "document": "stm32-rm0008",
+      "title": "STM32F10xxx reference manual",
+      "url": "https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf#page=178",
+      "page": 178,
+      "locator": "§9.3 · Table 44 · TIM3_REMAP · 48-pin package restrictions applied",
+      "method": "pdf-table"
+    },
+    "stm32-remap-45": {
+      "document": "stm32-rm0008",
+      "title": "STM32F10xxx reference manual",
+      "url": "https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf#page=179",
+      "page": 179,
+      "locator": "§9.3 · Table 45 · TIM2_REMAP · 48-pin package restrictions applied",
+      "method": "pdf-table"
+    },
+    "stm32-remap-46": {
+      "document": "stm32-rm0008",
+      "title": "STM32F10xxx reference manual",
+      "url": "https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf#page=179",
+      "page": 179,
+      "locator": "§9.3 · Table 46 · TIM1_REMAP · 48-pin package restrictions applied",
+      "method": "pdf-table"
+    },
+    "stm32-remap-52": {
+      "document": "stm32-rm0008",
+      "title": "STM32F10xxx reference manual",
+      "url": "https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf#page=180",
+      "page": 180,
+      "locator": "§9.3 · Table 52 · USART3_REMAP · 48-pin package restrictions applied",
+      "method": "pdf-table"
+    },
+    "stm32-remap-53": {
+      "document": "stm32-rm0008",
+      "title": "STM32F10xxx reference manual",
+      "url": "https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf#page=180",
+      "page": 180,
+      "locator": "§9.3 · Table 53 · USART2_REMAP · 48-pin package restrictions applied",
+      "method": "pdf-table"
+    },
+    "stm32-remap-54": {
+      "document": "stm32-rm0008",
+      "title": "STM32F10xxx reference manual",
+      "url": "https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf#page=181",
+      "page": 181,
+      "locator": "§9.3 · Table 54 · USART1_REMAP · 48-pin package restrictions applied",
+      "method": "pdf-table"
+    },
+    "stm32-remap-55": {
+      "document": "stm32-rm0008",
+      "title": "STM32F10xxx reference manual",
+      "url": "https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf#page=181",
+      "page": 181,
+      "locator": "§9.3 · Table 55 · I2C1_REMAP · 48-pin package restrictions applied",
+      "method": "pdf-table"
+    },
+    "stm32-remap-56": {
+      "document": "stm32-rm0008",
+      "title": "STM32F10xxx reference manual",
+      "url": "https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf#page=181",
+      "page": 181,
+      "locator": "§9.3 · Table 56 · SPI1_REMAP · 48-pin package restrictions applied",
+      "method": "pdf-table"
+    },
+    "stm32-osc-remap": {
+      "document": "stm32-rm0008",
+      "title": "STM32F10xxx reference manual",
+      "url": "https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf#page=175",
+      "page": 175,
+      "locator": "§9.3.1 · PD0/PD1 remapping; HSE oscillator must be released",
+      "method": "pdf-table"
+    },
+    "stm32-debug-mapping": {
+      "document": "stm32-rm0008",
+      "title": "STM32F10xxx reference manual",
+      "url": "https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf#page=177",
+      "page": 177,
+      "locator": "§9.3.5 · Table 37 · SWJ_CFG debug-port release conditions",
+      "method": "pdf-table"
+    },
+    "stm32-pin-table-p28": {
+      "document": "stm32f103",
+      "title": "STM32F103x8 / STM32F103xB datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf#page=28",
+      "page": 28,
+      "locator": "§3 · Table 5 · LQFP48 column, pin names, I/O tolerance and alternate functions",
+      "method": "pdf-table"
+    },
+    "stm32-pin-table-p29": {
+      "document": "stm32f103",
+      "title": "STM32F103x8 / STM32F103xB datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf#page=29",
+      "page": 29,
+      "locator": "§3 · Table 5 · LQFP48 column, pin names, I/O tolerance and alternate functions",
+      "method": "pdf-table"
+    },
+    "stm32-pin-table-p30": {
+      "document": "stm32f103",
+      "title": "STM32F103x8 / STM32F103xB datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf#page=30",
+      "page": 30,
+      "locator": "§3 · Table 5 · LQFP48 column, pin names, I/O tolerance and alternate functions",
+      "method": "pdf-table"
+    },
+    "stm32-pin-table-p31": {
+      "document": "stm32f103",
+      "title": "STM32F103x8 / STM32F103xB datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf#page=31",
+      "page": 31,
+      "locator": "§3 · Table 5 · LQFP48 column, pin names, I/O tolerance and alternate functions",
+      "method": "pdf-table"
+    },
+    "stm32-pin-table-p32": {
+      "document": "stm32f103",
+      "title": "STM32F103x8 / STM32F103xB datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf#page=32",
+      "page": 32,
+      "locator": "§3 · Table 5 · LQFP48 column, pin names, I/O tolerance and alternate functions",
+      "method": "pdf-table"
+    },
+    "stm32-pin-table-p33": {
+      "document": "stm32f103",
+      "title": "STM32F103x8 / STM32F103xB datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf#page=33",
+      "page": 33,
+      "locator": "§3 · Table 5 · LQFP48 column, pin names, I/O tolerance and alternate functions",
+      "method": "pdf-table"
+    },
+    "stm32-electrical-notes": {
+      "document": "stm32f103",
+      "title": "STM32F103x8 / STM32F103xB datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf#page=33",
+      "page": 33,
+      "locator": "Table 5 notes · FT qualification, PC13–PC15 limits and HSE remap restrictions",
+      "method": "pdf-table"
+    },
+    "stm32-lqfp48": {
+      "document": "stm32f103",
+      "title": "STM32F103x8 / STM32F103xB datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf#page=26",
+      "page": 26,
+      "locator": "§3 · Figure 8 · LQFP48 perimeter numbering; no exposed center pad",
+      "method": "pdf-table"
+    },
+    "bluepill-schematic": {
+      "document": "bluepill-schematic",
+      "title": "Blue Pill reference schematic (community mirror)",
+      "url": "https://stm32-base.org/assets/pdf/boards/original-schematic-STM32F103C8T6-Blue_Pill.pdf#page=1",
+      "page": 1,
+      "locator": "Community schematic · P3/P4 headers, P2 SWD and shared circuitry; RESET/NRST net-label mismatch; use board connector table for reset",
+      "method": "community-schematic"
+    },
+    "bluepill-orientation": {
+      "document": "bluepill-photo",
+      "title": "Blue Pill reference top-view photo (community)",
+      "url": "https://stm32-base.org/assets/img/boards/STM32F103C8T6_Blue_Pill-2.jpg",
+      "page": null,
+      "locator": "Community reference top view; USB at top, SWD at bottom; H2 left / H1 right",
+      "method": "visual-photo"
+    },
+    "bluepill-h1": {
+      "document": "bluepill-board",
+      "title": "Blue Pill STM32F103C8T6 board reference (community)",
+      "url": "https://stm32-base.org/boards/STM32F103C8T6-Blue-Pill.html",
+      "page": null,
+      "locator": "Header 1 pins · numbered connector pins and connected nets",
+      "method": "community-source-table"
+    },
+    "bluepill-h2": {
+      "document": "bluepill-board",
+      "title": "Blue Pill STM32F103C8T6 board reference (community)",
+      "url": "https://stm32-base.org/boards/STM32F103C8T6-Blue-Pill.html",
+      "page": null,
+      "locator": "Header 2 pins · numbered connector pins and connected nets",
+      "method": "community-source-table"
+    },
+    "bluepill-swd": {
+      "document": "bluepill-board",
+      "title": "Blue Pill STM32F103C8T6 board reference (community)",
+      "url": "https://stm32-base.org/boards/STM32F103C8T6-Blue-Pill.html",
+      "page": null,
+      "locator": "SWD header pins · numbered connector pins and connected nets",
+      "method": "community-source-table"
     }
   }
 }

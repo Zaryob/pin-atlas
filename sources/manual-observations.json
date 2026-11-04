@@ -234,5 +234,19 @@
       "VSYS",
       "VBUS"
     ]
+  },
+  "bluepill-orientation": {
+    "document": "bluepill-photo",
+    "usb": "top",
+    "left": "H2",
+    "right": "H1",
+    "header_order": "20 at USB end, 1 at SWD end, on both sides",
+    "swd_left_to_right": [
+      "GND",
+      "PA14",
+      "PA13",
+      "3V3"
+    ],
+    "qualification": "Reference-board orientation only; clone variants and component markings must be checked. H1/H2 are STM32-base connector labels; the reference schematic calls them P3/P4."
   }
 }

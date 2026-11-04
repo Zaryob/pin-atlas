@@ -2,7 +2,7 @@
 
 [English](VERIFICATION.md) · [Türkçe](VERIFICATION.tr.md)
 
-Kontrol tarihi: **4 Kasım 2026**. Kapsam: dokuz kart, başlık ve çip profili, **420 fiziksel pin kaydı ve 2.038 alternatif işlev ataması**. Ortak bağlantılar profil başına sayılır. Sayımda uygulamanın soyut `GPIO` seçeneği ve numarasız QFN merkez GND pedi yoktur. Aynı sinyalin farklı pinlerde bulunması ayrı bir atamadır.
+Kontrol tarihi: **4 Kasım 2026**. Kapsam: on bir kart, başlık ve çip profili, **512 fiziksel pin kaydı ve 2.234 alternatif işlev ataması**. Ortak bağlantılar profil başına sayılır. Sayımda uygulamanın soyut `GPIO` seçeneği ve numarasız QFN merkez GND pedi yoktur. Aynı sinyalin farklı pinlerde bulunması ayrı bir atamadır.
 
 ## Her haritanın dayanağı
 
@@ -57,11 +57,11 @@ Pico, Pico W ve Pico 2’nin fiziksel pinleri, her modelin veri sayfasının PDF
 
 Ortak Raspberry Pi 40-pin profili, üreticinin GPIO tablosunu kullanır: B+ ve sonrası, Zero ailesi ve klavyeli modellerin fiziksel düzenini kapsar. Klavyeli modellerde yön ters olabilir; bazı Zero başlıkları lehimli değildir. Eski 26-pin kartlar ve Compute Module dahil değildir. Bu profil işlemciye özgü alternatif işlev içermez; BCM2711 için Pi 4 profili ayrı tutulur.
 
-On bir üretici kaynağı SHA-256 ile kilitlidir. 420 fiziksel pin kaydı ortak bağlantıları profil başına sayar. Ayrıntılı model kaynakları [İngilizce doğrulama kaydında](VERIFICATION.md) bulunur.
+On üç üretici belgesi ve üç Blue Pill topluluk referansı SHA-256 ile kilitlidir. 512 fiziksel pin kaydı ortak bağlantıları profil başına sayar. Ayrıntılı model kaynakları [İngilizce doğrulama kaydında](VERIFICATION.md) bulunur.
 
 ## Ortak düzen kütüphanesi
 
-Dokuz kaynak profili beş fiziksel düzende sunulur: Pico ailesi, Raspberry Pi 40-pin başlığı, NVIDIA Jetson Orin Nano J12 ve iki farklı RP2350 paketi. Gruplanan profillerin pin numaraları, adları ve türleri uygulama tarafından karşılaştırılır. İşlemci işlevleri ve kaynakları aynı ekrandaki referans seçicisinde korunur. Eski profil kimlikleri kayıtlı plan ve paylaşımlarda desteklenir.
+On bir kaynak profili yedi fiziksel düzende sunulur: Pico ailesi, Raspberry Pi 40-pin başlığı, NVIDIA Jetson Orin Nano J12, Blue Pill, STM32F103C8/CB LQFP48 ve iki farklı RP2350 paketi. Gruplanan profillerin pin numaraları, adları ve türleri uygulama tarafından karşılaştırılır. İşlemci işlevleri ve kaynakları aynı ekrandaki referans seçicisinde korunur. Eski profil kimlikleri kayıtlı plan ve paylaşımlarda desteklenir.
 
 ## NVIDIA Jetson Orin Nano · J12
 
@@ -70,3 +70,11 @@ NVIDIA P3768 taşıyıcı kartının J12 başlığı, **SP-11324-001_v1.3 (Aral�
 Tablodaki 16/18 numaralı `SPI1_CSI1*` / `SPI1_CSI0*` yazımları; Şekil 3-1 ve aynı satırların CS1_N/CS0_N SoC adlarıyla karşılaştırılarak `SPI1_CS1*` / `SPI1_CS0*` olarak gösterilir. İşlev adları taşıyıcı kart sinyalleridir; Linux veri yolu/gpiochip numaraları değildir. İşlevin kullanımı pinmux/Jetson-IO ve hedef yazılım sürümüne bağlıdır.
 
 Elektriksel notlar tablonun dipnotlarından gelir: 3.3 V sinyaller; açık drenajlı I²C hatlarında ±2 mA, 3/5 pinlerinde 2.2 kΩ ve 27/28 pinlerinde 1.5 kΩ pull-up; diğer hatlarda zayıf TXB0108 sürüşü (±20 µA), harici pull dirençleri için 50 kΩ üzeri. Jetson 27/28 pinlerine Raspberry Pi HAT EEPROM kısıtlaması uygulanmaz. Üretici PDF’si dağıtılmaz; SHA-256 kilidiyle doğrulama için indirilir.
+
+## STM32F103C8/CB ve Blue Pill
+
+İşlemcinin 48-pin LQFP bağlantıları, işlevleri ve FT bilgileri ST DS5319 Rev 20, Tablo 5 (PDF s. 28–33) üzerinden çıkarılır. Fiziksel düzen Şekil 8 (PDF s. 26) ile incelendi; merkez GND pedi yoktur. AFIO remap koşulları RM0008 Rev 21, §9.3 tablolarından yeniden okunur; birleştirilmiş hücreler açılır ve 48-pin pakette bulunmayan remap uçları eklenmez. AF0–AF15 numaraları uydurulmaz.
+
+Blue Pill’in tek üreticisi yoktur. 44 bağlantı (H1:20, H2:20, SWD:4) STM32-base topluluk tablosundan alınır; referans şema ve üstten fotoğraf incelendi. Bu üç kaynak ST üretici belgesi olarak sunulmaz. USB üstteyken H2 solda, H1 sağda; her iki başlıkta 20 USB ucunda, 1 SWD ucundadır. SWD soldan sağa GND, PA14, PA13, 3V3’tür. H1/H2/SWD konumları çip pinlerinden ayrıdır; MCU pin eşlemesi ayrıca gösterilir.
+
+Şemadaki RESET/NRST etiket tutarsızlığı belgelendi; reset başlığı için topluluk bağlantı tablosu ve R yazısı kullanılır. PB2 boot jumperında, PD0/PD1 kristal devresindedir; yan başlıklarda gösterilmez. LED, LSE, USB ve debug paylaşımı pin notlarında belirtilir. Klon MCU ve kartlar için koşulsuz uyumluluk iddiası yoktur. Toplam 16 kilitli kaynakta 13 üretici belgesi ve 3 topluluk referansı bulunur.

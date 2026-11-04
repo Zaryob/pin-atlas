@@ -7,7 +7,7 @@ const boards = JSON.parse(readFileSync(new URL('../dist/data/boards.json', impor
 const layouts = buildLayouts(boards);
 
 test('catalog contains one entry per shared footprint', () => {
-  assert.deepEqual(layouts.map(layout => layout.id), ['pico-family', 'raspberry-pi-40', 'jetson-orin-nano', 'rp2350a', 'rp2350b']);
+  assert.deepEqual(layouts.map(layout => layout.id), ['pico-family', 'raspberry-pi-40', 'jetson-orin-nano', 'blue-pill', 'stm32f103c8t6', 'rp2350a', 'rp2350b']);
   assert.equal(layouts[0].profiles.length, 4);
   assert.equal(layouts[1].profiles.length, 2);
   assert.equal(new Set(layouts.flatMap(layout => layout.profileIds)).size, boards.length);
@@ -50,4 +50,17 @@ test('Jetson J12 stays distinct from the Raspberry Pi header', () => {
   assert.equal(jetson.profile.pins[26].name, 'I2C0_SDA');
   assert.equal(pi.profile.pins[26].name, 'GPIO0');
   assert(!jetson.profile.pins[26].reserved);
+});
+
+test('Blue Pill connectors are distinct from STM32 package pins', () => {
+  const board = resolveProfile(layouts, 'blue-pill').profile;
+  const chip = resolveProfile(layouts, 'stm32f103c8t6').profile;
+  assert.equal(board.packagePins, 44);
+  assert.equal(chip.packagePins, 48);
+  const swdio = board.pins.find(pin => pin.physicalLabel === 'SWD.2');
+  assert.equal(swdio.name, 'PA13');
+  assert.equal(swdio.mcuPin, 34);
+  assert.equal(chip.pins[33].name, swdio.name);
+  assert.equal(chip.layout, 'lqfp');
+  assert(!board.pins.some(pin => pin.name === 'PB2'));
 });

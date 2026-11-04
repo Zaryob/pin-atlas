@@ -2,7 +2,7 @@
 
 [English](VERIFICATION.md) · [Türkçe](VERIFICATION.tr.md)
 
-Reviewed on **4 November 2026**. The review covers nine board, header, and chip profiles, **420 physical pin records, and 2,038 function assignments**. Shared physical pins are counted once per profile. The count excludes the app’s generic `GPIO` planning option and the unnumbered QFN center GND pads. Each placement of a signal on a different pin counts separately.
+Reviewed on **4 November 2026**. The review covers eleven board, header, and chip profiles, **512 physical pin records, and 2,234 function assignments**. Shared physical pins are counted once per profile. The count excludes the app’s generic `GPIO` planning option and the unnumbered QFN center GND pads. Each placement of a signal on a different pin counts separately.
 
 ## Sources by pin map
 
@@ -64,7 +64,7 @@ The app uses its own SVG schematics. Manufacturer documents are linked from the 
 
 ## Shared layout catalog
 
-The nine source profiles are presented as five physical layouts: one Pico family entry, one Raspberry Pi 40-pin header entry, one NVIDIA Jetson Orin Nano J12 entry, and the two distinct RP2350 packages. The application checks that grouped profiles agree on pin numbers, names and types before grouping them. A function-reference selector retains the verified processor-specific function tables and evidence. Grouping does not claim that RP2040, RP2350A and BCM2711 have interchangeable alternate functions. Legacy profile IDs remain valid for saved plans and shared links.
+The eleven source profiles are presented as seven physical layouts: one Pico family entry, one Raspberry Pi 40-pin header entry, one NVIDIA Jetson Orin Nano J12 entry, the Blue Pill board, its STM32F103C8/CB LQFP48 processor, and the two distinct RP2350 packages. The application checks that grouped profiles agree on pin numbers, names and types before grouping them. A function-reference selector retains the verified processor-specific function tables and evidence. Grouping does not claim that RP2040, RP2350A and BCM2711 have interchangeable alternate functions. Legacy profile IDs remain valid for saved plans and shared links.
 
 ## NVIDIA Jetson Orin Nano · J12
 
@@ -77,4 +77,24 @@ The source is NVIDIA’s SHA-256-locked **Jetson Orin Nano Developer Kit Carrier
 - Electrical notes cite Table 3-3: 3.3 V signals; direct open-drain I²C on 3/5 and 27/28, with 2.2 kΩ / 1.5 kΩ pull-ups and ±2 mA listed drive; other signal pins use TXB0108 translators with ±20 µA listed weak drive and external pulls greater than 50 kΩ. These are not Raspberry Pi GPIO electrical characteristics.
 - J12 pins 27/28 are I2C0_SDA/SCL and are not given the Raspberry Pi HAT EEPROM reservation. No ADC or unverified numeric mux selectors are added.
 
-The manufacturer PDF is cached for verification and is not distributed in the repository. Eleven source documents now cover 420 physical pin records and 2,038 alternate-function assignments.
+The manufacturer PDF is cached for verification and is not distributed in the repository. The complete source set now covers 512 physical pin records and 2,234 function assignments.
+
+## STM32F103C8/CB · LQFP48
+
+ST **DS5319 Rev 20 (July 2025)** Table 5, PDF pp. 28–33, supplies the LQFP48 pin positions, I/O tolerance and functions. Figure 8, PDF p. 26, was inspected for the physical perimeter arrangement. The 48-pin LQFP has no exposed center pad. GPIO-capable OSC_IN/OSC_OUT remain oscillator functions after reset; PD0/PD1 require the software remap described in the datasheet footnote and RM0008 §9.3.1.
+
+**RM0008 Rev 21**, §9.3, Tables 34, 43–46 and 52–56, supplies actual CAN, timer, USART, I²C1 and SPI1 remap conditions. Merged table cells are expanded before assigning allowed values. Package restrictions exclude unavailable full-remap destinations; no larger-package ports or higher-density-only peripherals are injected. JTAG/SWD mapping is supported by Tables 36–37. The F1 architecture has no AF0–AF15 pin selector model; function records carry AFIO field/value conditions and a separate configuration reference. These are capabilities, not a claim that every combination of selected functions is simultaneously usable.
+
+FT status and PC13–PC15 restrictions use the Table 5 footnotes: the backup-domain pins have 3 mA / 2 MHz / 30 pF limits and must not be used as current sources. FT is a conditional digital-mode property, not permission to apply 5 V to analog inputs or to every pin.
+
+## Blue Pill · community board reference
+
+Blue Pill has no single authoritative manufacturer. Its connector positions use the **STM32-base community board page**, the mirrored 2016 reference schematic and an inspected top-view photo. All three artifacts are hash-locked and explicitly marked as community sources; STM32-base is not affiliated with ST. MCU functions and chip pin identities come separately from ST documents.
+
+- The board exposes 44 connections: H1 (20), H2 (20) and SWD (4); 34 are GPIO-capable. Internal storage IDs 1–44 are displayed as H1.n/H2.n/SWD.n, never as invented package pin numbers. Each signal links to its actual MCU package pin.
+- With USB at the top, H2 is on the left and H1 on the right, both running from connector position 20 at the USB end to position 1 at the SWD end. The four bottom SWD pins read GND, PA14, PA13, 3V3 from left to right. This orientation was reviewed against the locked reference photograph.
+- H1/H2 correspond to schematic P3/P4; SWD corresponds to P2. The schematic labels the reset-button/MCU net RESET but the header net NRST. The connector page and R silkscreen support the reset connection; this discrepancy is documented rather than treating the schematic as an independently consistent netlist.
+- PB2/BOOT1 is on a boot jumper, and PD0/PD1 attach to the 8 MHz crystal; they are absent from the side-header export. PC13 drives an active-low LED; PC14/PC15 share the LSE crystal; PA11/PA12 share USB; PA13/PA14 appear on SWD.
+- The community reference warns that USB VBUS and the 5 V rail are not isolated, so simultaneous USB and external 5 V power is not supported by this map. Clone regulators, USB pull-ups, MCUs and wiring can differ and require board inspection. The map makes no compatibility claim for GD32/CS32 clones.
+
+The complete locked source set contains 16 documents: 13 manufacturer documents and 3 community Blue Pill references.

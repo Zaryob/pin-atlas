@@ -30,15 +30,17 @@ const icons = {
  wifi:'<path d="M2 8a16 16 0 0 1 20 0M5 12a11 11 0 0 1 14 0m-10 4a5 5 0 0 1 6 0M12 20h.01"/>',
  menu:'<path d="M4 6h16M4 12h16M4 18h16"/>'
 };
+const isChip = item => ['qfn','lqfp'].includes(item.layout);
+const physicalLabel = pin => pin.physicalLabel || String(pin.number).padStart(2,'0');
 const icon = name => `<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">${icons[name] || icons.chip}</svg>`;
 function hydrateIcons(root = document) { $$('[data-icon]', root).forEach(el => el.innerHTML = icon(el.dataset.icon)); }
 hydrateIcons();
-const colors = Object.fromEntries(['GPIO','POWER','GND','SYSTEM','SPI','I2C','UART','PWM','ADC','HSTX','PIO','USB','QMI','SIO','PCM','I2S','CLOCK','JTAG','DPI','SDIO','SMI'].map(group => [group, `var(--pin-${group.toLowerCase()})`]));
+const colors = Object.fromEntries(['GPIO','POWER','GND','SYSTEM','SPI','I2C','UART','PWM','ADC','HSTX','PIO','USB','QMI','SIO','PCM','I2S','CLOCK','JTAG','DPI','SDIO','SMI','SWD','CAN','TIMER'].map(group => [group, `var(--pin-${group.toLowerCase()})`]));
 const appBase = new URL('./', import.meta.url);
 const familyKeys = { GPIO: 'generalIO', POWER: 'power', GND: 'ground', SYSTEM: 'system', ADC: 'analog' };
 const familyName = type => t(familyKeys[type] || type);
 const subtitle = item => t(`board.${item.id}`, {}, item.subtitle);
-const groups = ['SPI','I2C','UART','PWM','ADC','HSTX','PIO','PCM','I2S','CLOCK','JTAG','DPI','SDIO','SMI'];
+const groups = ['SPI','I2C','UART','PWM','ADC','HSTX','PIO','PCM','I2S','CLOCK','JTAG','DPI','SDIO','SMI','SWD','CAN','TIMER','USB'];
 let evidence = {references:{}};
 let boards, layouts, layout, board, selected = 1, selectedFn, filters = new Set(), search = '', flipped = false, rotated = false, view = 'map', assignments = {}, toastTimer;
 const storageKey = 'pin-atlas:plans:v1';
@@ -48,7 +50,7 @@ const layoutSubtitle = item => item.subtitleKey ? t(item.subtitleKey) : subtitle
 let savedPlans = {};
 try { savedPlans = JSON.parse(localStorage.getItem(storageKey) || '{}'); if (!savedPlans || typeof savedPlans !== 'object' || Array.isArray(savedPlans)) savedPlans = {}; } catch { savedPlans = {}; }
 function toast(message) { $('#toast').textContent = message; $('#toast').classList.add('visible'); clearTimeout(toastTimer); toastTimer = setTimeout(() => $('#toast').classList.remove('visible'), 3500); }
-function options(pin) { return [{name:pin.type === 'GPIO' ? 'GPIO' : pin.name, group:pin.type}, ...pin.functions]; }
+function options(pin) { return [{name:pin.baseFunction || (pin.type === 'GPIO' ? 'GPIO' : pin.name), group:pin.type}, ...pin.functions]; }
 function validatePlan(data, target) {
  if (!data || typeof data !== 'object' || Array.isArray(data)) throw new Error(t('invalidPlan'));
  const clean = {};
@@ -123,8 +125,8 @@ function renderFunctionReference() {
 }
 function renderNav() {
  $('#board-nav').innerHTML = ['layouts','chips'].map(group => {
-   const entries = layouts.filter(item => (item.layout === 'qfn' ? 'chips' : 'layouts') === group);
-   return `<div class="nav-section">${t(group)}</div>${entries.map(item => `<button class="board-nav-item ${item.id === layout.id ? 'active' : ''}" data-layout="${item.id}" ${item.id === layout.id ? 'aria-current="page"' : ''}>${icon(item.layout === 'qfn' ? 'chip' : 'board')}<span>${esc(layoutTitle(item))}<small>${esc(layoutSubtitle(item))}</small></span></button>`).join('')}`;
+   const entries = layouts.filter(item => (isChip(item) ? 'chips' : 'layouts') === group);
+   return `<div class="nav-section">${t(group)}</div>${entries.map(item => `<button class="board-nav-item ${item.id === layout.id ? 'active' : ''}" data-layout="${item.id}" ${item.id === layout.id ? 'aria-current="page"' : ''}>${icon(isChip(item) ? 'chip' : 'board')}<span>${esc(layoutTitle(item))}<small>${esc(layoutSubtitle(item))}</small></span></button>`).join('')}`;
  }).join('');
 }
 function renderFilters() {
@@ -147,8 +149,8 @@ function pinGroup(pin, x, y, side, opts = {}) {
  const func = assigned?.label || assigned?.function || matchingFunctions.slice(0,2).map(f=>f.name).join(' · ') || '';
  const left = side === 'left';
  const xSign = left ? -1 : 1;
- const body = `<rect class="pin-hit" x="${left ? -222 : 10}" y="-10" width="212" height="20" rx="4" fill="transparent"/><path d="M0 0h${xSign * 24}" stroke="${active ? 'var(--accent)' : 'var(--line)'}" stroke-width="1"/><circle class="pin-node" r="4.4" fill="${pin.type === 'GPIO' ? '#e2eccc' : '#f2eee6'}" stroke="${color}" stroke-width="1.3"/><text class="pin-number" x="${xSign * 17}" y="3" text-anchor="middle">${pin.number}</text><rect x="${left ? -99 : 30}" y="-8.5" width="69" height="17" rx="3" fill="${color}" fill-opacity="${active ? '.2' : '.09'}"/><text class="pin-label" x="${xSign * 64}" y="3.7" fill="${color}" text-anchor="middle">${esc(label)}</text>${func ? `<text class="pin-function" x="${xSign * 111}" y="3" text-anchor="${left ? 'end' : 'start'}" fill="${assigned ? 'var(--success)' : colors[fn?.group] || color}">${esc(func.length > 24 ? func.slice(0,23)+'…' : func)}</text>` : ''}${assigned ? `<circle r="2" cx="${xSign * 215}" fill="var(--success)"/>` : ''}`;
- return `<g class="pin-group ${active ? 'selected' : ''} ${match ? '' : 'dimmed'} ${assigned ? 'assigned' : ''}" data-pin="${pin.number}" role="button" tabindex="0" aria-label="Pin ${pin.number}: ${esc(pin.name)}${func ? ', '+esc(func) : ''}" aria-pressed="${active}" transform="translate(${x} ${y})${opts.angle ? ` rotate(${opts.angle})` : ''}"><title>Pin ${pin.number} · ${esc(pin.name)}${func ? ' · '+esc(func) : ''}</title>${body}</g>`;
+ const body = `<rect class="pin-hit" x="${left ? -222 : 10}" y="-10" width="212" height="20" rx="4" fill="transparent"/><path d="M0 0h${xSign * 24}" stroke="${active ? 'var(--accent)' : 'var(--line)'}" stroke-width="1"/><circle class="pin-node" r="4.4" fill="${pin.type === 'GPIO' ? '#e2eccc' : '#f2eee6'}" stroke="${color}" stroke-width="1.3"/><text class="pin-number" x="${xSign * 17}" y="3" text-anchor="middle">${esc(pin.physicalLabel || pin.number)}</text><rect x="${left ? -99 : 30}" y="-8.5" width="69" height="17" rx="3" fill="${color}" fill-opacity="${active ? '.2' : '.09'}"/><text class="pin-label" x="${xSign * 64}" y="3.7" fill="${color}" text-anchor="middle">${esc(label)}</text>${func ? `<text class="pin-function" x="${xSign * 111}" y="3" text-anchor="${left ? 'end' : 'start'}" fill="${assigned ? 'var(--success)' : colors[fn?.group] || color}">${esc(func.length > 24 ? func.slice(0,23)+'…' : func)}</text>` : ''}${assigned ? `<circle r="2" cx="${xSign * 215}" fill="var(--success)"/>` : ''}`;
+ return `<g class="pin-group ${active ? 'selected' : ''} ${match ? '' : 'dimmed'} ${assigned ? 'assigned' : ''}" data-pin="${pin.number}" role="button" tabindex="0" aria-label="Pin ${esc(pin.physicalLabel || pin.number)}: ${esc(pin.name)}${func ? ', '+esc(func) : ''}" aria-pressed="${active}" transform="translate(${x} ${y})${opts.angle ? ` rotate(${opts.angle})` : ''}"><title>Pin ${esc(pin.physicalLabel || pin.number)} · ${esc(pin.name)}${func ? ' · '+esc(func) : ''}</title>${body}</g>`;
 }
 function picoArt() {
  const pads=Array.from({length:20},(_,i)=>[278,402].map(x=>`<circle cx="${x}" cy="${48+i*23}" r="5" fill="var(--paper)" stroke="var(--accent)" stroke-width="1.2"/>`).join('')).join('');
@@ -178,6 +180,7 @@ function renderHeader() {
 }
 function renderQfn() {
  const n=board.packagePins/4, pitch=336/(n-1);
+ const packageName = `${board.layout === 'lqfp' ? 'LQFP' : 'QFN'}-${board.packagePins}`;
  let pins='';
  for(const pin of board.pins) {
    const sideIndex=Math.floor((pin.number-1)/n), i=(pin.number-1)%n;
@@ -190,7 +193,7 @@ function renderQfn() {
    pins+=pinGroup(pin,pos.x,pos.y,pos.side,{angle:pos.angle});
  }
  // The central exposed pad is separate from numbered perimeter pins.
- return `<svg viewBox="0 0 800 800" aria-label="${esc(t('diagramLabel', { board: `${board.name} QFN-${board.packagePins}` }))}"><g class="board-art" transform="${flipped?'translate(800 0) scale(-1 1)':''}"><g transform="${rotated?'rotate(180 400 400)':''}"><rect x="217" y="217" width="366" height="366" rx="9" fill="#34433a" stroke="#26352b" stroke-width="3"/><rect x="231" y="231" width="338" height="338" rx="5" fill="none" stroke="#7f9175" stroke-width=".6"/><circle cx="246" cy="247" r="6" fill="#a9b796"/><rect x="303" y="303" width="194" height="194" rx="5" fill="#3b4d40" stroke="#637a58" stroke-dasharray="4 5"/><text x="400" y="377" text-anchor="middle" fill="#dce6d0" font-size="29">${board.name}</text><text x="400" y="406" text-anchor="middle" fill="#9db08f" font-size="12" letter-spacing="3">QFN-${board.packagePins}</text><text x="400" y="443" text-anchor="middle" fill="#819975" font-size="9">EP · GND</text><text x="400" y="532" text-anchor="middle" fill="#839b76" font-size="8" letter-spacing="3">RASPBERRY PI</text></g></g>${pins}</svg>`;
+ return `<svg viewBox="0 0 800 800" aria-label="${esc(t('diagramLabel', { board: `${board.name} ${packageName}` }))}"><g class="board-art" transform="${flipped?'translate(800 0) scale(-1 1)':''}"><g transform="${rotated?'rotate(180 400 400)':''}"><rect x="217" y="217" width="366" height="366" rx="9" fill="#34433a" stroke="#26352b" stroke-width="3"/><rect x="231" y="231" width="338" height="338" rx="5" fill="none" stroke="#7f9175" stroke-width=".6"/><circle cx="246" cy="247" r="6" fill="#a9b796"/>${board.layout === 'qfn' ? '<rect x="303" y="303" width="194" height="194" rx="5" fill="#3b4d40" stroke="#637a58" stroke-dasharray="4 5"/>' : ''}<text x="400" y="377" text-anchor="middle" fill="#dce6d0" font-size="${board.layout === 'lqfp' ? 21 : 29}">${board.name}</text><text x="400" y="406" text-anchor="middle" fill="#9db08f" font-size="12" letter-spacing="3">${packageName}</text>${board.layout === 'qfn' ? '<text x="400" y="443" text-anchor="middle" fill="#819975" font-size="9">EP · GND</text>' : ''}<text x="400" y="532" text-anchor="middle" fill="#839b76" font-size="8" letter-spacing="3">${esc(board.family.toUpperCase())}</text></g></g>${pins}</svg>`;
 }
 function renderCustom() {
  const {width,height,artwork} = board.diagram;
@@ -203,11 +206,12 @@ function renderCustom() {
  }).join('');
  return `<svg viewBox="0 0 ${width} ${height}" aria-label="${esc(t('diagramLabel', { board: layoutTitle(layout) }))}"><g transform="${flipped?`translate(${width} 0) scale(-1 1)`:''}"><g transform="${rotated?`rotate(180 ${width/2} ${height/2})`:''}">${image}</g></g>${pins}</svg>`;
 }
-const renderers = {pico:renderPico,qfn:renderQfn,header:renderHeader,custom:renderCustom};
+const renderers = {pico:renderPico,qfn:renderQfn,lqfp:renderQfn,header:renderHeader,custom:renderCustom};
 function renderMap() {
  $('#flip-button').setAttribute('aria-pressed',flipped); $('#rotate-button').setAttribute('aria-pressed',rotated);
- $('#orientation').innerHTML = `${t(flipped ? 'bottomView' : 'topView')} <span>${board.layout==='pico' ? `USB ${rotated?'↓':'↑'}` : rotated ? '180°' : '0°'}</span>`;
- $('#diagram').classList.toggle('qfn-diagram',board.layout==='qfn');
+ $('#orientation').innerHTML = `${t(flipped ? 'bottomView' : 'topView')} <span>${board.layout==='pico' || board.orientation==='usb' ? `USB ${rotated?'↓':'↑'}` : rotated ? '180°' : '0°'}</span>`;
+ $('#diagram').classList.toggle('qfn-diagram',isChip(board));
+ $('#diagram').classList.toggle('board-diagram',board.layout === 'custom');
  const oldScroll = $('#diagram').scrollLeft;
  $('#diagram').innerHTML = renderers[board.layout]();
  if(innerWidth<=640) $('#diagram').scrollLeft = oldScroll || ($('#diagram').scrollWidth - $('#diagram').clientWidth)/2;
@@ -218,7 +222,7 @@ function renderMap() {
 }
 function renderTable() {
  const pins=board.pins.filter(matches);
- $('#table-content').innerHTML = `<table class="pin-table"><thead><tr><th>${t('physical')}</th><th>${t('pinName')}</th><th>${t('functions')}</th><th>${t('label')}</th><th><span class="sr-only">${t('details')}</span></th></tr></thead><tbody>${pins.map(p=>`<tr class="${p.number===selected?'selected':''}" aria-current="${p.number===selected?'true':'false'}"><td>${p.number}</td><td class="table-name" style="color:${colors[p.type]}">${esc(p.name)}</td><td>${p.functions.filter(f=>!filters.size||filters.has(f.group)).map(f=>`<span style="--color:${colors[f.group]||colors.SYSTEM}">${esc(f.name)}${f.selector ? ' · '+esc(f.selector) : ''}</span>`).join('')||'—'}</td><td>${esc(assignments[p.number]?.label||'—')}</td><td><button class="table-details" data-pin="${p.number}" aria-label="${esc(t('selectPin', {pin:p.number,name:p.name}))}">${t('details')} →</button></td></tr>`).join('')}</tbody>${!pins.length?`<caption>${t('noMatch')}</caption>`:''}</table>`;
+ $('#table-content').innerHTML = `<table class="pin-table"><thead><tr><th>${t('physical')}</th><th>${t('pinName')}</th><th>${t('functions')}</th><th>${t('label')}</th><th><span class="sr-only">${t('details')}</span></th></tr></thead><tbody>${pins.map(p=>`<tr class="${p.number===selected?'selected':''}" aria-current="${p.number===selected?'true':'false'}"><td>${esc(physicalLabel(p))}</td><td class="table-name" style="color:${colors[p.type]}">${esc(p.name)}</td><td>${p.functions.filter(f=>!filters.size||filters.has(f.group)).map(f=>`<span style="--color:${colors[f.group]||colors.SYSTEM}">${esc(f.name)}${f.selector ? ' · '+esc(f.selector) : ''}</span>`).join('')||'—'}</td><td>${esc(assignments[p.number]?.label||'—')}</td><td><button class="table-details" data-pin="${p.number}" aria-label="${esc(t('selectPin', {pin:physicalLabel(p),name:p.name}))}">${t('details')} →</button></td></tr>`).join('')}</tbody>${!pins.length?`<caption>${t('noMatch')}</caption>`:''}</table>`;
 }
 function renderDetail() {
  const pin=pinByNumber(selected), opts=options(pin);
@@ -233,10 +237,10 @@ function renderDetail() {
  const option = f => `<label class="function-option" style="--color:${colors[f.group]||colors.SYSTEM}"><input type="radio" name="pin-function" value="${esc(f.name)}" ${selectedFn===f.name?'checked':''}>${esc(f.name)}<small>${f.selector ? esc(f.selector) : f === opts[0] ? t('default') : ''}</small></label>`;
  const hasPlan=!!assignments[selected];
  $('#selected-pin-label').textContent = `${pin.name} · ${t('details')}`;
- $('#pin-detail').innerHTML=`<div class="pin-detail-body"><div class="pin-hero"><div class="pin-identity"><h2>${esc(pin.name.replace('_ADC',' / A'))}</h2><span class="physical-pin">${t('physicalPin')} <strong>${String(pin.number).padStart(2,'0')}</strong></span></div><span class="pin-type" style="color:${colors[pin.type]}">${familyName(pin.type)} · ${esc(pin.type === 'GPIO' ? board.voltage : '')}</span><p class="pin-description">${esc(description)}</p></div><fieldset class="function-section"><legend class="small-label">${t(opts.length>1 ? 'chooseFunction' : 'pinFunction')}</legend>${filters.size || query ? `<p class="function-hint">${t('matchingFunctions')}</p>` : ''}<div class="function-list">${primary.map(option).join('')}</div>${more.length ? `<details class="more-functions"><summary>${t('allFunctions', {count:more.length})}</summary><div class="function-list">${more.map(option).join('')}</div></details>` : ''}</fieldset><div class="label-section"><label class="small-label" for="custom-label">${t('projectLabel')} <span>${t('optional')}</span></label><input id="custom-label" maxlength="40" placeholder="${esc(t('labelExample'))}" value="${esc(assignments[selected]?.label||'')}"></div>${renderPinEvidence(pin)}</div><div class="detail-action"><button id="add-plan" class="add-plan" ${pin.reserved ? 'disabled' : ''}>${icon(hasPlan?'check':'plus')}${t(pin.reserved ? 'reserved' : hasPlan ? 'updatePin' : 'addPin')}</button></div>`;
+ $('#pin-detail').innerHTML=`<div class="pin-detail-body"><div class="pin-hero"><div class="pin-identity"><h2>${esc(pin.name.replace('_ADC',' / A'))}</h2><span class="physical-pin">${t('physicalPin')} <strong>${esc(physicalLabel(pin))}</strong>${pin.mcuPin ? `<span class="mcu-pin-label"> · ${t('mcuPin', {pin:pin.mcuPin})}</span>` : ''}</span></div><span class="pin-type" style="color:${colors[pin.type]}">${familyName(pin.type)} · ${esc(pin.type === 'GPIO' ? board.voltage : '')}</span><p class="pin-description">${esc(description)}${pin.fiveVoltTolerant !== undefined ? ' '+esc(t(pin.fiveVoltTolerant ? 'stm32FTNote' : 'stm32NonFTNote')) : ''}</p></div><fieldset class="function-section"><legend class="small-label">${t(opts.length>1 ? 'chooseFunction' : 'pinFunction')}</legend>${filters.size || query ? `<p class="function-hint">${t('matchingFunctions')}</p>` : ''}<div class="function-list">${primary.map(option).join('')}</div>${more.length ? `<details class="more-functions"><summary>${t('allFunctions', {count:more.length})}</summary><div class="function-list">${more.map(option).join('')}</div></details>` : ''}</fieldset><div class="label-section"><label class="small-label" for="custom-label">${t('projectLabel')} <span>${t('optional')}</span></label><input id="custom-label" maxlength="40" placeholder="${esc(t('labelExample'))}" value="${esc(assignments[selected]?.label||'')}"></div>${renderPinEvidence(pin)}</div><div class="detail-action"><button id="add-plan" class="add-plan" ${pin.reserved ? 'disabled' : ''}>${icon(hasPlan?'check':'plus')}${t(pin.reserved ? 'reserved' : hasPlan ? 'updatePin' : 'addPin')}</button></div>`;
 }
 function renderPinEvidence(pin) {
- const keys = [...new Set([...pin.evidence, ...pin.functions.map(f=>f.evidence)])];
+ const keys = [...new Set([...pin.evidence, ...pin.functions.flatMap(f=>[f.evidence,f.configurationEvidence].filter(Boolean))])];
  return `<details class="pin-evidence"><summary>${t('pinEvidence')}</summary><ul>${keys.map(key=>{const r=evidence.references[key];return `<li><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)} ↗</a><small>${esc(r.locator)}${r.page ? ` · ${t('pdfPage', { page: r.page })}` : ''}</small></li>`;}).join('')}</ul><p>${esc(t('verifiedOn', { date: board.verifiedOn }))} · <a href="${verificationUrl()}" target="_blank" rel="noopener">${t('method')}</a></p></details>`;
 }
 let detailTab = 'pin';
@@ -281,7 +285,7 @@ $('#open-plan').addEventListener('click', () => showDetails('plan'));
 function renderPlan() {
  const entries=Object.entries(assignments).sort((a,b)=>Number(a[0])-Number(b[0]));
  for (const id of ['plan-count','plan-tab-count','mobile-plan-count']) $(`#${id}`).textContent=entries.length;
- $('#plan-list').innerHTML=entries.length?entries.map(([n,a])=>`<div class="plan-row"><button data-select-pin="${n}" aria-label="${esc(t('selectPlanPin', { pin: pinByNumber(n)?.name }))}"><strong>${esc(pinByNumber(n)?.name)}</strong> <span>· ${esc(a.function)}</span>${a.label?`<small>${esc(a.label)}</small>`:''}</button><button class="remove-plan" data-remove-pin="${n}" aria-label="${t('removePin', { pin: n })}">×</button></div>`).join(''):`<p class="empty-plan">${t('emptyPlan')}<br>${t('emptyPlanHint')}</p>`;
+ $('#plan-list').innerHTML=entries.length?entries.map(([n,a])=>`<div class="plan-row"><button data-select-pin="${n}" aria-label="${esc(t('selectPlanPin', { pin: pinByNumber(n)?.name }))}"><strong>${esc(pinByNumber(n)?.name)}</strong> <span>· ${esc(a.function)}</span>${a.label?`<small>${esc(a.label)}</small>`:''}</button><button class="remove-plan" data-remove-pin="${n}" aria-label="${t('removePin', { pin: physicalLabel(pinByNumber(n)) })}">×</button></div>`).join(''):`<p class="empty-plan">${t('emptyPlan')}<br>${t('emptyPlanHint')}</p>`;
 }
 function addToPlan() {
  if(pinByNumber(selected).reserved)return;
@@ -295,7 +299,7 @@ function showCatalog() { $('#catalog-search').value=''; renderCatalog(); $('#lib
 function renderCatalog() {
  const query=$('#catalog-search').value.toLowerCase().trim();
  const results=layouts.filter(item => [layoutTitle(item),layoutSubtitle(item),item.compatibleKey ? t(item.compatibleKey) : '',...item.profiles.map(profile => `${profile.name} ${profile.mcu} ${profile.searchTerms || ''}`)].join(' ').toLowerCase().includes(query));
- $('#catalog-grid').innerHTML=results.length?results.map(item=>`<button class="catalog-card" data-layout="${item.id}"><span class="mini-art">${icon(item.layout==='qfn'?'chip':'board')}</span><span class="card-arrow">↗</span><b>${esc(layoutTitle(item))}</b><small>${esc(item.compatibleKey ? t(item.compatibleKey) : layoutSubtitle(item))}</small><span class="card-meta">${item.packagePins} PIN <span> / </span> ${item.gpioCount} GPIO</span></button>`).join(''):`<p class="catalog-note">${t('noBoard')}</p>`;
+ $('#catalog-grid').innerHTML=results.length?results.map(item=>`<button class="catalog-card" data-layout="${item.id}"><span class="mini-art">${icon(isChip(item)?'chip':'board')}</span><span class="card-arrow">↗</span><b>${esc(layoutTitle(item))}</b><small>${esc(item.compatibleKey ? t(item.compatibleKey) : layoutSubtitle(item))}</small><span class="card-meta">${item.packagePins} PIN <span> / </span> ${item.gpioCount} GPIO</span></button>`).join(''):`<p class="catalog-note">${t('noBoard')}</p>`;
 }
 function planPayload() { return {version:1,board:board.id,pins:assignments}; }
 function encode(value) { return btoa(Array.from(new TextEncoder().encode(JSON.stringify(value)),b=>String.fromCharCode(b)).join('')); }

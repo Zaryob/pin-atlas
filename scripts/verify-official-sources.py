@@ -8,6 +8,7 @@ import argparse,copy,csv,hashlib,io,json,re,subprocess,sys
 from pathlib import Path
 try:
     import pdfplumber
+    from stm32_sources import build_stm32
 except ImportError:
     sys.exit('Install source verification dependencies: python3 -m pip install -r requirements-source-verification.txt')
 ROOT=Path(__file__).resolve().parents[1]
@@ -294,17 +295,18 @@ def build():
         if pin.get('reserved'):pin['note']='Reserved for HAT identification EEPROM.'
     boards.append({**board_base,'id':'raspberry-pi-40','name':'Raspberry Pi · 40-pin GPIO','shortName':'40-pin GPIO (common)','subtitle':'Common physical layout · model-specific alternate functions excluded','layout':'header','scopeKey':'commonHeaderScope','packagePins':40,'gpioCount':28,'reservedGPIOCount':2,'mcu':'Common GPIO','source':DOCS['pi-gpio']['viewUrl'],'datasheet':DOCS['pi-gpio']['viewUrl'],'searchTerms':'Pi B+ A+ Pi 2 Pi 3 Pi 4 Pi 5 Zero Zero W Zero 2 W 400 500','pins':common_pins})
     boards.append(jetson_orin_nano())
+    boards.extend(build_stm32(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn']))
     for total,chip in [(60,'rp2350a'),(80,'rp2350b')]:
         boards.append({**board_base,'id':chip,'name':chip.upper(),'family':'Raspberry Pi','subtitle':f'QFN-{total} · RP2350 · Release 8','layout':'qfn','packagePins':total,'gpioCount':30 if total==60 else 48,'voltage':'1.8–3.3 V I/O','mcu':chip.upper(),'processor':'Cortex-M33 / Hazard3','clock':'150 MHz','source':DOCS['rp2350']['url']+f'#page={16 if total==60 else 17}','datasheet':DOCS['rp2350']['url'],'pins':[packages[total][n] for n in sorted(packages[total])]})
     return boards
 
 def outputs(boards):
     physical=sum(len(b['pins']) for b in boards);functions=sum(len(p['functions']) for b in boards for p in b['pins'])
-    report={'verifiedOn':MANIFEST['verifiedOn'],'physicalPins':physical,'functionAssignments':functions,'documents':[{k:v for k,v in d.items() if k!='file'} for d in DOCS.values()], 'boards':[{'id':b['id'],'physicalPins':len(b['pins']),'functionAssignments':sum(len(p['functions']) for p in b['pins']),'physicalSourceMethods':sorted({REFS[r]['method'] for p in b['pins'] for r in p['evidence']})} for b in boards], 'qualifications':['Figure-only Pico physical labels were visually checked; they are not machine-readable PDF table cells.','The QFN-60 IOVDD discrepancy in RP2350 Release 8 Table 1679 is resolved using Figures 2 and 152.','The common Raspberry Pi 40-pin profile contains physical connections only; Pi 4 BCM2711 alternate functions remain in a separate model-specific profile. Pins 27/28 are reserved for the HAT EEPROM.', 'Pico and Pico W use independently extracted RP2040 functions, not RP2350 selectors. Pico 2 and Pico 2 W use RP2350A functions.', 'Jetson Orin Nano uses NVIDIA P3768 carrier J12 names from Figure 3-1 and Table 3-3; peripheral names are carrier signals, not Linux bus numbers. Table spellings SPI1_CSI1*/CSI0* are resolved using the figure and CS1_N/CS0_N SoC names. Listed capabilities require appropriate pinmux/Jetson-IO configuration and do not assert an active runtime configuration.']}
+    report={'verifiedOn':MANIFEST['verifiedOn'],'physicalPins':physical,'functionAssignments':functions,'documents':[{k:v for k,v in d.items() if k!='file'} for d in DOCS.values()], 'boards':[{'id':b['id'],'physicalPins':len(b['pins']),'functionAssignments':sum(len(p['functions']) for p in b['pins']),'physicalSourceMethods':sorted({REFS[r]['method'] for p in b['pins'] for r in p['evidence']})} for b in boards], 'qualifications':['Figure-only Pico physical labels were visually checked; they are not machine-readable PDF table cells.','The QFN-60 IOVDD discrepancy in RP2350 Release 8 Table 1679 is resolved using Figures 2 and 152.','The common Raspberry Pi 40-pin profile contains physical connections only; Pi 4 BCM2711 alternate functions remain in a separate model-specific profile. Pins 27/28 are reserved for the HAT EEPROM.', 'Pico and Pico W use independently extracted RP2040 functions, not RP2350 selectors. Pico 2 and Pico 2 W use RP2350A functions.', 'Blue Pill board positions use a community reference, not ST manufacturer board documentation. STM32 chip pins and function/remap conditions use ST DS5319 and RM0008. H1/H2/SWD connector labels differ from MCU package pin numbers; clone wiring may differ.', 'Jetson Orin Nano uses NVIDIA P3768 carrier J12 names from Figure 3-1 and Table 3-3; peripheral names are carrier signals, not Linux bus numbers. Table spellings SPI1_CSI1*/CSI0* are resolved using the figure and CS1_N/CS0_N SoC names. Listed capabilities require appropriate pinmux/Jetson-IO configuration and do not assert an active runtime configuration.']}
     buf=io.StringIO();writer=csv.writer(buf,lineterminator='\n');writer.writerow(['board','physical_pin','pin_name','pin_type','function','selector','manufacturer_signal','physical_evidence','function_evidence'])
     for b in boards:
         for p in b['pins']:
-            for f in p['functions'] or [{}]:writer.writerow([b['id'],p['number'],p['name'],p['type'],f.get('name',''),f.get('selector',''),f.get('signal',''),' | '.join(p['evidence']),f.get('evidence','')])
+            for f in p['functions'] or [{}]:writer.writerow([b['id'],p['number'],p['name'],p['type'],f.get('name',''),f.get('selector',''),f.get('signal',''),' | '.join(p['evidence']),' | '.join(filter(None,[f.get('evidence'),f.get('configurationEvidence')]))])
     js=lambda value:json.dumps(value,ensure_ascii=False,indent=2)+'\n'
     return {'dist/data/boards.json':js(boards),'dist/data/evidence.json':js({'documents':MANIFEST['documents'],'references':REFS}),'dist/data/verification.json':js(report),'sources/pin-verification.csv':buf.getvalue()}
 
@@ -315,5 +317,5 @@ def main():
         p=ROOT/name
         if args.write:p.parent.mkdir(parents=True,exist_ok=True);p.write_text(content)
         elif not p.exists() or p.read_text()!=content:sys.exit(f'Official source verification failed: {name} differs. Review and run --write deliberately.')
-    print(f"Official source verification passed: {sum(len(b['pins']) for b in boards)} physical pins; {sum(len(p['functions']) for b in boards for p in b['pins'])} function assignments; {len(DOCS)} hash-locked manufacturer sources.")
+    print(f"Source verification passed: {sum(len(b['pins']) for b in boards)} physical pins; {sum(len(p['functions']) for b in boards for p in b['pins'])} function assignments; {len(DOCS)} hash-locked source documents.")
 if __name__=='__main__':main()

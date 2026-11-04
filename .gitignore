@@ -4,3 +4,4 @@ node_modules/
 *.tar.gz
 
 .cache/
+__pycache__/

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="900" viewBox="0 0 820 900">
+  <g font-family="monospace" text-anchor="middle">
+    <rect x="281" y="65" width="258" height="550" rx="9" fill="#244665" stroke="#92b4cc" stroke-width="2"/>
+    <rect x="296" y="83" width="228" height="513" rx="5" fill="none" stroke="#92b4cc" stroke-dasharray="4 5"/>
+    <rect x="373" y="38" width="74" height="48" rx="3" fill="#d6d9d8" stroke="#4d5963" stroke-width="2"/>
+    <path d="M382 39v10h56V39" fill="none" stroke="#4d5963" stroke-width="2"/>
+    <text x="410" y="68" fill="#263443" font-size="12">USB</text>
+    <text x="410" y="117" fill="#dce7ef" font-size="17">BLUE PILL</text>
+    <g fill="#d4b96d" stroke="#ad954f"><rect x="353" y="143" width="50" height="30"/><rect x="417" y="143" width="50" height="30"/></g>
+    <text x="410" y="193" fill="#c6d7e3" font-size="11">BOOT0 / BOOT1</text>
+    <rect x="337" y="232" width="146" height="137" rx="4" fill="#242a30" stroke="#90a9ba"/>
+    <circle cx="350" cy="245" r="4" fill="#d4b96d"/>
+    <text x="410" y="278" fill="#e0e8ed" font-size="12">STM32F103</text><text x="410" y="300" fill="#e0e8ed" font-size="12">C8T6</text>
+    <text x="410" y="334" fill="#9db6c7" font-size="11">LQFP-48</text>
+    <rect x="369" y="409" width="82" height="31" rx="8" fill="#b8bec1" stroke="#5d788e"/>
+    <text x="410" y="429" fill="#2c4053" font-size="12">8 MHz</text>
+    <rect x="394" y="468" width="33" height="60" rx="7" fill="#b8bec1" stroke="#5d788e"/>
+    <text x="410" y="551" fill="#c6d7e3" font-size="10">32.768 kHz</text>
+    <circle cx="355" cy="577" r="5" fill="#86ac74"/><text x="410" y="581" fill="#c6d7e3" font-size="10">PC13 LED</text>
+    <text x="410" y="608" fill="#dce7ef" font-size="10">SWD</text>
+    <path d="M350 615v25m40-25v25m40-25v25m40-25v25" stroke="#d4b96d" stroke-width="4"/>
+    <text x="410" y="868" fill="#70899d" font-size="11">REFERENCE LAYOUT · NOT TO SCALE</text>
+  </g>
+</svg>

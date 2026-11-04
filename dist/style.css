@@ -214,3 +214,10 @@
 
 :root { --pin-i2s: #315f92; }
 :root[data-theme="dark"] { --pin-i2s: #a3c8f0; }
+:root { --pin-can: #76582f; --pin-swd: #78558b; --pin-timer: #86631b; }
+:root[data-theme="dark"] { --pin-can: #dfc28d; --pin-swd: #c3a5de; --pin-timer: #dfcf88; }
+.mcu-pin-label { display: inline-block; font-size: 11px; margin-left: 4px; }
+.function-option { flex-wrap: wrap; }
+.function-option small { max-width: 100%; overflow-wrap: anywhere; }
+#diagram.board-diagram > svg { max-height: 900px; min-height: 700px; }
+@media (max-width: 640px) { #diagram.board-diagram > svg { min-height: 0; max-height: none; } }
