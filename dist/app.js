@@ -83,7 +83,7 @@ function setBoard(id, initial = false, preferredProfile) {
  const available = new Set(board.pins.flatMap(pin => pin.functions.map(fn => fn.group)));
  filters = new Set([...filters].filter(group => available.has(group)));
  renderBoard();
- if (!initial) history.replaceState(null, '', `#${new URLSearchParams({board:layout.id,profile:board.id})}`);
+ if (!initial) history.replaceState(null, '', `#${new URLSearchParams({board:layout.id,profile:board.id,pin:selected})}`);
  if ($('#details-dialog').open) $('#details-dialog').close();
  setDetailTab('pin');
 }
@@ -173,6 +173,7 @@ function choosePin(number, reveal = true) {
  selectedFn = assignments[selected]?.function || options(p)[0].name;
  renderMap(); renderDetail();
  if (reveal) showDetails('pin');
+ history.replaceState(null, '', `#${new URLSearchParams({board:layout.id,profile:board.id,pin:selected})}`);
 }
 function pinGroup(pin, x, y, side, opts = {}) {
  const active = pin.number === selected, match = matches(pin), assigned = assignments[pin.number];
