@@ -1,6 +1,20 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
 (() => {
   const messages = {
+    "compatibleDevices": ["Uyumlu işlemciler", "Compatible devices"],
+    "activeReference": ["Açık referans", "Active reference"],
+    "viewModelIndex": ["İndeksi aç", "View index"],
+    "hideModelIndex": ["İndeksi kapat", "Hide index"],
+    "findCompatibleModel": ["Model bul", "Find a model"],
+    "compatibleSearchPlaceholder": ["Uyumlu modellerde ara…", "Search compatible models…"],
+    "noCompatibleModel": ["Eşleşen model yok. Başka bir ad veya işlemciyle ara.", "No matching model. Try another name or processor."],
+    "compatibilityIndexNote": ["Modeli seçerek referansını aç. Ortak pin düzenlerinde işlevler ve elektriksel sınırlar değişebilir.", "Choose a model to open its reference. Shared pinouts may have different functions and electrical limits."],
+    "selectedModel": ["Seçili", "Selected"],
+    "sharedPinout": ["Pin düzeni", "Pinout only"],
+    "openReference": ["Aç", "Open"],
+    "hasSavedPlan": ["Kayıtlı plan", "Saved plan"],
+    "openCompatibleModel": ["{model} referansını aç · {reference}", "Open {model} · {reference}"],
+    "matchingModelCount": ["{count} / {total} model", "{count} / {total} models"],
     "boardLabel": ["Kart etiketi {label}", "Board label {label}"],
     "arduino32u4GpioNote": ["ATmega32U4 5 V I/O. GPIO ve çevre birimi modlarını birlikte yapılandır; işlemcinin pin, port ve toplam akım sınırlarını veri sayfasından kontrol et. PWM gerçek analog çıkış değildir.", "ATmega32U4 5 V I/O. Coordinate GPIO and peripheral modes; check the MCU datasheet for pin, port and total current limits. PWM is not a true analog output."],
     "unoLayout": ["Arduino UNO başlık düzeni", "Arduino UNO-format headers"],

@@ -96,3 +96,5 @@ Uygulama GPL-3.0-or-later lisanslıdır. Ortak tema ve IBM Plex Mono için gerç
 Arduino haritaları resmî tam pin şemaları, bağlantı tabloları ve sabitlenmiş Arduino AVR çekirdeğiyle doğrulanır. Listelenen AVR ve Renesas modellerinde her işlemci referansı kendi işlevlerini ve ek bağlantı kapsamını korur. Başlık konumları Arduino pin numaralarından ve MCU portlarından ayrıdır. Aynı GPIO hattının tekrar eden kontakları belirtilir; plan ve JSON içe aktarma aynı GPIO’nun iki kez kullanımını reddeder. USB köprüsünün programlama başlıkları ve işlemcinin bütün ham alternatif işlevleri bu haritaların kapsamında değildir.
 
 ESP GPIO matrix seçenekleri etkin yazılım atamasını değil, yapılandırılabilir yönlendirme olanağını gösterir. Girişe özel pinlere çıkış/PWM verilmez; flash/PSRAM’a ayrılmış kontaklar plana eklenemez. ESP çizimlerinde USB alttadır.
+
+**Uyumlu kartlar** bölümü numaralı bir model indeksi açar. İşlemci/referans, seçili model ve kayıtlı plan bilgisi gösterilir; uzun listeler aranabilir. Model seçimi doğru referansı açar. Yalnızca fiziksel uyumluluğu doğrulanan modeller ortak pin düzenine gider; başka kartın alternatif işlevleri atanmaz.

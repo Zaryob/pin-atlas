@@ -29,7 +29,7 @@ def build_espressif(cache,docs,obs,ref,verified_on):
     models=[('esp32-devkitc-v4','ESP32-DevKitC V4','esp32',19,'J2','ESP32-WROOM-32E'),
             ('esp32-c3-devkitm-1','ESP32-C3-DevKitM-1','esp32c3',15,'J1','ESP32-C3-MINI-1'),
             ('esp32-s3-devkitc-1','ESP32-S3-DevKitC-1 v1.1','esp32s3',22,'J1','ESP32-S3-WROOM-1-N8')]
-    for id,name,chip,count,left,module in models:
+    for id,board_name,chip,count,left,module in models:
         docid=chip+'-devkit-guide';text=(cache/docs[docid]['file']).read_text();headers=rst_headers(text)
         assert set(headers)=={left,'J3'}
         physical=ref(id+'-header',docid,None,'Header Block · '+left+'/J3 numbered rows and module-specific restrictions','source-table')
@@ -82,11 +82,12 @@ def build_espressif(cache,docs,obs,ref,verified_on):
             same=[p['physicalLabel'] for p in pins if p is not pin and p['net']==pin['net']]
             if same and pin['type']=='GPIO':pin['sharedWith']=same
         gpio_count=sum(p['type']=='GPIO' for p in pins)
-        board={'id':id,'name':name,'shortName':name,'family':'Espressif','subtitle':module+' · 3.3 V I/O','layout':'custom','diagram':{'width':820,'height':180+(count-1)*26+100,'artwork':'assets/boards/'+id+'.svg'},'orientation':'usb-bottom','packagePins':len(pins),'gpioCount':gpio_count,'mcu':{'esp32':'ESP32','esp32c3':'ESP32-C3','esp32s3':'ESP32-S3'}[chip],'processor':'RISC-V' if chip=='esp32c3' else 'Xtensa','clock':'160 MHz' if chip=='esp32c3' else '240 MHz','voltage':'3.3 V I/O','scopeKey':id+'Scope','compatibleKey':id+'Compatible','source':docs[docid]['viewUrl'],'datasheet':docs[ds]['url'],'verifiedOn':verified_on,'pins':pins}
+        board={'id':id,'name':board_name,'shortName':board_name,'family':'Espressif','subtitle':module+' · 3.3 V I/O','layout':'custom','diagram':{'width':820,'height':180+(count-1)*26+100,'artwork':'assets/boards/'+id+'.svg'},'orientation':'usb-bottom','packagePins':len(pins),'gpioCount':gpio_count,'mcu':{'esp32':'ESP32','esp32c3':'ESP32-C3','esp32s3':'ESP32-S3'}[chip],'processor':'RISC-V' if chip=='esp32c3' else 'Xtensa','clock':'160 MHz' if chip=='esp32c3' else '240 MHz','voltage':'3.3 V I/O','scopeKey':id+'Scope','compatibleKey':id+'Compatible','source':docs[docid]['viewUrl'],'datasheet':docs[ds]['url'],'verifiedOn':verified_on,'pins':pins}
         if any(p.get('reserved') for p in pins):board['reservedGPIOCount']=sum(p.get('reserved',False) for p in pins)
         boards.append(board)
         if chip in ('esp32','esp32s3'):
-            variant=copy.deepcopy(board);variant['id']=id+('-wrover' if chip=='esp32' else '-octal');variant['name']=name+(' · WROVER' if chip=='esp32' else ' · Octal memory');variant['subtitle']='ESP32-WROVER' if chip=='esp32' else 'ESP32-S3-WROOM-1-N8R8 · Octal PSRAM'
+            variant=copy.deepcopy(board);variant['id']=id+('-wrover' if chip=='esp32' else '-octal');variant['name']=board_name+(' · WROVER' if chip=='esp32' else ' · Octal memory');variant['subtitle']='ESP32-WROVER' if chip=='esp32' else 'ESP32-S3-WROOM-1-N8R8 · Octal PSRAM'
+            variant['shortName']=variant['name']
             variant['scopeKey']=variant['id']+'Scope'
             restricted={16,17} if chip=='esp32' else {35,36,37}
             assert ('GPIO16 and GPIO17' in text) if chip=='esp32' else ('GPIO35, GPIO36 and GPIO37' in text)

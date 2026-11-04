@@ -45,6 +45,8 @@ Arduino maps use official full pinouts, connector tables and a pinned Arduino AV
 
 ESP GPIO matrix options describe configurable peripheral routes, not default firmware pin assignments. The selected reference retains strapping, input-only, USB/LED and flash/PSRAM restrictions. Input-only pads never offer output/PWM routes; reserved memory contacts cannot enter plans. Espressif board orientation places USB at the bottom.
 
+**Compatible boards** opens a numbered model index with processor/reference details, the active reference and saved-plan indicators. Select a model directly; longer lists can be searched. Physical-only compatibility links open the common pinout rather than another board’s alternate-function map.
+
 The browser stores plans under `pin-atlas:plans:v1`. Share links carry the saved plan in the URL fragment. Opening one updates the local plan for that board. Pi 4 physical pins 27 and 28 are reserved for the HAT EEPROM and excluded from regular wiring plans. Check electrical compatibility and firmware configuration against the manufacturer documentation.
 
 ## Run locally

@@ -1,4 +1,5 @@
 import { buildLayouts, resolveProfile } from './layouts.mjs';
+import { compatibleModels, filterCompatibleModels } from './compatibility.mjs';
 const { t, verificationUrl } = window.ZaryobI18n;
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -45,6 +46,7 @@ let evidence = {references:{}};
 let boards, layouts, layout, board, selected = 1, selectedFn, filters = new Set(), search = '', flipped = false, rotated = false, view = 'map', assignments = {}, toastTimer;
 const storageKey = 'pin-atlas:plans:v1';
 const rememberedProfiles = new Map();
+let compatibilityModels = [], compatibilityQuery = '';
 const layoutTitle = item => item.nameKey ? t(item.nameKey) : item.name;
 const layoutSubtitle = item => item.subtitleKey ? t(item.subtitleKey) : subtitle(item);
 let savedPlans = {};
@@ -65,7 +67,7 @@ function validatePlan(data, target) {
  }
  return clean;
 }
-function persist() { savedPlans[board.id] = assignments; try { localStorage.setItem(storageKey, JSON.stringify(savedPlans)); } catch { toast(t('storageUnavailable')); } }
+function persist() { savedPlans[board.id] = assignments; renderCompatibilityList(); try { localStorage.setItem(storageKey, JSON.stringify(savedPlans)); } catch { toast(t('storageUnavailable')); } }
 function pinByNumber(n) { return board.pins.find(p => p.number === Number(n)); }
 function matches(pin) { const text = [pin.number, pin.name, pin.physicalLabel, pin.boardLabel, pin.mcuPort, pin.arduinoPin !== undefined ? `D${pin.arduinoPin}` : '', ...pin.functions.flatMap(f => [f.name,f.signal]), assignments[pin.number]?.label].join(' ').toLowerCase(); return text.includes(search.toLowerCase().trim()) && (!filters.size || pin.functions.some(f => filters.has(f.group))); }
 function setBoard(id, initial = false, preferredProfile) {
@@ -77,7 +79,7 @@ function setBoard(id, initial = false, preferredProfile) {
  selected = sameLayout && board.pins.some(pin => pin.number === previousPin) ? previousPin : board.pins.find(p => p.type === 'GPIO')?.number || 1;
  try { assignments = validatePlan(savedPlans[board.id] || {}, board); } catch { assignments = {}; }
  selectedFn = assignments[selected]?.function || options(pinByNumber(selected))[0].name;
- if (!sameLayout) { filters = new Set(); search = ''; $('#pin-search').value = ''; flipped = rotated = false; }
+ if (!sameLayout) { filters = new Set(); search = ''; $('#pin-search').value = ''; flipped = rotated = false; compatibilityQuery=''; $('#compatible-boards').open=false; }
  const available = new Set(board.pins.flatMap(pin => pin.functions.map(fn => fn.group)));
  filters = new Set([...filters].filter(group => available.has(group)));
  renderBoard();
@@ -98,8 +100,7 @@ function renderBoard() {
  const scope = board.scopeKey ? t(board.scopeKey) : layout.scopeKey ? t(layout.scopeKey) : '';
  $('#board-scope').hidden = !scope;
  $('#board-scope').textContent = scope;
- $('#compatible-boards').hidden = !layout.compatibleKey;
- $('#compatible-boards').textContent = layout.compatibleKey ? `${t('compatibleBoards')}: ${t(layout.compatibleKey)}` : '';
+ renderCompatibilityIndex();
  $('#library-count').textContent = layouts.length;
  $('#board-subtitle').textContent = layoutSubtitle(layout);
  $('#crumb').textContent = layoutTitle(layout);
@@ -110,6 +111,31 @@ function renderBoard() {
  $('#pin-count').textContent = t('pinCount', { count: board.packagePins });
  $('#specs').innerHTML = `<span>${icon('board')}<b>${board.packagePins}</b>${t('physicalPins')}</span><span>${icon('chip')}<b>${board.uniqueGPIOCount ?? board.gpioCount}</b>GPIO${board.reservedGPIOCount ? ` (${t('reservedCount', { count: board.reservedGPIOCount })})` : ''}</span><span>${icon('bolt')}<b>${esc(board.voltage)}</b></span>`;
  renderNav(); renderFunctionReference(); renderFilters(); renderMap(); renderDetail(); renderPlan();
+}
+function renderCompatibilityIndex() {
+ compatibilityModels=compatibleModels(layout);
+ $('#compatible-boards').hidden=!compatibilityModels.length;
+ $('#compatibility-title').textContent=t(isChip(layout)?'compatibleDevices':'compatibleBoards');
+ $('#compatibility-count').textContent=compatibilityModels.length;
+ $('#compatibility-current').textContent=compatibilityModels.find(model=>model.kind==='reference' && model.profileId===board.id)?.name || board.shortName || board.name;
+ $('#compatibility-search-row').hidden=compatibilityModels.length<7;
+ $('#compatibility-search').value=compatibilityQuery;
+ renderCompatibilityList();
+}
+function renderCompatibilityList() {
+ const detail=model=>model.detailKey?t(model.detailKey):model.detail;
+ const found=filterCompatibleModels(compatibilityModels,compatibilityQuery,model=>[model.name,detail(model),model.referenceKey?t(model.referenceKey):''].join(' '));
+ $('#compatibility-empty').hidden=found.length>0;
+ $('#compatibility-results').textContent=t('matchingModelCount',{count:found.length,total:compatibilityModels.length});
+ $('#compatibility-list').innerHTML=found.map(model=>{
+   const active=model.kind==='reference' && model.profileId===board.id;
+   const target=new URL(location.href);
+   target.searchParams.set('lang',document.documentElement.lang);
+   target.hash=new URLSearchParams({board:layout.id,profile:model.profileId}).toString();
+   const status=active?t('selectedModel'):model.kind==='physical'?t('sharedPinout'):t('openReference');
+   const saved=model.kind==='reference' && Object.keys(savedPlans[model.profileId] || {}).length>0;
+   return `<li><a href="${esc(target.href)}" data-compatible-model="${esc(model.id)}" data-profile="${esc(model.profileId)}" ${active?'aria-current="true"':''} aria-label="${esc(t('openCompatibleModel',{model:model.name,reference:detail(model)}))}"><span class="compatibility-number" aria-hidden="true">${String(compatibilityModels.indexOf(model)+1).padStart(2,'0')}</span><span class="compatibility-model"><strong>${esc(model.name)}</strong><small>${esc(detail(model))}${saved?`<span class="compatibility-saved">${esc(t('hasSavedPlan'))}</span>`:''}</small></span><span class="compatibility-state">${esc(status)}<span aria-hidden="true">${active?'✓':'→'}</span></span></a></li>`;
+ }).join('');
 }
 function renderFunctionReference() {
  $('#function-reference-bar').hidden = !layout.references.length;
@@ -354,6 +380,15 @@ function loadHash() {
 $('#board-nav').addEventListener('click',e=>{const b=e.target.closest('[data-layout]');if(b)openLayout(b.dataset.layout);});
 $('#library-button').addEventListener('click',showCatalog);
 $('#function-reference').addEventListener('change', e => setBoard(layout.id, false, e.target.value));
+$('#compatibility-search').addEventListener('input',e=>{compatibilityQuery=e.target.value;renderCompatibilityList();});
+$('#compatibility-list').addEventListener('click',e=>{
+ const link=e.target.closest('[data-compatible-model]');
+ if(!link || e.button!==0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey)return;
+ e.preventDefault();
+ const model=link.dataset.compatibleModel,profile=link.dataset.profile;
+ setBoard(layout.id,false,profile);
+ $('#compatibility-list').querySelector(`[data-compatible-model="${CSS.escape(model)}"]`)?.focus({preventScroll:true});
+});
 $('#catalog-grid').addEventListener('click',e=>{const b=e.target.closest('[data-layout]');if(b){openLayout(b.dataset.layout);$('#library-dialog').close();}});
 $('#catalog-search').addEventListener('input',renderCatalog);
 $('#help-button').addEventListener('click',()=>$('#help-dialog').showModal());

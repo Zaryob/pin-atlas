@@ -46,7 +46,19 @@
 <main id="main">
   <div class="page-heading"><div><h1 id="board-title">Raspberry Pi Pico family</h1><p id="board-subtitle"><span data-i18n="start">Explore pins and plan your connections.</span></p></div><div class="heading-actions"><a id="datasheet" class="button secondary" target="_blank" rel="noopener"><span data-icon="file"></span><span data-i18n="datasheet">Datasheet</span> <span>↗</span></a></div></div>
   <div class="specs" id="specs"></div>
-  <p id="compatible-boards" class="compatible-boards"></p>
+  <details id="compatible-boards" class="compatibility-index" hidden>
+    <summary>
+      <span class="compatibility-heading"><span id="compatibility-title" data-i18n="compatibleBoards">Compatible boards</span><span id="compatibility-count" class="compatibility-count"></span></span>
+      <span class="compatibility-current"><span data-i18n="activeReference">Active reference</span><strong id="compatibility-current"></strong></span>
+      <span class="compatibility-toggle"><span class="index-closed" data-i18n="viewModelIndex">View index</span><span class="index-open" data-i18n="hideModelIndex">Hide index</span><span class="index-chevron" aria-hidden="true">⌄</span></span>
+    </summary>
+    <div class="compatibility-content">
+      <div id="compatibility-search-row" class="compatibility-search-row" hidden><label for="compatibility-search" data-i18n="findCompatibleModel">Find a model</label><input id="compatibility-search" type="search" autocomplete="off" placeholder="Search compatible models…" data-i18n-placeholder="compatibleSearchPlaceholder"><span id="compatibility-results" role="status" aria-live="polite"></span></div>
+      <ol id="compatibility-list" class="compatibility-list"></ol>
+      <p id="compatibility-empty" class="compatibility-empty" data-i18n="noCompatibleModel" hidden>No matching model.</p>
+      <p class="compatibility-footnote" data-i18n="compatibilityIndexNote">Choose a model to open its reference. Shared pinouts may have different functions and electrical limits.</p>
+    </div>
+  </details>
   <p id="board-scope" class="board-scope" hidden></p>
   <section class="workspace" aria-label="Pinout workspace" data-i18n-aria-label="workspace">
     <div class="map-panel">
