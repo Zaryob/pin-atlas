@@ -494,6 +494,26 @@
       "downloadUrls": [
         "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf"
       ]
+    },
+    {
+      "id": "f401re-package",
+      "title": "STM32F401RE CubeMX package data",
+      "file": "f401re-package.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F401R(D-E)Tx.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F401R(D-E)Tx.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "43fd289df73ad74880e3b450d89ae6f16e429e6eb885300ddbf8af64d175ab15"
+    },
+    {
+      "id": "f401re-modes",
+      "title": "STM32F401RE CubeMX modes data",
+      "file": "f401re-modes.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F401_gpio_v1_0_Modes.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F401_gpio_v1_0_Modes.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "4491b4ee54faa9d6ccf722f6e79ca752b2dcd168f5279ad249959a561db4fbff"
     }
   ],
   "publishers": [

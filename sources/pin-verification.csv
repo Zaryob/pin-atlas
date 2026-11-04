@@ -2072,18 +2072,18 @@ nucleo-f103rb,21,PB7,GPIO,USART1_RX,USART1_REMAP=1,USART1_RX,nucleo-f103rb-morph
 nucleo-f103rb,22,GND,GND,,,,nucleo-f103rb-morpho-56,
 nucleo-f103rb,23,PC13,GPIO,TAMPER-RTC,,TAMPER-RTC,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28
 nucleo-f103rb,24,VIN,POWER,,,,nucleo-f103rb-morpho-56,
-nucleo-f103rb,25,PC14,GPIO,OSC32_IN,,OSC32_IN,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p28
+nucleo-f103rb,25,PC14,GPIO,OSC32_IN,,OSC32_IN,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes | nucleo-mb1136-bridges,stm32-pin-table-p28
 nucleo-f103rb,26,NC,SYSTEM,,,,nucleo-f103rb-morpho-56,
-nucleo-f103rb,27,PC15,GPIO,OSC32_OUT,,OSC32_OUT,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p28
+nucleo-f103rb,27,PC15,GPIO,OSC32_OUT,,OSC32_OUT,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes | nucleo-mb1136-bridges,stm32-pin-table-p28
 nucleo-f103rb,28,PA0,GPIO,WKUP,,WKUP,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
 nucleo-f103rb,28,PA0,GPIO,USART2_CTS,USART2_REMAP=0,USART2_CTS,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
 nucleo-f103rb,28,PA0,GPIO,ADC12_IN0,,ADC12_IN0,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
 nucleo-f103rb,28,PA0,GPIO,TIM2_CH1_ETR,TIM2_REMAP=00|10,TIM2_CH1_ETR,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-45
-nucleo-f103rb,29,PD0,GPIO,PD0,PD01_REMAP=1,PD0,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p28 | stm32-osc-remap
+nucleo-f103rb,29,PD0,GPIO,PD0,PD01_REMAP=1,PD0,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes | nucleo-mb1136-bridges,stm32-pin-table-p28 | stm32-osc-remap
 nucleo-f103rb,30,PA1,GPIO,USART2_RTS,USART2_REMAP=0,USART2_RTS,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
 nucleo-f103rb,30,PA1,GPIO,ADC12_IN1,,ADC12_IN1,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
 nucleo-f103rb,30,PA1,GPIO,TIM2_CH2,TIM2_REMAP=00|10,TIM2_CH2,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-45
-nucleo-f103rb,31,PD1,GPIO,PD1,PD01_REMAP=1,PD1,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p28 | stm32-osc-remap
+nucleo-f103rb,31,PD1,GPIO,PD1,PD01_REMAP=1,PD1,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes | nucleo-mb1136-bridges,stm32-pin-table-p28 | stm32-osc-remap
 nucleo-f103rb,32,PA4,GPIO,SPI1_NSS,SPI1_REMAP=0,SPI1_NSS,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-56
 nucleo-f103rb,32,PA4,GPIO,USART2_CK,USART2_REMAP=0,USART2_CK,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
 nucleo-f103rb,32,PA4,GPIO,ADC12_IN4,,ADC12_IN4,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
@@ -2092,32 +2092,32 @@ nucleo-f103rb,34,PB0,GPIO,ADC12_IN8,,ADC12_IN8,nucleo-f103rb-morpho-56 | stm32-l
 nucleo-f103rb,34,PB0,GPIO,TIM3_CH3,TIM3_REMAP=00|10,TIM3_CH3,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-44
 nucleo-f103rb,34,PB0,GPIO,TIM1_CH2N,TIM1_REMAP=01,TIM1_CH2N,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-46
 nucleo-f103rb,35,PC2,GPIO,ADC12_IN12,,ADC12_IN12,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28
-nucleo-f103rb,36,PC1,GPIO,ADC12_IN11,,ADC12_IN11,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p28
+nucleo-f103rb,36,PC1,GPIO,ADC12_IN11,,ADC12_IN11,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes | nucleo-mb1136-bridges,stm32-pin-table-p28
 nucleo-f103rb,37,PC3,GPIO,ADC12_IN13,,ADC12_IN13,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28
-nucleo-f103rb,38,PC0,GPIO,ADC12_IN10,,ADC12_IN10,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p28
-nucleo-f103rb,39,NC,SYSTEM,,,,nucleo-f103rb-arduino,
-nucleo-f103rb,40,IOREF,POWER,,,,nucleo-f103rb-arduino,
-nucleo-f103rb,41,NRST,SYSTEM,,,,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p28,
-nucleo-f103rb,42,+3.3V,POWER,,,,nucleo-f103rb-arduino,
-nucleo-f103rb,43,+5V,POWER,,,,nucleo-f103rb-arduino,
-nucleo-f103rb,44,GND,GND,,,,nucleo-f103rb-arduino,
-nucleo-f103rb,45,GND,GND,,,,nucleo-f103rb-arduino,
-nucleo-f103rb,46,VIN,POWER,,,,nucleo-f103rb-arduino,
-nucleo-f103rb,47,PA0,GPIO,WKUP,,WKUP,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
-nucleo-f103rb,47,PA0,GPIO,USART2_CTS,USART2_REMAP=0,USART2_CTS,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
-nucleo-f103rb,47,PA0,GPIO,ADC12_IN0,,ADC12_IN0,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
-nucleo-f103rb,47,PA0,GPIO,TIM2_CH1_ETR,TIM2_REMAP=00|10,TIM2_CH1_ETR,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-45
-nucleo-f103rb,48,PA1,GPIO,USART2_RTS,USART2_REMAP=0,USART2_RTS,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
-nucleo-f103rb,48,PA1,GPIO,ADC12_IN1,,ADC12_IN1,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
-nucleo-f103rb,48,PA1,GPIO,TIM2_CH2,TIM2_REMAP=00|10,TIM2_CH2,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-45
-nucleo-f103rb,49,PA4,GPIO,SPI1_NSS,SPI1_REMAP=0,SPI1_NSS,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-56
-nucleo-f103rb,49,PA4,GPIO,USART2_CK,USART2_REMAP=0,USART2_CK,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
-nucleo-f103rb,49,PA4,GPIO,ADC12_IN4,,ADC12_IN4,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
-nucleo-f103rb,50,PB0,GPIO,ADC12_IN8,,ADC12_IN8,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
-nucleo-f103rb,50,PB0,GPIO,TIM3_CH3,TIM3_REMAP=00|10,TIM3_CH3,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-44
-nucleo-f103rb,50,PB0,GPIO,TIM1_CH2N,TIM1_REMAP=01,TIM1_CH2N,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-46
-nucleo-f103rb,51,PC1,GPIO,ADC12_IN11,,ADC12_IN11,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p28
-nucleo-f103rb,52,PC0,GPIO,ADC12_IN10,,ADC12_IN10,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p28
+nucleo-f103rb,38,PC0,GPIO,ADC12_IN10,,ADC12_IN10,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes | nucleo-mb1136-bridges,stm32-pin-table-p28
+nucleo-f103rb,39,NC,SYSTEM,,,,nucleo-f103rb-arduino-39,
+nucleo-f103rb,40,IOREF,POWER,,,,nucleo-f103rb-arduino-39,
+nucleo-f103rb,41,NRST,SYSTEM,,,,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p28,
+nucleo-f103rb,42,+3.3V,POWER,,,,nucleo-f103rb-arduino-39,
+nucleo-f103rb,43,+5V,POWER,,,,nucleo-f103rb-arduino-39,
+nucleo-f103rb,44,GND,GND,,,,nucleo-f103rb-arduino-39,
+nucleo-f103rb,45,GND,GND,,,,nucleo-f103rb-arduino-39,
+nucleo-f103rb,46,VIN,POWER,,,,nucleo-f103rb-arduino-39,
+nucleo-f103rb,47,PA0,GPIO,WKUP,,WKUP,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+nucleo-f103rb,47,PA0,GPIO,USART2_CTS,USART2_REMAP=0,USART2_CTS,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
+nucleo-f103rb,47,PA0,GPIO,ADC12_IN0,,ADC12_IN0,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+nucleo-f103rb,47,PA0,GPIO,TIM2_CH1_ETR,TIM2_REMAP=00|10,TIM2_CH1_ETR,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-45
+nucleo-f103rb,48,PA1,GPIO,USART2_RTS,USART2_REMAP=0,USART2_RTS,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
+nucleo-f103rb,48,PA1,GPIO,ADC12_IN1,,ADC12_IN1,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+nucleo-f103rb,48,PA1,GPIO,TIM2_CH2,TIM2_REMAP=00|10,TIM2_CH2,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-45
+nucleo-f103rb,49,PA4,GPIO,SPI1_NSS,SPI1_REMAP=0,SPI1_NSS,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-56
+nucleo-f103rb,49,PA4,GPIO,USART2_CK,USART2_REMAP=0,USART2_CK,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
+nucleo-f103rb,49,PA4,GPIO,ADC12_IN4,,ADC12_IN4,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+nucleo-f103rb,50,PB0,GPIO,ADC12_IN8,,ADC12_IN8,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+nucleo-f103rb,50,PB0,GPIO,TIM3_CH3,TIM3_REMAP=00|10,TIM3_CH3,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-44
+nucleo-f103rb,50,PB0,GPIO,TIM1_CH2N,TIM1_REMAP=01,TIM1_CH2N,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-46
+nucleo-f103rb,51,PC1,GPIO,ADC12_IN11,,ADC12_IN11,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes | nucleo-mb1136-bridges,stm32-pin-table-p28
+nucleo-f103rb,52,PC0,GPIO,ADC12_IN10,,ADC12_IN10,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes | nucleo-mb1136-bridges,stm32-pin-table-p28
 nucleo-f103rb,53,PC9,GPIO,TIM3_CH4,TIM3_REMAP=11,TIM3_CH4,nucleo-f103rb-morpho-55 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-44
 nucleo-f103rb,54,PC8,GPIO,TIM3_CH3,TIM3_REMAP=11,TIM3_CH3,nucleo-f103rb-morpho-55 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-44
 nucleo-f103rb,55,PB8,GPIO,TIM4_CH3,TIM4_REMAP=0,TIM4_CH3,nucleo-f103rb-morpho-55 | stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-43
@@ -2132,8 +2132,8 @@ nucleo-f103rb,59,AVDD,POWER,,,,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pi
 nucleo-f103rb,60,U5V,POWER,,,,nucleo-f103rb-morpho-56,
 nucleo-f103rb,61,GND,GND,,,,nucleo-f103rb-morpho-56,
 nucleo-f103rb,62,NC,SYSTEM,,,,nucleo-f103rb-morpho-56,
-nucleo-f103rb,63,PA5,GPIO,SPI1_SCK,SPI1_REMAP=0,SPI1_SCK,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29 | stm32-remap-56
-nucleo-f103rb,63,PA5,GPIO,ADC12_IN5,,ADC12_IN5,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29
+nucleo-f103rb,63,PA5,GPIO,SPI1_SCK,SPI1_REMAP=0,SPI1_SCK,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-mb1136-bridges,stm32-pin-table-p29 | stm32-remap-56
+nucleo-f103rb,63,PA5,GPIO,ADC12_IN5,,ADC12_IN5,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-mb1136-bridges,stm32-pin-table-p29
 nucleo-f103rb,64,PA12,GPIO,USART1_RTS,,USART1_RTS,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
 nucleo-f103rb,64,PA12,GPIO,CANTX,CAN_REMAP=00,CANTX,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-34
 nucleo-f103rb,64,PA12,GPIO,USBDP,,USBDP,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
@@ -2196,62 +2196,360 @@ nucleo-f103rb,84,AGND,GND,,,,nucleo-f103rb-morpho-56,
 nucleo-f103rb,85,PA10,GPIO,USART1_RX,USART1_REMAP=0,USART1_RX,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-54
 nucleo-f103rb,85,PA10,GPIO,TIM1_CH3,TIM1_REMAP=00|01,TIM1_CH3,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
 nucleo-f103rb,86,PC4,GPIO,ADC12_IN14,,ADC12_IN14,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
-nucleo-f103rb,87,PA2,GPIO,USART2_TX,USART2_REMAP=0,USART2_TX,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29 | stm32-remap-53
-nucleo-f103rb,87,PA2,GPIO,ADC12_IN2,,ADC12_IN2,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29
-nucleo-f103rb,87,PA2,GPIO,TIM2_CH3,TIM2_REMAP=00|01,TIM2_CH3,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29 | stm32-remap-45
+nucleo-f103rb,87,PA2,GPIO,USART2_TX,USART2_REMAP=0,USART2_TX,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-mb1136-bridges,stm32-pin-table-p29 | stm32-remap-53
+nucleo-f103rb,87,PA2,GPIO,ADC12_IN2,,ADC12_IN2,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-mb1136-bridges,stm32-pin-table-p29
+nucleo-f103rb,87,PA2,GPIO,TIM2_CH3,TIM2_REMAP=00|01,TIM2_CH3,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-mb1136-bridges,stm32-pin-table-p29 | stm32-remap-45
 nucleo-f103rb,88,NC,SYSTEM,,,,nucleo-f103rb-morpho-56,
-nucleo-f103rb,89,PA3,GPIO,USART2_RX,USART2_REMAP=0,USART2_RX,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29 | stm32-remap-53
-nucleo-f103rb,89,PA3,GPIO,ADC12_IN3,,ADC12_IN3,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29
-nucleo-f103rb,89,PA3,GPIO,TIM2_CH4,TIM2_REMAP=00|01,TIM2_CH4,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29 | stm32-remap-45
+nucleo-f103rb,89,PA3,GPIO,USART2_RX,USART2_REMAP=0,USART2_RX,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-mb1136-bridges,stm32-pin-table-p29 | stm32-remap-53
+nucleo-f103rb,89,PA3,GPIO,ADC12_IN3,,ADC12_IN3,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-mb1136-bridges,stm32-pin-table-p29
+nucleo-f103rb,89,PA3,GPIO,TIM2_CH4,TIM2_REMAP=00|01,TIM2_CH4,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-mb1136-bridges,stm32-pin-table-p29 | stm32-remap-45
 nucleo-f103rb,90,NC,SYSTEM,,,,nucleo-f103rb-morpho-56,
-nucleo-f103rb,91,PA9,GPIO,USART1_TX,USART1_REMAP=0,USART1_TX,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-54
-nucleo-f103rb,91,PA9,GPIO,TIM1_CH2,TIM1_REMAP=00|01,TIM1_CH2,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
-nucleo-f103rb,92,PC7,GPIO,TIM3_CH2,TIM3_REMAP=11,TIM3_CH2,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-44
-nucleo-f103rb,93,PB6,GPIO,I2C1_SCL,I2C1_REMAP=0,I2C1_SCL,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-55
-nucleo-f103rb,93,PB6,GPIO,TIM4_CH1,TIM4_REMAP=0,TIM4_CH1,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-43
-nucleo-f103rb,93,PB6,GPIO,USART1_TX,USART1_REMAP=1,USART1_TX,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-54
-nucleo-f103rb,94,PA7,GPIO,SPI1_MOSI,SPI1_REMAP=0,SPI1_MOSI,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-56
-nucleo-f103rb,94,PA7,GPIO,ADC12_IN7,,ADC12_IN7,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
-nucleo-f103rb,94,PA7,GPIO,TIM3_CH2,TIM3_REMAP=00,TIM3_CH2,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-44
-nucleo-f103rb,94,PA7,GPIO,TIM1_CH1N,TIM1_REMAP=01,TIM1_CH1N,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-46
-nucleo-f103rb,95,PA6,GPIO,SPI1_MISO,SPI1_REMAP=0,SPI1_MISO,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-56
-nucleo-f103rb,95,PA6,GPIO,ADC12_IN6,,ADC12_IN6,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
-nucleo-f103rb,95,PA6,GPIO,TIM3_CH1,TIM3_REMAP=00,TIM3_CH1,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-44
-nucleo-f103rb,95,PA6,GPIO,TIM1_BKIN,TIM1_REMAP=01,TIM1_BKIN,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-46
-nucleo-f103rb,96,PA5,GPIO,SPI1_SCK,SPI1_REMAP=0,SPI1_SCK,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29 | stm32-remap-56
-nucleo-f103rb,96,PA5,GPIO,ADC12_IN5,,ADC12_IN5,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29
-nucleo-f103rb,97,GND,GND,,,,nucleo-f103rb-arduino,
-nucleo-f103rb,98,AVDD,POWER,,,,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p28,
-nucleo-f103rb,99,PB9,GPIO,TIM4_CH4,TIM4_REMAP=0,TIM4_CH4,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-43
-nucleo-f103rb,99,PB9,GPIO,I2C1_SDA,I2C1_REMAP=1,I2C1_SDA,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-55
-nucleo-f103rb,99,PB9,GPIO,CANTX,CAN_REMAP=10,CANTX,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-34
-nucleo-f103rb,100,PB8,GPIO,TIM4_CH3,TIM4_REMAP=0,TIM4_CH3,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-43
-nucleo-f103rb,100,PB8,GPIO,I2C1_SCL,I2C1_REMAP=1,I2C1_SCL,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-55
-nucleo-f103rb,100,PB8,GPIO,CANRX,CAN_REMAP=10,CANRX,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-34
-nucleo-f103rb,101,PA3,GPIO,USART2_RX,USART2_REMAP=0,USART2_RX,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29 | stm32-remap-53
-nucleo-f103rb,101,PA3,GPIO,ADC12_IN3,,ADC12_IN3,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29
-nucleo-f103rb,101,PA3,GPIO,TIM2_CH4,TIM2_REMAP=00|01,TIM2_CH4,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29 | stm32-remap-45
-nucleo-f103rb,102,PA2,GPIO,USART2_TX,USART2_REMAP=0,USART2_TX,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29 | stm32-remap-53
-nucleo-f103rb,102,PA2,GPIO,ADC12_IN2,,ADC12_IN2,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29
-nucleo-f103rb,102,PA2,GPIO,TIM2_CH3,TIM2_REMAP=00|01,TIM2_CH3,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29 | stm32-remap-45
-nucleo-f103rb,103,PA10,GPIO,USART1_RX,USART1_REMAP=0,USART1_RX,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-54
-nucleo-f103rb,103,PA10,GPIO,TIM1_CH3,TIM1_REMAP=00|01,TIM1_CH3,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
-nucleo-f103rb,104,PB3,GPIO,TIM2_CH2,TIM2_REMAP=01|11,TIM2_CH2,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-45
-nucleo-f103rb,104,PB3,GPIO,TRACESWO,,TRACESWO,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
-nucleo-f103rb,104,PB3,GPIO,SPI1_SCK,SPI1_REMAP=1,SPI1_SCK,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-56
-nucleo-f103rb,104,PB3,GPIO,JTDO,,JTDO,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
-nucleo-f103rb,105,PB5,GPIO,I2C1_SMBAl,,I2C1_SMBAl,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32
-nucleo-f103rb,105,PB5,GPIO,TIM3_CH2,TIM3_REMAP=10,TIM3_CH2,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-44
-nucleo-f103rb,105,PB5,GPIO,SPI1_MOSI,SPI1_REMAP=1,SPI1_MOSI,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-56
-nucleo-f103rb,106,PB4,GPIO,TIM3_CH1,TIM3_REMAP=10,TIM3_CH1,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-44
-nucleo-f103rb,106,PB4,GPIO,SPI1_MISO,SPI1_REMAP=1,SPI1_MISO,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-56
-nucleo-f103rb,106,PB4,GPIO,JNTRST,,JNTRST,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
-nucleo-f103rb,107,PB10,GPIO,I2C2_SCL,,I2C2_SCL,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
-nucleo-f103rb,107,PB10,GPIO,USART3_TX,USART3_REMAP=00,USART3_TX,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
-nucleo-f103rb,107,PB10,GPIO,TIM2_CH3,TIM2_REMAP=10|11,TIM2_CH3,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-45
-nucleo-f103rb,108,PA8,GPIO,USART1_CK,,USART1_CK,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
-nucleo-f103rb,108,PA8,GPIO,TIM1_CH1,TIM1_REMAP=00|01,TIM1_CH1,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
-nucleo-f103rb,108,PA8,GPIO,MCO,,MCO,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+nucleo-f103rb,91,PA9,GPIO,USART1_TX,USART1_REMAP=0,USART1_TX,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-54
+nucleo-f103rb,91,PA9,GPIO,TIM1_CH2,TIM1_REMAP=00|01,TIM1_CH2,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+nucleo-f103rb,92,PC7,GPIO,TIM3_CH2,TIM3_REMAP=11,TIM3_CH2,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-44
+nucleo-f103rb,93,PB6,GPIO,I2C1_SCL,I2C1_REMAP=0,I2C1_SCL,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-55
+nucleo-f103rb,93,PB6,GPIO,TIM4_CH1,TIM4_REMAP=0,TIM4_CH1,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-43
+nucleo-f103rb,93,PB6,GPIO,USART1_TX,USART1_REMAP=1,USART1_TX,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-54
+nucleo-f103rb,94,PA7,GPIO,SPI1_MOSI,SPI1_REMAP=0,SPI1_MOSI,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-56
+nucleo-f103rb,94,PA7,GPIO,ADC12_IN7,,ADC12_IN7,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+nucleo-f103rb,94,PA7,GPIO,TIM3_CH2,TIM3_REMAP=00,TIM3_CH2,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-44
+nucleo-f103rb,94,PA7,GPIO,TIM1_CH1N,TIM1_REMAP=01,TIM1_CH1N,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-46
+nucleo-f103rb,95,PA6,GPIO,SPI1_MISO,SPI1_REMAP=0,SPI1_MISO,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-56
+nucleo-f103rb,95,PA6,GPIO,ADC12_IN6,,ADC12_IN6,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+nucleo-f103rb,95,PA6,GPIO,TIM3_CH1,TIM3_REMAP=00,TIM3_CH1,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-44
+nucleo-f103rb,95,PA6,GPIO,TIM1_BKIN,TIM1_REMAP=01,TIM1_BKIN,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-46
+nucleo-f103rb,96,PA5,GPIO,SPI1_SCK,SPI1_REMAP=0,SPI1_SCK,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-mb1136-bridges,stm32-pin-table-p29 | stm32-remap-56
+nucleo-f103rb,96,PA5,GPIO,ADC12_IN5,,ADC12_IN5,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-mb1136-bridges,stm32-pin-table-p29
+nucleo-f103rb,97,GND,GND,,,,nucleo-f103rb-arduino-39,
+nucleo-f103rb,98,AVDD,POWER,,,,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p28,
+nucleo-f103rb,99,PB9,GPIO,TIM4_CH4,TIM4_REMAP=0,TIM4_CH4,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-43
+nucleo-f103rb,99,PB9,GPIO,I2C1_SDA,I2C1_REMAP=1,I2C1_SDA,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-55
+nucleo-f103rb,99,PB9,GPIO,CANTX,CAN_REMAP=10,CANTX,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-34
+nucleo-f103rb,100,PB8,GPIO,TIM4_CH3,TIM4_REMAP=0,TIM4_CH3,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-43
+nucleo-f103rb,100,PB8,GPIO,I2C1_SCL,I2C1_REMAP=1,I2C1_SCL,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-55
+nucleo-f103rb,100,PB8,GPIO,CANRX,CAN_REMAP=10,CANRX,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-34
+nucleo-f103rb,101,PA3,GPIO,USART2_RX,USART2_REMAP=0,USART2_RX,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-mb1136-bridges,stm32-pin-table-p29 | stm32-remap-53
+nucleo-f103rb,101,PA3,GPIO,ADC12_IN3,,ADC12_IN3,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-mb1136-bridges,stm32-pin-table-p29
+nucleo-f103rb,101,PA3,GPIO,TIM2_CH4,TIM2_REMAP=00|01,TIM2_CH4,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-mb1136-bridges,stm32-pin-table-p29 | stm32-remap-45
+nucleo-f103rb,102,PA2,GPIO,USART2_TX,USART2_REMAP=0,USART2_TX,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-mb1136-bridges,stm32-pin-table-p29 | stm32-remap-53
+nucleo-f103rb,102,PA2,GPIO,ADC12_IN2,,ADC12_IN2,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-mb1136-bridges,stm32-pin-table-p29
+nucleo-f103rb,102,PA2,GPIO,TIM2_CH3,TIM2_REMAP=00|01,TIM2_CH3,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-mb1136-bridges,stm32-pin-table-p29 | stm32-remap-45
+nucleo-f103rb,103,PA10,GPIO,USART1_RX,USART1_REMAP=0,USART1_RX,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-54
+nucleo-f103rb,103,PA10,GPIO,TIM1_CH3,TIM1_REMAP=00|01,TIM1_CH3,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+nucleo-f103rb,104,PB3,GPIO,TIM2_CH2,TIM2_REMAP=01|11,TIM2_CH2,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-45
+nucleo-f103rb,104,PB3,GPIO,TRACESWO,,TRACESWO,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+nucleo-f103rb,104,PB3,GPIO,SPI1_SCK,SPI1_REMAP=1,SPI1_SCK,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-56
+nucleo-f103rb,104,PB3,GPIO,JTDO,,JTDO,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+nucleo-f103rb,105,PB5,GPIO,I2C1_SMBAl,,I2C1_SMBAl,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32
+nucleo-f103rb,105,PB5,GPIO,TIM3_CH2,TIM3_REMAP=10,TIM3_CH2,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-44
+nucleo-f103rb,105,PB5,GPIO,SPI1_MOSI,SPI1_REMAP=1,SPI1_MOSI,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-56
+nucleo-f103rb,106,PB4,GPIO,TIM3_CH1,TIM3_REMAP=10,TIM3_CH1,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-44
+nucleo-f103rb,106,PB4,GPIO,SPI1_MISO,SPI1_REMAP=1,SPI1_MISO,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-56
+nucleo-f103rb,106,PB4,GPIO,JNTRST,,JNTRST,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+nucleo-f103rb,107,PB10,GPIO,I2C2_SCL,,I2C2_SCL,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+nucleo-f103rb,107,PB10,GPIO,USART3_TX,USART3_REMAP=00,USART3_TX,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+nucleo-f103rb,107,PB10,GPIO,TIM2_CH3,TIM2_REMAP=10|11,TIM2_CH3,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-45
+nucleo-f103rb,108,PA8,GPIO,USART1_CK,,USART1_CK,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+nucleo-f103rb,108,PA8,GPIO,TIM1_CH1,TIM1_REMAP=00|01,TIM1_CH1,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+nucleo-f103rb,108,PA8,GPIO,MCO,,MCO,nucleo-f103rb-arduino-39 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+nucleo-f401re,1,PC10,GPIO,I2S3_CK,AF6,I2S3_CK,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,1,PC10,GPIO,SDIO_D2,AF12,SDIO_D2,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,1,PC10,GPIO,SPI3_SCK,AF6,SPI3_SCK,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,2,PC11,GPIO,ADC1_EXTI11,,ADC1_EXTI11,nucleo-f401re-morpho-58 | f401re-package,f401re-package
+nucleo-f401re,2,PC11,GPIO,I2S3_ext_SD,AF5,I2S3_ext_SD,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,2,PC11,GPIO,SDIO_D3,AF12,SDIO_D3,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,2,PC11,GPIO,SPI3_MISO,AF6,SPI3_MISO,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,3,PC12,GPIO,I2S3_SD,AF6,I2S3_SD,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,3,PC12,GPIO,SDIO_CK,AF12,SDIO_CK,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,3,PC12,GPIO,SPI3_MOSI,AF6,SPI3_MOSI,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,4,PD2,GPIO,SDIO_CMD,AF12,SDIO_CMD,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,4,PD2,GPIO,TIM3_ETR,AF2,TIM3_ETR,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,5,VDD,POWER,,,,nucleo-f401re-morpho-58 | f401re-package,
+nucleo-f401re,6,E5V,POWER,,,,nucleo-f401re-morpho-58,
+nucleo-f401re,7,BOOT0,SYSTEM,,,,nucleo-f401re-morpho-58 | f401re-package,
+nucleo-f401re,8,GND,GND,,,,nucleo-f401re-morpho-58,
+nucleo-f401re,9,NC,SYSTEM,,,,nucleo-f401re-morpho-58,
+nucleo-f401re,10,NC,SYSTEM,,,,nucleo-f401re-morpho-58,
+nucleo-f401re,11,NC,SYSTEM,,,,nucleo-f401re-morpho-58,
+nucleo-f401re,12,IOREF,POWER,,,,nucleo-f401re-morpho-58,
+nucleo-f401re,13,PA13,GPIO,SYS_JTMS-SWDIO,AF0,SYS_JTMS-SWDIO,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,14,RESET,SYSTEM,,,,nucleo-f401re-morpho-58 | f401re-package,
+nucleo-f401re,15,PA14,GPIO,SYS_JTCK-SWCLK,AF0,SYS_JTCK-SWCLK,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,16,+3.3V,POWER,,,,nucleo-f401re-morpho-58,
+nucleo-f401re,17,PA15,GPIO,ADC1_EXTI15,,ADC1_EXTI15,nucleo-f401re-morpho-58 | f401re-package,f401re-package
+nucleo-f401re,17,PA15,GPIO,I2S3_WS,AF6,I2S3_WS,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,17,PA15,GPIO,SPI1_NSS,AF5,SPI1_NSS,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,17,PA15,GPIO,SPI3_NSS,AF6,SPI3_NSS,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,17,PA15,GPIO,SYS_JTDI,AF0,SYS_JTDI,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,17,PA15,GPIO,TIM2_CH1,AF1,TIM2_CH1,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,17,PA15,GPIO,TIM2_ETR,AF1,TIM2_ETR,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,18,+5V,POWER,,,,nucleo-f401re-morpho-58,
+nucleo-f401re,19,GND,GND,,,,nucleo-f401re-morpho-58,
+nucleo-f401re,20,GND,GND,,,,nucleo-f401re-morpho-58,
+nucleo-f401re,21,PB7,GPIO,I2C1_SDA,AF4,I2C1_SDA,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,21,PB7,GPIO,TIM4_CH2,AF2,TIM4_CH2,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,21,PB7,GPIO,USART1_RX,AF7,USART1_RX,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,22,GND,GND,,,,nucleo-f401re-morpho-58,
+nucleo-f401re,23,PC13,GPIO,RTC_AF1,,RTC_AF1,nucleo-f401re-morpho-58 | f401re-package,f401re-package
+nucleo-f401re,24,VIN,POWER,,,,nucleo-f401re-morpho-58,
+nucleo-f401re,25,PC14,GPIO,RCC_OSC32_IN,,RCC_OSC32_IN,nucleo-f401re-morpho-58 | f401re-package | nucleo-mb1136-bridges,f401re-package
+nucleo-f401re,26,NC,SYSTEM,,,,nucleo-f401re-morpho-58,
+nucleo-f401re,27,PC15,GPIO,ADC1_EXTI15,,ADC1_EXTI15,nucleo-f401re-morpho-58 | f401re-package | nucleo-mb1136-bridges,f401re-package
+nucleo-f401re,27,PC15,GPIO,RCC_OSC32_OUT,,RCC_OSC32_OUT,nucleo-f401re-morpho-58 | f401re-package | nucleo-mb1136-bridges,f401re-package
+nucleo-f401re,28,PA0,GPIO,ADC1_IN0,,ADC1_IN0,nucleo-f401re-morpho-58 | f401re-package,f401re-package
+nucleo-f401re,28,PA0,GPIO,SYS_WKUP,,SYS_WKUP,nucleo-f401re-morpho-58 | f401re-package,f401re-package
+nucleo-f401re,28,PA0,GPIO,TIM2_CH1,AF1,TIM2_CH1,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,28,PA0,GPIO,TIM2_ETR,AF1,TIM2_ETR,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,28,PA0,GPIO,TIM5_CH1,AF2,TIM5_CH1,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,28,PA0,GPIO,USART2_CTS,AF7,USART2_CTS,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,29,PH0,GPIO,RCC_OSC_IN,,RCC_OSC_IN,nucleo-f401re-morpho-58 | f401re-package | nucleo-mb1136-bridges,f401re-package
+nucleo-f401re,30,PA1,GPIO,ADC1_IN1,,ADC1_IN1,nucleo-f401re-morpho-58 | f401re-package,f401re-package
+nucleo-f401re,30,PA1,GPIO,TIM2_CH2,AF1,TIM2_CH2,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,30,PA1,GPIO,TIM5_CH2,AF2,TIM5_CH2,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,30,PA1,GPIO,USART2_RTS,AF7,USART2_RTS,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,31,PH1,GPIO,RCC_OSC_OUT,,RCC_OSC_OUT,nucleo-f401re-morpho-58 | f401re-package | nucleo-mb1136-bridges,f401re-package
+nucleo-f401re,32,PA4,GPIO,ADC1_IN4,,ADC1_IN4,nucleo-f401re-morpho-58 | f401re-package,f401re-package
+nucleo-f401re,32,PA4,GPIO,I2S3_WS,AF6,I2S3_WS,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,32,PA4,GPIO,SPI1_NSS,AF5,SPI1_NSS,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,32,PA4,GPIO,SPI3_NSS,AF6,SPI3_NSS,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,32,PA4,GPIO,USART2_CK,AF7,USART2_CK,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,33,VBAT,POWER,,,,nucleo-f401re-morpho-58 | f401re-package,
+nucleo-f401re,34,PB0,GPIO,ADC1_IN8,,ADC1_IN8,nucleo-f401re-morpho-58 | f401re-package,f401re-package
+nucleo-f401re,34,PB0,GPIO,TIM1_CH2N,AF1,TIM1_CH2N,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,34,PB0,GPIO,TIM3_CH3,AF2,TIM3_CH3,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,35,PC2,GPIO,ADC1_IN12,,ADC1_IN12,nucleo-f401re-morpho-58 | f401re-package,f401re-package
+nucleo-f401re,35,PC2,GPIO,I2S2_ext_SD,AF6,I2S2_ext_SD,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,35,PC2,GPIO,SPI2_MISO,AF5,SPI2_MISO,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,36,PC1,GPIO,ADC1_IN11,,ADC1_IN11,nucleo-f401re-morpho-58 | f401re-package | nucleo-mb1136-bridges,f401re-package
+nucleo-f401re,37,PC3,GPIO,ADC1_IN13,,ADC1_IN13,nucleo-f401re-morpho-58 | f401re-package,f401re-package
+nucleo-f401re,37,PC3,GPIO,I2S2_SD,AF5,I2S2_SD,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,37,PC3,GPIO,SPI2_MOSI,AF5,SPI2_MOSI,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,38,PC0,GPIO,ADC1_IN10,,ADC1_IN10,nucleo-f401re-morpho-58 | f401re-package | nucleo-mb1136-bridges,f401re-package
+nucleo-f401re,39,NC,SYSTEM,,,,nucleo-f401re-arduino-43,
+nucleo-f401re,40,IOREF,POWER,,,,nucleo-f401re-arduino-43,
+nucleo-f401re,41,NRST,SYSTEM,,,,nucleo-f401re-arduino-43 | f401re-package,
+nucleo-f401re,42,+3.3V,POWER,,,,nucleo-f401re-arduino-43,
+nucleo-f401re,43,+5V,POWER,,,,nucleo-f401re-arduino-43,
+nucleo-f401re,44,GND,GND,,,,nucleo-f401re-arduino-43,
+nucleo-f401re,45,GND,GND,,,,nucleo-f401re-arduino-43,
+nucleo-f401re,46,VIN,POWER,,,,nucleo-f401re-arduino-43,
+nucleo-f401re,47,PA0,GPIO,ADC1_IN0,,ADC1_IN0,nucleo-f401re-arduino-43 | f401re-package,f401re-package
+nucleo-f401re,47,PA0,GPIO,SYS_WKUP,,SYS_WKUP,nucleo-f401re-arduino-43 | f401re-package,f401re-package
+nucleo-f401re,47,PA0,GPIO,TIM2_CH1,AF1,TIM2_CH1,nucleo-f401re-arduino-43 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,47,PA0,GPIO,TIM2_ETR,AF1,TIM2_ETR,nucleo-f401re-arduino-43 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,47,PA0,GPIO,TIM5_CH1,AF2,TIM5_CH1,nucleo-f401re-arduino-43 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,47,PA0,GPIO,USART2_CTS,AF7,USART2_CTS,nucleo-f401re-arduino-43 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,48,PA1,GPIO,ADC1_IN1,,ADC1_IN1,nucleo-f401re-arduino-43 | f401re-package,f401re-package
+nucleo-f401re,48,PA1,GPIO,TIM2_CH2,AF1,TIM2_CH2,nucleo-f401re-arduino-43 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,48,PA1,GPIO,TIM5_CH2,AF2,TIM5_CH2,nucleo-f401re-arduino-43 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,48,PA1,GPIO,USART2_RTS,AF7,USART2_RTS,nucleo-f401re-arduino-43 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,49,PA4,GPIO,ADC1_IN4,,ADC1_IN4,nucleo-f401re-arduino-43 | f401re-package,f401re-package
+nucleo-f401re,49,PA4,GPIO,I2S3_WS,AF6,I2S3_WS,nucleo-f401re-arduino-43 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,49,PA4,GPIO,SPI1_NSS,AF5,SPI1_NSS,nucleo-f401re-arduino-43 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,49,PA4,GPIO,SPI3_NSS,AF6,SPI3_NSS,nucleo-f401re-arduino-43 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,49,PA4,GPIO,USART2_CK,AF7,USART2_CK,nucleo-f401re-arduino-43 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,50,PB0,GPIO,ADC1_IN8,,ADC1_IN8,nucleo-f401re-arduino-43 | f401re-package,f401re-package
+nucleo-f401re,50,PB0,GPIO,TIM1_CH2N,AF1,TIM1_CH2N,nucleo-f401re-arduino-43 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,50,PB0,GPIO,TIM3_CH3,AF2,TIM3_CH3,nucleo-f401re-arduino-43 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,51,PC1,GPIO,ADC1_IN11,,ADC1_IN11,nucleo-f401re-arduino-43 | f401re-package | nucleo-mb1136-bridges,f401re-package
+nucleo-f401re,52,PC0,GPIO,ADC1_IN10,,ADC1_IN10,nucleo-f401re-arduino-43 | f401re-package | nucleo-mb1136-bridges,f401re-package
+nucleo-f401re,53,PC9,GPIO,I2C3_SDA,AF4,I2C3_SDA,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,53,PC9,GPIO,I2S_CKIN,AF5,I2S_CKIN,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,53,PC9,GPIO,RCC_MCO_2,AF0,RCC_MCO_2,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,53,PC9,GPIO,SDIO_D1,AF12,SDIO_D1,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,53,PC9,GPIO,TIM3_CH4,AF2,TIM3_CH4,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,54,PC8,GPIO,SDIO_D0,AF12,SDIO_D0,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,54,PC8,GPIO,TIM3_CH3,AF2,TIM3_CH3,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,54,PC8,GPIO,USART6_CK,AF8,USART6_CK,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,55,PB8,GPIO,I2C1_SCL,AF4,I2C1_SCL,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,55,PB8,GPIO,SDIO_D4,AF12,SDIO_D4,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,55,PB8,GPIO,TIM10_CH1,AF3,TIM10_CH1,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,55,PB8,GPIO,TIM4_CH3,AF2,TIM4_CH3,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,56,PC6,GPIO,I2S2_MCK,AF5,I2S2_MCK,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,56,PC6,GPIO,SDIO_D6,AF12,SDIO_D6,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,56,PC6,GPIO,TIM3_CH1,AF2,TIM3_CH1,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,56,PC6,GPIO,USART6_TX,AF8,USART6_TX,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,57,PB9,GPIO,I2C1_SDA,AF4,I2C1_SDA,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,57,PB9,GPIO,I2S2_WS,AF5,I2S2_WS,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,57,PB9,GPIO,SDIO_D5,AF12,SDIO_D5,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,57,PB9,GPIO,SPI2_NSS,AF5,SPI2_NSS,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,57,PB9,GPIO,TIM11_CH1,AF3,TIM11_CH1,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,57,PB9,GPIO,TIM4_CH4,AF2,TIM4_CH4,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,58,PC5,GPIO,ADC1_IN15,,ADC1_IN15,nucleo-f401re-morpho-58 | f401re-package,f401re-package
+nucleo-f401re,59,AVDD,POWER,,,,nucleo-f401re-morpho-58 | f401re-package,
+nucleo-f401re,60,U5V,POWER,,,,nucleo-f401re-morpho-58,
+nucleo-f401re,61,GND,GND,,,,nucleo-f401re-morpho-58,
+nucleo-f401re,62,NC,SYSTEM,,,,nucleo-f401re-morpho-58,
+nucleo-f401re,63,PA5,GPIO,ADC1_IN5,,ADC1_IN5,nucleo-f401re-morpho-58 | f401re-package | nucleo-mb1136-bridges,f401re-package
+nucleo-f401re,63,PA5,GPIO,SPI1_SCK,AF5,SPI1_SCK,nucleo-f401re-morpho-58 | f401re-package | nucleo-mb1136-bridges,f401re-package | f401re-modes
+nucleo-f401re,63,PA5,GPIO,TIM2_CH1,AF1,TIM2_CH1,nucleo-f401re-morpho-58 | f401re-package | nucleo-mb1136-bridges,f401re-package | f401re-modes
+nucleo-f401re,63,PA5,GPIO,TIM2_ETR,AF1,TIM2_ETR,nucleo-f401re-morpho-58 | f401re-package | nucleo-mb1136-bridges,f401re-package | f401re-modes
+nucleo-f401re,64,PA12,GPIO,TIM1_ETR,AF1,TIM1_ETR,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,64,PA12,GPIO,USART1_RTS,AF7,USART1_RTS,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,64,PA12,GPIO,USART6_RX,AF8,USART6_RX,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,64,PA12,GPIO,USB_OTG_FS_DP,AF10,USB_OTG_FS_DP,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,65,PA6,GPIO,ADC1_IN6,,ADC1_IN6,nucleo-f401re-morpho-58 | f401re-package,f401re-package
+nucleo-f401re,65,PA6,GPIO,SPI1_MISO,AF5,SPI1_MISO,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,65,PA6,GPIO,TIM1_BKIN,AF1,TIM1_BKIN,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,65,PA6,GPIO,TIM3_CH1,AF2,TIM3_CH1,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,66,PA11,GPIO,ADC1_EXTI11,,ADC1_EXTI11,nucleo-f401re-morpho-58 | f401re-package,f401re-package
+nucleo-f401re,66,PA11,GPIO,TIM1_CH4,AF1,TIM1_CH4,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,66,PA11,GPIO,USART1_CTS,AF7,USART1_CTS,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,66,PA11,GPIO,USART6_TX,AF8,USART6_TX,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,66,PA11,GPIO,USB_OTG_FS_DM,AF10,USB_OTG_FS_DM,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,67,PA7,GPIO,ADC1_IN7,,ADC1_IN7,nucleo-f401re-morpho-58 | f401re-package,f401re-package
+nucleo-f401re,67,PA7,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,67,PA7,GPIO,TIM1_CH1N,AF1,TIM1_CH1N,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,67,PA7,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,68,PB12,GPIO,I2C2_SMBA,AF4,I2C2_SMBA,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,68,PB12,GPIO,I2S2_WS,AF5,I2S2_WS,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,68,PB12,GPIO,SPI2_NSS,AF5,SPI2_NSS,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,68,PB12,GPIO,TIM1_BKIN,AF1,TIM1_BKIN,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,69,PB6,GPIO,I2C1_SCL,AF4,I2C1_SCL,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,69,PB6,GPIO,TIM4_CH1,AF2,TIM4_CH1,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,69,PB6,GPIO,USART1_TX,AF7,USART1_TX,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,70,NC,SYSTEM,,,,nucleo-f401re-morpho-58,
+nucleo-f401re,71,PC7,GPIO,I2S3_MCK,AF6,I2S3_MCK,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,71,PC7,GPIO,SDIO_D7,AF12,SDIO_D7,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,71,PC7,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,71,PC7,GPIO,USART6_RX,AF8,USART6_RX,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,72,GND,GND,,,,nucleo-f401re-morpho-58,
+nucleo-f401re,73,PA9,GPIO,I2C3_SMBA,AF4,I2C3_SMBA,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,73,PA9,GPIO,TIM1_CH2,AF1,TIM1_CH2,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,73,PA9,GPIO,USART1_TX,AF7,USART1_TX,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,73,PA9,GPIO,USB_OTG_FS_VBUS,,USB_OTG_FS_VBUS,nucleo-f401re-morpho-58 | f401re-package,f401re-package
+nucleo-f401re,74,PB2,GPIO,,,,nucleo-f401re-morpho-58 | f401re-package,
+nucleo-f401re,75,PA8,GPIO,I2C3_SCL,AF4,I2C3_SCL,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,75,PA8,GPIO,RCC_MCO_1,AF0,RCC_MCO_1,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,75,PA8,GPIO,TIM1_CH1,AF1,TIM1_CH1,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,75,PA8,GPIO,USART1_CK,AF7,USART1_CK,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,75,PA8,GPIO,USB_OTG_FS_SOF,AF10,USB_OTG_FS_SOF,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,76,PB1,GPIO,ADC1_IN9,,ADC1_IN9,nucleo-f401re-morpho-58 | f401re-package,f401re-package
+nucleo-f401re,76,PB1,GPIO,TIM1_CH3N,AF1,TIM1_CH3N,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,76,PB1,GPIO,TIM3_CH4,AF2,TIM3_CH4,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,77,PB10,GPIO,I2C2_SCL,AF4,I2C2_SCL,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,77,PB10,GPIO,I2S2_CK,AF5,I2S2_CK,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,77,PB10,GPIO,SPI2_SCK,AF5,SPI2_SCK,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,77,PB10,GPIO,TIM2_CH3,AF1,TIM2_CH3,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,78,PB15,GPIO,ADC1_EXTI15,,ADC1_EXTI15,nucleo-f401re-morpho-58 | f401re-package,f401re-package
+nucleo-f401re,78,PB15,GPIO,I2S2_SD,AF5,I2S2_SD,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,78,PB15,GPIO,RTC_REFIN,AF0,RTC_REFIN,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,78,PB15,GPIO,SPI2_MOSI,AF5,SPI2_MOSI,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,78,PB15,GPIO,TIM1_CH3N,AF1,TIM1_CH3N,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,79,PB4,GPIO,I2C3_SDA,AF9,I2C3_SDA,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,79,PB4,GPIO,I2S3_ext_SD,AF7,I2S3_ext_SD,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,79,PB4,GPIO,SPI1_MISO,AF5,SPI1_MISO,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,79,PB4,GPIO,SPI3_MISO,AF6,SPI3_MISO,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,79,PB4,GPIO,SYS_JTRST,AF0,SYS_JTRST,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,79,PB4,GPIO,TIM3_CH1,AF2,TIM3_CH1,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,80,PB14,GPIO,I2S2_ext_SD,AF6,I2S2_ext_SD,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,80,PB14,GPIO,SPI2_MISO,AF5,SPI2_MISO,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,80,PB14,GPIO,TIM1_CH2N,AF1,TIM1_CH2N,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,81,PB5,GPIO,I2C1_SMBA,AF4,I2C1_SMBA,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,81,PB5,GPIO,I2S3_SD,AF6,I2S3_SD,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,81,PB5,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,81,PB5,GPIO,SPI3_MOSI,AF6,SPI3_MOSI,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,81,PB5,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,82,PB13,GPIO,I2S2_CK,AF5,I2S2_CK,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,82,PB13,GPIO,SPI2_SCK,AF5,SPI2_SCK,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,82,PB13,GPIO,TIM1_CH1N,AF1,TIM1_CH1N,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,83,PB3,GPIO,I2C2_SDA,AF9,I2C2_SDA,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,83,PB3,GPIO,I2S3_CK,AF6,I2S3_CK,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,83,PB3,GPIO,SPI1_SCK,AF5,SPI1_SCK,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,83,PB3,GPIO,SPI3_SCK,AF6,SPI3_SCK,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,83,PB3,GPIO,SYS_JTDO-SWO,AF0,SYS_JTDO-SWO,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,83,PB3,GPIO,TIM2_CH2,AF1,TIM2_CH2,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,84,AGND,GND,,,,nucleo-f401re-morpho-58,
+nucleo-f401re,85,PA10,GPIO,TIM1_CH3,AF1,TIM1_CH3,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,85,PA10,GPIO,USART1_RX,AF7,USART1_RX,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,85,PA10,GPIO,USB_OTG_FS_ID,AF10,USB_OTG_FS_ID,nucleo-f401re-morpho-58 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,86,PC4,GPIO,ADC1_IN14,,ADC1_IN14,nucleo-f401re-morpho-58 | f401re-package,f401re-package
+nucleo-f401re,87,PA2,GPIO,ADC1_IN2,,ADC1_IN2,nucleo-f401re-morpho-58 | f401re-package | nucleo-mb1136-bridges,f401re-package
+nucleo-f401re,87,PA2,GPIO,TIM2_CH3,AF1,TIM2_CH3,nucleo-f401re-morpho-58 | f401re-package | nucleo-mb1136-bridges,f401re-package | f401re-modes
+nucleo-f401re,87,PA2,GPIO,TIM5_CH3,AF2,TIM5_CH3,nucleo-f401re-morpho-58 | f401re-package | nucleo-mb1136-bridges,f401re-package | f401re-modes
+nucleo-f401re,87,PA2,GPIO,TIM9_CH1,AF3,TIM9_CH1,nucleo-f401re-morpho-58 | f401re-package | nucleo-mb1136-bridges,f401re-package | f401re-modes
+nucleo-f401re,87,PA2,GPIO,USART2_TX,AF7,USART2_TX,nucleo-f401re-morpho-58 | f401re-package | nucleo-mb1136-bridges,f401re-package | f401re-modes
+nucleo-f401re,88,NC,SYSTEM,,,,nucleo-f401re-morpho-58,
+nucleo-f401re,89,PA3,GPIO,ADC1_IN3,,ADC1_IN3,nucleo-f401re-morpho-58 | f401re-package | nucleo-mb1136-bridges,f401re-package
+nucleo-f401re,89,PA3,GPIO,TIM2_CH4,AF1,TIM2_CH4,nucleo-f401re-morpho-58 | f401re-package | nucleo-mb1136-bridges,f401re-package | f401re-modes
+nucleo-f401re,89,PA3,GPIO,TIM5_CH4,AF2,TIM5_CH4,nucleo-f401re-morpho-58 | f401re-package | nucleo-mb1136-bridges,f401re-package | f401re-modes
+nucleo-f401re,89,PA3,GPIO,TIM9_CH2,AF3,TIM9_CH2,nucleo-f401re-morpho-58 | f401re-package | nucleo-mb1136-bridges,f401re-package | f401re-modes
+nucleo-f401re,89,PA3,GPIO,USART2_RX,AF7,USART2_RX,nucleo-f401re-morpho-58 | f401re-package | nucleo-mb1136-bridges,f401re-package | f401re-modes
+nucleo-f401re,90,NC,SYSTEM,,,,nucleo-f401re-morpho-58,
+nucleo-f401re,91,PA9,GPIO,I2C3_SMBA,AF4,I2C3_SMBA,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,91,PA9,GPIO,TIM1_CH2,AF1,TIM1_CH2,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,91,PA9,GPIO,USART1_TX,AF7,USART1_TX,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,91,PA9,GPIO,USB_OTG_FS_VBUS,,USB_OTG_FS_VBUS,nucleo-f401re-arduino-44 | f401re-package,f401re-package
+nucleo-f401re,92,PC7,GPIO,I2S3_MCK,AF6,I2S3_MCK,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,92,PC7,GPIO,SDIO_D7,AF12,SDIO_D7,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,92,PC7,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,92,PC7,GPIO,USART6_RX,AF8,USART6_RX,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,93,PB6,GPIO,I2C1_SCL,AF4,I2C1_SCL,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,93,PB6,GPIO,TIM4_CH1,AF2,TIM4_CH1,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,93,PB6,GPIO,USART1_TX,AF7,USART1_TX,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,94,PA7,GPIO,ADC1_IN7,,ADC1_IN7,nucleo-f401re-arduino-44 | f401re-package,f401re-package
+nucleo-f401re,94,PA7,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,94,PA7,GPIO,TIM1_CH1N,AF1,TIM1_CH1N,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,94,PA7,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,95,PA6,GPIO,ADC1_IN6,,ADC1_IN6,nucleo-f401re-arduino-44 | f401re-package,f401re-package
+nucleo-f401re,95,PA6,GPIO,SPI1_MISO,AF5,SPI1_MISO,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,95,PA6,GPIO,TIM1_BKIN,AF1,TIM1_BKIN,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,95,PA6,GPIO,TIM3_CH1,AF2,TIM3_CH1,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,96,PA5,GPIO,ADC1_IN5,,ADC1_IN5,nucleo-f401re-arduino-44 | f401re-package | nucleo-mb1136-bridges,f401re-package
+nucleo-f401re,96,PA5,GPIO,SPI1_SCK,AF5,SPI1_SCK,nucleo-f401re-arduino-44 | f401re-package | nucleo-mb1136-bridges,f401re-package | f401re-modes
+nucleo-f401re,96,PA5,GPIO,TIM2_CH1,AF1,TIM2_CH1,nucleo-f401re-arduino-44 | f401re-package | nucleo-mb1136-bridges,f401re-package | f401re-modes
+nucleo-f401re,96,PA5,GPIO,TIM2_ETR,AF1,TIM2_ETR,nucleo-f401re-arduino-44 | f401re-package | nucleo-mb1136-bridges,f401re-package | f401re-modes
+nucleo-f401re,97,GND,GND,,,,nucleo-f401re-arduino-43,
+nucleo-f401re,98,AVDD,POWER,,,,nucleo-f401re-arduino-43 | f401re-package,
+nucleo-f401re,99,PB9,GPIO,I2C1_SDA,AF4,I2C1_SDA,nucleo-f401re-arduino-43 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,99,PB9,GPIO,I2S2_WS,AF5,I2S2_WS,nucleo-f401re-arduino-43 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,99,PB9,GPIO,SDIO_D5,AF12,SDIO_D5,nucleo-f401re-arduino-43 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,99,PB9,GPIO,SPI2_NSS,AF5,SPI2_NSS,nucleo-f401re-arduino-43 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,99,PB9,GPIO,TIM11_CH1,AF3,TIM11_CH1,nucleo-f401re-arduino-43 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,99,PB9,GPIO,TIM4_CH4,AF2,TIM4_CH4,nucleo-f401re-arduino-43 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,100,PB8,GPIO,I2C1_SCL,AF4,I2C1_SCL,nucleo-f401re-arduino-43 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,100,PB8,GPIO,SDIO_D4,AF12,SDIO_D4,nucleo-f401re-arduino-43 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,100,PB8,GPIO,TIM10_CH1,AF3,TIM10_CH1,nucleo-f401re-arduino-43 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,100,PB8,GPIO,TIM4_CH3,AF2,TIM4_CH3,nucleo-f401re-arduino-43 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,101,PA3,GPIO,ADC1_IN3,,ADC1_IN3,nucleo-f401re-arduino-44 | f401re-package | nucleo-mb1136-bridges,f401re-package
+nucleo-f401re,101,PA3,GPIO,TIM2_CH4,AF1,TIM2_CH4,nucleo-f401re-arduino-44 | f401re-package | nucleo-mb1136-bridges,f401re-package | f401re-modes
+nucleo-f401re,101,PA3,GPIO,TIM5_CH4,AF2,TIM5_CH4,nucleo-f401re-arduino-44 | f401re-package | nucleo-mb1136-bridges,f401re-package | f401re-modes
+nucleo-f401re,101,PA3,GPIO,TIM9_CH2,AF3,TIM9_CH2,nucleo-f401re-arduino-44 | f401re-package | nucleo-mb1136-bridges,f401re-package | f401re-modes
+nucleo-f401re,101,PA3,GPIO,USART2_RX,AF7,USART2_RX,nucleo-f401re-arduino-44 | f401re-package | nucleo-mb1136-bridges,f401re-package | f401re-modes
+nucleo-f401re,102,PA2,GPIO,ADC1_IN2,,ADC1_IN2,nucleo-f401re-arduino-44 | f401re-package | nucleo-mb1136-bridges,f401re-package
+nucleo-f401re,102,PA2,GPIO,TIM2_CH3,AF1,TIM2_CH3,nucleo-f401re-arduino-44 | f401re-package | nucleo-mb1136-bridges,f401re-package | f401re-modes
+nucleo-f401re,102,PA2,GPIO,TIM5_CH3,AF2,TIM5_CH3,nucleo-f401re-arduino-44 | f401re-package | nucleo-mb1136-bridges,f401re-package | f401re-modes
+nucleo-f401re,102,PA2,GPIO,TIM9_CH1,AF3,TIM9_CH1,nucleo-f401re-arduino-44 | f401re-package | nucleo-mb1136-bridges,f401re-package | f401re-modes
+nucleo-f401re,102,PA2,GPIO,USART2_TX,AF7,USART2_TX,nucleo-f401re-arduino-44 | f401re-package | nucleo-mb1136-bridges,f401re-package | f401re-modes
+nucleo-f401re,103,PA10,GPIO,TIM1_CH3,AF1,TIM1_CH3,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,103,PA10,GPIO,USART1_RX,AF7,USART1_RX,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,103,PA10,GPIO,USB_OTG_FS_ID,AF10,USB_OTG_FS_ID,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,104,PB3,GPIO,I2C2_SDA,AF9,I2C2_SDA,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,104,PB3,GPIO,I2S3_CK,AF6,I2S3_CK,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,104,PB3,GPIO,SPI1_SCK,AF5,SPI1_SCK,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,104,PB3,GPIO,SPI3_SCK,AF6,SPI3_SCK,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,104,PB3,GPIO,SYS_JTDO-SWO,AF0,SYS_JTDO-SWO,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,104,PB3,GPIO,TIM2_CH2,AF1,TIM2_CH2,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,105,PB5,GPIO,I2C1_SMBA,AF4,I2C1_SMBA,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,105,PB5,GPIO,I2S3_SD,AF6,I2S3_SD,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,105,PB5,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,105,PB5,GPIO,SPI3_MOSI,AF6,SPI3_MOSI,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,105,PB5,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,106,PB4,GPIO,I2C3_SDA,AF9,I2C3_SDA,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,106,PB4,GPIO,I2S3_ext_SD,AF7,I2S3_ext_SD,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,106,PB4,GPIO,SPI1_MISO,AF5,SPI1_MISO,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,106,PB4,GPIO,SPI3_MISO,AF6,SPI3_MISO,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,106,PB4,GPIO,SYS_JTRST,AF0,SYS_JTRST,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,106,PB4,GPIO,TIM3_CH1,AF2,TIM3_CH1,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,107,PB10,GPIO,I2C2_SCL,AF4,I2C2_SCL,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,107,PB10,GPIO,I2S2_CK,AF5,I2S2_CK,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,107,PB10,GPIO,SPI2_SCK,AF5,SPI2_SCK,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,107,PB10,GPIO,TIM2_CH3,AF1,TIM2_CH3,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,108,PA8,GPIO,I2C3_SCL,AF4,I2C3_SCL,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,108,PA8,GPIO,RCC_MCO_1,AF0,RCC_MCO_1,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,108,PA8,GPIO,TIM1_CH1,AF1,TIM1_CH1,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,108,PA8,GPIO,USART1_CK,AF7,USART1_CK,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f401re,108,PA8,GPIO,USB_OTG_FS_SOF,AF10,USB_OTG_FS_SOF,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
 arduino-uno-r3,1,NC,SYSTEM,,,,arduino-uno-r3-headers | arduino-uno-r3-connector-tables,
 arduino-uno-r3,2,IOREF,POWER,,,,arduino-uno-r3-headers | arduino-uno-r3-connector-tables,
 arduino-uno-r3,3,RESET,SYSTEM,,,,arduino-uno-r3-headers | arduino-uno-r3-connector-tables,

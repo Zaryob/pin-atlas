@@ -12,7 +12,7 @@ for r in refs.values():
     host=urlsplit(r['url']).hostname
     if r['document']=='nucleo-um1724-r14':assert host=='evo.net.ua'
     else:assert host in {'pip-assets.raspberrypi.com','datasheets.raspberrypi.com','developer.nvidia.com','www.st.com','stm32-base.org','github.com','docs.arduino.cc','docs.espressif.com','www.espressif.com','ww1.microchip.com'},host
-    if host=='github.com':assert any(repo in r['url'] for repo in ['/raspberrypi/documentation/','/arduino/ArduinoCore-avr/','/arduino/ArduinoCore-renesas/','/arduino/ArduinoCore-megaavr/','/espressif/esp-dev-kits/'])
+    if host=='github.com':assert any(repo in r['url'] for repo in ['/raspberrypi/documentation/','/arduino/ArduinoCore-avr/','/arduino/ArduinoCore-renesas/','/arduino/ArduinoCore-megaavr/','/espressif/esp-dev-kits/','/STMicroelectronics/STM32_open_pin_data/'])
 for b in boards:
     assert len(b['pins'])==b['packagePins']
     assert {p['number'] for p in b['pins']}==set(range(1,b['packagePins']+1))
@@ -148,4 +148,10 @@ assert contacts['CN8.5']['sharedWith']==['CN7.36']
 assert contacts['CN9.2']['boardCircuitKey']=='nucleoUsart'
 assert contacts['CN7.29']['mcuPin']==5 and contacts['CN7.29']['boardCircuitKey']=='nucleoHse'
 assert contacts['CN6.1']['reserved']
+f401={pin['physicalLabel']:pin for pin in lookup['nucleo-f401re'].values()}
+assert len(f401)==108
+assert f401['CN7.29']['name']=='PH0' and f401['CN7.29']['mcuPin']==5
+assert f401['CN10.18']['reserved']
+assert f401['CN5.6']['mcuPin']==21
+assert any(f['name']=='SPI1_SCK' and f.get('selector')=='AF5' for f in f401['CN5.6']['functions'])
 print(f"Checked {report['physicalPins']} pins, {report['functionAssignments']} function references and model-specific corner cases.")

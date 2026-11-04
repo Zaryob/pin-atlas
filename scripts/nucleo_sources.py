@@ -1,34 +1,88 @@
-"""Build the MB1136 NUCLEO-F103RB expansion connectors from ST UM1724."""
+"""Build MB1136 expansion connectors from ST UM1724."""
 import copy
 import re
+import xml.etree.ElementTree as ET
 
 import pdfplumber
 
 
-def build_nucleo_f103rb(cache, docs, ref, chip):
-    document = 'nucleo-um1724-r14'
-    url = docs[document]['viewUrl']
-    with pdfplumber.open(cache / docs[document]['file']) as pdf:
-        arduino_page, morpho_start, morpho_end = (pdf.pages[n - 1] for n in (39, 55, 56))
-        assert 'Table 12.' in arduino_page.extract_text()
-        assert 'Table 27.' in morpho_end.extract_text()
-        arduino = arduino_page.extract_tables()[0][1:]
-        morpho = morpho_start.extract_tables()[-1][2:] + morpho_end.extract_tables()[0][2:]
+def read_f4_chip(cache, docs, ref, model, verified_on, category):
+    package_id, modes_id = f'{model}-package', f'{model}-modes'
+    package_doc, modes_doc = docs[package_id], docs[modes_id]
+    package = ET.parse(cache / package_doc['file']).getroot()
+    modes = ET.parse(cache / modes_doc['file']).getroot()
+    assert package.get('Package') == 'LQFP64'
+    pin_ref = ref(package_id, package_id, None, 'LQFP64 package pin numbers and signals', 'manufacturer-xml')
+    mode_ref = ref(modes_id, modes_id, None, 'GPIO alternate function selectors', 'manufacturer-xml')
+    selectors = {}
+    for pad in modes.findall('{*}GPIO_Pin'):
+        port = re.match(r'P[A-H]\d+', pad.get('Name'))
+        if not port:
+            continue
+        for signal in pad.findall('{*}PinSignal'):
+            value = signal.findtext("{*}SpecificParameter[@Name='GPIO_AF']/{*}PossibleValue", '')
+            match = re.match(r'GPIO_(AF\d+)_', value)
+            if match:
+                selectors[port[0], signal.get('Name')] = match[1]
+    pins = []
+    for pad in package.findall('{*}Pin'):
+        name = pad.get('Name')
+        port = re.match(r'P[A-H]\d+', name)
+        if port:
+            name = port[0]
+        if name == 'VREF+':
+            name = 'VDDA'
+        pin_type = 'GPIO' if port else 'POWER' if pad.get('Type') == 'Power' else 'SYSTEM'
+        functions = []
+        for signal in pad.findall('{*}Signal'):
+            signal = signal.get('Name')
+            if signal == 'GPIO':
+                continue
+            group = category(signal)
+            if signal.startswith('USART'):
+                group = 'UART'
+            elif signal.startswith('TIM'):
+                group = 'PWM' if re.search(r'_CH[1-4]', signal) else 'TIMER'
+            selector = selectors.get((name, signal))
+            function = {'name': signal, 'signal': signal, 'group': group, 'evidence': pin_ref}
+            if selector:
+                function.update(selector=selector, configurationEvidence=mode_ref)
+            functions.append(function)
+        pins.append({'number': int(pad.get('Position')), 'name': name, 'type': pin_type,
+                     'functions': functions, 'evidence': [pin_ref]})
+    assert sorted(pin['number'] for pin in pins) == list(range(1, 65))
+    return {'mcu': f'STM32{model.upper()}T6', 'processor': 'Arm Cortex-M4',
+            'clock': '84 MHz' if model == 'f401re' else '100 MHz', 'verifiedOn': verified_on,
+            'datasheet': f'https://www.st.com/resource/en/datasheet/stm32{model}.pdf', 'pins': pins}
 
+
+def build_nucleo(cache, docs, ref, chip, model):
+    document = 'nucleo-um1724-r14'
+    board_id = f'nucleo-{model}'
+    url = docs[document]['viewUrl']
+    arduino_pages = (39,) if model == 'f103rb' else (43, 44)
+    morpho_pages = (55, 56) if model == 'f103rb' else (58,)
+    arduino_table = 12 if model == 'f103rb' else 16
+    morpho_table = 27 if model == 'f103rb' else 29
     connectors = {name: {} for name in ('CN7', 'CN6', 'CN8', 'CN10', 'CN5', 'CN9')}
-    arduino_ref = ref('nucleo-f103rb-arduino', document, 39, 'Table 12 · Arduino headers')
-    bridges_ref = ref('nucleo-f103rb-bridges', document, 26, 'Table 10 · solder bridges and alternate connections (pp. 26–27)')
-    for heading, number, label, signal, _ in arduino:
-        if heading and heading.startswith('CN'):
-            connector = heading.split()[0]
-        if number and number.isdigit():
-            connectors[connector][int(number)] = (label, signal or label, arduino_ref)
-    for row in morpho:
-        page = 55 if int(row[0]) <= 5 else 56
-        evidence = ref(f'nucleo-f103rb-morpho-{page}', document, page, 'Table 27 · ST Morpho headers')
-        for header, number, signal in (('CN7', row[0], row[1]), ('CN7', row[3], row[2]),
-                                        ('CN10', row[4], row[5]), ('CN10', row[7], row[6])):
-            connectors[header][int(number)] = (None, signal, evidence)
+    bridges_ref = ref('nucleo-mb1136-bridges', document, 26, 'Table 10 · solder bridges and alternate connections (pp. 26–27)')
+    with pdfplumber.open(cache / docs[document]['file']) as pdf:
+        for page in arduino_pages:
+            evidence = ref(f'{board_id}-arduino-{page}', document, page, f'Table {arduino_table} · Arduino headers')
+            tables = pdf.pages[page - 1].extract_tables()
+            # Page 43 has the preceding model’s continuation above this table.
+            for heading, number, label, signal, _ in tables[-1][1:]:
+                if heading and heading.startswith('CN'):
+                    connector = heading.split()[0]
+                if number and number.isdigit():
+                    connectors[connector][int(number)] = (label, signal or label, evidence)
+        for page in morpho_pages:
+            evidence = ref(f'{board_id}-morpho-{page}', document, page, f'Table {morpho_table} · ST Morpho headers')
+            rows = pdf.pages[page - 1].extract_tables()[-1][2:]
+            for row in rows:
+                for header, number, signal in (('CN7', row[0], row[1]), ('CN7', row[3], row[2]),
+                                                ('CN10', row[4], row[5]), ('CN10', row[7], row[6])):
+                    connectors[header][int(number)] = (None, signal, evidence)
 
     sizes = [38, 8, 6, 38, 10, 8]
     assert all(sorted(pins) == list(range(1, count + 1)) for pins, count in zip(connectors.values(), sizes))
@@ -37,7 +91,7 @@ def build_nucleo_f103rb(cache, docs, ref, chip):
     notes = {
         'PA2': 'nucleoUsart', 'PA3': 'nucleoUsart', 'PA5': 'nucleoLed',
         'PC14': 'nucleoLse', 'PC15': 'nucleoLse',
-        'PD0': 'nucleoHse', 'PD1': 'nucleoHse',
+        'PD0': 'nucleoHse', 'PD1': 'nucleoHse', 'PH0': 'nucleoF4Hse', 'PH1': 'nucleoF4Hse',
     }
     pins = []
     for index, (header, contacts) in enumerate(connectors.items()):
@@ -79,12 +133,12 @@ def build_nucleo_f103rb(cache, docs, ref, chip):
             pin['sharedWith'] = [other['physicalLabel'] for other in pins
                                  if other is not pin and other['net'] == pin['net']]
     return {
-        'id': 'nucleo-f103rb', 'name': 'NUCLEO-F103RB', 'family': 'STM32', 'shortName': 'NUCLEO-F103RB',
+        'id': board_id, 'name': board_id.upper(), 'family': 'STM32', 'shortName': board_id.upper(),
         'subtitle': 'Nucleo-64 · MB1136 · Arduino Uno and ST Morpho', 'layout': 'custom',
-        'diagram': {'width': 820, 'height': 1550, 'artwork': 'assets/boards/nucleo-f103rb.svg', 'minWidth': 640},
+        'diagram': {'width': 820, 'height': 1550, 'artwork': 'assets/boards/nucleo-mb1136.svg', 'minWidth': 640},
         'packagePins': len(pins), 'gpioCount': sum(pin['type'] == 'GPIO' for pin in pins),
         'uniqueGPIOCount': len({pin['net'] for pin in pins if pin['type'] == 'GPIO'}),
         'voltage': '3.3 V I/O', 'mcu': chip['mcu'], 'processor': chip['processor'], 'clock': chip['clock'],
-        'verifiedOn': chip['verifiedOn'], 'scopeKey': 'nucleoF103Scope', 'source': url + '#page=39',
+        'verifiedOn': chip['verifiedOn'], 'scopeKey': 'nucleoF103Scope', 'source': f'{url}#page={arduino_pages[0]}',
         'datasheet': chip['datasheet'], 'pins': pins,
     }

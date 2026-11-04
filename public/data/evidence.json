@@ -493,6 +493,26 @@
       "downloadUrls": [
         "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf"
       ]
+    },
+    {
+      "id": "f401re-package",
+      "title": "STM32F401RE CubeMX package data",
+      "file": "f401re-package.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F401R(D-E)Tx.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F401R(D-E)Tx.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "43fd289df73ad74880e3b450d89ae6f16e429e6eb885300ddbf8af64d175ab15"
+    },
+    {
+      "id": "f401re-modes",
+      "title": "STM32F401RE CubeMX modes data",
+      "file": "f401re-modes.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F401_gpio_v1_0_Modes.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F401_gpio_v1_0_Modes.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "4491b4ee54faa9d6ccf722f6e79ca752b2dcd168f5279ad249959a561db4fbff"
     }
   ],
   "references": {
@@ -960,20 +980,20 @@
       "locator": "SWD header pins · numbered connector pins and connected nets",
       "method": "community-source-table"
     },
-    "nucleo-f103rb-arduino": {
-      "document": "nucleo-um1724-r14",
-      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=39",
-      "page": 39,
-      "locator": "Table 12 · Arduino headers",
-      "method": "pdf-table"
-    },
-    "nucleo-f103rb-bridges": {
+    "nucleo-mb1136-bridges": {
       "document": "nucleo-um1724-r14",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
       "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=26",
       "page": 26,
       "locator": "Table 10 · solder bridges and alternate connections (pp. 26–27)",
+      "method": "pdf-table"
+    },
+    "nucleo-f103rb-arduino-39": {
+      "document": "nucleo-um1724-r14",
+      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
+      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=39",
+      "page": 39,
+      "locator": "Table 12 · Arduino headers",
       "method": "pdf-table"
     },
     "nucleo-f103rb-morpho-55": {
@@ -990,6 +1010,46 @@
       "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=56",
       "page": 56,
       "locator": "Table 27 · ST Morpho headers",
+      "method": "pdf-table"
+    },
+    "f401re-package": {
+      "document": "f401re-package",
+      "title": "STM32F401RE CubeMX package data",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F401R(D-E)Tx.xml",
+      "page": null,
+      "locator": "LQFP64 package pin numbers and signals",
+      "method": "manufacturer-xml"
+    },
+    "f401re-modes": {
+      "document": "f401re-modes",
+      "title": "STM32F401RE CubeMX modes data",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F401_gpio_v1_0_Modes.xml",
+      "page": null,
+      "locator": "GPIO alternate function selectors",
+      "method": "manufacturer-xml"
+    },
+    "nucleo-f401re-arduino-43": {
+      "document": "nucleo-um1724-r14",
+      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
+      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=43",
+      "page": 43,
+      "locator": "Table 16 · Arduino headers",
+      "method": "pdf-table"
+    },
+    "nucleo-f401re-arduino-44": {
+      "document": "nucleo-um1724-r14",
+      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
+      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=44",
+      "page": 44,
+      "locator": "Table 16 · Arduino headers",
+      "method": "pdf-table"
+    },
+    "nucleo-f401re-morpho-58": {
+      "document": "nucleo-um1724-r14",
+      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
+      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=58",
+      "page": 58,
+      "locator": "Table 29 · ST Morpho headers",
       "method": "pdf-table"
     },
     "arduino-uno-r3-core": {

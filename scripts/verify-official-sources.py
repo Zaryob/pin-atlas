@@ -9,7 +9,7 @@ from pathlib import Path
 try:
     import pdfplumber
     from stm32_sources import build_stm32,verify_snapshot
-    from nucleo_sources import build_nucleo_f103rb
+    from nucleo_sources import build_nucleo,read_f4_chip
     from arduino_sources import build_arduino
     from expanded_arduino_sources import build_expanded_arduino
     from espressif_sources import build_espressif
@@ -351,7 +351,10 @@ def build(use_snapshots=False):
     boards.append(jetson_orin_nano())
     stm32_boards=build_stm32(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn'],use_snapshots)
     boards.extend(stm32_boards)
-    boards.append(build_nucleo_f103rb(CACHE,DOCS,ref,stm32_boards[2]))
+    boards.append(build_nucleo(CACHE,DOCS,ref,stm32_boards[2],'f103rb'))
+    for model in ('f401re',):
+        chip=read_f4_chip(CACHE,DOCS,ref,model,MANIFEST['verifiedOn'],category)
+        boards.append(build_nucleo(CACHE,DOCS,ref,chip,model))
     boards.extend(build_arduino(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn']))
     boards.extend(build_expanded_arduino(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn'],boards))
     boards.extend(build_espressif(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn']))

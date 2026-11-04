@@ -23685,7 +23685,7 @@
     "diagram": {
       "width": 820,
       "height": 1550,
-      "artwork": "assets/boards/nucleo-f103rb.svg",
+      "artwork": "assets/boards/nucleo-mb1136.svg",
       "minWidth": 640
     },
     "packagePins": 108,
@@ -24392,7 +24392,7 @@
           "stm32-lqfp64",
           "stm32-pin-table-p28",
           "stm32-electrical-notes",
-          "nucleo-f103rb-bridges"
+          "nucleo-mb1136-bridges"
         ],
         "fiveVoltTolerant": false,
         "noteKey": "stm32BackupNote",
@@ -24445,7 +24445,7 @@
           "stm32-lqfp64",
           "stm32-pin-table-p28",
           "stm32-electrical-notes",
-          "nucleo-f103rb-bridges"
+          "nucleo-mb1136-bridges"
         ],
         "fiveVoltTolerant": false,
         "noteKey": "stm32BackupNote",
@@ -24556,7 +24556,7 @@
           "stm32-lqfp64",
           "stm32-pin-table-p28",
           "stm32-electrical-notes",
-          "nucleo-f103rb-bridges"
+          "nucleo-mb1136-bridges"
         ],
         "fiveVoltTolerant": false,
         "baseFunction": "OSC_IN",
@@ -24661,7 +24661,7 @@
           "stm32-lqfp64",
           "stm32-pin-table-p28",
           "stm32-electrical-notes",
-          "nucleo-f103rb-bridges"
+          "nucleo-mb1136-bridges"
         ],
         "fiveVoltTolerant": false,
         "baseFunction": "OSC_OUT",
@@ -24874,7 +24874,7 @@
           "stm32-lqfp64",
           "stm32-pin-table-p28",
           "stm32-electrical-notes",
-          "nucleo-f103rb-bridges"
+          "nucleo-mb1136-bridges"
         ],
         "fiveVoltTolerant": false,
         "noteKey": "stm32GpioNote",
@@ -24942,7 +24942,7 @@
           "stm32-lqfp64",
           "stm32-pin-table-p28",
           "stm32-electrical-notes",
-          "nucleo-f103rb-bridges"
+          "nucleo-mb1136-bridges"
         ],
         "fiveVoltTolerant": false,
         "noteKey": "stm32GpioNote",
@@ -24965,7 +24965,7 @@
         "type": "SYSTEM",
         "functions": [],
         "evidence": [
-          "nucleo-f103rb-arduino"
+          "nucleo-f103rb-arduino-39"
         ],
         "number": 39,
         "name": "NC",
@@ -24985,7 +24985,7 @@
         "type": "POWER",
         "functions": [],
         "evidence": [
-          "nucleo-f103rb-arduino"
+          "nucleo-f103rb-arduino-39"
         ],
         "number": 40,
         "name": "IOREF",
@@ -25006,7 +25006,7 @@
         "type": "SYSTEM",
         "functions": [],
         "evidence": [
-          "nucleo-f103rb-arduino",
+          "nucleo-f103rb-arduino-39",
           "stm32-lqfp64",
           "stm32-pin-table-p28"
         ],
@@ -25027,7 +25027,7 @@
         "type": "POWER",
         "functions": [],
         "evidence": [
-          "nucleo-f103rb-arduino"
+          "nucleo-f103rb-arduino-39"
         ],
         "number": 42,
         "name": "+3.3V",
@@ -25046,7 +25046,7 @@
         "type": "POWER",
         "functions": [],
         "evidence": [
-          "nucleo-f103rb-arduino"
+          "nucleo-f103rb-arduino-39"
         ],
         "number": 43,
         "name": "+5V",
@@ -25065,7 +25065,7 @@
         "type": "GND",
         "functions": [],
         "evidence": [
-          "nucleo-f103rb-arduino"
+          "nucleo-f103rb-arduino-39"
         ],
         "number": 44,
         "name": "GND",
@@ -25084,7 +25084,7 @@
         "type": "GND",
         "functions": [],
         "evidence": [
-          "nucleo-f103rb-arduino"
+          "nucleo-f103rb-arduino-39"
         ],
         "number": 45,
         "name": "GND",
@@ -25103,7 +25103,7 @@
         "type": "POWER",
         "functions": [],
         "evidence": [
-          "nucleo-f103rb-arduino"
+          "nucleo-f103rb-arduino-39"
         ],
         "number": 46,
         "name": "VIN",
@@ -25166,7 +25166,7 @@
           }
         ],
         "evidence": [
-          "nucleo-f103rb-arduino",
+          "nucleo-f103rb-arduino-39",
           "stm32-lqfp64",
           "stm32-pin-table-p29",
           "stm32-electrical-notes"
@@ -25230,7 +25230,7 @@
           }
         ],
         "evidence": [
-          "nucleo-f103rb-arduino",
+          "nucleo-f103rb-arduino-39",
           "stm32-lqfp64",
           "stm32-pin-table-p29",
           "stm32-electrical-notes"
@@ -25293,7 +25293,7 @@
           }
         ],
         "evidence": [
-          "nucleo-f103rb-arduino",
+          "nucleo-f103rb-arduino-39",
           "stm32-lqfp64",
           "stm32-pin-table-p29",
           "stm32-electrical-notes"
@@ -25357,7 +25357,7 @@
           }
         ],
         "evidence": [
-          "nucleo-f103rb-arduino",
+          "nucleo-f103rb-arduino-39",
           "stm32-lqfp64",
           "stm32-pin-table-p29",
           "stm32-electrical-notes"
@@ -25392,11 +25392,11 @@
           }
         ],
         "evidence": [
-          "nucleo-f103rb-arduino",
+          "nucleo-f103rb-arduino-39",
           "stm32-lqfp64",
           "stm32-pin-table-p28",
           "stm32-electrical-notes",
-          "nucleo-f103rb-bridges"
+          "nucleo-mb1136-bridges"
         ],
         "fiveVoltTolerant": false,
         "noteKey": "stm32GpioNote",
@@ -25429,11 +25429,11 @@
           }
         ],
         "evidence": [
-          "nucleo-f103rb-arduino",
+          "nucleo-f103rb-arduino-39",
           "stm32-lqfp64",
           "stm32-pin-table-p28",
           "stm32-electrical-notes",
-          "nucleo-f103rb-bridges"
+          "nucleo-mb1136-bridges"
         ],
         "fiveVoltTolerant": false,
         "noteKey": "stm32GpioNote",
@@ -25852,7 +25852,7 @@
           "stm32-lqfp64",
           "stm32-pin-table-p29",
           "stm32-electrical-notes",
-          "nucleo-f103rb-bridges"
+          "nucleo-mb1136-bridges"
         ],
         "fiveVoltTolerant": false,
         "noteKey": "stm32GpioNote",
@@ -27192,7 +27192,7 @@
           "stm32-lqfp64",
           "stm32-pin-table-p29",
           "stm32-electrical-notes",
-          "nucleo-f103rb-bridges"
+          "nucleo-mb1136-bridges"
         ],
         "fiveVoltTolerant": false,
         "noteKey": "stm32GpioNote",
@@ -27276,7 +27276,7 @@
           "stm32-lqfp64",
           "stm32-pin-table-p29",
           "stm32-electrical-notes",
-          "nucleo-f103rb-bridges"
+          "nucleo-mb1136-bridges"
         ],
         "fiveVoltTolerant": false,
         "noteKey": "stm32GpioNote",
@@ -27350,7 +27350,7 @@
           }
         ],
         "evidence": [
-          "nucleo-f103rb-arduino",
+          "nucleo-f103rb-arduino-39",
           "stm32-lqfp64",
           "stm32-pin-table-p31",
           "stm32-electrical-notes"
@@ -27393,7 +27393,7 @@
           }
         ],
         "evidence": [
-          "nucleo-f103rb-arduino",
+          "nucleo-f103rb-arduino-39",
           "stm32-lqfp64",
           "stm32-pin-table-p31",
           "stm32-electrical-notes"
@@ -27464,7 +27464,7 @@
           }
         ],
         "evidence": [
-          "nucleo-f103rb-arduino",
+          "nucleo-f103rb-arduino-39",
           "stm32-lqfp64",
           "stm32-pin-table-p32",
           "stm32-electrical-notes"
@@ -27541,7 +27541,7 @@
           }
         ],
         "evidence": [
-          "nucleo-f103rb-arduino",
+          "nucleo-f103rb-arduino-39",
           "stm32-lqfp64",
           "stm32-pin-table-p29",
           "stm32-electrical-notes"
@@ -27618,7 +27618,7 @@
           }
         ],
         "evidence": [
-          "nucleo-f103rb-arduino",
+          "nucleo-f103rb-arduino-39",
           "stm32-lqfp64",
           "stm32-pin-table-p29",
           "stm32-electrical-notes"
@@ -27667,11 +27667,11 @@
           }
         ],
         "evidence": [
-          "nucleo-f103rb-arduino",
+          "nucleo-f103rb-arduino-39",
           "stm32-lqfp64",
           "stm32-pin-table-p29",
           "stm32-electrical-notes",
-          "nucleo-f103rb-bridges"
+          "nucleo-mb1136-bridges"
         ],
         "fiveVoltTolerant": false,
         "noteKey": "stm32GpioNote",
@@ -27695,7 +27695,7 @@
         "type": "GND",
         "functions": [],
         "evidence": [
-          "nucleo-f103rb-arduino"
+          "nucleo-f103rb-arduino-39"
         ],
         "number": 97,
         "name": "GND",
@@ -27716,7 +27716,7 @@
         "type": "POWER",
         "functions": [],
         "evidence": [
-          "nucleo-f103rb-arduino",
+          "nucleo-f103rb-arduino-39",
           "stm32-lqfp64",
           "stm32-pin-table-p28"
         ],
@@ -27781,7 +27781,7 @@
           }
         ],
         "evidence": [
-          "nucleo-f103rb-arduino",
+          "nucleo-f103rb-arduino-39",
           "stm32-lqfp64",
           "stm32-pin-table-p33",
           "stm32-electrical-notes"
@@ -27852,7 +27852,7 @@
           }
         ],
         "evidence": [
-          "nucleo-f103rb-arduino",
+          "nucleo-f103rb-arduino-39",
           "stm32-lqfp64",
           "stm32-pin-table-p33",
           "stm32-electrical-notes"
@@ -27916,11 +27916,11 @@
           }
         ],
         "evidence": [
-          "nucleo-f103rb-arduino",
+          "nucleo-f103rb-arduino-39",
           "stm32-lqfp64",
           "stm32-pin-table-p29",
           "stm32-electrical-notes",
-          "nucleo-f103rb-bridges"
+          "nucleo-mb1136-bridges"
         ],
         "fiveVoltTolerant": false,
         "noteKey": "stm32GpioNote",
@@ -27982,11 +27982,11 @@
           }
         ],
         "evidence": [
-          "nucleo-f103rb-arduino",
+          "nucleo-f103rb-arduino-39",
           "stm32-lqfp64",
           "stm32-pin-table-p29",
           "stm32-electrical-notes",
-          "nucleo-f103rb-bridges"
+          "nucleo-mb1136-bridges"
         ],
         "fiveVoltTolerant": false,
         "noteKey": "stm32GpioNote",
@@ -28042,7 +28042,7 @@
           }
         ],
         "evidence": [
-          "nucleo-f103rb-arduino",
+          "nucleo-f103rb-arduino-39",
           "stm32-lqfp64",
           "stm32-pin-table-p31",
           "stm32-electrical-notes"
@@ -28114,7 +28114,7 @@
           }
         ],
         "evidence": [
-          "nucleo-f103rb-arduino",
+          "nucleo-f103rb-arduino-39",
           "stm32-lqfp64",
           "stm32-pin-table-p32",
           "stm32-electrical-notes"
@@ -28177,7 +28177,7 @@
           }
         ],
         "evidence": [
-          "nucleo-f103rb-arduino",
+          "nucleo-f103rb-arduino-39",
           "stm32-lqfp64",
           "stm32-pin-table-p32",
           "stm32-electrical-notes"
@@ -28241,7 +28241,7 @@
           }
         ],
         "evidence": [
-          "nucleo-f103rb-arduino",
+          "nucleo-f103rb-arduino-39",
           "stm32-lqfp64",
           "stm32-pin-table-p32",
           "stm32-electrical-notes"
@@ -28305,7 +28305,7 @@
           }
         ],
         "evidence": [
-          "nucleo-f103rb-arduino",
+          "nucleo-f103rb-arduino-39",
           "stm32-lqfp64",
           "stm32-pin-table-p30",
           "stm32-electrical-notes"
@@ -28361,13 +28361,4448 @@
           }
         ],
         "evidence": [
-          "nucleo-f103rb-arduino",
+          "nucleo-f103rb-arduino-39",
           "stm32-lqfp64",
           "stm32-pin-table-p31",
           "stm32-electrical-notes"
         ],
         "fiveVoltTolerant": true,
         "noteKey": "stm32GpioNote",
+        "net": "PA8",
+        "connector": "CN9",
+        "connectorPin": 8,
+        "physicalLabel": "CN9.8",
+        "boardLabel": "D7",
+        "mcuPin": 41,
+        "position": {
+          "x": 560,
+          "y": 1476,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN10.23"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "nucleo-f401re",
+    "name": "NUCLEO-F401RE",
+    "family": "STM32",
+    "shortName": "NUCLEO-F401RE",
+    "subtitle": "Nucleo-64 · MB1136 · Arduino Uno and ST Morpho",
+    "layout": "custom",
+    "diagram": {
+      "width": 820,
+      "height": 1550,
+      "artwork": "assets/boards/nucleo-mb1136.svg",
+      "minWidth": 640
+    },
+    "packagePins": 108,
+    "gpioCount": 72,
+    "uniqueGPIOCount": 50,
+    "voltage": "3.3 V I/O",
+    "mcu": "STM32F401RET6",
+    "processor": "Arm Cortex-M4",
+    "clock": "84 MHz",
+    "verifiedOn": "2026-11-04",
+    "scopeKey": "nucleoF103Scope",
+    "source": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=43",
+    "datasheet": "https://www.st.com/resource/en/datasheet/stm32f401re.pdf",
+    "pins": [
+      {
+        "number": 1,
+        "name": "PC10",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2S3_CK",
+            "signal": "I2S3_CK",
+            "group": "I2S",
+            "evidence": "f401re-package",
+            "selector": "AF6",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SDIO_D2",
+            "signal": "SDIO_D2",
+            "group": "SYSTEM",
+            "evidence": "f401re-package",
+            "selector": "AF12",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI3_SCK",
+            "signal": "SPI3_SCK",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF6",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PC10",
+        "connector": "CN7",
+        "connectorPin": 1,
+        "physicalLabel": "CN7.1",
+        "mcuPin": 51,
+        "position": {
+          "x": 260,
+          "y": 60,
+          "side": "left"
+        },
+        "sharedWith": []
+      },
+      {
+        "number": 2,
+        "name": "PC11",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_EXTI11",
+            "signal": "ADC1_EXTI11",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          },
+          {
+            "name": "I2S3_ext_SD",
+            "signal": "I2S3_ext_SD",
+            "group": "I2S",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SDIO_D3",
+            "signal": "SDIO_D3",
+            "group": "SYSTEM",
+            "evidence": "f401re-package",
+            "selector": "AF12",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI3_MISO",
+            "signal": "SPI3_MISO",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF6",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PC11",
+        "connector": "CN7",
+        "connectorPin": 2,
+        "physicalLabel": "CN7.2",
+        "mcuPin": 52,
+        "position": {
+          "x": 260,
+          "y": 84,
+          "side": "left"
+        },
+        "sharedWith": []
+      },
+      {
+        "number": 3,
+        "name": "PC12",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2S3_SD",
+            "signal": "I2S3_SD",
+            "group": "I2S",
+            "evidence": "f401re-package",
+            "selector": "AF6",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SDIO_CK",
+            "signal": "SDIO_CK",
+            "group": "SYSTEM",
+            "evidence": "f401re-package",
+            "selector": "AF12",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI3_MOSI",
+            "signal": "SPI3_MOSI",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF6",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PC12",
+        "connector": "CN7",
+        "connectorPin": 3,
+        "physicalLabel": "CN7.3",
+        "mcuPin": 53,
+        "position": {
+          "x": 260,
+          "y": 108,
+          "side": "left"
+        },
+        "sharedWith": []
+      },
+      {
+        "number": 4,
+        "name": "PD2",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SDIO_CMD",
+            "signal": "SDIO_CMD",
+            "group": "SYSTEM",
+            "evidence": "f401re-package",
+            "selector": "AF12",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM3_ETR",
+            "signal": "TIM3_ETR",
+            "group": "TIMER",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PD2",
+        "connector": "CN7",
+        "connectorPin": 4,
+        "physicalLabel": "CN7.4",
+        "mcuPin": 54,
+        "position": {
+          "x": 260,
+          "y": 132,
+          "side": "left"
+        },
+        "sharedWith": []
+      },
+      {
+        "number": 5,
+        "name": "VDD",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "VDD",
+        "connector": "CN7",
+        "connectorPin": 5,
+        "physicalLabel": "CN7.5",
+        "mcuPin": 64,
+        "position": {
+          "x": 260,
+          "y": 156,
+          "side": "left"
+        }
+      },
+      {
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-morpho-58"
+        ],
+        "number": 6,
+        "name": "E5V",
+        "net": "E5V",
+        "connector": "CN7",
+        "connectorPin": 6,
+        "physicalLabel": "CN7.6",
+        "position": {
+          "x": 260,
+          "y": 180,
+          "side": "left"
+        }
+      },
+      {
+        "number": 7,
+        "name": "BOOT0",
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "BOOT0",
+        "connector": "CN7",
+        "connectorPin": 7,
+        "physicalLabel": "CN7.7",
+        "mcuPin": 60,
+        "position": {
+          "x": 260,
+          "y": 204,
+          "side": "left"
+        }
+      },
+      {
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-morpho-58"
+        ],
+        "number": 8,
+        "name": "GND",
+        "net": "GND",
+        "connector": "CN7",
+        "connectorPin": 8,
+        "physicalLabel": "CN7.8",
+        "position": {
+          "x": 260,
+          "y": 228,
+          "side": "left"
+        }
+      },
+      {
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-morpho-58"
+        ],
+        "number": 9,
+        "name": "NC",
+        "net": "NC",
+        "connector": "CN7",
+        "connectorPin": 9,
+        "physicalLabel": "CN7.9",
+        "reserved": true,
+        "position": {
+          "x": 260,
+          "y": 252,
+          "side": "left"
+        }
+      },
+      {
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-morpho-58"
+        ],
+        "number": 10,
+        "name": "NC",
+        "net": "NC",
+        "connector": "CN7",
+        "connectorPin": 10,
+        "physicalLabel": "CN7.10",
+        "reserved": true,
+        "position": {
+          "x": 260,
+          "y": 276,
+          "side": "left"
+        }
+      },
+      {
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-morpho-58"
+        ],
+        "number": 11,
+        "name": "NC",
+        "net": "NC",
+        "connector": "CN7",
+        "connectorPin": 11,
+        "physicalLabel": "CN7.11",
+        "reserved": true,
+        "position": {
+          "x": 260,
+          "y": 300,
+          "side": "left"
+        }
+      },
+      {
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-morpho-58"
+        ],
+        "number": 12,
+        "name": "IOREF",
+        "net": "IOREF",
+        "connector": "CN7",
+        "connectorPin": 12,
+        "physicalLabel": "CN7.12",
+        "position": {
+          "x": 260,
+          "y": 324,
+          "side": "left"
+        }
+      },
+      {
+        "number": 13,
+        "name": "PA13",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SYS_JTMS-SWDIO",
+            "signal": "SYS_JTMS-SWDIO",
+            "group": "SYSTEM",
+            "evidence": "f401re-package",
+            "selector": "AF0",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PA13",
+        "connector": "CN7",
+        "connectorPin": 13,
+        "physicalLabel": "CN7.13",
+        "mcuPin": 46,
+        "position": {
+          "x": 260,
+          "y": 348,
+          "side": "left"
+        },
+        "sharedWith": []
+      },
+      {
+        "number": 14,
+        "name": "RESET",
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "RESET",
+        "connector": "CN7",
+        "connectorPin": 14,
+        "physicalLabel": "CN7.14",
+        "mcuPin": 7,
+        "position": {
+          "x": 260,
+          "y": 372,
+          "side": "left"
+        }
+      },
+      {
+        "number": 15,
+        "name": "PA14",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SYS_JTCK-SWCLK",
+            "signal": "SYS_JTCK-SWCLK",
+            "group": "SYSTEM",
+            "evidence": "f401re-package",
+            "selector": "AF0",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PA14",
+        "connector": "CN7",
+        "connectorPin": 15,
+        "physicalLabel": "CN7.15",
+        "mcuPin": 49,
+        "position": {
+          "x": 260,
+          "y": 396,
+          "side": "left"
+        },
+        "sharedWith": []
+      },
+      {
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-morpho-58"
+        ],
+        "number": 16,
+        "name": "+3.3V",
+        "net": "+3.3V",
+        "connector": "CN7",
+        "connectorPin": 16,
+        "physicalLabel": "CN7.16",
+        "position": {
+          "x": 260,
+          "y": 420,
+          "side": "left"
+        }
+      },
+      {
+        "number": 17,
+        "name": "PA15",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_EXTI15",
+            "signal": "ADC1_EXTI15",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          },
+          {
+            "name": "I2S3_WS",
+            "signal": "I2S3_WS",
+            "group": "I2S",
+            "evidence": "f401re-package",
+            "selector": "AF6",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI1_NSS",
+            "signal": "SPI1_NSS",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI3_NSS",
+            "signal": "SPI3_NSS",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF6",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SYS_JTDI",
+            "signal": "SYS_JTDI",
+            "group": "SYSTEM",
+            "evidence": "f401re-package",
+            "selector": "AF0",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM2_CH1",
+            "signal": "TIM2_CH1",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM2_ETR",
+            "signal": "TIM2_ETR",
+            "group": "TIMER",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PA15",
+        "connector": "CN7",
+        "connectorPin": 17,
+        "physicalLabel": "CN7.17",
+        "mcuPin": 50,
+        "position": {
+          "x": 260,
+          "y": 444,
+          "side": "left"
+        },
+        "sharedWith": []
+      },
+      {
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-morpho-58"
+        ],
+        "number": 18,
+        "name": "+5V",
+        "net": "+5V",
+        "connector": "CN7",
+        "connectorPin": 18,
+        "physicalLabel": "CN7.18",
+        "position": {
+          "x": 260,
+          "y": 468,
+          "side": "left"
+        }
+      },
+      {
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-morpho-58"
+        ],
+        "number": 19,
+        "name": "GND",
+        "net": "GND",
+        "connector": "CN7",
+        "connectorPin": 19,
+        "physicalLabel": "CN7.19",
+        "position": {
+          "x": 260,
+          "y": 492,
+          "side": "left"
+        }
+      },
+      {
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-morpho-58"
+        ],
+        "number": 20,
+        "name": "GND",
+        "net": "GND",
+        "connector": "CN7",
+        "connectorPin": 20,
+        "physicalLabel": "CN7.20",
+        "position": {
+          "x": 260,
+          "y": 516,
+          "side": "left"
+        }
+      },
+      {
+        "number": 21,
+        "name": "PB7",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C1_SDA",
+            "signal": "I2C1_SDA",
+            "group": "I2C",
+            "evidence": "f401re-package",
+            "selector": "AF4",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM4_CH2",
+            "signal": "TIM4_CH2",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USART1_RX",
+            "signal": "USART1_RX",
+            "group": "UART",
+            "evidence": "f401re-package",
+            "selector": "AF7",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PB7",
+        "connector": "CN7",
+        "connectorPin": 21,
+        "physicalLabel": "CN7.21",
+        "mcuPin": 59,
+        "position": {
+          "x": 260,
+          "y": 540,
+          "side": "left"
+        },
+        "sharedWith": []
+      },
+      {
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-morpho-58"
+        ],
+        "number": 22,
+        "name": "GND",
+        "net": "GND",
+        "connector": "CN7",
+        "connectorPin": 22,
+        "physicalLabel": "CN7.22",
+        "position": {
+          "x": 260,
+          "y": 564,
+          "side": "left"
+        }
+      },
+      {
+        "number": 23,
+        "name": "PC13",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "RTC_AF1",
+            "signal": "RTC_AF1",
+            "group": "SYSTEM",
+            "evidence": "f401re-package"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PC13",
+        "connector": "CN7",
+        "connectorPin": 23,
+        "physicalLabel": "CN7.23",
+        "mcuPin": 2,
+        "position": {
+          "x": 260,
+          "y": 588,
+          "side": "left"
+        },
+        "sharedWith": []
+      },
+      {
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-morpho-58"
+        ],
+        "number": 24,
+        "name": "VIN",
+        "net": "VIN",
+        "connector": "CN7",
+        "connectorPin": 24,
+        "physicalLabel": "CN7.24",
+        "position": {
+          "x": 260,
+          "y": 612,
+          "side": "left"
+        }
+      },
+      {
+        "number": 25,
+        "name": "PC14",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "RCC_OSC32_IN",
+            "signal": "RCC_OSC32_IN",
+            "group": "SYSTEM",
+            "evidence": "f401re-package"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package",
+          "nucleo-mb1136-bridges"
+        ],
+        "net": "PC14",
+        "connector": "CN7",
+        "connectorPin": 25,
+        "physicalLabel": "CN7.25",
+        "mcuPin": 3,
+        "boardCircuitKey": "nucleoLse",
+        "position": {
+          "x": 260,
+          "y": 636,
+          "side": "left"
+        },
+        "sharedWith": []
+      },
+      {
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-morpho-58"
+        ],
+        "number": 26,
+        "name": "NC",
+        "net": "NC",
+        "connector": "CN7",
+        "connectorPin": 26,
+        "physicalLabel": "CN7.26",
+        "reserved": true,
+        "position": {
+          "x": 260,
+          "y": 660,
+          "side": "left"
+        }
+      },
+      {
+        "number": 27,
+        "name": "PC15",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_EXTI15",
+            "signal": "ADC1_EXTI15",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          },
+          {
+            "name": "RCC_OSC32_OUT",
+            "signal": "RCC_OSC32_OUT",
+            "group": "SYSTEM",
+            "evidence": "f401re-package"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package",
+          "nucleo-mb1136-bridges"
+        ],
+        "net": "PC15",
+        "connector": "CN7",
+        "connectorPin": 27,
+        "physicalLabel": "CN7.27",
+        "mcuPin": 4,
+        "boardCircuitKey": "nucleoLse",
+        "position": {
+          "x": 260,
+          "y": 684,
+          "side": "left"
+        },
+        "sharedWith": []
+      },
+      {
+        "number": 28,
+        "name": "PA0",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN0",
+            "signal": "ADC1_IN0",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          },
+          {
+            "name": "SYS_WKUP",
+            "signal": "SYS_WKUP",
+            "group": "SYSTEM",
+            "evidence": "f401re-package"
+          },
+          {
+            "name": "TIM2_CH1",
+            "signal": "TIM2_CH1",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM2_ETR",
+            "signal": "TIM2_ETR",
+            "group": "TIMER",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM5_CH1",
+            "signal": "TIM5_CH1",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USART2_CTS",
+            "signal": "USART2_CTS",
+            "group": "UART",
+            "evidence": "f401re-package",
+            "selector": "AF7",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PA0",
+        "connector": "CN7",
+        "connectorPin": 28,
+        "physicalLabel": "CN7.28",
+        "mcuPin": 14,
+        "position": {
+          "x": 260,
+          "y": 708,
+          "side": "left"
+        },
+        "sharedWith": [
+          "CN8.1"
+        ]
+      },
+      {
+        "number": 29,
+        "name": "PH0",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "RCC_OSC_IN",
+            "signal": "RCC_OSC_IN",
+            "group": "SYSTEM",
+            "evidence": "f401re-package"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package",
+          "nucleo-mb1136-bridges"
+        ],
+        "net": "PH0",
+        "connector": "CN7",
+        "connectorPin": 29,
+        "physicalLabel": "CN7.29",
+        "mcuPin": 5,
+        "boardCircuitKey": "nucleoF4Hse",
+        "position": {
+          "x": 260,
+          "y": 732,
+          "side": "left"
+        },
+        "sharedWith": []
+      },
+      {
+        "number": 30,
+        "name": "PA1",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN1",
+            "signal": "ADC1_IN1",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          },
+          {
+            "name": "TIM2_CH2",
+            "signal": "TIM2_CH2",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM5_CH2",
+            "signal": "TIM5_CH2",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USART2_RTS",
+            "signal": "USART2_RTS",
+            "group": "UART",
+            "evidence": "f401re-package",
+            "selector": "AF7",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PA1",
+        "connector": "CN7",
+        "connectorPin": 30,
+        "physicalLabel": "CN7.30",
+        "mcuPin": 15,
+        "position": {
+          "x": 260,
+          "y": 756,
+          "side": "left"
+        },
+        "sharedWith": [
+          "CN8.2"
+        ]
+      },
+      {
+        "number": 31,
+        "name": "PH1",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "RCC_OSC_OUT",
+            "signal": "RCC_OSC_OUT",
+            "group": "SYSTEM",
+            "evidence": "f401re-package"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package",
+          "nucleo-mb1136-bridges"
+        ],
+        "net": "PH1",
+        "connector": "CN7",
+        "connectorPin": 31,
+        "physicalLabel": "CN7.31",
+        "mcuPin": 6,
+        "boardCircuitKey": "nucleoF4Hse",
+        "position": {
+          "x": 260,
+          "y": 780,
+          "side": "left"
+        },
+        "sharedWith": []
+      },
+      {
+        "number": 32,
+        "name": "PA4",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN4",
+            "signal": "ADC1_IN4",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          },
+          {
+            "name": "I2S3_WS",
+            "signal": "I2S3_WS",
+            "group": "I2S",
+            "evidence": "f401re-package",
+            "selector": "AF6",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI1_NSS",
+            "signal": "SPI1_NSS",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI3_NSS",
+            "signal": "SPI3_NSS",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF6",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USART2_CK",
+            "signal": "USART2_CK",
+            "group": "UART",
+            "evidence": "f401re-package",
+            "selector": "AF7",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PA4",
+        "connector": "CN7",
+        "connectorPin": 32,
+        "physicalLabel": "CN7.32",
+        "mcuPin": 20,
+        "position": {
+          "x": 260,
+          "y": 804,
+          "side": "left"
+        },
+        "sharedWith": [
+          "CN8.3"
+        ]
+      },
+      {
+        "number": 33,
+        "name": "VBAT",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "VBAT",
+        "connector": "CN7",
+        "connectorPin": 33,
+        "physicalLabel": "CN7.33",
+        "mcuPin": 1,
+        "position": {
+          "x": 260,
+          "y": 828,
+          "side": "left"
+        }
+      },
+      {
+        "number": 34,
+        "name": "PB0",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN8",
+            "signal": "ADC1_IN8",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          },
+          {
+            "name": "TIM1_CH2N",
+            "signal": "TIM1_CH2N",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM3_CH3",
+            "signal": "TIM3_CH3",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PB0",
+        "connector": "CN7",
+        "connectorPin": 34,
+        "physicalLabel": "CN7.34",
+        "mcuPin": 26,
+        "position": {
+          "x": 260,
+          "y": 852,
+          "side": "left"
+        },
+        "sharedWith": [
+          "CN8.4"
+        ]
+      },
+      {
+        "number": 35,
+        "name": "PC2",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN12",
+            "signal": "ADC1_IN12",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          },
+          {
+            "name": "I2S2_ext_SD",
+            "signal": "I2S2_ext_SD",
+            "group": "I2S",
+            "evidence": "f401re-package",
+            "selector": "AF6",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI2_MISO",
+            "signal": "SPI2_MISO",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PC2",
+        "connector": "CN7",
+        "connectorPin": 35,
+        "physicalLabel": "CN7.35",
+        "mcuPin": 10,
+        "position": {
+          "x": 260,
+          "y": 876,
+          "side": "left"
+        },
+        "sharedWith": []
+      },
+      {
+        "number": 36,
+        "name": "PC1",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN11",
+            "signal": "ADC1_IN11",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package",
+          "nucleo-mb1136-bridges"
+        ],
+        "net": "PC1",
+        "connector": "CN7",
+        "connectorPin": 36,
+        "physicalLabel": "CN7.36",
+        "mcuPin": 9,
+        "boardCircuitKey": "nucleoA45",
+        "position": {
+          "x": 260,
+          "y": 900,
+          "side": "left"
+        },
+        "sharedWith": [
+          "CN8.5"
+        ]
+      },
+      {
+        "number": 37,
+        "name": "PC3",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN13",
+            "signal": "ADC1_IN13",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          },
+          {
+            "name": "I2S2_SD",
+            "signal": "I2S2_SD",
+            "group": "I2S",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI2_MOSI",
+            "signal": "SPI2_MOSI",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PC3",
+        "connector": "CN7",
+        "connectorPin": 37,
+        "physicalLabel": "CN7.37",
+        "mcuPin": 11,
+        "position": {
+          "x": 260,
+          "y": 924,
+          "side": "left"
+        },
+        "sharedWith": []
+      },
+      {
+        "number": 38,
+        "name": "PC0",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN10",
+            "signal": "ADC1_IN10",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package",
+          "nucleo-mb1136-bridges"
+        ],
+        "net": "PC0",
+        "connector": "CN7",
+        "connectorPin": 38,
+        "physicalLabel": "CN7.38",
+        "mcuPin": 8,
+        "boardCircuitKey": "nucleoA45",
+        "position": {
+          "x": 260,
+          "y": 948,
+          "side": "left"
+        },
+        "sharedWith": [
+          "CN8.6"
+        ]
+      },
+      {
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-arduino-43"
+        ],
+        "number": 39,
+        "name": "NC",
+        "net": "NC",
+        "connector": "CN6",
+        "connectorPin": 1,
+        "physicalLabel": "CN6.1",
+        "boardLabel": "NC",
+        "reserved": true,
+        "position": {
+          "x": 260,
+          "y": 1020,
+          "side": "left"
+        }
+      },
+      {
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-arduino-43"
+        ],
+        "number": 40,
+        "name": "IOREF",
+        "net": "IOREF",
+        "connector": "CN6",
+        "connectorPin": 2,
+        "physicalLabel": "CN6.2",
+        "boardLabel": "IOREF",
+        "position": {
+          "x": 260,
+          "y": 1044,
+          "side": "left"
+        }
+      },
+      {
+        "number": 41,
+        "name": "NRST",
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-arduino-43",
+          "f401re-package"
+        ],
+        "net": "NRST",
+        "connector": "CN6",
+        "connectorPin": 3,
+        "physicalLabel": "CN6.3",
+        "boardLabel": "RESET",
+        "mcuPin": 7,
+        "position": {
+          "x": 260,
+          "y": 1068,
+          "side": "left"
+        }
+      },
+      {
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-arduino-43"
+        ],
+        "number": 42,
+        "name": "+3.3V",
+        "net": "+3.3V",
+        "connector": "CN6",
+        "connectorPin": 4,
+        "physicalLabel": "CN6.4",
+        "boardLabel": "+3.3V",
+        "position": {
+          "x": 260,
+          "y": 1092,
+          "side": "left"
+        }
+      },
+      {
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-arduino-43"
+        ],
+        "number": 43,
+        "name": "+5V",
+        "net": "+5V",
+        "connector": "CN6",
+        "connectorPin": 5,
+        "physicalLabel": "CN6.5",
+        "boardLabel": "+5V",
+        "position": {
+          "x": 260,
+          "y": 1116,
+          "side": "left"
+        }
+      },
+      {
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-arduino-43"
+        ],
+        "number": 44,
+        "name": "GND",
+        "net": "GND",
+        "connector": "CN6",
+        "connectorPin": 6,
+        "physicalLabel": "CN6.6",
+        "boardLabel": "GND",
+        "position": {
+          "x": 260,
+          "y": 1140,
+          "side": "left"
+        }
+      },
+      {
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-arduino-43"
+        ],
+        "number": 45,
+        "name": "GND",
+        "net": "GND",
+        "connector": "CN6",
+        "connectorPin": 7,
+        "physicalLabel": "CN6.7",
+        "boardLabel": "GND",
+        "position": {
+          "x": 260,
+          "y": 1164,
+          "side": "left"
+        }
+      },
+      {
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-arduino-43"
+        ],
+        "number": 46,
+        "name": "VIN",
+        "net": "VIN",
+        "connector": "CN6",
+        "connectorPin": 8,
+        "physicalLabel": "CN6.8",
+        "boardLabel": "VIN",
+        "position": {
+          "x": 260,
+          "y": 1188,
+          "side": "left"
+        }
+      },
+      {
+        "number": 47,
+        "name": "PA0",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN0",
+            "signal": "ADC1_IN0",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          },
+          {
+            "name": "SYS_WKUP",
+            "signal": "SYS_WKUP",
+            "group": "SYSTEM",
+            "evidence": "f401re-package"
+          },
+          {
+            "name": "TIM2_CH1",
+            "signal": "TIM2_CH1",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM2_ETR",
+            "signal": "TIM2_ETR",
+            "group": "TIMER",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM5_CH1",
+            "signal": "TIM5_CH1",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USART2_CTS",
+            "signal": "USART2_CTS",
+            "group": "UART",
+            "evidence": "f401re-package",
+            "selector": "AF7",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-arduino-43",
+          "f401re-package"
+        ],
+        "net": "PA0",
+        "connector": "CN8",
+        "connectorPin": 1,
+        "physicalLabel": "CN8.1",
+        "boardLabel": "A0",
+        "mcuPin": 14,
+        "position": {
+          "x": 260,
+          "y": 1308,
+          "side": "left"
+        },
+        "sharedWith": [
+          "CN7.28"
+        ]
+      },
+      {
+        "number": 48,
+        "name": "PA1",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN1",
+            "signal": "ADC1_IN1",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          },
+          {
+            "name": "TIM2_CH2",
+            "signal": "TIM2_CH2",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM5_CH2",
+            "signal": "TIM5_CH2",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USART2_RTS",
+            "signal": "USART2_RTS",
+            "group": "UART",
+            "evidence": "f401re-package",
+            "selector": "AF7",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-arduino-43",
+          "f401re-package"
+        ],
+        "net": "PA1",
+        "connector": "CN8",
+        "connectorPin": 2,
+        "physicalLabel": "CN8.2",
+        "boardLabel": "A1",
+        "mcuPin": 15,
+        "position": {
+          "x": 260,
+          "y": 1332,
+          "side": "left"
+        },
+        "sharedWith": [
+          "CN7.30"
+        ]
+      },
+      {
+        "number": 49,
+        "name": "PA4",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN4",
+            "signal": "ADC1_IN4",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          },
+          {
+            "name": "I2S3_WS",
+            "signal": "I2S3_WS",
+            "group": "I2S",
+            "evidence": "f401re-package",
+            "selector": "AF6",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI1_NSS",
+            "signal": "SPI1_NSS",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI3_NSS",
+            "signal": "SPI3_NSS",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF6",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USART2_CK",
+            "signal": "USART2_CK",
+            "group": "UART",
+            "evidence": "f401re-package",
+            "selector": "AF7",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-arduino-43",
+          "f401re-package"
+        ],
+        "net": "PA4",
+        "connector": "CN8",
+        "connectorPin": 3,
+        "physicalLabel": "CN8.3",
+        "boardLabel": "A2",
+        "mcuPin": 20,
+        "position": {
+          "x": 260,
+          "y": 1356,
+          "side": "left"
+        },
+        "sharedWith": [
+          "CN7.32"
+        ]
+      },
+      {
+        "number": 50,
+        "name": "PB0",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN8",
+            "signal": "ADC1_IN8",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          },
+          {
+            "name": "TIM1_CH2N",
+            "signal": "TIM1_CH2N",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM3_CH3",
+            "signal": "TIM3_CH3",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-arduino-43",
+          "f401re-package"
+        ],
+        "net": "PB0",
+        "connector": "CN8",
+        "connectorPin": 4,
+        "physicalLabel": "CN8.4",
+        "boardLabel": "A3",
+        "mcuPin": 26,
+        "position": {
+          "x": 260,
+          "y": 1380,
+          "side": "left"
+        },
+        "sharedWith": [
+          "CN7.34"
+        ]
+      },
+      {
+        "number": 51,
+        "name": "PC1",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN11",
+            "signal": "ADC1_IN11",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-arduino-43",
+          "f401re-package",
+          "nucleo-mb1136-bridges"
+        ],
+        "net": "PC1",
+        "connector": "CN8",
+        "connectorPin": 5,
+        "physicalLabel": "CN8.5",
+        "boardLabel": "A4",
+        "mcuPin": 9,
+        "boardCircuitKey": "nucleoA45",
+        "position": {
+          "x": 260,
+          "y": 1404,
+          "side": "left"
+        },
+        "sharedWith": [
+          "CN7.36"
+        ]
+      },
+      {
+        "number": 52,
+        "name": "PC0",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN10",
+            "signal": "ADC1_IN10",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-arduino-43",
+          "f401re-package",
+          "nucleo-mb1136-bridges"
+        ],
+        "net": "PC0",
+        "connector": "CN8",
+        "connectorPin": 6,
+        "physicalLabel": "CN8.6",
+        "boardLabel": "A5",
+        "mcuPin": 8,
+        "boardCircuitKey": "nucleoA45",
+        "position": {
+          "x": 260,
+          "y": 1428,
+          "side": "left"
+        },
+        "sharedWith": [
+          "CN7.38"
+        ]
+      },
+      {
+        "number": 53,
+        "name": "PC9",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C3_SDA",
+            "signal": "I2C3_SDA",
+            "group": "I2C",
+            "evidence": "f401re-package",
+            "selector": "AF4",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "I2S_CKIN",
+            "signal": "I2S_CKIN",
+            "group": "I2S",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "RCC_MCO_2",
+            "signal": "RCC_MCO_2",
+            "group": "SYSTEM",
+            "evidence": "f401re-package",
+            "selector": "AF0",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SDIO_D1",
+            "signal": "SDIO_D1",
+            "group": "SYSTEM",
+            "evidence": "f401re-package",
+            "selector": "AF12",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM3_CH4",
+            "signal": "TIM3_CH4",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PC9",
+        "connector": "CN10",
+        "connectorPin": 1,
+        "physicalLabel": "CN10.1",
+        "mcuPin": 40,
+        "position": {
+          "x": 560,
+          "y": 60,
+          "side": "right"
+        },
+        "sharedWith": []
+      },
+      {
+        "number": 54,
+        "name": "PC8",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SDIO_D0",
+            "signal": "SDIO_D0",
+            "group": "SYSTEM",
+            "evidence": "f401re-package",
+            "selector": "AF12",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM3_CH3",
+            "signal": "TIM3_CH3",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USART6_CK",
+            "signal": "USART6_CK",
+            "group": "UART",
+            "evidence": "f401re-package",
+            "selector": "AF8",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PC8",
+        "connector": "CN10",
+        "connectorPin": 2,
+        "physicalLabel": "CN10.2",
+        "mcuPin": 39,
+        "position": {
+          "x": 560,
+          "y": 84,
+          "side": "right"
+        },
+        "sharedWith": []
+      },
+      {
+        "number": 55,
+        "name": "PB8",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C1_SCL",
+            "signal": "I2C1_SCL",
+            "group": "I2C",
+            "evidence": "f401re-package",
+            "selector": "AF4",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SDIO_D4",
+            "signal": "SDIO_D4",
+            "group": "SYSTEM",
+            "evidence": "f401re-package",
+            "selector": "AF12",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM10_CH1",
+            "signal": "TIM10_CH1",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF3",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM4_CH3",
+            "signal": "TIM4_CH3",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PB8",
+        "connector": "CN10",
+        "connectorPin": 3,
+        "physicalLabel": "CN10.3",
+        "mcuPin": 61,
+        "position": {
+          "x": 560,
+          "y": 108,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN5.10"
+        ]
+      },
+      {
+        "number": 56,
+        "name": "PC6",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2S2_MCK",
+            "signal": "I2S2_MCK",
+            "group": "I2S",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SDIO_D6",
+            "signal": "SDIO_D6",
+            "group": "SYSTEM",
+            "evidence": "f401re-package",
+            "selector": "AF12",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM3_CH1",
+            "signal": "TIM3_CH1",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USART6_TX",
+            "signal": "USART6_TX",
+            "group": "UART",
+            "evidence": "f401re-package",
+            "selector": "AF8",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PC6",
+        "connector": "CN10",
+        "connectorPin": 4,
+        "physicalLabel": "CN10.4",
+        "mcuPin": 37,
+        "position": {
+          "x": 560,
+          "y": 132,
+          "side": "right"
+        },
+        "sharedWith": []
+      },
+      {
+        "number": 57,
+        "name": "PB9",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C1_SDA",
+            "signal": "I2C1_SDA",
+            "group": "I2C",
+            "evidence": "f401re-package",
+            "selector": "AF4",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "I2S2_WS",
+            "signal": "I2S2_WS",
+            "group": "I2S",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SDIO_D5",
+            "signal": "SDIO_D5",
+            "group": "SYSTEM",
+            "evidence": "f401re-package",
+            "selector": "AF12",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI2_NSS",
+            "signal": "SPI2_NSS",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM11_CH1",
+            "signal": "TIM11_CH1",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF3",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM4_CH4",
+            "signal": "TIM4_CH4",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PB9",
+        "connector": "CN10",
+        "connectorPin": 5,
+        "physicalLabel": "CN10.5",
+        "mcuPin": 62,
+        "position": {
+          "x": 560,
+          "y": 156,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN5.9"
+        ]
+      },
+      {
+        "number": 58,
+        "name": "PC5",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN15",
+            "signal": "ADC1_IN15",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PC5",
+        "connector": "CN10",
+        "connectorPin": 6,
+        "physicalLabel": "CN10.6",
+        "mcuPin": 25,
+        "position": {
+          "x": 560,
+          "y": 180,
+          "side": "right"
+        },
+        "sharedWith": []
+      },
+      {
+        "number": 59,
+        "name": "AVDD",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "AVDD",
+        "connector": "CN10",
+        "connectorPin": 7,
+        "physicalLabel": "CN10.7",
+        "mcuPin": 13,
+        "position": {
+          "x": 560,
+          "y": 204,
+          "side": "right"
+        }
+      },
+      {
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-morpho-58"
+        ],
+        "number": 60,
+        "name": "U5V",
+        "net": "U5V",
+        "connector": "CN10",
+        "connectorPin": 8,
+        "physicalLabel": "CN10.8",
+        "position": {
+          "x": 560,
+          "y": 228,
+          "side": "right"
+        }
+      },
+      {
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-morpho-58"
+        ],
+        "number": 61,
+        "name": "GND",
+        "net": "GND",
+        "connector": "CN10",
+        "connectorPin": 9,
+        "physicalLabel": "CN10.9",
+        "position": {
+          "x": 560,
+          "y": 252,
+          "side": "right"
+        }
+      },
+      {
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-morpho-58"
+        ],
+        "number": 62,
+        "name": "NC",
+        "net": "NC",
+        "connector": "CN10",
+        "connectorPin": 10,
+        "physicalLabel": "CN10.10",
+        "reserved": true,
+        "position": {
+          "x": 560,
+          "y": 276,
+          "side": "right"
+        }
+      },
+      {
+        "number": 63,
+        "name": "PA5",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN5",
+            "signal": "ADC1_IN5",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          },
+          {
+            "name": "SPI1_SCK",
+            "signal": "SPI1_SCK",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM2_CH1",
+            "signal": "TIM2_CH1",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM2_ETR",
+            "signal": "TIM2_ETR",
+            "group": "TIMER",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package",
+          "nucleo-mb1136-bridges"
+        ],
+        "net": "PA5",
+        "connector": "CN10",
+        "connectorPin": 11,
+        "physicalLabel": "CN10.11",
+        "mcuPin": 21,
+        "boardCircuitKey": "nucleoLed",
+        "position": {
+          "x": 560,
+          "y": 300,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN5.6"
+        ]
+      },
+      {
+        "number": 64,
+        "name": "PA12",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "TIM1_ETR",
+            "signal": "TIM1_ETR",
+            "group": "TIMER",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USART1_RTS",
+            "signal": "USART1_RTS",
+            "group": "UART",
+            "evidence": "f401re-package",
+            "selector": "AF7",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USART6_RX",
+            "signal": "USART6_RX",
+            "group": "UART",
+            "evidence": "f401re-package",
+            "selector": "AF8",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USB_OTG_FS_DP",
+            "signal": "USB_OTG_FS_DP",
+            "group": "USB",
+            "evidence": "f401re-package",
+            "selector": "AF10",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PA12",
+        "connector": "CN10",
+        "connectorPin": 12,
+        "physicalLabel": "CN10.12",
+        "mcuPin": 45,
+        "position": {
+          "x": 560,
+          "y": 324,
+          "side": "right"
+        },
+        "sharedWith": []
+      },
+      {
+        "number": 65,
+        "name": "PA6",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN6",
+            "signal": "ADC1_IN6",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          },
+          {
+            "name": "SPI1_MISO",
+            "signal": "SPI1_MISO",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM1_BKIN",
+            "signal": "TIM1_BKIN",
+            "group": "TIMER",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM3_CH1",
+            "signal": "TIM3_CH1",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PA6",
+        "connector": "CN10",
+        "connectorPin": 13,
+        "physicalLabel": "CN10.13",
+        "mcuPin": 22,
+        "position": {
+          "x": 560,
+          "y": 348,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN5.5"
+        ]
+      },
+      {
+        "number": 66,
+        "name": "PA11",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_EXTI11",
+            "signal": "ADC1_EXTI11",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          },
+          {
+            "name": "TIM1_CH4",
+            "signal": "TIM1_CH4",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USART1_CTS",
+            "signal": "USART1_CTS",
+            "group": "UART",
+            "evidence": "f401re-package",
+            "selector": "AF7",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USART6_TX",
+            "signal": "USART6_TX",
+            "group": "UART",
+            "evidence": "f401re-package",
+            "selector": "AF8",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USB_OTG_FS_DM",
+            "signal": "USB_OTG_FS_DM",
+            "group": "USB",
+            "evidence": "f401re-package",
+            "selector": "AF10",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PA11",
+        "connector": "CN10",
+        "connectorPin": 14,
+        "physicalLabel": "CN10.14",
+        "mcuPin": 44,
+        "position": {
+          "x": 560,
+          "y": 372,
+          "side": "right"
+        },
+        "sharedWith": []
+      },
+      {
+        "number": 67,
+        "name": "PA7",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN7",
+            "signal": "ADC1_IN7",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          },
+          {
+            "name": "SPI1_MOSI",
+            "signal": "SPI1_MOSI",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM1_CH1N",
+            "signal": "TIM1_CH1N",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM3_CH2",
+            "signal": "TIM3_CH2",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PA7",
+        "connector": "CN10",
+        "connectorPin": 15,
+        "physicalLabel": "CN10.15",
+        "mcuPin": 23,
+        "position": {
+          "x": 560,
+          "y": 396,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN5.4"
+        ]
+      },
+      {
+        "number": 68,
+        "name": "PB12",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C2_SMBA",
+            "signal": "I2C2_SMBA",
+            "group": "I2C",
+            "evidence": "f401re-package",
+            "selector": "AF4",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "I2S2_WS",
+            "signal": "I2S2_WS",
+            "group": "I2S",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI2_NSS",
+            "signal": "SPI2_NSS",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM1_BKIN",
+            "signal": "TIM1_BKIN",
+            "group": "TIMER",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PB12",
+        "connector": "CN10",
+        "connectorPin": 16,
+        "physicalLabel": "CN10.16",
+        "mcuPin": 33,
+        "position": {
+          "x": 560,
+          "y": 420,
+          "side": "right"
+        },
+        "sharedWith": []
+      },
+      {
+        "number": 69,
+        "name": "PB6",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C1_SCL",
+            "signal": "I2C1_SCL",
+            "group": "I2C",
+            "evidence": "f401re-package",
+            "selector": "AF4",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM4_CH1",
+            "signal": "TIM4_CH1",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USART1_TX",
+            "signal": "USART1_TX",
+            "group": "UART",
+            "evidence": "f401re-package",
+            "selector": "AF7",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PB6",
+        "connector": "CN10",
+        "connectorPin": 17,
+        "physicalLabel": "CN10.17",
+        "mcuPin": 58,
+        "position": {
+          "x": 560,
+          "y": 444,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN5.3"
+        ]
+      },
+      {
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-morpho-58"
+        ],
+        "number": 70,
+        "name": "NC",
+        "net": "NC",
+        "connector": "CN10",
+        "connectorPin": 18,
+        "physicalLabel": "CN10.18",
+        "reserved": true,
+        "position": {
+          "x": 560,
+          "y": 468,
+          "side": "right"
+        }
+      },
+      {
+        "number": 71,
+        "name": "PC7",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2S3_MCK",
+            "signal": "I2S3_MCK",
+            "group": "I2S",
+            "evidence": "f401re-package",
+            "selector": "AF6",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SDIO_D7",
+            "signal": "SDIO_D7",
+            "group": "SYSTEM",
+            "evidence": "f401re-package",
+            "selector": "AF12",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM3_CH2",
+            "signal": "TIM3_CH2",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USART6_RX",
+            "signal": "USART6_RX",
+            "group": "UART",
+            "evidence": "f401re-package",
+            "selector": "AF8",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PC7",
+        "connector": "CN10",
+        "connectorPin": 19,
+        "physicalLabel": "CN10.19",
+        "mcuPin": 38,
+        "position": {
+          "x": 560,
+          "y": 492,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN5.2"
+        ]
+      },
+      {
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-morpho-58"
+        ],
+        "number": 72,
+        "name": "GND",
+        "net": "GND",
+        "connector": "CN10",
+        "connectorPin": 20,
+        "physicalLabel": "CN10.20",
+        "position": {
+          "x": 560,
+          "y": 516,
+          "side": "right"
+        }
+      },
+      {
+        "number": 73,
+        "name": "PA9",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C3_SMBA",
+            "signal": "I2C3_SMBA",
+            "group": "I2C",
+            "evidence": "f401re-package",
+            "selector": "AF4",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM1_CH2",
+            "signal": "TIM1_CH2",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USART1_TX",
+            "signal": "USART1_TX",
+            "group": "UART",
+            "evidence": "f401re-package",
+            "selector": "AF7",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USB_OTG_FS_VBUS",
+            "signal": "USB_OTG_FS_VBUS",
+            "group": "USB",
+            "evidence": "f401re-package"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PA9",
+        "connector": "CN10",
+        "connectorPin": 21,
+        "physicalLabel": "CN10.21",
+        "mcuPin": 42,
+        "position": {
+          "x": 560,
+          "y": 540,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN5.1"
+        ]
+      },
+      {
+        "number": 74,
+        "name": "PB2",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PB2",
+        "connector": "CN10",
+        "connectorPin": 22,
+        "physicalLabel": "CN10.22",
+        "mcuPin": 28,
+        "position": {
+          "x": 560,
+          "y": 564,
+          "side": "right"
+        },
+        "sharedWith": []
+      },
+      {
+        "number": 75,
+        "name": "PA8",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C3_SCL",
+            "signal": "I2C3_SCL",
+            "group": "I2C",
+            "evidence": "f401re-package",
+            "selector": "AF4",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "RCC_MCO_1",
+            "signal": "RCC_MCO_1",
+            "group": "SYSTEM",
+            "evidence": "f401re-package",
+            "selector": "AF0",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM1_CH1",
+            "signal": "TIM1_CH1",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USART1_CK",
+            "signal": "USART1_CK",
+            "group": "UART",
+            "evidence": "f401re-package",
+            "selector": "AF7",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USB_OTG_FS_SOF",
+            "signal": "USB_OTG_FS_SOF",
+            "group": "USB",
+            "evidence": "f401re-package",
+            "selector": "AF10",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PA8",
+        "connector": "CN10",
+        "connectorPin": 23,
+        "physicalLabel": "CN10.23",
+        "mcuPin": 41,
+        "position": {
+          "x": 560,
+          "y": 588,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN9.8"
+        ]
+      },
+      {
+        "number": 76,
+        "name": "PB1",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN9",
+            "signal": "ADC1_IN9",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          },
+          {
+            "name": "TIM1_CH3N",
+            "signal": "TIM1_CH3N",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM3_CH4",
+            "signal": "TIM3_CH4",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PB1",
+        "connector": "CN10",
+        "connectorPin": 24,
+        "physicalLabel": "CN10.24",
+        "mcuPin": 27,
+        "position": {
+          "x": 560,
+          "y": 612,
+          "side": "right"
+        },
+        "sharedWith": []
+      },
+      {
+        "number": 77,
+        "name": "PB10",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C2_SCL",
+            "signal": "I2C2_SCL",
+            "group": "I2C",
+            "evidence": "f401re-package",
+            "selector": "AF4",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "I2S2_CK",
+            "signal": "I2S2_CK",
+            "group": "I2S",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI2_SCK",
+            "signal": "SPI2_SCK",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM2_CH3",
+            "signal": "TIM2_CH3",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PB10",
+        "connector": "CN10",
+        "connectorPin": 25,
+        "physicalLabel": "CN10.25",
+        "mcuPin": 29,
+        "position": {
+          "x": 560,
+          "y": 636,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN9.7"
+        ]
+      },
+      {
+        "number": 78,
+        "name": "PB15",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_EXTI15",
+            "signal": "ADC1_EXTI15",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          },
+          {
+            "name": "I2S2_SD",
+            "signal": "I2S2_SD",
+            "group": "I2S",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "RTC_REFIN",
+            "signal": "RTC_REFIN",
+            "group": "SYSTEM",
+            "evidence": "f401re-package",
+            "selector": "AF0",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI2_MOSI",
+            "signal": "SPI2_MOSI",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM1_CH3N",
+            "signal": "TIM1_CH3N",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PB15",
+        "connector": "CN10",
+        "connectorPin": 26,
+        "physicalLabel": "CN10.26",
+        "mcuPin": 36,
+        "position": {
+          "x": 560,
+          "y": 660,
+          "side": "right"
+        },
+        "sharedWith": []
+      },
+      {
+        "number": 79,
+        "name": "PB4",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C3_SDA",
+            "signal": "I2C3_SDA",
+            "group": "I2C",
+            "evidence": "f401re-package",
+            "selector": "AF9",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "I2S3_ext_SD",
+            "signal": "I2S3_ext_SD",
+            "group": "I2S",
+            "evidence": "f401re-package",
+            "selector": "AF7",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI1_MISO",
+            "signal": "SPI1_MISO",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI3_MISO",
+            "signal": "SPI3_MISO",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF6",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SYS_JTRST",
+            "signal": "SYS_JTRST",
+            "group": "SYSTEM",
+            "evidence": "f401re-package",
+            "selector": "AF0",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM3_CH1",
+            "signal": "TIM3_CH1",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PB4",
+        "connector": "CN10",
+        "connectorPin": 27,
+        "physicalLabel": "CN10.27",
+        "mcuPin": 56,
+        "position": {
+          "x": 560,
+          "y": 684,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN9.6"
+        ]
+      },
+      {
+        "number": 80,
+        "name": "PB14",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2S2_ext_SD",
+            "signal": "I2S2_ext_SD",
+            "group": "I2S",
+            "evidence": "f401re-package",
+            "selector": "AF6",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI2_MISO",
+            "signal": "SPI2_MISO",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM1_CH2N",
+            "signal": "TIM1_CH2N",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PB14",
+        "connector": "CN10",
+        "connectorPin": 28,
+        "physicalLabel": "CN10.28",
+        "mcuPin": 35,
+        "position": {
+          "x": 560,
+          "y": 708,
+          "side": "right"
+        },
+        "sharedWith": []
+      },
+      {
+        "number": 81,
+        "name": "PB5",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C1_SMBA",
+            "signal": "I2C1_SMBA",
+            "group": "I2C",
+            "evidence": "f401re-package",
+            "selector": "AF4",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "I2S3_SD",
+            "signal": "I2S3_SD",
+            "group": "I2S",
+            "evidence": "f401re-package",
+            "selector": "AF6",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI1_MOSI",
+            "signal": "SPI1_MOSI",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI3_MOSI",
+            "signal": "SPI3_MOSI",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF6",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM3_CH2",
+            "signal": "TIM3_CH2",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PB5",
+        "connector": "CN10",
+        "connectorPin": 29,
+        "physicalLabel": "CN10.29",
+        "mcuPin": 57,
+        "position": {
+          "x": 560,
+          "y": 732,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN9.5"
+        ]
+      },
+      {
+        "number": 82,
+        "name": "PB13",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2S2_CK",
+            "signal": "I2S2_CK",
+            "group": "I2S",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI2_SCK",
+            "signal": "SPI2_SCK",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM1_CH1N",
+            "signal": "TIM1_CH1N",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PB13",
+        "connector": "CN10",
+        "connectorPin": 30,
+        "physicalLabel": "CN10.30",
+        "mcuPin": 34,
+        "position": {
+          "x": 560,
+          "y": 756,
+          "side": "right"
+        },
+        "sharedWith": []
+      },
+      {
+        "number": 83,
+        "name": "PB3",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C2_SDA",
+            "signal": "I2C2_SDA",
+            "group": "I2C",
+            "evidence": "f401re-package",
+            "selector": "AF9",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "I2S3_CK",
+            "signal": "I2S3_CK",
+            "group": "I2S",
+            "evidence": "f401re-package",
+            "selector": "AF6",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI1_SCK",
+            "signal": "SPI1_SCK",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI3_SCK",
+            "signal": "SPI3_SCK",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF6",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SYS_JTDO-SWO",
+            "signal": "SYS_JTDO-SWO",
+            "group": "SYSTEM",
+            "evidence": "f401re-package",
+            "selector": "AF0",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM2_CH2",
+            "signal": "TIM2_CH2",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PB3",
+        "connector": "CN10",
+        "connectorPin": 31,
+        "physicalLabel": "CN10.31",
+        "mcuPin": 55,
+        "position": {
+          "x": 560,
+          "y": 780,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN9.4"
+        ]
+      },
+      {
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-morpho-58"
+        ],
+        "number": 84,
+        "name": "AGND",
+        "net": "AGND",
+        "connector": "CN10",
+        "connectorPin": 32,
+        "physicalLabel": "CN10.32",
+        "position": {
+          "x": 560,
+          "y": 804,
+          "side": "right"
+        }
+      },
+      {
+        "number": 85,
+        "name": "PA10",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "TIM1_CH3",
+            "signal": "TIM1_CH3",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USART1_RX",
+            "signal": "USART1_RX",
+            "group": "UART",
+            "evidence": "f401re-package",
+            "selector": "AF7",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USB_OTG_FS_ID",
+            "signal": "USB_OTG_FS_ID",
+            "group": "USB",
+            "evidence": "f401re-package",
+            "selector": "AF10",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PA10",
+        "connector": "CN10",
+        "connectorPin": 33,
+        "physicalLabel": "CN10.33",
+        "mcuPin": 43,
+        "position": {
+          "x": 560,
+          "y": 828,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN9.3"
+        ]
+      },
+      {
+        "number": 86,
+        "name": "PC4",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN14",
+            "signal": "ADC1_IN14",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package"
+        ],
+        "net": "PC4",
+        "connector": "CN10",
+        "connectorPin": 34,
+        "physicalLabel": "CN10.34",
+        "mcuPin": 24,
+        "position": {
+          "x": 560,
+          "y": 852,
+          "side": "right"
+        },
+        "sharedWith": []
+      },
+      {
+        "number": 87,
+        "name": "PA2",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN2",
+            "signal": "ADC1_IN2",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          },
+          {
+            "name": "TIM2_CH3",
+            "signal": "TIM2_CH3",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM5_CH3",
+            "signal": "TIM5_CH3",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM9_CH1",
+            "signal": "TIM9_CH1",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF3",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USART2_TX",
+            "signal": "USART2_TX",
+            "group": "UART",
+            "evidence": "f401re-package",
+            "selector": "AF7",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package",
+          "nucleo-mb1136-bridges"
+        ],
+        "net": "PA2",
+        "connector": "CN10",
+        "connectorPin": 35,
+        "physicalLabel": "CN10.35",
+        "mcuPin": 16,
+        "boardCircuitKey": "nucleoUsart",
+        "position": {
+          "x": 560,
+          "y": 876,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN9.2"
+        ]
+      },
+      {
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-morpho-58"
+        ],
+        "number": 88,
+        "name": "NC",
+        "net": "NC",
+        "connector": "CN10",
+        "connectorPin": 36,
+        "physicalLabel": "CN10.36",
+        "reserved": true,
+        "position": {
+          "x": 560,
+          "y": 900,
+          "side": "right"
+        }
+      },
+      {
+        "number": 89,
+        "name": "PA3",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN3",
+            "signal": "ADC1_IN3",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          },
+          {
+            "name": "TIM2_CH4",
+            "signal": "TIM2_CH4",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM5_CH4",
+            "signal": "TIM5_CH4",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM9_CH2",
+            "signal": "TIM9_CH2",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF3",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USART2_RX",
+            "signal": "USART2_RX",
+            "group": "UART",
+            "evidence": "f401re-package",
+            "selector": "AF7",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-morpho-58",
+          "f401re-package",
+          "nucleo-mb1136-bridges"
+        ],
+        "net": "PA3",
+        "connector": "CN10",
+        "connectorPin": 37,
+        "physicalLabel": "CN10.37",
+        "mcuPin": 17,
+        "boardCircuitKey": "nucleoUsart",
+        "position": {
+          "x": 560,
+          "y": 924,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN9.1"
+        ]
+      },
+      {
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-morpho-58"
+        ],
+        "number": 90,
+        "name": "NC",
+        "net": "NC",
+        "connector": "CN10",
+        "connectorPin": 38,
+        "physicalLabel": "CN10.38",
+        "reserved": true,
+        "position": {
+          "x": 560,
+          "y": 948,
+          "side": "right"
+        }
+      },
+      {
+        "number": 91,
+        "name": "PA9",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C3_SMBA",
+            "signal": "I2C3_SMBA",
+            "group": "I2C",
+            "evidence": "f401re-package",
+            "selector": "AF4",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM1_CH2",
+            "signal": "TIM1_CH2",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USART1_TX",
+            "signal": "USART1_TX",
+            "group": "UART",
+            "evidence": "f401re-package",
+            "selector": "AF7",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USB_OTG_FS_VBUS",
+            "signal": "USB_OTG_FS_VBUS",
+            "group": "USB",
+            "evidence": "f401re-package"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-arduino-44",
+          "f401re-package"
+        ],
+        "net": "PA9",
+        "connector": "CN5",
+        "connectorPin": 1,
+        "physicalLabel": "CN5.1",
+        "boardLabel": "D8",
+        "mcuPin": 42,
+        "position": {
+          "x": 560,
+          "y": 1020,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN10.21"
+        ]
+      },
+      {
+        "number": 92,
+        "name": "PC7",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2S3_MCK",
+            "signal": "I2S3_MCK",
+            "group": "I2S",
+            "evidence": "f401re-package",
+            "selector": "AF6",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SDIO_D7",
+            "signal": "SDIO_D7",
+            "group": "SYSTEM",
+            "evidence": "f401re-package",
+            "selector": "AF12",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM3_CH2",
+            "signal": "TIM3_CH2",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USART6_RX",
+            "signal": "USART6_RX",
+            "group": "UART",
+            "evidence": "f401re-package",
+            "selector": "AF8",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-arduino-44",
+          "f401re-package"
+        ],
+        "net": "PC7",
+        "connector": "CN5",
+        "connectorPin": 2,
+        "physicalLabel": "CN5.2",
+        "boardLabel": "D9",
+        "mcuPin": 38,
+        "position": {
+          "x": 560,
+          "y": 1044,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN10.19"
+        ]
+      },
+      {
+        "number": 93,
+        "name": "PB6",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C1_SCL",
+            "signal": "I2C1_SCL",
+            "group": "I2C",
+            "evidence": "f401re-package",
+            "selector": "AF4",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM4_CH1",
+            "signal": "TIM4_CH1",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USART1_TX",
+            "signal": "USART1_TX",
+            "group": "UART",
+            "evidence": "f401re-package",
+            "selector": "AF7",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-arduino-44",
+          "f401re-package"
+        ],
+        "net": "PB6",
+        "connector": "CN5",
+        "connectorPin": 3,
+        "physicalLabel": "CN5.3",
+        "boardLabel": "D10",
+        "mcuPin": 58,
+        "position": {
+          "x": 560,
+          "y": 1068,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN10.17"
+        ]
+      },
+      {
+        "number": 94,
+        "name": "PA7",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN7",
+            "signal": "ADC1_IN7",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          },
+          {
+            "name": "SPI1_MOSI",
+            "signal": "SPI1_MOSI",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM1_CH1N",
+            "signal": "TIM1_CH1N",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM3_CH2",
+            "signal": "TIM3_CH2",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-arduino-44",
+          "f401re-package"
+        ],
+        "net": "PA7",
+        "connector": "CN5",
+        "connectorPin": 4,
+        "physicalLabel": "CN5.4",
+        "boardLabel": "D11",
+        "mcuPin": 23,
+        "position": {
+          "x": 560,
+          "y": 1092,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN10.15"
+        ]
+      },
+      {
+        "number": 95,
+        "name": "PA6",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN6",
+            "signal": "ADC1_IN6",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          },
+          {
+            "name": "SPI1_MISO",
+            "signal": "SPI1_MISO",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM1_BKIN",
+            "signal": "TIM1_BKIN",
+            "group": "TIMER",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM3_CH1",
+            "signal": "TIM3_CH1",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-arduino-44",
+          "f401re-package"
+        ],
+        "net": "PA6",
+        "connector": "CN5",
+        "connectorPin": 5,
+        "physicalLabel": "CN5.5",
+        "boardLabel": "D12",
+        "mcuPin": 22,
+        "position": {
+          "x": 560,
+          "y": 1116,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN10.13"
+        ]
+      },
+      {
+        "number": 96,
+        "name": "PA5",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN5",
+            "signal": "ADC1_IN5",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          },
+          {
+            "name": "SPI1_SCK",
+            "signal": "SPI1_SCK",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM2_CH1",
+            "signal": "TIM2_CH1",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM2_ETR",
+            "signal": "TIM2_ETR",
+            "group": "TIMER",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-arduino-44",
+          "f401re-package",
+          "nucleo-mb1136-bridges"
+        ],
+        "net": "PA5",
+        "connector": "CN5",
+        "connectorPin": 6,
+        "physicalLabel": "CN5.6",
+        "boardLabel": "D13",
+        "mcuPin": 21,
+        "boardCircuitKey": "nucleoLed",
+        "position": {
+          "x": 560,
+          "y": 1140,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN10.11"
+        ]
+      },
+      {
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-arduino-43"
+        ],
+        "number": 97,
+        "name": "GND",
+        "net": "GND",
+        "connector": "CN5",
+        "connectorPin": 7,
+        "physicalLabel": "CN5.7",
+        "boardLabel": "GND",
+        "position": {
+          "x": 560,
+          "y": 1164,
+          "side": "right"
+        }
+      },
+      {
+        "number": 98,
+        "name": "AVDD",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "nucleo-f401re-arduino-43",
+          "f401re-package"
+        ],
+        "net": "AVDD",
+        "connector": "CN5",
+        "connectorPin": 8,
+        "physicalLabel": "CN5.8",
+        "boardLabel": "AREF",
+        "mcuPin": 13,
+        "position": {
+          "x": 560,
+          "y": 1188,
+          "side": "right"
+        }
+      },
+      {
+        "number": 99,
+        "name": "PB9",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C1_SDA",
+            "signal": "I2C1_SDA",
+            "group": "I2C",
+            "evidence": "f401re-package",
+            "selector": "AF4",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "I2S2_WS",
+            "signal": "I2S2_WS",
+            "group": "I2S",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SDIO_D5",
+            "signal": "SDIO_D5",
+            "group": "SYSTEM",
+            "evidence": "f401re-package",
+            "selector": "AF12",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI2_NSS",
+            "signal": "SPI2_NSS",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM11_CH1",
+            "signal": "TIM11_CH1",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF3",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM4_CH4",
+            "signal": "TIM4_CH4",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-arduino-43",
+          "f401re-package"
+        ],
+        "net": "PB9",
+        "connector": "CN5",
+        "connectorPin": 9,
+        "physicalLabel": "CN5.9",
+        "boardLabel": "D14",
+        "mcuPin": 62,
+        "position": {
+          "x": 560,
+          "y": 1212,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN10.5"
+        ]
+      },
+      {
+        "number": 100,
+        "name": "PB8",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C1_SCL",
+            "signal": "I2C1_SCL",
+            "group": "I2C",
+            "evidence": "f401re-package",
+            "selector": "AF4",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SDIO_D4",
+            "signal": "SDIO_D4",
+            "group": "SYSTEM",
+            "evidence": "f401re-package",
+            "selector": "AF12",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM10_CH1",
+            "signal": "TIM10_CH1",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF3",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM4_CH3",
+            "signal": "TIM4_CH3",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-arduino-43",
+          "f401re-package"
+        ],
+        "net": "PB8",
+        "connector": "CN5",
+        "connectorPin": 10,
+        "physicalLabel": "CN5.10",
+        "boardLabel": "D15",
+        "mcuPin": 61,
+        "position": {
+          "x": 560,
+          "y": 1236,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN10.3"
+        ]
+      },
+      {
+        "number": 101,
+        "name": "PA3",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN3",
+            "signal": "ADC1_IN3",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          },
+          {
+            "name": "TIM2_CH4",
+            "signal": "TIM2_CH4",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM5_CH4",
+            "signal": "TIM5_CH4",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM9_CH2",
+            "signal": "TIM9_CH2",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF3",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USART2_RX",
+            "signal": "USART2_RX",
+            "group": "UART",
+            "evidence": "f401re-package",
+            "selector": "AF7",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-arduino-44",
+          "f401re-package",
+          "nucleo-mb1136-bridges"
+        ],
+        "net": "PA3",
+        "connector": "CN9",
+        "connectorPin": 1,
+        "physicalLabel": "CN9.1",
+        "boardLabel": "D0",
+        "mcuPin": 17,
+        "boardCircuitKey": "nucleoUsart",
+        "position": {
+          "x": 560,
+          "y": 1308,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN10.37"
+        ]
+      },
+      {
+        "number": 102,
+        "name": "PA2",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN2",
+            "signal": "ADC1_IN2",
+            "group": "ADC",
+            "evidence": "f401re-package"
+          },
+          {
+            "name": "TIM2_CH3",
+            "signal": "TIM2_CH3",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM5_CH3",
+            "signal": "TIM5_CH3",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM9_CH1",
+            "signal": "TIM9_CH1",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF3",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USART2_TX",
+            "signal": "USART2_TX",
+            "group": "UART",
+            "evidence": "f401re-package",
+            "selector": "AF7",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-arduino-44",
+          "f401re-package",
+          "nucleo-mb1136-bridges"
+        ],
+        "net": "PA2",
+        "connector": "CN9",
+        "connectorPin": 2,
+        "physicalLabel": "CN9.2",
+        "boardLabel": "D1",
+        "mcuPin": 16,
+        "boardCircuitKey": "nucleoUsart",
+        "position": {
+          "x": 560,
+          "y": 1332,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN10.35"
+        ]
+      },
+      {
+        "number": 103,
+        "name": "PA10",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "TIM1_CH3",
+            "signal": "TIM1_CH3",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USART1_RX",
+            "signal": "USART1_RX",
+            "group": "UART",
+            "evidence": "f401re-package",
+            "selector": "AF7",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USB_OTG_FS_ID",
+            "signal": "USB_OTG_FS_ID",
+            "group": "USB",
+            "evidence": "f401re-package",
+            "selector": "AF10",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-arduino-44",
+          "f401re-package"
+        ],
+        "net": "PA10",
+        "connector": "CN9",
+        "connectorPin": 3,
+        "physicalLabel": "CN9.3",
+        "boardLabel": "D2",
+        "mcuPin": 43,
+        "position": {
+          "x": 560,
+          "y": 1356,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN10.33"
+        ]
+      },
+      {
+        "number": 104,
+        "name": "PB3",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C2_SDA",
+            "signal": "I2C2_SDA",
+            "group": "I2C",
+            "evidence": "f401re-package",
+            "selector": "AF9",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "I2S3_CK",
+            "signal": "I2S3_CK",
+            "group": "I2S",
+            "evidence": "f401re-package",
+            "selector": "AF6",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI1_SCK",
+            "signal": "SPI1_SCK",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI3_SCK",
+            "signal": "SPI3_SCK",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF6",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SYS_JTDO-SWO",
+            "signal": "SYS_JTDO-SWO",
+            "group": "SYSTEM",
+            "evidence": "f401re-package",
+            "selector": "AF0",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM2_CH2",
+            "signal": "TIM2_CH2",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-arduino-44",
+          "f401re-package"
+        ],
+        "net": "PB3",
+        "connector": "CN9",
+        "connectorPin": 4,
+        "physicalLabel": "CN9.4",
+        "boardLabel": "D3",
+        "mcuPin": 55,
+        "position": {
+          "x": 560,
+          "y": 1380,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN10.31"
+        ]
+      },
+      {
+        "number": 105,
+        "name": "PB5",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C1_SMBA",
+            "signal": "I2C1_SMBA",
+            "group": "I2C",
+            "evidence": "f401re-package",
+            "selector": "AF4",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "I2S3_SD",
+            "signal": "I2S3_SD",
+            "group": "I2S",
+            "evidence": "f401re-package",
+            "selector": "AF6",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI1_MOSI",
+            "signal": "SPI1_MOSI",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI3_MOSI",
+            "signal": "SPI3_MOSI",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF6",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM3_CH2",
+            "signal": "TIM3_CH2",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-arduino-44",
+          "f401re-package"
+        ],
+        "net": "PB5",
+        "connector": "CN9",
+        "connectorPin": 5,
+        "physicalLabel": "CN9.5",
+        "boardLabel": "D4",
+        "mcuPin": 57,
+        "position": {
+          "x": 560,
+          "y": 1404,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN10.29"
+        ]
+      },
+      {
+        "number": 106,
+        "name": "PB4",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C3_SDA",
+            "signal": "I2C3_SDA",
+            "group": "I2C",
+            "evidence": "f401re-package",
+            "selector": "AF9",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "I2S3_ext_SD",
+            "signal": "I2S3_ext_SD",
+            "group": "I2S",
+            "evidence": "f401re-package",
+            "selector": "AF7",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI1_MISO",
+            "signal": "SPI1_MISO",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI3_MISO",
+            "signal": "SPI3_MISO",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF6",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SYS_JTRST",
+            "signal": "SYS_JTRST",
+            "group": "SYSTEM",
+            "evidence": "f401re-package",
+            "selector": "AF0",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM3_CH1",
+            "signal": "TIM3_CH1",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF2",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-arduino-44",
+          "f401re-package"
+        ],
+        "net": "PB4",
+        "connector": "CN9",
+        "connectorPin": 6,
+        "physicalLabel": "CN9.6",
+        "boardLabel": "D5",
+        "mcuPin": 56,
+        "position": {
+          "x": 560,
+          "y": 1428,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN10.27"
+        ]
+      },
+      {
+        "number": 107,
+        "name": "PB10",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C2_SCL",
+            "signal": "I2C2_SCL",
+            "group": "I2C",
+            "evidence": "f401re-package",
+            "selector": "AF4",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "I2S2_CK",
+            "signal": "I2S2_CK",
+            "group": "I2S",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "SPI2_SCK",
+            "signal": "SPI2_SCK",
+            "group": "SPI",
+            "evidence": "f401re-package",
+            "selector": "AF5",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM2_CH3",
+            "signal": "TIM2_CH3",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-arduino-44",
+          "f401re-package"
+        ],
+        "net": "PB10",
+        "connector": "CN9",
+        "connectorPin": 7,
+        "physicalLabel": "CN9.7",
+        "boardLabel": "D6",
+        "mcuPin": 29,
+        "position": {
+          "x": 560,
+          "y": 1452,
+          "side": "right"
+        },
+        "sharedWith": [
+          "CN10.25"
+        ]
+      },
+      {
+        "number": 108,
+        "name": "PA8",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C3_SCL",
+            "signal": "I2C3_SCL",
+            "group": "I2C",
+            "evidence": "f401re-package",
+            "selector": "AF4",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "RCC_MCO_1",
+            "signal": "RCC_MCO_1",
+            "group": "SYSTEM",
+            "evidence": "f401re-package",
+            "selector": "AF0",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "TIM1_CH1",
+            "signal": "TIM1_CH1",
+            "group": "PWM",
+            "evidence": "f401re-package",
+            "selector": "AF1",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USART1_CK",
+            "signal": "USART1_CK",
+            "group": "UART",
+            "evidence": "f401re-package",
+            "selector": "AF7",
+            "configurationEvidence": "f401re-modes"
+          },
+          {
+            "name": "USB_OTG_FS_SOF",
+            "signal": "USB_OTG_FS_SOF",
+            "group": "USB",
+            "evidence": "f401re-package",
+            "selector": "AF10",
+            "configurationEvidence": "f401re-modes"
+          }
+        ],
+        "evidence": [
+          "nucleo-f401re-arduino-44",
+          "f401re-package"
+        ],
         "net": "PA8",
         "connector": "CN9",
         "connectorPin": 8,

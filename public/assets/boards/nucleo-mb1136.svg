@@ -4,7 +4,7 @@
     <text x="260" y="45">CN7</text><text x="560" y="45">CN10</text>
     <text x="260" y="1003">CN6</text><text x="560" y="1003">CN5</text>
     <text x="260" y="1291">CN8</text><text x="560" y="1291">CN9</text>
-    <text x="410" y="726" font-size="22">NUCLEO-F103RB</text>
+    <text x="410" y="726" font-size="22">NUCLEO-64</text>
     <text x="410" y="752">MB1136 · connector map</text>
   </g>
 </svg>
