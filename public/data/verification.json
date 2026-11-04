@@ -1,7 +1,7 @@
 {
   "verifiedOn": "2026-11-04",
-  "physicalPins": 1440,
-  "functionAssignments": 4688,
+  "physicalPins": 1504,
+  "functionAssignments": 4769,
   "documents": [
     {
       "id": "rp2350",
@@ -693,6 +693,14 @@
       "id": "atmega2560-tqfp100",
       "physicalPins": 100,
       "functionAssignments": 119,
+      "physicalSourceMethods": [
+        "visual-diagram"
+      ]
+    },
+    {
+      "id": "atmega2561-tqfp64",
+      "physicalPins": 64,
+      "functionAssignments": 81,
       "physicalSourceMethods": [
         "visual-diagram"
       ]

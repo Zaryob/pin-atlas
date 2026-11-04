@@ -23,13 +23,13 @@ Kütüphanede her fiziksel düzen bir kez listelenir; uyumlu kartlar aynı kayı
 - **ESP32-C3-DevKitM-1:** MINI-1/1U için resmî 30 kontak ve 15 GPIO; USB/RGB LED paylaşımları belirtilir.
 - **ESP32-S3-DevKitC-1 v1.1:** 44 kontak; WROOM-1-N8/N8R8 bellek referansları. N8R8 GPIO35–37’yi belleğe ayırır; v1.1 RGB LED GPIO38’dedir.
 - **ATmega328P paketleri:** PDIP-28, TQFP-32, QFN/MLF-28 ve QFN/MLF-32 ayrı fiziksel görünümler; 23 GPIO olanağı, reset/saat sigortası koşulları ve yalnızca 32-pin paketlerde ADC6/7.
-- **ATmega2560 paketi:** TQFP-100; 100 gerçek paket pini ve 86 GPIO. Mega kartının Arduino pin numaralarından ayrıdır.
+- **ATmega2560 ve ATmega2561 paketleri:** Ayrı TQFP-100 (86 GPIO'lu ATmega2560 / ATmega1280) ve TQFP-64 (54 GPIO'lu ATmega2561 / ATmega1281) görünümleri; Mega kartının Arduino pin numaralarından bağımsız gerçek MCU paket pinleri.
 - **RP2350A:** QFN-60, 30 Bank 0 GPIO.
 - **RP2350B:** QFN-80, 48 Bank 0 GPIO.
 
 Pico çizimi ortak başlığı gösterir; modellerin kablosuz, LED ve dahili bağlantılarının aynı olduğunu iddia etmez. İşlev referansı değişince fiziksel pinler aynı kalır. Planlar referans bazında saklanır. Eski model bağlantıları, JSON dosyaları ve kayıtlı planlar desteklenir; aynı işlemci için birden fazla eski plan varsa birleştirilmeden referans seçicisinde erişilebilir kalır.
 
-Yirmi bir kütüphane düzeninin otuz bir kaynak profili boyunca toplam 1.440 fiziksel pin kaydı ve 4.688 pin/alternatif işlev kaydı bulunur. RP2350 paketlerinin merkez GND pedi çevre pin sayısına dahil değildir. Çizimler şematiktir; mekanik CAD yerleşimi veya gerçek komponent konumları olarak kullanılmaz.
+Yirmi iki kütüphane düzeninin otuz iki kaynak profili boyunca toplam 1.504 fiziksel pin kaydı ve 4.769 pin/alternatif işlev kaydı bulunur. RP2350 paketlerinin merkez GND pedi çevre pin sayısına dahil değildir. Çizimler şematiktir; mekanik CAD yerleşimi veya gerçek komponent konumları olarak kullanılmaz.
 
 ## Kullanım
 

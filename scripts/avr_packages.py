@@ -83,4 +83,22 @@ def build_avr_packages(cache,docs,observations,ref,verified_on):
         pins.append(pin)
     assert sum(p['type']=='GPIO' for p in pins)==86
     out.append({'id':'atmega2560-tqfp100','name':'ATmega2560 · TQFP-100','shortName':'ATmega2560 TQFP-100','family':'Microchip AVR','subtitle':'TQFP-100 · bare MCU · up to 16 MHz','layout':'lqfp','packageName':'TQFP-100','packagePins':100,'gpioCount':86,'voltage':'4.5–5.5 V (16 MHz grade)','mcu':'ATmega2560','processor':'8-bit AVR','clock':'Up to 16 MHz','scopeKey':'atmega2560PackageScope','compatibleKey':'atmega2560Compatible','verifiedOn':verified_on,'source':docs[source]['url']+'#page=2','datasheet':docs[source]['url'],'pins':pins})
+
+    pdi_ref=ref('atmega2561-port-pdi',source,84,'§13.3.5 · Table 13-22 note 1 · PDO/PDI available at PE1/PE0 for ATmega1281/2561; SPI programming')
+    physical64=ref('atmega2561-tqfp64-physical',source,4,'Figure 1-3 · TQFP64/QFN64 top view · 64 package pins; ATmega1281/2561','visual-diagram')
+    names64=observations['atmega2561-tqfp64']['pins'];assert len(names64)==64
+    pins64=[]
+    for n,name in enumerate(names64,1):
+        fs=copy.deepcopy(functions.get(name,[]))
+        if name=='PE0' and not any(f['name']=='PDI' for f in fs):
+            fs.insert(0,{'name':'PDI','group':'SPI','signal':'PDI','evidence':pdi_ref})
+        elif name=='PE1' and not any(f['name']=='PDO' for f in fs):
+            fs.insert(0,{'name':'PDO','group':'SPI','signal':'PDO','evidence':pdi_ref})
+        pin=make_pin(n,name,fs,physical64)
+        if pin['type']=='GPIO':pin['noteKey']='avrJtagNote' if name in ('PF4','PF5','PF6','PF7') else 'avrClockNote' if name in ('PG3','PG4') else 'avrGpioNote'
+        elif name=='RESET':pin['noteKey']='avrResetNote'
+        elif name=='AREF':pin['noteKey']='avrArefNote'
+        pins64.append(pin)
+    assert sum(p['type']=='GPIO' for p in pins64)==54
+    out.append({'id':'atmega2561-tqfp64','name':'ATmega2561 · TQFP-64','shortName':'ATmega2561 TQFP-64','family':'Microchip AVR','subtitle':'TQFP-64 · bare MCU · up to 16 MHz','layout':'lqfp','packageName':'TQFP-64','packagePins':64,'gpioCount':54,'voltage':'4.5–5.5 V (16 MHz grade)','mcu':'ATmega2561','processor':'8-bit AVR','clock':'Up to 16 MHz','scopeKey':'atmega2561PackageScope','compatibleKey':'atmega2561Compatible','verifiedOn':verified_on,'source':docs[source]['url']+'#page=4','datasheet':docs[source]['url'],'pins':pins64})
     return out

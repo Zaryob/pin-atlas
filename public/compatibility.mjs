@@ -43,6 +43,12 @@ export function compatibleModels(layout) {
       {id:'atmega1280-tqfp100',name:'ATmega1280',profileId:'atmega2560-tqfp100',kind:'physical',detail:'TQFP-100 · 128 KB Flash'}
     ];
   }
+  if (layout.id === 'atmega2561-tqfp64') {
+    return [
+      {id:'atmega2561-tqfp64',name:'ATmega2561',profileId:'atmega2561-tqfp64',kind:'reference',detail:'TQFP-64 · 256 KB Flash'},
+      {id:'atmega1281-tqfp64',name:'ATmega1281',profileId:'atmega2561-tqfp64',kind:'physical',detail:'TQFP-64 · 128 KB Flash'}
+    ];
+  }
   const modelNames = {
     'esp32-devkitc-v4':'ESP32-DevKitC V4 · WROOM-32E',
     'esp32-devkitc-v4-wrover':'ESP32-DevKitC V4 · WROVER',

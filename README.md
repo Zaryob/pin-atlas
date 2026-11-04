@@ -23,13 +23,13 @@ The library lists each physical layout once and names its compatible boards:
 - **ESP32-C3-DevKitM-1:** the official MINI-1/1U 30-contact footprint with 15 exposed GPIOs, including USB and RGB LED sharing.
 - **ESP32-S3-DevKitC-1 v1.1:** one 44-contact entry with WROOM-1-N8 and N8R8 references. Octal PSRAM reserves GPIO35–37; the v1.1 RGB LED uses GPIO38. Other board revisions and module memory voltages need separate verification.
 - **ATmega328P packages:** separate PDIP-28, TQFP-32, QFN/MLF-28 and QFN/MLF-32 views. Package pins and raw MCU functions are independent of Arduino numbering. Reset/clock fuses qualify the 23 GPIO-capable pins; ADC6/ADC7 exist only on 32-pin packages.
-- **ATmega2560 package:** TQFP-100 with all 100 package pins, 86 GPIOs and raw MCU functions, including signals absent from Mega board headers.
+- **ATmega2560 and ATmega2561 packages:** separate TQFP-100 (ATmega2560 / ATmega1280 with 86 GPIOs) and TQFP-64 (ATmega2561 / ATmega1281 with 54 GPIOs) views with raw MCU functions; Mega board headers differ from package numbering.
 - **RP2350A:** QFN-60, 30 Bank 0 GPIOs.
 - **RP2350B:** QFN-80, 48 Bank 0 GPIOs.
 
 The Pico drawing represents the common header and does not claim identical wireless, LED or internal board wiring. Processor references change alternate functions, not physical pin positions. Plans are saved per reference; old model links, exported JSON files, and saved plans remain supported. If multiple old model plans exist for the same processor, they remain available in the function-reference selector without being merged.
 
-The dataset contains 1,440 physical pin records across thirty-one source profiles backing twenty-one library layouts and 4,688 pin/function assignments. The central GND pad on each RP2350 package sits outside the perimeter pin count. The schematic drawings show pin positions and are not mechanical CAD layouts.
+The dataset contains 1,504 physical pin records across thirty-two source profiles backing twenty-two library layouts and 4,769 pin/function assignments. The central GND pad on each RP2350 package sits outside the perimeter pin count. The schematic drawings show pin positions and are not mechanical CAD layouts.
 
 ## Usage
 
