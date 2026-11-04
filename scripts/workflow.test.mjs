@@ -2,11 +2,11 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { test } from 'node:test';
-import { buildLayouts, resolveProfile } from '../dist/layouts.mjs';
-import { compatibleModels, filterCompatibleModels } from '../dist/compatibility.mjs';
-import { options, physicalLabel, planReference, samePlan, validatePlan } from '../dist/plans.mjs';
+import { buildLayouts, resolveProfile } from '../public/layouts.mjs';
+import { compatibleModels, filterCompatibleModels } from '../public/compatibility.mjs';
+import { options, physicalLabel, planReference, samePlan, validatePlan } from '../public/plans.mjs';
 
-const boards = JSON.parse(readFileSync(new URL('../dist/data/boards.json', import.meta.url)));
+const boards = JSON.parse(readFileSync(new URL('../public/data/boards.json', import.meta.url)));
 const layouts = buildLayouts(boards);
 const t = (key, params = {}) => `${key} ${JSON.stringify(params)}`;
 

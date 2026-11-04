@@ -4,7 +4,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 root=Path(__file__).resolve().parents[1]
 read=lambda name:json.loads((root/name).read_text())
-boards=read('dist/data/boards.json');evidence=read('dist/data/evidence.json');report=read('dist/data/verification.json');manifest=read('sources/manifest.json')
+boards=read('public/data/boards.json');evidence=read('public/data/evidence.json');report=read('public/data/verification.json');manifest=read('sources/manifest.json')
 assert len({b['id'] for b in boards})==len(boards)
 refs=evidence['references'];docids={d['id'] for d in manifest['documents']}
 for r in refs.values():
@@ -105,6 +105,6 @@ for pin in mega.values():
 assert len({p['net'] for p in mega.values() if any(f['group']=='PWM' for f in p['functions'])})==15
 for board in boards:
     if board['layout']=='custom':
-        assert (root/'dist'/board['diagram']['artwork']).exists()
+        assert (root/'public'/board['diagram']['artwork']).exists()
         for pin in board['pins']:assert 0<=pin['position']['x']<=board['diagram']['width'] and 0<=pin['position']['y']<=board['diagram']['height']
 print(f"Checked {report['physicalPins']} pins, {report['functionAssignments']} function references and model-specific corner cases.")

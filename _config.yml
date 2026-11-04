@@ -1,0 +1,22 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+title: Pin Atlas — Source-verified pin guide
+description: English-first pinout explorer for development boards and chips, with Turkish localization.
+lang: en
+url: ""
+baseurl: ""
+source: public
+destination: _site
+encoding: utf-8
+timezone: UTC
+markdown: kramdown
+strict_front_matter: true
+liquid:
+  error_mode: strict
+exclude:
+  - .DS_Store
+  - README.md
+  - README.tr.md
+
+# Common Zaryob navigation; override suite_url for a combined local preview.
+suite_url: "https://zaryob.github.io"
+suite_section: pin-atlas

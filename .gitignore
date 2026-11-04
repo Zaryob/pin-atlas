@@ -5,3 +5,12 @@ node_modules/
 
 .cache/
 __pycache__/
+
+# Jekyll build outputs and bundles
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+.bundle/
+vendor/
+Gemfile.lock

@@ -1,42 +1,7 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<script defer src="https://cloud.umami.is/script.js" data-website-id="2ddfb587-71f9-4068-a66b-1f92ad4bf209"></script>
-<meta name="theme-color" content="#f5f3ed">
-<meta name="description" data-i18n-content="description" content="Interactive pinout guide for Raspberry Pi, Pico, and RP2350. Explore pins, filter interfaces, and save wiring plans.">
-<title data-i18n="pageTitle">Pin Atlas — Source-verified pin guide</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23171a1f'/%3E%3Cpath d='M10 12h20v16H10z' stroke='%23e2b56f' fill='none' stroke-width='3'/%3E%3C/svg%3E">
-<script src="./i18n.js"></script>
-<script src="./assets/console/theme.js"></script>
-<link rel="stylesheet" href="./assets/console/theme.css">
-<link rel="stylesheet" href="./style.css"><script type="module" src="./app.js"></script>
-<link rel="canonical" href="https://zaryob.github.io/pin-atlas/">
-</head>
-<body class="pin-atlas-site">
-<header class="console-header">
-  <div class="console-header__inner">
-    <div class="console-identity">
-      <a class="console-brand" href="https://zaryob.github.io/" aria-label="Zaryob home" data-i18n-aria-label="homeLabel">zaryob</a><span class="console-prompt-separator" aria-hidden="true">:</span>
-      <details class="console-projects" data-console-projects>
-        <summary role="button" aria-label="Switch project" data-i18n-aria-label="switchProject" aria-controls="console-project-menu"><span class="console-project-path"><span class="console-prompt-separator">~/</span>pin-atlas</span><span class="console-prompt-dollar" aria-hidden="true">$</span><svg class="console-icon" aria-hidden="true" focusable="false"><use href="./assets/console/site.svg#chevron-down"></use></svg></summary>
-        <nav class="console-project-menu" id="console-project-menu" aria-label="Zaryob projects" data-i18n-aria-label="projectsLabel">
-          <!-- console-project-links:start -->
-          <a href="https://zaryob.github.io/"><span>Ana sayfa</span><small>~</small></a>
-          <a href="https://zaryob.github.io/kilavuzlar/"><span>Kılavuzlar</span><small>~/kilavuzlar</small></a>
-          <a href="https://zaryob.github.io/syscall/"><span>Syscall</span><small>~/syscall</small></a>
-          <a href="https://zaryob.github.io/pin-atlas/" aria-current="location"><span>Pin Atlas</span><small>~/pin-atlas</small></a>
-          <!-- console-project-links:end -->
-        </nav>
-      </details>
-    </div>
-    <button class="console-menu" type="button" data-console-menu aria-label="Open menu" data-i18n-aria-label="Open menu" aria-expanded="false" aria-controls="console-navigation"><svg class="console-icon" aria-hidden="true" focusable="false"><use href="./assets/console/site.svg#menu"></use></svg></button>
-    <nav class="console-nav" id="console-navigation" aria-label="Pin Atlas navigation" data-i18n-aria-label="navigation">
-      <div class="console-tools"><a class="source-link" href="https://github.com/Zaryob/pin-atlas" target="_blank" rel="noopener"><span data-i18n="sourceCode">Source code ↗</span></a><label class="console-theme"><span data-i18n="theme">Color theme</span><select data-console-theme aria-label="Color theme" data-i18n-aria-label="theme"><option value="system" data-i18n="themeSystem">System</option><option value="dark" data-i18n="themeDark">Dark</option><option value="light" data-i18n="themeLight">Light</option></select></label><label class="console-language"><span data-i18n="language">Language</span><select data-console-language aria-label="Language" data-i18n-aria-label="language"><option value="en">EN</option><option value="tr">TR</option></select></label></div>
-    </nav>
-  </div>
-</header>
-<a class="skip" href="#main"><span data-i18n="skip">Skip to content</span></a>
+---
+layout: default
+title: Pin Atlas — Source-verified pin guide
+---
 <div class="shell">
 <header class="topbar">
   <div class="topbar-left">
@@ -114,5 +79,3 @@
   <div class="preview-actions"><button class="button secondary" data-close autofocus data-i18n="cancelPlan">Cancel</button><button id="save-incoming-plan" class="button primary"></button></div>
 </dialog>
 <div id="toast" role="status" aria-live="polite"></div>
-</body>
-</html>

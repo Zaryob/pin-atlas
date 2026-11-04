@@ -20,6 +20,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
       - uses: actions/cache@v4
         with:
           path: .cache/primary-sources
@@ -31,7 +35,7 @@ jobs:
       - name: Check JavaScript and board data
         run: npm run check
 
-  deploy:
+  build-and-deploy:
     needs: validate
     runs-on: ubuntu-latest
     permissions:
@@ -42,10 +46,20 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v6
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
       - uses: actions/configure-pages@v5
+        id: pages
+      - name: Build Jekyll
+        env:
+          JEKYLL_ENV: production
+          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        run: bundle exec jekyll build --baseurl "$PAGES_BASE_PATH"
       - uses: actions/upload-pages-artifact@v4
         with:
-          path: dist
+          path: _site
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4

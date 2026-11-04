@@ -2,9 +2,9 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { test } from 'node:test';
-import { samePlan, validatePlan } from '../dist/plans.mjs';
+import { samePlan, validatePlan } from '../public/plans.mjs';
 
-const boards = JSON.parse(readFileSync(new URL('../dist/data/boards.json', import.meta.url)));
+const boards = JSON.parse(readFileSync(new URL('../public/data/boards.json', import.meta.url)));
 const pico = boards.find(board => board.id === 'picow');
 const pi4 = boards.find(board => board.id === 'raspberry-pi-4');
 const t = key => key;

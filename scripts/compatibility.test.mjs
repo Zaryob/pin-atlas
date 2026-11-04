@@ -1,9 +1,9 @@
 import {readFileSync} from 'node:fs';
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {buildLayouts,resolveProfile} from '../dist/layouts.mjs';
-import {compatibleModels,filterCompatibleModels} from '../dist/compatibility.mjs';
-const boards=JSON.parse(readFileSync(new URL('../dist/data/boards.json',import.meta.url)));
+import {buildLayouts,resolveProfile} from '../public/layouts.mjs';
+import {compatibleModels,filterCompatibleModels} from '../public/compatibility.mjs';
+const boards=JSON.parse(readFileSync(new URL('../public/data/boards.json',import.meta.url)));
 const layouts=buildLayouts(boards);
 
 test('compatible model links stay within their verified source profiles',()=>{

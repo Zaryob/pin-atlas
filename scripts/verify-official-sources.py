@@ -334,7 +334,7 @@ def outputs(boards):
         for p in b['pins']:
             for f in p['functions'] or [{}]:writer.writerow([b['id'],p['number'],p['name'],p['type'],f.get('name',''),f.get('selector',''),f.get('signal',''),' | '.join(p['evidence']),' | '.join(filter(None,[f.get('evidence'),f.get('configurationEvidence')]))])
     js=lambda value:json.dumps(value,ensure_ascii=False,indent=2)+'\n'
-    return {'dist/data/boards.json':js(boards),'dist/data/evidence.json':js({'documents':MANIFEST['documents'],'references':REFS}),'dist/data/verification.json':js(report),'sources/pin-verification.csv':buf.getvalue()}
+    return {'public/data/boards.json':js(boards),'public/data/evidence.json':js({'documents':MANIFEST['documents'],'references':REFS}),'public/data/verification.json':js(report),'sources/pin-verification.csv':buf.getvalue()}
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--write',action='store_true');parser.add_argument('--table-snapshots',action='store_true',help='Use recorded, hash-locked ST table extractions instead of downloading ST PDFs');args=parser.parse_args()
