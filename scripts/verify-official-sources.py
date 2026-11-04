@@ -30,7 +30,13 @@ def acquire():
     for doc in DOCS.values():
         path=CACHE/doc['file']
         if not path.exists():
-            subprocess.run(['curl','-fsSL','--retry','2','--max-time','120',doc['url'],'-o',str(path)],check=True)
+            temporary=path.with_suffix(path.suffix+'.download')
+            try:
+                # Some document CDNs reset HTTP/2 streams on hosted runners.
+                subprocess.run(['curl','--http1.1','-fsSL','--retry','3','--retry-all-errors','--retry-delay','2','--connect-timeout','20','--max-time','120',doc['url'],'-o',str(temporary)],check=True)
+                temporary.replace(path)
+            finally:
+                temporary.unlink(missing_ok=True)
         actual=hashlib.sha256(path.read_bytes()).hexdigest()
         if actual!=doc['sha256']:
             sys.exit(f"Source hash mismatch: {doc['id']}. Review the new manufacturer revision; do not silently update the lock.")
