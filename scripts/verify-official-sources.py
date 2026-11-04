@@ -9,6 +9,7 @@ from pathlib import Path
 try:
     import pdfplumber
     from stm32_sources import build_stm32,verify_snapshot
+    from nucleo_sources import build_nucleo_f103rb
     from arduino_sources import build_arduino
     from expanded_arduino_sources import build_expanded_arduino
     from espressif_sources import build_espressif
@@ -348,7 +349,9 @@ def build(use_snapshots=False):
         if pin.get('reserved'):pin['note']='Reserved for HAT identification EEPROM.'
     boards.append({**board_base,'id':'raspberry-pi-40','name':'Raspberry Pi · 40-pin GPIO','shortName':'40-pin GPIO (common)','subtitle':'Common physical layout · model-specific alternate functions excluded','layout':'header','scopeKey':'commonHeaderScope','packagePins':40,'gpioCount':28,'reservedGPIOCount':2,'mcu':'Common GPIO','source':DOCS['pi-gpio']['viewUrl'],'datasheet':DOCS['pi-gpio']['viewUrl'],'searchTerms':'Pi B+ A+ Pi 2 Pi 3 Pi 4 Pi 5 Zero Zero W Zero 2 W 400 500','pins':common_pins})
     boards.append(jetson_orin_nano())
-    boards.extend(build_stm32(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn'],use_snapshots))
+    stm32_boards=build_stm32(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn'],use_snapshots)
+    boards.extend(stm32_boards)
+    boards.append(build_nucleo_f103rb(CACHE,DOCS,ref,stm32_boards[2]))
     boards.extend(build_arduino(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn']))
     boards.extend(build_expanded_arduino(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn'],boards))
     boards.extend(build_espressif(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn']))

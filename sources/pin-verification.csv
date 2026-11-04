@@ -2042,6 +2042,216 @@ stm32f103vbt6,97,PE0,GPIO,TIM4_ETR,,TIM4_ETR,stm32-lqfp100 | stm32-pin-table-p33
 stm32f103vbt6,98,PE1,GPIO,,,,stm32-lqfp100 | stm32-pin-table-p33 | stm32-electrical-notes,
 stm32f103vbt6,99,VSS_3,GND,,,,stm32-lqfp100 | stm32-pin-table-p33,
 stm32f103vbt6,100,VDD_3,POWER,,,,stm32-lqfp100 | stm32-pin-table-p33,
+nucleo-f103rb,1,PC10,GPIO,USART3_TX,USART3_REMAP=01,USART3_TX,nucleo-f103rb-morpho-55 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-52
+nucleo-f103rb,2,PC11,GPIO,USART3_RX,USART3_REMAP=01,USART3_RX,nucleo-f103rb-morpho-55 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-52
+nucleo-f103rb,3,PC12,GPIO,USART3_CK,USART3_REMAP=01,USART3_CK,nucleo-f103rb-morpho-55 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-52
+nucleo-f103rb,4,PD2,GPIO,TIM3_ETR,,TIM3_ETR,nucleo-f103rb-morpho-55 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32
+nucleo-f103rb,5,VDD,POWER,,,,nucleo-f103rb-morpho-55,
+nucleo-f103rb,6,E5V,POWER,,,,nucleo-f103rb-morpho-55,
+nucleo-f103rb,7,BOOT0,SYSTEM,,,,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p32,
+nucleo-f103rb,8,GND,GND,,,,nucleo-f103rb-morpho-56,
+nucleo-f103rb,9,NC,SYSTEM,,,,nucleo-f103rb-morpho-56,
+nucleo-f103rb,10,NC,SYSTEM,,,,nucleo-f103rb-morpho-56,
+nucleo-f103rb,11,NC,SYSTEM,,,,nucleo-f103rb-morpho-56,
+nucleo-f103rb,12,IOREF,POWER,,,,nucleo-f103rb-morpho-56,
+nucleo-f103rb,13,PA13,GPIO,JTMS,,JTMS,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-debug-mapping
+nucleo-f103rb,13,PA13,GPIO,SWDIO,,SWDIO,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-debug-mapping
+nucleo-f103rb,14,RESET,SYSTEM,,,,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p28,
+nucleo-f103rb,15,PA14,GPIO,JTCK,,JTCK,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+nucleo-f103rb,15,PA14,GPIO,SWCLK,,SWCLK,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+nucleo-f103rb,16,+3.3V,POWER,,,,nucleo-f103rb-morpho-56,
+nucleo-f103rb,17,PA15,GPIO,TIM2_CH1_ETR,TIM2_REMAP=01|11,TIM2_CH1_ETR,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-45
+nucleo-f103rb,17,PA15,GPIO,SPI1_NSS,SPI1_REMAP=1,SPI1_NSS,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-56
+nucleo-f103rb,17,PA15,GPIO,JTDI,,JTDI,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+nucleo-f103rb,18,+5V,POWER,,,,nucleo-f103rb-morpho-56,
+nucleo-f103rb,19,GND,GND,,,,nucleo-f103rb-morpho-56,
+nucleo-f103rb,20,GND,GND,,,,nucleo-f103rb-morpho-56,
+nucleo-f103rb,21,PB7,GPIO,I2C1_SDA,I2C1_REMAP=0,I2C1_SDA,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-55
+nucleo-f103rb,21,PB7,GPIO,TIM4_CH2,TIM4_REMAP=0,TIM4_CH2,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-43
+nucleo-f103rb,21,PB7,GPIO,USART1_RX,USART1_REMAP=1,USART1_RX,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-54
+nucleo-f103rb,22,GND,GND,,,,nucleo-f103rb-morpho-56,
+nucleo-f103rb,23,PC13,GPIO,TAMPER-RTC,,TAMPER-RTC,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28
+nucleo-f103rb,24,VIN,POWER,,,,nucleo-f103rb-morpho-56,
+nucleo-f103rb,25,PC14,GPIO,OSC32_IN,,OSC32_IN,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p28
+nucleo-f103rb,26,NC,SYSTEM,,,,nucleo-f103rb-morpho-56,
+nucleo-f103rb,27,PC15,GPIO,OSC32_OUT,,OSC32_OUT,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p28
+nucleo-f103rb,28,PA0,GPIO,WKUP,,WKUP,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+nucleo-f103rb,28,PA0,GPIO,USART2_CTS,USART2_REMAP=0,USART2_CTS,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
+nucleo-f103rb,28,PA0,GPIO,ADC12_IN0,,ADC12_IN0,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+nucleo-f103rb,28,PA0,GPIO,TIM2_CH1_ETR,TIM2_REMAP=00|10,TIM2_CH1_ETR,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-45
+nucleo-f103rb,29,PD0,GPIO,PD0,PD01_REMAP=1,PD0,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p28 | stm32-osc-remap
+nucleo-f103rb,30,PA1,GPIO,USART2_RTS,USART2_REMAP=0,USART2_RTS,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
+nucleo-f103rb,30,PA1,GPIO,ADC12_IN1,,ADC12_IN1,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+nucleo-f103rb,30,PA1,GPIO,TIM2_CH2,TIM2_REMAP=00|10,TIM2_CH2,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-45
+nucleo-f103rb,31,PD1,GPIO,PD1,PD01_REMAP=1,PD1,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p28 | stm32-osc-remap
+nucleo-f103rb,32,PA4,GPIO,SPI1_NSS,SPI1_REMAP=0,SPI1_NSS,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-56
+nucleo-f103rb,32,PA4,GPIO,USART2_CK,USART2_REMAP=0,USART2_CK,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
+nucleo-f103rb,32,PA4,GPIO,ADC12_IN4,,ADC12_IN4,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+nucleo-f103rb,33,VBAT,POWER,,,,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p28,
+nucleo-f103rb,34,PB0,GPIO,ADC12_IN8,,ADC12_IN8,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+nucleo-f103rb,34,PB0,GPIO,TIM3_CH3,TIM3_REMAP=00|10,TIM3_CH3,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-44
+nucleo-f103rb,34,PB0,GPIO,TIM1_CH2N,TIM1_REMAP=01,TIM1_CH2N,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-46
+nucleo-f103rb,35,PC2,GPIO,ADC12_IN12,,ADC12_IN12,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28
+nucleo-f103rb,36,PC1,GPIO,ADC12_IN11,,ADC12_IN11,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p28
+nucleo-f103rb,37,PC3,GPIO,ADC12_IN13,,ADC12_IN13,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes,stm32-pin-table-p28
+nucleo-f103rb,38,PC0,GPIO,ADC12_IN10,,ADC12_IN10,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p28
+nucleo-f103rb,39,NC,SYSTEM,,,,nucleo-f103rb-arduino,
+nucleo-f103rb,40,IOREF,POWER,,,,nucleo-f103rb-arduino,
+nucleo-f103rb,41,NRST,SYSTEM,,,,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p28,
+nucleo-f103rb,42,+3.3V,POWER,,,,nucleo-f103rb-arduino,
+nucleo-f103rb,43,+5V,POWER,,,,nucleo-f103rb-arduino,
+nucleo-f103rb,44,GND,GND,,,,nucleo-f103rb-arduino,
+nucleo-f103rb,45,GND,GND,,,,nucleo-f103rb-arduino,
+nucleo-f103rb,46,VIN,POWER,,,,nucleo-f103rb-arduino,
+nucleo-f103rb,47,PA0,GPIO,WKUP,,WKUP,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+nucleo-f103rb,47,PA0,GPIO,USART2_CTS,USART2_REMAP=0,USART2_CTS,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
+nucleo-f103rb,47,PA0,GPIO,ADC12_IN0,,ADC12_IN0,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+nucleo-f103rb,47,PA0,GPIO,TIM2_CH1_ETR,TIM2_REMAP=00|10,TIM2_CH1_ETR,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-45
+nucleo-f103rb,48,PA1,GPIO,USART2_RTS,USART2_REMAP=0,USART2_RTS,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
+nucleo-f103rb,48,PA1,GPIO,ADC12_IN1,,ADC12_IN1,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+nucleo-f103rb,48,PA1,GPIO,TIM2_CH2,TIM2_REMAP=00|10,TIM2_CH2,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-45
+nucleo-f103rb,49,PA4,GPIO,SPI1_NSS,SPI1_REMAP=0,SPI1_NSS,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-56
+nucleo-f103rb,49,PA4,GPIO,USART2_CK,USART2_REMAP=0,USART2_CK,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-53
+nucleo-f103rb,49,PA4,GPIO,ADC12_IN4,,ADC12_IN4,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+nucleo-f103rb,50,PB0,GPIO,ADC12_IN8,,ADC12_IN8,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+nucleo-f103rb,50,PB0,GPIO,TIM3_CH3,TIM3_REMAP=00|10,TIM3_CH3,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-44
+nucleo-f103rb,50,PB0,GPIO,TIM1_CH2N,TIM1_REMAP=01,TIM1_CH2N,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-46
+nucleo-f103rb,51,PC1,GPIO,ADC12_IN11,,ADC12_IN11,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p28
+nucleo-f103rb,52,PC0,GPIO,ADC12_IN10,,ADC12_IN10,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p28 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p28
+nucleo-f103rb,53,PC9,GPIO,TIM3_CH4,TIM3_REMAP=11,TIM3_CH4,nucleo-f103rb-morpho-55 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-44
+nucleo-f103rb,54,PC8,GPIO,TIM3_CH3,TIM3_REMAP=11,TIM3_CH3,nucleo-f103rb-morpho-55 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-44
+nucleo-f103rb,55,PB8,GPIO,TIM4_CH3,TIM4_REMAP=0,TIM4_CH3,nucleo-f103rb-morpho-55 | stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-43
+nucleo-f103rb,55,PB8,GPIO,I2C1_SCL,I2C1_REMAP=1,I2C1_SCL,nucleo-f103rb-morpho-55 | stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-55
+nucleo-f103rb,55,PB8,GPIO,CANRX,CAN_REMAP=10,CANRX,nucleo-f103rb-morpho-55 | stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-34
+nucleo-f103rb,56,PC6,GPIO,TIM3_CH1,TIM3_REMAP=11,TIM3_CH1,nucleo-f103rb-morpho-55 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-44
+nucleo-f103rb,57,PB9,GPIO,TIM4_CH4,TIM4_REMAP=0,TIM4_CH4,nucleo-f103rb-morpho-55 | stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-43
+nucleo-f103rb,57,PB9,GPIO,I2C1_SDA,I2C1_REMAP=1,I2C1_SDA,nucleo-f103rb-morpho-55 | stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-55
+nucleo-f103rb,57,PB9,GPIO,CANTX,CAN_REMAP=10,CANTX,nucleo-f103rb-morpho-55 | stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-34
+nucleo-f103rb,58,PC5,GPIO,ADC12_IN15,,ADC12_IN15,nucleo-f103rb-morpho-55 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+nucleo-f103rb,59,AVDD,POWER,,,,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p28,
+nucleo-f103rb,60,U5V,POWER,,,,nucleo-f103rb-morpho-56,
+nucleo-f103rb,61,GND,GND,,,,nucleo-f103rb-morpho-56,
+nucleo-f103rb,62,NC,SYSTEM,,,,nucleo-f103rb-morpho-56,
+nucleo-f103rb,63,PA5,GPIO,SPI1_SCK,SPI1_REMAP=0,SPI1_SCK,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29 | stm32-remap-56
+nucleo-f103rb,63,PA5,GPIO,ADC12_IN5,,ADC12_IN5,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29
+nucleo-f103rb,64,PA12,GPIO,USART1_RTS,,USART1_RTS,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+nucleo-f103rb,64,PA12,GPIO,CANTX,CAN_REMAP=00,CANTX,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-34
+nucleo-f103rb,64,PA12,GPIO,USBDP,,USBDP,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+nucleo-f103rb,64,PA12,GPIO,TIM1_ETR,TIM1_REMAP=00|01,TIM1_ETR,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+nucleo-f103rb,65,PA6,GPIO,SPI1_MISO,SPI1_REMAP=0,SPI1_MISO,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-56
+nucleo-f103rb,65,PA6,GPIO,ADC12_IN6,,ADC12_IN6,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+nucleo-f103rb,65,PA6,GPIO,TIM3_CH1,TIM3_REMAP=00,TIM3_CH1,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-44
+nucleo-f103rb,65,PA6,GPIO,TIM1_BKIN,TIM1_REMAP=01,TIM1_BKIN,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-46
+nucleo-f103rb,66,PA11,GPIO,USART1_CTS,,USART1_CTS,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+nucleo-f103rb,66,PA11,GPIO,CANRX,CAN_REMAP=00,CANRX,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-34
+nucleo-f103rb,66,PA11,GPIO,USBDM,,USBDM,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+nucleo-f103rb,66,PA11,GPIO,TIM1_CH4,TIM1_REMAP=00|01,TIM1_CH4,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+nucleo-f103rb,67,PA7,GPIO,SPI1_MOSI,SPI1_REMAP=0,SPI1_MOSI,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-56
+nucleo-f103rb,67,PA7,GPIO,ADC12_IN7,,ADC12_IN7,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+nucleo-f103rb,67,PA7,GPIO,TIM3_CH2,TIM3_REMAP=00,TIM3_CH2,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-44
+nucleo-f103rb,67,PA7,GPIO,TIM1_CH1N,TIM1_REMAP=01,TIM1_CH1N,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-46
+nucleo-f103rb,68,PB12,GPIO,SPI2_NSS,,SPI2_NSS,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+nucleo-f103rb,68,PB12,GPIO,I2C2_SMBAl,,I2C2_SMBAl,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+nucleo-f103rb,68,PB12,GPIO,USART3_CK,USART3_REMAP=00,USART3_CK,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+nucleo-f103rb,68,PB12,GPIO,TIM1_BKIN,TIM1_REMAP=00,TIM1_BKIN,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-46
+nucleo-f103rb,69,PB6,GPIO,I2C1_SCL,I2C1_REMAP=0,I2C1_SCL,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-55
+nucleo-f103rb,69,PB6,GPIO,TIM4_CH1,TIM4_REMAP=0,TIM4_CH1,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-43
+nucleo-f103rb,69,PB6,GPIO,USART1_TX,USART1_REMAP=1,USART1_TX,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-54
+nucleo-f103rb,70,PB11,GPIO,I2C2_SDA,,I2C2_SDA,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+nucleo-f103rb,70,PB11,GPIO,USART3_RX,USART3_REMAP=00,USART3_RX,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+nucleo-f103rb,70,PB11,GPIO,TIM2_CH4,TIM2_REMAP=10|11,TIM2_CH4,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-45
+nucleo-f103rb,71,PC7,GPIO,TIM3_CH2,TIM3_REMAP=11,TIM3_CH2,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-44
+nucleo-f103rb,72,GND,GND,,,,nucleo-f103rb-morpho-56,
+nucleo-f103rb,73,PA9,GPIO,USART1_TX,USART1_REMAP=0,USART1_TX,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-54
+nucleo-f103rb,73,PA9,GPIO,TIM1_CH2,TIM1_REMAP=00|01,TIM1_CH2,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+nucleo-f103rb,74,PB2,GPIO,,,,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,
+nucleo-f103rb,75,PA8,GPIO,USART1_CK,,USART1_CK,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+nucleo-f103rb,75,PA8,GPIO,TIM1_CH1,TIM1_REMAP=00|01,TIM1_CH1,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+nucleo-f103rb,75,PA8,GPIO,MCO,,MCO,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+nucleo-f103rb,76,PB1,GPIO,ADC12_IN9,,ADC12_IN9,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+nucleo-f103rb,76,PB1,GPIO,TIM3_CH4,TIM3_REMAP=00|10,TIM3_CH4,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-44
+nucleo-f103rb,76,PB1,GPIO,TIM1_CH3N,TIM1_REMAP=01,TIM1_CH3N,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-46
+nucleo-f103rb,77,PB10,GPIO,I2C2_SCL,,I2C2_SCL,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+nucleo-f103rb,77,PB10,GPIO,USART3_TX,USART3_REMAP=00,USART3_TX,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+nucleo-f103rb,77,PB10,GPIO,TIM2_CH3,TIM2_REMAP=10|11,TIM2_CH3,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-45
+nucleo-f103rb,78,PB15,GPIO,SPI2_MOSI,,SPI2_MOSI,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+nucleo-f103rb,78,PB15,GPIO,TIM1_CH3N,TIM1_REMAP=00,TIM1_CH3N,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-46
+nucleo-f103rb,79,PB4,GPIO,TIM3_CH1,TIM3_REMAP=10,TIM3_CH1,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-44
+nucleo-f103rb,79,PB4,GPIO,SPI1_MISO,SPI1_REMAP=1,SPI1_MISO,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-56
+nucleo-f103rb,79,PB4,GPIO,JNTRST,,JNTRST,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+nucleo-f103rb,80,PB14,GPIO,SPI2_MISO,,SPI2_MISO,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+nucleo-f103rb,80,PB14,GPIO,USART3_RTS,USART3_REMAP=00|01,USART3_RTS,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+nucleo-f103rb,80,PB14,GPIO,TIM1_CH2N,TIM1_REMAP=00,TIM1_CH2N,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-46
+nucleo-f103rb,81,PB5,GPIO,I2C1_SMBAl,,I2C1_SMBAl,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32
+nucleo-f103rb,81,PB5,GPIO,TIM3_CH2,TIM3_REMAP=10,TIM3_CH2,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-44
+nucleo-f103rb,81,PB5,GPIO,SPI1_MOSI,SPI1_REMAP=1,SPI1_MOSI,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-56
+nucleo-f103rb,82,PB13,GPIO,SPI2_SCK,,SPI2_SCK,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+nucleo-f103rb,82,PB13,GPIO,USART3_CTS,USART3_REMAP=00|01,USART3_CTS,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+nucleo-f103rb,82,PB13,GPIO,TIM1_CH1N,TIM1_REMAP=00,TIM1_CH1N,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-46
+nucleo-f103rb,83,PB3,GPIO,TIM2_CH2,TIM2_REMAP=01|11,TIM2_CH2,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-45
+nucleo-f103rb,83,PB3,GPIO,TRACESWO,,TRACESWO,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+nucleo-f103rb,83,PB3,GPIO,SPI1_SCK,SPI1_REMAP=1,SPI1_SCK,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-56
+nucleo-f103rb,83,PB3,GPIO,JTDO,,JTDO,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+nucleo-f103rb,84,AGND,GND,,,,nucleo-f103rb-morpho-56,
+nucleo-f103rb,85,PA10,GPIO,USART1_RX,USART1_REMAP=0,USART1_RX,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-54
+nucleo-f103rb,85,PA10,GPIO,TIM1_CH3,TIM1_REMAP=00|01,TIM1_CH3,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+nucleo-f103rb,86,PC4,GPIO,ADC12_IN14,,ADC12_IN14,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+nucleo-f103rb,87,PA2,GPIO,USART2_TX,USART2_REMAP=0,USART2_TX,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29 | stm32-remap-53
+nucleo-f103rb,87,PA2,GPIO,ADC12_IN2,,ADC12_IN2,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29
+nucleo-f103rb,87,PA2,GPIO,TIM2_CH3,TIM2_REMAP=00|01,TIM2_CH3,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29 | stm32-remap-45
+nucleo-f103rb,88,NC,SYSTEM,,,,nucleo-f103rb-morpho-56,
+nucleo-f103rb,89,PA3,GPIO,USART2_RX,USART2_REMAP=0,USART2_RX,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29 | stm32-remap-53
+nucleo-f103rb,89,PA3,GPIO,ADC12_IN3,,ADC12_IN3,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29
+nucleo-f103rb,89,PA3,GPIO,TIM2_CH4,TIM2_REMAP=00|01,TIM2_CH4,nucleo-f103rb-morpho-56 | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29 | stm32-remap-45
+nucleo-f103rb,90,NC,SYSTEM,,,,nucleo-f103rb-morpho-56,
+nucleo-f103rb,91,PA9,GPIO,USART1_TX,USART1_REMAP=0,USART1_TX,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-54
+nucleo-f103rb,91,PA9,GPIO,TIM1_CH2,TIM1_REMAP=00|01,TIM1_CH2,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+nucleo-f103rb,92,PC7,GPIO,TIM3_CH2,TIM3_REMAP=11,TIM3_CH2,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-44
+nucleo-f103rb,93,PB6,GPIO,I2C1_SCL,I2C1_REMAP=0,I2C1_SCL,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-55
+nucleo-f103rb,93,PB6,GPIO,TIM4_CH1,TIM4_REMAP=0,TIM4_CH1,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-43
+nucleo-f103rb,93,PB6,GPIO,USART1_TX,USART1_REMAP=1,USART1_TX,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-54
+nucleo-f103rb,94,PA7,GPIO,SPI1_MOSI,SPI1_REMAP=0,SPI1_MOSI,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-56
+nucleo-f103rb,94,PA7,GPIO,ADC12_IN7,,ADC12_IN7,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+nucleo-f103rb,94,PA7,GPIO,TIM3_CH2,TIM3_REMAP=00,TIM3_CH2,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-44
+nucleo-f103rb,94,PA7,GPIO,TIM1_CH1N,TIM1_REMAP=01,TIM1_CH1N,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-46
+nucleo-f103rb,95,PA6,GPIO,SPI1_MISO,SPI1_REMAP=0,SPI1_MISO,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-56
+nucleo-f103rb,95,PA6,GPIO,ADC12_IN6,,ADC12_IN6,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29
+nucleo-f103rb,95,PA6,GPIO,TIM3_CH1,TIM3_REMAP=00,TIM3_CH1,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-44
+nucleo-f103rb,95,PA6,GPIO,TIM1_BKIN,TIM1_REMAP=01,TIM1_BKIN,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes,stm32-pin-table-p29 | stm32-remap-46
+nucleo-f103rb,96,PA5,GPIO,SPI1_SCK,SPI1_REMAP=0,SPI1_SCK,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29 | stm32-remap-56
+nucleo-f103rb,96,PA5,GPIO,ADC12_IN5,,ADC12_IN5,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29
+nucleo-f103rb,97,GND,GND,,,,nucleo-f103rb-arduino,
+nucleo-f103rb,98,AVDD,POWER,,,,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p28,
+nucleo-f103rb,99,PB9,GPIO,TIM4_CH4,TIM4_REMAP=0,TIM4_CH4,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-43
+nucleo-f103rb,99,PB9,GPIO,I2C1_SDA,I2C1_REMAP=1,I2C1_SDA,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-55
+nucleo-f103rb,99,PB9,GPIO,CANTX,CAN_REMAP=10,CANTX,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-34
+nucleo-f103rb,100,PB8,GPIO,TIM4_CH3,TIM4_REMAP=0,TIM4_CH3,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-43
+nucleo-f103rb,100,PB8,GPIO,I2C1_SCL,I2C1_REMAP=1,I2C1_SCL,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-55
+nucleo-f103rb,100,PB8,GPIO,CANRX,CAN_REMAP=10,CANRX,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-34
+nucleo-f103rb,101,PA3,GPIO,USART2_RX,USART2_REMAP=0,USART2_RX,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29 | stm32-remap-53
+nucleo-f103rb,101,PA3,GPIO,ADC12_IN3,,ADC12_IN3,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29
+nucleo-f103rb,101,PA3,GPIO,TIM2_CH4,TIM2_REMAP=00|01,TIM2_CH4,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29 | stm32-remap-45
+nucleo-f103rb,102,PA2,GPIO,USART2_TX,USART2_REMAP=0,USART2_TX,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29 | stm32-remap-53
+nucleo-f103rb,102,PA2,GPIO,ADC12_IN2,,ADC12_IN2,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29
+nucleo-f103rb,102,PA2,GPIO,TIM2_CH3,TIM2_REMAP=00|01,TIM2_CH3,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p29 | stm32-electrical-notes | nucleo-f103rb-bridges,stm32-pin-table-p29 | stm32-remap-45
+nucleo-f103rb,103,PA10,GPIO,USART1_RX,USART1_REMAP=0,USART1_RX,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-54
+nucleo-f103rb,103,PA10,GPIO,TIM1_CH3,TIM1_REMAP=00|01,TIM1_CH3,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+nucleo-f103rb,104,PB3,GPIO,TIM2_CH2,TIM2_REMAP=01|11,TIM2_CH2,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-45
+nucleo-f103rb,104,PB3,GPIO,TRACESWO,,TRACESWO,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+nucleo-f103rb,104,PB3,GPIO,SPI1_SCK,SPI1_REMAP=1,SPI1_SCK,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-56
+nucleo-f103rb,104,PB3,GPIO,JTDO,,JTDO,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+nucleo-f103rb,105,PB5,GPIO,I2C1_SMBAl,,I2C1_SMBAl,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32
+nucleo-f103rb,105,PB5,GPIO,TIM3_CH2,TIM3_REMAP=10,TIM3_CH2,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-44
+nucleo-f103rb,105,PB5,GPIO,SPI1_MOSI,SPI1_REMAP=1,SPI1_MOSI,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-56
+nucleo-f103rb,106,PB4,GPIO,TIM3_CH1,TIM3_REMAP=10,TIM3_CH1,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-44
+nucleo-f103rb,106,PB4,GPIO,SPI1_MISO,SPI1_REMAP=1,SPI1_MISO,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-remap-56
+nucleo-f103rb,106,PB4,GPIO,JNTRST,,JNTRST,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p32 | stm32-electrical-notes,stm32-pin-table-p32 | stm32-debug-mapping
+nucleo-f103rb,107,PB10,GPIO,I2C2_SCL,,I2C2_SCL,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30
+nucleo-f103rb,107,PB10,GPIO,USART3_TX,USART3_REMAP=00,USART3_TX,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-52
+nucleo-f103rb,107,PB10,GPIO,TIM2_CH3,TIM2_REMAP=10|11,TIM2_CH3,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p30 | stm32-electrical-notes,stm32-pin-table-p30 | stm32-remap-45
+nucleo-f103rb,108,PA8,GPIO,USART1_CK,,USART1_CK,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
+nucleo-f103rb,108,PA8,GPIO,TIM1_CH1,TIM1_REMAP=00|01,TIM1_CH1,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31 | stm32-remap-46
+nucleo-f103rb,108,PA8,GPIO,MCO,,MCO,nucleo-f103rb-arduino | stm32-lqfp64 | stm32-pin-table-p31 | stm32-electrical-notes,stm32-pin-table-p31
 arduino-uno-r3,1,NC,SYSTEM,,,,arduino-uno-r3-headers | arduino-uno-r3-connector-tables,
 arduino-uno-r3,2,IOREF,POWER,,,,arduino-uno-r3-headers | arduino-uno-r3-connector-tables,
 arduino-uno-r3,3,RESET,SYSTEM,,,,arduino-uno-r3-headers | arduino-uno-r3-connector-tables,

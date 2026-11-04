@@ -15,6 +15,7 @@ Kütüphanede her fiziksel düzen bir kez listelenir; uyumlu kartlar aynı kayı
 - **NVIDIA Jetson Orin Nano:** NVIDIA P3768 geliştirme kiti taşıyıcı kartının J12 40-pin başlığı. SPI, I²C, UART, I²S, PWM ve saat işlevleri taşıyıcı kart belgesinden alınır. Raspberry Pi’den farklı sinyal adları ve pinmux gereksinimleri olduğundan ayrı haritadır.
 - **STM32 Blue Pill:** STM32-base topluluk referansı; iki 20-pin yan başlık ve dört SWD bağlantısı. H1/H2/SWD konumları MCU paket pinlerinden ayrıdır; LED, kristal, USB ve debug bağlantıları belirtilir. Klon yongaları ve bağlantıları kontrol edilmelidir.
 - **STM32F103 paketleri** için RM0008 kaynaklı AFIO remap koşullarıyla LQFP-48 (37 GPIO'lu STM32F103C8T6 / STM32F103CBT6), LQFP-64 (51 GPIO'lu STM32F103RBT6 / STM32F103R8T6) ve LQFP-100 (80 GPIO'lu STM32F103VBT6 / STM32F103V8T6) görünümleri.
+- **NUCLEO-F103RB**, 108 Arduino ve ST Morpho kontağını MCU paket pinleri ve lehim köprüsü notlarıyla gösterir.
 - **Arduino UNO başlık düzeni:** UNO R3, Leonardo, UNO R4 Minima ve UNO R4 WiFi tek kayıtta; 32 ortak başlık kontağı ve referansa özgü işlemci işlevleri. Her referansta altı SPI/ICSP kontağı bulunur. R4’te NC yerine BOOT vardır.
 - **Arduino Nano başlık düzeni:** klasik Nano ve Nano Every tek kayıtta 30 ortak yan konumu paylaşır. Klasik Nano altı ICSP kontağı ekler; A6/A7 yalnızca analogdur. Every’de A6/A7 dijital I/O da destekler; PWM ve programlama bağlantıları farklıdır.
 - **Arduino Mega 2560 Rev3:** uç başlık ve ana işlemci ICSP dahil 92 kontak, 70 bağımsız GPIO ve 16 analog giriş.
@@ -29,7 +30,7 @@ Kütüphanede her fiziksel düzen bir kez listelenir; uyumlu kartlar aynı kayı
 
 Pico çizimi ortak başlığı gösterir; modellerin kablosuz, LED ve dahili bağlantılarının aynı olduğunu iddia etmez. İşlev referansı değişince fiziksel pinler aynı kalır. Planlar referans bazında saklanır. Eski model bağlantıları, JSON dosyaları ve kayıtlı planlar desteklenir; aynı işlemci için birden fazla eski plan varsa birleştirilmeden referans seçicisinde erişilebilir kalır.
 
-Yirmi iki kütüphane düzeninin otuz üç kaynak profili boyunca toplam 1.544 fiziksel pin kaydı ve 5.003 pin/alternatif işlev kaydı bulunur. RP2350 paketlerinin merkez GND pedi çevre pin sayısına dahil değildir. Çizimler şematiktir; mekanik CAD yerleşimi veya gerçek komponent konumları olarak kullanılmaz.
+Yirmi üç kütüphane düzeninin otuz dört kaynak profili boyunca toplam 1.652 fiziksel pin kaydı ve 5.177 pin/alternatif işlev kaydı bulunur. RP2350 paketlerinin merkez GND pedi çevre pin sayısına dahil değildir. Çizimler şematiktir; mekanik CAD yerleşimi veya gerçek komponent konumları olarak kullanılmaz.
 
 ## Kullanım
 

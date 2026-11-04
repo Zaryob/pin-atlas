@@ -2,7 +2,7 @@
 
 [English](VERIFICATION.md) · [Türkçe](VERIFICATION.tr.md)
 
-Reviewed on **4 November 2026**. The review covers thirty-three board, header, and chip profiles, **1,544 physical pin records, and 5,003 function assignments**. Shared physical pins are counted once per profile. The count excludes the app’s generic `GPIO` planning option and the unnumbered QFN center GND pads. Each placement of a signal on a different pin counts separately.
+Reviewed on **4 November 2026**. The review covers thirty-four board, header, and chip profiles, **1,652 physical pin records, and 5,177 function assignments**. Shared physical pins are counted once per profile. The count excludes the app’s generic `GPIO` planning option and the unnumbered QFN center GND pads. Each placement of a signal on a different pin counts separately.
 
 ## Sources by pin map
 
@@ -108,6 +108,10 @@ Blue Pill has no single authoritative manufacturer. Its connector positions use 
 The complete locked source set contains 16 documents: 13 manufacturer documents and 3 community Blue Pill references.
 
 ST source downloads prefer the official `www.st.com.cn` mirror and fall back to `www.st.com`. Both downloads were checked byte-for-byte against the same locked SHA-256 values. Transfer retries are bounded; no source-hash or pin-data check is skipped when a CDN is unavailable.
+
+## NUCLEO-F103RB · MB1136
+
+The connector map uses Tables 12 and 27 of the hash-locked ST UM1724 Rev 14 PDF. MCU pin numbers and functions come from the STM32F103RB LQFP64 profile. The map shows the analog A4/A5 routing and labels the alternate I²C route and configurable clock, serial and LED connections using Table 10. The diagram groups contacts by connector.
 
 ## Arduino AVR boards
 

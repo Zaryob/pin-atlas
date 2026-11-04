@@ -7,7 +7,7 @@ const boards = JSON.parse(readFileSync(new URL('../public/data/boards.json', imp
 const layouts = buildLayouts(boards);
 
 test('catalog contains one entry per shared footprint', () => {
-  assert.deepEqual(layouts.map(layout => layout.id), ['pico-family', 'raspberry-pi-40', 'arduino-uno', 'arduino-nano', 'esp32-devkitc-v4', 'esp32-s3-devkitc-1', 'jetson-orin-nano', 'blue-pill', 'stm32f103c8t6', 'stm32f103rbt6', 'stm32f103vbt6', 'arduino-mega-2560', 'arduino-micro', 'esp32-c3-devkitm-1', 'atmega328p-pdip28', 'atmega328p-tqfp32', 'atmega328p-qfn32', 'atmega328p-qfn28', 'atmega2560-tqfp100', 'atmega2561-tqfp64', 'rp2350a', 'rp2350b']);
+  assert.deepEqual(layouts.map(layout => layout.id), ['pico-family', 'raspberry-pi-40', 'arduino-uno', 'arduino-nano', 'esp32-devkitc-v4', 'esp32-s3-devkitc-1', 'jetson-orin-nano', 'blue-pill', 'stm32f103c8t6', 'stm32f103rbt6', 'stm32f103vbt6','nucleo-f103rb', 'arduino-mega-2560', 'arduino-micro', 'esp32-c3-devkitm-1', 'atmega328p-pdip28', 'atmega328p-tqfp32', 'atmega328p-qfn32', 'atmega328p-qfn28', 'atmega2560-tqfp100', 'atmega2561-tqfp64', 'rp2350a', 'rp2350b']);
   assert.equal(layouts[0].profiles.length, 4);
   assert.equal(layouts[1].profiles.length, 3);
   assert.equal(new Set(layouts.flatMap(layout => layout.profileIds)).size, boards.length);

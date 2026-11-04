@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 1550">
+  <rect x="232" y="28" width="356" height="1510" rx="16" fill="#273b34" stroke="#718577"/>
+  <g fill="#e0ecd9" font-family="monospace" font-size="14" text-anchor="middle">
+    <text x="260" y="45">CN7</text><text x="560" y="45">CN10</text>
+    <text x="260" y="1003">CN6</text><text x="560" y="1003">CN5</text>
+    <text x="260" y="1291">CN8</text><text x="560" y="1291">CN9</text>
+    <text x="410" y="726" font-size="22">NUCLEO-F103RB</text>
+    <text x="410" y="752">MB1136 · connector map</text>
+  </g>
+</svg>

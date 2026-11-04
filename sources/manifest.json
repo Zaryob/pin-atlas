@@ -481,6 +481,19 @@
       "file": "atmega2560.pdf",
       "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/ATmega640-1280-1281-2560-2561-Datasheet-DS40002211A.pdf",
       "sha256": "978a018098bc1a136d3232b1b58aa3c652324c9b693a99830e0770bed2c76fb4"
+    },
+    {
+      "id": "nucleo-um1724-r14",
+      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
+      "file": "nucleo-um1724-r14.pdf",
+      "viewUrl": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf",
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf",
+      "publisher": "STMicroelectronics",
+      "revision": "UM1724 Rev 14 · August 2020",
+      "sha256": "bec8ccba84e244df785a9bbdd427e74ab974f34ed52d62ba5df3d82098925b96",
+      "downloadUrls": [
+        "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf"
+      ]
     }
   ],
   "publishers": [

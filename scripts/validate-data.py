@@ -10,7 +10,8 @@ refs=evidence['references'];docids={d['id'] for d in manifest['documents']}
 for r in refs.values():
     assert r['document'] in docids
     host=urlsplit(r['url']).hostname
-    assert host in {'pip-assets.raspberrypi.com','datasheets.raspberrypi.com','developer.nvidia.com','www.st.com','stm32-base.org','github.com','docs.arduino.cc','docs.espressif.com','www.espressif.com','ww1.microchip.com'},host
+    if r['document']=='nucleo-um1724-r14':assert host=='evo.net.ua'
+    else:assert host in {'pip-assets.raspberrypi.com','datasheets.raspberrypi.com','developer.nvidia.com','www.st.com','stm32-base.org','github.com','docs.arduino.cc','docs.espressif.com','www.espressif.com','ww1.microchip.com'},host
     if host=='github.com':assert any(repo in r['url'] for repo in ['/raspberrypi/documentation/','/arduino/ArduinoCore-avr/','/arduino/ArduinoCore-renesas/','/arduino/ArduinoCore-megaavr/','/espressif/esp-dev-kits/'])
 for b in boards:
     assert len(b['pins'])==b['packagePins']
@@ -134,4 +135,17 @@ for board in boards:
     if board['layout']=='custom':
         assert (root/'public'/board['diagram']['artwork']).exists()
         for pin in board['pins']:assert 0<=pin['position']['x']<=board['diagram']['width'] and 0<=pin['position']['y']<=board['diagram']['height']
+
+nucleo=lookup['nucleo-f103rb']
+contacts={pin['physicalLabel']:pin for pin in nucleo.values()}
+assert len(contacts)==len(nucleo)==108
+for label in ('CN5.6','CN10.11'):
+    pin=contacts[label]
+    assert (pin['name'],pin['net'],pin['mcuPin'])==('PA5','PA5',21)
+    assert pin['boardCircuitKey']=='nucleoLed'
+assert contacts['CN5.6']['boardLabel']=='D13'
+assert contacts['CN8.5']['sharedWith']==['CN7.36']
+assert contacts['CN9.2']['boardCircuitKey']=='nucleoUsart'
+assert contacts['CN7.29']['mcuPin']==5 and contacts['CN7.29']['boardCircuitKey']=='nucleoHse'
+assert contacts['CN6.1']['reserved']
 print(f"Checked {report['physicalPins']} pins, {report['functionAssignments']} function references and model-specific corner cases.")
