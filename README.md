@@ -30,7 +30,9 @@ The library lists each physical layout once and names its compatible boards:
 
 The Pico drawing represents the common header and does not claim identical wireless, LED or internal board wiring. Processor references change alternate functions, not physical pin positions. Plans are saved per reference; old model links, exported JSON files, and saved plans remain supported. If multiple old model plans exist for the same processor, they remain available in the function-reference selector without being merged.
 
-The dataset contains 1,868 physical pin records across thirty-six source profiles backing twenty-five library layouts and 5,770 pin/function assignments. The central GND pad on each RP2350 package sits outside the perimeter pin count. The schematic drawings show pin positions and are not mechanical CAD layouts.
+Boards with a verified MCU package link support selecting a contact or package pin from either drawing. The package view also opens matching board contacts. Board drawings with multiple connectors can zoom to an individual header.
+
+The dataset contains 2,052 physical pin records across thirty-nine source profiles backing twenty-eight library layouts and 6,401 pin/function assignments. The central GND pad on RP2040 and RP2350 packages sits outside the perimeter pin count. The schematic drawings show pin positions and are not mechanical CAD layouts.
 
 ## Usage
 
@@ -71,7 +73,7 @@ python3 scripts/verify-official-sources.py
 
 The script downloads fifty hash-locked sources: forty-seven manufacturer documents or source files and three explicitly identified community Blue Pill references. It checks their SHA-256 hashes, rereads the PDF and source tables, and compares the extracted data with the published files. The downloads stay under `.cache/primary-sources/`. The check fails on a changed hash or pin record.
 
-GitHub Actions uses `python3 scripts/verify-official-sources.py --table-snapshots` because ST's CDN can time out on hosted runners. This mode uses the raw ST table cells recorded in `sources/extracted/`; both the snapshots and their original PDF hashes are locked in the manifest. It still regenerates and compares every pin and function, and downloads the other forty-eight sources. The default command above checks the original ST PDFs directly.
+GitHub Actions uses `python3 scripts/verify-official-sources.py --table-snapshots` because ST's CDN can time out on hosted runners. This mode uses the raw ST table cells recorded in `sources/extracted/`; both the snapshots and their original PDF hashes are locked in the manifest. It still regenerates and compares every pin and function, and downloads the other fifty-seven sources. The default command above checks the original ST PDFs directly.
 
 Pin labels that appear only in drawings are checked against the visual observations recorded in `sources/manual-observations.json`. That record also explains the IOVDD discrepancy in RP2350 Release 8. See the full method in the [verification record](docs/VERIFICATION.md).
 

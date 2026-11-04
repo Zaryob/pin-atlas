@@ -333,6 +333,62 @@ def jetson_orin_nano():
         pins.append(pin)
     return {'id':'jetson-orin-nano','name':'NVIDIA Jetson Orin Nano','shortName':'Jetson Orin Nano','family':'NVIDIA Jetson','subtitle':'J12 · P3768 carrier · 40-pin expansion header','layout':'header','packagePins':40,'gpioCount':28,'voltage':'3.3 V I/O','mcu':'Tegra234','processor':'Jetson Orin Nano','verifiedOn':MANIFEST['verifiedOn'],'scopeKey':'jetsonScope','compatibleKey':'jetsonCompatible','headerLabel':'J12','source':DOCS[doc]['url']+'#page=25','datasheet':DOCS[doc]['url'],'searchTerms':'Jetson Orin Nano NVIDIA P3768 J12 Tegra234','pins':pins}
 
+def rp2040_package(bank0, board_base):
+    physical=ref('rp2040-qfn56-physical','rp2040',12,'Figure 3 · QFN-56 top view and exposed GND pad','visual-diagram')
+    names=OBS['rp2040-qfn56']['pins']
+    assert len(names)==56
+    pins=[]
+    for number,name in enumerate(names,1):
+        gpio=re.fullmatch(r'GPIO(\d+)(?:_ADC(\d+))?',name)
+        functions=copy.deepcopy(bank0[int(gpio[1])]) if gpio else []
+        if gpio and gpio[2] is not None:
+            functions.append(function('ADC'+gpio[2],None,physical))
+        pin_type='POWER' if name in ('VREG_VOUT','USB_VDD') else kind(name)
+        pins.append({'number':number,'name':name,'type':pin_type,'functions':functions,'evidence':[physical]})
+    return {**board_base,'id':'rp2040','name':'RP2040','subtitle':'QFN-56 · dual Cortex-M0+',
+            'layout':'qfn','packageName':'QFN-56','packagePins':56,'gpioCount':30,'voltage':'1.8–3.3 V I/O',
+            'mcu':'RP2040','processor':'Cortex-M0+','clock':'133 MHz',
+            'source':DOCS['rp2040']['url']+'#page=12','datasheet':DOCS['rp2040']['url'],'pins':pins}
+
+def link_board_packages(boards):
+    by_id={board['id']:board for board in boards}
+    by_id['blue-pill']['mcuProfile']='stm32f103c8t6'
+    arduino_packages={
+        'arduino-uno-r3':('atmega328p-pdip28','ATmega328P-PU · PDIP-28'),
+        'arduino-nano-classic':('atmega328p-qfn32','ATmega328P-MUR · QFN/MLF-32'),
+        'arduino-mega-2560':('atmega2560-tqfp100','ATmega2560-AU · TQFP-100'),
+    }
+    pico_packages={'pico':'rp2040','picow':'rp2040','pico2':'rp2350a','pico2w':'rp2350a'}
+    for board_id in (*arduino_packages,*pico_packages):
+        board=by_id[board_id]
+        if board_id in arduino_packages:
+            package_id,description=arduino_packages[board_id]
+            schematic=ref(board_id+'-package-schematic',board_id+'-schematic',1,
+                          description+' · main MCU and connector nets','visual-diagram')
+        else:
+            package_id=pico_packages[board_id]
+            schematic=None
+        board['mcuProfile']=package_id
+        by_name={pin['name'].split('_ADC')[0]:pin for pin in by_id[package_id]['pins']}
+        for pin in board['pins']:
+            if schematic:
+                name=pin.get('mcuPort') or {'A6':'ADC6','A7':'ADC7','RESET':'RESET' if board_id=='arduino-mega-2560' else 'PC6',
+                                           'AREF':'AREF'}.get(pin['name'])
+                if name is None:
+                    continue
+                pad=by_name[name]
+                pin['evidence'].append(schematic)
+            else:
+                if pin['name']=='RUN':
+                    name='RUN'
+                elif re.fullmatch(r'GP\d+',pin['name']):
+                    name='GPIO'+pin['name'][2:]
+                else:
+                    continue
+                pad=by_name[name]
+            pin['mcuPin']=pad['number']
+            pin['evidence'].append(pad['evidence'][0])
+
 def build(use_snapshots=False):
     bank0,packages=rp_tables()
     board_base={'family':'Raspberry Pi','voltage':'3.3 V I/O','verifiedOn':MANIFEST['verifiedOn']}
@@ -352,15 +408,20 @@ def build(use_snapshots=False):
     stm32_boards=build_stm32(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn'],use_snapshots)
     boards.extend(stm32_boards)
     boards.append(build_nucleo(CACHE,DOCS,ref,stm32_boards[2],'f103rb'))
+    f4_chips=[]
     for model in ('f401re','f411re'):
         chip=read_f4_chip(CACHE,DOCS,ref,model,MANIFEST['verifiedOn'],category)
         boards.append(build_nucleo(CACHE,DOCS,ref,chip,model))
+        f4_chips.append(chip)
     boards.extend(build_arduino(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn']))
     boards.extend(build_expanded_arduino(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn'],boards))
     boards.extend(build_espressif(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn']))
     boards.extend(build_avr_packages(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn']))
     for total,chip in [(60,'rp2350a'),(80,'rp2350b')]:
         boards.append({**board_base,'id':chip,'name':chip.upper(),'family':'Raspberry Pi','subtitle':f'QFN-{total} · RP2350 · Release 8','layout':'qfn','packagePins':total,'gpioCount':30 if total==60 else 48,'voltage':'1.8–3.3 V I/O','mcu':chip.upper(),'processor':'Cortex-M33 / Hazard3','clock':'150 MHz','source':DOCS['rp2350']['url']+f'#page={16 if total==60 else 17}','datasheet':DOCS['rp2350']['url'],'pins':[packages[total][n] for n in sorted(packages[total])]})
+    boards.extend(f4_chips)
+    boards.append(rp2040_package(bank2040,board_base))
+    link_board_packages(boards)
     return boards
 
 def outputs(boards):

@@ -174,4 +174,25 @@ assert f411['CN5.6']['mcuPin']==21
 assert any(f['name']=='SPI1_SCK' and f.get('selector')=='AF5' for f in f411['CN5.6']['functions'])
 assert any(f['name']=='I2C3_SDA' and f.get('selector')=='AF9' for f in f411['CN10.3']['functions'])
 assert not any(f['name']=='I2C3_SDA' for f in f401['CN10.3']['functions'])
+for item in boards:
+    if 'mcuProfile' not in item:
+        continue
+    package=board_by_id[item['mcuProfile']]
+    assert package['layout'] in {'dip','lqfp','qfn'} and package['mcu']==item['mcu']
+    assert any('mcuPin' in pin for pin in item['pins'])
+    for pin in item['pins']:
+        if 'mcuPin' in pin:
+            assert pin['mcuPin'] in lookup[package['id']]
+assert board_by_id['arduino-uno-r3']['mcuProfile']=='atmega328p-pdip28'
+assert next(pin for pin in uno.values() if pin['name']=='D13')['mcuPin']==19
+assert board_by_id['arduino-nano-classic']['mcuProfile']=='atmega328p-qfn32'
+assert (get(nano,'L.10')['mcuPin'],get(nano,'L.11')['mcuPin'])==(19,22)
+assert get(mega,'DIGITAL.5')['mcuPin']==26
+assert lookup['blue-pill'][42]['mcuPin']==34
+for board_id,package_id,run_pin,gpio_pin in [('pico','rp2040',26,38),('picow','rp2040',26,38),
+                                          ('pico2','rp2350a',26,40),('pico2w','rp2350a',26,40)]:
+    assert board_by_id[board_id]['mcuProfile']==package_id
+    assert lookup[board_id][30]['mcuPin']==run_pin and lookup[board_id][31]['mcuPin']==gpio_pin
+    assert 'mcuPin' not in lookup[board_id][35]
+assert lookup['rp2040'][56]['name']=='QSPI_SS_N'
 print(f"Checked {report['physicalPins']} pins, {report['functionAssignments']} function references and model-specific corner cases.")

@@ -2,7 +2,7 @@
 
 [English](VERIFICATION.md) · [Türkçe](VERIFICATION.tr.md)
 
-Reviewed on **4 November 2026**. The review covers thirty-six board, header, and chip profiles, **1,868 physical pin records, and 5,770 function assignments**. Shared physical pins are counted once per profile. The count excludes the app’s generic `GPIO` planning option and the unnumbered QFN center GND pads. Each placement of a signal on a different pin counts separately.
+Reviewed on **4 November 2026**. The review covers thirty-nine board, header, and chip profiles, **2,052 physical pin records, and 6,401 function assignments**. Shared physical pins are counted once per profile. The count excludes the app’s generic `GPIO` planning option and the unnumbered QFN center GND pads. Each placement of a signal on a different pin counts separately.
 
 ## Sources by pin map
 
@@ -62,7 +62,7 @@ The verified QFN-60 IOVDD list uses **1,11,20,30,38,45** from the two figures. T
 
 1. `sources/manifest.json` records each source revision, document URL or commit, and SHA-256 hash.
 2. `scripts/verify-official-sources.py` downloads and checks those sources, then rereads the PDF tables. It normalizes whitespace where cells wrap across lines.
-   CI passes `--table-snapshots` to use the recorded ST table extractions in `sources/extracted/`, avoiding ST CDN timeouts. Each extraction is hash-locked and identifies the original locked PDF hash. The same parser rebuilds the STM32 data from either input; the other forty-eight sources are downloaded and checked in both modes. The default command rereads the original ST PDFs.
+   CI passes `--table-snapshots` to use the recorded ST table extractions in `sources/extracted/`, avoiding ST CDN timeouts. Each extraction is hash-locked and identifies the original locked PDF hash. The same parser rebuilds the STM32 data from either input; the other fifty-seven sources are downloaded and checked in both modes. The default command rereads the original ST PDFs.
 3. The physical pin number, name, type, alternate function, manufacturer signal, and F/ALT selector must match the published record.
 4. Figure-only observations are marked separately. Reusing them during an automated run preserves the prior visual review. A changed hash requires a fresh source review.
 5. [`sources/pin-verification.csv`](../sources/pin-verification.csv) lists each pin and function record. `dist/data/evidence.json` resolves reference IDs to documents, pages, and tables. `dist/data/verification.json` holds the verification totals and source summary.
@@ -112,6 +112,10 @@ ST source downloads prefer the official `www.st.com.cn` mirror and fall back to 
 ## NUCLEO-F103RB / F401RE / F411RE · MB1136
 
 The connector map uses Tables 12 and 27 of the hash-locked ST UM1724 Rev 14 PDF. MCU pin numbers and functions come from the STM32F103RB LQFP64 profile. The map shows the analog A4/A5 routing and labels the alternate I²C route and configurable clock, serial and LED connections using Table 10. The board drawing follows the connector positions and row numbering in Figures 14, 18 and 19. Selecting a contact on NUCLEO-F103RB highlights the corresponding pad in the separate STM32F103RBT6 LQFP-64 drawing. F401RE and F411RE connector assignments use Tables 16 and 29, with package pin numbers and AF selectors from the locked STM32CubeMX pin data.
+
+## Board-to-package mapping
+
+Each link joins an identified board schematic or pinout to its MCU package. Arduino A000066 uses ATmega328P PDIP-28, Nano A000005 uses ATmega328P QFN/MLF-32, and Mega A000067 uses ATmega2560 TQFP-100. GPIO and RUN contacts on Pico and Pico W use RP2040 Figure 3, while Pico 2 and Pico 2 W use the RP2350A map. Blue Pill uses its existing STM32F103C8T6 package pin numbers. Nucleo F401RE and F411RE use their model-specific CubeMX LQFP-64 packages. Shared power rails and grounds without a unique package pad keep their board labels.
 
 ## Arduino AVR boards
 

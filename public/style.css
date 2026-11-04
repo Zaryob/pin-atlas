@@ -569,7 +569,7 @@
   stroke: var(--accent);
   stroke-width: 2;
 }
-.nucleo-board-map .pin-group.selected .pin-node {
+.board-pin-map .pin-group.selected .pin-node {
   fill: var(--accent);
 }
 .pin-group.net-contact.selected .pin-hit,
@@ -601,14 +601,17 @@
   align-items: start;
   gap: 12px;
 }
-.nucleo-board-map {
+.board-pin-map {
   min-width: 0;
   overflow-x: auto;
 }
-.nucleo-board-map > svg,
+.board-pin-map > svg,
 .mcu-package-map > svg {
   display: block;
   width: 100%;
+}
+@media (max-width: 640px) {
+  .pico-board-map > svg { min-width: 570px; }
 }
 .mcu-package-map {
   min-width: 0;
@@ -665,7 +668,7 @@
 .mcu-package-map .connector-bridge-note {
   color: var(--muted);
 }
-.nucleo-board-map.connector-zoom > svg {
+.board-pin-map.connector-zoom > svg {
   width: min(100%, 590px);
   margin-inline: auto;
 }

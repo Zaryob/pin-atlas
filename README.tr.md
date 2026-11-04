@@ -30,7 +30,9 @@ Kütüphanede her fiziksel düzen bir kez listelenir; uyumlu kartlar aynı kayı
 
 Pico çizimi ortak başlığı gösterir; modellerin kablosuz, LED ve dahili bağlantılarının aynı olduğunu iddia etmez. İşlev referansı değişince fiziksel pinler aynı kalır. Planlar referans bazında saklanır. Eski model bağlantıları, JSON dosyaları ve kayıtlı planlar desteklenir; aynı işlemci için birden fazla eski plan varsa birleştirilmeden referans seçicisinde erişilebilir kalır.
 
-Yirmi beş kütüphane düzeninin otuz altı kaynak profili boyunca toplam 1.868 fiziksel pin kaydı ve 5.770 pin/alternatif işlev kaydı bulunur. RP2350 paketlerinin merkez GND pedi çevre pin sayısına dahil değildir. Çizimler şematiktir; mekanik CAD yerleşimi veya gerçek komponent konumları olarak kullanılmaz.
+MCU paketi doğrulanmış kartlarda iki çizimden de pin seçilebilir. Paket görünümü eşleşen kart kontaklarını açar. Birden çok konnektörü olan kart çizimlerinde başlıklar ayrı ayrı büyütülebilir.
+
+Yirmi sekiz kütüphane düzeninin otuz dokuz kaynak profili boyunca toplam 2.052 fiziksel pin kaydı ve 6.401 pin/alternatif işlev kaydı bulunur. RP2040 ve RP2350 paketlerinin merkez GND pedi çevre pin sayısına dahil değildir. Çizimler şematiktir; mekanik CAD yerleşimi veya gerçek komponent konumları olarak kullanılmaz.
 
 ## Kullanım
 

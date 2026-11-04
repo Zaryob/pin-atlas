@@ -32,7 +32,7 @@ def read_f4_chip(cache, docs, ref, model, verified_on, category):
             name = port[0]
         if name == 'VREF+':
             name = 'VDDA'
-        pin_type = 'GPIO' if port else 'POWER' if pad.get('Type') == 'Power' else 'SYSTEM'
+        pin_type = 'GPIO' if port else 'GND' if name.startswith('VSS') else 'POWER' if pad.get('Type') == 'Power' else 'SYSTEM'
         functions = []
         for signal in pad.findall('{*}Signal'):
             signal = signal.get('Name')
@@ -51,9 +51,15 @@ def read_f4_chip(cache, docs, ref, model, verified_on, category):
         pins.append({'number': int(pad.get('Position')), 'name': name, 'type': pin_type,
                      'functions': functions, 'evidence': [pin_ref]})
     assert sorted(pin['number'] for pin in pins) == list(range(1, 65))
-    return {'mcu': f'STM32{model.upper()}T6', 'processor': 'Arm Cortex-M4',
-            'clock': '84 MHz' if model == 'f401re' else '100 MHz', 'verifiedOn': verified_on,
-            'datasheet': f'https://www.st.com/resource/en/datasheet/stm32{model}.pdf', 'pins': pins}
+    name = f'STM32{model.upper()}T6'
+    clock = '84 MHz' if model == 'f401re' else '100 MHz'
+    return {'id': name.lower(), 'name': name, 'shortName': name, 'mcu': name,
+            'family': 'STMicroelectronics', 'processor': 'Arm Cortex-M4',
+            'subtitle': f'LQFP-64 · Cortex-M4 · {clock}', 'clock': clock, 'verifiedOn': verified_on,
+            'layout': 'lqfp', 'packageName': 'LQFP-64', 'packagePins': len(pins),
+            'gpioCount': sum(pin['type'] == 'GPIO' for pin in pins), 'voltage': '1.8–3.6 V (POR/PDR on)',
+            'source': package_doc['viewUrl'], 'datasheet': f'https://www.st.com/resource/en/datasheet/stm32{model}.pdf',
+            'pins': pins}
 
 
 def build_nucleo(cache, docs, ref, chip, model):

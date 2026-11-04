@@ -2,7 +2,7 @@
 
 [English](VERIFICATION.md) · [Türkçe](VERIFICATION.tr.md)
 
-**4 Kasım 2026** tarihli inceleme, otuz altı kart, başlık ve çip profilindeki **1.868 fiziksel pin kaydını ve 5.770 alternatif işlev atamasını** kapsar. Ortak bağlantılar profil başına sayılır. Sayımda uygulamanın soyut `GPIO` seçeneği ve numarasız QFN merkez GND pedi yoktur. Aynı sinyalin farklı pinlerde bulunması ayrı bir atamadır.
+**4 Kasım 2026** tarihli inceleme, otuz dokuz kart, başlık ve çip profilindeki **2.052 fiziksel pin kaydını ve 6.401 alternatif işlev atamasını** kapsar. Ortak bağlantılar profil başına sayılır. Sayımda uygulamanın soyut `GPIO` seçeneği ve numarasız QFN merkez GND pedi yoktur. Aynı sinyalin farklı pinlerde bulunması ayrı bir atamadır.
 
 ## Her haritanın dayanağı
 
@@ -65,7 +65,7 @@ Pico, Pico W ve Pico 2’nin fiziksel pinleri, her modelin veri sayfasının PDF
 
 Ortak Raspberry Pi 40-pin profili, üreticinin GPIO tablosunu kullanır: B+ ve sonrası, Zero ailesi ve klavyeli modellerin fiziksel düzenini kapsar. Klavyeli modellerde yön ters olabilir; bazı Zero başlıkları lehimli değildir. Eski 26-pin kartlar ve Compute Module dahil değildir. Bu profil işlemciye özgü alternatif işlev içermez; BCM2711 için Pi 4 profili ayrı tutulur.
 
-Elli üç üretici belgesi veya kaynak dosyası ve üç Blue Pill topluluk referansı SHA-256 ile kilitlidir. 1.868 fiziksel pin kaydı ortak bağlantıları profil başına sayar. Ayrıntılı model kaynakları [İngilizce doğrulama kaydında](VERIFICATION.md) bulunur.
+Elli altı üretici belgesi veya kaynak dosyası ve üç Blue Pill topluluk referansı SHA-256 ile kilitlidir. 2.052 fiziksel pin kaydı ortak bağlantıları profil başına sayar. Ayrıntılı model kaynakları [İngilizce doğrulama kaydında](VERIFICATION.md) bulunur.
 
 ## Ortak düzen kütüphanesi
 
@@ -92,6 +92,10 @@ ST belgeleri önce resmî `www.st.com.cn`, ardından `www.st.com` adresinden ind
 ## NUCLEO-F103RB / F401RE / F411RE · MB1136
 
 Arduino ve ST Morpho kontakları, SHA-256 ile kilitlenen ST UM1724 Rev 14 belgesinin 12 ve 27 numaralı tablolarından alınır. MCU pinleri ve işlevleri STM32F103RB LQFP64 profilinden gelir. Haritada A4/A5 için analog yönlendirme gösterilir. Alternatif I²C bağlantısı ile saat, seri port ve LED köprüleri Tablo 10’a göre açıklanır. Kart çizimi Şekil 14, 18 ve 19’daki konnektör yerleşimi ve sıra numaralarını izler. NUCLEO-F103RB’de bir kontak seçildiğinde ayrı STM32F103RBT6 LQFP-64 çizimindeki karşılık gelen bacak vurgulanır. F401RE ve F411RE konnektörleri için Tablo 16 ve 29, paket pinleri ve AF seçicileri için kilitli STM32CubeMX verisi kullanılır.
+
+## Kart ve MCU paketi eşlemesi
+
+Arduino A000066, ATmega328P PDIP-28 ile, Nano A000005, ATmega328P QFN/MLF-32 ile, Mega A000067 ise ATmega2560 TQFP-100 ile eşleşir. Pico ve Pico W için RP2040 Şekil 3, Pico 2 ve Pico 2 W için RP2350A paket haritası GPIO ve RUN kontaklarını belirler. Blue Pill mevcut STM32F103C8T6 paket numaralarını kullanır. Nucleo F401RE ve F411RE kendi CubeMX LQFP-64 paketlerine bağlanır. Tek bir bacağı olmayan ortak besleme ve toprak hatları kart etiketiyle gösterilir.
 
 ## Arduino AVR
 

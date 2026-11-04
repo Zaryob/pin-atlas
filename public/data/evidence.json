@@ -533,6 +533,33 @@
       "publisher": "STMicroelectronics",
       "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
       "sha256": "ac1753a62670b4b27dfb1b9b7d8c3106d5e7926066e2f1cc6e8385178b28c34b"
+    },
+    {
+      "id": "arduino-uno-r3-schematic",
+      "title": "Arduino UNO Rev3 through-hole schematic",
+      "file": "arduino-uno-r3-schematic.pdf",
+      "url": "https://docs.arduino.cc/resources/schematics/A000066-schematics.pdf",
+      "publisher": "Arduino",
+      "revision": "Manufacturer schematic",
+      "sha256": "2c1041200352485393108e03c5117a07d4ea03954654485526c2c56cd01f7a42"
+    },
+    {
+      "id": "arduino-nano-classic-schematic",
+      "title": "Arduino Nano V3.3 schematic",
+      "file": "arduino-nano-classic-schematic.pdf",
+      "url": "https://docs.arduino.cc/resources/schematics/A000005-schematics.pdf",
+      "publisher": "Arduino",
+      "revision": "Manufacturer schematic",
+      "sha256": "e90b0a893ee464169b59638bdfa7d102db5c5360d8589d8f8d62b3a953f9c1aa"
+    },
+    {
+      "id": "arduino-mega-2560-schematic",
+      "title": "Arduino Mega 2560 Rev3 schematic",
+      "file": "arduino-mega-2560-schematic.pdf",
+      "url": "https://docs.arduino.cc/resources/schematics/A000067-schematics.pdf",
+      "publisher": "Arduino",
+      "revision": "Manufacturer schematic",
+      "sha256": "7d1b66c8822220e38d84540fafdf5e6bc000030e2dc9a72fdc69f0a9d72b1b21"
     }
   ],
   "references": {
@@ -1678,6 +1705,38 @@
       "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/ATmega640-1280-1281-2560-2561-Datasheet-DS40002211A.pdf#page=4",
       "page": 4,
       "locator": "Figure 1-3 · TQFP64/QFN64 top view · 64 package pins; ATmega1281/2561",
+      "method": "visual-diagram"
+    },
+    "rp2040-qfn56-physical": {
+      "document": "rp2040",
+      "title": "RP2040 Datasheet",
+      "url": "https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf#page=12",
+      "page": 12,
+      "locator": "Figure 3 · QFN-56 top view and exposed GND pad",
+      "method": "visual-diagram"
+    },
+    "arduino-uno-r3-package-schematic": {
+      "document": "arduino-uno-r3-schematic",
+      "title": "Arduino UNO Rev3 through-hole schematic",
+      "url": "https://docs.arduino.cc/resources/schematics/A000066-schematics.pdf#page=1",
+      "page": 1,
+      "locator": "ATmega328P-PU · PDIP-28 · main MCU and connector nets",
+      "method": "visual-diagram"
+    },
+    "arduino-nano-classic-package-schematic": {
+      "document": "arduino-nano-classic-schematic",
+      "title": "Arduino Nano V3.3 schematic",
+      "url": "https://docs.arduino.cc/resources/schematics/A000005-schematics.pdf#page=1",
+      "page": 1,
+      "locator": "ATmega328P-MUR · QFN/MLF-32 · main MCU and connector nets",
+      "method": "visual-diagram"
+    },
+    "arduino-mega-2560-package-schematic": {
+      "document": "arduino-mega-2560-schematic",
+      "title": "Arduino Mega 2560 Rev3 schematic",
+      "url": "https://docs.arduino.cc/resources/schematics/A000067-schematics.pdf#page=1",
+      "page": 1,
+      "locator": "ATmega2560-AU · TQFP-100 · main MCU and connector nets",
       "method": "visual-diagram"
     }
   }

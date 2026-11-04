@@ -534,6 +534,33 @@
       "publisher": "STMicroelectronics",
       "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
       "sha256": "ac1753a62670b4b27dfb1b9b7d8c3106d5e7926066e2f1cc6e8385178b28c34b"
+    },
+    {
+      "id": "arduino-uno-r3-schematic",
+      "title": "Arduino UNO Rev3 through-hole schematic",
+      "file": "arduino-uno-r3-schematic.pdf",
+      "url": "https://docs.arduino.cc/resources/schematics/A000066-schematics.pdf",
+      "publisher": "Arduino",
+      "revision": "Manufacturer schematic",
+      "sha256": "2c1041200352485393108e03c5117a07d4ea03954654485526c2c56cd01f7a42"
+    },
+    {
+      "id": "arduino-nano-classic-schematic",
+      "title": "Arduino Nano V3.3 schematic",
+      "file": "arduino-nano-classic-schematic.pdf",
+      "url": "https://docs.arduino.cc/resources/schematics/A000005-schematics.pdf",
+      "publisher": "Arduino",
+      "revision": "Manufacturer schematic",
+      "sha256": "e90b0a893ee464169b59638bdfa7d102db5c5360d8589d8f8d62b3a953f9c1aa"
+    },
+    {
+      "id": "arduino-mega-2560-schematic",
+      "title": "Arduino Mega 2560 Rev3 schematic",
+      "file": "arduino-mega-2560-schematic.pdf",
+      "url": "https://docs.arduino.cc/resources/schematics/A000067-schematics.pdf",
+      "publisher": "Arduino",
+      "revision": "Manufacturer schematic",
+      "sha256": "7d1b66c8822220e38d84540fafdf5e6bc000030e2dc9a72fdc69f0a9d72b1b21"
     }
   ],
   "publishers": [
