@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="860" viewBox="0 0 900 860">
+<g font-family="monospace" text-anchor="middle">
+<rect x="280" y="65" width="340" height="755" rx="16" fill="#087c86" stroke="#8cc3c3" stroke-width="2"/>
+<rect x="295" y="85" width="310" height="710" rx="7" fill="none" stroke="#80b8b8" stroke-dasharray="4 6"/>
+<rect x="490" y="35" width="64" height="65" rx="4" fill="#d7dddf" stroke="#53696c" stroke-width="2"/>
+<text x="522" y="75" font-size="13" fill="#29464d">USB</text>
+<rect x="312" y="58" width="63" height="83" rx="5" fill="#273438" stroke="#a2b3b3"/>
+<text x="343" y="113" font-size="10" fill="#dee8e6">VIN</text>
+<text x="450" y="180" font-size="22" fill="#e8f3ef">UNO R4 MINIMA</text>
+<text x="450" y="204" font-size="11" fill="#bcdad5">ARM · 48 MHz · 5 V I/O</text>
+<rect x="386" y="390" width="128" height="142" rx="4" fill="#273438" stroke="#9bb9b7"/>
+<circle cx="399" cy="403" r="4" fill="#d3b470"/>
+<text x="450" y="454" font-size="14" fill="#e5edeb">RA4M1</text>
+<text x="450" y="478" font-size="11" fill="#a6bdb9">MAIN MCU</text>
+<text x="450" y="666" font-size="12" fill="#d2e8e3">SPI CONNECTOR</text>
+<circle cx="305" cy="90" r="8" fill="#e0eeeb" stroke="#98c4bd"/>
+<circle cx="595" cy="90" r="8" fill="#e0eeeb" stroke="#98c4bd"/>
+<circle cx="305" cy="800" r="8" fill="#e0eeeb" stroke="#98c4bd"/>
+<circle cx="595" cy="800" r="8" fill="#e0eeeb" stroke="#98c4bd"/>
+<text x="338" y="208" font-size="10" fill="#d2e8e3">PWR</text><text x="343" y="465" font-size="10" fill="#d2e8e3">ANALOG</text><text x="566" y="135" font-size="10" fill="#d2e8e3">DIGITAL</text></g></svg>

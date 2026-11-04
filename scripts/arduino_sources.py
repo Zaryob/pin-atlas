@@ -9,7 +9,7 @@ def core_tables(text):
     def array(name):return re.search(name+r'\[\]\s*=\s*\{(.*?)\};',text,re.S)[1]
     ports=re.findall(r'P[A-L]',array('digital_pin_to_port_PGM'))
     bits=re.findall(r'_BV\(\s*(\d+)\s*\)',array('digital_pin_to_bit_mask_PGM'))
-    timers=re.findall(r'NOT_ON_TIMER|TIMER\d+[A-C]?',array('digital_pin_to_timer_PGM'))
+    timers=re.findall(r'NOT_ON_TIMER|TIMER\d+[A-D]?',array('digital_pin_to_timer_PGM'))
     assert len(ports)==len(bits)==len(timers)
     defines={key:int(value) for key,value in re.findall(r'#define\s+(PIN_\w+|NUM_DIGITAL_PINS|NUM_ANALOG_INPUTS)\s+\(?(\d+)\)?',text)}
     assert len(ports)==defines['NUM_DIGITAL_PINS']

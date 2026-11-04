@@ -7,7 +7,7 @@ class BoardTables(HTMLParser):
     def __init__(self):
         super().__init__();self.tables={};self.heading='';self.title=None;self.cell=None;self.row=None;self.table=None
     def handle_starttag(self,tag,attrs):
-        if tag in ('h2','h3'):self.title=[]
+        if tag in ('h2','h3','h4'):self.title=[]
         if tag=='table':self.table=[]
         if tag=='tr':self.row=[]
         if tag in ('th','td'):self.cell=[]
@@ -15,7 +15,7 @@ class BoardTables(HTMLParser):
         if self.title is not None:self.title.append(data)
         if self.cell is not None:self.cell.append(data)
     def handle_endtag(self,tag):
-        if tag in ('h2','h3') and self.title is not None:
+        if tag in ('h2','h3','h4') and self.title is not None:
             self.heading=''.join(self.title).strip();self.title=None
         if tag in ('th','td') and self.cell is not None:
             if self.row is not None:self.row.append(' '.join(''.join(self.cell).split()))

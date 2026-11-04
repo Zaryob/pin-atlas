@@ -7,7 +7,7 @@ const boards = JSON.parse(readFileSync(new URL('../dist/data/boards.json', impor
 const layouts = buildLayouts(boards);
 
 test('catalog contains one entry per shared footprint', () => {
-  assert.deepEqual(layouts.map(layout => layout.id), ['pico-family', 'raspberry-pi-40', 'jetson-orin-nano', 'blue-pill', 'stm32f103c8t6', 'arduino-uno-r3', 'arduino-nano-classic', 'arduino-mega-2560', 'rp2350a', 'rp2350b']);
+  assert.deepEqual(layouts.map(layout => layout.id), ['pico-family', 'raspberry-pi-40', 'arduino-uno', 'arduino-nano', 'esp32-devkitc-v4', 'esp32-s3-devkitc-1', 'jetson-orin-nano', 'blue-pill', 'stm32f103c8t6', 'arduino-mega-2560', 'arduino-micro', 'esp32-c3-devkitm-1', 'atmega328p-pdip28', 'atmega328p-tqfp32', 'atmega328p-qfn32', 'atmega328p-qfn28', 'atmega2560-tqfp100', 'rp2350a', 'rp2350b']);
   assert.equal(layouts[0].profiles.length, 4);
   assert.equal(layouts[1].profiles.length, 2);
   assert.equal(new Set(layouts.flatMap(layout => layout.profileIds)).size, boards.length);
@@ -63,4 +63,72 @@ test('Blue Pill connectors are distinct from STM32 package pins', () => {
   assert.equal(chip.pins[33].name, swdio.name);
   assert.equal(chip.layout, 'lqfp');
   assert(!board.pins.some(pin => pin.name === 'PB2'));
+});
+
+test('UNO headers retain separate MCU references and the old UNO link', () => {
+  const family = resolveProfile(layouts, 'arduino-uno').layout;
+  assert.equal(family.profiles.length, 4);
+  assert.equal(resolveProfile(layouts, 'arduino-uno-r3').profile.id, 'arduino-uno-r3');
+  const signal = (id, label, group) => resolveProfile(layouts, id).profile.pins.find(p => p.physicalLabel === label).functions.some(f => f.group === group);
+  assert(signal('arduino-uno-r3','ANALOG.5','I2C'));
+  assert(!signal('arduino-leonardo','ANALOG.5','I2C'));
+  assert(signal('arduino-leonardo','DIGITAL.3','I2C'));
+  assert(signal('arduino-uno-r4-minima','ANALOG.1','DAC'));
+  assert(signal('arduino-uno-r4-minima','DIGITAL.5','CAN'));
+  assert(!signal('arduino-uno-r4-wifi','DIGITAL.5','CAN'));
+  assert(signal('arduino-uno-r4-wifi','DIGITAL.11','CAN'));
+});
+
+test('Nano references share positions while exposing different GPIO and programming contacts', () => {
+  const classic = resolveProfile(layouts,'arduino-nano-classic').profile;
+  const every = resolveProfile(layouts,'arduino-nano-every').profile;
+  assert.equal(resolveProfile(layouts,classic.id).layout.id,resolveProfile(layouts,every.id).layout.id);
+  assert.equal(classic.pins.find(p=>p.physicalLabel==='L.10').type,'ADC');
+  assert.equal(every.pins.find(p=>p.physicalLabel==='L.10').type,'GPIO');
+  assert(classic.pins.some(p=>p.connector==='ICSP'));
+  assert(!every.pins.some(p=>p.connector==='ICSP'));
+  assert(!every.pins.find(p=>p.name==='D11').functions.some(f=>f.group==='PWM'));
+  const changed=structuredClone(boards);
+  changed.find(b=>b.id===every.id).pins[0].position.x+=1;
+  assert.throws(()=>buildLayouts(changed),/Incompatible physical layout: arduino-nano-every/);
+});
+
+test('ESP module choices retain physical pins and reserve the fitted memory bus', () => {
+  for(const [layoutId,variantId,pins] of [
+    ['esp32-devkitc-v4','esp32-devkitc-v4-wrover',[16,17]],
+    ['esp32-s3-devkitc-1','esp32-s3-devkitc-1-octal',[35,36,37]]
+  ]){
+    const regular=resolveProfile(layouts,layoutId).profile;
+    const memory=resolveProfile(layouts,layoutId,variantId).profile;
+    assert.equal(regular.packagePins,memory.packagePins);
+    for(const number of pins){
+      assert(!regular.pins.find(p=>p.name===`GPIO${number}`).reserved);
+      const pin=memory.pins.find(p=>p.name===`GPIO${number}`);
+      assert(pin.reserved);assert.equal(pin.functions.length,0);
+    }
+  }
+  const classic=resolveProfile(layouts,'esp32-devkitc-v4').profile;
+  assert(classic.pins.find(p=>p.name==='GPIO34').inputOnly);
+  assert(!classic.pins.find(p=>p.name==='GPIO34').functions.some(f=>f.group==='PWM'));
+  assert(!resolveProfile(layouts,'esp32-s3-devkitc-1').profile.pins.find(p=>p.name==='GPIO46').inputOnly);
+});
+
+test('AVR package numbers differ from board headers and analog-only pads depend on package', () => {
+  for(const id of ['atmega328p-pdip28','atmega328p-qfn28']){
+    const chip=resolveProfile(layouts,id).profile;
+    assert(!chip.pins.some(p=>p.name==='ADC6'||p.name==='ADC7'));
+    assert.equal(chip.gpioCount,23);
+  }
+  for(const id of ['atmega328p-tqfp32','atmega328p-qfn32']){
+    const chip=resolveProfile(layouts,id).profile;
+    assert.equal(chip.pins.find(p=>p.name==='ADC6').type,'ADC');
+    assert.equal(chip.pins.find(p=>p.name==='PC0').number,23);
+  }
+  const dip=resolveProfile(layouts,'atmega328p-pdip28').profile;
+  assert.equal(dip.pins.find(p=>p.name==='PC0').number,23);
+  assert.equal(dip.pins.find(p=>p.name==='PC6').baseFunction,'RESET');
+  const mega=resolveProfile(layouts,'atmega2560-tqfp100').profile;
+  assert.equal(mega.gpioCount,86);assert.equal(mega.pins.length,100);
+  assert.equal(mega.pins[0].name,'PG5');assert.equal(mega.pins[99].name,'AVCC');
+  assert(!mega.pins.some(p=>p.functions.some(f=>f.name==='PDI'||f.name==='PDO')));
 });

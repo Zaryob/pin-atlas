@@ -30,17 +30,17 @@ const icons = {
  wifi:'<path d="M2 8a16 16 0 0 1 20 0M5 12a11 11 0 0 1 14 0m-10 4a5 5 0 0 1 6 0M12 20h.01"/>',
  menu:'<path d="M4 6h16M4 12h16M4 18h16"/>'
 };
-const isChip = item => ['qfn','lqfp'].includes(item.layout);
+const isChip = item => ['qfn','lqfp','dip'].includes(item.layout);
 const physicalLabel = pin => pin.physicalLabel || String(pin.number).padStart(2,'0');
 const icon = name => `<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">${icons[name] || icons.chip}</svg>`;
 function hydrateIcons(root = document) { $$('[data-icon]', root).forEach(el => el.innerHTML = icon(el.dataset.icon)); }
 hydrateIcons();
-const colors = Object.fromEntries(['GPIO','POWER','GND','SYSTEM','SPI','I2C','UART','PWM','ADC','HSTX','PIO','USB','QMI','SIO','PCM','I2S','CLOCK','JTAG','DPI','SDIO','SMI','SWD','CAN','TIMER','IRQ'].map(group => [group, `var(--pin-${group.toLowerCase()})`]));
+const colors = Object.fromEntries(['GPIO','POWER','GND','SYSTEM','SPI','I2C','UART','PWM','ADC','HSTX','PIO','USB','QMI','SIO','PCM','I2S','CLOCK','JTAG','DPI','SDIO','SMI','SWD','CAN','TIMER','IRQ','DAC','TOUCH'].map(group => [group, `var(--pin-${group.toLowerCase()})`]));
 const appBase = new URL('./', import.meta.url);
 const familyKeys = { GPIO: 'generalIO', POWER: 'power', GND: 'ground', SYSTEM: 'system', ADC: 'analog' };
 const familyName = type => t(familyKeys[type] || type);
 const subtitle = item => t(`board.${item.id}`, {}, item.subtitle);
-const groups = ['SPI','I2C','UART','PWM','ADC','HSTX','PIO','PCM','I2S','CLOCK','JTAG','DPI','SDIO','SMI','SWD','CAN','TIMER','USB','IRQ'];
+const groups = ['SPI','I2C','UART','PWM','ADC','HSTX','PIO','PCM','I2S','CLOCK','JTAG','DPI','SDIO','SMI','SWD','CAN','TIMER','USB','IRQ','DAC','TOUCH'];
 let evidence = {references:{}};
 let boards, layouts, layout, board, selected = 1, selectedFn, filters = new Set(), search = '', flipped = false, rotated = false, view = 'map', assignments = {}, toastTimer;
 const storageKey = 'pin-atlas:plans:v1';
@@ -67,7 +67,7 @@ function validatePlan(data, target) {
 }
 function persist() { savedPlans[board.id] = assignments; try { localStorage.setItem(storageKey, JSON.stringify(savedPlans)); } catch { toast(t('storageUnavailable')); } }
 function pinByNumber(n) { return board.pins.find(p => p.number === Number(n)); }
-function matches(pin) { const text = [pin.number, pin.name, pin.physicalLabel, pin.mcuPort, pin.arduinoPin !== undefined ? `D${pin.arduinoPin}` : '', ...pin.functions.flatMap(f => [f.name,f.signal]), assignments[pin.number]?.label].join(' ').toLowerCase(); return text.includes(search.toLowerCase().trim()) && (!filters.size || pin.functions.some(f => filters.has(f.group))); }
+function matches(pin) { const text = [pin.number, pin.name, pin.physicalLabel, pin.boardLabel, pin.mcuPort, pin.arduinoPin !== undefined ? `D${pin.arduinoPin}` : '', ...pin.functions.flatMap(f => [f.name,f.signal]), assignments[pin.number]?.label].join(' ').toLowerCase(); return text.includes(search.toLowerCase().trim()) && (!filters.size || pin.functions.some(f => filters.has(f.group))); }
 function setBoard(id, initial = false, preferredProfile) {
  const next = resolveProfile(layouts, id, preferredProfile);
  const sameLayout = layout?.id === next.layout.id;
@@ -95,7 +95,7 @@ function openLayout(id) {
 function renderBoard() {
  document.title = `${layoutTitle(layout)} Pinout — Pin Atlas`;
  $('#board-title').textContent = layoutTitle(layout);
- const scope = layout.scopeKey ? t(layout.scopeKey) : '';
+ const scope = board.scopeKey ? t(board.scopeKey) : layout.scopeKey ? t(layout.scopeKey) : '';
  $('#board-scope').hidden = !scope;
  $('#board-scope').textContent = scope;
  $('#compatible-boards').hidden = !layout.compatibleKey;
@@ -113,7 +113,7 @@ function renderBoard() {
 }
 function renderFunctionReference() {
  $('#function-reference-bar').hidden = !layout.references.length;
- $('#reference-note').textContent = layout.id === 'raspberry-pi-40' ? t(board.id === 'raspberry-pi-4' ? 'pi4ReferenceNote' : 'commonReferenceNote') : t('picoReferenceNote');
+ $('#reference-note').textContent = layout.id === 'raspberry-pi-40' ? t(board.id === 'raspberry-pi-4' ? 'pi4ReferenceNote' : 'commonReferenceNote') : layout.id === 'pico-family' ? t('picoReferenceNote') : t('headerReferenceNote');
  const choices = layout.references.flatMap(reference => {
    const hasSavedPlan = id => Object.keys(savedPlans[id] || {}).length > 0;
    const selectedId = reference.profileIds.includes(board.id) ? board.id : reference.profileIds.find(hasSavedPlan) || reference.profileIds[0];
@@ -186,22 +186,32 @@ function renderHeader() {
  }
  return `<svg viewBox="0 0 680 540" aria-label="${esc(t('diagramLabel', { board: layoutTitle(layout) }))}"><rect x="308" y="29" width="64" height="480" rx="6" fill="#26372c"/><rect x="315" y="37" width="50" height="464" rx="3" fill="#384c3a"/>${pins}<text x="340" y="530" fill="#869b75" font-family="var(--mono)" font-size="7" text-anchor="middle">${board.headerLabel ? esc(board.headerLabel)+' · ' : ''}${t('headerLegend')}</text></svg>`;
 }
-function renderQfn() {
- const n=board.packagePins/4, pitch=336/(n-1);
- const packageName = `${board.layout === 'lqfp' ? 'LQFP' : 'QFN'}-${board.packagePins}`;
+function renderDip() {
+ const total=board.packagePins, half=total/2, h=160+(half-1)*28;
  let pins='';
- for(const pin of board.pins) {
-   const sideIndex=Math.floor((pin.number-1)/n), i=(pin.number-1)%n;
+ for(const pin of board.pins){
+   let left=pin.number<=half,x=left?305:495,y=80+(left?pin.number-1:total-pin.number)*28,side=left?'left':'right';
+   if(rotated){x=800-x;y=h-y;side=side==='left'?'right':'left';}
+   if(flipped){x=800-x;side=side==='left'?'right':'left';}
+   pins+=pinGroup(pin,x,y,side);
+ }
+ return `<svg viewBox="0 0 800 ${h}" aria-label="${esc(t('diagramLabel',{board:board.name}))}"><g class="board-art" transform="${flipped?'translate(800 0) scale(-1 1)':''}"><g transform="${rotated?`rotate(180 400 ${h/2})`:''}"><rect x="312" y="48" width="176" height="${h-96}" rx="7" fill="#34433a" stroke="#7f9175"/><path d="M382 48a18 18 0 0 0 36 0" fill="var(--paper)" stroke="#7f9175"/><circle cx="327" cy="79" r="5" fill="#a9b796"/><text x="400" y="${h/2-10}" text-anchor="middle" fill="#dce6d0" font-size="19">${esc(board.mcu)}</text><text x="400" y="${h/2+20}" text-anchor="middle" fill="#9db08f" font-size="13">${esc(board.packageName)}</text></g></g>${pins}</svg>`;
+}
+function renderQfn() {
+ const n=board.packagePins/4,size=board.packagePins>=100?1056:800,c=size/2,end=size-220,span=size-464,pitch=span/(n-1),body=size-434;
+ const packageName=board.packageName || `${board.layout==='lqfp'?'LQFP':'QFN'}-${board.packagePins}`;
+ let pins='';
+ for(const pin of board.pins){
+   const sideIndex=Math.floor((pin.number-1)/n),i=(pin.number-1)%n;
    let pos={x:220,y:232+i*pitch,side:'left',angle:0};
-   if(sideIndex===1) pos={x:232+i*pitch,y:580,side:'right',angle:90};
-   if(sideIndex===2) pos={x:580,y:568-i*pitch,side:'right',angle:0};
-   if(sideIndex===3) pos={x:568-i*pitch,y:220,side:'left',angle:90};
-   if(rotated) { pos.x=800-pos.x; pos.y=800-pos.y; pos.side=pos.side==='left'?'right':'left'; }
-   if(flipped) { pos.x=800-pos.x; if(!pos.angle) pos.side=pos.side==='left'?'right':'left'; }
+   if(sideIndex===1)pos={x:232+i*pitch,y:end,side:'right',angle:90};
+   if(sideIndex===2)pos={x:end,y:size-232-i*pitch,side:'right',angle:0};
+   if(sideIndex===3)pos={x:size-232-i*pitch,y:220,side:'left',angle:90};
+   if(rotated){pos.x=size-pos.x;pos.y=size-pos.y;pos.side=pos.side==='left'?'right':'left';}
+   if(flipped){pos.x=size-pos.x;if(!pos.angle)pos.side=pos.side==='left'?'right':'left';}
    pins+=pinGroup(pin,pos.x,pos.y,pos.side,{angle:pos.angle});
  }
- // The central exposed pad is separate from numbered perimeter pins.
- return `<svg viewBox="0 0 800 800" aria-label="${esc(t('diagramLabel', { board: `${board.name} ${packageName}` }))}"><g class="board-art" transform="${flipped?'translate(800 0) scale(-1 1)':''}"><g transform="${rotated?'rotate(180 400 400)':''}"><rect x="217" y="217" width="366" height="366" rx="9" fill="#34433a" stroke="#26352b" stroke-width="3"/><rect x="231" y="231" width="338" height="338" rx="5" fill="none" stroke="#7f9175" stroke-width=".6"/><circle cx="246" cy="247" r="6" fill="#a9b796"/>${board.layout === 'qfn' ? '<rect x="303" y="303" width="194" height="194" rx="5" fill="#3b4d40" stroke="#637a58" stroke-dasharray="4 5"/>' : ''}<text x="400" y="377" text-anchor="middle" fill="#dce6d0" font-size="${board.layout === 'lqfp' ? 21 : 29}">${board.name}</text><text x="400" y="406" text-anchor="middle" fill="#9db08f" font-size="12" letter-spacing="3">${packageName}</text>${board.layout === 'qfn' ? '<text x="400" y="443" text-anchor="middle" fill="#819975" font-size="9">EP · GND</text>' : ''}<text x="400" y="532" text-anchor="middle" fill="#839b76" font-size="8" letter-spacing="3">${esc(board.family.toUpperCase())}</text></g></g>${pins}</svg>`;
+ return `<svg viewBox="0 0 ${size} ${size}" ${size>800?'style="min-width:1000px;max-height:none"':''} aria-label="${esc(t('diagramLabel',{board:`${board.mcu} ${packageName}`}))}"><g class="board-art" transform="${flipped?`translate(${size} 0) scale(-1 1)`:''}"><g transform="${rotated?`rotate(180 ${c} ${c})`:''}"><rect x="217" y="217" width="${body}" height="${body}" rx="9" fill="#34433a" stroke="#26352b" stroke-width="3"/><rect x="231" y="231" width="${body-28}" height="${body-28}" rx="5" fill="none" stroke="#7f9175" stroke-width=".6"/><circle cx="246" cy="247" r="6" fill="#a9b796"/>${board.layout==='qfn'?`<rect x="${c-97}" y="${c-97}" width="194" height="194" rx="5" fill="#3b4d40" stroke="#637a58" stroke-dasharray="4 5"/>`:''}<text x="${c}" y="${c-23}" text-anchor="middle" fill="#dce6d0" font-size="${board.layout==='lqfp'?21:29}">${esc(board.mcu)}</text><text x="${c}" y="${c+6}" text-anchor="middle" fill="#9db08f" font-size="12" letter-spacing="3">${esc(packageName)}</text>${board.layout==='qfn'?`<text x="${c}" y="${c+43}" text-anchor="middle" fill="#819975" font-size="9">EP · GND</text>`:''}<text x="${c}" y="${size-268}" text-anchor="middle" fill="#839b76" font-size="8" letter-spacing="3">${esc(board.family.toUpperCase())}</text></g></g>${pins}</svg>`;
 }
 function renderCustom() {
  const {width,height,artwork} = board.diagram;
@@ -214,11 +224,11 @@ function renderCustom() {
  }).join('');
  return `<svg viewBox="0 0 ${width} ${height}" ${board.diagram.minWidth ? `style="min-width:${board.diagram.minWidth}px;max-height:none"` : ''} aria-label="${esc(t('diagramLabel', { board: layoutTitle(layout) }))}"><g transform="${flipped?`translate(${width} 0) scale(-1 1)`:''}"><g transform="${rotated?`rotate(180 ${width/2} ${height/2})`:''}">${image}</g></g>${pins}</svg>`;
 }
-const renderers = {pico:renderPico,qfn:renderQfn,lqfp:renderQfn,header:renderHeader,custom:renderCustom};
+const renderers = {pico:renderPico,qfn:renderQfn,lqfp:renderQfn,dip:renderDip,header:renderHeader,custom:renderCustom};
 function renderMap() {
  $('#flip-button').setAttribute('aria-pressed',flipped); $('#rotate-button').setAttribute('aria-pressed',rotated);
- $('.desktop-hint').textContent=t(board.diagram?.minWidth ? 'panPin' : 'clickPin');
- $('#orientation').innerHTML = `${t(flipped ? 'bottomView' : 'topView')} <span>${board.layout==='pico' || board.orientation==='usb' ? `USB ${rotated?'↓':'↑'}` : rotated ? '180°' : '0°'}</span>`;
+ $('.desktop-hint').textContent=t(board.diagram?.minWidth || board.packagePins>=100 ? 'panPin' : 'clickPin');
+ $('#orientation').innerHTML = `${t(flipped ? 'bottomView' : 'topView')} <span>${board.layout==='pico' || board.orientation?.startsWith('usb') ? `USB ${board.orientation==='usb-bottom' ? (rotated?'↑':'↓') : (rotated?'↓':'↑')}` : rotated ? '180°' : '0°'}</span>`;
  $('#diagram').classList.toggle('qfn-diagram',isChip(board));
  $('#diagram').classList.toggle('board-diagram',board.layout === 'custom');
  const oldScroll = $('#diagram').scrollLeft;
@@ -238,6 +248,7 @@ function renderDetail() {
  const descriptions = { GPIO: 'gpioDescription', GND: 'groundDescription', POWER: 'powerDescription', SYSTEM: 'systemDescription', ADC: 'analogDescription' };
  const noteBoard = board.layout === 'pico' ? 'pico2w' : board.id;
  let description = pin.noteKey ? t(pin.noteKey) : pin.reserved ? t('reservedNote') : t(`note.${noteBoard}.${pin.number}`, {}, pin.note || t(descriptions[pin.type] || 'systemDescription'));
+ description += [pin.strapping ? t('espStrappingNote') : '',pin.boardCircuitKey ? t(pin.boardCircuitKey) : '',pin.analogCautionKey ? t(pin.analogCautionKey) : ''].filter(Boolean).map(note=>' '+note).join('');
  if (board.mcu === 'RP2040' && pin.number === 30) description = description.replace('RP2350', 'RP2040');
  const query = search.trim().toLowerCase();
  const relevant = f => filters.has(f.group) || (query && f.name.toLowerCase().includes(query));
@@ -247,7 +258,7 @@ function renderDetail() {
  const option = f => `<label class="function-option" style="--color:${colors[f.group]||colors.SYSTEM}"><input type="radio" name="pin-function" value="${esc(f.name)}" ${selectedFn===f.name?'checked':''}>${esc(f.name)}<small>${f.selector ? esc(f.selector) : f === opts[0] ? t('default') : ''}</small></label>`;
  const hasPlan=!!assignments[selected];
  $('#selected-pin-label').textContent = `${pin.name} · ${t('details')}`;
- $('#pin-detail').innerHTML=`<div class="pin-detail-body"><div class="pin-hero"><div class="pin-identity"><h2>${esc(pin.name.replace('_ADC',' / A'))}</h2><span class="physical-pin">${t('physicalPin')} <strong>${esc(physicalLabel(pin))}</strong>${pin.mcuPort ? `<span class="mcu-pin-label"> · Arduino D${pin.arduinoPin} · ${t('mcuPort', {port:pin.mcuPort})}</span>` : ''}${pin.mcuPin ? `<span class="mcu-pin-label"> · ${t('mcuPin', {pin:pin.mcuPin})}</span>` : ''}</span></div><span class="pin-type" style="color:${colors[pin.type]}">${familyName(pin.type)} · ${esc(pin.type === 'GPIO' ? board.voltage : '')}</span><p class="pin-description">${esc(description)}${pin.fiveVoltTolerant !== undefined ? ' '+esc(t(pin.fiveVoltTolerant ? 'stm32FTNote' : 'stm32NonFTNote')) : ''}</p>${sharedNote}</div><fieldset class="function-section"><legend class="small-label">${t(opts.length>1 ? 'chooseFunction' : 'pinFunction')}</legend>${filters.size || query ? `<p class="function-hint">${t('matchingFunctions')}</p>` : ''}<div class="function-list">${primary.map(option).join('')}</div>${more.length ? `<details class="more-functions"><summary>${t('allFunctions', {count:more.length})}</summary><div class="function-list">${more.map(option).join('')}</div></details>` : ''}</fieldset><div class="label-section"><label class="small-label" for="custom-label">${t('projectLabel')} <span>${t('optional')}</span></label><input id="custom-label" maxlength="40" placeholder="${esc(t('labelExample'))}" value="${esc(assignments[selected]?.label||'')}"></div>${renderPinEvidence(pin)}</div><div class="detail-action"><button id="add-plan" class="add-plan" ${pin.reserved ? 'disabled' : ''}>${icon(hasPlan?'check':'plus')}${t(pin.reserved ? (pin.name==='NC' ? 'unconnected' : 'reserved') : hasPlan ? 'updatePin' : 'addPin')}</button></div>`;
+ $('#pin-detail').innerHTML=`<div class="pin-detail-body"><div class="pin-hero"><div class="pin-identity"><h2>${esc(pin.name.replace('_ADC',' / A'))}</h2><span class="physical-pin">${t('physicalPin')} <strong>${esc(physicalLabel(pin))}</strong>${pin.boardLabel && pin.boardLabel!==pin.name ? `<span class="mcu-pin-label"> · ${esc(t('boardLabel',{label:pin.boardLabel}))}</span>` : ''}${pin.mcuPort ? `<span class="mcu-pin-label"> · Arduino D${pin.arduinoPin} · ${t('mcuPort', {port:pin.mcuPort})}</span>` : ''}${pin.mcuPin ? `<span class="mcu-pin-label"> · ${t('mcuPin', {pin:pin.mcuPin})}</span>` : ''}</span></div><span class="pin-type" style="color:${colors[pin.type]}">${familyName(pin.type)} · ${esc(pin.type === 'GPIO' ? board.voltage : '')}</span><p class="pin-description">${esc(description)}${pin.fiveVoltTolerant !== undefined ? ' '+esc(t(pin.fiveVoltTolerant ? 'stm32FTNote' : 'stm32NonFTNote')) : ''}</p>${sharedNote}</div><fieldset class="function-section"><legend class="small-label">${t(opts.length>1 ? 'chooseFunction' : 'pinFunction')}</legend>${filters.size || query ? `<p class="function-hint">${t('matchingFunctions')}</p>` : ''}<div class="function-list">${primary.map(option).join('')}</div>${more.length ? `<details class="more-functions"><summary>${t('allFunctions', {count:more.length})}</summary><div class="function-list">${more.map(option).join('')}</div></details>` : ''}</fieldset><div class="label-section"><label class="small-label" for="custom-label">${t('projectLabel')} <span>${t('optional')}</span></label><input id="custom-label" maxlength="40" placeholder="${esc(t('labelExample'))}" value="${esc(assignments[selected]?.label||'')}"></div>${renderPinEvidence(pin)}</div><div class="detail-action"><button id="add-plan" class="add-plan" ${pin.reserved ? 'disabled' : ''}>${icon(hasPlan?'check':'plus')}${t(pin.reserved ? (pin.reservedLabel || (pin.name==='NC' ? 'unconnected' : 'reserved')) : hasPlan ? 'updatePin' : 'addPin')}</button></div>`;
 }
 function renderPinEvidence(pin) {
  const keys = [...new Set([...pin.evidence, ...pin.functions.flatMap(f=>[f.evidence,f.configurationEvidence].filter(Boolean))])];
@@ -312,7 +323,7 @@ function showCatalog() { $('#catalog-search').value=''; renderCatalog(); $('#lib
 function renderCatalog() {
  const query=$('#catalog-search').value.toLowerCase().trim();
  const results=layouts.filter(item => [layoutTitle(item),layoutSubtitle(item),item.compatibleKey ? t(item.compatibleKey) : '',...item.profiles.map(profile => `${profile.name} ${profile.mcu} ${profile.searchTerms || ''}`)].join(' ').toLowerCase().includes(query));
- $('#catalog-grid').innerHTML=results.length?results.map(item=>`<button class="catalog-card" data-layout="${item.id}"><span class="mini-art">${icon(isChip(item)?'chip':'board')}</span><span class="card-arrow">↗</span><b>${esc(layoutTitle(item))}</b><small>${esc(item.compatibleKey ? t(item.compatibleKey) : layoutSubtitle(item))}</small><span class="card-meta">${item.packagePins} PIN <span> / </span> ${item.uniqueGPIOCount ?? item.gpioCount} GPIO</span></button>`).join(''):`<p class="catalog-note">${t('noBoard')}</p>`;
+ $('#catalog-grid').innerHTML=results.length?results.map(item=>`<button class="catalog-card" data-layout="${item.id}"><span class="mini-art">${icon(isChip(item)?'chip':'board')}</span><span class="card-arrow">↗</span><b>${esc(layoutTitle(item))}</b><small>${esc(item.compatibleKey ? t(item.compatibleKey) : layoutSubtitle(item))}</small><span class="card-meta">${item.sharedContactCount ? `${item.sharedContactCount} ${t('sharedContacts')} <span> / </span> ${item.references.length} ${t('referencesCount')}` : `${item.packagePins} PIN <span> / </span> ${item.uniqueGPIOCount ?? item.gpioCount} GPIO`}</span></button>`).join(''):`<p class="catalog-note">${t('noBoard')}</p>`;
 }
 function planPayload() { return {version:1,board:board.id,pins:assignments}; }
 function encode(value) { return btoa(Array.from(new TextEncoder().encode(JSON.stringify(value)),b=>String.fromCharCode(b)).join('')); }

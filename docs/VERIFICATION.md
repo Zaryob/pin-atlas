@@ -2,7 +2,7 @@
 
 [English](VERIFICATION.md) · [Türkçe](VERIFICATION.tr.md)
 
-Reviewed on **4 November 2026**. The review covers fourteen board, header, and chip profiles, **678 physical pin records, and 2,350 function assignments**. Shared physical pins are counted once per profile. The count excludes the app’s generic `GPIO` planning option and the unnumbered QFN center GND pads. Each placement of a signal on a different pin counts separately.
+Reviewed on **4 November 2026**. The review covers twenty-nine board, header, and chip profiles, **1,276 physical pin records, and 4,431 function assignments**. Shared physical pins are counted once per profile. The count excludes the app’s generic `GPIO` planning option and the unnumbered QFN center GND pads. Each placement of a signal on a different pin counts separately.
 
 ## Sources by pin map
 
@@ -55,7 +55,7 @@ The verified QFN-60 IOVDD list uses **1,11,20,30,38,45** from the two figures. T
 
 1. `sources/manifest.json` records each source revision, document URL or commit, and SHA-256 hash.
 2. `scripts/verify-official-sources.py` downloads and checks those sources, then rereads the PDF tables. It normalizes whitespace where cells wrap across lines.
-   CI passes `--table-snapshots` to use the recorded ST table extractions in `sources/extracted/`, avoiding ST CDN timeouts. Each extraction is hash-locked and identifies the original locked PDF hash. The same parser rebuilds the STM32 data from either input; the other twenty-two sources are downloaded and checked in both modes. The default command rereads the original ST PDFs.
+   CI passes `--table-snapshots` to use the recorded ST table extractions in `sources/extracted/`, avoiding ST CDN timeouts. Each extraction is hash-locked and identifies the original locked PDF hash. The same parser rebuilds the STM32 data from either input; the other forty-eight sources are downloaded and checked in both modes. The default command rereads the original ST PDFs.
 3. The physical pin number, name, type, alternate function, manufacturer signal, and F/ALT selector must match the published record.
 4. Figure-only observations are marked separately. Reusing them during an automated run preserves the prior visual review. A changed hash requires a fresh source review.
 5. [`sources/pin-verification.csv`](../sources/pin-verification.csv) lists each pin and function record. `dist/data/evidence.json` resolves reference IDs to documents, pages, and tables. `dist/data/verification.json` holds the verification totals and source summary.
@@ -65,7 +65,7 @@ The app uses its own SVG schematics. Manufacturer documents are linked from the 
 
 ## Shared layout catalog
 
-The fourteen source profiles are presented as ten physical layouts: one Pico family entry, one Raspberry Pi 40-pin header entry, one NVIDIA Jetson Orin Nano J12 entry, the Blue Pill board, its STM32F103C8/CB LQFP48 processor, three Arduino AVR boards, and the two distinct RP2350 packages. The application checks that grouped profiles agree on pin numbers, names and types before grouping them. A function-reference selector retains the verified processor-specific function tables and evidence. Grouping does not claim that RP2040, RP2350A and BCM2711 have interchangeable alternate functions. Legacy profile IDs remain valid for saved plans and shared links.
+The twenty-nine source profiles are presented as nineteen physical layouts. UNO-format boards share 32 main-header positions, Nano references share 30 side positions, and the two Espressif module pairs retain one entry each. Optional connectors and electrical/MCU capabilities belong to the selected reference. Geometry grouping verifies connector labels and positions; it deliberately permits documented BOOT/NC and analog-only/GPIO differences. Older Pico/Pi groups retain their stricter number/name/type comparison. Legacy model IDs, saved plans and shared links still resolve to the original reference.
 
 ## NVIDIA Jetson Orin Nano · J12
 
@@ -78,7 +78,7 @@ The source is NVIDIA’s SHA-256-locked **Jetson Orin Nano Developer Kit Carrier
 - Electrical notes cite Table 3-3: 3.3 V signals; direct open-drain I²C on 3/5 and 27/28, with 2.2 kΩ / 1.5 kΩ pull-ups and ±2 mA listed drive; other signal pins use TXB0108 translators with ±20 µA listed weak drive and external pulls greater than 50 kΩ. These are not Raspberry Pi GPIO electrical characteristics.
 - J12 pins 27/28 are I2C0_SDA/SCL and are not given the Raspberry Pi HAT EEPROM reservation. No ADC or unverified numeric mux selectors are added.
 
-The manufacturer PDF is cached for verification and is not distributed in the repository. The complete source set now covers 678 physical pin records and 2,350 function assignments.
+The manufacturer PDF is cached for verification and is not distributed in the repository. The complete source set now covers 1,276 physical pin records and 4,431 function assignments.
 
 ## STM32F103C8/CB · LQFP48
 
@@ -113,3 +113,29 @@ The official `arduino/ArduinoCore-avr` revision `11b9130371e8447920edb65a75706a6
 Only main-MCU ICSP and the main signal/power headers are shown. USB sockets, barrel sockets, USB-bridge ICSP/JP5, test points, jumpers, and bare-processor package maps are outside these board profiles. The drawings are original schematic illustrations, not mechanical layouts. Sources remain linked at each pin. Shared-net assignments are rejected by both the plan action and JSON/share import validation.
 
 `PWR`, `ANALOG`, `DIGITAL`, `L`, `R`, and `END` are Pin Atlas connector-position labels. They do not claim to be manufacturer connector designators or Arduino sketch pin numbers. The numeric ID used in plan files is an internal contact key; details show the Arduino digital number and MCU port separately.
+
+## Expanded Arduino references
+
+- Leonardo (A000057, 25 November 2025) and Micro (A000053, 10 November 2020) full pinouts supply header placement, physical signal names and hardware interrupts. The pinned AVR core `leonardo` port/bit/timer/channel arrays are parsed again; `micro` explicitly inherits that map. Their ADC channels are not Arduino analog alias numbers: A0 is ADC7, A4 is ADC1, and the six extra analog aliases share digital-header ports. Leonardo's I²C uses D2/D3, and SPI uses its ICSP D14–D16. Micro additionally exposes D17/SS and the other SPI pins on its distinct 34-contact side footprint. Both use native USB independently of D0/D1 Serial1.
+- Nano Every (ABX00028, 15 December 2021) uses ArduinoCore-megaavr `e8edb4ef2e8ab5c98544c3884a653f0b9c1318dc`, `nona4809/pins_arduino.h`. The generator reads its port/bit, analog channel and PWM declarations. A6/A7 are PD4/PD5 with ADC4/ADC5 and digital capability; A4/A5 connect PF2/PA2 and PF3/PA3, so GPIO/ADC and TWI drivers must be coordinated. Only the 30 side contacts are included; underside SAMD11/UPDI debug pads are excluded. Its five Arduino PWM pins differ from classic Nano.
+- UNO R4 Minima (ABX00080, 27 November 2023) and WiFi (ABX00087, 23 April 2025) use ArduinoCore-renesas `424e86eff92d37f72123c2b641dd8bbf06a38b47`. Header constants, `g_pin_cfg` RA4M1 port maps and the six initialized PWM channels are parsed from each model's own files. The physical pinout supplies the ADC ANxxx channels and DAC. CAN TX/RX constants are read independently: Minima D4/D5, WiFi D10/D13. Both replace the UNO R3 NC contact with BOOT. Their 32 main contacts and six SPI contacts are included; SWD, coprocessor/Qwiic, LED-matrix and extra power connections are excluded. Main RA4M1 I/O is 5 V; the WiFi board's excluded ESP32-S3/Qwiic connectors use 3.3 V.
+
+UNO and Nano grouping validates the common connector-position geometry, not identical signal names or types. Reference changes update pin capabilities, source links, electrical notes and optional contacts. Plans remain per profile; legacy `arduino-uno-r3` and `arduino-nano-classic` URLs/imports remain supported.
+
+## Espressif reference boards
+
+The guide tables and front/pin-layout images are locked to `espressif/esp-dev-kits` commit `5c06bf1835329d6525f316475f7218aab6acfe79`. A small RST parser reads numbered J1/J2/J3 rows directly; the complete original guides remain the inputs, rather than a handwritten generated pin dataset. Images were visually inspected for left/right and connector order. USB is at the bottom and pin 1 at the antenna end. S3's horizontal front photo is rotated clockwise to that orientation.
+
+- ESP32-DevKitC V4: 38 contacts, J2/J3. WROOM-32E and WROVER share physical pins; GPIO6–11 serve flash and WROVER additionally reserves GPIO16/17 for internal memory. GPIO34/35/36/39 are input-only without internal pull-up/down.
+- ESP32-C3-DevKitM-1: 30 contacts, J1/J3, 15 GPIOs, MINI-1/1U reference. GPIO8 shares the RGB LED; GPIO2/8/9 are strapping pins and GPIO18/19 carry USB.
+- ESP32-S3-DevKitC-1 v1.1: 44 contacts, J1/J3, 36 GPIOs. The WROOM-1-N8 reference uses Quad flash; N8R8 additionally reserves GPIO35–37 for Octal PSRAM. Other WROOM-2 or memory-voltage variants are not claimed compatible. v1.1 RGB uses GPIO38. GPIO46 supports input and output on S3; the input-only restriction from S2 is not copied here. GPIO0/3/45/46 are strapping pins and GPIO19/20 carry USB.
+
+Native ADC/DAC/touch, UART, JTAG, USB and clock names come from the guide cells. Each chip's datasheet provides boot/strapping and GPIO-matrix routing evidence. Matrix choices are explicit routing capabilities, not default firmware assignments or invented numeric AF selectors. Input-only pads never offer output/PWM/I²C routes. Memory-reserved contacts are disabled and rejected on plan import. Driver/ADC2/Wi-Fi and onboard USB/LED sharing remain qualified; the plan does not configure SDK registers.
+
+## ATmega package views
+
+ATmega328P uses the original Atmel 42735B complete datasheet (November 2016), mirrored by Arduino. Tables 6-1 on PDF pages 19/20 are parsed separately for PDIP-28, TQFP-32, QFN/MLF-28 and QFN/MLF-32. The extracted names are compared with visually recorded Figures 5-1 through 5-4. **PDIP PC0 is pin 23:** Table 6-1 incorrectly prints 13; Figure 5-1 and the full physical sequence resolve the error. ADC6/ADC7 exist only in 32-pin packages and remain analog-only. QFN center pads connect to GND outside the perimeter count. PC6 GPIO requires the RSTDISBL fuse; PB6/PB7 depend on clock/oscillator configuration. The raw MCU function names retain their datasheet signals, independent of Arduino aliases.
+
+ATmega2560 uses Microchip DS40002211A, Figure 1-1 (PDF page 2), all 100 TQFP pins and 86 GPIOs. Port A–L alternate-function tables on PDF pages 75–94 are reread. The 64-pin ATmega1281/2561 PDI/PDO footnote is applied, so those functions are not copied onto PE0/PE1. Port E's `CLK0` label is resolved to `CLKO` using the figure and divided-clock description. PF4–PF7 carry JTAG/ADC qualifications; PG3/PG4 depend on asynchronous oscillator use. Mega board D0–D69 and CBGA ball positions are separate numbering systems and are not used as TQFP pin numbers.
+
+The application renders DIP with a pin-1/notch marker, TQFP without an exposed-pad claim, and QFN with its documented center GND. Dense TQFP100 labels use wider spacing and horizontal scrolling. Package variants have distinct physical footprints; only verified common board headers are grouped.

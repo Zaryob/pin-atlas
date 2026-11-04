@@ -228,3 +228,5 @@
 .shared-pin-note { margin-top: 10px; }
 .map-content { overflow: hidden; }
 #diagram { overflow-x: auto; overscroll-behavior-x: contain; }
+
+:root { --pin-dac: var(--pin-adc); --pin-touch: var(--pin-adc); }

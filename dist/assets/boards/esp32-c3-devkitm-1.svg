@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="644" viewBox="0 0 820 644"><g font-family="monospace" text-anchor="middle">
+ <rect x="268" y="55" width="284" height="509" rx="9" fill="#263238" stroke="#9aa7a8" stroke-width="2"/>
+ <rect x="324" y="66" width="172" height="220" rx="3" fill="#bac2c4" stroke="#78888d"/>
+ <rect x="324" y="66" width="172" height="55" fill="#343b40"/><path d="M338 110V80h20v25h20V80h20v25h20V80h20v25h40" fill="none" stroke="#9aa5a8" stroke-width="4"/>
+ <text x="410" y="182" font-size="21" fill="#2c3c42">ESP32-C3</text><text x="410" y="208" font-size="12" fill="#354951">MODULE</text>
+ <text x="410" y="334" font-size="11" fill="#d4dfdf">3.3 V I/O</text><text x="297" y="95" font-size="10" fill="#d4dfdf">J1</text><text x="522" y="95" font-size="10" fill="#d4dfdf">J3</text>
+ <rect x="380" y="370" width="60" height="60" rx="3" fill="#1c2226" stroke="#a3adae"/><text x="410" y="407" font-size="10" fill="#c6d1d1">UART</text>
+ <rect x="307" y="477" width="55" height="32" rx="4" fill="#b6bdbe"/><rect x="458" y="477" width="55" height="32" rx="4" fill="#b6bdbe"/>
+ <text x="334" y="499" font-size="10" fill="#293c41">RESET</text><text x="485" y="499" font-size="10" fill="#293c41">BOOT</text>
+ <rect x="373" y="541" width="74" height="53" rx="4" fill="#c4cdcf" stroke="#5d737b"/><text x="410" y="573" font-size="11" fill="#293c41">USB</text><circle cx="410" cy="465" r="6" fill="#a8b276"/><text x="410" y="490" font-size="10" fill="#d4dfdf">RGB LED</text></g></svg>

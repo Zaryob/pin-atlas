@@ -2,7 +2,7 @@
 
 [English](VERIFICATION.md) · [Türkçe](VERIFICATION.tr.md)
 
-Kontrol tarihi: **4 Kasım 2026**. Kapsam: on dört kart, başlık ve çip profili, **678 fiziksel pin kaydı ve 2.350 alternatif işlev ataması**. Ortak bağlantılar profil başına sayılır. Sayımda uygulamanın soyut `GPIO` seçeneği ve numarasız QFN merkez GND pedi yoktur. Aynı sinyalin farklı pinlerde bulunması ayrı bir atamadır.
+Kontrol tarihi: **4 Kasım 2026**. Kapsam: yirmi dokuz kart, başlık ve çip profili, **1.276 fiziksel pin kaydı ve 4.431 alternatif işlev ataması**. Ortak bağlantılar profil başına sayılır. Sayımda uygulamanın soyut `GPIO` seçeneği ve numarasız QFN merkez GND pedi yoktur. Aynı sinyalin farklı pinlerde bulunması ayrı bir atamadır.
 
 ## Her haritanın dayanağı
 
@@ -44,7 +44,7 @@ Bu yüzden IOVDD eşlemesi tablo satırından körlemesine alınmadı. Şekiller
 
 1. `sources/manifest.json`, her kaynağın sürümünü, değişmez belge adresini/commit’ini ve SHA-256 değerini kilitler.
 2. `scripts/verify-official-sources.py` kaynakları indirip hash doğrular. PDF tablo hücrelerini yeniden okur; satır sarımlarını yalnızca boşluk düzeyinde normalleştirir.
-   CI, ST CDN zaman aşımlarından etkilenmemek için `--table-snapshots` ile `sources/extracted/` içindeki ST tablo kayıtlarını kullanır. Her kaydın hash’i ve özgün PDF hash’i kilitlidir. Aynı ayrıştırıcı her iki girdiden STM32 verisini yeniden üretir; diğer yirmi iki kaynak her iki modda da indirilip doğrulanır. Varsayılan komut özgün ST PDF’lerini yeniden okur.
+   CI, ST CDN zaman aşımlarından etkilenmemek için `--table-snapshots` ile `sources/extracted/` içindeki ST tablo kayıtlarını kullanır. Her kaydın hash’i ve özgün PDF hash’i kilitlidir. Aynı ayrıştırıcı her iki girdiden STM32 verisini yeniden üretir; diğer kırk sekiz kaynak her iki modda da indirilip doğrulanır. Varsayılan komut özgün ST PDF’lerini yeniden okur.
 3. Fiziksel pin numarası, pin adı, pin türü, alternatif işlev, üretici sinyal adı ve F/ALT seçicisi uygulamadaki kayıtla eşleşmelidir.
 4. Şekillerden alınan gözlemler ayrı işaretlenir. Bir sonraki doğrulamada aynı görsel gözlemlerin kullanılması **yeni ve bağımsız bir insan incelemesi sayılmaz**. Hash değişirse kaynak yeniden incelenmeden kabul edilmez.
 5. Oluşturulan bütün pin/işlev satırları [`sources/pin-verification.csv`](../sources/pin-verification.csv) içindedir. Referans kimlikleri `dist/data/evidence.json` içinde belge, sayfa ve tabloya çözülür. Kaynak özeti `dist/data/verification.json` içindedir.
@@ -58,11 +58,11 @@ Pico, Pico W ve Pico 2’nin fiziksel pinleri, her modelin veri sayfasının PDF
 
 Ortak Raspberry Pi 40-pin profili, üreticinin GPIO tablosunu kullanır: B+ ve sonrası, Zero ailesi ve klavyeli modellerin fiziksel düzenini kapsar. Klavyeli modellerde yön ters olabilir; bazı Zero başlıkları lehimli değildir. Eski 26-pin kartlar ve Compute Module dahil değildir. Bu profil işlemciye özgü alternatif işlev içermez; BCM2711 için Pi 4 profili ayrı tutulur.
 
-Yirmi bir üretici belgesi veya kaynak dosyası ve üç Blue Pill topluluk referansı SHA-256 ile kilitlidir. 678 fiziksel pin kaydı ortak bağlantıları profil başına sayar. Ayrıntılı model kaynakları [İngilizce doğrulama kaydında](VERIFICATION.md) bulunur.
+Kırk yedi üretici belgesi veya kaynak dosyası ve üç Blue Pill topluluk referansı SHA-256 ile kilitlidir. 1.276 fiziksel pin kaydı ortak bağlantıları profil başına sayar. Ayrıntılı model kaynakları [İngilizce doğrulama kaydında](VERIFICATION.md) bulunur.
 
 ## Ortak düzen kütüphanesi
 
-On dört kaynak profili on fiziksel düzende sunulur: Pico ailesi, Raspberry Pi 40-pin başlığı, NVIDIA Jetson Orin Nano J12, Blue Pill, STM32F103C8/CB LQFP48, üç Arduino AVR kartı ve iki farklı RP2350 paketi. Gruplanan profillerin pin numaraları, adları ve türleri uygulama tarafından karşılaştırılır. İşlemci işlevleri ve kaynakları aynı ekrandaki referans seçicisinde korunur. Eski profil kimlikleri kayıtlı plan ve paylaşımlarda desteklenir.
+Yirmi dokuz kaynak profili on dokuz fiziksel düzende sunulur. UNO biçimindeki kartların 32 ana kontağı, Nano ailesinin 30 yan kontağı ve ESP32/S3 bellek varyantlarının ortak başlıkları tek kayıtta gruplanır. İsteğe bağlı bağlantılar ve işlemci işlevleri seçilen referansa aittir. Gruplama fiziksel konumları karşılaştırır; BOOT/NC ve analog giriş/GPIO farkları ayrıca korunur. Eski bağlantılar ve planlar özgün işlemci referansına açılır.
 
 ## NVIDIA Jetson Orin Nano · J12
 
@@ -89,3 +89,17 @@ UNO R3 için A000066, klasik Nano için A000005 ve Mega 2560 Rev3 için A000067 
 ArduinoCore-avr `11b9130371e8447920edb65a75706a6c951e51fc` revizyonunun `standard`, `mega` ve `eightanaloginputs` dosyaları commit ve hash ile kilitlidir. GPIO port/bit dizileri, zamanlayıcı dizileri, analog takma adları ve SPI/Wire sabitleri yeniden ayrıştırılır. UART ve donanım INT adları tam pin şemasından okunur. Nano A6/A7 yalnızca analog giriş kabul edilir; mevcut Nano veri sayfasındaki numaralandırma/GPIO etiket hataları kullanılmaz. Mega D0/D1’in PWM işaretleri çekirdekle çelişir; PWM yalnızca D2–D13 ve D44–D46’da sunulur. UNO tablosundaki A4/SD4, A5/SD5 hataları SDA/A4 ve SCL/A5 olarak çözülür.
 
 Arayüzde GPIO sayısı bağımsız hatları, fiziksel pin sayısı tekrarlanan kontaklar dahil bağlantıları sayar. SDA/SCL ve ICSP tekrarları belirtilir; planlama ve içe aktarma aynı GPIO hattını iki kez kullanmayı reddeder. Ayrıntılı kaynak sayfaları ve yön bilgisi İngilizce kayıtta bulunur.
+
+## Yeni referanslar ve paketler
+
+Leonardo/Micro ATmega32U4 eşlemeleri resmî tam pin şemaları ve aynı revizyona kilitli Arduino AVR çekirdeğinden yeniden çıkarılır. Leonardo’da I²C D2/D3, SPI ise ICSP D14–D16 üzerindedir. Micro’nun ek SPI yan kontakları nedeniyle ayrı fiziksel düzeni vardır. USB Serial ve donanım Serial1 farklı bağlantılardır.
+
+Nano Every için ArduinoCore-megaavr `e8edb4ef2e8ab5c98544c3884a653f0b9c1318dc` kullanılır. A6/A7 dijital I/O da destekler; A4/A5 iki MCU portuna bağlıdır. Beş Arduino PWM pini klasik Nano’dan farklıdır. Yalnızca 30 yan kontak dahil edilir.
+
+UNO R4 Minima/WiFi için ArduinoCore-renesas `424e86eff92d37f72123c2b641dd8bbf06a38b47` port dizileri, PWM başlangıçları ve çevre birimi sabitleri okunur. İlk güç başlığı kontağı BOOT’tur; A0 DAC destekler. CAN Minima’da D4/D5, WiFi’da D10/D13’tedir. Ana 5 V başlıklar ve altı SPI kontağı kapsam dahilindedir; SWD, ESP32-S3/Qwiic, matris ve ek güç bağlantıları dahil değildir.
+
+Espressif kılavuz ve görselleri `esp-dev-kits` commit `5c06bf1835329d6525f316475f7218aab6acfe79` ile kilitlidir. RST başlık tabloları yeniden ayrıştırılır. USB alttadır. DevKitC V4 WROOM/WROVER, C3 DevKitM-1 ve S3 DevKitC-1 v1.1 N8/N8R8 tam modelleri belirtilir. Flash/PSRAM kontakları plana kapalıdır; girişe özel pinlerde çıkış/PWM seçenekleri sunulmaz. GPIO matrix seçenekleri yazılımın varsayılan pin ataması değildir. S3 v1.1 RGB GPIO38’dedir; S3 GPIO46 giriş/çıkış destekler. ADC2, Wi-Fi, USB, strapping ve LED paylaşımları ayrıca açıklanır.
+
+ATmega328P’nin PDIP-28, TQFP-32, QFN/MLF-28 ve QFN/MLF-32 paketleri Atmel 42735B Tablo 6-1’den çıkarılıp Şekil 5-1–5-4 ile karşılaştırılır. PDIP PC0 pin 23’tür; tablonun 13 yazan hatası şekille çözülür. ADC6/7 yalnızca 32-pin paketlerde vardır. PC6 reset sigortasına, PB6/PB7 saat ayarına bağlıdır. QFN merkez GND pedi çevre pin sayısına dahil edilmez.
+
+ATmega2560 TQFP-100 için DS40002211A Şekil 1-1’deki 100 bacak ve 86 GPIO kullanılır. PDF s. 75–94 port tabloları yeniden okunur. 64-pin parçalara özgü PDI/PDO işlevleri PE0/PE1’e kopyalanmaz; CLK0 yazımı CLKO olarak şekil ve açıklamayla çözülür. JTAG/ADC ve osilatör koşulları korunur. Bu numaralar Mega D0–D69 veya CBGA topları değildir. Ayrıntılı belge sayfaları İngilizce kayıtta bulunur.

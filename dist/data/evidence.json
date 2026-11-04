@@ -225,6 +225,253 @@
       "url": "https://raw.githubusercontent.com/arduino/ArduinoCore-avr/11b9130371e8447920edb65a75706a6c951e51fc/variants/eightanaloginputs/pins_arduino.h",
       "viewUrl": "https://github.com/arduino/ArduinoCore-avr/blob/11b9130371e8447920edb65a75706a6c951e51fc/variants/eightanaloginputs/pins_arduino.h",
       "sha256": "f781478ed9f9507b6553e44dc90873103ea84e654528dc0e34901a32bfee3149"
+    },
+    {
+      "id": "arduino-leonardo-pinout",
+      "title": "Arduino leonardo full pinout",
+      "publisher": "Arduino",
+      "revision": "2025-11-25",
+      "file": "leonardo-full-pinout.pdf",
+      "url": "https://docs.arduino.cc/resources/pinouts/A000057-full-pinout.pdf",
+      "sha256": "a7bf8c0087aa44cf7c3b0e958f10389340b6c7b3425ca4047aa1e42d9818821e"
+    },
+    {
+      "id": "arduino-micro-pinout",
+      "title": "Arduino micro full pinout",
+      "publisher": "Arduino",
+      "revision": "2020-11-10",
+      "file": "micro-full-pinout.pdf",
+      "url": "https://docs.arduino.cc/resources/pinouts/A000053-full-pinout.pdf",
+      "sha256": "4e39fad1819d23b646e83af885cd129276ffe7a736c620f7c7959ebe56706a4f"
+    },
+    {
+      "id": "arduino-nano-every-pinout",
+      "title": "Arduino nano-every full pinout",
+      "publisher": "Arduino",
+      "revision": "2021-12-15",
+      "file": "nano-every-full-pinout.pdf",
+      "url": "https://docs.arduino.cc/resources/pinouts/ABX00028-full-pinout.pdf",
+      "sha256": "028f44dd75001dcdfe181e581ea8a51385af2ccc65e68012f87dc9cc1252f2bb"
+    },
+    {
+      "id": "arduino-nano-every-datasheet",
+      "title": "Arduino nano-every datasheet",
+      "publisher": "Arduino",
+      "revision": "Snapshot reviewed 2026-11-04",
+      "file": "nano-every-datasheet.pdf",
+      "url": "https://docs.arduino.cc/resources/datasheets/ABX00028-datasheet.pdf",
+      "sha256": "80e42abe28b0b78a1b2f2ca683029861dcf7b5c2f85ac6211bf0d99cd2572f35"
+    },
+    {
+      "id": "arduino-uno-r4-minima-pinout",
+      "title": "Arduino uno-r4-minima full pinout",
+      "publisher": "Arduino",
+      "revision": "2023-11-27",
+      "file": "uno-r4-minima-full-pinout.pdf",
+      "url": "https://docs.arduino.cc/resources/pinouts/ABX00080-full-pinout.pdf",
+      "sha256": "853b0664a1cf51040738a51385693f9a5c615d4337035d6b36c3c00f6ff76f3c"
+    },
+    {
+      "id": "arduino-uno-r4-minima-datasheet",
+      "title": "Arduino uno-r4-minima datasheet",
+      "publisher": "Arduino",
+      "revision": "Snapshot reviewed 2026-11-04",
+      "file": "uno-r4-minima-datasheet.pdf",
+      "url": "https://docs.arduino.cc/resources/datasheets/ABX00080-datasheet.pdf",
+      "sha256": "52c207cfd5fd90d3195097a52eb3d38327f438157e428787ab0e1afc73df67c7"
+    },
+    {
+      "id": "arduino-uno-r4-wifi-pinout",
+      "title": "Arduino uno-r4-wifi full pinout",
+      "publisher": "Arduino",
+      "revision": "2025-04-23",
+      "file": "uno-r4-wifi-full-pinout.pdf",
+      "url": "https://docs.arduino.cc/resources/pinouts/ABX00087-full-pinout.pdf",
+      "sha256": "5c4dc5fcee15d3f870eb3a01f0c114993032f39e4d8facc52f84dd75d7ce26cc"
+    },
+    {
+      "id": "arduino-uno-r4-wifi-datasheet",
+      "title": "Arduino uno-r4-wifi datasheet",
+      "publisher": "Arduino",
+      "revision": "Snapshot reviewed 2026-11-04",
+      "file": "uno-r4-wifi-datasheet.pdf",
+      "url": "https://docs.arduino.cc/resources/datasheets/ABX00087-datasheet.pdf",
+      "sha256": "7453eb59e66d408db007dca4260e4e7c022b484d950131b088e9217268842af1"
+    },
+    {
+      "id": "arduino-avr-leonardo",
+      "title": "Arduino official core · variants/leonardo/pins_arduino.h",
+      "publisher": "Arduino",
+      "revision": "11b9130371e8447920edb65a75706a6c951e51fc",
+      "file": "avr-leonardo.h",
+      "url": "https://raw.githubusercontent.com/arduino/ArduinoCore-avr/11b9130371e8447920edb65a75706a6c951e51fc/variants/leonardo/pins_arduino.h",
+      "sha256": "449274743a34fc1a7601b9aa06035bc9f1f5d951b4c4bdc685b8bdfca2c41c1e",
+      "viewUrl": "https://github.com/arduino/ArduinoCore-avr/blob/11b9130371e8447920edb65a75706a6c951e51fc/variants/leonardo/pins_arduino.h"
+    },
+    {
+      "id": "arduino-micro-core",
+      "title": "Arduino official core · variants/micro/pins_arduino.h",
+      "publisher": "Arduino",
+      "revision": "11b9130371e8447920edb65a75706a6c951e51fc",
+      "file": "avr-micro.h",
+      "url": "https://raw.githubusercontent.com/arduino/ArduinoCore-avr/11b9130371e8447920edb65a75706a6c951e51fc/variants/micro/pins_arduino.h",
+      "sha256": "eb9aaa91e2a4131b0044f38ba29cdcc7160ab41c03ebbd7ba471226d83a566d0",
+      "viewUrl": "https://github.com/arduino/ArduinoCore-avr/blob/11b9130371e8447920edb65a75706a6c951e51fc/variants/micro/pins_arduino.h"
+    },
+    {
+      "id": "arduino-nano-every-core",
+      "title": "Arduino official core · variants/nona4809/pins_arduino.h",
+      "publisher": "Arduino",
+      "revision": "e8edb4ef2e8ab5c98544c3884a653f0b9c1318dc",
+      "file": "nano-every.h",
+      "url": "https://raw.githubusercontent.com/arduino/ArduinoCore-megaavr/e8edb4ef2e8ab5c98544c3884a653f0b9c1318dc/variants/nona4809/pins_arduino.h",
+      "sha256": "a1fa5345a153c617e97ce9478991123de5f7b6482d2e69e9905bbb85da55d07a",
+      "viewUrl": "https://github.com/arduino/ArduinoCore-megaavr/blob/e8edb4ef2e8ab5c98544c3884a653f0b9c1318dc/variants/nona4809/pins_arduino.h"
+    },
+    {
+      "id": "arduino-uno-r4-minima-core",
+      "title": "Arduino Renesas core · variants/MINIMA/pins_arduino.h",
+      "publisher": "Arduino",
+      "revision": "424e86eff92d37f72123c2b641dd8bbf06a38b47",
+      "file": "uno-r4-minima-pins_arduino.h",
+      "url": "https://raw.githubusercontent.com/arduino/ArduinoCore-renesas/424e86eff92d37f72123c2b641dd8bbf06a38b47/variants/MINIMA/pins_arduino.h",
+      "sha256": "a15a81f8d8d99ee2f99b7a024a9092b839ef960312055397f0bcd348bf2a4b4f",
+      "viewUrl": "https://github.com/arduino/ArduinoCore-renesas/blob/424e86eff92d37f72123c2b641dd8bbf06a38b47/variants/MINIMA/pins_arduino.h"
+    },
+    {
+      "id": "arduino-uno-r4-minima-variant",
+      "title": "Arduino Renesas core · variants/MINIMA/variant.cpp",
+      "publisher": "Arduino",
+      "revision": "424e86eff92d37f72123c2b641dd8bbf06a38b47",
+      "file": "uno-r4-minima-variant.cpp",
+      "url": "https://raw.githubusercontent.com/arduino/ArduinoCore-renesas/424e86eff92d37f72123c2b641dd8bbf06a38b47/variants/MINIMA/variant.cpp",
+      "sha256": "97e5d39f7bfe72b5c8c504071c25b72aeb625042b8d24583c138b58af2a4eae6",
+      "viewUrl": "https://github.com/arduino/ArduinoCore-renesas/blob/424e86eff92d37f72123c2b641dd8bbf06a38b47/variants/MINIMA/variant.cpp"
+    },
+    {
+      "id": "arduino-uno-r4-wifi-core",
+      "title": "Arduino Renesas core · variants/UNOWIFIR4/pins_arduino.h",
+      "publisher": "Arduino",
+      "revision": "424e86eff92d37f72123c2b641dd8bbf06a38b47",
+      "file": "uno-r4-wifi-pins_arduino.h",
+      "url": "https://raw.githubusercontent.com/arduino/ArduinoCore-renesas/424e86eff92d37f72123c2b641dd8bbf06a38b47/variants/UNOWIFIR4/pins_arduino.h",
+      "sha256": "15e21b38e3960f4c84a146dd9cab9267616d64f42786411eabee445fa6f3862a",
+      "viewUrl": "https://github.com/arduino/ArduinoCore-renesas/blob/424e86eff92d37f72123c2b641dd8bbf06a38b47/variants/UNOWIFIR4/pins_arduino.h"
+    },
+    {
+      "id": "arduino-uno-r4-wifi-variant",
+      "title": "Arduino Renesas core · variants/UNOWIFIR4/variant.cpp",
+      "publisher": "Arduino",
+      "revision": "424e86eff92d37f72123c2b641dd8bbf06a38b47",
+      "file": "uno-r4-wifi-variant.cpp",
+      "url": "https://raw.githubusercontent.com/arduino/ArduinoCore-renesas/424e86eff92d37f72123c2b641dd8bbf06a38b47/variants/UNOWIFIR4/variant.cpp",
+      "sha256": "4596cfafc288d025d7bd11845920334e563307104f673d336b57d36daf9003ba",
+      "viewUrl": "https://github.com/arduino/ArduinoCore-renesas/blob/424e86eff92d37f72123c2b641dd8bbf06a38b47/variants/UNOWIFIR4/variant.cpp"
+    },
+    {
+      "id": "esp32-devkit-guide",
+      "title": "esp32-devkitc official user guide",
+      "publisher": "Espressif",
+      "revision": "5c06bf1835329d6525f316475f7218aab6acfe79",
+      "file": "esp32-guide.rst",
+      "url": "https://raw.githubusercontent.com/espressif/esp-dev-kits/5c06bf1835329d6525f316475f7218aab6acfe79/docs/en/esp32-devkitc/user_guide.rst",
+      "sha256": "a6e89080a3a5f9b99f33e63e7a0d9788fa858ad11cd25feffbb9e4df15229f1b",
+      "viewUrl": "https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32/esp32-devkitc/user_guide.html"
+    },
+    {
+      "id": "esp32-devkit-photo",
+      "title": "esp32-devkitc official front/pin-layout image",
+      "publisher": "Espressif",
+      "revision": "5c06bf1835329d6525f316475f7218aab6acfe79",
+      "file": "esp32-photo.png",
+      "url": "https://raw.githubusercontent.com/espressif/esp-dev-kits/5c06bf1835329d6525f316475f7218aab6acfe79/docs/_static/esp32-devkitc/esp32_devkitC_v4_pinlayout.png",
+      "sha256": "e3217229b995ec7e1b5c525ffd93eced3b3a17827806907dd25a1609667283e2",
+      "viewUrl": "https://github.com/espressif/esp-dev-kits/blob/5c06bf1835329d6525f316475f7218aab6acfe79/docs/_static/esp32-devkitc/esp32_devkitC_v4_pinlayout.png"
+    },
+    {
+      "id": "esp32-datasheet",
+      "title": "ESP32 series datasheet",
+      "publisher": "Espressif",
+      "revision": "Snapshot reviewed 2026-11-04",
+      "file": "esp32.pdf",
+      "url": "https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf",
+      "sha256": "a7917e6b47528c9dcab06837a49d452e582751335797db879f1cf2d17cd29adf"
+    },
+    {
+      "id": "esp32c3-devkit-guide",
+      "title": "esp32-c3-devkitm-1 official user guide",
+      "publisher": "Espressif",
+      "revision": "5c06bf1835329d6525f316475f7218aab6acfe79",
+      "file": "esp32c3-guide.rst",
+      "url": "https://raw.githubusercontent.com/espressif/esp-dev-kits/5c06bf1835329d6525f316475f7218aab6acfe79/docs/en/esp32-c3-devkitm-1/user_guide.rst",
+      "sha256": "6859d66ec8f3793845bc993e5993db4bbb0310c434f30a41c019a0c507f4ae2c",
+      "viewUrl": "https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32c3/esp32-c3-devkitm-1/user_guide.html"
+    },
+    {
+      "id": "esp32c3-devkit-photo",
+      "title": "esp32-c3-devkitm-1 official front/pin-layout image",
+      "publisher": "Espressif",
+      "revision": "5c06bf1835329d6525f316475f7218aab6acfe79",
+      "file": "esp32c3-photo.png",
+      "url": "https://raw.githubusercontent.com/espressif/esp-dev-kits/5c06bf1835329d6525f316475f7218aab6acfe79/docs/_static/esp32-c3-devkitm-1/esp32-c3-devkitm-1-v1-pinout.png",
+      "sha256": "fc7af279350219e235de68524038271ce9dc4cfa28c908b7315eee2676c997c7",
+      "viewUrl": "https://github.com/espressif/esp-dev-kits/blob/5c06bf1835329d6525f316475f7218aab6acfe79/docs/_static/esp32-c3-devkitm-1/esp32-c3-devkitm-1-v1-pinout.png"
+    },
+    {
+      "id": "esp32c3-datasheet",
+      "title": "ESP32C3 series datasheet",
+      "publisher": "Espressif",
+      "revision": "Snapshot reviewed 2026-11-04",
+      "file": "esp32c3.pdf",
+      "url": "https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf",
+      "sha256": "833fc000b4b3c3d39c496fcbd597fed5806956503ce7390b19cc8ae82f19f968"
+    },
+    {
+      "id": "esp32s3-devkit-guide",
+      "title": "esp32-s3-devkitc-1 official user guide",
+      "publisher": "Espressif",
+      "revision": "5c06bf1835329d6525f316475f7218aab6acfe79",
+      "file": "esp32s3-guide.rst",
+      "url": "https://raw.githubusercontent.com/espressif/esp-dev-kits/5c06bf1835329d6525f316475f7218aab6acfe79/docs/en/esp32-s3-devkitc-1/user_guide_v1.1.rst",
+      "sha256": "ee0b339051b013bdccbed9134335ee5d78e6564072d636c7127c3495936b116d",
+      "viewUrl": "https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32s3/esp32-s3-devkitc-1/user_guide_v1.1.html"
+    },
+    {
+      "id": "esp32s3-devkit-photo",
+      "title": "esp32-s3-devkitc-1 official front/pin-layout image",
+      "publisher": "Espressif",
+      "revision": "5c06bf1835329d6525f316475f7218aab6acfe79",
+      "file": "esp32s3-photo.png",
+      "url": "https://raw.githubusercontent.com/espressif/esp-dev-kits/5c06bf1835329d6525f316475f7218aab6acfe79/docs/_static/esp32-s3-devkitc-1/ESP32-S3-DevKitC-1_v2-annotated-photo.png",
+      "sha256": "37452262d8f6a924f8bd55552b94c668e7f88ea2e3b0df5992a29527b529ba0e",
+      "viewUrl": "https://github.com/espressif/esp-dev-kits/blob/5c06bf1835329d6525f316475f7218aab6acfe79/docs/_static/esp32-s3-devkitc-1/ESP32-S3-DevKitC-1_v2-annotated-photo.png"
+    },
+    {
+      "id": "esp32s3-datasheet",
+      "title": "ESP32S3 series datasheet",
+      "publisher": "Espressif",
+      "revision": "Snapshot reviewed 2026-11-04",
+      "file": "esp32s3.pdf",
+      "url": "https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf",
+      "sha256": "2d5a7cb7fd559d8d972bd88db32669c0196d23f22d7afaafb0f63d099b589a3f"
+    },
+    {
+      "id": "atmega328p-datasheet",
+      "title": "Atmel ATmega328/P complete datasheet (Arduino mirror)",
+      "publisher": "Microchip / Atmel",
+      "revision": "Atmel-42735B · November 2016",
+      "file": "atmega328p.pdf",
+      "url": "https://docs.arduino.cc/resources/datasheets/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf",
+      "sha256": "ab284b40243732b419bee9592607db15b6160101855800b3d629bc666b7c3e7b"
+    },
+    {
+      "id": "atmega2560-datasheet",
+      "title": "ATmega640/1280/1281/2560/2561 complete datasheet",
+      "publisher": "Microchip",
+      "revision": "DS40002211A",
+      "file": "atmega2560.pdf",
+      "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/ATmega640-1280-1281-2560-2561-Datasheet-DS40002211A.pdf",
+      "sha256": "978a018098bc1a136d3232b1b58aa3c652324c9b693a99830e0770bed2c76fb4"
     }
   ],
   "references": {
@@ -786,6 +1033,406 @@
       "url": "https://docs.arduino.cc/resources/pinouts/A000067-full-pinout.pdf#page=3",
       "page": 3,
       "locator": "D22–D53 end header · near-USB row and outer row, oriented with USB at top",
+      "method": "visual-diagram"
+    },
+    "arduino-leonardo-headers": {
+      "document": "arduino-leonardo-pinout",
+      "title": "Arduino leonardo full pinout",
+      "url": "https://docs.arduino.cc/resources/pinouts/A000057-full-pinout.pdf#page=1",
+      "page": 1,
+      "locator": "Main headers · USB at top · recorded connector positions, signal labels and optional SPI/ICSP connector",
+      "method": "visual-diagram"
+    },
+    "arduino-leonardo-core": {
+      "document": "arduino-avr-leonardo",
+      "title": "Arduino official core · variants/leonardo/pins_arduino.h",
+      "url": "https://github.com/arduino/ArduinoCore-avr/blob/11b9130371e8447920edb65a75706a6c951e51fc/variants/leonardo/pins_arduino.h",
+      "page": null,
+      "locator": "Official core · Arduino pin aliases, MCU port map, analog channels, SPI/Wire and supported PWM outputs",
+      "method": "source-code"
+    },
+    "arduino-leonardo-signals": {
+      "document": "arduino-leonardo-pinout",
+      "title": "Arduino leonardo full pinout",
+      "url": "https://docs.arduino.cc/resources/pinouts/A000057-full-pinout.pdf#page=2",
+      "page": 2,
+      "locator": "MCU signals and peripheral capabilities; Arduino PWM support comes from the matching core",
+      "method": "pdf-text"
+    },
+    "arduino-micro-headers": {
+      "document": "arduino-micro-pinout",
+      "title": "Arduino micro full pinout",
+      "url": "https://docs.arduino.cc/resources/pinouts/A000053-full-pinout.pdf#page=1",
+      "page": 1,
+      "locator": "Main headers · USB at top · recorded connector positions, signal labels and optional SPI/ICSP connector",
+      "method": "visual-diagram"
+    },
+    "arduino-micro-core": {
+      "document": "arduino-avr-leonardo",
+      "title": "Arduino official core · variants/leonardo/pins_arduino.h",
+      "url": "https://github.com/arduino/ArduinoCore-avr/blob/11b9130371e8447920edb65a75706a6c951e51fc/variants/leonardo/pins_arduino.h",
+      "page": null,
+      "locator": "Official core · Arduino pin aliases, MCU port map, analog channels, SPI/Wire and supported PWM outputs",
+      "method": "source-code"
+    },
+    "arduino-micro-signals": {
+      "document": "arduino-micro-pinout",
+      "title": "Arduino micro full pinout",
+      "url": "https://docs.arduino.cc/resources/pinouts/A000053-full-pinout.pdf#page=2",
+      "page": 2,
+      "locator": "MCU signals and peripheral capabilities; Arduino PWM support comes from the matching core",
+      "method": "pdf-text"
+    },
+    "arduino-nano-every-headers": {
+      "document": "arduino-nano-every-pinout",
+      "title": "Arduino nano-every full pinout",
+      "url": "https://docs.arduino.cc/resources/pinouts/ABX00028-full-pinout.pdf#page=1",
+      "page": 1,
+      "locator": "Main headers · USB at top · recorded connector positions, signal labels and optional SPI/ICSP connector",
+      "method": "visual-diagram"
+    },
+    "arduino-nano-every-core": {
+      "document": "arduino-nano-every-core",
+      "title": "Arduino official core · variants/nona4809/pins_arduino.h",
+      "url": "https://github.com/arduino/ArduinoCore-megaavr/blob/e8edb4ef2e8ab5c98544c3884a653f0b9c1318dc/variants/nona4809/pins_arduino.h",
+      "page": null,
+      "locator": "Official core · Arduino pin aliases, MCU port map, analog channels, SPI/Wire and supported PWM outputs",
+      "method": "source-code"
+    },
+    "arduino-nano-every-signals": {
+      "document": "arduino-nano-every-pinout",
+      "title": "Arduino nano-every full pinout",
+      "url": "https://docs.arduino.cc/resources/pinouts/ABX00028-full-pinout.pdf#page=2",
+      "page": 2,
+      "locator": "MCU signals and peripheral capabilities; Arduino PWM support comes from the matching core",
+      "method": "pdf-text"
+    },
+    "arduino-uno-r4-minima-headers": {
+      "document": "arduino-uno-r4-minima-pinout",
+      "title": "Arduino uno-r4-minima full pinout",
+      "url": "https://docs.arduino.cc/resources/pinouts/ABX00080-full-pinout.pdf#page=1",
+      "page": 1,
+      "locator": "Main headers · USB at top · recorded connector positions, signal labels and optional SPI/ICSP connector",
+      "method": "visual-diagram"
+    },
+    "arduino-uno-r4-minima-core": {
+      "document": "arduino-uno-r4-minima-core",
+      "title": "Arduino Renesas core · variants/MINIMA/pins_arduino.h",
+      "url": "https://github.com/arduino/ArduinoCore-renesas/blob/424e86eff92d37f72123c2b641dd8bbf06a38b47/variants/MINIMA/pins_arduino.h",
+      "page": null,
+      "locator": "Official core · Arduino pin aliases, MCU port map, analog channels, SPI/Wire and supported PWM outputs",
+      "method": "source-code"
+    },
+    "arduino-uno-r4-minima-signals": {
+      "document": "arduino-uno-r4-minima-pinout",
+      "title": "Arduino uno-r4-minima full pinout",
+      "url": "https://docs.arduino.cc/resources/pinouts/ABX00080-full-pinout.pdf#page=4",
+      "page": 4,
+      "locator": "MCU signals and peripheral capabilities; Arduino PWM support comes from the matching core",
+      "method": "pdf-text"
+    },
+    "arduino-uno-r4-minima-variant": {
+      "document": "arduino-uno-r4-minima-variant",
+      "title": "Arduino Renesas core · variants/MINIMA/variant.cpp",
+      "url": "https://github.com/arduino/ArduinoCore-renesas/blob/424e86eff92d37f72123c2b641dd8bbf06a38b47/variants/MINIMA/variant.cpp",
+      "page": null,
+      "locator": "g_pin_cfg · RA4M1 port map; initVariant · six Arduino PWM channels",
+      "method": "source-code"
+    },
+    "arduino-uno-r4-wifi-headers": {
+      "document": "arduino-uno-r4-wifi-pinout",
+      "title": "Arduino uno-r4-wifi full pinout",
+      "url": "https://docs.arduino.cc/resources/pinouts/ABX00087-full-pinout.pdf#page=1",
+      "page": 1,
+      "locator": "Main headers · USB at top · recorded connector positions, signal labels and optional SPI/ICSP connector",
+      "method": "visual-diagram"
+    },
+    "arduino-uno-r4-wifi-core": {
+      "document": "arduino-uno-r4-wifi-core",
+      "title": "Arduino Renesas core · variants/UNOWIFIR4/pins_arduino.h",
+      "url": "https://github.com/arduino/ArduinoCore-renesas/blob/424e86eff92d37f72123c2b641dd8bbf06a38b47/variants/UNOWIFIR4/pins_arduino.h",
+      "page": null,
+      "locator": "Official core · Arduino pin aliases, MCU port map, analog channels, SPI/Wire and supported PWM outputs",
+      "method": "source-code"
+    },
+    "arduino-uno-r4-wifi-signals": {
+      "document": "arduino-uno-r4-wifi-pinout",
+      "title": "Arduino uno-r4-wifi full pinout",
+      "url": "https://docs.arduino.cc/resources/pinouts/ABX00087-full-pinout.pdf#page=4",
+      "page": 4,
+      "locator": "MCU signals and peripheral capabilities; Arduino PWM support comes from the matching core",
+      "method": "pdf-text"
+    },
+    "arduino-uno-r4-wifi-variant": {
+      "document": "arduino-uno-r4-wifi-variant",
+      "title": "Arduino Renesas core · variants/UNOWIFIR4/variant.cpp",
+      "url": "https://github.com/arduino/ArduinoCore-renesas/blob/424e86eff92d37f72123c2b641dd8bbf06a38b47/variants/UNOWIFIR4/variant.cpp",
+      "page": null,
+      "locator": "g_pin_cfg · RA4M1 port map; initVariant · six Arduino PWM channels",
+      "method": "source-code"
+    },
+    "esp32-devkitc-v4-header": {
+      "document": "esp32-devkit-guide",
+      "title": "esp32-devkitc official user guide",
+      "url": "https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32/esp32-devkitc/user_guide.html",
+      "page": null,
+      "locator": "Header Block · J2/J3 numbered rows and module-specific restrictions",
+      "method": "source-table"
+    },
+    "esp32-devkitc-v4-orientation": {
+      "document": "esp32-devkit-photo",
+      "title": "esp32-devkitc official front/pin-layout image",
+      "url": "https://github.com/espressif/esp-dev-kits/blob/5c06bf1835329d6525f316475f7218aab6acfe79/docs/_static/esp32-devkitc/esp32_devkitC_v4_pinlayout.png",
+      "page": null,
+      "locator": "Official front/pin-layout image · USB at bottom, antenna at top; header numbers start at antenna end",
+      "method": "visual-diagram"
+    },
+    "esp32-devkitc-v4-matrix": {
+      "document": "esp32-datasheet",
+      "title": "ESP32 series datasheet",
+      "url": "https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf#page=16",
+      "page": 16,
+      "locator": "I/O pins / IO MUX and GPIO Matrix · routable peripheral capabilities, not a default firmware pin assignment",
+      "method": "pdf-text"
+    },
+    "esp32-devkitc-v4-strapping": {
+      "document": "esp32-datasheet",
+      "title": "ESP32 series datasheet",
+      "url": "https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf#page=22",
+      "page": 22,
+      "locator": "Boot configurations · strapping levels are sampled during reset",
+      "method": "pdf-table"
+    },
+    "esp32-c3-devkitm-1-header": {
+      "document": "esp32c3-devkit-guide",
+      "title": "esp32-c3-devkitm-1 official user guide",
+      "url": "https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32c3/esp32-c3-devkitm-1/user_guide.html",
+      "page": null,
+      "locator": "Header Block · J1/J3 numbered rows and module-specific restrictions",
+      "method": "source-table"
+    },
+    "esp32-c3-devkitm-1-orientation": {
+      "document": "esp32c3-devkit-photo",
+      "title": "esp32-c3-devkitm-1 official front/pin-layout image",
+      "url": "https://github.com/espressif/esp-dev-kits/blob/5c06bf1835329d6525f316475f7218aab6acfe79/docs/_static/esp32-c3-devkitm-1/esp32-c3-devkitm-1-v1-pinout.png",
+      "page": null,
+      "locator": "Official front/pin-layout image · USB at bottom, antenna at top; header numbers start at antenna end",
+      "method": "visual-diagram"
+    },
+    "esp32-c3-devkitm-1-matrix": {
+      "document": "esp32c3-datasheet",
+      "title": "ESP32C3 series datasheet",
+      "url": "https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf#page=19",
+      "page": 19,
+      "locator": "I/O pins / IO MUX and GPIO Matrix · routable peripheral capabilities, not a default firmware pin assignment",
+      "method": "pdf-text"
+    },
+    "esp32-c3-devkitm-1-strapping": {
+      "document": "esp32c3-datasheet",
+      "title": "ESP32C3 series datasheet",
+      "url": "https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf#page=30",
+      "page": 30,
+      "locator": "Boot configurations · strapping levels are sampled during reset",
+      "method": "pdf-table"
+    },
+    "esp32-s3-devkitc-1-header": {
+      "document": "esp32s3-devkit-guide",
+      "title": "esp32-s3-devkitc-1 official user guide",
+      "url": "https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32s3/esp32-s3-devkitc-1/user_guide_v1.1.html",
+      "page": null,
+      "locator": "Header Block · J1/J3 numbered rows and module-specific restrictions",
+      "method": "source-table"
+    },
+    "esp32-s3-devkitc-1-orientation": {
+      "document": "esp32s3-devkit-photo",
+      "title": "esp32-s3-devkitc-1 official front/pin-layout image",
+      "url": "https://github.com/espressif/esp-dev-kits/blob/5c06bf1835329d6525f316475f7218aab6acfe79/docs/_static/esp32-s3-devkitc-1/ESP32-S3-DevKitC-1_v2-annotated-photo.png",
+      "page": null,
+      "locator": "Official front/pin-layout image · USB at bottom, antenna at top; header numbers start at antenna end",
+      "method": "visual-diagram"
+    },
+    "esp32-s3-devkitc-1-matrix": {
+      "document": "esp32s3-datasheet",
+      "title": "ESP32S3 series datasheet",
+      "url": "https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf#page=20",
+      "page": 20,
+      "locator": "I/O pins / IO MUX and GPIO Matrix · routable peripheral capabilities, not a default firmware pin assignment",
+      "method": "pdf-text"
+    },
+    "esp32-s3-devkitc-1-strapping": {
+      "document": "esp32s3-datasheet",
+      "title": "ESP32S3 series datasheet",
+      "url": "https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf#page=32",
+      "page": 32,
+      "locator": "Boot configurations · strapping levels are sampled during reset",
+      "method": "pdf-table"
+    },
+    "atmega328p-reset-fuse": {
+      "document": "atmega328p-datasheet",
+      "title": "Atmel ATmega328/P complete datasheet (Arduino mirror)",
+      "url": "https://docs.arduino.cc/resources/datasheets/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=18",
+      "page": 18,
+      "locator": "§5.2.5 · PC6/RESET · RSTDISBL fuse condition and reset behavior",
+      "method": "pdf-text"
+    },
+    "atmega328p-clock-pins": {
+      "document": "atmega328p-datasheet",
+      "title": "Atmel ATmega328/P complete datasheet (Arduino mirror)",
+      "url": "https://docs.arduino.cc/resources/datasheets/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=17",
+      "page": 17,
+      "locator": "§5.2.3 continued on page 18 · PB6/PB7 clock selection and asynchronous Timer2",
+      "method": "pdf-text"
+    },
+    "atmega328p-mux-19": {
+      "document": "atmega328p-datasheet",
+      "title": "Atmel ATmega328/P complete datasheet (Arduino mirror)",
+      "url": "https://docs.arduino.cc/resources/datasheets/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=19",
+      "page": 19,
+      "locator": "§6 · Table 6-1 · PORT Function Multiplexing; PDIP PC0 typo resolved using Figure 5-1",
+      "method": "pdf-table"
+    },
+    "atmega328p-mux-20": {
+      "document": "atmega328p-datasheet",
+      "title": "Atmel ATmega328/P complete datasheet (Arduino mirror)",
+      "url": "https://docs.arduino.cc/resources/datasheets/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=20",
+      "page": 20,
+      "locator": "§6 · Table 6-1 · PORT Function Multiplexing; PDIP PC0 typo resolved using Figure 5-1",
+      "method": "pdf-table"
+    },
+    "atmega328p-pdip28-physical": {
+      "document": "atmega328p-datasheet",
+      "title": "Atmel ATmega328/P complete datasheet (Arduino mirror)",
+      "url": "https://docs.arduino.cc/resources/datasheets/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=14",
+      "page": 14,
+      "locator": "§5 · package pin diagram · top view; package-specific numbering and exposed-pad qualification",
+      "method": "visual-diagram"
+    },
+    "atmega328p-tqfp32-physical": {
+      "document": "atmega328p-datasheet",
+      "title": "Atmel ATmega328/P complete datasheet (Arduino mirror)",
+      "url": "https://docs.arduino.cc/resources/datasheets/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=16",
+      "page": 16,
+      "locator": "§5 · package pin diagram · top view; package-specific numbering and exposed-pad qualification",
+      "method": "visual-diagram"
+    },
+    "atmega328p-qfn32-physical": {
+      "document": "atmega328p-datasheet",
+      "title": "Atmel ATmega328/P complete datasheet (Arduino mirror)",
+      "url": "https://docs.arduino.cc/resources/datasheets/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=17",
+      "page": 17,
+      "locator": "§5 · package pin diagram · top view; package-specific numbering and exposed-pad qualification",
+      "method": "visual-diagram"
+    },
+    "atmega328p-qfn28-physical": {
+      "document": "atmega328p-datasheet",
+      "title": "Atmel ATmega328/P complete datasheet (Arduino mirror)",
+      "url": "https://docs.arduino.cc/resources/datasheets/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=15",
+      "page": 15,
+      "locator": "§5 · package pin diagram · top view; package-specific numbering and exposed-pad qualification",
+      "method": "visual-diagram"
+    },
+    "atmega2560-port-75": {
+      "document": "atmega2560-datasheet",
+      "title": "ATmega640/1280/1281/2560/2561 complete datasheet",
+      "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/ATmega640-1280-1281-2560-2561-Datasheet-DS40002211A.pdf#page=75",
+      "page": 75,
+      "locator": "§13.3 · Port alternate-function table · 100-pin package restrictions; raw MCU functions",
+      "method": "pdf-table"
+    },
+    "atmega2560-port-76": {
+      "document": "atmega2560-datasheet",
+      "title": "ATmega640/1280/1281/2560/2561 complete datasheet",
+      "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/ATmega640-1280-1281-2560-2561-Datasheet-DS40002211A.pdf#page=76",
+      "page": 76,
+      "locator": "§13.3 · Port alternate-function table · 100-pin package restrictions; raw MCU functions",
+      "method": "pdf-table"
+    },
+    "atmega2560-port-79": {
+      "document": "atmega2560-datasheet",
+      "title": "ATmega640/1280/1281/2560/2561 complete datasheet",
+      "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/ATmega640-1280-1281-2560-2561-Datasheet-DS40002211A.pdf#page=79",
+      "page": 79,
+      "locator": "§13.3 · Port alternate-function table · 100-pin package restrictions; raw MCU functions",
+      "method": "pdf-table"
+    },
+    "atmega2560-port-80": {
+      "document": "atmega2560-datasheet",
+      "title": "ATmega640/1280/1281/2560/2561 complete datasheet",
+      "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/ATmega640-1280-1281-2560-2561-Datasheet-DS40002211A.pdf#page=80",
+      "page": 80,
+      "locator": "§13.3 · Port alternate-function table · 100-pin package restrictions; raw MCU functions",
+      "method": "pdf-table"
+    },
+    "atmega2560-port-82": {
+      "document": "atmega2560-datasheet",
+      "title": "ATmega640/1280/1281/2560/2561 complete datasheet",
+      "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/ATmega640-1280-1281-2560-2561-Datasheet-DS40002211A.pdf#page=82",
+      "page": 82,
+      "locator": "§13.3 · Port alternate-function table · 100-pin package restrictions; raw MCU functions",
+      "method": "pdf-table"
+    },
+    "atmega2560-port-85": {
+      "document": "atmega2560-datasheet",
+      "title": "ATmega640/1280/1281/2560/2561 complete datasheet",
+      "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/ATmega640-1280-1281-2560-2561-Datasheet-DS40002211A.pdf#page=85",
+      "page": 85,
+      "locator": "§13.3 · Port alternate-function table · 100-pin package restrictions; raw MCU functions",
+      "method": "pdf-table"
+    },
+    "atmega2560-port-86": {
+      "document": "atmega2560-datasheet",
+      "title": "ATmega640/1280/1281/2560/2561 complete datasheet",
+      "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/ATmega640-1280-1281-2560-2561-Datasheet-DS40002211A.pdf#page=86",
+      "page": 86,
+      "locator": "§13.3 · Port alternate-function table · 100-pin package restrictions; raw MCU functions",
+      "method": "pdf-table"
+    },
+    "atmega2560-port-88": {
+      "document": "atmega2560-datasheet",
+      "title": "ATmega640/1280/1281/2560/2561 complete datasheet",
+      "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/ATmega640-1280-1281-2560-2561-Datasheet-DS40002211A.pdf#page=88",
+      "page": 88,
+      "locator": "§13.3 · Port alternate-function table · 100-pin package restrictions; raw MCU functions",
+      "method": "pdf-table"
+    },
+    "atmega2560-port-90": {
+      "document": "atmega2560-datasheet",
+      "title": "ATmega640/1280/1281/2560/2561 complete datasheet",
+      "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/ATmega640-1280-1281-2560-2561-Datasheet-DS40002211A.pdf#page=90",
+      "page": 90,
+      "locator": "§13.3 · Port alternate-function table · 100-pin package restrictions; raw MCU functions",
+      "method": "pdf-table"
+    },
+    "atmega2560-port-92": {
+      "document": "atmega2560-datasheet",
+      "title": "ATmega640/1280/1281/2560/2561 complete datasheet",
+      "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/ATmega640-1280-1281-2560-2561-Datasheet-DS40002211A.pdf#page=92",
+      "page": 92,
+      "locator": "§13.3 · Port alternate-function table · 100-pin package restrictions; raw MCU functions",
+      "method": "pdf-table"
+    },
+    "atmega2560-port-93": {
+      "document": "atmega2560-datasheet",
+      "title": "ATmega640/1280/1281/2560/2561 complete datasheet",
+      "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/ATmega640-1280-1281-2560-2561-Datasheet-DS40002211A.pdf#page=93",
+      "page": 93,
+      "locator": "§13.3 · Port alternate-function table · 100-pin package restrictions; raw MCU functions",
+      "method": "pdf-table"
+    },
+    "atmega2560-port-94": {
+      "document": "atmega2560-datasheet",
+      "title": "ATmega640/1280/1281/2560/2561 complete datasheet",
+      "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/ATmega640-1280-1281-2560-2561-Datasheet-DS40002211A.pdf#page=94",
+      "page": 94,
+      "locator": "§13.3 · Port alternate-function table · 100-pin package restrictions; raw MCU functions",
+      "method": "pdf-table"
+    },
+    "atmega2560-tqfp100-physical": {
+      "document": "atmega2560-datasheet",
+      "title": "ATmega640/1280/1281/2560/2561 complete datasheet",
+      "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/ATmega640-1280-1281-2560-2561-Datasheet-DS40002211A.pdf#page=2",
+      "page": 2,
+      "locator": "Figure 1-1 · TQFP100 top view · all 100 package pins; not the 64-pin ATmega2561",
       "method": "visual-diagram"
     }
   }

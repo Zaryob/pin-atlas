@@ -15,15 +15,21 @@ Kütüphanede her fiziksel düzen bir kez listelenir; uyumlu kartlar aynı kayı
 - **NVIDIA Jetson Orin Nano:** NVIDIA P3768 geliştirme kiti taşıyıcı kartının J12 40-pin başlığı. SPI, I²C, UART, I²S, PWM ve saat işlevleri taşıyıcı kart belgesinden alınır. Raspberry Pi’den farklı sinyal adları ve pinmux gereksinimleri olduğundan ayrı haritadır.
 - **STM32 Blue Pill:** STM32-base topluluk referansı; iki 20-pin yan başlık ve dört SWD bağlantısı. H1/H2/SWD konumları MCU paket pinlerinden ayrıdır; LED, kristal, USB ve debug bağlantıları belirtilir. Klon yongaları ve bağlantıları kontrol edilmelidir.
 - **STM32F103C8T6:** 48-pin LQFP işlemci; HSE bırakıldığında PD0/PD1 dahil 37 GPIO olanağı. STM32F103CBT6 aynı paket pin düzenini kullanır.
-- **Arduino UNO R3:** ana işlemci ICSP dahil 38 başlık kontağı, 20 bağımsız GPIO ve 6 analog giriş. SDA/SCL ve ICSP mevcut GPIO hatlarını tekrarlar.
-- **Arduino Nano (klasik):** ICSP dahil 36 kontak, 20 bağımsız GPIO ve 8 analog giriş. A6/A7 yalnızca analog giriş.
-- **Arduino Mega 2560 Rev3:** uç başlık ve ana işlemci ICSP dahil 92 kontak, 70 bağımsız GPIO, 16 analog giriş ve 15 PWM çıkışı. SPI D50–D53 üzerindedir.
+- **Arduino UNO başlık düzeni:** UNO R3, Leonardo, UNO R4 Minima ve UNO R4 WiFi tek kayıtta; 32 ortak başlık kontağı ve referansa özgü işlemci işlevleri. Her referansta altı SPI/ICSP kontağı bulunur. R4’te NC yerine BOOT vardır.
+- **Arduino Nano başlık düzeni:** klasik Nano ve Nano Every tek kayıtta 30 ortak yan konumu paylaşır. Klasik Nano altı ICSP kontağı ekler; A6/A7 yalnızca analogdur. Every’de A6/A7 dijital I/O da destekler; PWM ve programlama bağlantıları farklıdır.
+- **Arduino Mega 2560 Rev3:** uç başlık ve ana işlemci ICSP dahil 92 kontak, 70 bağımsız GPIO ve 16 analog giriş.
+- **Arduino Micro:** kendine özgü 34 yan kontak ve altı ICSP; ATmega32U4 için 24 bağımsız GPIO ve 12 ADC kanalı.
+- **ESP32-DevKitC V4:** 38 kontak; WROOM-32E/WROVER referansları tek kayıtta. Flash/PSRAM kısıtlamaları ve girişe özel pinler korunur.
+- **ESP32-C3-DevKitM-1:** MINI-1/1U için resmî 30 kontak ve 15 GPIO; USB/RGB LED paylaşımları belirtilir.
+- **ESP32-S3-DevKitC-1 v1.1:** 44 kontak; WROOM-1-N8/N8R8 bellek referansları. N8R8 GPIO35–37’yi belleğe ayırır; v1.1 RGB LED GPIO38’dedir.
+- **ATmega328P paketleri:** PDIP-28, TQFP-32, QFN/MLF-28 ve QFN/MLF-32 ayrı fiziksel görünümler; 23 GPIO olanağı, reset/saat sigortası koşulları ve yalnızca 32-pin paketlerde ADC6/7.
+- **ATmega2560 paketi:** TQFP-100; 100 gerçek paket pini ve 86 GPIO. Mega kartının Arduino pin numaralarından ayrıdır.
 - **RP2350A:** QFN-60, 30 Bank 0 GPIO.
 - **RP2350B:** QFN-80, 48 Bank 0 GPIO.
 
 Pico çizimi ortak başlığı gösterir; modellerin kablosuz, LED ve dahili bağlantılarının aynı olduğunu iddia etmez. İşlev referansı değişince fiziksel pinler aynı kalır. Planlar referans bazında saklanır. Eski model bağlantıları, JSON dosyaları ve kayıtlı planlar desteklenir; aynı işlemci için birden fazla eski plan varsa birleştirilmeden referans seçicisinde erişilebilir kalır.
 
-On kütüphane düzeninin on dört kaynak profili boyunca toplam 678 fiziksel pin kaydı ve 2.350 pin/alternatif işlev kaydı bulunur. RP2350 paketlerinin merkez GND pedi çevre pin sayısına dahil değildir. Çizimler şematiktir; mekanik CAD yerleşimi veya gerçek komponent konumları olarak kullanılmaz.
+On dokuz kütüphane düzeninin yirmi dokuz kaynak profili boyunca toplam 1.276 fiziksel pin kaydı ve 4.431 pin/alternatif işlev kaydı bulunur. RP2350 paketlerinin merkez GND pedi çevre pin sayısına dahil değildir. Çizimler şematiktir; mekanik CAD yerleşimi veya gerçek komponent konumları olarak kullanılmaz.
 
 ## Kullanım
 
@@ -58,9 +64,9 @@ python3 -m pip install -r requirements-source-verification.txt
 python3 scripts/verify-official-sources.py
 ```
 
-Bu komut yirmi dört kilitli kaynağı (yirmi bir üretici belgesi veya kaynak dosyası ve açıkça işaretlenmiş üç Blue Pill topluluk referansı) indirir, SHA-256 değerlerini kontrol eder, PDF ve kaynak tablolarını yeniden okur ve yayımlanan veriyle karşılaştırır. Kaynaklar `.cache/primary-sources/` altında tutulur; PDF’ler depoda dağıtılmaz. Bir hash veya pin kaydı değişirse kontrol başarısız olur.
+Bu komut elli kilitli kaynağı (kırk yedi üretici belgesi veya kaynak dosyası ve açıkça işaretlenmiş üç Blue Pill topluluk referansı) indirir, SHA-256 değerlerini kontrol eder, PDF ve kaynak tablolarını yeniden okur ve yayımlanan veriyle karşılaştırır. Kaynaklar `.cache/primary-sources/` altında tutulur; PDF’ler depoda dağıtılmaz. Bir hash veya pin kaydı değişirse kontrol başarısız olur.
 
-GitHub Actions, ST CDN’i yayın sunucularında zaman aşımına düşebildiği için `python3 scripts/verify-official-sources.py --table-snapshots` komutunu kullanır. Bu mod ST PDF’lerinden çıkarılıp `sources/extracted/` altında kaydedilen ham tablo hücrelerini kullanır. Kayıtların ve özgün PDF’lerin hash’leri manifestte kilitlidir. Bütün pin ve işlevler yine yeniden üretilip karşılaştırılır; diğer yirmi iki kaynak indirilir. Yukarıdaki varsayılan komut doğrudan özgün ST PDF’lerini kontrol eder.
+GitHub Actions, ST CDN’i yayın sunucularında zaman aşımına düşebildiği için `python3 scripts/verify-official-sources.py --table-snapshots` komutunu kullanır. Bu mod ST PDF’lerinden çıkarılıp `sources/extracted/` altında kaydedilen ham tablo hücrelerini kullanır. Kayıtların ve özgün PDF’lerin hash’leri manifestte kilitlidir. Bütün pin ve işlevler yine yeniden üretilip karşılaştırılır; diğer kırk sekiz kaynak indirilir. Yukarıdaki varsayılan komut doğrudan özgün ST PDF’lerini kontrol eder.
 
 Şekil olarak yayımlanan ve metin hücresi içermeyen fiziksel pinler, `sources/manual-observations.json` içindeki açıkça işaretlenmiş görsel gözlemlerle kontrol edilir. Bu bölüm otomatik OCR veya bağımsız donanım ölçümü olarak sunulmaz. RP2350 Release 8 içindeki IOVDD tablo/şekil tutarsızlığı da aynı kayıtta gerekçelendirilir. Tam yöntem [doğrulama kaydında](docs/VERIFICATION.tr.md).
 
@@ -87,4 +93,6 @@ Blue Pill ve STM32F103C8/CB LQFP48 işlemcisi desteklenir; diğer STM32 kartlar�
 
 Uygulama GPL-3.0-or-later lisanslıdır. Ortak tema ve IBM Plex Mono için gerçek yazılım/font bildirimleri `THIRD_PARTY_NOTICES.md` içindedir. Donanım doğrulamasında kullanılan üretici belgeleri ise ayrı olarak `sources/manifest.json` ve `docs/VERIFICATION.tr.md` içinde belgelenir.
 
-Arduino haritaları resmî tam pin şemaları, bağlantı tabloları ve sabitlenmiş Arduino AVR çekirdeğiyle doğrulanır. Kapsam 5 V ATmega328P UNO R3 / klasik Nano ile ATmega2560 Mega 2560 Rev3’tür. Başlık konumları Arduino pin numaralarından ve MCU portlarından ayrıdır. Aynı GPIO hattının tekrar eden kontakları belirtilir; plan ve JSON içe aktarma aynı GPIO’nun iki kez kullanımını reddeder. USB köprüsünün programlama başlıkları ve işlemcinin bütün ham alternatif işlevleri bu haritaların kapsamında değildir.
+Arduino haritaları resmî tam pin şemaları, bağlantı tabloları ve sabitlenmiş Arduino AVR çekirdeğiyle doğrulanır. Listelenen AVR ve Renesas modellerinde her işlemci referansı kendi işlevlerini ve ek bağlantı kapsamını korur. Başlık konumları Arduino pin numaralarından ve MCU portlarından ayrıdır. Aynı GPIO hattının tekrar eden kontakları belirtilir; plan ve JSON içe aktarma aynı GPIO’nun iki kez kullanımını reddeder. USB köprüsünün programlama başlıkları ve işlemcinin bütün ham alternatif işlevleri bu haritaların kapsamında değildir.
+
+ESP GPIO matrix seçenekleri etkin yazılım atamasını değil, yapılandırılabilir yönlendirme olanağını gösterir. Girişe özel pinlere çıkış/PWM verilmez; flash/PSRAM’a ayrılmış kontaklar plana eklenemez. ESP çizimlerinde USB alttadır.
