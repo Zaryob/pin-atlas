@@ -532,6 +532,14 @@
   border-color: var(--accent);
   font-weight: 600;
 }
+.catalog-related {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-top: 0;
+}
 @media (max-width: 640px) {
   .catalog-card-icon {
     width: 54px;
