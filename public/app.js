@@ -579,6 +579,7 @@ const boardFamilies = [
     items: [
       { type: 'layout', id: 'esp32-devkitc-v4' },
       { type: 'layout', id: 'esp32-s3-devkitc-1' },
+      { type: 'layout', id: 'esp32-c6-devkitc-1' },
       { type: 'layout', id: 'esp32-c3-devkitm-1' }
     ]
   },

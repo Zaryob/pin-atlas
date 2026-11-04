@@ -73112,6 +73112,2604 @@
     "reservedGPIOCount": 3
   },
   {
+    "id": "esp32-c6-devkitc-1",
+    "name": "ESP32-C6-DevKitC-1 v1.2",
+    "shortName": "ESP32-C6-DevKitC-1 v1.2",
+    "family": "Espressif",
+    "subtitle": "ESP32-C6-WROOM-1 · 3.3 V I/O",
+    "layout": "custom",
+    "diagram": {
+      "width": 820,
+      "height": 670,
+      "artwork": "assets/boards/esp32-c6-devkitc-1.svg"
+    },
+    "orientation": "usb-bottom",
+    "packagePins": 32,
+    "gpioCount": 23,
+    "mcu": "ESP32-C6",
+    "processor": "RISC-V",
+    "clock": "160 MHz",
+    "voltage": "3.3 V I/O",
+    "scopeKey": "esp32-c6-devkitc-1Scope",
+    "compatibleKey": "esp32-c6-devkitc-1Compatible",
+    "source": "https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32c6/esp32-c6-devkitc-1/user_guide.html",
+    "datasheet": "https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf",
+    "verifiedOn": "2026-11-04",
+    "pins": [
+      {
+        "number": 1,
+        "physicalLabel": "J1.1",
+        "connector": "J1",
+        "connectorPin": 1,
+        "name": "3V3",
+        "boardLabel": "3V3",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation"
+        ],
+        "net": "3V3",
+        "position": {
+          "x": 280,
+          "y": 115,
+          "side": "left"
+        }
+      },
+      {
+        "number": 2,
+        "physicalLabel": "J1.2",
+        "connector": "J1",
+        "connectorPin": 2,
+        "name": "RST",
+        "boardLabel": "RST",
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation"
+        ],
+        "net": "RST",
+        "position": {
+          "x": 280,
+          "y": 141,
+          "side": "left"
+        },
+        "noteKey": "espEnableNote"
+      },
+      {
+        "number": 3,
+        "physicalLabel": "J1.3",
+        "connector": "J1",
+        "connectorPin": 3,
+        "name": "GPIO4",
+        "boardLabel": "4",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "MTMS",
+            "group": "JTAG",
+            "signal": "MTMS",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "LP_UART_RXD",
+            "group": "UART",
+            "signal": "LP_UART_RXD",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "ADC1_CH4",
+            "group": "ADC",
+            "signal": "ADC1_CH4",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "FSPIHD",
+            "group": "SPI",
+            "signal": "FSPIHD",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MISO",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MOSI",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 SCK",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 CS",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "group": "PWM",
+            "signal": "LEDC PWM",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO4",
+            "evidence": "esp32-c6-devkitc-1-matrix"
+          }
+        ],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation",
+          "esp32-c6-devkitc-1-strapping"
+        ],
+        "net": "GPIO4",
+        "position": {
+          "x": 280,
+          "y": 167,
+          "side": "left"
+        },
+        "inputOnly": false,
+        "noteKey": "espGpioNote",
+        "strapping": true
+      },
+      {
+        "number": 4,
+        "physicalLabel": "J1.4",
+        "connector": "J1",
+        "connectorPin": 4,
+        "name": "GPIO5",
+        "boardLabel": "5",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "MTDI",
+            "group": "JTAG",
+            "signal": "MTDI",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "LP_UART_TXD",
+            "group": "UART",
+            "signal": "LP_UART_TXD",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "ADC1_CH5",
+            "group": "ADC",
+            "signal": "ADC1_CH5",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "FSPIWP",
+            "group": "SPI",
+            "signal": "FSPIWP",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MISO",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MOSI",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 SCK",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 CS",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "group": "PWM",
+            "signal": "LEDC PWM",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO5",
+            "evidence": "esp32-c6-devkitc-1-matrix"
+          }
+        ],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation",
+          "esp32-c6-devkitc-1-strapping"
+        ],
+        "net": "GPIO5",
+        "position": {
+          "x": 280,
+          "y": 193,
+          "side": "left"
+        },
+        "inputOnly": false,
+        "noteKey": "espGpioNote",
+        "strapping": true
+      },
+      {
+        "number": 5,
+        "physicalLabel": "J1.5",
+        "connector": "J1",
+        "connectorPin": 5,
+        "name": "GPIO6",
+        "boardLabel": "6",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "MTCK",
+            "group": "JTAG",
+            "signal": "MTCK",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "LP_I2C_SDA",
+            "group": "I2C",
+            "signal": "LP_I2C_SDA",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "ADC1_CH6",
+            "group": "ADC",
+            "signal": "ADC1_CH6",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "FSPICLK",
+            "group": "SPI",
+            "signal": "FSPICLK",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MISO",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MOSI",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 SCK",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 CS",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "group": "PWM",
+            "signal": "LEDC PWM",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO6",
+            "evidence": "esp32-c6-devkitc-1-matrix"
+          }
+        ],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation"
+        ],
+        "net": "GPIO6",
+        "position": {
+          "x": 280,
+          "y": 219,
+          "side": "left"
+        },
+        "inputOnly": false,
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 6,
+        "physicalLabel": "J1.6",
+        "connector": "J1",
+        "connectorPin": 6,
+        "name": "GPIO7",
+        "boardLabel": "7",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "MTDO",
+            "group": "JTAG",
+            "signal": "MTDO",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "LP_I2C_SCL",
+            "group": "I2C",
+            "signal": "LP_I2C_SCL",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "FSPID",
+            "group": "SPI",
+            "signal": "FSPID",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MISO",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MOSI",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 SCK",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 CS",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "group": "PWM",
+            "signal": "LEDC PWM",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO7",
+            "evidence": "esp32-c6-devkitc-1-matrix"
+          }
+        ],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation"
+        ],
+        "net": "GPIO7",
+        "position": {
+          "x": 280,
+          "y": 245,
+          "side": "left"
+        },
+        "inputOnly": false,
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 7,
+        "physicalLabel": "J1.7",
+        "connector": "J1",
+        "connectorPin": 7,
+        "name": "GPIO0",
+        "boardLabel": "0",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "XTAL_32K_P",
+            "group": "CLOCK",
+            "signal": "XTAL_32K_P",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "LP_UART_DTRN",
+            "group": "UART",
+            "signal": "LP_UART_DTRN",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "ADC1_CH0",
+            "group": "ADC",
+            "signal": "ADC1_CH0",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MISO",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MOSI",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 SCK",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 CS",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "group": "PWM",
+            "signal": "LEDC PWM",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO0",
+            "evidence": "esp32-c6-devkitc-1-matrix"
+          }
+        ],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation"
+        ],
+        "net": "GPIO0",
+        "position": {
+          "x": 280,
+          "y": 271,
+          "side": "left"
+        },
+        "inputOnly": false,
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 8,
+        "physicalLabel": "J1.8",
+        "connector": "J1",
+        "connectorPin": 8,
+        "name": "GPIO1",
+        "boardLabel": "1",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "XTAL_32K_N",
+            "group": "CLOCK",
+            "signal": "XTAL_32K_N",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "LP_UART_DSRN",
+            "group": "UART",
+            "signal": "LP_UART_DSRN",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "ADC1_CH1",
+            "group": "ADC",
+            "signal": "ADC1_CH1",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MISO",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MOSI",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 SCK",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 CS",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "group": "PWM",
+            "signal": "LEDC PWM",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO1",
+            "evidence": "esp32-c6-devkitc-1-matrix"
+          }
+        ],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation"
+        ],
+        "net": "GPIO1",
+        "position": {
+          "x": 280,
+          "y": 297,
+          "side": "left"
+        },
+        "inputOnly": false,
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 9,
+        "physicalLabel": "J1.9",
+        "connector": "J1",
+        "connectorPin": 9,
+        "name": "GPIO8",
+        "boardLabel": "8",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "UART1 RX (matrix)",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MISO",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MOSI",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 SCK",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 CS",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "group": "PWM",
+            "signal": "LEDC PWM",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO8",
+            "evidence": "esp32-c6-devkitc-1-matrix"
+          }
+        ],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation",
+          "esp32-c6-devkitc-1-strapping"
+        ],
+        "net": "GPIO8",
+        "position": {
+          "x": 280,
+          "y": 323,
+          "side": "left"
+        },
+        "inputOnly": false,
+        "noteKey": "espGpioNote",
+        "strapping": true,
+        "boardCircuitKey": "espRgbLedNote"
+      },
+      {
+        "number": 10,
+        "physicalLabel": "J1.10",
+        "connector": "J1",
+        "connectorPin": 10,
+        "name": "GPIO10",
+        "boardLabel": "10",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "UART1 RX (matrix)",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MISO",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MOSI",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 SCK",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 CS",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "group": "PWM",
+            "signal": "LEDC PWM",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO10",
+            "evidence": "esp32-c6-devkitc-1-matrix"
+          }
+        ],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation"
+        ],
+        "net": "GPIO10",
+        "position": {
+          "x": 280,
+          "y": 349,
+          "side": "left"
+        },
+        "inputOnly": false,
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 11,
+        "physicalLabel": "J1.11",
+        "connector": "J1",
+        "connectorPin": 11,
+        "name": "GPIO11",
+        "boardLabel": "11",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "UART1 RX (matrix)",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MISO",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MOSI",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 SCK",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 CS",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "group": "PWM",
+            "signal": "LEDC PWM",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO11",
+            "evidence": "esp32-c6-devkitc-1-matrix"
+          }
+        ],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation"
+        ],
+        "net": "GPIO11",
+        "position": {
+          "x": 280,
+          "y": 375,
+          "side": "left"
+        },
+        "inputOnly": false,
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 12,
+        "physicalLabel": "J1.12",
+        "connector": "J1",
+        "connectorPin": 12,
+        "name": "GPIO2",
+        "boardLabel": "2",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "LP_UART_RTSN",
+            "group": "UART",
+            "signal": "LP_UART_RTSN",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "ADC1_CH2",
+            "group": "ADC",
+            "signal": "ADC1_CH2",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "FSPIQ",
+            "group": "SPI",
+            "signal": "FSPIQ",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MISO",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MOSI",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 SCK",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 CS",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "group": "PWM",
+            "signal": "LEDC PWM",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO2",
+            "evidence": "esp32-c6-devkitc-1-matrix"
+          }
+        ],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation"
+        ],
+        "net": "GPIO2",
+        "position": {
+          "x": 280,
+          "y": 401,
+          "side": "left"
+        },
+        "inputOnly": false,
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 13,
+        "physicalLabel": "J1.13",
+        "connector": "J1",
+        "connectorPin": 13,
+        "name": "GPIO3",
+        "boardLabel": "3",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "LP_UART_CTSN",
+            "group": "UART",
+            "signal": "LP_UART_CTSN",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "ADC1_CH3",
+            "group": "ADC",
+            "signal": "ADC1_CH3",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MISO",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MOSI",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 SCK",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 CS",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "group": "PWM",
+            "signal": "LEDC PWM",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO3",
+            "evidence": "esp32-c6-devkitc-1-matrix"
+          }
+        ],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation"
+        ],
+        "net": "GPIO3",
+        "position": {
+          "x": 280,
+          "y": 427,
+          "side": "left"
+        },
+        "inputOnly": false,
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 14,
+        "physicalLabel": "J1.14",
+        "connector": "J1",
+        "connectorPin": 14,
+        "name": "5V",
+        "boardLabel": "5V",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation"
+        ],
+        "net": "5V",
+        "position": {
+          "x": 280,
+          "y": 453,
+          "side": "left"
+        }
+      },
+      {
+        "number": 15,
+        "physicalLabel": "J1.15",
+        "connector": "J1",
+        "connectorPin": 15,
+        "name": "GND",
+        "boardLabel": "G",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation"
+        ],
+        "net": "GND",
+        "position": {
+          "x": 280,
+          "y": 479,
+          "side": "left"
+        }
+      },
+      {
+        "number": 16,
+        "physicalLabel": "J1.16",
+        "connector": "J1",
+        "connectorPin": 16,
+        "name": "NC",
+        "boardLabel": "NC",
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation"
+        ],
+        "net": "NC",
+        "position": {
+          "x": 280,
+          "y": 505,
+          "side": "left"
+        },
+        "reserved": true,
+        "reservedLabel": "NC",
+        "noteKey": "espNcNote"
+      },
+      {
+        "number": 17,
+        "physicalLabel": "J3.1",
+        "connector": "J3",
+        "connectorPin": 1,
+        "name": "GND",
+        "boardLabel": "G",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation"
+        ],
+        "net": "GND",
+        "position": {
+          "x": 540,
+          "y": 115,
+          "side": "right"
+        }
+      },
+      {
+        "number": 18,
+        "physicalLabel": "J3.2",
+        "connector": "J3",
+        "connectorPin": 2,
+        "name": "GPIO16",
+        "boardLabel": "TX",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "U0TXD",
+            "group": "UART",
+            "signal": "U0TXD",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "FSPICS0",
+            "group": "SPI",
+            "signal": "FSPICS0",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MISO",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MOSI",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 SCK",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 CS",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "group": "PWM",
+            "signal": "LEDC PWM",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO16",
+            "evidence": "esp32-c6-devkitc-1-matrix"
+          }
+        ],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation"
+        ],
+        "net": "GPIO16",
+        "position": {
+          "x": 540,
+          "y": 141,
+          "side": "right"
+        },
+        "inputOnly": false,
+        "noteKey": "espGpioNote",
+        "boardCircuitKey": "espUartBridgeNote"
+      },
+      {
+        "number": 19,
+        "physicalLabel": "J3.3",
+        "connector": "J3",
+        "connectorPin": 3,
+        "name": "GPIO17",
+        "boardLabel": "RX",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "U0RXD",
+            "group": "UART",
+            "signal": "U0RXD",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "FSPICS1",
+            "group": "SPI",
+            "signal": "FSPICS1",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MISO",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MOSI",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 SCK",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 CS",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "group": "PWM",
+            "signal": "LEDC PWM",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO17",
+            "evidence": "esp32-c6-devkitc-1-matrix"
+          }
+        ],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation"
+        ],
+        "net": "GPIO17",
+        "position": {
+          "x": 540,
+          "y": 167,
+          "side": "right"
+        },
+        "inputOnly": false,
+        "noteKey": "espGpioNote",
+        "boardCircuitKey": "espUartBridgeNote"
+      },
+      {
+        "number": 20,
+        "physicalLabel": "J3.4",
+        "connector": "J3",
+        "connectorPin": 4,
+        "name": "GPIO15",
+        "boardLabel": "15",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "UART1 RX (matrix)",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MISO",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MOSI",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 SCK",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 CS",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "group": "PWM",
+            "signal": "LEDC PWM",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO15",
+            "evidence": "esp32-c6-devkitc-1-matrix"
+          }
+        ],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation",
+          "esp32-c6-devkitc-1-strapping"
+        ],
+        "net": "GPIO15",
+        "position": {
+          "x": 540,
+          "y": 193,
+          "side": "right"
+        },
+        "inputOnly": false,
+        "noteKey": "espGpioNote",
+        "strapping": true
+      },
+      {
+        "number": 21,
+        "physicalLabel": "J3.5",
+        "connector": "J3",
+        "connectorPin": 5,
+        "name": "GPIO23",
+        "boardLabel": "23",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SDIO_DATA3",
+            "group": "SDIO",
+            "signal": "SDIO_DATA3",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MISO",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MOSI",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 SCK",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 CS",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "group": "PWM",
+            "signal": "LEDC PWM",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO23",
+            "evidence": "esp32-c6-devkitc-1-matrix"
+          }
+        ],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation"
+        ],
+        "net": "GPIO23",
+        "position": {
+          "x": 540,
+          "y": 219,
+          "side": "right"
+        },
+        "inputOnly": false,
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 22,
+        "physicalLabel": "J3.6",
+        "connector": "J3",
+        "connectorPin": 6,
+        "name": "GPIO22",
+        "boardLabel": "22",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SDIO_DATA2",
+            "group": "SDIO",
+            "signal": "SDIO_DATA2",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MISO",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MOSI",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 SCK",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 CS",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "group": "PWM",
+            "signal": "LEDC PWM",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO22",
+            "evidence": "esp32-c6-devkitc-1-matrix"
+          }
+        ],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation"
+        ],
+        "net": "GPIO22",
+        "position": {
+          "x": 540,
+          "y": 245,
+          "side": "right"
+        },
+        "inputOnly": false,
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 23,
+        "physicalLabel": "J3.7",
+        "connector": "J3",
+        "connectorPin": 7,
+        "name": "GPIO21",
+        "boardLabel": "21",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SDIO_DATA1",
+            "group": "SDIO",
+            "signal": "SDIO_DATA1",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "FSPICS5",
+            "group": "SPI",
+            "signal": "FSPICS5",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MISO",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MOSI",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 SCK",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 CS",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "group": "PWM",
+            "signal": "LEDC PWM",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO21",
+            "evidence": "esp32-c6-devkitc-1-matrix"
+          }
+        ],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation"
+        ],
+        "net": "GPIO21",
+        "position": {
+          "x": 540,
+          "y": 271,
+          "side": "right"
+        },
+        "inputOnly": false,
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 24,
+        "physicalLabel": "J3.8",
+        "connector": "J3",
+        "connectorPin": 8,
+        "name": "GPIO20",
+        "boardLabel": "20",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SDIO_DATA0",
+            "group": "SDIO",
+            "signal": "SDIO_DATA0",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "FSPICS4",
+            "group": "SPI",
+            "signal": "FSPICS4",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MISO",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MOSI",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 SCK",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 CS",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "group": "PWM",
+            "signal": "LEDC PWM",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO20",
+            "evidence": "esp32-c6-devkitc-1-matrix"
+          }
+        ],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation"
+        ],
+        "net": "GPIO20",
+        "position": {
+          "x": 540,
+          "y": 297,
+          "side": "right"
+        },
+        "inputOnly": false,
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 25,
+        "physicalLabel": "J3.9",
+        "connector": "J3",
+        "connectorPin": 9,
+        "name": "GPIO19",
+        "boardLabel": "19",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SDIO_CLK",
+            "group": "SDIO",
+            "signal": "SDIO_CLK",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "FSPICS3",
+            "group": "SPI",
+            "signal": "FSPICS3",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MISO",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MOSI",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 SCK",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 CS",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "group": "PWM",
+            "signal": "LEDC PWM",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO19",
+            "evidence": "esp32-c6-devkitc-1-matrix"
+          }
+        ],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation"
+        ],
+        "net": "GPIO19",
+        "position": {
+          "x": 540,
+          "y": 323,
+          "side": "right"
+        },
+        "inputOnly": false,
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 26,
+        "physicalLabel": "J3.10",
+        "connector": "J3",
+        "connectorPin": 10,
+        "name": "GPIO18",
+        "boardLabel": "18",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SDIO_CMD",
+            "group": "SDIO",
+            "signal": "SDIO_CMD",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "FSPICS2",
+            "group": "SPI",
+            "signal": "FSPICS2",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MISO",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MOSI",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 SCK",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 CS",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "group": "PWM",
+            "signal": "LEDC PWM",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO18",
+            "evidence": "esp32-c6-devkitc-1-matrix"
+          }
+        ],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation"
+        ],
+        "net": "GPIO18",
+        "position": {
+          "x": 540,
+          "y": 349,
+          "side": "right"
+        },
+        "inputOnly": false,
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 27,
+        "physicalLabel": "J3.11",
+        "connector": "J3",
+        "connectorPin": 11,
+        "name": "GPIO9",
+        "boardLabel": "9",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "UART1 RX (matrix)",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MISO",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MOSI",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 SCK",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 CS",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "group": "PWM",
+            "signal": "LEDC PWM",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO9",
+            "evidence": "esp32-c6-devkitc-1-matrix"
+          }
+        ],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation",
+          "esp32-c6-devkitc-1-strapping"
+        ],
+        "net": "GPIO9",
+        "position": {
+          "x": 540,
+          "y": 375,
+          "side": "right"
+        },
+        "inputOnly": false,
+        "noteKey": "espGpioNote",
+        "strapping": true
+      },
+      {
+        "number": 28,
+        "physicalLabel": "J3.12",
+        "connector": "J3",
+        "connectorPin": 12,
+        "name": "GND",
+        "boardLabel": "G",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation"
+        ],
+        "net": "GND",
+        "position": {
+          "x": 540,
+          "y": 401,
+          "side": "right"
+        }
+      },
+      {
+        "number": 29,
+        "physicalLabel": "J3.13",
+        "connector": "J3",
+        "connectorPin": 13,
+        "name": "GPIO13",
+        "boardLabel": "13",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "USB_D+",
+            "group": "USB",
+            "signal": "USB_D+",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MISO",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MOSI",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 SCK",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 CS",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "group": "PWM",
+            "signal": "LEDC PWM",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO13",
+            "evidence": "esp32-c6-devkitc-1-matrix"
+          }
+        ],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation"
+        ],
+        "net": "GPIO13",
+        "position": {
+          "x": 540,
+          "y": 427,
+          "side": "right"
+        },
+        "inputOnly": false,
+        "noteKey": "espGpioNote",
+        "boardCircuitKey": "espUsbNote"
+      },
+      {
+        "number": 30,
+        "physicalLabel": "J3.14",
+        "connector": "J3",
+        "connectorPin": 14,
+        "name": "GPIO12",
+        "boardLabel": "12",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "USB_D-",
+            "group": "USB",
+            "signal": "USB_D-",
+            "evidence": "esp32-c6-devkitc-1-header"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MISO",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 MOSI",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 SCK",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "group": "SPI",
+            "signal": "SPI2 CS",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "group": "PWM",
+            "signal": "LEDC PWM",
+            "evidence": "esp32-c6-devkitc-1-matrix",
+            "selector": "GPIO matrix"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO12",
+            "evidence": "esp32-c6-devkitc-1-matrix"
+          }
+        ],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation"
+        ],
+        "net": "GPIO12",
+        "position": {
+          "x": 540,
+          "y": 453,
+          "side": "right"
+        },
+        "inputOnly": false,
+        "noteKey": "espGpioNote",
+        "boardCircuitKey": "espUsbNote"
+      },
+      {
+        "number": 31,
+        "physicalLabel": "J3.15",
+        "connector": "J3",
+        "connectorPin": 15,
+        "name": "GND",
+        "boardLabel": "G",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation"
+        ],
+        "net": "GND",
+        "position": {
+          "x": 540,
+          "y": 479,
+          "side": "right"
+        }
+      },
+      {
+        "number": 32,
+        "physicalLabel": "J3.16",
+        "connector": "J3",
+        "connectorPin": 16,
+        "name": "NC",
+        "boardLabel": "NC",
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "esp32-c6-devkitc-1-header",
+          "esp32-c6-devkitc-1-orientation"
+        ],
+        "net": "NC",
+        "position": {
+          "x": 540,
+          "y": 505,
+          "side": "right"
+        },
+        "reserved": true,
+        "reservedLabel": "NC",
+        "noteKey": "espNcNote"
+      }
+    ],
+    "reservedGPIOCount": 2
+  },
+  {
     "id": "atmega328p-pdip28",
     "name": "ATmega328P · PDIP-28",
     "shortName": "ATmega328P PDIP-28",
