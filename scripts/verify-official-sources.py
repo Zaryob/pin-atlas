@@ -9,7 +9,7 @@ from pathlib import Path
 try:
     import pdfplumber
     from stm32_sources import build_stm32,verify_snapshot
-    from nucleo_sources import build_nucleo,read_f4_chip
+    from nucleo_sources import build_nucleo,read_f4_chip,read_g4_chip,build_nucleo_g474
     from arduino_sources import build_arduino
     from expanded_arduino_sources import build_expanded_arduino
     from espressif_sources import build_espressif
@@ -418,6 +418,8 @@ def build(use_snapshots=False):
         chip=read_f4_chip(CACHE,DOCS,ref,model,MANIFEST['verifiedOn'],category)
         boards.append(build_nucleo(CACHE,DOCS,ref,chip,model))
         f4_chips.append(chip)
+    g4_chip=read_g4_chip(CACHE,DOCS,ref,MANIFEST['verifiedOn'],category)
+    boards.append(build_nucleo_g474(CACHE,DOCS,ref,g4_chip))
     boards.extend(build_arduino(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn']))
     boards.extend(build_expanded_arduino(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn'],boards))
     boards.extend(build_espressif(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn']))
@@ -428,6 +430,7 @@ def build(use_snapshots=False):
     for total,chip in [(60,'rp2350a'),(80,'rp2350b')]:
         boards.append({**board_base,'id':chip,'name':chip.upper(),'family':'Raspberry Pi','subtitle':f'QFN-{total} · RP2350 · Release 8','layout':'qfn','packagePins':total,'gpioCount':30 if total==60 else 48,'voltage':'1.8–3.3 V I/O','mcu':chip.upper(),'processor':'Cortex-M33 / Hazard3','clock':'150 MHz','source':DOCS['rp2350']['url']+f'#page={16 if total==60 else 17}','datasheet':DOCS['rp2350']['url'],'pins':[packages[total][n] for n in sorted(packages[total])]})
     boards.extend(f4_chips)
+    boards.append(g4_chip)
     boards.append(rp2040_package(bank2040,board_base))
     link_board_packages(boards)
     return boards

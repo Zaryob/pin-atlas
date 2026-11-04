@@ -1,7 +1,7 @@
 {
   "verifiedOn": "2026-11-04",
-  "physicalPins": 2101,
-  "functionAssignments": 6681,
+  "physicalPins": 2273,
+  "functionAssignments": 8197,
   "documents": [
     {
       "id": "rp2350",
@@ -482,6 +482,33 @@
       "sha256": "ac1753a62670b4b27dfb1b9b7d8c3106d5e7926066e2f1cc6e8385178b28c34b"
     },
     {
+      "id": "nucleo-g4-um2505",
+      "title": "STM32G4 Nucleo-64 boards (MB1367) user manual",
+      "url": "https://www.st.com/resource/en/user_manual/um2505-stm32g4-nucleo64-boards-stmicroelectronics.pdf",
+      "viewUrl": "https://www.st.com/resource/en/user_manual/um2505-stm32g4-nucleo64-boards-stmicroelectronics.pdf",
+      "publisher": "STMicroelectronics",
+      "revision": "UM2505 Rev 2 · October 2019",
+      "sha256": "d862980338d3b393f5f880790cc7c56105cff0a6931ca89b20b3967542feb685"
+    },
+    {
+      "id": "g474re-package",
+      "title": "STM32G474RE CubeMX package data",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/master/mcu/STM32G474R(B-C-E)Tx.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/master/mcu/STM32G474R(B-C-E)Tx.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "master",
+      "sha256": "acf8e79cc37cbdc033696c7d4af254b75fb11e2edda3a0e56300d4003a68d427"
+    },
+    {
+      "id": "g474re-modes",
+      "title": "STM32G474RE CubeMX modes data",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/master/mcu/IP/GPIO-STM32G474_gpio_v1_0_Modes.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/master/mcu/IP/GPIO-STM32G474_gpio_v1_0_Modes.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "master",
+      "sha256": "9e1cb7917a51c1f1dd5b8b143d4f1ca31af1146694e0137064f6e731157c4c0c"
+    },
+    {
       "id": "arduino-uno-r3-schematic",
       "title": "Arduino UNO Rev3 through-hole schematic",
       "url": "https://docs.arduino.cc/resources/schematics/A000066-schematics.pdf",
@@ -660,6 +687,16 @@
       "id": "nucleo-f411re",
       "physicalPins": 108,
       "functionAssignments": 332,
+      "physicalSourceMethods": [
+        "manufacturer-xml",
+        "pdf-table",
+        "visual-diagram"
+      ]
+    },
+    {
+      "id": "nucleo-g474re",
+      "physicalPins": 108,
+      "functionAssignments": 916,
       "physicalSourceMethods": [
         "manufacturer-xml",
         "pdf-table",
@@ -901,6 +938,14 @@
       "id": "stm32f411ret6",
       "physicalPins": 64,
       "functionAssignments": 212,
+      "physicalSourceMethods": [
+        "manufacturer-xml"
+      ]
+    },
+    {
+      "id": "stm32g474ret6",
+      "physicalPins": 64,
+      "functionAssignments": 600,
       "physicalSourceMethods": [
         "manufacturer-xml"
       ]

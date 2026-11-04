@@ -535,6 +535,36 @@
       "sha256": "ac1753a62670b4b27dfb1b9b7d8c3106d5e7926066e2f1cc6e8385178b28c34b"
     },
     {
+      "id": "nucleo-g4-um2505",
+      "title": "STM32G4 Nucleo-64 boards (MB1367) user manual",
+      "file": "nucleo-g4-um2505.pdf",
+      "url": "https://www.st.com/resource/en/user_manual/um2505-stm32g4-nucleo64-boards-stmicroelectronics.pdf",
+      "viewUrl": "https://www.st.com/resource/en/user_manual/um2505-stm32g4-nucleo64-boards-stmicroelectronics.pdf",
+      "publisher": "STMicroelectronics",
+      "revision": "UM2505 Rev 2 · October 2019",
+      "sha256": "d862980338d3b393f5f880790cc7c56105cff0a6931ca89b20b3967542feb685"
+    },
+    {
+      "id": "g474re-package",
+      "title": "STM32G474RE CubeMX package data",
+      "file": "g474re-package.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/master/mcu/STM32G474R(B-C-E)Tx.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/master/mcu/STM32G474R(B-C-E)Tx.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "master",
+      "sha256": "acf8e79cc37cbdc033696c7d4af254b75fb11e2edda3a0e56300d4003a68d427"
+    },
+    {
+      "id": "g474re-modes",
+      "title": "STM32G474RE CubeMX modes data",
+      "file": "g474re-modes.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/master/mcu/IP/GPIO-STM32G474_gpio_v1_0_Modes.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/master/mcu/IP/GPIO-STM32G474_gpio_v1_0_Modes.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "master",
+      "sha256": "9e1cb7917a51c1f1dd5b8b143d4f1ca31af1146694e0137064f6e731157c4c0c"
+    },
+    {
       "id": "arduino-uno-r3-schematic",
       "title": "Arduino UNO Rev3 through-hole schematic",
       "file": "arduino-uno-r3-schematic.pdf",
@@ -1188,6 +1218,70 @@
       "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=32",
       "page": 32,
       "locator": "MB1136 top view · connector positions, rows and numbering",
+      "method": "visual-diagram"
+    },
+    "g474re-package": {
+      "document": "g474re-package",
+      "title": "STM32G474RE CubeMX package data",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/master/mcu/STM32G474R(B-C-E)Tx.xml",
+      "page": null,
+      "locator": "LQFP64 package pin numbers and signals",
+      "method": "manufacturer-xml"
+    },
+    "g474re-modes": {
+      "document": "g474re-modes",
+      "title": "STM32G474RE CubeMX modes data",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/master/mcu/IP/GPIO-STM32G474_gpio_v1_0_Modes.xml",
+      "page": null,
+      "locator": "GPIO alternate function selectors",
+      "method": "manufacturer-xml"
+    },
+    "nucleo-g474-bridges": {
+      "document": "nucleo-g4-um2505",
+      "title": "STM32G4 Nucleo-64 boards (MB1367) user manual",
+      "url": "https://www.st.com/resource/en/user_manual/um2505-stm32g4-nucleo64-boards-stmicroelectronics.pdf#page=27",
+      "page": 27,
+      "locator": "Table 13 · Solder bridge control (p. 27)",
+      "method": "pdf-table"
+    },
+    "nucleo-g474re-arduino-30": {
+      "document": "nucleo-g4-um2505",
+      "title": "STM32G4 Nucleo-64 boards (MB1367) user manual",
+      "url": "https://www.st.com/resource/en/user_manual/um2505-stm32g4-nucleo64-boards-stmicroelectronics.pdf#page=30",
+      "page": 30,
+      "locator": "Table 15 · Arduino connectors pinout",
+      "method": "pdf-table"
+    },
+    "nucleo-g474re-arduino-31": {
+      "document": "nucleo-g4-um2505",
+      "title": "STM32G4 Nucleo-64 boards (MB1367) user manual",
+      "url": "https://www.st.com/resource/en/user_manual/um2505-stm32g4-nucleo64-boards-stmicroelectronics.pdf#page=31",
+      "page": 31,
+      "locator": "Table 15 · Arduino connectors pinout",
+      "method": "pdf-table"
+    },
+    "nucleo-g474re-morpho-32": {
+      "document": "nucleo-g4-um2505",
+      "title": "STM32G4 Nucleo-64 boards (MB1367) user manual",
+      "url": "https://www.st.com/resource/en/user_manual/um2505-stm32g4-nucleo64-boards-stmicroelectronics.pdf#page=32",
+      "page": 32,
+      "locator": "Table 16 · ST morpho connectors",
+      "method": "pdf-table"
+    },
+    "nucleo-g474re-morpho-33": {
+      "document": "nucleo-g4-um2505",
+      "title": "STM32G4 Nucleo-64 boards (MB1367) user manual",
+      "url": "https://www.st.com/resource/en/user_manual/um2505-stm32g4-nucleo64-boards-stmicroelectronics.pdf#page=33",
+      "page": 33,
+      "locator": "Table 16 · ST morpho connectors",
+      "method": "pdf-table"
+    },
+    "nucleo-g474re-top-view": {
+      "document": "nucleo-g4-um2505",
+      "title": "STM32G4 Nucleo-64 boards (MB1367) user manual",
+      "url": "https://www.st.com/resource/en/user_manual/um2505-stm32g4-nucleo64-boards-stmicroelectronics.pdf#page=24",
+      "page": 24,
+      "locator": "MB1367 top view · connector positions, rows and numbering",
       "method": "visual-diagram"
     },
     "arduino-uno-r3-core": {

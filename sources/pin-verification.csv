@@ -2919,6 +2919,954 @@ nucleo-f411re,108,PA8,GPIO,SDIO_D1,AF12,SDIO_D1,nucleo-f411re-arduino-44 | nucle
 nucleo-f411re,108,PA8,GPIO,TIM1_CH1,AF1,TIM1_CH1,nucleo-f411re-arduino-44 | nucleo-f411re-top-view | f411re-package,f411re-package | f411re-modes
 nucleo-f411re,108,PA8,GPIO,USART1_CK,AF7,USART1_CK,nucleo-f411re-arduino-44 | nucleo-f411re-top-view | f411re-package,f411re-package | f411re-modes
 nucleo-f411re,108,PA8,GPIO,USB_OTG_FS_SOF,AF10,USB_OTG_FS_SOF,nucleo-f411re-arduino-44 | nucleo-f411re-top-view | f411re-package,f411re-package | f411re-modes
+nucleo-g474re,1,PC10,GPIO,DAC1_EXTI10,,DAC1_EXTI10,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,1,PC10,GPIO,DAC2_EXTI10,,DAC2_EXTI10,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,1,PC10,GPIO,DAC3_EXTI10,,DAC3_EXTI10,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,1,PC10,GPIO,DAC4_EXTI10,,DAC4_EXTI10,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,1,PC10,GPIO,HRTIM1_FLT6,AF13,HRTIM1_FLT6,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,1,PC10,GPIO,I2S3_CK,AF6,I2S3_CK,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,1,PC10,GPIO,SPI3_SCK,AF6,SPI3_SCK,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,1,PC10,GPIO,TIM8_CH1N,AF4,TIM8_CH1N,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,1,PC10,GPIO,UART4_TX,AF5,UART4_TX,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,1,PC10,GPIO,USART3_TX,AF7,USART3_TX,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,2,PC11,GPIO,ADC1_EXTI11,,ADC1_EXTI11,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,2,PC11,GPIO,ADC2_EXTI11,,ADC2_EXTI11,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,2,PC11,GPIO,HRTIM1_EEV2,AF3,HRTIM1_EEV2,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,2,PC11,GPIO,I2C3_SDA,AF8,I2C3_SDA,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,2,PC11,GPIO,SPI3_MISO,AF6,SPI3_MISO,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,2,PC11,GPIO,TIM8_CH2N,AF4,TIM8_CH2N,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,2,PC11,GPIO,UART4_RX,AF5,UART4_RX,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,2,PC11,GPIO,USART3_RX,AF7,USART3_RX,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,3,PC12,GPIO,HRTIM1_EEV1,AF3,HRTIM1_EEV1,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,3,PC12,GPIO,I2S3_SD,AF6,I2S3_SD,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,3,PC12,GPIO,SPI3_MOSI,AF6,SPI3_MOSI,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,3,PC12,GPIO,TIM5_CH2,AF1,TIM5_CH2,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,3,PC12,GPIO,TIM8_CH3N,AF4,TIM8_CH3N,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,3,PC12,GPIO,UART5_TX,AF5,UART5_TX,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,3,PC12,GPIO,UCPD1_FRSTX1,AF14,UCPD1_FRSTX1,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,3,PC12,GPIO,UCPD1_FRSTX2,AF14,UCPD1_FRSTX2,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,3,PC12,GPIO,USART3_CK,AF7,USART3_CK,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,4,PD2,GPIO,ADC3_EXTI2,,ADC3_EXTI2,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,4,PD2,GPIO,ADC4_EXTI2,,ADC4_EXTI2,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,4,PD2,GPIO,ADC5_EXTI2,,ADC5_EXTI2,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,4,PD2,GPIO,TIM3_ETR,AF2,TIM3_ETR,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,4,PD2,GPIO,TIM8_BKIN,AF4,TIM8_BKIN,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,4,PD2,GPIO,UART5_RX,AF5,UART5_RX,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,5,VDD,POWER,,,,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,
+nucleo-g474re,6,E5V,POWER,,,,nucleo-g474re-morpho-32 | nucleo-g474re-top-view,
+nucleo-g474re,7,BOOT0,GPIO,COMP1_OUT,AF8,COMP1_OUT,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,7,BOOT0,GPIO,FDCAN1_RX,AF9,FDCAN1_RX,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,7,BOOT0,GPIO,HRTIM1_EEV8,AF13,HRTIM1_EEV8,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,7,BOOT0,GPIO,I2C1_SCL,AF4,I2C1_SCL,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,7,BOOT0,GPIO,SAI1_CK1,AF3,SAI1_CK1,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,7,BOOT0,GPIO,SAI1_MCLK_A,AF14,SAI1_MCLK_A,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,7,BOOT0,GPIO,TIM16_CH1,AF1,TIM16_CH1,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,7,BOOT0,GPIO,TIM1_BKIN,AF12,TIM1_BKIN,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,7,BOOT0,GPIO,TIM4_CH3,AF2,TIM4_CH3,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,7,BOOT0,GPIO,TIM8_CH2,AF10,TIM8_CH2,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,7,BOOT0,GPIO,USART3_RX,AF7,USART3_RX,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,8,GND,GND,,,,nucleo-g474re-morpho-32 | nucleo-g474re-top-view,
+nucleo-g474re,9,NC,SYSTEM,,,,nucleo-g474re-morpho-32 | nucleo-g474re-top-view,
+nucleo-g474re,10,NC,SYSTEM,,,,nucleo-g474re-morpho-32 | nucleo-g474re-top-view,
+nucleo-g474re,11,NC,SYSTEM,,,,nucleo-g474re-morpho-32 | nucleo-g474re-top-view,
+nucleo-g474re,12,IOREF,POWER,,,,nucleo-g474re-morpho-32 | nucleo-g474re-top-view,
+nucleo-g474re,13,PA13,GPIO,I2C1_SCL,AF4,I2C1_SCL,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,13,PA13,GPIO,I2C4_SCL,AF3,I2C4_SCL,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,13,PA13,GPIO,IR_OUT,AF5,IR_OUT,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,13,PA13,GPIO,SAI1_SD_B,AF13,SAI1_SD_B,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,13,PA13,GPIO,SYS_JTMS-SWDIO,AF0,SYS_JTMS-SWDIO,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,13,PA13,GPIO,TIM16_CH1N,AF1,TIM16_CH1N,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,13,PA13,GPIO,TIM4_CH3,AF10,TIM4_CH3,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,13,PA13,GPIO,USART3_CTS,AF7,USART3_CTS,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,13,PA13,GPIO,USART3_NSS,AF7,USART3_NSS,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,14,NRST,GPIO,DAC1_EXTI10,,DAC1_EXTI10,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,14,NRST,GPIO,DAC2_EXTI10,,DAC2_EXTI10,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,14,NRST,GPIO,DAC3_EXTI10,,DAC3_EXTI10,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,14,NRST,GPIO,DAC4_EXTI10,,DAC4_EXTI10,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,14,NRST,GPIO,RCC_MCO,AF0,RCC_MCO,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,15,PA14,GPIO,I2C1_SDA,AF4,I2C1_SDA,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,15,PA14,GPIO,I2C4_SMBA,AF3,I2C4_SMBA,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,15,PA14,GPIO,LPTIM1_OUT,AF1,LPTIM1_OUT,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,15,PA14,GPIO,SAI1_FS_B,AF13,SAI1_FS_B,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,15,PA14,GPIO,SYS_JTCK-SWCLK,AF0,SYS_JTCK-SWCLK,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,15,PA14,GPIO,TIM1_BKIN,AF6,TIM1_BKIN,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,15,PA14,GPIO,TIM8_CH2,AF5,TIM8_CH2,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,15,PA14,GPIO,USART2_TX,AF7,USART2_TX,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,16,+3.3V,POWER,,,,nucleo-g474re-morpho-32 | nucleo-g474re-top-view,
+nucleo-g474re,17,PA15,GPIO,ADC1_EXTI15,,ADC1_EXTI15,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,17,PA15,GPIO,ADC2_EXTI15,,ADC2_EXTI15,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,17,PA15,GPIO,FDCAN3_TX,AF11,FDCAN3_TX,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,17,PA15,GPIO,HRTIM1_FLT2,AF13,HRTIM1_FLT2,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,17,PA15,GPIO,I2C1_SCL,AF4,I2C1_SCL,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,17,PA15,GPIO,I2S3_WS,AF6,I2S3_WS,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,17,PA15,GPIO,SPI1_NSS,AF5,SPI1_NSS,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,17,PA15,GPIO,SPI3_NSS,AF6,SPI3_NSS,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,17,PA15,GPIO,SYS_JTDI,AF0,SYS_JTDI,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,17,PA15,GPIO,TIM1_BKIN,AF9,TIM1_BKIN,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,17,PA15,GPIO,TIM2_CH1,AF1,TIM2_CH1,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,17,PA15,GPIO,TIM2_ETR,AF14,TIM2_ETR,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,17,PA15,GPIO,TIM8_CH1,AF2,TIM8_CH1,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,17,PA15,GPIO,UART4_DE,AF8,UART4_DE,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,17,PA15,GPIO,UART4_RTS,AF8,UART4_RTS,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,17,PA15,GPIO,USART2_RX,AF7,USART2_RX,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,18,+5V,POWER,,,,nucleo-g474re-morpho-32 | nucleo-g474re-top-view,
+nucleo-g474re,19,GND,GND,,,,nucleo-g474re-morpho-33 | nucleo-g474re-top-view,
+nucleo-g474re,20,GND,GND,,,,nucleo-g474re-morpho-33 | nucleo-g474re-top-view,
+nucleo-g474re,21,PB7,GPIO,COMP3_OUT,AF8,COMP3_OUT,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,21,PB7,GPIO,HRTIM1_EEV3,AF13,HRTIM1_EEV3,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,21,PB7,GPIO,I2C1_SDA,AF4,I2C1_SDA,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,21,PB7,GPIO,I2C4_SDA,AF3,I2C4_SDA,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,21,PB7,GPIO,LPTIM1_IN2,AF11,LPTIM1_IN2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,21,PB7,GPIO,TIM17_CH1N,AF1,TIM17_CH1N,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,21,PB7,GPIO,TIM3_CH4,AF10,TIM3_CH4,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,21,PB7,GPIO,TIM4_CH2,AF2,TIM4_CH2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,21,PB7,GPIO,TIM8_BKIN,AF5,TIM8_BKIN,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,21,PB7,GPIO,UART4_CTS,AF14,UART4_CTS,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,21,PB7,GPIO,USART1_RX,AF7,USART1_RX,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,22,GND,GND,,,,nucleo-g474re-morpho-33 | nucleo-g474re-top-view,
+nucleo-g474re,23,PC13,GPIO,RTC_OUT1,,RTC_OUT1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,23,PC13,GPIO,RTC_TAMP1,,RTC_TAMP1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,23,PC13,GPIO,RTC_TS,,RTC_TS,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,23,PC13,GPIO,SYS_WKUP2,,SYS_WKUP2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,23,PC13,GPIO,TIM1_BKIN,AF2,TIM1_BKIN,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,23,PC13,GPIO,TIM1_CH1N,AF4,TIM1_CH1N,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,23,PC13,GPIO,TIM8_CH4N,AF6,TIM8_CH4N,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,24,VIN,POWER,,,,nucleo-g474re-morpho-33 | nucleo-g474re-top-view,
+nucleo-g474re,25,PC14,GPIO,RCC_OSC32_IN,,RCC_OSC32_IN,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,26,NC,SYSTEM,,,,nucleo-g474re-morpho-33 | nucleo-g474re-top-view,
+nucleo-g474re,27,PC15,GPIO,ADC1_EXTI15,,ADC1_EXTI15,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,27,PC15,GPIO,ADC2_EXTI15,,ADC2_EXTI15,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,27,PC15,GPIO,RCC_OSC32_OUT,,RCC_OSC32_OUT,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,28,PA0,GPIO,ADC1_IN1,,ADC1_IN1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,28,PA0,GPIO,ADC2_IN1,,ADC2_IN1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,28,PA0,GPIO,COMP1_INM,,COMP1_INM,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,28,PA0,GPIO,COMP1_OUT,AF8,COMP1_OUT,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,28,PA0,GPIO,COMP3_INP,,COMP3_INP,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,28,PA0,GPIO,RTC_TAMP2,,RTC_TAMP2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,28,PA0,GPIO,SYS_WKUP1,,SYS_WKUP1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,28,PA0,GPIO,TIM2_CH1,AF1,TIM2_CH1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,28,PA0,GPIO,TIM2_ETR,AF14,TIM2_ETR,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,28,PA0,GPIO,TIM5_CH1,AF2,TIM5_CH1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,28,PA0,GPIO,TIM8_BKIN,AF9,TIM8_BKIN,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,28,PA0,GPIO,TIM8_ETR,AF10,TIM8_ETR,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,28,PA0,GPIO,USART2_CTS,AF7,USART2_CTS,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,28,PA0,GPIO,USART2_NSS,AF7,USART2_NSS,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,29,PF0,GPIO,ADC1_IN10,,ADC1_IN10,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,29,PF0,GPIO,I2C2_SDA,AF4,I2C2_SDA,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,29,PF0,GPIO,I2S2_WS,AF5,I2S2_WS,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,29,PF0,GPIO,RCC_OSC_IN,,RCC_OSC_IN,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,29,PF0,GPIO,SPI2_NSS,AF5,SPI2_NSS,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,29,PF0,GPIO,TIM1_CH3N,AF6,TIM1_CH3N,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,30,PA1,GPIO,ADC1_IN2,,ADC1_IN2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,30,PA1,GPIO,ADC2_IN2,,ADC2_IN2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,30,PA1,GPIO,COMP1_INP,,COMP1_INP,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,30,PA1,GPIO,OPAMP1_VINP,,OPAMP1_VINP,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,30,PA1,GPIO,OPAMP1_VINP_SEC,,OPAMP1_VINP_SEC,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,30,PA1,GPIO,OPAMP3_VINP,,OPAMP3_VINP,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,30,PA1,GPIO,OPAMP3_VINP_SEC,,OPAMP3_VINP_SEC,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,30,PA1,GPIO,OPAMP6_VINM,,OPAMP6_VINM,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,30,PA1,GPIO,OPAMP6_VINM0,,OPAMP6_VINM0,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,30,PA1,GPIO,OPAMP6_VINM_SEC,,OPAMP6_VINM_SEC,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,30,PA1,GPIO,RTC_REFIN,AF0,RTC_REFIN,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,30,PA1,GPIO,TIM15_CH1N,AF9,TIM15_CH1N,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,30,PA1,GPIO,TIM2_CH2,AF1,TIM2_CH2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,30,PA1,GPIO,TIM5_CH2,AF2,TIM5_CH2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,30,PA1,GPIO,USART2_DE,AF7,USART2_DE,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,30,PA1,GPIO,USART2_RTS,AF7,USART2_RTS,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,31,PF1,GPIO,ADC2_IN10,,ADC2_IN10,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,31,PF1,GPIO,COMP3_INM,,COMP3_INM,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,31,PF1,GPIO,I2S2_CK,AF5,I2S2_CK,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,31,PF1,GPIO,RCC_OSC_OUT,,RCC_OSC_OUT,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,31,PF1,GPIO,SPI2_SCK,AF5,SPI2_SCK,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,32,PA4,GPIO,ADC2_IN17,,ADC2_IN17,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,32,PA4,GPIO,COMP1_INM,,COMP1_INM,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,32,PA4,GPIO,DAC1_OUT1,,DAC1_OUT1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,32,PA4,GPIO,I2S3_WS,AF6,I2S3_WS,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,32,PA4,GPIO,SAI1_FS_B,AF13,SAI1_FS_B,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,32,PA4,GPIO,SPI1_NSS,AF5,SPI1_NSS,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,32,PA4,GPIO,SPI3_NSS,AF6,SPI3_NSS,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,32,PA4,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,32,PA4,GPIO,USART2_CK,AF7,USART2_CK,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,33,VBAT,POWER,,,,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,
+nucleo-g474re,34,PB0,GPIO,ADC1_IN15,,ADC1_IN15,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,34,PB0,GPIO,ADC3_IN12,,ADC3_IN12,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,34,PB0,GPIO,COMP4_INP,,COMP4_INP,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,34,PB0,GPIO,HRTIM1_FLT5,AF13,HRTIM1_FLT5,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,34,PB0,GPIO,OPAMP2_VINP,,OPAMP2_VINP,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,34,PB0,GPIO,OPAMP2_VINP_SEC,,OPAMP2_VINP_SEC,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,34,PB0,GPIO,OPAMP3_VINP,,OPAMP3_VINP,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,34,PB0,GPIO,OPAMP3_VINP_SEC,,OPAMP3_VINP_SEC,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,34,PB0,GPIO,QUADSPI1_BK1_IO1,AF10,QUADSPI1_BK1_IO1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,34,PB0,GPIO,TIM1_CH2N,AF6,TIM1_CH2N,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,34,PB0,GPIO,TIM3_CH3,AF2,TIM3_CH3,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,34,PB0,GPIO,TIM8_CH2N,AF4,TIM8_CH2N,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,34,PB0,GPIO,UCPD1_FRSTX1,AF14,UCPD1_FRSTX1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,34,PB0,GPIO,UCPD1_FRSTX2,AF14,UCPD1_FRSTX2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,35,PC2,GPIO,ADC1_IN8,,ADC1_IN8,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,35,PC2,GPIO,ADC2_IN8,,ADC2_IN8,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,35,PC2,GPIO,ADC3_EXTI2,,ADC3_EXTI2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,35,PC2,GPIO,ADC4_EXTI2,,ADC4_EXTI2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,35,PC2,GPIO,ADC5_EXTI2,,ADC5_EXTI2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,35,PC2,GPIO,COMP3_OUT,AF3,COMP3_OUT,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,35,PC2,GPIO,LPTIM1_IN2,AF1,LPTIM1_IN2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,35,PC2,GPIO,QUADSPI1_BK2_IO1,AF10,QUADSPI1_BK2_IO1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,35,PC2,GPIO,TIM1_CH3,AF2,TIM1_CH3,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,35,PC2,GPIO,TIM20_CH2,AF6,TIM20_CH2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,36,PC1,GPIO,ADC1_IN7,,ADC1_IN7,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,36,PC1,GPIO,ADC2_IN7,,ADC2_IN7,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,36,PC1,GPIO,COMP3_INP,,COMP3_INP,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,36,PC1,GPIO,LPTIM1_OUT,AF1,LPTIM1_OUT,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,36,PC1,GPIO,LPUART1_TX,AF8,LPUART1_TX,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,36,PC1,GPIO,QUADSPI1_BK2_IO0,AF10,QUADSPI1_BK2_IO0,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,36,PC1,GPIO,SAI1_SD_A,AF13,SAI1_SD_A,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,36,PC1,GPIO,TIM1_CH2,AF2,TIM1_CH2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,37,PC3,GPIO,ADC1_IN9,,ADC1_IN9,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,37,PC3,GPIO,ADC2_IN9,,ADC2_IN9,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,37,PC3,GPIO,ADC3_EXTI3,,ADC3_EXTI3,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,37,PC3,GPIO,ADC4_EXTI3,,ADC4_EXTI3,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,37,PC3,GPIO,ADC5_EXTI3,,ADC5_EXTI3,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,37,PC3,GPIO,LPTIM1_ETR,AF1,LPTIM1_ETR,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,37,PC3,GPIO,OPAMP5_VINP,,OPAMP5_VINP,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,37,PC3,GPIO,OPAMP5_VINP_SEC,,OPAMP5_VINP_SEC,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,37,PC3,GPIO,QUADSPI1_BK2_IO2,AF10,QUADSPI1_BK2_IO2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,37,PC3,GPIO,SAI1_D1,AF3,SAI1_D1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,37,PC3,GPIO,SAI1_SD_A,AF13,SAI1_SD_A,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,37,PC3,GPIO,TIM1_BKIN2,AF6,TIM1_BKIN2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,37,PC3,GPIO,TIM1_CH4,AF2,TIM1_CH4,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,38,PC0,GPIO,ADC1_IN6,,ADC1_IN6,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,38,PC0,GPIO,ADC2_IN6,,ADC2_IN6,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,38,PC0,GPIO,COMP3_INM,,COMP3_INM,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,38,PC0,GPIO,LPTIM1_IN1,AF1,LPTIM1_IN1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,38,PC0,GPIO,LPUART1_RX,AF8,LPUART1_RX,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,38,PC0,GPIO,TIM1_CH1,AF2,TIM1_CH1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,39,NC,SYSTEM,,,,nucleo-g474re-arduino-30 | nucleo-g474re-top-view,
+nucleo-g474re,40,IOREF,POWER,,,,nucleo-g474re-arduino-30 | nucleo-g474re-top-view,
+nucleo-g474re,41,PG10,GPIO,DAC1_EXTI10,,DAC1_EXTI10,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,41,PG10,GPIO,DAC2_EXTI10,,DAC2_EXTI10,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,41,PG10,GPIO,DAC3_EXTI10,,DAC3_EXTI10,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,41,PG10,GPIO,DAC4_EXTI10,,DAC4_EXTI10,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,41,PG10,GPIO,RCC_MCO,AF0,RCC_MCO,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,42,+3.3V,POWER,,,,nucleo-g474re-arduino-30 | nucleo-g474re-top-view,
+nucleo-g474re,43,+5V,POWER,,,,nucleo-g474re-arduino-30 | nucleo-g474re-top-view,
+nucleo-g474re,44,GND,GND,,,,nucleo-g474re-arduino-30 | nucleo-g474re-top-view,
+nucleo-g474re,45,GND,GND,,,,nucleo-g474re-arduino-30 | nucleo-g474re-top-view,
+nucleo-g474re,46,VIN,POWER,,,,nucleo-g474re-arduino-30 | nucleo-g474re-top-view,
+nucleo-g474re,47,PA0,GPIO,ADC1_IN1,,ADC1_IN1,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,47,PA0,GPIO,ADC2_IN1,,ADC2_IN1,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,47,PA0,GPIO,COMP1_INM,,COMP1_INM,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,47,PA0,GPIO,COMP1_OUT,AF8,COMP1_OUT,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,47,PA0,GPIO,COMP3_INP,,COMP3_INP,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,47,PA0,GPIO,RTC_TAMP2,,RTC_TAMP2,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,47,PA0,GPIO,SYS_WKUP1,,SYS_WKUP1,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,47,PA0,GPIO,TIM2_CH1,AF1,TIM2_CH1,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,47,PA0,GPIO,TIM2_ETR,AF14,TIM2_ETR,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,47,PA0,GPIO,TIM5_CH1,AF2,TIM5_CH1,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,47,PA0,GPIO,TIM8_BKIN,AF9,TIM8_BKIN,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,47,PA0,GPIO,TIM8_ETR,AF10,TIM8_ETR,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,47,PA0,GPIO,USART2_CTS,AF7,USART2_CTS,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,47,PA0,GPIO,USART2_NSS,AF7,USART2_NSS,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,48,PA1,GPIO,ADC1_IN2,,ADC1_IN2,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,48,PA1,GPIO,ADC2_IN2,,ADC2_IN2,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,48,PA1,GPIO,COMP1_INP,,COMP1_INP,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,48,PA1,GPIO,OPAMP1_VINP,,OPAMP1_VINP,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,48,PA1,GPIO,OPAMP1_VINP_SEC,,OPAMP1_VINP_SEC,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,48,PA1,GPIO,OPAMP3_VINP,,OPAMP3_VINP,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,48,PA1,GPIO,OPAMP3_VINP_SEC,,OPAMP3_VINP_SEC,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,48,PA1,GPIO,OPAMP6_VINM,,OPAMP6_VINM,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,48,PA1,GPIO,OPAMP6_VINM0,,OPAMP6_VINM0,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,48,PA1,GPIO,OPAMP6_VINM_SEC,,OPAMP6_VINM_SEC,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,48,PA1,GPIO,RTC_REFIN,AF0,RTC_REFIN,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,48,PA1,GPIO,TIM15_CH1N,AF9,TIM15_CH1N,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,48,PA1,GPIO,TIM2_CH2,AF1,TIM2_CH2,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,48,PA1,GPIO,TIM5_CH2,AF2,TIM5_CH2,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,48,PA1,GPIO,USART2_DE,AF7,USART2_DE,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,48,PA1,GPIO,USART2_RTS,AF7,USART2_RTS,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,49,PA4,GPIO,ADC2_IN17,,ADC2_IN17,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,49,PA4,GPIO,COMP1_INM,,COMP1_INM,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,49,PA4,GPIO,DAC1_OUT1,,DAC1_OUT1,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,49,PA4,GPIO,I2S3_WS,AF6,I2S3_WS,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,49,PA4,GPIO,SAI1_FS_B,AF13,SAI1_FS_B,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,49,PA4,GPIO,SPI1_NSS,AF5,SPI1_NSS,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,49,PA4,GPIO,SPI3_NSS,AF6,SPI3_NSS,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,49,PA4,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,49,PA4,GPIO,USART2_CK,AF7,USART2_CK,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,50,PB0,GPIO,ADC1_IN15,,ADC1_IN15,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,50,PB0,GPIO,ADC3_IN12,,ADC3_IN12,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,50,PB0,GPIO,COMP4_INP,,COMP4_INP,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,50,PB0,GPIO,HRTIM1_FLT5,AF13,HRTIM1_FLT5,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,50,PB0,GPIO,OPAMP2_VINP,,OPAMP2_VINP,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,50,PB0,GPIO,OPAMP2_VINP_SEC,,OPAMP2_VINP_SEC,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,50,PB0,GPIO,OPAMP3_VINP,,OPAMP3_VINP,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,50,PB0,GPIO,OPAMP3_VINP_SEC,,OPAMP3_VINP_SEC,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,50,PB0,GPIO,QUADSPI1_BK1_IO1,AF10,QUADSPI1_BK1_IO1,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,50,PB0,GPIO,TIM1_CH2N,AF6,TIM1_CH2N,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,50,PB0,GPIO,TIM3_CH3,AF2,TIM3_CH3,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,50,PB0,GPIO,TIM8_CH2N,AF4,TIM8_CH2N,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,50,PB0,GPIO,UCPD1_FRSTX1,AF14,UCPD1_FRSTX1,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,50,PB0,GPIO,UCPD1_FRSTX2,AF14,UCPD1_FRSTX2,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,51,PC1,GPIO,ADC1_IN7,,ADC1_IN7,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,51,PC1,GPIO,ADC2_IN7,,ADC2_IN7,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,51,PC1,GPIO,COMP3_INP,,COMP3_INP,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,51,PC1,GPIO,LPTIM1_OUT,AF1,LPTIM1_OUT,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,51,PC1,GPIO,LPUART1_TX,AF8,LPUART1_TX,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,51,PC1,GPIO,QUADSPI1_BK2_IO0,AF10,QUADSPI1_BK2_IO0,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,51,PC1,GPIO,SAI1_SD_A,AF13,SAI1_SD_A,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,51,PC1,GPIO,TIM1_CH2,AF2,TIM1_CH2,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,52,PC0,GPIO,ADC1_IN6,,ADC1_IN6,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,52,PC0,GPIO,ADC2_IN6,,ADC2_IN6,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,52,PC0,GPIO,COMP3_INM,,COMP3_INM,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,52,PC0,GPIO,LPTIM1_IN1,AF1,LPTIM1_IN1,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,52,PC0,GPIO,LPUART1_RX,AF8,LPUART1_RX,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,52,PC0,GPIO,TIM1_CH1,AF2,TIM1_CH1,nucleo-g474re-arduino-30 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,53,PC9,GPIO,DAC1_EXTI9,,DAC1_EXTI9,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,53,PC9,GPIO,DAC2_EXTI9,,DAC2_EXTI9,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,53,PC9,GPIO,DAC3_EXTI9,,DAC3_EXTI9,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,53,PC9,GPIO,DAC4_EXTI9,,DAC4_EXTI9,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,53,PC9,GPIO,HRTIM1_CHE2,AF3,HRTIM1_CHE2,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,53,PC9,GPIO,I2C3_SDA,AF8,I2C3_SDA,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,53,PC9,GPIO,I2S_CKIN,AF5,I2S_CKIN,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,53,PC9,GPIO,TIM3_CH4,AF2,TIM3_CH4,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,53,PC9,GPIO,TIM8_BKIN2,AF6,TIM8_BKIN2,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,53,PC9,GPIO,TIM8_CH4,AF4,TIM8_CH4,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,54,PC8,GPIO,COMP7_OUT,AF7,COMP7_OUT,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,54,PC8,GPIO,HRTIM1_CHE1,AF3,HRTIM1_CHE1,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,54,PC8,GPIO,I2C3_SCL,AF8,I2C3_SCL,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,54,PC8,GPIO,TIM20_CH3,AF6,TIM20_CH3,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,54,PC8,GPIO,TIM3_CH3,AF2,TIM3_CH3,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,54,PC8,GPIO,TIM8_CH3,AF4,TIM8_CH3,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,55,PB8,GPIO,COMP1_OUT,AF8,COMP1_OUT,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,55,PB8,GPIO,FDCAN1_RX,AF9,FDCAN1_RX,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,55,PB8,GPIO,HRTIM1_EEV8,AF13,HRTIM1_EEV8,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,55,PB8,GPIO,I2C1_SCL,AF4,I2C1_SCL,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,55,PB8,GPIO,SAI1_CK1,AF3,SAI1_CK1,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,55,PB8,GPIO,SAI1_MCLK_A,AF14,SAI1_MCLK_A,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,55,PB8,GPIO,TIM16_CH1,AF1,TIM16_CH1,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,55,PB8,GPIO,TIM1_BKIN,AF12,TIM1_BKIN,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,55,PB8,GPIO,TIM4_CH3,AF2,TIM4_CH3,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,55,PB8,GPIO,TIM8_CH2,AF10,TIM8_CH2,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,55,PB8,GPIO,USART3_RX,AF7,USART3_RX,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,56,PC6,GPIO,COMP6_OUT,AF7,COMP6_OUT,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,56,PC6,GPIO,HRTIM1_CHF1,AF13,HRTIM1_CHF1,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,56,PC6,GPIO,HRTIM1_EEV10,AF3,HRTIM1_EEV10,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,56,PC6,GPIO,I2C4_SCL,AF8,I2C4_SCL,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,56,PC6,GPIO,I2S2_MCK,AF6,I2S2_MCK,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,56,PC6,GPIO,TIM3_CH1,AF2,TIM3_CH1,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,56,PC6,GPIO,TIM8_CH1,AF4,TIM8_CH1,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,57,PB9,GPIO,COMP2_OUT,AF8,COMP2_OUT,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,57,PB9,GPIO,DAC1_EXTI9,,DAC1_EXTI9,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,57,PB9,GPIO,DAC2_EXTI9,,DAC2_EXTI9,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,57,PB9,GPIO,DAC3_EXTI9,,DAC3_EXTI9,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,57,PB9,GPIO,DAC4_EXTI9,,DAC4_EXTI9,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,57,PB9,GPIO,FDCAN1_TX,AF9,FDCAN1_TX,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,57,PB9,GPIO,HRTIM1_EEV5,AF13,HRTIM1_EEV5,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,57,PB9,GPIO,I2C1_SDA,AF4,I2C1_SDA,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,57,PB9,GPIO,IR_OUT,AF6,IR_OUT,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,57,PB9,GPIO,SAI1_D2,AF3,SAI1_D2,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,57,PB9,GPIO,SAI1_FS_A,AF14,SAI1_FS_A,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,57,PB9,GPIO,TIM17_CH1,AF1,TIM17_CH1,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,57,PB9,GPIO,TIM1_CH3N,AF12,TIM1_CH3N,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,57,PB9,GPIO,TIM4_CH4,AF2,TIM4_CH4,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,57,PB9,GPIO,TIM8_CH3,AF10,TIM8_CH3,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,57,PB9,GPIO,USART3_TX,AF7,USART3_TX,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,58,PC5,GPIO,ADC2_IN11,,ADC2_IN11,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,58,PC5,GPIO,HRTIM1_EEV10,AF13,HRTIM1_EEV10,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,58,PC5,GPIO,OPAMP1_VINM,,OPAMP1_VINM,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,58,PC5,GPIO,OPAMP1_VINM1,,OPAMP1_VINM1,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,58,PC5,GPIO,OPAMP1_VINM_SEC,,OPAMP1_VINM_SEC,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,58,PC5,GPIO,OPAMP2_VINM,,OPAMP2_VINM,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,58,PC5,GPIO,OPAMP2_VINM1,,OPAMP2_VINM1,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,58,PC5,GPIO,OPAMP2_VINM_SEC,,OPAMP2_VINM_SEC,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,58,PC5,GPIO,SAI1_D3,AF3,SAI1_D3,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,58,PC5,GPIO,SYS_WKUP5,,SYS_WKUP5,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,58,PC5,GPIO,TIM15_BKIN,AF2,TIM15_BKIN,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,58,PC5,GPIO,TIM1_CH4N,AF6,TIM1_CH4N,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,58,PC5,GPIO,USART1_RX,AF7,USART1_RX,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,59,VDDA,POWER,,,,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,
+nucleo-g474re,60,U5V,POWER,,,,nucleo-g474re-morpho-32 | nucleo-g474re-top-view,
+nucleo-g474re,61,GND,GND,,,,nucleo-g474re-morpho-32 | nucleo-g474re-top-view,
+nucleo-g474re,62,NC,SYSTEM,,,,nucleo-g474re-morpho-32 | nucleo-g474re-top-view,
+nucleo-g474re,63,PA5,GPIO,ADC2_IN13,,ADC2_IN13,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,63,PA5,GPIO,COMP2_INM,,COMP2_INM,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,63,PA5,GPIO,DAC1_OUT2,,DAC1_OUT2,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,63,PA5,GPIO,OPAMP2_VINM,,OPAMP2_VINM,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,63,PA5,GPIO,OPAMP2_VINM0,,OPAMP2_VINM0,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,63,PA5,GPIO,OPAMP2_VINM_SEC,,OPAMP2_VINM_SEC,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,63,PA5,GPIO,SPI1_SCK,AF5,SPI1_SCK,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,63,PA5,GPIO,TIM2_CH1,AF1,TIM2_CH1,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,63,PA5,GPIO,TIM2_ETR,AF2,TIM2_ETR,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,63,PA5,GPIO,UCPD1_FRSTX1,AF14,UCPD1_FRSTX1,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,63,PA5,GPIO,UCPD1_FRSTX2,AF14,UCPD1_FRSTX2,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,64,PA12,GPIO,COMP2_OUT,AF8,COMP2_OUT,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,64,PA12,GPIO,FDCAN1_TX,AF9,FDCAN1_TX,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,64,PA12,GPIO,HRTIM1_FLT1,AF13,HRTIM1_FLT1,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,64,PA12,GPIO,I2S_CKIN,AF5,I2S_CKIN,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,64,PA12,GPIO,TIM16_CH1,AF1,TIM16_CH1,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,64,PA12,GPIO,TIM1_CH2N,AF6,TIM1_CH2N,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,64,PA12,GPIO,TIM1_ETR,AF11,TIM1_ETR,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,64,PA12,GPIO,TIM4_CH2,AF10,TIM4_CH2,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,64,PA12,GPIO,USART1_DE,AF7,USART1_DE,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,64,PA12,GPIO,USART1_RTS,AF7,USART1_RTS,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,64,PA12,GPIO,USB_DP,,USB_DP,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,65,PA6,GPIO,ADC2_IN3,,ADC2_IN3,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,65,PA6,GPIO,COMP1_OUT,AF8,COMP1_OUT,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,65,PA6,GPIO,DAC2_OUT1,,DAC2_OUT1,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,65,PA6,GPIO,LPUART1_CTS,AF12,LPUART1_CTS,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,65,PA6,GPIO,OPAMP2_VOUT,,OPAMP2_VOUT,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,65,PA6,GPIO,QUADSPI1_BK1_IO3,AF10,QUADSPI1_BK1_IO3,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,65,PA6,GPIO,SPI1_MISO,AF5,SPI1_MISO,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,65,PA6,GPIO,TIM16_CH1,AF1,TIM16_CH1,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,65,PA6,GPIO,TIM1_BKIN,AF6,TIM1_BKIN,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,65,PA6,GPIO,TIM3_CH1,AF2,TIM3_CH1,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,65,PA6,GPIO,TIM8_BKIN,AF4,TIM8_BKIN,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,66,PA11,GPIO,ADC1_EXTI11,,ADC1_EXTI11,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,66,PA11,GPIO,ADC2_EXTI11,,ADC2_EXTI11,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,66,PA11,GPIO,COMP1_OUT,AF8,COMP1_OUT,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,66,PA11,GPIO,FDCAN1_RX,AF9,FDCAN1_RX,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,66,PA11,GPIO,HRTIM1_CHB2,AF13,HRTIM1_CHB2,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,66,PA11,GPIO,I2S2_SD,AF5,I2S2_SD,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,66,PA11,GPIO,SPI2_MOSI,AF5,SPI2_MOSI,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,66,PA11,GPIO,TIM1_BKIN2,AF12,TIM1_BKIN2,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,66,PA11,GPIO,TIM1_CH1N,AF6,TIM1_CH1N,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,66,PA11,GPIO,TIM1_CH4,AF11,TIM1_CH4,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,66,PA11,GPIO,TIM4_CH1,AF10,TIM4_CH1,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,66,PA11,GPIO,USART1_CTS,AF7,USART1_CTS,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,66,PA11,GPIO,USART1_NSS,AF7,USART1_NSS,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,66,PA11,GPIO,USB_DM,,USB_DM,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,67,PA7,GPIO,ADC2_IN4,,ADC2_IN4,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,67,PA7,GPIO,COMP2_INP,,COMP2_INP,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,67,PA7,GPIO,COMP2_OUT,AF8,COMP2_OUT,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,67,PA7,GPIO,OPAMP1_VINP,,OPAMP1_VINP,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,67,PA7,GPIO,OPAMP1_VINP_SEC,,OPAMP1_VINP_SEC,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,67,PA7,GPIO,OPAMP2_VINP,,OPAMP2_VINP,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,67,PA7,GPIO,OPAMP2_VINP_SEC,,OPAMP2_VINP_SEC,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,67,PA7,GPIO,QUADSPI1_BK1_IO2,AF10,QUADSPI1_BK1_IO2,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,67,PA7,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,67,PA7,GPIO,TIM17_CH1,AF1,TIM17_CH1,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,67,PA7,GPIO,TIM1_CH1N,AF6,TIM1_CH1N,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,67,PA7,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,67,PA7,GPIO,TIM8_CH1N,AF4,TIM8_CH1N,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,67,PA7,GPIO,UCPD1_FRSTX1,AF14,UCPD1_FRSTX1,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,67,PA7,GPIO,UCPD1_FRSTX2,AF14,UCPD1_FRSTX2,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,68,PB12,GPIO,ADC1_IN11,,ADC1_IN11,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,68,PB12,GPIO,ADC4_IN3,,ADC4_IN3,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,68,PB12,GPIO,COMP7_INM,,COMP7_INM,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,68,PB12,GPIO,FDCAN2_RX,AF9,FDCAN2_RX,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,68,PB12,GPIO,HRTIM1_CHC1,AF13,HRTIM1_CHC1,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,68,PB12,GPIO,I2C2_SMBA,AF4,I2C2_SMBA,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,68,PB12,GPIO,I2S2_WS,AF5,I2S2_WS,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,68,PB12,GPIO,LPUART1_DE,AF8,LPUART1_DE,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,68,PB12,GPIO,LPUART1_RTS,AF8,LPUART1_RTS,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,68,PB12,GPIO,OPAMP4_VOUT,,OPAMP4_VOUT,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,68,PB12,GPIO,OPAMP6_VINP,,OPAMP6_VINP,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,68,PB12,GPIO,OPAMP6_VINP_SEC,,OPAMP6_VINP_SEC,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,68,PB12,GPIO,SPI2_NSS,AF5,SPI2_NSS,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,68,PB12,GPIO,TIM1_BKIN,AF6,TIM1_BKIN,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,68,PB12,GPIO,TIM5_ETR,AF2,TIM5_ETR,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,68,PB12,GPIO,USART3_CK,AF7,USART3_CK,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,69,PB6,GPIO,COMP4_OUT,AF8,COMP4_OUT,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,69,PB6,GPIO,FDCAN2_TX,AF9,FDCAN2_TX,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,69,PB6,GPIO,HRTIM1_EEV4,AF13,HRTIM1_EEV4,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,69,PB6,GPIO,HRTIM1_SCIN,AF12,HRTIM1_SCIN,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,69,PB6,GPIO,LPTIM1_ETR,AF11,LPTIM1_ETR,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,69,PB6,GPIO,SAI1_FS_B,AF14,SAI1_FS_B,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,69,PB6,GPIO,TIM16_CH1N,AF1,TIM16_CH1N,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,69,PB6,GPIO,TIM4_CH1,AF2,TIM4_CH1,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,69,PB6,GPIO,TIM8_BKIN2,AF10,TIM8_BKIN2,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,69,PB6,GPIO,TIM8_CH1,AF5,TIM8_CH1,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,69,PB6,GPIO,TIM8_ETR,AF6,TIM8_ETR,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,69,PB6,GPIO,UCPD1_CC1,,UCPD1_CC1,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,69,PB6,GPIO,USART1_TX,AF7,USART1_TX,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,70,PB11,GPIO,ADC1_EXTI11,,ADC1_EXTI11,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,70,PB11,GPIO,ADC1_IN14,,ADC1_IN14,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,70,PB11,GPIO,ADC2_EXTI11,,ADC2_EXTI11,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,70,PB11,GPIO,ADC2_IN14,,ADC2_IN14,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,70,PB11,GPIO,COMP6_INP,,COMP6_INP,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,70,PB11,GPIO,HRTIM1_FLT4,AF13,HRTIM1_FLT4,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,70,PB11,GPIO,LPUART1_TX,AF8,LPUART1_TX,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,70,PB11,GPIO,OPAMP4_VINP,,OPAMP4_VINP,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,70,PB11,GPIO,OPAMP4_VINP_SEC,,OPAMP4_VINP_SEC,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,70,PB11,GPIO,OPAMP6_VOUT,,OPAMP6_VOUT,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,70,PB11,GPIO,QUADSPI1_BK1_NCS,AF10,QUADSPI1_BK1_NCS,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,70,PB11,GPIO,TIM2_CH4,AF1,TIM2_CH4,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,70,PB11,GPIO,USART3_RX,AF7,USART3_RX,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,71,PC7,GPIO,COMP5_OUT,AF7,COMP5_OUT,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,71,PC7,GPIO,HRTIM1_CHF2,AF13,HRTIM1_CHF2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,71,PC7,GPIO,HRTIM1_FLT5,AF3,HRTIM1_FLT5,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,71,PC7,GPIO,I2C4_SDA,AF8,I2C4_SDA,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,71,PC7,GPIO,I2S3_MCK,AF6,I2S3_MCK,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,71,PC7,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,71,PC7,GPIO,TIM8_CH2,AF4,TIM8_CH2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,72,GND,GND,,,,nucleo-g474re-morpho-33 | nucleo-g474re-top-view,
+nucleo-g474re,73,PA9,GPIO,ADC5_IN2,,ADC5_IN2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,73,PA9,GPIO,COMP5_OUT,AF8,COMP5_OUT,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,73,PA9,GPIO,DAC1_EXTI9,,DAC1_EXTI9,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,73,PA9,GPIO,DAC2_EXTI9,,DAC2_EXTI9,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,73,PA9,GPIO,DAC3_EXTI9,,DAC3_EXTI9,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,73,PA9,GPIO,DAC4_EXTI9,,DAC4_EXTI9,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,73,PA9,GPIO,HRTIM1_CHA2,AF13,HRTIM1_CHA2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,73,PA9,GPIO,I2C2_SCL,AF4,I2C2_SCL,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,73,PA9,GPIO,I2C3_SMBA,AF2,I2C3_SMBA,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,73,PA9,GPIO,I2S3_MCK,AF5,I2S3_MCK,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,73,PA9,GPIO,SAI1_FS_A,AF14,SAI1_FS_A,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,73,PA9,GPIO,TIM15_BKIN,AF9,TIM15_BKIN,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,73,PA9,GPIO,TIM1_CH2,AF6,TIM1_CH2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,73,PA9,GPIO,TIM2_CH3,AF10,TIM2_CH3,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,73,PA9,GPIO,UCPD1_DBCC1,,UCPD1_DBCC1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,73,PA9,GPIO,USART1_TX,AF7,USART1_TX,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,74,PB2,GPIO,ADC2_IN12,,ADC2_IN12,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,74,PB2,GPIO,ADC3_EXTI2,,ADC3_EXTI2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,74,PB2,GPIO,ADC4_EXTI2,,ADC4_EXTI2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,74,PB2,GPIO,ADC5_EXTI2,,ADC5_EXTI2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,74,PB2,GPIO,COMP4_INM,,COMP4_INM,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,74,PB2,GPIO,HRTIM1_SCIN,AF13,HRTIM1_SCIN,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,74,PB2,GPIO,I2C3_SMBA,AF4,I2C3_SMBA,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,74,PB2,GPIO,LPTIM1_OUT,AF1,LPTIM1_OUT,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,74,PB2,GPIO,OPAMP3_VINM,,OPAMP3_VINM,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,74,PB2,GPIO,OPAMP3_VINM0,,OPAMP3_VINM0,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,74,PB2,GPIO,OPAMP3_VINM_SEC,,OPAMP3_VINM_SEC,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,74,PB2,GPIO,QUADSPI1_BK2_IO1,AF10,QUADSPI1_BK2_IO1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,74,PB2,GPIO,RTC_OUT2,AF0,RTC_OUT2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,74,PB2,GPIO,TIM20_CH1,AF3,TIM20_CH1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,74,PB2,GPIO,TIM5_CH1,AF2,TIM5_CH1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,75,PA8,GPIO,ADC5_IN1,,ADC5_IN1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,75,PA8,GPIO,COMP7_OUT,AF8,COMP7_OUT,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,75,PA8,GPIO,FDCAN3_RX,AF11,FDCAN3_RX,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,75,PA8,GPIO,HRTIM1_CHA1,AF13,HRTIM1_CHA1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,75,PA8,GPIO,I2C2_SDA,AF4,I2C2_SDA,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,75,PA8,GPIO,I2C3_SCL,AF2,I2C3_SCL,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,75,PA8,GPIO,I2S2_MCK,AF5,I2S2_MCK,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,75,PA8,GPIO,OPAMP5_VOUT,,OPAMP5_VOUT,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,75,PA8,GPIO,RCC_MCO,AF0,RCC_MCO,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,75,PA8,GPIO,SAI1_CK2,AF12,SAI1_CK2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,75,PA8,GPIO,SAI1_SCK_A,AF14,SAI1_SCK_A,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,75,PA8,GPIO,TIM1_CH1,AF6,TIM1_CH1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,75,PA8,GPIO,TIM4_ETR,AF10,TIM4_ETR,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,75,PA8,GPIO,USART1_CK,AF7,USART1_CK,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,76,PB1,GPIO,ADC1_IN12,,ADC1_IN12,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,76,PB1,GPIO,ADC3_IN1,,ADC3_IN1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,76,PB1,GPIO,COMP1_INP,,COMP1_INP,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,76,PB1,GPIO,COMP4_OUT,AF8,COMP4_OUT,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,76,PB1,GPIO,HRTIM1_SCOUT,AF13,HRTIM1_SCOUT,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,76,PB1,GPIO,LPUART1_DE,AF12,LPUART1_DE,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,76,PB1,GPIO,LPUART1_RTS,AF12,LPUART1_RTS,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,76,PB1,GPIO,OPAMP3_VOUT,,OPAMP3_VOUT,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,76,PB1,GPIO,OPAMP6_VINM,,OPAMP6_VINM,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,76,PB1,GPIO,OPAMP6_VINM1,,OPAMP6_VINM1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,76,PB1,GPIO,OPAMP6_VINM_SEC,,OPAMP6_VINM_SEC,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,76,PB1,GPIO,QUADSPI1_BK1_IO0,AF10,QUADSPI1_BK1_IO0,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,76,PB1,GPIO,TIM1_CH3N,AF6,TIM1_CH3N,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,76,PB1,GPIO,TIM3_CH4,AF2,TIM3_CH4,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,76,PB1,GPIO,TIM8_CH3N,AF4,TIM8_CH3N,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,77,PB10,GPIO,COMP5_INM,,COMP5_INM,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,77,PB10,GPIO,DAC1_EXTI10,,DAC1_EXTI10,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,77,PB10,GPIO,DAC2_EXTI10,,DAC2_EXTI10,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,77,PB10,GPIO,DAC3_EXTI10,,DAC3_EXTI10,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,77,PB10,GPIO,DAC4_EXTI10,,DAC4_EXTI10,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,77,PB10,GPIO,HRTIM1_FLT3,AF13,HRTIM1_FLT3,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,77,PB10,GPIO,LPUART1_RX,AF8,LPUART1_RX,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,77,PB10,GPIO,OPAMP3_VINM,,OPAMP3_VINM,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,77,PB10,GPIO,OPAMP3_VINM1,,OPAMP3_VINM1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,77,PB10,GPIO,OPAMP3_VINM_SEC,,OPAMP3_VINM_SEC,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,77,PB10,GPIO,OPAMP4_VINM,,OPAMP4_VINM,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,77,PB10,GPIO,OPAMP4_VINM0,,OPAMP4_VINM0,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,77,PB10,GPIO,OPAMP4_VINM_SEC,,OPAMP4_VINM_SEC,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,77,PB10,GPIO,QUADSPI1_CLK,AF10,QUADSPI1_CLK,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,77,PB10,GPIO,SAI1_SCK_A,AF14,SAI1_SCK_A,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,77,PB10,GPIO,TIM1_BKIN,AF12,TIM1_BKIN,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,77,PB10,GPIO,TIM2_CH3,AF1,TIM2_CH3,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,77,PB10,GPIO,USART3_TX,AF7,USART3_TX,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,78,PB15,GPIO,ADC1_EXTI15,,ADC1_EXTI15,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,78,PB15,GPIO,ADC2_EXTI15,,ADC2_EXTI15,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,78,PB15,GPIO,ADC2_IN15,,ADC2_IN15,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,78,PB15,GPIO,ADC4_IN5,,ADC4_IN5,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,78,PB15,GPIO,COMP3_OUT,AF3,COMP3_OUT,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,78,PB15,GPIO,COMP6_INM,,COMP6_INM,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,78,PB15,GPIO,HRTIM1_CHD2,AF13,HRTIM1_CHD2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,78,PB15,GPIO,I2S2_SD,AF5,I2S2_SD,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,78,PB15,GPIO,OPAMP5_VINM,,OPAMP5_VINM,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,78,PB15,GPIO,OPAMP5_VINM0,,OPAMP5_VINM0,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,78,PB15,GPIO,OPAMP5_VINM_SEC,,OPAMP5_VINM_SEC,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,78,PB15,GPIO,RTC_REFIN,AF0,RTC_REFIN,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,78,PB15,GPIO,SPI2_MOSI,AF5,SPI2_MOSI,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,78,PB15,GPIO,TIM15_CH1N,AF2,TIM15_CH1N,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,78,PB15,GPIO,TIM15_CH2,AF1,TIM15_CH2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,78,PB15,GPIO,TIM1_CH3N,AF4,TIM1_CH3N,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,79,PB4,GPIO,FDCAN3_TX,AF11,FDCAN3_TX,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,79,PB4,GPIO,HRTIM1_EEV7,AF13,HRTIM1_EEV7,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,79,PB4,GPIO,SAI1_MCLK_B,AF14,SAI1_MCLK_B,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,79,PB4,GPIO,SPI1_MISO,AF5,SPI1_MISO,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,79,PB4,GPIO,SPI3_MISO,AF6,SPI3_MISO,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,79,PB4,GPIO,SYS_JTRST,AF0,SYS_JTRST,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,79,PB4,GPIO,TIM16_CH1,AF1,TIM16_CH1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,79,PB4,GPIO,TIM17_BKIN,AF10,TIM17_BKIN,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,79,PB4,GPIO,TIM3_CH1,AF2,TIM3_CH1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,79,PB4,GPIO,TIM8_CH2N,AF4,TIM8_CH2N,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,79,PB4,GPIO,UART5_DE,AF8,UART5_DE,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,79,PB4,GPIO,UART5_RTS,AF8,UART5_RTS,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,79,PB4,GPIO,UCPD1_CC2,,UCPD1_CC2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,79,PB4,GPIO,USART2_RX,AF7,USART2_RX,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,80,PB14,GPIO,ADC1_IN5,,ADC1_IN5,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,80,PB14,GPIO,ADC4_IN4,,ADC4_IN4,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,80,PB14,GPIO,COMP4_OUT,AF8,COMP4_OUT,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,80,PB14,GPIO,COMP7_INP,,COMP7_INP,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,80,PB14,GPIO,HRTIM1_CHD1,AF13,HRTIM1_CHD1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,80,PB14,GPIO,OPAMP2_VINP,,OPAMP2_VINP,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,80,PB14,GPIO,OPAMP2_VINP_SEC,,OPAMP2_VINP_SEC,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,80,PB14,GPIO,OPAMP5_VINP,,OPAMP5_VINP,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,80,PB14,GPIO,OPAMP5_VINP_SEC,,OPAMP5_VINP_SEC,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,80,PB14,GPIO,SPI2_MISO,AF5,SPI2_MISO,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,80,PB14,GPIO,TIM15_CH1,AF1,TIM15_CH1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,80,PB14,GPIO,TIM1_CH2N,AF6,TIM1_CH2N,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,80,PB14,GPIO,USART3_DE,AF7,USART3_DE,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,80,PB14,GPIO,USART3_RTS,AF7,USART3_RTS,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,81,PB5,GPIO,FDCAN2_RX,AF9,FDCAN2_RX,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,81,PB5,GPIO,HRTIM1_EEV6,AF13,HRTIM1_EEV6,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,81,PB5,GPIO,I2C1_SMBA,AF4,I2C1_SMBA,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,81,PB5,GPIO,I2C3_SDA,AF8,I2C3_SDA,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,81,PB5,GPIO,I2S3_SD,AF6,I2S3_SD,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,81,PB5,GPIO,LPTIM1_IN1,AF11,LPTIM1_IN1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,81,PB5,GPIO,SAI1_SD_B,AF12,SAI1_SD_B,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,81,PB5,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,81,PB5,GPIO,SPI3_MOSI,AF6,SPI3_MOSI,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,81,PB5,GPIO,TIM16_BKIN,AF1,TIM16_BKIN,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,81,PB5,GPIO,TIM17_CH1,AF10,TIM17_CH1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,81,PB5,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,81,PB5,GPIO,TIM8_CH3N,AF3,TIM8_CH3N,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,81,PB5,GPIO,UART5_CTS,AF14,UART5_CTS,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,81,PB5,GPIO,USART2_CK,AF7,USART2_CK,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,82,PB13,GPIO,ADC3_IN5,,ADC3_IN5,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,82,PB13,GPIO,COMP5_INP,,COMP5_INP,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,82,PB13,GPIO,FDCAN2_TX,AF9,FDCAN2_TX,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,82,PB13,GPIO,HRTIM1_CHC2,AF13,HRTIM1_CHC2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,82,PB13,GPIO,I2S2_CK,AF5,I2S2_CK,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,82,PB13,GPIO,LPUART1_CTS,AF8,LPUART1_CTS,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,82,PB13,GPIO,OPAMP3_VINP,,OPAMP3_VINP,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,82,PB13,GPIO,OPAMP3_VINP_SEC,,OPAMP3_VINP_SEC,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,82,PB13,GPIO,OPAMP4_VINP,,OPAMP4_VINP,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,82,PB13,GPIO,OPAMP4_VINP_SEC,,OPAMP4_VINP_SEC,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,82,PB13,GPIO,OPAMP6_VINP,,OPAMP6_VINP,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,82,PB13,GPIO,OPAMP6_VINP_SEC,,OPAMP6_VINP_SEC,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,82,PB13,GPIO,SPI2_SCK,AF5,SPI2_SCK,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,82,PB13,GPIO,TIM1_CH1N,AF6,TIM1_CH1N,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,82,PB13,GPIO,USART3_CTS,AF7,USART3_CTS,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,82,PB13,GPIO,USART3_NSS,AF7,USART3_NSS,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,83,PB3,GPIO,ADC3_EXTI3,,ADC3_EXTI3,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,83,PB3,GPIO,ADC4_EXTI3,,ADC4_EXTI3,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,83,PB3,GPIO,ADC5_EXTI3,,ADC5_EXTI3,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,83,PB3,GPIO,CRS_SYNC,AF3,CRS_SYNC,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,83,PB3,GPIO,FDCAN3_RX,AF11,FDCAN3_RX,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,83,PB3,GPIO,HRTIM1_EEV9,AF13,HRTIM1_EEV9,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,83,PB3,GPIO,HRTIM1_SCOUT,AF12,HRTIM1_SCOUT,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,83,PB3,GPIO,I2S3_CK,AF6,I2S3_CK,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,83,PB3,GPIO,SAI1_SCK_B,AF14,SAI1_SCK_B,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,83,PB3,GPIO,SPI1_SCK,AF5,SPI1_SCK,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,83,PB3,GPIO,SPI3_SCK,AF6,SPI3_SCK,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,83,PB3,GPIO,SYS_JTDO-SWO,AF0,SYS_JTDO-SWO,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,83,PB3,GPIO,TIM2_CH2,AF1,TIM2_CH2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,83,PB3,GPIO,TIM3_ETR,AF10,TIM3_ETR,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,83,PB3,GPIO,TIM4_ETR,AF2,TIM4_ETR,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,83,PB3,GPIO,TIM8_CH1N,AF4,TIM8_CH1N,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,83,PB3,GPIO,USART2_TX,AF7,USART2_TX,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,84,AGND,GND,,,,nucleo-g474re-morpho-33 | nucleo-g474re-top-view,
+nucleo-g474re,85,PA10,GPIO,COMP6_OUT,AF8,COMP6_OUT,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,85,PA10,GPIO,CRS_SYNC,AF3,CRS_SYNC,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,85,PA10,GPIO,DAC1_EXTI10,,DAC1_EXTI10,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,85,PA10,GPIO,DAC2_EXTI10,,DAC2_EXTI10,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,85,PA10,GPIO,DAC3_EXTI10,,DAC3_EXTI10,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,85,PA10,GPIO,DAC4_EXTI10,,DAC4_EXTI10,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,85,PA10,GPIO,HRTIM1_CHB1,AF13,HRTIM1_CHB1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,85,PA10,GPIO,I2C2_SMBA,AF4,I2C2_SMBA,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,85,PA10,GPIO,SAI1_D1,AF12,SAI1_D1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,85,PA10,GPIO,SAI1_SD_A,AF14,SAI1_SD_A,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,85,PA10,GPIO,SPI2_MISO,AF5,SPI2_MISO,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,85,PA10,GPIO,SYS_PVD_IN,,SYS_PVD_IN,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,85,PA10,GPIO,TIM17_BKIN,AF1,TIM17_BKIN,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,85,PA10,GPIO,TIM1_CH3,AF6,TIM1_CH3,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,85,PA10,GPIO,TIM2_CH4,AF10,TIM2_CH4,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,85,PA10,GPIO,TIM8_BKIN,AF11,TIM8_BKIN,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,85,PA10,GPIO,UCPD1_DBCC2,,UCPD1_DBCC2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,85,PA10,GPIO,USART1_RX,AF7,USART1_RX,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,86,PC4,GPIO,ADC2_IN5,,ADC2_IN5,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,86,PC4,GPIO,I2C2_SCL,AF4,I2C2_SCL,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,86,PC4,GPIO,QUADSPI1_BK2_IO3,AF10,QUADSPI1_BK2_IO3,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,86,PC4,GPIO,TIM1_ETR,AF2,TIM1_ETR,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,86,PC4,GPIO,USART1_TX,AF7,USART1_TX,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,87,PA2,GPIO,ADC1_IN3,,ADC1_IN3,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,87,PA2,GPIO,ADC3_EXTI2,,ADC3_EXTI2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,87,PA2,GPIO,ADC4_EXTI2,,ADC4_EXTI2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,87,PA2,GPIO,ADC5_EXTI2,,ADC5_EXTI2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,87,PA2,GPIO,COMP2_INM,,COMP2_INM,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,87,PA2,GPIO,COMP2_OUT,AF8,COMP2_OUT,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,87,PA2,GPIO,LPUART1_TX,AF12,LPUART1_TX,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,87,PA2,GPIO,OPAMP1_VOUT,,OPAMP1_VOUT,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,87,PA2,GPIO,QUADSPI1_BK1_NCS,AF10,QUADSPI1_BK1_NCS,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,87,PA2,GPIO,RCC_LSCO,,RCC_LSCO,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,87,PA2,GPIO,SYS_WKUP4,,SYS_WKUP4,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,87,PA2,GPIO,TIM15_CH1,AF9,TIM15_CH1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,87,PA2,GPIO,TIM2_CH3,AF1,TIM2_CH3,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,87,PA2,GPIO,TIM5_CH3,AF2,TIM5_CH3,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,87,PA2,GPIO,UCPD1_FRSTX1,AF14,UCPD1_FRSTX1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,87,PA2,GPIO,UCPD1_FRSTX2,AF14,UCPD1_FRSTX2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,87,PA2,GPIO,USART2_TX,AF7,USART2_TX,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,88,NC,SYSTEM,,,,nucleo-g474re-morpho-33 | nucleo-g474re-top-view,
+nucleo-g474re,89,PA3,GPIO,ADC1_IN4,,ADC1_IN4,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,89,PA3,GPIO,ADC3_EXTI3,,ADC3_EXTI3,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,89,PA3,GPIO,ADC4_EXTI3,,ADC4_EXTI3,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,89,PA3,GPIO,ADC5_EXTI3,,ADC5_EXTI3,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,89,PA3,GPIO,COMP2_INP,,COMP2_INP,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,89,PA3,GPIO,LPUART1_RX,AF12,LPUART1_RX,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,89,PA3,GPIO,OPAMP1_VINM,,OPAMP1_VINM,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,89,PA3,GPIO,OPAMP1_VINM0,,OPAMP1_VINM0,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,89,PA3,GPIO,OPAMP1_VINM_SEC,,OPAMP1_VINM_SEC,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,89,PA3,GPIO,OPAMP1_VINP,,OPAMP1_VINP,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,89,PA3,GPIO,OPAMP1_VINP_SEC,,OPAMP1_VINP_SEC,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,89,PA3,GPIO,OPAMP5_VINM,,OPAMP5_VINM,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,89,PA3,GPIO,OPAMP5_VINM1,,OPAMP5_VINM1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,89,PA3,GPIO,OPAMP5_VINM_SEC,,OPAMP5_VINM_SEC,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,89,PA3,GPIO,QUADSPI1_CLK,AF10,QUADSPI1_CLK,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,89,PA3,GPIO,SAI1_CK1,AF3,SAI1_CK1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,89,PA3,GPIO,SAI1_MCLK_A,AF13,SAI1_MCLK_A,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,89,PA3,GPIO,TIM15_CH2,AF9,TIM15_CH2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,89,PA3,GPIO,TIM2_CH4,AF1,TIM2_CH4,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,89,PA3,GPIO,TIM5_CH4,AF2,TIM5_CH4,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,89,PA3,GPIO,USART2_RX,AF7,USART2_RX,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,90,NC,SYSTEM,,,,nucleo-g474re-morpho-33 | nucleo-g474re-top-view,
+nucleo-g474re,91,PA9,GPIO,ADC5_IN2,,ADC5_IN2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,91,PA9,GPIO,COMP5_OUT,AF8,COMP5_OUT,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,91,PA9,GPIO,DAC1_EXTI9,,DAC1_EXTI9,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,91,PA9,GPIO,DAC2_EXTI9,,DAC2_EXTI9,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,91,PA9,GPIO,DAC3_EXTI9,,DAC3_EXTI9,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,91,PA9,GPIO,DAC4_EXTI9,,DAC4_EXTI9,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,91,PA9,GPIO,HRTIM1_CHA2,AF13,HRTIM1_CHA2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,91,PA9,GPIO,I2C2_SCL,AF4,I2C2_SCL,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,91,PA9,GPIO,I2C3_SMBA,AF2,I2C3_SMBA,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,91,PA9,GPIO,I2S3_MCK,AF5,I2S3_MCK,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,91,PA9,GPIO,SAI1_FS_A,AF14,SAI1_FS_A,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,91,PA9,GPIO,TIM15_BKIN,AF9,TIM15_BKIN,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,91,PA9,GPIO,TIM1_CH2,AF6,TIM1_CH2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,91,PA9,GPIO,TIM2_CH3,AF10,TIM2_CH3,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,91,PA9,GPIO,UCPD1_DBCC1,,UCPD1_DBCC1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,91,PA9,GPIO,USART1_TX,AF7,USART1_TX,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,92,PC7,GPIO,COMP5_OUT,AF7,COMP5_OUT,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,92,PC7,GPIO,HRTIM1_CHF2,AF13,HRTIM1_CHF2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,92,PC7,GPIO,HRTIM1_FLT5,AF3,HRTIM1_FLT5,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,92,PC7,GPIO,I2C4_SDA,AF8,I2C4_SDA,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,92,PC7,GPIO,I2S3_MCK,AF6,I2S3_MCK,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,92,PC7,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,92,PC7,GPIO,TIM8_CH2,AF4,TIM8_CH2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,93,PB6,GPIO,COMP4_OUT,AF8,COMP4_OUT,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,93,PB6,GPIO,FDCAN2_TX,AF9,FDCAN2_TX,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,93,PB6,GPIO,HRTIM1_EEV4,AF13,HRTIM1_EEV4,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,93,PB6,GPIO,HRTIM1_SCIN,AF12,HRTIM1_SCIN,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,93,PB6,GPIO,LPTIM1_ETR,AF11,LPTIM1_ETR,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,93,PB6,GPIO,SAI1_FS_B,AF14,SAI1_FS_B,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,93,PB6,GPIO,TIM16_CH1N,AF1,TIM16_CH1N,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,93,PB6,GPIO,TIM4_CH1,AF2,TIM4_CH1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,93,PB6,GPIO,TIM8_BKIN2,AF10,TIM8_BKIN2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,93,PB6,GPIO,TIM8_CH1,AF5,TIM8_CH1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,93,PB6,GPIO,TIM8_ETR,AF6,TIM8_ETR,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,93,PB6,GPIO,UCPD1_CC1,,UCPD1_CC1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,93,PB6,GPIO,USART1_TX,AF7,USART1_TX,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,94,PA7,GPIO,ADC2_IN4,,ADC2_IN4,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,94,PA7,GPIO,COMP2_INP,,COMP2_INP,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,94,PA7,GPIO,COMP2_OUT,AF8,COMP2_OUT,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,94,PA7,GPIO,OPAMP1_VINP,,OPAMP1_VINP,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,94,PA7,GPIO,OPAMP1_VINP_SEC,,OPAMP1_VINP_SEC,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,94,PA7,GPIO,OPAMP2_VINP,,OPAMP2_VINP,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,94,PA7,GPIO,OPAMP2_VINP_SEC,,OPAMP2_VINP_SEC,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,94,PA7,GPIO,QUADSPI1_BK1_IO2,AF10,QUADSPI1_BK1_IO2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,94,PA7,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,94,PA7,GPIO,TIM17_CH1,AF1,TIM17_CH1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,94,PA7,GPIO,TIM1_CH1N,AF6,TIM1_CH1N,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,94,PA7,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,94,PA7,GPIO,TIM8_CH1N,AF4,TIM8_CH1N,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,94,PA7,GPIO,UCPD1_FRSTX1,AF14,UCPD1_FRSTX1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,94,PA7,GPIO,UCPD1_FRSTX2,AF14,UCPD1_FRSTX2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,95,PA6,GPIO,ADC2_IN3,,ADC2_IN3,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,95,PA6,GPIO,COMP1_OUT,AF8,COMP1_OUT,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,95,PA6,GPIO,DAC2_OUT1,,DAC2_OUT1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,95,PA6,GPIO,LPUART1_CTS,AF12,LPUART1_CTS,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,95,PA6,GPIO,OPAMP2_VOUT,,OPAMP2_VOUT,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,95,PA6,GPIO,QUADSPI1_BK1_IO3,AF10,QUADSPI1_BK1_IO3,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,95,PA6,GPIO,SPI1_MISO,AF5,SPI1_MISO,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,95,PA6,GPIO,TIM16_CH1,AF1,TIM16_CH1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,95,PA6,GPIO,TIM1_BKIN,AF6,TIM1_BKIN,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,95,PA6,GPIO,TIM3_CH1,AF2,TIM3_CH1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,95,PA6,GPIO,TIM8_BKIN,AF4,TIM8_BKIN,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,96,PA5,GPIO,ADC2_IN13,,ADC2_IN13,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,96,PA5,GPIO,COMP2_INM,,COMP2_INM,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,96,PA5,GPIO,DAC1_OUT2,,DAC1_OUT2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,96,PA5,GPIO,OPAMP2_VINM,,OPAMP2_VINM,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,96,PA5,GPIO,OPAMP2_VINM0,,OPAMP2_VINM0,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,96,PA5,GPIO,OPAMP2_VINM_SEC,,OPAMP2_VINM_SEC,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,96,PA5,GPIO,SPI1_SCK,AF5,SPI1_SCK,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,96,PA5,GPIO,TIM2_CH1,AF1,TIM2_CH1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,96,PA5,GPIO,TIM2_ETR,AF2,TIM2_ETR,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,96,PA5,GPIO,UCPD1_FRSTX1,AF14,UCPD1_FRSTX1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,96,PA5,GPIO,UCPD1_FRSTX2,AF14,UCPD1_FRSTX2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,97,GND,GND,,,,nucleo-g474re-arduino-31 | nucleo-g474re-top-view,
+nucleo-g474re,98,VREF+,POWER,,,,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,
+nucleo-g474re,99,PB9,GPIO,COMP2_OUT,AF8,COMP2_OUT,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,99,PB9,GPIO,DAC1_EXTI9,,DAC1_EXTI9,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,99,PB9,GPIO,DAC2_EXTI9,,DAC2_EXTI9,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,99,PB9,GPIO,DAC3_EXTI9,,DAC3_EXTI9,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,99,PB9,GPIO,DAC4_EXTI9,,DAC4_EXTI9,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,99,PB9,GPIO,FDCAN1_TX,AF9,FDCAN1_TX,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,99,PB9,GPIO,HRTIM1_EEV5,AF13,HRTIM1_EEV5,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,99,PB9,GPIO,I2C1_SDA,AF4,I2C1_SDA,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,99,PB9,GPIO,IR_OUT,AF6,IR_OUT,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,99,PB9,GPIO,SAI1_D2,AF3,SAI1_D2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,99,PB9,GPIO,SAI1_FS_A,AF14,SAI1_FS_A,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,99,PB9,GPIO,TIM17_CH1,AF1,TIM17_CH1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,99,PB9,GPIO,TIM1_CH3N,AF12,TIM1_CH3N,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,99,PB9,GPIO,TIM4_CH4,AF2,TIM4_CH4,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,99,PB9,GPIO,TIM8_CH3,AF10,TIM8_CH3,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,99,PB9,GPIO,USART3_TX,AF7,USART3_TX,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,100,PB8,GPIO,COMP1_OUT,AF8,COMP1_OUT,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,100,PB8,GPIO,FDCAN1_RX,AF9,FDCAN1_RX,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,100,PB8,GPIO,HRTIM1_EEV8,AF13,HRTIM1_EEV8,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,100,PB8,GPIO,I2C1_SCL,AF4,I2C1_SCL,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,100,PB8,GPIO,SAI1_CK1,AF3,SAI1_CK1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,100,PB8,GPIO,SAI1_MCLK_A,AF14,SAI1_MCLK_A,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,100,PB8,GPIO,TIM16_CH1,AF1,TIM16_CH1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,100,PB8,GPIO,TIM1_BKIN,AF12,TIM1_BKIN,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,100,PB8,GPIO,TIM4_CH3,AF2,TIM4_CH3,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,100,PB8,GPIO,TIM8_CH2,AF10,TIM8_CH2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,100,PB8,GPIO,USART3_RX,AF7,USART3_RX,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,101,PA3,GPIO,ADC1_IN4,,ADC1_IN4,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,101,PA3,GPIO,ADC3_EXTI3,,ADC3_EXTI3,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,101,PA3,GPIO,ADC4_EXTI3,,ADC4_EXTI3,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,101,PA3,GPIO,ADC5_EXTI3,,ADC5_EXTI3,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,101,PA3,GPIO,COMP2_INP,,COMP2_INP,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,101,PA3,GPIO,LPUART1_RX,AF12,LPUART1_RX,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,101,PA3,GPIO,OPAMP1_VINM,,OPAMP1_VINM,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,101,PA3,GPIO,OPAMP1_VINM0,,OPAMP1_VINM0,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,101,PA3,GPIO,OPAMP1_VINM_SEC,,OPAMP1_VINM_SEC,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,101,PA3,GPIO,OPAMP1_VINP,,OPAMP1_VINP,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,101,PA3,GPIO,OPAMP1_VINP_SEC,,OPAMP1_VINP_SEC,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,101,PA3,GPIO,OPAMP5_VINM,,OPAMP5_VINM,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,101,PA3,GPIO,OPAMP5_VINM1,,OPAMP5_VINM1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,101,PA3,GPIO,OPAMP5_VINM_SEC,,OPAMP5_VINM_SEC,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,101,PA3,GPIO,QUADSPI1_CLK,AF10,QUADSPI1_CLK,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,101,PA3,GPIO,SAI1_CK1,AF3,SAI1_CK1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,101,PA3,GPIO,SAI1_MCLK_A,AF13,SAI1_MCLK_A,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,101,PA3,GPIO,TIM15_CH2,AF9,TIM15_CH2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,101,PA3,GPIO,TIM2_CH4,AF1,TIM2_CH4,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,101,PA3,GPIO,TIM5_CH4,AF2,TIM5_CH4,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,101,PA3,GPIO,USART2_RX,AF7,USART2_RX,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,102,PA2,GPIO,ADC1_IN3,,ADC1_IN3,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,102,PA2,GPIO,ADC3_EXTI2,,ADC3_EXTI2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,102,PA2,GPIO,ADC4_EXTI2,,ADC4_EXTI2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,102,PA2,GPIO,ADC5_EXTI2,,ADC5_EXTI2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,102,PA2,GPIO,COMP2_INM,,COMP2_INM,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,102,PA2,GPIO,COMP2_OUT,AF8,COMP2_OUT,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,102,PA2,GPIO,LPUART1_TX,AF12,LPUART1_TX,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,102,PA2,GPIO,OPAMP1_VOUT,,OPAMP1_VOUT,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,102,PA2,GPIO,QUADSPI1_BK1_NCS,AF10,QUADSPI1_BK1_NCS,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,102,PA2,GPIO,RCC_LSCO,,RCC_LSCO,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,102,PA2,GPIO,SYS_WKUP4,,SYS_WKUP4,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,102,PA2,GPIO,TIM15_CH1,AF9,TIM15_CH1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,102,PA2,GPIO,TIM2_CH3,AF1,TIM2_CH3,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,102,PA2,GPIO,TIM5_CH3,AF2,TIM5_CH3,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,102,PA2,GPIO,UCPD1_FRSTX1,AF14,UCPD1_FRSTX1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,102,PA2,GPIO,UCPD1_FRSTX2,AF14,UCPD1_FRSTX2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,102,PA2,GPIO,USART2_TX,AF7,USART2_TX,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,103,PA10,GPIO,COMP6_OUT,AF8,COMP6_OUT,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,103,PA10,GPIO,CRS_SYNC,AF3,CRS_SYNC,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,103,PA10,GPIO,DAC1_EXTI10,,DAC1_EXTI10,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,103,PA10,GPIO,DAC2_EXTI10,,DAC2_EXTI10,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,103,PA10,GPIO,DAC3_EXTI10,,DAC3_EXTI10,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,103,PA10,GPIO,DAC4_EXTI10,,DAC4_EXTI10,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,103,PA10,GPIO,HRTIM1_CHB1,AF13,HRTIM1_CHB1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,103,PA10,GPIO,I2C2_SMBA,AF4,I2C2_SMBA,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,103,PA10,GPIO,SAI1_D1,AF12,SAI1_D1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,103,PA10,GPIO,SAI1_SD_A,AF14,SAI1_SD_A,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,103,PA10,GPIO,SPI2_MISO,AF5,SPI2_MISO,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,103,PA10,GPIO,SYS_PVD_IN,,SYS_PVD_IN,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,103,PA10,GPIO,TIM17_BKIN,AF1,TIM17_BKIN,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,103,PA10,GPIO,TIM1_CH3,AF6,TIM1_CH3,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,103,PA10,GPIO,TIM2_CH4,AF10,TIM2_CH4,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,103,PA10,GPIO,TIM8_BKIN,AF11,TIM8_BKIN,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,103,PA10,GPIO,UCPD1_DBCC2,,UCPD1_DBCC2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,103,PA10,GPIO,USART1_RX,AF7,USART1_RX,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,104,PB3,GPIO,ADC3_EXTI3,,ADC3_EXTI3,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,104,PB3,GPIO,ADC4_EXTI3,,ADC4_EXTI3,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,104,PB3,GPIO,ADC5_EXTI3,,ADC5_EXTI3,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,104,PB3,GPIO,CRS_SYNC,AF3,CRS_SYNC,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,104,PB3,GPIO,FDCAN3_RX,AF11,FDCAN3_RX,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,104,PB3,GPIO,HRTIM1_EEV9,AF13,HRTIM1_EEV9,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,104,PB3,GPIO,HRTIM1_SCOUT,AF12,HRTIM1_SCOUT,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,104,PB3,GPIO,I2S3_CK,AF6,I2S3_CK,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,104,PB3,GPIO,SAI1_SCK_B,AF14,SAI1_SCK_B,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,104,PB3,GPIO,SPI1_SCK,AF5,SPI1_SCK,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,104,PB3,GPIO,SPI3_SCK,AF6,SPI3_SCK,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,104,PB3,GPIO,SYS_JTDO-SWO,AF0,SYS_JTDO-SWO,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,104,PB3,GPIO,TIM2_CH2,AF1,TIM2_CH2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,104,PB3,GPIO,TIM3_ETR,AF10,TIM3_ETR,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,104,PB3,GPIO,TIM4_ETR,AF2,TIM4_ETR,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,104,PB3,GPIO,TIM8_CH1N,AF4,TIM8_CH1N,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,104,PB3,GPIO,USART2_TX,AF7,USART2_TX,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,105,PB5,GPIO,FDCAN2_RX,AF9,FDCAN2_RX,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,105,PB5,GPIO,HRTIM1_EEV6,AF13,HRTIM1_EEV6,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,105,PB5,GPIO,I2C1_SMBA,AF4,I2C1_SMBA,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,105,PB5,GPIO,I2C3_SDA,AF8,I2C3_SDA,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,105,PB5,GPIO,I2S3_SD,AF6,I2S3_SD,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,105,PB5,GPIO,LPTIM1_IN1,AF11,LPTIM1_IN1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,105,PB5,GPIO,SAI1_SD_B,AF12,SAI1_SD_B,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,105,PB5,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,105,PB5,GPIO,SPI3_MOSI,AF6,SPI3_MOSI,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,105,PB5,GPIO,TIM16_BKIN,AF1,TIM16_BKIN,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,105,PB5,GPIO,TIM17_CH1,AF10,TIM17_CH1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,105,PB5,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,105,PB5,GPIO,TIM8_CH3N,AF3,TIM8_CH3N,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,105,PB5,GPIO,UART5_CTS,AF14,UART5_CTS,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,105,PB5,GPIO,USART2_CK,AF7,USART2_CK,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,106,PB4,GPIO,FDCAN3_TX,AF11,FDCAN3_TX,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,106,PB4,GPIO,HRTIM1_EEV7,AF13,HRTIM1_EEV7,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,106,PB4,GPIO,SAI1_MCLK_B,AF14,SAI1_MCLK_B,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,106,PB4,GPIO,SPI1_MISO,AF5,SPI1_MISO,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,106,PB4,GPIO,SPI3_MISO,AF6,SPI3_MISO,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,106,PB4,GPIO,SYS_JTRST,AF0,SYS_JTRST,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,106,PB4,GPIO,TIM16_CH1,AF1,TIM16_CH1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,106,PB4,GPIO,TIM17_BKIN,AF10,TIM17_BKIN,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,106,PB4,GPIO,TIM3_CH1,AF2,TIM3_CH1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,106,PB4,GPIO,TIM8_CH2N,AF4,TIM8_CH2N,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,106,PB4,GPIO,UART5_DE,AF8,UART5_DE,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,106,PB4,GPIO,UART5_RTS,AF8,UART5_RTS,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,106,PB4,GPIO,UCPD1_CC2,,UCPD1_CC2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,106,PB4,GPIO,USART2_RX,AF7,USART2_RX,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,107,PB10,GPIO,COMP5_INM,,COMP5_INM,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,107,PB10,GPIO,DAC1_EXTI10,,DAC1_EXTI10,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,107,PB10,GPIO,DAC2_EXTI10,,DAC2_EXTI10,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,107,PB10,GPIO,DAC3_EXTI10,,DAC3_EXTI10,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,107,PB10,GPIO,DAC4_EXTI10,,DAC4_EXTI10,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,107,PB10,GPIO,HRTIM1_FLT3,AF13,HRTIM1_FLT3,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,107,PB10,GPIO,LPUART1_RX,AF8,LPUART1_RX,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,107,PB10,GPIO,OPAMP3_VINM,,OPAMP3_VINM,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,107,PB10,GPIO,OPAMP3_VINM1,,OPAMP3_VINM1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,107,PB10,GPIO,OPAMP3_VINM_SEC,,OPAMP3_VINM_SEC,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,107,PB10,GPIO,OPAMP4_VINM,,OPAMP4_VINM,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,107,PB10,GPIO,OPAMP4_VINM0,,OPAMP4_VINM0,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,107,PB10,GPIO,OPAMP4_VINM_SEC,,OPAMP4_VINM_SEC,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,107,PB10,GPIO,QUADSPI1_CLK,AF10,QUADSPI1_CLK,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,107,PB10,GPIO,SAI1_SCK_A,AF14,SAI1_SCK_A,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,107,PB10,GPIO,TIM1_BKIN,AF12,TIM1_BKIN,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,107,PB10,GPIO,TIM2_CH3,AF1,TIM2_CH3,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,107,PB10,GPIO,USART3_TX,AF7,USART3_TX,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,108,PA8,GPIO,ADC5_IN1,,ADC5_IN1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,108,PA8,GPIO,COMP7_OUT,AF8,COMP7_OUT,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,108,PA8,GPIO,FDCAN3_RX,AF11,FDCAN3_RX,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,108,PA8,GPIO,HRTIM1_CHA1,AF13,HRTIM1_CHA1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,108,PA8,GPIO,I2C2_SDA,AF4,I2C2_SDA,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,108,PA8,GPIO,I2C3_SCL,AF2,I2C3_SCL,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,108,PA8,GPIO,I2S2_MCK,AF5,I2S2_MCK,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,108,PA8,GPIO,OPAMP5_VOUT,,OPAMP5_VOUT,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
+nucleo-g474re,108,PA8,GPIO,RCC_MCO,AF0,RCC_MCO,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,108,PA8,GPIO,SAI1_CK2,AF12,SAI1_CK2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,108,PA8,GPIO,SAI1_SCK_A,AF14,SAI1_SCK_A,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,108,PA8,GPIO,TIM1_CH1,AF6,TIM1_CH1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,108,PA8,GPIO,TIM4_ETR,AF10,TIM4_ETR,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
+nucleo-g474re,108,PA8,GPIO,USART1_CK,AF7,USART1_CK,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
 arduino-uno-r3,1,NC,SYSTEM,,,,arduino-uno-r3-headers | arduino-uno-r3-connector-tables,
 arduino-uno-r3,2,IOREF,POWER,,,,arduino-uno-r3-headers | arduino-uno-r3-connector-tables,
 arduino-uno-r3,3,RESET,SYSTEM,,,,arduino-uno-r3-headers | arduino-uno-r3-connector-tables | arduino-uno-r3-package-schematic | atmega328p-pdip28-physical,
@@ -7065,6 +8013,617 @@ stm32f411ret6,62,PB9,GPIO,TIM11_CH1,AF3,TIM11_CH1,f411re-package,f411re-package 
 stm32f411ret6,62,PB9,GPIO,TIM4_CH4,AF2,TIM4_CH4,f411re-package,f411re-package | f411re-modes
 stm32f411ret6,63,VSS,GND,,,,f411re-package,
 stm32f411ret6,64,VDD,POWER,,,,f411re-package,
+stm32g474ret6,1,VBAT,POWER,,,,g474re-package,
+stm32g474ret6,2,PC13,GPIO,RTC_OUT1,,RTC_OUT1,g474re-package,g474re-package
+stm32g474ret6,2,PC13,GPIO,RTC_TAMP1,,RTC_TAMP1,g474re-package,g474re-package
+stm32g474ret6,2,PC13,GPIO,RTC_TS,,RTC_TS,g474re-package,g474re-package
+stm32g474ret6,2,PC13,GPIO,SYS_WKUP2,,SYS_WKUP2,g474re-package,g474re-package
+stm32g474ret6,2,PC13,GPIO,TIM1_BKIN,AF2,TIM1_BKIN,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,2,PC13,GPIO,TIM1_CH1N,AF4,TIM1_CH1N,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,2,PC13,GPIO,TIM8_CH4N,AF6,TIM8_CH4N,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,3,PC14,GPIO,RCC_OSC32_IN,,RCC_OSC32_IN,g474re-package,g474re-package
+stm32g474ret6,4,PC15,GPIO,ADC1_EXTI15,,ADC1_EXTI15,g474re-package,g474re-package
+stm32g474ret6,4,PC15,GPIO,ADC2_EXTI15,,ADC2_EXTI15,g474re-package,g474re-package
+stm32g474ret6,4,PC15,GPIO,RCC_OSC32_OUT,,RCC_OSC32_OUT,g474re-package,g474re-package
+stm32g474ret6,5,PF0,GPIO,ADC1_IN10,,ADC1_IN10,g474re-package,g474re-package
+stm32g474ret6,5,PF0,GPIO,I2C2_SDA,AF4,I2C2_SDA,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,5,PF0,GPIO,I2S2_WS,AF5,I2S2_WS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,5,PF0,GPIO,RCC_OSC_IN,,RCC_OSC_IN,g474re-package,g474re-package
+stm32g474ret6,5,PF0,GPIO,SPI2_NSS,AF5,SPI2_NSS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,5,PF0,GPIO,TIM1_CH3N,AF6,TIM1_CH3N,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,6,PF1,GPIO,ADC2_IN10,,ADC2_IN10,g474re-package,g474re-package
+stm32g474ret6,6,PF1,GPIO,COMP3_INM,,COMP3_INM,g474re-package,g474re-package
+stm32g474ret6,6,PF1,GPIO,I2S2_CK,AF5,I2S2_CK,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,6,PF1,GPIO,RCC_OSC_OUT,,RCC_OSC_OUT,g474re-package,g474re-package
+stm32g474ret6,6,PF1,GPIO,SPI2_SCK,AF5,SPI2_SCK,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,7,PG10,GPIO,DAC1_EXTI10,,DAC1_EXTI10,g474re-package,g474re-package
+stm32g474ret6,7,PG10,GPIO,DAC2_EXTI10,,DAC2_EXTI10,g474re-package,g474re-package
+stm32g474ret6,7,PG10,GPIO,DAC3_EXTI10,,DAC3_EXTI10,g474re-package,g474re-package
+stm32g474ret6,7,PG10,GPIO,DAC4_EXTI10,,DAC4_EXTI10,g474re-package,g474re-package
+stm32g474ret6,7,PG10,GPIO,RCC_MCO,AF0,RCC_MCO,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,8,PC0,GPIO,ADC1_IN6,,ADC1_IN6,g474re-package,g474re-package
+stm32g474ret6,8,PC0,GPIO,ADC2_IN6,,ADC2_IN6,g474re-package,g474re-package
+stm32g474ret6,8,PC0,GPIO,COMP3_INM,,COMP3_INM,g474re-package,g474re-package
+stm32g474ret6,8,PC0,GPIO,LPTIM1_IN1,AF1,LPTIM1_IN1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,8,PC0,GPIO,LPUART1_RX,AF8,LPUART1_RX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,8,PC0,GPIO,TIM1_CH1,AF2,TIM1_CH1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,9,PC1,GPIO,ADC1_IN7,,ADC1_IN7,g474re-package,g474re-package
+stm32g474ret6,9,PC1,GPIO,ADC2_IN7,,ADC2_IN7,g474re-package,g474re-package
+stm32g474ret6,9,PC1,GPIO,COMP3_INP,,COMP3_INP,g474re-package,g474re-package
+stm32g474ret6,9,PC1,GPIO,LPTIM1_OUT,AF1,LPTIM1_OUT,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,9,PC1,GPIO,LPUART1_TX,AF8,LPUART1_TX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,9,PC1,GPIO,QUADSPI1_BK2_IO0,AF10,QUADSPI1_BK2_IO0,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,9,PC1,GPIO,SAI1_SD_A,AF13,SAI1_SD_A,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,9,PC1,GPIO,TIM1_CH2,AF2,TIM1_CH2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,10,PC2,GPIO,ADC1_IN8,,ADC1_IN8,g474re-package,g474re-package
+stm32g474ret6,10,PC2,GPIO,ADC2_IN8,,ADC2_IN8,g474re-package,g474re-package
+stm32g474ret6,10,PC2,GPIO,ADC3_EXTI2,,ADC3_EXTI2,g474re-package,g474re-package
+stm32g474ret6,10,PC2,GPIO,ADC4_EXTI2,,ADC4_EXTI2,g474re-package,g474re-package
+stm32g474ret6,10,PC2,GPIO,ADC5_EXTI2,,ADC5_EXTI2,g474re-package,g474re-package
+stm32g474ret6,10,PC2,GPIO,COMP3_OUT,AF3,COMP3_OUT,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,10,PC2,GPIO,LPTIM1_IN2,AF1,LPTIM1_IN2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,10,PC2,GPIO,QUADSPI1_BK2_IO1,AF10,QUADSPI1_BK2_IO1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,10,PC2,GPIO,TIM1_CH3,AF2,TIM1_CH3,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,10,PC2,GPIO,TIM20_CH2,AF6,TIM20_CH2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,11,PC3,GPIO,ADC1_IN9,,ADC1_IN9,g474re-package,g474re-package
+stm32g474ret6,11,PC3,GPIO,ADC2_IN9,,ADC2_IN9,g474re-package,g474re-package
+stm32g474ret6,11,PC3,GPIO,ADC3_EXTI3,,ADC3_EXTI3,g474re-package,g474re-package
+stm32g474ret6,11,PC3,GPIO,ADC4_EXTI3,,ADC4_EXTI3,g474re-package,g474re-package
+stm32g474ret6,11,PC3,GPIO,ADC5_EXTI3,,ADC5_EXTI3,g474re-package,g474re-package
+stm32g474ret6,11,PC3,GPIO,LPTIM1_ETR,AF1,LPTIM1_ETR,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,11,PC3,GPIO,OPAMP5_VINP,,OPAMP5_VINP,g474re-package,g474re-package
+stm32g474ret6,11,PC3,GPIO,OPAMP5_VINP_SEC,,OPAMP5_VINP_SEC,g474re-package,g474re-package
+stm32g474ret6,11,PC3,GPIO,QUADSPI1_BK2_IO2,AF10,QUADSPI1_BK2_IO2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,11,PC3,GPIO,SAI1_D1,AF3,SAI1_D1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,11,PC3,GPIO,SAI1_SD_A,AF13,SAI1_SD_A,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,11,PC3,GPIO,TIM1_BKIN2,AF6,TIM1_BKIN2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,11,PC3,GPIO,TIM1_CH4,AF2,TIM1_CH4,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,12,PA0,GPIO,ADC1_IN1,,ADC1_IN1,g474re-package,g474re-package
+stm32g474ret6,12,PA0,GPIO,ADC2_IN1,,ADC2_IN1,g474re-package,g474re-package
+stm32g474ret6,12,PA0,GPIO,COMP1_INM,,COMP1_INM,g474re-package,g474re-package
+stm32g474ret6,12,PA0,GPIO,COMP1_OUT,AF8,COMP1_OUT,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,12,PA0,GPIO,COMP3_INP,,COMP3_INP,g474re-package,g474re-package
+stm32g474ret6,12,PA0,GPIO,RTC_TAMP2,,RTC_TAMP2,g474re-package,g474re-package
+stm32g474ret6,12,PA0,GPIO,SYS_WKUP1,,SYS_WKUP1,g474re-package,g474re-package
+stm32g474ret6,12,PA0,GPIO,TIM2_CH1,AF1,TIM2_CH1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,12,PA0,GPIO,TIM2_ETR,AF14,TIM2_ETR,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,12,PA0,GPIO,TIM5_CH1,AF2,TIM5_CH1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,12,PA0,GPIO,TIM8_BKIN,AF9,TIM8_BKIN,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,12,PA0,GPIO,TIM8_ETR,AF10,TIM8_ETR,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,12,PA0,GPIO,USART2_CTS,AF7,USART2_CTS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,12,PA0,GPIO,USART2_NSS,AF7,USART2_NSS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,13,PA1,GPIO,ADC1_IN2,,ADC1_IN2,g474re-package,g474re-package
+stm32g474ret6,13,PA1,GPIO,ADC2_IN2,,ADC2_IN2,g474re-package,g474re-package
+stm32g474ret6,13,PA1,GPIO,COMP1_INP,,COMP1_INP,g474re-package,g474re-package
+stm32g474ret6,13,PA1,GPIO,OPAMP1_VINP,,OPAMP1_VINP,g474re-package,g474re-package
+stm32g474ret6,13,PA1,GPIO,OPAMP1_VINP_SEC,,OPAMP1_VINP_SEC,g474re-package,g474re-package
+stm32g474ret6,13,PA1,GPIO,OPAMP3_VINP,,OPAMP3_VINP,g474re-package,g474re-package
+stm32g474ret6,13,PA1,GPIO,OPAMP3_VINP_SEC,,OPAMP3_VINP_SEC,g474re-package,g474re-package
+stm32g474ret6,13,PA1,GPIO,OPAMP6_VINM,,OPAMP6_VINM,g474re-package,g474re-package
+stm32g474ret6,13,PA1,GPIO,OPAMP6_VINM0,,OPAMP6_VINM0,g474re-package,g474re-package
+stm32g474ret6,13,PA1,GPIO,OPAMP6_VINM_SEC,,OPAMP6_VINM_SEC,g474re-package,g474re-package
+stm32g474ret6,13,PA1,GPIO,RTC_REFIN,AF0,RTC_REFIN,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,13,PA1,GPIO,TIM15_CH1N,AF9,TIM15_CH1N,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,13,PA1,GPIO,TIM2_CH2,AF1,TIM2_CH2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,13,PA1,GPIO,TIM5_CH2,AF2,TIM5_CH2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,13,PA1,GPIO,USART2_DE,AF7,USART2_DE,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,13,PA1,GPIO,USART2_RTS,AF7,USART2_RTS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,14,PA2,GPIO,ADC1_IN3,,ADC1_IN3,g474re-package,g474re-package
+stm32g474ret6,14,PA2,GPIO,ADC3_EXTI2,,ADC3_EXTI2,g474re-package,g474re-package
+stm32g474ret6,14,PA2,GPIO,ADC4_EXTI2,,ADC4_EXTI2,g474re-package,g474re-package
+stm32g474ret6,14,PA2,GPIO,ADC5_EXTI2,,ADC5_EXTI2,g474re-package,g474re-package
+stm32g474ret6,14,PA2,GPIO,COMP2_INM,,COMP2_INM,g474re-package,g474re-package
+stm32g474ret6,14,PA2,GPIO,COMP2_OUT,AF8,COMP2_OUT,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,14,PA2,GPIO,LPUART1_TX,AF12,LPUART1_TX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,14,PA2,GPIO,OPAMP1_VOUT,,OPAMP1_VOUT,g474re-package,g474re-package
+stm32g474ret6,14,PA2,GPIO,QUADSPI1_BK1_NCS,AF10,QUADSPI1_BK1_NCS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,14,PA2,GPIO,RCC_LSCO,,RCC_LSCO,g474re-package,g474re-package
+stm32g474ret6,14,PA2,GPIO,SYS_WKUP4,,SYS_WKUP4,g474re-package,g474re-package
+stm32g474ret6,14,PA2,GPIO,TIM15_CH1,AF9,TIM15_CH1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,14,PA2,GPIO,TIM2_CH3,AF1,TIM2_CH3,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,14,PA2,GPIO,TIM5_CH3,AF2,TIM5_CH3,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,14,PA2,GPIO,UCPD1_FRSTX1,AF14,UCPD1_FRSTX1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,14,PA2,GPIO,UCPD1_FRSTX2,AF14,UCPD1_FRSTX2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,14,PA2,GPIO,USART2_TX,AF7,USART2_TX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,15,VSS,GND,,,,g474re-package,
+stm32g474ret6,16,VDD,POWER,,,,g474re-package,
+stm32g474ret6,17,PA3,GPIO,ADC1_IN4,,ADC1_IN4,g474re-package,g474re-package
+stm32g474ret6,17,PA3,GPIO,ADC3_EXTI3,,ADC3_EXTI3,g474re-package,g474re-package
+stm32g474ret6,17,PA3,GPIO,ADC4_EXTI3,,ADC4_EXTI3,g474re-package,g474re-package
+stm32g474ret6,17,PA3,GPIO,ADC5_EXTI3,,ADC5_EXTI3,g474re-package,g474re-package
+stm32g474ret6,17,PA3,GPIO,COMP2_INP,,COMP2_INP,g474re-package,g474re-package
+stm32g474ret6,17,PA3,GPIO,LPUART1_RX,AF12,LPUART1_RX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,17,PA3,GPIO,OPAMP1_VINM,,OPAMP1_VINM,g474re-package,g474re-package
+stm32g474ret6,17,PA3,GPIO,OPAMP1_VINM0,,OPAMP1_VINM0,g474re-package,g474re-package
+stm32g474ret6,17,PA3,GPIO,OPAMP1_VINM_SEC,,OPAMP1_VINM_SEC,g474re-package,g474re-package
+stm32g474ret6,17,PA3,GPIO,OPAMP1_VINP,,OPAMP1_VINP,g474re-package,g474re-package
+stm32g474ret6,17,PA3,GPIO,OPAMP1_VINP_SEC,,OPAMP1_VINP_SEC,g474re-package,g474re-package
+stm32g474ret6,17,PA3,GPIO,OPAMP5_VINM,,OPAMP5_VINM,g474re-package,g474re-package
+stm32g474ret6,17,PA3,GPIO,OPAMP5_VINM1,,OPAMP5_VINM1,g474re-package,g474re-package
+stm32g474ret6,17,PA3,GPIO,OPAMP5_VINM_SEC,,OPAMP5_VINM_SEC,g474re-package,g474re-package
+stm32g474ret6,17,PA3,GPIO,QUADSPI1_CLK,AF10,QUADSPI1_CLK,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,17,PA3,GPIO,SAI1_CK1,AF3,SAI1_CK1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,17,PA3,GPIO,SAI1_MCLK_A,AF13,SAI1_MCLK_A,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,17,PA3,GPIO,TIM15_CH2,AF9,TIM15_CH2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,17,PA3,GPIO,TIM2_CH4,AF1,TIM2_CH4,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,17,PA3,GPIO,TIM5_CH4,AF2,TIM5_CH4,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,17,PA3,GPIO,USART2_RX,AF7,USART2_RX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,18,PA4,GPIO,ADC2_IN17,,ADC2_IN17,g474re-package,g474re-package
+stm32g474ret6,18,PA4,GPIO,COMP1_INM,,COMP1_INM,g474re-package,g474re-package
+stm32g474ret6,18,PA4,GPIO,DAC1_OUT1,,DAC1_OUT1,g474re-package,g474re-package
+stm32g474ret6,18,PA4,GPIO,I2S3_WS,AF6,I2S3_WS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,18,PA4,GPIO,SAI1_FS_B,AF13,SAI1_FS_B,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,18,PA4,GPIO,SPI1_NSS,AF5,SPI1_NSS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,18,PA4,GPIO,SPI3_NSS,AF6,SPI3_NSS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,18,PA4,GPIO,TIM3_CH2,AF2,TIM3_CH2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,18,PA4,GPIO,USART2_CK,AF7,USART2_CK,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,19,PA5,GPIO,ADC2_IN13,,ADC2_IN13,g474re-package,g474re-package
+stm32g474ret6,19,PA5,GPIO,COMP2_INM,,COMP2_INM,g474re-package,g474re-package
+stm32g474ret6,19,PA5,GPIO,DAC1_OUT2,,DAC1_OUT2,g474re-package,g474re-package
+stm32g474ret6,19,PA5,GPIO,OPAMP2_VINM,,OPAMP2_VINM,g474re-package,g474re-package
+stm32g474ret6,19,PA5,GPIO,OPAMP2_VINM0,,OPAMP2_VINM0,g474re-package,g474re-package
+stm32g474ret6,19,PA5,GPIO,OPAMP2_VINM_SEC,,OPAMP2_VINM_SEC,g474re-package,g474re-package
+stm32g474ret6,19,PA5,GPIO,SPI1_SCK,AF5,SPI1_SCK,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,19,PA5,GPIO,TIM2_CH1,AF1,TIM2_CH1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,19,PA5,GPIO,TIM2_ETR,AF2,TIM2_ETR,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,19,PA5,GPIO,UCPD1_FRSTX1,AF14,UCPD1_FRSTX1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,19,PA5,GPIO,UCPD1_FRSTX2,AF14,UCPD1_FRSTX2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,20,PA6,GPIO,ADC2_IN3,,ADC2_IN3,g474re-package,g474re-package
+stm32g474ret6,20,PA6,GPIO,COMP1_OUT,AF8,COMP1_OUT,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,20,PA6,GPIO,DAC2_OUT1,,DAC2_OUT1,g474re-package,g474re-package
+stm32g474ret6,20,PA6,GPIO,LPUART1_CTS,AF12,LPUART1_CTS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,20,PA6,GPIO,OPAMP2_VOUT,,OPAMP2_VOUT,g474re-package,g474re-package
+stm32g474ret6,20,PA6,GPIO,QUADSPI1_BK1_IO3,AF10,QUADSPI1_BK1_IO3,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,20,PA6,GPIO,SPI1_MISO,AF5,SPI1_MISO,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,20,PA6,GPIO,TIM16_CH1,AF1,TIM16_CH1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,20,PA6,GPIO,TIM1_BKIN,AF6,TIM1_BKIN,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,20,PA6,GPIO,TIM3_CH1,AF2,TIM3_CH1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,20,PA6,GPIO,TIM8_BKIN,AF4,TIM8_BKIN,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,21,PA7,GPIO,ADC2_IN4,,ADC2_IN4,g474re-package,g474re-package
+stm32g474ret6,21,PA7,GPIO,COMP2_INP,,COMP2_INP,g474re-package,g474re-package
+stm32g474ret6,21,PA7,GPIO,COMP2_OUT,AF8,COMP2_OUT,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,21,PA7,GPIO,OPAMP1_VINP,,OPAMP1_VINP,g474re-package,g474re-package
+stm32g474ret6,21,PA7,GPIO,OPAMP1_VINP_SEC,,OPAMP1_VINP_SEC,g474re-package,g474re-package
+stm32g474ret6,21,PA7,GPIO,OPAMP2_VINP,,OPAMP2_VINP,g474re-package,g474re-package
+stm32g474ret6,21,PA7,GPIO,OPAMP2_VINP_SEC,,OPAMP2_VINP_SEC,g474re-package,g474re-package
+stm32g474ret6,21,PA7,GPIO,QUADSPI1_BK1_IO2,AF10,QUADSPI1_BK1_IO2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,21,PA7,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,21,PA7,GPIO,TIM17_CH1,AF1,TIM17_CH1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,21,PA7,GPIO,TIM1_CH1N,AF6,TIM1_CH1N,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,21,PA7,GPIO,TIM3_CH2,AF2,TIM3_CH2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,21,PA7,GPIO,TIM8_CH1N,AF4,TIM8_CH1N,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,21,PA7,GPIO,UCPD1_FRSTX1,AF14,UCPD1_FRSTX1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,21,PA7,GPIO,UCPD1_FRSTX2,AF14,UCPD1_FRSTX2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,22,PC4,GPIO,ADC2_IN5,,ADC2_IN5,g474re-package,g474re-package
+stm32g474ret6,22,PC4,GPIO,I2C2_SCL,AF4,I2C2_SCL,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,22,PC4,GPIO,QUADSPI1_BK2_IO3,AF10,QUADSPI1_BK2_IO3,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,22,PC4,GPIO,TIM1_ETR,AF2,TIM1_ETR,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,22,PC4,GPIO,USART1_TX,AF7,USART1_TX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,23,PC5,GPIO,ADC2_IN11,,ADC2_IN11,g474re-package,g474re-package
+stm32g474ret6,23,PC5,GPIO,HRTIM1_EEV10,AF13,HRTIM1_EEV10,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,23,PC5,GPIO,OPAMP1_VINM,,OPAMP1_VINM,g474re-package,g474re-package
+stm32g474ret6,23,PC5,GPIO,OPAMP1_VINM1,,OPAMP1_VINM1,g474re-package,g474re-package
+stm32g474ret6,23,PC5,GPIO,OPAMP1_VINM_SEC,,OPAMP1_VINM_SEC,g474re-package,g474re-package
+stm32g474ret6,23,PC5,GPIO,OPAMP2_VINM,,OPAMP2_VINM,g474re-package,g474re-package
+stm32g474ret6,23,PC5,GPIO,OPAMP2_VINM1,,OPAMP2_VINM1,g474re-package,g474re-package
+stm32g474ret6,23,PC5,GPIO,OPAMP2_VINM_SEC,,OPAMP2_VINM_SEC,g474re-package,g474re-package
+stm32g474ret6,23,PC5,GPIO,SAI1_D3,AF3,SAI1_D3,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,23,PC5,GPIO,SYS_WKUP5,,SYS_WKUP5,g474re-package,g474re-package
+stm32g474ret6,23,PC5,GPIO,TIM15_BKIN,AF2,TIM15_BKIN,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,23,PC5,GPIO,TIM1_CH4N,AF6,TIM1_CH4N,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,23,PC5,GPIO,USART1_RX,AF7,USART1_RX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,24,PB0,GPIO,ADC1_IN15,,ADC1_IN15,g474re-package,g474re-package
+stm32g474ret6,24,PB0,GPIO,ADC3_IN12,,ADC3_IN12,g474re-package,g474re-package
+stm32g474ret6,24,PB0,GPIO,COMP4_INP,,COMP4_INP,g474re-package,g474re-package
+stm32g474ret6,24,PB0,GPIO,HRTIM1_FLT5,AF13,HRTIM1_FLT5,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,24,PB0,GPIO,OPAMP2_VINP,,OPAMP2_VINP,g474re-package,g474re-package
+stm32g474ret6,24,PB0,GPIO,OPAMP2_VINP_SEC,,OPAMP2_VINP_SEC,g474re-package,g474re-package
+stm32g474ret6,24,PB0,GPIO,OPAMP3_VINP,,OPAMP3_VINP,g474re-package,g474re-package
+stm32g474ret6,24,PB0,GPIO,OPAMP3_VINP_SEC,,OPAMP3_VINP_SEC,g474re-package,g474re-package
+stm32g474ret6,24,PB0,GPIO,QUADSPI1_BK1_IO1,AF10,QUADSPI1_BK1_IO1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,24,PB0,GPIO,TIM1_CH2N,AF6,TIM1_CH2N,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,24,PB0,GPIO,TIM3_CH3,AF2,TIM3_CH3,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,24,PB0,GPIO,TIM8_CH2N,AF4,TIM8_CH2N,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,24,PB0,GPIO,UCPD1_FRSTX1,AF14,UCPD1_FRSTX1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,24,PB0,GPIO,UCPD1_FRSTX2,AF14,UCPD1_FRSTX2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,25,PB1,GPIO,ADC1_IN12,,ADC1_IN12,g474re-package,g474re-package
+stm32g474ret6,25,PB1,GPIO,ADC3_IN1,,ADC3_IN1,g474re-package,g474re-package
+stm32g474ret6,25,PB1,GPIO,COMP1_INP,,COMP1_INP,g474re-package,g474re-package
+stm32g474ret6,25,PB1,GPIO,COMP4_OUT,AF8,COMP4_OUT,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,25,PB1,GPIO,HRTIM1_SCOUT,AF13,HRTIM1_SCOUT,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,25,PB1,GPIO,LPUART1_DE,AF12,LPUART1_DE,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,25,PB1,GPIO,LPUART1_RTS,AF12,LPUART1_RTS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,25,PB1,GPIO,OPAMP3_VOUT,,OPAMP3_VOUT,g474re-package,g474re-package
+stm32g474ret6,25,PB1,GPIO,OPAMP6_VINM,,OPAMP6_VINM,g474re-package,g474re-package
+stm32g474ret6,25,PB1,GPIO,OPAMP6_VINM1,,OPAMP6_VINM1,g474re-package,g474re-package
+stm32g474ret6,25,PB1,GPIO,OPAMP6_VINM_SEC,,OPAMP6_VINM_SEC,g474re-package,g474re-package
+stm32g474ret6,25,PB1,GPIO,QUADSPI1_BK1_IO0,AF10,QUADSPI1_BK1_IO0,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,25,PB1,GPIO,TIM1_CH3N,AF6,TIM1_CH3N,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,25,PB1,GPIO,TIM3_CH4,AF2,TIM3_CH4,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,25,PB1,GPIO,TIM8_CH3N,AF4,TIM8_CH3N,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,26,PB2,GPIO,ADC2_IN12,,ADC2_IN12,g474re-package,g474re-package
+stm32g474ret6,26,PB2,GPIO,ADC3_EXTI2,,ADC3_EXTI2,g474re-package,g474re-package
+stm32g474ret6,26,PB2,GPIO,ADC4_EXTI2,,ADC4_EXTI2,g474re-package,g474re-package
+stm32g474ret6,26,PB2,GPIO,ADC5_EXTI2,,ADC5_EXTI2,g474re-package,g474re-package
+stm32g474ret6,26,PB2,GPIO,COMP4_INM,,COMP4_INM,g474re-package,g474re-package
+stm32g474ret6,26,PB2,GPIO,HRTIM1_SCIN,AF13,HRTIM1_SCIN,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,26,PB2,GPIO,I2C3_SMBA,AF4,I2C3_SMBA,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,26,PB2,GPIO,LPTIM1_OUT,AF1,LPTIM1_OUT,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,26,PB2,GPIO,OPAMP3_VINM,,OPAMP3_VINM,g474re-package,g474re-package
+stm32g474ret6,26,PB2,GPIO,OPAMP3_VINM0,,OPAMP3_VINM0,g474re-package,g474re-package
+stm32g474ret6,26,PB2,GPIO,OPAMP3_VINM_SEC,,OPAMP3_VINM_SEC,g474re-package,g474re-package
+stm32g474ret6,26,PB2,GPIO,QUADSPI1_BK2_IO1,AF10,QUADSPI1_BK2_IO1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,26,PB2,GPIO,RTC_OUT2,AF0,RTC_OUT2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,26,PB2,GPIO,TIM20_CH1,AF3,TIM20_CH1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,26,PB2,GPIO,TIM5_CH1,AF2,TIM5_CH1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,27,VSSA,GND,,,,g474re-package,
+stm32g474ret6,28,VDDA,SYSTEM,VREFBUF_OUT,,VREFBUF_OUT,g474re-package,g474re-package
+stm32g474ret6,29,VDDA,POWER,,,,g474re-package,
+stm32g474ret6,30,PB10,GPIO,COMP5_INM,,COMP5_INM,g474re-package,g474re-package
+stm32g474ret6,30,PB10,GPIO,DAC1_EXTI10,,DAC1_EXTI10,g474re-package,g474re-package
+stm32g474ret6,30,PB10,GPIO,DAC2_EXTI10,,DAC2_EXTI10,g474re-package,g474re-package
+stm32g474ret6,30,PB10,GPIO,DAC3_EXTI10,,DAC3_EXTI10,g474re-package,g474re-package
+stm32g474ret6,30,PB10,GPIO,DAC4_EXTI10,,DAC4_EXTI10,g474re-package,g474re-package
+stm32g474ret6,30,PB10,GPIO,HRTIM1_FLT3,AF13,HRTIM1_FLT3,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,30,PB10,GPIO,LPUART1_RX,AF8,LPUART1_RX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,30,PB10,GPIO,OPAMP3_VINM,,OPAMP3_VINM,g474re-package,g474re-package
+stm32g474ret6,30,PB10,GPIO,OPAMP3_VINM1,,OPAMP3_VINM1,g474re-package,g474re-package
+stm32g474ret6,30,PB10,GPIO,OPAMP3_VINM_SEC,,OPAMP3_VINM_SEC,g474re-package,g474re-package
+stm32g474ret6,30,PB10,GPIO,OPAMP4_VINM,,OPAMP4_VINM,g474re-package,g474re-package
+stm32g474ret6,30,PB10,GPIO,OPAMP4_VINM0,,OPAMP4_VINM0,g474re-package,g474re-package
+stm32g474ret6,30,PB10,GPIO,OPAMP4_VINM_SEC,,OPAMP4_VINM_SEC,g474re-package,g474re-package
+stm32g474ret6,30,PB10,GPIO,QUADSPI1_CLK,AF10,QUADSPI1_CLK,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,30,PB10,GPIO,SAI1_SCK_A,AF14,SAI1_SCK_A,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,30,PB10,GPIO,TIM1_BKIN,AF12,TIM1_BKIN,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,30,PB10,GPIO,TIM2_CH3,AF1,TIM2_CH3,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,30,PB10,GPIO,USART3_TX,AF7,USART3_TX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,31,VSS,GND,,,,g474re-package,
+stm32g474ret6,32,VDD,POWER,,,,g474re-package,
+stm32g474ret6,33,PB11,GPIO,ADC1_EXTI11,,ADC1_EXTI11,g474re-package,g474re-package
+stm32g474ret6,33,PB11,GPIO,ADC1_IN14,,ADC1_IN14,g474re-package,g474re-package
+stm32g474ret6,33,PB11,GPIO,ADC2_EXTI11,,ADC2_EXTI11,g474re-package,g474re-package
+stm32g474ret6,33,PB11,GPIO,ADC2_IN14,,ADC2_IN14,g474re-package,g474re-package
+stm32g474ret6,33,PB11,GPIO,COMP6_INP,,COMP6_INP,g474re-package,g474re-package
+stm32g474ret6,33,PB11,GPIO,HRTIM1_FLT4,AF13,HRTIM1_FLT4,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,33,PB11,GPIO,LPUART1_TX,AF8,LPUART1_TX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,33,PB11,GPIO,OPAMP4_VINP,,OPAMP4_VINP,g474re-package,g474re-package
+stm32g474ret6,33,PB11,GPIO,OPAMP4_VINP_SEC,,OPAMP4_VINP_SEC,g474re-package,g474re-package
+stm32g474ret6,33,PB11,GPIO,OPAMP6_VOUT,,OPAMP6_VOUT,g474re-package,g474re-package
+stm32g474ret6,33,PB11,GPIO,QUADSPI1_BK1_NCS,AF10,QUADSPI1_BK1_NCS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,33,PB11,GPIO,TIM2_CH4,AF1,TIM2_CH4,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,33,PB11,GPIO,USART3_RX,AF7,USART3_RX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,34,PB12,GPIO,ADC1_IN11,,ADC1_IN11,g474re-package,g474re-package
+stm32g474ret6,34,PB12,GPIO,ADC4_IN3,,ADC4_IN3,g474re-package,g474re-package
+stm32g474ret6,34,PB12,GPIO,COMP7_INM,,COMP7_INM,g474re-package,g474re-package
+stm32g474ret6,34,PB12,GPIO,FDCAN2_RX,AF9,FDCAN2_RX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,34,PB12,GPIO,HRTIM1_CHC1,AF13,HRTIM1_CHC1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,34,PB12,GPIO,I2C2_SMBA,AF4,I2C2_SMBA,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,34,PB12,GPIO,I2S2_WS,AF5,I2S2_WS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,34,PB12,GPIO,LPUART1_DE,AF8,LPUART1_DE,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,34,PB12,GPIO,LPUART1_RTS,AF8,LPUART1_RTS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,34,PB12,GPIO,OPAMP4_VOUT,,OPAMP4_VOUT,g474re-package,g474re-package
+stm32g474ret6,34,PB12,GPIO,OPAMP6_VINP,,OPAMP6_VINP,g474re-package,g474re-package
+stm32g474ret6,34,PB12,GPIO,OPAMP6_VINP_SEC,,OPAMP6_VINP_SEC,g474re-package,g474re-package
+stm32g474ret6,34,PB12,GPIO,SPI2_NSS,AF5,SPI2_NSS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,34,PB12,GPIO,TIM1_BKIN,AF6,TIM1_BKIN,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,34,PB12,GPIO,TIM5_ETR,AF2,TIM5_ETR,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,34,PB12,GPIO,USART3_CK,AF7,USART3_CK,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,35,PB13,GPIO,ADC3_IN5,,ADC3_IN5,g474re-package,g474re-package
+stm32g474ret6,35,PB13,GPIO,COMP5_INP,,COMP5_INP,g474re-package,g474re-package
+stm32g474ret6,35,PB13,GPIO,FDCAN2_TX,AF9,FDCAN2_TX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,35,PB13,GPIO,HRTIM1_CHC2,AF13,HRTIM1_CHC2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,35,PB13,GPIO,I2S2_CK,AF5,I2S2_CK,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,35,PB13,GPIO,LPUART1_CTS,AF8,LPUART1_CTS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,35,PB13,GPIO,OPAMP3_VINP,,OPAMP3_VINP,g474re-package,g474re-package
+stm32g474ret6,35,PB13,GPIO,OPAMP3_VINP_SEC,,OPAMP3_VINP_SEC,g474re-package,g474re-package
+stm32g474ret6,35,PB13,GPIO,OPAMP4_VINP,,OPAMP4_VINP,g474re-package,g474re-package
+stm32g474ret6,35,PB13,GPIO,OPAMP4_VINP_SEC,,OPAMP4_VINP_SEC,g474re-package,g474re-package
+stm32g474ret6,35,PB13,GPIO,OPAMP6_VINP,,OPAMP6_VINP,g474re-package,g474re-package
+stm32g474ret6,35,PB13,GPIO,OPAMP6_VINP_SEC,,OPAMP6_VINP_SEC,g474re-package,g474re-package
+stm32g474ret6,35,PB13,GPIO,SPI2_SCK,AF5,SPI2_SCK,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,35,PB13,GPIO,TIM1_CH1N,AF6,TIM1_CH1N,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,35,PB13,GPIO,USART3_CTS,AF7,USART3_CTS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,35,PB13,GPIO,USART3_NSS,AF7,USART3_NSS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,36,PB14,GPIO,ADC1_IN5,,ADC1_IN5,g474re-package,g474re-package
+stm32g474ret6,36,PB14,GPIO,ADC4_IN4,,ADC4_IN4,g474re-package,g474re-package
+stm32g474ret6,36,PB14,GPIO,COMP4_OUT,AF8,COMP4_OUT,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,36,PB14,GPIO,COMP7_INP,,COMP7_INP,g474re-package,g474re-package
+stm32g474ret6,36,PB14,GPIO,HRTIM1_CHD1,AF13,HRTIM1_CHD1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,36,PB14,GPIO,OPAMP2_VINP,,OPAMP2_VINP,g474re-package,g474re-package
+stm32g474ret6,36,PB14,GPIO,OPAMP2_VINP_SEC,,OPAMP2_VINP_SEC,g474re-package,g474re-package
+stm32g474ret6,36,PB14,GPIO,OPAMP5_VINP,,OPAMP5_VINP,g474re-package,g474re-package
+stm32g474ret6,36,PB14,GPIO,OPAMP5_VINP_SEC,,OPAMP5_VINP_SEC,g474re-package,g474re-package
+stm32g474ret6,36,PB14,GPIO,SPI2_MISO,AF5,SPI2_MISO,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,36,PB14,GPIO,TIM15_CH1,AF1,TIM15_CH1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,36,PB14,GPIO,TIM1_CH2N,AF6,TIM1_CH2N,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,36,PB14,GPIO,USART3_DE,AF7,USART3_DE,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,36,PB14,GPIO,USART3_RTS,AF7,USART3_RTS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,37,PB15,GPIO,ADC1_EXTI15,,ADC1_EXTI15,g474re-package,g474re-package
+stm32g474ret6,37,PB15,GPIO,ADC2_EXTI15,,ADC2_EXTI15,g474re-package,g474re-package
+stm32g474ret6,37,PB15,GPIO,ADC2_IN15,,ADC2_IN15,g474re-package,g474re-package
+stm32g474ret6,37,PB15,GPIO,ADC4_IN5,,ADC4_IN5,g474re-package,g474re-package
+stm32g474ret6,37,PB15,GPIO,COMP3_OUT,AF3,COMP3_OUT,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,37,PB15,GPIO,COMP6_INM,,COMP6_INM,g474re-package,g474re-package
+stm32g474ret6,37,PB15,GPIO,HRTIM1_CHD2,AF13,HRTIM1_CHD2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,37,PB15,GPIO,I2S2_SD,AF5,I2S2_SD,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,37,PB15,GPIO,OPAMP5_VINM,,OPAMP5_VINM,g474re-package,g474re-package
+stm32g474ret6,37,PB15,GPIO,OPAMP5_VINM0,,OPAMP5_VINM0,g474re-package,g474re-package
+stm32g474ret6,37,PB15,GPIO,OPAMP5_VINM_SEC,,OPAMP5_VINM_SEC,g474re-package,g474re-package
+stm32g474ret6,37,PB15,GPIO,RTC_REFIN,AF0,RTC_REFIN,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,37,PB15,GPIO,SPI2_MOSI,AF5,SPI2_MOSI,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,37,PB15,GPIO,TIM15_CH1N,AF2,TIM15_CH1N,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,37,PB15,GPIO,TIM15_CH2,AF1,TIM15_CH2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,37,PB15,GPIO,TIM1_CH3N,AF4,TIM1_CH3N,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,38,PC6,GPIO,COMP6_OUT,AF7,COMP6_OUT,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,38,PC6,GPIO,HRTIM1_CHF1,AF13,HRTIM1_CHF1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,38,PC6,GPIO,HRTIM1_EEV10,AF3,HRTIM1_EEV10,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,38,PC6,GPIO,I2C4_SCL,AF8,I2C4_SCL,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,38,PC6,GPIO,I2S2_MCK,AF6,I2S2_MCK,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,38,PC6,GPIO,TIM3_CH1,AF2,TIM3_CH1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,38,PC6,GPIO,TIM8_CH1,AF4,TIM8_CH1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,39,PC7,GPIO,COMP5_OUT,AF7,COMP5_OUT,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,39,PC7,GPIO,HRTIM1_CHF2,AF13,HRTIM1_CHF2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,39,PC7,GPIO,HRTIM1_FLT5,AF3,HRTIM1_FLT5,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,39,PC7,GPIO,I2C4_SDA,AF8,I2C4_SDA,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,39,PC7,GPIO,I2S3_MCK,AF6,I2S3_MCK,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,39,PC7,GPIO,TIM3_CH2,AF2,TIM3_CH2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,39,PC7,GPIO,TIM8_CH2,AF4,TIM8_CH2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,40,PC8,GPIO,COMP7_OUT,AF7,COMP7_OUT,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,40,PC8,GPIO,HRTIM1_CHE1,AF3,HRTIM1_CHE1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,40,PC8,GPIO,I2C3_SCL,AF8,I2C3_SCL,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,40,PC8,GPIO,TIM20_CH3,AF6,TIM20_CH3,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,40,PC8,GPIO,TIM3_CH3,AF2,TIM3_CH3,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,40,PC8,GPIO,TIM8_CH3,AF4,TIM8_CH3,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,41,PC9,GPIO,DAC1_EXTI9,,DAC1_EXTI9,g474re-package,g474re-package
+stm32g474ret6,41,PC9,GPIO,DAC2_EXTI9,,DAC2_EXTI9,g474re-package,g474re-package
+stm32g474ret6,41,PC9,GPIO,DAC3_EXTI9,,DAC3_EXTI9,g474re-package,g474re-package
+stm32g474ret6,41,PC9,GPIO,DAC4_EXTI9,,DAC4_EXTI9,g474re-package,g474re-package
+stm32g474ret6,41,PC9,GPIO,HRTIM1_CHE2,AF3,HRTIM1_CHE2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,41,PC9,GPIO,I2C3_SDA,AF8,I2C3_SDA,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,41,PC9,GPIO,I2S_CKIN,AF5,I2S_CKIN,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,41,PC9,GPIO,TIM3_CH4,AF2,TIM3_CH4,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,41,PC9,GPIO,TIM8_BKIN2,AF6,TIM8_BKIN2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,41,PC9,GPIO,TIM8_CH4,AF4,TIM8_CH4,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,42,PA8,GPIO,ADC5_IN1,,ADC5_IN1,g474re-package,g474re-package
+stm32g474ret6,42,PA8,GPIO,COMP7_OUT,AF8,COMP7_OUT,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,42,PA8,GPIO,FDCAN3_RX,AF11,FDCAN3_RX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,42,PA8,GPIO,HRTIM1_CHA1,AF13,HRTIM1_CHA1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,42,PA8,GPIO,I2C2_SDA,AF4,I2C2_SDA,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,42,PA8,GPIO,I2C3_SCL,AF2,I2C3_SCL,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,42,PA8,GPIO,I2S2_MCK,AF5,I2S2_MCK,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,42,PA8,GPIO,OPAMP5_VOUT,,OPAMP5_VOUT,g474re-package,g474re-package
+stm32g474ret6,42,PA8,GPIO,RCC_MCO,AF0,RCC_MCO,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,42,PA8,GPIO,SAI1_CK2,AF12,SAI1_CK2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,42,PA8,GPIO,SAI1_SCK_A,AF14,SAI1_SCK_A,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,42,PA8,GPIO,TIM1_CH1,AF6,TIM1_CH1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,42,PA8,GPIO,TIM4_ETR,AF10,TIM4_ETR,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,42,PA8,GPIO,USART1_CK,AF7,USART1_CK,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,43,PA9,GPIO,ADC5_IN2,,ADC5_IN2,g474re-package,g474re-package
+stm32g474ret6,43,PA9,GPIO,COMP5_OUT,AF8,COMP5_OUT,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,43,PA9,GPIO,DAC1_EXTI9,,DAC1_EXTI9,g474re-package,g474re-package
+stm32g474ret6,43,PA9,GPIO,DAC2_EXTI9,,DAC2_EXTI9,g474re-package,g474re-package
+stm32g474ret6,43,PA9,GPIO,DAC3_EXTI9,,DAC3_EXTI9,g474re-package,g474re-package
+stm32g474ret6,43,PA9,GPIO,DAC4_EXTI9,,DAC4_EXTI9,g474re-package,g474re-package
+stm32g474ret6,43,PA9,GPIO,HRTIM1_CHA2,AF13,HRTIM1_CHA2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,43,PA9,GPIO,I2C2_SCL,AF4,I2C2_SCL,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,43,PA9,GPIO,I2C3_SMBA,AF2,I2C3_SMBA,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,43,PA9,GPIO,I2S3_MCK,AF5,I2S3_MCK,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,43,PA9,GPIO,SAI1_FS_A,AF14,SAI1_FS_A,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,43,PA9,GPIO,TIM15_BKIN,AF9,TIM15_BKIN,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,43,PA9,GPIO,TIM1_CH2,AF6,TIM1_CH2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,43,PA9,GPIO,TIM2_CH3,AF10,TIM2_CH3,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,43,PA9,GPIO,UCPD1_DBCC1,,UCPD1_DBCC1,g474re-package,g474re-package
+stm32g474ret6,43,PA9,GPIO,USART1_TX,AF7,USART1_TX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,44,PA10,GPIO,COMP6_OUT,AF8,COMP6_OUT,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,44,PA10,GPIO,CRS_SYNC,AF3,CRS_SYNC,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,44,PA10,GPIO,DAC1_EXTI10,,DAC1_EXTI10,g474re-package,g474re-package
+stm32g474ret6,44,PA10,GPIO,DAC2_EXTI10,,DAC2_EXTI10,g474re-package,g474re-package
+stm32g474ret6,44,PA10,GPIO,DAC3_EXTI10,,DAC3_EXTI10,g474re-package,g474re-package
+stm32g474ret6,44,PA10,GPIO,DAC4_EXTI10,,DAC4_EXTI10,g474re-package,g474re-package
+stm32g474ret6,44,PA10,GPIO,HRTIM1_CHB1,AF13,HRTIM1_CHB1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,44,PA10,GPIO,I2C2_SMBA,AF4,I2C2_SMBA,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,44,PA10,GPIO,SAI1_D1,AF12,SAI1_D1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,44,PA10,GPIO,SAI1_SD_A,AF14,SAI1_SD_A,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,44,PA10,GPIO,SPI2_MISO,AF5,SPI2_MISO,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,44,PA10,GPIO,SYS_PVD_IN,,SYS_PVD_IN,g474re-package,g474re-package
+stm32g474ret6,44,PA10,GPIO,TIM17_BKIN,AF1,TIM17_BKIN,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,44,PA10,GPIO,TIM1_CH3,AF6,TIM1_CH3,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,44,PA10,GPIO,TIM2_CH4,AF10,TIM2_CH4,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,44,PA10,GPIO,TIM8_BKIN,AF11,TIM8_BKIN,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,44,PA10,GPIO,UCPD1_DBCC2,,UCPD1_DBCC2,g474re-package,g474re-package
+stm32g474ret6,44,PA10,GPIO,USART1_RX,AF7,USART1_RX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,45,PA11,GPIO,ADC1_EXTI11,,ADC1_EXTI11,g474re-package,g474re-package
+stm32g474ret6,45,PA11,GPIO,ADC2_EXTI11,,ADC2_EXTI11,g474re-package,g474re-package
+stm32g474ret6,45,PA11,GPIO,COMP1_OUT,AF8,COMP1_OUT,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,45,PA11,GPIO,FDCAN1_RX,AF9,FDCAN1_RX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,45,PA11,GPIO,HRTIM1_CHB2,AF13,HRTIM1_CHB2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,45,PA11,GPIO,I2S2_SD,AF5,I2S2_SD,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,45,PA11,GPIO,SPI2_MOSI,AF5,SPI2_MOSI,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,45,PA11,GPIO,TIM1_BKIN2,AF12,TIM1_BKIN2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,45,PA11,GPIO,TIM1_CH1N,AF6,TIM1_CH1N,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,45,PA11,GPIO,TIM1_CH4,AF11,TIM1_CH4,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,45,PA11,GPIO,TIM4_CH1,AF10,TIM4_CH1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,45,PA11,GPIO,USART1_CTS,AF7,USART1_CTS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,45,PA11,GPIO,USART1_NSS,AF7,USART1_NSS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,45,PA11,GPIO,USB_DM,,USB_DM,g474re-package,g474re-package
+stm32g474ret6,46,PA12,GPIO,COMP2_OUT,AF8,COMP2_OUT,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,46,PA12,GPIO,FDCAN1_TX,AF9,FDCAN1_TX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,46,PA12,GPIO,HRTIM1_FLT1,AF13,HRTIM1_FLT1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,46,PA12,GPIO,I2S_CKIN,AF5,I2S_CKIN,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,46,PA12,GPIO,TIM16_CH1,AF1,TIM16_CH1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,46,PA12,GPIO,TIM1_CH2N,AF6,TIM1_CH2N,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,46,PA12,GPIO,TIM1_ETR,AF11,TIM1_ETR,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,46,PA12,GPIO,TIM4_CH2,AF10,TIM4_CH2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,46,PA12,GPIO,USART1_DE,AF7,USART1_DE,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,46,PA12,GPIO,USART1_RTS,AF7,USART1_RTS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,46,PA12,GPIO,USB_DP,,USB_DP,g474re-package,g474re-package
+stm32g474ret6,47,VSS,GND,,,,g474re-package,
+stm32g474ret6,48,VDD,POWER,,,,g474re-package,
+stm32g474ret6,49,PA13,GPIO,I2C1_SCL,AF4,I2C1_SCL,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,49,PA13,GPIO,I2C4_SCL,AF3,I2C4_SCL,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,49,PA13,GPIO,IR_OUT,AF5,IR_OUT,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,49,PA13,GPIO,SAI1_SD_B,AF13,SAI1_SD_B,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,49,PA13,GPIO,SYS_JTMS-SWDIO,AF0,SYS_JTMS-SWDIO,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,49,PA13,GPIO,TIM16_CH1N,AF1,TIM16_CH1N,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,49,PA13,GPIO,TIM4_CH3,AF10,TIM4_CH3,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,49,PA13,GPIO,USART3_CTS,AF7,USART3_CTS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,49,PA13,GPIO,USART3_NSS,AF7,USART3_NSS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,50,PA14,GPIO,I2C1_SDA,AF4,I2C1_SDA,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,50,PA14,GPIO,I2C4_SMBA,AF3,I2C4_SMBA,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,50,PA14,GPIO,LPTIM1_OUT,AF1,LPTIM1_OUT,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,50,PA14,GPIO,SAI1_FS_B,AF13,SAI1_FS_B,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,50,PA14,GPIO,SYS_JTCK-SWCLK,AF0,SYS_JTCK-SWCLK,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,50,PA14,GPIO,TIM1_BKIN,AF6,TIM1_BKIN,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,50,PA14,GPIO,TIM8_CH2,AF5,TIM8_CH2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,50,PA14,GPIO,USART2_TX,AF7,USART2_TX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,51,PA15,GPIO,ADC1_EXTI15,,ADC1_EXTI15,g474re-package,g474re-package
+stm32g474ret6,51,PA15,GPIO,ADC2_EXTI15,,ADC2_EXTI15,g474re-package,g474re-package
+stm32g474ret6,51,PA15,GPIO,FDCAN3_TX,AF11,FDCAN3_TX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,51,PA15,GPIO,HRTIM1_FLT2,AF13,HRTIM1_FLT2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,51,PA15,GPIO,I2C1_SCL,AF4,I2C1_SCL,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,51,PA15,GPIO,I2S3_WS,AF6,I2S3_WS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,51,PA15,GPIO,SPI1_NSS,AF5,SPI1_NSS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,51,PA15,GPIO,SPI3_NSS,AF6,SPI3_NSS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,51,PA15,GPIO,SYS_JTDI,AF0,SYS_JTDI,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,51,PA15,GPIO,TIM1_BKIN,AF9,TIM1_BKIN,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,51,PA15,GPIO,TIM2_CH1,AF1,TIM2_CH1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,51,PA15,GPIO,TIM2_ETR,AF14,TIM2_ETR,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,51,PA15,GPIO,TIM8_CH1,AF2,TIM8_CH1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,51,PA15,GPIO,UART4_DE,AF8,UART4_DE,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,51,PA15,GPIO,UART4_RTS,AF8,UART4_RTS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,51,PA15,GPIO,USART2_RX,AF7,USART2_RX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,52,PC10,GPIO,DAC1_EXTI10,,DAC1_EXTI10,g474re-package,g474re-package
+stm32g474ret6,52,PC10,GPIO,DAC2_EXTI10,,DAC2_EXTI10,g474re-package,g474re-package
+stm32g474ret6,52,PC10,GPIO,DAC3_EXTI10,,DAC3_EXTI10,g474re-package,g474re-package
+stm32g474ret6,52,PC10,GPIO,DAC4_EXTI10,,DAC4_EXTI10,g474re-package,g474re-package
+stm32g474ret6,52,PC10,GPIO,HRTIM1_FLT6,AF13,HRTIM1_FLT6,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,52,PC10,GPIO,I2S3_CK,AF6,I2S3_CK,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,52,PC10,GPIO,SPI3_SCK,AF6,SPI3_SCK,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,52,PC10,GPIO,TIM8_CH1N,AF4,TIM8_CH1N,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,52,PC10,GPIO,UART4_TX,AF5,UART4_TX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,52,PC10,GPIO,USART3_TX,AF7,USART3_TX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,53,PC11,GPIO,ADC1_EXTI11,,ADC1_EXTI11,g474re-package,g474re-package
+stm32g474ret6,53,PC11,GPIO,ADC2_EXTI11,,ADC2_EXTI11,g474re-package,g474re-package
+stm32g474ret6,53,PC11,GPIO,HRTIM1_EEV2,AF3,HRTIM1_EEV2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,53,PC11,GPIO,I2C3_SDA,AF8,I2C3_SDA,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,53,PC11,GPIO,SPI3_MISO,AF6,SPI3_MISO,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,53,PC11,GPIO,TIM8_CH2N,AF4,TIM8_CH2N,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,53,PC11,GPIO,UART4_RX,AF5,UART4_RX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,53,PC11,GPIO,USART3_RX,AF7,USART3_RX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,54,PC12,GPIO,HRTIM1_EEV1,AF3,HRTIM1_EEV1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,54,PC12,GPIO,I2S3_SD,AF6,I2S3_SD,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,54,PC12,GPIO,SPI3_MOSI,AF6,SPI3_MOSI,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,54,PC12,GPIO,TIM5_CH2,AF1,TIM5_CH2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,54,PC12,GPIO,TIM8_CH3N,AF4,TIM8_CH3N,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,54,PC12,GPIO,UART5_TX,AF5,UART5_TX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,54,PC12,GPIO,UCPD1_FRSTX1,AF14,UCPD1_FRSTX1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,54,PC12,GPIO,UCPD1_FRSTX2,AF14,UCPD1_FRSTX2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,54,PC12,GPIO,USART3_CK,AF7,USART3_CK,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,55,PD2,GPIO,ADC3_EXTI2,,ADC3_EXTI2,g474re-package,g474re-package
+stm32g474ret6,55,PD2,GPIO,ADC4_EXTI2,,ADC4_EXTI2,g474re-package,g474re-package
+stm32g474ret6,55,PD2,GPIO,ADC5_EXTI2,,ADC5_EXTI2,g474re-package,g474re-package
+stm32g474ret6,55,PD2,GPIO,TIM3_ETR,AF2,TIM3_ETR,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,55,PD2,GPIO,TIM8_BKIN,AF4,TIM8_BKIN,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,55,PD2,GPIO,UART5_RX,AF5,UART5_RX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,56,PB3,GPIO,ADC3_EXTI3,,ADC3_EXTI3,g474re-package,g474re-package
+stm32g474ret6,56,PB3,GPIO,ADC4_EXTI3,,ADC4_EXTI3,g474re-package,g474re-package
+stm32g474ret6,56,PB3,GPIO,ADC5_EXTI3,,ADC5_EXTI3,g474re-package,g474re-package
+stm32g474ret6,56,PB3,GPIO,CRS_SYNC,AF3,CRS_SYNC,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,56,PB3,GPIO,FDCAN3_RX,AF11,FDCAN3_RX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,56,PB3,GPIO,HRTIM1_EEV9,AF13,HRTIM1_EEV9,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,56,PB3,GPIO,HRTIM1_SCOUT,AF12,HRTIM1_SCOUT,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,56,PB3,GPIO,I2S3_CK,AF6,I2S3_CK,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,56,PB3,GPIO,SAI1_SCK_B,AF14,SAI1_SCK_B,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,56,PB3,GPIO,SPI1_SCK,AF5,SPI1_SCK,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,56,PB3,GPIO,SPI3_SCK,AF6,SPI3_SCK,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,56,PB3,GPIO,SYS_JTDO-SWO,AF0,SYS_JTDO-SWO,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,56,PB3,GPIO,TIM2_CH2,AF1,TIM2_CH2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,56,PB3,GPIO,TIM3_ETR,AF10,TIM3_ETR,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,56,PB3,GPIO,TIM4_ETR,AF2,TIM4_ETR,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,56,PB3,GPIO,TIM8_CH1N,AF4,TIM8_CH1N,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,56,PB3,GPIO,USART2_TX,AF7,USART2_TX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,57,PB4,GPIO,FDCAN3_TX,AF11,FDCAN3_TX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,57,PB4,GPIO,HRTIM1_EEV7,AF13,HRTIM1_EEV7,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,57,PB4,GPIO,SAI1_MCLK_B,AF14,SAI1_MCLK_B,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,57,PB4,GPIO,SPI1_MISO,AF5,SPI1_MISO,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,57,PB4,GPIO,SPI3_MISO,AF6,SPI3_MISO,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,57,PB4,GPIO,SYS_JTRST,AF0,SYS_JTRST,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,57,PB4,GPIO,TIM16_CH1,AF1,TIM16_CH1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,57,PB4,GPIO,TIM17_BKIN,AF10,TIM17_BKIN,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,57,PB4,GPIO,TIM3_CH1,AF2,TIM3_CH1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,57,PB4,GPIO,TIM8_CH2N,AF4,TIM8_CH2N,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,57,PB4,GPIO,UART5_DE,AF8,UART5_DE,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,57,PB4,GPIO,UART5_RTS,AF8,UART5_RTS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,57,PB4,GPIO,UCPD1_CC2,,UCPD1_CC2,g474re-package,g474re-package
+stm32g474ret6,57,PB4,GPIO,USART2_RX,AF7,USART2_RX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,58,PB5,GPIO,FDCAN2_RX,AF9,FDCAN2_RX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,58,PB5,GPIO,HRTIM1_EEV6,AF13,HRTIM1_EEV6,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,58,PB5,GPIO,I2C1_SMBA,AF4,I2C1_SMBA,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,58,PB5,GPIO,I2C3_SDA,AF8,I2C3_SDA,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,58,PB5,GPIO,I2S3_SD,AF6,I2S3_SD,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,58,PB5,GPIO,LPTIM1_IN1,AF11,LPTIM1_IN1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,58,PB5,GPIO,SAI1_SD_B,AF12,SAI1_SD_B,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,58,PB5,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,58,PB5,GPIO,SPI3_MOSI,AF6,SPI3_MOSI,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,58,PB5,GPIO,TIM16_BKIN,AF1,TIM16_BKIN,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,58,PB5,GPIO,TIM17_CH1,AF10,TIM17_CH1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,58,PB5,GPIO,TIM3_CH2,AF2,TIM3_CH2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,58,PB5,GPIO,TIM8_CH3N,AF3,TIM8_CH3N,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,58,PB5,GPIO,UART5_CTS,AF14,UART5_CTS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,58,PB5,GPIO,USART2_CK,AF7,USART2_CK,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,59,PB6,GPIO,COMP4_OUT,AF8,COMP4_OUT,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,59,PB6,GPIO,FDCAN2_TX,AF9,FDCAN2_TX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,59,PB6,GPIO,HRTIM1_EEV4,AF13,HRTIM1_EEV4,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,59,PB6,GPIO,HRTIM1_SCIN,AF12,HRTIM1_SCIN,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,59,PB6,GPIO,LPTIM1_ETR,AF11,LPTIM1_ETR,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,59,PB6,GPIO,SAI1_FS_B,AF14,SAI1_FS_B,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,59,PB6,GPIO,TIM16_CH1N,AF1,TIM16_CH1N,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,59,PB6,GPIO,TIM4_CH1,AF2,TIM4_CH1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,59,PB6,GPIO,TIM8_BKIN2,AF10,TIM8_BKIN2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,59,PB6,GPIO,TIM8_CH1,AF5,TIM8_CH1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,59,PB6,GPIO,TIM8_ETR,AF6,TIM8_ETR,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,59,PB6,GPIO,UCPD1_CC1,,UCPD1_CC1,g474re-package,g474re-package
+stm32g474ret6,59,PB6,GPIO,USART1_TX,AF7,USART1_TX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,60,PB7,GPIO,COMP3_OUT,AF8,COMP3_OUT,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,60,PB7,GPIO,HRTIM1_EEV3,AF13,HRTIM1_EEV3,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,60,PB7,GPIO,I2C1_SDA,AF4,I2C1_SDA,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,60,PB7,GPIO,I2C4_SDA,AF3,I2C4_SDA,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,60,PB7,GPIO,LPTIM1_IN2,AF11,LPTIM1_IN2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,60,PB7,GPIO,TIM17_CH1N,AF1,TIM17_CH1N,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,60,PB7,GPIO,TIM3_CH4,AF10,TIM3_CH4,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,60,PB7,GPIO,TIM4_CH2,AF2,TIM4_CH2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,60,PB7,GPIO,TIM8_BKIN,AF5,TIM8_BKIN,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,60,PB7,GPIO,UART4_CTS,AF14,UART4_CTS,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,60,PB7,GPIO,USART1_RX,AF7,USART1_RX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,61,PB8,GPIO,COMP1_OUT,AF8,COMP1_OUT,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,61,PB8,GPIO,FDCAN1_RX,AF9,FDCAN1_RX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,61,PB8,GPIO,HRTIM1_EEV8,AF13,HRTIM1_EEV8,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,61,PB8,GPIO,I2C1_SCL,AF4,I2C1_SCL,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,61,PB8,GPIO,SAI1_CK1,AF3,SAI1_CK1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,61,PB8,GPIO,SAI1_MCLK_A,AF14,SAI1_MCLK_A,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,61,PB8,GPIO,TIM16_CH1,AF1,TIM16_CH1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,61,PB8,GPIO,TIM1_BKIN,AF12,TIM1_BKIN,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,61,PB8,GPIO,TIM4_CH3,AF2,TIM4_CH3,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,61,PB8,GPIO,TIM8_CH2,AF10,TIM8_CH2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,61,PB8,GPIO,USART3_RX,AF7,USART3_RX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,62,PB9,GPIO,COMP2_OUT,AF8,COMP2_OUT,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,62,PB9,GPIO,DAC1_EXTI9,,DAC1_EXTI9,g474re-package,g474re-package
+stm32g474ret6,62,PB9,GPIO,DAC2_EXTI9,,DAC2_EXTI9,g474re-package,g474re-package
+stm32g474ret6,62,PB9,GPIO,DAC3_EXTI9,,DAC3_EXTI9,g474re-package,g474re-package
+stm32g474ret6,62,PB9,GPIO,DAC4_EXTI9,,DAC4_EXTI9,g474re-package,g474re-package
+stm32g474ret6,62,PB9,GPIO,FDCAN1_TX,AF9,FDCAN1_TX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,62,PB9,GPIO,HRTIM1_EEV5,AF13,HRTIM1_EEV5,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,62,PB9,GPIO,I2C1_SDA,AF4,I2C1_SDA,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,62,PB9,GPIO,IR_OUT,AF6,IR_OUT,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,62,PB9,GPIO,SAI1_D2,AF3,SAI1_D2,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,62,PB9,GPIO,SAI1_FS_A,AF14,SAI1_FS_A,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,62,PB9,GPIO,TIM17_CH1,AF1,TIM17_CH1,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,62,PB9,GPIO,TIM1_CH3N,AF12,TIM1_CH3N,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,62,PB9,GPIO,TIM4_CH4,AF2,TIM4_CH4,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,62,PB9,GPIO,TIM8_CH3,AF10,TIM8_CH3,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,62,PB9,GPIO,USART3_TX,AF7,USART3_TX,g474re-package,g474re-package | g474re-modes
+stm32g474ret6,63,VSS,GND,,,,g474re-package,
+stm32g474ret6,64,VDD,POWER,,,,g474re-package,
 rp2040,1,IOVDD,POWER,,,,rp2040-qfn56-physical,
 rp2040,2,GPIO0,GPIO,SPI0 RX,F1,SPI0 RX,rp2040-qfn56-physical,rp2040-bank0-p13
 rp2040,2,GPIO0,GPIO,UART0 TX,F2,UART0 TX,rp2040-qfn56-physical,rp2040-bank0-p13

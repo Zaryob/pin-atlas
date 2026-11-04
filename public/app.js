@@ -584,7 +584,8 @@ const boardFamilies = [
       { type: 'layout', id: 'stm32f103rbt6' },
       { type: 'layout', id: 'stm32f103vbt6' },
       { type: 'layout', id: 'stm32f401ret6' },
-      { type: 'layout', id: 'stm32f411ret6' }
+      { type: 'layout', id: 'stm32f411ret6' },
+      { type: 'layout', id: 'stm32g474ret6' }
     ]
   },
   {
@@ -593,7 +594,8 @@ const boardFamilies = [
     items: [
       { type: 'layout', id: 'nucleo-f103rb' },
       { type: 'layout', id: 'nucleo-f401re' },
-      { type: 'layout', id: 'nucleo-f411re' }
+      { type: 'layout', id: 'nucleo-f411re' },
+      { type: 'layout', id: 'nucleo-g474re' }
     ]
   },
   {
