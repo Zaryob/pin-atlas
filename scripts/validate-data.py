@@ -69,13 +69,28 @@ stm=lookup['stm32f103c8t6'];blue=lookup['blue-pill']
 stm64=lookup['stm32f103rbt6'];stm100=lookup['stm32f103vbt6']
 atm64=lookup['atmega2561-tqfp64']
 assert len(stm64)==64 and sum(p['type']=='GPIO' for p in stm64.values())==51
-assert len(stm100)==100 and sum(p['type']=='GPIO' for p in stm100.values())==82
+assert len(stm100)==100 and sum(p['type']=='GPIO' for p in stm100.values())==80
+for pins in (stm,stm64):
+    for number,osc,signal in ((5,'OSC_IN','PD0'),(6,'OSC_OUT','PD1')):
+        pin=pins[number]
+        assert (pin['name'],pin['type'],pin['baseFunction'])==(osc,'GPIO',osc)
+        assert any(f['name']==signal and f['selector']=='PD01_REMAP=1' for f in pin['functions'])
+for number,osc,port_number,port in ((12,'OSC_IN',81,'PD0'),(13,'OSC_OUT',82,'PD1')):
+    pin=stm100[number]
+    assert (pin['name'],pin['type'],pin['baseFunction'])==(osc,'SYSTEM',osc) and not pin['functions']
+    assert (stm100[port_number]['name'],stm100[port_number]['type'])==(port,'GPIO')
+tim1_full_remap=['TIM1_ETR','TIM1_CH1N','TIM1_CH1','TIM1_CH2N','TIM1_CH2','TIM1_CH3N','TIM1_CH3','TIM1_CH4','TIM1_BKIN']
+for number,port,signal in zip(range(38,47),range(7,16),tim1_full_remap):
+    assert stm100[number]['name']==f'PE{port}'
+    function=next(f for f in stm100[number]['functions'] if f['name']==signal)
+    assert function['configuration']=={'field':'TIM1_REMAP','values':['11']} and function['selector']=='TIM1_REMAP=11'
+for pins in (stm,stm64):
+    assert not any(f.get('selector')=='TIM1_REMAP=11' for pin in pins.values() for f in pin['functions'])
 assert len(atm64)==64 and sum(p['type']=='GPIO' for p in atm64.values())==54
 assert any(f['name']=='PDI' for f in atm64[2]['functions']) and any(f['name']=='PDO' for f in atm64[3]['functions'])
 assert any(f['name']=='ADC12_IN10' for f in stm64[8]['functions'])
 assert any(f['name']=='USART3_TX' for f in stm64[51]['functions'])
 assert stm[1]['name']=='VBAT' and stm[34]['name']=='PA13' and stm[44]['name']=='BOOT0'
-assert stm[5]['functions'][0]['name']=='PD0' and stm[5]['baseFunction']=='OSC_IN'
 assert all('alt' not in f for p in stm.values() for f in p['functions'])
 assert next(f for f in stm[42]['functions'] if f['name']=='USART1_TX')['configuration']=={'field':'USART1_REMAP','values':['1']}
 assert next(f for f in stm[21]['functions'] if f['name']=='TIM2_CH3')['configuration']['values']==['10','11']

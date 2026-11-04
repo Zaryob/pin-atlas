@@ -2,7 +2,7 @@
 
 [English](VERIFICATION.md) · [Türkçe](VERIFICATION.tr.md)
 
-Reviewed on **4 November 2026**. The review covers thirty-three board, header, and chip profiles, **1,544 physical pin records, and 5,005 function assignments**. Shared physical pins are counted once per profile. The count excludes the app’s generic `GPIO` planning option and the unnumbered QFN center GND pads. Each placement of a signal on a different pin counts separately.
+Reviewed on **4 November 2026**. The review covers thirty-three board, header, and chip profiles, **1,544 physical pin records, and 5,003 function assignments**. Shared physical pins are counted once per profile. The count excludes the app’s generic `GPIO` planning option and the unnumbered QFN center GND pads. Each placement of a signal on a different pin counts separately.
 
 ## Sources by pin map
 
@@ -89,9 +89,9 @@ The manufacturer PDF is cached for verification and is not distributed in the re
 
 ## STM32F103 packages · LQFP48, LQFP64, LQFP100
 
-ST **DS5319 Rev 20 (July 2025)** Table 5, PDF pp. 28–33, supplies the LQFP48, LQFP64, and LQFP100 pin positions, I/O tolerance and functions. Figures 6–8, PDF pp. 24–26, were inspected for the physical perimeter arrangements. These LQFP packages have no exposed center pad. GPIO-capable OSC_IN/OSC_OUT remain oscillator functions after reset; PD0/PD1 require the software remap described in the datasheet footnote and RM0008 §9.3.1.
+ST **DS5319 Rev 20 (July 2025)** Table 5, PDF pp. 28–33, supplies the LQFP48, LQFP64, and LQFP100 pin positions, I/O tolerance and functions. Figures 6–8, PDF pp. 24–26, were inspected for the physical perimeter arrangements. These LQFP packages have no exposed center pad. LQFP48 and LQFP64 use `PD01_REMAP` to expose PD0 and PD1 on OSC_IN and OSC_OUT, as described in Table 5 footnote 7 and RM0008. LQFP100 has dedicated oscillator pins at 12 and 13, with PD0 and PD1 at 81 and 82.
 
-**RM0008 Rev 21**, §9.3, Tables 34, 43–46 and 52–56, supplies actual CAN, timer, USART, I²C1 and SPI1 remap conditions. Merged table cells are expanded before assigning allowed values. Package restrictions exclude unavailable full-remap destinations; no larger-package ports or higher-density-only peripherals are injected. JTAG/SWD mapping is supported by Tables 36–37. The F1 architecture has no AF0–AF15 pin selector model; function records carry AFIO field/value conditions and a separate configuration reference. These are capabilities, not a claim that every combination of selected functions is simultaneously usable.
+**RM0008 Rev 21**, §9.3, Tables 34, 43–46 and 52–56, supplies CAN, timer, USART, I²C1 and SPI1 remap conditions. The extractor expands merged cells and matches each remap destination to a pin in the selected package. For example, Table 46 maps TIM1 to PE7–PE15 with `TIM1_REMAP=11` on LQFP100. Tables 36–37 cover JTAG/SWD mapping. Function records carry the AFIO field, allowed values and a configuration reference. Each remap value applies to the peripheral as a whole.
 
 FT status and PC13–PC15 restrictions use the Table 5 footnotes: the backup-domain pins have 3 mA / 2 MHz / 30 pF limits and must not be used as current sources. FT is a conditional digital-mode property, not permission to apply 5 V to analog inputs or to every pin.
 

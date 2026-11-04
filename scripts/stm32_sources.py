@@ -50,12 +50,12 @@ def build_stm32(cache,docs,observations,ref,verified_on,use_snapshots=False):
         return pdfplumber.open(cache/docs[id]['file'])
     compact=lambda value:re.sub(r'\s+','',re.sub(r'\(\d+\)','',value or ''))
     configs={}
-    # Only remap columns supported on the 48-pin medium-density part are used.
+    # Match remap destinations to the pins present in each package below.
     specs=[(176,0,34,'CAN_REMAP',['00','10','11'],[1,2,3]),
            (178,2,43,'TIM4_REMAP',['0','1'],[1,2]),
            (178,3,44,'TIM3_REMAP',['00','10','11'],[1,2,3]),
            (179,0,45,'TIM2_REMAP',['00','01','10','11'],[1,2,3,4]),
-           (179,1,46,'TIM1_REMAP',['00','01','11'],[1,2]),
+           (179,1,46,'TIM1_REMAP',['00','01','11'],[1,2,3]),
            (180,3,52,'USART3_REMAP',['00','01','11'],[1,2,3]),
            (180,4,53,'USART2_REMAP',['0','1'],[1,2]),
            (181,0,54,'USART1_REMAP',['0','1'],[1,2]),
@@ -65,7 +65,7 @@ def build_stm32(cache,docs,observations,ref,verified_on,use_snapshots=False):
         for page,index,table_no,field,values,columns in specs:
             table=rm.pages[page-1].extract_tables()[index]
             assert field in compact(''.join(c or '' for c in table[0]))
-            evidence=ref(f'stm32-remap-{table_no}','stm32-rm0008',page,f'§9.3 · Table {table_no} · {field} · 48-pin package restrictions applied')
+            evidence=ref(f'stm32-remap-{table_no}','stm32-rm0008',page,f'§9.3 · Table {table_no} · {field}')
             for row in table[1:]:
                 signal=compact(row[0])
                 if signal.startswith('CAN1_RX'):signal='CANRX'
@@ -82,7 +82,7 @@ def build_stm32(cache,docs,observations,ref,verified_on,use_snapshots=False):
                     assert entry['field']==field
                     entry['values'].append(values[col-1])
         assert 'PD01_REMAP' in rm.pages[174].extract_text()
-    osc_evidence=ref('stm32-osc-remap','stm32-rm0008',175,'§9.3.1 · PD0/PD1 remapping; HSE oscillator must be released')
+    osc_evidence=ref('stm32-osc-remap','stm32-rm0008',175,'PD0/PD1 remapping on OSC_IN/OSC_OUT in LQFP48 and LQFP64; HSE oscillator must be released')
     debug_evidence=ref('stm32-debug-mapping','stm32-rm0008',177,'§9.3.5 · Table 37 · SWJ_CFG debug-port release conditions')
     token_re=re.compile(r'USART\d+_(?:CTS|RTS|TX|RX|CK)|SPI\d+_(?:NSS|SCK|MISO|MOSI)|I2C\d+_(?:SCL|SDA|SMBAl)|ADC12_IN\d+|TIM\d+_(?:CH[1-4]N?(?:_ETR)?|ETR|BKIN)|CANRX|CANTX|USBDM|USBDP|MCO|WKUP|TAMPER-RTC|OSC32_IN|OSC32_OUT|PD[012]|JTMS|JTCK|JTDI|JTDO|JNTRST|NJTRST|SWDIO|SWCLK|TRACESWO|TRACE(?:CK|D[0-3])|PA13|PA14|PA15|PB3|PB4')
     def group(signal):
@@ -100,6 +100,7 @@ def build_stm32(cache,docs,observations,ref,verified_on,use_snapshots=False):
         return 'SYSTEM'
     electrical=ref('stm32-electrical-notes','stm32f103',33,'Table 5 notes · FT qualification, PC13–PC15 limits and HSE remap restrictions')
     def extract_pins(col_idx, package_pins, expected_gpios, physical_ref):
+        hse_remap_supported=package_pins in (48,64)
         pins=[]
         with open_source('stm32f103') as ds:
             for page in range(28,34):
@@ -110,12 +111,15 @@ def build_stm32(cache,docs,observations,ref,verified_on,use_snapshots=False):
                     if not (row[col_idx] or '').isdigit():continue
                     n=int(row[col_idx]);raw_name=compact(row[7]);main=compact(row[10]);port=re.match(r'P[A-E]\d+',raw_name)
                     name=port[0] if port else raw_name
-                    pin_type='GPIO' if port or name in ('OSC_IN','OSC_OUT') else 'GND' if name.startswith('VSS') else 'POWER' if name.startswith(('VDD','VBAT')) else 'SYSTEM'
+                    is_hse_pin=name in ('OSC_IN','OSC_OUT')
+                    pin_type='GPIO' if port or (is_hse_pin and hse_remap_supported) else 'GND' if name.startswith('VSS') else 'POWER' if name.startswith(('VDD','VBAT')) else 'SYSTEM'
                     functions=[]
                     for cell in (row[11],row[12],main if main!=name else ''):
                         text=compact(cell)
                         for signal in token_re.findall(text):
                             if signal in ('PA13','PA14','PA15','PB3','PB4'):continue # Generic GPIO planning already covers these released debug pins.
+                            # Table 5 shares these cells across packages. Footnote 7 limits the HSE remap.
+                            if is_hse_pin and not hse_remap_supported and signal in ('PD0','PD1'):continue
                             if any(f['name']==signal for f in functions):continue
                             f={'name':signal,'group':group(signal),'signal':signal,'evidence':evidence}
                             cfg=configs.get((signal,name))
@@ -132,7 +136,7 @@ def build_stm32(cache,docs,observations,ref,verified_on,use_snapshots=False):
                     if name in ('PC13','PC14','PC15'):note='stm32BackupNote'
                     elif name in ('PA13','PA14'):note='stm32SwdNote'
                     elif name in ('PA15','PB3','PB4'):note='stm32JtagNote'
-                    elif name in ('OSC_IN','OSC_OUT'):note='stm32OscNote'
+                    elif is_hse_pin:note='stm32OscNote' if hse_remap_supported else 'stm32DedicatedOscNote'
                     elif name=='PB2':note='stm32Boot1Note'
                     elif name=='NRST':note='stm32ResetNote'
                     elif name=='BOOT0':note='stm32Boot0Note'
@@ -140,7 +144,7 @@ def build_stm32(cache,docs,observations,ref,verified_on,use_snapshots=False):
                     elif pin_type!='GPIO':note=None
                     pin={'number':n,'name':name,'type':pin_type,'functions':functions,'evidence':[evidence]}
                     if pin_type=='GPIO':pin['fiveVoltTolerant']=compact(row[9])=='FT'
-                    if name in ('OSC_IN','OSC_OUT'):pin['baseFunction']=name
+                    if is_hse_pin:pin['baseFunction']=name
                     if note:pin['noteKey']=note
                     pins.append(pin)
         pins.sort(key=lambda p:p['number']);assert [p['number'] for p in pins]==list(range(1,package_pins+1))
@@ -159,8 +163,8 @@ def build_stm32(cache,docs,observations,ref,verified_on,use_snapshots=False):
     chip64={'id':'stm32f103rbt6','name':'STM32F103RBT6','shortName':'STM32F103RBT6','family':'STMicroelectronics','subtitle':'LQFP-64 · Cortex-M3 · 72 MHz','layout':'lqfp','packageName':'LQFP-64','packagePins':64,'gpioCount':51,'voltage':'2.0–3.6 V I/O','mcu':'STM32F103RBT6','processor':'Arm Cortex-M3','clock':'72 MHz','verifiedOn':verified_on,'compatibleKey':'stm32F103Rbt6Compatible','scopeKey':'stm32F103Rbt6Scope','source':docs['stm32f103']['url']+'#page=25','datasheet':docs['stm32f103']['url'],'pins':pins64}
 
     phys_lqfp100=ref('stm32-lqfp100','stm32f103',24,'§3 · Figure 6 · LQFP100 perimeter numbering; no exposed center pad')
-    pins100=extract_pins(5,100,82,phys_lqfp100)
-    chip100={'id':'stm32f103vbt6','name':'STM32F103VBT6','shortName':'STM32F103VBT6','family':'STMicroelectronics','subtitle':'LQFP-100 · Cortex-M3 · 72 MHz','layout':'lqfp','packageName':'LQFP-100','packagePins':100,'gpioCount':82,'voltage':'2.0–3.6 V I/O','mcu':'STM32F103VBT6','processor':'Arm Cortex-M3','clock':'72 MHz','verifiedOn':verified_on,'compatibleKey':'stm32F103Vbt6Compatible','scopeKey':'stm32F103Vbt6Scope','source':docs['stm32f103']['url']+'#page=24','datasheet':docs['stm32f103']['url'],'pins':pins100}
+    pins100=extract_pins(5,100,80,phys_lqfp100)
+    chip100={'id':'stm32f103vbt6','name':'STM32F103VBT6','shortName':'STM32F103VBT6','family':'STMicroelectronics','subtitle':'LQFP-100 · Cortex-M3 · 72 MHz','layout':'lqfp','packageName':'LQFP-100','packagePins':100,'gpioCount':80,'voltage':'2.0–3.6 V I/O','mcu':'STM32F103VBT6','processor':'Arm Cortex-M3','clock':'72 MHz','verifiedOn':verified_on,'compatibleKey':'stm32F103Vbt6Compatible','scopeKey':'stm32F103Vbt6Scope','source':docs['stm32f103']['url']+'#page=24','datasheet':docs['stm32f103']['url'],'pins':pins100}
 
     parser=BoardTables();parser.feed((cache/docs['bluepill-board']['file']).read_text())
     by_name={pin['name']:pin for pin in pins48};board_pins=[]

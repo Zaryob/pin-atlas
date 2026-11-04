@@ -111,3 +111,22 @@ test('plan validation rejects reserved pins on Pi 4 and ESP32', () => {
   // Pin 16 is GPIO9 (internal flash)
   assert.throws(() => validatePlan({ 16: { function: 'GPIO', label: 'test' } }, esp, t), /invalidAssignment/);
 });
+
+test('LQFP-100 plans keep oscillator wiring and GPIO assignments separate', () => {
+  const profile = boards.find(board => board.id === 'stm32f103vbt6');
+  const valid = {
+    40: { function: 'TIM1_CH1', label: 'PWM' },
+    81: { function: 'GPIO', label: 'PD0' },
+    82: { function: 'GPIO', label: 'PD1' }
+  };
+  const legacy = {
+    ...valid,
+    12: { function: 'PD0', label: 'old input' },
+    13: { function: 'PD1', label: 'old output' }
+  };
+  assert.throws(() => validatePlan(legacy, profile, t), /invalidAssignment/);
+  assert.deepEqual(validatePlan(legacy, profile, t, { ignoreLegacyHseAssignments: true }), valid);
+
+  const oscillator = { 12: { function: 'OSC_IN', label: 'crystal' } };
+  assert.deepEqual(validatePlan(oscillator, profile, t, { ignoreLegacyHseAssignments: true }), oscillator);
+});

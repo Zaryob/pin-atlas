@@ -736,7 +736,7 @@
       "title": "STM32F10xxx reference manual",
       "url": "https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf#page=176",
       "page": 176,
-      "locator": "§9.3 · Table 34 · CAN_REMAP · 48-pin package restrictions applied",
+      "locator": "§9.3 · Table 34 · CAN_REMAP",
       "method": "pdf-table"
     },
     "stm32-remap-43": {
@@ -744,7 +744,7 @@
       "title": "STM32F10xxx reference manual",
       "url": "https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf#page=178",
       "page": 178,
-      "locator": "§9.3 · Table 43 · TIM4_REMAP · 48-pin package restrictions applied",
+      "locator": "§9.3 · Table 43 · TIM4_REMAP",
       "method": "pdf-table"
     },
     "stm32-remap-44": {
@@ -752,7 +752,7 @@
       "title": "STM32F10xxx reference manual",
       "url": "https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf#page=178",
       "page": 178,
-      "locator": "§9.3 · Table 44 · TIM3_REMAP · 48-pin package restrictions applied",
+      "locator": "§9.3 · Table 44 · TIM3_REMAP",
       "method": "pdf-table"
     },
     "stm32-remap-45": {
@@ -760,7 +760,7 @@
       "title": "STM32F10xxx reference manual",
       "url": "https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf#page=179",
       "page": 179,
-      "locator": "§9.3 · Table 45 · TIM2_REMAP · 48-pin package restrictions applied",
+      "locator": "§9.3 · Table 45 · TIM2_REMAP",
       "method": "pdf-table"
     },
     "stm32-remap-46": {
@@ -768,7 +768,7 @@
       "title": "STM32F10xxx reference manual",
       "url": "https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf#page=179",
       "page": 179,
-      "locator": "§9.3 · Table 46 · TIM1_REMAP · 48-pin package restrictions applied",
+      "locator": "§9.3 · Table 46 · TIM1_REMAP",
       "method": "pdf-table"
     },
     "stm32-remap-52": {
@@ -776,7 +776,7 @@
       "title": "STM32F10xxx reference manual",
       "url": "https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf#page=180",
       "page": 180,
-      "locator": "§9.3 · Table 52 · USART3_REMAP · 48-pin package restrictions applied",
+      "locator": "§9.3 · Table 52 · USART3_REMAP",
       "method": "pdf-table"
     },
     "stm32-remap-53": {
@@ -784,7 +784,7 @@
       "title": "STM32F10xxx reference manual",
       "url": "https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf#page=180",
       "page": 180,
-      "locator": "§9.3 · Table 53 · USART2_REMAP · 48-pin package restrictions applied",
+      "locator": "§9.3 · Table 53 · USART2_REMAP",
       "method": "pdf-table"
     },
     "stm32-remap-54": {
@@ -792,7 +792,7 @@
       "title": "STM32F10xxx reference manual",
       "url": "https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf#page=181",
       "page": 181,
-      "locator": "§9.3 · Table 54 · USART1_REMAP · 48-pin package restrictions applied",
+      "locator": "§9.3 · Table 54 · USART1_REMAP",
       "method": "pdf-table"
     },
     "stm32-remap-55": {
@@ -800,7 +800,7 @@
       "title": "STM32F10xxx reference manual",
       "url": "https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf#page=181",
       "page": 181,
-      "locator": "§9.3 · Table 55 · I2C1_REMAP · 48-pin package restrictions applied",
+      "locator": "§9.3 · Table 55 · I2C1_REMAP",
       "method": "pdf-table"
     },
     "stm32-remap-56": {
@@ -808,7 +808,7 @@
       "title": "STM32F10xxx reference manual",
       "url": "https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf#page=181",
       "page": 181,
-      "locator": "§9.3 · Table 56 · SPI1_REMAP · 48-pin package restrictions applied",
+      "locator": "§9.3 · Table 56 · SPI1_REMAP",
       "method": "pdf-table"
     },
     "stm32-osc-remap": {
@@ -816,7 +816,7 @@
       "title": "STM32F10xxx reference manual",
       "url": "https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf#page=175",
       "page": 175,
-      "locator": "§9.3.1 · PD0/PD1 remapping; HSE oscillator must be released",
+      "locator": "PD0/PD1 remapping on OSC_IN/OSC_OUT in LQFP48 and LQFP64; HSE oscillator must be released",
       "method": "pdf-table"
     },
     "stm32-debug-mapping": {

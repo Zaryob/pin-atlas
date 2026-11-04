@@ -2,7 +2,7 @@
 
 [English](VERIFICATION.md) · [Türkçe](VERIFICATION.tr.md)
 
-Kontrol tarihi: **4 Kasım 2026**. Kapsam: otuz üç kart, başlık ve çip profili, **1.544 fiziksel pin kaydı ve 5.005 alternatif işlev ataması**. Ortak bağlantılar profil başına sayılır. Sayımda uygulamanın soyut `GPIO` seçeneği ve numarasız QFN merkez GND pedi yoktur. Aynı sinyalin farklı pinlerde bulunması ayrı bir atamadır.
+**4 Kasım 2026** tarihli inceleme, otuz üç kart, başlık ve çip profilindeki **1.544 fiziksel pin kaydını ve 5.003 alternatif işlev atamasını** kapsar. Ortak bağlantılar profil başına sayılır. Sayımda uygulamanın soyut `GPIO` seçeneği ve numarasız QFN merkez GND pedi yoktur. Aynı sinyalin farklı pinlerde bulunması ayrı bir atamadır.
 
 ## Her haritanın dayanağı
 
@@ -79,9 +79,9 @@ Tablodaki 16/18 numaralı `SPI1_CSI1*` / `SPI1_CSI0*` yazımları; Şekil 3-1 ve
 
 Elektriksel notlar tablonun dipnotlarından gelir: 3.3 V sinyaller; açık drenajlı I²C hatlarında ±2 mA, 3/5 pinlerinde 2.2 kΩ ve 27/28 pinlerinde 1.5 kΩ pull-up; diğer hatlarda zayıf TXB0108 sürüşü (±20 µA), harici pull dirençleri için 50 kΩ üzeri. Jetson 27/28 pinlerine Raspberry Pi HAT EEPROM kısıtlaması uygulanmaz. Üretici PDF’si dağıtılmaz; SHA-256 kilidiyle doğrulama için indirilir.
 
-## STM32F103C8/CB ve Blue Pill
+## STM32F103 paketleri ve Blue Pill
 
-İşlemcinin 48-pin LQFP bağlantıları, işlevleri ve FT bilgileri ST DS5319 Rev 20, Tablo 5 (PDF s. 28–33) üzerinden çıkarılır. Fiziksel düzen Şekil 8 (PDF s. 26) ile incelendi; merkez GND pedi yoktur. AFIO remap koşulları RM0008 Rev 21, §9.3 tablolarından yeniden okunur; birleştirilmiş hücreler açılır ve 48-pin pakette bulunmayan remap uçları eklenmez. AF0–AF15 numaraları uydurulmaz.
+LQFP‑48, LQFP‑64 ve LQFP‑100 pinleri, işlevleri ve FT bilgileri ST DS5319 Rev 20, Tablo 5’ten (PDF s. 28–33) alınır. Fiziksel düzenler Şekil 6–8’de gösterilir. Tablo 5’in 7. dipnotuna göre LQFP‑48 ve LQFP‑64’te `PD01_REMAP`, PD0 ve PD1’i OSC_IN ve OSC_OUT pinlerine yönlendirir. LQFP‑100’de 12 ve 13 numaralı pinler HSE osilatörüne ayrılmıştır. PD0 ve PD1, 81 ve 82 numaralı pinlerdedir. AFIO remap koşulları RM0008 Rev 21, §9.3 tablolarından alınır ve ilgili paketteki pinlerle eşleştirilir. Örneğin LQFP‑100’de PE7–PE15 üzerindeki TIM1 işlevleri için Tablo 46’daki `TIM1_REMAP=11` gerekir.
 
 Blue Pill’in tek üreticisi yoktur. 44 bağlantı (H1:20, H2:20, SWD:4) STM32-base topluluk tablosundan alınır; referans şema ve üstten fotoğraf incelendi. Bu üç kaynak ST üretici belgesi olarak sunulmaz. USB üstteyken H2 solda, H1 sağda; her iki başlıkta 20 USB ucunda, 1 SWD ucundadır. SWD soldan sağa GND, PA14, PA13, 3V3’tür. H1/H2/SWD konumları çip pinlerinden ayrıdır; MCU pin eşlemesi ayrıca gösterilir.
 

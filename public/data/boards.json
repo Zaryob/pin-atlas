@@ -20711,7 +20711,7 @@
     "layout": "lqfp",
     "packageName": "LQFP-100",
     "packagePins": 100,
-    "gpioCount": 82,
+    "gpioCount": 80,
     "voltage": "2.0–3.6 V I/O",
     "mcu": "STM32F103VBT6",
     "processor": "Arm Cortex-M3",
@@ -20921,60 +20921,26 @@
       {
         "number": 12,
         "name": "OSC_IN",
-        "type": "GPIO",
-        "functions": [
-          {
-            "name": "PD0",
-            "group": "GPIO",
-            "signal": "PD0",
-            "evidence": "stm32-pin-table-p28",
-            "configuration": {
-              "field": "PD01_REMAP",
-              "values": [
-                "1"
-              ]
-            },
-            "selector": "PD01_REMAP=1",
-            "configurationEvidence": "stm32-osc-remap"
-          }
-        ],
+        "type": "SYSTEM",
+        "functions": [],
         "evidence": [
           "stm32-lqfp100",
-          "stm32-pin-table-p28",
-          "stm32-electrical-notes"
+          "stm32-pin-table-p28"
         ],
-        "fiveVoltTolerant": false,
         "baseFunction": "OSC_IN",
-        "noteKey": "stm32OscNote"
+        "noteKey": "stm32DedicatedOscNote"
       },
       {
         "number": 13,
         "name": "OSC_OUT",
-        "type": "GPIO",
-        "functions": [
-          {
-            "name": "PD1",
-            "group": "GPIO",
-            "signal": "PD1",
-            "evidence": "stm32-pin-table-p28",
-            "configuration": {
-              "field": "PD01_REMAP",
-              "values": [
-                "1"
-              ]
-            },
-            "selector": "PD01_REMAP=1",
-            "configurationEvidence": "stm32-osc-remap"
-          }
-        ],
+        "type": "SYSTEM",
+        "functions": [],
         "evidence": [
           "stm32-lqfp100",
-          "stm32-pin-table-p28",
-          "stm32-electrical-notes"
+          "stm32-pin-table-p28"
         ],
-        "fiveVoltTolerant": false,
         "baseFunction": "OSC_OUT",
-        "noteKey": "stm32OscNote"
+        "noteKey": "stm32DedicatedOscNote"
       },
       {
         "number": 14,
@@ -21695,7 +21661,15 @@
             "name": "TIM1_ETR",
             "group": "TIMER",
             "signal": "TIM1_ETR",
-            "evidence": "stm32-pin-table-p30"
+            "evidence": "stm32-pin-table-p30",
+            "configuration": {
+              "field": "TIM1_REMAP",
+              "values": [
+                "11"
+              ]
+            },
+            "selector": "TIM1_REMAP=11",
+            "configurationEvidence": "stm32-remap-46"
           }
         ],
         "evidence": [
@@ -21715,7 +21689,15 @@
             "name": "TIM1_CH1N",
             "group": "PWM",
             "signal": "TIM1_CH1N",
-            "evidence": "stm32-pin-table-p30"
+            "evidence": "stm32-pin-table-p30",
+            "configuration": {
+              "field": "TIM1_REMAP",
+              "values": [
+                "11"
+              ]
+            },
+            "selector": "TIM1_REMAP=11",
+            "configurationEvidence": "stm32-remap-46"
           }
         ],
         "evidence": [
@@ -21735,7 +21717,15 @@
             "name": "TIM1_CH1",
             "group": "PWM",
             "signal": "TIM1_CH1",
-            "evidence": "stm32-pin-table-p30"
+            "evidence": "stm32-pin-table-p30",
+            "configuration": {
+              "field": "TIM1_REMAP",
+              "values": [
+                "11"
+              ]
+            },
+            "selector": "TIM1_REMAP=11",
+            "configurationEvidence": "stm32-remap-46"
           }
         ],
         "evidence": [
@@ -21755,7 +21745,15 @@
             "name": "TIM1_CH2N",
             "group": "PWM",
             "signal": "TIM1_CH2N",
-            "evidence": "stm32-pin-table-p30"
+            "evidence": "stm32-pin-table-p30",
+            "configuration": {
+              "field": "TIM1_REMAP",
+              "values": [
+                "11"
+              ]
+            },
+            "selector": "TIM1_REMAP=11",
+            "configurationEvidence": "stm32-remap-46"
           }
         ],
         "evidence": [
@@ -21775,7 +21773,15 @@
             "name": "TIM1_CH2",
             "group": "PWM",
             "signal": "TIM1_CH2",
-            "evidence": "stm32-pin-table-p30"
+            "evidence": "stm32-pin-table-p30",
+            "configuration": {
+              "field": "TIM1_REMAP",
+              "values": [
+                "11"
+              ]
+            },
+            "selector": "TIM1_REMAP=11",
+            "configurationEvidence": "stm32-remap-46"
           }
         ],
         "evidence": [
@@ -21795,7 +21801,15 @@
             "name": "TIM1_CH3N",
             "group": "PWM",
             "signal": "TIM1_CH3N",
-            "evidence": "stm32-pin-table-p30"
+            "evidence": "stm32-pin-table-p30",
+            "configuration": {
+              "field": "TIM1_REMAP",
+              "values": [
+                "11"
+              ]
+            },
+            "selector": "TIM1_REMAP=11",
+            "configurationEvidence": "stm32-remap-46"
           }
         ],
         "evidence": [
@@ -21815,7 +21829,15 @@
             "name": "TIM1_CH3",
             "group": "PWM",
             "signal": "TIM1_CH3",
-            "evidence": "stm32-pin-table-p30"
+            "evidence": "stm32-pin-table-p30",
+            "configuration": {
+              "field": "TIM1_REMAP",
+              "values": [
+                "11"
+              ]
+            },
+            "selector": "TIM1_REMAP=11",
+            "configurationEvidence": "stm32-remap-46"
           }
         ],
         "evidence": [
@@ -21835,7 +21857,15 @@
             "name": "TIM1_CH4",
             "group": "PWM",
             "signal": "TIM1_CH4",
-            "evidence": "stm32-pin-table-p30"
+            "evidence": "stm32-pin-table-p30",
+            "configuration": {
+              "field": "TIM1_REMAP",
+              "values": [
+                "11"
+              ]
+            },
+            "selector": "TIM1_REMAP=11",
+            "configurationEvidence": "stm32-remap-46"
           }
         ],
         "evidence": [
@@ -21855,7 +21885,15 @@
             "name": "TIM1_BKIN",
             "group": "TIMER",
             "signal": "TIM1_BKIN",
-            "evidence": "stm32-pin-table-p30"
+            "evidence": "stm32-pin-table-p30",
+            "configuration": {
+              "field": "TIM1_REMAP",
+              "values": [
+                "11"
+              ]
+            },
+            "selector": "TIM1_REMAP=11",
+            "configurationEvidence": "stm32-remap-46"
           }
         ],
         "evidence": [

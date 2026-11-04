@@ -10,10 +10,13 @@ export function planReference(profile, t = k => k) {
   return mcu && !profile.name.includes(mcu) ? `${profile.name} · ${mcu}` : profile.name;
 }
 
-export function validatePlan(data, target, t, { allowDuplicateSignals = false } = {}) {
+export function validatePlan(data, target, t, { allowDuplicateSignals = false, ignoreLegacyHseAssignments = false } = {}) {
   if (!data || typeof data !== 'object' || Array.isArray(data)) throw new Error(t('invalidPlan'));
   const clean = {}, nets = new Map(), signals = new Map();
   for (const [key, value] of Object.entries(data)) {
+    // Preserve valid saved entries from plans made before the LQFP-100 HSE correction.
+    if (ignoreLegacyHseAssignments && target.id === 'stm32f103vbt6' &&
+        ((key === '12' && value?.function === 'PD0') || (key === '13' && value?.function === 'PD1'))) continue;
     const pin = target.pins.find(pin => String(pin.number) === key);
     if (!pin || pin.reserved || !value || typeof value !== 'object' ||
         !options(pin).some(fn => fn.name === value.function) ||

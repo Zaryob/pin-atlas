@@ -77,7 +77,9 @@ function setBoard(id, initial = false, preferredProfile) {
  layout = next.layout; board = next.profile;
  rememberedProfiles.set(layout.id, board.id);
  selected = sameLayout && board.pins.some(pin => pin.number === previousPin) ? previousPin : board.pins.find(p => p.type === 'GPIO')?.number || 1;
- try { assignments = validatePlan(savedPlans[board.id] || {}, board, t, { allowDuplicateSignals: true }); } catch { assignments = {}; }
+ try {
+   assignments = validatePlan(savedPlans[board.id] || {}, board, t, { allowDuplicateSignals: true, ignoreLegacyHseAssignments: true });
+ } catch { assignments = {}; }
  selectedFn = assignments[selected]?.function || options(pinByNumber(selected))[0].name;
  if (!sameLayout) { filters = new Set(); search = ''; $('#pin-search').value = ''; flipped = rotated = false; compatibilityQuery=''; $('#compatible-boards').open=false; }
  const available = new Set(board.pins.flatMap(pin => pin.functions.map(fn => fn.group)));
