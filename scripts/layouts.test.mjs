@@ -132,3 +132,16 @@ test('AVR package numbers differ from board headers and analog-only pads depend 
   assert.equal(mega.pins[0].name,'PG5');assert.equal(mega.pins[99].name,'AVCC');
   assert(!mega.pins.some(p=>p.functions.some(f=>f.name==='PDI'||f.name==='PDO')));
 });
+
+test('Seeed XIAO references share 14 physical positions while changing processor GPIOs', () => {
+  const xiaoRp = resolveProfile(layouts, 'xiao-rp2040').profile;
+  const xiaoC3 = resolveProfile(layouts, 'seeed-xiao', 'xiao-esp32c3').profile;
+  assert.equal(resolveProfile(layouts, xiaoRp.id).layout.id, resolveProfile(layouts, xiaoC3.id).layout.id);
+  assert.equal(xiaoRp.packagePins, 14);
+  assert.equal(xiaoC3.packagePins, 14);
+  assert.equal(xiaoRp.pins.find(p => p.physicalLabel === 'L.1').net, 'GPIO26');
+  assert.equal(xiaoC3.pins.find(p => p.physicalLabel === 'L.1').net, 'GPIO2');
+  assert.equal(xiaoRp.pins.find(p => p.physicalLabel === 'L.7').net, 'GPIO0');
+  assert.equal(xiaoC3.pins.find(p => p.physicalLabel === 'L.7').net, 'GPIO21');
+  assert(xiaoC3.pins.find(p => p.physicalLabel === 'L.1').strapping);
+});

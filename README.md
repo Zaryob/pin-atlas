@@ -20,7 +20,7 @@ The library lists each physical layout once and names its compatible boards:
 - **Arduino Nano headers:** classic Nano and Nano Every share 30 side contacts in one entry. Classic Nano adds six ICSP contacts and has analog-only A6/A7; Every has digital-capable A6/A7, different PWM support and no ICSP in this map.
 - **Arduino Mega 2560 Rev3:** 92 header contacts including the end header and main MCU ICSP, 70 independent GPIOs, 16 analog inputs and 15 PWM outputs. SPI uses D50–D53.
 - **Arduino Micro:** its distinct 34-contact side footprint plus six ICSP contacts. The ATmega32U4 exposes 24 independent GPIOs; SPI and 12 ADC channels follow its own core mapping.
-- **Seeed Studio XIAO headers:** Seeed Studio XIAO RP2040 in the compact 14-contact XIAO footprint with 11 exposed GPIOs (including 4 analog inputs). Links directly to the RP2040 QFN package pin view.
+- **Seeed Studio XIAO headers:** 14-contact compact XIAO footprint shared by Seeed Studio XIAO RP2040 (with RP2040 QFN package pin linking) and Seeed Studio XIAO ESP32C3 (RISC-V Wi-Fi/BLE), showing how D0–D10 map to different GPIOs and peripherals across processors.
 - **ESP32-DevKitC V4:** one 38-contact entry with WROOM-32E and WROVER memory references. Flash and module-specific PSRAM pins are excluded from plans; GPIO34/35/36/39 are input-only.
 - **ESP32-C3-DevKitM-1:** the official MINI-1/1U 30-contact footprint with 15 exposed GPIOs, including USB and RGB LED sharing.
 - **ESP32-S3-DevKitC-1 v1.1:** one 44-contact entry with WROOM-1-N8 and N8R8 references. Octal PSRAM reserves GPIO35–37; the v1.1 RGB LED uses GPIO38. Other board revisions and module memory voltages need separate verification.

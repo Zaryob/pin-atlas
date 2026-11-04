@@ -927,5 +927,29 @@
       "D8",
       "D7"
     ]
+  },
+  "seeed-xiao-esp32c3": {
+    "document": "xiao-esp32c3-schematic",
+    "page": 3,
+    "usb": "top",
+    "qualification": "Top view; 14-pin castellated XIAO header. Left connector J2 (pins 1-7: D0-D6), right connector J1 (pins 1-7: 5V/VBUS, GND, 3V3, MOSI/D10, MISO/D9, SCK/D8, RX/D7). Reset/boot buttons, battery charging circuit and U.FL antenna connector are documented in schematic and wiki.",
+    "left": [
+      "D0",
+      "D1",
+      "D2",
+      "D3",
+      "D4",
+      "D5",
+      "D6"
+    ],
+    "right": [
+      "5V",
+      "GND",
+      "3V3",
+      "D10",
+      "D9",
+      "D8",
+      "D7"
+    ]
   }
 }

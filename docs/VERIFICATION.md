@@ -2,7 +2,7 @@
 
 [English](VERIFICATION.md) · [Türkçe](VERIFICATION.tr.md)
 
-Reviewed on **4 November 2026**. The review covers thirty-nine board, header, and chip profiles, **2,052 physical pin records, and 6,401 function assignments**. Shared physical pins are counted once per profile. The count excludes the app’s generic `GPIO` planning option and the unnumbered QFN center GND pads. Each placement of a signal on a different pin counts separately.
+Reviewed on **4 November 2026**. The review covers forty-one board, header, and chip profiles, **2,080 physical pin records, and 6,619 function assignments**. Shared physical pins are counted once per profile. The count excludes the app’s generic `GPIO` planning option and the unnumbered QFN center GND pads. Each placement of a signal on a different pin counts separately.
 
 ## Sources by pin map
 
@@ -152,3 +152,10 @@ ATmega328P uses the original Atmel 42735B complete datasheet (November 2016), mi
 ATmega2560 uses Microchip DS40002211A, Figure 1-1 (PDF page 2), all 100 TQFP pins and 86 GPIOs. Port A–L alternate-function tables on PDF pages 75–94 are reread. The 64-pin ATmega1281/2561 PDI/PDO footnote is applied, so those functions are not copied onto PE0/PE1. Port E's `CLK0` label is resolved to `CLKO` using the figure and divided-clock description. PF4–PF7 carry JTAG/ADC qualifications; PG3/PG4 depend on asynchronous oscillator use. Mega board D0–D69 and CBGA ball positions are separate numbering systems and are not used as TQFP pin numbers.
 
 The application renders DIP with a pin-1/notch marker, TQFP without an exposed-pad claim, and QFN with its documented center GND. Dense TQFP100 labels use wider spacing and horizontal scrolling. Package variants have distinct physical footprints; only verified common board headers are grouped.
+
+## Seeed Studio XIAO headers
+
+The Seeed Studio XIAO layout groups compact 14-pin development boards sharing the standard 14-contact castellated footprint (seven left pins, seven right pins).
+
+- **Seeed Studio XIAO RP2040:** Verified against official Seeed Studio schematic v1.3 (June 2022). Left pins 1–7 map to D0–D6 (RP2040 GPIO26–29 with 4 ADC channels, GPIO6, GPIO7, GPIO0). Right pins map to 5V, GND, 3V3, and D10–D7 (RP2040 GPIO3, GPIO4, GPIO2, GPIO1). Pin mapping bridges directly to the RP2040 QFN-56 package view.
+- **Seeed Studio XIAO ESP32C3:** Verified against official Seeed Studio schematic v1.3 (January 2026) and official pinout sheet. Left pins 1–7 map to D0–D6 (ESP32-C3 GPIO2–7 and GPIO21). Right pins map to 5V, GND, 3V3, and D10–D7 (ESP32-C3 GPIO10, GPIO9, GPIO8, GPIO20). Strapping pins (GPIO2, GPIO8, GPIO9), ADC1/ADC2 caution notes, and GPIO matrix routable peripherals are verified from Espressif documentation.

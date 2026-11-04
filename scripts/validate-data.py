@@ -206,4 +206,17 @@ assert xiao[14]['name']=='D7' and xiao[14]['mcuPin']==3 and xiao[14]['net']=='GP
 assert any(f['group']=='ADC' and f['name']=='ADC0' for f in xiao[1]['functions'])
 assert any(f['group']=='ADC' and f['name']=='ADC3' for f in xiao[4]['functions'])
 assert not any(f['group']=='ADC' for f in xiao[5]['functions'])
+xiao_c3=lookup['xiao-esp32c3']
+assert len(xiao_c3)==14 and sum(p['type']=='GPIO' for p in xiao_c3.values())==11
+assert xiao_c3[1]['name']=='D0' and xiao_c3[1]['net']=='GPIO2' and xiao_c3[1]['strapping']
+assert xiao_c3[7]['name']=='D6' and xiao_c3[7]['net']=='GPIO21'
+assert xiao_c3[8]['name']=='5V' and xiao_c3[8]['type']=='POWER'
+assert xiao_c3[9]['name']=='GND' and xiao_c3[9]['type']=='GND'
+assert xiao_c3[10]['name']=='3V3' and xiao_c3[10]['type']=='POWER'
+assert xiao_c3[14]['name']=='D7' and xiao_c3[14]['net']=='GPIO20'
+assert any(f['group']=='ADC' and f['name']=='ADC1_CH2' for f in xiao_c3[1]['functions'])
+assert any(f['group']=='ADC' and f['name']=='ADC2_CH0' for f in xiao_c3[4]['functions'])
+assert xiao_c3[4]['analogCautionKey']=='espAdc2Note'
+assert not any(f['group']=='ADC' for f in xiao_c3[5]['functions'])
+assert xiao_c3[12]['strapping'] and xiao_c3[13]['strapping']
 print(f"Checked {report['physicalPins']} pins, {report['functionAssignments']} function references and model-specific corner cases.")

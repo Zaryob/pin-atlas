@@ -1,7 +1,7 @@
 {
   "verifiedOn": "2026-11-04",
-  "physicalPins": 2066,
-  "functionAssignments": 6493,
+  "physicalPins": 2080,
+  "functionAssignments": 6619,
   "documents": [
     {
       "id": "rp2350",
@@ -512,6 +512,14 @@
       "publisher": "Seeed Studio",
       "revision": "v1.3 · 2022-06-24",
       "sha256": "0da8a6c0cf1464c82ac3964b6a933b634761621a884ab1f498f61f777b42aeef"
+    },
+    {
+      "id": "xiao-esp32c3-schematic",
+      "title": "Seeed Studio XIAO ESP32C3 Schematic",
+      "url": "https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO_ESP32C3_v1.3_SCH_260116.pdf",
+      "publisher": "Seeed Studio",
+      "revision": "v1.3 · 2026-01-15",
+      "sha256": "60d7d447d0d37b0c3ff6c50d372a45d50f750070b8b9d68ca7b906df43365081"
     }
   ],
   "boards": [
@@ -835,6 +843,15 @@
       "physicalPins": 14,
       "functionAssignments": 92,
       "physicalSourceMethods": [
+        "visual-diagram"
+      ]
+    },
+    {
+      "id": "xiao-esp32c3",
+      "physicalPins": 14,
+      "functionAssignments": 126,
+      "physicalSourceMethods": [
+        "pdf-table",
         "visual-diagram"
       ]
     },

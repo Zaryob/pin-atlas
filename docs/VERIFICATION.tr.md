@@ -2,7 +2,7 @@
 
 [English](VERIFICATION.md) · [Türkçe](VERIFICATION.tr.md)
 
-**4 Kasım 2026** tarihli inceleme, otuz dokuz kart, başlık ve çip profilindeki **2.052 fiziksel pin kaydını ve 6.401 alternatif işlev atamasını** kapsar. Ortak bağlantılar profil başına sayılır. Sayımda uygulamanın soyut `GPIO` seçeneği ve numarasız QFN merkez GND pedi yoktur. Aynı sinyalin farklı pinlerde bulunması ayrı bir atamadır.
+**4 Kasım 2026** tarihli inceleme, kırk bir kart, başlık ve çip profilindeki **2.080 fiziksel pin kaydını ve 6.619 alternatif işlev atamasını** kapsar. Ortak bağlantılar profil başına sayılır. Sayımda uygulamanın soyut `GPIO` seçeneği ve numarasız QFN merkez GND pedi yoktur. Aynı sinyalin farklı pinlerde bulunması ayrı bir atamadır.
 
 ## Her haritanın dayanağı
 
@@ -118,3 +118,10 @@ Espressif kılavuz ve görselleri `esp-dev-kits` commit `5c06bf1835329d6525f3164
 ATmega328P’nin PDIP-28, TQFP-32, QFN/MLF-28 ve QFN/MLF-32 paketleri Atmel 42735B Tablo 6-1’den çıkarılıp Şekil 5-1–5-4 ile karşılaştırılır. PDIP PC0 pin 23’tür; tablonun 13 yazan hatası şekille çözülür. ADC6/7 yalnızca 32-pin paketlerde vardır. PC6 reset sigortasına, PB6/PB7 saat ayarına bağlıdır. QFN merkez GND pedi çevre pin sayısına dahil edilmez.
 
 ATmega2560 TQFP-100 için DS40002211A Şekil 1-1’deki 100 bacak ve 86 GPIO kullanılır. PDF s. 75–94 port tabloları yeniden okunur. 64-pin parçalara özgü PDI/PDO işlevleri PE0/PE1’e kopyalanmaz; CLK0 yazımı CLKO olarak şekil ve açıklamayla çözülür. JTAG/ADC ve osilatör koşulları korunur. Bu numaralar Mega D0–D69 veya CBGA topları değildir. Ayrıntılı belge sayfaları İngilizce kayıtta bulunur.
+
+## Seeed Studio XIAO başlıkları
+
+Seeed Studio XIAO düzeni, 14 kontaklı standart lehimlenebilir/castellated XIAO biçimini (yedi sol, yedi sağ pin) paylaşan kompakt kartları gruplar.
+
+- **Seeed Studio XIAO RP2040:** Resmî Seeed Studio şeması v1.3 (Haziran 2022) üzerinden doğrulandı. Sol 1–7 pinleri D0–D6 (4 ADC kanallı RP2040 GPIO26–29, GPIO6, GPIO7, GPIO0); sağ pinler 5V, GND, 3V3 ve D10–D7 (RP2040 GPIO3, GPIO4, GPIO2, GPIO1) bağlantılarına karşılık gelir. RP2040 QFN-56 paket görünümüne doğrudan çift yönlü bağlanır.
+- **Seeed Studio XIAO ESP32C3:** Resmî Seeed Studio şeması v1.3 (Ocak 2026) ve pinout tablosu üzerinden doğrulandı. Sol 1–7 pinleri D0–D6 (ESP32-C3 GPIO2–7 ve GPIO21); sağ pinler 5V, GND, 3V3 ve D10–D7 (ESP32-C3 GPIO10, GPIO9, GPIO8, GPIO20) olarak eşlenir. Başlatma/strapping pinleri (GPIO2, GPIO8, GPIO9), ADC1/ADC2 uyarıları ve GPIO matrisi yönlendirmeleri Espressif belgeleriyle doğrulanmıştır.

@@ -569,6 +569,15 @@
       "publisher": "Seeed Studio",
       "revision": "v1.3 · 2022-06-24",
       "sha256": "0da8a6c0cf1464c82ac3964b6a933b634761621a884ab1f498f61f777b42aeef"
+    },
+    {
+      "id": "xiao-esp32c3-schematic",
+      "title": "Seeed Studio XIAO ESP32C3 Schematic",
+      "file": "xiao-esp32c3-schematic.pdf",
+      "url": "https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO_ESP32C3_v1.3_SCH_260116.pdf",
+      "publisher": "Seeed Studio",
+      "revision": "v1.3 · 2026-01-15",
+      "sha256": "60d7d447d0d37b0c3ff6c50d372a45d50f750070b8b9d68ca7b906df43365081"
     }
   ],
   "references": {
@@ -1731,6 +1740,30 @@
       "page": 1,
       "locator": "Sheet 1/1 · connectors J2 (D0–D6) and J4 (D7–D10, 3V3, GND, 5V)",
       "method": "visual-diagram"
+    },
+    "xiao-esp32c3-header": {
+      "document": "xiao-esp32c3-schematic",
+      "title": "Seeed Studio XIAO ESP32C3 Schematic",
+      "url": "https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO_ESP32C3_v1.3_SCH_260116.pdf#page=3",
+      "page": 3,
+      "locator": "Sheet 3/3 · connectors J2 (D0–D6) and J1 (D7–D10, 3V3, GND, 5V)",
+      "method": "visual-diagram"
+    },
+    "xiao-esp32c3-matrix": {
+      "document": "esp32c3-datasheet",
+      "title": "ESP32C3 series datasheet",
+      "url": "https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf#page=19",
+      "page": 19,
+      "locator": "I/O pins / IO MUX and GPIO Matrix · routable peripheral capabilities",
+      "method": "pdf-text"
+    },
+    "xiao-esp32c3-strapping": {
+      "document": "esp32c3-datasheet",
+      "title": "ESP32C3 series datasheet",
+      "url": "https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf#page=30",
+      "page": 30,
+      "locator": "Boot configurations · strapping levels sampled during reset",
+      "method": "pdf-table"
     },
     "arduino-uno-r3-package-schematic": {
       "document": "arduino-uno-r3-schematic",

@@ -66,10 +66,11 @@ export function buildLayouts(boards) {
     {
       id: 'seeed-xiao', nameKey: 'xiaoLayout', subtitleKey: 'xiaoLayoutSubtitle',
       compatibleKey: 'xiaoCompatible',
-      profileIds: ['xiao-rp2040'], defaultProfile: 'xiao-rp2040',
+      profileIds: ['xiao-rp2040', 'xiao-esp32c3'], defaultProfile: 'xiao-rp2040',
       geometryConnectors: ['L', 'R'], sharedContactCount: 14,
       references: [
-        {key: 'xiaoRp2040Reference', profileIds: ['xiao-rp2040']}
+        {key: 'xiaoRp2040Reference', profileIds: ['xiao-rp2040']},
+        {key: 'xiaoEsp32c3Reference', profileIds: ['xiao-esp32c3']}
       ]
     }
   ];
