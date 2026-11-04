@@ -1,5 +1,7 @@
 # Pin verilerinin doğrulanması
 
+[Türkçe](VERIFICATION.md) · [English](VERIFICATION.en.md)
+
 Kontrol tarihi: **3 Kasım 2026**. Kapsam: dört kart/çip, **220 fiziksel pin ve 1.310 alternatif işlev ataması**. Sayımda uygulamanın soyut `GPIO` seçeneği ve numarasız QFN merkez GND pedi yoktur. Aynı sinyalin farklı pinlerde bulunması ayrı bir atamadır.
 
 ## Her haritanın dayanağı

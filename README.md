@@ -1,5 +1,7 @@
 # Pin Atlas
 
+[Türkçe](README.md) · [English](README.en.md)
+
 [Canlı site](https://zaryob.github.io/pin-atlas/) · [Doğrulama kaydı](docs/VERIFICATION.md) · [Pin bazında karşılaştırma](sources/pin-verification.csv)
 
 Üretici belgelerinden derlenen Türkçe pin rehberi. Fiziksel pin düzenini, alternatif işlevleri ve bağlantı planlarını aynı çalışma alanında gösterir. Arayüz, çizimler ve uygulama kodu bu proje için hazırlanmıştır. Konsol teması kişisel sitemin ortak temasıdır.
@@ -31,7 +33,7 @@ npm run dev
 npm run check
 ```
 
-Uygulamanın çalışması için paket kurulumu veya build gerekmez. Yayımlanacak dosyalar `dist/` içindedir. Fontlar yereldir. Açık/koyu/sistem tema tercihi, `zaryob.github.io` ile ortak `zaryob-theme` anahtarını kullanır.
+Uygulamanın çalışması için paket kurulumu veya build gerekmez. Yayımlanacak dosyalar `dist/` içindedir. Fontlar yereldir. Açık/koyu/sistem teması ve TR/EN dil tercihi `zaryob.github.io` ile paylaşılır. İngilizce arayüz `?lang=en`, Türkçe arayüz `?lang=tr` ile doğrudan açılabilir. Dil değiştiğinde açık kart, filtreler ve bağlantı planı korunur.
 
 ## Üretici belgelerinden tekrar doğrulama
 

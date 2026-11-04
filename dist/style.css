@@ -35,3 +35,10 @@
 :root{--pin-pcm:#506931;--pin-clock:#8e6726;--pin-jtag:#7d5483;--pin-dpi:#7c6545;--pin-sdio:#346d70;--pin-smi:#665d8b}
 :root[data-theme="dark"]{--pin-pcm:#bdd49e;--pin-clock:#e0c08c;--pin-jtag:#d5a7dc;--pin-dpi:#c6b091;--pin-sdio:#9bcdd0;--pin-smi:#bdb1e8}
 .pin-evidence{padding:18px 19px;border-top:1px solid var(--line)}.pin-evidence ul{list-style:none;margin:0;padding:0}.pin-evidence li+li{margin-top:14px}.pin-evidence a{font-size:10px}.pin-evidence small{display:block;font-size:9px;color:var(--muted);line-height:1.9;margin-top:4px}.pin-evidence p{font-size:8px;line-height:1.9;color:var(--muted);margin-bottom:0}.pin-evidence p a{font-size:8px}.filter-bar{align-items:start}.filter-label{padding-top:8px}#reset-filters{margin-top:5px}
+
+.console-language select {
+  border: 1px solid var(--control-border);
+  border-radius: 0;
+  background: var(--paper);
+  color: var(--ink);
+}

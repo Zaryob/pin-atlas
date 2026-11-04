@@ -2,10 +2,10 @@
   "name": "pin-atlas",
   "version": "0.2.0",
   "private": true,
-  "description": "Extensible Turkish pinout explorer for development boards and chips",
+  "description": "Bilingual Turkish and English pinout explorer for development boards and chips",
   "scripts": {
     "dev": "python3 -m http.server 4173 --directory dist --bind 127.0.0.1",
-    "check": "node --check dist/app.js && node --check dist/assets/console/theme.js && python3 scripts/validate-data.py && python3 scripts/check-static-paths.py",
+    "check": "node --check dist/app.js && node --check dist/i18n.js && node --check dist/assets/console/theme.js && python3 scripts/validate-data.py && python3 scripts/check-static-paths.py",
     "verify:sources": "python3 scripts/verify-official-sources.py"
   },
   "license": "GPL-3.0-or-later",
