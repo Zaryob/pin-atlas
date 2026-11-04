@@ -11,7 +11,7 @@ for r in refs.values():
     assert r['document'] in docids
     host=urlsplit(r['url']).hostname
     if r['document']=='nucleo-um1724-r14':assert host=='evo.net.ua'
-    else:assert host in {'pip-assets.raspberrypi.com','datasheets.raspberrypi.com','developer.nvidia.com','www.st.com','stm32-base.org','github.com','docs.arduino.cc','docs.espressif.com','www.espressif.com','ww1.microchip.com','files.seeedstudio.com','wiki.seeedstudio.com'},host
+    else:assert host in {'pip-assets.raspberrypi.com','datasheets.raspberrypi.com','developer.nvidia.com','www.st.com','stm32-base.org','github.com','docs.arduino.cc','docs.espressif.com','www.espressif.com','ww1.microchip.com','files.seeedstudio.com','wiki.seeedstudio.com','tech.microbit.org'},host
     if host=='github.com':assert any(repo in r['url'] for repo in ['/raspberrypi/documentation/','/arduino/ArduinoCore-avr/','/arduino/ArduinoCore-renesas/','/arduino/ArduinoCore-megaavr/','/espressif/esp-dev-kits/','/STMicroelectronics/STM32_open_pin_data/'])
 for b in boards:
     assert len(b['pins'])==b['packagePins']
@@ -219,4 +219,19 @@ assert any(f['group']=='ADC' and f['name']=='ADC2_CH0' for f in xiao_c3[4]['func
 assert xiao_c3[4]['analogCautionKey']=='espAdc2Note'
 assert not any(f['group']=='ADC' for f in xiao_c3[5]['functions'])
 assert xiao_c3[12]['strapping'] and xiao_c3[13]['strapping']
+mb=lookup['microbit-v2']
+assert len(mb)==21 and sum(p['type']=='GPIO' for p in mb.values())==19
+assert mb[1]['name']=='P0' and mb[1]['net']=='P0.02' and mb[1]['connector']=='RING'
+assert mb[12]['name']=='3V' and mb[12]['type']=='POWER' and mb[12]['connector']=='RING'
+assert mb[13]['name']=='GND' and mb[13]['type']=='GND' and mb[13]['connector']=='RING'
+assert mb[21]['name']=='P20' and mb[21]['net']=='P1.00' and mb[21]['connector']=='EDGE'
+assert any(f['group']=='TOUCH' and f['name']=='TOUCH' for f in mb[1]['functions'])
+assert any(f['group']=='SYSTEM' and f['name']=='BUTTON_A' for f in mb[6]['functions'])
+assert any(f['group']=='SYSTEM' and f['name']=='BUTTON_B' for f in mb[14]['functions'])
+assert any(f['group']=='SPI' and f['name']=='SPI_SCK' for f in mb[16]['functions'])
+assert any(f['group']=='I2C' and f['name']=='I2C_SDA' for f in mb[21]['functions'])
+assert mb[4]['boardCircuitKey']=='microbitLedColNote'
+assert mb[6]['boardCircuitKey']=='microbitButtonANote'
+assert mb[14]['boardCircuitKey']=='microbitButtonBNote'
+assert mb[20]['boardCircuitKey']=='microbitI2cPullupNote'
 print(f"Checked {report['physicalPins']} pins, {report['functionAssignments']} function references and model-specific corner cases.")

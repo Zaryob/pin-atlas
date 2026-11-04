@@ -15,6 +15,7 @@ try:
     from espressif_sources import build_espressif
     from avr_packages import build_avr_packages
     from seeed_sources import build_seeed
+    from microbit_sources import build_microbit
 except ImportError:
     sys.exit('Install source verification dependencies: python3 -m pip install -r requirements-source-verification.txt')
 ROOT=Path(__file__).resolve().parents[1]
@@ -423,6 +424,7 @@ def build(use_snapshots=False):
     boards.extend(build_avr_packages(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn']))
     rp2040_phys = ref('rp2040-qfn56-physical','rp2040',12,'Figure 3 · QFN-56 top view and exposed GND pad','visual-diagram')
     boards.extend(build_seeed(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn'],bank2040,rp2040_phys))
+    boards.extend(build_microbit(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn']))
     for total,chip in [(60,'rp2350a'),(80,'rp2350b')]:
         boards.append({**board_base,'id':chip,'name':chip.upper(),'family':'Raspberry Pi','subtitle':f'QFN-{total} · RP2350 · Release 8','layout':'qfn','packagePins':total,'gpioCount':30 if total==60 else 48,'voltage':'1.8–3.3 V I/O','mcu':chip.upper(),'processor':'Cortex-M33 / Hazard3','clock':'150 MHz','source':DOCS['rp2350']['url']+f'#page={16 if total==60 else 17}','datasheet':DOCS['rp2350']['url'],'pins':[packages[total][n] for n in sorted(packages[total])]})
     boards.extend(f4_chips)

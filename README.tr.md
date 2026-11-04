@@ -21,6 +21,7 @@ Kütüphanede her fiziksel düzen bir kez listelenir; uyumlu kartlar aynı kayı
 - **Arduino Mega 2560 Rev3:** uç başlık ve ana işlemci ICSP dahil 92 kontak, 70 bağımsız GPIO ve 16 analog giriş.
 - **Arduino Micro:** kendine özgü 34 yan kontak ve altı ICSP; ATmega32U4 için 24 bağımsız GPIO ve 12 ADC kanalı.
 - **Seeed Studio XIAO başlıkları:** Seeed Studio XIAO RP2040 (RP2040 QFN paket bacak köprüsüyle) ve Seeed Studio XIAO ESP32C3 (RISC-V Wi-Fi/BLE) tarafından paylaşılan 14 kontaklı kompakt XIAO biçimi; D0–D10 pinlerinin işlemciler arasında farklı GPIO ve çevre birimlerine nasıl eşlendiğini karşılaştırmalı olarak sunar.
+- **BBC micro:bit V2:** 5 büyük timsah/muz halka kontağı (0, 1, 2, 3V, GND) ve 16 genişletme kenar kontağını (P3–P16, P19, P20) içeren 21 kontaklı kenar konnektörü biçimi. nRF52833 GPIO'larını, dokunmatik algılamayı, analog girişleri; 5×5 LED matris sütunları, A/B butonları ve I²C pull-up devreleriyle paylaşılan hatları ve RING ile EDGE arasında konnektör yakınlaştırmasını destekler.
 - **ESP32-DevKitC V4:** 38 kontak; WROOM-32E/WROVER referansları tek kayıtta. Flash/PSRAM kısıtlamaları ve girişe özel pinler korunur.
 - **ESP32-C3-DevKitM-1:** MINI-1/1U için resmî 30 kontak ve 15 GPIO; USB/RGB LED paylaşımları belirtilir.
 - **ESP32-S3-DevKitC-1 v1.1:** 44 kontak; WROOM-1-N8/N8R8 bellek referansları. N8R8 GPIO35–37’yi belleğe ayırır; v1.1 RGB LED GPIO38’dedir.

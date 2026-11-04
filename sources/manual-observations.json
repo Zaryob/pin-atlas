@@ -951,5 +951,36 @@
       "D8",
       "D7"
     ]
+  },
+  "microbit-v2": {
+    "document": "microbit-v2-schematic",
+    "page": 2,
+    "usb": "top",
+    "qualification": "Top view; bottom edge connector featuring 5 large crocodile/banana rings (0, 1, 2, 3V, GND) and 16 small edge connector contacts (P3–P16, P19, P20). Shared circuits with 5x5 LED matrix columns and push buttons A/B are documented in schematic and hardware specifications.",
+    "rings": [
+      "0",
+      "1",
+      "2",
+      "3V",
+      "GND"
+    ],
+    "edge": [
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7",
+      "P8",
+      "P9",
+      "P10",
+      "P11",
+      "P12",
+      "P13",
+      "P14",
+      "P15",
+      "P16",
+      "P19",
+      "P20"
+    ]
   }
 }

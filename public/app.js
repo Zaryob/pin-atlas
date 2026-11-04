@@ -560,6 +560,13 @@ const boardFamilies = [
     ]
   },
   {
+    id: 'microbit',
+    nameKey: 'familyMicrobit',
+    items: [
+      { type: 'layout', id: 'microbit-v2' }
+    ]
+  },
+  {
     id: 'espressif',
     nameKey: 'familyEspressif',
     items: [
@@ -842,6 +849,7 @@ const featuredDefs = [
 const homeFilterChips = [
   { id: 'all', labelKey: 'allFamilies' },
   { id: 'raspberry-pi', labelKey: 'familyRaspberryPi' },
+  { id: 'microbit', labelKey: 'familyMicrobit' },
   { id: 'espressif', labelKey: 'familyEspressif' },
   { id: 'arduino', labelKey: 'familyArduino' },
   { id: 'stm32', labelKey: 'familyStm32' },
@@ -888,7 +896,7 @@ function renderHomeStats() {
   const lang = document.documentElement.lang || 'tr';
   const totalPins = boards.reduce((acc, b) => acc + (b.pins?.length || 0), 0);
   const totalFns = boards.reduce((acc, b) => acc + b.pins.reduce((sum, p) => sum + (p.functions?.length || 0), 0), 0);
-  const totalSources = 61;
+  const totalSources = evidence?.documents?.length || 62;
   if ($('#home-stat-families')) $('#home-stat-families').textContent = boardFamilies.length;
   if ($('#home-stat-pins')) $('#home-stat-pins').textContent = new Intl.NumberFormat(lang).format(totalPins);
   if ($('#home-stat-functions')) $('#home-stat-functions').textContent = new Intl.NumberFormat(lang).format(totalFns);

@@ -7,7 +7,7 @@ const boards = JSON.parse(readFileSync(new URL('../public/data/boards.json', imp
 const layouts = buildLayouts(boards);
 
 test('catalog contains one entry per shared footprint', () => {
-  assert.deepEqual(layouts.map(layout => layout.id), ['pico-family', 'raspberry-pi-40', 'arduino-uno', 'arduino-nano', 'esp32-devkitc-v4', 'esp32-s3-devkitc-1', 'seeed-xiao', 'jetson-orin-nano', 'blue-pill', 'stm32f103c8t6', 'stm32f103rbt6', 'stm32f103vbt6','nucleo-f103rb', 'nucleo-f401re', 'nucleo-f411re', 'arduino-mega-2560', 'arduino-micro', 'esp32-c3-devkitm-1', 'atmega328p-pdip28', 'atmega328p-tqfp32', 'atmega328p-qfn32', 'atmega328p-qfn28', 'atmega2560-tqfp100', 'atmega2561-tqfp64', 'rp2350a', 'rp2350b', 'stm32f401ret6', 'stm32f411ret6', 'rp2040']);
+  assert.deepEqual(layouts.map(layout => layout.id), ['pico-family', 'raspberry-pi-40', 'arduino-uno', 'arduino-nano', 'esp32-devkitc-v4', 'esp32-s3-devkitc-1', 'seeed-xiao', 'jetson-orin-nano', 'blue-pill', 'stm32f103c8t6', 'stm32f103rbt6', 'stm32f103vbt6','nucleo-f103rb', 'nucleo-f401re', 'nucleo-f411re', 'arduino-mega-2560', 'arduino-micro', 'esp32-c3-devkitm-1', 'atmega328p-pdip28', 'atmega328p-tqfp32', 'atmega328p-qfn32', 'atmega328p-qfn28', 'atmega2560-tqfp100', 'atmega2561-tqfp64', 'microbit-v2', 'rp2350a', 'rp2350b', 'stm32f401ret6', 'stm32f411ret6', 'rp2040']);
   assert.equal(layouts[0].profiles.length, 4);
   assert.equal(layouts[1].profiles.length, 3);
   assert.equal(new Set(layouts.flatMap(layout => layout.profileIds)).size, boards.length);
@@ -144,4 +144,16 @@ test('Seeed XIAO references share 14 physical positions while changing processor
   assert.equal(xiaoRp.pins.find(p => p.physicalLabel === 'L.7').net, 'GPIO0');
   assert.equal(xiaoC3.pins.find(p => p.physicalLabel === 'L.7').net, 'GPIO21');
   assert(xiaoC3.pins.find(p => p.physicalLabel === 'L.1').strapping);
+});
+
+test('micro:bit V2 exposes edge connector with 5 rings and 16 expansion pins', () => {
+  const mb = resolveProfile(layouts, 'microbit-v2').profile;
+  assert.equal(mb.pins.length, 21);
+  assert.equal(mb.pins.filter(p => p.connector === 'RING').length, 5);
+  assert.equal(mb.pins.filter(p => p.connector === 'EDGE').length, 16);
+  assert.equal(mb.gpioCount, 19);
+  assert(mb.pins.find(p => p.name === 'P0').functions.some(f => f.group === 'TOUCH'));
+  assert(mb.pins.find(p => p.name === 'P5').functions.some(f => f.signal === 'BUTTON_A'));
+  assert(mb.pins.find(p => p.name === 'P13').functions.some(f => f.signal === 'SPI_SCK'));
+  assert(mb.pins.find(p => p.name === 'P19').functions.some(f => f.signal === 'I2C_SCL'));
 });

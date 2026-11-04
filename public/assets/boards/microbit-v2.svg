@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="540" viewBox="0 0 820 540">
+<g font-family="monospace" text-anchor="middle">
+ <!-- Board Body -->
+ <rect x="300" y="50" width="220" height="380" rx="18" fill="#1e222b" stroke="#3d4454" stroke-width="2"/>
+ <rect x="310" y="60" width="200" height="310" rx="12" fill="none" stroke="#2c3240" stroke-dasharray="4 6"/>
+
+ <!-- Micro USB Connector at top -->
+ <rect x="385" y="32" width="50" height="36" rx="5" fill="#c4cdcf" stroke="#5d737b" stroke-width="1.5"/>
+ <text x="410" y="54" font-size="9" fill="#293c41" font-weight="bold">USB</text>
+
+ <!-- Capacitive Touch Logo -->
+ <circle cx="410" cy="100" r="18" fill="#d4af37" stroke="#aa8c2c" stroke-width="1.5"/>
+ <circle cx="410" cy="100" r="12" fill="#1e222b"/>
+ <circle cx="404" cy="100" r="3" fill="#d4af37"/>
+ <circle cx="416" cy="100" r="3" fill="#d4af37"/>
+ <text x="410" y="128" font-size="9" fill="#9db08f" font-weight="bold">TOUCH LOGO</text>
+
+ <!-- Microphone indicator -->
+ <circle cx="345" cy="98" r="4" fill="#a0a8b0"/>
+ <circle cx="345" cy="98" r="1.5" fill="#111"/>
+ <text x="345" y="112" font-size="7" fill="#758f7e">MIC</text>
+
+ <!-- 5x5 LED Matrix Grid -->
+ <rect x="342" y="140" width="136" height="136" rx="8" fill="#15181f" stroke="#2d3342"/>
+ <!-- Row 1 -->
+ <rect x="352" y="150" width="16" height="16" rx="2" fill="#e11d48"/>
+ <rect x="376" y="150" width="16" height="16" rx="2" fill="#e11d48"/>
+ <rect x="402" y="150" width="16" height="16" rx="2" fill="#e11d48"/>
+ <rect x="428" y="150" width="16" height="16" rx="2" fill="#e11d48"/>
+ <rect x="452" y="150" width="16" height="16" rx="2" fill="#e11d48"/>
+ <!-- Row 2 -->
+ <rect x="352" y="174" width="16" height="16" rx="2" fill="#be123c"/>
+ <rect x="376" y="174" width="16" height="16" rx="2" fill="#be123c"/>
+ <rect x="402" y="174" width="16" height="16" rx="2" fill="#be123c"/>
+ <rect x="428" y="174" width="16" height="16" rx="2" fill="#be123c"/>
+ <rect x="452" y="174" width="16" height="16" rx="2" fill="#be123c"/>
+ <!-- Row 3 -->
+ <rect x="352" y="198" width="16" height="16" rx="2" fill="#e11d48"/>
+ <rect x="376" y="198" width="16" height="16" rx="2" fill="#e11d48"/>
+ <rect x="402" y="198" width="16" height="16" rx="2" fill="#e11d48"/>
+ <rect x="428" y="198" width="16" height="16" rx="2" fill="#e11d48"/>
+ <rect x="452" y="198" width="16" height="16" rx="2" fill="#e11d48"/>
+ <!-- Row 4 -->
+ <rect x="352" y="222" width="16" height="16" rx="2" fill="#be123c"/>
+ <rect x="376" y="222" width="16" height="16" rx="2" fill="#be123c"/>
+ <rect x="402" y="222" width="16" height="16" rx="2" fill="#be123c"/>
+ <rect x="428" y="222" width="16" height="16" rx="2" fill="#be123c"/>
+ <rect x="452" y="222" width="16" height="16" rx="2" fill="#be123c"/>
+ <!-- Row 5 -->
+ <rect x="352" y="246" width="16" height="16" rx="2" fill="#e11d48"/>
+ <rect x="376" y="246" width="16" height="16" rx="2" fill="#e11d48"/>
+ <rect x="402" y="246" width="16" height="16" rx="2" fill="#e11d48"/>
+ <rect x="428" y="246" width="16" height="16" rx="2" fill="#e11d48"/>
+ <rect x="452" y="246" width="16" height="16" rx="2" fill="#e11d48"/>
+
+ <text x="410" y="292" font-size="9" fill="#758f7e">5×5 LED MATRIX</text>
+
+ <!-- Push Button A -->
+ <circle cx="324" cy="208" r="14" fill="#2d3342" stroke="#4a5568"/>
+ <circle cx="324" cy="208" r="8" fill="#111827"/>
+ <text x="324" y="235" font-size="11" font-weight="bold" fill="#e2e8f0">A</text>
+
+ <!-- Push Button B -->
+ <circle cx="496" cy="208" r="14" fill="#2d3342" stroke="#4a5568"/>
+ <circle cx="496" cy="208" r="8" fill="#111827"/>
+ <text x="496" y="235" font-size="11" font-weight="bold" fill="#e2e8f0">B</text>
+
+ <!-- Edge Connector Gold Surface -->
+ <rect x="300" y="375" width="220" height="55" rx="4" fill="#cfab5b" stroke="#796434" stroke-width="1.5"/>
+
+ <!-- 5 Big Rings with Holes -->
+ <!-- Ring 0 -->
+ <circle cx="322" cy="402" r="14" fill="#e5c06e" stroke="#8a6f27" stroke-width="1.5"/>
+ <circle cx="322" cy="402" r="7" fill="#1e222b"/>
+ <text x="322" y="425" font-size="9" font-weight="bold" fill="#1e222b">0</text>
+
+ <!-- Ring 1 -->
+ <circle cx="366" cy="402" r="14" fill="#e5c06e" stroke="#8a6f27" stroke-width="1.5"/>
+ <circle cx="366" cy="402" r="7" fill="#1e222b"/>
+ <text x="366" y="425" font-size="9" font-weight="bold" fill="#1e222b">1</text>
+
+ <!-- Ring 2 -->
+ <circle cx="410" cy="402" r="14" fill="#e5c06e" stroke="#8a6f27" stroke-width="1.5"/>
+ <circle cx="410" cy="402" r="7" fill="#1e222b"/>
+ <text x="410" y="425" font-size="9" font-weight="bold" fill="#1e222b">2</text>
+
+ <!-- Ring 3V -->
+ <circle cx="454" cy="402" r="14" fill="#e5c06e" stroke="#8a6f27" stroke-width="1.5"/>
+ <circle cx="454" cy="402" r="7" fill="#1e222b"/>
+ <text x="454" y="425" font-size="8" font-weight="bold" fill="#1e222b">3V</text>
+
+ <!-- Ring GND -->
+ <circle cx="498" cy="402" r="14" fill="#e5c06e" stroke="#8a6f27" stroke-width="1.5"/>
+ <circle cx="498" cy="402" r="7" fill="#1e222b"/>
+ <text x="498" y="425" font-size="8" font-weight="bold" fill="#1e222b">GND</text>
+
+ <!-- Small Gold Edge Fingers between rings -->
+ <!-- Left of Ring 0 -->
+ <rect x="304" y="378" width="4" height="26" fill="#aa8838"/>
+ <!-- Between Ring 0 and Ring 1 (P4, P5, P6, P7) -->
+ <rect x="340" y="378" width="3.5" height="26" fill="#aa8838"/>
+ <rect x="346" y="378" width="3.5" height="26" fill="#aa8838"/>
+ <rect x="351" y="378" width="3.5" height="26" fill="#aa8838"/>
+ <rect x="356" y="378" width="3.5" height="26" fill="#aa8838"/>
+ <!-- Between Ring 1 and Ring 2 (P8, P9, P10, P11, P12) -->
+ <rect x="383" y="378" width="3.5" height="26" fill="#aa8838"/>
+ <rect x="388" y="378" width="3.5" height="26" fill="#aa8838"/>
+ <rect x="393" y="378" width="3.5" height="26" fill="#aa8838"/>
+ <rect x="398" y="378" width="3.5" height="26" fill="#aa8838"/>
+ <rect x="403" y="378" width="3.5" height="26" fill="#aa8838"/>
+ <!-- Between Ring 2 and 3V (P13, P14, P15, P16) -->
+ <rect x="427" y="378" width="3.5" height="26" fill="#aa8838"/>
+ <rect x="432" y="378" width="3.5" height="26" fill="#aa8838"/>
+ <rect x="437" y="378" width="3.5" height="26" fill="#aa8838"/>
+ <rect x="442" y="378" width="3.5" height="26" fill="#aa8838"/>
+ <!-- Between 3V and GND (P19, P20) -->
+ <rect x="472" y="378" width="4" height="26" fill="#aa8838"/>
+ <rect x="479" y="378" width="4" height="26" fill="#aa8838"/>
+
+ <text x="410" y="332" font-size="13" font-weight="bold" fill="#f8fafc">BBC micro:bit V2</text>
+ <text x="410" y="348" font-size="9" fill="#94a3b8">nRF52833 · 64 MHz · BLE 5.1</text>
+</g>
+</svg>
