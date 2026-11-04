@@ -485,26 +485,31 @@ function renderCatalog() {
           if (!item) return '';
           const isActive = layout && layout.id === item.id;
           return `<div class="catalog-card ${isActive ? 'active' : ''}" data-layout="${esc(item.id)}" role="button" tabindex="0" ${isActive ? 'aria-current="true"' : ''}>
-            <div class="catalog-card-header">
-              <b class="catalog-card-title">${esc(layoutTitle(item))}</b>
-              <span class="catalog-card-tag">${icon(isChip(item) ? 'chip' : 'board')}</span>
+            <div class="catalog-card-icon" aria-hidden="true">${icon(isChip(item) ? 'chip' : 'board')}</div>
+            <div class="catalog-card-body">
+              <div class="catalog-card-header">
+                <b class="catalog-card-title">${esc(layoutTitle(item))}</b>
+              </div>
+              <small class="catalog-card-desc">${esc(item.compatibleKey ? t(item.compatibleKey) : layoutSubtitle(item))}</small>
             </div>
-            <small class="catalog-card-desc">${esc(item.compatibleKey ? t(item.compatibleKey) : layoutSubtitle(item))}</small>
           </div>`;
         } else if (entry.type === 'package-group') {
           const isGroupActive = entry.packages.some(p => layout && layout.id === p.id);
           const activePkg = entry.packages.find(p => layout && layout.id === p.id);
           const activeId = activePkg ? activePkg.id : entry.defaultLayout;
           return `<div class="catalog-card ${isGroupActive ? 'active' : ''}" data-layout="${esc(activeId)}" role="button" tabindex="0">
-            <div class="catalog-card-header">
-              <b class="catalog-card-title">${esc(entry.name)}</b>
-              <span class="catalog-card-tag"><span class="catalog-card-count">${t('packageCount', { count: entry.packages.length })}</span>${icon('chip')}</span>
-            </div>
-            <small class="catalog-card-desc">${esc(t(entry.subtitleKey))}</small>
-            <div class="catalog-packages" role="group" aria-label="${esc(entry.name)} ${esc(t('packagesHeading'))}">
-              ${entry.packages.map(p => `
-                <button type="button" class="catalog-package-btn ${layout && layout.id === p.id ? 'active' : ''}" data-layout="${esc(p.id)}" title="${esc(entry.name)} · ${esc(p.label)}" aria-label="${esc(entry.name)} ${esc(p.label)}">${esc(p.label)}</button>
-              `).join('')}
+            <div class="catalog-card-icon" aria-hidden="true">${icon('chip')}</div>
+            <div class="catalog-card-body">
+              <div class="catalog-card-header">
+                <b class="catalog-card-title">${esc(entry.name)}</b>
+                <span class="catalog-card-count">${t('packageCount', { count: entry.packages.length })}</span>
+              </div>
+              <small class="catalog-card-desc">${esc(t(entry.subtitleKey))}</small>
+              <div class="catalog-packages" role="group" aria-label="${esc(entry.name)} ${esc(t('packagesHeading'))}">
+                ${entry.packages.map(p => `
+                  <button type="button" class="catalog-package-btn ${layout && layout.id === p.id ? 'active' : ''}" data-layout="${esc(p.id)}" title="${esc(entry.name)} · ${esc(p.label)}" aria-label="${esc(entry.name)} ${esc(p.label)}">${esc(p.label)}</button>
+                `).join('')}
+              </div>
             </div>
           </div>`;
         }
@@ -594,24 +599,29 @@ function renderCatalog() {
     const isActive = layout && layout.id === m.id && (!m.profile || board.id === m.profile);
     if (m.packages) {
       return `<div class="catalog-card ${isActive ? 'active' : ''}" data-layout="${esc(m.id)}" role="button" tabindex="0">
-        <div class="catalog-card-header">
-          <b class="catalog-card-title">${esc(m.name)}</b>
-          <span class="catalog-card-tag"><span class="catalog-card-count">${t('packageCount', { count: m.packages.length })}</span>${icon('chip')}</span>
-        </div>
-        <small class="catalog-card-desc">${esc(m.detail)}</small>
-        <div class="catalog-packages" role="group" aria-label="${esc(m.name)} ${esc(t('packagesHeading'))}">
-          ${m.packages.map(p => `
-            <button type="button" class="catalog-package-btn ${layout && layout.id === p.id ? 'active' : ''}" data-layout="${esc(p.id)}" title="${esc(m.name)} · ${esc(p.label)}" aria-label="${esc(m.name)} ${esc(p.label)}">${esc(p.label)}</button>
-          `).join('')}
+        <div class="catalog-card-icon" aria-hidden="true">${icon('chip')}</div>
+        <div class="catalog-card-body">
+          <div class="catalog-card-header">
+            <b class="catalog-card-title">${esc(m.name)}</b>
+            <span class="catalog-card-count">${t('packageCount', { count: m.packages.length })}</span>
+          </div>
+          <small class="catalog-card-desc">${esc(m.detail)}</small>
+          <div class="catalog-packages" role="group" aria-label="${esc(m.name)} ${esc(t('packagesHeading'))}">
+            ${m.packages.map(p => `
+              <button type="button" class="catalog-package-btn ${layout && layout.id === p.id ? 'active' : ''}" data-layout="${esc(p.id)}" title="${esc(m.name)} · ${esc(p.label)}" aria-label="${esc(m.name)} ${esc(p.label)}">${esc(p.label)}</button>
+            `).join('')}
+          </div>
         </div>
       </div>`;
     }
     return `<div class="catalog-card ${isActive ? 'active' : ''}" data-layout="${esc(m.id)}"${m.profile ? ` data-profile="${esc(m.profile)}"` : ''} role="button" tabindex="0">
-      <div class="catalog-card-header">
-        <b class="catalog-card-title">${esc(m.name)}</b>
-        <span class="catalog-card-tag">${icon(m.isChip ? 'chip' : 'board')}</span>
+      <div class="catalog-card-icon" aria-hidden="true">${icon(m.isChip ? 'chip' : 'board')}</div>
+      <div class="catalog-card-body">
+        <div class="catalog-card-header">
+          <b class="catalog-card-title">${esc(m.name)}</b>
+        </div>
+        <small class="catalog-card-desc">${esc(m.detail)}</small>
       </div>
-      <small class="catalog-card-desc">${esc(m.detail)}</small>
     </div>`;
   }).join('')}</div>`;
 }
