@@ -7,7 +7,7 @@ const boards = JSON.parse(readFileSync(new URL('../dist/data/boards.json', impor
 const layouts = buildLayouts(boards);
 
 test('catalog contains one entry per shared footprint', () => {
-  assert.deepEqual(layouts.map(layout => layout.id), ['pico-family', 'raspberry-pi-40', 'jetson-orin-nano', 'blue-pill', 'stm32f103c8t6', 'rp2350a', 'rp2350b']);
+  assert.deepEqual(layouts.map(layout => layout.id), ['pico-family', 'raspberry-pi-40', 'jetson-orin-nano', 'blue-pill', 'stm32f103c8t6', 'arduino-uno-r3', 'arduino-nano-classic', 'arduino-mega-2560', 'rp2350a', 'rp2350b']);
   assert.equal(layouts[0].profiles.length, 4);
   assert.equal(layouts[1].profiles.length, 2);
   assert.equal(new Set(layouts.flatMap(layout => layout.profileIds)).size, boards.length);

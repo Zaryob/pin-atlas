@@ -15,12 +15,15 @@ Kütüphanede her fiziksel düzen bir kez listelenir; uyumlu kartlar aynı kayı
 - **NVIDIA Jetson Orin Nano:** NVIDIA P3768 geliştirme kiti taşıyıcı kartının J12 40-pin başlığı. SPI, I²C, UART, I²S, PWM ve saat işlevleri taşıyıcı kart belgesinden alınır. Raspberry Pi’den farklı sinyal adları ve pinmux gereksinimleri olduğundan ayrı haritadır.
 - **STM32 Blue Pill:** STM32-base topluluk referansı; iki 20-pin yan başlık ve dört SWD bağlantısı. H1/H2/SWD konumları MCU paket pinlerinden ayrıdır; LED, kristal, USB ve debug bağlantıları belirtilir. Klon yongaları ve bağlantıları kontrol edilmelidir.
 - **STM32F103C8T6:** 48-pin LQFP işlemci; HSE bırakıldığında PD0/PD1 dahil 37 GPIO olanağı. STM32F103CBT6 aynı paket pin düzenini kullanır.
+- **Arduino UNO R3:** ana işlemci ICSP dahil 38 başlık kontağı, 20 bağımsız GPIO ve 6 analog giriş. SDA/SCL ve ICSP mevcut GPIO hatlarını tekrarlar.
+- **Arduino Nano (klasik):** ICSP dahil 36 kontak, 20 bağımsız GPIO ve 8 analog giriş. A6/A7 yalnızca analog giriş.
+- **Arduino Mega 2560 Rev3:** uç başlık ve ana işlemci ICSP dahil 92 kontak, 70 bağımsız GPIO, 16 analog giriş ve 15 PWM çıkışı. SPI D50–D53 üzerindedir.
 - **RP2350A:** QFN-60, 30 Bank 0 GPIO.
 - **RP2350B:** QFN-80, 48 Bank 0 GPIO.
 
 Pico çizimi ortak başlığı gösterir; modellerin kablosuz, LED ve dahili bağlantılarının aynı olduğunu iddia etmez. İşlev referansı değişince fiziksel pinler aynı kalır. Planlar referans bazında saklanır. Eski model bağlantıları, JSON dosyaları ve kayıtlı planlar desteklenir; aynı işlemci için birden fazla eski plan varsa birleştirilmeden referans seçicisinde erişilebilir kalır.
 
-Yedi kütüphane düzeninin on bir kaynak profili boyunca toplam 512 fiziksel pin kaydı ve 2.234 pin/alternatif işlev kaydı bulunur. RP2350 paketlerinin merkez GND pedi çevre pin sayısına dahil değildir. Çizimler şematiktir; mekanik CAD yerleşimi veya gerçek komponent konumları olarak kullanılmaz.
+On kütüphane düzeninin on dört kaynak profili boyunca toplam 678 fiziksel pin kaydı ve 2.350 pin/alternatif işlev kaydı bulunur. RP2350 paketlerinin merkez GND pedi çevre pin sayısına dahil değildir. Çizimler şematiktir; mekanik CAD yerleşimi veya gerçek komponent konumları olarak kullanılmaz.
 
 ## Kullanım
 
@@ -55,9 +58,9 @@ python3 -m pip install -r requirements-source-verification.txt
 python3 scripts/verify-official-sources.py
 ```
 
-Bu komut on altı kilitli kaynağı (on üç üretici belgesi ve açıkça işaretlenmiş üç Blue Pill topluluk referansı) indirir, SHA-256 değerlerini kontrol eder, PDF ve kaynak tablolarını yeniden okur ve yayımlanan veriyle karşılaştırır. Kaynaklar `.cache/primary-sources/` altında tutulur; PDF’ler depoda dağıtılmaz. Bir hash veya pin kaydı değişirse kontrol başarısız olur.
+Bu komut yirmi dört kilitli kaynağı (yirmi bir üretici belgesi veya kaynak dosyası ve açıkça işaretlenmiş üç Blue Pill topluluk referansı) indirir, SHA-256 değerlerini kontrol eder, PDF ve kaynak tablolarını yeniden okur ve yayımlanan veriyle karşılaştırır. Kaynaklar `.cache/primary-sources/` altında tutulur; PDF’ler depoda dağıtılmaz. Bir hash veya pin kaydı değişirse kontrol başarısız olur.
 
-GitHub Actions, ST CDN’i yayın sunucularında zaman aşımına düşebildiği için `python3 scripts/verify-official-sources.py --table-snapshots` komutunu kullanır. Bu mod ST PDF’lerinden çıkarılıp `sources/extracted/` altında kaydedilen ham tablo hücrelerini kullanır. Kayıtların ve özgün PDF’lerin hash’leri manifestte kilitlidir. Bütün pin ve işlevler yine yeniden üretilip karşılaştırılır; diğer on dört kaynak indirilir. Yukarıdaki varsayılan komut doğrudan özgün ST PDF’lerini kontrol eder.
+GitHub Actions, ST CDN’i yayın sunucularında zaman aşımına düşebildiği için `python3 scripts/verify-official-sources.py --table-snapshots` komutunu kullanır. Bu mod ST PDF’lerinden çıkarılıp `sources/extracted/` altında kaydedilen ham tablo hücrelerini kullanır. Kayıtların ve özgün PDF’lerin hash’leri manifestte kilitlidir. Bütün pin ve işlevler yine yeniden üretilip karşılaştırılır; diğer yirmi iki kaynak indirilir. Yukarıdaki varsayılan komut doğrudan özgün ST PDF’lerini kontrol eder.
 
 Şekil olarak yayımlanan ve metin hücresi içermeyen fiziksel pinler, `sources/manual-observations.json` içindeki açıkça işaretlenmiş görsel gözlemlerle kontrol edilir. Bu bölüm otomatik OCR veya bağımsız donanım ölçümü olarak sunulmaz. RP2350 Release 8 içindeki IOVDD tablo/şekil tutarsızlığı da aynı kayıtta gerekçelendirilir. Tam yöntem [doğrulama kaydında](docs/VERIFICATION.tr.md).
 
@@ -83,3 +86,5 @@ Blue Pill ve STM32F103C8/CB LQFP48 işlemcisi desteklenir; diğer STM32 kartlar�
 ## Lisans
 
 Uygulama GPL-3.0-or-later lisanslıdır. Ortak tema ve IBM Plex Mono için gerçek yazılım/font bildirimleri `THIRD_PARTY_NOTICES.md` içindedir. Donanım doğrulamasında kullanılan üretici belgeleri ise ayrı olarak `sources/manifest.json` ve `docs/VERIFICATION.tr.md` içinde belgelenir.
+
+Arduino haritaları resmî tam pin şemaları, bağlantı tabloları ve sabitlenmiş Arduino AVR çekirdeğiyle doğrulanır. Kapsam 5 V ATmega328P UNO R3 / klasik Nano ile ATmega2560 Mega 2560 Rev3’tür. Başlık konumları Arduino pin numaralarından ve MCU portlarından ayrıdır. Aynı GPIO hattının tekrar eden kontakları belirtilir; plan ve JSON içe aktarma aynı GPIO’nun iki kez kullanımını reddeder. USB köprüsünün programlama başlıkları ve işlemcinin bütün ham alternatif işlevleri bu haritaların kapsamında değildir.

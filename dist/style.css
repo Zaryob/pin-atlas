@@ -221,3 +221,10 @@
 .function-option small { max-width: 100%; overflow-wrap: anywhere; }
 #diagram.board-diagram > svg { max-height: 900px; min-height: 700px; }
 @media (max-width: 640px) { #diagram.board-diagram > svg { min-height: 0; max-height: none; } }
+
+:root { --pin-irq: var(--pin-system); }
+.pin-group .pad-number { font: 9px var(--mono); fill: var(--muted); }
+.pin-group .pad-label { font: 10px var(--mono); }
+.shared-pin-note { margin-top: 10px; }
+.map-content { overflow: hidden; }
+#diagram { overflow-x: auto; overscroll-behavior-x: contain; }

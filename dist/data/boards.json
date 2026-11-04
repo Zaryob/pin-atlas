@@ -16225,6 +16225,4676 @@
     ]
   },
   {
+    "id": "arduino-uno-r3",
+    "name": "Arduino UNO R3",
+    "shortName": "UNO R3",
+    "family": "Arduino AVR",
+    "subtitle": "ATmega328P · 16 MHz · 5 V I/O",
+    "layout": "custom",
+    "diagram": {
+      "width": 900,
+      "height": 860,
+      "artwork": "assets/boards/arduino-uno-r3.svg"
+    },
+    "orientation": "usb",
+    "packagePins": 38,
+    "gpioCount": 25,
+    "uniqueGPIOCount": 20,
+    "voltage": "5 V I/O",
+    "mcu": "ATmega328P",
+    "processor": "8-bit AVR",
+    "clock": "16 MHz",
+    "compatibleKey": "arduino-uno-r3Compatible",
+    "scopeKey": "arduino-uno-r3Scope",
+    "verifiedOn": "2026-11-04",
+    "source": "https://docs.arduino.cc/resources/pinouts/A000066-full-pinout.pdf",
+    "datasheet": "https://docs.arduino.cc/resources/datasheets/A000066-datasheet.pdf",
+    "pins": [
+      {
+        "number": 1,
+        "physicalLabel": "PWR.1",
+        "connector": "PWR",
+        "connectorPin": 1,
+        "name": "NC",
+        "functions": [],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables"
+        ],
+        "position": {
+          "x": 300,
+          "y": 220,
+          "side": "left"
+        },
+        "type": "SYSTEM",
+        "net": "NC",
+        "noteKey": "arduinoNcNote",
+        "reserved": true
+      },
+      {
+        "number": 2,
+        "physicalLabel": "PWR.2",
+        "connector": "PWR",
+        "connectorPin": 2,
+        "name": "IOREF",
+        "functions": [],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables"
+        ],
+        "position": {
+          "x": 300,
+          "y": 246,
+          "side": "left"
+        },
+        "type": "POWER",
+        "net": "IOREF",
+        "noteKey": "arduinoIorefNote"
+      },
+      {
+        "number": 3,
+        "physicalLabel": "PWR.3",
+        "connector": "PWR",
+        "connectorPin": 3,
+        "name": "RESET",
+        "functions": [],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables"
+        ],
+        "position": {
+          "x": 300,
+          "y": 272,
+          "side": "left"
+        },
+        "type": "SYSTEM",
+        "net": "RESET",
+        "noteKey": "arduinoResetNote",
+        "sharedWith": [
+          "ICSP.5"
+        ]
+      },
+      {
+        "number": 4,
+        "physicalLabel": "PWR.4",
+        "connector": "PWR",
+        "connectorPin": 4,
+        "name": "3V3",
+        "functions": [],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables"
+        ],
+        "position": {
+          "x": 300,
+          "y": 298,
+          "side": "left"
+        },
+        "type": "POWER",
+        "net": "3V3"
+      },
+      {
+        "number": 5,
+        "physicalLabel": "PWR.5",
+        "connector": "PWR",
+        "connectorPin": 5,
+        "name": "5V",
+        "functions": [],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables"
+        ],
+        "position": {
+          "x": 300,
+          "y": 324,
+          "side": "left"
+        },
+        "type": "POWER",
+        "net": "5V"
+      },
+      {
+        "number": 6,
+        "physicalLabel": "PWR.6",
+        "connector": "PWR",
+        "connectorPin": 6,
+        "name": "GND",
+        "functions": [],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables"
+        ],
+        "position": {
+          "x": 300,
+          "y": 350,
+          "side": "left"
+        },
+        "type": "GND",
+        "net": "GND"
+      },
+      {
+        "number": 7,
+        "physicalLabel": "PWR.7",
+        "connector": "PWR",
+        "connectorPin": 7,
+        "name": "GND",
+        "functions": [],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables"
+        ],
+        "position": {
+          "x": 300,
+          "y": 376,
+          "side": "left"
+        },
+        "type": "GND",
+        "net": "GND"
+      },
+      {
+        "number": 8,
+        "physicalLabel": "PWR.8",
+        "connector": "PWR",
+        "connectorPin": 8,
+        "name": "VIN",
+        "functions": [],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables"
+        ],
+        "position": {
+          "x": 300,
+          "y": 402,
+          "side": "left"
+        },
+        "type": "POWER",
+        "net": "VIN",
+        "noteKey": "arduinoVinNote"
+      },
+      {
+        "number": 9,
+        "physicalLabel": "ANALOG.1",
+        "connector": "ANALOG",
+        "connectorPin": 1,
+        "name": "A0",
+        "functions": [
+          {
+            "name": "ADC0",
+            "group": "ADC",
+            "signal": "ADC0",
+            "evidence": "arduino-uno-r3-core"
+          }
+        ],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables",
+          "arduino-uno-r3-core"
+        ],
+        "position": {
+          "x": 300,
+          "y": 480,
+          "side": "left"
+        },
+        "type": "GPIO",
+        "net": "PC0",
+        "arduinoPin": 14,
+        "mcuPort": "PC0",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 10,
+        "physicalLabel": "ANALOG.2",
+        "connector": "ANALOG",
+        "connectorPin": 2,
+        "name": "A1",
+        "functions": [
+          {
+            "name": "ADC1",
+            "group": "ADC",
+            "signal": "ADC1",
+            "evidence": "arduino-uno-r3-core"
+          }
+        ],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables",
+          "arduino-uno-r3-core"
+        ],
+        "position": {
+          "x": 300,
+          "y": 506,
+          "side": "left"
+        },
+        "type": "GPIO",
+        "net": "PC1",
+        "arduinoPin": 15,
+        "mcuPort": "PC1",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 11,
+        "physicalLabel": "ANALOG.3",
+        "connector": "ANALOG",
+        "connectorPin": 3,
+        "name": "A2",
+        "functions": [
+          {
+            "name": "ADC2",
+            "group": "ADC",
+            "signal": "ADC2",
+            "evidence": "arduino-uno-r3-core"
+          }
+        ],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables",
+          "arduino-uno-r3-core"
+        ],
+        "position": {
+          "x": 300,
+          "y": 532,
+          "side": "left"
+        },
+        "type": "GPIO",
+        "net": "PC2",
+        "arduinoPin": 16,
+        "mcuPort": "PC2",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 12,
+        "physicalLabel": "ANALOG.4",
+        "connector": "ANALOG",
+        "connectorPin": 4,
+        "name": "A3",
+        "functions": [
+          {
+            "name": "ADC3",
+            "group": "ADC",
+            "signal": "ADC3",
+            "evidence": "arduino-uno-r3-core"
+          }
+        ],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables",
+          "arduino-uno-r3-core"
+        ],
+        "position": {
+          "x": 300,
+          "y": 558,
+          "side": "left"
+        },
+        "type": "GPIO",
+        "net": "PC3",
+        "arduinoPin": 17,
+        "mcuPort": "PC3",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 13,
+        "physicalLabel": "ANALOG.5",
+        "connector": "ANALOG",
+        "connectorPin": 5,
+        "name": "A4",
+        "functions": [
+          {
+            "name": "I2C SDA",
+            "group": "I2C",
+            "signal": "SDA",
+            "evidence": "arduino-uno-r3-core"
+          },
+          {
+            "name": "ADC4",
+            "group": "ADC",
+            "signal": "ADC4",
+            "evidence": "arduino-uno-r3-core"
+          }
+        ],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables",
+          "arduino-uno-r3-core"
+        ],
+        "position": {
+          "x": 300,
+          "y": 584,
+          "side": "left"
+        },
+        "type": "GPIO",
+        "net": "PC4",
+        "arduinoPin": 18,
+        "mcuPort": "PC4",
+        "noteKey": "arduinoGpioNote",
+        "sharedWith": [
+          "DIGITAL.17"
+        ]
+      },
+      {
+        "number": 14,
+        "physicalLabel": "ANALOG.6",
+        "connector": "ANALOG",
+        "connectorPin": 6,
+        "name": "A5",
+        "functions": [
+          {
+            "name": "I2C SCL",
+            "group": "I2C",
+            "signal": "SCL",
+            "evidence": "arduino-uno-r3-core"
+          },
+          {
+            "name": "ADC5",
+            "group": "ADC",
+            "signal": "ADC5",
+            "evidence": "arduino-uno-r3-core"
+          }
+        ],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables",
+          "arduino-uno-r3-core"
+        ],
+        "position": {
+          "x": 300,
+          "y": 610,
+          "side": "left"
+        },
+        "type": "GPIO",
+        "net": "PC5",
+        "arduinoPin": 19,
+        "mcuPort": "PC5",
+        "noteKey": "arduinoGpioNote",
+        "sharedWith": [
+          "DIGITAL.18"
+        ]
+      },
+      {
+        "number": 15,
+        "physicalLabel": "DIGITAL.1",
+        "connector": "DIGITAL",
+        "connectorPin": 1,
+        "name": "D0",
+        "functions": [
+          {
+            "name": "UART0 RX",
+            "group": "UART",
+            "signal": "RXD",
+            "evidence": "arduino-uno-r3-signals"
+          }
+        ],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables",
+          "arduino-uno-r3-core"
+        ],
+        "position": {
+          "x": 600,
+          "y": 612,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PD0",
+        "arduinoPin": 0,
+        "mcuPort": "PD0",
+        "noteKey": "arduinoSerialNote"
+      },
+      {
+        "number": 16,
+        "physicalLabel": "DIGITAL.2",
+        "connector": "DIGITAL",
+        "connectorPin": 2,
+        "name": "D1",
+        "functions": [
+          {
+            "name": "UART0 TX",
+            "group": "UART",
+            "signal": "TXD",
+            "evidence": "arduino-uno-r3-signals"
+          }
+        ],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables",
+          "arduino-uno-r3-core"
+        ],
+        "position": {
+          "x": 600,
+          "y": 586,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PD1",
+        "arduinoPin": 1,
+        "mcuPort": "PD1",
+        "noteKey": "arduinoSerialNote"
+      },
+      {
+        "number": 17,
+        "physicalLabel": "DIGITAL.3",
+        "connector": "DIGITAL",
+        "connectorPin": 3,
+        "name": "D2",
+        "functions": [
+          {
+            "name": "INT0",
+            "group": "IRQ",
+            "signal": "INT0",
+            "evidence": "arduino-uno-r3-signals"
+          }
+        ],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables",
+          "arduino-uno-r3-core"
+        ],
+        "position": {
+          "x": 600,
+          "y": 560,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PD2",
+        "arduinoPin": 2,
+        "mcuPort": "PD2",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 18,
+        "physicalLabel": "DIGITAL.4",
+        "connector": "DIGITAL",
+        "connectorPin": 4,
+        "name": "D3",
+        "functions": [
+          {
+            "name": "PWM OC2B",
+            "group": "PWM",
+            "signal": "OC2B",
+            "evidence": "arduino-uno-r3-core"
+          },
+          {
+            "name": "INT1",
+            "group": "IRQ",
+            "signal": "INT1",
+            "evidence": "arduino-uno-r3-signals"
+          }
+        ],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables",
+          "arduino-uno-r3-core"
+        ],
+        "position": {
+          "x": 600,
+          "y": 534,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PD3",
+        "arduinoPin": 3,
+        "mcuPort": "PD3",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 19,
+        "physicalLabel": "DIGITAL.5",
+        "connector": "DIGITAL",
+        "connectorPin": 5,
+        "name": "D4",
+        "functions": [],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables",
+          "arduino-uno-r3-core"
+        ],
+        "position": {
+          "x": 600,
+          "y": 508,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PD4",
+        "arduinoPin": 4,
+        "mcuPort": "PD4",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 20,
+        "physicalLabel": "DIGITAL.6",
+        "connector": "DIGITAL",
+        "connectorPin": 6,
+        "name": "D5",
+        "functions": [
+          {
+            "name": "PWM OC0B",
+            "group": "PWM",
+            "signal": "OC0B",
+            "evidence": "arduino-uno-r3-core"
+          }
+        ],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables",
+          "arduino-uno-r3-core"
+        ],
+        "position": {
+          "x": 600,
+          "y": 482,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PD5",
+        "arduinoPin": 5,
+        "mcuPort": "PD5",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 21,
+        "physicalLabel": "DIGITAL.7",
+        "connector": "DIGITAL",
+        "connectorPin": 7,
+        "name": "D6",
+        "functions": [
+          {
+            "name": "PWM OC0A",
+            "group": "PWM",
+            "signal": "OC0A",
+            "evidence": "arduino-uno-r3-core"
+          }
+        ],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables",
+          "arduino-uno-r3-core"
+        ],
+        "position": {
+          "x": 600,
+          "y": 456,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PD6",
+        "arduinoPin": 6,
+        "mcuPort": "PD6",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 22,
+        "physicalLabel": "DIGITAL.8",
+        "connector": "DIGITAL",
+        "connectorPin": 8,
+        "name": "D7",
+        "functions": [],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables",
+          "arduino-uno-r3-core"
+        ],
+        "position": {
+          "x": 600,
+          "y": 430,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PD7",
+        "arduinoPin": 7,
+        "mcuPort": "PD7",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 23,
+        "physicalLabel": "DIGITAL.9",
+        "connector": "DIGITAL",
+        "connectorPin": 9,
+        "name": "D8",
+        "functions": [],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables",
+          "arduino-uno-r3-core"
+        ],
+        "position": {
+          "x": 600,
+          "y": 384,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PB0",
+        "arduinoPin": 8,
+        "mcuPort": "PB0",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 24,
+        "physicalLabel": "DIGITAL.10",
+        "connector": "DIGITAL",
+        "connectorPin": 10,
+        "name": "D9",
+        "functions": [
+          {
+            "name": "PWM OC1A",
+            "group": "PWM",
+            "signal": "OC1A",
+            "evidence": "arduino-uno-r3-core"
+          }
+        ],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables",
+          "arduino-uno-r3-core"
+        ],
+        "position": {
+          "x": 600,
+          "y": 358,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PB1",
+        "arduinoPin": 9,
+        "mcuPort": "PB1",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 25,
+        "physicalLabel": "DIGITAL.11",
+        "connector": "DIGITAL",
+        "connectorPin": 11,
+        "name": "D10",
+        "functions": [
+          {
+            "name": "SPI SS",
+            "group": "SPI",
+            "signal": "SS",
+            "evidence": "arduino-uno-r3-core"
+          },
+          {
+            "name": "PWM OC1B",
+            "group": "PWM",
+            "signal": "OC1B",
+            "evidence": "arduino-uno-r3-core"
+          }
+        ],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables",
+          "arduino-uno-r3-core"
+        ],
+        "position": {
+          "x": 600,
+          "y": 332,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PB2",
+        "arduinoPin": 10,
+        "mcuPort": "PB2",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 26,
+        "physicalLabel": "DIGITAL.12",
+        "connector": "DIGITAL",
+        "connectorPin": 12,
+        "name": "D11",
+        "functions": [
+          {
+            "name": "SPI COPI / MOSI",
+            "group": "SPI",
+            "signal": "MOSI",
+            "evidence": "arduino-uno-r3-core"
+          },
+          {
+            "name": "PWM OC2A",
+            "group": "PWM",
+            "signal": "OC2A",
+            "evidence": "arduino-uno-r3-core"
+          }
+        ],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables",
+          "arduino-uno-r3-core"
+        ],
+        "position": {
+          "x": 600,
+          "y": 306,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PB3",
+        "arduinoPin": 11,
+        "mcuPort": "PB3",
+        "noteKey": "arduinoGpioNote",
+        "sharedWith": [
+          "ICSP.4"
+        ]
+      },
+      {
+        "number": 27,
+        "physicalLabel": "DIGITAL.13",
+        "connector": "DIGITAL",
+        "connectorPin": 13,
+        "name": "D12",
+        "functions": [
+          {
+            "name": "SPI CIPO / MISO",
+            "group": "SPI",
+            "signal": "MISO",
+            "evidence": "arduino-uno-r3-core"
+          }
+        ],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables",
+          "arduino-uno-r3-core"
+        ],
+        "position": {
+          "x": 600,
+          "y": 280,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PB4",
+        "arduinoPin": 12,
+        "mcuPort": "PB4",
+        "noteKey": "arduinoGpioNote",
+        "sharedWith": [
+          "ICSP.1"
+        ]
+      },
+      {
+        "number": 28,
+        "physicalLabel": "DIGITAL.14",
+        "connector": "DIGITAL",
+        "connectorPin": 14,
+        "name": "D13",
+        "functions": [
+          {
+            "name": "SPI SCK",
+            "group": "SPI",
+            "signal": "SCK",
+            "evidence": "arduino-uno-r3-core"
+          }
+        ],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables",
+          "arduino-uno-r3-core"
+        ],
+        "position": {
+          "x": 600,
+          "y": 254,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PB5",
+        "arduinoPin": 13,
+        "mcuPort": "PB5",
+        "noteKey": "arduinoLedNote",
+        "sharedWith": [
+          "ICSP.3"
+        ]
+      },
+      {
+        "number": 29,
+        "physicalLabel": "DIGITAL.15",
+        "connector": "DIGITAL",
+        "connectorPin": 15,
+        "name": "GND",
+        "functions": [],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables"
+        ],
+        "position": {
+          "x": 600,
+          "y": 228,
+          "side": "right"
+        },
+        "type": "GND",
+        "net": "GND"
+      },
+      {
+        "number": 30,
+        "physicalLabel": "DIGITAL.16",
+        "connector": "DIGITAL",
+        "connectorPin": 16,
+        "name": "AREF",
+        "functions": [],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables"
+        ],
+        "position": {
+          "x": 600,
+          "y": 202,
+          "side": "right"
+        },
+        "type": "SYSTEM",
+        "net": "AREF",
+        "noteKey": "arduinoArefNote"
+      },
+      {
+        "number": 31,
+        "physicalLabel": "DIGITAL.17",
+        "connector": "DIGITAL",
+        "connectorPin": 17,
+        "name": "SDA",
+        "functions": [
+          {
+            "name": "I2C SDA",
+            "group": "I2C",
+            "signal": "SDA",
+            "evidence": "arduino-uno-r3-core"
+          },
+          {
+            "name": "ADC4",
+            "group": "ADC",
+            "signal": "ADC4",
+            "evidence": "arduino-uno-r3-core"
+          }
+        ],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables",
+          "arduino-uno-r3-core"
+        ],
+        "position": {
+          "x": 600,
+          "y": 176,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PC4",
+        "arduinoPin": 18,
+        "mcuPort": "PC4",
+        "noteKey": "arduinoGpioNote",
+        "sharedWith": [
+          "ANALOG.5"
+        ]
+      },
+      {
+        "number": 32,
+        "physicalLabel": "DIGITAL.18",
+        "connector": "DIGITAL",
+        "connectorPin": 18,
+        "name": "SCL",
+        "functions": [
+          {
+            "name": "I2C SCL",
+            "group": "I2C",
+            "signal": "SCL",
+            "evidence": "arduino-uno-r3-core"
+          },
+          {
+            "name": "ADC5",
+            "group": "ADC",
+            "signal": "ADC5",
+            "evidence": "arduino-uno-r3-core"
+          }
+        ],
+        "evidence": [
+          "arduino-uno-r3-headers",
+          "arduino-uno-r3-connector-tables",
+          "arduino-uno-r3-core"
+        ],
+        "position": {
+          "x": 600,
+          "y": 150,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PC5",
+        "arduinoPin": 19,
+        "mcuPort": "PC5",
+        "noteKey": "arduinoGpioNote",
+        "sharedWith": [
+          "ANALOG.6"
+        ]
+      },
+      {
+        "number": 33,
+        "physicalLabel": "ICSP.5",
+        "connector": "ICSP",
+        "connectorPin": 5,
+        "name": "RESET",
+        "functions": [],
+        "evidence": [
+          "arduino-uno-r3-icsp"
+        ],
+        "position": {
+          "x": 382,
+          "y": 710,
+          "side": "right",
+          "compact": true,
+          "padWidth": 62
+        },
+        "type": "SYSTEM",
+        "net": "RESET",
+        "noteKey": "arduinoResetNote",
+        "sharedWith": [
+          "PWR.3"
+        ]
+      },
+      {
+        "number": 34,
+        "physicalLabel": "ICSP.3",
+        "connector": "ICSP",
+        "connectorPin": 3,
+        "name": "SCK",
+        "functions": [
+          {
+            "name": "SPI SCK",
+            "group": "SPI",
+            "signal": "SCK",
+            "evidence": "arduino-uno-r3-core"
+          }
+        ],
+        "evidence": [
+          "arduino-uno-r3-icsp",
+          "arduino-uno-r3-core"
+        ],
+        "position": {
+          "x": 450,
+          "y": 710,
+          "side": "right",
+          "compact": true,
+          "padWidth": 62
+        },
+        "type": "GPIO",
+        "net": "PB5",
+        "arduinoPin": 13,
+        "mcuPort": "PB5",
+        "noteKey": "arduinoLedNote",
+        "sharedWith": [
+          "DIGITAL.14"
+        ]
+      },
+      {
+        "number": 35,
+        "physicalLabel": "ICSP.1",
+        "connector": "ICSP",
+        "connectorPin": 1,
+        "name": "CIPO",
+        "functions": [
+          {
+            "name": "SPI CIPO / MISO",
+            "group": "SPI",
+            "signal": "MISO",
+            "evidence": "arduino-uno-r3-core"
+          }
+        ],
+        "evidence": [
+          "arduino-uno-r3-icsp",
+          "arduino-uno-r3-core"
+        ],
+        "position": {
+          "x": 518,
+          "y": 710,
+          "side": "right",
+          "compact": true,
+          "padWidth": 62
+        },
+        "type": "GPIO",
+        "net": "PB4",
+        "arduinoPin": 12,
+        "mcuPort": "PB4",
+        "noteKey": "arduinoGpioNote",
+        "sharedWith": [
+          "DIGITAL.13"
+        ]
+      },
+      {
+        "number": 36,
+        "physicalLabel": "ICSP.6",
+        "connector": "ICSP",
+        "connectorPin": 6,
+        "name": "GND",
+        "functions": [],
+        "evidence": [
+          "arduino-uno-r3-icsp"
+        ],
+        "position": {
+          "x": 382,
+          "y": 770,
+          "side": "right",
+          "compact": true,
+          "padWidth": 62
+        },
+        "type": "GND",
+        "net": "GND"
+      },
+      {
+        "number": 37,
+        "physicalLabel": "ICSP.4",
+        "connector": "ICSP",
+        "connectorPin": 4,
+        "name": "COPI",
+        "functions": [
+          {
+            "name": "SPI COPI / MOSI",
+            "group": "SPI",
+            "signal": "MOSI",
+            "evidence": "arduino-uno-r3-core"
+          },
+          {
+            "name": "PWM OC2A",
+            "group": "PWM",
+            "signal": "OC2A",
+            "evidence": "arduino-uno-r3-core"
+          }
+        ],
+        "evidence": [
+          "arduino-uno-r3-icsp",
+          "arduino-uno-r3-core"
+        ],
+        "position": {
+          "x": 450,
+          "y": 770,
+          "side": "right",
+          "compact": true,
+          "padWidth": 62
+        },
+        "type": "GPIO",
+        "net": "PB3",
+        "arduinoPin": 11,
+        "mcuPort": "PB3",
+        "noteKey": "arduinoGpioNote",
+        "sharedWith": [
+          "DIGITAL.12"
+        ]
+      },
+      {
+        "number": 38,
+        "physicalLabel": "ICSP.2",
+        "connector": "ICSP",
+        "connectorPin": 2,
+        "name": "5V",
+        "functions": [],
+        "evidence": [
+          "arduino-uno-r3-icsp"
+        ],
+        "position": {
+          "x": 518,
+          "y": 770,
+          "side": "right",
+          "compact": true,
+          "padWidth": 62
+        },
+        "type": "POWER",
+        "net": "5V"
+      }
+    ]
+  },
+  {
+    "id": "arduino-nano-classic",
+    "name": "Arduino Nano (classic)",
+    "shortName": "Nano (classic)",
+    "family": "Arduino AVR",
+    "subtitle": "ATmega328P · 16 MHz · 5 V I/O",
+    "layout": "custom",
+    "diagram": {
+      "width": 820,
+      "height": 780,
+      "artwork": "assets/boards/arduino-nano-classic.svg"
+    },
+    "orientation": "usb",
+    "packagePins": 36,
+    "gpioCount": 23,
+    "uniqueGPIOCount": 20,
+    "voltage": "5 V I/O",
+    "mcu": "ATmega328P",
+    "processor": "8-bit AVR",
+    "clock": "16 MHz",
+    "compatibleKey": "arduino-nano-classicCompatible",
+    "scopeKey": "arduino-nano-classicScope",
+    "verifiedOn": "2026-11-04",
+    "source": "https://docs.arduino.cc/resources/pinouts/A000005-full-pinout.pdf",
+    "datasheet": "https://docs.arduino.cc/resources/pinouts/A000005-full-pinout.pdf",
+    "pins": [
+      {
+        "number": 1,
+        "physicalLabel": "L.1",
+        "connector": "L",
+        "connectorPin": 1,
+        "name": "D13",
+        "functions": [
+          {
+            "name": "SPI SCK",
+            "group": "SPI",
+            "signal": "SCK",
+            "evidence": "arduino-nano-classic-core"
+          }
+        ],
+        "evidence": [
+          "arduino-nano-classic-headers",
+          "arduino-nano-classic-core"
+        ],
+        "position": {
+          "x": 280,
+          "y": 110,
+          "side": "left"
+        },
+        "type": "GPIO",
+        "net": "PB5",
+        "arduinoPin": 13,
+        "mcuPort": "PB5",
+        "noteKey": "arduinoLedNote",
+        "sharedWith": [
+          "ICSP.3"
+        ]
+      },
+      {
+        "number": 2,
+        "physicalLabel": "L.2",
+        "connector": "L",
+        "connectorPin": 2,
+        "name": "3V3",
+        "functions": [],
+        "evidence": [
+          "arduino-nano-classic-headers"
+        ],
+        "position": {
+          "x": 280,
+          "y": 138,
+          "side": "left"
+        },
+        "type": "POWER",
+        "net": "3V3"
+      },
+      {
+        "number": 3,
+        "physicalLabel": "L.3",
+        "connector": "L",
+        "connectorPin": 3,
+        "name": "AREF",
+        "functions": [],
+        "evidence": [
+          "arduino-nano-classic-headers"
+        ],
+        "position": {
+          "x": 280,
+          "y": 166,
+          "side": "left"
+        },
+        "type": "SYSTEM",
+        "net": "AREF",
+        "noteKey": "arduinoArefNote"
+      },
+      {
+        "number": 4,
+        "physicalLabel": "L.4",
+        "connector": "L",
+        "connectorPin": 4,
+        "name": "A0",
+        "functions": [
+          {
+            "name": "ADC0",
+            "group": "ADC",
+            "signal": "ADC0",
+            "evidence": "arduino-nano-classic-analog"
+          }
+        ],
+        "evidence": [
+          "arduino-nano-classic-headers",
+          "arduino-nano-classic-core"
+        ],
+        "position": {
+          "x": 280,
+          "y": 194,
+          "side": "left"
+        },
+        "type": "GPIO",
+        "net": "PC0",
+        "arduinoPin": 14,
+        "mcuPort": "PC0",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 5,
+        "physicalLabel": "L.5",
+        "connector": "L",
+        "connectorPin": 5,
+        "name": "A1",
+        "functions": [
+          {
+            "name": "ADC1",
+            "group": "ADC",
+            "signal": "ADC1",
+            "evidence": "arduino-nano-classic-analog"
+          }
+        ],
+        "evidence": [
+          "arduino-nano-classic-headers",
+          "arduino-nano-classic-core"
+        ],
+        "position": {
+          "x": 280,
+          "y": 222,
+          "side": "left"
+        },
+        "type": "GPIO",
+        "net": "PC1",
+        "arduinoPin": 15,
+        "mcuPort": "PC1",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 6,
+        "physicalLabel": "L.6",
+        "connector": "L",
+        "connectorPin": 6,
+        "name": "A2",
+        "functions": [
+          {
+            "name": "ADC2",
+            "group": "ADC",
+            "signal": "ADC2",
+            "evidence": "arduino-nano-classic-analog"
+          }
+        ],
+        "evidence": [
+          "arduino-nano-classic-headers",
+          "arduino-nano-classic-core"
+        ],
+        "position": {
+          "x": 280,
+          "y": 250,
+          "side": "left"
+        },
+        "type": "GPIO",
+        "net": "PC2",
+        "arduinoPin": 16,
+        "mcuPort": "PC2",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 7,
+        "physicalLabel": "L.7",
+        "connector": "L",
+        "connectorPin": 7,
+        "name": "A3",
+        "functions": [
+          {
+            "name": "ADC3",
+            "group": "ADC",
+            "signal": "ADC3",
+            "evidence": "arduino-nano-classic-analog"
+          }
+        ],
+        "evidence": [
+          "arduino-nano-classic-headers",
+          "arduino-nano-classic-core"
+        ],
+        "position": {
+          "x": 280,
+          "y": 278,
+          "side": "left"
+        },
+        "type": "GPIO",
+        "net": "PC3",
+        "arduinoPin": 17,
+        "mcuPort": "PC3",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 8,
+        "physicalLabel": "L.8",
+        "connector": "L",
+        "connectorPin": 8,
+        "name": "A4",
+        "functions": [
+          {
+            "name": "I2C SDA",
+            "group": "I2C",
+            "signal": "SDA",
+            "evidence": "arduino-nano-classic-core"
+          },
+          {
+            "name": "ADC4",
+            "group": "ADC",
+            "signal": "ADC4",
+            "evidence": "arduino-nano-classic-analog"
+          }
+        ],
+        "evidence": [
+          "arduino-nano-classic-headers",
+          "arduino-nano-classic-core"
+        ],
+        "position": {
+          "x": 280,
+          "y": 306,
+          "side": "left"
+        },
+        "type": "GPIO",
+        "net": "PC4",
+        "arduinoPin": 18,
+        "mcuPort": "PC4",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 9,
+        "physicalLabel": "L.9",
+        "connector": "L",
+        "connectorPin": 9,
+        "name": "A5",
+        "functions": [
+          {
+            "name": "I2C SCL",
+            "group": "I2C",
+            "signal": "SCL",
+            "evidence": "arduino-nano-classic-core"
+          },
+          {
+            "name": "ADC5",
+            "group": "ADC",
+            "signal": "ADC5",
+            "evidence": "arduino-nano-classic-analog"
+          }
+        ],
+        "evidence": [
+          "arduino-nano-classic-headers",
+          "arduino-nano-classic-core"
+        ],
+        "position": {
+          "x": 280,
+          "y": 334,
+          "side": "left"
+        },
+        "type": "GPIO",
+        "net": "PC5",
+        "arduinoPin": 19,
+        "mcuPort": "PC5",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 10,
+        "physicalLabel": "L.10",
+        "connector": "L",
+        "connectorPin": 10,
+        "name": "A6",
+        "functions": [
+          {
+            "name": "ADC6",
+            "group": "ADC",
+            "signal": "ADC6",
+            "evidence": "arduino-nano-classic-analog"
+          }
+        ],
+        "evidence": [
+          "arduino-nano-classic-headers",
+          "arduino-nano-classic-analog"
+        ],
+        "position": {
+          "x": 280,
+          "y": 362,
+          "side": "left"
+        },
+        "type": "ADC",
+        "net": "A6",
+        "noteKey": "arduinoAnalogOnlyNote"
+      },
+      {
+        "number": 11,
+        "physicalLabel": "L.11",
+        "connector": "L",
+        "connectorPin": 11,
+        "name": "A7",
+        "functions": [
+          {
+            "name": "ADC7",
+            "group": "ADC",
+            "signal": "ADC7",
+            "evidence": "arduino-nano-classic-analog"
+          }
+        ],
+        "evidence": [
+          "arduino-nano-classic-headers",
+          "arduino-nano-classic-analog"
+        ],
+        "position": {
+          "x": 280,
+          "y": 390,
+          "side": "left"
+        },
+        "type": "ADC",
+        "net": "A7",
+        "noteKey": "arduinoAnalogOnlyNote"
+      },
+      {
+        "number": 12,
+        "physicalLabel": "L.12",
+        "connector": "L",
+        "connectorPin": 12,
+        "name": "5V",
+        "functions": [],
+        "evidence": [
+          "arduino-nano-classic-headers"
+        ],
+        "position": {
+          "x": 280,
+          "y": 418,
+          "side": "left"
+        },
+        "type": "POWER",
+        "net": "5V"
+      },
+      {
+        "number": 13,
+        "physicalLabel": "L.13",
+        "connector": "L",
+        "connectorPin": 13,
+        "name": "RESET",
+        "functions": [],
+        "evidence": [
+          "arduino-nano-classic-headers"
+        ],
+        "position": {
+          "x": 280,
+          "y": 446,
+          "side": "left"
+        },
+        "type": "SYSTEM",
+        "net": "RESET",
+        "noteKey": "arduinoResetNote",
+        "sharedWith": [
+          "R.13",
+          "ICSP.5"
+        ]
+      },
+      {
+        "number": 14,
+        "physicalLabel": "L.14",
+        "connector": "L",
+        "connectorPin": 14,
+        "name": "GND",
+        "functions": [],
+        "evidence": [
+          "arduino-nano-classic-headers"
+        ],
+        "position": {
+          "x": 280,
+          "y": 474,
+          "side": "left"
+        },
+        "type": "GND",
+        "net": "GND"
+      },
+      {
+        "number": 15,
+        "physicalLabel": "L.15",
+        "connector": "L",
+        "connectorPin": 15,
+        "name": "VIN",
+        "functions": [],
+        "evidence": [
+          "arduino-nano-classic-headers"
+        ],
+        "position": {
+          "x": 280,
+          "y": 502,
+          "side": "left"
+        },
+        "type": "POWER",
+        "net": "VIN",
+        "noteKey": "arduinoVinNote"
+      },
+      {
+        "number": 16,
+        "physicalLabel": "R.1",
+        "connector": "R",
+        "connectorPin": 1,
+        "name": "D12",
+        "functions": [
+          {
+            "name": "SPI CIPO / MISO",
+            "group": "SPI",
+            "signal": "MISO",
+            "evidence": "arduino-nano-classic-core"
+          }
+        ],
+        "evidence": [
+          "arduino-nano-classic-headers",
+          "arduino-nano-classic-core"
+        ],
+        "position": {
+          "x": 540,
+          "y": 110,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PB4",
+        "arduinoPin": 12,
+        "mcuPort": "PB4",
+        "noteKey": "arduinoGpioNote",
+        "sharedWith": [
+          "ICSP.1"
+        ]
+      },
+      {
+        "number": 17,
+        "physicalLabel": "R.2",
+        "connector": "R",
+        "connectorPin": 2,
+        "name": "D11",
+        "functions": [
+          {
+            "name": "SPI COPI / MOSI",
+            "group": "SPI",
+            "signal": "MOSI",
+            "evidence": "arduino-nano-classic-core"
+          },
+          {
+            "name": "PWM OC2A",
+            "group": "PWM",
+            "signal": "OC2A",
+            "evidence": "arduino-nano-classic-core"
+          }
+        ],
+        "evidence": [
+          "arduino-nano-classic-headers",
+          "arduino-nano-classic-core"
+        ],
+        "position": {
+          "x": 540,
+          "y": 138,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PB3",
+        "arduinoPin": 11,
+        "mcuPort": "PB3",
+        "noteKey": "arduinoGpioNote",
+        "sharedWith": [
+          "ICSP.4"
+        ]
+      },
+      {
+        "number": 18,
+        "physicalLabel": "R.3",
+        "connector": "R",
+        "connectorPin": 3,
+        "name": "D10",
+        "functions": [
+          {
+            "name": "SPI SS",
+            "group": "SPI",
+            "signal": "SS",
+            "evidence": "arduino-nano-classic-core"
+          },
+          {
+            "name": "PWM OC1B",
+            "group": "PWM",
+            "signal": "OC1B",
+            "evidence": "arduino-nano-classic-core"
+          }
+        ],
+        "evidence": [
+          "arduino-nano-classic-headers",
+          "arduino-nano-classic-core"
+        ],
+        "position": {
+          "x": 540,
+          "y": 166,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PB2",
+        "arduinoPin": 10,
+        "mcuPort": "PB2",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 19,
+        "physicalLabel": "R.4",
+        "connector": "R",
+        "connectorPin": 4,
+        "name": "D9",
+        "functions": [
+          {
+            "name": "PWM OC1A",
+            "group": "PWM",
+            "signal": "OC1A",
+            "evidence": "arduino-nano-classic-core"
+          }
+        ],
+        "evidence": [
+          "arduino-nano-classic-headers",
+          "arduino-nano-classic-core"
+        ],
+        "position": {
+          "x": 540,
+          "y": 194,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PB1",
+        "arduinoPin": 9,
+        "mcuPort": "PB1",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 20,
+        "physicalLabel": "R.5",
+        "connector": "R",
+        "connectorPin": 5,
+        "name": "D8",
+        "functions": [],
+        "evidence": [
+          "arduino-nano-classic-headers",
+          "arduino-nano-classic-core"
+        ],
+        "position": {
+          "x": 540,
+          "y": 222,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PB0",
+        "arduinoPin": 8,
+        "mcuPort": "PB0",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 21,
+        "physicalLabel": "R.6",
+        "connector": "R",
+        "connectorPin": 6,
+        "name": "D7",
+        "functions": [],
+        "evidence": [
+          "arduino-nano-classic-headers",
+          "arduino-nano-classic-core"
+        ],
+        "position": {
+          "x": 540,
+          "y": 250,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PD7",
+        "arduinoPin": 7,
+        "mcuPort": "PD7",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 22,
+        "physicalLabel": "R.7",
+        "connector": "R",
+        "connectorPin": 7,
+        "name": "D6",
+        "functions": [
+          {
+            "name": "PWM OC0A",
+            "group": "PWM",
+            "signal": "OC0A",
+            "evidence": "arduino-nano-classic-core"
+          }
+        ],
+        "evidence": [
+          "arduino-nano-classic-headers",
+          "arduino-nano-classic-core"
+        ],
+        "position": {
+          "x": 540,
+          "y": 278,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PD6",
+        "arduinoPin": 6,
+        "mcuPort": "PD6",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 23,
+        "physicalLabel": "R.8",
+        "connector": "R",
+        "connectorPin": 8,
+        "name": "D5",
+        "functions": [
+          {
+            "name": "PWM OC0B",
+            "group": "PWM",
+            "signal": "OC0B",
+            "evidence": "arduino-nano-classic-core"
+          }
+        ],
+        "evidence": [
+          "arduino-nano-classic-headers",
+          "arduino-nano-classic-core"
+        ],
+        "position": {
+          "x": 540,
+          "y": 306,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PD5",
+        "arduinoPin": 5,
+        "mcuPort": "PD5",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 24,
+        "physicalLabel": "R.9",
+        "connector": "R",
+        "connectorPin": 9,
+        "name": "D4",
+        "functions": [],
+        "evidence": [
+          "arduino-nano-classic-headers",
+          "arduino-nano-classic-core"
+        ],
+        "position": {
+          "x": 540,
+          "y": 334,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PD4",
+        "arduinoPin": 4,
+        "mcuPort": "PD4",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 25,
+        "physicalLabel": "R.10",
+        "connector": "R",
+        "connectorPin": 10,
+        "name": "D3",
+        "functions": [
+          {
+            "name": "PWM OC2B",
+            "group": "PWM",
+            "signal": "OC2B",
+            "evidence": "arduino-nano-classic-core"
+          },
+          {
+            "name": "INT1",
+            "group": "IRQ",
+            "signal": "INT1",
+            "evidence": "arduino-nano-classic-signals"
+          }
+        ],
+        "evidence": [
+          "arduino-nano-classic-headers",
+          "arduino-nano-classic-core"
+        ],
+        "position": {
+          "x": 540,
+          "y": 362,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PD3",
+        "arduinoPin": 3,
+        "mcuPort": "PD3",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 26,
+        "physicalLabel": "R.11",
+        "connector": "R",
+        "connectorPin": 11,
+        "name": "D2",
+        "functions": [
+          {
+            "name": "INT0",
+            "group": "IRQ",
+            "signal": "INT0",
+            "evidence": "arduino-nano-classic-signals"
+          }
+        ],
+        "evidence": [
+          "arduino-nano-classic-headers",
+          "arduino-nano-classic-core"
+        ],
+        "position": {
+          "x": 540,
+          "y": 390,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PD2",
+        "arduinoPin": 2,
+        "mcuPort": "PD2",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 27,
+        "physicalLabel": "R.12",
+        "connector": "R",
+        "connectorPin": 12,
+        "name": "GND",
+        "functions": [],
+        "evidence": [
+          "arduino-nano-classic-headers"
+        ],
+        "position": {
+          "x": 540,
+          "y": 418,
+          "side": "right"
+        },
+        "type": "GND",
+        "net": "GND"
+      },
+      {
+        "number": 28,
+        "physicalLabel": "R.13",
+        "connector": "R",
+        "connectorPin": 13,
+        "name": "RESET",
+        "functions": [],
+        "evidence": [
+          "arduino-nano-classic-headers"
+        ],
+        "position": {
+          "x": 540,
+          "y": 446,
+          "side": "right"
+        },
+        "type": "SYSTEM",
+        "net": "RESET",
+        "noteKey": "arduinoResetNote",
+        "sharedWith": [
+          "L.13",
+          "ICSP.5"
+        ]
+      },
+      {
+        "number": 29,
+        "physicalLabel": "R.14",
+        "connector": "R",
+        "connectorPin": 14,
+        "name": "D0",
+        "functions": [
+          {
+            "name": "UART0 RX",
+            "group": "UART",
+            "signal": "RXD",
+            "evidence": "arduino-nano-classic-signals"
+          }
+        ],
+        "evidence": [
+          "arduino-nano-classic-headers",
+          "arduino-nano-classic-core"
+        ],
+        "position": {
+          "x": 540,
+          "y": 474,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PD0",
+        "arduinoPin": 0,
+        "mcuPort": "PD0",
+        "noteKey": "arduinoSerialNote"
+      },
+      {
+        "number": 30,
+        "physicalLabel": "R.15",
+        "connector": "R",
+        "connectorPin": 15,
+        "name": "D1",
+        "functions": [
+          {
+            "name": "UART0 TX",
+            "group": "UART",
+            "signal": "TXD",
+            "evidence": "arduino-nano-classic-signals"
+          }
+        ],
+        "evidence": [
+          "arduino-nano-classic-headers",
+          "arduino-nano-classic-core"
+        ],
+        "position": {
+          "x": 540,
+          "y": 502,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PD1",
+        "arduinoPin": 1,
+        "mcuPort": "PD1",
+        "noteKey": "arduinoSerialNote"
+      },
+      {
+        "number": 31,
+        "physicalLabel": "ICSP.2",
+        "connector": "ICSP",
+        "connectorPin": 2,
+        "name": "5V",
+        "functions": [],
+        "evidence": [
+          "arduino-nano-classic-icsp"
+        ],
+        "position": {
+          "x": 342,
+          "y": 600,
+          "side": "right",
+          "compact": true,
+          "padWidth": 62
+        },
+        "type": "POWER",
+        "net": "5V"
+      },
+      {
+        "number": 32,
+        "physicalLabel": "ICSP.4",
+        "connector": "ICSP",
+        "connectorPin": 4,
+        "name": "COPI",
+        "functions": [
+          {
+            "name": "SPI COPI / MOSI",
+            "group": "SPI",
+            "signal": "MOSI",
+            "evidence": "arduino-nano-classic-core"
+          },
+          {
+            "name": "PWM OC2A",
+            "group": "PWM",
+            "signal": "OC2A",
+            "evidence": "arduino-nano-classic-core"
+          }
+        ],
+        "evidence": [
+          "arduino-nano-classic-icsp",
+          "arduino-nano-classic-core"
+        ],
+        "position": {
+          "x": 410,
+          "y": 600,
+          "side": "right",
+          "compact": true,
+          "padWidth": 62
+        },
+        "type": "GPIO",
+        "net": "PB3",
+        "arduinoPin": 11,
+        "mcuPort": "PB3",
+        "noteKey": "arduinoGpioNote",
+        "sharedWith": [
+          "R.2"
+        ]
+      },
+      {
+        "number": 33,
+        "physicalLabel": "ICSP.6",
+        "connector": "ICSP",
+        "connectorPin": 6,
+        "name": "GND",
+        "functions": [],
+        "evidence": [
+          "arduino-nano-classic-icsp"
+        ],
+        "position": {
+          "x": 478,
+          "y": 600,
+          "side": "right",
+          "compact": true,
+          "padWidth": 62
+        },
+        "type": "GND",
+        "net": "GND"
+      },
+      {
+        "number": 34,
+        "physicalLabel": "ICSP.1",
+        "connector": "ICSP",
+        "connectorPin": 1,
+        "name": "CIPO",
+        "functions": [
+          {
+            "name": "SPI CIPO / MISO",
+            "group": "SPI",
+            "signal": "MISO",
+            "evidence": "arduino-nano-classic-core"
+          }
+        ],
+        "evidence": [
+          "arduino-nano-classic-icsp",
+          "arduino-nano-classic-core"
+        ],
+        "position": {
+          "x": 342,
+          "y": 660,
+          "side": "right",
+          "compact": true,
+          "padWidth": 62
+        },
+        "type": "GPIO",
+        "net": "PB4",
+        "arduinoPin": 12,
+        "mcuPort": "PB4",
+        "noteKey": "arduinoGpioNote",
+        "sharedWith": [
+          "R.1"
+        ]
+      },
+      {
+        "number": 35,
+        "physicalLabel": "ICSP.3",
+        "connector": "ICSP",
+        "connectorPin": 3,
+        "name": "SCK",
+        "functions": [
+          {
+            "name": "SPI SCK",
+            "group": "SPI",
+            "signal": "SCK",
+            "evidence": "arduino-nano-classic-core"
+          }
+        ],
+        "evidence": [
+          "arduino-nano-classic-icsp",
+          "arduino-nano-classic-core"
+        ],
+        "position": {
+          "x": 410,
+          "y": 660,
+          "side": "right",
+          "compact": true,
+          "padWidth": 62
+        },
+        "type": "GPIO",
+        "net": "PB5",
+        "arduinoPin": 13,
+        "mcuPort": "PB5",
+        "noteKey": "arduinoLedNote",
+        "sharedWith": [
+          "L.1"
+        ]
+      },
+      {
+        "number": 36,
+        "physicalLabel": "ICSP.5",
+        "connector": "ICSP",
+        "connectorPin": 5,
+        "name": "RESET",
+        "functions": [],
+        "evidence": [
+          "arduino-nano-classic-icsp"
+        ],
+        "position": {
+          "x": 478,
+          "y": 660,
+          "side": "right",
+          "compact": true,
+          "padWidth": 62
+        },
+        "type": "SYSTEM",
+        "net": "RESET",
+        "noteKey": "arduinoResetNote",
+        "sharedWith": [
+          "L.13",
+          "R.13"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "arduino-mega-2560",
+    "name": "Arduino Mega 2560 Rev3",
+    "shortName": "Mega 2560 Rev3",
+    "family": "Arduino AVR",
+    "subtitle": "ATmega2560 · 16 MHz · 5 V I/O",
+    "layout": "custom",
+    "diagram": {
+      "width": 1200,
+      "height": 1160,
+      "artwork": "assets/boards/arduino-mega-2560.svg",
+      "minWidth": 1000
+    },
+    "orientation": "usb",
+    "packagePins": 92,
+    "gpioCount": 75,
+    "uniqueGPIOCount": 70,
+    "voltage": "5 V I/O",
+    "mcu": "ATmega2560",
+    "processor": "8-bit AVR",
+    "clock": "16 MHz",
+    "compatibleKey": "arduino-mega-2560Compatible",
+    "scopeKey": "arduino-mega-2560Scope",
+    "verifiedOn": "2026-11-04",
+    "source": "https://docs.arduino.cc/resources/pinouts/A000067-full-pinout.pdf",
+    "datasheet": "https://docs.arduino.cc/resources/datasheets/A000067-datasheet.pdf",
+    "pins": [
+      {
+        "number": 1,
+        "physicalLabel": "PWR.1",
+        "connector": "PWR",
+        "connectorPin": 1,
+        "name": "NC",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables"
+        ],
+        "position": {
+          "x": 300,
+          "y": 220,
+          "side": "left"
+        },
+        "type": "SYSTEM",
+        "net": "NC",
+        "noteKey": "arduinoNcNote",
+        "reserved": true
+      },
+      {
+        "number": 2,
+        "physicalLabel": "PWR.2",
+        "connector": "PWR",
+        "connectorPin": 2,
+        "name": "IOREF",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables"
+        ],
+        "position": {
+          "x": 300,
+          "y": 246,
+          "side": "left"
+        },
+        "type": "POWER",
+        "net": "IOREF",
+        "noteKey": "arduinoIorefNote"
+      },
+      {
+        "number": 3,
+        "physicalLabel": "PWR.3",
+        "connector": "PWR",
+        "connectorPin": 3,
+        "name": "RESET",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables"
+        ],
+        "position": {
+          "x": 300,
+          "y": 272,
+          "side": "left"
+        },
+        "type": "SYSTEM",
+        "net": "RESET",
+        "noteKey": "arduinoResetNote",
+        "sharedWith": [
+          "ICSP.5"
+        ]
+      },
+      {
+        "number": 4,
+        "physicalLabel": "PWR.4",
+        "connector": "PWR",
+        "connectorPin": 4,
+        "name": "3V3",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables"
+        ],
+        "position": {
+          "x": 300,
+          "y": 298,
+          "side": "left"
+        },
+        "type": "POWER",
+        "net": "3V3"
+      },
+      {
+        "number": 5,
+        "physicalLabel": "PWR.5",
+        "connector": "PWR",
+        "connectorPin": 5,
+        "name": "5V",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables"
+        ],
+        "position": {
+          "x": 300,
+          "y": 324,
+          "side": "left"
+        },
+        "type": "POWER",
+        "net": "5V"
+      },
+      {
+        "number": 6,
+        "physicalLabel": "PWR.6",
+        "connector": "PWR",
+        "connectorPin": 6,
+        "name": "GND",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables"
+        ],
+        "position": {
+          "x": 300,
+          "y": 350,
+          "side": "left"
+        },
+        "type": "GND",
+        "net": "GND"
+      },
+      {
+        "number": 7,
+        "physicalLabel": "PWR.7",
+        "connector": "PWR",
+        "connectorPin": 7,
+        "name": "GND",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables"
+        ],
+        "position": {
+          "x": 300,
+          "y": 376,
+          "side": "left"
+        },
+        "type": "GND",
+        "net": "GND"
+      },
+      {
+        "number": 8,
+        "physicalLabel": "PWR.8",
+        "connector": "PWR",
+        "connectorPin": 8,
+        "name": "VIN",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables"
+        ],
+        "position": {
+          "x": 300,
+          "y": 402,
+          "side": "left"
+        },
+        "type": "POWER",
+        "net": "VIN",
+        "noteKey": "arduinoVinNote"
+      },
+      {
+        "number": 9,
+        "physicalLabel": "ANALOG.1",
+        "connector": "ANALOG",
+        "connectorPin": 1,
+        "name": "A0",
+        "functions": [
+          {
+            "name": "ADC0",
+            "group": "ADC",
+            "signal": "ADC0",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 300,
+          "y": 450,
+          "side": "left"
+        },
+        "type": "GPIO",
+        "net": "PF0",
+        "arduinoPin": 54,
+        "mcuPort": "PF0",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 10,
+        "physicalLabel": "ANALOG.2",
+        "connector": "ANALOG",
+        "connectorPin": 2,
+        "name": "A1",
+        "functions": [
+          {
+            "name": "ADC1",
+            "group": "ADC",
+            "signal": "ADC1",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 300,
+          "y": 476,
+          "side": "left"
+        },
+        "type": "GPIO",
+        "net": "PF1",
+        "arduinoPin": 55,
+        "mcuPort": "PF1",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 11,
+        "physicalLabel": "ANALOG.3",
+        "connector": "ANALOG",
+        "connectorPin": 3,
+        "name": "A2",
+        "functions": [
+          {
+            "name": "ADC2",
+            "group": "ADC",
+            "signal": "ADC2",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 300,
+          "y": 502,
+          "side": "left"
+        },
+        "type": "GPIO",
+        "net": "PF2",
+        "arduinoPin": 56,
+        "mcuPort": "PF2",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 12,
+        "physicalLabel": "ANALOG.4",
+        "connector": "ANALOG",
+        "connectorPin": 4,
+        "name": "A3",
+        "functions": [
+          {
+            "name": "ADC3",
+            "group": "ADC",
+            "signal": "ADC3",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 300,
+          "y": 528,
+          "side": "left"
+        },
+        "type": "GPIO",
+        "net": "PF3",
+        "arduinoPin": 57,
+        "mcuPort": "PF3",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 13,
+        "physicalLabel": "ANALOG.5",
+        "connector": "ANALOG",
+        "connectorPin": 5,
+        "name": "A4",
+        "functions": [
+          {
+            "name": "ADC4",
+            "group": "ADC",
+            "signal": "ADC4",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 300,
+          "y": 554,
+          "side": "left"
+        },
+        "type": "GPIO",
+        "net": "PF4",
+        "arduinoPin": 58,
+        "mcuPort": "PF4",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 14,
+        "physicalLabel": "ANALOG.6",
+        "connector": "ANALOG",
+        "connectorPin": 6,
+        "name": "A5",
+        "functions": [
+          {
+            "name": "ADC5",
+            "group": "ADC",
+            "signal": "ADC5",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 300,
+          "y": 580,
+          "side": "left"
+        },
+        "type": "GPIO",
+        "net": "PF5",
+        "arduinoPin": 59,
+        "mcuPort": "PF5",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 15,
+        "physicalLabel": "ANALOG.7",
+        "connector": "ANALOG",
+        "connectorPin": 7,
+        "name": "A6",
+        "functions": [
+          {
+            "name": "ADC6",
+            "group": "ADC",
+            "signal": "ADC6",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 300,
+          "y": 606,
+          "side": "left"
+        },
+        "type": "GPIO",
+        "net": "PF6",
+        "arduinoPin": 60,
+        "mcuPort": "PF6",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 16,
+        "physicalLabel": "ANALOG.8",
+        "connector": "ANALOG",
+        "connectorPin": 8,
+        "name": "A7",
+        "functions": [
+          {
+            "name": "ADC7",
+            "group": "ADC",
+            "signal": "ADC7",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 300,
+          "y": 632,
+          "side": "left"
+        },
+        "type": "GPIO",
+        "net": "PF7",
+        "arduinoPin": 61,
+        "mcuPort": "PF7",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 17,
+        "physicalLabel": "ANALOG.9",
+        "connector": "ANALOG",
+        "connectorPin": 9,
+        "name": "A8",
+        "functions": [
+          {
+            "name": "ADC8",
+            "group": "ADC",
+            "signal": "ADC8",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 300,
+          "y": 682,
+          "side": "left"
+        },
+        "type": "GPIO",
+        "net": "PK0",
+        "arduinoPin": 62,
+        "mcuPort": "PK0",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 18,
+        "physicalLabel": "ANALOG.10",
+        "connector": "ANALOG",
+        "connectorPin": 10,
+        "name": "A9",
+        "functions": [
+          {
+            "name": "ADC9",
+            "group": "ADC",
+            "signal": "ADC9",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 300,
+          "y": 708,
+          "side": "left"
+        },
+        "type": "GPIO",
+        "net": "PK1",
+        "arduinoPin": 63,
+        "mcuPort": "PK1",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 19,
+        "physicalLabel": "ANALOG.11",
+        "connector": "ANALOG",
+        "connectorPin": 11,
+        "name": "A10",
+        "functions": [
+          {
+            "name": "ADC10",
+            "group": "ADC",
+            "signal": "ADC10",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 300,
+          "y": 734,
+          "side": "left"
+        },
+        "type": "GPIO",
+        "net": "PK2",
+        "arduinoPin": 64,
+        "mcuPort": "PK2",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 20,
+        "physicalLabel": "ANALOG.12",
+        "connector": "ANALOG",
+        "connectorPin": 12,
+        "name": "A11",
+        "functions": [
+          {
+            "name": "ADC11",
+            "group": "ADC",
+            "signal": "ADC11",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 300,
+          "y": 760,
+          "side": "left"
+        },
+        "type": "GPIO",
+        "net": "PK3",
+        "arduinoPin": 65,
+        "mcuPort": "PK3",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 21,
+        "physicalLabel": "ANALOG.13",
+        "connector": "ANALOG",
+        "connectorPin": 13,
+        "name": "A12",
+        "functions": [
+          {
+            "name": "ADC12",
+            "group": "ADC",
+            "signal": "ADC12",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 300,
+          "y": 786,
+          "side": "left"
+        },
+        "type": "GPIO",
+        "net": "PK4",
+        "arduinoPin": 66,
+        "mcuPort": "PK4",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 22,
+        "physicalLabel": "ANALOG.14",
+        "connector": "ANALOG",
+        "connectorPin": 14,
+        "name": "A13",
+        "functions": [
+          {
+            "name": "ADC13",
+            "group": "ADC",
+            "signal": "ADC13",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 300,
+          "y": 812,
+          "side": "left"
+        },
+        "type": "GPIO",
+        "net": "PK5",
+        "arduinoPin": 67,
+        "mcuPort": "PK5",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 23,
+        "physicalLabel": "ANALOG.15",
+        "connector": "ANALOG",
+        "connectorPin": 15,
+        "name": "A14",
+        "functions": [
+          {
+            "name": "ADC14",
+            "group": "ADC",
+            "signal": "ADC14",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 300,
+          "y": 838,
+          "side": "left"
+        },
+        "type": "GPIO",
+        "net": "PK6",
+        "arduinoPin": 68,
+        "mcuPort": "PK6",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 24,
+        "physicalLabel": "ANALOG.16",
+        "connector": "ANALOG",
+        "connectorPin": 16,
+        "name": "A15",
+        "functions": [
+          {
+            "name": "ADC15",
+            "group": "ADC",
+            "signal": "ADC15",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 300,
+          "y": 864,
+          "side": "left"
+        },
+        "type": "GPIO",
+        "net": "PK7",
+        "arduinoPin": 69,
+        "mcuPort": "PK7",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 25,
+        "physicalLabel": "DIGITAL.1",
+        "connector": "DIGITAL",
+        "connectorPin": 1,
+        "name": "SCL",
+        "functions": [
+          {
+            "name": "I2C SCL",
+            "group": "I2C",
+            "signal": "SCL",
+            "evidence": "arduino-mega-2560-core"
+          },
+          {
+            "name": "INT0",
+            "group": "IRQ",
+            "signal": "INT0",
+            "evidence": "arduino-mega-2560-signals"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 900,
+          "y": 120,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PD0",
+        "arduinoPin": 21,
+        "mcuPort": "PD0",
+        "noteKey": "arduinoGpioNote",
+        "sharedWith": [
+          "DIGITAL.26"
+        ]
+      },
+      {
+        "number": 26,
+        "physicalLabel": "DIGITAL.2",
+        "connector": "DIGITAL",
+        "connectorPin": 2,
+        "name": "SDA",
+        "functions": [
+          {
+            "name": "I2C SDA",
+            "group": "I2C",
+            "signal": "SDA",
+            "evidence": "arduino-mega-2560-core"
+          },
+          {
+            "name": "INT1",
+            "group": "IRQ",
+            "signal": "INT1",
+            "evidence": "arduino-mega-2560-signals"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 900,
+          "y": 146,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PD1",
+        "arduinoPin": 20,
+        "mcuPort": "PD1",
+        "noteKey": "arduinoGpioNote",
+        "sharedWith": [
+          "DIGITAL.25"
+        ]
+      },
+      {
+        "number": 27,
+        "physicalLabel": "DIGITAL.3",
+        "connector": "DIGITAL",
+        "connectorPin": 3,
+        "name": "AREF",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables"
+        ],
+        "position": {
+          "x": 900,
+          "y": 172,
+          "side": "right"
+        },
+        "type": "SYSTEM",
+        "net": "AREF",
+        "noteKey": "arduinoArefNote"
+      },
+      {
+        "number": 28,
+        "physicalLabel": "DIGITAL.4",
+        "connector": "DIGITAL",
+        "connectorPin": 4,
+        "name": "GND",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables"
+        ],
+        "position": {
+          "x": 900,
+          "y": 198,
+          "side": "right"
+        },
+        "type": "GND",
+        "net": "GND"
+      },
+      {
+        "number": 29,
+        "physicalLabel": "DIGITAL.5",
+        "connector": "DIGITAL",
+        "connectorPin": 5,
+        "name": "D13",
+        "functions": [
+          {
+            "name": "PWM OC0A",
+            "group": "PWM",
+            "signal": "OC0A",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 900,
+          "y": 224,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PB7",
+        "arduinoPin": 13,
+        "mcuPort": "PB7",
+        "noteKey": "arduinoLedNote"
+      },
+      {
+        "number": 30,
+        "physicalLabel": "DIGITAL.6",
+        "connector": "DIGITAL",
+        "connectorPin": 6,
+        "name": "D12",
+        "functions": [
+          {
+            "name": "PWM OC1B",
+            "group": "PWM",
+            "signal": "OC1B",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 900,
+          "y": 250,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PB6",
+        "arduinoPin": 12,
+        "mcuPort": "PB6",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 31,
+        "physicalLabel": "DIGITAL.7",
+        "connector": "DIGITAL",
+        "connectorPin": 7,
+        "name": "D11",
+        "functions": [
+          {
+            "name": "PWM OC1A",
+            "group": "PWM",
+            "signal": "OC1A",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 900,
+          "y": 276,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PB5",
+        "arduinoPin": 11,
+        "mcuPort": "PB5",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 32,
+        "physicalLabel": "DIGITAL.8",
+        "connector": "DIGITAL",
+        "connectorPin": 8,
+        "name": "D10",
+        "functions": [
+          {
+            "name": "PWM OC2A",
+            "group": "PWM",
+            "signal": "OC2A",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 900,
+          "y": 302,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PB4",
+        "arduinoPin": 10,
+        "mcuPort": "PB4",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 33,
+        "physicalLabel": "DIGITAL.9",
+        "connector": "DIGITAL",
+        "connectorPin": 9,
+        "name": "D9",
+        "functions": [
+          {
+            "name": "PWM OC2B",
+            "group": "PWM",
+            "signal": "OC2B",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 900,
+          "y": 328,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PH6",
+        "arduinoPin": 9,
+        "mcuPort": "PH6",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 34,
+        "physicalLabel": "DIGITAL.10",
+        "connector": "DIGITAL",
+        "connectorPin": 10,
+        "name": "D8",
+        "functions": [
+          {
+            "name": "PWM OC4C",
+            "group": "PWM",
+            "signal": "OC4C",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 900,
+          "y": 354,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PH5",
+        "arduinoPin": 8,
+        "mcuPort": "PH5",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 35,
+        "physicalLabel": "DIGITAL.11",
+        "connector": "DIGITAL",
+        "connectorPin": 11,
+        "name": "D7",
+        "functions": [
+          {
+            "name": "PWM OC4B",
+            "group": "PWM",
+            "signal": "OC4B",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 900,
+          "y": 400,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PH4",
+        "arduinoPin": 7,
+        "mcuPort": "PH4",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 36,
+        "physicalLabel": "DIGITAL.12",
+        "connector": "DIGITAL",
+        "connectorPin": 12,
+        "name": "D6",
+        "functions": [
+          {
+            "name": "PWM OC4A",
+            "group": "PWM",
+            "signal": "OC4A",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 900,
+          "y": 426,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PH3",
+        "arduinoPin": 6,
+        "mcuPort": "PH3",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 37,
+        "physicalLabel": "DIGITAL.13",
+        "connector": "DIGITAL",
+        "connectorPin": 13,
+        "name": "D5",
+        "functions": [
+          {
+            "name": "PWM OC3A",
+            "group": "PWM",
+            "signal": "OC3A",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 900,
+          "y": 452,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PE3",
+        "arduinoPin": 5,
+        "mcuPort": "PE3",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 38,
+        "physicalLabel": "DIGITAL.14",
+        "connector": "DIGITAL",
+        "connectorPin": 14,
+        "name": "D4",
+        "functions": [
+          {
+            "name": "PWM OC0B",
+            "group": "PWM",
+            "signal": "OC0B",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 900,
+          "y": 478,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PG5",
+        "arduinoPin": 4,
+        "mcuPort": "PG5",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 39,
+        "physicalLabel": "DIGITAL.15",
+        "connector": "DIGITAL",
+        "connectorPin": 15,
+        "name": "D3",
+        "functions": [
+          {
+            "name": "PWM OC3C",
+            "group": "PWM",
+            "signal": "OC3C",
+            "evidence": "arduino-mega-2560-core"
+          },
+          {
+            "name": "INT5",
+            "group": "IRQ",
+            "signal": "INT5",
+            "evidence": "arduino-mega-2560-signals"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 900,
+          "y": 504,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PE5",
+        "arduinoPin": 3,
+        "mcuPort": "PE5",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 40,
+        "physicalLabel": "DIGITAL.16",
+        "connector": "DIGITAL",
+        "connectorPin": 16,
+        "name": "D2",
+        "functions": [
+          {
+            "name": "PWM OC3B",
+            "group": "PWM",
+            "signal": "OC3B",
+            "evidence": "arduino-mega-2560-core"
+          },
+          {
+            "name": "INT4",
+            "group": "IRQ",
+            "signal": "INT4",
+            "evidence": "arduino-mega-2560-signals"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 900,
+          "y": 530,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PE4",
+        "arduinoPin": 2,
+        "mcuPort": "PE4",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 41,
+        "physicalLabel": "DIGITAL.17",
+        "connector": "DIGITAL",
+        "connectorPin": 17,
+        "name": "D1",
+        "functions": [
+          {
+            "name": "UART0 TX",
+            "group": "UART",
+            "signal": "TXD0",
+            "evidence": "arduino-mega-2560-signals"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 900,
+          "y": 556,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PE1",
+        "arduinoPin": 1,
+        "mcuPort": "PE1",
+        "noteKey": "arduinoSerialNote"
+      },
+      {
+        "number": 42,
+        "physicalLabel": "DIGITAL.18",
+        "connector": "DIGITAL",
+        "connectorPin": 18,
+        "name": "D0",
+        "functions": [
+          {
+            "name": "UART0 RX",
+            "group": "UART",
+            "signal": "RXD0",
+            "evidence": "arduino-mega-2560-signals"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 900,
+          "y": 582,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PE0",
+        "arduinoPin": 0,
+        "mcuPort": "PE0",
+        "noteKey": "arduinoSerialNote"
+      },
+      {
+        "number": 43,
+        "physicalLabel": "DIGITAL.19",
+        "connector": "DIGITAL",
+        "connectorPin": 19,
+        "name": "D14",
+        "functions": [
+          {
+            "name": "UART3 TX",
+            "group": "UART",
+            "signal": "TXD3",
+            "evidence": "arduino-mega-2560-signals"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 900,
+          "y": 628,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PJ1",
+        "arduinoPin": 14,
+        "mcuPort": "PJ1",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 44,
+        "physicalLabel": "DIGITAL.20",
+        "connector": "DIGITAL",
+        "connectorPin": 20,
+        "name": "D15",
+        "functions": [
+          {
+            "name": "UART3 RX",
+            "group": "UART",
+            "signal": "RXD3",
+            "evidence": "arduino-mega-2560-signals"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 900,
+          "y": 654,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PJ0",
+        "arduinoPin": 15,
+        "mcuPort": "PJ0",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 45,
+        "physicalLabel": "DIGITAL.21",
+        "connector": "DIGITAL",
+        "connectorPin": 21,
+        "name": "D16",
+        "functions": [
+          {
+            "name": "UART2 TX",
+            "group": "UART",
+            "signal": "TXD2",
+            "evidence": "arduino-mega-2560-signals"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 900,
+          "y": 680,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PH1",
+        "arduinoPin": 16,
+        "mcuPort": "PH1",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 46,
+        "physicalLabel": "DIGITAL.22",
+        "connector": "DIGITAL",
+        "connectorPin": 22,
+        "name": "D17",
+        "functions": [
+          {
+            "name": "UART2 RX",
+            "group": "UART",
+            "signal": "RXD2",
+            "evidence": "arduino-mega-2560-signals"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 900,
+          "y": 706,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PH0",
+        "arduinoPin": 17,
+        "mcuPort": "PH0",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 47,
+        "physicalLabel": "DIGITAL.23",
+        "connector": "DIGITAL",
+        "connectorPin": 23,
+        "name": "D18",
+        "functions": [
+          {
+            "name": "UART1 TX",
+            "group": "UART",
+            "signal": "TXD1",
+            "evidence": "arduino-mega-2560-signals"
+          },
+          {
+            "name": "INT3",
+            "group": "IRQ",
+            "signal": "INT3",
+            "evidence": "arduino-mega-2560-signals"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 900,
+          "y": 732,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PD3",
+        "arduinoPin": 18,
+        "mcuPort": "PD3",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 48,
+        "physicalLabel": "DIGITAL.24",
+        "connector": "DIGITAL",
+        "connectorPin": 24,
+        "name": "D19",
+        "functions": [
+          {
+            "name": "UART1 RX",
+            "group": "UART",
+            "signal": "RXD1",
+            "evidence": "arduino-mega-2560-signals"
+          },
+          {
+            "name": "INT2",
+            "group": "IRQ",
+            "signal": "INT2",
+            "evidence": "arduino-mega-2560-signals"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 900,
+          "y": 758,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PD2",
+        "arduinoPin": 19,
+        "mcuPort": "PD2",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 49,
+        "physicalLabel": "DIGITAL.25",
+        "connector": "DIGITAL",
+        "connectorPin": 25,
+        "name": "D20",
+        "functions": [
+          {
+            "name": "I2C SDA",
+            "group": "I2C",
+            "signal": "SDA",
+            "evidence": "arduino-mega-2560-core"
+          },
+          {
+            "name": "INT1",
+            "group": "IRQ",
+            "signal": "INT1",
+            "evidence": "arduino-mega-2560-signals"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 900,
+          "y": 784,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PD1",
+        "arduinoPin": 20,
+        "mcuPort": "PD1",
+        "noteKey": "arduinoGpioNote",
+        "sharedWith": [
+          "DIGITAL.2"
+        ]
+      },
+      {
+        "number": 50,
+        "physicalLabel": "DIGITAL.26",
+        "connector": "DIGITAL",
+        "connectorPin": 26,
+        "name": "D21",
+        "functions": [
+          {
+            "name": "I2C SCL",
+            "group": "I2C",
+            "signal": "SCL",
+            "evidence": "arduino-mega-2560-core"
+          },
+          {
+            "name": "INT0",
+            "group": "IRQ",
+            "signal": "INT0",
+            "evidence": "arduino-mega-2560-signals"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-headers",
+          "arduino-mega-2560-connector-tables",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 900,
+          "y": 810,
+          "side": "right"
+        },
+        "type": "GPIO",
+        "net": "PD0",
+        "arduinoPin": 21,
+        "mcuPort": "PD0",
+        "noteKey": "arduinoGpioNote",
+        "sharedWith": [
+          "DIGITAL.1"
+        ]
+      },
+      {
+        "number": 51,
+        "physicalLabel": "END.1",
+        "connector": "END",
+        "connectorPin": 1,
+        "name": "5V",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-end-header"
+        ],
+        "position": {
+          "x": 872,
+          "y": 1035,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "POWER",
+        "net": "5V"
+      },
+      {
+        "number": 52,
+        "physicalLabel": "END.3",
+        "connector": "END",
+        "connectorPin": 3,
+        "name": "D22",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 840,
+          "y": 1035,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PA0",
+        "arduinoPin": 22,
+        "mcuPort": "PA0",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 53,
+        "physicalLabel": "END.5",
+        "connector": "END",
+        "connectorPin": 5,
+        "name": "D24",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 808,
+          "y": 1035,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PA2",
+        "arduinoPin": 24,
+        "mcuPort": "PA2",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 54,
+        "physicalLabel": "END.7",
+        "connector": "END",
+        "connectorPin": 7,
+        "name": "D26",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 776,
+          "y": 1035,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PA4",
+        "arduinoPin": 26,
+        "mcuPort": "PA4",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 55,
+        "physicalLabel": "END.9",
+        "connector": "END",
+        "connectorPin": 9,
+        "name": "D28",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 744,
+          "y": 1035,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PA6",
+        "arduinoPin": 28,
+        "mcuPort": "PA6",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 56,
+        "physicalLabel": "END.11",
+        "connector": "END",
+        "connectorPin": 11,
+        "name": "D30",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 712,
+          "y": 1035,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PC7",
+        "arduinoPin": 30,
+        "mcuPort": "PC7",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 57,
+        "physicalLabel": "END.13",
+        "connector": "END",
+        "connectorPin": 13,
+        "name": "D32",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 680,
+          "y": 1035,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PC5",
+        "arduinoPin": 32,
+        "mcuPort": "PC5",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 58,
+        "physicalLabel": "END.15",
+        "connector": "END",
+        "connectorPin": 15,
+        "name": "D34",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 648,
+          "y": 1035,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PC3",
+        "arduinoPin": 34,
+        "mcuPort": "PC3",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 59,
+        "physicalLabel": "END.17",
+        "connector": "END",
+        "connectorPin": 17,
+        "name": "D36",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 616,
+          "y": 1035,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PC1",
+        "arduinoPin": 36,
+        "mcuPort": "PC1",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 60,
+        "physicalLabel": "END.19",
+        "connector": "END",
+        "connectorPin": 19,
+        "name": "D38",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 584,
+          "y": 1035,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PD7",
+        "arduinoPin": 38,
+        "mcuPort": "PD7",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 61,
+        "physicalLabel": "END.21",
+        "connector": "END",
+        "connectorPin": 21,
+        "name": "D40",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 552,
+          "y": 1035,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PG1",
+        "arduinoPin": 40,
+        "mcuPort": "PG1",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 62,
+        "physicalLabel": "END.23",
+        "connector": "END",
+        "connectorPin": 23,
+        "name": "D42",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 520,
+          "y": 1035,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PL7",
+        "arduinoPin": 42,
+        "mcuPort": "PL7",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 63,
+        "physicalLabel": "END.25",
+        "connector": "END",
+        "connectorPin": 25,
+        "name": "D44",
+        "functions": [
+          {
+            "name": "PWM OC5C",
+            "group": "PWM",
+            "signal": "OC5C",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 488,
+          "y": 1035,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PL5",
+        "arduinoPin": 44,
+        "mcuPort": "PL5",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 64,
+        "physicalLabel": "END.27",
+        "connector": "END",
+        "connectorPin": 27,
+        "name": "D46",
+        "functions": [
+          {
+            "name": "PWM OC5A",
+            "group": "PWM",
+            "signal": "OC5A",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 456,
+          "y": 1035,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PL3",
+        "arduinoPin": 46,
+        "mcuPort": "PL3",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 65,
+        "physicalLabel": "END.29",
+        "connector": "END",
+        "connectorPin": 29,
+        "name": "D48",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 424,
+          "y": 1035,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PL1",
+        "arduinoPin": 48,
+        "mcuPort": "PL1",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 66,
+        "physicalLabel": "END.31",
+        "connector": "END",
+        "connectorPin": 31,
+        "name": "D50",
+        "functions": [
+          {
+            "name": "SPI CIPO / MISO",
+            "group": "SPI",
+            "signal": "MISO",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 392,
+          "y": 1035,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PB3",
+        "arduinoPin": 50,
+        "mcuPort": "PB3",
+        "noteKey": "arduinoGpioNote",
+        "sharedWith": [
+          "ICSP.1"
+        ]
+      },
+      {
+        "number": 67,
+        "physicalLabel": "END.33",
+        "connector": "END",
+        "connectorPin": 33,
+        "name": "D52",
+        "functions": [
+          {
+            "name": "SPI SCK",
+            "group": "SPI",
+            "signal": "SCK",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 360,
+          "y": 1035,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PB1",
+        "arduinoPin": 52,
+        "mcuPort": "PB1",
+        "noteKey": "arduinoGpioNote",
+        "sharedWith": [
+          "ICSP.3"
+        ]
+      },
+      {
+        "number": 68,
+        "physicalLabel": "END.35",
+        "connector": "END",
+        "connectorPin": 35,
+        "name": "GND",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-end-header"
+        ],
+        "position": {
+          "x": 328,
+          "y": 1035,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GND",
+        "net": "GND"
+      },
+      {
+        "number": 69,
+        "physicalLabel": "END.2",
+        "connector": "END",
+        "connectorPin": 2,
+        "name": "5V",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-end-header"
+        ],
+        "position": {
+          "x": 872,
+          "y": 1095,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "POWER",
+        "net": "5V"
+      },
+      {
+        "number": 70,
+        "physicalLabel": "END.4",
+        "connector": "END",
+        "connectorPin": 4,
+        "name": "D23",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 840,
+          "y": 1095,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PA1",
+        "arduinoPin": 23,
+        "mcuPort": "PA1",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 71,
+        "physicalLabel": "END.6",
+        "connector": "END",
+        "connectorPin": 6,
+        "name": "D25",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 808,
+          "y": 1095,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PA3",
+        "arduinoPin": 25,
+        "mcuPort": "PA3",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 72,
+        "physicalLabel": "END.8",
+        "connector": "END",
+        "connectorPin": 8,
+        "name": "D27",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 776,
+          "y": 1095,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PA5",
+        "arduinoPin": 27,
+        "mcuPort": "PA5",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 73,
+        "physicalLabel": "END.10",
+        "connector": "END",
+        "connectorPin": 10,
+        "name": "D29",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 744,
+          "y": 1095,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PA7",
+        "arduinoPin": 29,
+        "mcuPort": "PA7",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 74,
+        "physicalLabel": "END.12",
+        "connector": "END",
+        "connectorPin": 12,
+        "name": "D31",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 712,
+          "y": 1095,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PC6",
+        "arduinoPin": 31,
+        "mcuPort": "PC6",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 75,
+        "physicalLabel": "END.14",
+        "connector": "END",
+        "connectorPin": 14,
+        "name": "D33",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 680,
+          "y": 1095,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PC4",
+        "arduinoPin": 33,
+        "mcuPort": "PC4",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 76,
+        "physicalLabel": "END.16",
+        "connector": "END",
+        "connectorPin": 16,
+        "name": "D35",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 648,
+          "y": 1095,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PC2",
+        "arduinoPin": 35,
+        "mcuPort": "PC2",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 77,
+        "physicalLabel": "END.18",
+        "connector": "END",
+        "connectorPin": 18,
+        "name": "D37",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 616,
+          "y": 1095,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PC0",
+        "arduinoPin": 37,
+        "mcuPort": "PC0",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 78,
+        "physicalLabel": "END.20",
+        "connector": "END",
+        "connectorPin": 20,
+        "name": "D39",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 584,
+          "y": 1095,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PG2",
+        "arduinoPin": 39,
+        "mcuPort": "PG2",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 79,
+        "physicalLabel": "END.22",
+        "connector": "END",
+        "connectorPin": 22,
+        "name": "D41",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 552,
+          "y": 1095,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PG0",
+        "arduinoPin": 41,
+        "mcuPort": "PG0",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 80,
+        "physicalLabel": "END.24",
+        "connector": "END",
+        "connectorPin": 24,
+        "name": "D43",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 520,
+          "y": 1095,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PL6",
+        "arduinoPin": 43,
+        "mcuPort": "PL6",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 81,
+        "physicalLabel": "END.26",
+        "connector": "END",
+        "connectorPin": 26,
+        "name": "D45",
+        "functions": [
+          {
+            "name": "PWM OC5B",
+            "group": "PWM",
+            "signal": "OC5B",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 488,
+          "y": 1095,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PL4",
+        "arduinoPin": 45,
+        "mcuPort": "PL4",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 82,
+        "physicalLabel": "END.28",
+        "connector": "END",
+        "connectorPin": 28,
+        "name": "D47",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 456,
+          "y": 1095,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PL2",
+        "arduinoPin": 47,
+        "mcuPort": "PL2",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 83,
+        "physicalLabel": "END.30",
+        "connector": "END",
+        "connectorPin": 30,
+        "name": "D49",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 424,
+          "y": 1095,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PL0",
+        "arduinoPin": 49,
+        "mcuPort": "PL0",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 84,
+        "physicalLabel": "END.32",
+        "connector": "END",
+        "connectorPin": 32,
+        "name": "D51",
+        "functions": [
+          {
+            "name": "SPI COPI / MOSI",
+            "group": "SPI",
+            "signal": "MOSI",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 392,
+          "y": 1095,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PB2",
+        "arduinoPin": 51,
+        "mcuPort": "PB2",
+        "noteKey": "arduinoGpioNote",
+        "sharedWith": [
+          "ICSP.4"
+        ]
+      },
+      {
+        "number": 85,
+        "physicalLabel": "END.34",
+        "connector": "END",
+        "connectorPin": 34,
+        "name": "D53",
+        "functions": [
+          {
+            "name": "SPI SS",
+            "group": "SPI",
+            "signal": "SS",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-end-header",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 360,
+          "y": 1095,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GPIO",
+        "net": "PB0",
+        "arduinoPin": 53,
+        "mcuPort": "PB0",
+        "noteKey": "arduinoGpioNote"
+      },
+      {
+        "number": 86,
+        "physicalLabel": "END.36",
+        "connector": "END",
+        "connectorPin": 36,
+        "name": "GND",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-end-header"
+        ],
+        "position": {
+          "x": 328,
+          "y": 1095,
+          "side": "right",
+          "compact": true,
+          "padWidth": 30
+        },
+        "type": "GND",
+        "net": "GND"
+      },
+      {
+        "number": 87,
+        "physicalLabel": "ICSP.5",
+        "connector": "ICSP",
+        "connectorPin": 5,
+        "name": "RESET",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-icsp"
+        ],
+        "position": {
+          "x": 532,
+          "y": 875,
+          "side": "right",
+          "compact": true,
+          "padWidth": 62
+        },
+        "type": "SYSTEM",
+        "net": "RESET",
+        "noteKey": "arduinoResetNote",
+        "sharedWith": [
+          "PWR.3"
+        ]
+      },
+      {
+        "number": 88,
+        "physicalLabel": "ICSP.3",
+        "connector": "ICSP",
+        "connectorPin": 3,
+        "name": "SCK",
+        "functions": [
+          {
+            "name": "SPI SCK",
+            "group": "SPI",
+            "signal": "SCK",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-icsp",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 600,
+          "y": 875,
+          "side": "right",
+          "compact": true,
+          "padWidth": 62
+        },
+        "type": "GPIO",
+        "net": "PB1",
+        "arduinoPin": 52,
+        "mcuPort": "PB1",
+        "noteKey": "arduinoGpioNote",
+        "sharedWith": [
+          "END.33"
+        ]
+      },
+      {
+        "number": 89,
+        "physicalLabel": "ICSP.1",
+        "connector": "ICSP",
+        "connectorPin": 1,
+        "name": "CIPO",
+        "functions": [
+          {
+            "name": "SPI CIPO / MISO",
+            "group": "SPI",
+            "signal": "MISO",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-icsp",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 668,
+          "y": 875,
+          "side": "right",
+          "compact": true,
+          "padWidth": 62
+        },
+        "type": "GPIO",
+        "net": "PB3",
+        "arduinoPin": 50,
+        "mcuPort": "PB3",
+        "noteKey": "arduinoGpioNote",
+        "sharedWith": [
+          "END.31"
+        ]
+      },
+      {
+        "number": 90,
+        "physicalLabel": "ICSP.6",
+        "connector": "ICSP",
+        "connectorPin": 6,
+        "name": "GND",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-icsp"
+        ],
+        "position": {
+          "x": 532,
+          "y": 935,
+          "side": "right",
+          "compact": true,
+          "padWidth": 62
+        },
+        "type": "GND",
+        "net": "GND"
+      },
+      {
+        "number": 91,
+        "physicalLabel": "ICSP.4",
+        "connector": "ICSP",
+        "connectorPin": 4,
+        "name": "COPI",
+        "functions": [
+          {
+            "name": "SPI COPI / MOSI",
+            "group": "SPI",
+            "signal": "MOSI",
+            "evidence": "arduino-mega-2560-core"
+          }
+        ],
+        "evidence": [
+          "arduino-mega-2560-icsp",
+          "arduino-mega-2560-core"
+        ],
+        "position": {
+          "x": 600,
+          "y": 935,
+          "side": "right",
+          "compact": true,
+          "padWidth": 62
+        },
+        "type": "GPIO",
+        "net": "PB2",
+        "arduinoPin": 51,
+        "mcuPort": "PB2",
+        "noteKey": "arduinoGpioNote",
+        "sharedWith": [
+          "END.32"
+        ]
+      },
+      {
+        "number": 92,
+        "physicalLabel": "ICSP.2",
+        "connector": "ICSP",
+        "connectorPin": 2,
+        "name": "5V",
+        "functions": [],
+        "evidence": [
+          "arduino-mega-2560-icsp"
+        ],
+        "position": {
+          "x": 668,
+          "y": 935,
+          "side": "right",
+          "compact": true,
+          "padWidth": 62
+        },
+        "type": "POWER",
+        "net": "5V"
+      }
+    ]
+  },
+  {
     "family": "Raspberry Pi",
     "voltage": "1.8–3.3 V I/O",
     "verifiedOn": "2026-11-04",

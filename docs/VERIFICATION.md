@@ -2,7 +2,7 @@
 
 [English](VERIFICATION.md) · [Türkçe](VERIFICATION.tr.md)
 
-Reviewed on **4 November 2026**. The review covers eleven board, header, and chip profiles, **512 physical pin records, and 2,234 function assignments**. Shared physical pins are counted once per profile. The count excludes the app’s generic `GPIO` planning option and the unnumbered QFN center GND pads. Each placement of a signal on a different pin counts separately.
+Reviewed on **4 November 2026**. The review covers fourteen board, header, and chip profiles, **678 physical pin records, and 2,350 function assignments**. Shared physical pins are counted once per profile. The count excludes the app’s generic `GPIO` planning option and the unnumbered QFN center GND pads. Each placement of a signal on a different pin counts separately.
 
 ## Sources by pin map
 
@@ -55,7 +55,7 @@ The verified QFN-60 IOVDD list uses **1,11,20,30,38,45** from the two figures. T
 
 1. `sources/manifest.json` records each source revision, document URL or commit, and SHA-256 hash.
 2. `scripts/verify-official-sources.py` downloads and checks those sources, then rereads the PDF tables. It normalizes whitespace where cells wrap across lines.
-   CI passes `--table-snapshots` to use the recorded ST table extractions in `sources/extracted/`, avoiding ST CDN timeouts. Each extraction is hash-locked and identifies the original locked PDF hash. The same parser rebuilds the STM32 data from either input; the other fourteen sources are downloaded and checked in both modes. The default command rereads the original ST PDFs.
+   CI passes `--table-snapshots` to use the recorded ST table extractions in `sources/extracted/`, avoiding ST CDN timeouts. Each extraction is hash-locked and identifies the original locked PDF hash. The same parser rebuilds the STM32 data from either input; the other twenty-two sources are downloaded and checked in both modes. The default command rereads the original ST PDFs.
 3. The physical pin number, name, type, alternate function, manufacturer signal, and F/ALT selector must match the published record.
 4. Figure-only observations are marked separately. Reusing them during an automated run preserves the prior visual review. A changed hash requires a fresh source review.
 5. [`sources/pin-verification.csv`](../sources/pin-verification.csv) lists each pin and function record. `dist/data/evidence.json` resolves reference IDs to documents, pages, and tables. `dist/data/verification.json` holds the verification totals and source summary.
@@ -65,7 +65,7 @@ The app uses its own SVG schematics. Manufacturer documents are linked from the 
 
 ## Shared layout catalog
 
-The eleven source profiles are presented as seven physical layouts: one Pico family entry, one Raspberry Pi 40-pin header entry, one NVIDIA Jetson Orin Nano J12 entry, the Blue Pill board, its STM32F103C8/CB LQFP48 processor, and the two distinct RP2350 packages. The application checks that grouped profiles agree on pin numbers, names and types before grouping them. A function-reference selector retains the verified processor-specific function tables and evidence. Grouping does not claim that RP2040, RP2350A and BCM2711 have interchangeable alternate functions. Legacy profile IDs remain valid for saved plans and shared links.
+The fourteen source profiles are presented as ten physical layouts: one Pico family entry, one Raspberry Pi 40-pin header entry, one NVIDIA Jetson Orin Nano J12 entry, the Blue Pill board, its STM32F103C8/CB LQFP48 processor, three Arduino AVR boards, and the two distinct RP2350 packages. The application checks that grouped profiles agree on pin numbers, names and types before grouping them. A function-reference selector retains the verified processor-specific function tables and evidence. Grouping does not claim that RP2040, RP2350A and BCM2711 have interchangeable alternate functions. Legacy profile IDs remain valid for saved plans and shared links.
 
 ## NVIDIA Jetson Orin Nano · J12
 
@@ -78,7 +78,7 @@ The source is NVIDIA’s SHA-256-locked **Jetson Orin Nano Developer Kit Carrier
 - Electrical notes cite Table 3-3: 3.3 V signals; direct open-drain I²C on 3/5 and 27/28, with 2.2 kΩ / 1.5 kΩ pull-ups and ±2 mA listed drive; other signal pins use TXB0108 translators with ±20 µA listed weak drive and external pulls greater than 50 kΩ. These are not Raspberry Pi GPIO electrical characteristics.
 - J12 pins 27/28 are I2C0_SDA/SCL and are not given the Raspberry Pi HAT EEPROM reservation. No ADC or unverified numeric mux selectors are added.
 
-The manufacturer PDF is cached for verification and is not distributed in the repository. The complete source set now covers 512 physical pin records and 2,234 function assignments.
+The manufacturer PDF is cached for verification and is not distributed in the repository. The complete source set now covers 678 physical pin records and 2,350 function assignments.
 
 ## STM32F103C8/CB · LQFP48
 
@@ -101,3 +101,15 @@ Blue Pill has no single authoritative manufacturer. Its connector positions use 
 The complete locked source set contains 16 documents: 13 manufacturer documents and 3 community Blue Pill references.
 
 ST source downloads prefer the official `www.st.com.cn` mirror and fall back to `www.st.com`. Both downloads were checked byte-for-byte against the same locked SHA-256 values. Transfer retries are bounded; no source-hash or pin-data check is skipped when a CDN is unavailable.
+
+## Arduino AVR boards
+
+- **UNO R3:** A000066 full pinout (6 October 2022), pages 1/3/4; the board datasheet connector tables on page 10. The two main header groups contribute 32 contacts; main-MCU ICSP contributes 6. There are 20 distinct GPIO nets. JDIGITAL's A4/SD4 and A5/SD5 typos resolve to SDA/A4 and SCL/A5 using the full pinout and AVR core.
+- **Classic Nano:** A000005 full pinout (30 June 2021), pages 1–3. Main-header order and ICSP orientation were visually reviewed; the top-view ICSP rows are 2/4/6 and 1/3/5. There are 30 side contacts, 6 ICSP contacts, 20 independent GPIOs and 8 ADC inputs. The current Nano datasheet has connector numbering errors and misleading A6/A7 GPIO labels, so it is not used as the physical pin source. The official `eightanaloginputs` variant inherits a 20-entry digital port map from `standard`; A6/A7 are ADC-only and have no digital port, pull-up or PWM.
+- **Mega 2560 Rev3:** A000067 full pinout (16 December 2020), pages 1–4; datasheet connector tables on pages 10/11/12/13. Its 86 outer contacts and 6 main-MCU ICSP contacts expose 70 independent GPIOs. With USB at top, the end header's even-GPIO row is nearer USB; its power contacts are at the right and ground contacts at the left. The separately rotated source detail is recorded in `manual-observations.json`. D0/D1 are not Arduino PWM outputs despite the tilde marks in the full pinout. The core confirms 15 PWM outputs on D2–D13 and D44–D46, and SPI on D50–D53.
+
+The official `arduino/ArduinoCore-avr` revision `11b9130371e8447920edb65a75706a6c951e51fc` is locked by commit and per-file hash. The generator parses digital port/bit arrays, timer arrays, analog aliases and SPI/Wire pin constants from `standard` and `mega`, with Nano's `eightanaloginputs` override. UART and hardware INT names are read from the full pinout text and checked against the port map. PWM reflects Arduino's timer mapping, not every possible raw timer output. No invented mux selectors are added. GPIO counts shown in the interface count unique nets; physical-contact match counts still include duplicates.
+
+Only main-MCU ICSP and the main signal/power headers are shown. USB sockets, barrel sockets, USB-bridge ICSP/JP5, test points, jumpers, and bare-processor package maps are outside these board profiles. The drawings are original schematic illustrations, not mechanical layouts. Sources remain linked at each pin. Shared-net assignments are rejected by both the plan action and JSON/share import validation.
+
+`PWR`, `ANALOG`, `DIGITAL`, `L`, `R`, and `END` are Pin Atlas connector-position labels. They do not claim to be manufacturer connector designators or Arduino sketch pin numbers. The numeric ID used in plan files is an internal contact key; details show the Arduino digital number and MCU port separately.

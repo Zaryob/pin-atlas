@@ -1503,6 +1503,194 @@ stm32f103c8t6,46,PB9,GPIO,I2C1_SDA,I2C1_REMAP=1,I2C1_SDA,stm32-lqfp48 | stm32-pi
 stm32f103c8t6,46,PB9,GPIO,CANTX,CAN_REMAP=10,CANTX,stm32-lqfp48 | stm32-pin-table-p33 | stm32-electrical-notes,stm32-pin-table-p33 | stm32-remap-34
 stm32f103c8t6,47,VSS_3,GND,,,,stm32-lqfp48 | stm32-pin-table-p33,
 stm32f103c8t6,48,VDD_3,POWER,,,,stm32-lqfp48 | stm32-pin-table-p33,
+arduino-uno-r3,1,NC,SYSTEM,,,,arduino-uno-r3-headers | arduino-uno-r3-connector-tables,
+arduino-uno-r3,2,IOREF,POWER,,,,arduino-uno-r3-headers | arduino-uno-r3-connector-tables,
+arduino-uno-r3,3,RESET,SYSTEM,,,,arduino-uno-r3-headers | arduino-uno-r3-connector-tables,
+arduino-uno-r3,4,3V3,POWER,,,,arduino-uno-r3-headers | arduino-uno-r3-connector-tables,
+arduino-uno-r3,5,5V,POWER,,,,arduino-uno-r3-headers | arduino-uno-r3-connector-tables,
+arduino-uno-r3,6,GND,GND,,,,arduino-uno-r3-headers | arduino-uno-r3-connector-tables,
+arduino-uno-r3,7,GND,GND,,,,arduino-uno-r3-headers | arduino-uno-r3-connector-tables,
+arduino-uno-r3,8,VIN,POWER,,,,arduino-uno-r3-headers | arduino-uno-r3-connector-tables,
+arduino-uno-r3,9,A0,GPIO,ADC0,,ADC0,arduino-uno-r3-headers | arduino-uno-r3-connector-tables | arduino-uno-r3-core,arduino-uno-r3-core
+arduino-uno-r3,10,A1,GPIO,ADC1,,ADC1,arduino-uno-r3-headers | arduino-uno-r3-connector-tables | arduino-uno-r3-core,arduino-uno-r3-core
+arduino-uno-r3,11,A2,GPIO,ADC2,,ADC2,arduino-uno-r3-headers | arduino-uno-r3-connector-tables | arduino-uno-r3-core,arduino-uno-r3-core
+arduino-uno-r3,12,A3,GPIO,ADC3,,ADC3,arduino-uno-r3-headers | arduino-uno-r3-connector-tables | arduino-uno-r3-core,arduino-uno-r3-core
+arduino-uno-r3,13,A4,GPIO,I2C SDA,,SDA,arduino-uno-r3-headers | arduino-uno-r3-connector-tables | arduino-uno-r3-core,arduino-uno-r3-core
+arduino-uno-r3,13,A4,GPIO,ADC4,,ADC4,arduino-uno-r3-headers | arduino-uno-r3-connector-tables | arduino-uno-r3-core,arduino-uno-r3-core
+arduino-uno-r3,14,A5,GPIO,I2C SCL,,SCL,arduino-uno-r3-headers | arduino-uno-r3-connector-tables | arduino-uno-r3-core,arduino-uno-r3-core
+arduino-uno-r3,14,A5,GPIO,ADC5,,ADC5,arduino-uno-r3-headers | arduino-uno-r3-connector-tables | arduino-uno-r3-core,arduino-uno-r3-core
+arduino-uno-r3,15,D0,GPIO,UART0 RX,,RXD,arduino-uno-r3-headers | arduino-uno-r3-connector-tables | arduino-uno-r3-core,arduino-uno-r3-signals
+arduino-uno-r3,16,D1,GPIO,UART0 TX,,TXD,arduino-uno-r3-headers | arduino-uno-r3-connector-tables | arduino-uno-r3-core,arduino-uno-r3-signals
+arduino-uno-r3,17,D2,GPIO,INT0,,INT0,arduino-uno-r3-headers | arduino-uno-r3-connector-tables | arduino-uno-r3-core,arduino-uno-r3-signals
+arduino-uno-r3,18,D3,GPIO,PWM OC2B,,OC2B,arduino-uno-r3-headers | arduino-uno-r3-connector-tables | arduino-uno-r3-core,arduino-uno-r3-core
+arduino-uno-r3,18,D3,GPIO,INT1,,INT1,arduino-uno-r3-headers | arduino-uno-r3-connector-tables | arduino-uno-r3-core,arduino-uno-r3-signals
+arduino-uno-r3,19,D4,GPIO,,,,arduino-uno-r3-headers | arduino-uno-r3-connector-tables | arduino-uno-r3-core,
+arduino-uno-r3,20,D5,GPIO,PWM OC0B,,OC0B,arduino-uno-r3-headers | arduino-uno-r3-connector-tables | arduino-uno-r3-core,arduino-uno-r3-core
+arduino-uno-r3,21,D6,GPIO,PWM OC0A,,OC0A,arduino-uno-r3-headers | arduino-uno-r3-connector-tables | arduino-uno-r3-core,arduino-uno-r3-core
+arduino-uno-r3,22,D7,GPIO,,,,arduino-uno-r3-headers | arduino-uno-r3-connector-tables | arduino-uno-r3-core,
+arduino-uno-r3,23,D8,GPIO,,,,arduino-uno-r3-headers | arduino-uno-r3-connector-tables | arduino-uno-r3-core,
+arduino-uno-r3,24,D9,GPIO,PWM OC1A,,OC1A,arduino-uno-r3-headers | arduino-uno-r3-connector-tables | arduino-uno-r3-core,arduino-uno-r3-core
+arduino-uno-r3,25,D10,GPIO,SPI SS,,SS,arduino-uno-r3-headers | arduino-uno-r3-connector-tables | arduino-uno-r3-core,arduino-uno-r3-core
+arduino-uno-r3,25,D10,GPIO,PWM OC1B,,OC1B,arduino-uno-r3-headers | arduino-uno-r3-connector-tables | arduino-uno-r3-core,arduino-uno-r3-core
+arduino-uno-r3,26,D11,GPIO,SPI COPI / MOSI,,MOSI,arduino-uno-r3-headers | arduino-uno-r3-connector-tables | arduino-uno-r3-core,arduino-uno-r3-core
+arduino-uno-r3,26,D11,GPIO,PWM OC2A,,OC2A,arduino-uno-r3-headers | arduino-uno-r3-connector-tables | arduino-uno-r3-core,arduino-uno-r3-core
+arduino-uno-r3,27,D12,GPIO,SPI CIPO / MISO,,MISO,arduino-uno-r3-headers | arduino-uno-r3-connector-tables | arduino-uno-r3-core,arduino-uno-r3-core
+arduino-uno-r3,28,D13,GPIO,SPI SCK,,SCK,arduino-uno-r3-headers | arduino-uno-r3-connector-tables | arduino-uno-r3-core,arduino-uno-r3-core
+arduino-uno-r3,29,GND,GND,,,,arduino-uno-r3-headers | arduino-uno-r3-connector-tables,
+arduino-uno-r3,30,AREF,SYSTEM,,,,arduino-uno-r3-headers | arduino-uno-r3-connector-tables,
+arduino-uno-r3,31,SDA,GPIO,I2C SDA,,SDA,arduino-uno-r3-headers | arduino-uno-r3-connector-tables | arduino-uno-r3-core,arduino-uno-r3-core
+arduino-uno-r3,31,SDA,GPIO,ADC4,,ADC4,arduino-uno-r3-headers | arduino-uno-r3-connector-tables | arduino-uno-r3-core,arduino-uno-r3-core
+arduino-uno-r3,32,SCL,GPIO,I2C SCL,,SCL,arduino-uno-r3-headers | arduino-uno-r3-connector-tables | arduino-uno-r3-core,arduino-uno-r3-core
+arduino-uno-r3,32,SCL,GPIO,ADC5,,ADC5,arduino-uno-r3-headers | arduino-uno-r3-connector-tables | arduino-uno-r3-core,arduino-uno-r3-core
+arduino-uno-r3,33,RESET,SYSTEM,,,,arduino-uno-r3-icsp,
+arduino-uno-r3,34,SCK,GPIO,SPI SCK,,SCK,arduino-uno-r3-icsp | arduino-uno-r3-core,arduino-uno-r3-core
+arduino-uno-r3,35,CIPO,GPIO,SPI CIPO / MISO,,MISO,arduino-uno-r3-icsp | arduino-uno-r3-core,arduino-uno-r3-core
+arduino-uno-r3,36,GND,GND,,,,arduino-uno-r3-icsp,
+arduino-uno-r3,37,COPI,GPIO,SPI COPI / MOSI,,MOSI,arduino-uno-r3-icsp | arduino-uno-r3-core,arduino-uno-r3-core
+arduino-uno-r3,37,COPI,GPIO,PWM OC2A,,OC2A,arduino-uno-r3-icsp | arduino-uno-r3-core,arduino-uno-r3-core
+arduino-uno-r3,38,5V,POWER,,,,arduino-uno-r3-icsp,
+arduino-nano-classic,1,D13,GPIO,SPI SCK,,SCK,arduino-nano-classic-headers | arduino-nano-classic-core,arduino-nano-classic-core
+arduino-nano-classic,2,3V3,POWER,,,,arduino-nano-classic-headers,
+arduino-nano-classic,3,AREF,SYSTEM,,,,arduino-nano-classic-headers,
+arduino-nano-classic,4,A0,GPIO,ADC0,,ADC0,arduino-nano-classic-headers | arduino-nano-classic-core,arduino-nano-classic-analog
+arduino-nano-classic,5,A1,GPIO,ADC1,,ADC1,arduino-nano-classic-headers | arduino-nano-classic-core,arduino-nano-classic-analog
+arduino-nano-classic,6,A2,GPIO,ADC2,,ADC2,arduino-nano-classic-headers | arduino-nano-classic-core,arduino-nano-classic-analog
+arduino-nano-classic,7,A3,GPIO,ADC3,,ADC3,arduino-nano-classic-headers | arduino-nano-classic-core,arduino-nano-classic-analog
+arduino-nano-classic,8,A4,GPIO,I2C SDA,,SDA,arduino-nano-classic-headers | arduino-nano-classic-core,arduino-nano-classic-core
+arduino-nano-classic,8,A4,GPIO,ADC4,,ADC4,arduino-nano-classic-headers | arduino-nano-classic-core,arduino-nano-classic-analog
+arduino-nano-classic,9,A5,GPIO,I2C SCL,,SCL,arduino-nano-classic-headers | arduino-nano-classic-core,arduino-nano-classic-core
+arduino-nano-classic,9,A5,GPIO,ADC5,,ADC5,arduino-nano-classic-headers | arduino-nano-classic-core,arduino-nano-classic-analog
+arduino-nano-classic,10,A6,ADC,ADC6,,ADC6,arduino-nano-classic-headers | arduino-nano-classic-analog,arduino-nano-classic-analog
+arduino-nano-classic,11,A7,ADC,ADC7,,ADC7,arduino-nano-classic-headers | arduino-nano-classic-analog,arduino-nano-classic-analog
+arduino-nano-classic,12,5V,POWER,,,,arduino-nano-classic-headers,
+arduino-nano-classic,13,RESET,SYSTEM,,,,arduino-nano-classic-headers,
+arduino-nano-classic,14,GND,GND,,,,arduino-nano-classic-headers,
+arduino-nano-classic,15,VIN,POWER,,,,arduino-nano-classic-headers,
+arduino-nano-classic,16,D12,GPIO,SPI CIPO / MISO,,MISO,arduino-nano-classic-headers | arduino-nano-classic-core,arduino-nano-classic-core
+arduino-nano-classic,17,D11,GPIO,SPI COPI / MOSI,,MOSI,arduino-nano-classic-headers | arduino-nano-classic-core,arduino-nano-classic-core
+arduino-nano-classic,17,D11,GPIO,PWM OC2A,,OC2A,arduino-nano-classic-headers | arduino-nano-classic-core,arduino-nano-classic-core
+arduino-nano-classic,18,D10,GPIO,SPI SS,,SS,arduino-nano-classic-headers | arduino-nano-classic-core,arduino-nano-classic-core
+arduino-nano-classic,18,D10,GPIO,PWM OC1B,,OC1B,arduino-nano-classic-headers | arduino-nano-classic-core,arduino-nano-classic-core
+arduino-nano-classic,19,D9,GPIO,PWM OC1A,,OC1A,arduino-nano-classic-headers | arduino-nano-classic-core,arduino-nano-classic-core
+arduino-nano-classic,20,D8,GPIO,,,,arduino-nano-classic-headers | arduino-nano-classic-core,
+arduino-nano-classic,21,D7,GPIO,,,,arduino-nano-classic-headers | arduino-nano-classic-core,
+arduino-nano-classic,22,D6,GPIO,PWM OC0A,,OC0A,arduino-nano-classic-headers | arduino-nano-classic-core,arduino-nano-classic-core
+arduino-nano-classic,23,D5,GPIO,PWM OC0B,,OC0B,arduino-nano-classic-headers | arduino-nano-classic-core,arduino-nano-classic-core
+arduino-nano-classic,24,D4,GPIO,,,,arduino-nano-classic-headers | arduino-nano-classic-core,
+arduino-nano-classic,25,D3,GPIO,PWM OC2B,,OC2B,arduino-nano-classic-headers | arduino-nano-classic-core,arduino-nano-classic-core
+arduino-nano-classic,25,D3,GPIO,INT1,,INT1,arduino-nano-classic-headers | arduino-nano-classic-core,arduino-nano-classic-signals
+arduino-nano-classic,26,D2,GPIO,INT0,,INT0,arduino-nano-classic-headers | arduino-nano-classic-core,arduino-nano-classic-signals
+arduino-nano-classic,27,GND,GND,,,,arduino-nano-classic-headers,
+arduino-nano-classic,28,RESET,SYSTEM,,,,arduino-nano-classic-headers,
+arduino-nano-classic,29,D0,GPIO,UART0 RX,,RXD,arduino-nano-classic-headers | arduino-nano-classic-core,arduino-nano-classic-signals
+arduino-nano-classic,30,D1,GPIO,UART0 TX,,TXD,arduino-nano-classic-headers | arduino-nano-classic-core,arduino-nano-classic-signals
+arduino-nano-classic,31,5V,POWER,,,,arduino-nano-classic-icsp,
+arduino-nano-classic,32,COPI,GPIO,SPI COPI / MOSI,,MOSI,arduino-nano-classic-icsp | arduino-nano-classic-core,arduino-nano-classic-core
+arduino-nano-classic,32,COPI,GPIO,PWM OC2A,,OC2A,arduino-nano-classic-icsp | arduino-nano-classic-core,arduino-nano-classic-core
+arduino-nano-classic,33,GND,GND,,,,arduino-nano-classic-icsp,
+arduino-nano-classic,34,CIPO,GPIO,SPI CIPO / MISO,,MISO,arduino-nano-classic-icsp | arduino-nano-classic-core,arduino-nano-classic-core
+arduino-nano-classic,35,SCK,GPIO,SPI SCK,,SCK,arduino-nano-classic-icsp | arduino-nano-classic-core,arduino-nano-classic-core
+arduino-nano-classic,36,RESET,SYSTEM,,,,arduino-nano-classic-icsp,
+arduino-mega-2560,1,NC,SYSTEM,,,,arduino-mega-2560-headers | arduino-mega-2560-connector-tables,
+arduino-mega-2560,2,IOREF,POWER,,,,arduino-mega-2560-headers | arduino-mega-2560-connector-tables,
+arduino-mega-2560,3,RESET,SYSTEM,,,,arduino-mega-2560-headers | arduino-mega-2560-connector-tables,
+arduino-mega-2560,4,3V3,POWER,,,,arduino-mega-2560-headers | arduino-mega-2560-connector-tables,
+arduino-mega-2560,5,5V,POWER,,,,arduino-mega-2560-headers | arduino-mega-2560-connector-tables,
+arduino-mega-2560,6,GND,GND,,,,arduino-mega-2560-headers | arduino-mega-2560-connector-tables,
+arduino-mega-2560,7,GND,GND,,,,arduino-mega-2560-headers | arduino-mega-2560-connector-tables,
+arduino-mega-2560,8,VIN,POWER,,,,arduino-mega-2560-headers | arduino-mega-2560-connector-tables,
+arduino-mega-2560,9,A0,GPIO,ADC0,,ADC0,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,10,A1,GPIO,ADC1,,ADC1,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,11,A2,GPIO,ADC2,,ADC2,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,12,A3,GPIO,ADC3,,ADC3,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,13,A4,GPIO,ADC4,,ADC4,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,14,A5,GPIO,ADC5,,ADC5,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,15,A6,GPIO,ADC6,,ADC6,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,16,A7,GPIO,ADC7,,ADC7,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,17,A8,GPIO,ADC8,,ADC8,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,18,A9,GPIO,ADC9,,ADC9,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,19,A10,GPIO,ADC10,,ADC10,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,20,A11,GPIO,ADC11,,ADC11,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,21,A12,GPIO,ADC12,,ADC12,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,22,A13,GPIO,ADC13,,ADC13,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,23,A14,GPIO,ADC14,,ADC14,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,24,A15,GPIO,ADC15,,ADC15,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,25,SCL,GPIO,I2C SCL,,SCL,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,25,SCL,GPIO,INT0,,INT0,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-signals
+arduino-mega-2560,26,SDA,GPIO,I2C SDA,,SDA,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,26,SDA,GPIO,INT1,,INT1,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-signals
+arduino-mega-2560,27,AREF,SYSTEM,,,,arduino-mega-2560-headers | arduino-mega-2560-connector-tables,
+arduino-mega-2560,28,GND,GND,,,,arduino-mega-2560-headers | arduino-mega-2560-connector-tables,
+arduino-mega-2560,29,D13,GPIO,PWM OC0A,,OC0A,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,30,D12,GPIO,PWM OC1B,,OC1B,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,31,D11,GPIO,PWM OC1A,,OC1A,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,32,D10,GPIO,PWM OC2A,,OC2A,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,33,D9,GPIO,PWM OC2B,,OC2B,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,34,D8,GPIO,PWM OC4C,,OC4C,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,35,D7,GPIO,PWM OC4B,,OC4B,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,36,D6,GPIO,PWM OC4A,,OC4A,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,37,D5,GPIO,PWM OC3A,,OC3A,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,38,D4,GPIO,PWM OC0B,,OC0B,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,39,D3,GPIO,PWM OC3C,,OC3C,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,39,D3,GPIO,INT5,,INT5,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-signals
+arduino-mega-2560,40,D2,GPIO,PWM OC3B,,OC3B,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,40,D2,GPIO,INT4,,INT4,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-signals
+arduino-mega-2560,41,D1,GPIO,UART0 TX,,TXD0,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-signals
+arduino-mega-2560,42,D0,GPIO,UART0 RX,,RXD0,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-signals
+arduino-mega-2560,43,D14,GPIO,UART3 TX,,TXD3,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-signals
+arduino-mega-2560,44,D15,GPIO,UART3 RX,,RXD3,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-signals
+arduino-mega-2560,45,D16,GPIO,UART2 TX,,TXD2,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-signals
+arduino-mega-2560,46,D17,GPIO,UART2 RX,,RXD2,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-signals
+arduino-mega-2560,47,D18,GPIO,UART1 TX,,TXD1,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-signals
+arduino-mega-2560,47,D18,GPIO,INT3,,INT3,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-signals
+arduino-mega-2560,48,D19,GPIO,UART1 RX,,RXD1,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-signals
+arduino-mega-2560,48,D19,GPIO,INT2,,INT2,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-signals
+arduino-mega-2560,49,D20,GPIO,I2C SDA,,SDA,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,49,D20,GPIO,INT1,,INT1,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-signals
+arduino-mega-2560,50,D21,GPIO,I2C SCL,,SCL,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,50,D21,GPIO,INT0,,INT0,arduino-mega-2560-headers | arduino-mega-2560-connector-tables | arduino-mega-2560-core,arduino-mega-2560-signals
+arduino-mega-2560,51,5V,POWER,,,,arduino-mega-2560-end-header,
+arduino-mega-2560,52,D22,GPIO,,,,arduino-mega-2560-end-header | arduino-mega-2560-core,
+arduino-mega-2560,53,D24,GPIO,,,,arduino-mega-2560-end-header | arduino-mega-2560-core,
+arduino-mega-2560,54,D26,GPIO,,,,arduino-mega-2560-end-header | arduino-mega-2560-core,
+arduino-mega-2560,55,D28,GPIO,,,,arduino-mega-2560-end-header | arduino-mega-2560-core,
+arduino-mega-2560,56,D30,GPIO,,,,arduino-mega-2560-end-header | arduino-mega-2560-core,
+arduino-mega-2560,57,D32,GPIO,,,,arduino-mega-2560-end-header | arduino-mega-2560-core,
+arduino-mega-2560,58,D34,GPIO,,,,arduino-mega-2560-end-header | arduino-mega-2560-core,
+arduino-mega-2560,59,D36,GPIO,,,,arduino-mega-2560-end-header | arduino-mega-2560-core,
+arduino-mega-2560,60,D38,GPIO,,,,arduino-mega-2560-end-header | arduino-mega-2560-core,
+arduino-mega-2560,61,D40,GPIO,,,,arduino-mega-2560-end-header | arduino-mega-2560-core,
+arduino-mega-2560,62,D42,GPIO,,,,arduino-mega-2560-end-header | arduino-mega-2560-core,
+arduino-mega-2560,63,D44,GPIO,PWM OC5C,,OC5C,arduino-mega-2560-end-header | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,64,D46,GPIO,PWM OC5A,,OC5A,arduino-mega-2560-end-header | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,65,D48,GPIO,,,,arduino-mega-2560-end-header | arduino-mega-2560-core,
+arduino-mega-2560,66,D50,GPIO,SPI CIPO / MISO,,MISO,arduino-mega-2560-end-header | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,67,D52,GPIO,SPI SCK,,SCK,arduino-mega-2560-end-header | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,68,GND,GND,,,,arduino-mega-2560-end-header,
+arduino-mega-2560,69,5V,POWER,,,,arduino-mega-2560-end-header,
+arduino-mega-2560,70,D23,GPIO,,,,arduino-mega-2560-end-header | arduino-mega-2560-core,
+arduino-mega-2560,71,D25,GPIO,,,,arduino-mega-2560-end-header | arduino-mega-2560-core,
+arduino-mega-2560,72,D27,GPIO,,,,arduino-mega-2560-end-header | arduino-mega-2560-core,
+arduino-mega-2560,73,D29,GPIO,,,,arduino-mega-2560-end-header | arduino-mega-2560-core,
+arduino-mega-2560,74,D31,GPIO,,,,arduino-mega-2560-end-header | arduino-mega-2560-core,
+arduino-mega-2560,75,D33,GPIO,,,,arduino-mega-2560-end-header | arduino-mega-2560-core,
+arduino-mega-2560,76,D35,GPIO,,,,arduino-mega-2560-end-header | arduino-mega-2560-core,
+arduino-mega-2560,77,D37,GPIO,,,,arduino-mega-2560-end-header | arduino-mega-2560-core,
+arduino-mega-2560,78,D39,GPIO,,,,arduino-mega-2560-end-header | arduino-mega-2560-core,
+arduino-mega-2560,79,D41,GPIO,,,,arduino-mega-2560-end-header | arduino-mega-2560-core,
+arduino-mega-2560,80,D43,GPIO,,,,arduino-mega-2560-end-header | arduino-mega-2560-core,
+arduino-mega-2560,81,D45,GPIO,PWM OC5B,,OC5B,arduino-mega-2560-end-header | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,82,D47,GPIO,,,,arduino-mega-2560-end-header | arduino-mega-2560-core,
+arduino-mega-2560,83,D49,GPIO,,,,arduino-mega-2560-end-header | arduino-mega-2560-core,
+arduino-mega-2560,84,D51,GPIO,SPI COPI / MOSI,,MOSI,arduino-mega-2560-end-header | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,85,D53,GPIO,SPI SS,,SS,arduino-mega-2560-end-header | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,86,GND,GND,,,,arduino-mega-2560-end-header,
+arduino-mega-2560,87,RESET,SYSTEM,,,,arduino-mega-2560-icsp,
+arduino-mega-2560,88,SCK,GPIO,SPI SCK,,SCK,arduino-mega-2560-icsp | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,89,CIPO,GPIO,SPI CIPO / MISO,,MISO,arduino-mega-2560-icsp | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,90,GND,GND,,,,arduino-mega-2560-icsp,
+arduino-mega-2560,91,COPI,GPIO,SPI COPI / MOSI,,MOSI,arduino-mega-2560-icsp | arduino-mega-2560-core,arduino-mega-2560-core
+arduino-mega-2560,92,5V,POWER,,,,arduino-mega-2560-icsp,
 rp2350a,1,IOVDD,POWER,,,,rp2350a-iovdd,
 rp2350a,2,GPIO0,GPIO,SPI0 RX,F1,SPI0 RX,rp-pin-list-p1333,rp-bank0-p18
 rp2350a,2,GPIO0,GPIO,UART0 TX,F2,UART0 TX,rp-pin-list-p1333,rp-bank0-p18

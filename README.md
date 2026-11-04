@@ -15,12 +15,15 @@ The library lists each physical layout once and names its compatible boards:
 - **NVIDIA Jetson Orin Nano:** the NVIDIA P3768 developer-kit carrier’s 40-pin J12 header, with SPI, I²C, UART, I²S, PWM and clock capabilities from the carrier specification. This is a separate pin map from Raspberry Pi; header signal names and pinmux requirements differ.
 - **STM32 Blue Pill:** the STM32-base community reference with two 20-pin side headers and four SWD connections. H1/H2/SWD positions are distinct from MCU package pins; the diagram includes the MCU pin mapping and shared LED, crystal, USB and debug connections. Check clone wiring and chip markings.
 - **STM32F103C8T6:** the 48-pin LQFP processor, with 37 GPIO-capable pins (including PD0/PD1 after releasing HSE). The STM32F103CBT6 uses the same package pinout.
+- **Arduino UNO R3:** 38 header contacts including the main MCU ICSP, 20 independent GPIOs and 6 analog inputs. SDA/SCL and ICSP repeat existing GPIO nets.
+- **Arduino Nano (classic):** 36 header contacts including ICSP, 20 independent GPIOs and 8 analog inputs. A6/A7 are analog-only.
+- **Arduino Mega 2560 Rev3:** 92 header contacts including the end header and main MCU ICSP, 70 independent GPIOs, 16 analog inputs and 15 PWM outputs. SPI uses D50–D53.
 - **RP2350A:** QFN-60, 30 Bank 0 GPIOs.
 - **RP2350B:** QFN-80, 48 Bank 0 GPIOs.
 
 The Pico drawing represents the common header and does not claim identical wireless, LED or internal board wiring. Processor references change alternate functions, not physical pin positions. Plans are saved per reference; old model links, exported JSON files, and saved plans remain supported. If multiple old model plans exist for the same processor, they remain available in the function-reference selector without being merged.
 
-The dataset contains 512 physical pin records across eleven source profiles backing seven library layouts and 2,234 pin/function assignments. The central GND pad on each RP2350 package sits outside the perimeter pin count. The schematic drawings show pin positions and are not mechanical CAD layouts.
+The dataset contains 678 physical pin records across fourteen source profiles backing ten library layouts and 2,350 pin/function assignments. The central GND pad on each RP2350 package sits outside the perimeter pin count. The schematic drawings show pin positions and are not mechanical CAD layouts.
 
 ## Usage
 
@@ -31,6 +34,8 @@ Each pin detail links to the manufacturer document, PDF page, and table or figur
 Jetson peripheral use requires a suitable pinmux / Jetson-IO configuration and software support; saving a plan does not configure the device. NVIDIA documents 3.3 V signal levels, open-drain I²C and weak TXB0108-buffered outputs. Check the per-pin electrical notes before connecting hardware.
 
 STM32F1 functions list the actual AFIO remap fields and allowed values from RM0008 rather than inventing AF0–AF15 selectors. Remapping applies to whole peripherals; configure all selected signals consistently and release JTAG pins when needed. The plan does not validate every joint register or board-circuit constraint.
+
+Arduino maps use official full pinouts, connector tables and a pinned Arduino AVR core revision. They cover the 5 V ATmega328P UNO R3 / classic Nano and ATmega2560 Mega 2560 Rev3. Board-header contacts are distinct from Arduino digital pin numbers and MCU ports. Repeated GPIO contacts show their shared net; the plan and JSON importer reject using the same GPIO twice. USB-bridge programming headers and an exhaustive bare-MCU alternate-function map are outside this scope.
 
 The browser stores plans under `pin-atlas:plans:v1`. Share links carry the saved plan in the URL fragment. Opening one updates the local plan for that board. Pi 4 physical pins 27 and 28 are reserved for the HAT EEPROM and excluded from regular wiring plans. Check electrical compatibility and firmware configuration against the manufacturer documentation.
 
@@ -53,9 +58,9 @@ python3 -m pip install -r requirements-source-verification.txt
 python3 scripts/verify-official-sources.py
 ```
 
-The script downloads sixteen hash-locked sources: thirteen manufacturer documents and three explicitly identified community Blue Pill references. It checks their SHA-256 hashes, rereads the PDF and source tables, and compares the extracted data with the published files. The downloads stay under `.cache/primary-sources/`. The check fails on a changed hash or pin record.
+The script downloads twenty-four hash-locked sources: twenty-one manufacturer documents or source files and three explicitly identified community Blue Pill references. It checks their SHA-256 hashes, rereads the PDF and source tables, and compares the extracted data with the published files. The downloads stay under `.cache/primary-sources/`. The check fails on a changed hash or pin record.
 
-GitHub Actions uses `python3 scripts/verify-official-sources.py --table-snapshots` because ST's CDN can time out on hosted runners. This mode uses the raw ST table cells recorded in `sources/extracted/`; both the snapshots and their original PDF hashes are locked in the manifest. It still regenerates and compares every pin and function, and downloads the other fourteen sources. The default command above checks the original ST PDFs directly.
+GitHub Actions uses `python3 scripts/verify-official-sources.py --table-snapshots` because ST's CDN can time out on hosted runners. This mode uses the raw ST table cells recorded in `sources/extracted/`; both the snapshots and their original PDF hashes are locked in the manifest. It still regenerates and compares every pin and function, and downloads the other twenty-two sources. The default command above checks the original ST PDFs directly.
 
 Pin labels that appear only in drawings are checked against the visual observations recorded in `sources/manual-observations.json`. That record also explains the IOVDD discrepancy in RP2350 Release 8. See the full method in the [verification record](docs/VERIFICATION.md).
 

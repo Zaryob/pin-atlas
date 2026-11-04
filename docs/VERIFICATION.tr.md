@@ -2,7 +2,7 @@
 
 [English](VERIFICATION.md) · [Türkçe](VERIFICATION.tr.md)
 
-Kontrol tarihi: **4 Kasım 2026**. Kapsam: on bir kart, başlık ve çip profili, **512 fiziksel pin kaydı ve 2.234 alternatif işlev ataması**. Ortak bağlantılar profil başına sayılır. Sayımda uygulamanın soyut `GPIO` seçeneği ve numarasız QFN merkez GND pedi yoktur. Aynı sinyalin farklı pinlerde bulunması ayrı bir atamadır.
+Kontrol tarihi: **4 Kasım 2026**. Kapsam: on dört kart, başlık ve çip profili, **678 fiziksel pin kaydı ve 2.350 alternatif işlev ataması**. Ortak bağlantılar profil başına sayılır. Sayımda uygulamanın soyut `GPIO` seçeneği ve numarasız QFN merkez GND pedi yoktur. Aynı sinyalin farklı pinlerde bulunması ayrı bir atamadır.
 
 ## Her haritanın dayanağı
 
@@ -44,7 +44,7 @@ Bu yüzden IOVDD eşlemesi tablo satırından körlemesine alınmadı. Şekiller
 
 1. `sources/manifest.json`, her kaynağın sürümünü, değişmez belge adresini/commit’ini ve SHA-256 değerini kilitler.
 2. `scripts/verify-official-sources.py` kaynakları indirip hash doğrular. PDF tablo hücrelerini yeniden okur; satır sarımlarını yalnızca boşluk düzeyinde normalleştirir.
-   CI, ST CDN zaman aşımlarından etkilenmemek için `--table-snapshots` ile `sources/extracted/` içindeki ST tablo kayıtlarını kullanır. Her kaydın hash’i ve özgün PDF hash’i kilitlidir. Aynı ayrıştırıcı her iki girdiden STM32 verisini yeniden üretir; diğer on dört kaynak her iki modda da indirilip doğrulanır. Varsayılan komut özgün ST PDF’lerini yeniden okur.
+   CI, ST CDN zaman aşımlarından etkilenmemek için `--table-snapshots` ile `sources/extracted/` içindeki ST tablo kayıtlarını kullanır. Her kaydın hash’i ve özgün PDF hash’i kilitlidir. Aynı ayrıştırıcı her iki girdiden STM32 verisini yeniden üretir; diğer yirmi iki kaynak her iki modda da indirilip doğrulanır. Varsayılan komut özgün ST PDF’lerini yeniden okur.
 3. Fiziksel pin numarası, pin adı, pin türü, alternatif işlev, üretici sinyal adı ve F/ALT seçicisi uygulamadaki kayıtla eşleşmelidir.
 4. Şekillerden alınan gözlemler ayrı işaretlenir. Bir sonraki doğrulamada aynı görsel gözlemlerin kullanılması **yeni ve bağımsız bir insan incelemesi sayılmaz**. Hash değişirse kaynak yeniden incelenmeden kabul edilmez.
 5. Oluşturulan bütün pin/işlev satırları [`sources/pin-verification.csv`](../sources/pin-verification.csv) içindedir. Referans kimlikleri `dist/data/evidence.json` içinde belge, sayfa ve tabloya çözülür. Kaynak özeti `dist/data/verification.json` içindedir.
@@ -58,11 +58,11 @@ Pico, Pico W ve Pico 2’nin fiziksel pinleri, her modelin veri sayfasının PDF
 
 Ortak Raspberry Pi 40-pin profili, üreticinin GPIO tablosunu kullanır: B+ ve sonrası, Zero ailesi ve klavyeli modellerin fiziksel düzenini kapsar. Klavyeli modellerde yön ters olabilir; bazı Zero başlıkları lehimli değildir. Eski 26-pin kartlar ve Compute Module dahil değildir. Bu profil işlemciye özgü alternatif işlev içermez; BCM2711 için Pi 4 profili ayrı tutulur.
 
-On üç üretici belgesi ve üç Blue Pill topluluk referansı SHA-256 ile kilitlidir. 512 fiziksel pin kaydı ortak bağlantıları profil başına sayar. Ayrıntılı model kaynakları [İngilizce doğrulama kaydında](VERIFICATION.md) bulunur.
+Yirmi bir üretici belgesi veya kaynak dosyası ve üç Blue Pill topluluk referansı SHA-256 ile kilitlidir. 678 fiziksel pin kaydı ortak bağlantıları profil başına sayar. Ayrıntılı model kaynakları [İngilizce doğrulama kaydında](VERIFICATION.md) bulunur.
 
 ## Ortak düzen kütüphanesi
 
-On bir kaynak profili yedi fiziksel düzende sunulur: Pico ailesi, Raspberry Pi 40-pin başlığı, NVIDIA Jetson Orin Nano J12, Blue Pill, STM32F103C8/CB LQFP48 ve iki farklı RP2350 paketi. Gruplanan profillerin pin numaraları, adları ve türleri uygulama tarafından karşılaştırılır. İşlemci işlevleri ve kaynakları aynı ekrandaki referans seçicisinde korunur. Eski profil kimlikleri kayıtlı plan ve paylaşımlarda desteklenir.
+On dört kaynak profili on fiziksel düzende sunulur: Pico ailesi, Raspberry Pi 40-pin başlığı, NVIDIA Jetson Orin Nano J12, Blue Pill, STM32F103C8/CB LQFP48, üç Arduino AVR kartı ve iki farklı RP2350 paketi. Gruplanan profillerin pin numaraları, adları ve türleri uygulama tarafından karşılaştırılır. İşlemci işlevleri ve kaynakları aynı ekrandaki referans seçicisinde korunur. Eski profil kimlikleri kayıtlı plan ve paylaşımlarda desteklenir.
 
 ## NVIDIA Jetson Orin Nano · J12
 
@@ -81,3 +81,11 @@ Blue Pill’in tek üreticisi yoktur. 44 bağlantı (H1:20, H2:20, SWD:4) STM32-
 Şemadaki RESET/NRST etiket tutarsızlığı belgelendi; reset başlığı için topluluk bağlantı tablosu ve R yazısı kullanılır. PB2 boot jumperında, PD0/PD1 kristal devresindedir; yan başlıklarda gösterilmez. LED, LSE, USB ve debug paylaşımı pin notlarında belirtilir. Klon MCU ve kartlar için koşulsuz uyumluluk iddiası yoktur. Toplam 16 kilitli kaynakta 13 üretici belgesi ve 3 topluluk referansı bulunur.
 
 ST belgeleri önce resmî `www.st.com.cn`, ardından `www.st.com` adresinden indirilir. İki adresten gelen dosyalar aynı kilitli SHA-256 değerleriyle karşılaştırıldı. İndirme hatasında kaynak hash veya pin doğrulaması atlanmaz.
+
+## Arduino AVR
+
+UNO R3 için A000066, klasik Nano için A000005 ve Mega 2560 Rev3 için A000067 resmî tam pin şemaları kullanılır. UNO/Mega bağlantı tabloları da yeniden okunur. Ana işlemcinin ICSP başlığı dahildir; USB köprüsünün programlama başlığı kapsam dışıdır. Başlık sırası ve ICSP yönü görsel gözlemlerde kayıtlıdır. UNO 38 kontak/20 bağımsız GPIO, Nano 36 kontak/20 GPIO ve 8 ADC, Mega 92 kontak/70 GPIO içerir.
+
+ArduinoCore-avr `11b9130371e8447920edb65a75706a6c951e51fc` revizyonunun `standard`, `mega` ve `eightanaloginputs` dosyaları commit ve hash ile kilitlidir. GPIO port/bit dizileri, zamanlayıcı dizileri, analog takma adları ve SPI/Wire sabitleri yeniden ayrıştırılır. UART ve donanım INT adları tam pin şemasından okunur. Nano A6/A7 yalnızca analog giriş kabul edilir; mevcut Nano veri sayfasındaki numaralandırma/GPIO etiket hataları kullanılmaz. Mega D0/D1’in PWM işaretleri çekirdekle çelişir; PWM yalnızca D2–D13 ve D44–D46’da sunulur. UNO tablosundaki A4/SD4, A5/SD5 hataları SDA/A4 ve SCL/A5 olarak çözülür.
+
+Arayüzde GPIO sayısı bağımsız hatları, fiziksel pin sayısı tekrarlanan kontaklar dahil bağlantıları sayar. SDA/SCL ve ICSP tekrarları belirtilir; planlama ve içe aktarma aynı GPIO hattını iki kez kullanmayı reddeder. Ayrıntılı kaynak sayfaları ve yön bilgisi İngilizce kayıtta bulunur.

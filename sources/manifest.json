@@ -151,12 +151,88 @@
       "publisher": "STM32-base community",
       "revision": "Top view reviewed 2026-11-04",
       "sha256": "62b9bc61c0334a1c70ea4f43aad579fb71b36dcca6d6d9b4202bdc99b81b6426"
+    },
+    {
+      "id": "arduino-uno-r3-pinout",
+      "title": "Arduino UNO R3 full pinout",
+      "publisher": "Arduino",
+      "revision": "2022-10-06",
+      "file": "arduino-uno-r3-pinout.pdf",
+      "url": "https://docs.arduino.cc/resources/pinouts/A000066-full-pinout.pdf",
+      "sha256": "088b4d7d776abf443cb050c31875221aa5fc7f0533470b33e035c249cf240007"
+    },
+    {
+      "id": "arduino-uno-r3-datasheet",
+      "title": "Arduino UNO R3 datasheet",
+      "publisher": "Arduino",
+      "revision": "Modified 2026-11-03",
+      "file": "arduino-uno-r3-datasheet.pdf",
+      "url": "https://docs.arduino.cc/resources/datasheets/A000066-datasheet.pdf",
+      "sha256": "7decc9caca757eae23241053e0c84ded9ca95c3260b9ad9521f19479a044ad49"
+    },
+    {
+      "id": "arduino-nano-classic-pinout",
+      "title": "Arduino Nano (classic) full pinout",
+      "publisher": "Arduino",
+      "revision": "2021-06-30",
+      "file": "arduino-nano-classic-pinout.pdf",
+      "url": "https://docs.arduino.cc/resources/pinouts/A000005-full-pinout.pdf",
+      "sha256": "2b9140b09cb66c788c1c4e01da33498a63e245fc133ac7d32697e140b00ea317"
+    },
+    {
+      "id": "arduino-mega-2560-pinout",
+      "title": "Arduino Mega 2560 Rev3 full pinout",
+      "publisher": "Arduino",
+      "revision": "2020-12-16",
+      "file": "arduino-mega-2560-pinout.pdf",
+      "url": "https://docs.arduino.cc/resources/pinouts/A000067-full-pinout.pdf",
+      "sha256": "ecc6204d0683269e8ee3f328764c92932121f2d98daca7fd3ff3ea45bd4d090f"
+    },
+    {
+      "id": "arduino-mega-2560-datasheet",
+      "title": "Arduino Mega 2560 Rev3 datasheet",
+      "publisher": "Arduino",
+      "revision": "Modified 2026-11-03",
+      "file": "arduino-mega-2560-datasheet.pdf",
+      "url": "https://docs.arduino.cc/resources/datasheets/A000067-datasheet.pdf",
+      "sha256": "0f328efd35c157ae10ae206d924e2c876d2d0514fb591270cf328d1cbbb252dc"
+    },
+    {
+      "id": "arduino-avr-standard",
+      "title": "Arduino AVR core — standard pin definitions",
+      "publisher": "Arduino",
+      "revision": "11b9130371e8447920edb65a75706a6c951e51fc",
+      "file": "arduino-avr-standard.h",
+      "url": "https://raw.githubusercontent.com/arduino/ArduinoCore-avr/11b9130371e8447920edb65a75706a6c951e51fc/variants/standard/pins_arduino.h",
+      "viewUrl": "https://github.com/arduino/ArduinoCore-avr/blob/11b9130371e8447920edb65a75706a6c951e51fc/variants/standard/pins_arduino.h",
+      "sha256": "d313845f9916c1f21c8ba9848d40806f5caab52529ad510e81b3f15318441631"
+    },
+    {
+      "id": "arduino-avr-mega",
+      "title": "Arduino AVR core — mega pin definitions",
+      "publisher": "Arduino",
+      "revision": "11b9130371e8447920edb65a75706a6c951e51fc",
+      "file": "arduino-avr-mega.h",
+      "url": "https://raw.githubusercontent.com/arduino/ArduinoCore-avr/11b9130371e8447920edb65a75706a6c951e51fc/variants/mega/pins_arduino.h",
+      "viewUrl": "https://github.com/arduino/ArduinoCore-avr/blob/11b9130371e8447920edb65a75706a6c951e51fc/variants/mega/pins_arduino.h",
+      "sha256": "d563f983b968f8859b667bf586a6bea48de49c1a80621d40f1c60181b28cc8a3"
+    },
+    {
+      "id": "arduino-avr-nano",
+      "title": "Arduino AVR core — eightanaloginputs pin definitions",
+      "publisher": "Arduino",
+      "revision": "11b9130371e8447920edb65a75706a6c951e51fc",
+      "file": "arduino-avr-nano.h",
+      "url": "https://raw.githubusercontent.com/arduino/ArduinoCore-avr/11b9130371e8447920edb65a75706a6c951e51fc/variants/eightanaloginputs/pins_arduino.h",
+      "viewUrl": "https://github.com/arduino/ArduinoCore-avr/blob/11b9130371e8447920edb65a75706a6c951e51fc/variants/eightanaloginputs/pins_arduino.h",
+      "sha256": "f781478ed9f9507b6553e44dc90873103ea84e654528dc0e34901a32bfee3149"
     }
   ],
   "publishers": [
     "Raspberry Pi Ltd",
     "NVIDIA",
     "STMicroelectronics",
-    "STM32-base community reference (not affiliated with ST)"
+    "STM32-base community reference (not affiliated with ST)",
+    "Arduino"
   ]
 }

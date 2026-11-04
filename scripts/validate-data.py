@@ -1,5 +1,5 @@
 """Fast offline contract checks; manufacturer comparison runs separately in CI."""
-import json
+import json,re
 from pathlib import Path
 from urllib.parse import urlsplit
 root=Path(__file__).resolve().parents[1]
@@ -10,8 +10,8 @@ refs=evidence['references'];docids={d['id'] for d in manifest['documents']}
 for r in refs.values():
     assert r['document'] in docids
     host=urlsplit(r['url']).hostname
-    assert host in {'pip-assets.raspberrypi.com','datasheets.raspberrypi.com','developer.nvidia.com','www.st.com','stm32-base.org','github.com'},host
-    if host=='github.com':assert '/raspberrypi/documentation/' in r['url']
+    assert host in {'pip-assets.raspberrypi.com','datasheets.raspberrypi.com','developer.nvidia.com','www.st.com','stm32-base.org','github.com','docs.arduino.cc'},host
+    if host=='github.com':assert any(repo in r['url'] for repo in ['/raspberrypi/documentation/','/arduino/ArduinoCore-avr/'])
 for b in boards:
     assert len(b['pins'])==b['packagePins']
     assert {p['number'] for p in b['pins']}==set(range(1,b['packagePins']+1))
@@ -75,6 +75,34 @@ assert blue[42]['name']=='PA13' and blue[42]['mcuPin']==34
 assert blue[43]['name']=='PA14' and blue[43]['mcuPin']==37
 assert not any(p['name'] in {'PB2','OSC_IN','OSC_OUT'} for p in blue.values())
 assert all(p['position']['y']==640 for p in blue.values() if p['connector']=='SWD')
+for id,count,unique in [('arduino-uno-r3',38,20),('arduino-nano-classic',36,20),('arduino-mega-2560',92,70)]:
+    board=next(b for b in boards if b['id']==id);pins=board['pins']
+    assert len(pins)==count and board['uniqueGPIOCount']==unique
+    assert len({p['net'] for p in pins if p['type']=='GPIO'})==unique
+    assert len({p['physicalLabel'] for p in pins})==count
+    assert not any('alt' in f or 'selector' in f for p in pins for f in p['functions'])
+    for pin in pins:
+        if pin['type'] in ('GPIO','ADC'):
+            assert set(pin.get('sharedWith',[]))=={p['physicalLabel'] for p in pins if p['number']!=pin['number'] and p['net']==pin['net']}
+        if pin.get('arduinoPin') is not None:assert pin['type']=='GPIO' and re.fullmatch(r'P[A-L][0-7]',pin['mcuPort'])
+uno=lookup['arduino-uno-r3'];nano=lookup['arduino-nano-classic'];mega=lookup['arduino-mega-2560']
+get=lambda pins,label:next(p for p in pins.values() if p['physicalLabel']==label)
+assert get(uno,'ANALOG.5')['name']=='A4' and get(uno,'ANALOG.5')['net']==get(uno,'DIGITAL.17')['net']
+assert get(uno,'DIGITAL.14')['net']==get(uno,'ICSP.3')['net']=='PB5'
+assert get(uno,'PWR.1')['reserved'] and not get(uno,'PWR.1')['functions']
+for label,ch in [('L.10',6),('L.11',7)]:
+    pin=get(nano,label);assert pin['type']=='ADC' and 'arduinoPin' not in pin
+    assert [f['name'] for f in pin['functions']]==['ADC'+str(ch)]
+assert get(nano,'R.14')['name']=='D0' and get(nano,'R.15')['name']=='D1'
+assert get(nano,'ICSP.1')['position']['x']<get(nano,'ICSP.5')['position']['x']
+assert get(mega,'END.3')['name']=='D22' and get(mega,'END.4')['name']=='D23'
+assert get(mega,'END.1')['position']['x']>get(mega,'END.35')['position']['x']
+assert get(mega,'END.3')['position']['y']<get(mega,'END.4')['position']['y']
+assert get(mega,'ANALOG.9')['mcuPort']=='PK0' and get(mega,'ANALOG.9')['arduinoPin']==62
+for pin in mega.values():
+    if pin.get('arduinoPin') in (0,1):assert not any(f['group']=='PWM' for f in pin['functions'])
+    if pin.get('arduinoPin')==51:assert any(f['signal']=='MOSI' for f in pin['functions'])
+assert len({p['net'] for p in mega.values() if any(f['group']=='PWM' for f in p['functions'])})==15
 for board in boards:
     if board['layout']=='custom':
         assert (root/'dist'/board['diagram']['artwork']).exists()
