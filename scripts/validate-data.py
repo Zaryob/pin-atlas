@@ -154,4 +154,12 @@ assert f401['CN7.29']['name']=='PH0' and f401['CN7.29']['mcuPin']==5
 assert f401['CN10.18']['reserved']
 assert f401['CN5.6']['mcuPin']==21
 assert any(f['name']=='SPI1_SCK' and f.get('selector')=='AF5' for f in f401['CN5.6']['functions'])
+f411={pin['physicalLabel']:pin for pin in lookup['nucleo-f411re'].values()}
+assert len(f411)==108
+assert f411['CN7.29']['name']=='PH0' and f411['CN7.29']['mcuPin']==5
+assert f411['CN10.18']['reserved']
+assert f411['CN5.6']['mcuPin']==21
+assert any(f['name']=='SPI1_SCK' and f.get('selector')=='AF5' for f in f411['CN5.6']['functions'])
+assert any(f['name']=='I2C3_SDA' and f.get('selector')=='AF9' for f in f411['CN10.3']['functions'])
+assert not any(f['name']=='I2C3_SDA' for f in f401['CN10.3']['functions'])
 print(f"Checked {report['physicalPins']} pins, {report['functionAssignments']} function references and model-specific corner cases.")

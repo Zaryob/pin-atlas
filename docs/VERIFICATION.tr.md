@@ -2,7 +2,7 @@
 
 [English](VERIFICATION.md) · [Türkçe](VERIFICATION.tr.md)
 
-**4 Kasım 2026** tarihli inceleme, otuz beş kart, başlık ve çip profilindeki **1.760 fiziksel pin kaydını ve 5.438 alternatif işlev atamasını** kapsar. Ortak bağlantılar profil başına sayılır. Sayımda uygulamanın soyut `GPIO` seçeneği ve numarasız QFN merkez GND pedi yoktur. Aynı sinyalin farklı pinlerde bulunması ayrı bir atamadır.
+**4 Kasım 2026** tarihli inceleme, otuz altı kart, başlık ve çip profilindeki **1.868 fiziksel pin kaydını ve 5.770 alternatif işlev atamasını** kapsar. Ortak bağlantılar profil başına sayılır. Sayımda uygulamanın soyut `GPIO` seçeneği ve numarasız QFN merkez GND pedi yoktur. Aynı sinyalin farklı pinlerde bulunması ayrı bir atamadır.
 
 ## Her haritanın dayanağı
 
@@ -65,7 +65,7 @@ Pico, Pico W ve Pico 2’nin fiziksel pinleri, her modelin veri sayfasının PDF
 
 Ortak Raspberry Pi 40-pin profili, üreticinin GPIO tablosunu kullanır: B+ ve sonrası, Zero ailesi ve klavyeli modellerin fiziksel düzenini kapsar. Klavyeli modellerde yön ters olabilir; bazı Zero başlıkları lehimli değildir. Eski 26-pin kartlar ve Compute Module dahil değildir. Bu profil işlemciye özgü alternatif işlev içermez; BCM2711 için Pi 4 profili ayrı tutulur.
 
-Elli bir üretici belgesi veya kaynak dosyası ve üç Blue Pill topluluk referansı SHA-256 ile kilitlidir. 1.760 fiziksel pin kaydı ortak bağlantıları profil başına sayar. Ayrıntılı model kaynakları [İngilizce doğrulama kaydında](VERIFICATION.md) bulunur.
+Elli üç üretici belgesi veya kaynak dosyası ve üç Blue Pill topluluk referansı SHA-256 ile kilitlidir. 1.868 fiziksel pin kaydı ortak bağlantıları profil başına sayar. Ayrıntılı model kaynakları [İngilizce doğrulama kaydında](VERIFICATION.md) bulunur.
 
 ## Ortak düzen kütüphanesi
 
@@ -89,9 +89,9 @@ Blue Pill’in tek üreticisi yoktur. 44 bağlantı (H1:20, H2:20, SWD:4) STM32-
 
 ST belgeleri önce resmî `www.st.com.cn`, ardından `www.st.com` adresinden indirilir. İki adresten gelen dosyalar aynı kilitli SHA-256 değerleriyle karşılaştırıldı. İndirme hatasında kaynak hash veya pin doğrulaması atlanmaz.
 
-## NUCLEO-F103RB / F401RE · MB1136
+## NUCLEO-F103RB / F401RE / F411RE · MB1136
 
-Arduino ve ST Morpho kontakları, SHA-256 ile kilitlenen ST UM1724 Rev 14 belgesinin 12 ve 27 numaralı tablolarından alınır. MCU pinleri ve işlevleri STM32F103RB LQFP64 profilinden gelir. Haritada A4/A5 için analog yönlendirme gösterilir. Alternatif I²C bağlantısı ile saat, seri port ve LED köprüleri Tablo 10’a göre açıklanır. F401RE konnektörleri için Tablo 16 ve 29, paket pinleri ve AF seçicileri için kilitli STM32CubeMX verisi kullanılır.
+Arduino ve ST Morpho kontakları, SHA-256 ile kilitlenen ST UM1724 Rev 14 belgesinin 12 ve 27 numaralı tablolarından alınır. MCU pinleri ve işlevleri STM32F103RB LQFP64 profilinden gelir. Haritada A4/A5 için analog yönlendirme gösterilir. Alternatif I²C bağlantısı ile saat, seri port ve LED köprüleri Tablo 10’a göre açıklanır. F401RE ve F411RE konnektörleri için Tablo 16 ve 29, paket pinleri ve AF seçicileri için kilitli STM32CubeMX verisi kullanılır.
 
 ## Arduino AVR
 

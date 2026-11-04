@@ -2,7 +2,7 @@
 
 [English](VERIFICATION.md) · [Türkçe](VERIFICATION.tr.md)
 
-Reviewed on **4 November 2026**. The review covers thirty-five board, header, and chip profiles, **1,760 physical pin records, and 5,438 function assignments**. Shared physical pins are counted once per profile. The count excludes the app’s generic `GPIO` planning option and the unnumbered QFN center GND pads. Each placement of a signal on a different pin counts separately.
+Reviewed on **4 November 2026**. The review covers thirty-six board, header, and chip profiles, **1,868 physical pin records, and 5,770 function assignments**. Shared physical pins are counted once per profile. The count excludes the app’s generic `GPIO` planning option and the unnumbered QFN center GND pads. Each placement of a signal on a different pin counts separately.
 
 ## Sources by pin map
 
@@ -109,9 +109,9 @@ The complete locked source set contains 16 documents: 13 manufacturer documents 
 
 ST source downloads prefer the official `www.st.com.cn` mirror and fall back to `www.st.com`. Both downloads were checked byte-for-byte against the same locked SHA-256 values. Transfer retries are bounded; no source-hash or pin-data check is skipped when a CDN is unavailable.
 
-## NUCLEO-F103RB / F401RE · MB1136
+## NUCLEO-F103RB / F401RE / F411RE · MB1136
 
-The connector map uses Tables 12 and 27 of the hash-locked ST UM1724 Rev 14 PDF. MCU pin numbers and functions come from the STM32F103RB LQFP64 profile. The map shows the analog A4/A5 routing and labels the alternate I²C route and configurable clock, serial and LED connections using Table 10. The diagram groups contacts by connector. F401RE connector assignments use Tables 16 and 29, with package pin numbers and AF selectors from the locked STM32CubeMX pin data.
+The connector map uses Tables 12 and 27 of the hash-locked ST UM1724 Rev 14 PDF. MCU pin numbers and functions come from the STM32F103RB LQFP64 profile. The map shows the analog A4/A5 routing and labels the alternate I²C route and configurable clock, serial and LED connections using Table 10. The diagram groups contacts by connector. F401RE and F411RE connector assignments use Tables 16 and 29, with package pin numbers and AF selectors from the locked STM32CubeMX pin data.
 
 ## Arduino AVR boards
 

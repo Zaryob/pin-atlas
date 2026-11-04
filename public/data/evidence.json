@@ -513,6 +513,26 @@
       "publisher": "STMicroelectronics",
       "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
       "sha256": "4491b4ee54faa9d6ccf722f6e79ca752b2dcd168f5279ad249959a561db4fbff"
+    },
+    {
+      "id": "f411re-package",
+      "title": "STM32F411RE CubeMX package data",
+      "file": "f411re-package.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F411R(C-E)Tx.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F411R(C-E)Tx.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "e94f0b99a3300bae665f211079e114eef33656cdfac7c2da671d3717fe7881ab"
+    },
+    {
+      "id": "f411re-modes",
+      "title": "STM32F411RE CubeMX modes data",
+      "file": "f411re-modes.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F411_gpio_v1_0_Modes.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F411_gpio_v1_0_Modes.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "ac1753a62670b4b27dfb1b9b7d8c3106d5e7926066e2f1cc6e8385178b28c34b"
     }
   ],
   "references": {
@@ -1045,6 +1065,46 @@
       "method": "pdf-table"
     },
     "nucleo-f401re-morpho-58": {
+      "document": "nucleo-um1724-r14",
+      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
+      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=58",
+      "page": 58,
+      "locator": "Table 29 · ST Morpho headers",
+      "method": "pdf-table"
+    },
+    "f411re-package": {
+      "document": "f411re-package",
+      "title": "STM32F411RE CubeMX package data",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F411R(C-E)Tx.xml",
+      "page": null,
+      "locator": "LQFP64 package pin numbers and signals",
+      "method": "manufacturer-xml"
+    },
+    "f411re-modes": {
+      "document": "f411re-modes",
+      "title": "STM32F411RE CubeMX modes data",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F411_gpio_v1_0_Modes.xml",
+      "page": null,
+      "locator": "GPIO alternate function selectors",
+      "method": "manufacturer-xml"
+    },
+    "nucleo-f411re-arduino-43": {
+      "document": "nucleo-um1724-r14",
+      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
+      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=43",
+      "page": 43,
+      "locator": "Table 16 · Arduino headers",
+      "method": "pdf-table"
+    },
+    "nucleo-f411re-arduino-44": {
+      "document": "nucleo-um1724-r14",
+      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
+      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=44",
+      "page": 44,
+      "locator": "Table 16 · Arduino headers",
+      "method": "pdf-table"
+    },
+    "nucleo-f411re-morpho-58": {
       "document": "nucleo-um1724-r14",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
       "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=58",

@@ -2550,6 +2550,375 @@ nucleo-f401re,108,PA8,GPIO,RCC_MCO_1,AF0,RCC_MCO_1,nucleo-f401re-arduino-44 | f4
 nucleo-f401re,108,PA8,GPIO,TIM1_CH1,AF1,TIM1_CH1,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
 nucleo-f401re,108,PA8,GPIO,USART1_CK,AF7,USART1_CK,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
 nucleo-f401re,108,PA8,GPIO,USB_OTG_FS_SOF,AF10,USB_OTG_FS_SOF,nucleo-f401re-arduino-44 | f401re-package,f401re-package | f401re-modes
+nucleo-f411re,1,PC10,GPIO,I2S3_CK,AF6,I2S3_CK,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,1,PC10,GPIO,SDIO_D2,AF12,SDIO_D2,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,1,PC10,GPIO,SPI3_SCK,AF6,SPI3_SCK,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,2,PC11,GPIO,ADC1_EXTI11,,ADC1_EXTI11,nucleo-f411re-morpho-58 | f411re-package,f411re-package
+nucleo-f411re,2,PC11,GPIO,I2S3_ext_SD,AF5,I2S3_ext_SD,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,2,PC11,GPIO,SDIO_D3,AF12,SDIO_D3,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,2,PC11,GPIO,SPI3_MISO,AF6,SPI3_MISO,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,3,PC12,GPIO,I2S3_SD,AF6,I2S3_SD,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,3,PC12,GPIO,SDIO_CK,AF12,SDIO_CK,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,3,PC12,GPIO,SPI3_MOSI,AF6,SPI3_MOSI,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,4,PD2,GPIO,SDIO_CMD,AF12,SDIO_CMD,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,4,PD2,GPIO,TIM3_ETR,AF2,TIM3_ETR,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,5,VDD,POWER,,,,nucleo-f411re-morpho-58 | f411re-package,
+nucleo-f411re,6,E5V,POWER,,,,nucleo-f411re-morpho-58,
+nucleo-f411re,7,BOOT0,SYSTEM,,,,nucleo-f411re-morpho-58 | f411re-package,
+nucleo-f411re,8,GND,GND,,,,nucleo-f411re-morpho-58,
+nucleo-f411re,9,NC,SYSTEM,,,,nucleo-f411re-morpho-58,
+nucleo-f411re,10,NC,SYSTEM,,,,nucleo-f411re-morpho-58,
+nucleo-f411re,11,NC,SYSTEM,,,,nucleo-f411re-morpho-58,
+nucleo-f411re,12,IOREF,POWER,,,,nucleo-f411re-morpho-58,
+nucleo-f411re,13,PA13,GPIO,SYS_JTMS-SWDIO,AF0,SYS_JTMS-SWDIO,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,14,RESET,SYSTEM,,,,nucleo-f411re-morpho-58 | f411re-package,
+nucleo-f411re,15,PA14,GPIO,SYS_JTCK-SWCLK,AF0,SYS_JTCK-SWCLK,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,16,+3.3V,POWER,,,,nucleo-f411re-morpho-58,
+nucleo-f411re,17,PA15,GPIO,ADC1_EXTI15,,ADC1_EXTI15,nucleo-f411re-morpho-58 | f411re-package,f411re-package
+nucleo-f411re,17,PA15,GPIO,I2S1_WS,AF5,I2S1_WS,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,17,PA15,GPIO,I2S3_WS,AF6,I2S3_WS,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,17,PA15,GPIO,SPI1_NSS,AF5,SPI1_NSS,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,17,PA15,GPIO,SPI3_NSS,AF6,SPI3_NSS,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,17,PA15,GPIO,SYS_JTDI,AF0,SYS_JTDI,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,17,PA15,GPIO,TIM2_CH1,AF1,TIM2_CH1,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,17,PA15,GPIO,TIM2_ETR,AF1,TIM2_ETR,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,17,PA15,GPIO,USART1_TX,AF7,USART1_TX,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,18,+5V,POWER,,,,nucleo-f411re-morpho-58,
+nucleo-f411re,19,GND,GND,,,,nucleo-f411re-morpho-58,
+nucleo-f411re,20,GND,GND,,,,nucleo-f411re-morpho-58,
+nucleo-f411re,21,PB7,GPIO,I2C1_SDA,AF4,I2C1_SDA,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,21,PB7,GPIO,SDIO_D0,AF12,SDIO_D0,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,21,PB7,GPIO,TIM4_CH2,AF2,TIM4_CH2,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,21,PB7,GPIO,USART1_RX,AF7,USART1_RX,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,22,GND,GND,,,,nucleo-f411re-morpho-58,
+nucleo-f411re,23,PC13,GPIO,RTC_AF1,,RTC_AF1,nucleo-f411re-morpho-58 | f411re-package,f411re-package
+nucleo-f411re,24,VIN,POWER,,,,nucleo-f411re-morpho-58,
+nucleo-f411re,25,PC14,GPIO,RCC_OSC32_IN,,RCC_OSC32_IN,nucleo-f411re-morpho-58 | f411re-package | nucleo-mb1136-bridges,f411re-package
+nucleo-f411re,26,NC,SYSTEM,,,,nucleo-f411re-morpho-58,
+nucleo-f411re,27,PC15,GPIO,ADC1_EXTI15,,ADC1_EXTI15,nucleo-f411re-morpho-58 | f411re-package | nucleo-mb1136-bridges,f411re-package
+nucleo-f411re,27,PC15,GPIO,RCC_OSC32_OUT,,RCC_OSC32_OUT,nucleo-f411re-morpho-58 | f411re-package | nucleo-mb1136-bridges,f411re-package
+nucleo-f411re,28,PA0,GPIO,ADC1_IN0,,ADC1_IN0,nucleo-f411re-morpho-58 | f411re-package,f411re-package
+nucleo-f411re,28,PA0,GPIO,SYS_WKUP,,SYS_WKUP,nucleo-f411re-morpho-58 | f411re-package,f411re-package
+nucleo-f411re,28,PA0,GPIO,TIM2_CH1,AF1,TIM2_CH1,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,28,PA0,GPIO,TIM2_ETR,AF1,TIM2_ETR,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,28,PA0,GPIO,TIM5_CH1,AF2,TIM5_CH1,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,28,PA0,GPIO,USART2_CTS,AF7,USART2_CTS,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,29,PH0,GPIO,RCC_OSC_IN,,RCC_OSC_IN,nucleo-f411re-morpho-58 | f411re-package | nucleo-mb1136-bridges,f411re-package
+nucleo-f411re,30,PA1,GPIO,ADC1_IN1,,ADC1_IN1,nucleo-f411re-morpho-58 | f411re-package,f411re-package
+nucleo-f411re,30,PA1,GPIO,I2S4_SD,AF5,I2S4_SD,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,30,PA1,GPIO,SPI4_MOSI,AF5,SPI4_MOSI,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,30,PA1,GPIO,TIM2_CH2,AF1,TIM2_CH2,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,30,PA1,GPIO,TIM5_CH2,AF2,TIM5_CH2,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,30,PA1,GPIO,USART2_RTS,AF7,USART2_RTS,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,31,PH1,GPIO,RCC_OSC_OUT,,RCC_OSC_OUT,nucleo-f411re-morpho-58 | f411re-package | nucleo-mb1136-bridges,f411re-package
+nucleo-f411re,32,PA4,GPIO,ADC1_IN4,,ADC1_IN4,nucleo-f411re-morpho-58 | f411re-package,f411re-package
+nucleo-f411re,32,PA4,GPIO,I2S1_WS,AF5,I2S1_WS,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,32,PA4,GPIO,I2S3_WS,AF6,I2S3_WS,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,32,PA4,GPIO,SPI1_NSS,AF5,SPI1_NSS,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,32,PA4,GPIO,SPI3_NSS,AF6,SPI3_NSS,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,32,PA4,GPIO,USART2_CK,AF7,USART2_CK,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,33,VBAT,POWER,,,,nucleo-f411re-morpho-58 | f411re-package,
+nucleo-f411re,34,PB0,GPIO,ADC1_IN8,,ADC1_IN8,nucleo-f411re-morpho-58 | f411re-package,f411re-package
+nucleo-f411re,34,PB0,GPIO,I2S5_CK,AF6,I2S5_CK,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,34,PB0,GPIO,SPI5_SCK,AF6,SPI5_SCK,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,34,PB0,GPIO,TIM1_CH2N,AF1,TIM1_CH2N,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,34,PB0,GPIO,TIM3_CH3,AF2,TIM3_CH3,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,35,PC2,GPIO,ADC1_IN12,,ADC1_IN12,nucleo-f411re-morpho-58 | f411re-package,f411re-package
+nucleo-f411re,35,PC2,GPIO,I2S2_ext_SD,AF6,I2S2_ext_SD,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,35,PC2,GPIO,SPI2_MISO,AF5,SPI2_MISO,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,36,PC1,GPIO,ADC1_IN11,,ADC1_IN11,nucleo-f411re-morpho-58 | f411re-package | nucleo-mb1136-bridges,f411re-package
+nucleo-f411re,37,PC3,GPIO,ADC1_IN13,,ADC1_IN13,nucleo-f411re-morpho-58 | f411re-package,f411re-package
+nucleo-f411re,37,PC3,GPIO,I2S2_SD,AF5,I2S2_SD,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,37,PC3,GPIO,SPI2_MOSI,AF5,SPI2_MOSI,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,38,PC0,GPIO,ADC1_IN10,,ADC1_IN10,nucleo-f411re-morpho-58 | f411re-package | nucleo-mb1136-bridges,f411re-package
+nucleo-f411re,39,NC,SYSTEM,,,,nucleo-f411re-arduino-43,
+nucleo-f411re,40,IOREF,POWER,,,,nucleo-f411re-arduino-43,
+nucleo-f411re,41,NRST,SYSTEM,,,,nucleo-f411re-arduino-43 | f411re-package,
+nucleo-f411re,42,+3.3V,POWER,,,,nucleo-f411re-arduino-43,
+nucleo-f411re,43,+5V,POWER,,,,nucleo-f411re-arduino-43,
+nucleo-f411re,44,GND,GND,,,,nucleo-f411re-arduino-43,
+nucleo-f411re,45,GND,GND,,,,nucleo-f411re-arduino-43,
+nucleo-f411re,46,VIN,POWER,,,,nucleo-f411re-arduino-43,
+nucleo-f411re,47,PA0,GPIO,ADC1_IN0,,ADC1_IN0,nucleo-f411re-arduino-43 | f411re-package,f411re-package
+nucleo-f411re,47,PA0,GPIO,SYS_WKUP,,SYS_WKUP,nucleo-f411re-arduino-43 | f411re-package,f411re-package
+nucleo-f411re,47,PA0,GPIO,TIM2_CH1,AF1,TIM2_CH1,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,47,PA0,GPIO,TIM2_ETR,AF1,TIM2_ETR,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,47,PA0,GPIO,TIM5_CH1,AF2,TIM5_CH1,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,47,PA0,GPIO,USART2_CTS,AF7,USART2_CTS,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,48,PA1,GPIO,ADC1_IN1,,ADC1_IN1,nucleo-f411re-arduino-43 | f411re-package,f411re-package
+nucleo-f411re,48,PA1,GPIO,I2S4_SD,AF5,I2S4_SD,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,48,PA1,GPIO,SPI4_MOSI,AF5,SPI4_MOSI,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,48,PA1,GPIO,TIM2_CH2,AF1,TIM2_CH2,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,48,PA1,GPIO,TIM5_CH2,AF2,TIM5_CH2,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,48,PA1,GPIO,USART2_RTS,AF7,USART2_RTS,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,49,PA4,GPIO,ADC1_IN4,,ADC1_IN4,nucleo-f411re-arduino-43 | f411re-package,f411re-package
+nucleo-f411re,49,PA4,GPIO,I2S1_WS,AF5,I2S1_WS,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,49,PA4,GPIO,I2S3_WS,AF6,I2S3_WS,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,49,PA4,GPIO,SPI1_NSS,AF5,SPI1_NSS,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,49,PA4,GPIO,SPI3_NSS,AF6,SPI3_NSS,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,49,PA4,GPIO,USART2_CK,AF7,USART2_CK,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,50,PB0,GPIO,ADC1_IN8,,ADC1_IN8,nucleo-f411re-arduino-43 | f411re-package,f411re-package
+nucleo-f411re,50,PB0,GPIO,I2S5_CK,AF6,I2S5_CK,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,50,PB0,GPIO,SPI5_SCK,AF6,SPI5_SCK,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,50,PB0,GPIO,TIM1_CH2N,AF1,TIM1_CH2N,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,50,PB0,GPIO,TIM3_CH3,AF2,TIM3_CH3,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,51,PC1,GPIO,ADC1_IN11,,ADC1_IN11,nucleo-f411re-arduino-43 | f411re-package | nucleo-mb1136-bridges,f411re-package
+nucleo-f411re,52,PC0,GPIO,ADC1_IN10,,ADC1_IN10,nucleo-f411re-arduino-43 | f411re-package | nucleo-mb1136-bridges,f411re-package
+nucleo-f411re,53,PC9,GPIO,I2C3_SDA,AF4,I2C3_SDA,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,53,PC9,GPIO,I2S_CKIN,AF5,I2S_CKIN,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,53,PC9,GPIO,RCC_MCO_2,AF0,RCC_MCO_2,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,53,PC9,GPIO,SDIO_D1,AF12,SDIO_D1,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,53,PC9,GPIO,TIM3_CH4,AF2,TIM3_CH4,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,54,PC8,GPIO,SDIO_D0,AF12,SDIO_D0,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,54,PC8,GPIO,TIM3_CH3,AF2,TIM3_CH3,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,54,PC8,GPIO,USART6_CK,AF8,USART6_CK,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,55,PB8,GPIO,I2C1_SCL,AF4,I2C1_SCL,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,55,PB8,GPIO,I2C3_SDA,AF9,I2C3_SDA,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,55,PB8,GPIO,I2S5_SD,AF6,I2S5_SD,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,55,PB8,GPIO,SDIO_D4,AF12,SDIO_D4,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,55,PB8,GPIO,SPI5_MOSI,AF6,SPI5_MOSI,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,55,PB8,GPIO,TIM10_CH1,AF3,TIM10_CH1,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,55,PB8,GPIO,TIM4_CH3,AF2,TIM4_CH3,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,56,PC6,GPIO,I2S2_MCK,AF5,I2S2_MCK,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,56,PC6,GPIO,SDIO_D6,AF12,SDIO_D6,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,56,PC6,GPIO,TIM3_CH1,AF2,TIM3_CH1,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,56,PC6,GPIO,USART6_TX,AF8,USART6_TX,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,57,PB9,GPIO,I2C1_SDA,AF4,I2C1_SDA,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,57,PB9,GPIO,I2C2_SDA,AF9,I2C2_SDA,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,57,PB9,GPIO,I2S2_WS,AF5,I2S2_WS,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,57,PB9,GPIO,SDIO_D5,AF12,SDIO_D5,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,57,PB9,GPIO,SPI2_NSS,AF5,SPI2_NSS,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,57,PB9,GPIO,TIM11_CH1,AF3,TIM11_CH1,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,57,PB9,GPIO,TIM4_CH4,AF2,TIM4_CH4,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,58,PC5,GPIO,ADC1_IN15,,ADC1_IN15,nucleo-f411re-morpho-58 | f411re-package,f411re-package
+nucleo-f411re,59,AVDD,POWER,,,,nucleo-f411re-morpho-58 | f411re-package,
+nucleo-f411re,60,U5V,POWER,,,,nucleo-f411re-morpho-58,
+nucleo-f411re,61,GND,GND,,,,nucleo-f411re-morpho-58,
+nucleo-f411re,62,NC,SYSTEM,,,,nucleo-f411re-morpho-58,
+nucleo-f411re,63,PA5,GPIO,ADC1_IN5,,ADC1_IN5,nucleo-f411re-morpho-58 | f411re-package | nucleo-mb1136-bridges,f411re-package
+nucleo-f411re,63,PA5,GPIO,I2S1_CK,AF5,I2S1_CK,nucleo-f411re-morpho-58 | f411re-package | nucleo-mb1136-bridges,f411re-package | f411re-modes
+nucleo-f411re,63,PA5,GPIO,SPI1_SCK,AF5,SPI1_SCK,nucleo-f411re-morpho-58 | f411re-package | nucleo-mb1136-bridges,f411re-package | f411re-modes
+nucleo-f411re,63,PA5,GPIO,TIM2_CH1,AF1,TIM2_CH1,nucleo-f411re-morpho-58 | f411re-package | nucleo-mb1136-bridges,f411re-package | f411re-modes
+nucleo-f411re,63,PA5,GPIO,TIM2_ETR,AF1,TIM2_ETR,nucleo-f411re-morpho-58 | f411re-package | nucleo-mb1136-bridges,f411re-package | f411re-modes
+nucleo-f411re,64,PA12,GPIO,SPI5_MISO,AF6,SPI5_MISO,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,64,PA12,GPIO,TIM1_ETR,AF1,TIM1_ETR,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,64,PA12,GPIO,USART1_RTS,AF7,USART1_RTS,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,64,PA12,GPIO,USART6_RX,AF8,USART6_RX,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,64,PA12,GPIO,USB_OTG_FS_DP,AF10,USB_OTG_FS_DP,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,65,PA6,GPIO,ADC1_IN6,,ADC1_IN6,nucleo-f411re-morpho-58 | f411re-package,f411re-package
+nucleo-f411re,65,PA6,GPIO,I2S2_MCK,AF6,I2S2_MCK,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,65,PA6,GPIO,SDIO_CMD,AF12,SDIO_CMD,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,65,PA6,GPIO,SPI1_MISO,AF5,SPI1_MISO,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,65,PA6,GPIO,TIM1_BKIN,AF1,TIM1_BKIN,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,65,PA6,GPIO,TIM3_CH1,AF2,TIM3_CH1,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,66,PA11,GPIO,ADC1_EXTI11,,ADC1_EXTI11,nucleo-f411re-morpho-58 | f411re-package,f411re-package
+nucleo-f411re,66,PA11,GPIO,SPI4_MISO,AF6,SPI4_MISO,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,66,PA11,GPIO,TIM1_CH4,AF1,TIM1_CH4,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,66,PA11,GPIO,USART1_CTS,AF7,USART1_CTS,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,66,PA11,GPIO,USART6_TX,AF8,USART6_TX,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,66,PA11,GPIO,USB_OTG_FS_DM,AF10,USB_OTG_FS_DM,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,67,PA7,GPIO,ADC1_IN7,,ADC1_IN7,nucleo-f411re-morpho-58 | f411re-package,f411re-package
+nucleo-f411re,67,PA7,GPIO,I2S1_SD,AF5,I2S1_SD,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,67,PA7,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,67,PA7,GPIO,TIM1_CH1N,AF1,TIM1_CH1N,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,67,PA7,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,68,PB12,GPIO,I2C2_SMBA,AF4,I2C2_SMBA,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,68,PB12,GPIO,I2S2_WS,AF5,I2S2_WS,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,68,PB12,GPIO,I2S3_CK,AF7,I2S3_CK,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,68,PB12,GPIO,I2S4_WS,AF6,I2S4_WS,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,68,PB12,GPIO,SPI2_NSS,AF5,SPI2_NSS,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,68,PB12,GPIO,SPI3_SCK,AF7,SPI3_SCK,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,68,PB12,GPIO,SPI4_NSS,AF6,SPI4_NSS,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,68,PB12,GPIO,TIM1_BKIN,AF1,TIM1_BKIN,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,69,PB6,GPIO,I2C1_SCL,AF4,I2C1_SCL,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,69,PB6,GPIO,TIM4_CH1,AF2,TIM4_CH1,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,69,PB6,GPIO,USART1_TX,AF7,USART1_TX,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,70,NC,SYSTEM,,,,nucleo-f411re-morpho-58,
+nucleo-f411re,71,PC7,GPIO,I2S2_CK,AF5,I2S2_CK,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,71,PC7,GPIO,I2S3_MCK,AF6,I2S3_MCK,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,71,PC7,GPIO,SDIO_D7,AF12,SDIO_D7,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,71,PC7,GPIO,SPI2_SCK,AF5,SPI2_SCK,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,71,PC7,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,71,PC7,GPIO,USART6_RX,AF8,USART6_RX,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,72,GND,GND,,,,nucleo-f411re-morpho-58,
+nucleo-f411re,73,PA9,GPIO,I2C3_SMBA,AF4,I2C3_SMBA,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,73,PA9,GPIO,SDIO_D2,AF12,SDIO_D2,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,73,PA9,GPIO,TIM1_CH2,AF1,TIM1_CH2,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,73,PA9,GPIO,USART1_TX,AF7,USART1_TX,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,73,PA9,GPIO,USB_OTG_FS_VBUS,AF10,USB_OTG_FS_VBUS,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,74,PB2,GPIO,,,,nucleo-f411re-morpho-58 | f411re-package,
+nucleo-f411re,75,PA8,GPIO,I2C3_SCL,AF4,I2C3_SCL,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,75,PA8,GPIO,RCC_MCO_1,AF0,RCC_MCO_1,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,75,PA8,GPIO,SDIO_D1,AF12,SDIO_D1,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,75,PA8,GPIO,TIM1_CH1,AF1,TIM1_CH1,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,75,PA8,GPIO,USART1_CK,AF7,USART1_CK,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,75,PA8,GPIO,USB_OTG_FS_SOF,AF10,USB_OTG_FS_SOF,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,76,PB1,GPIO,ADC1_IN9,,ADC1_IN9,nucleo-f411re-morpho-58 | f411re-package,f411re-package
+nucleo-f411re,76,PB1,GPIO,I2S5_WS,AF6,I2S5_WS,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,76,PB1,GPIO,SPI5_NSS,AF6,SPI5_NSS,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,76,PB1,GPIO,TIM1_CH3N,AF1,TIM1_CH3N,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,76,PB1,GPIO,TIM3_CH4,AF2,TIM3_CH4,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,77,PB10,GPIO,I2C2_SCL,AF4,I2C2_SCL,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,77,PB10,GPIO,I2S2_CK,AF5,I2S2_CK,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,77,PB10,GPIO,I2S3_MCK,AF6,I2S3_MCK,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,77,PB10,GPIO,SDIO_D7,AF12,SDIO_D7,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,77,PB10,GPIO,SPI2_SCK,AF5,SPI2_SCK,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,77,PB10,GPIO,TIM2_CH3,AF1,TIM2_CH3,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,78,PB15,GPIO,ADC1_EXTI15,,ADC1_EXTI15,nucleo-f411re-morpho-58 | f411re-package,f411re-package
+nucleo-f411re,78,PB15,GPIO,I2S2_SD,AF5,I2S2_SD,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,78,PB15,GPIO,RTC_REFIN,AF0,RTC_REFIN,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,78,PB15,GPIO,SDIO_CK,AF12,SDIO_CK,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,78,PB15,GPIO,SPI2_MOSI,AF5,SPI2_MOSI,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,78,PB15,GPIO,TIM1_CH3N,AF1,TIM1_CH3N,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,79,PB4,GPIO,I2C3_SDA,AF9,I2C3_SDA,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,79,PB4,GPIO,I2S3_ext_SD,AF7,I2S3_ext_SD,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,79,PB4,GPIO,SDIO_D0,AF12,SDIO_D0,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,79,PB4,GPIO,SPI1_MISO,AF5,SPI1_MISO,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,79,PB4,GPIO,SPI3_MISO,AF6,SPI3_MISO,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,79,PB4,GPIO,SYS_JTRST,AF0,SYS_JTRST,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,79,PB4,GPIO,TIM3_CH1,AF2,TIM3_CH1,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,80,PB14,GPIO,I2S2_ext_SD,AF6,I2S2_ext_SD,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,80,PB14,GPIO,SDIO_D6,AF12,SDIO_D6,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,80,PB14,GPIO,SPI2_MISO,AF5,SPI2_MISO,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,80,PB14,GPIO,TIM1_CH2N,AF1,TIM1_CH2N,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,81,PB5,GPIO,I2C1_SMBA,AF4,I2C1_SMBA,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,81,PB5,GPIO,I2S1_SD,AF5,I2S1_SD,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,81,PB5,GPIO,I2S3_SD,AF6,I2S3_SD,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,81,PB5,GPIO,SDIO_D3,AF12,SDIO_D3,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,81,PB5,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,81,PB5,GPIO,SPI3_MOSI,AF6,SPI3_MOSI,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,81,PB5,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,82,PB13,GPIO,I2S2_CK,AF5,I2S2_CK,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,82,PB13,GPIO,I2S4_CK,AF6,I2S4_CK,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,82,PB13,GPIO,SPI2_SCK,AF5,SPI2_SCK,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,82,PB13,GPIO,SPI4_SCK,AF6,SPI4_SCK,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,82,PB13,GPIO,TIM1_CH1N,AF1,TIM1_CH1N,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,83,PB3,GPIO,I2C2_SDA,AF9,I2C2_SDA,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,83,PB3,GPIO,I2S1_CK,AF5,I2S1_CK,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,83,PB3,GPIO,I2S3_CK,AF6,I2S3_CK,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,83,PB3,GPIO,SPI1_SCK,AF5,SPI1_SCK,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,83,PB3,GPIO,SPI3_SCK,AF6,SPI3_SCK,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,83,PB3,GPIO,SYS_JTDO-SWO,AF0,SYS_JTDO-SWO,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,83,PB3,GPIO,TIM2_CH2,AF1,TIM2_CH2,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,83,PB3,GPIO,USART1_RX,AF7,USART1_RX,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,84,AGND,GND,,,,nucleo-f411re-morpho-58,
+nucleo-f411re,85,PA10,GPIO,I2S5_SD,AF6,I2S5_SD,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,85,PA10,GPIO,SPI5_MOSI,AF6,SPI5_MOSI,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,85,PA10,GPIO,TIM1_CH3,AF1,TIM1_CH3,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,85,PA10,GPIO,USART1_RX,AF7,USART1_RX,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,85,PA10,GPIO,USB_OTG_FS_ID,AF10,USB_OTG_FS_ID,nucleo-f411re-morpho-58 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,86,PC4,GPIO,ADC1_IN14,,ADC1_IN14,nucleo-f411re-morpho-58 | f411re-package,f411re-package
+nucleo-f411re,87,PA2,GPIO,ADC1_IN2,,ADC1_IN2,nucleo-f411re-morpho-58 | f411re-package | nucleo-mb1136-bridges,f411re-package
+nucleo-f411re,87,PA2,GPIO,I2S_CKIN,AF5,I2S_CKIN,nucleo-f411re-morpho-58 | f411re-package | nucleo-mb1136-bridges,f411re-package | f411re-modes
+nucleo-f411re,87,PA2,GPIO,TIM2_CH3,AF1,TIM2_CH3,nucleo-f411re-morpho-58 | f411re-package | nucleo-mb1136-bridges,f411re-package | f411re-modes
+nucleo-f411re,87,PA2,GPIO,TIM5_CH3,AF2,TIM5_CH3,nucleo-f411re-morpho-58 | f411re-package | nucleo-mb1136-bridges,f411re-package | f411re-modes
+nucleo-f411re,87,PA2,GPIO,TIM9_CH1,AF3,TIM9_CH1,nucleo-f411re-morpho-58 | f411re-package | nucleo-mb1136-bridges,f411re-package | f411re-modes
+nucleo-f411re,87,PA2,GPIO,USART2_TX,AF7,USART2_TX,nucleo-f411re-morpho-58 | f411re-package | nucleo-mb1136-bridges,f411re-package | f411re-modes
+nucleo-f411re,88,NC,SYSTEM,,,,nucleo-f411re-morpho-58,
+nucleo-f411re,89,PA3,GPIO,ADC1_IN3,,ADC1_IN3,nucleo-f411re-morpho-58 | f411re-package | nucleo-mb1136-bridges,f411re-package
+nucleo-f411re,89,PA3,GPIO,I2S2_MCK,AF5,I2S2_MCK,nucleo-f411re-morpho-58 | f411re-package | nucleo-mb1136-bridges,f411re-package | f411re-modes
+nucleo-f411re,89,PA3,GPIO,TIM2_CH4,AF1,TIM2_CH4,nucleo-f411re-morpho-58 | f411re-package | nucleo-mb1136-bridges,f411re-package | f411re-modes
+nucleo-f411re,89,PA3,GPIO,TIM5_CH4,AF2,TIM5_CH4,nucleo-f411re-morpho-58 | f411re-package | nucleo-mb1136-bridges,f411re-package | f411re-modes
+nucleo-f411re,89,PA3,GPIO,TIM9_CH2,AF3,TIM9_CH2,nucleo-f411re-morpho-58 | f411re-package | nucleo-mb1136-bridges,f411re-package | f411re-modes
+nucleo-f411re,89,PA3,GPIO,USART2_RX,AF7,USART2_RX,nucleo-f411re-morpho-58 | f411re-package | nucleo-mb1136-bridges,f411re-package | f411re-modes
+nucleo-f411re,90,NC,SYSTEM,,,,nucleo-f411re-morpho-58,
+nucleo-f411re,91,PA9,GPIO,I2C3_SMBA,AF4,I2C3_SMBA,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,91,PA9,GPIO,SDIO_D2,AF12,SDIO_D2,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,91,PA9,GPIO,TIM1_CH2,AF1,TIM1_CH2,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,91,PA9,GPIO,USART1_TX,AF7,USART1_TX,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,91,PA9,GPIO,USB_OTG_FS_VBUS,AF10,USB_OTG_FS_VBUS,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,92,PC7,GPIO,I2S2_CK,AF5,I2S2_CK,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,92,PC7,GPIO,I2S3_MCK,AF6,I2S3_MCK,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,92,PC7,GPIO,SDIO_D7,AF12,SDIO_D7,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,92,PC7,GPIO,SPI2_SCK,AF5,SPI2_SCK,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,92,PC7,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,92,PC7,GPIO,USART6_RX,AF8,USART6_RX,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,93,PB6,GPIO,I2C1_SCL,AF4,I2C1_SCL,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,93,PB6,GPIO,TIM4_CH1,AF2,TIM4_CH1,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,93,PB6,GPIO,USART1_TX,AF7,USART1_TX,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,94,PA7,GPIO,ADC1_IN7,,ADC1_IN7,nucleo-f411re-arduino-44 | f411re-package,f411re-package
+nucleo-f411re,94,PA7,GPIO,I2S1_SD,AF5,I2S1_SD,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,94,PA7,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,94,PA7,GPIO,TIM1_CH1N,AF1,TIM1_CH1N,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,94,PA7,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,95,PA6,GPIO,ADC1_IN6,,ADC1_IN6,nucleo-f411re-arduino-44 | f411re-package,f411re-package
+nucleo-f411re,95,PA6,GPIO,I2S2_MCK,AF6,I2S2_MCK,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,95,PA6,GPIO,SDIO_CMD,AF12,SDIO_CMD,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,95,PA6,GPIO,SPI1_MISO,AF5,SPI1_MISO,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,95,PA6,GPIO,TIM1_BKIN,AF1,TIM1_BKIN,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,95,PA6,GPIO,TIM3_CH1,AF2,TIM3_CH1,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,96,PA5,GPIO,ADC1_IN5,,ADC1_IN5,nucleo-f411re-arduino-44 | f411re-package | nucleo-mb1136-bridges,f411re-package
+nucleo-f411re,96,PA5,GPIO,I2S1_CK,AF5,I2S1_CK,nucleo-f411re-arduino-44 | f411re-package | nucleo-mb1136-bridges,f411re-package | f411re-modes
+nucleo-f411re,96,PA5,GPIO,SPI1_SCK,AF5,SPI1_SCK,nucleo-f411re-arduino-44 | f411re-package | nucleo-mb1136-bridges,f411re-package | f411re-modes
+nucleo-f411re,96,PA5,GPIO,TIM2_CH1,AF1,TIM2_CH1,nucleo-f411re-arduino-44 | f411re-package | nucleo-mb1136-bridges,f411re-package | f411re-modes
+nucleo-f411re,96,PA5,GPIO,TIM2_ETR,AF1,TIM2_ETR,nucleo-f411re-arduino-44 | f411re-package | nucleo-mb1136-bridges,f411re-package | f411re-modes
+nucleo-f411re,97,GND,GND,,,,nucleo-f411re-arduino-43,
+nucleo-f411re,98,AVDD,POWER,,,,nucleo-f411re-arduino-43 | f411re-package,
+nucleo-f411re,99,PB9,GPIO,I2C1_SDA,AF4,I2C1_SDA,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,99,PB9,GPIO,I2C2_SDA,AF9,I2C2_SDA,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,99,PB9,GPIO,I2S2_WS,AF5,I2S2_WS,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,99,PB9,GPIO,SDIO_D5,AF12,SDIO_D5,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,99,PB9,GPIO,SPI2_NSS,AF5,SPI2_NSS,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,99,PB9,GPIO,TIM11_CH1,AF3,TIM11_CH1,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,99,PB9,GPIO,TIM4_CH4,AF2,TIM4_CH4,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,100,PB8,GPIO,I2C1_SCL,AF4,I2C1_SCL,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,100,PB8,GPIO,I2C3_SDA,AF9,I2C3_SDA,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,100,PB8,GPIO,I2S5_SD,AF6,I2S5_SD,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,100,PB8,GPIO,SDIO_D4,AF12,SDIO_D4,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,100,PB8,GPIO,SPI5_MOSI,AF6,SPI5_MOSI,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,100,PB8,GPIO,TIM10_CH1,AF3,TIM10_CH1,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,100,PB8,GPIO,TIM4_CH3,AF2,TIM4_CH3,nucleo-f411re-arduino-43 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,101,PA3,GPIO,ADC1_IN3,,ADC1_IN3,nucleo-f411re-arduino-44 | f411re-package | nucleo-mb1136-bridges,f411re-package
+nucleo-f411re,101,PA3,GPIO,I2S2_MCK,AF5,I2S2_MCK,nucleo-f411re-arduino-44 | f411re-package | nucleo-mb1136-bridges,f411re-package | f411re-modes
+nucleo-f411re,101,PA3,GPIO,TIM2_CH4,AF1,TIM2_CH4,nucleo-f411re-arduino-44 | f411re-package | nucleo-mb1136-bridges,f411re-package | f411re-modes
+nucleo-f411re,101,PA3,GPIO,TIM5_CH4,AF2,TIM5_CH4,nucleo-f411re-arduino-44 | f411re-package | nucleo-mb1136-bridges,f411re-package | f411re-modes
+nucleo-f411re,101,PA3,GPIO,TIM9_CH2,AF3,TIM9_CH2,nucleo-f411re-arduino-44 | f411re-package | nucleo-mb1136-bridges,f411re-package | f411re-modes
+nucleo-f411re,101,PA3,GPIO,USART2_RX,AF7,USART2_RX,nucleo-f411re-arduino-44 | f411re-package | nucleo-mb1136-bridges,f411re-package | f411re-modes
+nucleo-f411re,102,PA2,GPIO,ADC1_IN2,,ADC1_IN2,nucleo-f411re-arduino-44 | f411re-package | nucleo-mb1136-bridges,f411re-package
+nucleo-f411re,102,PA2,GPIO,I2S_CKIN,AF5,I2S_CKIN,nucleo-f411re-arduino-44 | f411re-package | nucleo-mb1136-bridges,f411re-package | f411re-modes
+nucleo-f411re,102,PA2,GPIO,TIM2_CH3,AF1,TIM2_CH3,nucleo-f411re-arduino-44 | f411re-package | nucleo-mb1136-bridges,f411re-package | f411re-modes
+nucleo-f411re,102,PA2,GPIO,TIM5_CH3,AF2,TIM5_CH3,nucleo-f411re-arduino-44 | f411re-package | nucleo-mb1136-bridges,f411re-package | f411re-modes
+nucleo-f411re,102,PA2,GPIO,TIM9_CH1,AF3,TIM9_CH1,nucleo-f411re-arduino-44 | f411re-package | nucleo-mb1136-bridges,f411re-package | f411re-modes
+nucleo-f411re,102,PA2,GPIO,USART2_TX,AF7,USART2_TX,nucleo-f411re-arduino-44 | f411re-package | nucleo-mb1136-bridges,f411re-package | f411re-modes
+nucleo-f411re,103,PA10,GPIO,I2S5_SD,AF6,I2S5_SD,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,103,PA10,GPIO,SPI5_MOSI,AF6,SPI5_MOSI,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,103,PA10,GPIO,TIM1_CH3,AF1,TIM1_CH3,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,103,PA10,GPIO,USART1_RX,AF7,USART1_RX,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,103,PA10,GPIO,USB_OTG_FS_ID,AF10,USB_OTG_FS_ID,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,104,PB3,GPIO,I2C2_SDA,AF9,I2C2_SDA,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,104,PB3,GPIO,I2S1_CK,AF5,I2S1_CK,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,104,PB3,GPIO,I2S3_CK,AF6,I2S3_CK,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,104,PB3,GPIO,SPI1_SCK,AF5,SPI1_SCK,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,104,PB3,GPIO,SPI3_SCK,AF6,SPI3_SCK,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,104,PB3,GPIO,SYS_JTDO-SWO,AF0,SYS_JTDO-SWO,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,104,PB3,GPIO,TIM2_CH2,AF1,TIM2_CH2,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,104,PB3,GPIO,USART1_RX,AF7,USART1_RX,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,105,PB5,GPIO,I2C1_SMBA,AF4,I2C1_SMBA,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,105,PB5,GPIO,I2S1_SD,AF5,I2S1_SD,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,105,PB5,GPIO,I2S3_SD,AF6,I2S3_SD,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,105,PB5,GPIO,SDIO_D3,AF12,SDIO_D3,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,105,PB5,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,105,PB5,GPIO,SPI3_MOSI,AF6,SPI3_MOSI,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,105,PB5,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,106,PB4,GPIO,I2C3_SDA,AF9,I2C3_SDA,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,106,PB4,GPIO,I2S3_ext_SD,AF7,I2S3_ext_SD,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,106,PB4,GPIO,SDIO_D0,AF12,SDIO_D0,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,106,PB4,GPIO,SPI1_MISO,AF5,SPI1_MISO,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,106,PB4,GPIO,SPI3_MISO,AF6,SPI3_MISO,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,106,PB4,GPIO,SYS_JTRST,AF0,SYS_JTRST,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,106,PB4,GPIO,TIM3_CH1,AF2,TIM3_CH1,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,107,PB10,GPIO,I2C2_SCL,AF4,I2C2_SCL,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,107,PB10,GPIO,I2S2_CK,AF5,I2S2_CK,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,107,PB10,GPIO,I2S3_MCK,AF6,I2S3_MCK,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,107,PB10,GPIO,SDIO_D7,AF12,SDIO_D7,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,107,PB10,GPIO,SPI2_SCK,AF5,SPI2_SCK,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,107,PB10,GPIO,TIM2_CH3,AF1,TIM2_CH3,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,108,PA8,GPIO,I2C3_SCL,AF4,I2C3_SCL,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,108,PA8,GPIO,RCC_MCO_1,AF0,RCC_MCO_1,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,108,PA8,GPIO,SDIO_D1,AF12,SDIO_D1,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,108,PA8,GPIO,TIM1_CH1,AF1,TIM1_CH1,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,108,PA8,GPIO,USART1_CK,AF7,USART1_CK,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
+nucleo-f411re,108,PA8,GPIO,USB_OTG_FS_SOF,AF10,USB_OTG_FS_SOF,nucleo-f411re-arduino-44 | f411re-package,f411re-package | f411re-modes
 arduino-uno-r3,1,NC,SYSTEM,,,,arduino-uno-r3-headers | arduino-uno-r3-connector-tables,
 arduino-uno-r3,2,IOREF,POWER,,,,arduino-uno-r3-headers | arduino-uno-r3-connector-tables,
 arduino-uno-r3,3,RESET,SYSTEM,,,,arduino-uno-r3-headers | arduino-uno-r3-connector-tables,

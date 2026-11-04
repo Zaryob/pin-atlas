@@ -352,7 +352,7 @@ def build(use_snapshots=False):
     stm32_boards=build_stm32(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn'],use_snapshots)
     boards.extend(stm32_boards)
     boards.append(build_nucleo(CACHE,DOCS,ref,stm32_boards[2],'f103rb'))
-    for model in ('f401re',):
+    for model in ('f401re','f411re'):
         chip=read_f4_chip(CACHE,DOCS,ref,model,MANIFEST['verifiedOn'],category)
         boards.append(build_nucleo(CACHE,DOCS,ref,chip,model))
     boards.extend(build_arduino(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn']))

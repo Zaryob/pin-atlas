@@ -1,7 +1,7 @@
 {
   "verifiedOn": "2026-11-04",
-  "physicalPins": 1760,
-  "functionAssignments": 5438,
+  "physicalPins": 1868,
+  "functionAssignments": 5770,
   "documents": [
     {
       "id": "rp2350",
@@ -462,6 +462,24 @@
       "publisher": "STMicroelectronics",
       "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
       "sha256": "4491b4ee54faa9d6ccf722f6e79ca752b2dcd168f5279ad249959a561db4fbff"
+    },
+    {
+      "id": "f411re-package",
+      "title": "STM32F411RE CubeMX package data",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F411R(C-E)Tx.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F411R(C-E)Tx.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "e94f0b99a3300bae665f211079e114eef33656cdfac7c2da671d3717fe7881ab"
+    },
+    {
+      "id": "f411re-modes",
+      "title": "STM32F411RE CubeMX modes data",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F411_gpio_v1_0_Modes.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F411_gpio_v1_0_Modes.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "ac1753a62670b4b27dfb1b9b7d8c3106d5e7926066e2f1cc6e8385178b28c34b"
     }
   ],
   "boards": [
@@ -583,6 +601,15 @@
       "id": "nucleo-f401re",
       "physicalPins": 108,
       "functionAssignments": 261,
+      "physicalSourceMethods": [
+        "manufacturer-xml",
+        "pdf-table"
+      ]
+    },
+    {
+      "id": "nucleo-f411re",
+      "physicalPins": 108,
+      "functionAssignments": 332,
       "physicalSourceMethods": [
         "manufacturer-xml",
         "pdf-table"
