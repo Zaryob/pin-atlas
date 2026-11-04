@@ -5447,6 +5447,101 @@ atmega2561-tqfp64,61,PF0,GPIO,ADC0,,ADC0,atmega2561-tqfp64-physical,atmega2560-p
 atmega2561-tqfp64,62,AREF,SYSTEM,,,,atmega2561-tqfp64-physical,
 atmega2561-tqfp64,63,GND,GND,,,,atmega2561-tqfp64-physical,
 atmega2561-tqfp64,64,AVCC,POWER,,,,atmega2561-tqfp64-physical,
+xiao-rp2040,1,D0_ADC0,GPIO,SPI1 SCK,F1,SPI1 SCK,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,1,D0_ADC0,GPIO,UART1 CTS,F2,UART1 CTS,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,1,D0_ADC0,GPIO,I2C1 SDA,F3,I2C1 SDA,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,1,D0_ADC0,GPIO,PWM5 A,F4,PWM5 A,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,1,D0_ADC0,GPIO,SIO,F5,SIO,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,1,D0_ADC0,GPIO,PIO0,F6,PIO0,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,1,D0_ADC0,GPIO,PIO1,F7,PIO1,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,1,D0_ADC0,GPIO,USB VBUS EN,F9,USB VBUS EN,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,1,D0_ADC0,GPIO,ADC0,,ADC0,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-qfn56-physical
+xiao-rp2040,2,D1_ADC1,GPIO,SPI1 TX,F1,SPI1 TX,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,2,D1_ADC1,GPIO,UART1 RTS,F2,UART1 RTS,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,2,D1_ADC1,GPIO,I2C1 SCL,F3,I2C1 SCL,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,2,D1_ADC1,GPIO,PWM5 B,F4,PWM5 B,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,2,D1_ADC1,GPIO,SIO,F5,SIO,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,2,D1_ADC1,GPIO,PIO0,F6,PIO0,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,2,D1_ADC1,GPIO,PIO1,F7,PIO1,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,2,D1_ADC1,GPIO,USB OVCUR DET,F9,USB OVCUR DET,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,2,D1_ADC1,GPIO,ADC1,,ADC1,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-qfn56-physical
+xiao-rp2040,3,D2_ADC2,GPIO,SPI1 RX,F1,SPI1 RX,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,3,D2_ADC2,GPIO,UART0 TX,F2,UART0 TX,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,3,D2_ADC2,GPIO,I2C0 SDA,F3,I2C0 SDA,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,3,D2_ADC2,GPIO,PWM6 A,F4,PWM6 A,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,3,D2_ADC2,GPIO,SIO,F5,SIO,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,3,D2_ADC2,GPIO,PIO0,F6,PIO0,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,3,D2_ADC2,GPIO,PIO1,F7,PIO1,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,3,D2_ADC2,GPIO,USB VBUS DET,F9,USB VBUS DET,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,3,D2_ADC2,GPIO,ADC2,,ADC2,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-qfn56-physical
+xiao-rp2040,4,D3_ADC3,GPIO,SPI1 CSn,F1,SPI1 CSn,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,4,D3_ADC3,GPIO,UART0 RX,F2,UART0 RX,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,4,D3_ADC3,GPIO,I2C0 SCL,F3,I2C0 SCL,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,4,D3_ADC3,GPIO,PWM6 B,F4,PWM6 B,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,4,D3_ADC3,GPIO,SIO,F5,SIO,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,4,D3_ADC3,GPIO,PIO0,F6,PIO0,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,4,D3_ADC3,GPIO,PIO1,F7,PIO1,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,4,D3_ADC3,GPIO,USB VBUS EN,F9,USB VBUS EN,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p14
+xiao-rp2040,4,D3_ADC3,GPIO,ADC3,,ADC3,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-qfn56-physical
+xiao-rp2040,5,D4,GPIO,SPI0 SCK,F1,SPI0 SCK,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,5,D4,GPIO,UART1 CTS,F2,UART1 CTS,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,5,D4,GPIO,I2C1 SDA,F3,I2C1 SDA,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,5,D4,GPIO,PWM3 A,F4,PWM3 A,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,5,D4,GPIO,SIO,F5,SIO,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,5,D4,GPIO,PIO0,F6,PIO0,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,5,D4,GPIO,PIO1,F7,PIO1,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,5,D4,GPIO,USB OVCUR DET,F9,USB OVCUR DET,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,6,D5,GPIO,SPI0 TX,F1,SPI0 TX,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,6,D5,GPIO,UART1 RTS,F2,UART1 RTS,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,6,D5,GPIO,I2C1 SCL,F3,I2C1 SCL,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,6,D5,GPIO,PWM3 B,F4,PWM3 B,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,6,D5,GPIO,SIO,F5,SIO,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,6,D5,GPIO,PIO0,F6,PIO0,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,6,D5,GPIO,PIO1,F7,PIO1,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,6,D5,GPIO,USB VBUS DET,F9,USB VBUS DET,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,7,D6,GPIO,SPI0 RX,F1,SPI0 RX,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,7,D6,GPIO,UART0 TX,F2,UART0 TX,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,7,D6,GPIO,I2C0 SDA,F3,I2C0 SDA,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,7,D6,GPIO,PWM0 A,F4,PWM0 A,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,7,D6,GPIO,SIO,F5,SIO,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,7,D6,GPIO,PIO0,F6,PIO0,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,7,D6,GPIO,PIO1,F7,PIO1,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,7,D6,GPIO,USB OVCUR DET,F9,USB OVCUR DET,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,8,5V,POWER,,,,xiao-rp2040-header,
+xiao-rp2040,9,GND,GND,,,,xiao-rp2040-header,
+xiao-rp2040,10,3V3,POWER,,,,xiao-rp2040-header,
+xiao-rp2040,11,D10,GPIO,SPI0 TX,F1,SPI0 TX,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,11,D10,GPIO,UART0 RTS,F2,UART0 RTS,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,11,D10,GPIO,I2C1 SCL,F3,I2C1 SCL,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,11,D10,GPIO,PWM1 B,F4,PWM1 B,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,11,D10,GPIO,SIO,F5,SIO,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,11,D10,GPIO,PIO0,F6,PIO0,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,11,D10,GPIO,PIO1,F7,PIO1,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,11,D10,GPIO,USB OVCUR DET,F9,USB OVCUR DET,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,12,D9,GPIO,SPI0 RX,F1,SPI0 RX,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,12,D9,GPIO,UART1 TX,F2,UART1 TX,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,12,D9,GPIO,I2C0 SDA,F3,I2C0 SDA,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,12,D9,GPIO,PWM2 A,F4,PWM2 A,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,12,D9,GPIO,SIO,F5,SIO,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,12,D9,GPIO,PIO0,F6,PIO0,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,12,D9,GPIO,PIO1,F7,PIO1,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,12,D9,GPIO,USB VBUS DET,F9,USB VBUS DET,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,13,D8,GPIO,SPI0 SCK,F1,SPI0 SCK,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,13,D8,GPIO,UART0 CTS,F2,UART0 CTS,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,13,D8,GPIO,I2C1 SDA,F3,I2C1 SDA,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,13,D8,GPIO,PWM1 A,F4,PWM1 A,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,13,D8,GPIO,SIO,F5,SIO,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,13,D8,GPIO,PIO0,F6,PIO0,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,13,D8,GPIO,PIO1,F7,PIO1,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,13,D8,GPIO,USB VBUS EN,F9,USB VBUS EN,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,14,D7,GPIO,SPI0 CSn,F1,SPI0 CSn,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,14,D7,GPIO,UART0 RX,F2,UART0 RX,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,14,D7,GPIO,I2C0 SCL,F3,I2C0 SCL,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,14,D7,GPIO,PWM0 B,F4,PWM0 B,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,14,D7,GPIO,SIO,F5,SIO,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,14,D7,GPIO,PIO0,F6,PIO0,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,14,D7,GPIO,PIO1,F7,PIO1,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
+xiao-rp2040,14,D7,GPIO,USB VBUS DET,F9,USB VBUS DET,xiao-rp2040-header | rp2040-qfn56-physical,rp2040-bank0-p13
 rp2350a,1,IOVDD,POWER,,,,rp2350a-iovdd,
 rp2350a,2,GPIO0,GPIO,SPI0 RX,F1,SPI0 RX,rp-pin-list-p1333,rp-bank0-p18
 rp2350a,2,GPIO0,GPIO,UART0 TX,F2,UART0 TX,rp-pin-list-p1333,rp-bank0-p18

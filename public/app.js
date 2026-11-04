@@ -30,7 +30,10 @@ const icons = {
  bolt:'<path d="m13 2-9 12h7l-1 8 10-13h-7z"/>',
  clock:'<circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/>',
  wifi:'<path d="M2 8a16 16 0 0 1 20 0M5 12a11 11 0 0 1 14 0m-10 4a5 5 0 0 1 6 0M12 20h.01"/>',
- menu:'<path d="M4 6h16M4 12h16M4 18h16"/>'
+ menu:'<path d="M4 6h16M4 12h16M4 18h16"/>',
+ home:'<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>',
+ shield:'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
+ globe:'<circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10z"/>'
 };
 const isChip = item => ['qfn','lqfp','dip'].includes(item.layout);
 const icon = name => `<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">${icons[name] || icons.chip}</svg>`;
@@ -44,6 +47,7 @@ const subtitle = item => t(`board.${item.id}`, {}, item.subtitle);
 const groups = ['SPI','I2C','UART','PWM','ADC','HSTX','PIO','PCM','I2S','CLOCK','JTAG','DPI','SDIO','SMI','SWD','CAN','TIMER','USB','IRQ','DAC','TOUCH'];
 let evidence = {references:{}};
 let boards, layouts, layout, board, selected = 1, selectedFn, filters = new Set(), search = '', flipped = false, rotated = false, view = 'map', assignments = {}, toastTimer;
+let currentView = 'home', homeActiveFilter = 'all', homeSearchQuery = '';
 const storageKey = 'pin-atlas:plans:v1';
 const rememberedProfiles = new Map();
 let compatibilityModels = [], compatibilityQuery = '';
@@ -95,8 +99,14 @@ function setBoard(id, initial = false, preferredProfile) {
  if (!sameLayout) { filters = new Set(); search = ''; $('#pin-search').value = ''; flipped = rotated = false; connectorZoom = ''; compatibilityQuery=''; $('#compatible-boards').open=false; }
  const available = new Set(board.pins.flatMap(pin => pin.functions.map(fn => fn.group)));
  filters = new Set([...filters].filter(group => available.has(group)));
+ const wasHome = currentView === 'home';
+ showWorkspaceView();
  renderBoard();
- if (!initial) history.replaceState(null, '', `#${new URLSearchParams({board:layout.id,profile:board.id,pin:selected})}`);
+ if (!initial) {
+   const hash = `#${new URLSearchParams({board:layout.id,profile:board.id,pin:selected})}`;
+   if (wasHome) history.pushState(null, '', hash);
+   else history.replaceState(null, '', hash);
+ }
  if ($('#details-dialog').open) $('#details-dialog').close();
  setDetailTab('pin');
 }
@@ -543,6 +553,13 @@ const boardFamilies = [
     ]
   },
   {
+    id: 'seeed',
+    nameKey: 'familySeeed',
+    items: [
+      { type: 'layout', id: 'seeed-xiao' }
+    ]
+  },
+  {
     id: 'espressif',
     nameKey: 'familyEspressif',
     items: [
@@ -770,6 +787,230 @@ function renderCatalog() {
     return renderCatalogCard(m);
   }).join('')}</div>`;
 }
+
+const featuredDefs = [
+  {
+    layoutId: 'pico-family',
+    profileId: 'raspberry-pi-pico',
+    badge: 'Raspberry Pi',
+    titleKey: 'featuredPicoTitle',
+    descKey: 'featuredPicoDesc',
+    specs: '26-30 GPIO · 3.3V · RP2040 / RP2350'
+  },
+  {
+    layoutId: 'esp32-devkitc-v4',
+    profileId: 'esp32-devkitc-v4',
+    badge: 'Espressif',
+    titleKey: 'featuredEsp32Title',
+    descKey: 'featuredEsp32Desc',
+    specs: '28 GPIO · 3.3V / 5V · Xtensa LX6'
+  },
+  {
+    layoutId: 'arduino-nano',
+    profileId: 'arduino-nano',
+    badge: 'Arduino',
+    titleKey: 'featuredNanoTitle',
+    descKey: 'featuredNanoDesc',
+    specs: '14-22 GPIO · 5V / 3.3V · AVR'
+  },
+  {
+    layoutId: 'seeed-xiao',
+    profileId: 'seeed-xiao-rp2040',
+    badge: 'Seeed Studio',
+    titleKey: 'featuredXiaoTitle',
+    descKey: 'featuredXiaoDesc',
+    specs: '11 GPIO · 3.3V / 5V · RP2040'
+  },
+  {
+    layoutId: 'blue-pill',
+    profileId: 'blue-pill',
+    badge: 'STM32',
+    titleKey: 'featuredBluepillTitle',
+    descKey: 'featuredBluepillDesc',
+    specs: '32 GPIO · 3.3V · Cortex-M3'
+  },
+  {
+    layoutId: 'rp2040',
+    profileId: 'rp2040',
+    badge: 'IC / Package',
+    titleKey: 'featuredRp2040Title',
+    descKey: 'featuredRp2040Desc',
+    specs: '30 GPIO · QFN-56 · Dual Cortex-M0+'
+  }
+];
+
+const homeFilterChips = [
+  { id: 'all', labelKey: 'allFamilies' },
+  { id: 'raspberry-pi', labelKey: 'familyRaspberryPi' },
+  { id: 'espressif', labelKey: 'familyEspressif' },
+  { id: 'arduino', labelKey: 'familyArduino' },
+  { id: 'stm32', labelKey: 'familyStm32' },
+  { id: 'seeed', labelKey: 'familySeeed' },
+  { id: 'chips', labelKey: 'familyChips' }
+];
+
+function showHomeView() {
+  currentView = 'home';
+  $('#home-view').hidden = false;
+  $('#workspace-view').hidden = true;
+  $('#home-breadcrumb-link').classList.add('active');
+  $('#home-breadcrumb-link').setAttribute('aria-current', 'page');
+  $('#crumb-sep-1').hidden = true;
+  $('#board-family').hidden = true;
+  $('#crumb-sep-2').hidden = true;
+  $('#crumb').hidden = true;
+  document.title = `Pin Atlas — ${t('homeBadge')}`;
+  renderHome();
+}
+
+function showWorkspaceView() {
+  currentView = 'workspace';
+  $('#home-view').hidden = true;
+  $('#workspace-view').hidden = false;
+  $('#home-breadcrumb-link').classList.remove('active');
+  $('#home-breadcrumb-link').removeAttribute('aria-current');
+  $('#crumb-sep-1').hidden = false;
+  $('#board-family').hidden = false;
+  $('#crumb-sep-2').hidden = false;
+  $('#crumb').hidden = false;
+}
+
+function renderHome() {
+  renderHomeStats();
+  renderHomeFilterChips();
+  renderHomeFeatured();
+  renderHomeCatalog();
+  hydrateIcons($('#home-view'));
+}
+
+function renderHomeStats() {
+  if (!boards) return;
+  const lang = document.documentElement.lang || 'tr';
+  const totalPins = boards.reduce((acc, b) => acc + (b.pins?.length || 0), 0);
+  const totalFns = boards.reduce((acc, b) => acc + b.pins.reduce((sum, p) => sum + (p.functions?.length || 0), 0), 0);
+  const totalSources = 60;
+  if ($('#home-stat-families')) $('#home-stat-families').textContent = boardFamilies.length;
+  if ($('#home-stat-pins')) $('#home-stat-pins').textContent = new Intl.NumberFormat(lang).format(totalPins);
+  if ($('#home-stat-functions')) $('#home-stat-functions').textContent = new Intl.NumberFormat(lang).format(totalFns);
+  if ($('#home-stat-sources')) $('#home-stat-sources').textContent = totalSources;
+}
+
+function renderHomeFilterChips() {
+  const container = $('#home-filter-chips');
+  if (!container) return;
+  container.innerHTML = homeFilterChips.map(chip => `
+    <button type="button" class="home-chip ${homeActiveFilter === chip.id ? 'active' : ''}" data-home-filter="${esc(chip.id)}">
+      ${esc(t(chip.labelKey))}
+    </button>
+  `).join('');
+}
+
+function renderHomeFeatured() {
+  const grid = $('#featured-grid');
+  if (!grid) return;
+  grid.innerHTML = featuredDefs.map(item => `
+    <div class="featured-card" data-layout="${esc(item.layoutId)}"${item.profileId ? ` data-profile="${esc(item.profileId)}"` : ''} role="button" tabindex="0" aria-label="${esc(t(item.titleKey))}">
+      <div class="featured-card-top">
+        <span class="featured-badge">${esc(item.badge)}</span>
+        <span class="tiny-dot" aria-hidden="true"></span>
+      </div>
+      <h3 class="featured-title">${esc(t(item.titleKey))}</h3>
+      <p class="featured-desc">${esc(t(item.descKey))}</p>
+      <div class="featured-footer">
+        <span class="featured-specs">${esc(item.specs)}</span>
+        <span class="featured-action">${esc(t('featuredOpen'))}</span>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderHomeCatalog() {
+  const container = $('#home-catalog-container');
+  if (!container || !layouts) return;
+
+  const query = homeSearchQuery;
+  const activeFilter = homeActiveFilter;
+
+  const matchingFamilies = boardFamilies.map(family => {
+    if (activeFilter !== 'all') {
+      if (activeFilter === 'chips') {
+        const isChipsFamily = family.id === 'microchip' || family.items.some(entry => entry.type === 'package-group');
+        if (!isChipsFamily && !family.items.some(entry => {
+          const l = layouts.find(item => item.id === entry.id);
+          return l && isChip(l);
+        })) {
+          return null;
+        }
+      } else if (family.id !== activeFilter && !family.id.startsWith(activeFilter)) {
+        return null;
+      }
+    }
+
+    const items = family.items.map(entry => {
+      if (entry.type === 'layout') {
+        const item = layouts.find(l => l.id === entry.id);
+        if (!item) return null;
+        if (activeFilter === 'chips' && !isChip(item)) return null;
+
+        if (query) {
+          const title = layoutTitle(item).toLowerCase();
+          const subtitle = catalogLayoutDetail(item).toLowerCase();
+          const profiles = item.profiles.map(p => p.name.toLowerCase()).join(' ');
+          const mcu = (item.mcu || '').toLowerCase();
+          const familyName = t(family.nameKey).toLowerCase();
+          const searchMatch = title.includes(query) || subtitle.includes(query) || profiles.includes(query) || mcu.includes(query) || familyName.includes(query);
+          if (!searchMatch) return null;
+        }
+        return renderCatalogCard({ id: item.id, name: layoutTitle(item), detail: catalogLayoutDetail(item), isChip: isChip(item) });
+      } else if (entry.type === 'package-group') {
+        if (query) {
+          const name = entry.name.toLowerCase();
+          const desc = t(entry.subtitleKey).toLowerCase();
+          const pkgs = entry.packages.map(p => p.label.toLowerCase()).join(' ');
+          const familyName = t(family.nameKey).toLowerCase();
+          const searchMatch = name.includes(query) || desc.includes(query) || pkgs.includes(query) || familyName.includes(query);
+          if (!searchMatch) return null;
+        }
+        const isGroupActive = entry.packages.some(p => layout && layout.id === p.id);
+        const activePkg = entry.packages.find(p => layout && layout.id === p.id);
+        const activeId = activePkg ? activePkg.id : entry.defaultLayout;
+        return `<div class="catalog-card ${isGroupActive ? 'active' : ''}" data-layout="${esc(activeId)}" role="button" tabindex="0">
+          <div class="catalog-card-icon" aria-hidden="true">${icon('chip')}</div>
+          <div class="catalog-card-body">
+            <div class="catalog-card-header">
+              <b class="catalog-card-title">${esc(entry.name)}</b>
+              <span class="catalog-card-count">${t('packageCount', { count: entry.packages.length })}</span>
+            </div>
+            <small class="catalog-card-desc">${esc(t(entry.subtitleKey))}</small>
+            <div class="catalog-packages" role="group" aria-label="${esc(entry.name)} ${esc(t('packagesHeading'))}">
+              ${entry.packages.map(p => `
+                <button type="button" class="catalog-package-btn ${layout && layout.id === p.id ? 'active' : ''}" data-layout="${esc(p.id)}" title="${esc(entry.name)} · ${esc(p.label)}" aria-label="${esc(entry.name)} ${esc(p.label)}">${esc(p.label)}</button>
+              `).join('')}
+            </div>
+          </div>
+        </div>`;
+      }
+      return null;
+    }).filter(Boolean);
+
+    if (!items.length) return null;
+    return { family, items };
+  }).filter(Boolean);
+
+  if (!matchingFamilies.length) {
+    container.innerHTML = `<p class="home-empty" style="color:var(--muted);padding:30px 0;text-align:center;">${esc(t('noBoardsMatchFilter'))}</p>`;
+    return;
+  }
+
+  container.innerHTML = `<div class="home-catalog-families">${matchingFamilies.map(({ family, items }) => `
+    <div class="home-family-group">
+      <h3 class="home-family-title">${esc(t(family.nameKey))} (${items.length})</h3>
+      <div class="home-family-cards">
+        ${items.join('')}
+      </div>
+    </div>
+  `).join('')}</div>`;
+}
 function planPayload() { return {version:1,board:board.id,pins:assignments}; }
 function encode(value) { return btoa(Array.from(new TextEncoder().encode(JSON.stringify(value)),b=>String.fromCharCode(b)).join('')); }
 function decode(value) { if(value.length>16000) throw new Error(t('linkTooLong')); return JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(value),c=>c.charCodeAt(0)))); }
@@ -830,30 +1071,47 @@ $('#save-incoming-plan').addEventListener('click', () => {
 });
 
 function loadHash() {
- const params = new URLSearchParams(location.hash.slice(1));
- const pin = params.get('pin');
- let target = params.get('board'), payload;
- if (params.has('plan')) {
-   try {
-     const data = decode(params.get('plan'));
-     const profile = boards.find(item => item.id === data?.board);
-     if (data?.version !== 1 || !profile) throw new Error(t('unsupportedFormat'));
-     payload = { target: profile, pins: validatePlan(data.pins, profile, t) };
-     target = profile.id;
-   } catch (error) {
-     toast(t('shareFailed', { error: error.message }));
-   }
- }
- setBoard(target || layouts[0].id, true, payload ? payload.target.id : params.get('profile'));
- if (pin && pinByNumber(pin)) choosePin(pin, false);
- if (params.has('plan')) {
-   params.delete('plan');
-   params.set('board', layout.id);
-   params.set('profile', board.id);
-   history.replaceState(null, '', `#${params}`);
- }
- if (payload) previewPlan(payload.target, payload.pins, pin);
- else if (previewDialog.open) previewDialog.close();
+  const hash = location.hash.slice(1);
+  if (!hash || hash === 'home') {
+    if (!layout) {
+      const next = resolveProfile(layouts, layouts[0].id);
+      layout = next.layout; board = next.profile;
+    }
+    showHomeView();
+    return;
+  }
+  const params = new URLSearchParams(hash);
+  const pin = params.get('pin');
+  let target = params.get('board'), payload;
+  if (!target && !params.has('plan')) {
+    if (!layout) {
+      const next = resolveProfile(layouts, layouts[0].id);
+      layout = next.layout; board = next.profile;
+    }
+    showHomeView();
+    return;
+  }
+  if (params.has('plan')) {
+    try {
+      const data = decode(params.get('plan'));
+      const profile = boards.find(item => item.id === data?.board);
+      if (data?.version !== 1 || !profile) throw new Error(t('unsupportedFormat'));
+      payload = { target: profile, pins: validatePlan(data.pins, profile, t) };
+      target = profile.id;
+    } catch (error) {
+      toast(t('shareFailed', { error: error.message }));
+    }
+  }
+  setBoard(target || layouts[0].id, true, payload ? payload.target.id : params.get('profile'));
+  if (pin && pinByNumber(pin)) choosePin(pin, false);
+  if (params.has('plan')) {
+    params.delete('plan');
+    params.set('board', layout.id);
+    params.set('profile', board.id);
+    history.replaceState(null, '', `#${params}`);
+  }
+  if (payload) previewPlan(payload.target, payload.pins, pin);
+  else if (previewDialog.open) previewDialog.close();
 }
 $('#board-nav')?.addEventListener('click',e=>{const b=e.target.closest('[data-layout]');if(b)openLayout(b.dataset.layout);});
 $('#library-button')?.addEventListener('click',showCatalog);
@@ -982,14 +1240,69 @@ $('#import-file').addEventListener('change',async e=>{
   previewPlan(target, validatePlan(payload.pins, target, t));
  }catch(error){$('#plan-feedback').textContent=error.message||t('importFailed');}finally{e.target.value='';}
 });
-document.addEventListener('keydown',e=>{if(e.key==='/'&&!/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)&&!$('dialog[open]')){e.preventDefault();$('#pin-search').focus();}if(e.key==='Escape')$('#sidebar')?.classList.remove('open');});
+document.addEventListener('keydown', e => {
+  if (e.key === '/' && !/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName) && !$('dialog[open]')) {
+    e.preventDefault();
+    if (currentView === 'home') $('#home-search')?.focus();
+    else $('#pin-search')?.focus();
+  }
+  if (e.key === 'Escape') $('#sidebar')?.classList.remove('open');
+});
+$('#home-breadcrumb-link')?.addEventListener('click', e => {
+  e.preventDefault();
+  location.hash = '#home';
+  showHomeView();
+});
+$$('.back-to-home-btn').forEach(btn => btn.addEventListener('click', e => {
+  e.preventDefault();
+  location.hash = '#home';
+  showHomeView();
+}));
+$('#home-search')?.addEventListener('input', e => {
+  homeSearchQuery = e.target.value.toLowerCase().trim();
+  renderHomeCatalog();
+});
+$('#home-filter-chips')?.addEventListener('click', e => {
+  const btn = e.target.closest('[data-home-filter]');
+  if (!btn) return;
+  homeActiveFilter = btn.dataset.homeFilter;
+  renderHomeFilterChips();
+  renderHomeCatalog();
+});
+$('#featured-grid')?.addEventListener('click', e => {
+  const card = e.target.closest('[data-layout]');
+  if (card) openLayout(card.dataset.layout, card.dataset.profile);
+});
+$('#featured-grid')?.addEventListener('keydown', e => {
+  if (['Enter', ' '].includes(e.key)) {
+    const card = e.target.closest('[data-layout]');
+    if (card) {
+      e.preventDefault();
+      openLayout(card.dataset.layout, card.dataset.profile);
+    }
+  }
+});
+$('#home-catalog-container')?.addEventListener('click', e => {
+  const card = e.target.closest('[data-layout]');
+  if (card) openLayout(card.dataset.layout, card.dataset.profile);
+});
+$('#home-catalog-container')?.addEventListener('keydown', e => {
+  if (['Enter', ' '].includes(e.key)) {
+    const card = e.target.closest('[data-layout]');
+    if (card) {
+      e.preventDefault();
+      openLayout(card.dataset.layout, card.dataset.profile);
+    }
+  }
+});
 window.addEventListener('zaryob:language', () => {
- if (!board) return;
- const draftLabel = $('#custom-label')?.value;
- renderBoard();
- if (draftLabel !== undefined) $('#custom-label').value = draftLabel;
- if ($('#library-dialog').open) renderCatalog();
- if (previewDialog.open) renderIncomingPlan();
+  if (currentView === 'home') renderHome();
+  if (!board) return;
+  const draftLabel = $('#custom-label')?.value;
+  renderBoard();
+  if (draftLabel !== undefined) $('#custom-label').value = draftLabel;
+  if ($('#library-dialog').open) renderCatalog();
+  if (previewDialog.open) renderIncomingPlan();
 });
 window.addEventListener('hashchange',()=>{if(boards && location.hash!=='#main')loadHash();});
 try {

@@ -20,6 +20,7 @@ The library lists each physical layout once and names its compatible boards:
 - **Arduino Nano headers:** classic Nano and Nano Every share 30 side contacts in one entry. Classic Nano adds six ICSP contacts and has analog-only A6/A7; Every has digital-capable A6/A7, different PWM support and no ICSP in this map.
 - **Arduino Mega 2560 Rev3:** 92 header contacts including the end header and main MCU ICSP, 70 independent GPIOs, 16 analog inputs and 15 PWM outputs. SPI uses D50–D53.
 - **Arduino Micro:** its distinct 34-contact side footprint plus six ICSP contacts. The ATmega32U4 exposes 24 independent GPIOs; SPI and 12 ADC channels follow its own core mapping.
+- **Seeed Studio XIAO headers:** Seeed Studio XIAO RP2040 in the compact 14-contact XIAO footprint with 11 exposed GPIOs (including 4 analog inputs). Links directly to the RP2040 QFN package pin view.
 - **ESP32-DevKitC V4:** one 38-contact entry with WROOM-32E and WROVER memory references. Flash and module-specific PSRAM pins are excluded from plans; GPIO34/35/36/39 are input-only.
 - **ESP32-C3-DevKitM-1:** the official MINI-1/1U 30-contact footprint with 15 exposed GPIOs, including USB and RGB LED sharing.
 - **ESP32-S3-DevKitC-1 v1.1:** one 44-contact entry with WROOM-1-N8 and N8R8 references. Octal PSRAM reserves GPIO35–37; the v1.1 RGB LED uses GPIO38. Other board revisions and module memory voltages need separate verification.
@@ -32,7 +33,7 @@ The Pico drawing represents the common header and does not claim identical wirel
 
 Boards with a verified MCU package link support selecting a contact or package pin from either drawing. The package view also opens matching board contacts. Board drawings with multiple connectors can zoom to an individual header.
 
-The dataset contains 2,052 physical pin records across thirty-nine source profiles backing twenty-eight library layouts and 6,401 pin/function assignments. The central GND pad on RP2040 and RP2350 packages sits outside the perimeter pin count. The schematic drawings show pin positions and are not mechanical CAD layouts.
+The [verification summary](public/data/verification.json) lists the dataset totals and source profiles. The central GND pad on RP2040 and RP2350 packages sits outside the perimeter pin count. The schematic drawings show pin positions and are not mechanical CAD layouts.
 
 ## Usage
 
@@ -54,15 +55,18 @@ The browser stores plans under `pin-atlas:plans:v1`. Share links carry the saved
 
 ## Run locally
 
+Use Node.js with npm, Python 3, and Ruby 3.3 or newer with Bundler. Install the Jekyll dependencies before starting the local server.
+
 ```sh
 git clone https://github.com/Zaryob/pin-atlas.git
 cd pin-atlas
+python3 scripts/jekyll.py install
 npm run dev
-# http://127.0.0.1:4173
-npm run check
 ```
 
-The app runs directly from the static files in `dist/`. Fonts are bundled locally. English is the default language. The theme and EN/TR language preferences are shared with `zaryob.github.io`. Use `?lang=en` or `?lang=tr` to open the interface in a specific language. Switching languages preserves the current board, filters, and wiring plan.
+Open `http://127.0.0.1:4173`. Run `npm run build` to generate `_site/` from `public/` and check the built asset paths. Run `npm run check` for the JavaScript, data, and static path checks.
+
+Fonts are bundled locally. English is the default language. The theme and EN/TR language preferences are shared with `zaryob.github.io`. Use `?lang=en` or `?lang=tr` to open the interface in a specific language. Switching languages preserves the current board, filters, and wiring plan.
 
 ## Recheck against manufacturer documentation
 
@@ -71,9 +75,9 @@ python3 -m pip install -r requirements-source-verification.txt
 python3 scripts/verify-official-sources.py
 ```
 
-The script downloads fifty hash-locked sources: forty-seven manufacturer documents or source files and three explicitly identified community Blue Pill references. It checks their SHA-256 hashes, rereads the PDF and source tables, and compares the extracted data with the published files. The downloads stay under `.cache/primary-sources/`. The check fails on a changed hash or pin record.
+The script reads the [source manifest](sources/manifest.json), which includes manufacturer documents and source files as well as the identified Blue Pill community references. It downloads missing files to `.cache/primary-sources/`, checks the locked SHA-256 hashes, rereads the PDF and source tables, and compares the extracted data with the checked-in files. The check fails on a changed hash or pin record.
 
-GitHub Actions uses `python3 scripts/verify-official-sources.py --table-snapshots` because ST's CDN can time out on hosted runners. This mode uses the raw ST table cells recorded in `sources/extracted/`; both the snapshots and their original PDF hashes are locked in the manifest. It still regenerates and compares every pin and function, and downloads the other fifty-seven sources. The default command above checks the original ST PDFs directly.
+GitHub Actions uses `python3 scripts/verify-official-sources.py --table-snapshots` because ST's CDN can time out on hosted runners. This mode uses the raw ST table cells recorded in `sources/extracted/`. The manifest locks both the snapshots and the original PDFs. The script still checks the remaining sources and compares every generated pin and function. The default command above checks the original ST PDFs directly.
 
 Pin labels that appear only in drawings are checked against the visual observations recorded in `sources/manual-observations.json`. That record also explains the IOVDD discrepancy in RP2350 Release 8. See the full method in the [verification record](docs/VERIFICATION.md).
 
@@ -84,7 +88,7 @@ python3 scripts/verify-official-sources.py --write
 npm run check
 ```
 
-`--write` regenerates `dist/data/boards.json`, `evidence.json`, `verification.json`, and the pin-by-pin CSV. When changing a document revision, review the manufacturer document and update its hash and any affected visual observations.
+`--write` regenerates `boards.json`, `evidence.json`, and `verification.json` in `public/data/` and the pin-by-pin CSV in `sources/`. When changing a document revision, review the manufacturer document and update its hash and any affected visual observations.
 
 ## Add a board
 
@@ -94,7 +98,7 @@ Diagram renderers are `pico`, `header`, `dip`, `qfn`, `lqfp`, and `custom`. The 
 
 ## GitHub Pages
 
-Pushes to `main` trigger manufacturer source verification and static file checks. GitHub Actions deploys `dist/` to GitHub Pages after the checks pass. The workflow is in `.github/workflows/pages.yml`.
+Pushes to `main` trigger source verification and repository checks. After they pass, GitHub Actions builds the site with Jekyll and deploys `_site/` to GitHub Pages. See the [Pages workflow](.github/workflows/pages.yml).
 
 ## License
 

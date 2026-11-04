@@ -60,19 +60,19 @@ The verified QFN-60 IOVDD list uses **1,11,20,30,38,45** from the two figures. T
 
 ## Reproduce the verification
 
-1. `sources/manifest.json` records each source revision, document URL or commit, and SHA-256 hash.
+1. The [source manifest](../sources/manifest.json) records each source revision, document URL or commit, and SHA-256 hash. It includes the three identified Blue Pill community references.
 2. `scripts/verify-official-sources.py` downloads and checks those sources, then rereads the PDF tables. It normalizes whitespace where cells wrap across lines.
-   CI passes `--table-snapshots` to use the recorded ST table extractions in `sources/extracted/`, avoiding ST CDN timeouts. Each extraction is hash-locked and identifies the original locked PDF hash. The same parser rebuilds the STM32 data from either input; the other fifty-seven sources are downloaded and checked in both modes. The default command rereads the original ST PDFs.
+   CI passes `--table-snapshots` to use the recorded ST table extractions in `sources/extracted/`, avoiding ST CDN timeouts. Each extraction is hash-locked and identifies the original locked PDF hash. The same parser rebuilds the STM32 data from either input, and both modes check the remaining sources. The default command rereads the original ST PDFs.
 3. The physical pin number, name, type, alternate function, manufacturer signal, and F/ALT selector must match the published record.
 4. Figure-only observations are marked separately. Reusing them during an automated run preserves the prior visual review. A changed hash requires a fresh source review.
-5. [`sources/pin-verification.csv`](../sources/pin-verification.csv) lists each pin and function record. `dist/data/evidence.json` resolves reference IDs to documents, pages, and tables. `dist/data/verification.json` holds the verification totals and source summary.
+5. [`sources/pin-verification.csv`](../sources/pin-verification.csv) lists each pin and function record. [`public/data/evidence.json`](../public/data/evidence.json) resolves reference IDs to documents, pages, and tables. [`public/data/verification.json`](../public/data/verification.json) holds the verification totals and source summary.
 6. GitHub Actions runs the same comparison against the manufacturer sources before deployment.
 
 The app uses its own SVG schematics. Manufacturer documents are linked from the evidence records. Software and font licensing notices are maintained separately.
 
 ## Shared layout catalog
 
-The twenty-nine source profiles are presented as nineteen physical layouts. UNO-format boards share 32 main-header positions, Nano references share 30 side positions, and the two Espressif module pairs retain one entry each. Optional connectors and electrical/MCU capabilities belong to the selected reference. Geometry grouping verifies connector labels and positions; it deliberately permits documented BOOT/NC and analog-only/GPIO differences. Older Pico/Pi groups retain their stricter number/name/type comparison. Legacy model IDs, saved plans and shared links still resolve to the original reference.
+The catalog groups source profiles by physical layout. UNO-format boards share 32 main-header positions, Nano references share 30 side positions, and the two Espressif module pairs retain one entry each. Optional connectors and electrical/MCU capabilities belong to the selected reference. Grouping checks connector labels and positions while allowing documented BOOT/NC and analog-only/GPIO differences. Older Pico/Pi groups retain their stricter number/name/type comparison. Legacy model IDs, saved plans and shared links still resolve to the original reference.
 
 ## NVIDIA Jetson Orin Nano · J12
 
@@ -85,7 +85,7 @@ The source is NVIDIA’s SHA-256-locked **Jetson Orin Nano Developer Kit Carrier
 - Electrical notes cite Table 3-3: 3.3 V signals; direct open-drain I²C on 3/5 and 27/28, with 2.2 kΩ / 1.5 kΩ pull-ups and ±2 mA listed drive; other signal pins use TXB0108 translators with ±20 µA listed weak drive and external pulls greater than 50 kΩ. These are not Raspberry Pi GPIO electrical characteristics.
 - J12 pins 27/28 are I2C0_SDA/SCL and are not given the Raspberry Pi HAT EEPROM reservation. No ADC or unverified numeric mux selectors are added.
 
-The manufacturer PDF is cached for verification and is not distributed in the repository. The complete source set now covers 1,504 physical pin records and 4,769 function assignments.
+The manufacturer PDF is cached for verification and is not distributed in the repository.
 
 ## STM32F103 packages · LQFP48, LQFP64, LQFP100
 
@@ -104,8 +104,6 @@ Blue Pill has no single authoritative manufacturer. Its connector positions use 
 - H1/H2 correspond to schematic P3/P4; SWD corresponds to P2. The schematic labels the reset-button/MCU net RESET but the header net NRST. The connector page and R silkscreen support the reset connection; this discrepancy is documented rather than treating the schematic as an independently consistent netlist.
 - PB2/BOOT1 is on a boot jumper, and PD0/PD1 attach to the 8 MHz crystal; they are absent from the side-header export. PC13 drives an active-low LED; PC14/PC15 share the LSE crystal; PA11/PA12 share USB; PA13/PA14 appear on SWD.
 - The community reference warns that USB VBUS and the 5 V rail are not isolated, so simultaneous USB and external 5 V power is not supported by this map. Clone regulators, USB pull-ups, MCUs and wiring can differ and require board inspection. The map makes no compatibility claim for GD32/CS32 clones.
-
-The complete locked source set contains 16 documents: 13 manufacturer documents and 3 community Blue Pill references.
 
 ST source downloads prefer the official `www.st.com.cn` mirror and fall back to `www.st.com`. Both downloads were checked byte-for-byte against the same locked SHA-256 values. Transfer retries are bounded; no source-hash or pin-data check is skipped when a CDN is unavailable.
 

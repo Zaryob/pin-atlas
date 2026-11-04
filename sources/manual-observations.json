@@ -903,5 +903,29 @@
     "right": "J3",
     "pin1": "antenna end",
     "qualification": "Front/top view. S3 official horizontal photo is rotated clockwise so USB is at the bottom. Header rows come from the matching official guide tables."
+  },
+  "seeed-xiao-rp2040": {
+    "document": "xiao-rp2040-schematic",
+    "page": 1,
+    "usb": "top",
+    "qualification": "Top view; 14-pin castellated XIAO header. Left connector J2 (pins 1-7: D0-D6), right connector J4 (pins 1-7: RX/D7, SCK/D8, MISO/D9, MOSI/D10, 3V3, GND, 5V/VBUS). SWD, reset/boot pads, internal RGB LEDs (GPIO16/17/25) and battery pads are documented in schematic and wiki.",
+    "left": [
+      "D0",
+      "D1",
+      "D2",
+      "D3",
+      "D4",
+      "D5",
+      "D6"
+    ],
+    "right": [
+      "5V",
+      "GND",
+      "3V3",
+      "D10",
+      "D9",
+      "D8",
+      "D7"
+    ]
   }
 }

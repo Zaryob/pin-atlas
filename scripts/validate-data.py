@@ -11,7 +11,7 @@ for r in refs.values():
     assert r['document'] in docids
     host=urlsplit(r['url']).hostname
     if r['document']=='nucleo-um1724-r14':assert host=='evo.net.ua'
-    else:assert host in {'pip-assets.raspberrypi.com','datasheets.raspberrypi.com','developer.nvidia.com','www.st.com','stm32-base.org','github.com','docs.arduino.cc','docs.espressif.com','www.espressif.com','ww1.microchip.com'},host
+    else:assert host in {'pip-assets.raspberrypi.com','datasheets.raspberrypi.com','developer.nvidia.com','www.st.com','stm32-base.org','github.com','docs.arduino.cc','docs.espressif.com','www.espressif.com','ww1.microchip.com','files.seeedstudio.com','wiki.seeedstudio.com'},host
     if host=='github.com':assert any(repo in r['url'] for repo in ['/raspberrypi/documentation/','/arduino/ArduinoCore-avr/','/arduino/ArduinoCore-renesas/','/arduino/ArduinoCore-megaavr/','/espressif/esp-dev-kits/','/STMicroelectronics/STM32_open_pin_data/'])
 for b in boards:
     assert len(b['pins'])==b['packagePins']
@@ -195,4 +195,15 @@ for board_id,package_id,run_pin,gpio_pin in [('pico','rp2040',26,38),('picow','r
     assert lookup[board_id][30]['mcuPin']==run_pin and lookup[board_id][31]['mcuPin']==gpio_pin
     assert 'mcuPin' not in lookup[board_id][35]
 assert lookup['rp2040'][56]['name']=='QSPI_SS_N'
+xiao=lookup['xiao-rp2040']
+assert len(xiao)==14 and sum(p['type']=='GPIO' for p in xiao.values())==11
+assert xiao[1]['name']=='D0_ADC0' and xiao[1]['mcuPin']==38 and xiao[1]['net']=='GPIO26'
+assert xiao[7]['name']=='D6' and xiao[7]['mcuPin']==2 and xiao[7]['net']=='GPIO0'
+assert xiao[8]['name']=='5V' and xiao[8]['type']=='POWER'
+assert xiao[9]['name']=='GND' and xiao[9]['type']=='GND'
+assert xiao[10]['name']=='3V3' and xiao[10]['type']=='POWER'
+assert xiao[14]['name']=='D7' and xiao[14]['mcuPin']==3 and xiao[14]['net']=='GPIO1'
+assert any(f['group']=='ADC' and f['name']=='ADC0' for f in xiao[1]['functions'])
+assert any(f['group']=='ADC' and f['name']=='ADC3' for f in xiao[4]['functions'])
+assert not any(f['group']=='ADC' for f in xiao[5]['functions'])
 print(f"Checked {report['physicalPins']} pins, {report['functionAssignments']} function references and model-specific corner cases.")

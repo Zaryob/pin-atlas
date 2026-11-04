@@ -14,6 +14,7 @@ try:
     from expanded_arduino_sources import build_expanded_arduino
     from espressif_sources import build_espressif
     from avr_packages import build_avr_packages
+    from seeed_sources import build_seeed
 except ImportError:
     sys.exit('Install source verification dependencies: python3 -m pip install -r requirements-source-verification.txt')
 ROOT=Path(__file__).resolve().parents[1]
@@ -358,7 +359,7 @@ def link_board_packages(boards):
         'arduino-nano-classic':('atmega328p-qfn32','ATmega328P-MUR · QFN/MLF-32'),
         'arduino-mega-2560':('atmega2560-tqfp100','ATmega2560-AU · TQFP-100'),
     }
-    pico_packages={'pico':'rp2040','picow':'rp2040','pico2':'rp2350a','pico2w':'rp2350a'}
+    pico_packages={'pico':'rp2040','picow':'rp2040','pico2':'rp2350a','pico2w':'rp2350a','xiao-rp2040':'rp2040'}
     for board_id in (*arduino_packages,*pico_packages):
         board=by_id[board_id]
         if board_id in arduino_packages:
@@ -383,11 +384,14 @@ def link_board_packages(boards):
                     name='RUN'
                 elif re.fullmatch(r'GP\d+',pin['name']):
                     name='GPIO'+pin['name'][2:]
+                elif pin.get('net') and pin['net'].startswith('GPIO'):
+                    name=pin['net']
                 else:
                     continue
                 pad=by_name[name]
             pin['mcuPin']=pad['number']
-            pin['evidence'].append(pad['evidence'][0])
+            if pad['evidence'][0] not in pin['evidence']:
+                pin['evidence'].append(pad['evidence'][0])
 
 def build(use_snapshots=False):
     bank0,packages=rp_tables()
@@ -417,6 +421,8 @@ def build(use_snapshots=False):
     boards.extend(build_expanded_arduino(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn'],boards))
     boards.extend(build_espressif(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn']))
     boards.extend(build_avr_packages(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn']))
+    rp2040_phys = ref('rp2040-qfn56-physical','rp2040',12,'Figure 3 · QFN-56 top view and exposed GND pad','visual-diagram')
+    boards.extend(build_seeed(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn'],bank2040,rp2040_phys))
     for total,chip in [(60,'rp2350a'),(80,'rp2350b')]:
         boards.append({**board_base,'id':chip,'name':chip.upper(),'family':'Raspberry Pi','subtitle':f'QFN-{total} · RP2350 · Release 8','layout':'qfn','packagePins':total,'gpioCount':30 if total==60 else 48,'voltage':'1.8–3.3 V I/O','mcu':chip.upper(),'processor':'Cortex-M33 / Hazard3','clock':'150 MHz','source':DOCS['rp2350']['url']+f'#page={16 if total==60 else 17}','datasheet':DOCS['rp2350']['url'],'pins':[packages[total][n] for n in sorted(packages[total])]})
     boards.extend(f4_chips)

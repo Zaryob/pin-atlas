@@ -561,6 +561,15 @@
       "publisher": "Arduino",
       "revision": "Manufacturer schematic",
       "sha256": "7d1b66c8822220e38d84540fafdf5e6bc000030e2dc9a72fdc69f0a9d72b1b21"
+    },
+    {
+      "id": "xiao-rp2040-schematic",
+      "title": "Seeed Studio XIAO RP2040 Schematic",
+      "file": "xiao-rp2040-schematic.pdf",
+      "url": "https://files.seeedstudio.com/wiki/XIAO-RP2040/res/Seeed-Studio-XIAO-RP2040-v1.3.pdf",
+      "publisher": "Seeed Studio",
+      "revision": "v1.3 · 2022-06-24",
+      "sha256": "0da8a6c0cf1464c82ac3964b6a933b634761621a884ab1f498f61f777b42aeef"
     }
   ],
   "publishers": [
@@ -570,6 +579,7 @@
     "STM32-base community reference (not affiliated with ST)",
     "Arduino",
     "Espressif",
-    "Microchip / Atmel"
+    "Microchip / Atmel",
+    "Seeed Studio"
   ]
 }

@@ -62,6 +62,15 @@ export function buildLayouts(boards) {
         {key:'esp32s3QuadReference',profileIds:['esp32-s3-devkitc-1']},
         {key:'esp32s3OctalReference',profileIds:['esp32-s3-devkitc-1-octal']}
       ]
+    },
+    {
+      id: 'seeed-xiao', nameKey: 'xiaoLayout', subtitleKey: 'xiaoLayoutSubtitle',
+      compatibleKey: 'xiaoCompatible',
+      profileIds: ['xiao-rp2040'], defaultProfile: 'xiao-rp2040',
+      geometryConnectors: ['L', 'R'], sharedContactCount: 14,
+      references: [
+        {key: 'xiaoRp2040Reference', profileIds: ['xiao-rp2040']}
+      ]
     }
   ];
   const grouped = new Set(definitions.flatMap(layout => layout.profileIds));

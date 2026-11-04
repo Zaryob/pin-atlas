@@ -49,12 +49,12 @@ Bu yüzden IOVDD eşlemesi tablo satırından körlemesine alınmadı. Şekiller
 
 ## Tekrar üretilebilir kontrol
 
-1. `sources/manifest.json`, her kaynağın sürümünü, değişmez belge adresini/commit’ini ve SHA-256 değerini kilitler.
+1. [Kaynak listesi](../sources/manifest.json) her kaynağın sürümünü, değişmez belge adresini veya commit’ini ve SHA-256 değerini kaydeder. Blue Pill için kullanılan üç topluluk referansı da bu listededir.
 2. `scripts/verify-official-sources.py` kaynakları indirip hash doğrular. PDF tablo hücrelerini yeniden okur; satır sarımlarını yalnızca boşluk düzeyinde normalleştirir.
-   CI, ST CDN zaman aşımlarından etkilenmemek için `--table-snapshots` ile `sources/extracted/` içindeki ST tablo kayıtlarını kullanır. Her kaydın hash’i ve özgün PDF hash’i kilitlidir. Aynı ayrıştırıcı her iki girdiden STM32 verisini yeniden üretir; diğer kırk sekiz kaynak her iki modda da indirilip doğrulanır. Varsayılan komut özgün ST PDF’lerini yeniden okur.
+   CI, ST CDN zaman aşımlarından etkilenmemek için `--table-snapshots` ile `sources/extracted/` içindeki ST tablo kayıtlarını kullanır. Her kaydın hash’i ve özgün PDF hash’i kilitlidir. Aynı ayrıştırıcı her iki girdiden STM32 verisini yeniden üretir ve kalan kaynaklar her iki modda da doğrulanır. Varsayılan komut özgün ST PDF’lerini yeniden okur.
 3. Fiziksel pin numarası, pin adı, pin türü, alternatif işlev, üretici sinyal adı ve F/ALT seçicisi uygulamadaki kayıtla eşleşmelidir.
 4. Şekillerden alınan gözlemler ayrı işaretlenir. Bir sonraki doğrulamada aynı görsel gözlemlerin kullanılması **yeni ve bağımsız bir insan incelemesi sayılmaz**. Hash değişirse kaynak yeniden incelenmeden kabul edilmez.
-5. Oluşturulan bütün pin/işlev satırları [`sources/pin-verification.csv`](../sources/pin-verification.csv) içindedir. Referans kimlikleri `dist/data/evidence.json` içinde belge, sayfa ve tabloya çözülür. Kaynak özeti `dist/data/verification.json` içindedir.
+5. Oluşturulan bütün pin/işlev satırları [`sources/pin-verification.csv`](../sources/pin-verification.csv) içindedir. [`public/data/evidence.json`](../public/data/evidence.json) referans kimliklerini belge, sayfa ve tablolarla eşler. [`public/data/verification.json`](../public/data/verification.json) toplam kayıt sayılarını ve kaynak özetini içerir.
 6. GitHub Actions, aynı kaynak karşılaştırmasını yayından önce çalıştırır. Yalnızca uygulama JSON’unu kontrol eden bir tutarlılık testiyle yetinmez.
 
 PDF’lerin kopyaları, üretici çizimleri veya belge metinleri uygulama varlığı olarak dağıtılmaz. Çizimler uygulama için yazılmış SVG şemalarıdır. Belge konumları kanıt bağlantılarıdır; yazılım/font lisans bildirimi değildir.
@@ -65,11 +65,11 @@ Pico, Pico W ve Pico 2’nin fiziksel pinleri, her modelin veri sayfasının PDF
 
 Ortak Raspberry Pi 40-pin profili, üreticinin GPIO tablosunu kullanır: B+ ve sonrası, Zero ailesi ve klavyeli modellerin fiziksel düzenini kapsar. Klavyeli modellerde yön ters olabilir; bazı Zero başlıkları lehimli değildir. Eski 26-pin kartlar ve Compute Module dahil değildir. Bu profil işlemciye özgü alternatif işlev içermez; BCM2711 için Pi 4 profili ayrı tutulur.
 
-Elli altı üretici belgesi veya kaynak dosyası ve üç Blue Pill topluluk referansı SHA-256 ile kilitlidir. 2.052 fiziksel pin kaydı ortak bağlantıları profil başına sayar. Ayrıntılı model kaynakları [İngilizce doğrulama kaydında](VERIFICATION.md) bulunur.
+Ayrıntılı model kaynakları [İngilizce doğrulama kaydında](VERIFICATION.md) bulunur.
 
 ## Ortak düzen kütüphanesi
 
-Otuz üç kaynak profili yirmi iki fiziksel düzende sunulur. UNO biçimindeki kartların 32 ana kontağı, Nano ailesinin 30 yan kontağı ve ESP32/S3 bellek varyantlarının ortak başlıkları tek kayıtta gruplanır. İsteğe bağlı bağlantılar ve işlemci işlevleri seçilen referansa aittir. Gruplama fiziksel konumları karşılaştırır; BOOT/NC ve analog giriş/GPIO farkları ayrıca korunur. Eski bağlantılar ve planlar özgün işlemci referansına açılır.
+Kütüphane kaynak profillerini fiziksel düzene göre gruplar. UNO biçimindeki kartların 32 ana kontağı, Nano ailesinin 30 yan kontağı ve ESP32/S3 bellek varyantlarının ortak başlıkları tek kayıtta gruplanır. İsteğe bağlı bağlantılar ve işlemci işlevleri seçilen referansa aittir. Gruplama fiziksel konumları karşılaştırır ve BOOT/NC ile analog giriş/GPIO farklarını korur. Eski bağlantılar ve planlar özgün işlemci referansına açılır.
 
 ## NVIDIA Jetson Orin Nano · J12
 
@@ -85,7 +85,7 @@ LQFP‑48, LQFP‑64 ve LQFP‑100 pinleri, işlevleri ve FT bilgileri ST DS5319
 
 Blue Pill’in tek üreticisi yoktur. 44 bağlantı (H1:20, H2:20, SWD:4) STM32-base topluluk tablosundan alınır; referans şema ve üstten fotoğraf incelendi. Bu üç kaynak ST üretici belgesi olarak sunulmaz. USB üstteyken H2 solda, H1 sağda; her iki başlıkta 20 USB ucunda, 1 SWD ucundadır. SWD soldan sağa GND, PA14, PA13, 3V3’tür. H1/H2/SWD konumları çip pinlerinden ayrıdır; MCU pin eşlemesi ayrıca gösterilir.
 
-Şemadaki RESET/NRST etiket tutarsızlığı belgelendi; reset başlığı için topluluk bağlantı tablosu ve R yazısı kullanılır. PB2 boot jumperında, PD0/PD1 kristal devresindedir; yan başlıklarda gösterilmez. LED, LSE, USB ve debug paylaşımı pin notlarında belirtilir. Klon MCU ve kartlar için koşulsuz uyumluluk iddiası yoktur. Toplam 16 kilitli kaynakta 13 üretici belgesi ve 3 topluluk referansı bulunur.
+Şemadaki RESET/NRST etiket tutarsızlığı belgelendi; reset başlığı için topluluk bağlantı tablosu ve R yazısı kullanılır. PB2 boot jumperında, PD0/PD1 kristal devresindedir; yan başlıklarda gösterilmez. LED, LSE, USB ve debug paylaşımı pin notlarında belirtilir. Klon MCU ve kartlar için koşulsuz uyumluluk iddiası yoktur.
 
 ST belgeleri önce resmî `www.st.com.cn`, ardından `www.st.com` adresinden indirilir. İki adresten gelen dosyalar aynı kilitli SHA-256 değerleriyle karşılaştırıldı. İndirme hatasında kaynak hash veya pin doğrulaması atlanmaz.
 
