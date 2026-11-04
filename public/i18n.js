@@ -60,6 +60,7 @@
     "Skip to content": ["İçeriğe geç", "Skip to content"],
     "familyRaspberryPi": ["Raspberry Pi", "Raspberry Pi"],
     "familySeeed": ["Seeed Studio", "Seeed Studio"],
+    "familyAdafruit": ["Adafruit", "Adafruit"],
     "familyMicrobit": ["BBC micro:bit", "BBC micro:bit"],
     "familyArduino": ["Arduino", "Arduino"],
     "familyEspressif": ["Espressif", "Espressif"],

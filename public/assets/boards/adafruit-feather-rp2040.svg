@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="640" viewBox="0 0 820 640">
+<g font-family="monospace" text-anchor="middle">
+ <!-- Board PCB -->
+ <rect x="270" y="50" width="280" height="540" rx="16" fill="#181b24" stroke="#48566a" stroke-width="2"/>
+ <rect x="282" y="62" width="256" height="516" rx="12" fill="none" stroke="#2b3545" stroke-dasharray="4 6"/>
+
+ <!-- Mounting Holes -->
+ <circle cx="295" cy="75" r="8" fill="#10131a" stroke="#48566a"/>
+ <circle cx="525" cy="75" r="8" fill="#10131a" stroke="#48566a"/>
+ <circle cx="295" cy="565" r="8" fill="#10131a" stroke="#48566a"/>
+ <circle cx="525" cy="565" r="8" fill="#10131a" stroke="#48566a"/>
+
+ <!-- Left Header Through-Holes (16 pins) -->
+ <rect x="270" y="100" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="270" y="128" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="270" y="156" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="270" y="184" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="270" y="212" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="270" y="240" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="270" y="268" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="270" y="296" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="270" y="324" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="270" y="352" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="270" y="380" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="270" y="408" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="270" y="436" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="270" y="464" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="270" y="492" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="270" y="520" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+
+ <!-- Right Header Through-Holes (12 pins) -->
+ <rect x="536" y="212" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="536" y="240" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="536" y="268" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="536" y="296" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="536" y="324" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="536" y="352" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="536" y="380" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="536" y="408" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="536" y="436" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="536" y="464" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="536" y="492" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="536" y="520" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+
+ <!-- Top USB-C -->
+ <rect x="370" y="26" width="80" height="48" rx="6" fill="#c4cdcf" stroke="#5d737b" stroke-width="1.5"/>
+ <text x="410" y="55" font-size="11" fill="#293c41" font-weight="bold">USB-C</text>
+
+ <!-- LiPo JST Connector -->
+ <rect x="460" y="65" width="56" height="40" rx="4" fill="#e8edf0" stroke="#7c8a99"/>
+ <text x="488" y="89" font-size="8" fill="#3b4856" font-weight="bold">LiPo BATT</text>
+
+ <!-- Buttons -->
+ <rect x="312" y="70" width="24" height="20" rx="3" fill="#b0b8ba" stroke="#5a686b"/>
+ <text x="324" y="84" font-size="8" fill="#1e2d30">RST</text>
+ <rect x="344" y="70" width="24" height="20" rx="3" fill="#b0b8ba" stroke="#5a686b"/>
+ <text x="356" y="84" font-size="8" fill="#1e2d30">BOOT</text>
+
+ <!-- Board Title -->
+ <text x="410" y="145" font-size="15" font-weight="bold" fill="#e8f3ef">Adafruit Feather</text>
+ <text x="410" y="165" font-size="12" fill="#9db08f">RP2040</text>
+
+ <!-- NeoPixel RGB LED & Red LED D13 -->
+ <rect x="315" y="150" width="20" height="20" rx="3" fill="#2d3d36" stroke="#4d665b"/>
+ <circle cx="325" cy="160" r="4" fill="#4ade80"/>
+ <text x="325" y="182" font-size="8" fill="#9db08f">RGB</text>
+
+ <rect x="475" y="150" width="20" height="20" rx="3" fill="#3d2d2d" stroke="#664d4d"/>
+ <circle cx="485" cy="160" r="4" fill="#f87171"/>
+ <text x="485" y="182" font-size="8" fill="#e0a0a0">D13</text>
+
+ <!-- RP2040 QFN-56 Chip -->
+ <rect x="355" y="215" width="110" height="110" rx="5" fill="#27362f" stroke="#5c7a6e"/>
+ <circle cx="367" cy="227" r="3" fill="#a9b796"/>
+ <text x="410" y="265" font-size="16" font-weight="bold" fill="#dce6d0">RP2040</text>
+ <text x="410" y="285" font-size="10" fill="#9db08f">ARM Cortex-M0+</text>
+ <text x="410" y="303" font-size="9" fill="#758f7e">133 MHz</text>
+
+ <!-- 8MB SPI Flash -->
+ <rect x="365" y="360" width="90" height="60" rx="4" fill="#232833" stroke="#48566a"/>
+ <text x="410" y="392" font-size="12" font-weight="bold" fill="#c0cbe0">8 MB</text>
+ <text x="410" y="408" font-size="9" fill="#8896aa">QSPI FLASH</text>
+
+ <!-- STEMMA QT Connector (Qwiic compatible) -->
+ <rect x="360" y="475" width="100" height="40" rx="4" fill="#2a303c" stroke="#5d6d85"/>
+ <text x="410" y="497" font-size="10" font-weight="bold" fill="#89a0c7">STEMMA QT</text>
+ <text x="410" y="509" font-size="8" fill="#6d7d96">I2C (SDA/SCL)</text>
+
+ <!-- Headers Labels -->
+ <text x="296" y="94" font-size="9" font-weight="bold" fill="#7ba598">1-16</text>
+ <text x="524" y="206" font-size="9" font-weight="bold" fill="#7ba598">17-28</text>
+</g>
+</svg>

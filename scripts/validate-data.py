@@ -12,7 +12,7 @@ for r in refs.values():
     host=urlsplit(r['url']).hostname
     if r['document']=='nucleo-um1724-r14':assert host=='evo.net.ua'
     else:assert host in {'pip-assets.raspberrypi.com','datasheets.raspberrypi.com','developer.nvidia.com','www.st.com','stm32-base.org','github.com','docs.arduino.cc','docs.espressif.com','www.espressif.com','ww1.microchip.com','files.seeedstudio.com','wiki.seeedstudio.com','tech.microbit.org'},host
-    if host=='github.com':assert any(repo in r['url'] for repo in ['/raspberrypi/documentation/','/arduino/ArduinoCore-avr/','/arduino/ArduinoCore-renesas/','/arduino/ArduinoCore-megaavr/','/espressif/esp-dev-kits/','/STMicroelectronics/STM32_open_pin_data/'])
+    if host=='github.com':assert any(repo in r['url'] for repo in ['/raspberrypi/documentation/','/arduino/ArduinoCore-avr/','/arduino/ArduinoCore-renesas/','/arduino/ArduinoCore-megaavr/','/espressif/esp-dev-kits/','/STMicroelectronics/STM32_open_pin_data/','/adafruit/'])
 for b in boards:
     assert len(b['pins'])==b['packagePins']
     assert {p['number'] for p in b['pins']}==set(range(1,b['packagePins']+1))
@@ -234,4 +234,12 @@ assert mb[4]['boardCircuitKey']=='microbitLedColNote'
 assert mb[6]['boardCircuitKey']=='microbitButtonANote'
 assert mb[14]['boardCircuitKey']=='microbitButtonBNote'
 assert mb[20]['boardCircuitKey']=='microbitI2cPullupNote'
+feather=lookup['adafruit-feather-rp2040']
+assert len(feather)==28 and sum(p['type']=='GPIO' for p in feather.values())==21
+assert feather[5]['name']=='A0' and feather[5]['net']=='GPIO26' and feather[5]['mcuPin']==30
+assert feather[11]['name']=='SCK' and feather[11]['net']=='GPIO18' and feather[11]['mcuPin']==21
+assert feather[17]['name']=='SDA' and feather[17]['net']=='GPIO2' and feather[17]['mcuPin']==4
+assert feather[25]['name']=='D13' and feather[25]['net']=='GPIO13' and feather[25]['mcuPin']==15
+assert feather[28]['name']=='VBAT' and feather[28]['type']=='POWER'
+assert any(f['group']=='ADC' and f['name']=='ADC0' for f in feather[5]['functions'])
 print(f"Checked {report['physicalPins']} pins, {report['functionAssignments']} function references and model-specific corner cases.")

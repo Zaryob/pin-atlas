@@ -566,6 +566,16 @@
       "sha256": "9e1cb7917a51c1f1dd5b8b143d4f1ca31af1146694e0137064f6e731157c4c0c"
     },
     {
+      "id": "feather-rp2040-pinout",
+      "title": "Adafruit Feather RP2040 pinout diagram",
+      "file": "feather-rp2040-pinout.pdf",
+      "url": "https://raw.githubusercontent.com/adafruit/Adafruit-Feather-RP2040-PCB/main/Adafruit%20Feather%20RP2040%20pinout.pdf",
+      "viewUrl": "https://github.com/adafruit/Adafruit-Feather-RP2040-PCB/blob/main/Adafruit%20Feather%20RP2040%20pinout.pdf",
+      "publisher": "Adafruit",
+      "revision": "Rev B · 2021",
+      "sha256": "e10a2a8c12d489d76631fa72abbc53914a1e2560ac2c23835b462261baa059ea"
+    },
+    {
       "id": "arduino-uno-r3-schematic",
       "title": "Arduino UNO Rev3 through-hole schematic",
       "file": "arduino-uno-r3-schematic.pdf",

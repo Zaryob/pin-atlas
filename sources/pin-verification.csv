@@ -6683,6 +6683,188 @@ microbit-v2,20,P19,GPIO,UART,,UART,microbit-v2-header,microbit-v2-functions
 microbit-v2,21,P20,GPIO,I2C_SDA,,I2C_SDA,microbit-v2-header,microbit-v2-functions
 microbit-v2,21,P20,GPIO,PWM,,PWM,microbit-v2-header,microbit-v2-functions
 microbit-v2,21,P20,GPIO,UART,,UART,microbit-v2-header,microbit-v2-functions
+adafruit-feather-rp2040,1,RESET,SYSTEM,,,,feather-rp2040-pinout | feather-rp2040-top-view,
+adafruit-feather-rp2040,2,3V3,POWER,,,,feather-rp2040-pinout | feather-rp2040-top-view,
+adafruit-feather-rp2040,3,AREF,POWER,,,,feather-rp2040-pinout | feather-rp2040-top-view,
+adafruit-feather-rp2040,4,GND,GND,,,,feather-rp2040-pinout | feather-rp2040-top-view,
+adafruit-feather-rp2040,5,A0,GPIO,SPI1 SCK,F1,SPI1 SCK,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,5,A0,GPIO,UART1 CTS,F2,UART1 CTS,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,5,A0,GPIO,I2C1 SDA,F3,I2C1 SDA,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,5,A0,GPIO,PWM5 A,F4,PWM5 A,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,5,A0,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,5,A0,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,5,A0,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,5,A0,GPIO,USB VBUS EN,F9,USB VBUS EN,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,5,A0,GPIO,ADC0,,ADC0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-qfn56-physical
+adafruit-feather-rp2040,6,A1,GPIO,SPI1 TX,F1,SPI1 TX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,6,A1,GPIO,UART1 RTS,F2,UART1 RTS,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,6,A1,GPIO,I2C1 SCL,F3,I2C1 SCL,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,6,A1,GPIO,PWM5 B,F4,PWM5 B,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,6,A1,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,6,A1,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,6,A1,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,6,A1,GPIO,USB OVCUR DET,F9,USB OVCUR DET,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,6,A1,GPIO,ADC1,,ADC1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-qfn56-physical
+adafruit-feather-rp2040,7,A2,GPIO,SPI1 RX,F1,SPI1 RX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,7,A2,GPIO,UART0 TX,F2,UART0 TX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,7,A2,GPIO,I2C0 SDA,F3,I2C0 SDA,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,7,A2,GPIO,PWM6 A,F4,PWM6 A,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,7,A2,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,7,A2,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,7,A2,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,7,A2,GPIO,USB VBUS DET,F9,USB VBUS DET,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,7,A2,GPIO,ADC2,,ADC2,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-qfn56-physical
+adafruit-feather-rp2040,8,A3,GPIO,SPI1 CSn,F1,SPI1 CSn,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,8,A3,GPIO,UART0 RX,F2,UART0 RX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,8,A3,GPIO,I2C0 SCL,F3,I2C0 SCL,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,8,A3,GPIO,PWM6 B,F4,PWM6 B,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,8,A3,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,8,A3,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,8,A3,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,8,A3,GPIO,USB VBUS EN,F9,USB VBUS EN,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,8,A3,GPIO,ADC3,,ADC3,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-qfn56-physical
+adafruit-feather-rp2040,9,D24,GPIO,SPI1 RX,F1,SPI1 RX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,9,D24,GPIO,UART1 TX,F2,UART1 TX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,9,D24,GPIO,I2C0 SDA,F3,I2C0 SDA,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,9,D24,GPIO,PWM4 A,F4,PWM4 A,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,9,D24,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,9,D24,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,9,D24,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,9,D24,GPIO,CLOCK GPOUT2,F8,CLOCK GPOUT2,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,9,D24,GPIO,USB OVCUR DET,F9,USB OVCUR DET,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,10,D25,GPIO,SPI1 CSn,F1,SPI1 CSn,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,10,D25,GPIO,UART1 RX,F2,UART1 RX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,10,D25,GPIO,I2C0 SCL,F3,I2C0 SCL,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,10,D25,GPIO,PWM4 B,F4,PWM4 B,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,10,D25,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,10,D25,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,10,D25,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,10,D25,GPIO,CLOCK GPOUT3,F8,CLOCK GPOUT3,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,10,D25,GPIO,USB VBUS DET,F9,USB VBUS DET,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
+adafruit-feather-rp2040,11,SCK,GPIO,SPI0 SCK,F1,SPI0 SCK,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,11,SCK,GPIO,UART0 CTS,F2,UART0 CTS,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,11,SCK,GPIO,I2C1 SDA,F3,I2C1 SDA,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,11,SCK,GPIO,PWM1 A,F4,PWM1 A,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,11,SCK,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,11,SCK,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,11,SCK,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,11,SCK,GPIO,USB OVCUR DET,F9,USB OVCUR DET,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,12,MOSI,GPIO,SPI0 TX,F1,SPI0 TX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,12,MOSI,GPIO,UART0 RTS,F2,UART0 RTS,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,12,MOSI,GPIO,I2C1 SCL,F3,I2C1 SCL,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,12,MOSI,GPIO,PWM1 B,F4,PWM1 B,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,12,MOSI,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,12,MOSI,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,12,MOSI,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,12,MOSI,GPIO,USB VBUS DET,F9,USB VBUS DET,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,13,MISO,GPIO,SPI0 RX,F1,SPI0 RX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,13,MISO,GPIO,UART1 TX,F2,UART1 TX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,13,MISO,GPIO,I2C0 SDA,F3,I2C0 SDA,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,13,MISO,GPIO,PWM2 A,F4,PWM2 A,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,13,MISO,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,13,MISO,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,13,MISO,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,13,MISO,GPIO,CLOCK GPIN0,F8,CLOCK GPIN0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,13,MISO,GPIO,USB VBUS EN,F9,USB VBUS EN,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,14,RX,GPIO,SPI0 CSn,F1,SPI0 CSn,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,14,RX,GPIO,UART0 RX,F2,UART0 RX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,14,RX,GPIO,I2C0 SCL,F3,I2C0 SCL,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,14,RX,GPIO,PWM0 B,F4,PWM0 B,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,14,RX,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,14,RX,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,14,RX,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,14,RX,GPIO,USB VBUS DET,F9,USB VBUS DET,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,15,TX,GPIO,SPI0 RX,F1,SPI0 RX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,15,TX,GPIO,UART0 TX,F2,UART0 TX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,15,TX,GPIO,I2C0 SDA,F3,I2C0 SDA,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,15,TX,GPIO,PWM0 A,F4,PWM0 A,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,15,TX,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,15,TX,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,15,TX,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,15,TX,GPIO,USB OVCUR DET,F9,USB OVCUR DET,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,16,D4,GPIO,SPI0 SCK,F1,SPI0 SCK,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,16,D4,GPIO,UART1 CTS,F2,UART1 CTS,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,16,D4,GPIO,I2C1 SDA,F3,I2C1 SDA,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,16,D4,GPIO,PWM3 A,F4,PWM3 A,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,16,D4,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,16,D4,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,16,D4,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,16,D4,GPIO,USB OVCUR DET,F9,USB OVCUR DET,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,17,SDA,GPIO,SPI0 SCK,F1,SPI0 SCK,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,17,SDA,GPIO,UART0 CTS,F2,UART0 CTS,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,17,SDA,GPIO,I2C1 SDA,F3,I2C1 SDA,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,17,SDA,GPIO,PWM1 A,F4,PWM1 A,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,17,SDA,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,17,SDA,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,17,SDA,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,17,SDA,GPIO,USB VBUS EN,F9,USB VBUS EN,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,18,SCL,GPIO,SPI0 TX,F1,SPI0 TX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,18,SCL,GPIO,UART0 RTS,F2,UART0 RTS,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,18,SCL,GPIO,I2C1 SCL,F3,I2C1 SCL,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,18,SCL,GPIO,PWM1 B,F4,PWM1 B,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,18,SCL,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,18,SCL,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,18,SCL,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,18,SCL,GPIO,USB OVCUR DET,F9,USB OVCUR DET,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,19,D5,GPIO,SPI0 TX,F1,SPI0 TX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,19,D5,GPIO,UART1 RTS,F2,UART1 RTS,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,19,D5,GPIO,I2C1 SCL,F3,I2C1 SCL,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,19,D5,GPIO,PWM3 B,F4,PWM3 B,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,19,D5,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,19,D5,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,19,D5,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,19,D5,GPIO,USB VBUS DET,F9,USB VBUS DET,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,20,D6,GPIO,SPI1 RX,F1,SPI1 RX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,20,D6,GPIO,UART1 TX,F2,UART1 TX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,20,D6,GPIO,I2C0 SDA,F3,I2C0 SDA,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,20,D6,GPIO,PWM4 A,F4,PWM4 A,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,20,D6,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,20,D6,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,20,D6,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,20,D6,GPIO,USB VBUS EN,F9,USB VBUS EN,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,21,D9,GPIO,SPI1 CSn,F1,SPI1 CSn,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,21,D9,GPIO,UART1 RX,F2,UART1 RX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,21,D9,GPIO,I2C0 SCL,F3,I2C0 SCL,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,21,D9,GPIO,PWM4 B,F4,PWM4 B,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,21,D9,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,21,D9,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,21,D9,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,21,D9,GPIO,USB OVCUR DET,F9,USB OVCUR DET,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,22,D10,GPIO,SPI1 SCK,F1,SPI1 SCK,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,22,D10,GPIO,UART1 CTS,F2,UART1 CTS,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,22,D10,GPIO,I2C1 SDA,F3,I2C1 SDA,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,22,D10,GPIO,PWM5 A,F4,PWM5 A,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,22,D10,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,22,D10,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,22,D10,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,22,D10,GPIO,USB VBUS DET,F9,USB VBUS DET,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,23,D11,GPIO,SPI1 TX,F1,SPI1 TX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,23,D11,GPIO,UART1 RTS,F2,UART1 RTS,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,23,D11,GPIO,I2C1 SCL,F3,I2C1 SCL,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,23,D11,GPIO,PWM5 B,F4,PWM5 B,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,23,D11,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,23,D11,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,23,D11,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,23,D11,GPIO,USB VBUS EN,F9,USB VBUS EN,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,24,D12,GPIO,SPI1 RX,F1,SPI1 RX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,24,D12,GPIO,UART0 TX,F2,UART0 TX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,24,D12,GPIO,I2C0 SDA,F3,I2C0 SDA,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,24,D12,GPIO,PWM6 A,F4,PWM6 A,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,24,D12,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,24,D12,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,24,D12,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,24,D12,GPIO,USB OVCUR DET,F9,USB OVCUR DET,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,25,D13,GPIO,SPI1 CSn,F1,SPI1 CSn,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,25,D13,GPIO,UART0 RX,F2,UART0 RX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,25,D13,GPIO,I2C0 SCL,F3,I2C0 SCL,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,25,D13,GPIO,PWM6 B,F4,PWM6 B,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,25,D13,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,25,D13,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,25,D13,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,25,D13,GPIO,USB VBUS DET,F9,USB VBUS DET,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,26,VBUS,POWER,,,,feather-rp2040-pinout | feather-rp2040-top-view,
+adafruit-feather-rp2040,27,EN,SYSTEM,,,,feather-rp2040-pinout | feather-rp2040-top-view,
+adafruit-feather-rp2040,28,VBAT,POWER,,,,feather-rp2040-pinout | feather-rp2040-top-view,
 rp2350a,1,IOVDD,POWER,,,,rp2350a-iovdd,
 rp2350a,2,GPIO0,GPIO,SPI0 RX,F1,SPI0 RX,rp-pin-list-p1333,rp-bank0-p18
 rp2350a,2,GPIO0,GPIO,UART0 TX,F2,UART0 TX,rp-pin-list-p1333,rp-bank0-p18

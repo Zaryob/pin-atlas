@@ -1,7 +1,7 @@
 {
   "verifiedOn": "2026-11-04",
-  "physicalPins": 2273,
-  "functionAssignments": 8197,
+  "physicalPins": 2301,
+  "functionAssignments": 8372,
   "documents": [
     {
       "id": "rp2350",
@@ -509,6 +509,15 @@
       "sha256": "9e1cb7917a51c1f1dd5b8b143d4f1ca31af1146694e0137064f6e731157c4c0c"
     },
     {
+      "id": "feather-rp2040-pinout",
+      "title": "Adafruit Feather RP2040 pinout diagram",
+      "url": "https://raw.githubusercontent.com/adafruit/Adafruit-Feather-RP2040-PCB/main/Adafruit%20Feather%20RP2040%20pinout.pdf",
+      "viewUrl": "https://github.com/adafruit/Adafruit-Feather-RP2040-PCB/blob/main/Adafruit%20Feather%20RP2040%20pinout.pdf",
+      "publisher": "Adafruit",
+      "revision": "Rev B · 2021",
+      "sha256": "e10a2a8c12d489d76631fa72abbc53914a1e2560ac2c23835b462261baa059ea"
+    },
+    {
       "id": "arduino-uno-r3-schematic",
       "title": "Arduino UNO Rev3 through-hole schematic",
       "url": "https://docs.arduino.cc/resources/schematics/A000066-schematics.pdf",
@@ -905,6 +914,15 @@
       "physicalPins": 21,
       "functionAssignments": 62,
       "physicalSourceMethods": [
+        "visual-diagram"
+      ]
+    },
+    {
+      "id": "adafruit-feather-rp2040",
+      "physicalPins": 28,
+      "functionAssignments": 175,
+      "physicalSourceMethods": [
+        "pdf-table",
         "visual-diagram"
       ]
     },

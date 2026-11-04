@@ -560,6 +560,13 @@ const boardFamilies = [
     ]
   },
   {
+    id: 'adafruit',
+    nameKey: 'familyAdafruit',
+    items: [
+      { type: 'layout', id: 'adafruit-feather-rp2040' }
+    ]
+  },
+  {
     id: 'microbit',
     nameKey: 'familyMicrobit',
     items: [
