@@ -78,3 +78,5 @@ Elektriksel notlar tablonun dipnotlarından gelir: 3.3 V sinyaller; açık drena
 Blue Pill’in tek üreticisi yoktur. 44 bağlantı (H1:20, H2:20, SWD:4) STM32-base topluluk tablosundan alınır; referans şema ve üstten fotoğraf incelendi. Bu üç kaynak ST üretici belgesi olarak sunulmaz. USB üstteyken H2 solda, H1 sağda; her iki başlıkta 20 USB ucunda, 1 SWD ucundadır. SWD soldan sağa GND, PA14, PA13, 3V3’tür. H1/H2/SWD konumları çip pinlerinden ayrıdır; MCU pin eşlemesi ayrıca gösterilir.
 
 Şemadaki RESET/NRST etiket tutarsızlığı belgelendi; reset başlığı için topluluk bağlantı tablosu ve R yazısı kullanılır. PB2 boot jumperında, PD0/PD1 kristal devresindedir; yan başlıklarda gösterilmez. LED, LSE, USB ve debug paylaşımı pin notlarında belirtilir. Klon MCU ve kartlar için koşulsuz uyumluluk iddiası yoktur. Toplam 16 kilitli kaynakta 13 üretici belgesi ve 3 topluluk referansı bulunur.
+
+ST belgeleri önce resmî `www.st.com.cn`, ardından `www.st.com` adresinden indirilir. İki adresten gelen dosyalar aynı kilitli SHA-256 değerleriyle karşılaştırıldı. İndirme hatasında kaynak hash veya pin doğrulaması atlanmaz.

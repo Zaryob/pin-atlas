@@ -98,3 +98,5 @@ Blue Pill has no single authoritative manufacturer. Its connector positions use 
 - The community reference warns that USB VBUS and the 5 V rail are not isolated, so simultaneous USB and external 5 V power is not supported by this map. Clone regulators, USB pull-ups, MCUs and wiring can differ and require board inspection. The map makes no compatibility claim for GD32/CS32 clones.
 
 The complete locked source set contains 16 documents: 13 manufacturer documents and 3 community Blue Pill references.
+
+ST source downloads prefer the official `www.st.com.cn` mirror and fall back to `www.st.com`. Both downloads were checked byte-for-byte against the same locked SHA-256 values. Transfer retries are bounded; no source-hash or pin-data check is skipped when a CDN is unavailable.

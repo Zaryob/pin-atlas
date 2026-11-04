@@ -98,7 +98,11 @@
       "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf",
       "publisher": "STMicroelectronics",
       "revision": "DS5319 Rev 20 · July 2025",
-      "sha256": "1e54ce18e6c34c5b4a78986f26e245e143748c721009fc9af5953795c30686bc"
+      "sha256": "1e54ce18e6c34c5b4a78986f26e245e143748c721009fc9af5953795c30686bc",
+      "downloadUrls": [
+        "https://www.st.com.cn/resource/en/datasheet/stm32f103c8.pdf",
+        "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf"
+      ]
     },
     {
       "id": "stm32-rm0008",
@@ -107,7 +111,11 @@
       "url": "https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf",
       "publisher": "STMicroelectronics",
       "revision": "RM0008 Rev 21",
-      "sha256": "4c1b8ac2729cc1f45a4685eea9e91e6139e24e58804fba21e27201dfcc2ad149"
+      "sha256": "4c1b8ac2729cc1f45a4685eea9e91e6139e24e58804fba21e27201dfcc2ad149",
+      "downloadUrls": [
+        "https://www.st.com.cn/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf",
+        "https://www.st.com/resource/en/reference_manual/cd00171190-stm32f101xx-stm32f102xx-stm32f103xx-stm32f105xx-and-stm32f107xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf"
+      ]
     },
     {
       "id": "bluepill-board",

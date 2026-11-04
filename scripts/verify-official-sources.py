@@ -31,10 +31,19 @@ def acquire():
         path=CACHE/doc['file']
         if not path.exists():
             temporary=path.with_suffix(path.suffix+'.download')
+            urls=doc.get('downloadUrls',[doc['url']])
             try:
-                # Some document CDNs reset HTTP/2 streams on hosted runners.
-                subprocess.run(['curl','--http1.1','-fsSL','--retry','3','--retry-all-errors','--retry-delay','2','--connect-timeout','20','--max-time','120',doc['url'],'-o',str(temporary)],check=True)
-                temporary.replace(path)
+                for url in urls:
+                    # ST's global CDN can stall on hosted runners. Only use
+                    # explicitly recorded official mirrors and the same hash.
+                    result=subprocess.run(['curl','--http1.1','-fsSL','--retry','1','--retry-all-errors','--retry-delay','1','--connect-timeout','10','--max-time','45',url,'-o',str(temporary)])
+                    if result.returncode==0:
+                        if hashlib.sha256(temporary.read_bytes()).hexdigest()!=doc['sha256']:
+                            sys.exit(f"Source hash mismatch: {doc['id']}. Review the source revision; do not silently update the lock.")
+                        temporary.replace(path)
+                        break
+                    print(f"Download unavailable for {doc['id']}; trying the next recorded URL.",flush=True)
+                else:sys.exit(f"Could not download locked source: {doc['id']}")
             finally:
                 temporary.unlink(missing_ok=True)
         actual=hashlib.sha256(path.read_bytes()).hexdigest()
