@@ -33,6 +33,8 @@ if site_root.is_dir() and (site_root / 'index.html').is_file():
                 if not value or value.startswith(('#', 'data:')) or urlsplit(value).scheme:
                     continue
                 path_str = unquote(urlsplit(value).path).lstrip('/')
+                if path_str.startswith('pin-atlas/'):
+                    path_str = path_str.removeprefix('pin-atlas/')
                 target = site_root / path_str
                 assert target.exists(), f'Missing asset in _site: {value}'
     Check().feed(index_text)
