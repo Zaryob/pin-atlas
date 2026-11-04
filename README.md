@@ -1,29 +1,30 @@
 # Pin Atlas
 
-[Türkçe](README.md) · [English](README.en.md)
+[English](README.md) · [Türkçe](README.tr.md)
 
-[Canlı site](https://zaryob.github.io/pin-atlas/) · [Doğrulama kaydı](docs/VERIFICATION.md) · [Pin bazında karşılaştırma](sources/pin-verification.csv)
+[Live site](https://zaryob.github.io/pin-atlas/?lang=en) · [Verification record](docs/VERIFICATION.md) · [Pin-by-pin comparison](sources/pin-verification.csv)
 
-Üretici belgelerinden derlenen Türkçe pin rehberi. Fiziksel pin düzenini, alternatif işlevleri ve bağlantı planlarını aynı çalışma alanında gösterir. Arayüz, çizimler ve uygulama kodu bu proje için hazırlanmıştır. Konsol teması kişisel sitemin ortak temasıdır.
+An English-first pin guide with Turkish localization built from manufacturer documentation. View physical pin positions, alternate functions, and wiring plans in one workspace. The interface, schematic drawings, and application code were made for this project. The console theme is shared with my personal site.
 
-## Kartlar
+## Boards
 
-- Raspberry Pi Pico 2 W: 40 fiziksel pin, 26 GPIO.
-- Raspberry Pi 4 Model B: J8 üzerinde 40 fiziksel pin; 26 proje GPIO’su ve HAT EEPROM için ayrılmış 2 hat. Alternatif işlevler BCM2711’e aittir; Pi 5 için geçerli olduğu iddia edilmez.
-- RP2350A: QFN-60, 30 Bank 0 GPIO.
-- RP2350B: QFN-80, 48 Bank 0 GPIO.
+- Raspberry Pi Pico, Pico W, Pico 2, and Pico 2 W each have 40 physical pins and 26 exposed GPIOs. Pico / Pico W use RP2040 functions; Pico 2 / Pico 2 W use RP2350A functions. Wireless hardware appears only on the W models.
+- Raspberry Pi 40-pin GPIO provides the common physical layout for B+, A+, Pi 2/3/4/5, Zero models, and 400/500. This profile includes GPIO, power and ground; processor-specific alternate functions belong to separate model profiles. It excludes older 26-pin boards and Compute Modules.
+- Raspberry Pi 4 Model B has 40 physical pins on J8, with 26 general-purpose GPIOs and two lines reserved for the HAT identification EEPROM. The alternate functions are specific to the BCM2711.
+- RP2350A has a QFN-60 package and 30 Bank 0 GPIOs.
+- RP2350B has a QFN-80 package and 48 Bank 0 GPIOs.
 
-Toplam 220 fiziksel pin ve 1.310 pin/alternatif işlev kaydı bulunur. RP2350 paketlerinin merkez GND pedi çevre pin sayısına dahil değildir. Çizimler şematiktir; mekanik CAD yerleşimi veya gerçek komponent konumları olarak kullanılmaz.
+The dataset contains 380 physical pin records across eight profiles and 2,011 pin/function assignments. The central GND pad on each RP2350 package sits outside the perimeter pin count. The schematic drawings show pin positions and are not mechanical CAD layouts.
 
-## Kullanım
+## Usage
 
-Pin seçimi, arayüz filtreleri, metin araması, tablo, aynalama, 180° döndürme, özel etiketler, karta özel bağlantı planları, JSON aktarımı ve bağlantıyla paylaşım desteklenir. Filtreler VEYA mantığıyla çalışır. Haritada ilk iki eşleşen işlev, tabloda tüm eşleşen işlevler görünür.
+Select pins, filter interfaces, search, switch to a table, mirror or rotate the diagram by 180°, add custom labels, and save a wiring plan per board. Start with an unfiltered map. Pin details prioritize matching or common functions; expand **More functions** for the rest. References are expandable, and the wiring plan has its own tab. On smaller screens, pin selection opens a detail sheet with a persistent save action. Import and export plans as JSON or share them with a link. Filters match any selected interface. The map displays the first two matching functions, and the table displays all matches.
 
-Her pinin detayında, fiziksel bağlantıyı ve alternatif işlevlerini destekleyen **resmî belge, PDF sayfası ve tablo/şekil numarası** bulunur. `F0…F11` RP2350 işlev seçicilerini, `ALT0…ALT5` BCM2711 seçicilerini belirtir. ADC kaydı bir dijital işlev seçici değildir. `GPIO` seçeneği uygulamanın genel giriş/çıkış planlama etiketidir; ayrıca bir üretici seçici numarası olarak sayılmaz.
+Each pin detail links to the manufacturer document, PDF page, and table or figure supporting the physical connection and alternate functions. `F0` through `F11` are RP2350 function selectors. `ALT0` through `ALT5` are BCM2711 selectors. ADC records describe analog inputs. The app’s `GPIO` option is a general input/output planning label and carries no manufacturer selector number.
 
-Planlar tarayıcıda `pin-atlas:plans:v1` anahtarında saklanır. Paylaşım bağlantısı kaydedilmiş planı URL fragment içinde taşır; açılması ilgili kartın yerel planını günceller. GPIO0/GPIO1 (Pi 4 fiziksel 27/28) HAT EEPROM için ayrıldığı için normal proje planına eklenmez. Uygulama elektriksel tasarım veya firmware doğrulaması yapmaz.
+The browser stores plans under `pin-atlas:plans:v1`. Share links carry the saved plan in the URL fragment. Opening one updates the local plan for that board. Pi 4 physical pins 27 and 28 are reserved for the HAT EEPROM and excluded from regular wiring plans. Check electrical compatibility and firmware configuration against the manufacturer documentation.
 
-## Yerel çalıştırma
+## Run locally
 
 ```sh
 git clone https://github.com/Zaryob/pin-atlas.git
@@ -33,38 +34,38 @@ npm run dev
 npm run check
 ```
 
-Uygulamanın çalışması için paket kurulumu veya build gerekmez. Yayımlanacak dosyalar `dist/` içindedir. Fontlar yereldir. Açık/koyu/sistem teması ve TR/EN dil tercihi `zaryob.github.io` ile paylaşılır. İngilizce arayüz `?lang=en`, Türkçe arayüz `?lang=tr` ile doğrudan açılabilir. Dil değiştiğinde açık kart, filtreler ve bağlantı planı korunur.
+The app runs directly from the static files in `dist/`. Fonts are bundled locally. English is the default language. The theme and EN/TR language preferences are shared with `zaryob.github.io`. Use `?lang=en` or `?lang=tr` to open the interface in a specific language. Switching languages preserves the current board, filters, and wiring plan.
 
-## Üretici belgelerinden tekrar doğrulama
+## Recheck against manufacturer documentation
 
 ```sh
 python3 -m pip install -r requirements-source-verification.txt
 python3 scripts/verify-official-sources.py
 ```
 
-Bu komut altı kilitli kaynağı üreticinin sunucusundan indirir, SHA-256 değerlerini kontrol eder, PDF ve kaynak tablolarını yeniden okur ve yayımlanan veriyle karşılaştırır. Kaynaklar `.cache/primary-sources/` altında tutulur; PDF’ler depoda dağıtılmaz. Bir hash veya pin kaydı değişirse kontrol başarısız olur.
+The script downloads ten pinned manufacturer sources, checks their SHA-256 hashes, rereads the PDF and source tables, and compares the extracted data with the published files. The downloads stay under `.cache/primary-sources/`. The check fails on a changed hash or pin record.
 
-Şekil olarak yayımlanan ve metin hücresi içermeyen fiziksel pinler, `sources/manual-observations.json` içindeki açıkça işaretlenmiş görsel gözlemlerle kontrol edilir. Bu bölüm otomatik OCR veya bağımsız donanım ölçümü olarak sunulmaz. RP2350 Release 8 içindeki IOVDD tablo/şekil tutarsızlığı da aynı kayıtta gerekçelendirilir. Tam yöntem [doğrulama kaydında](docs/VERIFICATION.md).
+Pin labels that appear only in drawings are checked against the visual observations recorded in `sources/manual-observations.json`. That record also explains the IOVDD discrepancy in RP2350 Release 8. See the full method in the [verification record](docs/VERIFICATION.md).
 
-Kaynak incelemesinden sonra bilinçli bir güncelleme yapmak için:
+To regenerate the dataset after reviewing the sources, run:
 
 ```sh
 python3 scripts/verify-official-sources.py --write
 npm run check
 ```
 
-`--write`, geçerli üretici girdilerinden `dist/data/boards.json`, `evidence.json`, `verification.json` ve pin bazındaki CSV’yi yeniden üretir. Kaynak revizyonunu değiştirmek önce üretici belgesini yeniden incelemeyi, manifest hash’lerini ve ilgili görsel gözlemleri güncellemeyi gerektirir.
+`--write` regenerates `dist/data/boards.json`, `evidence.json`, `verification.json`, and the pin-by-pin CSV. When changing a document revision, review the manufacturer document and update its hash and any affected visual observations.
 
-## Yeni kart ekleme
+## Add a board
 
-STM32 henüz kütüphaneye dahil değildir. Yeni kart eklerken üretici/model/revizyon, fiziksel bağlantılar, alternatif işlevler ve bunların resmî belge konumları birlikte eklenmelidir. Mevcut dört kartın üretilmiş JSON dosyasını tek başına elle değiştirmek kaynak doğrulamasından geçmez; veri üreticisini ve ilgili kaynak kayıtlarını birlikte güncelleyin.
+STM32 boards are planned for a future release. Add the manufacturer, model, revision, physical connections, alternate functions, and official source locations together. Update the generator and source records alongside the dataset so the change passes verification.
 
-Çizici türleri `pico`, `header`, `qfn` ve `custom` olarak ayrılır. `custom` kartlar yerel bir SVG tuvali ve `pins[].position` koordinatları ile tanımlanabilir. SVG yolu uygulamanın tabanına göre çözülür; `/pin-atlas/` gibi bir alt yol desteklenir. Pin koordinatları bağlantı merkezini, `side` etiket yönünü, `angle` isteğe bağlı dönüşü belirtir.
+Diagram renderers are `pico`, `header`, `qfn`, and `custom`. A `custom` board can use a local SVG and `pins[].position` coordinates. SVG paths resolve from the app base, including deployments under `/pin-atlas/`. The coordinates mark the connection center, `side` sets the label direction, and `angle` controls optional rotation.
 
 ## GitHub Pages
 
-`main` dalına gönderilen değişiklikler önce üretici belgeleriyle karşılaştırılır, ardından statik dosya kontrolleri çalıştırılır. Yalnızca kontroller başarılıysa `dist/` GitHub Pages’e yayımlanır. İş akışı `.github/workflows/pages.yml` içindedir.
+Pushes to `main` trigger manufacturer source verification and static file checks. GitHub Actions deploys `dist/` to GitHub Pages after the checks pass. The workflow is in `.github/workflows/pages.yml`.
 
-## Lisans
+## License
 
-Uygulama GPL-3.0-or-later lisanslıdır. Ortak tema ve IBM Plex Mono için gerçek yazılım/font bildirimleri `THIRD_PARTY_NOTICES.md` içindedir. Donanım doğrulamasında kullanılan üretici belgeleri ise ayrı olarak `sources/manifest.json` ve `docs/VERIFICATION.md` içinde belgelenir.
+The application is licensed under GPL-3.0-or-later. Notices for the shared theme and IBM Plex Mono are in `THIRD_PARTY_NOTICES.md`. Hardware verification sources are documented separately in `sources/manifest.json` and `docs/VERIFICATION.md`.

@@ -462,6 +462,789 @@ raspberry-pi-4,40,GPIO21,GPIO,DPI_D17,ALT2,DPI_D17,pi-header-doc | pi4-j8,bcm271
 raspberry-pi-4,40,GPIO21,GPIO,SPI6_SCLK,ALT3,SPI6_SCLK,pi-header-doc | pi4-j8,bcm2711-alt-p79
 raspberry-pi-4,40,GPIO21,GPIO,SPI1_SCLK,ALT4,SPI1_SCLK,pi-header-doc | pi4-j8,bcm2711-alt-p79
 raspberry-pi-4,40,GPIO21,GPIO,GPCLK1,ALT5,GPCLK1,pi-header-doc | pi4-j8,bcm2711-alt-p79
+pico,1,GP0,GPIO,SPI0 RX,F1,SPI0 RX,pico-physical,rp2040-bank0-p13
+pico,1,GP0,GPIO,UART0 TX,F2,UART0 TX,pico-physical,rp2040-bank0-p13
+pico,1,GP0,GPIO,I2C0 SDA,F3,I2C0 SDA,pico-physical,rp2040-bank0-p13
+pico,1,GP0,GPIO,PWM0 A,F4,PWM0 A,pico-physical,rp2040-bank0-p13
+pico,1,GP0,GPIO,SIO,F5,SIO,pico-physical,rp2040-bank0-p13
+pico,1,GP0,GPIO,PIO0,F6,PIO0,pico-physical,rp2040-bank0-p13
+pico,1,GP0,GPIO,PIO1,F7,PIO1,pico-physical,rp2040-bank0-p13
+pico,1,GP0,GPIO,USB OVCUR DET,F9,USB OVCUR DET,pico-physical,rp2040-bank0-p13
+pico,2,GP1,GPIO,SPI0 CSn,F1,SPI0 CSn,pico-physical,rp2040-bank0-p13
+pico,2,GP1,GPIO,UART0 RX,F2,UART0 RX,pico-physical,rp2040-bank0-p13
+pico,2,GP1,GPIO,I2C0 SCL,F3,I2C0 SCL,pico-physical,rp2040-bank0-p13
+pico,2,GP1,GPIO,PWM0 B,F4,PWM0 B,pico-physical,rp2040-bank0-p13
+pico,2,GP1,GPIO,SIO,F5,SIO,pico-physical,rp2040-bank0-p13
+pico,2,GP1,GPIO,PIO0,F6,PIO0,pico-physical,rp2040-bank0-p13
+pico,2,GP1,GPIO,PIO1,F7,PIO1,pico-physical,rp2040-bank0-p13
+pico,2,GP1,GPIO,USB VBUS DET,F9,USB VBUS DET,pico-physical,rp2040-bank0-p13
+pico,3,GND,GND,,,,pico-physical,
+pico,4,GP2,GPIO,SPI0 SCK,F1,SPI0 SCK,pico-physical,rp2040-bank0-p13
+pico,4,GP2,GPIO,UART0 CTS,F2,UART0 CTS,pico-physical,rp2040-bank0-p13
+pico,4,GP2,GPIO,I2C1 SDA,F3,I2C1 SDA,pico-physical,rp2040-bank0-p13
+pico,4,GP2,GPIO,PWM1 A,F4,PWM1 A,pico-physical,rp2040-bank0-p13
+pico,4,GP2,GPIO,SIO,F5,SIO,pico-physical,rp2040-bank0-p13
+pico,4,GP2,GPIO,PIO0,F6,PIO0,pico-physical,rp2040-bank0-p13
+pico,4,GP2,GPIO,PIO1,F7,PIO1,pico-physical,rp2040-bank0-p13
+pico,4,GP2,GPIO,USB VBUS EN,F9,USB VBUS EN,pico-physical,rp2040-bank0-p13
+pico,5,GP3,GPIO,SPI0 TX,F1,SPI0 TX,pico-physical,rp2040-bank0-p13
+pico,5,GP3,GPIO,UART0 RTS,F2,UART0 RTS,pico-physical,rp2040-bank0-p13
+pico,5,GP3,GPIO,I2C1 SCL,F3,I2C1 SCL,pico-physical,rp2040-bank0-p13
+pico,5,GP3,GPIO,PWM1 B,F4,PWM1 B,pico-physical,rp2040-bank0-p13
+pico,5,GP3,GPIO,SIO,F5,SIO,pico-physical,rp2040-bank0-p13
+pico,5,GP3,GPIO,PIO0,F6,PIO0,pico-physical,rp2040-bank0-p13
+pico,5,GP3,GPIO,PIO1,F7,PIO1,pico-physical,rp2040-bank0-p13
+pico,5,GP3,GPIO,USB OVCUR DET,F9,USB OVCUR DET,pico-physical,rp2040-bank0-p13
+pico,6,GP4,GPIO,SPI0 RX,F1,SPI0 RX,pico-physical,rp2040-bank0-p13
+pico,6,GP4,GPIO,UART1 TX,F2,UART1 TX,pico-physical,rp2040-bank0-p13
+pico,6,GP4,GPIO,I2C0 SDA,F3,I2C0 SDA,pico-physical,rp2040-bank0-p13
+pico,6,GP4,GPIO,PWM2 A,F4,PWM2 A,pico-physical,rp2040-bank0-p13
+pico,6,GP4,GPIO,SIO,F5,SIO,pico-physical,rp2040-bank0-p13
+pico,6,GP4,GPIO,PIO0,F6,PIO0,pico-physical,rp2040-bank0-p13
+pico,6,GP4,GPIO,PIO1,F7,PIO1,pico-physical,rp2040-bank0-p13
+pico,6,GP4,GPIO,USB VBUS DET,F9,USB VBUS DET,pico-physical,rp2040-bank0-p13
+pico,7,GP5,GPIO,SPI0 CSn,F1,SPI0 CSn,pico-physical,rp2040-bank0-p13
+pico,7,GP5,GPIO,UART1 RX,F2,UART1 RX,pico-physical,rp2040-bank0-p13
+pico,7,GP5,GPIO,I2C0 SCL,F3,I2C0 SCL,pico-physical,rp2040-bank0-p13
+pico,7,GP5,GPIO,PWM2 B,F4,PWM2 B,pico-physical,rp2040-bank0-p13
+pico,7,GP5,GPIO,SIO,F5,SIO,pico-physical,rp2040-bank0-p13
+pico,7,GP5,GPIO,PIO0,F6,PIO0,pico-physical,rp2040-bank0-p13
+pico,7,GP5,GPIO,PIO1,F7,PIO1,pico-physical,rp2040-bank0-p13
+pico,7,GP5,GPIO,USB VBUS EN,F9,USB VBUS EN,pico-physical,rp2040-bank0-p13
+pico,8,GND,GND,,,,pico-physical,
+pico,9,GP6,GPIO,SPI0 SCK,F1,SPI0 SCK,pico-physical,rp2040-bank0-p13
+pico,9,GP6,GPIO,UART1 CTS,F2,UART1 CTS,pico-physical,rp2040-bank0-p13
+pico,9,GP6,GPIO,I2C1 SDA,F3,I2C1 SDA,pico-physical,rp2040-bank0-p13
+pico,9,GP6,GPIO,PWM3 A,F4,PWM3 A,pico-physical,rp2040-bank0-p13
+pico,9,GP6,GPIO,SIO,F5,SIO,pico-physical,rp2040-bank0-p13
+pico,9,GP6,GPIO,PIO0,F6,PIO0,pico-physical,rp2040-bank0-p13
+pico,9,GP6,GPIO,PIO1,F7,PIO1,pico-physical,rp2040-bank0-p13
+pico,9,GP6,GPIO,USB OVCUR DET,F9,USB OVCUR DET,pico-physical,rp2040-bank0-p13
+pico,10,GP7,GPIO,SPI0 TX,F1,SPI0 TX,pico-physical,rp2040-bank0-p13
+pico,10,GP7,GPIO,UART1 RTS,F2,UART1 RTS,pico-physical,rp2040-bank0-p13
+pico,10,GP7,GPIO,I2C1 SCL,F3,I2C1 SCL,pico-physical,rp2040-bank0-p13
+pico,10,GP7,GPIO,PWM3 B,F4,PWM3 B,pico-physical,rp2040-bank0-p13
+pico,10,GP7,GPIO,SIO,F5,SIO,pico-physical,rp2040-bank0-p13
+pico,10,GP7,GPIO,PIO0,F6,PIO0,pico-physical,rp2040-bank0-p13
+pico,10,GP7,GPIO,PIO1,F7,PIO1,pico-physical,rp2040-bank0-p13
+pico,10,GP7,GPIO,USB VBUS DET,F9,USB VBUS DET,pico-physical,rp2040-bank0-p13
+pico,11,GP8,GPIO,SPI1 RX,F1,SPI1 RX,pico-physical,rp2040-bank0-p13
+pico,11,GP8,GPIO,UART1 TX,F2,UART1 TX,pico-physical,rp2040-bank0-p13
+pico,11,GP8,GPIO,I2C0 SDA,F3,I2C0 SDA,pico-physical,rp2040-bank0-p13
+pico,11,GP8,GPIO,PWM4 A,F4,PWM4 A,pico-physical,rp2040-bank0-p13
+pico,11,GP8,GPIO,SIO,F5,SIO,pico-physical,rp2040-bank0-p13
+pico,11,GP8,GPIO,PIO0,F6,PIO0,pico-physical,rp2040-bank0-p13
+pico,11,GP8,GPIO,PIO1,F7,PIO1,pico-physical,rp2040-bank0-p13
+pico,11,GP8,GPIO,USB VBUS EN,F9,USB VBUS EN,pico-physical,rp2040-bank0-p13
+pico,12,GP9,GPIO,SPI1 CSn,F1,SPI1 CSn,pico-physical,rp2040-bank0-p13
+pico,12,GP9,GPIO,UART1 RX,F2,UART1 RX,pico-physical,rp2040-bank0-p13
+pico,12,GP9,GPIO,I2C0 SCL,F3,I2C0 SCL,pico-physical,rp2040-bank0-p13
+pico,12,GP9,GPIO,PWM4 B,F4,PWM4 B,pico-physical,rp2040-bank0-p13
+pico,12,GP9,GPIO,SIO,F5,SIO,pico-physical,rp2040-bank0-p13
+pico,12,GP9,GPIO,PIO0,F6,PIO0,pico-physical,rp2040-bank0-p13
+pico,12,GP9,GPIO,PIO1,F7,PIO1,pico-physical,rp2040-bank0-p13
+pico,12,GP9,GPIO,USB OVCUR DET,F9,USB OVCUR DET,pico-physical,rp2040-bank0-p13
+pico,13,GND,GND,,,,pico-physical,
+pico,14,GP10,GPIO,SPI1 SCK,F1,SPI1 SCK,pico-physical,rp2040-bank0-p13
+pico,14,GP10,GPIO,UART1 CTS,F2,UART1 CTS,pico-physical,rp2040-bank0-p13
+pico,14,GP10,GPIO,I2C1 SDA,F3,I2C1 SDA,pico-physical,rp2040-bank0-p13
+pico,14,GP10,GPIO,PWM5 A,F4,PWM5 A,pico-physical,rp2040-bank0-p13
+pico,14,GP10,GPIO,SIO,F5,SIO,pico-physical,rp2040-bank0-p13
+pico,14,GP10,GPIO,PIO0,F6,PIO0,pico-physical,rp2040-bank0-p13
+pico,14,GP10,GPIO,PIO1,F7,PIO1,pico-physical,rp2040-bank0-p13
+pico,14,GP10,GPIO,USB VBUS DET,F9,USB VBUS DET,pico-physical,rp2040-bank0-p13
+pico,15,GP11,GPIO,SPI1 TX,F1,SPI1 TX,pico-physical,rp2040-bank0-p13
+pico,15,GP11,GPIO,UART1 RTS,F2,UART1 RTS,pico-physical,rp2040-bank0-p13
+pico,15,GP11,GPIO,I2C1 SCL,F3,I2C1 SCL,pico-physical,rp2040-bank0-p13
+pico,15,GP11,GPIO,PWM5 B,F4,PWM5 B,pico-physical,rp2040-bank0-p13
+pico,15,GP11,GPIO,SIO,F5,SIO,pico-physical,rp2040-bank0-p13
+pico,15,GP11,GPIO,PIO0,F6,PIO0,pico-physical,rp2040-bank0-p13
+pico,15,GP11,GPIO,PIO1,F7,PIO1,pico-physical,rp2040-bank0-p13
+pico,15,GP11,GPIO,USB VBUS EN,F9,USB VBUS EN,pico-physical,rp2040-bank0-p13
+pico,16,GP12,GPIO,SPI1 RX,F1,SPI1 RX,pico-physical,rp2040-bank0-p13
+pico,16,GP12,GPIO,UART0 TX,F2,UART0 TX,pico-physical,rp2040-bank0-p13
+pico,16,GP12,GPIO,I2C0 SDA,F3,I2C0 SDA,pico-physical,rp2040-bank0-p13
+pico,16,GP12,GPIO,PWM6 A,F4,PWM6 A,pico-physical,rp2040-bank0-p13
+pico,16,GP12,GPIO,SIO,F5,SIO,pico-physical,rp2040-bank0-p13
+pico,16,GP12,GPIO,PIO0,F6,PIO0,pico-physical,rp2040-bank0-p13
+pico,16,GP12,GPIO,PIO1,F7,PIO1,pico-physical,rp2040-bank0-p13
+pico,16,GP12,GPIO,USB OVCUR DET,F9,USB OVCUR DET,pico-physical,rp2040-bank0-p13
+pico,17,GP13,GPIO,SPI1 CSn,F1,SPI1 CSn,pico-physical,rp2040-bank0-p13
+pico,17,GP13,GPIO,UART0 RX,F2,UART0 RX,pico-physical,rp2040-bank0-p13
+pico,17,GP13,GPIO,I2C0 SCL,F3,I2C0 SCL,pico-physical,rp2040-bank0-p13
+pico,17,GP13,GPIO,PWM6 B,F4,PWM6 B,pico-physical,rp2040-bank0-p13
+pico,17,GP13,GPIO,SIO,F5,SIO,pico-physical,rp2040-bank0-p13
+pico,17,GP13,GPIO,PIO0,F6,PIO0,pico-physical,rp2040-bank0-p13
+pico,17,GP13,GPIO,PIO1,F7,PIO1,pico-physical,rp2040-bank0-p13
+pico,17,GP13,GPIO,USB VBUS DET,F9,USB VBUS DET,pico-physical,rp2040-bank0-p13
+pico,18,GND,GND,,,,pico-physical,
+pico,19,GP14,GPIO,SPI1 SCK,F1,SPI1 SCK,pico-physical,rp2040-bank0-p13
+pico,19,GP14,GPIO,UART0 CTS,F2,UART0 CTS,pico-physical,rp2040-bank0-p13
+pico,19,GP14,GPIO,I2C1 SDA,F3,I2C1 SDA,pico-physical,rp2040-bank0-p13
+pico,19,GP14,GPIO,PWM7 A,F4,PWM7 A,pico-physical,rp2040-bank0-p13
+pico,19,GP14,GPIO,SIO,F5,SIO,pico-physical,rp2040-bank0-p13
+pico,19,GP14,GPIO,PIO0,F6,PIO0,pico-physical,rp2040-bank0-p13
+pico,19,GP14,GPIO,PIO1,F7,PIO1,pico-physical,rp2040-bank0-p13
+pico,19,GP14,GPIO,USB VBUS EN,F9,USB VBUS EN,pico-physical,rp2040-bank0-p13
+pico,20,GP15,GPIO,SPI1 TX,F1,SPI1 TX,pico-physical,rp2040-bank0-p13
+pico,20,GP15,GPIO,UART0 RTS,F2,UART0 RTS,pico-physical,rp2040-bank0-p13
+pico,20,GP15,GPIO,I2C1 SCL,F3,I2C1 SCL,pico-physical,rp2040-bank0-p13
+pico,20,GP15,GPIO,PWM7 B,F4,PWM7 B,pico-physical,rp2040-bank0-p13
+pico,20,GP15,GPIO,SIO,F5,SIO,pico-physical,rp2040-bank0-p13
+pico,20,GP15,GPIO,PIO0,F6,PIO0,pico-physical,rp2040-bank0-p13
+pico,20,GP15,GPIO,PIO1,F7,PIO1,pico-physical,rp2040-bank0-p13
+pico,20,GP15,GPIO,USB OVCUR DET,F9,USB OVCUR DET,pico-physical,rp2040-bank0-p13
+pico,21,GP16,GPIO,SPI0 RX,F1,SPI0 RX,pico-physical,rp2040-bank0-p13
+pico,21,GP16,GPIO,UART0 TX,F2,UART0 TX,pico-physical,rp2040-bank0-p13
+pico,21,GP16,GPIO,I2C0 SDA,F3,I2C0 SDA,pico-physical,rp2040-bank0-p13
+pico,21,GP16,GPIO,PWM0 A,F4,PWM0 A,pico-physical,rp2040-bank0-p13
+pico,21,GP16,GPIO,SIO,F5,SIO,pico-physical,rp2040-bank0-p13
+pico,21,GP16,GPIO,PIO0,F6,PIO0,pico-physical,rp2040-bank0-p13
+pico,21,GP16,GPIO,PIO1,F7,PIO1,pico-physical,rp2040-bank0-p13
+pico,21,GP16,GPIO,USB VBUS DET,F9,USB VBUS DET,pico-physical,rp2040-bank0-p13
+pico,22,GP17,GPIO,SPI0 CSn,F1,SPI0 CSn,pico-physical,rp2040-bank0-p13
+pico,22,GP17,GPIO,UART0 RX,F2,UART0 RX,pico-physical,rp2040-bank0-p13
+pico,22,GP17,GPIO,I2C0 SCL,F3,I2C0 SCL,pico-physical,rp2040-bank0-p13
+pico,22,GP17,GPIO,PWM0 B,F4,PWM0 B,pico-physical,rp2040-bank0-p13
+pico,22,GP17,GPIO,SIO,F5,SIO,pico-physical,rp2040-bank0-p13
+pico,22,GP17,GPIO,PIO0,F6,PIO0,pico-physical,rp2040-bank0-p13
+pico,22,GP17,GPIO,PIO1,F7,PIO1,pico-physical,rp2040-bank0-p13
+pico,22,GP17,GPIO,USB VBUS EN,F9,USB VBUS EN,pico-physical,rp2040-bank0-p13
+pico,23,GND,GND,,,,pico-physical,
+pico,24,GP18,GPIO,SPI0 SCK,F1,SPI0 SCK,pico-physical,rp2040-bank0-p13
+pico,24,GP18,GPIO,UART0 CTS,F2,UART0 CTS,pico-physical,rp2040-bank0-p13
+pico,24,GP18,GPIO,I2C1 SDA,F3,I2C1 SDA,pico-physical,rp2040-bank0-p13
+pico,24,GP18,GPIO,PWM1 A,F4,PWM1 A,pico-physical,rp2040-bank0-p13
+pico,24,GP18,GPIO,SIO,F5,SIO,pico-physical,rp2040-bank0-p13
+pico,24,GP18,GPIO,PIO0,F6,PIO0,pico-physical,rp2040-bank0-p13
+pico,24,GP18,GPIO,PIO1,F7,PIO1,pico-physical,rp2040-bank0-p13
+pico,24,GP18,GPIO,USB OVCUR DET,F9,USB OVCUR DET,pico-physical,rp2040-bank0-p13
+pico,25,GP19,GPIO,SPI0 TX,F1,SPI0 TX,pico-physical,rp2040-bank0-p13
+pico,25,GP19,GPIO,UART0 RTS,F2,UART0 RTS,pico-physical,rp2040-bank0-p13
+pico,25,GP19,GPIO,I2C1 SCL,F3,I2C1 SCL,pico-physical,rp2040-bank0-p13
+pico,25,GP19,GPIO,PWM1 B,F4,PWM1 B,pico-physical,rp2040-bank0-p13
+pico,25,GP19,GPIO,SIO,F5,SIO,pico-physical,rp2040-bank0-p13
+pico,25,GP19,GPIO,PIO0,F6,PIO0,pico-physical,rp2040-bank0-p13
+pico,25,GP19,GPIO,PIO1,F7,PIO1,pico-physical,rp2040-bank0-p13
+pico,25,GP19,GPIO,USB VBUS DET,F9,USB VBUS DET,pico-physical,rp2040-bank0-p13
+pico,26,GP20,GPIO,SPI0 RX,F1,SPI0 RX,pico-physical,rp2040-bank0-p13
+pico,26,GP20,GPIO,UART1 TX,F2,UART1 TX,pico-physical,rp2040-bank0-p13
+pico,26,GP20,GPIO,I2C0 SDA,F3,I2C0 SDA,pico-physical,rp2040-bank0-p13
+pico,26,GP20,GPIO,PWM2 A,F4,PWM2 A,pico-physical,rp2040-bank0-p13
+pico,26,GP20,GPIO,SIO,F5,SIO,pico-physical,rp2040-bank0-p13
+pico,26,GP20,GPIO,PIO0,F6,PIO0,pico-physical,rp2040-bank0-p13
+pico,26,GP20,GPIO,PIO1,F7,PIO1,pico-physical,rp2040-bank0-p13
+pico,26,GP20,GPIO,CLOCK GPIN0,F8,CLOCK GPIN0,pico-physical,rp2040-bank0-p13
+pico,26,GP20,GPIO,USB VBUS EN,F9,USB VBUS EN,pico-physical,rp2040-bank0-p13
+pico,27,GP21,GPIO,SPI0 CSn,F1,SPI0 CSn,pico-physical,rp2040-bank0-p13
+pico,27,GP21,GPIO,UART1 RX,F2,UART1 RX,pico-physical,rp2040-bank0-p13
+pico,27,GP21,GPIO,I2C0 SCL,F3,I2C0 SCL,pico-physical,rp2040-bank0-p13
+pico,27,GP21,GPIO,PWM2 B,F4,PWM2 B,pico-physical,rp2040-bank0-p13
+pico,27,GP21,GPIO,SIO,F5,SIO,pico-physical,rp2040-bank0-p13
+pico,27,GP21,GPIO,PIO0,F6,PIO0,pico-physical,rp2040-bank0-p13
+pico,27,GP21,GPIO,PIO1,F7,PIO1,pico-physical,rp2040-bank0-p13
+pico,27,GP21,GPIO,CLOCK GPOUT0,F8,CLOCK GPOUT0,pico-physical,rp2040-bank0-p13
+pico,27,GP21,GPIO,USB OVCUR DET,F9,USB OVCUR DET,pico-physical,rp2040-bank0-p13
+pico,28,GND,GND,,,,pico-physical,
+pico,29,GP22,GPIO,SPI0 SCK,F1,SPI0 SCK,pico-physical,rp2040-bank0-p14
+pico,29,GP22,GPIO,UART1 CTS,F2,UART1 CTS,pico-physical,rp2040-bank0-p14
+pico,29,GP22,GPIO,I2C1 SDA,F3,I2C1 SDA,pico-physical,rp2040-bank0-p14
+pico,29,GP22,GPIO,PWM3 A,F4,PWM3 A,pico-physical,rp2040-bank0-p14
+pico,29,GP22,GPIO,SIO,F5,SIO,pico-physical,rp2040-bank0-p14
+pico,29,GP22,GPIO,PIO0,F6,PIO0,pico-physical,rp2040-bank0-p14
+pico,29,GP22,GPIO,PIO1,F7,PIO1,pico-physical,rp2040-bank0-p14
+pico,29,GP22,GPIO,CLOCK GPIN1,F8,CLOCK GPIN1,pico-physical,rp2040-bank0-p14
+pico,29,GP22,GPIO,USB VBUS DET,F9,USB VBUS DET,pico-physical,rp2040-bank0-p14
+pico,30,RUN,SYSTEM,,,,pico-physical | pico-supply,
+pico,31,GP26,GPIO,SPI1 SCK,F1,SPI1 SCK,pico-physical,rp2040-bank0-p14
+pico,31,GP26,GPIO,UART1 CTS,F2,UART1 CTS,pico-physical,rp2040-bank0-p14
+pico,31,GP26,GPIO,I2C1 SDA,F3,I2C1 SDA,pico-physical,rp2040-bank0-p14
+pico,31,GP26,GPIO,PWM5 A,F4,PWM5 A,pico-physical,rp2040-bank0-p14
+pico,31,GP26,GPIO,SIO,F5,SIO,pico-physical,rp2040-bank0-p14
+pico,31,GP26,GPIO,PIO0,F6,PIO0,pico-physical,rp2040-bank0-p14
+pico,31,GP26,GPIO,PIO1,F7,PIO1,pico-physical,rp2040-bank0-p14
+pico,31,GP26,GPIO,USB VBUS EN,F9,USB VBUS EN,pico-physical,rp2040-bank0-p14
+pico,31,GP26,GPIO,ADC0,,ADC0,pico-physical,pico-physical
+pico,32,GP27,GPIO,SPI1 TX,F1,SPI1 TX,pico-physical,rp2040-bank0-p14
+pico,32,GP27,GPIO,UART1 RTS,F2,UART1 RTS,pico-physical,rp2040-bank0-p14
+pico,32,GP27,GPIO,I2C1 SCL,F3,I2C1 SCL,pico-physical,rp2040-bank0-p14
+pico,32,GP27,GPIO,PWM5 B,F4,PWM5 B,pico-physical,rp2040-bank0-p14
+pico,32,GP27,GPIO,SIO,F5,SIO,pico-physical,rp2040-bank0-p14
+pico,32,GP27,GPIO,PIO0,F6,PIO0,pico-physical,rp2040-bank0-p14
+pico,32,GP27,GPIO,PIO1,F7,PIO1,pico-physical,rp2040-bank0-p14
+pico,32,GP27,GPIO,USB OVCUR DET,F9,USB OVCUR DET,pico-physical,rp2040-bank0-p14
+pico,32,GP27,GPIO,ADC1,,ADC1,pico-physical,pico-physical
+pico,33,AGND,GND,,,,pico-physical | pico-supply,
+pico,34,GP28,GPIO,SPI1 RX,F1,SPI1 RX,pico-physical,rp2040-bank0-p14
+pico,34,GP28,GPIO,UART0 TX,F2,UART0 TX,pico-physical,rp2040-bank0-p14
+pico,34,GP28,GPIO,I2C0 SDA,F3,I2C0 SDA,pico-physical,rp2040-bank0-p14
+pico,34,GP28,GPIO,PWM6 A,F4,PWM6 A,pico-physical,rp2040-bank0-p14
+pico,34,GP28,GPIO,SIO,F5,SIO,pico-physical,rp2040-bank0-p14
+pico,34,GP28,GPIO,PIO0,F6,PIO0,pico-physical,rp2040-bank0-p14
+pico,34,GP28,GPIO,PIO1,F7,PIO1,pico-physical,rp2040-bank0-p14
+pico,34,GP28,GPIO,USB VBUS DET,F9,USB VBUS DET,pico-physical,rp2040-bank0-p14
+pico,34,GP28,GPIO,ADC2,,ADC2,pico-physical,pico-physical
+pico,35,ADC_VREF,ADC,,,,pico-physical | pico-supply,
+pico,36,3V3(OUT),POWER,,,,pico-physical | pico-supply,
+pico,37,3V3_EN,SYSTEM,,,,pico-physical | pico-supply,
+pico,38,GND,GND,,,,pico-physical,
+pico,39,VSYS,POWER,,,,pico-physical | pico-supply,
+pico,40,VBUS,POWER,,,,pico-physical | pico-supply,
+picow,1,GP0,GPIO,SPI0 RX,F1,SPI0 RX,picow-physical,rp2040-bank0-p13
+picow,1,GP0,GPIO,UART0 TX,F2,UART0 TX,picow-physical,rp2040-bank0-p13
+picow,1,GP0,GPIO,I2C0 SDA,F3,I2C0 SDA,picow-physical,rp2040-bank0-p13
+picow,1,GP0,GPIO,PWM0 A,F4,PWM0 A,picow-physical,rp2040-bank0-p13
+picow,1,GP0,GPIO,SIO,F5,SIO,picow-physical,rp2040-bank0-p13
+picow,1,GP0,GPIO,PIO0,F6,PIO0,picow-physical,rp2040-bank0-p13
+picow,1,GP0,GPIO,PIO1,F7,PIO1,picow-physical,rp2040-bank0-p13
+picow,1,GP0,GPIO,USB OVCUR DET,F9,USB OVCUR DET,picow-physical,rp2040-bank0-p13
+picow,2,GP1,GPIO,SPI0 CSn,F1,SPI0 CSn,picow-physical,rp2040-bank0-p13
+picow,2,GP1,GPIO,UART0 RX,F2,UART0 RX,picow-physical,rp2040-bank0-p13
+picow,2,GP1,GPIO,I2C0 SCL,F3,I2C0 SCL,picow-physical,rp2040-bank0-p13
+picow,2,GP1,GPIO,PWM0 B,F4,PWM0 B,picow-physical,rp2040-bank0-p13
+picow,2,GP1,GPIO,SIO,F5,SIO,picow-physical,rp2040-bank0-p13
+picow,2,GP1,GPIO,PIO0,F6,PIO0,picow-physical,rp2040-bank0-p13
+picow,2,GP1,GPIO,PIO1,F7,PIO1,picow-physical,rp2040-bank0-p13
+picow,2,GP1,GPIO,USB VBUS DET,F9,USB VBUS DET,picow-physical,rp2040-bank0-p13
+picow,3,GND,GND,,,,picow-physical,
+picow,4,GP2,GPIO,SPI0 SCK,F1,SPI0 SCK,picow-physical,rp2040-bank0-p13
+picow,4,GP2,GPIO,UART0 CTS,F2,UART0 CTS,picow-physical,rp2040-bank0-p13
+picow,4,GP2,GPIO,I2C1 SDA,F3,I2C1 SDA,picow-physical,rp2040-bank0-p13
+picow,4,GP2,GPIO,PWM1 A,F4,PWM1 A,picow-physical,rp2040-bank0-p13
+picow,4,GP2,GPIO,SIO,F5,SIO,picow-physical,rp2040-bank0-p13
+picow,4,GP2,GPIO,PIO0,F6,PIO0,picow-physical,rp2040-bank0-p13
+picow,4,GP2,GPIO,PIO1,F7,PIO1,picow-physical,rp2040-bank0-p13
+picow,4,GP2,GPIO,USB VBUS EN,F9,USB VBUS EN,picow-physical,rp2040-bank0-p13
+picow,5,GP3,GPIO,SPI0 TX,F1,SPI0 TX,picow-physical,rp2040-bank0-p13
+picow,5,GP3,GPIO,UART0 RTS,F2,UART0 RTS,picow-physical,rp2040-bank0-p13
+picow,5,GP3,GPIO,I2C1 SCL,F3,I2C1 SCL,picow-physical,rp2040-bank0-p13
+picow,5,GP3,GPIO,PWM1 B,F4,PWM1 B,picow-physical,rp2040-bank0-p13
+picow,5,GP3,GPIO,SIO,F5,SIO,picow-physical,rp2040-bank0-p13
+picow,5,GP3,GPIO,PIO0,F6,PIO0,picow-physical,rp2040-bank0-p13
+picow,5,GP3,GPIO,PIO1,F7,PIO1,picow-physical,rp2040-bank0-p13
+picow,5,GP3,GPIO,USB OVCUR DET,F9,USB OVCUR DET,picow-physical,rp2040-bank0-p13
+picow,6,GP4,GPIO,SPI0 RX,F1,SPI0 RX,picow-physical,rp2040-bank0-p13
+picow,6,GP4,GPIO,UART1 TX,F2,UART1 TX,picow-physical,rp2040-bank0-p13
+picow,6,GP4,GPIO,I2C0 SDA,F3,I2C0 SDA,picow-physical,rp2040-bank0-p13
+picow,6,GP4,GPIO,PWM2 A,F4,PWM2 A,picow-physical,rp2040-bank0-p13
+picow,6,GP4,GPIO,SIO,F5,SIO,picow-physical,rp2040-bank0-p13
+picow,6,GP4,GPIO,PIO0,F6,PIO0,picow-physical,rp2040-bank0-p13
+picow,6,GP4,GPIO,PIO1,F7,PIO1,picow-physical,rp2040-bank0-p13
+picow,6,GP4,GPIO,USB VBUS DET,F9,USB VBUS DET,picow-physical,rp2040-bank0-p13
+picow,7,GP5,GPIO,SPI0 CSn,F1,SPI0 CSn,picow-physical,rp2040-bank0-p13
+picow,7,GP5,GPIO,UART1 RX,F2,UART1 RX,picow-physical,rp2040-bank0-p13
+picow,7,GP5,GPIO,I2C0 SCL,F3,I2C0 SCL,picow-physical,rp2040-bank0-p13
+picow,7,GP5,GPIO,PWM2 B,F4,PWM2 B,picow-physical,rp2040-bank0-p13
+picow,7,GP5,GPIO,SIO,F5,SIO,picow-physical,rp2040-bank0-p13
+picow,7,GP5,GPIO,PIO0,F6,PIO0,picow-physical,rp2040-bank0-p13
+picow,7,GP5,GPIO,PIO1,F7,PIO1,picow-physical,rp2040-bank0-p13
+picow,7,GP5,GPIO,USB VBUS EN,F9,USB VBUS EN,picow-physical,rp2040-bank0-p13
+picow,8,GND,GND,,,,picow-physical,
+picow,9,GP6,GPIO,SPI0 SCK,F1,SPI0 SCK,picow-physical,rp2040-bank0-p13
+picow,9,GP6,GPIO,UART1 CTS,F2,UART1 CTS,picow-physical,rp2040-bank0-p13
+picow,9,GP6,GPIO,I2C1 SDA,F3,I2C1 SDA,picow-physical,rp2040-bank0-p13
+picow,9,GP6,GPIO,PWM3 A,F4,PWM3 A,picow-physical,rp2040-bank0-p13
+picow,9,GP6,GPIO,SIO,F5,SIO,picow-physical,rp2040-bank0-p13
+picow,9,GP6,GPIO,PIO0,F6,PIO0,picow-physical,rp2040-bank0-p13
+picow,9,GP6,GPIO,PIO1,F7,PIO1,picow-physical,rp2040-bank0-p13
+picow,9,GP6,GPIO,USB OVCUR DET,F9,USB OVCUR DET,picow-physical,rp2040-bank0-p13
+picow,10,GP7,GPIO,SPI0 TX,F1,SPI0 TX,picow-physical,rp2040-bank0-p13
+picow,10,GP7,GPIO,UART1 RTS,F2,UART1 RTS,picow-physical,rp2040-bank0-p13
+picow,10,GP7,GPIO,I2C1 SCL,F3,I2C1 SCL,picow-physical,rp2040-bank0-p13
+picow,10,GP7,GPIO,PWM3 B,F4,PWM3 B,picow-physical,rp2040-bank0-p13
+picow,10,GP7,GPIO,SIO,F5,SIO,picow-physical,rp2040-bank0-p13
+picow,10,GP7,GPIO,PIO0,F6,PIO0,picow-physical,rp2040-bank0-p13
+picow,10,GP7,GPIO,PIO1,F7,PIO1,picow-physical,rp2040-bank0-p13
+picow,10,GP7,GPIO,USB VBUS DET,F9,USB VBUS DET,picow-physical,rp2040-bank0-p13
+picow,11,GP8,GPIO,SPI1 RX,F1,SPI1 RX,picow-physical,rp2040-bank0-p13
+picow,11,GP8,GPIO,UART1 TX,F2,UART1 TX,picow-physical,rp2040-bank0-p13
+picow,11,GP8,GPIO,I2C0 SDA,F3,I2C0 SDA,picow-physical,rp2040-bank0-p13
+picow,11,GP8,GPIO,PWM4 A,F4,PWM4 A,picow-physical,rp2040-bank0-p13
+picow,11,GP8,GPIO,SIO,F5,SIO,picow-physical,rp2040-bank0-p13
+picow,11,GP8,GPIO,PIO0,F6,PIO0,picow-physical,rp2040-bank0-p13
+picow,11,GP8,GPIO,PIO1,F7,PIO1,picow-physical,rp2040-bank0-p13
+picow,11,GP8,GPIO,USB VBUS EN,F9,USB VBUS EN,picow-physical,rp2040-bank0-p13
+picow,12,GP9,GPIO,SPI1 CSn,F1,SPI1 CSn,picow-physical,rp2040-bank0-p13
+picow,12,GP9,GPIO,UART1 RX,F2,UART1 RX,picow-physical,rp2040-bank0-p13
+picow,12,GP9,GPIO,I2C0 SCL,F3,I2C0 SCL,picow-physical,rp2040-bank0-p13
+picow,12,GP9,GPIO,PWM4 B,F4,PWM4 B,picow-physical,rp2040-bank0-p13
+picow,12,GP9,GPIO,SIO,F5,SIO,picow-physical,rp2040-bank0-p13
+picow,12,GP9,GPIO,PIO0,F6,PIO0,picow-physical,rp2040-bank0-p13
+picow,12,GP9,GPIO,PIO1,F7,PIO1,picow-physical,rp2040-bank0-p13
+picow,12,GP9,GPIO,USB OVCUR DET,F9,USB OVCUR DET,picow-physical,rp2040-bank0-p13
+picow,13,GND,GND,,,,picow-physical,
+picow,14,GP10,GPIO,SPI1 SCK,F1,SPI1 SCK,picow-physical,rp2040-bank0-p13
+picow,14,GP10,GPIO,UART1 CTS,F2,UART1 CTS,picow-physical,rp2040-bank0-p13
+picow,14,GP10,GPIO,I2C1 SDA,F3,I2C1 SDA,picow-physical,rp2040-bank0-p13
+picow,14,GP10,GPIO,PWM5 A,F4,PWM5 A,picow-physical,rp2040-bank0-p13
+picow,14,GP10,GPIO,SIO,F5,SIO,picow-physical,rp2040-bank0-p13
+picow,14,GP10,GPIO,PIO0,F6,PIO0,picow-physical,rp2040-bank0-p13
+picow,14,GP10,GPIO,PIO1,F7,PIO1,picow-physical,rp2040-bank0-p13
+picow,14,GP10,GPIO,USB VBUS DET,F9,USB VBUS DET,picow-physical,rp2040-bank0-p13
+picow,15,GP11,GPIO,SPI1 TX,F1,SPI1 TX,picow-physical,rp2040-bank0-p13
+picow,15,GP11,GPIO,UART1 RTS,F2,UART1 RTS,picow-physical,rp2040-bank0-p13
+picow,15,GP11,GPIO,I2C1 SCL,F3,I2C1 SCL,picow-physical,rp2040-bank0-p13
+picow,15,GP11,GPIO,PWM5 B,F4,PWM5 B,picow-physical,rp2040-bank0-p13
+picow,15,GP11,GPIO,SIO,F5,SIO,picow-physical,rp2040-bank0-p13
+picow,15,GP11,GPIO,PIO0,F6,PIO0,picow-physical,rp2040-bank0-p13
+picow,15,GP11,GPIO,PIO1,F7,PIO1,picow-physical,rp2040-bank0-p13
+picow,15,GP11,GPIO,USB VBUS EN,F9,USB VBUS EN,picow-physical,rp2040-bank0-p13
+picow,16,GP12,GPIO,SPI1 RX,F1,SPI1 RX,picow-physical,rp2040-bank0-p13
+picow,16,GP12,GPIO,UART0 TX,F2,UART0 TX,picow-physical,rp2040-bank0-p13
+picow,16,GP12,GPIO,I2C0 SDA,F3,I2C0 SDA,picow-physical,rp2040-bank0-p13
+picow,16,GP12,GPIO,PWM6 A,F4,PWM6 A,picow-physical,rp2040-bank0-p13
+picow,16,GP12,GPIO,SIO,F5,SIO,picow-physical,rp2040-bank0-p13
+picow,16,GP12,GPIO,PIO0,F6,PIO0,picow-physical,rp2040-bank0-p13
+picow,16,GP12,GPIO,PIO1,F7,PIO1,picow-physical,rp2040-bank0-p13
+picow,16,GP12,GPIO,USB OVCUR DET,F9,USB OVCUR DET,picow-physical,rp2040-bank0-p13
+picow,17,GP13,GPIO,SPI1 CSn,F1,SPI1 CSn,picow-physical,rp2040-bank0-p13
+picow,17,GP13,GPIO,UART0 RX,F2,UART0 RX,picow-physical,rp2040-bank0-p13
+picow,17,GP13,GPIO,I2C0 SCL,F3,I2C0 SCL,picow-physical,rp2040-bank0-p13
+picow,17,GP13,GPIO,PWM6 B,F4,PWM6 B,picow-physical,rp2040-bank0-p13
+picow,17,GP13,GPIO,SIO,F5,SIO,picow-physical,rp2040-bank0-p13
+picow,17,GP13,GPIO,PIO0,F6,PIO0,picow-physical,rp2040-bank0-p13
+picow,17,GP13,GPIO,PIO1,F7,PIO1,picow-physical,rp2040-bank0-p13
+picow,17,GP13,GPIO,USB VBUS DET,F9,USB VBUS DET,picow-physical,rp2040-bank0-p13
+picow,18,GND,GND,,,,picow-physical,
+picow,19,GP14,GPIO,SPI1 SCK,F1,SPI1 SCK,picow-physical,rp2040-bank0-p13
+picow,19,GP14,GPIO,UART0 CTS,F2,UART0 CTS,picow-physical,rp2040-bank0-p13
+picow,19,GP14,GPIO,I2C1 SDA,F3,I2C1 SDA,picow-physical,rp2040-bank0-p13
+picow,19,GP14,GPIO,PWM7 A,F4,PWM7 A,picow-physical,rp2040-bank0-p13
+picow,19,GP14,GPIO,SIO,F5,SIO,picow-physical,rp2040-bank0-p13
+picow,19,GP14,GPIO,PIO0,F6,PIO0,picow-physical,rp2040-bank0-p13
+picow,19,GP14,GPIO,PIO1,F7,PIO1,picow-physical,rp2040-bank0-p13
+picow,19,GP14,GPIO,USB VBUS EN,F9,USB VBUS EN,picow-physical,rp2040-bank0-p13
+picow,20,GP15,GPIO,SPI1 TX,F1,SPI1 TX,picow-physical,rp2040-bank0-p13
+picow,20,GP15,GPIO,UART0 RTS,F2,UART0 RTS,picow-physical,rp2040-bank0-p13
+picow,20,GP15,GPIO,I2C1 SCL,F3,I2C1 SCL,picow-physical,rp2040-bank0-p13
+picow,20,GP15,GPIO,PWM7 B,F4,PWM7 B,picow-physical,rp2040-bank0-p13
+picow,20,GP15,GPIO,SIO,F5,SIO,picow-physical,rp2040-bank0-p13
+picow,20,GP15,GPIO,PIO0,F6,PIO0,picow-physical,rp2040-bank0-p13
+picow,20,GP15,GPIO,PIO1,F7,PIO1,picow-physical,rp2040-bank0-p13
+picow,20,GP15,GPIO,USB OVCUR DET,F9,USB OVCUR DET,picow-physical,rp2040-bank0-p13
+picow,21,GP16,GPIO,SPI0 RX,F1,SPI0 RX,picow-physical,rp2040-bank0-p13
+picow,21,GP16,GPIO,UART0 TX,F2,UART0 TX,picow-physical,rp2040-bank0-p13
+picow,21,GP16,GPIO,I2C0 SDA,F3,I2C0 SDA,picow-physical,rp2040-bank0-p13
+picow,21,GP16,GPIO,PWM0 A,F4,PWM0 A,picow-physical,rp2040-bank0-p13
+picow,21,GP16,GPIO,SIO,F5,SIO,picow-physical,rp2040-bank0-p13
+picow,21,GP16,GPIO,PIO0,F6,PIO0,picow-physical,rp2040-bank0-p13
+picow,21,GP16,GPIO,PIO1,F7,PIO1,picow-physical,rp2040-bank0-p13
+picow,21,GP16,GPIO,USB VBUS DET,F9,USB VBUS DET,picow-physical,rp2040-bank0-p13
+picow,22,GP17,GPIO,SPI0 CSn,F1,SPI0 CSn,picow-physical,rp2040-bank0-p13
+picow,22,GP17,GPIO,UART0 RX,F2,UART0 RX,picow-physical,rp2040-bank0-p13
+picow,22,GP17,GPIO,I2C0 SCL,F3,I2C0 SCL,picow-physical,rp2040-bank0-p13
+picow,22,GP17,GPIO,PWM0 B,F4,PWM0 B,picow-physical,rp2040-bank0-p13
+picow,22,GP17,GPIO,SIO,F5,SIO,picow-physical,rp2040-bank0-p13
+picow,22,GP17,GPIO,PIO0,F6,PIO0,picow-physical,rp2040-bank0-p13
+picow,22,GP17,GPIO,PIO1,F7,PIO1,picow-physical,rp2040-bank0-p13
+picow,22,GP17,GPIO,USB VBUS EN,F9,USB VBUS EN,picow-physical,rp2040-bank0-p13
+picow,23,GND,GND,,,,picow-physical,
+picow,24,GP18,GPIO,SPI0 SCK,F1,SPI0 SCK,picow-physical,rp2040-bank0-p13
+picow,24,GP18,GPIO,UART0 CTS,F2,UART0 CTS,picow-physical,rp2040-bank0-p13
+picow,24,GP18,GPIO,I2C1 SDA,F3,I2C1 SDA,picow-physical,rp2040-bank0-p13
+picow,24,GP18,GPIO,PWM1 A,F4,PWM1 A,picow-physical,rp2040-bank0-p13
+picow,24,GP18,GPIO,SIO,F5,SIO,picow-physical,rp2040-bank0-p13
+picow,24,GP18,GPIO,PIO0,F6,PIO0,picow-physical,rp2040-bank0-p13
+picow,24,GP18,GPIO,PIO1,F7,PIO1,picow-physical,rp2040-bank0-p13
+picow,24,GP18,GPIO,USB OVCUR DET,F9,USB OVCUR DET,picow-physical,rp2040-bank0-p13
+picow,25,GP19,GPIO,SPI0 TX,F1,SPI0 TX,picow-physical,rp2040-bank0-p13
+picow,25,GP19,GPIO,UART0 RTS,F2,UART0 RTS,picow-physical,rp2040-bank0-p13
+picow,25,GP19,GPIO,I2C1 SCL,F3,I2C1 SCL,picow-physical,rp2040-bank0-p13
+picow,25,GP19,GPIO,PWM1 B,F4,PWM1 B,picow-physical,rp2040-bank0-p13
+picow,25,GP19,GPIO,SIO,F5,SIO,picow-physical,rp2040-bank0-p13
+picow,25,GP19,GPIO,PIO0,F6,PIO0,picow-physical,rp2040-bank0-p13
+picow,25,GP19,GPIO,PIO1,F7,PIO1,picow-physical,rp2040-bank0-p13
+picow,25,GP19,GPIO,USB VBUS DET,F9,USB VBUS DET,picow-physical,rp2040-bank0-p13
+picow,26,GP20,GPIO,SPI0 RX,F1,SPI0 RX,picow-physical,rp2040-bank0-p13
+picow,26,GP20,GPIO,UART1 TX,F2,UART1 TX,picow-physical,rp2040-bank0-p13
+picow,26,GP20,GPIO,I2C0 SDA,F3,I2C0 SDA,picow-physical,rp2040-bank0-p13
+picow,26,GP20,GPIO,PWM2 A,F4,PWM2 A,picow-physical,rp2040-bank0-p13
+picow,26,GP20,GPIO,SIO,F5,SIO,picow-physical,rp2040-bank0-p13
+picow,26,GP20,GPIO,PIO0,F6,PIO0,picow-physical,rp2040-bank0-p13
+picow,26,GP20,GPIO,PIO1,F7,PIO1,picow-physical,rp2040-bank0-p13
+picow,26,GP20,GPIO,CLOCK GPIN0,F8,CLOCK GPIN0,picow-physical,rp2040-bank0-p13
+picow,26,GP20,GPIO,USB VBUS EN,F9,USB VBUS EN,picow-physical,rp2040-bank0-p13
+picow,27,GP21,GPIO,SPI0 CSn,F1,SPI0 CSn,picow-physical,rp2040-bank0-p13
+picow,27,GP21,GPIO,UART1 RX,F2,UART1 RX,picow-physical,rp2040-bank0-p13
+picow,27,GP21,GPIO,I2C0 SCL,F3,I2C0 SCL,picow-physical,rp2040-bank0-p13
+picow,27,GP21,GPIO,PWM2 B,F4,PWM2 B,picow-physical,rp2040-bank0-p13
+picow,27,GP21,GPIO,SIO,F5,SIO,picow-physical,rp2040-bank0-p13
+picow,27,GP21,GPIO,PIO0,F6,PIO0,picow-physical,rp2040-bank0-p13
+picow,27,GP21,GPIO,PIO1,F7,PIO1,picow-physical,rp2040-bank0-p13
+picow,27,GP21,GPIO,CLOCK GPOUT0,F8,CLOCK GPOUT0,picow-physical,rp2040-bank0-p13
+picow,27,GP21,GPIO,USB OVCUR DET,F9,USB OVCUR DET,picow-physical,rp2040-bank0-p13
+picow,28,GND,GND,,,,picow-physical,
+picow,29,GP22,GPIO,SPI0 SCK,F1,SPI0 SCK,picow-physical,rp2040-bank0-p14
+picow,29,GP22,GPIO,UART1 CTS,F2,UART1 CTS,picow-physical,rp2040-bank0-p14
+picow,29,GP22,GPIO,I2C1 SDA,F3,I2C1 SDA,picow-physical,rp2040-bank0-p14
+picow,29,GP22,GPIO,PWM3 A,F4,PWM3 A,picow-physical,rp2040-bank0-p14
+picow,29,GP22,GPIO,SIO,F5,SIO,picow-physical,rp2040-bank0-p14
+picow,29,GP22,GPIO,PIO0,F6,PIO0,picow-physical,rp2040-bank0-p14
+picow,29,GP22,GPIO,PIO1,F7,PIO1,picow-physical,rp2040-bank0-p14
+picow,29,GP22,GPIO,CLOCK GPIN1,F8,CLOCK GPIN1,picow-physical,rp2040-bank0-p14
+picow,29,GP22,GPIO,USB VBUS DET,F9,USB VBUS DET,picow-physical,rp2040-bank0-p14
+picow,30,RUN,SYSTEM,,,,picow-physical | picow-supply,
+picow,31,GP26,GPIO,SPI1 SCK,F1,SPI1 SCK,picow-physical,rp2040-bank0-p14
+picow,31,GP26,GPIO,UART1 CTS,F2,UART1 CTS,picow-physical,rp2040-bank0-p14
+picow,31,GP26,GPIO,I2C1 SDA,F3,I2C1 SDA,picow-physical,rp2040-bank0-p14
+picow,31,GP26,GPIO,PWM5 A,F4,PWM5 A,picow-physical,rp2040-bank0-p14
+picow,31,GP26,GPIO,SIO,F5,SIO,picow-physical,rp2040-bank0-p14
+picow,31,GP26,GPIO,PIO0,F6,PIO0,picow-physical,rp2040-bank0-p14
+picow,31,GP26,GPIO,PIO1,F7,PIO1,picow-physical,rp2040-bank0-p14
+picow,31,GP26,GPIO,USB VBUS EN,F9,USB VBUS EN,picow-physical,rp2040-bank0-p14
+picow,31,GP26,GPIO,ADC0,,ADC0,picow-physical,picow-physical
+picow,32,GP27,GPIO,SPI1 TX,F1,SPI1 TX,picow-physical,rp2040-bank0-p14
+picow,32,GP27,GPIO,UART1 RTS,F2,UART1 RTS,picow-physical,rp2040-bank0-p14
+picow,32,GP27,GPIO,I2C1 SCL,F3,I2C1 SCL,picow-physical,rp2040-bank0-p14
+picow,32,GP27,GPIO,PWM5 B,F4,PWM5 B,picow-physical,rp2040-bank0-p14
+picow,32,GP27,GPIO,SIO,F5,SIO,picow-physical,rp2040-bank0-p14
+picow,32,GP27,GPIO,PIO0,F6,PIO0,picow-physical,rp2040-bank0-p14
+picow,32,GP27,GPIO,PIO1,F7,PIO1,picow-physical,rp2040-bank0-p14
+picow,32,GP27,GPIO,USB OVCUR DET,F9,USB OVCUR DET,picow-physical,rp2040-bank0-p14
+picow,32,GP27,GPIO,ADC1,,ADC1,picow-physical,picow-physical
+picow,33,AGND,GND,,,,picow-physical | picow-supply,
+picow,34,GP28,GPIO,SPI1 RX,F1,SPI1 RX,picow-physical,rp2040-bank0-p14
+picow,34,GP28,GPIO,UART0 TX,F2,UART0 TX,picow-physical,rp2040-bank0-p14
+picow,34,GP28,GPIO,I2C0 SDA,F3,I2C0 SDA,picow-physical,rp2040-bank0-p14
+picow,34,GP28,GPIO,PWM6 A,F4,PWM6 A,picow-physical,rp2040-bank0-p14
+picow,34,GP28,GPIO,SIO,F5,SIO,picow-physical,rp2040-bank0-p14
+picow,34,GP28,GPIO,PIO0,F6,PIO0,picow-physical,rp2040-bank0-p14
+picow,34,GP28,GPIO,PIO1,F7,PIO1,picow-physical,rp2040-bank0-p14
+picow,34,GP28,GPIO,USB VBUS DET,F9,USB VBUS DET,picow-physical,rp2040-bank0-p14
+picow,34,GP28,GPIO,ADC2,,ADC2,picow-physical,picow-physical
+picow,35,ADC_VREF,ADC,,,,picow-physical | picow-supply,
+picow,36,3V3(OUT),POWER,,,,picow-physical | picow-supply,
+picow,37,3V3_EN,SYSTEM,,,,picow-physical | picow-supply,
+picow,38,GND,GND,,,,picow-physical,
+picow,39,VSYS,POWER,,,,picow-physical | picow-supply,
+picow,40,VBUS,POWER,,,,picow-physical | picow-supply,
+pico2,1,GP0,GPIO,SPI0 RX,F1,SPI0 RX,pico2-physical,rp-bank0-p18
+pico2,1,GP0,GPIO,UART0 TX,F2,UART0 TX,pico2-physical,rp-bank0-p18
+pico2,1,GP0,GPIO,I2C0 SDA,F3,I2C0 SDA,pico2-physical,rp-bank0-p18
+pico2,1,GP0,GPIO,PWM0 A,F4,PWM0 A,pico2-physical,rp-bank0-p18
+pico2,1,GP0,GPIO,SIO,F5,SIO,pico2-physical,rp-bank0-p18
+pico2,1,GP0,GPIO,PIO0,F6,PIO0,pico2-physical,rp-bank0-p18
+pico2,1,GP0,GPIO,PIO1,F7,PIO1,pico2-physical,rp-bank0-p18
+pico2,1,GP0,GPIO,PIO2,F8,PIO2,pico2-physical,rp-bank0-p18
+pico2,1,GP0,GPIO,QMI CS1n,F9,QMI CS1n,pico2-physical,rp-bank0-p18
+pico2,1,GP0,GPIO,USB OVCUR DET,F10,USB OVCUR DET,pico2-physical,rp-bank0-p18
+pico2,2,GP1,GPIO,SPI0 CSn,F1,SPI0 CSn,pico2-physical,rp-bank0-p18
+pico2,2,GP1,GPIO,UART0 RX,F2,UART0 RX,pico2-physical,rp-bank0-p18
+pico2,2,GP1,GPIO,I2C0 SCL,F3,I2C0 SCL,pico2-physical,rp-bank0-p18
+pico2,2,GP1,GPIO,PWM0 B,F4,PWM0 B,pico2-physical,rp-bank0-p18
+pico2,2,GP1,GPIO,SIO,F5,SIO,pico2-physical,rp-bank0-p18
+pico2,2,GP1,GPIO,PIO0,F6,PIO0,pico2-physical,rp-bank0-p18
+pico2,2,GP1,GPIO,PIO1,F7,PIO1,pico2-physical,rp-bank0-p18
+pico2,2,GP1,GPIO,PIO2,F8,PIO2,pico2-physical,rp-bank0-p18
+pico2,2,GP1,GPIO,TRACECLK,F9,TRACECLK,pico2-physical,rp-bank0-p18
+pico2,2,GP1,GPIO,USB VBUS DET,F10,USB VBUS DET,pico2-physical,rp-bank0-p18
+pico2,3,GND,GND,,,,pico2-physical,
+pico2,4,GP2,GPIO,SPI0 SCK,F1,SPI0 SCK,pico2-physical,rp-bank0-p18
+pico2,4,GP2,GPIO,UART0 CTS,F2,UART0 CTS,pico2-physical,rp-bank0-p18
+pico2,4,GP2,GPIO,I2C1 SDA,F3,I2C1 SDA,pico2-physical,rp-bank0-p18
+pico2,4,GP2,GPIO,PWM1 A,F4,PWM1 A,pico2-physical,rp-bank0-p18
+pico2,4,GP2,GPIO,SIO,F5,SIO,pico2-physical,rp-bank0-p18
+pico2,4,GP2,GPIO,PIO0,F6,PIO0,pico2-physical,rp-bank0-p18
+pico2,4,GP2,GPIO,PIO1,F7,PIO1,pico2-physical,rp-bank0-p18
+pico2,4,GP2,GPIO,PIO2,F8,PIO2,pico2-physical,rp-bank0-p18
+pico2,4,GP2,GPIO,TRACEDATA0,F9,TRACEDATA0,pico2-physical,rp-bank0-p18
+pico2,4,GP2,GPIO,USB VBUS EN,F10,USB VBUS EN,pico2-physical,rp-bank0-p18
+pico2,4,GP2,GPIO,UART0 TX,F11,UART0 TX,pico2-physical,rp-bank0-p18
+pico2,5,GP3,GPIO,SPI0 TX,F1,SPI0 TX,pico2-physical,rp-bank0-p18
+pico2,5,GP3,GPIO,UART0 RTS,F2,UART0 RTS,pico2-physical,rp-bank0-p18
+pico2,5,GP3,GPIO,I2C1 SCL,F3,I2C1 SCL,pico2-physical,rp-bank0-p18
+pico2,5,GP3,GPIO,PWM1 B,F4,PWM1 B,pico2-physical,rp-bank0-p18
+pico2,5,GP3,GPIO,SIO,F5,SIO,pico2-physical,rp-bank0-p18
+pico2,5,GP3,GPIO,PIO0,F6,PIO0,pico2-physical,rp-bank0-p18
+pico2,5,GP3,GPIO,PIO1,F7,PIO1,pico2-physical,rp-bank0-p18
+pico2,5,GP3,GPIO,PIO2,F8,PIO2,pico2-physical,rp-bank0-p18
+pico2,5,GP3,GPIO,TRACEDATA1,F9,TRACEDATA1,pico2-physical,rp-bank0-p18
+pico2,5,GP3,GPIO,USB OVCUR DET,F10,USB OVCUR DET,pico2-physical,rp-bank0-p18
+pico2,5,GP3,GPIO,UART0 RX,F11,UART0 RX,pico2-physical,rp-bank0-p18
+pico2,6,GP4,GPIO,SPI0 RX,F1,SPI0 RX,pico2-physical,rp-bank0-p18
+pico2,6,GP4,GPIO,UART1 TX,F2,UART1 TX,pico2-physical,rp-bank0-p18
+pico2,6,GP4,GPIO,I2C0 SDA,F3,I2C0 SDA,pico2-physical,rp-bank0-p18
+pico2,6,GP4,GPIO,PWM2 A,F4,PWM2 A,pico2-physical,rp-bank0-p18
+pico2,6,GP4,GPIO,SIO,F5,SIO,pico2-physical,rp-bank0-p18
+pico2,6,GP4,GPIO,PIO0,F6,PIO0,pico2-physical,rp-bank0-p18
+pico2,6,GP4,GPIO,PIO1,F7,PIO1,pico2-physical,rp-bank0-p18
+pico2,6,GP4,GPIO,PIO2,F8,PIO2,pico2-physical,rp-bank0-p18
+pico2,6,GP4,GPIO,TRACEDATA2,F9,TRACEDATA2,pico2-physical,rp-bank0-p18
+pico2,6,GP4,GPIO,USB VBUS DET,F10,USB VBUS DET,pico2-physical,rp-bank0-p18
+pico2,7,GP5,GPIO,SPI0 CSn,F1,SPI0 CSn,pico2-physical,rp-bank0-p18
+pico2,7,GP5,GPIO,UART1 RX,F2,UART1 RX,pico2-physical,rp-bank0-p18
+pico2,7,GP5,GPIO,I2C0 SCL,F3,I2C0 SCL,pico2-physical,rp-bank0-p18
+pico2,7,GP5,GPIO,PWM2 B,F4,PWM2 B,pico2-physical,rp-bank0-p18
+pico2,7,GP5,GPIO,SIO,F5,SIO,pico2-physical,rp-bank0-p18
+pico2,7,GP5,GPIO,PIO0,F6,PIO0,pico2-physical,rp-bank0-p18
+pico2,7,GP5,GPIO,PIO1,F7,PIO1,pico2-physical,rp-bank0-p18
+pico2,7,GP5,GPIO,PIO2,F8,PIO2,pico2-physical,rp-bank0-p18
+pico2,7,GP5,GPIO,TRACEDATA3,F9,TRACEDATA3,pico2-physical,rp-bank0-p18
+pico2,7,GP5,GPIO,USB VBUS EN,F10,USB VBUS EN,pico2-physical,rp-bank0-p18
+pico2,8,GND,GND,,,,pico2-physical,
+pico2,9,GP6,GPIO,SPI0 SCK,F1,SPI0 SCK,pico2-physical,rp-bank0-p18
+pico2,9,GP6,GPIO,UART1 CTS,F2,UART1 CTS,pico2-physical,rp-bank0-p18
+pico2,9,GP6,GPIO,I2C1 SDA,F3,I2C1 SDA,pico2-physical,rp-bank0-p18
+pico2,9,GP6,GPIO,PWM3 A,F4,PWM3 A,pico2-physical,rp-bank0-p18
+pico2,9,GP6,GPIO,SIO,F5,SIO,pico2-physical,rp-bank0-p18
+pico2,9,GP6,GPIO,PIO0,F6,PIO0,pico2-physical,rp-bank0-p18
+pico2,9,GP6,GPIO,PIO1,F7,PIO1,pico2-physical,rp-bank0-p18
+pico2,9,GP6,GPIO,PIO2,F8,PIO2,pico2-physical,rp-bank0-p18
+pico2,9,GP6,GPIO,USB OVCUR DET,F10,USB OVCUR DET,pico2-physical,rp-bank0-p18
+pico2,9,GP6,GPIO,UART1 TX,F11,UART1 TX,pico2-physical,rp-bank0-p18
+pico2,10,GP7,GPIO,SPI0 TX,F1,SPI0 TX,pico2-physical,rp-bank0-p18
+pico2,10,GP7,GPIO,UART1 RTS,F2,UART1 RTS,pico2-physical,rp-bank0-p18
+pico2,10,GP7,GPIO,I2C1 SCL,F3,I2C1 SCL,pico2-physical,rp-bank0-p18
+pico2,10,GP7,GPIO,PWM3 B,F4,PWM3 B,pico2-physical,rp-bank0-p18
+pico2,10,GP7,GPIO,SIO,F5,SIO,pico2-physical,rp-bank0-p18
+pico2,10,GP7,GPIO,PIO0,F6,PIO0,pico2-physical,rp-bank0-p18
+pico2,10,GP7,GPIO,PIO1,F7,PIO1,pico2-physical,rp-bank0-p18
+pico2,10,GP7,GPIO,PIO2,F8,PIO2,pico2-physical,rp-bank0-p18
+pico2,10,GP7,GPIO,USB VBUS DET,F10,USB VBUS DET,pico2-physical,rp-bank0-p18
+pico2,10,GP7,GPIO,UART1 RX,F11,UART1 RX,pico2-physical,rp-bank0-p18
+pico2,11,GP8,GPIO,SPI1 RX,F1,SPI1 RX,pico2-physical,rp-bank0-p18
+pico2,11,GP8,GPIO,UART1 TX,F2,UART1 TX,pico2-physical,rp-bank0-p18
+pico2,11,GP8,GPIO,I2C0 SDA,F3,I2C0 SDA,pico2-physical,rp-bank0-p18
+pico2,11,GP8,GPIO,PWM4 A,F4,PWM4 A,pico2-physical,rp-bank0-p18
+pico2,11,GP8,GPIO,SIO,F5,SIO,pico2-physical,rp-bank0-p18
+pico2,11,GP8,GPIO,PIO0,F6,PIO0,pico2-physical,rp-bank0-p18
+pico2,11,GP8,GPIO,PIO1,F7,PIO1,pico2-physical,rp-bank0-p18
+pico2,11,GP8,GPIO,PIO2,F8,PIO2,pico2-physical,rp-bank0-p18
+pico2,11,GP8,GPIO,QMI CS1n,F9,QMI CS1n,pico2-physical,rp-bank0-p18
+pico2,11,GP8,GPIO,USB VBUS EN,F10,USB VBUS EN,pico2-physical,rp-bank0-p18
+pico2,12,GP9,GPIO,SPI1 CSn,F1,SPI1 CSn,pico2-physical,rp-bank0-p18
+pico2,12,GP9,GPIO,UART1 RX,F2,UART1 RX,pico2-physical,rp-bank0-p18
+pico2,12,GP9,GPIO,I2C0 SCL,F3,I2C0 SCL,pico2-physical,rp-bank0-p18
+pico2,12,GP9,GPIO,PWM4 B,F4,PWM4 B,pico2-physical,rp-bank0-p18
+pico2,12,GP9,GPIO,SIO,F5,SIO,pico2-physical,rp-bank0-p18
+pico2,12,GP9,GPIO,PIO0,F6,PIO0,pico2-physical,rp-bank0-p18
+pico2,12,GP9,GPIO,PIO1,F7,PIO1,pico2-physical,rp-bank0-p18
+pico2,12,GP9,GPIO,PIO2,F8,PIO2,pico2-physical,rp-bank0-p18
+pico2,12,GP9,GPIO,USB OVCUR DET,F10,USB OVCUR DET,pico2-physical,rp-bank0-p18
+pico2,13,GND,GND,,,,pico2-physical,
+pico2,14,GP10,GPIO,SPI1 SCK,F1,SPI1 SCK,pico2-physical,rp-bank0-p18
+pico2,14,GP10,GPIO,UART1 CTS,F2,UART1 CTS,pico2-physical,rp-bank0-p18
+pico2,14,GP10,GPIO,I2C1 SDA,F3,I2C1 SDA,pico2-physical,rp-bank0-p18
+pico2,14,GP10,GPIO,PWM5 A,F4,PWM5 A,pico2-physical,rp-bank0-p18
+pico2,14,GP10,GPIO,SIO,F5,SIO,pico2-physical,rp-bank0-p18
+pico2,14,GP10,GPIO,PIO0,F6,PIO0,pico2-physical,rp-bank0-p18
+pico2,14,GP10,GPIO,PIO1,F7,PIO1,pico2-physical,rp-bank0-p18
+pico2,14,GP10,GPIO,PIO2,F8,PIO2,pico2-physical,rp-bank0-p18
+pico2,14,GP10,GPIO,USB VBUS DET,F10,USB VBUS DET,pico2-physical,rp-bank0-p18
+pico2,14,GP10,GPIO,UART1 TX,F11,UART1 TX,pico2-physical,rp-bank0-p18
+pico2,15,GP11,GPIO,SPI1 TX,F1,SPI1 TX,pico2-physical,rp-bank0-p19
+pico2,15,GP11,GPIO,UART1 RTS,F2,UART1 RTS,pico2-physical,rp-bank0-p19
+pico2,15,GP11,GPIO,I2C1 SCL,F3,I2C1 SCL,pico2-physical,rp-bank0-p19
+pico2,15,GP11,GPIO,PWM5 B,F4,PWM5 B,pico2-physical,rp-bank0-p19
+pico2,15,GP11,GPIO,SIO,F5,SIO,pico2-physical,rp-bank0-p19
+pico2,15,GP11,GPIO,PIO0,F6,PIO0,pico2-physical,rp-bank0-p19
+pico2,15,GP11,GPIO,PIO1,F7,PIO1,pico2-physical,rp-bank0-p19
+pico2,15,GP11,GPIO,PIO2,F8,PIO2,pico2-physical,rp-bank0-p19
+pico2,15,GP11,GPIO,USB VBUS EN,F10,USB VBUS EN,pico2-physical,rp-bank0-p19
+pico2,15,GP11,GPIO,UART1 RX,F11,UART1 RX,pico2-physical,rp-bank0-p19
+pico2,16,GP12,GPIO,HSTX,F0,HSTX,pico2-physical,rp-bank0-p19
+pico2,16,GP12,GPIO,SPI1 RX,F1,SPI1 RX,pico2-physical,rp-bank0-p19
+pico2,16,GP12,GPIO,UART0 TX,F2,UART0 TX,pico2-physical,rp-bank0-p19
+pico2,16,GP12,GPIO,I2C0 SDA,F3,I2C0 SDA,pico2-physical,rp-bank0-p19
+pico2,16,GP12,GPIO,PWM6 A,F4,PWM6 A,pico2-physical,rp-bank0-p19
+pico2,16,GP12,GPIO,SIO,F5,SIO,pico2-physical,rp-bank0-p19
+pico2,16,GP12,GPIO,PIO0,F6,PIO0,pico2-physical,rp-bank0-p19
+pico2,16,GP12,GPIO,PIO1,F7,PIO1,pico2-physical,rp-bank0-p19
+pico2,16,GP12,GPIO,PIO2,F8,PIO2,pico2-physical,rp-bank0-p19
+pico2,16,GP12,GPIO,CLOCK GPIN0,F9,CLOCK GPIN0,pico2-physical,rp-bank0-p19
+pico2,16,GP12,GPIO,USB OVCUR DET,F10,USB OVCUR DET,pico2-physical,rp-bank0-p19
+pico2,17,GP13,GPIO,HSTX,F0,HSTX,pico2-physical,rp-bank0-p19
+pico2,17,GP13,GPIO,SPI1 CSn,F1,SPI1 CSn,pico2-physical,rp-bank0-p19
+pico2,17,GP13,GPIO,UART0 RX,F2,UART0 RX,pico2-physical,rp-bank0-p19
+pico2,17,GP13,GPIO,I2C0 SCL,F3,I2C0 SCL,pico2-physical,rp-bank0-p19
+pico2,17,GP13,GPIO,PWM6 B,F4,PWM6 B,pico2-physical,rp-bank0-p19
+pico2,17,GP13,GPIO,SIO,F5,SIO,pico2-physical,rp-bank0-p19
+pico2,17,GP13,GPIO,PIO0,F6,PIO0,pico2-physical,rp-bank0-p19
+pico2,17,GP13,GPIO,PIO1,F7,PIO1,pico2-physical,rp-bank0-p19
+pico2,17,GP13,GPIO,PIO2,F8,PIO2,pico2-physical,rp-bank0-p19
+pico2,17,GP13,GPIO,CLOCK GPOUT0,F9,CLOCK GPOUT0,pico2-physical,rp-bank0-p19
+pico2,17,GP13,GPIO,USB VBUS DET,F10,USB VBUS DET,pico2-physical,rp-bank0-p19
+pico2,18,GND,GND,,,,pico2-physical,
+pico2,19,GP14,GPIO,HSTX,F0,HSTX,pico2-physical,rp-bank0-p19
+pico2,19,GP14,GPIO,SPI1 SCK,F1,SPI1 SCK,pico2-physical,rp-bank0-p19
+pico2,19,GP14,GPIO,UART0 CTS,F2,UART0 CTS,pico2-physical,rp-bank0-p19
+pico2,19,GP14,GPIO,I2C1 SDA,F3,I2C1 SDA,pico2-physical,rp-bank0-p19
+pico2,19,GP14,GPIO,PWM7 A,F4,PWM7 A,pico2-physical,rp-bank0-p19
+pico2,19,GP14,GPIO,SIO,F5,SIO,pico2-physical,rp-bank0-p19
+pico2,19,GP14,GPIO,PIO0,F6,PIO0,pico2-physical,rp-bank0-p19
+pico2,19,GP14,GPIO,PIO1,F7,PIO1,pico2-physical,rp-bank0-p19
+pico2,19,GP14,GPIO,PIO2,F8,PIO2,pico2-physical,rp-bank0-p19
+pico2,19,GP14,GPIO,CLOCK GPIN1,F9,CLOCK GPIN1,pico2-physical,rp-bank0-p19
+pico2,19,GP14,GPIO,USB VBUS EN,F10,USB VBUS EN,pico2-physical,rp-bank0-p19
+pico2,19,GP14,GPIO,UART0 TX,F11,UART0 TX,pico2-physical,rp-bank0-p19
+pico2,20,GP15,GPIO,HSTX,F0,HSTX,pico2-physical,rp-bank0-p19
+pico2,20,GP15,GPIO,SPI1 TX,F1,SPI1 TX,pico2-physical,rp-bank0-p19
+pico2,20,GP15,GPIO,UART0 RTS,F2,UART0 RTS,pico2-physical,rp-bank0-p19
+pico2,20,GP15,GPIO,I2C1 SCL,F3,I2C1 SCL,pico2-physical,rp-bank0-p19
+pico2,20,GP15,GPIO,PWM7 B,F4,PWM7 B,pico2-physical,rp-bank0-p19
+pico2,20,GP15,GPIO,SIO,F5,SIO,pico2-physical,rp-bank0-p19
+pico2,20,GP15,GPIO,PIO0,F6,PIO0,pico2-physical,rp-bank0-p19
+pico2,20,GP15,GPIO,PIO1,F7,PIO1,pico2-physical,rp-bank0-p19
+pico2,20,GP15,GPIO,PIO2,F8,PIO2,pico2-physical,rp-bank0-p19
+pico2,20,GP15,GPIO,CLOCK GPOUT1,F9,CLOCK GPOUT1,pico2-physical,rp-bank0-p19
+pico2,20,GP15,GPIO,USB OVCUR DET,F10,USB OVCUR DET,pico2-physical,rp-bank0-p19
+pico2,20,GP15,GPIO,UART0 RX,F11,UART0 RX,pico2-physical,rp-bank0-p19
+pico2,21,GP16,GPIO,HSTX,F0,HSTX,pico2-physical,rp-bank0-p19
+pico2,21,GP16,GPIO,SPI0 RX,F1,SPI0 RX,pico2-physical,rp-bank0-p19
+pico2,21,GP16,GPIO,UART0 TX,F2,UART0 TX,pico2-physical,rp-bank0-p19
+pico2,21,GP16,GPIO,I2C0 SDA,F3,I2C0 SDA,pico2-physical,rp-bank0-p19
+pico2,21,GP16,GPIO,PWM0 A,F4,PWM0 A,pico2-physical,rp-bank0-p19
+pico2,21,GP16,GPIO,SIO,F5,SIO,pico2-physical,rp-bank0-p19
+pico2,21,GP16,GPIO,PIO0,F6,PIO0,pico2-physical,rp-bank0-p19
+pico2,21,GP16,GPIO,PIO1,F7,PIO1,pico2-physical,rp-bank0-p19
+pico2,21,GP16,GPIO,PIO2,F8,PIO2,pico2-physical,rp-bank0-p19
+pico2,21,GP16,GPIO,USB VBUS DET,F10,USB VBUS DET,pico2-physical,rp-bank0-p19
+pico2,22,GP17,GPIO,HSTX,F0,HSTX,pico2-physical,rp-bank0-p19
+pico2,22,GP17,GPIO,SPI0 CSn,F1,SPI0 CSn,pico2-physical,rp-bank0-p19
+pico2,22,GP17,GPIO,UART0 RX,F2,UART0 RX,pico2-physical,rp-bank0-p19
+pico2,22,GP17,GPIO,I2C0 SCL,F3,I2C0 SCL,pico2-physical,rp-bank0-p19
+pico2,22,GP17,GPIO,PWM0 B,F4,PWM0 B,pico2-physical,rp-bank0-p19
+pico2,22,GP17,GPIO,SIO,F5,SIO,pico2-physical,rp-bank0-p19
+pico2,22,GP17,GPIO,PIO0,F6,PIO0,pico2-physical,rp-bank0-p19
+pico2,22,GP17,GPIO,PIO1,F7,PIO1,pico2-physical,rp-bank0-p19
+pico2,22,GP17,GPIO,PIO2,F8,PIO2,pico2-physical,rp-bank0-p19
+pico2,22,GP17,GPIO,USB VBUS EN,F10,USB VBUS EN,pico2-physical,rp-bank0-p19
+pico2,23,GND,GND,,,,pico2-physical,
+pico2,24,GP18,GPIO,HSTX,F0,HSTX,pico2-physical,rp-bank0-p19
+pico2,24,GP18,GPIO,SPI0 SCK,F1,SPI0 SCK,pico2-physical,rp-bank0-p19
+pico2,24,GP18,GPIO,UART0 CTS,F2,UART0 CTS,pico2-physical,rp-bank0-p19
+pico2,24,GP18,GPIO,I2C1 SDA,F3,I2C1 SDA,pico2-physical,rp-bank0-p19
+pico2,24,GP18,GPIO,PWM1 A,F4,PWM1 A,pico2-physical,rp-bank0-p19
+pico2,24,GP18,GPIO,SIO,F5,SIO,pico2-physical,rp-bank0-p19
+pico2,24,GP18,GPIO,PIO0,F6,PIO0,pico2-physical,rp-bank0-p19
+pico2,24,GP18,GPIO,PIO1,F7,PIO1,pico2-physical,rp-bank0-p19
+pico2,24,GP18,GPIO,PIO2,F8,PIO2,pico2-physical,rp-bank0-p19
+pico2,24,GP18,GPIO,USB OVCUR DET,F10,USB OVCUR DET,pico2-physical,rp-bank0-p19
+pico2,24,GP18,GPIO,UART0 TX,F11,UART0 TX,pico2-physical,rp-bank0-p19
+pico2,25,GP19,GPIO,HSTX,F0,HSTX,pico2-physical,rp-bank0-p19
+pico2,25,GP19,GPIO,SPI0 TX,F1,SPI0 TX,pico2-physical,rp-bank0-p19
+pico2,25,GP19,GPIO,UART0 RTS,F2,UART0 RTS,pico2-physical,rp-bank0-p19
+pico2,25,GP19,GPIO,I2C1 SCL,F3,I2C1 SCL,pico2-physical,rp-bank0-p19
+pico2,25,GP19,GPIO,PWM1 B,F4,PWM1 B,pico2-physical,rp-bank0-p19
+pico2,25,GP19,GPIO,SIO,F5,SIO,pico2-physical,rp-bank0-p19
+pico2,25,GP19,GPIO,PIO0,F6,PIO0,pico2-physical,rp-bank0-p19
+pico2,25,GP19,GPIO,PIO1,F7,PIO1,pico2-physical,rp-bank0-p19
+pico2,25,GP19,GPIO,PIO2,F8,PIO2,pico2-physical,rp-bank0-p19
+pico2,25,GP19,GPIO,QMI CS1n,F9,QMI CS1n,pico2-physical,rp-bank0-p19
+pico2,25,GP19,GPIO,USB VBUS DET,F10,USB VBUS DET,pico2-physical,rp-bank0-p19
+pico2,25,GP19,GPIO,UART0 RX,F11,UART0 RX,pico2-physical,rp-bank0-p19
+pico2,26,GP20,GPIO,SPI0 RX,F1,SPI0 RX,pico2-physical,rp-bank0-p19
+pico2,26,GP20,GPIO,UART1 TX,F2,UART1 TX,pico2-physical,rp-bank0-p19
+pico2,26,GP20,GPIO,I2C0 SDA,F3,I2C0 SDA,pico2-physical,rp-bank0-p19
+pico2,26,GP20,GPIO,PWM2 A,F4,PWM2 A,pico2-physical,rp-bank0-p19
+pico2,26,GP20,GPIO,SIO,F5,SIO,pico2-physical,rp-bank0-p19
+pico2,26,GP20,GPIO,PIO0,F6,PIO0,pico2-physical,rp-bank0-p19
+pico2,26,GP20,GPIO,PIO1,F7,PIO1,pico2-physical,rp-bank0-p19
+pico2,26,GP20,GPIO,PIO2,F8,PIO2,pico2-physical,rp-bank0-p19
+pico2,26,GP20,GPIO,CLOCK GPIN0,F9,CLOCK GPIN0,pico2-physical,rp-bank0-p19
+pico2,26,GP20,GPIO,USB VBUS EN,F10,USB VBUS EN,pico2-physical,rp-bank0-p19
+pico2,27,GP21,GPIO,SPI0 CSn,F1,SPI0 CSn,pico2-physical,rp-bank0-p19
+pico2,27,GP21,GPIO,UART1 RX,F2,UART1 RX,pico2-physical,rp-bank0-p19
+pico2,27,GP21,GPIO,I2C0 SCL,F3,I2C0 SCL,pico2-physical,rp-bank0-p19
+pico2,27,GP21,GPIO,PWM2 B,F4,PWM2 B,pico2-physical,rp-bank0-p19
+pico2,27,GP21,GPIO,SIO,F5,SIO,pico2-physical,rp-bank0-p19
+pico2,27,GP21,GPIO,PIO0,F6,PIO0,pico2-physical,rp-bank0-p19
+pico2,27,GP21,GPIO,PIO1,F7,PIO1,pico2-physical,rp-bank0-p19
+pico2,27,GP21,GPIO,PIO2,F8,PIO2,pico2-physical,rp-bank0-p19
+pico2,27,GP21,GPIO,CLOCK GPOUT0,F9,CLOCK GPOUT0,pico2-physical,rp-bank0-p19
+pico2,27,GP21,GPIO,USB OVCUR DET,F10,USB OVCUR DET,pico2-physical,rp-bank0-p19
+pico2,28,GND,GND,,,,pico2-physical,
+pico2,29,GP22,GPIO,SPI0 SCK,F1,SPI0 SCK,pico2-physical,rp-bank0-p19
+pico2,29,GP22,GPIO,UART1 CTS,F2,UART1 CTS,pico2-physical,rp-bank0-p19
+pico2,29,GP22,GPIO,I2C1 SDA,F3,I2C1 SDA,pico2-physical,rp-bank0-p19
+pico2,29,GP22,GPIO,PWM3 A,F4,PWM3 A,pico2-physical,rp-bank0-p19
+pico2,29,GP22,GPIO,SIO,F5,SIO,pico2-physical,rp-bank0-p19
+pico2,29,GP22,GPIO,PIO0,F6,PIO0,pico2-physical,rp-bank0-p19
+pico2,29,GP22,GPIO,PIO1,F7,PIO1,pico2-physical,rp-bank0-p19
+pico2,29,GP22,GPIO,PIO2,F8,PIO2,pico2-physical,rp-bank0-p19
+pico2,29,GP22,GPIO,CLOCK GPIN1,F9,CLOCK GPIN1,pico2-physical,rp-bank0-p19
+pico2,29,GP22,GPIO,USB VBUS DET,F10,USB VBUS DET,pico2-physical,rp-bank0-p19
+pico2,29,GP22,GPIO,UART1 TX,F11,UART1 TX,pico2-physical,rp-bank0-p19
+pico2,30,RUN,SYSTEM,,,,pico2-physical | pico2-supply,
+pico2,31,GP26,GPIO,SPI1 SCK,F1,SPI1 SCK,pico2-physical,rp-bank0-p19
+pico2,31,GP26,GPIO,UART1 CTS,F2,UART1 CTS,pico2-physical,rp-bank0-p19
+pico2,31,GP26,GPIO,I2C1 SDA,F3,I2C1 SDA,pico2-physical,rp-bank0-p19
+pico2,31,GP26,GPIO,PWM5 A,F4,PWM5 A,pico2-physical,rp-bank0-p19
+pico2,31,GP26,GPIO,SIO,F5,SIO,pico2-physical,rp-bank0-p19
+pico2,31,GP26,GPIO,PIO0,F6,PIO0,pico2-physical,rp-bank0-p19
+pico2,31,GP26,GPIO,PIO1,F7,PIO1,pico2-physical,rp-bank0-p19
+pico2,31,GP26,GPIO,PIO2,F8,PIO2,pico2-physical,rp-bank0-p19
+pico2,31,GP26,GPIO,USB VBUS EN,F10,USB VBUS EN,pico2-physical,rp-bank0-p19
+pico2,31,GP26,GPIO,UART1 TX,F11,UART1 TX,pico2-physical,rp-bank0-p19
+pico2,31,GP26,GPIO,ADC0,,ADC0,pico2-physical,pico2-physical
+pico2,32,GP27,GPIO,SPI1 TX,F1,SPI1 TX,pico2-physical,rp-bank0-p19
+pico2,32,GP27,GPIO,UART1 RTS,F2,UART1 RTS,pico2-physical,rp-bank0-p19
+pico2,32,GP27,GPIO,I2C1 SCL,F3,I2C1 SCL,pico2-physical,rp-bank0-p19
+pico2,32,GP27,GPIO,PWM5 B,F4,PWM5 B,pico2-physical,rp-bank0-p19
+pico2,32,GP27,GPIO,SIO,F5,SIO,pico2-physical,rp-bank0-p19
+pico2,32,GP27,GPIO,PIO0,F6,PIO0,pico2-physical,rp-bank0-p19
+pico2,32,GP27,GPIO,PIO1,F7,PIO1,pico2-physical,rp-bank0-p19
+pico2,32,GP27,GPIO,PIO2,F8,PIO2,pico2-physical,rp-bank0-p19
+pico2,32,GP27,GPIO,USB OVCUR DET,F10,USB OVCUR DET,pico2-physical,rp-bank0-p19
+pico2,32,GP27,GPIO,UART1 RX,F11,UART1 RX,pico2-physical,rp-bank0-p19
+pico2,32,GP27,GPIO,ADC1,,ADC1,pico2-physical,pico2-physical
+pico2,33,AGND,GND,,,,pico2-physical | pico2-supply,
+pico2,34,GP28,GPIO,SPI1 RX,F1,SPI1 RX,pico2-physical,rp-bank0-p19
+pico2,34,GP28,GPIO,UART0 TX,F2,UART0 TX,pico2-physical,rp-bank0-p19
+pico2,34,GP28,GPIO,I2C0 SDA,F3,I2C0 SDA,pico2-physical,rp-bank0-p19
+pico2,34,GP28,GPIO,PWM6 A,F4,PWM6 A,pico2-physical,rp-bank0-p19
+pico2,34,GP28,GPIO,SIO,F5,SIO,pico2-physical,rp-bank0-p19
+pico2,34,GP28,GPIO,PIO0,F6,PIO0,pico2-physical,rp-bank0-p19
+pico2,34,GP28,GPIO,PIO1,F7,PIO1,pico2-physical,rp-bank0-p19
+pico2,34,GP28,GPIO,PIO2,F8,PIO2,pico2-physical,rp-bank0-p19
+pico2,34,GP28,GPIO,USB VBUS DET,F10,USB VBUS DET,pico2-physical,rp-bank0-p19
+pico2,34,GP28,GPIO,ADC2,,ADC2,pico2-physical,pico2-physical
+pico2,35,ADC_VREF,ADC,,,,pico2-physical | pico2-supply,
+pico2,36,3V3(OUT),POWER,,,,pico2-physical | pico2-supply,
+pico2,37,3V3_EN,SYSTEM,,,,pico2-physical | pico2-supply,
+pico2,38,GND,GND,,,,pico2-physical,
+pico2,39,VSYS,POWER,,,,pico2-physical | pico2-supply,
+pico2,40,VBUS,POWER,,,,pico2-physical | pico2-supply,
+raspberry-pi-40,1,3V3,POWER,,,,pi-header-doc,
+raspberry-pi-40,2,5V,POWER,,,,pi-header-doc,
+raspberry-pi-40,3,GPIO2,GPIO,,,,pi-header-doc,
+raspberry-pi-40,4,5V,POWER,,,,pi-header-doc,
+raspberry-pi-40,5,GPIO3,GPIO,,,,pi-header-doc,
+raspberry-pi-40,6,GND,GND,,,,pi-header-doc,
+raspberry-pi-40,7,GPIO4,GPIO,,,,pi-header-doc,
+raspberry-pi-40,8,GPIO14,GPIO,,,,pi-header-doc,
+raspberry-pi-40,9,GND,GND,,,,pi-header-doc,
+raspberry-pi-40,10,GPIO15,GPIO,,,,pi-header-doc,
+raspberry-pi-40,11,GPIO17,GPIO,,,,pi-header-doc,
+raspberry-pi-40,12,GPIO18,GPIO,,,,pi-header-doc,
+raspberry-pi-40,13,GPIO27,GPIO,,,,pi-header-doc,
+raspberry-pi-40,14,GND,GND,,,,pi-header-doc,
+raspberry-pi-40,15,GPIO22,GPIO,,,,pi-header-doc,
+raspberry-pi-40,16,GPIO23,GPIO,,,,pi-header-doc,
+raspberry-pi-40,17,3V3,POWER,,,,pi-header-doc,
+raspberry-pi-40,18,GPIO24,GPIO,,,,pi-header-doc,
+raspberry-pi-40,19,GPIO10,GPIO,,,,pi-header-doc,
+raspberry-pi-40,20,GND,GND,,,,pi-header-doc,
+raspberry-pi-40,21,GPIO9,GPIO,,,,pi-header-doc,
+raspberry-pi-40,22,GPIO25,GPIO,,,,pi-header-doc,
+raspberry-pi-40,23,GPIO11,GPIO,,,,pi-header-doc,
+raspberry-pi-40,24,GPIO8,GPIO,,,,pi-header-doc,
+raspberry-pi-40,25,GND,GND,,,,pi-header-doc,
+raspberry-pi-40,26,GPIO7,GPIO,,,,pi-header-doc,
+raspberry-pi-40,27,GPIO0,GPIO,,,,pi-header-doc,
+raspberry-pi-40,28,GPIO1,GPIO,,,,pi-header-doc,
+raspberry-pi-40,29,GPIO5,GPIO,,,,pi-header-doc,
+raspberry-pi-40,30,GND,GND,,,,pi-header-doc,
+raspberry-pi-40,31,GPIO6,GPIO,,,,pi-header-doc,
+raspberry-pi-40,32,GPIO12,GPIO,,,,pi-header-doc,
+raspberry-pi-40,33,GPIO13,GPIO,,,,pi-header-doc,
+raspberry-pi-40,34,GND,GND,,,,pi-header-doc,
+raspberry-pi-40,35,GPIO19,GPIO,,,,pi-header-doc,
+raspberry-pi-40,36,GPIO16,GPIO,,,,pi-header-doc,
+raspberry-pi-40,37,GPIO26,GPIO,,,,pi-header-doc,
+raspberry-pi-40,38,GPIO20,GPIO,,,,pi-header-doc,
+raspberry-pi-40,39,GND,GND,,,,pi-header-doc,
+raspberry-pi-40,40,GPIO21,GPIO,,,,pi-header-doc,
 rp2350a,1,IOVDD,POWER,,,,rp2350a-iovdd,
 rp2350a,2,GPIO0,GPIO,SPI0 RX,F1,SPI0 RX,rp-pin-list-p1333,rp-bank0-p18
 rp2350a,2,GPIO0,GPIO,UART0 TX,F2,UART0 TX,rp-pin-list-p1333,rp-bank0-p18

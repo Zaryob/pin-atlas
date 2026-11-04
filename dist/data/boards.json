@@ -2,7 +2,7 @@
   {
     "family": "Raspberry Pi",
     "voltage": "3.3 V I/O",
-    "verifiedOn": "2026-11-03",
+    "verifiedOn": "2026-11-04",
     "id": "pico2w",
     "name": "Raspberry Pi Pico 2 W",
     "shortName": "Pico 2 W",
@@ -13,6 +13,7 @@
     "mcu": "RP2350A",
     "processor": "Cortex-M33 / Hazard3",
     "clock": "150 MHz",
+    "wireless": true,
     "source": "https://pip-assets.raspberrypi.com/categories/1088-raspberry-pi-pico-2-w/documents/RP-008305-DS-1-pico-2-w-pinout.pdf",
     "datasheet": "https://pip-assets.raspberrypi.com/categories/1088-raspberry-pi-pico-2-w/documents/RP-008304-DS-3-pico-2-w-datasheet.pdf",
     "pins": [
@@ -2599,8 +2600,9 @@
   {
     "family": "Raspberry Pi",
     "voltage": "3.3 V I/O",
-    "verifiedOn": "2026-11-03",
+    "verifiedOn": "2026-11-04",
     "id": "raspberry-pi-4",
+    "scopeKey": "pi4Scope",
     "name": "Raspberry Pi 4 Model B",
     "shortName": "Pi 4 Model B",
     "subtitle": "J8 · 40 pin · BCM2711 alternatif işlevleri",
@@ -4362,8 +4364,7221 @@
   },
   {
     "family": "Raspberry Pi",
+    "voltage": "3.3 V I/O",
+    "verifiedOn": "2026-11-04",
+    "id": "pico",
+    "name": "Raspberry Pi Pico",
+    "shortName": "Pico",
+    "subtitle": "RP2040 · 40-pin development board",
+    "layout": "pico",
+    "packagePins": 40,
+    "gpioCount": 26,
+    "mcu": "RP2040",
+    "processor": "Cortex-M0+",
+    "clock": "133 MHz",
+    "wireless": false,
+    "source": "https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf#page=5",
+    "datasheet": "https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf",
+    "pins": [
+      {
+        "number": 1,
+        "name": "GP0",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 RX",
+            "group": "SPI",
+            "signal": "SPI0 RX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 TX",
+            "group": "UART",
+            "signal": "UART0 TX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SDA",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM0 A",
+            "group": "PWM",
+            "signal": "PWM0 A",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB OVCUR DET",
+            "group": "USB",
+            "signal": "USB OVCUR DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 2,
+        "name": "GP1",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 CSn",
+            "group": "SPI",
+            "signal": "SPI0 CSn",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 RX",
+            "group": "UART",
+            "signal": "UART0 RX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SCL",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM0 B",
+            "group": "PWM",
+            "signal": "PWM0 B",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS DET",
+            "group": "USB",
+            "signal": "USB VBUS DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 3,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 4,
+        "name": "GP2",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 SCK",
+            "group": "SPI",
+            "signal": "SPI0 SCK",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 CTS",
+            "group": "UART",
+            "signal": "UART0 CTS",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SDA",
+            "group": "I2C",
+            "signal": "I2C1 SDA",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM1 A",
+            "group": "PWM",
+            "signal": "PWM1 A",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS EN",
+            "group": "USB",
+            "signal": "USB VBUS EN",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 5,
+        "name": "GP3",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 TX",
+            "group": "SPI",
+            "signal": "SPI0 TX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 RTS",
+            "group": "UART",
+            "signal": "UART0 RTS",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SCL",
+            "group": "I2C",
+            "signal": "I2C1 SCL",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM1 B",
+            "group": "PWM",
+            "signal": "PWM1 B",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB OVCUR DET",
+            "group": "USB",
+            "signal": "USB OVCUR DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 6,
+        "name": "GP4",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 RX",
+            "group": "SPI",
+            "signal": "SPI0 RX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 TX",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SDA",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM2 A",
+            "group": "PWM",
+            "signal": "PWM2 A",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS DET",
+            "group": "USB",
+            "signal": "USB VBUS DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 7,
+        "name": "GP5",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 CSn",
+            "group": "SPI",
+            "signal": "SPI0 CSn",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 RX",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SCL",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM2 B",
+            "group": "PWM",
+            "signal": "PWM2 B",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS EN",
+            "group": "USB",
+            "signal": "USB VBUS EN",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 8,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 9,
+        "name": "GP6",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 SCK",
+            "group": "SPI",
+            "signal": "SPI0 SCK",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 CTS",
+            "group": "UART",
+            "signal": "UART1 CTS",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SDA",
+            "group": "I2C",
+            "signal": "I2C1 SDA",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM3 A",
+            "group": "PWM",
+            "signal": "PWM3 A",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB OVCUR DET",
+            "group": "USB",
+            "signal": "USB OVCUR DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 10,
+        "name": "GP7",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 TX",
+            "group": "SPI",
+            "signal": "SPI0 TX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 RTS",
+            "group": "UART",
+            "signal": "UART1 RTS",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SCL",
+            "group": "I2C",
+            "signal": "I2C1 SCL",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM3 B",
+            "group": "PWM",
+            "signal": "PWM3 B",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS DET",
+            "group": "USB",
+            "signal": "USB VBUS DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 11,
+        "name": "GP8",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 RX",
+            "group": "SPI",
+            "signal": "SPI1 RX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 TX",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SDA",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM4 A",
+            "group": "PWM",
+            "signal": "PWM4 A",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS EN",
+            "group": "USB",
+            "signal": "USB VBUS EN",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 12,
+        "name": "GP9",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 CSn",
+            "group": "SPI",
+            "signal": "SPI1 CSn",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 RX",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SCL",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM4 B",
+            "group": "PWM",
+            "signal": "PWM4 B",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB OVCUR DET",
+            "group": "USB",
+            "signal": "USB OVCUR DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 13,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 14,
+        "name": "GP10",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 SCK",
+            "group": "SPI",
+            "signal": "SPI1 SCK",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 CTS",
+            "group": "UART",
+            "signal": "UART1 CTS",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SDA",
+            "group": "I2C",
+            "signal": "I2C1 SDA",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM5 A",
+            "group": "PWM",
+            "signal": "PWM5 A",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS DET",
+            "group": "USB",
+            "signal": "USB VBUS DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 15,
+        "name": "GP11",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 TX",
+            "group": "SPI",
+            "signal": "SPI1 TX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 RTS",
+            "group": "UART",
+            "signal": "UART1 RTS",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SCL",
+            "group": "I2C",
+            "signal": "I2C1 SCL",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM5 B",
+            "group": "PWM",
+            "signal": "PWM5 B",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS EN",
+            "group": "USB",
+            "signal": "USB VBUS EN",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 16,
+        "name": "GP12",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 RX",
+            "group": "SPI",
+            "signal": "SPI1 RX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 TX",
+            "group": "UART",
+            "signal": "UART0 TX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SDA",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM6 A",
+            "group": "PWM",
+            "signal": "PWM6 A",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB OVCUR DET",
+            "group": "USB",
+            "signal": "USB OVCUR DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 17,
+        "name": "GP13",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 CSn",
+            "group": "SPI",
+            "signal": "SPI1 CSn",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 RX",
+            "group": "UART",
+            "signal": "UART0 RX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SCL",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM6 B",
+            "group": "PWM",
+            "signal": "PWM6 B",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS DET",
+            "group": "USB",
+            "signal": "USB VBUS DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 18,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 19,
+        "name": "GP14",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 SCK",
+            "group": "SPI",
+            "signal": "SPI1 SCK",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 CTS",
+            "group": "UART",
+            "signal": "UART0 CTS",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SDA",
+            "group": "I2C",
+            "signal": "I2C1 SDA",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM7 A",
+            "group": "PWM",
+            "signal": "PWM7 A",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS EN",
+            "group": "USB",
+            "signal": "USB VBUS EN",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 20,
+        "name": "GP15",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 TX",
+            "group": "SPI",
+            "signal": "SPI1 TX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 RTS",
+            "group": "UART",
+            "signal": "UART0 RTS",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SCL",
+            "group": "I2C",
+            "signal": "I2C1 SCL",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM7 B",
+            "group": "PWM",
+            "signal": "PWM7 B",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB OVCUR DET",
+            "group": "USB",
+            "signal": "USB OVCUR DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 21,
+        "name": "GP16",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 RX",
+            "group": "SPI",
+            "signal": "SPI0 RX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 TX",
+            "group": "UART",
+            "signal": "UART0 TX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SDA",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM0 A",
+            "group": "PWM",
+            "signal": "PWM0 A",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS DET",
+            "group": "USB",
+            "signal": "USB VBUS DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 22,
+        "name": "GP17",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 CSn",
+            "group": "SPI",
+            "signal": "SPI0 CSn",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 RX",
+            "group": "UART",
+            "signal": "UART0 RX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SCL",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM0 B",
+            "group": "PWM",
+            "signal": "PWM0 B",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS EN",
+            "group": "USB",
+            "signal": "USB VBUS EN",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 23,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 24,
+        "name": "GP18",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 SCK",
+            "group": "SPI",
+            "signal": "SPI0 SCK",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 CTS",
+            "group": "UART",
+            "signal": "UART0 CTS",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SDA",
+            "group": "I2C",
+            "signal": "I2C1 SDA",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM1 A",
+            "group": "PWM",
+            "signal": "PWM1 A",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB OVCUR DET",
+            "group": "USB",
+            "signal": "USB OVCUR DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 25,
+        "name": "GP19",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 TX",
+            "group": "SPI",
+            "signal": "SPI0 TX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 RTS",
+            "group": "UART",
+            "signal": "UART0 RTS",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SCL",
+            "group": "I2C",
+            "signal": "I2C1 SCL",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM1 B",
+            "group": "PWM",
+            "signal": "PWM1 B",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS DET",
+            "group": "USB",
+            "signal": "USB VBUS DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 26,
+        "name": "GP20",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 RX",
+            "group": "SPI",
+            "signal": "SPI0 RX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 TX",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SDA",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM2 A",
+            "group": "PWM",
+            "signal": "PWM2 A",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "CLOCK GPIN0",
+            "group": "CLOCK",
+            "signal": "CLOCK GPIN0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "USB VBUS EN",
+            "group": "USB",
+            "signal": "USB VBUS EN",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 27,
+        "name": "GP21",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 CSn",
+            "group": "SPI",
+            "signal": "SPI0 CSn",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 RX",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SCL",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM2 B",
+            "group": "PWM",
+            "signal": "PWM2 B",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "CLOCK GPOUT0",
+            "group": "CLOCK",
+            "signal": "CLOCK GPOUT0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "USB OVCUR DET",
+            "group": "USB",
+            "signal": "USB OVCUR DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 28,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 29,
+        "name": "GP22",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 SCK",
+            "group": "SPI",
+            "signal": "SPI0 SCK",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 CTS",
+            "group": "UART",
+            "signal": "UART1 CTS",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SDA",
+            "group": "I2C",
+            "signal": "I2C1 SDA",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM3 A",
+            "group": "PWM",
+            "signal": "PWM3 A",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "CLOCK GPIN1",
+            "group": "CLOCK",
+            "signal": "CLOCK GPIN1",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "USB VBUS DET",
+            "group": "USB",
+            "signal": "USB VBUS DET",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 30,
+        "name": "RUN",
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "pico-physical",
+          "pico-supply"
+        ]
+      },
+      {
+        "number": 31,
+        "name": "GP26",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 SCK",
+            "group": "SPI",
+            "signal": "SPI1 SCK",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 CTS",
+            "group": "UART",
+            "signal": "UART1 CTS",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SDA",
+            "group": "I2C",
+            "signal": "I2C1 SDA",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM5 A",
+            "group": "PWM",
+            "signal": "PWM5 A",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS EN",
+            "group": "USB",
+            "signal": "USB VBUS EN",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 9,
+            "selector": "F9"
+          },
+          {
+            "name": "ADC0",
+            "group": "ADC",
+            "signal": "ADC0",
+            "evidence": "pico-physical"
+          }
+        ],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 32,
+        "name": "GP27",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 TX",
+            "group": "SPI",
+            "signal": "SPI1 TX",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 RTS",
+            "group": "UART",
+            "signal": "UART1 RTS",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SCL",
+            "group": "I2C",
+            "signal": "I2C1 SCL",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM5 B",
+            "group": "PWM",
+            "signal": "PWM5 B",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB OVCUR DET",
+            "group": "USB",
+            "signal": "USB OVCUR DET",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 9,
+            "selector": "F9"
+          },
+          {
+            "name": "ADC1",
+            "group": "ADC",
+            "signal": "ADC1",
+            "evidence": "pico-physical"
+          }
+        ],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 33,
+        "name": "AGND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pico-physical",
+          "pico-supply"
+        ]
+      },
+      {
+        "number": 34,
+        "name": "GP28",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 RX",
+            "group": "SPI",
+            "signal": "SPI1 RX",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 TX",
+            "group": "UART",
+            "signal": "UART0 TX",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SDA",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM6 A",
+            "group": "PWM",
+            "signal": "PWM6 A",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS DET",
+            "group": "USB",
+            "signal": "USB VBUS DET",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 9,
+            "selector": "F9"
+          },
+          {
+            "name": "ADC2",
+            "group": "ADC",
+            "signal": "ADC2",
+            "evidence": "pico-physical"
+          }
+        ],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 35,
+        "name": "ADC_VREF",
+        "type": "ADC",
+        "functions": [],
+        "evidence": [
+          "pico-physical",
+          "pico-supply"
+        ]
+      },
+      {
+        "number": 36,
+        "name": "3V3(OUT)",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "pico-physical",
+          "pico-supply"
+        ]
+      },
+      {
+        "number": 37,
+        "name": "3V3_EN",
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "pico-physical",
+          "pico-supply"
+        ]
+      },
+      {
+        "number": 38,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pico-physical"
+        ]
+      },
+      {
+        "number": 39,
+        "name": "VSYS",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "pico-physical",
+          "pico-supply"
+        ]
+      },
+      {
+        "number": 40,
+        "name": "VBUS",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "pico-physical",
+          "pico-supply"
+        ]
+      }
+    ]
+  },
+  {
+    "family": "Raspberry Pi",
+    "voltage": "3.3 V I/O",
+    "verifiedOn": "2026-11-04",
+    "id": "picow",
+    "name": "Raspberry Pi Pico W",
+    "shortName": "Pico W",
+    "subtitle": "RP2040 · 40-pin development board",
+    "layout": "pico",
+    "packagePins": 40,
+    "gpioCount": 26,
+    "mcu": "RP2040",
+    "processor": "Cortex-M0+",
+    "clock": "133 MHz",
+    "wireless": true,
+    "source": "https://datasheets.raspberrypi.com/picow/pico-w-datasheet.pdf#page=5",
+    "datasheet": "https://datasheets.raspberrypi.com/picow/pico-w-datasheet.pdf",
+    "pins": [
+      {
+        "number": 1,
+        "name": "GP0",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 RX",
+            "group": "SPI",
+            "signal": "SPI0 RX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 TX",
+            "group": "UART",
+            "signal": "UART0 TX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SDA",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM0 A",
+            "group": "PWM",
+            "signal": "PWM0 A",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB OVCUR DET",
+            "group": "USB",
+            "signal": "USB OVCUR DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 2,
+        "name": "GP1",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 CSn",
+            "group": "SPI",
+            "signal": "SPI0 CSn",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 RX",
+            "group": "UART",
+            "signal": "UART0 RX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SCL",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM0 B",
+            "group": "PWM",
+            "signal": "PWM0 B",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS DET",
+            "group": "USB",
+            "signal": "USB VBUS DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 3,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 4,
+        "name": "GP2",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 SCK",
+            "group": "SPI",
+            "signal": "SPI0 SCK",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 CTS",
+            "group": "UART",
+            "signal": "UART0 CTS",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SDA",
+            "group": "I2C",
+            "signal": "I2C1 SDA",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM1 A",
+            "group": "PWM",
+            "signal": "PWM1 A",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS EN",
+            "group": "USB",
+            "signal": "USB VBUS EN",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 5,
+        "name": "GP3",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 TX",
+            "group": "SPI",
+            "signal": "SPI0 TX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 RTS",
+            "group": "UART",
+            "signal": "UART0 RTS",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SCL",
+            "group": "I2C",
+            "signal": "I2C1 SCL",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM1 B",
+            "group": "PWM",
+            "signal": "PWM1 B",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB OVCUR DET",
+            "group": "USB",
+            "signal": "USB OVCUR DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 6,
+        "name": "GP4",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 RX",
+            "group": "SPI",
+            "signal": "SPI0 RX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 TX",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SDA",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM2 A",
+            "group": "PWM",
+            "signal": "PWM2 A",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS DET",
+            "group": "USB",
+            "signal": "USB VBUS DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 7,
+        "name": "GP5",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 CSn",
+            "group": "SPI",
+            "signal": "SPI0 CSn",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 RX",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SCL",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM2 B",
+            "group": "PWM",
+            "signal": "PWM2 B",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS EN",
+            "group": "USB",
+            "signal": "USB VBUS EN",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 8,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 9,
+        "name": "GP6",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 SCK",
+            "group": "SPI",
+            "signal": "SPI0 SCK",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 CTS",
+            "group": "UART",
+            "signal": "UART1 CTS",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SDA",
+            "group": "I2C",
+            "signal": "I2C1 SDA",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM3 A",
+            "group": "PWM",
+            "signal": "PWM3 A",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB OVCUR DET",
+            "group": "USB",
+            "signal": "USB OVCUR DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 10,
+        "name": "GP7",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 TX",
+            "group": "SPI",
+            "signal": "SPI0 TX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 RTS",
+            "group": "UART",
+            "signal": "UART1 RTS",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SCL",
+            "group": "I2C",
+            "signal": "I2C1 SCL",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM3 B",
+            "group": "PWM",
+            "signal": "PWM3 B",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS DET",
+            "group": "USB",
+            "signal": "USB VBUS DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 11,
+        "name": "GP8",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 RX",
+            "group": "SPI",
+            "signal": "SPI1 RX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 TX",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SDA",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM4 A",
+            "group": "PWM",
+            "signal": "PWM4 A",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS EN",
+            "group": "USB",
+            "signal": "USB VBUS EN",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 12,
+        "name": "GP9",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 CSn",
+            "group": "SPI",
+            "signal": "SPI1 CSn",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 RX",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SCL",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM4 B",
+            "group": "PWM",
+            "signal": "PWM4 B",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB OVCUR DET",
+            "group": "USB",
+            "signal": "USB OVCUR DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 13,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 14,
+        "name": "GP10",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 SCK",
+            "group": "SPI",
+            "signal": "SPI1 SCK",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 CTS",
+            "group": "UART",
+            "signal": "UART1 CTS",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SDA",
+            "group": "I2C",
+            "signal": "I2C1 SDA",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM5 A",
+            "group": "PWM",
+            "signal": "PWM5 A",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS DET",
+            "group": "USB",
+            "signal": "USB VBUS DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 15,
+        "name": "GP11",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 TX",
+            "group": "SPI",
+            "signal": "SPI1 TX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 RTS",
+            "group": "UART",
+            "signal": "UART1 RTS",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SCL",
+            "group": "I2C",
+            "signal": "I2C1 SCL",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM5 B",
+            "group": "PWM",
+            "signal": "PWM5 B",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS EN",
+            "group": "USB",
+            "signal": "USB VBUS EN",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 16,
+        "name": "GP12",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 RX",
+            "group": "SPI",
+            "signal": "SPI1 RX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 TX",
+            "group": "UART",
+            "signal": "UART0 TX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SDA",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM6 A",
+            "group": "PWM",
+            "signal": "PWM6 A",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB OVCUR DET",
+            "group": "USB",
+            "signal": "USB OVCUR DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 17,
+        "name": "GP13",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 CSn",
+            "group": "SPI",
+            "signal": "SPI1 CSn",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 RX",
+            "group": "UART",
+            "signal": "UART0 RX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SCL",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM6 B",
+            "group": "PWM",
+            "signal": "PWM6 B",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS DET",
+            "group": "USB",
+            "signal": "USB VBUS DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 18,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 19,
+        "name": "GP14",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 SCK",
+            "group": "SPI",
+            "signal": "SPI1 SCK",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 CTS",
+            "group": "UART",
+            "signal": "UART0 CTS",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SDA",
+            "group": "I2C",
+            "signal": "I2C1 SDA",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM7 A",
+            "group": "PWM",
+            "signal": "PWM7 A",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS EN",
+            "group": "USB",
+            "signal": "USB VBUS EN",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 20,
+        "name": "GP15",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 TX",
+            "group": "SPI",
+            "signal": "SPI1 TX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 RTS",
+            "group": "UART",
+            "signal": "UART0 RTS",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SCL",
+            "group": "I2C",
+            "signal": "I2C1 SCL",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM7 B",
+            "group": "PWM",
+            "signal": "PWM7 B",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB OVCUR DET",
+            "group": "USB",
+            "signal": "USB OVCUR DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 21,
+        "name": "GP16",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 RX",
+            "group": "SPI",
+            "signal": "SPI0 RX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 TX",
+            "group": "UART",
+            "signal": "UART0 TX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SDA",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM0 A",
+            "group": "PWM",
+            "signal": "PWM0 A",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS DET",
+            "group": "USB",
+            "signal": "USB VBUS DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 22,
+        "name": "GP17",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 CSn",
+            "group": "SPI",
+            "signal": "SPI0 CSn",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 RX",
+            "group": "UART",
+            "signal": "UART0 RX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SCL",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM0 B",
+            "group": "PWM",
+            "signal": "PWM0 B",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS EN",
+            "group": "USB",
+            "signal": "USB VBUS EN",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 23,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 24,
+        "name": "GP18",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 SCK",
+            "group": "SPI",
+            "signal": "SPI0 SCK",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 CTS",
+            "group": "UART",
+            "signal": "UART0 CTS",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SDA",
+            "group": "I2C",
+            "signal": "I2C1 SDA",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM1 A",
+            "group": "PWM",
+            "signal": "PWM1 A",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB OVCUR DET",
+            "group": "USB",
+            "signal": "USB OVCUR DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 25,
+        "name": "GP19",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 TX",
+            "group": "SPI",
+            "signal": "SPI0 TX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 RTS",
+            "group": "UART",
+            "signal": "UART0 RTS",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SCL",
+            "group": "I2C",
+            "signal": "I2C1 SCL",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM1 B",
+            "group": "PWM",
+            "signal": "PWM1 B",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS DET",
+            "group": "USB",
+            "signal": "USB VBUS DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 26,
+        "name": "GP20",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 RX",
+            "group": "SPI",
+            "signal": "SPI0 RX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 TX",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SDA",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM2 A",
+            "group": "PWM",
+            "signal": "PWM2 A",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "CLOCK GPIN0",
+            "group": "CLOCK",
+            "signal": "CLOCK GPIN0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "USB VBUS EN",
+            "group": "USB",
+            "signal": "USB VBUS EN",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 27,
+        "name": "GP21",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 CSn",
+            "group": "SPI",
+            "signal": "SPI0 CSn",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 RX",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SCL",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM2 B",
+            "group": "PWM",
+            "signal": "PWM2 B",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "CLOCK GPOUT0",
+            "group": "CLOCK",
+            "signal": "CLOCK GPOUT0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "USB OVCUR DET",
+            "group": "USB",
+            "signal": "USB OVCUR DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 28,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 29,
+        "name": "GP22",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 SCK",
+            "group": "SPI",
+            "signal": "SPI0 SCK",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 CTS",
+            "group": "UART",
+            "signal": "UART1 CTS",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SDA",
+            "group": "I2C",
+            "signal": "I2C1 SDA",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM3 A",
+            "group": "PWM",
+            "signal": "PWM3 A",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "CLOCK GPIN1",
+            "group": "CLOCK",
+            "signal": "CLOCK GPIN1",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "USB VBUS DET",
+            "group": "USB",
+            "signal": "USB VBUS DET",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 30,
+        "name": "RUN",
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "picow-physical",
+          "picow-supply"
+        ]
+      },
+      {
+        "number": 31,
+        "name": "GP26",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 SCK",
+            "group": "SPI",
+            "signal": "SPI1 SCK",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 CTS",
+            "group": "UART",
+            "signal": "UART1 CTS",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SDA",
+            "group": "I2C",
+            "signal": "I2C1 SDA",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM5 A",
+            "group": "PWM",
+            "signal": "PWM5 A",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS EN",
+            "group": "USB",
+            "signal": "USB VBUS EN",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 9,
+            "selector": "F9"
+          },
+          {
+            "name": "ADC0",
+            "group": "ADC",
+            "signal": "ADC0",
+            "evidence": "picow-physical"
+          }
+        ],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 32,
+        "name": "GP27",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 TX",
+            "group": "SPI",
+            "signal": "SPI1 TX",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 RTS",
+            "group": "UART",
+            "signal": "UART1 RTS",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SCL",
+            "group": "I2C",
+            "signal": "I2C1 SCL",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM5 B",
+            "group": "PWM",
+            "signal": "PWM5 B",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB OVCUR DET",
+            "group": "USB",
+            "signal": "USB OVCUR DET",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 9,
+            "selector": "F9"
+          },
+          {
+            "name": "ADC1",
+            "group": "ADC",
+            "signal": "ADC1",
+            "evidence": "picow-physical"
+          }
+        ],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 33,
+        "name": "AGND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "picow-physical",
+          "picow-supply"
+        ]
+      },
+      {
+        "number": 34,
+        "name": "GP28",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 RX",
+            "group": "SPI",
+            "signal": "SPI1 RX",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 TX",
+            "group": "UART",
+            "signal": "UART0 TX",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SDA",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM6 A",
+            "group": "PWM",
+            "signal": "PWM6 A",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS DET",
+            "group": "USB",
+            "signal": "USB VBUS DET",
+            "evidence": "rp2040-bank0-p14",
+            "alt": 9,
+            "selector": "F9"
+          },
+          {
+            "name": "ADC2",
+            "group": "ADC",
+            "signal": "ADC2",
+            "evidence": "picow-physical"
+          }
+        ],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 35,
+        "name": "ADC_VREF",
+        "type": "ADC",
+        "functions": [],
+        "evidence": [
+          "picow-physical",
+          "picow-supply"
+        ]
+      },
+      {
+        "number": 36,
+        "name": "3V3(OUT)",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "picow-physical",
+          "picow-supply"
+        ]
+      },
+      {
+        "number": 37,
+        "name": "3V3_EN",
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "picow-physical",
+          "picow-supply"
+        ]
+      },
+      {
+        "number": 38,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "picow-physical"
+        ]
+      },
+      {
+        "number": 39,
+        "name": "VSYS",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "picow-physical",
+          "picow-supply"
+        ]
+      },
+      {
+        "number": 40,
+        "name": "VBUS",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "picow-physical",
+          "picow-supply"
+        ]
+      }
+    ]
+  },
+  {
+    "family": "Raspberry Pi",
+    "voltage": "3.3 V I/O",
+    "verifiedOn": "2026-11-04",
+    "id": "pico2",
+    "name": "Raspberry Pi Pico 2",
+    "shortName": "Pico 2",
+    "subtitle": "RP2350A · 40-pin development board",
+    "layout": "pico",
+    "packagePins": 40,
+    "gpioCount": 26,
+    "mcu": "RP2350A",
+    "processor": "Cortex-M33 / Hazard3",
+    "clock": "150 MHz",
+    "wireless": false,
+    "source": "https://datasheets.raspberrypi.com/pico/pico-2-datasheet.pdf#page=5",
+    "datasheet": "https://datasheets.raspberrypi.com/pico/pico-2-datasheet.pdf",
+    "pins": [
+      {
+        "number": 1,
+        "name": "GP0",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 RX",
+            "group": "SPI",
+            "signal": "SPI0 RX",
+            "evidence": "rp-bank0-p18",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 TX",
+            "group": "UART",
+            "signal": "UART0 TX",
+            "evidence": "rp-bank0-p18",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SDA",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "rp-bank0-p18",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM0 A",
+            "group": "PWM",
+            "signal": "PWM0 A",
+            "evidence": "rp-bank0-p18",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp-bank0-p18",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp-bank0-p18",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp-bank0-p18",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "PIO2",
+            "group": "PIO",
+            "signal": "PIO2",
+            "evidence": "rp-bank0-p18",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "QMI CS1n",
+            "group": "QMI",
+            "signal": "QMI CS1n",
+            "evidence": "rp-bank0-p18",
+            "alt": 9,
+            "selector": "F9"
+          },
+          {
+            "name": "USB OVCUR DET",
+            "group": "USB",
+            "signal": "USB OVCUR DET",
+            "evidence": "rp-bank0-p18",
+            "alt": 10,
+            "selector": "F10"
+          }
+        ],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 2,
+        "name": "GP1",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 CSn",
+            "group": "SPI",
+            "signal": "SPI0 CSn",
+            "evidence": "rp-bank0-p18",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 RX",
+            "group": "UART",
+            "signal": "UART0 RX",
+            "evidence": "rp-bank0-p18",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SCL",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "rp-bank0-p18",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM0 B",
+            "group": "PWM",
+            "signal": "PWM0 B",
+            "evidence": "rp-bank0-p18",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp-bank0-p18",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp-bank0-p18",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp-bank0-p18",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "PIO2",
+            "group": "PIO",
+            "signal": "PIO2",
+            "evidence": "rp-bank0-p18",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "TRACECLK",
+            "group": "CLOCK",
+            "signal": "TRACECLK",
+            "evidence": "rp-bank0-p18",
+            "alt": 9,
+            "selector": "F9"
+          },
+          {
+            "name": "USB VBUS DET",
+            "group": "USB",
+            "signal": "USB VBUS DET",
+            "evidence": "rp-bank0-p18",
+            "alt": 10,
+            "selector": "F10"
+          }
+        ],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 3,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 4,
+        "name": "GP2",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 SCK",
+            "group": "SPI",
+            "signal": "SPI0 SCK",
+            "evidence": "rp-bank0-p18",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 CTS",
+            "group": "UART",
+            "signal": "UART0 CTS",
+            "evidence": "rp-bank0-p18",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SDA",
+            "group": "I2C",
+            "signal": "I2C1 SDA",
+            "evidence": "rp-bank0-p18",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM1 A",
+            "group": "PWM",
+            "signal": "PWM1 A",
+            "evidence": "rp-bank0-p18",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp-bank0-p18",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp-bank0-p18",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp-bank0-p18",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "PIO2",
+            "group": "PIO",
+            "signal": "PIO2",
+            "evidence": "rp-bank0-p18",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "TRACEDATA0",
+            "group": "CLOCK",
+            "signal": "TRACEDATA0",
+            "evidence": "rp-bank0-p18",
+            "alt": 9,
+            "selector": "F9"
+          },
+          {
+            "name": "USB VBUS EN",
+            "group": "USB",
+            "signal": "USB VBUS EN",
+            "evidence": "rp-bank0-p18",
+            "alt": 10,
+            "selector": "F10"
+          },
+          {
+            "name": "UART0 TX",
+            "group": "UART",
+            "signal": "UART0 TX",
+            "evidence": "rp-bank0-p18",
+            "alt": 11,
+            "selector": "F11"
+          }
+        ],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 5,
+        "name": "GP3",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 TX",
+            "group": "SPI",
+            "signal": "SPI0 TX",
+            "evidence": "rp-bank0-p18",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 RTS",
+            "group": "UART",
+            "signal": "UART0 RTS",
+            "evidence": "rp-bank0-p18",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SCL",
+            "group": "I2C",
+            "signal": "I2C1 SCL",
+            "evidence": "rp-bank0-p18",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM1 B",
+            "group": "PWM",
+            "signal": "PWM1 B",
+            "evidence": "rp-bank0-p18",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp-bank0-p18",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp-bank0-p18",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp-bank0-p18",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "PIO2",
+            "group": "PIO",
+            "signal": "PIO2",
+            "evidence": "rp-bank0-p18",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "TRACEDATA1",
+            "group": "CLOCK",
+            "signal": "TRACEDATA1",
+            "evidence": "rp-bank0-p18",
+            "alt": 9,
+            "selector": "F9"
+          },
+          {
+            "name": "USB OVCUR DET",
+            "group": "USB",
+            "signal": "USB OVCUR DET",
+            "evidence": "rp-bank0-p18",
+            "alt": 10,
+            "selector": "F10"
+          },
+          {
+            "name": "UART0 RX",
+            "group": "UART",
+            "signal": "UART0 RX",
+            "evidence": "rp-bank0-p18",
+            "alt": 11,
+            "selector": "F11"
+          }
+        ],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 6,
+        "name": "GP4",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 RX",
+            "group": "SPI",
+            "signal": "SPI0 RX",
+            "evidence": "rp-bank0-p18",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 TX",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "rp-bank0-p18",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SDA",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "rp-bank0-p18",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM2 A",
+            "group": "PWM",
+            "signal": "PWM2 A",
+            "evidence": "rp-bank0-p18",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp-bank0-p18",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp-bank0-p18",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp-bank0-p18",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "PIO2",
+            "group": "PIO",
+            "signal": "PIO2",
+            "evidence": "rp-bank0-p18",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "TRACEDATA2",
+            "group": "CLOCK",
+            "signal": "TRACEDATA2",
+            "evidence": "rp-bank0-p18",
+            "alt": 9,
+            "selector": "F9"
+          },
+          {
+            "name": "USB VBUS DET",
+            "group": "USB",
+            "signal": "USB VBUS DET",
+            "evidence": "rp-bank0-p18",
+            "alt": 10,
+            "selector": "F10"
+          }
+        ],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 7,
+        "name": "GP5",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 CSn",
+            "group": "SPI",
+            "signal": "SPI0 CSn",
+            "evidence": "rp-bank0-p18",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 RX",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "rp-bank0-p18",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SCL",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "rp-bank0-p18",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM2 B",
+            "group": "PWM",
+            "signal": "PWM2 B",
+            "evidence": "rp-bank0-p18",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp-bank0-p18",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp-bank0-p18",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp-bank0-p18",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "PIO2",
+            "group": "PIO",
+            "signal": "PIO2",
+            "evidence": "rp-bank0-p18",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "TRACEDATA3",
+            "group": "CLOCK",
+            "signal": "TRACEDATA3",
+            "evidence": "rp-bank0-p18",
+            "alt": 9,
+            "selector": "F9"
+          },
+          {
+            "name": "USB VBUS EN",
+            "group": "USB",
+            "signal": "USB VBUS EN",
+            "evidence": "rp-bank0-p18",
+            "alt": 10,
+            "selector": "F10"
+          }
+        ],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 8,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 9,
+        "name": "GP6",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 SCK",
+            "group": "SPI",
+            "signal": "SPI0 SCK",
+            "evidence": "rp-bank0-p18",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 CTS",
+            "group": "UART",
+            "signal": "UART1 CTS",
+            "evidence": "rp-bank0-p18",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SDA",
+            "group": "I2C",
+            "signal": "I2C1 SDA",
+            "evidence": "rp-bank0-p18",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM3 A",
+            "group": "PWM",
+            "signal": "PWM3 A",
+            "evidence": "rp-bank0-p18",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp-bank0-p18",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp-bank0-p18",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp-bank0-p18",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "PIO2",
+            "group": "PIO",
+            "signal": "PIO2",
+            "evidence": "rp-bank0-p18",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "USB OVCUR DET",
+            "group": "USB",
+            "signal": "USB OVCUR DET",
+            "evidence": "rp-bank0-p18",
+            "alt": 10,
+            "selector": "F10"
+          },
+          {
+            "name": "UART1 TX",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "rp-bank0-p18",
+            "alt": 11,
+            "selector": "F11"
+          }
+        ],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 10,
+        "name": "GP7",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 TX",
+            "group": "SPI",
+            "signal": "SPI0 TX",
+            "evidence": "rp-bank0-p18",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 RTS",
+            "group": "UART",
+            "signal": "UART1 RTS",
+            "evidence": "rp-bank0-p18",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SCL",
+            "group": "I2C",
+            "signal": "I2C1 SCL",
+            "evidence": "rp-bank0-p18",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM3 B",
+            "group": "PWM",
+            "signal": "PWM3 B",
+            "evidence": "rp-bank0-p18",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp-bank0-p18",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp-bank0-p18",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp-bank0-p18",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "PIO2",
+            "group": "PIO",
+            "signal": "PIO2",
+            "evidence": "rp-bank0-p18",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "USB VBUS DET",
+            "group": "USB",
+            "signal": "USB VBUS DET",
+            "evidence": "rp-bank0-p18",
+            "alt": 10,
+            "selector": "F10"
+          },
+          {
+            "name": "UART1 RX",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "rp-bank0-p18",
+            "alt": 11,
+            "selector": "F11"
+          }
+        ],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 11,
+        "name": "GP8",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 RX",
+            "group": "SPI",
+            "signal": "SPI1 RX",
+            "evidence": "rp-bank0-p18",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 TX",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "rp-bank0-p18",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SDA",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "rp-bank0-p18",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM4 A",
+            "group": "PWM",
+            "signal": "PWM4 A",
+            "evidence": "rp-bank0-p18",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp-bank0-p18",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp-bank0-p18",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp-bank0-p18",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "PIO2",
+            "group": "PIO",
+            "signal": "PIO2",
+            "evidence": "rp-bank0-p18",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "QMI CS1n",
+            "group": "QMI",
+            "signal": "QMI CS1n",
+            "evidence": "rp-bank0-p18",
+            "alt": 9,
+            "selector": "F9"
+          },
+          {
+            "name": "USB VBUS EN",
+            "group": "USB",
+            "signal": "USB VBUS EN",
+            "evidence": "rp-bank0-p18",
+            "alt": 10,
+            "selector": "F10"
+          }
+        ],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 12,
+        "name": "GP9",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 CSn",
+            "group": "SPI",
+            "signal": "SPI1 CSn",
+            "evidence": "rp-bank0-p18",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 RX",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "rp-bank0-p18",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SCL",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "rp-bank0-p18",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM4 B",
+            "group": "PWM",
+            "signal": "PWM4 B",
+            "evidence": "rp-bank0-p18",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp-bank0-p18",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp-bank0-p18",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp-bank0-p18",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "PIO2",
+            "group": "PIO",
+            "signal": "PIO2",
+            "evidence": "rp-bank0-p18",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "USB OVCUR DET",
+            "group": "USB",
+            "signal": "USB OVCUR DET",
+            "evidence": "rp-bank0-p18",
+            "alt": 10,
+            "selector": "F10"
+          }
+        ],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 13,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 14,
+        "name": "GP10",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 SCK",
+            "group": "SPI",
+            "signal": "SPI1 SCK",
+            "evidence": "rp-bank0-p18",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 CTS",
+            "group": "UART",
+            "signal": "UART1 CTS",
+            "evidence": "rp-bank0-p18",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SDA",
+            "group": "I2C",
+            "signal": "I2C1 SDA",
+            "evidence": "rp-bank0-p18",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM5 A",
+            "group": "PWM",
+            "signal": "PWM5 A",
+            "evidence": "rp-bank0-p18",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp-bank0-p18",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp-bank0-p18",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp-bank0-p18",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "PIO2",
+            "group": "PIO",
+            "signal": "PIO2",
+            "evidence": "rp-bank0-p18",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "USB VBUS DET",
+            "group": "USB",
+            "signal": "USB VBUS DET",
+            "evidence": "rp-bank0-p18",
+            "alt": 10,
+            "selector": "F10"
+          },
+          {
+            "name": "UART1 TX",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "rp-bank0-p18",
+            "alt": 11,
+            "selector": "F11"
+          }
+        ],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 15,
+        "name": "GP11",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 TX",
+            "group": "SPI",
+            "signal": "SPI1 TX",
+            "evidence": "rp-bank0-p19",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 RTS",
+            "group": "UART",
+            "signal": "UART1 RTS",
+            "evidence": "rp-bank0-p19",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SCL",
+            "group": "I2C",
+            "signal": "I2C1 SCL",
+            "evidence": "rp-bank0-p19",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM5 B",
+            "group": "PWM",
+            "signal": "PWM5 B",
+            "evidence": "rp-bank0-p19",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp-bank0-p19",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp-bank0-p19",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp-bank0-p19",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "PIO2",
+            "group": "PIO",
+            "signal": "PIO2",
+            "evidence": "rp-bank0-p19",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "USB VBUS EN",
+            "group": "USB",
+            "signal": "USB VBUS EN",
+            "evidence": "rp-bank0-p19",
+            "alt": 10,
+            "selector": "F10"
+          },
+          {
+            "name": "UART1 RX",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "rp-bank0-p19",
+            "alt": 11,
+            "selector": "F11"
+          }
+        ],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 16,
+        "name": "GP12",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "HSTX",
+            "group": "HSTX",
+            "signal": "HSTX",
+            "evidence": "rp-bank0-p19",
+            "alt": 0,
+            "selector": "F0"
+          },
+          {
+            "name": "SPI1 RX",
+            "group": "SPI",
+            "signal": "SPI1 RX",
+            "evidence": "rp-bank0-p19",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 TX",
+            "group": "UART",
+            "signal": "UART0 TX",
+            "evidence": "rp-bank0-p19",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SDA",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "rp-bank0-p19",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM6 A",
+            "group": "PWM",
+            "signal": "PWM6 A",
+            "evidence": "rp-bank0-p19",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp-bank0-p19",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp-bank0-p19",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp-bank0-p19",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "PIO2",
+            "group": "PIO",
+            "signal": "PIO2",
+            "evidence": "rp-bank0-p19",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "CLOCK GPIN0",
+            "group": "CLOCK",
+            "signal": "CLOCK GPIN0",
+            "evidence": "rp-bank0-p19",
+            "alt": 9,
+            "selector": "F9"
+          },
+          {
+            "name": "USB OVCUR DET",
+            "group": "USB",
+            "signal": "USB OVCUR DET",
+            "evidence": "rp-bank0-p19",
+            "alt": 10,
+            "selector": "F10"
+          }
+        ],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 17,
+        "name": "GP13",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "HSTX",
+            "group": "HSTX",
+            "signal": "HSTX",
+            "evidence": "rp-bank0-p19",
+            "alt": 0,
+            "selector": "F0"
+          },
+          {
+            "name": "SPI1 CSn",
+            "group": "SPI",
+            "signal": "SPI1 CSn",
+            "evidence": "rp-bank0-p19",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 RX",
+            "group": "UART",
+            "signal": "UART0 RX",
+            "evidence": "rp-bank0-p19",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SCL",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "rp-bank0-p19",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM6 B",
+            "group": "PWM",
+            "signal": "PWM6 B",
+            "evidence": "rp-bank0-p19",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp-bank0-p19",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp-bank0-p19",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp-bank0-p19",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "PIO2",
+            "group": "PIO",
+            "signal": "PIO2",
+            "evidence": "rp-bank0-p19",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "CLOCK GPOUT0",
+            "group": "CLOCK",
+            "signal": "CLOCK GPOUT0",
+            "evidence": "rp-bank0-p19",
+            "alt": 9,
+            "selector": "F9"
+          },
+          {
+            "name": "USB VBUS DET",
+            "group": "USB",
+            "signal": "USB VBUS DET",
+            "evidence": "rp-bank0-p19",
+            "alt": 10,
+            "selector": "F10"
+          }
+        ],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 18,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 19,
+        "name": "GP14",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "HSTX",
+            "group": "HSTX",
+            "signal": "HSTX",
+            "evidence": "rp-bank0-p19",
+            "alt": 0,
+            "selector": "F0"
+          },
+          {
+            "name": "SPI1 SCK",
+            "group": "SPI",
+            "signal": "SPI1 SCK",
+            "evidence": "rp-bank0-p19",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 CTS",
+            "group": "UART",
+            "signal": "UART0 CTS",
+            "evidence": "rp-bank0-p19",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SDA",
+            "group": "I2C",
+            "signal": "I2C1 SDA",
+            "evidence": "rp-bank0-p19",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM7 A",
+            "group": "PWM",
+            "signal": "PWM7 A",
+            "evidence": "rp-bank0-p19",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp-bank0-p19",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp-bank0-p19",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp-bank0-p19",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "PIO2",
+            "group": "PIO",
+            "signal": "PIO2",
+            "evidence": "rp-bank0-p19",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "CLOCK GPIN1",
+            "group": "CLOCK",
+            "signal": "CLOCK GPIN1",
+            "evidence": "rp-bank0-p19",
+            "alt": 9,
+            "selector": "F9"
+          },
+          {
+            "name": "USB VBUS EN",
+            "group": "USB",
+            "signal": "USB VBUS EN",
+            "evidence": "rp-bank0-p19",
+            "alt": 10,
+            "selector": "F10"
+          },
+          {
+            "name": "UART0 TX",
+            "group": "UART",
+            "signal": "UART0 TX",
+            "evidence": "rp-bank0-p19",
+            "alt": 11,
+            "selector": "F11"
+          }
+        ],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 20,
+        "name": "GP15",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "HSTX",
+            "group": "HSTX",
+            "signal": "HSTX",
+            "evidence": "rp-bank0-p19",
+            "alt": 0,
+            "selector": "F0"
+          },
+          {
+            "name": "SPI1 TX",
+            "group": "SPI",
+            "signal": "SPI1 TX",
+            "evidence": "rp-bank0-p19",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 RTS",
+            "group": "UART",
+            "signal": "UART0 RTS",
+            "evidence": "rp-bank0-p19",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SCL",
+            "group": "I2C",
+            "signal": "I2C1 SCL",
+            "evidence": "rp-bank0-p19",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM7 B",
+            "group": "PWM",
+            "signal": "PWM7 B",
+            "evidence": "rp-bank0-p19",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp-bank0-p19",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp-bank0-p19",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp-bank0-p19",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "PIO2",
+            "group": "PIO",
+            "signal": "PIO2",
+            "evidence": "rp-bank0-p19",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "CLOCK GPOUT1",
+            "group": "CLOCK",
+            "signal": "CLOCK GPOUT1",
+            "evidence": "rp-bank0-p19",
+            "alt": 9,
+            "selector": "F9"
+          },
+          {
+            "name": "USB OVCUR DET",
+            "group": "USB",
+            "signal": "USB OVCUR DET",
+            "evidence": "rp-bank0-p19",
+            "alt": 10,
+            "selector": "F10"
+          },
+          {
+            "name": "UART0 RX",
+            "group": "UART",
+            "signal": "UART0 RX",
+            "evidence": "rp-bank0-p19",
+            "alt": 11,
+            "selector": "F11"
+          }
+        ],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 21,
+        "name": "GP16",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "HSTX",
+            "group": "HSTX",
+            "signal": "HSTX",
+            "evidence": "rp-bank0-p19",
+            "alt": 0,
+            "selector": "F0"
+          },
+          {
+            "name": "SPI0 RX",
+            "group": "SPI",
+            "signal": "SPI0 RX",
+            "evidence": "rp-bank0-p19",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 TX",
+            "group": "UART",
+            "signal": "UART0 TX",
+            "evidence": "rp-bank0-p19",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SDA",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "rp-bank0-p19",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM0 A",
+            "group": "PWM",
+            "signal": "PWM0 A",
+            "evidence": "rp-bank0-p19",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp-bank0-p19",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp-bank0-p19",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp-bank0-p19",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "PIO2",
+            "group": "PIO",
+            "signal": "PIO2",
+            "evidence": "rp-bank0-p19",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "USB VBUS DET",
+            "group": "USB",
+            "signal": "USB VBUS DET",
+            "evidence": "rp-bank0-p19",
+            "alt": 10,
+            "selector": "F10"
+          }
+        ],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 22,
+        "name": "GP17",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "HSTX",
+            "group": "HSTX",
+            "signal": "HSTX",
+            "evidence": "rp-bank0-p19",
+            "alt": 0,
+            "selector": "F0"
+          },
+          {
+            "name": "SPI0 CSn",
+            "group": "SPI",
+            "signal": "SPI0 CSn",
+            "evidence": "rp-bank0-p19",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 RX",
+            "group": "UART",
+            "signal": "UART0 RX",
+            "evidence": "rp-bank0-p19",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SCL",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "rp-bank0-p19",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM0 B",
+            "group": "PWM",
+            "signal": "PWM0 B",
+            "evidence": "rp-bank0-p19",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp-bank0-p19",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp-bank0-p19",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp-bank0-p19",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "PIO2",
+            "group": "PIO",
+            "signal": "PIO2",
+            "evidence": "rp-bank0-p19",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "USB VBUS EN",
+            "group": "USB",
+            "signal": "USB VBUS EN",
+            "evidence": "rp-bank0-p19",
+            "alt": 10,
+            "selector": "F10"
+          }
+        ],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 23,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 24,
+        "name": "GP18",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "HSTX",
+            "group": "HSTX",
+            "signal": "HSTX",
+            "evidence": "rp-bank0-p19",
+            "alt": 0,
+            "selector": "F0"
+          },
+          {
+            "name": "SPI0 SCK",
+            "group": "SPI",
+            "signal": "SPI0 SCK",
+            "evidence": "rp-bank0-p19",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 CTS",
+            "group": "UART",
+            "signal": "UART0 CTS",
+            "evidence": "rp-bank0-p19",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SDA",
+            "group": "I2C",
+            "signal": "I2C1 SDA",
+            "evidence": "rp-bank0-p19",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM1 A",
+            "group": "PWM",
+            "signal": "PWM1 A",
+            "evidence": "rp-bank0-p19",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp-bank0-p19",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp-bank0-p19",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp-bank0-p19",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "PIO2",
+            "group": "PIO",
+            "signal": "PIO2",
+            "evidence": "rp-bank0-p19",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "USB OVCUR DET",
+            "group": "USB",
+            "signal": "USB OVCUR DET",
+            "evidence": "rp-bank0-p19",
+            "alt": 10,
+            "selector": "F10"
+          },
+          {
+            "name": "UART0 TX",
+            "group": "UART",
+            "signal": "UART0 TX",
+            "evidence": "rp-bank0-p19",
+            "alt": 11,
+            "selector": "F11"
+          }
+        ],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 25,
+        "name": "GP19",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "HSTX",
+            "group": "HSTX",
+            "signal": "HSTX",
+            "evidence": "rp-bank0-p19",
+            "alt": 0,
+            "selector": "F0"
+          },
+          {
+            "name": "SPI0 TX",
+            "group": "SPI",
+            "signal": "SPI0 TX",
+            "evidence": "rp-bank0-p19",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 RTS",
+            "group": "UART",
+            "signal": "UART0 RTS",
+            "evidence": "rp-bank0-p19",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SCL",
+            "group": "I2C",
+            "signal": "I2C1 SCL",
+            "evidence": "rp-bank0-p19",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM1 B",
+            "group": "PWM",
+            "signal": "PWM1 B",
+            "evidence": "rp-bank0-p19",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp-bank0-p19",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp-bank0-p19",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp-bank0-p19",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "PIO2",
+            "group": "PIO",
+            "signal": "PIO2",
+            "evidence": "rp-bank0-p19",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "QMI CS1n",
+            "group": "QMI",
+            "signal": "QMI CS1n",
+            "evidence": "rp-bank0-p19",
+            "alt": 9,
+            "selector": "F9"
+          },
+          {
+            "name": "USB VBUS DET",
+            "group": "USB",
+            "signal": "USB VBUS DET",
+            "evidence": "rp-bank0-p19",
+            "alt": 10,
+            "selector": "F10"
+          },
+          {
+            "name": "UART0 RX",
+            "group": "UART",
+            "signal": "UART0 RX",
+            "evidence": "rp-bank0-p19",
+            "alt": 11,
+            "selector": "F11"
+          }
+        ],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 26,
+        "name": "GP20",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 RX",
+            "group": "SPI",
+            "signal": "SPI0 RX",
+            "evidence": "rp-bank0-p19",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 TX",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "rp-bank0-p19",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SDA",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "rp-bank0-p19",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM2 A",
+            "group": "PWM",
+            "signal": "PWM2 A",
+            "evidence": "rp-bank0-p19",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp-bank0-p19",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp-bank0-p19",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp-bank0-p19",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "PIO2",
+            "group": "PIO",
+            "signal": "PIO2",
+            "evidence": "rp-bank0-p19",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "CLOCK GPIN0",
+            "group": "CLOCK",
+            "signal": "CLOCK GPIN0",
+            "evidence": "rp-bank0-p19",
+            "alt": 9,
+            "selector": "F9"
+          },
+          {
+            "name": "USB VBUS EN",
+            "group": "USB",
+            "signal": "USB VBUS EN",
+            "evidence": "rp-bank0-p19",
+            "alt": 10,
+            "selector": "F10"
+          }
+        ],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 27,
+        "name": "GP21",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 CSn",
+            "group": "SPI",
+            "signal": "SPI0 CSn",
+            "evidence": "rp-bank0-p19",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 RX",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "rp-bank0-p19",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SCL",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "rp-bank0-p19",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM2 B",
+            "group": "PWM",
+            "signal": "PWM2 B",
+            "evidence": "rp-bank0-p19",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp-bank0-p19",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp-bank0-p19",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp-bank0-p19",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "PIO2",
+            "group": "PIO",
+            "signal": "PIO2",
+            "evidence": "rp-bank0-p19",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "CLOCK GPOUT0",
+            "group": "CLOCK",
+            "signal": "CLOCK GPOUT0",
+            "evidence": "rp-bank0-p19",
+            "alt": 9,
+            "selector": "F9"
+          },
+          {
+            "name": "USB OVCUR DET",
+            "group": "USB",
+            "signal": "USB OVCUR DET",
+            "evidence": "rp-bank0-p19",
+            "alt": 10,
+            "selector": "F10"
+          }
+        ],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 28,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 29,
+        "name": "GP22",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 SCK",
+            "group": "SPI",
+            "signal": "SPI0 SCK",
+            "evidence": "rp-bank0-p19",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 CTS",
+            "group": "UART",
+            "signal": "UART1 CTS",
+            "evidence": "rp-bank0-p19",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SDA",
+            "group": "I2C",
+            "signal": "I2C1 SDA",
+            "evidence": "rp-bank0-p19",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM3 A",
+            "group": "PWM",
+            "signal": "PWM3 A",
+            "evidence": "rp-bank0-p19",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp-bank0-p19",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp-bank0-p19",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp-bank0-p19",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "PIO2",
+            "group": "PIO",
+            "signal": "PIO2",
+            "evidence": "rp-bank0-p19",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "CLOCK GPIN1",
+            "group": "CLOCK",
+            "signal": "CLOCK GPIN1",
+            "evidence": "rp-bank0-p19",
+            "alt": 9,
+            "selector": "F9"
+          },
+          {
+            "name": "USB VBUS DET",
+            "group": "USB",
+            "signal": "USB VBUS DET",
+            "evidence": "rp-bank0-p19",
+            "alt": 10,
+            "selector": "F10"
+          },
+          {
+            "name": "UART1 TX",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "rp-bank0-p19",
+            "alt": 11,
+            "selector": "F11"
+          }
+        ],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 30,
+        "name": "RUN",
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "pico2-physical",
+          "pico2-supply"
+        ]
+      },
+      {
+        "number": 31,
+        "name": "GP26",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 SCK",
+            "group": "SPI",
+            "signal": "SPI1 SCK",
+            "evidence": "rp-bank0-p19",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 CTS",
+            "group": "UART",
+            "signal": "UART1 CTS",
+            "evidence": "rp-bank0-p19",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SDA",
+            "group": "I2C",
+            "signal": "I2C1 SDA",
+            "evidence": "rp-bank0-p19",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM5 A",
+            "group": "PWM",
+            "signal": "PWM5 A",
+            "evidence": "rp-bank0-p19",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp-bank0-p19",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp-bank0-p19",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp-bank0-p19",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "PIO2",
+            "group": "PIO",
+            "signal": "PIO2",
+            "evidence": "rp-bank0-p19",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "USB VBUS EN",
+            "group": "USB",
+            "signal": "USB VBUS EN",
+            "evidence": "rp-bank0-p19",
+            "alt": 10,
+            "selector": "F10"
+          },
+          {
+            "name": "UART1 TX",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "rp-bank0-p19",
+            "alt": 11,
+            "selector": "F11"
+          },
+          {
+            "name": "ADC0",
+            "group": "ADC",
+            "signal": "ADC0",
+            "evidence": "pico2-physical"
+          }
+        ],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 32,
+        "name": "GP27",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 TX",
+            "group": "SPI",
+            "signal": "SPI1 TX",
+            "evidence": "rp-bank0-p19",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 RTS",
+            "group": "UART",
+            "signal": "UART1 RTS",
+            "evidence": "rp-bank0-p19",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SCL",
+            "group": "I2C",
+            "signal": "I2C1 SCL",
+            "evidence": "rp-bank0-p19",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM5 B",
+            "group": "PWM",
+            "signal": "PWM5 B",
+            "evidence": "rp-bank0-p19",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp-bank0-p19",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp-bank0-p19",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp-bank0-p19",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "PIO2",
+            "group": "PIO",
+            "signal": "PIO2",
+            "evidence": "rp-bank0-p19",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "USB OVCUR DET",
+            "group": "USB",
+            "signal": "USB OVCUR DET",
+            "evidence": "rp-bank0-p19",
+            "alt": 10,
+            "selector": "F10"
+          },
+          {
+            "name": "UART1 RX",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "rp-bank0-p19",
+            "alt": 11,
+            "selector": "F11"
+          },
+          {
+            "name": "ADC1",
+            "group": "ADC",
+            "signal": "ADC1",
+            "evidence": "pico2-physical"
+          }
+        ],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 33,
+        "name": "AGND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pico2-physical",
+          "pico2-supply"
+        ]
+      },
+      {
+        "number": 34,
+        "name": "GP28",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 RX",
+            "group": "SPI",
+            "signal": "SPI1 RX",
+            "evidence": "rp-bank0-p19",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 TX",
+            "group": "UART",
+            "signal": "UART0 TX",
+            "evidence": "rp-bank0-p19",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SDA",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "rp-bank0-p19",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM6 A",
+            "group": "PWM",
+            "signal": "PWM6 A",
+            "evidence": "rp-bank0-p19",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp-bank0-p19",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp-bank0-p19",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp-bank0-p19",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "PIO2",
+            "group": "PIO",
+            "signal": "PIO2",
+            "evidence": "rp-bank0-p19",
+            "alt": 8,
+            "selector": "F8"
+          },
+          {
+            "name": "USB VBUS DET",
+            "group": "USB",
+            "signal": "USB VBUS DET",
+            "evidence": "rp-bank0-p19",
+            "alt": 10,
+            "selector": "F10"
+          },
+          {
+            "name": "ADC2",
+            "group": "ADC",
+            "signal": "ADC2",
+            "evidence": "pico2-physical"
+          }
+        ],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 35,
+        "name": "ADC_VREF",
+        "type": "ADC",
+        "functions": [],
+        "evidence": [
+          "pico2-physical",
+          "pico2-supply"
+        ]
+      },
+      {
+        "number": 36,
+        "name": "3V3(OUT)",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "pico2-physical",
+          "pico2-supply"
+        ]
+      },
+      {
+        "number": 37,
+        "name": "3V3_EN",
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "pico2-physical",
+          "pico2-supply"
+        ]
+      },
+      {
+        "number": 38,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pico2-physical"
+        ]
+      },
+      {
+        "number": 39,
+        "name": "VSYS",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "pico2-physical",
+          "pico2-supply"
+        ]
+      },
+      {
+        "number": 40,
+        "name": "VBUS",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "pico2-physical",
+          "pico2-supply"
+        ]
+      }
+    ]
+  },
+  {
+    "family": "Raspberry Pi",
+    "voltage": "3.3 V I/O",
+    "verifiedOn": "2026-11-04",
+    "id": "raspberry-pi-40",
+    "name": "Raspberry Pi · 40-pin GPIO",
+    "shortName": "40-pin GPIO (common)",
+    "subtitle": "Common physical layout · model-specific alternate functions excluded",
+    "layout": "header",
+    "scopeKey": "commonHeaderScope",
+    "packagePins": 40,
+    "gpioCount": 28,
+    "reservedGPIOCount": 2,
+    "mcu": "Common GPIO",
+    "source": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc",
+    "datasheet": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc",
+    "searchTerms": "Pi B+ A+ Pi 2 Pi 3 Pi 4 Pi 5 Zero Zero W Zero 2 W 400 500",
+    "pins": [
+      {
+        "number": 1,
+        "name": "3V3",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 2,
+        "name": "5V",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 3,
+        "name": "GPIO2",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 4,
+        "name": "5V",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 5,
+        "name": "GPIO3",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 6,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 7,
+        "name": "GPIO4",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 8,
+        "name": "GPIO14",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 9,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 10,
+        "name": "GPIO15",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 11,
+        "name": "GPIO17",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 12,
+        "name": "GPIO18",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 13,
+        "name": "GPIO27",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 14,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 15,
+        "name": "GPIO22",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 16,
+        "name": "GPIO23",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 17,
+        "name": "3V3",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 18,
+        "name": "GPIO24",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 19,
+        "name": "GPIO10",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 20,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 21,
+        "name": "GPIO9",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 22,
+        "name": "GPIO25",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 23,
+        "name": "GPIO11",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 24,
+        "name": "GPIO8",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 25,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 26,
+        "name": "GPIO7",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 27,
+        "name": "GPIO0",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ],
+        "note": "Reserved for HAT identification EEPROM.",
+        "reserved": true
+      },
+      {
+        "number": 28,
+        "name": "GPIO1",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ],
+        "note": "Reserved for HAT identification EEPROM.",
+        "reserved": true
+      },
+      {
+        "number": 29,
+        "name": "GPIO5",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 30,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 31,
+        "name": "GPIO6",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 32,
+        "name": "GPIO12",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 33,
+        "name": "GPIO13",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 34,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 35,
+        "name": "GPIO19",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 36,
+        "name": "GPIO16",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 37,
+        "name": "GPIO26",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 38,
+        "name": "GPIO20",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 39,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      },
+      {
+        "number": 40,
+        "name": "GPIO21",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc"
+        ]
+      }
+    ]
+  },
+  {
+    "family": "Raspberry Pi",
     "voltage": "1.8–3.3 V I/O",
-    "verifiedOn": "2026-11-03",
+    "verifiedOn": "2026-11-04",
     "id": "rp2350a",
     "name": "RP2350A",
     "subtitle": "QFN-60 · RP2350 · Release 8",
@@ -7735,7 +14950,7 @@
   {
     "family": "Raspberry Pi",
     "voltage": "1.8–3.3 V I/O",
-    "verifiedOn": "2026-11-03",
+    "verifiedOn": "2026-11-04",
     "id": "rp2350b",
     "name": "RP2350B",
     "subtitle": "QFN-80 · RP2350 · Release 8",

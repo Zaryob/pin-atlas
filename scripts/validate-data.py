@@ -10,7 +10,7 @@ refs=evidence['references'];docids={d['id'] for d in manifest['documents']}
 for r in refs.values():
     assert r['document'] in docids
     host=urlsplit(r['url']).hostname
-    assert host in {'pip-assets.raspberrypi.com','github.com'},host
+    assert host in {'pip-assets.raspberrypi.com','datasheets.raspberrypi.com','github.com'},host
     if host=='github.com':assert '/raspberrypi/documentation/' in r['url']
 for b in boards:
     assert len(b['pins'])==b['packagePins']
@@ -36,4 +36,15 @@ assert any(f['signal']=='PWM0_0' and f['alt']==0 for f in lookup['raspberry-pi-4
 assert any(f['signal']=='PWM0_1' and f['alt']==0 for f in lookup['raspberry-pi-4'][33]['functions'])
 assert sum(len(b['pins']) for b in boards)==report['physicalPins']
 assert sum(len(p['functions']) for b in boards for p in b['pins'])==report['functionAssignments']
+# Model families share physical positions, but not their processor function sets.
+for id in ('pico','picow','pico2'):
+    assert [p['name'] for p in lookup[id].values()]==[p['name'] for p in lookup['pico2w'].values()]
+    assert lookup[id][31]['functions'][-1]['name']=='ADC0'
+for id in ('pico','picow'):
+    assert not any(f['group'] in {'HSTX','QMI'} or f['name']=='PIO2' for p in lookup[id].values() for f in p['functions'])
+    assert any(f['name']=='USB OVCUR DET' and f['selector']=='F9' for f in lookup[id][1]['functions'])
+assert any(f['name']=='USB OVCUR DET' and f['selector']=='F10' for f in lookup['pico2'][1]['functions'])
+assert [p['name'] for p in lookup['raspberry-pi-40'].values()]==[p['name'] for p in lookup['raspberry-pi-4'].values()]
+assert all(not p['functions'] for p in lookup['raspberry-pi-40'].values())
+assert all(lookup['raspberry-pi-40'][n]['reserved'] for n in (27,28))
 print(f"Checked {report['physicalPins']} pins, {report['functionAssignments']} function references and model-specific corner cases.")

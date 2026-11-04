@@ -48,6 +48,38 @@
       "url": "https://raw.githubusercontent.com/raspberrypi/documentation/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc",
       "viewUrl": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc",
       "sha256": "2c6d14324ae8e4972b63e93d7e653c7117189ec9f061d033631a99bf3ca2519f"
+    },
+    {
+      "id": "rp2040",
+      "title": "RP2040 Datasheet",
+      "revision": "2025-02-20 build",
+      "file": "rp2040.pdf",
+      "url": "https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf",
+      "sha256": "be56fbb75ba0ae9e26558a73c93ac3e75c2ad4e6878d3b6703de2a76d886ea8c"
+    },
+    {
+      "id": "pico",
+      "title": "Raspberry Pi Pico Datasheet",
+      "revision": "Release 21 · 2026-07-03",
+      "file": "pico.pdf",
+      "url": "https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf",
+      "sha256": "757ff485227493b9fcc0c2c96c4dea9de020e1d8b2b11e2aa4f9ee8b25aa89eb"
+    },
+    {
+      "id": "picow",
+      "title": "Raspberry Pi Pico W Datasheet",
+      "revision": "Release 7 · 2026-07-03",
+      "file": "picow.pdf",
+      "url": "https://datasheets.raspberrypi.com/picow/pico-w-datasheet.pdf",
+      "sha256": "ba8649ba98437301b9f1621504569a27f1d2ba6111795b4df76783adb08de7c5"
+    },
+    {
+      "id": "pico2",
+      "title": "Raspberry Pi Pico 2 Datasheet",
+      "revision": "Release 5 · 2026-07-03",
+      "file": "pico2.pdf",
+      "url": "https://datasheets.raspberrypi.com/pico/pico-2-datasheet.pdf",
+      "sha256": "cbcfaf881018c686495a2e53c7bd281e7e0a8217d79447d73eda7c8f74b7f675"
     }
   ],
   "references": {
@@ -185,6 +217,70 @@
       "url": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008248-DS-1-bcm2711-peripherals.pdf#page=79",
       "page": 79,
       "locator": "§5.3 · Table 94 · GPIO alternate function ALT0–ALT5",
+      "method": "pdf-table"
+    },
+    "rp2040-bank0-p13": {
+      "document": "rp2040",
+      "title": "RP2040 Datasheet",
+      "url": "https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf#page=13",
+      "page": 13,
+      "locator": "§1.4.3 · Table 2 · Bank 0 function selectors F1–F9",
+      "method": "pdf-table"
+    },
+    "rp2040-bank0-p14": {
+      "document": "rp2040",
+      "title": "RP2040 Datasheet",
+      "url": "https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf#page=14",
+      "page": 14,
+      "locator": "§1.4.3 · Table 2 · Bank 0 function selectors F1–F9",
+      "method": "pdf-table"
+    },
+    "pico-physical": {
+      "document": "pico",
+      "title": "Raspberry Pi Pico Datasheet",
+      "url": "https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf#page=5",
+      "page": 5,
+      "locator": "Figure 2 · 40-pin physical labels and ADC0/1/2 visually checked",
+      "method": "visual-diagram"
+    },
+    "pico-supply": {
+      "document": "pico",
+      "title": "Raspberry Pi Pico Datasheet",
+      "url": "https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf#page=8",
+      "page": 8,
+      "locator": "§2.1 · special supply / analogue / RUN pins",
+      "method": "pdf-table"
+    },
+    "picow-physical": {
+      "document": "picow",
+      "title": "Raspberry Pi Pico W Datasheet",
+      "url": "https://datasheets.raspberrypi.com/picow/pico-w-datasheet.pdf#page=5",
+      "page": 5,
+      "locator": "Figure 2 · 40-pin physical labels and ADC0/1/2 visually checked",
+      "method": "visual-diagram"
+    },
+    "picow-supply": {
+      "document": "picow",
+      "title": "Raspberry Pi Pico W Datasheet",
+      "url": "https://datasheets.raspberrypi.com/picow/pico-w-datasheet.pdf#page=9",
+      "page": 9,
+      "locator": "§2.1 · special supply / analogue / RUN pins",
+      "method": "pdf-table"
+    },
+    "pico2-physical": {
+      "document": "pico2",
+      "title": "Raspberry Pi Pico 2 Datasheet",
+      "url": "https://datasheets.raspberrypi.com/pico/pico-2-datasheet.pdf#page=5",
+      "page": 5,
+      "locator": "Figure 2 · 40-pin physical labels and ADC0/1/2 visually checked",
+      "method": "visual-diagram"
+    },
+    "pico2-supply": {
+      "document": "pico2",
+      "title": "Raspberry Pi Pico 2 Datasheet",
+      "url": "https://datasheets.raspberrypi.com/pico/pico-2-datasheet.pdf#page=9",
+      "page": 9,
+      "locator": "§2.1 · special supply / analogue / RUN pins",
       "method": "pdf-table"
     }
   }

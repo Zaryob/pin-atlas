@@ -1,7 +1,7 @@
 {
-  "verifiedOn": "2026-11-03",
-  "physicalPins": 220,
-  "functionAssignments": 1310,
+  "verifiedOn": "2026-11-04",
+  "physicalPins": 380,
+  "functionAssignments": 2011,
   "documents": [
     {
       "id": "rp2350",
@@ -45,6 +45,34 @@
       "url": "https://raw.githubusercontent.com/raspberrypi/documentation/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc",
       "viewUrl": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc",
       "sha256": "2c6d14324ae8e4972b63e93d7e653c7117189ec9f061d033631a99bf3ca2519f"
+    },
+    {
+      "id": "rp2040",
+      "title": "RP2040 Datasheet",
+      "revision": "2025-02-20 build",
+      "url": "https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf",
+      "sha256": "be56fbb75ba0ae9e26558a73c93ac3e75c2ad4e6878d3b6703de2a76d886ea8c"
+    },
+    {
+      "id": "pico",
+      "title": "Raspberry Pi Pico Datasheet",
+      "revision": "Release 21 · 2026-07-03",
+      "url": "https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf",
+      "sha256": "757ff485227493b9fcc0c2c96c4dea9de020e1d8b2b11e2aa4f9ee8b25aa89eb"
+    },
+    {
+      "id": "picow",
+      "title": "Raspberry Pi Pico W Datasheet",
+      "revision": "Release 7 · 2026-07-03",
+      "url": "https://datasheets.raspberrypi.com/picow/pico-w-datasheet.pdf",
+      "sha256": "ba8649ba98437301b9f1621504569a27f1d2ba6111795b4df76783adb08de7c5"
+    },
+    {
+      "id": "pico2",
+      "title": "Raspberry Pi Pico 2 Datasheet",
+      "revision": "Release 5 · 2026-07-03",
+      "url": "https://datasheets.raspberrypi.com/pico/pico-2-datasheet.pdf",
+      "sha256": "cbcfaf881018c686495a2e53c7bd281e7e0a8217d79447d73eda7c8f74b7f675"
     }
   ],
   "boards": [
@@ -64,6 +92,41 @@
       "physicalSourceMethods": [
         "manufacturer-source-table",
         "schematic-net-labels+visual-power"
+      ]
+    },
+    {
+      "id": "pico",
+      "physicalPins": 40,
+      "functionAssignments": 214,
+      "physicalSourceMethods": [
+        "pdf-table",
+        "visual-diagram"
+      ]
+    },
+    {
+      "id": "picow",
+      "physicalPins": 40,
+      "functionAssignments": 214,
+      "physicalSourceMethods": [
+        "pdf-table",
+        "visual-diagram"
+      ]
+    },
+    {
+      "id": "pico2",
+      "physicalPins": 40,
+      "functionAssignments": 273,
+      "physicalSourceMethods": [
+        "pdf-table",
+        "visual-diagram"
+      ]
+    },
+    {
+      "id": "raspberry-pi-40",
+      "physicalPins": 40,
+      "functionAssignments": 0,
+      "physicalSourceMethods": [
+        "manufacturer-source-table"
       ]
     },
     {
@@ -88,6 +151,7 @@
   "qualifications": [
     "Figure-only Pico physical labels were visually checked; they are not machine-readable PDF table cells.",
     "The QFN-60 IOVDD discrepancy in RP2350 Release 8 Table 1679 is resolved using Figures 2 and 152.",
-    "Raspberry Pi alternate functions apply specifically to the Pi 4 BCM2711. Pins 27/28 are reserved for the HAT EEPROM."
+    "The common Raspberry Pi 40-pin profile contains physical connections only; Pi 4 BCM2711 alternate functions remain in a separate model-specific profile. Pins 27/28 are reserved for the HAT EEPROM.",
+    "Pico and Pico W use independently extracted RP2040 functions, not RP2350 selectors. Pico 2 and Pico 2 W use RP2350A functions."
   ]
 }

@@ -1,6 +1,26 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
 (() => {
   const messages = {
+    "diagramOptions": ["Harita görünüm seçenekleri", "Diagram options"],
+    "chooseBoard": ["Kart seç", "Choose board"],
+    "pinAndPlan": ["Pin ve bağlantı planı", "Pin and wiring plan"],
+    "backToMap": ["Haritaya dön", "Back to map"],
+    "import": ["İçe aktar", "Import"],
+    "allFunctions": ["Diğer işlevler ({count})", "More functions ({count})"],
+    "matchingFunctions": ["Filtreye uyan işlevler önce gösterilir. Kaydetmeden önce işlevi seç.", "Matching functions appear first. Choose a function before saving."],
+    "selectPin": ["Pin {pin} · {name} detaylarını aç", "Open details for pin {pin} · {name}"],
+    "details": ["Detaylar", "Details"],
+    "picoFamily": ["Pico ailesi", "Pico family"],
+    "piHeaders": ["Raspberry Pi başlıkları", "Raspberry Pi headers"],
+    "chips": ["Mikrodenetleyiciler", "Microcontrollers"],
+    "board.pico": ["RP2040 · 40-pin geliştirme kartı", "RP2040 · 40-pin development board"],
+    "board.picow": ["RP2040 · Wi-Fi + Bluetooth", "RP2040 · Wi-Fi + Bluetooth"],
+    "board.pico2": ["RP2350A · 40-pin geliştirme kartı", "RP2350A · 40-pin development board"],
+    "board.raspberry-pi-40": ["Ortak 40-pin GPIO · B+ ve sonrası / Zero", "Common 40-pin GPIO · B+ and later / Zero"],
+    "commonHeaderScope": ["B+, A+, Pi 2/3/4/5, Zero ailesi ve 400/500 için ortak fiziksel bağlantılar. Bazı Zero modellerinde başlık lehimli değildir. 26-pin kartlar ve Compute Module dahil değildir. Alternatif işlevler işlemciye bağlıdır; bu profil yalnızca GPIO, güç ve toprağı gösterir. Pi 4 işlevleri için Pi 4 profilini seç.", "Shared physical connections for B+, A+, Pi 2/3/4/5, the Zero family and 400/500. Some Zero models have an unpopulated header. Excludes 26-pin boards and Compute Modules. Alternate functions depend on the processor; this profile shows GPIO, power and ground only. Select the Pi 4 profile for its alternate functions."],
+    "pi4Scope": ["Fiziksel 40-pin düzeni birçok Raspberry Pi ile ortaktır. Buradaki alternatif işlevler yalnızca BCM2711 (Pi 4) içindir.", "The physical 40-pin layout is shared with many Raspberry Pi models. Alternate functions here apply specifically to BCM2711 (Pi 4)."],
+    "wired": ["Kablosuz bağlantı yok", "No wireless"],
+    "catalogScope": ["İşlemciye özgü işlevler için model seç veya ortak Raspberry Pi 40-pin düzenini aç.", "Choose a model for processor-specific functions, or the common Raspberry Pi 40-pin layout."],
     "homeLabel": ["Zaryob ana sayfa", "Zaryob home"],
     "switchProject": ["Proje değiştir", "Switch project"],
     "projectsLabel": ["Zaryob projeleri", "Zaryob projects"],
@@ -48,7 +68,7 @@
     "bottomView": ["ALT GÖRÜNÜM (AYNALI)", "BOTTOM VIEW (MIRRORED)"],
     "noMatch": ["Bu aramayla eşleşen pin yok.", "No pins match this search."],
     "clickPin": ["Detayları görmek için bir pine tıkla.", "Click a pin to see its details."],
-    "tapPin": ["Haritayı kaydır; bir pine dokun.", "Scroll the map and tap a pin."],
+    "tapPin": ["Haritayı kaydır; bir pine dokun.", "Scroll sideways for functions; tap a pin."],
     "power": ["Güç", "Power"],
     "system": ["Sistem", "System"],
     "physicalNumbers": ["Fiziksel pin numaraları", "Physical pin numbers"],
@@ -142,7 +162,7 @@
     "emptyPlanHint": ["Bir sonraki projen burada başlasın.", "Add it here to start your plan."],
     "duplicateSignal": ["{name}, pin {pin} üzerinde planlanmış. Önce o atamayı kaldır.", "{name} is already assigned to pin {pin}. Remove that assignment first."],
     "pinSaved": ["Pin bağlantı planına kaydedildi.", "Pin saved to the wiring plan."],
-    "noBoard": ["Henüz bu kart yok. STM32 ailesi sonraki sürümler için sırada.", "No matching board. STM32 boards are planned for a future release."],
+    "noBoard": ["Henüz bu kart yok. STM32 ailesi sonraki sürümler için sırada.", "No matching board. Try a model, processor, or family name."],
     "linkTooLong": ["Paylaşım bağlantısı çok uzun.", "The share link is too long."],
     "planLinkCopied": ["Plan bağlantısı kopyalandı.", "Plan link copied."],
     "unsupportedFormat": ["Bu plan biçimi desteklenmiyor.", "This plan format is unsupported."],
@@ -171,7 +191,7 @@
   const supported = ['tr', 'en'];
   const storageKey = 'zaryob-language';
   const query = new URLSearchParams(location.search).get('lang');
-  let language = 'tr';
+  let language = 'en';
   try {
     const saved = localStorage.getItem(storageKey);
     if (supported.includes(saved)) language = saved;
@@ -183,7 +203,7 @@
     const message = Object.hasOwn(messages, key) ? messages[key][language === 'en' ? 1 : 0] : fallback;
     return message.replace(/\{(\w+)\}/g, (placeholder, name) => values[name] ?? placeholder);
   };
-  const verificationUrl = () => `https://github.com/Zaryob/pin-atlas/blob/main/docs/VERIFICATION${language === 'en' ? '.en' : ''}.md`;
+  const verificationUrl = () => `https://github.com/Zaryob/pin-atlas/blob/main/docs/VERIFICATION${language === 'tr' ? '.tr' : ''}.md`;
   function apply(root = document) {
     root.querySelectorAll('[data-i18n]').forEach(node => { node.textContent = t(node.dataset.i18n); });
     for (const attribute of ['aria-label', 'placeholder', 'title', 'content']) {

@@ -133,6 +133,41 @@ def pico(bank0):
             assert re.search(r'PIN'+str(number)+r'\s+'+re.escape(name),text), (number,name)
     return pins
 
+def rp2040_functions():
+    bank0={}
+    with pdfplumber.open(CACHE/'rp2040.pdf') as pdf:
+        for index in (12,13):
+            for table in pdf.pages[index].extract_tables():
+                if len(table[0])!=10:continue
+                for row in table:
+                    if not (row[0] or '').isdigit():continue
+                    gp=int(row[0]);assert gp not in bank0
+                    evidence=ref(f'rp2040-bank0-p{index+1}','rp2040',index+1,'§1.4.3 · Table 2 · Bank 0 function selectors F1–F9')
+                    bank0[gp]=[function(clean(value),alt,evidence) for alt,value in enumerate(row[1:],1) if clean(value)]
+        assert set(bank0)==set(range(30))
+    return bank0
+
+def pico_variant(id,bank0):
+    observation=OBS[id]
+    physical=ref(id+'-physical',id,5,'Figure 2 · 40-pin physical labels and ADC0/1/2 visually checked','visual-diagram')
+    special_page={'pico':8,'picow':9,'pico2':9}[id]
+    details=ref(id+'-supply',id,special_page,'§2.1 · special supply / analogue / RUN pins')
+    pins=[]
+    # These observations are independent reviews of each model's own figure.
+    assert len(observation['pins'])==40
+    with pdfplumber.open(CACHE/DOCS[id]['file']) as pdf:
+        text='\n'.join(p.extract_text() for p in pdf.pages[special_page-1:special_page+1])
+        for n,name in [(40,'VBUS'),(39,'VSYS'),(37,'3V3_EN'),(36,'3V3'),(35,'ADC_VREF'),(33,'AGND'),(30,'RUN')]:
+            assert re.search(r'PIN'+str(n)+r'\s+'+re.escape(name),text),(id,n,name)
+    for n,name in enumerate(observation['pins'],1):
+        fs=[];ev=[physical]
+        if re.fullmatch(r'GP\d+',name):
+            gp=int(name[2:]);fs=copy.deepcopy(bank0[gp])
+            if 26<=gp<=28:fs.append(function('ADC'+str(gp-26),None,physical))
+        if n in (30,33,35,36,37,39,40):ev.append(details)
+        pins.append({'number':n,'name':name,'type':kind(name),'functions':fs,'evidence':ev})
+    return pins
+
 def pi4():
     source=(CACHE/'pi-gpio.adoc').read_text()
     table=source.split('.Pin names, types, and typical functions',1)[1].split('|===')[1]
@@ -187,15 +222,24 @@ def parse_pi_row(row,pins):
 def build():
     bank0,packages=rp_tables()
     board_base={'family':'Raspberry Pi','voltage':'3.3 V I/O','verifiedOn':MANIFEST['verifiedOn']}
-    boards=[{**board_base,'id':'pico2w','name':'Raspberry Pi Pico 2 W','shortName':'Pico 2 W','subtitle':'RP2350A · 40-pin geliştirme kartı','layout':'pico','packagePins':40,'gpioCount':26,'mcu':'RP2350A','processor':'Cortex-M33 / Hazard3','clock':'150 MHz','source':DOCS['pico2w-pinout']['url'],'datasheet':DOCS['pico2w']['url'],'pins':pico(bank0)},
-        {**board_base,'id':'raspberry-pi-4','name':'Raspberry Pi 4 Model B','shortName':'Pi 4 Model B','subtitle':'J8 · 40 pin · BCM2711 alternatif işlevleri','layout':'header','packagePins':40,'gpioCount':28,'reservedGPIOCount':2,'mcu':'BCM2711','processor':'BCM2711','clock':'BCM numaralandırma','source':DOCS['pi4-schematic']['url'],'datasheet':DOCS['bcm2711']['url'],'pins':pi4()}]
+    boards=[{**board_base,'id':'pico2w','name':'Raspberry Pi Pico 2 W','shortName':'Pico 2 W','subtitle':'RP2350A · 40-pin geliştirme kartı','layout':'pico','packagePins':40,'gpioCount':26,'mcu':'RP2350A','processor':'Cortex-M33 / Hazard3','clock':'150 MHz','wireless':True,'source':DOCS['pico2w-pinout']['url'],'datasheet':DOCS['pico2w']['url'],'pins':pico(bank0)},
+        {**board_base,'id':'raspberry-pi-4','scopeKey':'pi4Scope','name':'Raspberry Pi 4 Model B','shortName':'Pi 4 Model B','subtitle':'J8 · 40 pin · BCM2711 alternatif işlevleri','layout':'header','packagePins':40,'gpioCount':28,'reservedGPIOCount':2,'mcu':'BCM2711','processor':'BCM2711','clock':'BCM numaralandırma','source':DOCS['pi4-schematic']['url'],'datasheet':DOCS['bcm2711']['url'],'pins':pi4()}]
+    bank2040=rp2040_functions()
+    for id,name,mcu,wireless in [('pico','Pico','RP2040',False),('picow','Pico W','RP2040',True),('pico2','Pico 2','RP2350A',False)]:
+        boards.append({**board_base,'id':id,'name':'Raspberry Pi '+name,'shortName':name,'subtitle':mcu+' · 40-pin development board','layout':'pico','packagePins':40,'gpioCount':26,'mcu':mcu,'processor':'Cortex-M0+' if mcu=='RP2040' else 'Cortex-M33 / Hazard3','clock':'133 MHz' if mcu=='RP2040' else '150 MHz','wireless':wireless,'source':DOCS[id]['url']+'#page=5','datasheet':DOCS[id]['url'],'pins':pico_variant(id,bank2040 if mcu=='RP2040' else bank0)})
+    common_pins=copy.deepcopy(boards[1]['pins'])
+    for pin in common_pins:
+        pin['functions']=[]
+        pin['evidence']=['pi-header-doc']
+        if pin.get('reserved'):pin['note']='Reserved for HAT identification EEPROM.'
+    boards.append({**board_base,'id':'raspberry-pi-40','name':'Raspberry Pi · 40-pin GPIO','shortName':'40-pin GPIO (common)','subtitle':'Common physical layout · model-specific alternate functions excluded','layout':'header','scopeKey':'commonHeaderScope','packagePins':40,'gpioCount':28,'reservedGPIOCount':2,'mcu':'Common GPIO','source':DOCS['pi-gpio']['viewUrl'],'datasheet':DOCS['pi-gpio']['viewUrl'],'searchTerms':'Pi B+ A+ Pi 2 Pi 3 Pi 4 Pi 5 Zero Zero W Zero 2 W 400 500','pins':common_pins})
     for total,chip in [(60,'rp2350a'),(80,'rp2350b')]:
         boards.append({**board_base,'id':chip,'name':chip.upper(),'family':'Raspberry Pi','subtitle':f'QFN-{total} · RP2350 · Release 8','layout':'qfn','packagePins':total,'gpioCount':30 if total==60 else 48,'voltage':'1.8–3.3 V I/O','mcu':chip.upper(),'processor':'Cortex-M33 / Hazard3','clock':'150 MHz','source':DOCS['rp2350']['url']+f'#page={16 if total==60 else 17}','datasheet':DOCS['rp2350']['url'],'pins':[packages[total][n] for n in sorted(packages[total])]})
     return boards
 
 def outputs(boards):
     physical=sum(len(b['pins']) for b in boards);functions=sum(len(p['functions']) for b in boards for p in b['pins'])
-    report={'verifiedOn':MANIFEST['verifiedOn'],'physicalPins':physical,'functionAssignments':functions,'documents':[{k:v for k,v in d.items() if k!='file'} for d in DOCS.values()], 'boards':[{'id':b['id'],'physicalPins':len(b['pins']),'functionAssignments':sum(len(p['functions']) for p in b['pins']),'physicalSourceMethods':sorted({REFS[r]['method'] for p in b['pins'] for r in p['evidence']})} for b in boards], 'qualifications':['Figure-only Pico physical labels were visually checked; they are not machine-readable PDF table cells.','The QFN-60 IOVDD discrepancy in RP2350 Release 8 Table 1679 is resolved using Figures 2 and 152.','Raspberry Pi alternate functions apply specifically to the Pi 4 BCM2711. Pins 27/28 are reserved for the HAT EEPROM.']}
+    report={'verifiedOn':MANIFEST['verifiedOn'],'physicalPins':physical,'functionAssignments':functions,'documents':[{k:v for k,v in d.items() if k!='file'} for d in DOCS.values()], 'boards':[{'id':b['id'],'physicalPins':len(b['pins']),'functionAssignments':sum(len(p['functions']) for p in b['pins']),'physicalSourceMethods':sorted({REFS[r]['method'] for p in b['pins'] for r in p['evidence']})} for b in boards], 'qualifications':['Figure-only Pico physical labels were visually checked; they are not machine-readable PDF table cells.','The QFN-60 IOVDD discrepancy in RP2350 Release 8 Table 1679 is resolved using Figures 2 and 152.','The common Raspberry Pi 40-pin profile contains physical connections only; Pi 4 BCM2711 alternate functions remain in a separate model-specific profile. Pins 27/28 are reserved for the HAT EEPROM.', 'Pico and Pico W use independently extracted RP2040 functions, not RP2350 selectors. Pico 2 and Pico 2 W use RP2350A functions.']}
     buf=io.StringIO();writer=csv.writer(buf,lineterminator='\n');writer.writerow(['board','physical_pin','pin_name','pin_type','function','selector','manufacturer_signal','physical_evidence','function_evidence'])
     for b in boards:
         for p in b['pins']:
