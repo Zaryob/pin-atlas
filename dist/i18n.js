@@ -1,6 +1,17 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
 (() => {
   const messages = {
+    "familyRaspberryPi": ["Raspberry Pi", "Raspberry Pi"],
+    "familyArduino": ["Arduino", "Arduino"],
+    "familyEspressif": ["Espressif", "Espressif"],
+    "familyStm32": ["STM32", "STM32"],
+    "familyMicrochip": ["Microchip AVR", "Microchip AVR"],
+    "familyNvidia": ["NVIDIA", "NVIDIA"],
+    "atmega328pSubtitle": ["8-bit AVR · 28/32-pin mikrodenetleyici", "8-bit AVR · 28/32-pin bare MCU"],
+    "rp2350Subtitle": ["Dual Cortex-M33 / Hazard3 · bare MCU", "Dual Cortex-M33 / Hazard3 · bare MCU"],
+    "packageVariant": ["Paket:", "Package:"],
+    "packageCount": ["{count} paket", "{count} packages"],
+    "packagesHeading": ["paket seçenekleri", "package variants"],
     "compatibleDevices": ["Uyumlu işlemciler", "Compatible devices"],
     "activeReference": ["Açık referans", "Active reference"],
     "viewModelIndex": ["İndeksi aç", "View index"],

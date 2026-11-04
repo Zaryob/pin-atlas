@@ -154,7 +154,9 @@ function renderFunctionReference() {
  $('#function-reference').innerHTML = choices.map(choice => `<option value="${choice.id}" ${choice.id === board.id ? 'selected' : ''}>${esc(choice.label)}</option>`).join('');
 }
 function renderNav() {
- $('#board-nav').innerHTML = ['layouts','chips'].map(group => {
+ const nav = $('#board-nav');
+ if (!nav) return;
+ nav.innerHTML = ['layouts','chips'].map(group => {
    const entries = layouts.filter(item => (isChip(item) ? 'chips' : 'layouts') === group);
    return `<div class="nav-section">${t(group)}</div>${entries.map(item => `<button class="board-nav-item ${item.id === layout.id ? 'active' : ''}" data-layout="${item.id}" ${item.id === layout.id ? 'aria-current="page"' : ''}>${icon(isChip(item) ? 'chip' : 'board')}<span>${esc(layoutTitle(item))}<small>${esc(layoutSubtitle(item))}</small></span></button>`).join('')}`;
  }).join('');
@@ -388,25 +390,230 @@ function addToPlan() {
    $('#add-plan').focus({ preventScroll: true });
  }
 }
-function showCatalog() { $('#catalog-search').value=''; renderCatalog(); $('#library-dialog').showModal(); }
+const boardFamilies = [
+  {
+    id: 'raspberry-pi',
+    nameKey: 'familyRaspberryPi',
+    items: [
+      { type: 'layout', id: 'pico-family' },
+      { type: 'layout', id: 'raspberry-pi-40' },
+      {
+        type: 'package-group',
+        id: 'rp2350',
+        name: 'RP2350',
+        subtitleKey: 'rp2350Subtitle',
+        defaultLayout: 'rp2350a',
+        packages: [
+          { id: 'rp2350a', label: 'QFN-60' },
+          { id: 'rp2350b', label: 'QFN-80' }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'arduino',
+    nameKey: 'familyArduino',
+    items: [
+      { type: 'layout', id: 'arduino-uno' },
+      { type: 'layout', id: 'arduino-nano' },
+      { type: 'layout', id: 'arduino-mega-2560' },
+      { type: 'layout', id: 'arduino-micro' }
+    ]
+  },
+  {
+    id: 'espressif',
+    nameKey: 'familyEspressif',
+    items: [
+      { type: 'layout', id: 'esp32-devkitc-v4' },
+      { type: 'layout', id: 'esp32-s3-devkitc-1' },
+      { type: 'layout', id: 'esp32-c3-devkitm-1' }
+    ]
+  },
+  {
+    id: 'stm32',
+    nameKey: 'familyStm32',
+    items: [
+      { type: 'layout', id: 'blue-pill' },
+      { type: 'layout', id: 'stm32f103c8t6' }
+    ]
+  },
+  {
+    id: 'microchip',
+    nameKey: 'familyMicrochip',
+    items: [
+      {
+        type: 'package-group',
+        id: 'atmega328p',
+        name: 'ATmega328P',
+        subtitleKey: 'atmega328pSubtitle',
+        defaultLayout: 'atmega328p-pdip28',
+        packages: [
+          { id: 'atmega328p-pdip28', label: 'PDIP-28' },
+          { id: 'atmega328p-tqfp32', label: 'TQFP-32' },
+          { id: 'atmega328p-qfn32', label: 'QFN-32' },
+          { id: 'atmega328p-qfn28', label: 'QFN-28' }
+        ]
+      },
+      { type: 'layout', id: 'atmega2560-tqfp100' }
+    ]
+  },
+  {
+    id: 'nvidia',
+    nameKey: 'familyNvidia',
+    items: [
+      { type: 'layout', id: 'jetson-orin-nano' }
+    ]
+  }
+];
+
+function showCatalog() {
+  $('#catalog-search').value = '';
+  renderCatalog();
+  $('#library-dialog').showModal();
+  $('#catalog-search').focus();
+}
+
 function renderCatalog() {
- const query = $('#catalog-search').value.toLocaleLowerCase().trim();
- const rows = layouts.flatMap(item => {
-   if (query) {
-     const models = filterCompatibleModels(compatibleModels(item), query, model => `${model.name} ${model.id}`);
-     if (models.length) return models.map(model => ({
-       item, profile: model.profileId, name: model.name, detail: model.detailKey ? t(model.detailKey) : model.detail
-     }));
-     const familyText = [layoutTitle(item), layoutSubtitle(item), item.compatibleKey ? t(item.compatibleKey) : '',
-       ...item.profiles.map(profile => `${profile.name} ${profile.mcu} ${profile.searchTerms || ''}`)].join(' ');
-     if (!familyText.toLocaleLowerCase().includes(query)) return [];
-   }
-   return [{ item, name: layoutTitle(item), detail: item.compatibleKey ? t(item.compatibleKey) : layoutSubtitle(item) }];
- });
- rows.sort((a, b) => Number(Boolean(b.profile)) - Number(Boolean(a.profile)));
- $('#catalog-grid').innerHTML = rows.length ? rows.map(({ item, profile, name, detail }) =>
-   `<button class="catalog-card" data-layout="${esc(item.id)}"${profile ? ` data-profile="${esc(profile)}"` : ''}><b>${esc(name)}</b><small>${esc(detail)}</small></button>`
- ).join('') : `<p class="catalog-note">${t('noBoard')}</p>`;
+  const query = $('#catalog-search').value.toLocaleLowerCase().trim();
+  const grid = $('#catalog-grid');
+
+  if (!query) {
+    grid.innerHTML = `<div class="catalog-families">${boardFamilies.map(family => {
+      const cardsHtml = family.items.map(entry => {
+        if (entry.type === 'layout') {
+          const item = layouts.find(l => l.id === entry.id);
+          if (!item) return '';
+          const isActive = layout && layout.id === item.id;
+          return `<div class="catalog-card ${isActive ? 'active' : ''}" data-layout="${esc(item.id)}" role="button" tabindex="0" ${isActive ? 'aria-current="true"' : ''}>
+            <div class="catalog-card-header">
+              <b class="catalog-card-title">${esc(layoutTitle(item))}</b>
+              <span class="catalog-card-tag">${icon(isChip(item) ? 'chip' : 'board')}</span>
+            </div>
+            <small class="catalog-card-desc">${esc(item.compatibleKey ? t(item.compatibleKey) : layoutSubtitle(item))}</small>
+          </div>`;
+        } else if (entry.type === 'package-group') {
+          const isGroupActive = entry.packages.some(p => layout && layout.id === p.id);
+          const activePkg = entry.packages.find(p => layout && layout.id === p.id);
+          const activeId = activePkg ? activePkg.id : entry.defaultLayout;
+          return `<div class="catalog-card ${isGroupActive ? 'active' : ''}" data-layout="${esc(activeId)}" role="button" tabindex="0">
+            <div class="catalog-card-header">
+              <b class="catalog-card-title">${esc(entry.name)}</b>
+              <span class="catalog-card-tag"><span class="catalog-card-count">${t('packageCount', { count: entry.packages.length })}</span>${icon('chip')}</span>
+            </div>
+            <small class="catalog-card-desc">${esc(t(entry.subtitleKey))}</small>
+            <div class="catalog-packages" role="group" aria-label="${esc(entry.name)} ${esc(t('packagesHeading'))}">
+              ${entry.packages.map(p => `
+                <button type="button" class="catalog-package-btn ${layout && layout.id === p.id ? 'active' : ''}" data-layout="${esc(p.id)}" title="${esc(entry.name)} · ${esc(p.label)}" aria-label="${esc(entry.name)} ${esc(p.label)}">${esc(p.label)}</button>
+              `).join('')}
+            </div>
+          </div>`;
+        }
+        return '';
+      }).join('');
+
+      return `<section class="catalog-family">
+        <h3 class="catalog-family-title">${esc(t(family.nameKey))}</h3>
+        <div class="catalog-family-cards">${cardsHtml}</div>
+      </section>`;
+    }).join('')}</div>`;
+    return;
+  }
+
+  const matches = [];
+
+  for (const family of boardFamilies) {
+    for (const entry of family.items) {
+      if (entry.type === 'package-group') {
+        const groupText = `${entry.name} ${t(entry.subtitleKey)} ${entry.packages.map(p => `${p.label} ${p.id}`).join(' ')}`.toLocaleLowerCase();
+        if (groupText.includes(query)) {
+          const matchedPkgs = entry.packages.filter(p => `${p.label} ${p.id}`.toLocaleLowerCase().includes(query));
+          if (matchedPkgs.length && matchedPkgs.length < entry.packages.length) {
+            for (const p of matchedPkgs) {
+              const pkgLayout = layouts.find(l => l.id === p.id);
+              matches.push({
+                id: p.id,
+                name: `${entry.name} (${p.label})`,
+                detail: pkgLayout ? (pkgLayout.compatibleKey ? t(pkgLayout.compatibleKey) : layoutSubtitle(pkgLayout)) : t(entry.subtitleKey),
+                isChip: true
+              });
+            }
+          } else {
+            matches.push({
+              id: entry.defaultLayout,
+              name: entry.name,
+              detail: t(entry.subtitleKey),
+              packages: entry.packages,
+              isChip: true
+            });
+          }
+        }
+      }
+    }
+  }
+
+  for (const item of layouts) {
+    const alreadyMatched = matches.some(m => m.id === item.id || (m.packages && m.packages.some(p => p.id === item.id)));
+    if (alreadyMatched) continue;
+
+    const models = filterCompatibleModels(compatibleModels(item), query, model => `${model.name} ${model.id}`);
+    if (models.length) {
+      for (const model of models) {
+        matches.push({
+          id: item.id,
+          profile: model.profileId,
+          name: model.name,
+          detail: model.detailKey ? t(model.detailKey) : model.detail,
+          isChip: isChip(item)
+        });
+      }
+    } else {
+      const familyText = [
+        layoutTitle(item),
+        layoutSubtitle(item),
+        item.compatibleKey ? t(item.compatibleKey) : '',
+        ...item.profiles.map(profile => `${profile.name} ${profile.mcu} ${profile.searchTerms || ''}`)
+      ].join(' ').toLocaleLowerCase();
+
+      if (familyText.includes(query)) {
+        matches.push({
+          id: item.id,
+          name: layoutTitle(item),
+          detail: item.compatibleKey ? t(item.compatibleKey) : layoutSubtitle(item),
+          isChip: isChip(item)
+        });
+      }
+    }
+  }
+
+  if (!matches.length) {
+    grid.innerHTML = `<p class="catalog-note">${t('noBoard')}</p>`;
+    return;
+  }
+
+  grid.innerHTML = `<div class="catalog-search-results">${matches.map(m => {
+    const isActive = layout && layout.id === m.id && (!m.profile || board.id === m.profile);
+    if (m.packages) {
+      return `<div class="catalog-card ${isActive ? 'active' : ''}" data-layout="${esc(m.id)}" role="button" tabindex="0">
+        <div class="catalog-card-header">
+          <b class="catalog-card-title">${esc(m.name)}</b>
+          <span class="catalog-card-tag"><span class="catalog-card-count">${t('packageCount', { count: m.packages.length })}</span>${icon('chip')}</span>
+        </div>
+        <small class="catalog-card-desc">${esc(m.detail)}</small>
+        <div class="catalog-packages" role="group" aria-label="${esc(m.name)} ${esc(t('packagesHeading'))}">
+          ${m.packages.map(p => `
+            <button type="button" class="catalog-package-btn ${layout && layout.id === p.id ? 'active' : ''}" data-layout="${esc(p.id)}" title="${esc(m.name)} · ${esc(p.label)}" aria-label="${esc(m.name)} ${esc(p.label)}">${esc(p.label)}</button>
+          `).join('')}
+        </div>
+      </div>`;
+    }
+    return `<div class="catalog-card ${isActive ? 'active' : ''}" data-layout="${esc(m.id)}"${m.profile ? ` data-profile="${esc(m.profile)}"` : ''} role="button" tabindex="0">
+      <div class="catalog-card-header">
+        <b class="catalog-card-title">${esc(m.name)}</b>
+        <span class="catalog-card-tag">${icon(m.isChip ? 'chip' : 'board')}</span>
+      </div>
+      <small class="catalog-card-desc">${esc(m.detail)}</small>
+    </div>`;
+  }).join('')}</div>`;
 }
 function planPayload() { return {version:1,board:board.id,pins:assignments}; }
 function encode(value) { return btoa(Array.from(new TextEncoder().encode(JSON.stringify(value)),b=>String.fromCharCode(b)).join('')); }
@@ -493,8 +700,8 @@ function loadHash() {
  if (payload) previewPlan(payload.target, payload.pins, pin);
  else if (previewDialog.open) previewDialog.close();
 }
-$('#board-nav').addEventListener('click',e=>{const b=e.target.closest('[data-layout]');if(b)openLayout(b.dataset.layout);});
-$('#library-button').addEventListener('click',showCatalog);
+$('#board-nav')?.addEventListener('click',e=>{const b=e.target.closest('[data-layout]');if(b)openLayout(b.dataset.layout);});
+$('#library-button')?.addEventListener('click',showCatalog);
 $('#function-reference').addEventListener('change', e => setBoard(layout.id, false, e.target.value));
 $('#compatibility-search').addEventListener('input',e=>{compatibilityQuery=e.target.value;renderCompatibilityList();});
 $('#compatibility-list').addEventListener('click',e=>{
@@ -506,12 +713,13 @@ $('#compatibility-list').addEventListener('click',e=>{
  $('#compatibility-list').querySelector(`[data-compatible-model="${CSS.escape(model)}"]`)?.focus({preventScroll:true});
 });
 $('#catalog-grid').addEventListener('click',e=>{const b=e.target.closest('[data-layout]');if(b){openLayout(b.dataset.layout, b.dataset.profile);$('#library-dialog').close();}});
+$('#catalog-grid').addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.closest('[data-layout]')){e.preventDefault();const b=e.target.closest('[data-layout]');openLayout(b.dataset.layout, b.dataset.profile);$('#library-dialog').close();}});
 $('#catalog-search').addEventListener('input',renderCatalog);
 $('#help-button').addEventListener('click',()=>$('#help-dialog').showModal());
 $$('[data-close]').forEach(b=>b.addEventListener('click',()=>b.closest('dialog').close()));
 $$('dialog').forEach(dialog=>dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}}));
 $('#menu-button').addEventListener('click',showCatalog);
-$('#main').addEventListener('click',()=>$('#sidebar').classList.remove('open'));
+$('#main').addEventListener('click',()=>$('#sidebar')?.classList.remove('open'));
 $('#filters').addEventListener('click', e => {
  const button = e.target.closest('[data-filter]');
  if (!button) return;
@@ -581,7 +789,7 @@ $('#import-file').addEventListener('change',async e=>{
   previewPlan(target, validatePlan(payload.pins, target, t));
  }catch(error){$('#plan-feedback').textContent=error.message||t('importFailed');}finally{e.target.value='';}
 });
-document.addEventListener('keydown',e=>{if(e.key==='/'&&!/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)&&!$('dialog[open]')){e.preventDefault();$('#pin-search').focus();}if(e.key==='Escape')$('#sidebar').classList.remove('open');});
+document.addEventListener('keydown',e=>{if(e.key==='/'&&!/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)&&!$('dialog[open]')){e.preventDefault();$('#pin-search').focus();}if(e.key==='Escape')$('#sidebar')?.classList.remove('open');});
 window.addEventListener('zaryob:language', () => {
  if (!board) return;
  const draftLabel = $('#custom-label')?.value;
