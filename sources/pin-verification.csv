@@ -15509,3 +15509,643 @@ stm32l476rgt6,62,PB9,GPIO,TIM17_CH1,AF14,TIM17_CH1,l476rg-package,l476rg-package
 stm32l476rgt6,62,PB9,GPIO,TIM4_CH4,AF2,TIM4_CH4,l476rg-package,l476rg-package | l476rg-modes
 stm32l476rgt6,63,VSS,GND,,,,l476rg-package,
 stm32l476rgt6,64,VDD,POWER,,,,l476rg-package,
+nucleo-f072rb,1,PC10,GPIO,USART3_TX,AF1,USART3_TX,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,1,PC10,GPIO,USART4_TX,AF0,USART4_TX,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,2,PC11,GPIO,USART3_RX,AF1,USART3_RX,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,2,PC11,GPIO,USART4_RX,AF0,USART4_RX,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,3,PC12,GPIO,USART3_CK,AF1,USART3_CK,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,3,PC12,GPIO,USART4_CK,AF0,USART4_CK,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,4,PD2,GPIO,TIM3_ETR,AF0,TIM3_ETR,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,4,PD2,GPIO,USART3_DE,AF1,USART3_DE,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,4,PD2,GPIO,USART3_RTS,AF1,USART3_RTS,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,5,VDD,POWER,,,,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,
+nucleo-f072rb,6,E5V,POWER,,,,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view,
+nucleo-f072rb,7,BOOT0,SYSTEM,,,,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,
+nucleo-f072rb,8,GND,GND,,,,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view,
+nucleo-f072rb,9,NC,SYSTEM,,,,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view,
+nucleo-f072rb,10,NC,SYSTEM,,,,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view,
+nucleo-f072rb,11,NC,SYSTEM,,,,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view,
+nucleo-f072rb,12,IOREF,POWER,,,,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view,
+nucleo-f072rb,13,PA13,GPIO,IR_OUT,AF1,IR_OUT,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,13,PA13,GPIO,SYS_SWDIO,AF0,SYS_SWDIO,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,13,PA13,GPIO,USB_NOE,AF2,USB_NOE,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,14,RESET,SYSTEM,,,,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,
+nucleo-f072rb,15,PA14,GPIO,SYS_SWCLK,AF0,SYS_SWCLK,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,15,PA14,GPIO,USART2_TX,AF1,USART2_TX,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,16,+3.3V,POWER,,,,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view,
+nucleo-f072rb,17,PA15,GPIO,I2S1_WS,AF0,I2S1_WS,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,17,PA15,GPIO,SPI1_NSS,AF0,SPI1_NSS,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,17,PA15,GPIO,TIM2_CH1,AF2,TIM2_CH1,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,17,PA15,GPIO,TIM2_ETR,AF2,TIM2_ETR,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,17,PA15,GPIO,USART2_RX,AF1,USART2_RX,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,17,PA15,GPIO,USART4_DE,AF4,USART4_DE,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,17,PA15,GPIO,USART4_RTS,AF4,USART4_RTS,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,18,+5V,POWER,,,,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view,
+nucleo-f072rb,19,GND,GND,,,,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view,
+nucleo-f072rb,20,GND,GND,,,,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view,
+nucleo-f072rb,21,PB7,GPIO,I2C1_SDA,AF1,I2C1_SDA,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,21,PB7,GPIO,TIM17_CH1N,AF2,TIM17_CH1N,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,21,PB7,GPIO,TSC_G5_IO4,AF3,TSC_G5_IO4,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,21,PB7,GPIO,USART1_RX,AF0,USART1_RX,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,21,PB7,GPIO,USART4_CTS,AF4,USART4_CTS,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,22,GND,GND,,,,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view,
+nucleo-f072rb,23,PC13,GPIO,RTC_OUT_ALARM,,RTC_OUT_ALARM,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,23,PC13,GPIO,RTC_OUT_CALIB,,RTC_OUT_CALIB,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,23,PC13,GPIO,RTC_TAMP1,,RTC_TAMP1,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,23,PC13,GPIO,RTC_TS,,RTC_TS,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,23,PC13,GPIO,SYS_WKUP2,,SYS_WKUP2,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,24,VIN,POWER,,,,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view,
+nucleo-f072rb,25,PC14,GPIO,RCC_OSC32_IN,,RCC_OSC32_IN,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package
+nucleo-f072rb,26,NC,SYSTEM,,,,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view,
+nucleo-f072rb,27,PC15,GPIO,RCC_OSC32_OUT,,RCC_OSC32_OUT,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package
+nucleo-f072rb,28,PA0,GPIO,ADC_IN0,,ADC_IN0,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,28,PA0,GPIO,COMP1_INM,,COMP1_INM,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,28,PA0,GPIO,COMP1_OUT,AF7,COMP1_OUT,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,28,PA0,GPIO,RTC_TAMP2,,RTC_TAMP2,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,28,PA0,GPIO,SYS_WKUP1,,SYS_WKUP1,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,28,PA0,GPIO,TIM2_CH1,AF2,TIM2_CH1,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,28,PA0,GPIO,TIM2_ETR,AF2,TIM2_ETR,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,28,PA0,GPIO,TSC_G1_IO1,AF3,TSC_G1_IO1,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,28,PA0,GPIO,USART2_CTS,AF1,USART2_CTS,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,28,PA0,GPIO,USART4_TX,AF4,USART4_TX,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,29,PF0,GPIO,CRS_SYNC,AF0,CRS_SYNC,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,29,PF0,GPIO,RCC_OSC_IN,,RCC_OSC_IN,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package
+nucleo-f072rb,30,PA1,GPIO,ADC_IN1,,ADC_IN1,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,30,PA1,GPIO,COMP1_INP,,COMP1_INP,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,30,PA1,GPIO,TIM15_CH1N,AF5,TIM15_CH1N,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,30,PA1,GPIO,TIM2_CH2,AF2,TIM2_CH2,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,30,PA1,GPIO,TSC_G1_IO2,AF3,TSC_G1_IO2,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,30,PA1,GPIO,USART2_DE,AF1,USART2_DE,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,30,PA1,GPIO,USART2_RTS,AF1,USART2_RTS,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,30,PA1,GPIO,USART4_RX,AF4,USART4_RX,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,31,PF1,GPIO,RCC_OSC_OUT,,RCC_OSC_OUT,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package
+nucleo-f072rb,32,PA4,GPIO,ADC_IN4,,ADC_IN4,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,32,PA4,GPIO,COMP1_INM,,COMP1_INM,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,32,PA4,GPIO,COMP2_INM,,COMP2_INM,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,32,PA4,GPIO,DAC_OUT1,,DAC_OUT1,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,32,PA4,GPIO,I2S1_WS,AF0,I2S1_WS,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,32,PA4,GPIO,SPI1_NSS,AF0,SPI1_NSS,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,32,PA4,GPIO,TIM14_CH1,AF4,TIM14_CH1,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,32,PA4,GPIO,TSC_G2_IO1,AF3,TSC_G2_IO1,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,32,PA4,GPIO,USART2_CK,AF1,USART2_CK,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,33,VBAT,POWER,,,,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,
+nucleo-f072rb,34,PB0,GPIO,ADC_IN8,,ADC_IN8,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,34,PB0,GPIO,TIM1_CH2N,AF2,TIM1_CH2N,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,34,PB0,GPIO,TIM3_CH3,AF1,TIM3_CH3,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,34,PB0,GPIO,TSC_G3_IO2,AF3,TSC_G3_IO2,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,34,PB0,GPIO,USART3_CK,AF4,USART3_CK,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,35,PC2,GPIO,ADC_IN12,,ADC_IN12,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,35,PC2,GPIO,I2S2_MCK,AF1,I2S2_MCK,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,35,PC2,GPIO,SPI2_MISO,AF1,SPI2_MISO,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,36,PC1,GPIO,ADC_IN11,,ADC_IN11,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package
+nucleo-f072rb,37,PC3,GPIO,ADC_IN13,,ADC_IN13,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,37,PC3,GPIO,I2S2_SD,AF1,I2S2_SD,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,37,PC3,GPIO,SPI2_MOSI,AF1,SPI2_MOSI,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,38,PC0,GPIO,ADC_IN10,,ADC_IN10,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package
+nucleo-f072rb,39,NC,SYSTEM,,,,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view,
+nucleo-f072rb,40,IOREF,POWER,,,,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view,
+nucleo-f072rb,41,NRST,SYSTEM,,,,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,
+nucleo-f072rb,42,+3.3V,POWER,,,,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view,
+nucleo-f072rb,43,+5V,POWER,,,,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view,
+nucleo-f072rb,44,GND,GND,,,,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view,
+nucleo-f072rb,45,GND,GND,,,,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view,
+nucleo-f072rb,46,VIN,POWER,,,,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view,
+nucleo-f072rb,47,PA0,GPIO,ADC_IN0,,ADC_IN0,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,47,PA0,GPIO,COMP1_INM,,COMP1_INM,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,47,PA0,GPIO,COMP1_OUT,AF7,COMP1_OUT,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,47,PA0,GPIO,RTC_TAMP2,,RTC_TAMP2,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,47,PA0,GPIO,SYS_WKUP1,,SYS_WKUP1,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,47,PA0,GPIO,TIM2_CH1,AF2,TIM2_CH1,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,47,PA0,GPIO,TIM2_ETR,AF2,TIM2_ETR,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,47,PA0,GPIO,TSC_G1_IO1,AF3,TSC_G1_IO1,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,47,PA0,GPIO,USART2_CTS,AF1,USART2_CTS,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,47,PA0,GPIO,USART4_TX,AF4,USART4_TX,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,48,PA1,GPIO,ADC_IN1,,ADC_IN1,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,48,PA1,GPIO,COMP1_INP,,COMP1_INP,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,48,PA1,GPIO,TIM15_CH1N,AF5,TIM15_CH1N,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,48,PA1,GPIO,TIM2_CH2,AF2,TIM2_CH2,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,48,PA1,GPIO,TSC_G1_IO2,AF3,TSC_G1_IO2,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,48,PA1,GPIO,USART2_DE,AF1,USART2_DE,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,48,PA1,GPIO,USART2_RTS,AF1,USART2_RTS,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,48,PA1,GPIO,USART4_RX,AF4,USART4_RX,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,49,PA4,GPIO,ADC_IN4,,ADC_IN4,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,49,PA4,GPIO,COMP1_INM,,COMP1_INM,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,49,PA4,GPIO,COMP2_INM,,COMP2_INM,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,49,PA4,GPIO,DAC_OUT1,,DAC_OUT1,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,49,PA4,GPIO,I2S1_WS,AF0,I2S1_WS,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,49,PA4,GPIO,SPI1_NSS,AF0,SPI1_NSS,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,49,PA4,GPIO,TIM14_CH1,AF4,TIM14_CH1,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,49,PA4,GPIO,TSC_G2_IO1,AF3,TSC_G2_IO1,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,49,PA4,GPIO,USART2_CK,AF1,USART2_CK,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,50,PB0,GPIO,ADC_IN8,,ADC_IN8,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,50,PB0,GPIO,TIM1_CH2N,AF2,TIM1_CH2N,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,50,PB0,GPIO,TIM3_CH3,AF1,TIM3_CH3,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,50,PB0,GPIO,TSC_G3_IO2,AF3,TSC_G3_IO2,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,50,PB0,GPIO,USART3_CK,AF4,USART3_CK,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,51,PC1,GPIO,ADC_IN11,,ADC_IN11,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package
+nucleo-f072rb,52,PC0,GPIO,ADC_IN10,,ADC_IN10,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package
+nucleo-f072rb,53,PC9,GPIO,DAC_EXTI9,,DAC_EXTI9,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,53,PC9,GPIO,TIM3_CH4,AF0,TIM3_CH4,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,54,PC8,GPIO,TIM3_CH3,AF0,TIM3_CH3,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,55,PB8,GPIO,CAN_RX,AF4,CAN_RX,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,55,PB8,GPIO,CEC,AF0,CEC,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,55,PB8,GPIO,I2C1_SCL,AF1,I2C1_SCL,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,55,PB8,GPIO,TIM16_CH1,AF2,TIM16_CH1,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,55,PB8,GPIO,TSC_SYNC,AF3,TSC_SYNC,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,56,PC6,GPIO,TIM3_CH1,AF0,TIM3_CH1,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,57,PB9,GPIO,CAN_TX,AF4,CAN_TX,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,57,PB9,GPIO,DAC_EXTI9,,DAC_EXTI9,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,57,PB9,GPIO,I2C1_SDA,AF1,I2C1_SDA,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,57,PB9,GPIO,I2S2_WS,AF5,I2S2_WS,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,57,PB9,GPIO,IR_OUT,AF0,IR_OUT,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,57,PB9,GPIO,SPI2_NSS,AF5,SPI2_NSS,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,57,PB9,GPIO,TIM17_CH1,AF2,TIM17_CH1,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,58,PC5,GPIO,ADC_IN15,,ADC_IN15,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,58,PC5,GPIO,SYS_WKUP5,,SYS_WKUP5,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,58,PC5,GPIO,TSC_G3_IO1,AF0,TSC_G3_IO1,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,58,PC5,GPIO,USART3_RX,AF1,USART3_RX,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,59,AVDD,POWER,,,,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,
+nucleo-f072rb,60,U5V,POWER,,,,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view,
+nucleo-f072rb,61,GND,GND,,,,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view,
+nucleo-f072rb,62,NC,SYSTEM,,,,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view,
+nucleo-f072rb,63,PA5,GPIO,ADC_IN5,,ADC_IN5,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package
+nucleo-f072rb,63,PA5,GPIO,CEC,AF1,CEC,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,63,PA5,GPIO,COMP1_INM,,COMP1_INM,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package
+nucleo-f072rb,63,PA5,GPIO,COMP2_INM,,COMP2_INM,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package
+nucleo-f072rb,63,PA5,GPIO,DAC_OUT2,,DAC_OUT2,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package
+nucleo-f072rb,63,PA5,GPIO,I2S1_CK,AF0,I2S1_CK,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,63,PA5,GPIO,SPI1_SCK,AF0,SPI1_SCK,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,63,PA5,GPIO,TIM2_CH1,AF2,TIM2_CH1,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,63,PA5,GPIO,TIM2_ETR,AF2,TIM2_ETR,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,63,PA5,GPIO,TSC_G2_IO2,AF3,TSC_G2_IO2,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,64,PA12,GPIO,CAN_TX,AF4,CAN_TX,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,64,PA12,GPIO,COMP2_OUT,AF7,COMP2_OUT,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,64,PA12,GPIO,TIM1_ETR,AF2,TIM1_ETR,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,64,PA12,GPIO,TSC_G4_IO4,AF3,TSC_G4_IO4,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,64,PA12,GPIO,USART1_DE,AF1,USART1_DE,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,64,PA12,GPIO,USART1_RTS,AF1,USART1_RTS,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,64,PA12,GPIO,USB_DP,,USB_DP,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,65,PA6,GPIO,ADC_IN6,,ADC_IN6,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,65,PA6,GPIO,COMP1_OUT,AF7,COMP1_OUT,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,65,PA6,GPIO,I2S1_MCK,AF0,I2S1_MCK,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,65,PA6,GPIO,SPI1_MISO,AF0,SPI1_MISO,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,65,PA6,GPIO,TIM16_CH1,AF5,TIM16_CH1,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,65,PA6,GPIO,TIM1_BKIN,AF2,TIM1_BKIN,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,65,PA6,GPIO,TIM3_CH1,AF1,TIM3_CH1,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,65,PA6,GPIO,TSC_G2_IO3,AF3,TSC_G2_IO3,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,65,PA6,GPIO,USART3_CTS,AF4,USART3_CTS,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,66,PA11,GPIO,CAN_RX,AF4,CAN_RX,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,66,PA11,GPIO,COMP1_OUT,AF7,COMP1_OUT,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,66,PA11,GPIO,TIM1_CH4,AF2,TIM1_CH4,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,66,PA11,GPIO,TSC_G4_IO3,AF3,TSC_G4_IO3,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,66,PA11,GPIO,USART1_CTS,AF1,USART1_CTS,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,66,PA11,GPIO,USB_DM,,USB_DM,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,67,PA7,GPIO,ADC_IN7,,ADC_IN7,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,67,PA7,GPIO,COMP2_OUT,AF7,COMP2_OUT,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,67,PA7,GPIO,I2S1_SD,AF0,I2S1_SD,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,67,PA7,GPIO,SPI1_MOSI,AF0,SPI1_MOSI,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,67,PA7,GPIO,TIM14_CH1,AF4,TIM14_CH1,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,67,PA7,GPIO,TIM17_CH1,AF5,TIM17_CH1,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,67,PA7,GPIO,TIM1_CH1N,AF2,TIM1_CH1N,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,67,PA7,GPIO,TIM3_CH2,AF1,TIM3_CH2,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,67,PA7,GPIO,TSC_G2_IO4,AF3,TSC_G2_IO4,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,68,PB12,GPIO,I2S2_WS,AF0,I2S2_WS,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,68,PB12,GPIO,SPI2_NSS,AF0,SPI2_NSS,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,68,PB12,GPIO,TIM15_BKIN,AF5,TIM15_BKIN,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,68,PB12,GPIO,TIM1_BKIN,AF2,TIM1_BKIN,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,68,PB12,GPIO,TSC_G6_IO2,AF3,TSC_G6_IO2,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,68,PB12,GPIO,USART3_CK,AF4,USART3_CK,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,69,PB6,GPIO,I2C1_SCL,AF1,I2C1_SCL,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,69,PB6,GPIO,TIM16_CH1N,AF2,TIM16_CH1N,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,69,PB6,GPIO,TSC_G5_IO3,AF3,TSC_G5_IO3,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,69,PB6,GPIO,USART1_TX,AF0,USART1_TX,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,70,PB11,GPIO,I2C2_SDA,AF1,I2C2_SDA,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,70,PB11,GPIO,TIM2_CH4,AF2,TIM2_CH4,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,70,PB11,GPIO,TSC_G6_IO1,AF3,TSC_G6_IO1,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,70,PB11,GPIO,USART3_RX,AF4,USART3_RX,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,71,PC7,GPIO,TIM3_CH2,AF0,TIM3_CH2,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,72,GND,GND,,,,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view,
+nucleo-f072rb,73,PA9,GPIO,DAC_EXTI9,,DAC_EXTI9,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,73,PA9,GPIO,TIM15_BKIN,AF0,TIM15_BKIN,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,73,PA9,GPIO,TIM1_CH2,AF2,TIM1_CH2,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,73,PA9,GPIO,TSC_G4_IO1,AF3,TSC_G4_IO1,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,73,PA9,GPIO,USART1_TX,AF1,USART1_TX,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,74,PB2,GPIO,TSC_G3_IO4,AF3,TSC_G3_IO4,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,75,PA8,GPIO,CRS_SYNC,AF4,CRS_SYNC,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,75,PA8,GPIO,RCC_MCO,AF0,RCC_MCO,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,75,PA8,GPIO,TIM1_CH1,AF2,TIM1_CH1,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,75,PA8,GPIO,USART1_CK,AF1,USART1_CK,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,76,PB1,GPIO,ADC_IN9,,ADC_IN9,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,76,PB1,GPIO,TIM14_CH1,AF0,TIM14_CH1,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,76,PB1,GPIO,TIM1_CH3N,AF2,TIM1_CH3N,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,76,PB1,GPIO,TIM3_CH4,AF1,TIM3_CH4,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,76,PB1,GPIO,TSC_G3_IO3,AF3,TSC_G3_IO3,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,76,PB1,GPIO,USART3_DE,AF4,USART3_DE,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,76,PB1,GPIO,USART3_RTS,AF4,USART3_RTS,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,77,PB10,GPIO,CEC,AF0,CEC,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,77,PB10,GPIO,I2C2_SCL,AF1,I2C2_SCL,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,77,PB10,GPIO,I2S2_CK,AF5,I2S2_CK,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,77,PB10,GPIO,SPI2_SCK,AF5,SPI2_SCK,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,77,PB10,GPIO,TIM2_CH3,AF2,TIM2_CH3,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,77,PB10,GPIO,TSC_SYNC,AF3,TSC_SYNC,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,77,PB10,GPIO,USART3_TX,AF4,USART3_TX,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,78,PB15,GPIO,I2S2_SD,AF0,I2S2_SD,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,78,PB15,GPIO,RTC_REFIN,,RTC_REFIN,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,78,PB15,GPIO,SPI2_MOSI,AF0,SPI2_MOSI,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,78,PB15,GPIO,SYS_WKUP7,,SYS_WKUP7,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,78,PB15,GPIO,TIM15_CH1N,AF3,TIM15_CH1N,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,78,PB15,GPIO,TIM15_CH2,AF1,TIM15_CH2,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,78,PB15,GPIO,TIM1_CH3N,AF2,TIM1_CH3N,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,79,PB4,GPIO,I2S1_MCK,AF0,I2S1_MCK,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,79,PB4,GPIO,SPI1_MISO,AF0,SPI1_MISO,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,79,PB4,GPIO,TIM17_BKIN,AF5,TIM17_BKIN,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,79,PB4,GPIO,TIM3_CH1,AF1,TIM3_CH1,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,79,PB4,GPIO,TSC_G5_IO2,AF3,TSC_G5_IO2,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,80,PB14,GPIO,I2C2_SDA,AF5,I2C2_SDA,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,80,PB14,GPIO,I2S2_MCK,AF0,I2S2_MCK,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,80,PB14,GPIO,SPI2_MISO,AF0,SPI2_MISO,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,80,PB14,GPIO,TIM15_CH1,AF1,TIM15_CH1,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,80,PB14,GPIO,TIM1_CH2N,AF2,TIM1_CH2N,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,80,PB14,GPIO,TSC_G6_IO4,AF3,TSC_G6_IO4,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,80,PB14,GPIO,USART3_DE,AF4,USART3_DE,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,80,PB14,GPIO,USART3_RTS,AF4,USART3_RTS,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,81,PB5,GPIO,I2C1_SMBA,AF3,I2C1_SMBA,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,81,PB5,GPIO,I2S1_SD,AF0,I2S1_SD,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,81,PB5,GPIO,SPI1_MOSI,AF0,SPI1_MOSI,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,81,PB5,GPIO,SYS_WKUP6,,SYS_WKUP6,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,81,PB5,GPIO,TIM16_BKIN,AF2,TIM16_BKIN,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,81,PB5,GPIO,TIM3_CH2,AF1,TIM3_CH2,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,82,PB13,GPIO,I2C2_SCL,AF5,I2C2_SCL,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,82,PB13,GPIO,I2S2_CK,AF0,I2S2_CK,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,82,PB13,GPIO,SPI2_SCK,AF0,SPI2_SCK,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,82,PB13,GPIO,TIM1_CH1N,AF2,TIM1_CH1N,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,82,PB13,GPIO,TSC_G6_IO3,AF3,TSC_G6_IO3,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,82,PB13,GPIO,USART3_CTS,AF4,USART3_CTS,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,83,PB3,GPIO,I2S1_CK,AF0,I2S1_CK,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,83,PB3,GPIO,SPI1_SCK,AF0,SPI1_SCK,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,83,PB3,GPIO,TIM2_CH2,AF2,TIM2_CH2,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,83,PB3,GPIO,TSC_G5_IO1,AF3,TSC_G5_IO1,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,84,AGND,GND,,,,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view,
+nucleo-f072rb,85,PA10,GPIO,TIM17_BKIN,AF0,TIM17_BKIN,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,85,PA10,GPIO,TIM1_CH3,AF2,TIM1_CH3,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,85,PA10,GPIO,TSC_G4_IO2,AF3,TSC_G4_IO2,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,85,PA10,GPIO,USART1_RX,AF1,USART1_RX,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,86,PC4,GPIO,ADC_IN14,,ADC_IN14,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,86,PC4,GPIO,USART3_TX,AF1,USART3_TX,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,87,PA2,GPIO,ADC_IN2,,ADC_IN2,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package
+nucleo-f072rb,87,PA2,GPIO,COMP2_INM,,COMP2_INM,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package
+nucleo-f072rb,87,PA2,GPIO,COMP2_OUT,AF7,COMP2_OUT,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,87,PA2,GPIO,SYS_WKUP4,,SYS_WKUP4,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package
+nucleo-f072rb,87,PA2,GPIO,TIM15_CH1,AF0,TIM15_CH1,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,87,PA2,GPIO,TIM2_CH3,AF2,TIM2_CH3,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,87,PA2,GPIO,TSC_G1_IO3,AF3,TSC_G1_IO3,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,87,PA2,GPIO,USART2_TX,AF1,USART2_TX,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,88,NC,SYSTEM,,,,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view,
+nucleo-f072rb,89,PA3,GPIO,ADC_IN3,,ADC_IN3,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package
+nucleo-f072rb,89,PA3,GPIO,COMP2_INP,,COMP2_INP,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package
+nucleo-f072rb,89,PA3,GPIO,TIM15_CH2,AF0,TIM15_CH2,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,89,PA3,GPIO,TIM2_CH4,AF2,TIM2_CH4,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,89,PA3,GPIO,TSC_G1_IO4,AF3,TSC_G1_IO4,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,89,PA3,GPIO,USART2_RX,AF1,USART2_RX,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,90,NC,SYSTEM,,,,nucleo-f072rb-morpho-55 | nucleo-f072rb-top-view,
+nucleo-f072rb,91,PA9,GPIO,DAC_EXTI9,,DAC_EXTI9,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,91,PA9,GPIO,TIM15_BKIN,AF0,TIM15_BKIN,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,91,PA9,GPIO,TIM1_CH2,AF2,TIM1_CH2,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,91,PA9,GPIO,TSC_G4_IO1,AF3,TSC_G4_IO1,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,91,PA9,GPIO,USART1_TX,AF1,USART1_TX,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,92,PC7,GPIO,TIM3_CH2,AF0,TIM3_CH2,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,93,PB6,GPIO,I2C1_SCL,AF1,I2C1_SCL,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,93,PB6,GPIO,TIM16_CH1N,AF2,TIM16_CH1N,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,93,PB6,GPIO,TSC_G5_IO3,AF3,TSC_G5_IO3,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,93,PB6,GPIO,USART1_TX,AF0,USART1_TX,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,94,PA7,GPIO,ADC_IN7,,ADC_IN7,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,94,PA7,GPIO,COMP2_OUT,AF7,COMP2_OUT,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,94,PA7,GPIO,I2S1_SD,AF0,I2S1_SD,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,94,PA7,GPIO,SPI1_MOSI,AF0,SPI1_MOSI,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,94,PA7,GPIO,TIM14_CH1,AF4,TIM14_CH1,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,94,PA7,GPIO,TIM17_CH1,AF5,TIM17_CH1,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,94,PA7,GPIO,TIM1_CH1N,AF2,TIM1_CH1N,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,94,PA7,GPIO,TIM3_CH2,AF1,TIM3_CH2,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,94,PA7,GPIO,TSC_G2_IO4,AF3,TSC_G2_IO4,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,95,PA6,GPIO,ADC_IN6,,ADC_IN6,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,95,PA6,GPIO,COMP1_OUT,AF7,COMP1_OUT,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,95,PA6,GPIO,I2S1_MCK,AF0,I2S1_MCK,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,95,PA6,GPIO,SPI1_MISO,AF0,SPI1_MISO,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,95,PA6,GPIO,TIM16_CH1,AF5,TIM16_CH1,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,95,PA6,GPIO,TIM1_BKIN,AF2,TIM1_BKIN,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,95,PA6,GPIO,TIM3_CH1,AF1,TIM3_CH1,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,95,PA6,GPIO,TSC_G2_IO3,AF3,TSC_G2_IO3,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,95,PA6,GPIO,USART3_CTS,AF4,USART3_CTS,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,96,PA5,GPIO,ADC_IN5,,ADC_IN5,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package
+nucleo-f072rb,96,PA5,GPIO,CEC,AF1,CEC,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,96,PA5,GPIO,COMP1_INM,,COMP1_INM,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package
+nucleo-f072rb,96,PA5,GPIO,COMP2_INM,,COMP2_INM,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package
+nucleo-f072rb,96,PA5,GPIO,DAC_OUT2,,DAC_OUT2,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package
+nucleo-f072rb,96,PA5,GPIO,I2S1_CK,AF0,I2S1_CK,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,96,PA5,GPIO,SPI1_SCK,AF0,SPI1_SCK,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,96,PA5,GPIO,TIM2_CH1,AF2,TIM2_CH1,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,96,PA5,GPIO,TIM2_ETR,AF2,TIM2_ETR,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,96,PA5,GPIO,TSC_G2_IO2,AF3,TSC_G2_IO2,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,97,GND,GND,,,,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view,
+nucleo-f072rb,98,AVDD,POWER,,,,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,
+nucleo-f072rb,99,PB9,GPIO,CAN_TX,AF4,CAN_TX,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,99,PB9,GPIO,DAC_EXTI9,,DAC_EXTI9,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,99,PB9,GPIO,I2C1_SDA,AF1,I2C1_SDA,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,99,PB9,GPIO,I2S2_WS,AF5,I2S2_WS,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,99,PB9,GPIO,IR_OUT,AF0,IR_OUT,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,99,PB9,GPIO,SPI2_NSS,AF5,SPI2_NSS,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,99,PB9,GPIO,TIM17_CH1,AF2,TIM17_CH1,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,100,PB8,GPIO,CAN_RX,AF4,CAN_RX,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,100,PB8,GPIO,CEC,AF0,CEC,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,100,PB8,GPIO,I2C1_SCL,AF1,I2C1_SCL,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,100,PB8,GPIO,TIM16_CH1,AF2,TIM16_CH1,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,100,PB8,GPIO,TSC_SYNC,AF3,TSC_SYNC,nucleo-f072rb-arduino-37 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,101,PA3,GPIO,ADC_IN3,,ADC_IN3,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package
+nucleo-f072rb,101,PA3,GPIO,COMP2_INP,,COMP2_INP,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package
+nucleo-f072rb,101,PA3,GPIO,TIM15_CH2,AF0,TIM15_CH2,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,101,PA3,GPIO,TIM2_CH4,AF2,TIM2_CH4,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,101,PA3,GPIO,TSC_G1_IO4,AF3,TSC_G1_IO4,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,101,PA3,GPIO,USART2_RX,AF1,USART2_RX,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,102,PA2,GPIO,ADC_IN2,,ADC_IN2,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package
+nucleo-f072rb,102,PA2,GPIO,COMP2_INM,,COMP2_INM,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package
+nucleo-f072rb,102,PA2,GPIO,COMP2_OUT,AF7,COMP2_OUT,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,102,PA2,GPIO,SYS_WKUP4,,SYS_WKUP4,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package
+nucleo-f072rb,102,PA2,GPIO,TIM15_CH1,AF0,TIM15_CH1,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,102,PA2,GPIO,TIM2_CH3,AF2,TIM2_CH3,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,102,PA2,GPIO,TSC_G1_IO3,AF3,TSC_G1_IO3,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,102,PA2,GPIO,USART2_TX,AF1,USART2_TX,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package | nucleo-mb1136-bridges,f072rb-package | f072rb-modes
+nucleo-f072rb,103,PA10,GPIO,TIM17_BKIN,AF0,TIM17_BKIN,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,103,PA10,GPIO,TIM1_CH3,AF2,TIM1_CH3,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,103,PA10,GPIO,TSC_G4_IO2,AF3,TSC_G4_IO2,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,103,PA10,GPIO,USART1_RX,AF1,USART1_RX,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,104,PB3,GPIO,I2S1_CK,AF0,I2S1_CK,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,104,PB3,GPIO,SPI1_SCK,AF0,SPI1_SCK,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,104,PB3,GPIO,TIM2_CH2,AF2,TIM2_CH2,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,104,PB3,GPIO,TSC_G5_IO1,AF3,TSC_G5_IO1,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,105,PB5,GPIO,I2C1_SMBA,AF3,I2C1_SMBA,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,105,PB5,GPIO,I2S1_SD,AF0,I2S1_SD,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,105,PB5,GPIO,SPI1_MOSI,AF0,SPI1_MOSI,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,105,PB5,GPIO,SYS_WKUP6,,SYS_WKUP6,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package
+nucleo-f072rb,105,PB5,GPIO,TIM16_BKIN,AF2,TIM16_BKIN,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,105,PB5,GPIO,TIM3_CH2,AF1,TIM3_CH2,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,106,PB4,GPIO,I2S1_MCK,AF0,I2S1_MCK,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,106,PB4,GPIO,SPI1_MISO,AF0,SPI1_MISO,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,106,PB4,GPIO,TIM17_BKIN,AF5,TIM17_BKIN,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,106,PB4,GPIO,TIM3_CH1,AF1,TIM3_CH1,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,106,PB4,GPIO,TSC_G5_IO2,AF3,TSC_G5_IO2,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,107,PB10,GPIO,CEC,AF0,CEC,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,107,PB10,GPIO,I2C2_SCL,AF1,I2C2_SCL,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,107,PB10,GPIO,I2S2_CK,AF5,I2S2_CK,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,107,PB10,GPIO,SPI2_SCK,AF5,SPI2_SCK,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,107,PB10,GPIO,TIM2_CH3,AF2,TIM2_CH3,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,107,PB10,GPIO,TSC_SYNC,AF3,TSC_SYNC,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,107,PB10,GPIO,USART3_TX,AF4,USART3_TX,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,108,PA8,GPIO,CRS_SYNC,AF4,CRS_SYNC,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,108,PA8,GPIO,RCC_MCO,AF0,RCC_MCO,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,108,PA8,GPIO,TIM1_CH1,AF2,TIM1_CH1,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+nucleo-f072rb,108,PA8,GPIO,USART1_CK,AF1,USART1_CK,nucleo-f072rb-arduino-38 | nucleo-f072rb-top-view | f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,1,VBAT,POWER,,,,f072rb-package,
+stm32f072rbt6,2,PC13,GPIO,RTC_OUT_ALARM,,RTC_OUT_ALARM,f072rb-package,f072rb-package
+stm32f072rbt6,2,PC13,GPIO,RTC_OUT_CALIB,,RTC_OUT_CALIB,f072rb-package,f072rb-package
+stm32f072rbt6,2,PC13,GPIO,RTC_TAMP1,,RTC_TAMP1,f072rb-package,f072rb-package
+stm32f072rbt6,2,PC13,GPIO,RTC_TS,,RTC_TS,f072rb-package,f072rb-package
+stm32f072rbt6,2,PC13,GPIO,SYS_WKUP2,,SYS_WKUP2,f072rb-package,f072rb-package
+stm32f072rbt6,3,PC14,GPIO,RCC_OSC32_IN,,RCC_OSC32_IN,f072rb-package,f072rb-package
+stm32f072rbt6,4,PC15,GPIO,RCC_OSC32_OUT,,RCC_OSC32_OUT,f072rb-package,f072rb-package
+stm32f072rbt6,5,PF0,GPIO,CRS_SYNC,AF0,CRS_SYNC,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,5,PF0,GPIO,RCC_OSC_IN,,RCC_OSC_IN,f072rb-package,f072rb-package
+stm32f072rbt6,6,PF1,GPIO,RCC_OSC_OUT,,RCC_OSC_OUT,f072rb-package,f072rb-package
+stm32f072rbt6,7,NRST,SYSTEM,,,,f072rb-package,
+stm32f072rbt6,8,PC0,GPIO,ADC_IN10,,ADC_IN10,f072rb-package,f072rb-package
+stm32f072rbt6,9,PC1,GPIO,ADC_IN11,,ADC_IN11,f072rb-package,f072rb-package
+stm32f072rbt6,10,PC2,GPIO,ADC_IN12,,ADC_IN12,f072rb-package,f072rb-package
+stm32f072rbt6,10,PC2,GPIO,I2S2_MCK,AF1,I2S2_MCK,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,10,PC2,GPIO,SPI2_MISO,AF1,SPI2_MISO,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,11,PC3,GPIO,ADC_IN13,,ADC_IN13,f072rb-package,f072rb-package
+stm32f072rbt6,11,PC3,GPIO,I2S2_SD,AF1,I2S2_SD,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,11,PC3,GPIO,SPI2_MOSI,AF1,SPI2_MOSI,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,12,VSSA,GND,,,,f072rb-package,
+stm32f072rbt6,13,VDDA,POWER,,,,f072rb-package,
+stm32f072rbt6,14,PA0,GPIO,ADC_IN0,,ADC_IN0,f072rb-package,f072rb-package
+stm32f072rbt6,14,PA0,GPIO,COMP1_INM,,COMP1_INM,f072rb-package,f072rb-package
+stm32f072rbt6,14,PA0,GPIO,COMP1_OUT,AF7,COMP1_OUT,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,14,PA0,GPIO,RTC_TAMP2,,RTC_TAMP2,f072rb-package,f072rb-package
+stm32f072rbt6,14,PA0,GPIO,SYS_WKUP1,,SYS_WKUP1,f072rb-package,f072rb-package
+stm32f072rbt6,14,PA0,GPIO,TIM2_CH1,AF2,TIM2_CH1,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,14,PA0,GPIO,TIM2_ETR,AF2,TIM2_ETR,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,14,PA0,GPIO,TSC_G1_IO1,AF3,TSC_G1_IO1,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,14,PA0,GPIO,USART2_CTS,AF1,USART2_CTS,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,14,PA0,GPIO,USART4_TX,AF4,USART4_TX,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,15,PA1,GPIO,ADC_IN1,,ADC_IN1,f072rb-package,f072rb-package
+stm32f072rbt6,15,PA1,GPIO,COMP1_INP,,COMP1_INP,f072rb-package,f072rb-package
+stm32f072rbt6,15,PA1,GPIO,TIM15_CH1N,AF5,TIM15_CH1N,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,15,PA1,GPIO,TIM2_CH2,AF2,TIM2_CH2,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,15,PA1,GPIO,TSC_G1_IO2,AF3,TSC_G1_IO2,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,15,PA1,GPIO,USART2_DE,AF1,USART2_DE,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,15,PA1,GPIO,USART2_RTS,AF1,USART2_RTS,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,15,PA1,GPIO,USART4_RX,AF4,USART4_RX,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,16,PA2,GPIO,ADC_IN2,,ADC_IN2,f072rb-package,f072rb-package
+stm32f072rbt6,16,PA2,GPIO,COMP2_INM,,COMP2_INM,f072rb-package,f072rb-package
+stm32f072rbt6,16,PA2,GPIO,COMP2_OUT,AF7,COMP2_OUT,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,16,PA2,GPIO,SYS_WKUP4,,SYS_WKUP4,f072rb-package,f072rb-package
+stm32f072rbt6,16,PA2,GPIO,TIM15_CH1,AF0,TIM15_CH1,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,16,PA2,GPIO,TIM2_CH3,AF2,TIM2_CH3,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,16,PA2,GPIO,TSC_G1_IO3,AF3,TSC_G1_IO3,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,16,PA2,GPIO,USART2_TX,AF1,USART2_TX,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,17,PA3,GPIO,ADC_IN3,,ADC_IN3,f072rb-package,f072rb-package
+stm32f072rbt6,17,PA3,GPIO,COMP2_INP,,COMP2_INP,f072rb-package,f072rb-package
+stm32f072rbt6,17,PA3,GPIO,TIM15_CH2,AF0,TIM15_CH2,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,17,PA3,GPIO,TIM2_CH4,AF2,TIM2_CH4,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,17,PA3,GPIO,TSC_G1_IO4,AF3,TSC_G1_IO4,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,17,PA3,GPIO,USART2_RX,AF1,USART2_RX,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,18,VSS,GND,,,,f072rb-package,
+stm32f072rbt6,19,VDD,POWER,,,,f072rb-package,
+stm32f072rbt6,20,PA4,GPIO,ADC_IN4,,ADC_IN4,f072rb-package,f072rb-package
+stm32f072rbt6,20,PA4,GPIO,COMP1_INM,,COMP1_INM,f072rb-package,f072rb-package
+stm32f072rbt6,20,PA4,GPIO,COMP2_INM,,COMP2_INM,f072rb-package,f072rb-package
+stm32f072rbt6,20,PA4,GPIO,DAC_OUT1,,DAC_OUT1,f072rb-package,f072rb-package
+stm32f072rbt6,20,PA4,GPIO,I2S1_WS,AF0,I2S1_WS,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,20,PA4,GPIO,SPI1_NSS,AF0,SPI1_NSS,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,20,PA4,GPIO,TIM14_CH1,AF4,TIM14_CH1,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,20,PA4,GPIO,TSC_G2_IO1,AF3,TSC_G2_IO1,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,20,PA4,GPIO,USART2_CK,AF1,USART2_CK,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,21,PA5,GPIO,ADC_IN5,,ADC_IN5,f072rb-package,f072rb-package
+stm32f072rbt6,21,PA5,GPIO,CEC,AF1,CEC,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,21,PA5,GPIO,COMP1_INM,,COMP1_INM,f072rb-package,f072rb-package
+stm32f072rbt6,21,PA5,GPIO,COMP2_INM,,COMP2_INM,f072rb-package,f072rb-package
+stm32f072rbt6,21,PA5,GPIO,DAC_OUT2,,DAC_OUT2,f072rb-package,f072rb-package
+stm32f072rbt6,21,PA5,GPIO,I2S1_CK,AF0,I2S1_CK,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,21,PA5,GPIO,SPI1_SCK,AF0,SPI1_SCK,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,21,PA5,GPIO,TIM2_CH1,AF2,TIM2_CH1,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,21,PA5,GPIO,TIM2_ETR,AF2,TIM2_ETR,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,21,PA5,GPIO,TSC_G2_IO2,AF3,TSC_G2_IO2,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,22,PA6,GPIO,ADC_IN6,,ADC_IN6,f072rb-package,f072rb-package
+stm32f072rbt6,22,PA6,GPIO,COMP1_OUT,AF7,COMP1_OUT,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,22,PA6,GPIO,I2S1_MCK,AF0,I2S1_MCK,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,22,PA6,GPIO,SPI1_MISO,AF0,SPI1_MISO,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,22,PA6,GPIO,TIM16_CH1,AF5,TIM16_CH1,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,22,PA6,GPIO,TIM1_BKIN,AF2,TIM1_BKIN,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,22,PA6,GPIO,TIM3_CH1,AF1,TIM3_CH1,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,22,PA6,GPIO,TSC_G2_IO3,AF3,TSC_G2_IO3,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,22,PA6,GPIO,USART3_CTS,AF4,USART3_CTS,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,23,PA7,GPIO,ADC_IN7,,ADC_IN7,f072rb-package,f072rb-package
+stm32f072rbt6,23,PA7,GPIO,COMP2_OUT,AF7,COMP2_OUT,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,23,PA7,GPIO,I2S1_SD,AF0,I2S1_SD,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,23,PA7,GPIO,SPI1_MOSI,AF0,SPI1_MOSI,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,23,PA7,GPIO,TIM14_CH1,AF4,TIM14_CH1,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,23,PA7,GPIO,TIM17_CH1,AF5,TIM17_CH1,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,23,PA7,GPIO,TIM1_CH1N,AF2,TIM1_CH1N,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,23,PA7,GPIO,TIM3_CH2,AF1,TIM3_CH2,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,23,PA7,GPIO,TSC_G2_IO4,AF3,TSC_G2_IO4,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,24,PC4,GPIO,ADC_IN14,,ADC_IN14,f072rb-package,f072rb-package
+stm32f072rbt6,24,PC4,GPIO,USART3_TX,AF1,USART3_TX,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,25,PC5,GPIO,ADC_IN15,,ADC_IN15,f072rb-package,f072rb-package
+stm32f072rbt6,25,PC5,GPIO,SYS_WKUP5,,SYS_WKUP5,f072rb-package,f072rb-package
+stm32f072rbt6,25,PC5,GPIO,TSC_G3_IO1,AF0,TSC_G3_IO1,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,25,PC5,GPIO,USART3_RX,AF1,USART3_RX,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,26,PB0,GPIO,ADC_IN8,,ADC_IN8,f072rb-package,f072rb-package
+stm32f072rbt6,26,PB0,GPIO,TIM1_CH2N,AF2,TIM1_CH2N,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,26,PB0,GPIO,TIM3_CH3,AF1,TIM3_CH3,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,26,PB0,GPIO,TSC_G3_IO2,AF3,TSC_G3_IO2,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,26,PB0,GPIO,USART3_CK,AF4,USART3_CK,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,27,PB1,GPIO,ADC_IN9,,ADC_IN9,f072rb-package,f072rb-package
+stm32f072rbt6,27,PB1,GPIO,TIM14_CH1,AF0,TIM14_CH1,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,27,PB1,GPIO,TIM1_CH3N,AF2,TIM1_CH3N,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,27,PB1,GPIO,TIM3_CH4,AF1,TIM3_CH4,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,27,PB1,GPIO,TSC_G3_IO3,AF3,TSC_G3_IO3,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,27,PB1,GPIO,USART3_DE,AF4,USART3_DE,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,27,PB1,GPIO,USART3_RTS,AF4,USART3_RTS,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,28,PB2,GPIO,TSC_G3_IO4,AF3,TSC_G3_IO4,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,29,PB10,GPIO,CEC,AF0,CEC,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,29,PB10,GPIO,I2C2_SCL,AF1,I2C2_SCL,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,29,PB10,GPIO,I2S2_CK,AF5,I2S2_CK,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,29,PB10,GPIO,SPI2_SCK,AF5,SPI2_SCK,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,29,PB10,GPIO,TIM2_CH3,AF2,TIM2_CH3,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,29,PB10,GPIO,TSC_SYNC,AF3,TSC_SYNC,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,29,PB10,GPIO,USART3_TX,AF4,USART3_TX,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,30,PB11,GPIO,I2C2_SDA,AF1,I2C2_SDA,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,30,PB11,GPIO,TIM2_CH4,AF2,TIM2_CH4,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,30,PB11,GPIO,TSC_G6_IO1,AF3,TSC_G6_IO1,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,30,PB11,GPIO,USART3_RX,AF4,USART3_RX,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,31,VSS,GND,,,,f072rb-package,
+stm32f072rbt6,32,VDD,POWER,,,,f072rb-package,
+stm32f072rbt6,33,PB12,GPIO,I2S2_WS,AF0,I2S2_WS,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,33,PB12,GPIO,SPI2_NSS,AF0,SPI2_NSS,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,33,PB12,GPIO,TIM15_BKIN,AF5,TIM15_BKIN,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,33,PB12,GPIO,TIM1_BKIN,AF2,TIM1_BKIN,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,33,PB12,GPIO,TSC_G6_IO2,AF3,TSC_G6_IO2,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,33,PB12,GPIO,USART3_CK,AF4,USART3_CK,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,34,PB13,GPIO,I2C2_SCL,AF5,I2C2_SCL,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,34,PB13,GPIO,I2S2_CK,AF0,I2S2_CK,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,34,PB13,GPIO,SPI2_SCK,AF0,SPI2_SCK,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,34,PB13,GPIO,TIM1_CH1N,AF2,TIM1_CH1N,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,34,PB13,GPIO,TSC_G6_IO3,AF3,TSC_G6_IO3,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,34,PB13,GPIO,USART3_CTS,AF4,USART3_CTS,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,35,PB14,GPIO,I2C2_SDA,AF5,I2C2_SDA,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,35,PB14,GPIO,I2S2_MCK,AF0,I2S2_MCK,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,35,PB14,GPIO,SPI2_MISO,AF0,SPI2_MISO,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,35,PB14,GPIO,TIM15_CH1,AF1,TIM15_CH1,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,35,PB14,GPIO,TIM1_CH2N,AF2,TIM1_CH2N,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,35,PB14,GPIO,TSC_G6_IO4,AF3,TSC_G6_IO4,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,35,PB14,GPIO,USART3_DE,AF4,USART3_DE,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,35,PB14,GPIO,USART3_RTS,AF4,USART3_RTS,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,36,PB15,GPIO,I2S2_SD,AF0,I2S2_SD,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,36,PB15,GPIO,RTC_REFIN,,RTC_REFIN,f072rb-package,f072rb-package
+stm32f072rbt6,36,PB15,GPIO,SPI2_MOSI,AF0,SPI2_MOSI,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,36,PB15,GPIO,SYS_WKUP7,,SYS_WKUP7,f072rb-package,f072rb-package
+stm32f072rbt6,36,PB15,GPIO,TIM15_CH1N,AF3,TIM15_CH1N,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,36,PB15,GPIO,TIM15_CH2,AF1,TIM15_CH2,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,36,PB15,GPIO,TIM1_CH3N,AF2,TIM1_CH3N,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,37,PC6,GPIO,TIM3_CH1,AF0,TIM3_CH1,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,38,PC7,GPIO,TIM3_CH2,AF0,TIM3_CH2,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,39,PC8,GPIO,TIM3_CH3,AF0,TIM3_CH3,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,40,PC9,GPIO,DAC_EXTI9,,DAC_EXTI9,f072rb-package,f072rb-package
+stm32f072rbt6,40,PC9,GPIO,TIM3_CH4,AF0,TIM3_CH4,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,41,PA8,GPIO,CRS_SYNC,AF4,CRS_SYNC,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,41,PA8,GPIO,RCC_MCO,AF0,RCC_MCO,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,41,PA8,GPIO,TIM1_CH1,AF2,TIM1_CH1,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,41,PA8,GPIO,USART1_CK,AF1,USART1_CK,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,42,PA9,GPIO,DAC_EXTI9,,DAC_EXTI9,f072rb-package,f072rb-package
+stm32f072rbt6,42,PA9,GPIO,TIM15_BKIN,AF0,TIM15_BKIN,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,42,PA9,GPIO,TIM1_CH2,AF2,TIM1_CH2,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,42,PA9,GPIO,TSC_G4_IO1,AF3,TSC_G4_IO1,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,42,PA9,GPIO,USART1_TX,AF1,USART1_TX,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,43,PA10,GPIO,TIM17_BKIN,AF0,TIM17_BKIN,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,43,PA10,GPIO,TIM1_CH3,AF2,TIM1_CH3,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,43,PA10,GPIO,TSC_G4_IO2,AF3,TSC_G4_IO2,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,43,PA10,GPIO,USART1_RX,AF1,USART1_RX,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,44,PA11,GPIO,CAN_RX,AF4,CAN_RX,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,44,PA11,GPIO,COMP1_OUT,AF7,COMP1_OUT,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,44,PA11,GPIO,TIM1_CH4,AF2,TIM1_CH4,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,44,PA11,GPIO,TSC_G4_IO3,AF3,TSC_G4_IO3,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,44,PA11,GPIO,USART1_CTS,AF1,USART1_CTS,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,44,PA11,GPIO,USB_DM,,USB_DM,f072rb-package,f072rb-package
+stm32f072rbt6,45,PA12,GPIO,CAN_TX,AF4,CAN_TX,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,45,PA12,GPIO,COMP2_OUT,AF7,COMP2_OUT,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,45,PA12,GPIO,TIM1_ETR,AF2,TIM1_ETR,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,45,PA12,GPIO,TSC_G4_IO4,AF3,TSC_G4_IO4,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,45,PA12,GPIO,USART1_DE,AF1,USART1_DE,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,45,PA12,GPIO,USART1_RTS,AF1,USART1_RTS,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,45,PA12,GPIO,USB_DP,,USB_DP,f072rb-package,f072rb-package
+stm32f072rbt6,46,PA13,GPIO,IR_OUT,AF1,IR_OUT,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,46,PA13,GPIO,SYS_SWDIO,AF0,SYS_SWDIO,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,46,PA13,GPIO,USB_NOE,AF2,USB_NOE,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,47,VSS,GND,,,,f072rb-package,
+stm32f072rbt6,48,VDDIO2,POWER,,,,f072rb-package,
+stm32f072rbt6,49,PA14,GPIO,SYS_SWCLK,AF0,SYS_SWCLK,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,49,PA14,GPIO,USART2_TX,AF1,USART2_TX,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,50,PA15,GPIO,I2S1_WS,AF0,I2S1_WS,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,50,PA15,GPIO,SPI1_NSS,AF0,SPI1_NSS,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,50,PA15,GPIO,TIM2_CH1,AF2,TIM2_CH1,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,50,PA15,GPIO,TIM2_ETR,AF2,TIM2_ETR,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,50,PA15,GPIO,USART2_RX,AF1,USART2_RX,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,50,PA15,GPIO,USART4_DE,AF4,USART4_DE,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,50,PA15,GPIO,USART4_RTS,AF4,USART4_RTS,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,51,PC10,GPIO,USART3_TX,AF1,USART3_TX,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,51,PC10,GPIO,USART4_TX,AF0,USART4_TX,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,52,PC11,GPIO,USART3_RX,AF1,USART3_RX,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,52,PC11,GPIO,USART4_RX,AF0,USART4_RX,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,53,PC12,GPIO,USART3_CK,AF1,USART3_CK,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,53,PC12,GPIO,USART4_CK,AF0,USART4_CK,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,54,PD2,GPIO,TIM3_ETR,AF0,TIM3_ETR,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,54,PD2,GPIO,USART3_DE,AF1,USART3_DE,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,54,PD2,GPIO,USART3_RTS,AF1,USART3_RTS,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,55,PB3,GPIO,I2S1_CK,AF0,I2S1_CK,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,55,PB3,GPIO,SPI1_SCK,AF0,SPI1_SCK,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,55,PB3,GPIO,TIM2_CH2,AF2,TIM2_CH2,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,55,PB3,GPIO,TSC_G5_IO1,AF3,TSC_G5_IO1,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,56,PB4,GPIO,I2S1_MCK,AF0,I2S1_MCK,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,56,PB4,GPIO,SPI1_MISO,AF0,SPI1_MISO,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,56,PB4,GPIO,TIM17_BKIN,AF5,TIM17_BKIN,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,56,PB4,GPIO,TIM3_CH1,AF1,TIM3_CH1,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,56,PB4,GPIO,TSC_G5_IO2,AF3,TSC_G5_IO2,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,57,PB5,GPIO,I2C1_SMBA,AF3,I2C1_SMBA,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,57,PB5,GPIO,I2S1_SD,AF0,I2S1_SD,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,57,PB5,GPIO,SPI1_MOSI,AF0,SPI1_MOSI,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,57,PB5,GPIO,SYS_WKUP6,,SYS_WKUP6,f072rb-package,f072rb-package
+stm32f072rbt6,57,PB5,GPIO,TIM16_BKIN,AF2,TIM16_BKIN,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,57,PB5,GPIO,TIM3_CH2,AF1,TIM3_CH2,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,58,PB6,GPIO,I2C1_SCL,AF1,I2C1_SCL,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,58,PB6,GPIO,TIM16_CH1N,AF2,TIM16_CH1N,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,58,PB6,GPIO,TSC_G5_IO3,AF3,TSC_G5_IO3,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,58,PB6,GPIO,USART1_TX,AF0,USART1_TX,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,59,PB7,GPIO,I2C1_SDA,AF1,I2C1_SDA,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,59,PB7,GPIO,TIM17_CH1N,AF2,TIM17_CH1N,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,59,PB7,GPIO,TSC_G5_IO4,AF3,TSC_G5_IO4,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,59,PB7,GPIO,USART1_RX,AF0,USART1_RX,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,59,PB7,GPIO,USART4_CTS,AF4,USART4_CTS,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,60,BOOT0,SYSTEM,,,,f072rb-package,
+stm32f072rbt6,61,PB8,GPIO,CAN_RX,AF4,CAN_RX,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,61,PB8,GPIO,CEC,AF0,CEC,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,61,PB8,GPIO,I2C1_SCL,AF1,I2C1_SCL,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,61,PB8,GPIO,TIM16_CH1,AF2,TIM16_CH1,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,61,PB8,GPIO,TSC_SYNC,AF3,TSC_SYNC,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,62,PB9,GPIO,CAN_TX,AF4,CAN_TX,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,62,PB9,GPIO,DAC_EXTI9,,DAC_EXTI9,f072rb-package,f072rb-package
+stm32f072rbt6,62,PB9,GPIO,I2C1_SDA,AF1,I2C1_SDA,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,62,PB9,GPIO,I2S2_WS,AF5,I2S2_WS,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,62,PB9,GPIO,IR_OUT,AF0,IR_OUT,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,62,PB9,GPIO,SPI2_NSS,AF5,SPI2_NSS,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,62,PB9,GPIO,TIM17_CH1,AF2,TIM17_CH1,f072rb-package,f072rb-package | f072rb-modes
+stm32f072rbt6,63,VSS,GND,,,,f072rb-package,
+stm32f072rbt6,64,VDD,POWER,,,,f072rb-package,

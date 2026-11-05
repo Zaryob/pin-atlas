@@ -1,7 +1,7 @@
 {
   "verifiedOn": "2026-11-05",
-  "physicalPins": 3313,
-  "functionAssignments": 14566,
+  "physicalPins": 3485,
+  "functionAssignments": 15158,
   "documents": [
     {
       "id": "rp2350",
@@ -764,6 +764,24 @@
       "publisher": "STMicroelectronics",
       "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
       "sha256": "02304a9fab76e957140923a766f367928e3a89550849acbe9ee4b050ba1a893e"
+    },
+    {
+      "id": "f072rb-package",
+      "title": "STM32F072RB CubeMX package data",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F072R(8-B)Tx.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F072R(8-B)Tx.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "6c84dde33fe5bfff15c39f5e176c4deab251e907ae50b7c025d7abdbf6d6a9e5"
+    },
+    {
+      "id": "f072rb-modes",
+      "title": "STM32F072RB CubeMX modes data",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F052_gpio_v1_0_Modes.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F052_gpio_v1_0_Modes.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "b2bbae747f13e9dac4507a58a9acec3f5c4bf846f5832ab2f44545fd8a1d79af"
     }
   ],
   "boards": [
@@ -1281,6 +1299,24 @@
       "id": "stm32l476rgt6",
       "physicalPins": 64,
       "functionAssignments": 424,
+      "physicalSourceMethods": [
+        "manufacturer-xml"
+      ]
+    },
+    {
+      "id": "nucleo-f072rb",
+      "physicalPins": 108,
+      "functionAssignments": 360,
+      "physicalSourceMethods": [
+        "manufacturer-xml",
+        "pdf-table",
+        "visual-diagram"
+      ]
+    },
+    {
+      "id": "stm32f072rbt6",
+      "physicalPins": 64,
+      "functionAssignments": 232,
       "physicalSourceMethods": [
         "manufacturer-xml"
       ]

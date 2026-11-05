@@ -60,3 +60,15 @@ test('L476RG retains its MCU, low-power clock and analog input mapping',()=>{
   const supply=board.pins.find(pin=>pin.physicalLabel==='CN7.33');
   assert.equal(supply.name,'VBAT');
 });
+
+test('F072RB retains its MCU, low-power clock and analog input mapping',()=>{
+  const board=boards.find(board=>board.id==='nucleo-f072rb');
+  const chip=boards.find(board=>board.id==='stm32f072rbt6');
+  assert.equal(chip.clock,'48 MHz');assert.equal(chip.gpioCount,51);
+  assert.equal(chip.packagePins,64);assert(chip.processor.includes('Cortex-M0'));
+  const a0=board.pins.find(pin=>pin.physicalLabel==='CN8.1');
+  assert.equal(a0.name,'PA0');assert.equal(a0.mcuPin,14);
+  assert(a0.functions.some(fn=>fn.name==='ADC_IN0'));
+  const supply=board.pins.find(pin=>pin.physicalLabel==='CN7.33');
+  assert.equal(supply.name,'VBAT');
+});
