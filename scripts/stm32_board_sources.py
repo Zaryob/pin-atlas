@@ -1,6 +1,8 @@
 """Physical STM32 board contacts from locked manufacturer source tables/CAD."""
 import copy
 from collections import Counter
+import json
+from pathlib import Path
 import re
 import pdfplumber
 from stm32_sources import SnapshotDocument, verify_snapshot
@@ -105,8 +107,16 @@ def build_nucleo144(cache,docs,ref,chip,model,spec,use_snapshots=False):
             if header=='CN9' and index in (9,11):pin['boardCircuitKey']='nucleo144AnalogBridge'
             pins.append(pin)
     ioc_id='nucleo-'+model+'-ioc'
+    if document=='nucleo-um2407-r6':
+        limits=ref(id+'-board-limits',document,32,'Table 14 · SB14/SB15 Morpho SDMMC links; continued p.34, SB65/PF11 ADC restriction')
+        for pin in pins:
+            if pin['physicalLabel'] in ('CN12.1','CN12.2'):
+                pin['boardCircuitKey']='nucleo144SdBridge';pin['evidence'].append(limits)
+            if pin['net']=='PF11':
+                pin['functions']=[fn for fn in pin['functions'] if not re.match(r'ADC\d+_IN',fn['name'])]
+                pin['boardCircuitKey']='nucleo144Pf11';pin['evidence'].append(limits)
     if ioc_id in docs:
-        source=ref(ioc_id,ioc_id,None,'Official board configuration · fitted peripheral and GPIO labels','hardware-spec')
+        source=ref(ioc_id+'-circuit',ioc_id,None,'Official board configuration · fitted peripheral and GPIO labels','hardware-spec')
         configuration=dict(line.split('=',1) for line in (cache/docs[ioc_id]['file']).read_text().splitlines() if '=' in line)
         for pin in pins:
             signal=configuration.get(pin['name']+'.Signal','');label=configuration.get(pin['name']+'.GPIO_Label','').upper()
@@ -116,3 +126,26 @@ def build_nucleo144(cache,docs,ref,chip,model,spec,use_snapshots=False):
                          {'width':1100,'height':1040,'minWidth':1000,'artwork':'assets/boards/nucleo-144.svg',
                           'connectorGroups':[{'id':h,'label':('ST Zio' if h in ('CN7','CN8','CN9','CN10') else 'ST Morpho')+' · '+h,'contacts':[h]} for h in expected]},
                          docs[document]['viewUrl'],'nucleo144SourceScope')
+
+def preserve_h723_assignments(board,legacy):
+    """Retain v0.6 electrical assignment IDs while correcting physical labels."""
+    mapping=json.loads((Path(__file__).resolve().parents[1]/'sources/legacy-h723-pin-ids.json').read_text())
+    assert [item['number'] for item in mapping]==list(range(1,132))
+    original={p['number']:p for p in legacy['pins']};physical={p['physicalLabel']:p for p in board['pins']}
+    aliases={'+3.3V':'3V3','+5V':'5V','VDD':'3V3_VDD','VREF+':'VREFP'}
+    used=set()
+    for item in mapping:
+        old=original[item['number']];pin=physical[item['physicalLabel']]
+        assert item['physicalLabel'] not in used
+        assert item['name']==old['name'] and item['mcuPin']==old.get('mcuPin')
+        assert aliases.get(old['name'],old['name'])==pin['name']
+        if old.get('mcuPin'):assert old['mcuPin']==pin.get('mcuPin')
+        retired=sorted({f['name'] for f in old['functions']}-{f['name'] for f in pin['functions']})
+        if retired:pin['retiredFunctions']=retired
+        pin['number']=item['number'];pin['name']=old['name'];used.add(item['physicalLabel'])
+    number=132
+    for pin in board['pins']:
+        if pin['physicalLabel'] not in used:pin['number']=number;number+=1
+    board['pins'].sort(key=lambda p:p['number'])
+    assert number==241
+    return board

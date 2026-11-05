@@ -1039,6 +1039,50 @@
       "publisher": "STMicroelectronics",
       "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
       "sha256": "2c28d56f76b110bfebc7d33f55b68a153460cb33379a60897c0a5e9c065291f6"
+    },
+    {
+      "id": "h743zi-package",
+      "title": "H743ZI CubeMX package data",
+      "file": "h743zi-package.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32H743ZITx.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32H743ZITx.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "ac4c5375cf52cb170e7296442abd7ca7dc9f4926acc98ed2c735fa2b12ef2e68"
+    },
+    {
+      "id": "h743zi-modes",
+      "title": "STM32H747_gpio_v1_0 GPIO alternate functions",
+      "file": "h743zi-modes.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32H747_gpio_v1_0_Modes.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32H747_gpio_v1_0_Modes.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "49f51ae2508a11df6b385b86ed21172ea43478c4d314314db465e0f8d278c246"
+    },
+    {
+      "id": "nucleo-um2407-r6",
+      "title": "STM32 Nucleo-144 · UM2407 Rev 6",
+      "file": "nucleo-um2407-r6.pdf",
+      "url": "https://www.st.com/resource/en/user_manual/um2407-stm32h7-nucleo144-board-stmicroelectronics.pdf",
+      "viewUrl": "https://www.st.com/resource/en/user_manual/um2407-stm32h7-nucleo144-board-stmicroelectronics.pdf",
+      "publisher": "STMicroelectronics",
+      "revision": "UM2407 Rev 6",
+      "sha256": "b493e14fad9b4fe8323e4694bc83eff98ee74c4e10ca14b7cc24a8e22180a4cd",
+      "tableSnapshot": {
+        "file": "sources/extracted/nucleo-um2407-r6.json",
+        "sha256": "6f8db36e34eb104290528ec8204547a718a6a246448cfabbee022c3ca111922b"
+      }
+    },
+    {
+      "id": "nucleo-h743zi-ioc",
+      "title": "NUCLEO-H743ZI official board configuration",
+      "file": "nucleo-h743zi-ioc.ioc",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/boards/G73_Nucleo_NUCLEO-H743ZI2_STM32H743ZIT_Board_AllConfig.ioc",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/boards/G73_Nucleo_NUCLEO-H743ZI2_STM32H743ZIT_Board_AllConfig.ioc",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "95a7cc04b3d5d33a13654d8b0e70b7bb709762ecf45f4aea5bacb80011e605cf"
     }
   ],
   "publishers": [

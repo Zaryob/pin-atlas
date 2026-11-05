@@ -17,7 +17,7 @@ test('connector navigation covers each exposed connector with no empty group', (
 test('Nucleo-144 uses Zio and Morpho groups rather than the Nucleo-64 connector list', () => {
   const h7=boards.find(board=>board.id==='nucleo-h723zg');
   assert.deepEqual(connectorGroupsFor(h7).map(group=>[group.id,group.label]), [
-    ['CN7','ST Zio · CN7'],['CN8','ST Zio · CN8'],['MORPHO','ST Morpho']
+    ['CN7','ST Zio · CN7'],['CN8','ST Zio · CN8'],['CN9','ST Zio · CN9'],['CN10','ST Zio · CN10'],['CN11','ST Morpho · CN11'],['CN12','ST Morpho · CN12']
   ]);
   const f1=boards.find(board=>board.id==='nucleo-f103rb');
   const arduino=connectorGroupsFor(f1).find(group=>group.id==='arduino');

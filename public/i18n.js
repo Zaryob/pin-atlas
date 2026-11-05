@@ -1,6 +1,9 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
 (() => {
   const messages = {
+    "retiredFunction": ["{pin} üzerindeki {name}, düzeltilmiş kart kapsamına göre kullanılamaz. Geçerli bir işlev seçin.", "{name} on {pin} is unavailable under the corrected board scope. Choose a supported function."],
+    "nucleo144SdBridge": ["CN12.1/2 üzerindeki PC9/PC8 bağlantıları SB15/SB14 üzerinden seçilir. Köprüler OFF iken Morpho temasları bağlı değildir; SDMMC pinlerini kullanmadan önce ayarları kontrol edin.", "PC9/PC8 reach CN12.1/2 through SB15/SB14. These Morpho contacts are disconnected with the bridges OFF; check the settings before using the SDMMC pins."],
+    "nucleo144Pf11": ["UM2407, MB1364 üzerinde PF11'in yalnızca GPIO olarak kullanılmasını ve ADC_IN olarak kullanılmamasını belirtir (SB65). Bu kart görünümünde analog ADC girişleri çıkarılır; dijital EXTI tetikleri korunur.", "UM2407 restricts PF11 on MB1364 to GPIO use and prohibits ADC_IN use (SB65). Analog ADC inputs are excluded here; digital EXTI triggers remain available."],
     "nucleo144Layout": ["STM32 Nucleo-144 ailesi", "STM32 Nucleo-144 family"],
     "nucleo144Subtitle": ["100 ST Zio + 140 ST Morpho kontağı", "100 ST Zio + 140 ST Morpho contacts"],
     "nucleo144Compatible": ["Ortak CN7–CN12 fiziksel konumları; model seçimi kendi işlemcisini ve devre notlarını açar.", "Shared CN7–CN12 physical positions; select a model for its own processor and circuit notes."],
@@ -289,7 +292,7 @@
     "nucleoH7VcpTx": ["ST-LINK sanal COM port alıcı hattı STLK_VCP_RX (PD8 / USART3_TX).", "ST-LINK Virtual COM port RX line STLK_VCP_RX (PD8 / USART3_TX)."],
     "nucleoH7VcpRx": ["ST-LINK sanal COM port verici hattı STLK_VCP_TX (PD9 / USART3_RX).", "ST-LINK Virtual COM port TX line STLK_VCP_TX (PD9 / USART3_RX)."],
     "nucleoH7Rmii": ["Yerleşik Ethernet PHY (RMII) arayüzüne ayrılmış hat.", "Dedicated to the on-board Ethernet PHY (RMII) interface."],
-    "nucleoH7Usb": ["Yerleşik USB OTG FS / Type-C arayüz hattı.", "On-board USB OTG FS / Type-C interface line."],
+    "nucleoH7Usb": ["Yerleşik USB OTG FS arayüz hattı.", "On-board USB OTG FS interface line."],
     "stm32F103Compatible": ["STM32F103C8T6 / STM32F103CBT6 · LQFP-48 pin düzeni", "STM32F103C8T6 / STM32F103CBT6 · LQFP-48 pinout"],
     "stm32F103Scope": ["ST DS5319 ve RM0008: 48 paket pini, 37 GPIO olanağı (PD0/PD1 için HSE pinleri yazılımla bırakılmalıdır). STM32F1 işlevleri AFIO remap ile seçilir; AF0–AF15 numaraları kullanılmaz. Remap değerleri çevre birimi genelindedir; bu plan yazmaçları veya tüm birlikte kullanım koşullarını doğrulamaz. ADC girişlerinde 5 V toleransı varsayma.", "ST DS5319 and RM0008: 48 package pins, 37 GPIO-capable connections (PD0/PD1 require releasing the HSE pins). STM32F1 uses AFIO remapping, not AF0–AF15 selectors. Remap values apply to whole peripherals; the plan does not validate register settings or every simultaneous-use constraint. Do not assume 5 V tolerance in analog mode."],
     "stm32F103Rbt6Compatible": ["STM32F103RBT6 / STM32F103R8T6 · LQFP-64 pin düzeni", "STM32F103RBT6 / STM32F103R8T6 · LQFP-64 pinout"],

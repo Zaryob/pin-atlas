@@ -193,3 +193,11 @@ NUCLEO-L432KC uses UM1956 Rev 6 Table 16 (page 30) and shares the verified CN3/C
 ## Nucleo-144 / MB1137
 
 NUCLEO-F767ZI uses UM1974 Rev 11 Table 19 (pages 61–65), Table 21 (pages 70/71) and the mechanical drawing on page 15. All six headers are represented independently: CN7 (20), CN8 (16), CN9 (30), CN10 (34), CN11 (70) and CN12 (70), totaling 240 physical contacts. These are separate from STM32F767ZIT6's 144 LQFP pads and 114 GPIOs. The MCU clock is up to 216 MHz. Functions and AF selectors use the pinned package's exact GPIO dependency; onboard peripheral notes use ST's pinned board configuration. Repeated power rails do not imply a unique MCU pad.
+
+## Nucleo-144 / MB1364 and legacy H723 plans
+
+NUCLEO-H743ZI2 is the MB1364 board, distinct from the older MB1137 NUCLEO-H743ZI. Its STM32H743ZIT6 package uses 144 LQFP pads, 114 GPIO-capable pads and up to 480 MHz. UM2407 Rev 6 Tables 18–22 (pages 40–44), the mechanical drawing on page 16, and ST's pinned board configuration provide the physical contacts and circuit evidence. The manual's PC2/PC3 labels resolve to PC2_C/PC3_C in the selected package XML. SB14/SB15 control the PC8/PC9 Morpho connections; A4/A5 routing depends on solder bridges. PF11 analog ADC input is excluded per Table 14/SB65, while digital EXTI triggers remain available.
+
+The H723 view is rebuilt from the same numbered physical tables. Its former 131 logical records did not describe all six physical connectors. All 131 existing assignment IDs keep their electrical signal and MCU pad, using the reviewed mapping in `sources/legacy-h723-pin-ids.json`; additional physical contacts get IDs 132–240. The old variant parser is used only to verify legacy assignment identity, not as physical connector evidence. Actual connector labels come from UM2407. Shared layout checks compare named contact positions, so switching models retains the physical contact even when internal assignment IDs differ.
+
+Existing browser plans containing a now-unavailable PF11 analog input or repeated physical net remain visible with a conflict warning. New assignments, JSON imports and share previews reject unsupported choices. Printed/SVG output retains the warning. GPIO/ADC labels and saved pin numbers are not silently discarded.

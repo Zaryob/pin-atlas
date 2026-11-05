@@ -23,6 +23,22 @@ async function openPlan(page) {
   else await page.locator('#plan-tab').click();
 }
 
+test('Nucleo144 model changes retain the physical contact and old H723 wiring plans',async({page})=>{
+ const saved={'nucleo-h723zg':{21:{function:'SPI1_MOSI',label:'legacy MOSI'}}};
+ await page.addInitScript(({key,saved})=>localStorage.setItem(key,JSON.stringify(saved)),{key:storageKey,saved});
+ await ready(page,'#board=nucleo-h723zg&pin=21');
+ await expect(page.locator('#diagram [data-pin="21"]')).toHaveAttribute('aria-current','true');
+ await page.locator('#function-reference').selectOption('nucleo-f767zi');
+ await expect(page.locator('#app-status')).toBeHidden();
+ await expect(page.locator('#diagram [data-pin="14"]')).toHaveAttribute('aria-current','true');
+ await page.locator('#function-reference').selectOption('nucleo-h723zg');
+ await expect(page.locator('#app-status')).toBeHidden();
+ await expect(page.locator('#diagram [data-pin="21"]')).toHaveAttribute('aria-current','true');
+ await openPlan(page);await expect(page.locator('#plan-list')).toContainText('CN7.14');
+ await expect(page.locator('#plan-list')).toContainText('legacy MOSI');
+ expect(await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),storageKey)).toEqual(saved);
+});
+
 for(const board of boards.filter(b=>['nucleo32Scope','nucleo144SourceScope','blackPillScope'].includes(b.scopeKey))) {
  test(`${board.id} opens its exact reference and verified package`,async({page})=>{
   await ready(page);await page.locator('#home-search').fill(board.name);

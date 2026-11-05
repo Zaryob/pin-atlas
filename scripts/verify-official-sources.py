@@ -10,7 +10,8 @@ try:
     import pdfplumber
     from stm32_sources import build_stm32,verify_snapshot
     from nucleo_sources import build_nucleo,read_f4_chip,read_g4_chip,build_nucleo_g474,read_h7_chip,build_nucleo_h723
-    from stm32_catalog_sources import build_catalog as build_stm32_catalog
+    from stm32_catalog_sources import build_catalog as build_stm32_catalog, REGISTRY as STM32_REGISTRY
+    from stm32_board_sources import build_nucleo144,preserve_h723_assignments
     from arduino_sources import build_arduino
     from expanded_arduino_sources import build_expanded_arduino
     from espressif_sources import build_espressif
@@ -425,7 +426,9 @@ def build(use_snapshots=False):
     g4_chip=read_g4_chip(CACHE,DOCS,ref,MANIFEST['verifiedOn'],category)
     boards.append(build_nucleo_g474(CACHE,DOCS,ref,g4_chip,use_snapshots=use_snapshots))
     h7_chip=read_h7_chip(CACHE,DOCS,ref,MANIFEST['verifiedOn'],category)
-    boards.append(build_nucleo_h723(CACHE,DOCS,ref,h7_chip))
+    legacy_h723=build_nucleo_h723(CACHE,DOCS,ref,h7_chip,legacy_identity_only=True)
+    corrected_h723=build_nucleo144(CACHE,DOCS,ref,h7_chip,'h723zg',STM32_REGISTRY['nucleo144']['h743zi'],use_snapshots)
+    boards.append(preserve_h723_assignments(corrected_h723,legacy_h723))
     boards.extend(build_arduino(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn']))
     boards.extend(build_expanded_arduino(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn'],boards))
     boards.extend(build_espressif(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn']))

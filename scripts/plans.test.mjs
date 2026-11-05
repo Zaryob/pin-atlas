@@ -52,3 +52,18 @@ test('F103 AFIO conditions must have a common value across the whole plan',()=>{
  assert.deepEqual(validatePlan(compatible,chip,t),compatible);
  assert.deepEqual(validatePlan(incompatible,chip,t,{allowConflictingRemaps:true}),incompatible);
 });
+
+test('H723 retired ADC assignments and duplicate net entries are preserved only for browser restoration',()=>{
+ const board=boards.find(b=>b.id==='nucleo-h723zg');
+ const retired=board.pins.find(p=>p.retiredFunctions?.length);
+ assert(retired?.retiredFunctions.includes('ADC1_INP2'));
+ {
+  const plan={[retired.number]:entry(retired.retiredFunctions[0],'old ADC')};
+  assert.throws(()=>validatePlan(plan,board,t),/retiredFunction/);
+  assert.deepEqual(validatePlan(plan,board,t,{allowRetiredFunctions:true}),plan);
+ }
+ const same=board.pins.filter(p=>p.net==='PB5');assert(same.length>=2);
+ const plan=Object.fromEntries(same.slice(0,2).map(p=>[p.number,entry('GPIO')]));
+ assert.throws(()=>validatePlan(plan,board,t),/sharedSignal/);
+ assert.deepEqual(validatePlan(plan,board,t,{allowSharedNets:true}),plan);
+});

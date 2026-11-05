@@ -1,0 +1,788 @@
+[
+  {
+    "number": 1,
+    "physicalLabel": "CN8.1",
+    "name": "NC",
+    "mcuPin": null
+  },
+  {
+    "number": 2,
+    "physicalLabel": "CN8.3",
+    "name": "IOREF",
+    "mcuPin": null
+  },
+  {
+    "number": 3,
+    "physicalLabel": "CN8.5",
+    "name": "NRST",
+    "mcuPin": null
+  },
+  {
+    "number": 4,
+    "physicalLabel": "CN8.7",
+    "name": "+3.3V",
+    "mcuPin": null
+  },
+  {
+    "number": 5,
+    "physicalLabel": "CN8.9",
+    "name": "+5V",
+    "mcuPin": null
+  },
+  {
+    "number": 6,
+    "physicalLabel": "CN7.8",
+    "name": "GND",
+    "mcuPin": null
+  },
+  {
+    "number": 7,
+    "physicalLabel": "CN8.11",
+    "name": "GND",
+    "mcuPin": null
+  },
+  {
+    "number": 8,
+    "physicalLabel": "CN8.15",
+    "name": "VIN",
+    "mcuPin": null
+  },
+  {
+    "number": 9,
+    "physicalLabel": "CN7.6",
+    "name": "VREF+",
+    "mcuPin": null
+  },
+  {
+    "number": 10,
+    "physicalLabel": "CN10.16",
+    "name": "PB7",
+    "mcuPin": 137
+  },
+  {
+    "number": 11,
+    "physicalLabel": "CN10.14",
+    "name": "PB6",
+    "mcuPin": 136
+  },
+  {
+    "number": 12,
+    "physicalLabel": "CN10.12",
+    "name": "PG14",
+    "mcuPin": 129
+  },
+  {
+    "number": 13,
+    "physicalLabel": "CN10.10",
+    "name": "PE13",
+    "mcuPin": 66
+  },
+  {
+    "number": 14,
+    "physicalLabel": "CN10.8",
+    "name": "PE14",
+    "mcuPin": 67
+  },
+  {
+    "number": 15,
+    "physicalLabel": "CN10.6",
+    "name": "PE11",
+    "mcuPin": 64
+  },
+  {
+    "number": 16,
+    "physicalLabel": "CN10.4",
+    "name": "PE9",
+    "mcuPin": 60
+  },
+  {
+    "number": 17,
+    "physicalLabel": "CN10.2",
+    "name": "PG12",
+    "mcuPin": 127
+  },
+  {
+    "number": 18,
+    "physicalLabel": "CN7.20",
+    "name": "PF3",
+    "mcuPin": 13
+  },
+  {
+    "number": 19,
+    "physicalLabel": "CN7.18",
+    "name": "PD15",
+    "mcuPin": 86
+  },
+  {
+    "number": 20,
+    "physicalLabel": "CN7.16",
+    "name": "PD14",
+    "mcuPin": 85
+  },
+  {
+    "number": 21,
+    "physicalLabel": "CN7.14",
+    "name": "PB5",
+    "mcuPin": 135
+  },
+  {
+    "number": 22,
+    "physicalLabel": "CN7.12",
+    "name": "PA6",
+    "mcuPin": 42
+  },
+  {
+    "number": 23,
+    "physicalLabel": "CN7.10",
+    "name": "PA5",
+    "mcuPin": 41
+  },
+  {
+    "number": 24,
+    "physicalLabel": "CN7.4",
+    "name": "PB9",
+    "mcuPin": 140
+  },
+  {
+    "number": 25,
+    "physicalLabel": "CN7.2",
+    "name": "PB8",
+    "mcuPin": 139
+  },
+  {
+    "number": 26,
+    "physicalLabel": "CN7.1",
+    "name": "PC6",
+    "mcuPin": 96
+  },
+  {
+    "number": 27,
+    "physicalLabel": "CN7.3",
+    "name": "PB15",
+    "mcuPin": 76
+  },
+  {
+    "number": 28,
+    "physicalLabel": "CN7.5",
+    "name": "PB13",
+    "mcuPin": 74
+  },
+  {
+    "number": 29,
+    "physicalLabel": "CN7.7",
+    "name": "PB12",
+    "mcuPin": 73
+  },
+  {
+    "number": 30,
+    "physicalLabel": "CN7.9",
+    "name": "PA15",
+    "mcuPin": 110
+  },
+  {
+    "number": 31,
+    "physicalLabel": "CN7.11",
+    "name": "PC7",
+    "mcuPin": 97
+  },
+  {
+    "number": 32,
+    "physicalLabel": "CN7.15",
+    "name": "PB3",
+    "mcuPin": 133
+  },
+  {
+    "number": 33,
+    "physicalLabel": "CN7.17",
+    "name": "PA4",
+    "mcuPin": 40
+  },
+  {
+    "number": 34,
+    "physicalLabel": "CN7.19",
+    "name": "PB4",
+    "mcuPin": 134
+  },
+  {
+    "number": 35,
+    "physicalLabel": "CN10.13",
+    "name": "PG6",
+    "mcuPin": 91
+  },
+  {
+    "number": 36,
+    "physicalLabel": "CN10.15",
+    "name": "PB2",
+    "mcuPin": 48
+  },
+  {
+    "number": 37,
+    "physicalLabel": "CN10.19",
+    "name": "PD13",
+    "mcuPin": 82
+  },
+  {
+    "number": 38,
+    "physicalLabel": "CN10.21",
+    "name": "PD12",
+    "mcuPin": 81
+  },
+  {
+    "number": 39,
+    "physicalLabel": "CN10.23",
+    "name": "PD11",
+    "mcuPin": 80
+  },
+  {
+    "number": 40,
+    "physicalLabel": "CN10.25",
+    "name": "PE2",
+    "mcuPin": 1
+  },
+  {
+    "number": 41,
+    "physicalLabel": "CN10.29",
+    "name": "PA0",
+    "mcuPin": 34
+  },
+  {
+    "number": 42,
+    "physicalLabel": "CN10.31",
+    "name": "PB0",
+    "mcuPin": 46
+  },
+  {
+    "number": 43,
+    "physicalLabel": "CN10.33",
+    "name": "PE0",
+    "mcuPin": 141
+  },
+  {
+    "number": 44,
+    "physicalLabel": "CN10.34",
+    "name": "PB11",
+    "mcuPin": 70
+  },
+  {
+    "number": 45,
+    "physicalLabel": "CN10.32",
+    "name": "PB10",
+    "mcuPin": 69
+  },
+  {
+    "number": 46,
+    "physicalLabel": "CN10.30",
+    "name": "PE15",
+    "mcuPin": 68
+  },
+  {
+    "number": 47,
+    "physicalLabel": "CN10.28",
+    "name": "PE6",
+    "mcuPin": 5
+  },
+  {
+    "number": 48,
+    "physicalLabel": "CN10.26",
+    "name": "PE12",
+    "mcuPin": 65
+  },
+  {
+    "number": 49,
+    "physicalLabel": "CN10.24",
+    "name": "PE10",
+    "mcuPin": 63
+  },
+  {
+    "number": 50,
+    "physicalLabel": "CN10.20",
+    "name": "PE7",
+    "mcuPin": 58
+  },
+  {
+    "number": 51,
+    "physicalLabel": "CN10.18",
+    "name": "PE8",
+    "mcuPin": 59
+  },
+  {
+    "number": 52,
+    "physicalLabel": "CN8.2",
+    "name": "PC8",
+    "mcuPin": 98
+  },
+  {
+    "number": 53,
+    "physicalLabel": "CN8.4",
+    "name": "PC9",
+    "mcuPin": 99
+  },
+  {
+    "number": 54,
+    "physicalLabel": "CN8.6",
+    "name": "PC10",
+    "mcuPin": 111
+  },
+  {
+    "number": 55,
+    "physicalLabel": "CN8.8",
+    "name": "PC11",
+    "mcuPin": 112
+  },
+  {
+    "number": 56,
+    "physicalLabel": "CN8.10",
+    "name": "PC12",
+    "mcuPin": 113
+  },
+  {
+    "number": 57,
+    "physicalLabel": "CN8.12",
+    "name": "PD2",
+    "mcuPin": 116
+  },
+  {
+    "number": 58,
+    "physicalLabel": "CN8.14",
+    "name": "PG2",
+    "mcuPin": 87
+  },
+  {
+    "number": 59,
+    "physicalLabel": "CN8.16",
+    "name": "PG3",
+    "mcuPin": 88
+  },
+  {
+    "number": 60,
+    "physicalLabel": "CN9.2",
+    "name": "PD7",
+    "mcuPin": 123
+  },
+  {
+    "number": 61,
+    "physicalLabel": "CN9.4",
+    "name": "PD6",
+    "mcuPin": 122
+  },
+  {
+    "number": 62,
+    "physicalLabel": "CN9.6",
+    "name": "PD5",
+    "mcuPin": 119
+  },
+  {
+    "number": 63,
+    "physicalLabel": "CN9.8",
+    "name": "PD4",
+    "mcuPin": 118
+  },
+  {
+    "number": 64,
+    "physicalLabel": "CN9.10",
+    "name": "PD3",
+    "mcuPin": 117
+  },
+  {
+    "number": 65,
+    "physicalLabel": "CN9.16",
+    "name": "PE4",
+    "mcuPin": 3
+  },
+  {
+    "number": 66,
+    "physicalLabel": "CN9.18",
+    "name": "PE5",
+    "mcuPin": 4
+  },
+  {
+    "number": 67,
+    "physicalLabel": "CN9.22",
+    "name": "PE3",
+    "mcuPin": 2
+  },
+  {
+    "number": 68,
+    "physicalLabel": "CN9.24",
+    "name": "PF8",
+    "mcuPin": 20
+  },
+  {
+    "number": 69,
+    "physicalLabel": "CN9.26",
+    "name": "PF7",
+    "mcuPin": 19
+  },
+  {
+    "number": 70,
+    "physicalLabel": "CN9.28",
+    "name": "PF9",
+    "mcuPin": 21
+  },
+  {
+    "number": 71,
+    "physicalLabel": "CN9.30",
+    "name": "PG1",
+    "mcuPin": 57
+  },
+  {
+    "number": 72,
+    "physicalLabel": "CN9.29",
+    "name": "PG0",
+    "mcuPin": 56
+  },
+  {
+    "number": 73,
+    "physicalLabel": "CN9.27",
+    "name": "PD1",
+    "mcuPin": 115
+  },
+  {
+    "number": 74,
+    "physicalLabel": "CN9.25",
+    "name": "PD0",
+    "mcuPin": 114
+  },
+  {
+    "number": 75,
+    "physicalLabel": "CN9.21",
+    "name": "PF0",
+    "mcuPin": 10
+  },
+  {
+    "number": 76,
+    "physicalLabel": "CN9.19",
+    "name": "PF1",
+    "mcuPin": 11
+  },
+  {
+    "number": 77,
+    "physicalLabel": "CN9.17",
+    "name": "PF2",
+    "mcuPin": 12
+  },
+  {
+    "number": 78,
+    "physicalLabel": "CN9.1",
+    "name": "PA3",
+    "mcuPin": 37
+  },
+  {
+    "number": 79,
+    "physicalLabel": "CN9.3",
+    "name": "PC0",
+    "mcuPin": 26
+  },
+  {
+    "number": 80,
+    "physicalLabel": "CN9.5",
+    "name": "PC3_C",
+    "mcuPin": 29
+  },
+  {
+    "number": 81,
+    "physicalLabel": "CN9.7",
+    "name": "PB1",
+    "mcuPin": 47
+  },
+  {
+    "number": 82,
+    "physicalLabel": "CN9.9",
+    "name": "PC2_C",
+    "mcuPin": 28
+  },
+  {
+    "number": 83,
+    "physicalLabel": "CN9.11",
+    "name": "PF10",
+    "mcuPin": 22
+  },
+  {
+    "number": 84,
+    "physicalLabel": "CN10.7",
+    "name": "PF4",
+    "mcuPin": 14
+  },
+  {
+    "number": 85,
+    "physicalLabel": "CN10.9",
+    "name": "PF5",
+    "mcuPin": 15
+  },
+  {
+    "number": 86,
+    "physicalLabel": "CN10.11",
+    "name": "PF6",
+    "mcuPin": 18
+  },
+  {
+    "number": 87,
+    "physicalLabel": "CN12.62",
+    "name": "PF11",
+    "mcuPin": 49
+  },
+  {
+    "number": 88,
+    "physicalLabel": "CN11.30",
+    "name": "PA1",
+    "mcuPin": 35
+  },
+  {
+    "number": 89,
+    "physicalLabel": "CN12.35",
+    "name": "PA2",
+    "mcuPin": 36
+  },
+  {
+    "number": 90,
+    "physicalLabel": "CN12.15",
+    "name": "PA7",
+    "mcuPin": 43
+  },
+  {
+    "number": 91,
+    "physicalLabel": "CN12.23",
+    "name": "PA8",
+    "mcuPin": 100
+  },
+  {
+    "number": 92,
+    "physicalLabel": "CN12.21",
+    "name": "PA9",
+    "mcuPin": 101
+  },
+  {
+    "number": 93,
+    "physicalLabel": "CN12.33",
+    "name": "PA10",
+    "mcuPin": 102
+  },
+  {
+    "number": 94,
+    "physicalLabel": "CN12.14",
+    "name": "PA11",
+    "mcuPin": 103
+  },
+  {
+    "number": 95,
+    "physicalLabel": "CN12.12",
+    "name": "PA12",
+    "mcuPin": 104
+  },
+  {
+    "number": 96,
+    "physicalLabel": "CN11.13",
+    "name": "PA13",
+    "mcuPin": 105
+  },
+  {
+    "number": 97,
+    "physicalLabel": "CN11.15",
+    "name": "PA14",
+    "mcuPin": 109
+  },
+  {
+    "number": 98,
+    "physicalLabel": "CN12.28",
+    "name": "PB14",
+    "mcuPin": 75
+  },
+  {
+    "number": 99,
+    "physicalLabel": "CN11.36",
+    "name": "PC1",
+    "mcuPin": 27
+  },
+  {
+    "number": 100,
+    "physicalLabel": "CN12.34",
+    "name": "PC4",
+    "mcuPin": 44
+  },
+  {
+    "number": 101,
+    "physicalLabel": "CN12.6",
+    "name": "PC5",
+    "mcuPin": 45
+  },
+  {
+    "number": 102,
+    "physicalLabel": "CN11.23",
+    "name": "PC13",
+    "mcuPin": 7
+  },
+  {
+    "number": 103,
+    "physicalLabel": "CN11.25",
+    "name": "PC14",
+    "mcuPin": 8
+  },
+  {
+    "number": 104,
+    "physicalLabel": "CN11.27",
+    "name": "PC15",
+    "mcuPin": 9
+  },
+  {
+    "number": 105,
+    "physicalLabel": "CN12.10",
+    "name": "PD8",
+    "mcuPin": 77
+  },
+  {
+    "number": 106,
+    "physicalLabel": "CN11.69",
+    "name": "PD9",
+    "mcuPin": 78
+  },
+  {
+    "number": 107,
+    "physicalLabel": "CN12.65",
+    "name": "PD10",
+    "mcuPin": 79
+  },
+  {
+    "number": 108,
+    "physicalLabel": "CN11.61",
+    "name": "PE1",
+    "mcuPin": 142
+  },
+  {
+    "number": 109,
+    "physicalLabel": "CN12.59",
+    "name": "PF12",
+    "mcuPin": 50
+  },
+  {
+    "number": 110,
+    "physicalLabel": "CN12.57",
+    "name": "PF13",
+    "mcuPin": 53
+  },
+  {
+    "number": 111,
+    "physicalLabel": "CN12.50",
+    "name": "PF14",
+    "mcuPin": 54
+  },
+  {
+    "number": 112,
+    "physicalLabel": "CN12.60",
+    "name": "PF15",
+    "mcuPin": 55
+  },
+  {
+    "number": 113,
+    "physicalLabel": "CN12.69",
+    "name": "PG4",
+    "mcuPin": 89
+  },
+  {
+    "number": 114,
+    "physicalLabel": "CN12.68",
+    "name": "PG5",
+    "mcuPin": 90
+  },
+  {
+    "number": 115,
+    "physicalLabel": "CN12.67",
+    "name": "PG7",
+    "mcuPin": 92
+  },
+  {
+    "number": 116,
+    "physicalLabel": "CN12.66",
+    "name": "PG8",
+    "mcuPin": 93
+  },
+  {
+    "number": 117,
+    "physicalLabel": "CN11.63",
+    "name": "PG9",
+    "mcuPin": 124
+  },
+  {
+    "number": 118,
+    "physicalLabel": "CN11.66",
+    "name": "PG10",
+    "mcuPin": 125
+  },
+  {
+    "number": 119,
+    "physicalLabel": "CN11.70",
+    "name": "PG11",
+    "mcuPin": 126
+  },
+  {
+    "number": 120,
+    "physicalLabel": "CN11.68",
+    "name": "PG13",
+    "mcuPin": 128
+  },
+  {
+    "number": 121,
+    "physicalLabel": "CN11.64",
+    "name": "PG15",
+    "mcuPin": 132
+  },
+  {
+    "number": 122,
+    "physicalLabel": "CN11.29",
+    "name": "PH0",
+    "mcuPin": 23
+  },
+  {
+    "number": 123,
+    "physicalLabel": "CN11.31",
+    "name": "PH1",
+    "mcuPin": 24
+  },
+  {
+    "number": 124,
+    "physicalLabel": "CN10.3",
+    "name": "AGND",
+    "mcuPin": null
+  },
+  {
+    "number": 125,
+    "physicalLabel": "CN10.1",
+    "name": "AVDD",
+    "mcuPin": null
+  },
+  {
+    "number": 126,
+    "physicalLabel": "CN8.13",
+    "name": "GND",
+    "mcuPin": null
+  },
+  {
+    "number": 127,
+    "physicalLabel": "CN11.16",
+    "name": "+3.3V",
+    "mcuPin": null
+  },
+  {
+    "number": 128,
+    "physicalLabel": "CN11.18",
+    "name": "+5V",
+    "mcuPin": null
+  },
+  {
+    "number": 129,
+    "physicalLabel": "CN11.5",
+    "name": "VDD",
+    "mcuPin": null
+  },
+  {
+    "number": 130,
+    "physicalLabel": "CN9.12",
+    "name": "GND",
+    "mcuPin": null
+  },
+  {
+    "number": 131,
+    "physicalLabel": "CN9.23",
+    "name": "GND",
+    "mcuPin": null
+  }
+]

@@ -11,7 +11,7 @@ export function planReference(profile, t = k => k) {
   return mcu && !profile.name.includes(mcu) ? `${profile.name} · ${mcu}` : profile.name;
 }
 
-export function validatePlan(data, target, t, { allowDuplicateSignals = false, allowConflictingRemaps = false, ignoreLegacyHseAssignments = false } = {}) {
+export function validatePlan(data, target, t, { allowDuplicateSignals = false, allowConflictingRemaps = false, allowSharedNets = false, allowRetiredFunctions = false, ignoreLegacyHseAssignments = false } = {}) {
   if (!data || typeof data !== 'object' || Array.isArray(data)) throw new Error(t('invalidPlan'));
   const clean = {}, nets = new Map(), signals = new Map(), remaps = new Map();
   for (const [key, value] of Object.entries(data)) {
@@ -19,12 +19,14 @@ export function validatePlan(data, target, t, { allowDuplicateSignals = false, a
     if (ignoreLegacyHseAssignments && target.id === 'stm32f103vbt6' &&
         ((key === '12' && value?.function === 'PD0') || (key === '13' && value?.function === 'PD1'))) continue;
     const pin = target.pins.find(pin => String(pin.number) === key);
+    const retired=pin?.retiredFunctions?.includes(value?.function);
+    if(retired && !allowRetiredFunctions)throw new Error(t('retiredFunction',{name:value.function,pin:physicalLabel(pin)}));
     if (!pin || pin.reserved || !value || typeof value !== 'object' ||
-        !options(pin).some(fn => fn.name === value.function) ||
+        !(options(pin).some(fn => fn.name === value.function) || (allowRetiredFunctions && retired)) ||
         typeof value.label !== 'string' || value.label.length > 40) {
       throw new Error(t('invalidAssignment'));
     }
-    if (pin.net && ['GPIO', 'ADC'].includes(pin.type)) {
+    if (!allowSharedNets && pin.net && ['GPIO', 'ADC'].includes(pin.type)) {
       if (nets.has(pin.net)) throw new Error(t('sharedSignal', { pin: physicalLabel(nets.get(pin.net)) }));
       nets.set(pin.net, pin);
     }

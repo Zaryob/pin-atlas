@@ -98,13 +98,15 @@ async function setBoard(id, initial = false, preferredProfile) {
  dataState='ready';
  const sameLayout = layout?.id === next.layout.id;
  const previousPin = selected;
+ const previousPhysical=board?.pins?.find(pin=>pin.number===selected)?.physicalLabel;
  layout = next.layout; board = next.profile;
  connectorGroups = connectorGroupsFor(board);
  if (!connectorGroups.some(group => group.id === connectorZoom)) connectorZoom = '';
  rememberedProfiles.set(layout.id, board.id);
- selected = sameLayout && board.pins.some(pin => pin.number === previousPin) ? previousPin : board.pins.find(p => p.type === 'GPIO')?.number || 1;
+ const physicalMatch=sameLayout && previousPhysical && board.pins.find(pin=>pin.physicalLabel===previousPhysical);
+ selected = physicalMatch ? physicalMatch.number : sameLayout && board.pins.some(pin => pin.number === previousPin) ? previousPin : board.pins.find(p => p.type === 'GPIO')?.number || 1;
  try {
-   assignments = validatePlan(savedPlans[board.id] || {}, board, t, { allowDuplicateSignals: true, allowConflictingRemaps: true, ignoreLegacyHseAssignments: true });
+   assignments = validatePlan(savedPlans[board.id] || {}, board, t, { allowDuplicateSignals: true, allowConflictingRemaps: true, allowSharedNets:true, allowRetiredFunctions:true, ignoreLegacyHseAssignments: true });
  } catch { assignments = {}; }
  selectedFn = assignments[selected]?.function || options(pinByNumber(selected))[0].name;
  if (!sameLayout) { filters = new Set(); search = ''; $('#pin-search').value = ''; flipped = rotated = false; connectorZoom = ''; compatibilityQuery=''; $('#compatible-boards').open=false; }

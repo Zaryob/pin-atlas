@@ -159,3 +159,11 @@ NUCLEO-L432KC, UM1956 Rev 6 Tablo 16'yı (sayfa 30) kullanır ve F042K6 ile doğ
 ## Nucleo-144 / MB1137
 
 NUCLEO-F767ZI için UM1974 Rev 11 Tablo 19 (sayfa 61–65), Tablo 21 (sayfa 70/71) ve sayfa 15'teki mekanik çizim kullanılır. CN7 (20), CN8 (16), CN9 (30), CN10 (34), CN11 (70) ve CN12 (70) toplam 240 fiziksel kontak içerir. Bunlar STM32F767ZIT6'nın 144 LQFP bacağından ve 114 GPIO'sundan ayrıdır. İşlemci en fazla 216 MHz çalışır. İşlevler/seçiciler sabitlenmiş üretici paketinin belirttiği GPIO kaynağından; kart devresi notları ST'nin sabit sürümlü kart yapılandırmasından gelir. Tekrarlanan güç hatları tek bir MCU bacağına indirgenmez.
+
+## Nucleo-144 / MB1364 ve eski H723 planları
+
+NUCLEO-H743ZI2, MB1364 kartıdır; eski MB1137 NUCLEO-H743ZI ile karıştırılmaz. STM32H743ZIT6, 144 LQFP bacağı, 114 GPIO ve en fazla 480 MHz sunar. Fiziksel kontaklar UM2407 Rev 6 Tablo 18–22 (sayfa 40–44), sayfa 16'daki mekanik çizim ve ST'nin sabitlenmiş kart yapılandırmasına dayanır. Kılavuzdaki PC2/PC3 adları paket XML kaynağında PC2_C/PC3_C olarak çözülür. SB14/SB15, PC8/PC9 Morpho bağlantılarını kontrol eder. A4/A5 yönlendirmesi lehim köprülerine bağlıdır. PF11'in analog ADC girişi Tablo 14/SB65 gereği çıkarılır; dijital EXTI tetikleri korunur.
+
+H723 görünümü aynı numaralı fiziksel tablolardan yeniden üretilir. Önceki 131 mantıksal kayıt altı konektörün tamamını temsil etmiyordu. `sources/legacy-h723-pin-ids.json` eşlemesi eski 131 atama kimliğinin elektriksel sinyalini ve MCU bacağını korur; ek fiziksel kontaklar 132–240 kimliklerini alır. Eski varyant ayrıştırıcısı yalnızca eski kimlikleri doğrular, fiziksel konektör kanıtı olarak kullanılmaz. Gerçek etiketler UM2407'den gelir. Model değişimi, dahili numaralar farklı olsa da aynı fiziksel kontağı korur.
+
+Artık kullanılamayan PF11 analog işlevleri veya tekrarlanan fiziksel hat içeren eski tarayıcı planları uyarıyla korunur. Yeni atamalar, JSON içe aktarımı ve paylaşım önizlemesi geçersiz seçimleri reddeder. Yazdırma/SVG çıktıları da uyarıyı içerir.

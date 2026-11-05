@@ -1,0 +1,1758 @@
+{
+  "schema": 1,
+  "document": "nucleo-um2407-r6",
+  "sourceSha256": "b493e14fad9b4fe8323e4694bc83eff98ee74c4e10ca14b7cc24a8e22180a4cd",
+  "pages": {
+    "15": {
+      "tables": [
+        [
+          [
+            "",
+            "IOREF Power selection\n(SB10, SB11, and SB20)\nMSv51398V3",
+            ""
+          ]
+        ]
+      ],
+      "tokens": []
+    },
+    "16": {
+      "tables": [],
+      "tokens": []
+    },
+    "31": {
+      "tables": [
+        [
+          [
+            "Bridge",
+            "State(1)",
+            "Description"
+          ],
+          [
+            "SB1 (3V3_PER)",
+            "ON",
+            "Peripheral power 3V3_PER is connected to 3V3."
+          ],
+          [
+            null,
+            "OFF",
+            "Peripheral power 3V3_PER is not connected."
+          ],
+          [
+            "SB2 (3V3)",
+            "ON",
+            "Output of voltage regulator ST1L05CPU33R is connected to\n3V3."
+          ],
+          [
+            null,
+            "OFF",
+            "Output of voltage regulator ST1L05CPU33R is not\nconnected."
+          ],
+          [
+            "SB80 (1V8_VDD)",
+            "ON",
+            "Output of voltage regulator ST1L05BPUR is connected to\n1V8_VDD."
+          ],
+          [
+            null,
+            "OFF",
+            "Output of voltage regulator ST1L05BPUR is not connected."
+          ],
+          [
+            "SB6",
+            "ON",
+            "Input of voltage regulator ST1L05BPUR is connected to\n3V3_VDD."
+          ],
+          [
+            null,
+            "OFF",
+            "Input of voltage regulator ST1L05BPUR is not connected."
+          ],
+          [
+            "SB12, SB19 (ST-LINK-\nUSART)",
+            "ON",
+            "PG9 and PG14 on ST-LINK STM32F723IEK6 are connected\nto PD8 and PD9 to enable the Virtual COM port. Thus, PD8\nand PD9 on the ST morpho connectors cannot be used."
+          ],
+          [
+            null,
+            "OFF",
+            "PG9 and PG14 on ST-LINK STM32F723IEK6 are\ndisconnected from PD8 and PD9 on STM32H7."
+          ],
+          [
+            "JP1 (ST-LINK_RST)",
+            "OFF",
+            "No incidence on ST-LINK STM32F723IEK6 NRST signal."
+          ],
+          [
+            null,
+            "ON",
+            "ST-LINK STM32F723IEK6 signal is connected to GND\n(ST-LINK reset to reduce power consumption)."
+          ],
+          [
+            "SB32\n(SWO)",
+            "ON",
+            "SWO signal of the STM32H7 (PB3) is connected to the ST-\nLINK SWO input.\n(SB26 must be OFF)"
+          ],
+          [
+            null,
+            "OFF",
+            "SWO signal of STM32H7 is not connected."
+          ],
+          [
+            "JP3\n(NRST)",
+            "ON",
+            "Board RESET signal (NRST) is connected to ST-LINK reset\ncontrol I/O (T_NRST)."
+          ],
+          [
+            null,
+            "OFF",
+            "Board RESET signal (NRST) is not connected to ST-LINK\nreset control I/O (T_NRST)."
+          ],
+          [
+            "SB10, SB11, SB20\n(IOREF)",
+            "OFF, ON,\nOFF",
+            "IOREF is connected to VDD_MCU."
+          ],
+          [
+            null,
+            "ON, OFF,\nOFF",
+            "IOREF is connected to 3V3_PER."
+          ],
+          [
+            null,
+            "OFF, OFF,\nON",
+            "IOREF is connected to 3V3."
+          ]
+        ]
+      ],
+      "tokens": []
+    },
+    "32": {
+      "tables": [
+        [
+          [
+            "Bridge",
+            "State(1)",
+            "Description"
+          ],
+          [
+            "SB14 (SDMMC_D0),\nSB15 (SDMMC_D1)",
+            "ON",
+            "These pins are connected to the ST morpho connector\n(CN12)."
+          ],
+          [
+            null,
+            "OFF",
+            "These pins are disconnected from the ST morpho connector\n(CN12) to avoid stubs of SDMMC data signals on the PCB."
+          ],
+          [
+            "SB39, SB47\n(LD1-LED)",
+            "ON, OFF",
+            "Green user LED (LD1) is connected to PB0."
+          ],
+          [
+            null,
+            "OFF, ON",
+            "Green user LED (LD1) is connected to D13 of the\nARDUINO® signal (PA5)."
+          ],
+          [
+            null,
+            "OFF, OFF",
+            "Green user LED (LD1) is not connected."
+          ],
+          [
+            null,
+            "ON, ON",
+            "Forbidden"
+          ],
+          [
+            "SB33, SB35\n(D11)",
+            "OFF, ON",
+            "D11 (pin 14 of CN7) is connected to STM32H7 PB5\n(SPI_A_MOSI/ TIM_D_PWM2)"
+          ],
+          [
+            null,
+            "ON, OFF",
+            "D11 (pin 14 of CN7) is connected to STM32H7 PA7\n(SPI_A_MOSI/ TIM_E_PWM1)"
+          ],
+          [
+            "SB40, SB41\n(X2 crystal)",
+            "OFF, OFF",
+            "PC14 and PC15 are not connected to the ST morpho\nconnector (CN11). X2 is used to generate the 32 kHz clock."
+          ],
+          [
+            null,
+            "ON, ON",
+            "PC14 and PC15 are connected to the ST morpho connector\n(CN11). R38 and R39 must be OFF."
+          ],
+          [
+            "SB44 (PF1/PH1)\nSB46 (PF0/PH0)\n(main clock)",
+            "ON, OFF",
+            "PF0/PH0 is not connected to the ST morpho connector\n(CN11).\nPF1/PH1 is connected to the ST morpho connector\n(MCO is used as the main clock for STM32H7 on PF0/PH0–\nSB45 ON)."
+          ],
+          [
+            null,
+            "OFF, OFF",
+            "PF0/PH0 and PF1/PH1 are not connected to the ST morpho\nconnector (CN11). X3, C69, C70, SB3, and SB4 provide a\nclock. In this case, SB45 must be OFF."
+          ],
+          [
+            null,
+            "ON, ON",
+            "PF0/PH0 and PF1/PH1 are connected to the ST morpho\nconnector (CN11). SB3, SB4, and SB45 must be OFF."
+          ],
+          [
+            "SB45\n(STLK_MCO)",
+            "ON",
+            "MCO of ST-LINK (STM32F723IEK6) is connected to\nPF0/PH0 of STM32H7."
+          ],
+          [
+            null,
+            "OFF",
+            "MCO of ST-LINK (STM32F723IEK6) is not connected to\nPF0/PH0 of STM32H7."
+          ],
+          [
+            "SB3, SB4\n(external 25M crystal)",
+            "OFF, OFF",
+            "PF0/PH0 and PF1/PH1 are not connected to an external\n25 MHz crystal X3."
+          ],
+          [
+            null,
+            "ON, ON",
+            "PF0/PH0 and PF1/PH1 are connected to an external 25 MHz\ncrystal X3."
+          ],
+          [
+            "SB52\n(V )\nBAT",
+            "ON",
+            "V pin of STM32H7 is connected to V .\nBAT DD_MCU"
+          ],
+          [
+            null,
+            "OFF",
+            "V pin of STM32H7 is not connected to V .\nBAT DD_MCU"
+          ],
+          [
+            "SB51, SB58\n(B1-USER)",
+            "ON, OFF",
+            "B1 push-button is connected to PC13."
+          ],
+          [
+            null,
+            "OFF, ON",
+            "B1 push-button is connected to PA0 (set SB51 OFF if the ST\nZio connector is used)."
+          ],
+          [
+            null,
+            "OFF, OFF",
+            "B1 push-button is not connected."
+          ]
+        ]
+      ],
+      "tokens": []
+    },
+    "33": {
+      "tables": [
+        [
+          [
+            "Bridge",
+            "State(1)",
+            "Description"
+          ],
+          [
+            "SB75\n(PA0)",
+            "ON",
+            "PA0 is connected to the ST Zio connector (pin 29 of CN10)."
+          ],
+          [
+            null,
+            "OFF",
+            "PA0 is not connected to the ST Zio connector (pin 29 of\nCN10)."
+          ],
+          [
+            "RMII signals\nSB57 (PA1), SB64\n(PC1),\nSB72 (PA2), SB36\n(PC4),\nSB29 (PC5), SB30\n(PG13), SB27 (PG11),\nSB31 (PA7), JP6\n(PB13)",
+            "ON",
+            "These pins are used as RMII signals and connected to\nEthernet PHY. SB7 must be OFF.\nThese pins must not be used on the ST morpho or the ST Zio\nconnectors."
+          ],
+          [
+            null,
+            "OFF",
+            "These pins can be used as GPIOs on the ST morpho\nconnectors.\nPB13 can be used as I2S_A_CK on ST Zio (pin 5 of CN7) if\nnot used on the ST morpho."
+          ],
+          [
+            "SB74 (Ethernet nRST)\nRMII signal",
+            "ON",
+            "NRST of STM32H7 is connected to Ethernet PHY (U15)."
+          ],
+          [
+            null,
+            "OFF",
+            "NRST of STM32H7 is not connected to Ethernet PHY (U15)."
+          ],
+          [
+            "SB76 (PG7)",
+            "ON",
+            "USB overcurrent alarm is connected."
+          ],
+          [
+            null,
+            "OFF",
+            "USB overcurrent alarm is not connected. PG7 is used as\nGPIO on the ST morpho connector (CN12)."
+          ],
+          [
+            "SB77 (PD10)",
+            "ON",
+            "PD10 is connected to the USB power switch (U18) to control\nV .\nBUS"
+          ],
+          [
+            null,
+            "OFF",
+            "PD10 is used as GPIO on the ST morpho connector (CN12)."
+          ],
+          [
+            "SB23 (PA9)",
+            "ON",
+            "PA9 is connected to USB V .\nBUS"
+          ],
+          [
+            null,
+            "OFF",
+            "PA9 is not connected to USB V .\nBUS\nPA9 is used as GPIO on the ST morpho connector (CN12)."
+          ],
+          [
+            "SB24 (PA10)",
+            "ON",
+            "PA10 is connected to the USB ID."
+          ],
+          [
+            null,
+            "OFF",
+            "PA10 is not connected to the USB ID.\nPA10 is used as GPIO on the ST morpho connector (CN12)."
+          ],
+          [
+            "SB21 (PA11), SB22\n(PA12)",
+            "ON",
+            "These pins are used as D- and D+ on the USB connector\n(CN13). SB16 and SB17 must be OFF."
+          ],
+          [
+            null,
+            "OFF",
+            "These pins are used as GPIOs on the ST morpho\nconnectors. SB16 and SB17 must be ON."
+          ],
+          [
+            "SB13",
+            "ON",
+            "VDD33_USB_1 is connected to 3V3_VDD."
+          ],
+          [
+            null,
+            "OFF",
+            "VDD33_USB_1 is not supplied."
+          ],
+          [
+            "SB25",
+            "ON",
+            "VDD_MMC_1 is connected to VDD_MCU."
+          ],
+          [
+            null,
+            "OFF",
+            "VDD_MMC_1 is not supplied."
+          ],
+          [
+            "SB59 (PG6)",
+            "ON",
+            "PG6 is connected to QSPI_CS. SB61 must be OFF."
+          ],
+          [
+            null,
+            "OFF",
+            "PG6 is used as GPIO on the ST morpho connector (CN12)."
+          ],
+          [
+            "SB63 (PB2)",
+            "ON",
+            "PB2 is connected to QSPI_CLK. SB69 must be OFF."
+          ],
+          [
+            null,
+            "OFF",
+            "PB2 is not connected to QSPI_CLK and can be used as\nCOMP1_INP (SB69 ON) or used as GPIO on the ST morpho\nconnector (CN12). SB69 must be OFF."
+          ]
+        ]
+      ],
+      "tokens": []
+    },
+    "34": {
+      "tables": [
+        [
+          [
+            "Bridge",
+            "State(1)",
+            "Description"
+          ],
+          [
+            "SB71, SB73\n(PE6)",
+            "ON, OFF",
+            "PE6 is connected to SAI_A_SD (D59 of CN9)"
+          ],
+          [
+            null,
+            "OFF, ON",
+            "PE6 is connected to TIMER_A_BKIN2 (D38 of CN10)"
+          ],
+          [
+            "SB67 (PE2)",
+            "ON",
+            "PE2 is connected to SAI_A_MCLK (D56 of CN9).\nQSPI_BK1_IO2 cannot be used (D31 of CN10)."
+          ],
+          [
+            null,
+            "OFF",
+            "PE2 is used as QSPI_BK1_IO2 (D31 of CN10)."
+          ],
+          [
+            "SB53 (PC2) and\nSB60 (PF10)",
+            "ON",
+            "ADC_IN are connected to A4 and A5 (pins 9 and 11) on the\nST Zio connector (CN9). Thus, SB55 and SB62 must be OFF"
+          ],
+          [
+            null,
+            "OFF",
+            "ADC_IN are connected to A4 and A5 (pins 9 and 11) on the\nST Zio connector (CN9). Thus, SB55 and SB62 can be ON\n(I²C)"
+          ],
+          [
+            "SB65 (PF11)",
+            "OFF",
+            "On NUCLEO-H723ZG, NUCLEO-H743ZI2, and NUCLEO-\nH753ZI, PF11 is used only as GPIO on the ST morpho\nconnector (CN12). It must not be used as ADC_IN."
+          ],
+          [
+            "I²C\nSB55 (PB9) and SB62\n(PB8)",
+            "ON",
+            "PB9 and PB8 (I²C) are connected to A4 and A5 (pins 9 and\n11) on the ST Zio connector (CN9). Thus, SB60 and SB53\nmust be OFF"
+          ],
+          [
+            null,
+            "OFF",
+            "PB9 and PB8 (I²C) are not connected to A4 and A5 (pins 9\nand 11) on the ST Zio connector (CN9)."
+          ],
+          [
+            "SB28 and SB70 (PE9)",
+            "ON, OFF",
+            "PE9 is used as TIMER_A_PWM1 (pin 4) on the ST Zio\nconnector (CN10)."
+          ],
+          [
+            null,
+            "OFF, ON",
+            "PE9 is used as COMP2_INP (pin 15) on the ST Zio connector\n(CN9)."
+          ],
+          [
+            "SB37 (PF12) and\nSB38 (PF4)",
+            "OFF, ON",
+            "ADC_IN is connected to A6 (pin 7) on the ST Zio connector\n(CN10).\nPF12 must not be used as ADC_IN. SB37 must be OFF."
+          ],
+          [
+            "SB48 (PF5) and SB49\n(PF13)",
+            "ON, OFF",
+            "ADC_IN is connected to A7 (pin 9) on the ST Zio connector\n(CN10).\nPF13 must not be used as ADC_IN. SB49 must be OFF."
+          ],
+          [
+            "SB50 (PF14) and\nSB54 (PF6)",
+            "OFF, ON",
+            "ADC_IN is connected to A8 (pin 11) on the ST Zio connector\n(CN10).\nPF14 must not be used as ADC_IN. SB50 must be OFF."
+          ],
+          [
+            "SB5",
+            "OFF",
+            "NUCLEO-H723ZG, NUCLEO-H743ZI2, and NUCLEO-\nH753ZI support 1V8 and 3V3 for VDD_MCU. Thus, the level\nshifter (U10) is needed and SB5 must be OFF."
+          ],
+          [
+            null,
+            "ON",
+            "If the MCU is supplied with 3V3, U10 can be by-passed and\nSB5 can be ON."
+          ],
+          [
+            "SB81",
+            "ON",
+            "USART_RX connected to ST morpho (CN11)"
+          ],
+          [
+            null,
+            "OFF",
+            "USART_RX not connected to ST morpho (CN11)"
+          ],
+          [
+            "SB82",
+            "ON",
+            "USART_TX connected to ST morpho (CN12)"
+          ],
+          [
+            null,
+            "OFF",
+            "USART_TX not connected to ST morpho (CN12)"
+          ]
+        ]
+      ],
+      "tokens": []
+    },
+    "38": {
+      "tables": [
+        [
+          [
+            "1",
+            "2"
+          ],
+          [
+            "3",
+            "4"
+          ],
+          [
+            "5\n7\n9\n11\n13",
+            "6\n8\n10\n12\n14"
+          ],
+          [
+            "15\n17\n19\n1",
+            "16\n18\n20\n2"
+          ],
+          [
+            "3",
+            "4"
+          ],
+          [
+            "5",
+            "6"
+          ],
+          [
+            "7",
+            "8"
+          ],
+          [
+            "9",
+            "10"
+          ],
+          [
+            "11",
+            "12"
+          ],
+          [
+            "13",
+            "14"
+          ],
+          [
+            "15",
+            "16"
+          ],
+          [
+            "17",
+            "18"
+          ],
+          [
+            "19",
+            "20"
+          ],
+          [
+            "21",
+            "22"
+          ],
+          [
+            "23",
+            "24"
+          ],
+          [
+            "25",
+            "26"
+          ],
+          [
+            "27",
+            "28"
+          ],
+          [
+            "29",
+            "30"
+          ],
+          [
+            "31",
+            "32"
+          ],
+          [
+            "33",
+            "34"
+          ]
+        ],
+        [
+          [
+            "7\n9\n11\n13\n15",
+            "8\n10\n12\n14\n16"
+          ]
+        ],
+        [
+          [
+            "1",
+            "2"
+          ],
+          [
+            "3",
+            "4"
+          ],
+          [
+            "5",
+            "6"
+          ],
+          [
+            "7",
+            "8"
+          ],
+          [
+            "9",
+            "10"
+          ],
+          [
+            "11",
+            "12"
+          ],
+          [
+            "13",
+            "14"
+          ],
+          [
+            "15",
+            "16"
+          ],
+          [
+            "17",
+            "18"
+          ],
+          [
+            "19",
+            "20"
+          ],
+          [
+            "21",
+            "22"
+          ],
+          [
+            "23",
+            "24"
+          ],
+          [
+            "25",
+            "26"
+          ],
+          [
+            "27",
+            "28"
+          ],
+          [
+            "29",
+            "30"
+          ]
+        ]
+      ],
+      "tokens": []
+    },
+    "39": {
+      "tables": [],
+      "tokens": []
+    },
+    "40": {
+      "tables": [
+        [
+          [
+            "Pin",
+            "Pin\nname",
+            "Signal name",
+            "STM32H7\npin",
+            "MCU function",
+            "Pin",
+            "Pin name",
+            "Signal name",
+            "STM32H7 pin",
+            "MCU function"
+          ],
+          [
+            "1",
+            "D16",
+            "I2S_A_MCK",
+            "PC6",
+            "I2S_2",
+            "2",
+            "D15",
+            "I2C_A_SCL",
+            "PB8",
+            "I2C_1_SCL"
+          ],
+          [
+            "3",
+            "D17",
+            "I2S_A_SD",
+            "PB15",
+            "I2S_2",
+            "4",
+            "D14",
+            "I2C_A_SDA",
+            "PB9",
+            "I2C_1_SDA"
+          ],
+          [
+            "5",
+            "D18",
+            "I2S_A_CK",
+            "PB13(2)",
+            "I2S_2",
+            "6",
+            "VREFP",
+            "VREFP",
+            "-",
+            "VDDA/VREFP"
+          ],
+          [
+            "7",
+            "D19",
+            "I2S_A_WS",
+            "PB12",
+            "I2S_2",
+            "8",
+            "GND",
+            "GND",
+            "-",
+            "-"
+          ],
+          [
+            "9",
+            "D20",
+            "I2S_B_WS",
+            "PA15",
+            "I2S_3",
+            "10",
+            "D13",
+            "SPI_A_SCK",
+            "PA5",
+            "SPI1_SCK"
+          ],
+          [
+            "11",
+            "D21",
+            "I2S_B_MCK",
+            "PC7",
+            "I2S_3",
+            "12",
+            "D12",
+            "SPI_A_MISO",
+            "PA6",
+            "SPI1_MISO"
+          ],
+          [
+            "13",
+            "D22",
+            "I2S_B_SD/\nSPI_B_MOSI",
+            "PB5",
+            "I2S_3/\nSPI3",
+            "14",
+            "D11",
+            "SPI_A_MOSI /\nTIM_E_PWM1",
+            "PB5(3)",
+            "SPI1_MOSI/\nTIM3_CH2"
+          ],
+          [
+            "15",
+            "D23",
+            "I2S_B_CK/\nSPI_B_SCK",
+            "PB3",
+            "I2S_3/\nSPI3",
+            "16",
+            "D10",
+            "SPI_A_CS /\nTIM_B_PWM3",
+            "PD14",
+            "SPI1_CS/\nTIM4_CH3"
+          ],
+          [
+            "17",
+            "D24",
+            "SPI_B_NSS",
+            "PA4",
+            "SPI3",
+            "18",
+            "D9",
+            "TIM_B_PWM2",
+            "PD15",
+            "TIM4_CH4"
+          ],
+          [
+            "19",
+            "D25",
+            "SPI_B_MISO",
+            "PB4",
+            "SPI3",
+            "20",
+            "D8",
+            "I/O",
+            "PF3",
+            "-"
+          ]
+        ],
+        [
+          [
+            "Pin",
+            "Pin name",
+            "Signal name",
+            "STM32H7\npin",
+            "MCU function",
+            "Pin",
+            "Pin name",
+            "Signal name",
+            "STM32H7\npin",
+            "MCU function"
+          ],
+          [
+            "1",
+            "NC",
+            "NC",
+            "-",
+            "-",
+            "2",
+            "D43",
+            "SDMMC_D0",
+            "PC8",
+            "SDMMC"
+          ],
+          [
+            "3",
+            "IOREF",
+            "IOREF",
+            "-",
+            "3.3 V reference",
+            "4",
+            "D44",
+            "SDMMC_D1\nI2S_A_CKIN",
+            "PC9",
+            "SDMMC\nI2S_CKIN"
+          ],
+          [
+            "5",
+            "NRST",
+            "NRST",
+            "NRST",
+            "RESET",
+            "6",
+            "D45",
+            "SDMMC_D2",
+            "PC10",
+            "SDMMC"
+          ]
+        ]
+      ],
+      "tokens": []
+    },
+    "41": {
+      "tables": [
+        [
+          [
+            "Pin",
+            "Pin name",
+            "Signal name",
+            "STM32H7\npin",
+            "MCU function",
+            "Pin",
+            "Pin name",
+            "Signal name",
+            "STM32H7\npin",
+            "MCU function"
+          ],
+          [
+            "7",
+            "3V3",
+            "3V3",
+            "-",
+            "3.3 V input/output",
+            "8",
+            "D46",
+            "SDMMC_D3",
+            "PC11",
+            "SDMMC"
+          ],
+          [
+            "9",
+            "5V",
+            "5V",
+            "-",
+            "5 V output",
+            "10",
+            "D47",
+            "SDMMC_CK",
+            "PC12",
+            "SDMMC"
+          ],
+          [
+            "11",
+            "GND",
+            "GND",
+            "-",
+            "ground",
+            "12",
+            "D48",
+            "SDMMC_CMD",
+            "PD2",
+            "SDMMC"
+          ],
+          [
+            "13",
+            "GND",
+            "GND",
+            "-",
+            "ground",
+            "14",
+            "D49",
+            "I/O",
+            "PG2",
+            "-"
+          ],
+          [
+            "15",
+            "VIN",
+            "VIN",
+            "-",
+            "Power input",
+            "16",
+            "D50",
+            "I/O",
+            "PG3",
+            "-"
+          ]
+        ],
+        [
+          [
+            "Pin",
+            "Pin name",
+            "Signal name",
+            "STM32H7\npin",
+            "MCU function",
+            "Pin",
+            "Pin name",
+            "Signal name",
+            "STM32H7\npin",
+            "MCU function"
+          ],
+          [
+            "1",
+            "A0",
+            "ADC",
+            "PA3",
+            "ADC12_INP15",
+            "2",
+            "D51",
+            "USART_B_SCLK",
+            "PD7",
+            "USART_2"
+          ],
+          [
+            "3",
+            "A1",
+            "ADC",
+            "PC0",
+            "ADC123_INP10",
+            "4",
+            "D52",
+            "USART_B_RX",
+            "PD6",
+            "USART_2"
+          ],
+          [
+            "5",
+            "A2",
+            "ADC",
+            "PC3",
+            "ADC12_INP13",
+            "6",
+            "D53",
+            "USART_B_TX",
+            "PD5",
+            "USART_2"
+          ],
+          [
+            "7",
+            "A3",
+            "ADC",
+            "PB1",
+            "ADC12_INP5",
+            "8",
+            "D54",
+            "USART_B_RTS",
+            "PD4",
+            "USART_2"
+          ],
+          [
+            "9",
+            "A4",
+            "ADC",
+            "PC2/\nPB9",
+            "ADC123_INP12/\nI2C1_SDA",
+            "10",
+            "D55",
+            "USART_B_CTS",
+            "PD3",
+            "USART_2"
+          ],
+          [
+            "11",
+            "A5",
+            "ADC",
+            "PF10/ PB8",
+            "ADC3_INP6/\nI2C1_SCL",
+            "12",
+            "GND",
+            "GND",
+            "-",
+            "-"
+          ],
+          [
+            "13",
+            "D72",
+            "COMP1_INP",
+            "PB2",
+            "COMP1_INP",
+            "14",
+            "D56",
+            "SAI_A_MCLK",
+            "PE2(1)",
+            "SAI_1_A"
+          ],
+          [
+            "15",
+            "D71",
+            "COMP2_INP",
+            "PE9",
+            "COMP2_INP",
+            "16",
+            "D57",
+            "SAI_A_FS",
+            "PE4",
+            "SAI_1_A"
+          ],
+          [
+            "17",
+            "D70",
+            "I2C_B_SMBA",
+            "PF2",
+            "I2C2",
+            "18",
+            "D58",
+            "SAI_A_SCK",
+            "PE5",
+            "SAI_1_A"
+          ],
+          [
+            "19",
+            "D69",
+            "I2C_B_SCL",
+            "PF1",
+            "I2C2",
+            "20",
+            "D59",
+            "SAI_A_SD",
+            "PE6",
+            "SAI_1_A"
+          ],
+          [
+            "21",
+            "D68",
+            "I2C_B_SDA",
+            "PF0",
+            "I2C2",
+            "22",
+            "D60",
+            "SAI_B_SD",
+            "PE3",
+            "SAI_1_B"
+          ],
+          [
+            "23",
+            "GND",
+            "GND",
+            "-",
+            "-",
+            "24",
+            "D61",
+            "SAI_B_SCK",
+            "PF8",
+            "SAI_1_B"
+          ],
+          [
+            "25",
+            "D67",
+            "CAN_RX",
+            "PD0",
+            "CAN_1",
+            "26",
+            "D62",
+            "SAI_B_MCLK",
+            "PF7",
+            "SAI_1_B"
+          ]
+        ]
+      ],
+      "tokens": []
+    },
+    "42": {
+      "tables": [
+        [
+          [
+            "Pin",
+            "Pin name",
+            "Signal name",
+            "STM32H7\npin",
+            "MCU function",
+            "Pin",
+            "Pin name",
+            "Signal name",
+            "STM32H7\npin",
+            "MCU function"
+          ],
+          [
+            "27",
+            "D66",
+            "CAN_TX",
+            "PD1",
+            "CAN_1",
+            "28",
+            "D63",
+            "SAI_B_FS",
+            "PF9",
+            "SAI_1_B"
+          ],
+          [
+            "29",
+            "D65",
+            "I/O",
+            "PG0",
+            "-",
+            "30",
+            "D64",
+            "I/O",
+            "PG1",
+            "-"
+          ]
+        ],
+        [
+          [
+            "Pin",
+            "Pin name",
+            "Signal name",
+            "STM32H7\npin",
+            "MCU function",
+            "Pin",
+            "Pin name",
+            "Signal name",
+            "STM32H7\npin",
+            "MCU function"
+          ],
+          [
+            "1",
+            "AVDD",
+            "VDDA",
+            "-",
+            "Analog VDD",
+            "2",
+            "D7",
+            "I/O",
+            "PG12",
+            "I/O"
+          ],
+          [
+            "3",
+            "AGND",
+            "AGND",
+            "-",
+            "Analog GND",
+            "4",
+            "D6",
+            "TIMER_A_PWM1",
+            "PE9",
+            "TIM1_CH1"
+          ],
+          [
+            "5",
+            "GND",
+            "GND",
+            "-",
+            "GND",
+            "6",
+            "D5",
+            "TIMER_A_PWM2",
+            "PE11",
+            "TIM1_CH2"
+          ],
+          [
+            "7",
+            "A6",
+            "ADC_A_IN",
+            "PF4",
+            "ADC3_INP9",
+            "8",
+            "D4",
+            "I/O",
+            "PE14",
+            "I/O"
+          ],
+          [
+            "9",
+            "A7",
+            "ADC_B_IN",
+            "PF5",
+            "ADC3_INP4",
+            "10",
+            "D3",
+            "TIMER_A_PWM3",
+            "PE13",
+            "TIM1_CH3"
+          ],
+          [
+            "11",
+            "A8",
+            "ADC_C_IN",
+            "PF6",
+            "ADC3_INP8",
+            "12",
+            "D2",
+            "I/O",
+            "PG14",
+            "I/O"
+          ],
+          [
+            "13",
+            "D26",
+            "QSPI_CS",
+            "PG6",
+            "QSPI1_NCS",
+            "14",
+            "D1",
+            "USART_A_TX",
+            "PB6",
+            "LPUART1"
+          ],
+          [
+            "15",
+            "D27",
+            "QSPI_CLK",
+            "PB2",
+            "QSPI1_CLK",
+            "16",
+            "D0",
+            "USART_A_RX",
+            "PB7",
+            "LPUART1"
+          ],
+          [
+            "17",
+            "GND",
+            "GND",
+            "-",
+            "GND",
+            "18",
+            "D42",
+            "TIMER_A_PWM1N",
+            "PE8",
+            "TIM1_CH1N"
+          ],
+          [
+            "19",
+            "D28",
+            "QSPI_BK1_IO3",
+            "PD13",
+            "QSPI1_IO",
+            "20",
+            "D41",
+            "TIMER_A_ETR",
+            "PE7",
+            "TIM1_ETR"
+          ],
+          [
+            "21",
+            "D29",
+            "QSPI_BK1_IO1",
+            "PD12",
+            "QSPI1_IO",
+            "22",
+            "GND",
+            "GND",
+            "-",
+            "GND"
+          ],
+          [
+            "23",
+            "D30",
+            "QSPI_BK1_IO0",
+            "PD11",
+            "QSPI1_IO",
+            "24",
+            "D40",
+            "TIMER_A_PWM2N",
+            "PE10",
+            "TIM1_CH2N"
+          ],
+          [
+            "25",
+            "D31",
+            "QSPI_BK1_IO2",
+            "PE2(1)",
+            "QSPI1_IO",
+            "26",
+            "D39",
+            "TIMER_A_PWM3N",
+            "PE12",
+            "TIM1_CH3N"
+          ],
+          [
+            "27",
+            "GND",
+            "-",
+            "-",
+            "-",
+            "28",
+            "D38",
+            "TIMER_A_BKIN2",
+            "PE6",
+            "TIM1_BKIN2"
+          ],
+          [
+            "29",
+            "D32",
+            "TIM_C_PWM1",
+            "PA0",
+            "TIM2_CH1",
+            "30",
+            "D37",
+            "TIMER_A_BKIN1",
+            "PE15",
+            "TIM1_BKIN1"
+          ],
+          [
+            "31",
+            "D33",
+            "TIM_D_PWM1",
+            "PB0",
+            "TIM3_CH3",
+            "32",
+            "D36",
+            "TIMER_C_PWM2",
+            "PB10",
+            "TIM2_CH3"
+          ],
+          [
+            "33",
+            "D34",
+            "TIM_B_ETR",
+            "PE0",
+            "TIM4_ETR",
+            "34",
+            "D35",
+            "TIMER_C_PWM3",
+            "PB11",
+            "TIM2_CH4"
+          ]
+        ]
+      ],
+      "tokens": []
+    },
+    "43": {
+      "tables": [
+        [
+          [
+            "CN11 odd pins",
+            null,
+            "CN11 even pins",
+            null,
+            "CN12 odd pins",
+            null,
+            "CN12 even pins",
+            null
+          ],
+          [
+            "Pin nbr",
+            "Pin name",
+            "Pin nbr",
+            "Pin name",
+            "Pin nbr",
+            "Pin name",
+            "Pin nbr",
+            "Pin name"
+          ],
+          [
+            "1",
+            "PC10",
+            "2",
+            "PC11",
+            "1",
+            "PC9",
+            "2",
+            "PC8"
+          ],
+          [
+            "3",
+            "PC12",
+            "4",
+            "PD2",
+            "3",
+            "PB8",
+            "4",
+            "PC6"
+          ],
+          [
+            "5",
+            "3V3_VDD",
+            "6",
+            "5V_EXT",
+            "5",
+            "PB9",
+            "6",
+            "PC5"
+          ],
+          [
+            "7",
+            "BOOT0(1)",
+            "8",
+            "GND",
+            "7",
+            "VREFP",
+            "8",
+            "5V_USB_STLK(2)"
+          ],
+          [
+            "9",
+            "PF6",
+            "10",
+            "NC",
+            "9",
+            "GND",
+            "10",
+            "PD8"
+          ],
+          [
+            "11",
+            "PF7",
+            "12",
+            "IOREF",
+            "11",
+            "PA5",
+            "12",
+            "PA12"
+          ],
+          [
+            "13",
+            "PA13(3)",
+            "14",
+            "NRST",
+            "13",
+            "PA6",
+            "14",
+            "PA11"
+          ],
+          [
+            "15",
+            "PA14(3)",
+            "16",
+            "3V3",
+            "15",
+            "PA7",
+            "16",
+            "PB12"
+          ],
+          [
+            "17",
+            "PA15",
+            "18",
+            "5V",
+            "17",
+            "PB6",
+            "18",
+            "PB11"
+          ],
+          [
+            "19",
+            "GND",
+            "20",
+            "GND",
+            "19",
+            "PC7",
+            "20",
+            "GND"
+          ],
+          [
+            "21",
+            "PB7",
+            "22",
+            "GND",
+            "21",
+            "PA9",
+            "22",
+            "PB2"
+          ],
+          [
+            "23",
+            "PC13",
+            "24",
+            "VIN",
+            "23",
+            "PA8",
+            "24",
+            "PB1"
+          ],
+          [
+            "25",
+            "PC14",
+            "26",
+            "NC",
+            "25",
+            "PB10",
+            "26",
+            "PB15"
+          ],
+          [
+            "27",
+            "PC15",
+            "28",
+            "PA0",
+            "27",
+            "PB4",
+            "28",
+            "PB14"
+          ],
+          [
+            "29",
+            "PH0",
+            "30",
+            "PA1",
+            "29",
+            "PB5",
+            "30",
+            "PB13"
+          ],
+          [
+            "31",
+            "PH1",
+            "32",
+            "PA4",
+            "31",
+            "PB3",
+            "32",
+            "AGND"
+          ],
+          [
+            "33",
+            "VBAT",
+            "34",
+            "PB0",
+            "33",
+            "PA10",
+            "34",
+            "PC4"
+          ],
+          [
+            "35",
+            "PC2",
+            "36",
+            "PC1",
+            "35",
+            "PA2",
+            "36",
+            "PF5"
+          ],
+          [
+            "37",
+            "PC3",
+            "38",
+            "PC0",
+            "37",
+            "PA3",
+            "38",
+            "PF4"
+          ],
+          [
+            "39",
+            "PD4",
+            "40",
+            "PD3",
+            "39",
+            "GND",
+            "40",
+            "PE8"
+          ],
+          [
+            "41",
+            "PD5",
+            "42",
+            "PG2",
+            "41",
+            "PD13",
+            "42",
+            "PF10"
+          ],
+          [
+            "43",
+            "PD6",
+            "44",
+            "PG3",
+            "43",
+            "PD12",
+            "44",
+            "PE7"
+          ],
+          [
+            "45",
+            "PD7",
+            "46",
+            "PE2",
+            "45",
+            "PD11",
+            "46",
+            "PD14"
+          ],
+          [
+            "47",
+            "PE3",
+            "48",
+            "PE4",
+            "47",
+            "PE10",
+            "48",
+            "PD15"
+          ],
+          [
+            "49",
+            "GND",
+            "50",
+            "PE5",
+            "49",
+            "PE12",
+            "50",
+            "PF14"
+          ],
+          [
+            "51",
+            "PF1",
+            "52",
+            "PF2",
+            "51",
+            "PE14",
+            "52",
+            "PE9"
+          ],
+          [
+            "53",
+            "PF0",
+            "54",
+            "PF8",
+            "53",
+            "PE15",
+            "54",
+            "GND"
+          ]
+        ]
+      ],
+      "tokens": []
+    },
+    "44": {
+      "tables": [
+        [
+          [
+            "CN11 odd pins",
+            null,
+            "CN11 even pins",
+            null,
+            "CN12 odd pins",
+            null,
+            "CN12 even pins",
+            null
+          ],
+          [
+            "Pin nbr",
+            "Pin name",
+            "Pin nbr",
+            "Pin name",
+            "Pin nbr",
+            "Pin name",
+            "Pin nbr",
+            "Pin name"
+          ],
+          [
+            "55",
+            "PD1",
+            "56",
+            "PF9",
+            "55",
+            "PE13",
+            "56",
+            "PE11"
+          ],
+          [
+            "57",
+            "PD0",
+            "58",
+            "PG1",
+            "57",
+            "PF13",
+            "58",
+            "PF3"
+          ],
+          [
+            "59",
+            "PG0",
+            "60",
+            "GND",
+            "59",
+            "PF12",
+            "60",
+            "PF15"
+          ],
+          [
+            "61",
+            "PE1",
+            "62",
+            "PE6",
+            "61",
+            "PG14",
+            "62",
+            "PF11"
+          ],
+          [
+            "63",
+            "PG9",
+            "64",
+            "PG15",
+            "63",
+            "GND",
+            "64",
+            "PE0"
+          ],
+          [
+            "65",
+            "PG12",
+            "66",
+            "PG10",
+            "65",
+            "PD10",
+            "66",
+            "PG8"
+          ],
+          [
+            "67",
+            "NC",
+            "68",
+            "PG13",
+            "67",
+            "PG7",
+            "68",
+            "PG5"
+          ],
+          [
+            "69",
+            "PD9",
+            "70",
+            "PG11",
+            "69",
+            "PG4",
+            "70",
+            "PG6"
+          ]
+        ]
+      ],
+      "tokens": []
+    }
+  }
+}

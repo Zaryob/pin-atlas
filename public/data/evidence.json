@@ -1038,6 +1038,50 @@
       "publisher": "STMicroelectronics",
       "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
       "sha256": "2c28d56f76b110bfebc7d33f55b68a153460cb33379a60897c0a5e9c065291f6"
+    },
+    {
+      "id": "h743zi-package",
+      "title": "H743ZI CubeMX package data",
+      "file": "h743zi-package.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32H743ZITx.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32H743ZITx.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "ac4c5375cf52cb170e7296442abd7ca7dc9f4926acc98ed2c735fa2b12ef2e68"
+    },
+    {
+      "id": "h743zi-modes",
+      "title": "STM32H747_gpio_v1_0 GPIO alternate functions",
+      "file": "h743zi-modes.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32H747_gpio_v1_0_Modes.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32H747_gpio_v1_0_Modes.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "49f51ae2508a11df6b385b86ed21172ea43478c4d314314db465e0f8d278c246"
+    },
+    {
+      "id": "nucleo-um2407-r6",
+      "title": "STM32 Nucleo-144 · UM2407 Rev 6",
+      "file": "nucleo-um2407-r6.pdf",
+      "url": "https://www.st.com/resource/en/user_manual/um2407-stm32h7-nucleo144-board-stmicroelectronics.pdf",
+      "viewUrl": "https://www.st.com/resource/en/user_manual/um2407-stm32h7-nucleo144-board-stmicroelectronics.pdf",
+      "publisher": "STMicroelectronics",
+      "revision": "UM2407 Rev 6",
+      "sha256": "b493e14fad9b4fe8323e4694bc83eff98ee74c4e10ca14b7cc24a8e22180a4cd",
+      "tableSnapshot": {
+        "file": "sources/extracted/nucleo-um2407-r6.json",
+        "sha256": "6f8db36e34eb104290528ec8204547a718a6a246448cfabbee022c3ca111922b"
+      }
+    },
+    {
+      "id": "nucleo-h743zi-ioc",
+      "title": "NUCLEO-H743ZI official board configuration",
+      "file": "nucleo-h743zi-ioc.ioc",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/boards/G73_Nucleo_NUCLEO-H743ZI2_STM32H743ZIT_Board_AllConfig.ioc",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/boards/G73_Nucleo_NUCLEO-H743ZI2_STM32H743ZIT_Board_AllConfig.ioc",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "95a7cc04b3d5d33a13654d8b0e70b7bb709762ecf45f4aea5bacb80011e605cf"
     }
   ],
   "references": {
@@ -1745,13 +1789,93 @@
       "locator": "STMicroelectronics official board configuration",
       "method": "hardware-spec"
     },
-    "nucleo-h723zg-top-view": {
+    "nucleo-h723zg-drawing": {
+      "document": "nucleo-um2407-r6",
+      "title": "STM32 Nucleo-144 · UM2407 Rev 6",
+      "url": "https://www.st.com/resource/en/user_manual/um2407-stm32h7-nucleo144-board-stmicroelectronics.pdf#page=16",
+      "page": 16,
+      "locator": "Mechanical drawing · CN7/CN8/CN9/CN10 ST Zio and CN11/CN12 ST Morpho",
+      "method": "visual-diagram"
+    },
+    "nucleo-h723zg-zio-CN7-40": {
+      "document": "nucleo-um2407-r6",
+      "title": "STM32 Nucleo-144 · UM2407 Rev 6",
+      "url": "https://www.st.com/resource/en/user_manual/um2407-stm32h7-nucleo144-board-stmicroelectronics.pdf#page=40",
+      "page": 40,
+      "locator": "UM2407 Rev 6 · CN7 ST Zio pinout",
+      "method": "pdf-table"
+    },
+    "nucleo-h723zg-zio-CN8-40": {
+      "document": "nucleo-um2407-r6",
+      "title": "STM32 Nucleo-144 · UM2407 Rev 6",
+      "url": "https://www.st.com/resource/en/user_manual/um2407-stm32h7-nucleo144-board-stmicroelectronics.pdf#page=40",
+      "page": 40,
+      "locator": "UM2407 Rev 6 · CN8 ST Zio pinout",
+      "method": "pdf-table"
+    },
+    "nucleo-h723zg-zio-CN8-41": {
+      "document": "nucleo-um2407-r6",
+      "title": "STM32 Nucleo-144 · UM2407 Rev 6",
+      "url": "https://www.st.com/resource/en/user_manual/um2407-stm32h7-nucleo144-board-stmicroelectronics.pdf#page=41",
+      "page": 41,
+      "locator": "UM2407 Rev 6 · CN8 ST Zio pinout",
+      "method": "pdf-table"
+    },
+    "nucleo-h723zg-zio-CN9-41": {
+      "document": "nucleo-um2407-r6",
+      "title": "STM32 Nucleo-144 · UM2407 Rev 6",
+      "url": "https://www.st.com/resource/en/user_manual/um2407-stm32h7-nucleo144-board-stmicroelectronics.pdf#page=41",
+      "page": 41,
+      "locator": "UM2407 Rev 6 · CN9 ST Zio pinout",
+      "method": "pdf-table"
+    },
+    "nucleo-h723zg-zio-CN9-42": {
+      "document": "nucleo-um2407-r6",
+      "title": "STM32 Nucleo-144 · UM2407 Rev 6",
+      "url": "https://www.st.com/resource/en/user_manual/um2407-stm32h7-nucleo144-board-stmicroelectronics.pdf#page=42",
+      "page": 42,
+      "locator": "UM2407 Rev 6 · CN9 ST Zio pinout",
+      "method": "pdf-table"
+    },
+    "nucleo-h723zg-zio-CN10-42": {
+      "document": "nucleo-um2407-r6",
+      "title": "STM32 Nucleo-144 · UM2407 Rev 6",
+      "url": "https://www.st.com/resource/en/user_manual/um2407-stm32h7-nucleo144-board-stmicroelectronics.pdf#page=42",
+      "page": 42,
+      "locator": "UM2407 Rev 6 · CN10 ST Zio pinout",
+      "method": "pdf-table"
+    },
+    "nucleo-h723zg-morpho-43": {
+      "document": "nucleo-um2407-r6",
+      "title": "STM32 Nucleo-144 · UM2407 Rev 6",
+      "url": "https://www.st.com/resource/en/user_manual/um2407-stm32h7-nucleo144-board-stmicroelectronics.pdf#page=43",
+      "page": 43,
+      "locator": "ST Morpho · CN11/CN12 numbered contacts",
+      "method": "pdf-table"
+    },
+    "nucleo-h723zg-morpho-44": {
+      "document": "nucleo-um2407-r6",
+      "title": "STM32 Nucleo-144 · UM2407 Rev 6",
+      "url": "https://www.st.com/resource/en/user_manual/um2407-stm32h7-nucleo144-board-stmicroelectronics.pdf#page=44",
+      "page": 44,
+      "locator": "ST Morpho · CN11/CN12 numbered contacts",
+      "method": "pdf-table"
+    },
+    "nucleo-h723zg-board-limits": {
+      "document": "nucleo-um2407-r6",
+      "title": "STM32 Nucleo-144 · UM2407 Rev 6",
+      "url": "https://www.st.com/resource/en/user_manual/um2407-stm32h7-nucleo144-board-stmicroelectronics.pdf#page=32",
+      "page": 32,
+      "locator": "Table 14 · SB14/SB15 Morpho SDMMC links; continued p.34, SB65/PF11 ADC restriction",
+      "method": "pdf-table"
+    },
+    "nucleo-h723zg-ioc-circuit": {
       "document": "nucleo-h723zg-ioc",
       "title": "NUCLEO-H723ZG STM32Cube board configuration (.ioc)",
       "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/boards/G75_Nucleo_NUCLEO-H723ZG_STM32H723ZGT_Board_AllConfig.ioc",
       "page": null,
-      "locator": "MB1364 top view · ST Zio and Morpho connector layout",
-      "method": "visual-diagram"
+      "locator": "Official board configuration · fitted peripheral and GPIO labels",
+      "method": "hardware-spec"
     },
     "arduino-uno-r3-core": {
       "document": "arduino-avr-standard",
@@ -2937,10 +3061,114 @@
       "locator": "ST Morpho · CN11/CN12 numbered contacts",
       "method": "pdf-table"
     },
-    "nucleo-f767zi-ioc": {
+    "nucleo-f767zi-ioc-circuit": {
       "document": "nucleo-f767zi-ioc",
       "title": "NUCLEO-F767ZI official board configuration",
       "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/boards/A71_Nucleo_NUCLEO-F767ZI_STM32F767ZI_Board_AllConfig.ioc",
+      "page": null,
+      "locator": "Official board configuration · fitted peripheral and GPIO labels",
+      "method": "hardware-spec"
+    },
+    "h743zi-package": {
+      "document": "h743zi-package",
+      "title": "H743ZI CubeMX package data",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32H743ZITx.xml",
+      "page": null,
+      "locator": "LQFP144 numbered package pins and physical signals",
+      "method": "manufacturer-xml"
+    },
+    "h743zi-modes": {
+      "document": "h743zi-modes",
+      "title": "STM32H747_gpio_v1_0 GPIO alternate functions",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32H747_gpio_v1_0_Modes.xml",
+      "page": null,
+      "locator": "STM32H747_gpio_v1_0 GPIO alternate function selectors",
+      "method": "manufacturer-xml"
+    },
+    "nucleo-h743zi2-drawing": {
+      "document": "nucleo-um2407-r6",
+      "title": "STM32 Nucleo-144 · UM2407 Rev 6",
+      "url": "https://www.st.com/resource/en/user_manual/um2407-stm32h7-nucleo144-board-stmicroelectronics.pdf#page=16",
+      "page": 16,
+      "locator": "Mechanical drawing · CN7/CN8/CN9/CN10 ST Zio and CN11/CN12 ST Morpho",
+      "method": "visual-diagram"
+    },
+    "nucleo-h743zi2-zio-CN7-40": {
+      "document": "nucleo-um2407-r6",
+      "title": "STM32 Nucleo-144 · UM2407 Rev 6",
+      "url": "https://www.st.com/resource/en/user_manual/um2407-stm32h7-nucleo144-board-stmicroelectronics.pdf#page=40",
+      "page": 40,
+      "locator": "UM2407 Rev 6 · CN7 ST Zio pinout",
+      "method": "pdf-table"
+    },
+    "nucleo-h743zi2-zio-CN8-40": {
+      "document": "nucleo-um2407-r6",
+      "title": "STM32 Nucleo-144 · UM2407 Rev 6",
+      "url": "https://www.st.com/resource/en/user_manual/um2407-stm32h7-nucleo144-board-stmicroelectronics.pdf#page=40",
+      "page": 40,
+      "locator": "UM2407 Rev 6 · CN8 ST Zio pinout",
+      "method": "pdf-table"
+    },
+    "nucleo-h743zi2-zio-CN8-41": {
+      "document": "nucleo-um2407-r6",
+      "title": "STM32 Nucleo-144 · UM2407 Rev 6",
+      "url": "https://www.st.com/resource/en/user_manual/um2407-stm32h7-nucleo144-board-stmicroelectronics.pdf#page=41",
+      "page": 41,
+      "locator": "UM2407 Rev 6 · CN8 ST Zio pinout",
+      "method": "pdf-table"
+    },
+    "nucleo-h743zi2-zio-CN9-41": {
+      "document": "nucleo-um2407-r6",
+      "title": "STM32 Nucleo-144 · UM2407 Rev 6",
+      "url": "https://www.st.com/resource/en/user_manual/um2407-stm32h7-nucleo144-board-stmicroelectronics.pdf#page=41",
+      "page": 41,
+      "locator": "UM2407 Rev 6 · CN9 ST Zio pinout",
+      "method": "pdf-table"
+    },
+    "nucleo-h743zi2-zio-CN9-42": {
+      "document": "nucleo-um2407-r6",
+      "title": "STM32 Nucleo-144 · UM2407 Rev 6",
+      "url": "https://www.st.com/resource/en/user_manual/um2407-stm32h7-nucleo144-board-stmicroelectronics.pdf#page=42",
+      "page": 42,
+      "locator": "UM2407 Rev 6 · CN9 ST Zio pinout",
+      "method": "pdf-table"
+    },
+    "nucleo-h743zi2-zio-CN10-42": {
+      "document": "nucleo-um2407-r6",
+      "title": "STM32 Nucleo-144 · UM2407 Rev 6",
+      "url": "https://www.st.com/resource/en/user_manual/um2407-stm32h7-nucleo144-board-stmicroelectronics.pdf#page=42",
+      "page": 42,
+      "locator": "UM2407 Rev 6 · CN10 ST Zio pinout",
+      "method": "pdf-table"
+    },
+    "nucleo-h743zi2-morpho-43": {
+      "document": "nucleo-um2407-r6",
+      "title": "STM32 Nucleo-144 · UM2407 Rev 6",
+      "url": "https://www.st.com/resource/en/user_manual/um2407-stm32h7-nucleo144-board-stmicroelectronics.pdf#page=43",
+      "page": 43,
+      "locator": "ST Morpho · CN11/CN12 numbered contacts",
+      "method": "pdf-table"
+    },
+    "nucleo-h743zi2-morpho-44": {
+      "document": "nucleo-um2407-r6",
+      "title": "STM32 Nucleo-144 · UM2407 Rev 6",
+      "url": "https://www.st.com/resource/en/user_manual/um2407-stm32h7-nucleo144-board-stmicroelectronics.pdf#page=44",
+      "page": 44,
+      "locator": "ST Morpho · CN11/CN12 numbered contacts",
+      "method": "pdf-table"
+    },
+    "nucleo-h743zi2-board-limits": {
+      "document": "nucleo-um2407-r6",
+      "title": "STM32 Nucleo-144 · UM2407 Rev 6",
+      "url": "https://www.st.com/resource/en/user_manual/um2407-stm32h7-nucleo144-board-stmicroelectronics.pdf#page=32",
+      "page": 32,
+      "locator": "Table 14 · SB14/SB15 Morpho SDMMC links; continued p.34, SB65/PF11 ADC restriction",
+      "method": "pdf-table"
+    },
+    "nucleo-h743zi-ioc-circuit": {
+      "document": "nucleo-h743zi-ioc",
+      "title": "NUCLEO-H743ZI official board configuration",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/boards/G73_Nucleo_NUCLEO-H743ZI2_STM32H743ZIT_Board_AllConfig.ioc",
       "page": null,
       "locator": "Official board configuration · fitted peripheral and GPIO labels",
       "method": "hardware-spec"

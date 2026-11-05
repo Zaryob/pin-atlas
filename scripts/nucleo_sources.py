@@ -428,7 +428,7 @@ def read_h7_chip(cache, docs, ref, verified_on, category):
             'pins': pins}
 
 
-def build_nucleo_h723(cache, docs, ref, chip):
+def build_nucleo_h723(cache, docs, ref, chip, legacy_identity_only=False):
     board_id = 'nucleo-h723zg'
     h_doc = docs['nucleo-h723zg-variant-h']
     cpp_doc = docs['nucleo-h723zg-variant-cpp']
@@ -439,7 +439,7 @@ def build_nucleo_h723(cache, docs, ref, chip):
                   'STMicroelectronics official digitalPin table', 'code-variant')
     ioc_ref = ref('nucleo-h723zg-ioc', 'nucleo-h723zg-ioc', None,
                   'STMicroelectronics official board configuration', 'hardware-spec')
-    drawing_ref = ref(f'{board_id}-top-view', 'nucleo-h723zg-ioc', None,
+    drawing_ref = h_ref if legacy_identity_only else ref(f'{board_id}-top-view', 'nucleo-h723zg-ioc', None,
                       'MB1364 top view · ST Zio and Morpho connector layout', 'visual-diagram')
 
     circuit_notes = {

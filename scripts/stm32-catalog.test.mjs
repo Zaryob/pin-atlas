@@ -5,6 +5,22 @@ import {buildLayouts,resolveProfile} from '../public/layouts.mjs';
 const boards=JSON.parse(readFileSync(new URL('../public/data/boards.json',import.meta.url)));
 const layouts=buildLayouts(boards);
 
+test('MB1364 H743ZI2 and corrected H723 share physical connectors without renumbering legacy assignments',()=>{
+ const h743=boards.find(b=>b.id==='nucleo-h743zi2'),chip=boards.find(b=>b.id===h743.mcuProfile);
+ assert.equal(chip.packagePins,144);assert.equal(chip.gpioCount,114);assert.equal(chip.clock,'480 MHz');
+ const h723=boards.find(b=>b.id==='nucleo-h723zg');assert.equal(h743.pins.length,240);assert.equal(h723.pins.length,240);
+ const legacy=JSON.parse(readFileSync(new URL('../sources/legacy-h723-pin-ids.json',import.meta.url)));
+ for(const old of legacy){
+  const pin=h723.pins.find(p=>p.number===old.number);assert.equal(pin.name,old.name);assert.equal(pin.physicalLabel,old.physicalLabel);
+  if(old.mcuPin)assert.equal(pin.mcuPin,old.mcuPin);
+ }
+ for(const board of [h723,h743]){
+  assert.equal(resolveProfile(layouts,board.id).layout.id,'nucleo-144');
+  assert(!board.pins.find(p=>p.net==='PF11').functions.some(f=>/^ADC\d+_IN/.test(f.name)));
+  assert.equal(board.pins.find(p=>p.physicalLabel==='CN12.1').boardCircuitKey,'nucleo144SdBridge');
+ }
+});
+
 test('NUCLEO-F767ZI exposes the complete six physical headers and its Cortex-M7 package',()=>{
  const board=boards.find(b=>b.id==='nucleo-f767zi'),chip=boards.find(b=>b.id===board.mcuProfile);
  assert.equal(chip.packagePins,144);assert.equal(chip.gpioCount,114);assert.equal(chip.clock,'216 MHz');
