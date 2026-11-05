@@ -975,6 +975,26 @@
         "file": "sources/extracted/nucleo-um1956-r6.json",
         "sha256": "d5f9b9ba8ff97a58238bb1ab34bb35a7e21089d398a303726694b394c81861dd"
       }
+    },
+    {
+      "id": "l432kc-package",
+      "title": "L432KC CubeMX package data",
+      "file": "l432kc-package.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32L432K(B-C)Ux.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32L432K(B-C)Ux.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "08da7af494ab4b5054edf4fef9554be46b314efaee3221a2ea6a78eda9643ce1"
+    },
+    {
+      "id": "l432kc-modes",
+      "title": "STM32L43x_gpio_v1_0 GPIO alternate functions",
+      "file": "l432kc-modes.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32L43x_gpio_v1_0_Modes.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32L43x_gpio_v1_0_Modes.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "1ccb854fb3b4f18e3508bd6b34e9faa1112cbea646f4993e0f2eeffb3e52da43"
     }
   ],
   "publishers": [

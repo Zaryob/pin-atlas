@@ -18570,3 +18570,348 @@ stm32f042k6t6,31,PB8,GPIO,I2C1_SCL,AF1,I2C1_SCL,f042k6-package,f042k6-package | 
 stm32f042k6t6,31,PB8,GPIO,TIM16_CH1,AF2,TIM16_CH1,f042k6-package,f042k6-package | f042k6-modes
 stm32f042k6t6,31,PB8,GPIO,TSC_SYNC,AF3,TSC_SYNC,f042k6-package,f042k6-package | f042k6-modes
 stm32f042k6t6,32,VSSA,GND,,,,f042k6-package,
+nucleo-l432kc,1,PA9,GPIO,DAC1_EXTI9,,DAC1_EXTI9,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package
+nucleo-l432kc,1,PA9,GPIO,I2C1_SCL,AF4,I2C1_SCL,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,1,PA9,GPIO,SAI1_FS_A,AF13,SAI1_FS_A,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,1,PA9,GPIO,TIM15_BKIN,AF14,TIM15_BKIN,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,1,PA9,GPIO,TIM1_CH2,AF1,TIM1_CH2,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,1,PA9,GPIO,USART1_TX,AF7,USART1_TX,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,2,PA10,GPIO,CRS_SYNC,AF10,CRS_SYNC,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,2,PA10,GPIO,I2C1_SDA,AF4,I2C1_SDA,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,2,PA10,GPIO,SAI1_SD_A,AF13,SAI1_SD_A,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,2,PA10,GPIO,TIM1_CH3,AF1,TIM1_CH3,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,2,PA10,GPIO,USART1_RX,AF7,USART1_RX,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,3,NRST,SYSTEM,,,,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,
+nucleo-l432kc,4,GND,GND,,,,nucleo-l432kc-headers | nucleo-l432kc-top-view,
+nucleo-l432kc,5,PA12,GPIO,CAN1_TX,AF9,CAN1_TX,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,5,PA12,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,5,PA12,GPIO,TIM1_ETR,AF1,TIM1_ETR,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,5,PA12,GPIO,USART1_DE,AF7,USART1_DE,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,5,PA12,GPIO,USART1_RTS,AF7,USART1_RTS,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,5,PA12,GPIO,USB_DP,AF10,USB_DP,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,6,PB0,GPIO,ADC1_IN15,,ADC1_IN15,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package
+nucleo-l432kc,6,PB0,GPIO,COMP1_OUT,AF12,COMP1_OUT,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,6,PB0,GPIO,QUADSPI_BK1_IO1,AF10,QUADSPI_BK1_IO1,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,6,PB0,GPIO,SAI1_EXTCLK,AF13,SAI1_EXTCLK,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,6,PB0,GPIO,SPI1_NSS,AF5,SPI1_NSS,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,6,PB0,GPIO,TIM1_CH2N,AF1,TIM1_CH2N,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,7,PB7,GPIO,COMP2_INM,,COMP2_INM,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package
+nucleo-l432kc,7,PB7,GPIO,I2C1_SDA,AF4,I2C1_SDA,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,7,PB7,GPIO,LPTIM1_IN2,AF1,LPTIM1_IN2,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,7,PB7,GPIO,SYS_PVD_IN,,SYS_PVD_IN,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package
+nucleo-l432kc,7,PB7,GPIO,TSC_G2_IO4,AF9,TSC_G2_IO4,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,7,PB7,GPIO,USART1_RX,AF7,USART1_RX,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,8,PB6,GPIO,COMP2_INP,,COMP2_INP,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package
+nucleo-l432kc,8,PB6,GPIO,I2C1_SCL,AF4,I2C1_SCL,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,8,PB6,GPIO,LPTIM1_ETR,AF1,LPTIM1_ETR,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,8,PB6,GPIO,SAI1_FS_B,AF13,SAI1_FS_B,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,8,PB6,GPIO,TIM16_CH1N,AF14,TIM16_CH1N,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,8,PB6,GPIO,TSC_G2_IO3,AF9,TSC_G2_IO3,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,8,PB6,GPIO,USART1_TX,AF7,USART1_TX,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,9,PB1,GPIO,ADC1_IN16,,ADC1_IN16,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package
+nucleo-l432kc,9,PB1,GPIO,COMP1_INM,,COMP1_INM,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package
+nucleo-l432kc,9,PB1,GPIO,LPTIM2_IN1,AF14,LPTIM2_IN1,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,9,PB1,GPIO,LPUART1_DE,AF8,LPUART1_DE,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,9,PB1,GPIO,LPUART1_RTS,AF8,LPUART1_RTS,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,9,PB1,GPIO,QUADSPI_BK1_IO0,AF10,QUADSPI_BK1_IO0,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,9,PB1,GPIO,TIM1_CH3N,AF1,TIM1_CH3N,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,10,PC14,GPIO,RCC_OSC32_IN,,RCC_OSC32_IN,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package
+nucleo-l432kc,11,PC15,GPIO,ADC1_EXTI15,,ADC1_EXTI15,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package
+nucleo-l432kc,11,PC15,GPIO,RCC_OSC32_OUT,,RCC_OSC32_OUT,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package
+nucleo-l432kc,12,PA8,GPIO,LPTIM2_OUT,AF14,LPTIM2_OUT,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,12,PA8,GPIO,RCC_MCO,AF0,RCC_MCO,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,12,PA8,GPIO,SAI1_SCK_A,AF13,SAI1_SCK_A,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,12,PA8,GPIO,SWPMI1_IO,AF12,SWPMI1_IO,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,12,PA8,GPIO,TIM1_CH1,AF1,TIM1_CH1,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,12,PA8,GPIO,USART1_CK,AF7,USART1_CK,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,13,PA11,GPIO,ADC1_EXTI11,,ADC1_EXTI11,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package
+nucleo-l432kc,13,PA11,GPIO,CAN1_RX,AF9,CAN1_RX,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,13,PA11,GPIO,COMP1_OUT,AF6,COMP1_OUT,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,13,PA11,GPIO,SPI1_MISO,AF5,SPI1_MISO,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,13,PA11,GPIO,TIM1_BKIN2,AF2,TIM1_BKIN2,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,13,PA11,GPIO,TIM1_BKIN2_COMP1,AF12,TIM1_BKIN2_COMP1,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,13,PA11,GPIO,TIM1_CH4,AF1,TIM1_CH4,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,13,PA11,GPIO,USART1_CTS,AF7,USART1_CTS,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,13,PA11,GPIO,USB_DM,AF10,USB_DM,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,14,PB5,GPIO,COMP2_OUT,AF12,COMP2_OUT,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,14,PB5,GPIO,I2C1_SMBA,AF4,I2C1_SMBA,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,14,PB5,GPIO,LPTIM1_IN1,AF1,LPTIM1_IN1,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,14,PB5,GPIO,SAI1_SD_B,AF13,SAI1_SD_B,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,14,PB5,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,14,PB5,GPIO,SPI3_MOSI,AF6,SPI3_MOSI,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,14,PB5,GPIO,TIM16_BKIN,AF14,TIM16_BKIN,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,14,PB5,GPIO,TSC_G2_IO2,AF9,TSC_G2_IO2,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,14,PB5,GPIO,USART1_CK,AF7,USART1_CK,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,15,PB4,GPIO,COMP2_INP,,COMP2_INP,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package
+nucleo-l432kc,15,PB4,GPIO,I2C3_SDA,AF4,I2C3_SDA,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,15,PB4,GPIO,SAI1_MCLK_B,AF13,SAI1_MCLK_B,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,15,PB4,GPIO,SPI1_MISO,AF5,SPI1_MISO,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,15,PB4,GPIO,SPI3_MISO,AF6,SPI3_MISO,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,15,PB4,GPIO,SYS_JTRST,AF0,SYS_JTRST,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,15,PB4,GPIO,TSC_G2_IO1,AF9,TSC_G2_IO1,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,15,PB4,GPIO,USART1_CTS,AF7,USART1_CTS,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,16,VIN,POWER,,,,nucleo-l432kc-headers | nucleo-l432kc-top-view,
+nucleo-l432kc,17,GND,GND,,,,nucleo-l432kc-headers | nucleo-l432kc-top-view,
+nucleo-l432kc,18,NRST,SYSTEM,,,,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,
+nucleo-l432kc,19,+5V,POWER,,,,nucleo-l432kc-headers | nucleo-l432kc-top-view,
+nucleo-l432kc,20,PA2,GPIO,ADC1_IN7,,ADC1_IN7,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package
+nucleo-l432kc,20,PA2,GPIO,COMP2_INM,,COMP2_INM,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package
+nucleo-l432kc,20,PA2,GPIO,COMP2_OUT,AF12,COMP2_OUT,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,20,PA2,GPIO,LPUART1_TX,AF8,LPUART1_TX,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,20,PA2,GPIO,QUADSPI_BK1_NCS,AF10,QUADSPI_BK1_NCS,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,20,PA2,GPIO,RCC_LSCO,,RCC_LSCO,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package
+nucleo-l432kc,20,PA2,GPIO,SYS_WKUP4,,SYS_WKUP4,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package
+nucleo-l432kc,20,PA2,GPIO,TIM15_CH1,AF14,TIM15_CH1,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,20,PA2,GPIO,TIM2_CH3,AF1,TIM2_CH3,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,20,PA2,GPIO,USART2_TX,AF7,USART2_TX,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,21,PA7,GPIO,ADC1_IN12,,ADC1_IN12,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package
+nucleo-l432kc,21,PA7,GPIO,COMP2_OUT,AF12,COMP2_OUT,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,21,PA7,GPIO,I2C3_SCL,AF4,I2C3_SCL,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,21,PA7,GPIO,QUADSPI_BK1_IO2,AF10,QUADSPI_BK1_IO2,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,21,PA7,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,21,PA7,GPIO,TIM1_CH1N,AF1,TIM1_CH1N,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,22,PA6,GPIO,ADC1_IN11,,ADC1_IN11,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package
+nucleo-l432kc,22,PA6,GPIO,COMP1_OUT,AF6,COMP1_OUT,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,22,PA6,GPIO,LPUART1_CTS,AF8,LPUART1_CTS,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,22,PA6,GPIO,QUADSPI_BK1_IO3,AF10,QUADSPI_BK1_IO3,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,22,PA6,GPIO,SPI1_MISO,AF5,SPI1_MISO,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,22,PA6,GPIO,TIM16_CH1,AF14,TIM16_CH1,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,22,PA6,GPIO,TIM1_BKIN,AF1,TIM1_BKIN,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,22,PA6,GPIO,TIM1_BKIN_COMP2,AF12,TIM1_BKIN_COMP2,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,23,PA5,GPIO,ADC1_IN10,,ADC1_IN10,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package
+nucleo-l432kc,23,PA5,GPIO,COMP1_INM,,COMP1_INM,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package
+nucleo-l432kc,23,PA5,GPIO,COMP2_INM,,COMP2_INM,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package
+nucleo-l432kc,23,PA5,GPIO,DAC1_OUT2,,DAC1_OUT2,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package
+nucleo-l432kc,23,PA5,GPIO,LPTIM2_ETR,AF14,LPTIM2_ETR,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,23,PA5,GPIO,SPI1_SCK,AF5,SPI1_SCK,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,23,PA5,GPIO,TIM2_CH1,AF1,TIM2_CH1,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,23,PA5,GPIO,TIM2_ETR,AF2,TIM2_ETR,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,24,PA4,GPIO,ADC1_IN9,,ADC1_IN9,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package
+nucleo-l432kc,24,PA4,GPIO,COMP1_INM,,COMP1_INM,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package
+nucleo-l432kc,24,PA4,GPIO,COMP2_INM,,COMP2_INM,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package
+nucleo-l432kc,24,PA4,GPIO,DAC1_OUT1,,DAC1_OUT1,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package
+nucleo-l432kc,24,PA4,GPIO,LPTIM2_OUT,AF14,LPTIM2_OUT,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,24,PA4,GPIO,SAI1_FS_B,AF13,SAI1_FS_B,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,24,PA4,GPIO,SPI1_NSS,AF5,SPI1_NSS,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,24,PA4,GPIO,SPI3_NSS,AF6,SPI3_NSS,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,24,PA4,GPIO,USART2_CK,AF7,USART2_CK,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,25,PA3,GPIO,ADC1_IN8,,ADC1_IN8,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package
+nucleo-l432kc,25,PA3,GPIO,COMP2_INP,,COMP2_INP,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package
+nucleo-l432kc,25,PA3,GPIO,LPUART1_RX,AF8,LPUART1_RX,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,25,PA3,GPIO,OPAMP1_VOUT,,OPAMP1_VOUT,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package
+nucleo-l432kc,25,PA3,GPIO,QUADSPI_CLK,AF10,QUADSPI_CLK,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,25,PA3,GPIO,SAI1_MCLK_A,AF13,SAI1_MCLK_A,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,25,PA3,GPIO,TIM15_CH2,AF14,TIM15_CH2,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,25,PA3,GPIO,TIM2_CH4,AF1,TIM2_CH4,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,25,PA3,GPIO,USART2_RX,AF7,USART2_RX,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,26,PA1,GPIO,ADC1_IN6,,ADC1_IN6,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package
+nucleo-l432kc,26,PA1,GPIO,COMP1_INP,,COMP1_INP,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package
+nucleo-l432kc,26,PA1,GPIO,I2C1_SMBA,AF4,I2C1_SMBA,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,26,PA1,GPIO,OPAMP1_VINM,,OPAMP1_VINM,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package
+nucleo-l432kc,26,PA1,GPIO,SPI1_SCK,AF5,SPI1_SCK,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,26,PA1,GPIO,TIM15_CH1N,AF14,TIM15_CH1N,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,26,PA1,GPIO,TIM2_CH2,AF1,TIM2_CH2,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,26,PA1,GPIO,USART2_DE,AF7,USART2_DE,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,26,PA1,GPIO,USART2_RTS,AF7,USART2_RTS,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,27,PA0,GPIO,ADC1_IN5,,ADC1_IN5,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package
+nucleo-l432kc,27,PA0,GPIO,COMP1_INM,,COMP1_INM,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package
+nucleo-l432kc,27,PA0,GPIO,COMP1_OUT,AF12,COMP1_OUT,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,27,PA0,GPIO,OPAMP1_VINP,,OPAMP1_VINP,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package
+nucleo-l432kc,27,PA0,GPIO,RCC_CK_IN,,RCC_CK_IN,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package
+nucleo-l432kc,27,PA0,GPIO,RTC_TAMP2,,RTC_TAMP2,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package
+nucleo-l432kc,27,PA0,GPIO,SAI1_EXTCLK,AF13,SAI1_EXTCLK,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,27,PA0,GPIO,SYS_WKUP1,,SYS_WKUP1,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package
+nucleo-l432kc,27,PA0,GPIO,TIM2_CH1,AF1,TIM2_CH1,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,27,PA0,GPIO,TIM2_ETR,AF14,TIM2_ETR,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,27,PA0,GPIO,USART2_CTS,AF7,USART2_CTS,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package,l432kc-package | l432kc-modes
+nucleo-l432kc,28,AREF,POWER,,,,nucleo-l432kc-headers | nucleo-l432kc-top-view | nucleo32-bridges,
+nucleo-l432kc,29,+3V3,POWER,,,,nucleo-l432kc-headers | nucleo-l432kc-top-view,
+nucleo-l432kc,30,PB3,GPIO,COMP2_INM,,COMP2_INM,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package
+nucleo-l432kc,30,PB3,GPIO,SAI1_SCK_B,AF13,SAI1_SCK_B,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,30,PB3,GPIO,SPI1_SCK,AF5,SPI1_SCK,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,30,PB3,GPIO,SPI3_SCK,AF6,SPI3_SCK,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,30,PB3,GPIO,SYS_JTDO-SWO,AF0,SYS_JTDO-SWO,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,30,PB3,GPIO,TIM2_CH2,AF1,TIM2_CH2,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,30,PB3,GPIO,USART1_DE,AF7,USART1_DE,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+nucleo-l432kc,30,PB3,GPIO,USART1_RTS,AF7,USART1_RTS,nucleo-l432kc-headers | nucleo-l432kc-top-view | l432kc-package | nucleo32-bridges,l432kc-package | l432kc-modes
+stm32l432kcu6,1,VDD,POWER,,,,l432kc-package,
+stm32l432kcu6,2,PC14,GPIO,RCC_OSC32_IN,,RCC_OSC32_IN,l432kc-package,l432kc-package
+stm32l432kcu6,3,PC15,GPIO,ADC1_EXTI15,,ADC1_EXTI15,l432kc-package,l432kc-package
+stm32l432kcu6,3,PC15,GPIO,RCC_OSC32_OUT,,RCC_OSC32_OUT,l432kc-package,l432kc-package
+stm32l432kcu6,4,NRST,SYSTEM,,,,l432kc-package,
+stm32l432kcu6,5,VDDA/VREF+,POWER,,,,l432kc-package,
+stm32l432kcu6,6,PA0,GPIO,ADC1_IN5,,ADC1_IN5,l432kc-package,l432kc-package
+stm32l432kcu6,6,PA0,GPIO,COMP1_INM,,COMP1_INM,l432kc-package,l432kc-package
+stm32l432kcu6,6,PA0,GPIO,COMP1_OUT,AF12,COMP1_OUT,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,6,PA0,GPIO,OPAMP1_VINP,,OPAMP1_VINP,l432kc-package,l432kc-package
+stm32l432kcu6,6,PA0,GPIO,RCC_CK_IN,,RCC_CK_IN,l432kc-package,l432kc-package
+stm32l432kcu6,6,PA0,GPIO,RTC_TAMP2,,RTC_TAMP2,l432kc-package,l432kc-package
+stm32l432kcu6,6,PA0,GPIO,SAI1_EXTCLK,AF13,SAI1_EXTCLK,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,6,PA0,GPIO,SYS_WKUP1,,SYS_WKUP1,l432kc-package,l432kc-package
+stm32l432kcu6,6,PA0,GPIO,TIM2_CH1,AF1,TIM2_CH1,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,6,PA0,GPIO,TIM2_ETR,AF14,TIM2_ETR,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,6,PA0,GPIO,USART2_CTS,AF7,USART2_CTS,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,7,PA1,GPIO,ADC1_IN6,,ADC1_IN6,l432kc-package,l432kc-package
+stm32l432kcu6,7,PA1,GPIO,COMP1_INP,,COMP1_INP,l432kc-package,l432kc-package
+stm32l432kcu6,7,PA1,GPIO,I2C1_SMBA,AF4,I2C1_SMBA,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,7,PA1,GPIO,OPAMP1_VINM,,OPAMP1_VINM,l432kc-package,l432kc-package
+stm32l432kcu6,7,PA1,GPIO,SPI1_SCK,AF5,SPI1_SCK,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,7,PA1,GPIO,TIM15_CH1N,AF14,TIM15_CH1N,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,7,PA1,GPIO,TIM2_CH2,AF1,TIM2_CH2,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,7,PA1,GPIO,USART2_DE,AF7,USART2_DE,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,7,PA1,GPIO,USART2_RTS,AF7,USART2_RTS,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,8,PA2,GPIO,ADC1_IN7,,ADC1_IN7,l432kc-package,l432kc-package
+stm32l432kcu6,8,PA2,GPIO,COMP2_INM,,COMP2_INM,l432kc-package,l432kc-package
+stm32l432kcu6,8,PA2,GPIO,COMP2_OUT,AF12,COMP2_OUT,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,8,PA2,GPIO,LPUART1_TX,AF8,LPUART1_TX,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,8,PA2,GPIO,QUADSPI_BK1_NCS,AF10,QUADSPI_BK1_NCS,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,8,PA2,GPIO,RCC_LSCO,,RCC_LSCO,l432kc-package,l432kc-package
+stm32l432kcu6,8,PA2,GPIO,SYS_WKUP4,,SYS_WKUP4,l432kc-package,l432kc-package
+stm32l432kcu6,8,PA2,GPIO,TIM15_CH1,AF14,TIM15_CH1,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,8,PA2,GPIO,TIM2_CH3,AF1,TIM2_CH3,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,8,PA2,GPIO,USART2_TX,AF7,USART2_TX,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,9,PA3,GPIO,ADC1_IN8,,ADC1_IN8,l432kc-package,l432kc-package
+stm32l432kcu6,9,PA3,GPIO,COMP2_INP,,COMP2_INP,l432kc-package,l432kc-package
+stm32l432kcu6,9,PA3,GPIO,LPUART1_RX,AF8,LPUART1_RX,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,9,PA3,GPIO,OPAMP1_VOUT,,OPAMP1_VOUT,l432kc-package,l432kc-package
+stm32l432kcu6,9,PA3,GPIO,QUADSPI_CLK,AF10,QUADSPI_CLK,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,9,PA3,GPIO,SAI1_MCLK_A,AF13,SAI1_MCLK_A,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,9,PA3,GPIO,TIM15_CH2,AF14,TIM15_CH2,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,9,PA3,GPIO,TIM2_CH4,AF1,TIM2_CH4,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,9,PA3,GPIO,USART2_RX,AF7,USART2_RX,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,10,PA4,GPIO,ADC1_IN9,,ADC1_IN9,l432kc-package,l432kc-package
+stm32l432kcu6,10,PA4,GPIO,COMP1_INM,,COMP1_INM,l432kc-package,l432kc-package
+stm32l432kcu6,10,PA4,GPIO,COMP2_INM,,COMP2_INM,l432kc-package,l432kc-package
+stm32l432kcu6,10,PA4,GPIO,DAC1_OUT1,,DAC1_OUT1,l432kc-package,l432kc-package
+stm32l432kcu6,10,PA4,GPIO,LPTIM2_OUT,AF14,LPTIM2_OUT,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,10,PA4,GPIO,SAI1_FS_B,AF13,SAI1_FS_B,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,10,PA4,GPIO,SPI1_NSS,AF5,SPI1_NSS,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,10,PA4,GPIO,SPI3_NSS,AF6,SPI3_NSS,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,10,PA4,GPIO,USART2_CK,AF7,USART2_CK,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,11,PA5,GPIO,ADC1_IN10,,ADC1_IN10,l432kc-package,l432kc-package
+stm32l432kcu6,11,PA5,GPIO,COMP1_INM,,COMP1_INM,l432kc-package,l432kc-package
+stm32l432kcu6,11,PA5,GPIO,COMP2_INM,,COMP2_INM,l432kc-package,l432kc-package
+stm32l432kcu6,11,PA5,GPIO,DAC1_OUT2,,DAC1_OUT2,l432kc-package,l432kc-package
+stm32l432kcu6,11,PA5,GPIO,LPTIM2_ETR,AF14,LPTIM2_ETR,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,11,PA5,GPIO,SPI1_SCK,AF5,SPI1_SCK,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,11,PA5,GPIO,TIM2_CH1,AF1,TIM2_CH1,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,11,PA5,GPIO,TIM2_ETR,AF2,TIM2_ETR,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,12,PA6,GPIO,ADC1_IN11,,ADC1_IN11,l432kc-package,l432kc-package
+stm32l432kcu6,12,PA6,GPIO,COMP1_OUT,AF6,COMP1_OUT,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,12,PA6,GPIO,LPUART1_CTS,AF8,LPUART1_CTS,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,12,PA6,GPIO,QUADSPI_BK1_IO3,AF10,QUADSPI_BK1_IO3,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,12,PA6,GPIO,SPI1_MISO,AF5,SPI1_MISO,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,12,PA6,GPIO,TIM16_CH1,AF14,TIM16_CH1,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,12,PA6,GPIO,TIM1_BKIN,AF1,TIM1_BKIN,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,12,PA6,GPIO,TIM1_BKIN_COMP2,AF12,TIM1_BKIN_COMP2,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,13,PA7,GPIO,ADC1_IN12,,ADC1_IN12,l432kc-package,l432kc-package
+stm32l432kcu6,13,PA7,GPIO,COMP2_OUT,AF12,COMP2_OUT,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,13,PA7,GPIO,I2C3_SCL,AF4,I2C3_SCL,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,13,PA7,GPIO,QUADSPI_BK1_IO2,AF10,QUADSPI_BK1_IO2,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,13,PA7,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,13,PA7,GPIO,TIM1_CH1N,AF1,TIM1_CH1N,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,14,PB0,GPIO,ADC1_IN15,,ADC1_IN15,l432kc-package,l432kc-package
+stm32l432kcu6,14,PB0,GPIO,COMP1_OUT,AF12,COMP1_OUT,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,14,PB0,GPIO,QUADSPI_BK1_IO1,AF10,QUADSPI_BK1_IO1,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,14,PB0,GPIO,SAI1_EXTCLK,AF13,SAI1_EXTCLK,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,14,PB0,GPIO,SPI1_NSS,AF5,SPI1_NSS,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,14,PB0,GPIO,TIM1_CH2N,AF1,TIM1_CH2N,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,15,PB1,GPIO,ADC1_IN16,,ADC1_IN16,l432kc-package,l432kc-package
+stm32l432kcu6,15,PB1,GPIO,COMP1_INM,,COMP1_INM,l432kc-package,l432kc-package
+stm32l432kcu6,15,PB1,GPIO,LPTIM2_IN1,AF14,LPTIM2_IN1,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,15,PB1,GPIO,LPUART1_DE,AF8,LPUART1_DE,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,15,PB1,GPIO,LPUART1_RTS,AF8,LPUART1_RTS,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,15,PB1,GPIO,QUADSPI_BK1_IO0,AF10,QUADSPI_BK1_IO0,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,15,PB1,GPIO,TIM1_CH3N,AF1,TIM1_CH3N,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,16,VSS,GND,,,,l432kc-package,
+stm32l432kcu6,17,VDD,POWER,,,,l432kc-package,
+stm32l432kcu6,18,PA8,GPIO,LPTIM2_OUT,AF14,LPTIM2_OUT,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,18,PA8,GPIO,RCC_MCO,AF0,RCC_MCO,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,18,PA8,GPIO,SAI1_SCK_A,AF13,SAI1_SCK_A,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,18,PA8,GPIO,SWPMI1_IO,AF12,SWPMI1_IO,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,18,PA8,GPIO,TIM1_CH1,AF1,TIM1_CH1,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,18,PA8,GPIO,USART1_CK,AF7,USART1_CK,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,19,PA9,GPIO,DAC1_EXTI9,,DAC1_EXTI9,l432kc-package,l432kc-package
+stm32l432kcu6,19,PA9,GPIO,I2C1_SCL,AF4,I2C1_SCL,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,19,PA9,GPIO,SAI1_FS_A,AF13,SAI1_FS_A,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,19,PA9,GPIO,TIM15_BKIN,AF14,TIM15_BKIN,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,19,PA9,GPIO,TIM1_CH2,AF1,TIM1_CH2,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,19,PA9,GPIO,USART1_TX,AF7,USART1_TX,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,20,PA10,GPIO,CRS_SYNC,AF10,CRS_SYNC,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,20,PA10,GPIO,I2C1_SDA,AF4,I2C1_SDA,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,20,PA10,GPIO,SAI1_SD_A,AF13,SAI1_SD_A,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,20,PA10,GPIO,TIM1_CH3,AF1,TIM1_CH3,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,20,PA10,GPIO,USART1_RX,AF7,USART1_RX,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,21,PA11,GPIO,ADC1_EXTI11,,ADC1_EXTI11,l432kc-package,l432kc-package
+stm32l432kcu6,21,PA11,GPIO,CAN1_RX,AF9,CAN1_RX,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,21,PA11,GPIO,COMP1_OUT,AF6,COMP1_OUT,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,21,PA11,GPIO,SPI1_MISO,AF5,SPI1_MISO,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,21,PA11,GPIO,TIM1_BKIN2,AF2,TIM1_BKIN2,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,21,PA11,GPIO,TIM1_BKIN2_COMP1,AF12,TIM1_BKIN2_COMP1,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,21,PA11,GPIO,TIM1_CH4,AF1,TIM1_CH4,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,21,PA11,GPIO,USART1_CTS,AF7,USART1_CTS,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,21,PA11,GPIO,USB_DM,AF10,USB_DM,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,22,PA12,GPIO,CAN1_TX,AF9,CAN1_TX,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,22,PA12,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,22,PA12,GPIO,TIM1_ETR,AF1,TIM1_ETR,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,22,PA12,GPIO,USART1_DE,AF7,USART1_DE,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,22,PA12,GPIO,USART1_RTS,AF7,USART1_RTS,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,22,PA12,GPIO,USB_DP,AF10,USB_DP,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,23,PA13,GPIO,IR_OUT,AF1,IR_OUT,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,23,PA13,GPIO,SAI1_SD_B,AF13,SAI1_SD_B,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,23,PA13,GPIO,SWPMI1_TX,AF12,SWPMI1_TX,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,23,PA13,GPIO,SYS_JTMS-SWDIO,AF0,SYS_JTMS-SWDIO,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,23,PA13,GPIO,USB_NOE,AF10,USB_NOE,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,24,PA14,GPIO,I2C1_SMBA,AF4,I2C1_SMBA,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,24,PA14,GPIO,LPTIM1_OUT,AF1,LPTIM1_OUT,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,24,PA14,GPIO,SAI1_FS_B,AF13,SAI1_FS_B,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,24,PA14,GPIO,SWPMI1_RX,AF12,SWPMI1_RX,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,24,PA14,GPIO,SYS_JTCK-SWCLK,AF0,SYS_JTCK-SWCLK,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,25,PA15,GPIO,ADC1_EXTI15,,ADC1_EXTI15,l432kc-package,l432kc-package
+stm32l432kcu6,25,PA15,GPIO,SPI1_NSS,AF5,SPI1_NSS,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,25,PA15,GPIO,SPI3_NSS,AF6,SPI3_NSS,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,25,PA15,GPIO,SWPMI1_SUSPEND,AF12,SWPMI1_SUSPEND,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,25,PA15,GPIO,SYS_JTDI,AF0,SYS_JTDI,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,25,PA15,GPIO,TIM2_CH1,AF1,TIM2_CH1,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,25,PA15,GPIO,TIM2_ETR,AF2,TIM2_ETR,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,25,PA15,GPIO,USART2_RX,AF3,USART2_RX,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,26,PB3,GPIO,COMP2_INM,,COMP2_INM,l432kc-package,l432kc-package
+stm32l432kcu6,26,PB3,GPIO,SAI1_SCK_B,AF13,SAI1_SCK_B,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,26,PB3,GPIO,SPI1_SCK,AF5,SPI1_SCK,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,26,PB3,GPIO,SPI3_SCK,AF6,SPI3_SCK,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,26,PB3,GPIO,SYS_JTDO-SWO,AF0,SYS_JTDO-SWO,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,26,PB3,GPIO,TIM2_CH2,AF1,TIM2_CH2,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,26,PB3,GPIO,USART1_DE,AF7,USART1_DE,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,26,PB3,GPIO,USART1_RTS,AF7,USART1_RTS,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,27,PB4,GPIO,COMP2_INP,,COMP2_INP,l432kc-package,l432kc-package
+stm32l432kcu6,27,PB4,GPIO,I2C3_SDA,AF4,I2C3_SDA,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,27,PB4,GPIO,SAI1_MCLK_B,AF13,SAI1_MCLK_B,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,27,PB4,GPIO,SPI1_MISO,AF5,SPI1_MISO,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,27,PB4,GPIO,SPI3_MISO,AF6,SPI3_MISO,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,27,PB4,GPIO,SYS_JTRST,AF0,SYS_JTRST,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,27,PB4,GPIO,TSC_G2_IO1,AF9,TSC_G2_IO1,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,27,PB4,GPIO,USART1_CTS,AF7,USART1_CTS,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,28,PB5,GPIO,COMP2_OUT,AF12,COMP2_OUT,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,28,PB5,GPIO,I2C1_SMBA,AF4,I2C1_SMBA,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,28,PB5,GPIO,LPTIM1_IN1,AF1,LPTIM1_IN1,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,28,PB5,GPIO,SAI1_SD_B,AF13,SAI1_SD_B,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,28,PB5,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,28,PB5,GPIO,SPI3_MOSI,AF6,SPI3_MOSI,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,28,PB5,GPIO,TIM16_BKIN,AF14,TIM16_BKIN,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,28,PB5,GPIO,TSC_G2_IO2,AF9,TSC_G2_IO2,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,28,PB5,GPIO,USART1_CK,AF7,USART1_CK,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,29,PB6,GPIO,COMP2_INP,,COMP2_INP,l432kc-package,l432kc-package
+stm32l432kcu6,29,PB6,GPIO,I2C1_SCL,AF4,I2C1_SCL,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,29,PB6,GPIO,LPTIM1_ETR,AF1,LPTIM1_ETR,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,29,PB6,GPIO,SAI1_FS_B,AF13,SAI1_FS_B,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,29,PB6,GPIO,TIM16_CH1N,AF14,TIM16_CH1N,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,29,PB6,GPIO,TSC_G2_IO3,AF9,TSC_G2_IO3,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,29,PB6,GPIO,USART1_TX,AF7,USART1_TX,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,30,PB7,GPIO,COMP2_INM,,COMP2_INM,l432kc-package,l432kc-package
+stm32l432kcu6,30,PB7,GPIO,I2C1_SDA,AF4,I2C1_SDA,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,30,PB7,GPIO,LPTIM1_IN2,AF1,LPTIM1_IN2,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,30,PB7,GPIO,SYS_PVD_IN,,SYS_PVD_IN,l432kc-package,l432kc-package
+stm32l432kcu6,30,PB7,GPIO,TSC_G2_IO4,AF9,TSC_G2_IO4,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,30,PB7,GPIO,USART1_RX,AF7,USART1_RX,l432kc-package,l432kc-package | l432kc-modes
+stm32l432kcu6,31,PH3,GPIO,,,,l432kc-package,
+stm32l432kcu6,32,VSS,GND,,,,l432kc-package,

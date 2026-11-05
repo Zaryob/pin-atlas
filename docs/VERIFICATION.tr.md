@@ -153,3 +153,5 @@ UM1724 ham tablo hücreleri `sources/extracted/nucleo-um1724-r14.json` içinde h
 NUCLEO-F042K6 için UM1956 Rev 6 Tablo 10 (sayfa 24), Şekil 3 (sayfa 12) ve Tablo 7/8 (sayfa 21/22) kullanılır. CN3/CN4 üzerindeki 30 fiziksel konum ve baskı etiketleri korunur. STM32F042K6T6, 32 LQFP çevre bacağı ve 26 GPIO bacağına sahiptir; işlevler sabit sürümlü üretici XML kaynaklarından alınır.
 
 A4/A5'in ana bacakları PA5/PA6'dır. SB18/SB16 bunları PB7/PB6 (D4/D5) ile bağlayabilir; bu durumda ana bacaklar yüzer giriş olmalı, D4/D5 bağımsız GPIO olarak kullanılmamalıdır. PA5/PA6 üzerinde olmayan I²C seçicileri eklenmez. VCP, LED, osilatör ve AREF bağlantıları pin notlarında açıklanır. Ham UM1956 tablo kaydı özgün PDF ile karşılaştırılır; CI bu PDF'yi indirmeden yeniden üretim yapar.
+
+NUCLEO-L432KC, UM1956 Rev 6 Tablo 16'yı (sayfa 30) kullanır ve F042K6 ile doğrulanmış CN3/CN4 konumlarını paylaşır. İşlemci STM32L432KCU6, UFQFPN-32, 26 GPIO ve en fazla 80 MHz Cortex-M4'tür. D7/D8, F042'deki PF0/PF1 yerine PC14/PC15 kullanır. Yalnızca üretici XML kaynağında numaralanan çevre bacakları çizilir; merkez termal pad bu kaynağın numaralı kapsamı dışındadır.

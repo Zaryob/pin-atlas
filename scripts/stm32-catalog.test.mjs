@@ -5,6 +5,15 @@ import {buildLayouts,resolveProfile} from '../public/layouts.mjs';
 const boards=JSON.parse(readFileSync(new URL('../public/data/boards.json',import.meta.url)));
 const layouts=buildLayouts(boards);
 
+test('NUCLEO-L432KC shares the Nucleo32 footprint while retaining QFN pads and LSE pins',()=>{
+ const board=boards.find(b=>b.id==='nucleo-l432kc'),chip=boards.find(b=>b.id===board.mcuProfile);
+ assert.equal(chip.layout,'qfn');assert.equal(chip.packagePins,32);assert.equal(chip.gpioCount,26);assert.equal(chip.clock,'80 MHz');
+ assert.equal(chip.exposedPad,false);
+ const clock=board.pins.find(p=>p.physicalLabel==='CN3.10');assert.equal(clock.name,'PC14');
+ const a0=board.pins.find(p=>p.physicalLabel==='CN4.12');assert(a0.functions.some(f=>f.name==='ADC1_IN5'));
+ assert.equal(resolveProfile(layouts,board.id).layout.id,'nucleo-32');
+});
+
 test('NUCLEO-F042K6 uses UM1956 header numbering and its own LQFP32 package',()=>{
  const board=boards.find(b=>b.id==='nucleo-f042k6'),chip=boards.find(b=>b.id===board.mcuProfile);
  assert.equal(chip.packagePins,32);assert.equal(chip.gpioCount,26);assert.equal(chip.clock,'48 MHz');
