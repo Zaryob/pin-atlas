@@ -110,6 +110,30 @@ test('legacy remap conflicts stay visible and retain all stored assignments',asy
  expect(await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),storageKey)).toEqual(saved);
 });
 
+test('SVG and printable PDF retain model, labels, full board geometry and source provenance',async({page})=>{
+ const board=boards.find(b=>b.id==='nucleo-f446re'),pin=board.pins.find(p=>p.physicalLabel==='CN8.1');
+ const saved={[board.id]:{[pin.number]:{function:'ADC1_IN0',label:'sensor <&> Türkçe'}}};
+ await page.addInitScript(({key,saved})=>localStorage.setItem(key,JSON.stringify(saved)),{key:storageKey,saved});
+ await ready(page,'#board='+board.id);await page.locator('#connector-zoom').selectOption('CN7');
+ await openPlan(page);
+ const event=page.waitForEvent('download');await page.locator('#export-svg').click();
+ const svg=readFileSync(await(await event).path(),'utf8');
+ expect(svg).toContain('NUCLEO-F446RE');expect(svg).toContain('sensor &lt;&amp;&gt; Türkçe');
+ expect(svg).not.toContain('var(--');
+ const parsed=await page.evaluate(svg=>{
+  const xml=new DOMParser().parseFromString(svg,'image/svg+xml');
+  return {errors:xml.querySelectorAll('parsererror').length,pins:xml.querySelectorAll('[data-pin]').length,
+   images:[...xml.querySelectorAll('image')].map(img=>img.getAttribute('href'))};
+ },svg);
+ expect(parsed.errors).toBe(0);expect(parsed.pins).toBe(108);
+ expect(parsed.images.length).toBeGreaterThan(0);expect(parsed.images.every(href=>href.startsWith('data:'))).toBe(true);
+ await expect(page.locator('#connector-zoom')).toHaveValue('CN7');
+ await page.evaluate(()=>window.dispatchEvent(new Event('beforeprint')));
+ await expect(page.locator('#print-plan')).toContainText('sensor <&> Türkçe');
+ await expect(page.locator('#print-plan')).toContainText('NUCLEO-F446RE');
+ const pdf=await page.pdf({format:'A4'});expect(pdf.subarray(0,4).toString()).toBe('%PDF');
+});
+
 test('exact model search shares results with the library and opens the right reference',async({page})=>{
   for (const [query,profile,mcu] of [
     ['Pico W','picow','RP2040'],['Pico 2 W','pico2w','RP2350A'],

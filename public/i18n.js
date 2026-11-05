@@ -1,6 +1,12 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
 (() => {
   const messages = {
+    "outputPrint": ["Yazdır / PDF kaydet", "Print / Save PDF"],
+    "outputSVG": ["SVG indir", "Download SVG"],
+    "outputFunction": ["İşlev", "Function"],
+    "outputSources": ["Doğrulama kaynakları", "Verification sources"],
+    "outputTopView": ["Üstten görünüm · İşaretli pinler bağlantı planındadır. Çizim şematiktir.", "Top view · Marked pins belong to the wiring plan. The drawing is schematic."],
+    "outputFailed": ["Çıktı oluşturulamadı. Tekrar deneyin.", "Output could not be created. Try again."],
     "profileLoading": ["Pin haritası yükleniyor…", "Loading pin map…"],
     "profileLoadFailed": ["Pin haritası yüklenemedi", "Pin map could not be loaded"],
     "remapConflict": ["Seçili pinlerin {field} yönlendirme koşulları çelişiyor ({pin} dahil). Aynı yönlendirme ayarında çalışan pinleri seçin.", "Selected pins require incompatible {field} settings (including {pin}). Choose pins that support the same routing setting."],

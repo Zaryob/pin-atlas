@@ -1077,3 +1077,18 @@
 #peripheral-fields { display: grid; gap: .6rem; }
 #peripheral-notes { font-size: .85rem; overflow-wrap: anywhere; }
 #peripheral-feedback { color: var(--danger, #b85446); }
+
+#print-plan { display: none; }
+@media print {
+  @page { size: A4; margin: 14mm; }
+  body.printing-plan > :not(#print-plan) { display: none !important; }
+  body.printing-plan #print-plan { display: block !important; color: #17221d; background: white; font: 11pt sans-serif; }
+  body.printing-plan { margin: 0; background: white; }
+  #print-plan h1 { font-size: 20pt; }
+  #print-plan h2 { font-size: 14pt; }
+  #print-plan table { width: 100%; border-collapse: collapse; }
+  #print-plan th, #print-plan td { padding: 7pt; border: 1px solid #aaa; text-align: left; overflow-wrap: anywhere; }
+  #print-plan thead { display: table-header-group; }
+  #print-plan tr, #print-plan li { break-inside: avoid; }
+  #print-plan li p { font-size: 8pt; overflow-wrap: anywhere; }
+}

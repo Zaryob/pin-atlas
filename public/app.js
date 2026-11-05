@@ -5,6 +5,7 @@ import { boardFamilies, homeFilterChips, featuredCards } from './catalog.mjs';
 import { options, physicalLabel, planReference, samePlan, validatePlan } from './plans.mjs';
 import { availablePeripherals, assemblePeripheral } from './peripherals.mjs';
 import {ProfileLibrary} from './profile-library.mjs';
+import {planReport,reportHTML,reportSVG,standaloneDiagram} from './plan-output.mjs';
 const { t, verificationUrl } = window.ZaryobI18n;
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -514,6 +515,7 @@ function renderPlan() {
  for (const id of ['plan-count','plan-tab-count','mobile-plan-count']) $(`#${id}`).textContent = entries.length;
  $('#plan-reference').textContent = planReference(board, t);
  $('#plan-feedback').textContent = '';
+ $('#print-plan-button').disabled=!entries.length;$('#export-svg').disabled=!entries.length;
  try { validatePlan(assignments,board,t);$('#plan-validation').textContent=''; }
  catch(error) { $('#plan-validation').textContent=t('savedPlanConflict',{error:error.message}); }
  renderPeripheral();
@@ -1078,6 +1080,32 @@ $('#plan-list').addEventListener('click',e=>{const remove=e.target.closest('[dat
 $('#share-button').addEventListener('click',share);
 $('#copy-share').addEventListener('click',async()=>{try{await navigator.clipboard.writeText($('#share-url').value);toast(t('linkCopied'));$('#share-dialog').close();}catch{$('#share-url').focus();$('#share-url').select();toast(t('manualCopy'));}});
 $('#export-button').addEventListener('click',()=>{const blob=new Blob([JSON.stringify(planPayload(),null,2)],{type:'application/json'});const link=document.createElement('a');link.href=URL.createObjectURL(blob);link.download=`pin-atlas-${board.id}.json`;link.click();setTimeout(()=>URL.revokeObjectURL(link.href),1000);toast(t('planDownloaded'));});
+function preparePrint(){
+ if(currentView!=='workspace'||!board?.pins)return;
+ $('#print-plan').innerHTML=reportHTML(planReport(board,assignments,evidence,t),t);
+ document.body.classList.add('printing-plan');
+}
+window.addEventListener('beforeprint',preparePrint);
+window.addEventListener('afterprint',()=>document.body.classList.remove('printing-plan'));
+$('#print-plan-button').addEventListener('click',()=>{preparePrint();window.print();});
+$('#export-svg').addEventListener('click',async()=>{
+ const button=$('#export-svg');button.disabled=true;
+ const outputBoard=board,report=planReport(board,assignments,evidence,t);
+ const state={filters,search,connectorZoom,flipped,rotated};let markup;
+ try {filters=new Set();search='';connectorZoom='';flipped=rotated=false;markup=renderers[board.layout]();}
+ finally {({filters,search,connectorZoom,flipped,rotated}=state);}
+ const host=document.createElement('div');host.className='output-diagram'+(isChip(board)?' qfn-diagram':'');
+ host.style.cssText='position:absolute;left:-20000px;top:0;width:1000px;pointer-events:none';host.innerHTML=markup;
+ host.querySelectorAll('.selected,.net-contact').forEach(node=>node.classList.remove('selected','net-contact'));
+ document.body.append(host);
+ try {
+  const diagram=await standaloneDiagram(host.querySelector('svg'));
+  const blob=new Blob([reportSVG(report,diagram,t)],{type:'image/svg+xml;charset=utf-8'});
+  const link=document.createElement('a');link.href=URL.createObjectURL(blob);link.download=`pin-atlas-${outputBoard.id}.svg`;link.click();
+  setTimeout(()=>URL.revokeObjectURL(link.href),1000);
+ } catch(error){toast(t('outputFailed'));}
+ finally{host.remove();button.disabled=!Object.keys(assignments).length;}
+});
 $('#import-button').addEventListener('click',()=>$('#import-file').click());
 $('#import-file').addEventListener('change',async e=>{
  const file=e.target.files[0];if(!file)return;
