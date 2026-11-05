@@ -690,8 +690,18 @@
     color: var(--accent);
   }
   #mobile-mcu button { flex: 0 0 auto; }
-  body:has(#mobile-mcu:not([hidden])) .shell { padding-bottom: 128px; }
-  body:has(#mobile-mcu:not([hidden])) #toast { bottom: 132px; }
+  body:has(.mobile-workbar:not([hidden]) #mobile-mcu:not([hidden])) .shell { padding-bottom: 128px; }
+  body:has(.mobile-workbar:not([hidden]) #mobile-mcu:not([hidden])) #toast { bottom: 132px; }
+}
+@media (max-width: 970px) {
+  body:has(.mobile-workbar[hidden]) .shell { padding-bottom: 0; }
+}
+@media (max-width: 640px) {
+  .topbar-left { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .topbar-right { align-self: flex-start; }
+  .breadcrumbs { max-width: 100%; }
+  .help-btn { width: 44px; min-height: 44px; padding: 10px; justify-content: center; }
+  .help-btn > [data-i18n], .help-btn > span:last-child { display: none; }
 }
 
 

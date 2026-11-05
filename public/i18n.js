@@ -9,6 +9,7 @@
     "homeSearchPlaceholder": ["Kart, mikrodenetleyici veya aile ara (ör. RP2040, Nano, ESP32, Nucleo)…", "Search boards, chips, or families (e.g. RP2040, Nano, ESP32, Nucleo)…"],
     "catalogSearchResults": ["Arama sonuçları", "Search results"],
     "catalogResultCount": ["{count} sonuç", "{count} results"],
+    "catalogSingleResult": ["{count} sonuç", "{count} result"],
     "libraryLoading": ["Kart kütüphanesi yükleniyor…", "Loading board library…"],
     "libraryLoadingDetail": ["Pin haritaları ve kaynak referansları hazırlanıyor.", "Preparing the pin maps and their source references."],
     "libraryLoadFailed": ["Kart kütüphanesi yüklenemedi", "Board library could not be loaded"],

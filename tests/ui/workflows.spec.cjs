@@ -53,6 +53,12 @@ test('exact model search shares results with the library and opens the right ref
 
 test('empty searches recover and every featured card uses its verified profile',async({page})=>{
   await ready(page);
+  await expect(page.locator('.mobile-workbar')).toBeHidden();
+  const viewport=page.viewportSize();
+  await page.setViewportSize({width:320,height:844});
+  const library=await page.locator('#menu-button').boundingBox(), help=await page.locator('#help-button').boundingBox();
+  expect(library.x+library.width).toBeLessThanOrEqual(help.x);
+  await page.setViewportSize(viewport);
   for (const card of await page.locator('#featured-grid .featured-card').all()) {
     const id=await card.getAttribute('data-profile');
     const profile=boards.find(board=>board.id===id);
@@ -121,6 +127,7 @@ for (const deepLink of [false,true]) test(`load failure remains visible and retr
   await page.goto('./?lang=en'+(deepLink?'#board=pico-family&profile=picow&pin=4':''));
   await expect(page.locator('#app-status[role="alert"]')).toBeVisible();
   await expect(page.locator('#menu-button')).toBeDisabled();await expect(page.locator('#home-view')).toBeHidden();
+  await expect(page.locator('.mobile-workbar')).toBeHidden();
   await page.clock.install();await page.clock.fastForward(4000);
   await expect(page.locator('#retry-data')).toBeVisible();
   await page.locator('#retry-data').click();

@@ -689,6 +689,7 @@ function updateLibraryCount() {
 
 function showHomeView() {
   currentView = 'home';
+  $('.mobile-workbar').hidden = true;
   $('#home-view').hidden = false;
   $('#workspace-view').hidden = true;
   $('#home-breadcrumb-link').classList.add('active');
@@ -704,6 +705,7 @@ function showHomeView() {
 
 function showWorkspaceView() {
   currentView = 'workspace';
+  $('.mobile-workbar').hidden = dataState !== 'ready';
   $('#home-view').hidden = true;
   $('#workspace-view').hidden = false;
   $('#home-breadcrumb-link').classList.remove('active');
@@ -774,7 +776,7 @@ function renderHomeCatalog() {
     html = renderCatalogResults(matches); count = matches.length;
   } else ({html, count} = renderCatalogFamilies(homeActiveFilter, true));
   $('#home-catalog-container').innerHTML = html;
-  $('#home-search-status').textContent = searching ? t('catalogResultCount', {count}) : '';
+  $('#home-search-status').textContent = searching ? t(count === 1 ? 'catalogSingleResult' : 'catalogResultCount', {count}) : '';
 }
 
 function planPayload() { return {version:1,board:board.id,pins:assignments}; }
@@ -1109,6 +1111,7 @@ function renderDataState() {
  $('#catalog-search').disabled = !ready;
  $('#home-view').hidden = !ready || currentView !== 'home';
  $('#workspace-view').hidden = !ready || currentView !== 'workspace';
+ $('.mobile-workbar').hidden = !ready || currentView !== 'workspace';
 }
 async function loadData(retry = false) {
  if (dataLoading) return;
