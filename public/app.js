@@ -108,9 +108,15 @@ function setBoard(id, initial = false, preferredProfile) {
 function openLayout(id, profile) {
  const target = layouts.find(item => item.id === id);
  if (!target) return;
+ const wasHome = currentView === 'home';
  // Reopen the last function reference, including legacy saved model plans.
  const savedProfile = target.profiles.find(profile => Object.keys(savedPlans[profile.id] || {}).length)?.id;
  setBoard(id, false, profile || rememberedProfiles.get(id) || savedProfile);
+ if (wasHome && !$('#library-dialog').open) focusWorkspace();
+}
+function focusWorkspace() {
+ window.scrollTo(0, 0);
+ $('#board-title').focus({preventScroll:true});
 }
 function renderBoard() {
  document.title = `${layoutTitle(layout)} Pinout — Pin Atlas`;
@@ -224,7 +230,7 @@ function pinGroup(pin, x, y, side, opts = {}) {
      : 'aria-hidden="true"';
    return `<g class="pin-group ${active ? 'selected package-pad' : ''}" ${action} transform="translate(${x} ${y})${opts.angle ? ` rotate(${opts.angle})` : ''}">${body}</g>`;
  }
- return `<g class="pin-group ${opts.connected ? 'net-contact' : ''} ${active ? 'selected' : ''} ${match ? '' : 'dimmed'} ${assigned ? 'assigned' : ''}" data-pin="${pin.number}" role="button" tabindex="0" aria-label="${esc(t('selectPin', { pin: physicalLabel(pin), name: label !== pin.name && opts.showConnectorLabel ? `${label} · ${pin.name}` : pin.name }))}${func && !opts.connector ? ', '+esc(func) : ''}"${active ? ' aria-current="true"' : ''} transform="translate(${x} ${y})${opts.angle ? ` rotate(${opts.angle})` : ''}"><title>Pin ${esc(pin.physicalLabel || pin.number)} · ${esc(pin.name)}${func ? ' · '+esc(func) : ''}</title><g aria-hidden="true">${body}</g></g>`;
+ return `<g class="pin-group ${opts.connected ? 'net-contact' : ''} ${active ? 'selected' : ''} ${match ? '' : 'dimmed'} ${assigned ? 'assigned' : ''}" data-pin="${pin.number}" role="button" tabindex="${active ? '0' : '-1'}" aria-label="${esc(t('selectPin', { pin: physicalLabel(pin), name: label !== pin.name && opts.showConnectorLabel ? `${label} · ${pin.name}` : pin.name }))}${func && !opts.connector ? ', '+esc(func) : ''}"${active ? ' aria-current="true"' : ''} transform="translate(${x} ${y})${opts.angle ? ` rotate(${opts.angle})` : ''}"><title>Pin ${esc(pin.physicalLabel || pin.number)} · ${esc(pin.name)}${func ? ' · '+esc(func) : ''}</title><g aria-hidden="true">${body}</g></g>`;
 }
 function picoArt() {
  const pads=Array.from({length:20},(_,i)=>[278,402].map(x=>`<circle cx="${x}" cy="${48+i*23}" r="5" fill="var(--paper)" stroke="var(--accent)" stroke-width="1.2"/>`).join('')).join('');
@@ -921,11 +927,15 @@ function renderHomeStats() {
 function renderHomeFilterChips() {
   const container = $('#home-filter-chips');
   if (!container) return;
-  container.innerHTML = homeFilterChips.map(chip => `
-    <button type="button" class="home-chip ${homeActiveFilter === chip.id ? 'active' : ''}" data-home-filter="${esc(chip.id)}">
-      ${esc(t(chip.labelKey))}
-    </button>
-  `).join('');
+  if (!container.children.length) container.innerHTML = homeFilterChips.map(chip =>
+    `<button type="button" class="home-chip" data-home-filter="${esc(chip.id)}"></button>`).join('');
+  for (const button of container.children) {
+    const chip = homeFilterChips.find(item => item.id === button.dataset.homeFilter);
+    const active = homeActiveFilter === chip.id;
+    button.textContent = t(chip.labelKey);
+    button.classList.toggle('active', active);
+    button.setAttribute('aria-pressed', String(active));
+  }
 }
 
 function renderHomeFeatured() {
@@ -1076,8 +1086,8 @@ $('#compatibility-list').addEventListener('click',e=>{
  setBoard(layout.id,false,profile);
  $('#compatibility-list').querySelector(`[data-compatible-model="${CSS.escape(model)}"]`)?.focus({preventScroll:true});
 });
-$('#catalog-grid').addEventListener('click',e=>{const b=e.target.closest('[data-layout]');if(b){openLayout(b.dataset.layout, b.dataset.profile);$('#library-dialog').close();}});
-$('#catalog-grid').addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.closest('[data-layout]')){e.preventDefault();const b=e.target.closest('[data-layout]');openLayout(b.dataset.layout, b.dataset.profile);$('#library-dialog').close();}});
+$('#catalog-grid').addEventListener('click',e=>{const b=e.target.closest('[data-layout]');if(b){openLayout(b.dataset.layout, b.dataset.profile);$('#library-dialog').close();focusWorkspace();}});
+$('#catalog-grid').addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.closest('[data-layout]')){e.preventDefault();const b=e.target.closest('[data-layout]');openLayout(b.dataset.layout, b.dataset.profile);$('#library-dialog').close();focusWorkspace();}});
 $('#catalog-search').addEventListener('input',renderCatalog);
 $('#help-button').addEventListener('click',()=>$('#help-dialog').showModal());
 $$('[data-close]').forEach(b=>b.addEventListener('click',()=>b.closest('dialog').close()));
@@ -1159,7 +1169,26 @@ $('#diagram').addEventListener('keydown', e => {
 });
 for(const element of [$('#diagram'),$('#table-content')]) {
  element.addEventListener('click',e=>{const p=e.target.closest('[data-pin]');if(p)choosePin(p.dataset.pin, element !== $('#diagram') || !board.mcuProfile);});
- element.addEventListener('keydown',e=>{const p=e.target.closest('[data-pin]');if(p&&p.tagName.toLowerCase()!=='button'&&['Enter',' '].includes(e.key)){e.preventDefault();choosePin(p.dataset.pin, element !== $('#diagram') || !board.mcuProfile); if(!$('#details-dialog').open) $(`[data-pin="${p.dataset.pin}"]`,element)?.focus();}});
+ element.addEventListener('keydown', e => {
+   if (e.altKey || e.ctrlKey || e.metaKey) return;
+   const pin = e.target.closest('[data-pin]');
+   if (!pin || pin.tagName.toLowerCase() === 'button') return;
+   const step = {ArrowRight:1, ArrowDown:1, ArrowLeft:-1, ArrowUp:-1}[e.key];
+   if (element.id === 'diagram' && (step || ['Home','End'].includes(e.key))) {
+     e.preventDefault();
+     const pins = $$('[data-pin]', element);
+     const index = pins.indexOf(pin);
+     const next = e.key === 'Home' ? pins[0] : e.key === 'End' ? pins.at(-1) : pins[(index + step + pins.length) % pins.length];
+     choosePin(next.dataset.pin, false);
+     const target = $(`[data-pin="${next.dataset.pin}"]`, element);
+     target?.focus({preventScroll:true});
+     target?.scrollIntoView({block:'nearest', inline:'nearest'});
+   } else if (['Enter',' '].includes(e.key)) {
+     e.preventDefault();
+     choosePin(pin.dataset.pin, element !== $('#diagram') || !board.mcuProfile);
+     if (!$('#details-dialog').open) $(`[data-pin="${pin.dataset.pin}"]`, element)?.focus();
+   }
+ });
 }
 function renderDetailPreservingDraft() {
  const label = $('#custom-label')?.value;
@@ -1206,6 +1235,8 @@ $('#home-breadcrumb-link')?.addEventListener('click', e => {
   e.preventDefault();
   location.hash = '#home';
   showHomeView();
+  window.scrollTo(0, 0);
+  $('#home-search').focus({preventScroll:true});
 });
 $('#home-search')?.addEventListener('input', e => {
   homeSearchQuery = e.target.value.toLowerCase().trim();

@@ -9,6 +9,8 @@
     "homeSearchPlaceholder": ["Kart, mikrodenetleyici veya aile ara (ör. RP2040, Nano, ESP32, Nucleo)…", "Search boards, chips, or families (e.g. RP2040, Nano, ESP32, Nucleo)…"],
     "catalogSearchResults": ["Arama sonuçları", "Search results"],
     "catalogResultCount": ["{count} sonuç", "{count} results"],
+    "filterFamilies": ["Kart ailelerini filtrele", "Filter board families"],
+    "pinKeyboardHelp": ["Pinler arasında fiziksel pin sırasıyla gezinmek için yön tuşlarını, ayrıntıları açmak için Enter tuşunu kullanın. Home ve End ilk ve son pine gider.", "Use the arrow keys to move in physical pin order and Enter to open details. Home and End move to the first and last pin."],
     "statBoards": ["Kart & Yonga", "Boards & MCUs"],
     "statFamilies": ["Kart Ailesi", "Board Families"],
     "statPins": ["Doğrulanmış Pin", "Verified Pins"],
