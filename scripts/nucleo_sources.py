@@ -173,7 +173,7 @@ def build_nucleo(cache, docs, ref, chip, model, use_snapshots=False, table_spec=
                                  if other is not pin and other['net'] == pin['net']]
     return {
         'id': board_id, 'name': board_id.upper(), 'family': 'STM32', 'shortName': board_id.upper(),
-        'subtitle': 'Nucleo-64 · MB1136 · Arduino Uno and ST Morpho', 'layout': 'custom',
+        'layoutFamily': 'nucleo-64', 'subtitle': 'Nucleo-64 · MB1136 · Arduino Uno and ST Morpho', 'layout': 'custom',
         'diagram': {'width': 900, 'height': 720, 'artwork': 'assets/boards/nucleo-mb1136.svg', 'minWidth': 760,
                     'connectorGroups': copy.deepcopy(NUCLEO_64_CONNECTOR_GROUPS)},
         'packagePins': len(pins), 'gpioCount': sum(pin['type'] == 'GPIO' for pin in pins),
@@ -354,7 +354,7 @@ def build_nucleo_g474(cache, docs, ref, chip, use_snapshots=False):
                                  if other is not pin and other['net'] == pin['net']]
     return {
         'id': board_id, 'name': 'NUCLEO-G474RE', 'family': 'STM32', 'shortName': 'NUCLEO-G474RE',
-        'subtitle': 'Nucleo-64 · MB1367 · Arduino Uno and ST Morpho', 'layout': 'custom',
+        'layoutFamily': 'nucleo-64', 'subtitle': 'Nucleo-64 · MB1367 · Arduino Uno and ST Morpho', 'layout': 'custom',
         'diagram': {'width': 900, 'height': 720, 'artwork': 'assets/boards/nucleo-mb1136.svg', 'minWidth': 760,
                     'connectorGroups': copy.deepcopy(NUCLEO_64_CONNECTOR_GROUPS)},
         'packagePins': len(pins), 'gpioCount': sum(pin['type'] == 'GPIO' for pin in pins),

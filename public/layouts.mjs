@@ -3,6 +3,7 @@
 // stay separate so a shared footprint never implies identical alternate functions.
 export function buildLayouts(boards) {
   const byId = new Map(boards.map(board => [board.id, board]));
+  const nucleo64 = boards.filter(board => board.layoutFamily === 'nucleo-64');
   const definitions = [
     {
       id: 'pico-family', nameKey: 'picoLayout', subtitleKey: 'picoLayoutSubtitle',
@@ -75,6 +76,12 @@ export function buildLayouts(boards) {
       ]
     }
   ];
+  if (nucleo64.length) definitions.push({
+    id:'nucleo-64', nameKey:'nucleo64Layout', subtitleKey:'nucleo64Subtitle', compatibleKey:'nucleo64Compatible',
+    profileIds:nucleo64.map(board=>board.id), defaultProfile:'nucleo-f401re',
+    geometryConnectors:['CN7','CN6','CN8','CN10','CN5','CN9'], sharedContactCount:108,
+    references:nucleo64.map(board=>({label:`${board.name} · ${board.mcu}`,profileIds:[board.id]}))
+  });
   const grouped = new Set(definitions.flatMap(layout => layout.profileIds));
   const layouts = definitions.map(definition => {
     const profiles = definition.profileIds.map(id => {

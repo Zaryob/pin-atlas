@@ -1,5 +1,5 @@
 {
-  "verifiedOn": "2026-11-04",
+  "verifiedOn": "2026-11-05",
   "documents": [
     {
       "id": "rp2350",
@@ -780,6 +780,26 @@
       "publisher": "STMicroelectronics",
       "revision": "b18163265c827fc3b1f1396c4d09221b4821a405",
       "sha256": "b8398bc713a4c4a9aefe4a7d7c5b3d83e378208cb8cd23e26da6ea75c5d337ae"
+    },
+    {
+      "id": "f446re-package",
+      "title": "STM32F446RE CubeMX package data",
+      "file": "f446re-package.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F446R(C-E)Tx.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F446R(C-E)Tx.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "451d1d286e7e3edc1a90c5f74ed14e85c54101852a3eb7b35b0813794d1a8e59"
+    },
+    {
+      "id": "f446re-modes",
+      "title": "STM32F446RE CubeMX modes data",
+      "file": "f446re-modes.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F446_gpio_v1_0_Modes.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F446_gpio_v1_0_Modes.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "fe95087cfca51ece0d091a844246d564c12c378f74decd3e780d06c15de53a6c"
     }
   ],
   "publishers": [

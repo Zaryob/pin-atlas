@@ -118,6 +118,27 @@ test('keyboard filters retain focus and pin maps have one tab stop with arrow na
   await page.keyboard.press('Home');await expect(page.locator('#diagram [data-pin="1"]')).toBeFocused();
 });
 
+test('new Nucleo models share one catalog entry and link to their exact MCU package',async({page})=>{
+  await ready(page);
+  await expect(page.locator('#home-catalog-container .catalog-card[data-layout="nucleo-64"]')).toHaveCount(1);
+  const additions=boards.filter(board=>board.layoutFamily==='nucleo-64' &&
+    boards.find(chip=>chip.id===board.mcuProfile)?.scopeKey==='stm32CubeScope');
+  for(const board of additions){
+    await ready(page);
+    await page.locator('#home-search').fill(board.name);
+    await page.locator(`#home-catalog-container .catalog-card[data-profile="${board.id}"]`).click();
+    await expect(page.locator('#function-reference')).toHaveValue(board.id);
+    await expect(page.locator('#board-reference')).toContainText(board.mcu);
+    const pin=board.pins.find(pin=>pin.physicalLabel==='CN5.6');
+    await page.locator(`#diagram [data-pin="${pin.number}"]`).click();
+    await expect(page.locator(`#diagram [data-mcu-pin="${pin.mcuPin}"]`)).toHaveAttribute('aria-current','true');
+    await ready(page,'#board='+board.mcuProfile);
+    await expect(page.locator('#diagram [data-pin]')).toHaveCount(boards.find(chip=>chip.id===board.mcuProfile).packagePins);
+    await page.locator(`#package-boards [data-package-board="${board.id}"]`).click();
+    await expect(page.locator('#function-reference')).toHaveValue(board.id);
+  }
+});
+
 for (const deepLink of [false,true]) test(`load failure remains visible and retry restores ${deepLink?'a model link':'the catalog'}`,async({page})=>{
   const saved={picow:{1:{function:'GPIO',label:'preserved'}}};
   await page.addInitScript(({key,saved})=>localStorage.setItem(key,JSON.stringify(saved)),{key:storageKey,saved});

@@ -125,3 +125,11 @@ Seeed Studio XIAO düzeni, 14 kontaklı standart lehimlenebilir/castellated XIAO
 
 - **Seeed Studio XIAO RP2040:** Resmî Seeed Studio şeması v1.3 (Haziran 2022) üzerinden doğrulandı. Sol 1–7 pinleri D0–D6 (4 ADC kanallı RP2040 GPIO26–29, GPIO6, GPIO7, GPIO0); sağ pinler 5V, GND, 3V3 ve D10–D7 (RP2040 GPIO3, GPIO4, GPIO2, GPIO1) bağlantılarına karşılık gelir. RP2040 QFN-56 paket görünümüne doğrudan çift yönlü bağlanır.
 - **Seeed Studio XIAO ESP32C3:** Resmî Seeed Studio şeması v1.3 (Ocak 2026) ve pinout tablosu üzerinden doğrulandı. Sol 1–7 pinleri D0–D6 (ESP32-C3 GPIO2–7 ve GPIO21); sağ pinler 5V, GND, 3V3 ve D10–D7 (ESP32-C3 GPIO10, GPIO9, GPIO8, GPIO20) olarak eşlenir. Başlatma/strapping pinleri (GPIO2, GPIO8, GPIO9), ADC1/ADC2 uyarıları ve GPIO matrisi yönlendirmeleri Espressif belgeleriyle doğrulanmıştır.
+
+## Genişletilmiş Nucleo-64 referansları
+
+Ortak Nucleo-64 kaydı yalnızca konektör konumlarını gruplar. Her modelin MCU paketi, GPIO seçicileri, güç bağlantıları ve kayıtlı planları ayrıdır. Yeni STM32 paketleri üreticinin `STM32_open_pin_data` paket XML dosyası ve bu dosyada belirtilen GPIO Modes XML kaynağından alınır. İkisi de tam commit ve SHA-256 ile kilitlenir; GPIO bağımlılığının dosya adı önbellek kullanılırken de denetlenir.
+
+- **NUCLEO-F446RE / STM32F446RET6:** UM1724 Rev 14 Tablo 19 (s. 47–48) ve Tablo 29 (s. 58); LQFP-64, 50 GPIO bacağı, Cortex-M4, en fazla 180 MHz. AF seçicileri F446 GPIO Modes kaynağından alınır.
+
+UM1724 ham tablo hücreleri `sources/extracted/nucleo-um1724-r14.json` içinde hash ile kilitlidir. CI aynı ayrıştırıcıyı bu hücrelere uygular; PDF önbelleği veya erişilebilir bir PDF sunucusu gerektirmez. Bağımsız karşılaştırma için özgün PDF yolu korunur.

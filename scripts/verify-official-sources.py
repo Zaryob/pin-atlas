@@ -10,6 +10,7 @@ try:
     import pdfplumber
     from stm32_sources import build_stm32,verify_snapshot
     from nucleo_sources import build_nucleo,read_f4_chip,read_g4_chip,build_nucleo_g474,read_h7_chip,build_nucleo_h723
+    from stm32_catalog_sources import build_catalog as build_stm32_catalog
     from arduino_sources import build_arduino
     from expanded_arduino_sources import build_expanded_arduino
     from espressif_sources import build_espressif
@@ -441,6 +442,7 @@ def build(use_snapshots=False):
     boards.append(g4_chip)
     boards.append(h7_chip)
     boards.append(rp2040_package(bank2040,board_base))
+    boards.extend(build_stm32_catalog(CACHE,DOCS,ref,MANIFEST['verifiedOn'],use_snapshots=use_snapshots))
     link_board_packages(boards)
     return boards
 

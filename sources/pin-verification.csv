@@ -12429,3 +12429,897 @@ rp2040,53,QSPI_SD0,SYSTEM,,,,rp2040-qfn56-physical,
 rp2040,54,QSPI_SD2,SYSTEM,,,,rp2040-qfn56-physical,
 rp2040,55,QSPI_SD1,SYSTEM,,,,rp2040-qfn56-physical,
 rp2040,56,QSPI_SS_N,SYSTEM,,,,rp2040-qfn56-physical,
+nucleo-f446re,1,PC10,GPIO,DCMI_D8,AF13,DCMI_D8,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,1,PC10,GPIO,I2S3_CK,AF6,I2S3_CK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,1,PC10,GPIO,QUADSPI_BK1_IO1,AF9,QUADSPI_BK1_IO1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,1,PC10,GPIO,SDIO_D2,AF12,SDIO_D2,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,1,PC10,GPIO,SPI3_SCK,AF6,SPI3_SCK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,1,PC10,GPIO,UART4_TX,AF8,UART4_TX,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,1,PC10,GPIO,USART3_TX,AF7,USART3_TX,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,2,PC11,GPIO,ADC1_EXTI11,,ADC1_EXTI11,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,2,PC11,GPIO,ADC2_EXTI11,,ADC2_EXTI11,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,2,PC11,GPIO,ADC3_EXTI11,,ADC3_EXTI11,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,2,PC11,GPIO,DCMI_D4,AF13,DCMI_D4,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,2,PC11,GPIO,QUADSPI_BK2_NCS,AF9,QUADSPI_BK2_NCS,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,2,PC11,GPIO,SDIO_D3,AF12,SDIO_D3,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,2,PC11,GPIO,SPI3_MISO,AF6,SPI3_MISO,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,2,PC11,GPIO,UART4_RX,AF8,UART4_RX,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,2,PC11,GPIO,USART3_RX,AF7,USART3_RX,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,3,PC12,GPIO,DCMI_D9,AF13,DCMI_D9,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,3,PC12,GPIO,I2C2_SDA,AF4,I2C2_SDA,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,3,PC12,GPIO,I2S3_SD,AF6,I2S3_SD,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,3,PC12,GPIO,SDIO_CK,AF12,SDIO_CK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,3,PC12,GPIO,SPI3_MOSI,AF6,SPI3_MOSI,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,3,PC12,GPIO,UART5_TX,AF8,UART5_TX,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,3,PC12,GPIO,USART3_CK,AF7,USART3_CK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,4,PD2,GPIO,DCMI_D11,AF13,DCMI_D11,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,4,PD2,GPIO,SDIO_CMD,AF12,SDIO_CMD,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,4,PD2,GPIO,TIM3_ETR,AF2,TIM3_ETR,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,4,PD2,GPIO,UART5_RX,AF8,UART5_RX,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,5,VDD,POWER,,,,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,
+nucleo-f446re,6,E5V,POWER,,,,nucleo-f446re-morpho-58 | nucleo-f446re-top-view,
+nucleo-f446re,7,BOOT0,SYSTEM,,,,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,
+nucleo-f446re,8,GND,GND,,,,nucleo-f446re-morpho-58 | nucleo-f446re-top-view,
+nucleo-f446re,9,NC,SYSTEM,,,,nucleo-f446re-morpho-58 | nucleo-f446re-top-view,
+nucleo-f446re,10,NC,SYSTEM,,,,nucleo-f446re-morpho-58 | nucleo-f446re-top-view,
+nucleo-f446re,11,NC,SYSTEM,,,,nucleo-f446re-morpho-58 | nucleo-f446re-top-view,
+nucleo-f446re,12,IOREF,POWER,,,,nucleo-f446re-morpho-58 | nucleo-f446re-top-view,
+nucleo-f446re,13,PA13,GPIO,SYS_JTMS-SWDIO,AF0,SYS_JTMS-SWDIO,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,14,RESET,SYSTEM,,,,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,
+nucleo-f446re,15,PA14,GPIO,SYS_JTCK-SWCLK,AF0,SYS_JTCK-SWCLK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,16,+3.3V,POWER,,,,nucleo-f446re-morpho-58 | nucleo-f446re-top-view,
+nucleo-f446re,17,PA15,GPIO,ADC1_EXTI15,,ADC1_EXTI15,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,17,PA15,GPIO,ADC2_EXTI15,,ADC2_EXTI15,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,17,PA15,GPIO,ADC3_EXTI15,,ADC3_EXTI15,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,17,PA15,GPIO,CEC,AF4,CEC,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,17,PA15,GPIO,I2S1_WS,AF5,I2S1_WS,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,17,PA15,GPIO,I2S3_WS,AF6,I2S3_WS,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,17,PA15,GPIO,SPI1_NSS,AF5,SPI1_NSS,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,17,PA15,GPIO,SPI3_NSS,AF6,SPI3_NSS,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,17,PA15,GPIO,SYS_JTDI,AF0,SYS_JTDI,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,17,PA15,GPIO,TIM2_CH1,AF1,TIM2_CH1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,17,PA15,GPIO,TIM2_ETR,AF1,TIM2_ETR,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,17,PA15,GPIO,UART4_RTS,AF8,UART4_RTS,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,18,+5V,POWER,,,,nucleo-f446re-morpho-58 | nucleo-f446re-top-view,
+nucleo-f446re,19,GND,GND,,,,nucleo-f446re-morpho-58 | nucleo-f446re-top-view,
+nucleo-f446re,20,GND,GND,,,,nucleo-f446re-morpho-58 | nucleo-f446re-top-view,
+nucleo-f446re,21,PB7,GPIO,DCMI_VSYNC,AF13,DCMI_VSYNC,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,21,PB7,GPIO,I2C1_SDA,AF4,I2C1_SDA,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,21,PB7,GPIO,SPDIFRX_IN0,AF8,SPDIFRX_IN0,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,21,PB7,GPIO,TIM4_CH2,AF2,TIM4_CH2,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,21,PB7,GPIO,USART1_RX,AF7,USART1_RX,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,22,GND,GND,,,,nucleo-f446re-morpho-58 | nucleo-f446re-top-view,
+nucleo-f446re,23,PC13,GPIO,RTC_AF1,,RTC_AF1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,23,PC13,GPIO,SYS_WKUP1,,SYS_WKUP1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,24,VIN,POWER,,,,nucleo-f446re-morpho-58 | nucleo-f446re-top-view,
+nucleo-f446re,25,PC14,GPIO,RCC_OSC32_IN,,RCC_OSC32_IN,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,26,NC,SYSTEM,,,,nucleo-f446re-morpho-58 | nucleo-f446re-top-view,
+nucleo-f446re,27,PC15,GPIO,ADC1_EXTI15,,ADC1_EXTI15,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,27,PC15,GPIO,ADC2_EXTI15,,ADC2_EXTI15,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,27,PC15,GPIO,ADC3_EXTI15,,ADC3_EXTI15,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,27,PC15,GPIO,RCC_OSC32_OUT,,RCC_OSC32_OUT,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,28,PA0,GPIO,ADC1_IN0,,ADC1_IN0,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,28,PA0,GPIO,ADC2_IN0,,ADC2_IN0,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,28,PA0,GPIO,ADC3_IN0,,ADC3_IN0,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,28,PA0,GPIO,RTC_AF2,,RTC_AF2,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,28,PA0,GPIO,SYS_WKUP0,,SYS_WKUP0,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,28,PA0,GPIO,TIM2_CH1,AF1,TIM2_CH1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,28,PA0,GPIO,TIM2_ETR,AF1,TIM2_ETR,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,28,PA0,GPIO,TIM5_CH1,AF2,TIM5_CH1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,28,PA0,GPIO,TIM8_ETR,AF3,TIM8_ETR,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,28,PA0,GPIO,UART4_TX,AF8,UART4_TX,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,28,PA0,GPIO,USART2_CTS,AF7,USART2_CTS,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,29,PH0,GPIO,RCC_OSC_IN,,RCC_OSC_IN,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,30,PA1,GPIO,ADC1_IN1,,ADC1_IN1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,30,PA1,GPIO,ADC2_IN1,,ADC2_IN1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,30,PA1,GPIO,ADC3_IN1,,ADC3_IN1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,30,PA1,GPIO,QUADSPI_BK1_IO3,AF9,QUADSPI_BK1_IO3,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,30,PA1,GPIO,TIM2_CH2,AF1,TIM2_CH2,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,30,PA1,GPIO,TIM5_CH2,AF2,TIM5_CH2,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,30,PA1,GPIO,UART4_RX,AF8,UART4_RX,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,30,PA1,GPIO,USART2_RTS,AF7,USART2_RTS,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,31,PH1,GPIO,RCC_OSC_OUT,,RCC_OSC_OUT,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,32,PA4,GPIO,ADC1_IN4,,ADC1_IN4,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,32,PA4,GPIO,ADC2_IN4,,ADC2_IN4,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,32,PA4,GPIO,DAC_OUT1,,DAC_OUT1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,32,PA4,GPIO,DCMI_HSYNC,AF13,DCMI_HSYNC,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,32,PA4,GPIO,I2S1_WS,AF5,I2S1_WS,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,32,PA4,GPIO,I2S3_WS,AF6,I2S3_WS,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,32,PA4,GPIO,SPI1_NSS,AF5,SPI1_NSS,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,32,PA4,GPIO,SPI3_NSS,AF6,SPI3_NSS,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,32,PA4,GPIO,USART2_CK,AF7,USART2_CK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,32,PA4,GPIO,USB_OTG_HS_SOF,AF12,USB_OTG_HS_SOF,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,33,VBAT,POWER,,,,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,
+nucleo-f446re,34,PB0,GPIO,ADC1_IN8,,ADC1_IN8,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,34,PB0,GPIO,ADC2_IN8,,ADC2_IN8,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,34,PB0,GPIO,I2S3_SD,AF7,I2S3_SD,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,34,PB0,GPIO,SDIO_D1,AF12,SDIO_D1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,34,PB0,GPIO,SPI3_MOSI,AF7,SPI3_MOSI,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,34,PB0,GPIO,TIM1_CH2N,AF1,TIM1_CH2N,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,34,PB0,GPIO,TIM3_CH3,AF2,TIM3_CH3,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,34,PB0,GPIO,TIM8_CH2N,AF3,TIM8_CH2N,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,34,PB0,GPIO,UART4_CTS,AF8,UART4_CTS,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,34,PB0,GPIO,USB_OTG_HS_ULPI_D1,AF10,USB_OTG_HS_ULPI_D1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,35,PC2,GPIO,ADC1_IN12,,ADC1_IN12,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,35,PC2,GPIO,ADC2_IN12,,ADC2_IN12,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,35,PC2,GPIO,ADC3_IN12,,ADC3_IN12,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,35,PC2,GPIO,SPI2_MISO,AF5,SPI2_MISO,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,35,PC2,GPIO,USB_OTG_HS_ULPI_DIR,AF10,USB_OTG_HS_ULPI_DIR,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,36,PC1,GPIO,ADC1_IN11,,ADC1_IN11,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,36,PC1,GPIO,ADC2_IN11,,ADC2_IN11,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,36,PC1,GPIO,ADC3_IN11,,ADC3_IN11,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,36,PC1,GPIO,I2S2_SD,AF7,I2S2_SD,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,36,PC1,GPIO,I2S3_SD,AF5,I2S3_SD,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,36,PC1,GPIO,SAI1_SD_A,AF6,SAI1_SD_A,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,36,PC1,GPIO,SPI2_MOSI,AF7,SPI2_MOSI,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,36,PC1,GPIO,SPI3_MOSI,AF5,SPI3_MOSI,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,37,PC3,GPIO,ADC1_IN13,,ADC1_IN13,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,37,PC3,GPIO,ADC2_IN13,,ADC2_IN13,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,37,PC3,GPIO,ADC3_IN13,,ADC3_IN13,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,37,PC3,GPIO,I2S2_SD,AF5,I2S2_SD,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,37,PC3,GPIO,SPI2_MOSI,AF5,SPI2_MOSI,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,37,PC3,GPIO,USB_OTG_HS_ULPI_NXT,AF10,USB_OTG_HS_ULPI_NXT,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,38,PC0,GPIO,ADC1_IN10,,ADC1_IN10,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,38,PC0,GPIO,ADC2_IN10,,ADC2_IN10,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,38,PC0,GPIO,ADC3_IN10,,ADC3_IN10,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,38,PC0,GPIO,SAI1_MCLK_B,AF6,SAI1_MCLK_B,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,38,PC0,GPIO,USB_OTG_HS_ULPI_STP,AF10,USB_OTG_HS_ULPI_STP,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,39,NC,SYSTEM,,,,nucleo-f446re-arduino-47 | nucleo-f446re-top-view,
+nucleo-f446re,40,IOREF,POWER,,,,nucleo-f446re-arduino-47 | nucleo-f446re-top-view,
+nucleo-f446re,41,NRST,SYSTEM,,,,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,
+nucleo-f446re,42,+3.3V,POWER,,,,nucleo-f446re-arduino-47 | nucleo-f446re-top-view,
+nucleo-f446re,43,+5V,POWER,,,,nucleo-f446re-arduino-47 | nucleo-f446re-top-view,
+nucleo-f446re,44,GND,GND,,,,nucleo-f446re-arduino-47 | nucleo-f446re-top-view,
+nucleo-f446re,45,GND,GND,,,,nucleo-f446re-arduino-47 | nucleo-f446re-top-view,
+nucleo-f446re,46,VIN,POWER,,,,nucleo-f446re-arduino-47 | nucleo-f446re-top-view,
+nucleo-f446re,47,PA0,GPIO,ADC1_IN0,,ADC1_IN0,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,47,PA0,GPIO,ADC2_IN0,,ADC2_IN0,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,47,PA0,GPIO,ADC3_IN0,,ADC3_IN0,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,47,PA0,GPIO,RTC_AF2,,RTC_AF2,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,47,PA0,GPIO,SYS_WKUP0,,SYS_WKUP0,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,47,PA0,GPIO,TIM2_CH1,AF1,TIM2_CH1,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,47,PA0,GPIO,TIM2_ETR,AF1,TIM2_ETR,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,47,PA0,GPIO,TIM5_CH1,AF2,TIM5_CH1,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,47,PA0,GPIO,TIM8_ETR,AF3,TIM8_ETR,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,47,PA0,GPIO,UART4_TX,AF8,UART4_TX,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,47,PA0,GPIO,USART2_CTS,AF7,USART2_CTS,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,48,PA1,GPIO,ADC1_IN1,,ADC1_IN1,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,48,PA1,GPIO,ADC2_IN1,,ADC2_IN1,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,48,PA1,GPIO,ADC3_IN1,,ADC3_IN1,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,48,PA1,GPIO,QUADSPI_BK1_IO3,AF9,QUADSPI_BK1_IO3,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,48,PA1,GPIO,TIM2_CH2,AF1,TIM2_CH2,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,48,PA1,GPIO,TIM5_CH2,AF2,TIM5_CH2,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,48,PA1,GPIO,UART4_RX,AF8,UART4_RX,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,48,PA1,GPIO,USART2_RTS,AF7,USART2_RTS,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,49,PA4,GPIO,ADC1_IN4,,ADC1_IN4,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,49,PA4,GPIO,ADC2_IN4,,ADC2_IN4,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,49,PA4,GPIO,DAC_OUT1,,DAC_OUT1,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,49,PA4,GPIO,DCMI_HSYNC,AF13,DCMI_HSYNC,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,49,PA4,GPIO,I2S1_WS,AF5,I2S1_WS,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,49,PA4,GPIO,I2S3_WS,AF6,I2S3_WS,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,49,PA4,GPIO,SPI1_NSS,AF5,SPI1_NSS,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,49,PA4,GPIO,SPI3_NSS,AF6,SPI3_NSS,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,49,PA4,GPIO,USART2_CK,AF7,USART2_CK,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,49,PA4,GPIO,USB_OTG_HS_SOF,AF12,USB_OTG_HS_SOF,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,50,PB0,GPIO,ADC1_IN8,,ADC1_IN8,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,50,PB0,GPIO,ADC2_IN8,,ADC2_IN8,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,50,PB0,GPIO,I2S3_SD,AF7,I2S3_SD,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,50,PB0,GPIO,SDIO_D1,AF12,SDIO_D1,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,50,PB0,GPIO,SPI3_MOSI,AF7,SPI3_MOSI,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,50,PB0,GPIO,TIM1_CH2N,AF1,TIM1_CH2N,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,50,PB0,GPIO,TIM3_CH3,AF2,TIM3_CH3,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,50,PB0,GPIO,TIM8_CH2N,AF3,TIM8_CH2N,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,50,PB0,GPIO,UART4_CTS,AF8,UART4_CTS,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,50,PB0,GPIO,USB_OTG_HS_ULPI_D1,AF10,USB_OTG_HS_ULPI_D1,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,51,PC1,GPIO,ADC1_IN11,,ADC1_IN11,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,51,PC1,GPIO,ADC2_IN11,,ADC2_IN11,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,51,PC1,GPIO,ADC3_IN11,,ADC3_IN11,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,51,PC1,GPIO,I2S2_SD,AF7,I2S2_SD,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,51,PC1,GPIO,I2S3_SD,AF5,I2S3_SD,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,51,PC1,GPIO,SAI1_SD_A,AF6,SAI1_SD_A,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,51,PC1,GPIO,SPI2_MOSI,AF7,SPI2_MOSI,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,51,PC1,GPIO,SPI3_MOSI,AF5,SPI3_MOSI,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,52,PC0,GPIO,ADC1_IN10,,ADC1_IN10,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,52,PC0,GPIO,ADC2_IN10,,ADC2_IN10,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,52,PC0,GPIO,ADC3_IN10,,ADC3_IN10,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,52,PC0,GPIO,SAI1_MCLK_B,AF6,SAI1_MCLK_B,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,52,PC0,GPIO,USB_OTG_HS_ULPI_STP,AF10,USB_OTG_HS_ULPI_STP,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,53,PC9,GPIO,DAC_EXTI9,,DAC_EXTI9,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,53,PC9,GPIO,DCMI_D3,AF13,DCMI_D3,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,53,PC9,GPIO,I2C3_SDA,AF4,I2C3_SDA,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,53,PC9,GPIO,I2S_CKIN,AF5,I2S_CKIN,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,53,PC9,GPIO,QUADSPI_BK1_IO0,AF9,QUADSPI_BK1_IO0,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,53,PC9,GPIO,RCC_MCO_2,AF0,RCC_MCO_2,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,53,PC9,GPIO,SDIO_D1,AF12,SDIO_D1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,53,PC9,GPIO,TIM3_CH4,AF2,TIM3_CH4,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,53,PC9,GPIO,TIM8_CH4,AF3,TIM8_CH4,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,53,PC9,GPIO,UART5_CTS,AF7,UART5_CTS,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,54,PC8,GPIO,DCMI_D2,AF13,DCMI_D2,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,54,PC8,GPIO,SDIO_D0,AF12,SDIO_D0,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,54,PC8,GPIO,SYS_TRACED0,AF0,SYS_TRACED0,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,54,PC8,GPIO,TIM3_CH3,AF2,TIM3_CH3,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,54,PC8,GPIO,TIM8_CH3,AF3,TIM8_CH3,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,54,PC8,GPIO,UART5_RTS,AF7,UART5_RTS,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,54,PC8,GPIO,USART6_CK,AF8,USART6_CK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,55,PB8,GPIO,CAN1_RX,AF9,CAN1_RX,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,55,PB8,GPIO,DCMI_D6,AF13,DCMI_D6,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,55,PB8,GPIO,I2C1_SCL,AF4,I2C1_SCL,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,55,PB8,GPIO,SDIO_D4,AF12,SDIO_D4,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,55,PB8,GPIO,TIM10_CH1,AF3,TIM10_CH1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,55,PB8,GPIO,TIM2_CH1,AF1,TIM2_CH1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,55,PB8,GPIO,TIM2_ETR,AF1,TIM2_ETR,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,55,PB8,GPIO,TIM4_CH3,AF2,TIM4_CH3,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,56,PC6,GPIO,DCMI_D0,AF13,DCMI_D0,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,56,PC6,GPIO,FMPI2C1_SCL,AF4,FMPI2C1_SCL,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,56,PC6,GPIO,I2S2_MCK,AF5,I2S2_MCK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,56,PC6,GPIO,SDIO_D6,AF12,SDIO_D6,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,56,PC6,GPIO,TIM3_CH1,AF2,TIM3_CH1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,56,PC6,GPIO,TIM8_CH1,AF3,TIM8_CH1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,56,PC6,GPIO,USART6_TX,AF8,USART6_TX,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,57,PB9,GPIO,CAN1_TX,AF9,CAN1_TX,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,57,PB9,GPIO,DAC_EXTI9,,DAC_EXTI9,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,57,PB9,GPIO,DCMI_D7,AF13,DCMI_D7,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,57,PB9,GPIO,I2C1_SDA,AF4,I2C1_SDA,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,57,PB9,GPIO,I2S2_WS,AF5,I2S2_WS,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,57,PB9,GPIO,SAI1_FS_B,AF6,SAI1_FS_B,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,57,PB9,GPIO,SDIO_D5,AF12,SDIO_D5,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,57,PB9,GPIO,SPI2_NSS,AF5,SPI2_NSS,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,57,PB9,GPIO,TIM11_CH1,AF3,TIM11_CH1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,57,PB9,GPIO,TIM2_CH2,AF1,TIM2_CH2,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,57,PB9,GPIO,TIM4_CH4,AF2,TIM4_CH4,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,58,PC5,GPIO,ADC1_IN15,,ADC1_IN15,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,58,PC5,GPIO,ADC2_IN15,,ADC2_IN15,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,58,PC5,GPIO,SPDIFRX_IN3,AF8,SPDIFRX_IN3,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,58,PC5,GPIO,USART3_RX,AF7,USART3_RX,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,59,AVDD,POWER,,,,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,
+nucleo-f446re,60,U5V,POWER,,,,nucleo-f446re-morpho-58 | nucleo-f446re-top-view,
+nucleo-f446re,61,GND,GND,,,,nucleo-f446re-morpho-58 | nucleo-f446re-top-view,
+nucleo-f446re,62,NC,SYSTEM,,,,nucleo-f446re-morpho-58 | nucleo-f446re-top-view,
+nucleo-f446re,63,PA5,GPIO,ADC1_IN5,,ADC1_IN5,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,63,PA5,GPIO,ADC2_IN5,,ADC2_IN5,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,63,PA5,GPIO,DAC_OUT2,,DAC_OUT2,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,63,PA5,GPIO,I2S1_CK,AF5,I2S1_CK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,63,PA5,GPIO,SPI1_SCK,AF5,SPI1_SCK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,63,PA5,GPIO,TIM2_CH1,AF1,TIM2_CH1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,63,PA5,GPIO,TIM2_ETR,AF1,TIM2_ETR,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,63,PA5,GPIO,TIM8_CH1N,AF3,TIM8_CH1N,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,63,PA5,GPIO,USB_OTG_HS_ULPI_CK,AF10,USB_OTG_HS_ULPI_CK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,64,PA12,GPIO,CAN1_TX,AF9,CAN1_TX,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,64,PA12,GPIO,TIM1_ETR,AF1,TIM1_ETR,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,64,PA12,GPIO,USART1_RTS,AF7,USART1_RTS,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,64,PA12,GPIO,USB_OTG_FS_DP,AF10,USB_OTG_FS_DP,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,65,PA6,GPIO,ADC1_IN6,,ADC1_IN6,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,65,PA6,GPIO,ADC2_IN6,,ADC2_IN6,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,65,PA6,GPIO,DCMI_PIXCLK,AF13,DCMI_PIXCLK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,65,PA6,GPIO,I2S2_MCK,AF6,I2S2_MCK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,65,PA6,GPIO,SPI1_MISO,AF5,SPI1_MISO,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,65,PA6,GPIO,TIM13_CH1,AF9,TIM13_CH1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,65,PA6,GPIO,TIM1_BKIN,AF1,TIM1_BKIN,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,65,PA6,GPIO,TIM3_CH1,AF2,TIM3_CH1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,65,PA6,GPIO,TIM8_BKIN,AF3,TIM8_BKIN,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,66,PA11,GPIO,ADC1_EXTI11,,ADC1_EXTI11,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,66,PA11,GPIO,ADC2_EXTI11,,ADC2_EXTI11,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,66,PA11,GPIO,ADC3_EXTI11,,ADC3_EXTI11,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,66,PA11,GPIO,CAN1_RX,AF9,CAN1_RX,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,66,PA11,GPIO,TIM1_CH4,AF1,TIM1_CH4,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,66,PA11,GPIO,USART1_CTS,AF7,USART1_CTS,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,66,PA11,GPIO,USB_OTG_FS_DM,AF10,USB_OTG_FS_DM,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,67,PA7,GPIO,ADC1_IN7,,ADC1_IN7,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,67,PA7,GPIO,ADC2_IN7,,ADC2_IN7,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,67,PA7,GPIO,I2S1_SD,AF5,I2S1_SD,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,67,PA7,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,67,PA7,GPIO,TIM14_CH1,AF9,TIM14_CH1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,67,PA7,GPIO,TIM1_CH1N,AF1,TIM1_CH1N,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,67,PA7,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,67,PA7,GPIO,TIM8_CH1N,AF3,TIM8_CH1N,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,68,PB12,GPIO,CAN2_RX,AF9,CAN2_RX,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,68,PB12,GPIO,I2C2_SMBA,AF4,I2C2_SMBA,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,68,PB12,GPIO,I2S2_WS,AF5,I2S2_WS,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,68,PB12,GPIO,SAI1_SCK_B,AF6,SAI1_SCK_B,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,68,PB12,GPIO,SPI2_NSS,AF5,SPI2_NSS,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,68,PB12,GPIO,TIM1_BKIN,AF1,TIM1_BKIN,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,68,PB12,GPIO,USART3_CK,AF7,USART3_CK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,68,PB12,GPIO,USB_OTG_HS_ID,AF12,USB_OTG_HS_ID,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,68,PB12,GPIO,USB_OTG_HS_ULPI_D5,AF10,USB_OTG_HS_ULPI_D5,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,69,PB6,GPIO,CAN2_TX,AF9,CAN2_TX,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,69,PB6,GPIO,CEC,AF3,CEC,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,69,PB6,GPIO,DCMI_D5,AF13,DCMI_D5,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,69,PB6,GPIO,I2C1_SCL,AF4,I2C1_SCL,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,69,PB6,GPIO,QUADSPI_BK1_NCS,AF10,QUADSPI_BK1_NCS,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,69,PB6,GPIO,TIM4_CH1,AF2,TIM4_CH1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,69,PB6,GPIO,USART1_TX,AF7,USART1_TX,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,70,NC,SYSTEM,,,,nucleo-f446re-morpho-58 | nucleo-f446re-top-view,
+nucleo-f446re,71,PC7,GPIO,DCMI_D1,AF13,DCMI_D1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,71,PC7,GPIO,FMPI2C1_SDA,AF4,FMPI2C1_SDA,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,71,PC7,GPIO,I2S2_CK,AF5,I2S2_CK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,71,PC7,GPIO,I2S3_MCK,AF6,I2S3_MCK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,71,PC7,GPIO,SDIO_D7,AF12,SDIO_D7,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,71,PC7,GPIO,SPDIFRX_IN1,AF7,SPDIFRX_IN1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,71,PC7,GPIO,SPI2_SCK,AF5,SPI2_SCK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,71,PC7,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,71,PC7,GPIO,TIM8_CH2,AF3,TIM8_CH2,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,71,PC7,GPIO,USART6_RX,AF8,USART6_RX,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,72,GND,GND,,,,nucleo-f446re-morpho-58 | nucleo-f446re-top-view,
+nucleo-f446re,73,PA9,GPIO,DAC_EXTI9,,DAC_EXTI9,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,73,PA9,GPIO,DCMI_D0,AF13,DCMI_D0,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,73,PA9,GPIO,I2C3_SMBA,AF4,I2C3_SMBA,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,73,PA9,GPIO,I2S2_CK,AF5,I2S2_CK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,73,PA9,GPIO,SAI1_SD_B,AF6,SAI1_SD_B,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,73,PA9,GPIO,SPI2_SCK,AF5,SPI2_SCK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,73,PA9,GPIO,TIM1_CH2,AF1,TIM1_CH2,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,73,PA9,GPIO,USART1_TX,AF7,USART1_TX,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,73,PA9,GPIO,USB_OTG_FS_VBUS,,USB_OTG_FS_VBUS,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,74,PB2,GPIO,I2S3_SD,AF7,I2S3_SD,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,74,PB2,GPIO,QUADSPI_CLK,AF9,QUADSPI_CLK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,74,PB2,GPIO,SAI1_SD_A,AF6,SAI1_SD_A,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,74,PB2,GPIO,SDIO_CK,AF12,SDIO_CK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,74,PB2,GPIO,SPI3_MOSI,AF7,SPI3_MOSI,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,74,PB2,GPIO,TIM2_CH4,AF1,TIM2_CH4,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,74,PB2,GPIO,USB_OTG_HS_ULPI_D4,AF10,USB_OTG_HS_ULPI_D4,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,75,PA8,GPIO,I2C3_SCL,AF4,I2C3_SCL,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,75,PA8,GPIO,RCC_MCO_1,AF0,RCC_MCO_1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,75,PA8,GPIO,TIM1_CH1,AF1,TIM1_CH1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,75,PA8,GPIO,USART1_CK,AF7,USART1_CK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,75,PA8,GPIO,USB_OTG_FS_SOF,AF10,USB_OTG_FS_SOF,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,76,PB1,GPIO,ADC1_IN9,,ADC1_IN9,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,76,PB1,GPIO,ADC2_IN9,,ADC2_IN9,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,76,PB1,GPIO,SDIO_D2,AF12,SDIO_D2,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,76,PB1,GPIO,TIM1_CH3N,AF1,TIM1_CH3N,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,76,PB1,GPIO,TIM3_CH4,AF2,TIM3_CH4,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,76,PB1,GPIO,TIM8_CH3N,AF3,TIM8_CH3N,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,76,PB1,GPIO,USB_OTG_HS_ULPI_D2,AF10,USB_OTG_HS_ULPI_D2,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,77,PB10,GPIO,I2C2_SCL,AF4,I2C2_SCL,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,77,PB10,GPIO,I2S2_CK,AF5,I2S2_CK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,77,PB10,GPIO,SAI1_SCK_A,AF6,SAI1_SCK_A,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,77,PB10,GPIO,SPI2_SCK,AF5,SPI2_SCK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,77,PB10,GPIO,TIM2_CH3,AF1,TIM2_CH3,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,77,PB10,GPIO,USART3_TX,AF7,USART3_TX,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,77,PB10,GPIO,USB_OTG_HS_ULPI_D3,AF10,USB_OTG_HS_ULPI_D3,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,78,PB15,GPIO,ADC1_EXTI15,,ADC1_EXTI15,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,78,PB15,GPIO,ADC2_EXTI15,,ADC2_EXTI15,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,78,PB15,GPIO,ADC3_EXTI15,,ADC3_EXTI15,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,78,PB15,GPIO,I2S2_SD,AF5,I2S2_SD,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,78,PB15,GPIO,RTC_REFIN,AF0,RTC_REFIN,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,78,PB15,GPIO,SPI2_MOSI,AF5,SPI2_MOSI,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,78,PB15,GPIO,TIM12_CH2,AF9,TIM12_CH2,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,78,PB15,GPIO,TIM1_CH3N,AF1,TIM1_CH3N,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,78,PB15,GPIO,TIM8_CH3N,AF3,TIM8_CH3N,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,78,PB15,GPIO,USB_OTG_HS_DP,AF12,USB_OTG_HS_DP,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,79,PB4,GPIO,I2C3_SDA,AF4,I2C3_SDA,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,79,PB4,GPIO,I2S2_WS,AF7,I2S2_WS,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,79,PB4,GPIO,SPI1_MISO,AF5,SPI1_MISO,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,79,PB4,GPIO,SPI2_NSS,AF7,SPI2_NSS,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,79,PB4,GPIO,SPI3_MISO,AF6,SPI3_MISO,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,79,PB4,GPIO,SYS_JTRST,AF0,SYS_JTRST,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,79,PB4,GPIO,TIM3_CH1,AF2,TIM3_CH1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,80,PB14,GPIO,SPI2_MISO,AF5,SPI2_MISO,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,80,PB14,GPIO,TIM12_CH1,AF9,TIM12_CH1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,80,PB14,GPIO,TIM1_CH2N,AF1,TIM1_CH2N,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,80,PB14,GPIO,TIM8_CH2N,AF3,TIM8_CH2N,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,80,PB14,GPIO,USART3_RTS,AF7,USART3_RTS,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,80,PB14,GPIO,USB_OTG_HS_DM,AF12,USB_OTG_HS_DM,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,81,PB5,GPIO,CAN2_RX,AF9,CAN2_RX,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,81,PB5,GPIO,DCMI_D10,AF13,DCMI_D10,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,81,PB5,GPIO,I2C1_SMBA,AF4,I2C1_SMBA,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,81,PB5,GPIO,I2S1_SD,AF5,I2S1_SD,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,81,PB5,GPIO,I2S3_SD,AF6,I2S3_SD,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,81,PB5,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,81,PB5,GPIO,SPI3_MOSI,AF6,SPI3_MOSI,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,81,PB5,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,81,PB5,GPIO,USB_OTG_HS_ULPI_D7,AF10,USB_OTG_HS_ULPI_D7,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,82,PB13,GPIO,CAN2_TX,AF9,CAN2_TX,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,82,PB13,GPIO,I2S2_CK,AF5,I2S2_CK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,82,PB13,GPIO,SPI2_SCK,AF5,SPI2_SCK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,82,PB13,GPIO,TIM1_CH1N,AF1,TIM1_CH1N,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,82,PB13,GPIO,USART3_CTS,AF7,USART3_CTS,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,82,PB13,GPIO,USB_OTG_HS_ULPI_D6,AF10,USB_OTG_HS_ULPI_D6,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,82,PB13,GPIO,USB_OTG_HS_VBUS,,USB_OTG_HS_VBUS,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,83,PB3,GPIO,I2C2_SDA,AF4,I2C2_SDA,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,83,PB3,GPIO,I2S1_CK,AF5,I2S1_CK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,83,PB3,GPIO,I2S3_CK,AF6,I2S3_CK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,83,PB3,GPIO,SPI1_SCK,AF5,SPI1_SCK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,83,PB3,GPIO,SPI3_SCK,AF6,SPI3_SCK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,83,PB3,GPIO,SYS_JTDO-SWO,AF0,SYS_JTDO-SWO,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,83,PB3,GPIO,TIM2_CH2,AF1,TIM2_CH2,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,84,AGND,GND,,,,nucleo-f446re-morpho-58 | nucleo-f446re-top-view,
+nucleo-f446re,85,PA10,GPIO,DCMI_D1,AF13,DCMI_D1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,85,PA10,GPIO,TIM1_CH3,AF1,TIM1_CH3,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,85,PA10,GPIO,USART1_RX,AF7,USART1_RX,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,85,PA10,GPIO,USB_OTG_FS_ID,AF10,USB_OTG_FS_ID,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,86,PC4,GPIO,ADC1_IN14,,ADC1_IN14,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,86,PC4,GPIO,ADC2_IN14,,ADC2_IN14,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,86,PC4,GPIO,I2S1_MCK,AF5,I2S1_MCK,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,86,PC4,GPIO,SPDIFRX_IN2,AF8,SPDIFRX_IN2,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,87,PA2,GPIO,ADC1_IN2,,ADC1_IN2,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,87,PA2,GPIO,ADC2_IN2,,ADC2_IN2,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,87,PA2,GPIO,ADC3_IN2,,ADC3_IN2,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,87,PA2,GPIO,TIM2_CH3,AF1,TIM2_CH3,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,87,PA2,GPIO,TIM5_CH3,AF2,TIM5_CH3,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,87,PA2,GPIO,TIM9_CH1,AF3,TIM9_CH1,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,87,PA2,GPIO,USART2_TX,AF7,USART2_TX,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,88,NC,SYSTEM,,,,nucleo-f446re-morpho-58 | nucleo-f446re-top-view,
+nucleo-f446re,89,PA3,GPIO,ADC1_IN3,,ADC1_IN3,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,89,PA3,GPIO,ADC2_IN3,,ADC2_IN3,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,89,PA3,GPIO,ADC3_IN3,,ADC3_IN3,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,89,PA3,GPIO,SAI1_FS_A,AF6,SAI1_FS_A,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,89,PA3,GPIO,TIM2_CH4,AF1,TIM2_CH4,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,89,PA3,GPIO,TIM5_CH4,AF2,TIM5_CH4,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,89,PA3,GPIO,TIM9_CH2,AF3,TIM9_CH2,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,89,PA3,GPIO,USART2_RX,AF7,USART2_RX,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,89,PA3,GPIO,USB_OTG_HS_ULPI_D0,AF10,USB_OTG_HS_ULPI_D0,nucleo-f446re-morpho-58 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,90,NC,SYSTEM,,,,nucleo-f446re-morpho-58 | nucleo-f446re-top-view,
+nucleo-f446re,91,PA9,GPIO,DAC_EXTI9,,DAC_EXTI9,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,91,PA9,GPIO,DCMI_D0,AF13,DCMI_D0,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,91,PA9,GPIO,I2C3_SMBA,AF4,I2C3_SMBA,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,91,PA9,GPIO,I2S2_CK,AF5,I2S2_CK,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,91,PA9,GPIO,SAI1_SD_B,AF6,SAI1_SD_B,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,91,PA9,GPIO,SPI2_SCK,AF5,SPI2_SCK,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,91,PA9,GPIO,TIM1_CH2,AF1,TIM1_CH2,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,91,PA9,GPIO,USART1_TX,AF7,USART1_TX,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,91,PA9,GPIO,USB_OTG_FS_VBUS,,USB_OTG_FS_VBUS,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,92,PC7,GPIO,DCMI_D1,AF13,DCMI_D1,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,92,PC7,GPIO,FMPI2C1_SDA,AF4,FMPI2C1_SDA,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,92,PC7,GPIO,I2S2_CK,AF5,I2S2_CK,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,92,PC7,GPIO,I2S3_MCK,AF6,I2S3_MCK,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,92,PC7,GPIO,SDIO_D7,AF12,SDIO_D7,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,92,PC7,GPIO,SPDIFRX_IN1,AF7,SPDIFRX_IN1,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,92,PC7,GPIO,SPI2_SCK,AF5,SPI2_SCK,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,92,PC7,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,92,PC7,GPIO,TIM8_CH2,AF3,TIM8_CH2,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,92,PC7,GPIO,USART6_RX,AF8,USART6_RX,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,93,PB6,GPIO,CAN2_TX,AF9,CAN2_TX,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,93,PB6,GPIO,CEC,AF3,CEC,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,93,PB6,GPIO,DCMI_D5,AF13,DCMI_D5,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,93,PB6,GPIO,I2C1_SCL,AF4,I2C1_SCL,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,93,PB6,GPIO,QUADSPI_BK1_NCS,AF10,QUADSPI_BK1_NCS,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,93,PB6,GPIO,TIM4_CH1,AF2,TIM4_CH1,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,93,PB6,GPIO,USART1_TX,AF7,USART1_TX,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,94,PA7,GPIO,ADC1_IN7,,ADC1_IN7,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,94,PA7,GPIO,ADC2_IN7,,ADC2_IN7,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,94,PA7,GPIO,I2S1_SD,AF5,I2S1_SD,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,94,PA7,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,94,PA7,GPIO,TIM14_CH1,AF9,TIM14_CH1,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,94,PA7,GPIO,TIM1_CH1N,AF1,TIM1_CH1N,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,94,PA7,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,94,PA7,GPIO,TIM8_CH1N,AF3,TIM8_CH1N,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,95,PA6,GPIO,ADC1_IN6,,ADC1_IN6,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,95,PA6,GPIO,ADC2_IN6,,ADC2_IN6,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,95,PA6,GPIO,DCMI_PIXCLK,AF13,DCMI_PIXCLK,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,95,PA6,GPIO,I2S2_MCK,AF6,I2S2_MCK,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,95,PA6,GPIO,SPI1_MISO,AF5,SPI1_MISO,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,95,PA6,GPIO,TIM13_CH1,AF9,TIM13_CH1,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,95,PA6,GPIO,TIM1_BKIN,AF1,TIM1_BKIN,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,95,PA6,GPIO,TIM3_CH1,AF2,TIM3_CH1,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,95,PA6,GPIO,TIM8_BKIN,AF3,TIM8_BKIN,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,96,PA5,GPIO,ADC1_IN5,,ADC1_IN5,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,96,PA5,GPIO,ADC2_IN5,,ADC2_IN5,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,96,PA5,GPIO,DAC_OUT2,,DAC_OUT2,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,96,PA5,GPIO,I2S1_CK,AF5,I2S1_CK,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,96,PA5,GPIO,SPI1_SCK,AF5,SPI1_SCK,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,96,PA5,GPIO,TIM2_CH1,AF1,TIM2_CH1,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,96,PA5,GPIO,TIM2_ETR,AF1,TIM2_ETR,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,96,PA5,GPIO,TIM8_CH1N,AF3,TIM8_CH1N,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,96,PA5,GPIO,USB_OTG_HS_ULPI_CK,AF10,USB_OTG_HS_ULPI_CK,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,97,GND,GND,,,,nucleo-f446re-arduino-48 | nucleo-f446re-top-view,
+nucleo-f446re,98,AVDD,POWER,,,,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,
+nucleo-f446re,99,PB9,GPIO,CAN1_TX,AF9,CAN1_TX,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,99,PB9,GPIO,DAC_EXTI9,,DAC_EXTI9,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package
+nucleo-f446re,99,PB9,GPIO,DCMI_D7,AF13,DCMI_D7,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,99,PB9,GPIO,I2C1_SDA,AF4,I2C1_SDA,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,99,PB9,GPIO,I2S2_WS,AF5,I2S2_WS,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,99,PB9,GPIO,SAI1_FS_B,AF6,SAI1_FS_B,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,99,PB9,GPIO,SDIO_D5,AF12,SDIO_D5,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,99,PB9,GPIO,SPI2_NSS,AF5,SPI2_NSS,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,99,PB9,GPIO,TIM11_CH1,AF3,TIM11_CH1,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,99,PB9,GPIO,TIM2_CH2,AF1,TIM2_CH2,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,99,PB9,GPIO,TIM4_CH4,AF2,TIM4_CH4,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,100,PB8,GPIO,CAN1_RX,AF9,CAN1_RX,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,100,PB8,GPIO,DCMI_D6,AF13,DCMI_D6,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,100,PB8,GPIO,I2C1_SCL,AF4,I2C1_SCL,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,100,PB8,GPIO,SDIO_D4,AF12,SDIO_D4,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,100,PB8,GPIO,TIM10_CH1,AF3,TIM10_CH1,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,100,PB8,GPIO,TIM2_CH1,AF1,TIM2_CH1,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,100,PB8,GPIO,TIM2_ETR,AF1,TIM2_ETR,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,100,PB8,GPIO,TIM4_CH3,AF2,TIM4_CH3,nucleo-f446re-arduino-47 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,101,PA3,GPIO,ADC1_IN3,,ADC1_IN3,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,101,PA3,GPIO,ADC2_IN3,,ADC2_IN3,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,101,PA3,GPIO,ADC3_IN3,,ADC3_IN3,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,101,PA3,GPIO,SAI1_FS_A,AF6,SAI1_FS_A,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,101,PA3,GPIO,TIM2_CH4,AF1,TIM2_CH4,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,101,PA3,GPIO,TIM5_CH4,AF2,TIM5_CH4,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,101,PA3,GPIO,TIM9_CH2,AF3,TIM9_CH2,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,101,PA3,GPIO,USART2_RX,AF7,USART2_RX,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,101,PA3,GPIO,USB_OTG_HS_ULPI_D0,AF10,USB_OTG_HS_ULPI_D0,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,102,PA2,GPIO,ADC1_IN2,,ADC1_IN2,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,102,PA2,GPIO,ADC2_IN2,,ADC2_IN2,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,102,PA2,GPIO,ADC3_IN2,,ADC3_IN2,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package
+nucleo-f446re,102,PA2,GPIO,TIM2_CH3,AF1,TIM2_CH3,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,102,PA2,GPIO,TIM5_CH3,AF2,TIM5_CH3,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,102,PA2,GPIO,TIM9_CH1,AF3,TIM9_CH1,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,102,PA2,GPIO,USART2_TX,AF7,USART2_TX,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package | nucleo-mb1136-bridges,f446re-package | f446re-modes
+nucleo-f446re,103,PA10,GPIO,DCMI_D1,AF13,DCMI_D1,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,103,PA10,GPIO,TIM1_CH3,AF1,TIM1_CH3,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,103,PA10,GPIO,USART1_RX,AF7,USART1_RX,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,103,PA10,GPIO,USB_OTG_FS_ID,AF10,USB_OTG_FS_ID,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,104,PB3,GPIO,I2C2_SDA,AF4,I2C2_SDA,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,104,PB3,GPIO,I2S1_CK,AF5,I2S1_CK,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,104,PB3,GPIO,I2S3_CK,AF6,I2S3_CK,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,104,PB3,GPIO,SPI1_SCK,AF5,SPI1_SCK,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,104,PB3,GPIO,SPI3_SCK,AF6,SPI3_SCK,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,104,PB3,GPIO,SYS_JTDO-SWO,AF0,SYS_JTDO-SWO,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,104,PB3,GPIO,TIM2_CH2,AF1,TIM2_CH2,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,105,PB5,GPIO,CAN2_RX,AF9,CAN2_RX,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,105,PB5,GPIO,DCMI_D10,AF13,DCMI_D10,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,105,PB5,GPIO,I2C1_SMBA,AF4,I2C1_SMBA,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,105,PB5,GPIO,I2S1_SD,AF5,I2S1_SD,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,105,PB5,GPIO,I2S3_SD,AF6,I2S3_SD,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,105,PB5,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,105,PB5,GPIO,SPI3_MOSI,AF6,SPI3_MOSI,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,105,PB5,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,105,PB5,GPIO,USB_OTG_HS_ULPI_D7,AF10,USB_OTG_HS_ULPI_D7,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,106,PB4,GPIO,I2C3_SDA,AF4,I2C3_SDA,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,106,PB4,GPIO,I2S2_WS,AF7,I2S2_WS,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,106,PB4,GPIO,SPI1_MISO,AF5,SPI1_MISO,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,106,PB4,GPIO,SPI2_NSS,AF7,SPI2_NSS,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,106,PB4,GPIO,SPI3_MISO,AF6,SPI3_MISO,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,106,PB4,GPIO,SYS_JTRST,AF0,SYS_JTRST,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,106,PB4,GPIO,TIM3_CH1,AF2,TIM3_CH1,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,107,PB10,GPIO,I2C2_SCL,AF4,I2C2_SCL,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,107,PB10,GPIO,I2S2_CK,AF5,I2S2_CK,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,107,PB10,GPIO,SAI1_SCK_A,AF6,SAI1_SCK_A,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,107,PB10,GPIO,SPI2_SCK,AF5,SPI2_SCK,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,107,PB10,GPIO,TIM2_CH3,AF1,TIM2_CH3,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,107,PB10,GPIO,USART3_TX,AF7,USART3_TX,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,107,PB10,GPIO,USB_OTG_HS_ULPI_D3,AF10,USB_OTG_HS_ULPI_D3,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,108,PA8,GPIO,I2C3_SCL,AF4,I2C3_SCL,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,108,PA8,GPIO,RCC_MCO_1,AF0,RCC_MCO_1,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,108,PA8,GPIO,TIM1_CH1,AF1,TIM1_CH1,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,108,PA8,GPIO,USART1_CK,AF7,USART1_CK,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+nucleo-f446re,108,PA8,GPIO,USB_OTG_FS_SOF,AF10,USB_OTG_FS_SOF,nucleo-f446re-arduino-48 | nucleo-f446re-top-view | f446re-package,f446re-package | f446re-modes
+stm32f446ret6,1,VBAT,POWER,,,,f446re-package,
+stm32f446ret6,2,PC13,GPIO,RTC_AF1,,RTC_AF1,f446re-package,f446re-package
+stm32f446ret6,2,PC13,GPIO,SYS_WKUP1,,SYS_WKUP1,f446re-package,f446re-package
+stm32f446ret6,3,PC14,GPIO,RCC_OSC32_IN,,RCC_OSC32_IN,f446re-package,f446re-package
+stm32f446ret6,4,PC15,GPIO,ADC1_EXTI15,,ADC1_EXTI15,f446re-package,f446re-package
+stm32f446ret6,4,PC15,GPIO,ADC2_EXTI15,,ADC2_EXTI15,f446re-package,f446re-package
+stm32f446ret6,4,PC15,GPIO,ADC3_EXTI15,,ADC3_EXTI15,f446re-package,f446re-package
+stm32f446ret6,4,PC15,GPIO,RCC_OSC32_OUT,,RCC_OSC32_OUT,f446re-package,f446re-package
+stm32f446ret6,5,PH0,GPIO,RCC_OSC_IN,,RCC_OSC_IN,f446re-package,f446re-package
+stm32f446ret6,6,PH1,GPIO,RCC_OSC_OUT,,RCC_OSC_OUT,f446re-package,f446re-package
+stm32f446ret6,7,NRST,SYSTEM,,,,f446re-package,
+stm32f446ret6,8,PC0,GPIO,ADC1_IN10,,ADC1_IN10,f446re-package,f446re-package
+stm32f446ret6,8,PC0,GPIO,ADC2_IN10,,ADC2_IN10,f446re-package,f446re-package
+stm32f446ret6,8,PC0,GPIO,ADC3_IN10,,ADC3_IN10,f446re-package,f446re-package
+stm32f446ret6,8,PC0,GPIO,SAI1_MCLK_B,AF6,SAI1_MCLK_B,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,8,PC0,GPIO,USB_OTG_HS_ULPI_STP,AF10,USB_OTG_HS_ULPI_STP,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,9,PC1,GPIO,ADC1_IN11,,ADC1_IN11,f446re-package,f446re-package
+stm32f446ret6,9,PC1,GPIO,ADC2_IN11,,ADC2_IN11,f446re-package,f446re-package
+stm32f446ret6,9,PC1,GPIO,ADC3_IN11,,ADC3_IN11,f446re-package,f446re-package
+stm32f446ret6,9,PC1,GPIO,I2S2_SD,AF7,I2S2_SD,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,9,PC1,GPIO,I2S3_SD,AF5,I2S3_SD,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,9,PC1,GPIO,SAI1_SD_A,AF6,SAI1_SD_A,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,9,PC1,GPIO,SPI2_MOSI,AF7,SPI2_MOSI,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,9,PC1,GPIO,SPI3_MOSI,AF5,SPI3_MOSI,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,10,PC2,GPIO,ADC1_IN12,,ADC1_IN12,f446re-package,f446re-package
+stm32f446ret6,10,PC2,GPIO,ADC2_IN12,,ADC2_IN12,f446re-package,f446re-package
+stm32f446ret6,10,PC2,GPIO,ADC3_IN12,,ADC3_IN12,f446re-package,f446re-package
+stm32f446ret6,10,PC2,GPIO,SPI2_MISO,AF5,SPI2_MISO,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,10,PC2,GPIO,USB_OTG_HS_ULPI_DIR,AF10,USB_OTG_HS_ULPI_DIR,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,11,PC3,GPIO,ADC1_IN13,,ADC1_IN13,f446re-package,f446re-package
+stm32f446ret6,11,PC3,GPIO,ADC2_IN13,,ADC2_IN13,f446re-package,f446re-package
+stm32f446ret6,11,PC3,GPIO,ADC3_IN13,,ADC3_IN13,f446re-package,f446re-package
+stm32f446ret6,11,PC3,GPIO,I2S2_SD,AF5,I2S2_SD,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,11,PC3,GPIO,SPI2_MOSI,AF5,SPI2_MOSI,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,11,PC3,GPIO,USB_OTG_HS_ULPI_NXT,AF10,USB_OTG_HS_ULPI_NXT,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,12,VSSA,GND,,,,f446re-package,
+stm32f446ret6,13,VDDA,POWER,,,,f446re-package,
+stm32f446ret6,14,PA0,GPIO,ADC1_IN0,,ADC1_IN0,f446re-package,f446re-package
+stm32f446ret6,14,PA0,GPIO,ADC2_IN0,,ADC2_IN0,f446re-package,f446re-package
+stm32f446ret6,14,PA0,GPIO,ADC3_IN0,,ADC3_IN0,f446re-package,f446re-package
+stm32f446ret6,14,PA0,GPIO,RTC_AF2,,RTC_AF2,f446re-package,f446re-package
+stm32f446ret6,14,PA0,GPIO,SYS_WKUP0,,SYS_WKUP0,f446re-package,f446re-package
+stm32f446ret6,14,PA0,GPIO,TIM2_CH1,AF1,TIM2_CH1,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,14,PA0,GPIO,TIM2_ETR,AF1,TIM2_ETR,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,14,PA0,GPIO,TIM5_CH1,AF2,TIM5_CH1,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,14,PA0,GPIO,TIM8_ETR,AF3,TIM8_ETR,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,14,PA0,GPIO,UART4_TX,AF8,UART4_TX,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,14,PA0,GPIO,USART2_CTS,AF7,USART2_CTS,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,15,PA1,GPIO,ADC1_IN1,,ADC1_IN1,f446re-package,f446re-package
+stm32f446ret6,15,PA1,GPIO,ADC2_IN1,,ADC2_IN1,f446re-package,f446re-package
+stm32f446ret6,15,PA1,GPIO,ADC3_IN1,,ADC3_IN1,f446re-package,f446re-package
+stm32f446ret6,15,PA1,GPIO,QUADSPI_BK1_IO3,AF9,QUADSPI_BK1_IO3,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,15,PA1,GPIO,TIM2_CH2,AF1,TIM2_CH2,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,15,PA1,GPIO,TIM5_CH2,AF2,TIM5_CH2,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,15,PA1,GPIO,UART4_RX,AF8,UART4_RX,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,15,PA1,GPIO,USART2_RTS,AF7,USART2_RTS,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,16,PA2,GPIO,ADC1_IN2,,ADC1_IN2,f446re-package,f446re-package
+stm32f446ret6,16,PA2,GPIO,ADC2_IN2,,ADC2_IN2,f446re-package,f446re-package
+stm32f446ret6,16,PA2,GPIO,ADC3_IN2,,ADC3_IN2,f446re-package,f446re-package
+stm32f446ret6,16,PA2,GPIO,TIM2_CH3,AF1,TIM2_CH3,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,16,PA2,GPIO,TIM5_CH3,AF2,TIM5_CH3,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,16,PA2,GPIO,TIM9_CH1,AF3,TIM9_CH1,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,16,PA2,GPIO,USART2_TX,AF7,USART2_TX,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,17,PA3,GPIO,ADC1_IN3,,ADC1_IN3,f446re-package,f446re-package
+stm32f446ret6,17,PA3,GPIO,ADC2_IN3,,ADC2_IN3,f446re-package,f446re-package
+stm32f446ret6,17,PA3,GPIO,ADC3_IN3,,ADC3_IN3,f446re-package,f446re-package
+stm32f446ret6,17,PA3,GPIO,SAI1_FS_A,AF6,SAI1_FS_A,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,17,PA3,GPIO,TIM2_CH4,AF1,TIM2_CH4,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,17,PA3,GPIO,TIM5_CH4,AF2,TIM5_CH4,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,17,PA3,GPIO,TIM9_CH2,AF3,TIM9_CH2,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,17,PA3,GPIO,USART2_RX,AF7,USART2_RX,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,17,PA3,GPIO,USB_OTG_HS_ULPI_D0,AF10,USB_OTG_HS_ULPI_D0,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,18,VSS,GND,,,,f446re-package,
+stm32f446ret6,19,VDD,POWER,,,,f446re-package,
+stm32f446ret6,20,PA4,GPIO,ADC1_IN4,,ADC1_IN4,f446re-package,f446re-package
+stm32f446ret6,20,PA4,GPIO,ADC2_IN4,,ADC2_IN4,f446re-package,f446re-package
+stm32f446ret6,20,PA4,GPIO,DAC_OUT1,,DAC_OUT1,f446re-package,f446re-package
+stm32f446ret6,20,PA4,GPIO,DCMI_HSYNC,AF13,DCMI_HSYNC,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,20,PA4,GPIO,I2S1_WS,AF5,I2S1_WS,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,20,PA4,GPIO,I2S3_WS,AF6,I2S3_WS,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,20,PA4,GPIO,SPI1_NSS,AF5,SPI1_NSS,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,20,PA4,GPIO,SPI3_NSS,AF6,SPI3_NSS,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,20,PA4,GPIO,USART2_CK,AF7,USART2_CK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,20,PA4,GPIO,USB_OTG_HS_SOF,AF12,USB_OTG_HS_SOF,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,21,PA5,GPIO,ADC1_IN5,,ADC1_IN5,f446re-package,f446re-package
+stm32f446ret6,21,PA5,GPIO,ADC2_IN5,,ADC2_IN5,f446re-package,f446re-package
+stm32f446ret6,21,PA5,GPIO,DAC_OUT2,,DAC_OUT2,f446re-package,f446re-package
+stm32f446ret6,21,PA5,GPIO,I2S1_CK,AF5,I2S1_CK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,21,PA5,GPIO,SPI1_SCK,AF5,SPI1_SCK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,21,PA5,GPIO,TIM2_CH1,AF1,TIM2_CH1,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,21,PA5,GPIO,TIM2_ETR,AF1,TIM2_ETR,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,21,PA5,GPIO,TIM8_CH1N,AF3,TIM8_CH1N,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,21,PA5,GPIO,USB_OTG_HS_ULPI_CK,AF10,USB_OTG_HS_ULPI_CK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,22,PA6,GPIO,ADC1_IN6,,ADC1_IN6,f446re-package,f446re-package
+stm32f446ret6,22,PA6,GPIO,ADC2_IN6,,ADC2_IN6,f446re-package,f446re-package
+stm32f446ret6,22,PA6,GPIO,DCMI_PIXCLK,AF13,DCMI_PIXCLK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,22,PA6,GPIO,I2S2_MCK,AF6,I2S2_MCK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,22,PA6,GPIO,SPI1_MISO,AF5,SPI1_MISO,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,22,PA6,GPIO,TIM13_CH1,AF9,TIM13_CH1,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,22,PA6,GPIO,TIM1_BKIN,AF1,TIM1_BKIN,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,22,PA6,GPIO,TIM3_CH1,AF2,TIM3_CH1,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,22,PA6,GPIO,TIM8_BKIN,AF3,TIM8_BKIN,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,23,PA7,GPIO,ADC1_IN7,,ADC1_IN7,f446re-package,f446re-package
+stm32f446ret6,23,PA7,GPIO,ADC2_IN7,,ADC2_IN7,f446re-package,f446re-package
+stm32f446ret6,23,PA7,GPIO,I2S1_SD,AF5,I2S1_SD,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,23,PA7,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,23,PA7,GPIO,TIM14_CH1,AF9,TIM14_CH1,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,23,PA7,GPIO,TIM1_CH1N,AF1,TIM1_CH1N,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,23,PA7,GPIO,TIM3_CH2,AF2,TIM3_CH2,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,23,PA7,GPIO,TIM8_CH1N,AF3,TIM8_CH1N,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,24,PC4,GPIO,ADC1_IN14,,ADC1_IN14,f446re-package,f446re-package
+stm32f446ret6,24,PC4,GPIO,ADC2_IN14,,ADC2_IN14,f446re-package,f446re-package
+stm32f446ret6,24,PC4,GPIO,I2S1_MCK,AF5,I2S1_MCK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,24,PC4,GPIO,SPDIFRX_IN2,AF8,SPDIFRX_IN2,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,25,PC5,GPIO,ADC1_IN15,,ADC1_IN15,f446re-package,f446re-package
+stm32f446ret6,25,PC5,GPIO,ADC2_IN15,,ADC2_IN15,f446re-package,f446re-package
+stm32f446ret6,25,PC5,GPIO,SPDIFRX_IN3,AF8,SPDIFRX_IN3,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,25,PC5,GPIO,USART3_RX,AF7,USART3_RX,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,26,PB0,GPIO,ADC1_IN8,,ADC1_IN8,f446re-package,f446re-package
+stm32f446ret6,26,PB0,GPIO,ADC2_IN8,,ADC2_IN8,f446re-package,f446re-package
+stm32f446ret6,26,PB0,GPIO,I2S3_SD,AF7,I2S3_SD,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,26,PB0,GPIO,SDIO_D1,AF12,SDIO_D1,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,26,PB0,GPIO,SPI3_MOSI,AF7,SPI3_MOSI,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,26,PB0,GPIO,TIM1_CH2N,AF1,TIM1_CH2N,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,26,PB0,GPIO,TIM3_CH3,AF2,TIM3_CH3,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,26,PB0,GPIO,TIM8_CH2N,AF3,TIM8_CH2N,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,26,PB0,GPIO,UART4_CTS,AF8,UART4_CTS,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,26,PB0,GPIO,USB_OTG_HS_ULPI_D1,AF10,USB_OTG_HS_ULPI_D1,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,27,PB1,GPIO,ADC1_IN9,,ADC1_IN9,f446re-package,f446re-package
+stm32f446ret6,27,PB1,GPIO,ADC2_IN9,,ADC2_IN9,f446re-package,f446re-package
+stm32f446ret6,27,PB1,GPIO,SDIO_D2,AF12,SDIO_D2,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,27,PB1,GPIO,TIM1_CH3N,AF1,TIM1_CH3N,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,27,PB1,GPIO,TIM3_CH4,AF2,TIM3_CH4,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,27,PB1,GPIO,TIM8_CH3N,AF3,TIM8_CH3N,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,27,PB1,GPIO,USB_OTG_HS_ULPI_D2,AF10,USB_OTG_HS_ULPI_D2,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,28,PB2,GPIO,I2S3_SD,AF7,I2S3_SD,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,28,PB2,GPIO,QUADSPI_CLK,AF9,QUADSPI_CLK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,28,PB2,GPIO,SAI1_SD_A,AF6,SAI1_SD_A,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,28,PB2,GPIO,SDIO_CK,AF12,SDIO_CK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,28,PB2,GPIO,SPI3_MOSI,AF7,SPI3_MOSI,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,28,PB2,GPIO,TIM2_CH4,AF1,TIM2_CH4,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,28,PB2,GPIO,USB_OTG_HS_ULPI_D4,AF10,USB_OTG_HS_ULPI_D4,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,29,PB10,GPIO,I2C2_SCL,AF4,I2C2_SCL,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,29,PB10,GPIO,I2S2_CK,AF5,I2S2_CK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,29,PB10,GPIO,SAI1_SCK_A,AF6,SAI1_SCK_A,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,29,PB10,GPIO,SPI2_SCK,AF5,SPI2_SCK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,29,PB10,GPIO,TIM2_CH3,AF1,TIM2_CH3,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,29,PB10,GPIO,USART3_TX,AF7,USART3_TX,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,29,PB10,GPIO,USB_OTG_HS_ULPI_D3,AF10,USB_OTG_HS_ULPI_D3,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,30,VCAP_1,POWER,,,,f446re-package,
+stm32f446ret6,31,VSS,GND,,,,f446re-package,
+stm32f446ret6,32,VDD,POWER,,,,f446re-package,
+stm32f446ret6,33,PB12,GPIO,CAN2_RX,AF9,CAN2_RX,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,33,PB12,GPIO,I2C2_SMBA,AF4,I2C2_SMBA,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,33,PB12,GPIO,I2S2_WS,AF5,I2S2_WS,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,33,PB12,GPIO,SAI1_SCK_B,AF6,SAI1_SCK_B,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,33,PB12,GPIO,SPI2_NSS,AF5,SPI2_NSS,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,33,PB12,GPIO,TIM1_BKIN,AF1,TIM1_BKIN,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,33,PB12,GPIO,USART3_CK,AF7,USART3_CK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,33,PB12,GPIO,USB_OTG_HS_ID,AF12,USB_OTG_HS_ID,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,33,PB12,GPIO,USB_OTG_HS_ULPI_D5,AF10,USB_OTG_HS_ULPI_D5,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,34,PB13,GPIO,CAN2_TX,AF9,CAN2_TX,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,34,PB13,GPIO,I2S2_CK,AF5,I2S2_CK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,34,PB13,GPIO,SPI2_SCK,AF5,SPI2_SCK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,34,PB13,GPIO,TIM1_CH1N,AF1,TIM1_CH1N,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,34,PB13,GPIO,USART3_CTS,AF7,USART3_CTS,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,34,PB13,GPIO,USB_OTG_HS_ULPI_D6,AF10,USB_OTG_HS_ULPI_D6,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,34,PB13,GPIO,USB_OTG_HS_VBUS,,USB_OTG_HS_VBUS,f446re-package,f446re-package
+stm32f446ret6,35,PB14,GPIO,SPI2_MISO,AF5,SPI2_MISO,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,35,PB14,GPIO,TIM12_CH1,AF9,TIM12_CH1,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,35,PB14,GPIO,TIM1_CH2N,AF1,TIM1_CH2N,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,35,PB14,GPIO,TIM8_CH2N,AF3,TIM8_CH2N,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,35,PB14,GPIO,USART3_RTS,AF7,USART3_RTS,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,35,PB14,GPIO,USB_OTG_HS_DM,AF12,USB_OTG_HS_DM,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,36,PB15,GPIO,ADC1_EXTI15,,ADC1_EXTI15,f446re-package,f446re-package
+stm32f446ret6,36,PB15,GPIO,ADC2_EXTI15,,ADC2_EXTI15,f446re-package,f446re-package
+stm32f446ret6,36,PB15,GPIO,ADC3_EXTI15,,ADC3_EXTI15,f446re-package,f446re-package
+stm32f446ret6,36,PB15,GPIO,I2S2_SD,AF5,I2S2_SD,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,36,PB15,GPIO,RTC_REFIN,AF0,RTC_REFIN,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,36,PB15,GPIO,SPI2_MOSI,AF5,SPI2_MOSI,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,36,PB15,GPIO,TIM12_CH2,AF9,TIM12_CH2,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,36,PB15,GPIO,TIM1_CH3N,AF1,TIM1_CH3N,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,36,PB15,GPIO,TIM8_CH3N,AF3,TIM8_CH3N,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,36,PB15,GPIO,USB_OTG_HS_DP,AF12,USB_OTG_HS_DP,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,37,PC6,GPIO,DCMI_D0,AF13,DCMI_D0,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,37,PC6,GPIO,FMPI2C1_SCL,AF4,FMPI2C1_SCL,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,37,PC6,GPIO,I2S2_MCK,AF5,I2S2_MCK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,37,PC6,GPIO,SDIO_D6,AF12,SDIO_D6,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,37,PC6,GPIO,TIM3_CH1,AF2,TIM3_CH1,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,37,PC6,GPIO,TIM8_CH1,AF3,TIM8_CH1,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,37,PC6,GPIO,USART6_TX,AF8,USART6_TX,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,38,PC7,GPIO,DCMI_D1,AF13,DCMI_D1,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,38,PC7,GPIO,FMPI2C1_SDA,AF4,FMPI2C1_SDA,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,38,PC7,GPIO,I2S2_CK,AF5,I2S2_CK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,38,PC7,GPIO,I2S3_MCK,AF6,I2S3_MCK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,38,PC7,GPIO,SDIO_D7,AF12,SDIO_D7,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,38,PC7,GPIO,SPDIFRX_IN1,AF7,SPDIFRX_IN1,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,38,PC7,GPIO,SPI2_SCK,AF5,SPI2_SCK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,38,PC7,GPIO,TIM3_CH2,AF2,TIM3_CH2,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,38,PC7,GPIO,TIM8_CH2,AF3,TIM8_CH2,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,38,PC7,GPIO,USART6_RX,AF8,USART6_RX,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,39,PC8,GPIO,DCMI_D2,AF13,DCMI_D2,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,39,PC8,GPIO,SDIO_D0,AF12,SDIO_D0,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,39,PC8,GPIO,SYS_TRACED0,AF0,SYS_TRACED0,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,39,PC8,GPIO,TIM3_CH3,AF2,TIM3_CH3,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,39,PC8,GPIO,TIM8_CH3,AF3,TIM8_CH3,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,39,PC8,GPIO,UART5_RTS,AF7,UART5_RTS,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,39,PC8,GPIO,USART6_CK,AF8,USART6_CK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,40,PC9,GPIO,DAC_EXTI9,,DAC_EXTI9,f446re-package,f446re-package
+stm32f446ret6,40,PC9,GPIO,DCMI_D3,AF13,DCMI_D3,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,40,PC9,GPIO,I2C3_SDA,AF4,I2C3_SDA,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,40,PC9,GPIO,I2S_CKIN,AF5,I2S_CKIN,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,40,PC9,GPIO,QUADSPI_BK1_IO0,AF9,QUADSPI_BK1_IO0,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,40,PC9,GPIO,RCC_MCO_2,AF0,RCC_MCO_2,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,40,PC9,GPIO,SDIO_D1,AF12,SDIO_D1,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,40,PC9,GPIO,TIM3_CH4,AF2,TIM3_CH4,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,40,PC9,GPIO,TIM8_CH4,AF3,TIM8_CH4,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,40,PC9,GPIO,UART5_CTS,AF7,UART5_CTS,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,41,PA8,GPIO,I2C3_SCL,AF4,I2C3_SCL,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,41,PA8,GPIO,RCC_MCO_1,AF0,RCC_MCO_1,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,41,PA8,GPIO,TIM1_CH1,AF1,TIM1_CH1,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,41,PA8,GPIO,USART1_CK,AF7,USART1_CK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,41,PA8,GPIO,USB_OTG_FS_SOF,AF10,USB_OTG_FS_SOF,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,42,PA9,GPIO,DAC_EXTI9,,DAC_EXTI9,f446re-package,f446re-package
+stm32f446ret6,42,PA9,GPIO,DCMI_D0,AF13,DCMI_D0,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,42,PA9,GPIO,I2C3_SMBA,AF4,I2C3_SMBA,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,42,PA9,GPIO,I2S2_CK,AF5,I2S2_CK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,42,PA9,GPIO,SAI1_SD_B,AF6,SAI1_SD_B,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,42,PA9,GPIO,SPI2_SCK,AF5,SPI2_SCK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,42,PA9,GPIO,TIM1_CH2,AF1,TIM1_CH2,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,42,PA9,GPIO,USART1_TX,AF7,USART1_TX,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,42,PA9,GPIO,USB_OTG_FS_VBUS,,USB_OTG_FS_VBUS,f446re-package,f446re-package
+stm32f446ret6,43,PA10,GPIO,DCMI_D1,AF13,DCMI_D1,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,43,PA10,GPIO,TIM1_CH3,AF1,TIM1_CH3,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,43,PA10,GPIO,USART1_RX,AF7,USART1_RX,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,43,PA10,GPIO,USB_OTG_FS_ID,AF10,USB_OTG_FS_ID,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,44,PA11,GPIO,ADC1_EXTI11,,ADC1_EXTI11,f446re-package,f446re-package
+stm32f446ret6,44,PA11,GPIO,ADC2_EXTI11,,ADC2_EXTI11,f446re-package,f446re-package
+stm32f446ret6,44,PA11,GPIO,ADC3_EXTI11,,ADC3_EXTI11,f446re-package,f446re-package
+stm32f446ret6,44,PA11,GPIO,CAN1_RX,AF9,CAN1_RX,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,44,PA11,GPIO,TIM1_CH4,AF1,TIM1_CH4,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,44,PA11,GPIO,USART1_CTS,AF7,USART1_CTS,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,44,PA11,GPIO,USB_OTG_FS_DM,AF10,USB_OTG_FS_DM,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,45,PA12,GPIO,CAN1_TX,AF9,CAN1_TX,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,45,PA12,GPIO,TIM1_ETR,AF1,TIM1_ETR,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,45,PA12,GPIO,USART1_RTS,AF7,USART1_RTS,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,45,PA12,GPIO,USB_OTG_FS_DP,AF10,USB_OTG_FS_DP,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,46,PA13,GPIO,SYS_JTMS-SWDIO,AF0,SYS_JTMS-SWDIO,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,47,VSS,GND,,,,f446re-package,
+stm32f446ret6,48,VDD,POWER,,,,f446re-package,
+stm32f446ret6,49,PA14,GPIO,SYS_JTCK-SWCLK,AF0,SYS_JTCK-SWCLK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,50,PA15,GPIO,ADC1_EXTI15,,ADC1_EXTI15,f446re-package,f446re-package
+stm32f446ret6,50,PA15,GPIO,ADC2_EXTI15,,ADC2_EXTI15,f446re-package,f446re-package
+stm32f446ret6,50,PA15,GPIO,ADC3_EXTI15,,ADC3_EXTI15,f446re-package,f446re-package
+stm32f446ret6,50,PA15,GPIO,CEC,AF4,CEC,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,50,PA15,GPIO,I2S1_WS,AF5,I2S1_WS,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,50,PA15,GPIO,I2S3_WS,AF6,I2S3_WS,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,50,PA15,GPIO,SPI1_NSS,AF5,SPI1_NSS,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,50,PA15,GPIO,SPI3_NSS,AF6,SPI3_NSS,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,50,PA15,GPIO,SYS_JTDI,AF0,SYS_JTDI,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,50,PA15,GPIO,TIM2_CH1,AF1,TIM2_CH1,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,50,PA15,GPIO,TIM2_ETR,AF1,TIM2_ETR,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,50,PA15,GPIO,UART4_RTS,AF8,UART4_RTS,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,51,PC10,GPIO,DCMI_D8,AF13,DCMI_D8,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,51,PC10,GPIO,I2S3_CK,AF6,I2S3_CK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,51,PC10,GPIO,QUADSPI_BK1_IO1,AF9,QUADSPI_BK1_IO1,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,51,PC10,GPIO,SDIO_D2,AF12,SDIO_D2,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,51,PC10,GPIO,SPI3_SCK,AF6,SPI3_SCK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,51,PC10,GPIO,UART4_TX,AF8,UART4_TX,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,51,PC10,GPIO,USART3_TX,AF7,USART3_TX,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,52,PC11,GPIO,ADC1_EXTI11,,ADC1_EXTI11,f446re-package,f446re-package
+stm32f446ret6,52,PC11,GPIO,ADC2_EXTI11,,ADC2_EXTI11,f446re-package,f446re-package
+stm32f446ret6,52,PC11,GPIO,ADC3_EXTI11,,ADC3_EXTI11,f446re-package,f446re-package
+stm32f446ret6,52,PC11,GPIO,DCMI_D4,AF13,DCMI_D4,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,52,PC11,GPIO,QUADSPI_BK2_NCS,AF9,QUADSPI_BK2_NCS,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,52,PC11,GPIO,SDIO_D3,AF12,SDIO_D3,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,52,PC11,GPIO,SPI3_MISO,AF6,SPI3_MISO,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,52,PC11,GPIO,UART4_RX,AF8,UART4_RX,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,52,PC11,GPIO,USART3_RX,AF7,USART3_RX,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,53,PC12,GPIO,DCMI_D9,AF13,DCMI_D9,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,53,PC12,GPIO,I2C2_SDA,AF4,I2C2_SDA,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,53,PC12,GPIO,I2S3_SD,AF6,I2S3_SD,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,53,PC12,GPIO,SDIO_CK,AF12,SDIO_CK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,53,PC12,GPIO,SPI3_MOSI,AF6,SPI3_MOSI,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,53,PC12,GPIO,UART5_TX,AF8,UART5_TX,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,53,PC12,GPIO,USART3_CK,AF7,USART3_CK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,54,PD2,GPIO,DCMI_D11,AF13,DCMI_D11,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,54,PD2,GPIO,SDIO_CMD,AF12,SDIO_CMD,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,54,PD2,GPIO,TIM3_ETR,AF2,TIM3_ETR,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,54,PD2,GPIO,UART5_RX,AF8,UART5_RX,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,55,PB3,GPIO,I2C2_SDA,AF4,I2C2_SDA,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,55,PB3,GPIO,I2S1_CK,AF5,I2S1_CK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,55,PB3,GPIO,I2S3_CK,AF6,I2S3_CK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,55,PB3,GPIO,SPI1_SCK,AF5,SPI1_SCK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,55,PB3,GPIO,SPI3_SCK,AF6,SPI3_SCK,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,55,PB3,GPIO,SYS_JTDO-SWO,AF0,SYS_JTDO-SWO,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,55,PB3,GPIO,TIM2_CH2,AF1,TIM2_CH2,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,56,PB4,GPIO,I2C3_SDA,AF4,I2C3_SDA,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,56,PB4,GPIO,I2S2_WS,AF7,I2S2_WS,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,56,PB4,GPIO,SPI1_MISO,AF5,SPI1_MISO,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,56,PB4,GPIO,SPI2_NSS,AF7,SPI2_NSS,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,56,PB4,GPIO,SPI3_MISO,AF6,SPI3_MISO,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,56,PB4,GPIO,SYS_JTRST,AF0,SYS_JTRST,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,56,PB4,GPIO,TIM3_CH1,AF2,TIM3_CH1,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,57,PB5,GPIO,CAN2_RX,AF9,CAN2_RX,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,57,PB5,GPIO,DCMI_D10,AF13,DCMI_D10,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,57,PB5,GPIO,I2C1_SMBA,AF4,I2C1_SMBA,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,57,PB5,GPIO,I2S1_SD,AF5,I2S1_SD,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,57,PB5,GPIO,I2S3_SD,AF6,I2S3_SD,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,57,PB5,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,57,PB5,GPIO,SPI3_MOSI,AF6,SPI3_MOSI,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,57,PB5,GPIO,TIM3_CH2,AF2,TIM3_CH2,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,57,PB5,GPIO,USB_OTG_HS_ULPI_D7,AF10,USB_OTG_HS_ULPI_D7,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,58,PB6,GPIO,CAN2_TX,AF9,CAN2_TX,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,58,PB6,GPIO,CEC,AF3,CEC,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,58,PB6,GPIO,DCMI_D5,AF13,DCMI_D5,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,58,PB6,GPIO,I2C1_SCL,AF4,I2C1_SCL,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,58,PB6,GPIO,QUADSPI_BK1_NCS,AF10,QUADSPI_BK1_NCS,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,58,PB6,GPIO,TIM4_CH1,AF2,TIM4_CH1,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,58,PB6,GPIO,USART1_TX,AF7,USART1_TX,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,59,PB7,GPIO,DCMI_VSYNC,AF13,DCMI_VSYNC,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,59,PB7,GPIO,I2C1_SDA,AF4,I2C1_SDA,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,59,PB7,GPIO,SPDIFRX_IN0,AF8,SPDIFRX_IN0,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,59,PB7,GPIO,TIM4_CH2,AF2,TIM4_CH2,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,59,PB7,GPIO,USART1_RX,AF7,USART1_RX,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,60,BOOT0,SYSTEM,,,,f446re-package,
+stm32f446ret6,61,PB8,GPIO,CAN1_RX,AF9,CAN1_RX,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,61,PB8,GPIO,DCMI_D6,AF13,DCMI_D6,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,61,PB8,GPIO,I2C1_SCL,AF4,I2C1_SCL,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,61,PB8,GPIO,SDIO_D4,AF12,SDIO_D4,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,61,PB8,GPIO,TIM10_CH1,AF3,TIM10_CH1,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,61,PB8,GPIO,TIM2_CH1,AF1,TIM2_CH1,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,61,PB8,GPIO,TIM2_ETR,AF1,TIM2_ETR,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,61,PB8,GPIO,TIM4_CH3,AF2,TIM4_CH3,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,62,PB9,GPIO,CAN1_TX,AF9,CAN1_TX,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,62,PB9,GPIO,DAC_EXTI9,,DAC_EXTI9,f446re-package,f446re-package
+stm32f446ret6,62,PB9,GPIO,DCMI_D7,AF13,DCMI_D7,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,62,PB9,GPIO,I2C1_SDA,AF4,I2C1_SDA,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,62,PB9,GPIO,I2S2_WS,AF5,I2S2_WS,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,62,PB9,GPIO,SAI1_FS_B,AF6,SAI1_FS_B,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,62,PB9,GPIO,SDIO_D5,AF12,SDIO_D5,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,62,PB9,GPIO,SPI2_NSS,AF5,SPI2_NSS,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,62,PB9,GPIO,TIM11_CH1,AF3,TIM11_CH1,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,62,PB9,GPIO,TIM2_CH2,AF1,TIM2_CH2,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,62,PB9,GPIO,TIM4_CH4,AF2,TIM4_CH4,f446re-package,f446re-package | f446re-modes
+stm32f446ret6,63,VSS,GND,,,,f446re-package,
+stm32f446ret6,64,VDD,POWER,,,,f446re-package,

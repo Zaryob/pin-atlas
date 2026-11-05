@@ -159,3 +159,11 @@ The Seeed Studio XIAO layout groups compact 14-pin development boards sharing th
 
 - **Seeed Studio XIAO RP2040:** Verified against official Seeed Studio schematic v1.3 (June 2022). Left pins 1–7 map to D0–D6 (RP2040 GPIO26–29 with 4 ADC channels, GPIO6, GPIO7, GPIO0). Right pins map to 5V, GND, 3V3, and D10–D7 (RP2040 GPIO3, GPIO4, GPIO2, GPIO1). Pin mapping bridges directly to the RP2040 QFN-56 package view.
 - **Seeed Studio XIAO ESP32C3:** Verified against official Seeed Studio schematic v1.3 (January 2026) and official pinout sheet. Left pins 1–7 map to D0–D6 (ESP32-C3 GPIO2–7 and GPIO21). Right pins map to 5V, GND, 3V3, and D10–D7 (ESP32-C3 GPIO10, GPIO9, GPIO8, GPIO20). Strapping pins (GPIO2, GPIO8, GPIO9), ADC1/ADC2 caution notes, and GPIO matrix routable peripherals are verified from Espressif documentation.
+
+## Extended Nucleo-64 references
+
+The shared Nucleo-64 catalog groups connector positions only. Each model retains its own package profile, GPIO selectors, power connections and saved plans. New STM32 packages use the official STMicroelectronics `STM32_open_pin_data` package XML and the GPIO Modes XML referenced by that package, both pinned to a full commit and SHA-256. The parser checks the GPIO dependency filename even when cached.
+
+- **NUCLEO-F446RE / STM32F446RET6:** UM1724 Rev 14 Table 19 (pp. 47–48) and Table 29 (p. 58); LQFP-64, 50 GPIO-capable pads, Cortex-M4, up to 180 MHz. Raw STM32 AF selectors come from the F446 GPIO Modes source.
+
+UM1724 raw table cells are hash-locked in `sources/extracted/nucleo-um1724-r14.json`. CI applies the same parser to those cells and does not require the manual PDF to be cached or downloadable. The original-PDF path remains available for independent comparison.

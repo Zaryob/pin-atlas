@@ -1,0 +1,112 @@
+"""Build additional STM32 packages and Nucleo-64 references from pinned ST sources."""
+import re
+import xml.etree.ElementTree as ET
+from pathlib import PurePosixPath
+from urllib.parse import urlsplit
+
+from nucleo_sources import build_nucleo
+
+# Explicit manual table locations prevent selecting an adjacent model's continuation.
+MODELS = {
+    'f446re': {'arduino': [(47, 1), (48, 0)], 'morpho': [(58, 0)], 'tables': (19, 29)},
+}
+PACKAGES = ()
+
+
+def stm32_group(signal):
+    for prefixes, group in [
+        (('USART', 'UART', 'LPUART'), 'UART'), (('I2C',), 'I2C'),
+        (('I2S', 'SAI'), 'I2S'), (('SPI',), 'SPI'), (('ADC',), 'ADC'),
+        (('DAC',), 'DAC'), (('CAN', 'FDCAN'), 'CAN'), (('USB',), 'USB'),
+        (('SDIO', 'SDMMC'), 'SDIO'), (('RCC', 'MCO', 'LSCO'), 'CLOCK'),
+    ]:
+        if signal.startswith(prefixes):
+            return group
+    if signal.startswith(('TIM', 'HRTIM')):
+        return 'PWM' if re.search(r'_CH\d', signal) else 'TIMER'
+    if 'SWD' in signal or 'SWCLK' in signal:
+        return 'SWD'
+    if signal.startswith(('DEBUG_', 'SYS_JT')):
+        return 'JTAG'
+    return 'SYSTEM'
+
+
+def read_cube_package(cache, docs, ref, model, verified_on):
+    package_doc, modes_doc = docs[f'{model}-package'], docs[f'{model}-modes']
+    package = ET.parse(cache / package_doc['file']).getroot()
+    modes = ET.parse(cache / modes_doc['file']).getroot()
+    gpio_version = package.find("{*}IP[@Name='GPIO']").get('Version')
+    # Check the manufacturer's dependency even with a warm cache. H723 previously
+    # passed locally because its cached file hid a nonexistent download filename.
+    assert PurePosixPath(urlsplit(modes_doc['url']).path).name == f'GPIO-{gpio_version}_Modes.xml'
+    assert re.fullmatch(r'[0-9a-f]{40}', package_doc['revision'])
+    assert modes_doc['revision'] == package_doc['revision']
+    package_name = package.get('Package')
+    match = re.fullmatch(r'LQFP(\d+)', package_name)
+    assert match, package_name
+    total = int(match[1])
+    pin_ref = ref(f'{model}-package', f'{model}-package', None,
+                  f'{package_name} numbered package pins and physical signals', 'manufacturer-xml')
+    mode_ref = ref(f'{model}-modes', f'{model}-modes', None,
+                   f'{gpio_version} GPIO alternate function selectors', 'manufacturer-xml')
+    selectors = {}
+    for pad in modes.findall('{*}GPIO_Pin'):
+        port = re.match(r'P[A-K]\d+(?:_C)?', pad.get('Name'))
+        if not port:
+            continue
+        for signal in pad.findall('{*}PinSignal'):
+            values = signal.findall("{*}SpecificParameter[@Name='GPIO_AF']/{*}PossibleValue")
+            choices = {m[1] for value in values for m in re.finditer(r'GPIO_(AF\d+)_', value.text or '')}
+            assert len(choices) <= 1, (model, port[0], signal.get('Name'), choices)
+            if choices:
+                selectors[port[0], signal.get('Name')] = choices.pop()
+    pins = []
+    for pad in package.findall('{*}Pin'):
+        raw_name = pad.get('Name')
+        port = re.match(r'P[A-K]\d+(?:_C)?', raw_name)
+        name = port[0] if port else raw_name
+        kind = 'GPIO' if port else 'GND' if name.startswith('VSS') else 'POWER' if pad.get('Type') == 'Power' else 'SYSTEM'
+        functions = []
+        for raw_signal in pad.findall('{*}Signal'):
+            signal = raw_signal.get('Name')
+            if signal == 'GPIO':
+                continue
+            entry = {'name': signal, 'signal': signal, 'group': stm32_group(signal), 'evidence': pin_ref}
+            selector = selectors.get((name, signal))
+            if selector:
+                entry.update(selector=selector, configurationEvidence=mode_ref)
+            functions.append(entry)
+        pin = {'number': int(pad.get('Position')), 'name': name, 'type': kind,
+               'functions': functions, 'evidence': [pin_ref]}
+        if port:
+            pin['noteKey'] = 'stm32CubeGpio'
+            if any(word in raw_name for word in ('JT', 'SWD', 'SWCLK')):
+                pin['noteKey'] = 'stm32CubeDebug'
+            elif 'OSC' in raw_name:
+                pin['noteKey'] = 'stm32CubeOsc'
+        pins.append(pin)
+    assert sorted(pin['number'] for pin in pins) == list(range(1, total + 1))
+    gpio_count = sum(pin['type'] == 'GPIO' for pin in pins)
+    assert gpio_count == int(package.findtext('{*}IONb'))
+    voltage = package.find('{*}Voltage')
+    name = f'STM32{model.upper()}T6'
+    core, frequency = package.findtext('{*}Core'), package.findtext('{*}Frequency')
+    return {'id': name.lower(), 'name': name, 'shortName': name, 'mcu': name,
+            'family': 'STMicroelectronics', 'processor': core, 'clock': f'{frequency} MHz',
+            'subtitle': f'LQFP-{total} · {core} · {frequency} MHz',
+            'layout': 'lqfp', 'packageName': f'LQFP-{total}', 'packagePins': total,
+            'gpioCount': gpio_count, 'voltage': f"{voltage.get('Min')}–{voltage.get('Max')} V",
+            'verifiedOn': verified_on, 'scopeKey': 'stm32CubeScope',
+            'source': package_doc['viewUrl'], 'datasheet': f'https://www.st.com/resource/en/datasheet/stm32{model}.pdf',
+            'pins': pins}
+
+
+def build_catalog(cache, docs, ref, verified_on, use_snapshots=False):
+    boards = []
+    for model, table_spec in MODELS.items():
+        chip = read_cube_package(cache, docs, ref, model, verified_on)
+        board = build_nucleo(cache, docs, ref, chip, model, use_snapshots=use_snapshots, table_spec=table_spec)
+        boards.extend([board, chip])
+    for model in PACKAGES:
+        boards.append(read_cube_package(cache, docs, ref, model, verified_on))
+    return boards

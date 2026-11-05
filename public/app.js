@@ -171,11 +171,12 @@ function renderFunctionReference() {
  const choices = layout.references.flatMap(reference => {
    const hasSavedPlan = id => Object.keys(savedPlans[id] || {}).length > 0;
    const selectedId = reference.profileIds.includes(board.id) ? board.id : reference.profileIds.find(hasSavedPlan) || reference.profileIds[0];
-   const result = [{id:selectedId, label:t(reference.key)}];
+   const label = reference.label || t(reference.key);
+   const result = [{id:selectedId, label}];
    // If both old model slots contain plans, expose them rather than merge or hide data.
    for (const id of reference.profileIds.filter(id => id !== selectedId && hasSavedPlan(id))) {
      const profile = boards.find(item => item.id === id);
-     result.push({id, label:`${t(reference.key)} · ${t('savedModelPlan', {model:profile.shortName})}`});
+     result.push({id, label:`${label} · ${t('savedModelPlan', {model:profile.shortName})}`});
    }
    return result;
  });
@@ -537,6 +538,7 @@ function showCatalog() {
 }
 
 function catalogLayoutDetail(item) {
+  if (item.id === 'nucleo-64') return t('nucleo64Compatible');
   if (item.id.startsWith('nucleo-')) return `${item.mcu} · ${layoutSubtitle(item)}`;
   return item.compatibleKey ? t(item.compatibleKey) : layoutSubtitle(item);
 }
