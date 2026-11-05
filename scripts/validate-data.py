@@ -10,6 +10,9 @@ validate_catalog(boards,manifest['documents'])
 validate_registry(read('sources/stm32-catalog.json'),{d['id']:d for d in manifest['documents']})
 assert len({b['id'] for b in boards})==len(boards)
 refs=evidence['references'];docids={d['id'] for d in manifest['documents']}
+for b in boards:
+    for control in b.get('hardware',{}).get('controls',[]):
+        assert all(key in refs for key in control['evidence']), (b['id'], control['id'])
 for r in refs.values():
     assert r['document'] in docids
     host=urlsplit(r['url']).hostname

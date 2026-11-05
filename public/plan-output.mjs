@@ -1,5 +1,6 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
 import {physicalLabel,planReference,validatePlan} from './plans.mjs';
+import {hardwareSummary} from './hardware-config.mjs';
 export const escapeText=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function planReport(board,assignments,evidence,t=k=>k){
  const sources=new Map();
@@ -10,20 +11,24 @@ export function planReport(board,assignments,evidence,t=k=>k){
   for(const key of keys)if(evidence.references[key])sources.set(key,evidence.references[key]);
   return {physical:physicalLabel(pin),name:pin.name,function:entry.function,label:entry.label,selector:fn?.selector||'',keys};
  });
+ const hardware=hardwareSummary(board,board.appliedHardware||{},t);
+ for(const row of hardware)for(const key of row.evidence)if(evidence.references[key])sources.set(key,evidence.references[key]);
  let warning='';try{validatePlan(assignments,board,t);}catch(error){warning=error.message;}
  const sourceList=[...sources].map(([id,ref])=>({id,...ref}));
  for(const row of rows)row.references=row.keys.map(key=>sourceList.findIndex(source=>source.id===key)+1).filter(Boolean);
- return {model:planReference(board,t),date:board.verifiedOn,voltage:board.voltage,rows,sources:sourceList,warning};
+ return {model:planReference(board,t),date:board.verifiedOn,voltage:board.voltage,rows,sources:sourceList,warning,hardware};
 }
 export function reportHTML(report,t=k=>k){
  const e=escapeText;
- return `<h1>Pin Atlas · ${e(t('myPlan'))}</h1><h2>${e(report.model)}</h2><p>${e(report.voltage)} · ${e(t('verifiedOn',{date:report.date}))}</p>${report.warning?`<p><strong>${e(report.warning)}</strong></p>`:''}<table><thead><tr>${['physicalPin','pinName','outputFunction','label'].map(key=>`<th>${e(t(key))}</th>`).join('')}</tr></thead><tbody>${report.rows.map(row=>`<tr><td>${e(row.physical)}</td><td>${e(row.name)}</td><td>${e(row.function)}${row.selector?' · '+e(row.selector):''} <sup>[${row.references.join(', ')}]</sup></td><td>${e(row.label)}</td></tr>`).join('')}</tbody></table><h2>${e(t('outputSources'))}</h2><ol>${report.sources.map(source=>`<li><a href="${e(source.url)}">${e(source.title)}</a><p>${e(source.locator)}<br>${e(source.url)}</p></li>`).join('')}</ol><p>${e(t('schematicNote'))}</p>`;
+ const hardware=report.hardware?.length?`<h2>${e(t('hwTitle'))}</h2><ul>${report.hardware.map(row=>`<li>${e(row.label)}: ${e(row.value)}</li>`).join('')}</ul>`:'';
+ return `<h1>Pin Atlas · ${e(t('myPlan'))}</h1><h2>${e(report.model)}</h2><p>${e(report.voltage)} · ${e(t('verifiedOn',{date:report.date}))}</p>${hardware}${report.warning?`<p><strong>${e(report.warning)}</strong></p>`:''}<table><thead><tr>${['physicalPin','pinName','outputFunction','label'].map(key=>`<th>${e(t(key))}</th>`).join('')}</tr></thead><tbody>${report.rows.map(row=>`<tr><td>${e(row.physical)}</td><td>${e(row.name)}</td><td>${e(row.function)}${row.selector?' · '+e(row.selector):''} <sup>[${row.references.join(', ')}]</sup></td><td>${e(row.label)}</td></tr>`).join('')}</tbody></table><h2>${e(t('outputSources'))}</h2><ol>${report.sources.map(source=>`<li><a href="${e(source.url)}">${e(source.title)}</a><p>${e(source.locator)}<br>${e(source.url)}</p></li>`).join('')}</ol><p>${e(t('schematicNote'))}</p>`;
 }
 export function reportSVG(report,diagram,t=k=>k){
  const e=escapeText,lines=[];
  const wrap=text=>{const chars=Array.from(text);for(let i=0;i<chars.length;i+=108)lines.push(chars.slice(i,i+108).join(''));};
  wrap(report.model);wrap(`${report.voltage} · ${t('verifiedOn',{date:report.date})}`);
  wrap(t('outputTopView'));lines.push('');
+ for(const row of report.hardware||[])wrap(row.label+': '+row.value);
  if(report.warning)wrap(report.warning);
  for(const row of report.rows)wrap(`${row.physical} · ${row.name} · ${row.function}${row.selector?' · '+row.selector:''}${row.label?' · '+row.label:''} [${row.references.join(', ')}]`);
  lines.push('');wrap(t('outputSources'));

@@ -3324,6 +3324,46 @@
       "page": 1,
       "locator": "ATmega2560-AU · TQFP-100 · main MCU and connector nets",
       "method": "visual-diagram"
+    },
+    "hw-mb1364-bridges": {
+      "document": "nucleo-um2407-r6",
+      "title": "STM32 Nucleo-144 · UM2407 Rev 6",
+      "url": "https://www.st.com/resource/en/user_manual/um2407-stm32h7-nucleo144-board-stmicroelectronics.pdf#page=32",
+      "page": 32,
+      "locator": "Table 14, continued pp.33/34 · SDMMC contacts and A4/A5 analog/I2C routing",
+      "method": "pdf-table"
+    },
+    "hw-nucleo-h723zg-vcp": {
+      "document": "nucleo-h723zg-ioc",
+      "title": "NUCLEO-H723ZG STM32Cube board configuration (.ioc)",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/boards/G75_Nucleo_NUCLEO-H723ZG_STM32H723ZGT_Board_AllConfig.ioc",
+      "page": null,
+      "locator": "GPIO_Label STLK/STLINK virtual serial nets and USART signals",
+      "method": "hardware-spec"
+    },
+    "hw-nucleo32-bridges": {
+      "document": "nucleo-um1956-r6",
+      "title": "STM32 Nucleo-32 boards MB1180 · UM1956 Rev 6",
+      "url": "https://www.st.com/resource/en/user_manual/dm00231744.pdf#page=21",
+      "page": 21,
+      "locator": "Tables 7/8, continued p.22 · SB2, SB15, SB16 and SB18 states",
+      "method": "pdf-table"
+    },
+    "hw-nucleo-f767zi-vcp": {
+      "document": "nucleo-f767zi-ioc",
+      "title": "NUCLEO-F767ZI official board configuration",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/boards/A71_Nucleo_NUCLEO-F767ZI_STM32F767ZI_Board_AllConfig.ioc",
+      "page": null,
+      "locator": "GPIO_Label STLK/STLINK virtual serial nets and USART signals",
+      "method": "hardware-spec"
+    },
+    "hw-nucleo-h743zi2-vcp": {
+      "document": "nucleo-h743zi-ioc",
+      "title": "NUCLEO-H743ZI official board configuration",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/boards/G73_Nucleo_NUCLEO-H743ZI2_STM32H743ZIT_Board_AllConfig.ioc",
+      "page": null,
+      "locator": "GPIO_Label STLK/STLINK virtual serial nets and USART signals",
+      "method": "hardware-spec"
     }
   }
 }

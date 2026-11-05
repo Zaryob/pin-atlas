@@ -19,6 +19,19 @@ def validate_catalog(boards, documents):
     for board in boards:
         errors = sorted(VALIDATOR.iter_errors(board), key=lambda e:str(e.path))
         assert not errors, f"{board['id']}: {errors[0].json_path}: {errors[0].message}" if errors else ''
+        if board.get('hardware'):
+            hardware=board['hardware'];assert hardware['version']==1
+            controls=hardware['controls'];assert len({c['id'] for c in controls})==len(controls)
+            pin_ids={p['number'] for p in board['pins']}
+            for control in controls:
+                values={o['value'] for o in control['options']}
+                assert len(values)==len(control['options']) and control['default'] in values
+                assert control['evidence'] and control['effects']
+                for effect in control['effects']:
+                    assert set(effect['when'])<=values and effect['when']
+                    assert set(effect.get('block',[]))<=pin_ids
+                    for route in effect.get('routes',[]):
+                        assert route['pin'] in pin_ids and route['via'] in pin_ids and route['pin']!=route['via']
         target = board.get('mcuProfile')
         if target:
             assert target in by_id and target != board['id'], f"Invalid MCU profile: {board['id']}"

@@ -46,6 +46,10 @@ Toplam kayıt sayıları ve kaynak profilleri [doğrulama özetinde](public/data
 
 ## Kullanım
 
+**Kart yapılandırması**, desteklenen STM32 referanslarında kaynakla doğrulanmış lehim köprülerini, debug bağlantısını, saatleri ve takılı bileşenleri belirtir. Nucleo-32 SB16/SB18, A5/A4 MCU yönlendirmesini ve işlevlerini değiştirir; bağlıyken D5/D4 bağımsız kullanılamaz ve ilk analog bacaklar yüzer giriş olmalıdır. MB1364 Nucleo-144 A4/A5, SB14/SB15, ST-LINK VCP ve WeAct isteğe bağlı flash kendi kısıtlarını uygular. Belirtilmeyen ayarlar ilgili kontakları ihtiyatlı biçimde ayırır. Uygula düğmesi haritayı, bağlantı seçeneklerini ve çakışma denetimini günceller; mevcut atamalar çakışsalar bile korunur. Bu seçimler fiziksel kartı veya firmware'i değiştirmez.
+
+**Uyumlu pin önerileri**, toplam SPI, I²C ve UART ihtiyacını alır (örneğin bir SPI ve iki UART). Mevcut işlev ve etiketler kilitlenir; tamamlanmış bağlantılar istenen toplamdan sayılır. Üç adede kadar alternatifi birim, fiziksel kontak, seçici, devre notu ve kaynak üzerinden karşılaştırıp plana ekleyebilirsiniz. SPI için doğrulanmış donanımsal CS/NSS istenebilir veya cihazın chip select bağlantısı elle eklenebilir. Arama; kart ayarlarını, ortak MCU bacaklarını, ayrılmış bellek pinlerini ve AFIO koşullarını izler. İptal edilebilir bir worker içinde çalışır; arama sınırına ulaşılması çözümsüzlükten ayrı gösterilir. Belgelenmemiş birim numarası veya elektriksel zamanlama uyumluluğu varsayılmaz.
+
 Bağlantı planındaki **Çevrebirim ekle**, aynı SPI, I²C veya UART/USART biriminin doğrulanmış sinyallerini birlikte seçtirir. Mevcut atamalar korunur; seçili pinlerin devre notları ve kaynakları gösterilir. Tekrarlanan sinyaller ve çelişen STM32 AFIO remap koşulları reddedilir; eski tarayıcı kayıtları çakışma uyarısıyla görünür kalır.
 
 **Yazdır / PDF kaydet**, tarayıcının yazdırma penceresinde kaynaklı bağlantı tablosu oluşturur. **SVG indir**, tam üstten pin haritasını, seçili işlevleri, etiketleri ve kaynak konumlarını içerir; renkler ve kart çizimi çevrimdışı kullanım için dosyaya gömülür.
@@ -62,7 +66,7 @@ Jetson çevre birimleri uygun pinmux/Jetson-IO yapılandırması ve yazılım de
 
 STM32F1 için uydurma AF0–AF15 seçicileri kullanılmaz; RM0008’deki AFIO remap alanları ve değerleri gösterilir. Remap çevre birimi genelindedir; tüm sinyaller birlikte yapılandırılmalı, gereken JTAG pinleri bırakılmalıdır. Plan, seçili AFIO koşullarının ortak bir değerde çalışabildiğini denetler; firmware ve kalan devre koşulları ayrıca yapılandırılmalıdır.
 
-Planlar tarayıcıda `pin-atlas:plans:v1` anahtarında saklanır. Paylaşım bağlantısı kaydedilmiş planı URL fragment içinde taşır. Bağlantılar ve JSON dosyaları önce önizlenir. Mevcut plan yalnızca değiştirmeyi seçtiğinde güncellenir. GPIO0/GPIO1 (Pi 4 fiziksel 27/28) HAT EEPROM için ayrıldığı için normal proje planına eklenmez. Uygulama elektriksel tasarım veya firmware doğrulaması yapmaz.
+Yapılandırmalı planların pinleri ve donanım ayarları `pin-atlas:plans:v2` anahtarında atomik olarak saklanır. Eski `pin-atlas:plans:v1` kayıtları yedek olarak korunur; yapılandırmasız profiller v1 biçiminde kalır. JSON/paylaşım v2 donanım ayarlarını içerir; v1 içe aktarma mevcut ayarlarla aynı katı denetimden geçer. Paylaşım bağlantısı kaydedilmiş planı URL fragment içinde taşır. Bağlantılar ve JSON dosyaları önce önizlenir. Mevcut plan yalnızca değiştirmeyi seçtiğinde güncellenir. GPIO0/GPIO1 (Pi 4 fiziksel 27/28) HAT EEPROM için ayrıldığı için normal proje planına eklenmez. Uygulama elektriksel tasarım veya firmware doğrulaması yapmaz.
 
 ## Yerel çalıştırma
 

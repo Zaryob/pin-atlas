@@ -12,6 +12,7 @@ try:
     from nucleo_sources import build_nucleo,read_f4_chip,read_g4_chip,build_nucleo_g474,read_h7_chip,build_nucleo_h723
     from stm32_catalog_sources import build_catalog as build_stm32_catalog, REGISTRY as STM32_REGISTRY
     from stm32_board_sources import build_nucleo144,preserve_h723_assignments
+    from hardware_sources import attach_hardware
     from arduino_sources import build_arduino
     from expanded_arduino_sources import build_expanded_arduino
     from espressif_sources import build_espressif
@@ -448,6 +449,7 @@ def build(use_snapshots=False):
     boards.append(rp2040_chip)
     boards.extend(build_stm32_catalog(CACHE,DOCS,ref,MANIFEST['verifiedOn'],use_snapshots=use_snapshots))
     link_board_packages(boards)
+    attach_hardware(boards,ref,CACHE,DOCS)
     return boards
 
 def outputs(boards):

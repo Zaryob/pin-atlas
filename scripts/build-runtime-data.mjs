@@ -9,7 +9,7 @@ const evidence=JSON.parse(readFileSync(root+'public/data/evidence.json'));
 const layouts=buildLayouts(boards); // Validate full geometry before producing metadata.
 const files=new Map(),profiles=[];
 for(const board of boards){
- const keys=new Set(board.pins.flatMap(pin=>[...pin.evidence,...pin.functions.flatMap(fn=>[fn.evidence,fn.configurationEvidence].filter(Boolean))]));
+ const keys=new Set([...board.pins.flatMap(pin=>[...pin.evidence,...pin.functions.flatMap(fn=>[fn.evidence,fn.configurationEvidence].filter(Boolean))]),...(board.hardware?.controls.flatMap(control=>control.evidence)||[])]);
  const references=Object.fromEntries([...keys].map(key=>[key,evidence.references[key]]));
  const documentIds=new Set(Object.values(references).map(ref=>ref.document));
  const documents=evidence.documents.filter(doc=>documentIds.has(doc.id));
@@ -17,7 +17,7 @@ for(const board of boards){
  const digest=createHash('sha256').update(content).digest('hex').slice(0,16);
  const dataFile=`profiles/${board.id}.${digest}.json`;
  files.set(dataFile,content);
- const {pins,diagram,...metadata}=board;
+ const {pins,diagram,hardware,...metadata}=board;
  profiles.push({...metadata,physicalLayout:layouts.find(layout=>layout.profileIds.includes(board.id)).id,dataFile,
   functionAssignments:pins.reduce((n,p)=>n+p.functions.length,0)});
 }

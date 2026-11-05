@@ -7,7 +7,7 @@
     "dev": "python3 scripts/jekyll.py serve --port 4173 --livereload",
     "start": "python3 scripts/jekyll.py serve --port 4173",
     "build": "python3 scripts/jekyll.py build && python3 scripts/check-static-paths.py",
-    "check": "node --check public/app.js && node --check public/i18n.js && node --check public/layouts.mjs && node --check public/compatibility.mjs && node --check public/plans.mjs && node --check public/connectors.mjs && node --check public/catalog.mjs && node scripts/build-runtime-data.mjs && node --test scripts/*.test.mjs && node --check public/assets/console/theme.js && python3 scripts/validate-data.py && python3 scripts/check-static-paths.py",
+    "check": "node --check public/solver-worker.mjs && node --check public/app.js && node --check public/i18n.js && node --check public/layouts.mjs && node --check public/compatibility.mjs && node --check public/plans.mjs && node --check public/connectors.mjs && node --check public/catalog.mjs && node scripts/build-runtime-data.mjs && node --test scripts/*.test.mjs && node --check public/assets/console/theme.js && python3 scripts/validate-data.py && python3 scripts/check-static-paths.py",
     "verify:sources": "python3 scripts/verify-official-sources.py",
     "build:ui": "python3 scripts/jekyll.py build --baseurl /pin-atlas && python3 scripts/check-static-paths.py --require-built",
     "test:ui": "playwright test",

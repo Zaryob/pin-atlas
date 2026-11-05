@@ -1092,3 +1092,19 @@
   #print-plan tr, #print-plan li { break-inside: avoid; }
   #print-plan li p { font-size: 8pt; overflow-wrap: anywhere; }
 }
+
+#hardware-config { margin: 1rem 0; padding: .8rem; border: 1px solid var(--line); border-radius: .5rem; }
+#hardware-config summary { cursor: pointer; font-weight: 600; }
+#hardware-config > p, .hardware-control p { font-size: .85rem; line-height: 1.6; }
+#hardware-controls { display: grid; gap: 1rem; margin: 1rem 0; }
+.hardware-control label { display: grid; gap: .4rem; }
+.hardware-control select { width: 100%; min-width: 0; }
+.hardware-control details, #hardware-impact, #hardware-pending { font-size: .85rem; overflow-wrap: anywhere; }
+.hardware-note { padding: .65rem; border-left: 3px solid var(--accent); background: var(--surface); font-size: .85rem; }
+.pin-group.hardware-unavailable { opacity: .45; }
+.pin-group.hardware-unavailable .pin-node { stroke-dasharray: 3 2; }
+#incoming-plan-configuration dl > div { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; margin: .4rem 0; }
+#incoming-plan-configuration dd { margin: 0; }
+#pin-suggestions{border-top:1px solid var(--line);padding:14px 0}#pin-suggestions summary{cursor:pointer;font-weight:600}#pin-suggestions p{font-size:12px;line-height:1.6;color:var(--muted)}.suggest-counts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:12px 0}.suggest-counts label{font-size:12px;display:grid;gap:6px}.suggest-counts input{min-width:0;width:100%;padding:8px;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:4px}.suggest-cs-label{display:flex;align-items:flex-start;gap:8px;font-size:12px;line-height:1.5}.suggest-cs-label input{width:auto;flex:none;margin-top:3px}#suggest-cancel{margin-left:8px}.suggestion{border:1px solid var(--line);border-radius:6px;padding:12px;margin-top:12px;overflow-wrap:anywhere}.suggestion h3{font-size:15px;margin:0}.suggestion h4{font-size:12px;margin:12px 0 5px}.suggestion ul{list-style:none;margin:0 0 12px;padding:0}.suggestion li{font-size:12px;border-bottom:1px solid var(--line);padding:6px 0;line-height:1.6}.suggestion small{display:block;color:var(--muted)}.suggestion a{font-size:11px}
+.pin-table .hardware-unavailable small{display:block;font-size:11px;color:var(--muted);font-weight:400;white-space:normal}
+.suggestion-evidence{margin:10px 0 14px;font-size:11px}.suggestion-evidence summary{font-weight:400!important}.suggestion-evidence p{font-size:11px!important}

@@ -13,19 +13,22 @@ export function peripheralSignal(fn) {
   }
   if (!match) return null;
   let role = match[2].split(/[ _(]/)[0];
+  if (fn.group === 'UART') role = ({TXD:'TX',RXD:'RX'})[role] || role;
   if (fn.group === 'SPI') role = ({RX:'MISO', TX:'MOSI', CIPO:'MISO', COPI:'MOSI', SCLK:'SCK', CLK:'SCK'})[role] || role;
-  if (!roles[fn.group].includes(role)) return null;
-  return {id:match[1], group:fn.group, role};
+  const channel=fn.group==='SPI' && /^(?:(?:NSS|SS|CS|CE)\d*|CSN)$/.test(role)?role:null;
+  if(channel)role='CS';
+  if (!roles[fn.group].includes(role) && !channel) return null;
+  return {id:match[1], group:fn.group, role, ...(channel?{channel}:{})};
 }
 
-export function availablePeripherals(board) {
+export function availablePeripherals(board,{includeSPIChipSelect=false}={}) {
   const buses = new Map();
   for (const pin of board.pins) {
-    if (pin.reserved) continue;
+    if (pin.reserved || pin.hardwareBlocked) continue;
     for (const fn of pin.functions) {
       const signal = peripheralSignal(fn);
       if (!signal) continue;
-      if (!buses.has(signal.id)) buses.set(signal.id, {...signal, roles:roles[signal.group], candidates:[]});
+      if (!buses.has(signal.id)) buses.set(signal.id, {...signal, roles:signal.group==='SPI'&&includeSPIChipSelect?[...roles.SPI,'CS']:roles[signal.group], candidates:[]});
       buses.get(signal.id).candidates.push({pin, fn, role:signal.role, key:JSON.stringify([pin.number,fn.name])});
     }
   }

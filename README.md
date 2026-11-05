@@ -46,9 +46,13 @@ The [verification summary](public/data/verification.json) lists the dataset tota
 
 ## Usage
 
+**Board configuration** declares source-backed solder bridges, debug wiring, clocks and fitted components for supported STM32 references. Nucleo-32 SB16/SB18 change A5/A4 MCU routes and functions, reserve D5/D4 when coupled, and require the original analog pads to remain floating inputs. MB1364 Nucleo-144 A4/A5 presets, SB14/SB15 contacts, ST-LINK VCP and WeAct optional flash have their own constraints. Unspecified settings reserve affected contacts conservatively. Apply a configuration to update the map, connection choices and conflict checks; existing assignments remain visible even when they conflict. These declarations do not change the physical board or firmware.
+
+**Suggest compatible pins** accepts total SPI, I²C and UART connections (for example, one SPI and two UARTs). Existing functions and labels are locked; complete connections count toward the requested totals. Compare up to three alternatives with bus instances, physical contacts, selectors, circuit notes and sources before adding one to the plan. SPI can require a verified hardware CS/NSS route, or leave device chip select for manual assignment. The search respects configured wiring, shared MCU pads, reserved memory and AFIO conditions. It runs in a cancellable worker and reports a reached search limit separately from an impossible request. It does not infer undocumented bus instances or electrical timing compatibility.
+
 **Add a peripheral** in the wiring plan selects verified SPI, I²C or UART/USART signal roles from one peripheral instance. It preserves existing assignments and shows the selected pins' circuit notes and sources. Duplicate routes and incompatible STM32 AFIO remap settings are rejected; conflicting legacy browser entries remain visible with a warning.
 
-**Print / Save PDF** creates a source-backed wiring table through the browser's print dialog. **Download SVG** includes the full top-view pin map, selected functions, labels and source locators; colors and artwork are embedded for offline use.
+**Print / Save PDF** creates a source-backed wiring table through the browser's print dialog. **Download SVG** includes the full top-view pin map, selected functions, labels, applied board configuration and source locators; colors and artwork are embedded for offline use.
 
 The home page loads a roughly 56 KB catalog summary. Pin maps and their evidence load on demand with content-addressed profile files, cached navigation and a persistent retry that retains the selected model and saved plans.
 
@@ -70,7 +74,7 @@ Home and library searches use the same catalog. Searching for an exact model ope
 
 The site uses Umami for usage analytics. Wiring plans are stored locally in the browser.
 
-The browser stores plans under `pin-atlas:plans:v1`. Share links carry the saved plan in the URL fragment. Links and JSON imports open a preview. Saving replaces an existing plan only after you choose to replace it. Pi 4 physical pins 27 and 28 are reserved for the HAT EEPROM and excluded from regular wiring plans. Check electrical compatibility and firmware configuration against the manufacturer documentation.
+The browser stores configured plans atomically under `pin-atlas:plans:v2`, including their hardware settings. Legacy `pin-atlas:plans:v1` entries remain as a backup; profiles without configuration retain the v1 format. JSON/share v2 includes hardware settings; v1 imports use the current settings and undergo the same strict validation. Share links carry the saved plan in the URL fragment. Links and JSON imports open a preview. Saving replaces an existing plan only after you choose to replace it. Pi 4 physical pins 27 and 28 are reserved for the HAT EEPROM and excluded from regular wiring plans. Check electrical compatibility and firmware configuration against the manufacturer documentation.
 
 ## Run locally
 
