@@ -125202,7 +125202,7 @@
     "packagePins": 144,
     "gpioCount": 114,
     "voltage": "1.62–3.6 V",
-    "source": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/master/mcu/STM32H723ZGTx.xml",
+    "source": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32H723ZGTx.xml",
     "datasheet": "https://www.st.com/resource/en/datasheet/stm32h723zg.pdf",
     "pins": [
       {

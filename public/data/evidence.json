@@ -730,30 +730,30 @@
       "id": "h723zg-package",
       "title": "STM32H723ZGTx CubeMX package data",
       "file": "h723zg-package.xml",
-      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/master/mcu/STM32H723ZGTx.xml",
-      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/master/mcu/STM32H723ZGTx.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32H723ZGTx.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32H723ZGTx.xml",
       "publisher": "STMicroelectronics",
-      "revision": "master",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
       "sha256": "289dc09cbcd64209d7e3d44d0265057eaef079ae167724372d3893b3a93b0242"
     },
     {
       "id": "h723zg-modes",
       "title": "STM32H723 GPIO modes XML definition",
       "file": "h723zg-modes.xml",
-      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/master/mcu/IP/GPIO-STM32H723_gpio_v1_0_Modes.xml",
-      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/master/mcu/IP/GPIO-STM32H723_gpio_v1_0_Modes.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32H72_gpio_v1_0_Modes.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32H72_gpio_v1_0_Modes.xml",
       "publisher": "STMicroelectronics",
-      "revision": "master",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
       "sha256": "3589056b6537a909d273b6cd2a3acc3fe3faf8c07139ab02f95309ca0ee4c0bd"
     },
     {
       "id": "nucleo-h723zg-ioc",
       "title": "NUCLEO-H723ZG STM32Cube board configuration (.ioc)",
       "file": "nucleo-h723zg.ioc",
-      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/master/boards/G75_Nucleo_NUCLEO-H723ZG_STM32H723ZGT_Board_AllConfig.ioc",
-      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/master/boards/G75_Nucleo_NUCLEO-H723ZG_STM32H723ZGT_Board_AllConfig.ioc",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/boards/G75_Nucleo_NUCLEO-H723ZG_STM32H723ZGT_Board_AllConfig.ioc",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/boards/G75_Nucleo_NUCLEO-H723ZG_STM32H723ZGT_Board_AllConfig.ioc",
       "publisher": "STMicroelectronics",
-      "revision": "master",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
       "sha256": "9be2313dd619ca07be1dd51cc4d8bc54ab4f253e990227fa1dddfbe33ade437f"
     },
     {
@@ -1445,7 +1445,7 @@
     "h723zg-package": {
       "document": "h723zg-package",
       "title": "STM32H723ZGTx CubeMX package data",
-      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/master/mcu/STM32H723ZGTx.xml",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32H723ZGTx.xml",
       "page": null,
       "locator": "LQFP144 package pin numbers and signals",
       "method": "manufacturer-xml"
@@ -1453,7 +1453,7 @@
     "h723zg-modes": {
       "document": "h723zg-modes",
       "title": "STM32H723 GPIO modes XML definition",
-      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/master/mcu/IP/GPIO-STM32H723_gpio_v1_0_Modes.xml",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32H72_gpio_v1_0_Modes.xml",
       "page": null,
       "locator": "GPIO alternate function selectors",
       "method": "manufacturer-xml"
@@ -1477,7 +1477,7 @@
     "nucleo-h723zg-ioc": {
       "document": "nucleo-h723zg-ioc",
       "title": "NUCLEO-H723ZG STM32Cube board configuration (.ioc)",
-      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/master/boards/G75_Nucleo_NUCLEO-H723ZG_STM32H723ZGT_Board_AllConfig.ioc",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/boards/G75_Nucleo_NUCLEO-H723ZG_STM32H723ZGT_Board_AllConfig.ioc",
       "page": null,
       "locator": "STMicroelectronics official board configuration",
       "method": "hardware-spec"
@@ -1485,7 +1485,7 @@
     "nucleo-h723zg-top-view": {
       "document": "nucleo-h723zg-ioc",
       "title": "NUCLEO-H723ZG STM32Cube board configuration (.ioc)",
-      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/master/boards/G75_Nucleo_NUCLEO-H723ZG_STM32H723ZGT_Board_AllConfig.ioc",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/boards/G75_Nucleo_NUCLEO-H723ZG_STM32H723ZGT_Board_AllConfig.ioc",
       "page": null,
       "locator": "MB1364 top view · ST Zio and Morpho connector layout",
       "method": "visual-diagram"
