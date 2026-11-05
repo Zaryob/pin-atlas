@@ -941,6 +941,40 @@
       "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
       "sha256": "3e965c28403876ea586deaf403f5cff069bb127341913fadb58985ddc135b6d3",
       "gpioModesDocument": "f407vg-modes"
+    },
+    {
+      "id": "f042k6-package",
+      "title": "F042K6 CubeMX package data",
+      "file": "f042k6-package.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F042K(4-6)Tx.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F042K(4-6)Tx.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "6a3996752eb38c503a5d0c4386d29ecdb494e6d0b09c6be6373a25aed8e2a4c2"
+    },
+    {
+      "id": "f042k6-modes",
+      "title": "STM32F042_gpio_v1_0 GPIO alternate functions",
+      "file": "f042k6-modes.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F042_gpio_v1_0_Modes.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F042_gpio_v1_0_Modes.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "8d5377e0d7d470f50adaf4a1c7428dd0e5f8490fbe86f9b8820d037200d3e1b1"
+    },
+    {
+      "id": "nucleo-um1956-r6",
+      "title": "STM32 Nucleo-32 boards MB1180 · UM1956 Rev 6",
+      "file": "nucleo-um1956-r6.pdf",
+      "url": "https://www.st.com/resource/en/user_manual/dm00231744.pdf",
+      "viewUrl": "https://www.st.com/resource/en/user_manual/dm00231744.pdf",
+      "publisher": "STMicroelectronics",
+      "revision": "UM1956 Rev 6 · March 2025",
+      "sha256": "71264721637099173f0427097ce2981755e7eec23a86ddc37e6eae6a39be746e",
+      "tableSnapshot": {
+        "file": "sources/extracted/nucleo-um1956-r6.json",
+        "sha256": "d5f9b9ba8ff97a58238bb1ab34bb35a7e21089d398a303726694b394c81861dd"
+      }
     }
   ],
   "publishers": [

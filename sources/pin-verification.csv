@@ -18314,3 +18314,259 @@ stm32f405rgt6,62,PB9,GPIO,TIM11_CH1,AF3,TIM11_CH1,f405rg-package,f405rg-package 
 stm32f405rgt6,62,PB9,GPIO,TIM4_CH4,AF2,TIM4_CH4,f405rg-package,f405rg-package | f405rg-modes
 stm32f405rgt6,63,VSS,GND,,,,f405rg-package,
 stm32f405rgt6,64,VDD,POWER,,,,f405rg-package,
+nucleo-f042k6,1,PA9,GPIO,I2C1_SCL,AF4,I2C1_SCL,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,1,PA9,GPIO,TIM1_CH2,AF2,TIM1_CH2,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,1,PA9,GPIO,TSC_G4_IO1,AF3,TSC_G4_IO1,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,1,PA9,GPIO,USART1_TX,AF1,USART1_TX,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,2,PA10,GPIO,I2C1_SDA,AF4,I2C1_SDA,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,2,PA10,GPIO,TIM17_BKIN,AF0,TIM17_BKIN,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,2,PA10,GPIO,TIM1_CH3,AF2,TIM1_CH3,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,2,PA10,GPIO,TSC_G4_IO2,AF3,TSC_G4_IO2,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,2,PA10,GPIO,USART1_RX,AF1,USART1_RX,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,3,NRST,SYSTEM,,,,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,
+nucleo-f042k6,4,GND,GND,,,,nucleo-f042k6-headers | nucleo-f042k6-top-view,
+nucleo-f042k6,5,PA12,GPIO,CAN_TX,AF4,CAN_TX,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,5,PA12,GPIO,I2C1_SDA,AF5,I2C1_SDA,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,5,PA12,GPIO,TIM1_ETR,AF2,TIM1_ETR,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,5,PA12,GPIO,TSC_G4_IO4,AF3,TSC_G4_IO4,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,5,PA12,GPIO,USART1_DE,AF1,USART1_DE,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,5,PA12,GPIO,USART1_RTS,AF1,USART1_RTS,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,5,PA12,GPIO,USB_DP,,USB_DP,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package
+nucleo-f042k6,6,PB0,GPIO,ADC_IN8,,ADC_IN8,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package
+nucleo-f042k6,6,PB0,GPIO,TIM1_CH2N,AF2,TIM1_CH2N,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,6,PB0,GPIO,TIM3_CH3,AF1,TIM3_CH3,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,6,PB0,GPIO,TSC_G3_IO2,AF3,TSC_G3_IO2,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,7,PB7,GPIO,I2C1_SDA,AF1,I2C1_SDA,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package | f042k6-modes
+nucleo-f042k6,7,PB7,GPIO,TIM17_CH1N,AF2,TIM17_CH1N,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package | f042k6-modes
+nucleo-f042k6,7,PB7,GPIO,TSC_G5_IO4,AF3,TSC_G5_IO4,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package | f042k6-modes
+nucleo-f042k6,7,PB7,GPIO,USART1_RX,AF0,USART1_RX,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package | f042k6-modes
+nucleo-f042k6,8,PB6,GPIO,I2C1_SCL,AF1,I2C1_SCL,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package | f042k6-modes
+nucleo-f042k6,8,PB6,GPIO,TIM16_CH1N,AF2,TIM16_CH1N,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package | f042k6-modes
+nucleo-f042k6,8,PB6,GPIO,TSC_G5_IO3,AF3,TSC_G5_IO3,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package | f042k6-modes
+nucleo-f042k6,8,PB6,GPIO,USART1_TX,AF0,USART1_TX,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package | f042k6-modes
+nucleo-f042k6,9,PB1,GPIO,ADC_IN9,,ADC_IN9,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package
+nucleo-f042k6,9,PB1,GPIO,TIM14_CH1,AF0,TIM14_CH1,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,9,PB1,GPIO,TIM1_CH3N,AF2,TIM1_CH3N,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,9,PB1,GPIO,TIM3_CH4,AF1,TIM3_CH4,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,9,PB1,GPIO,TSC_G3_IO3,AF3,TSC_G3_IO3,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,10,PF0,GPIO,CRS_SYNC,AF0,CRS_SYNC,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package | f042k6-modes
+nucleo-f042k6,10,PF0,GPIO,I2C1_SDA,AF1,I2C1_SDA,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package | f042k6-modes
+nucleo-f042k6,10,PF0,GPIO,RCC_OSC_IN,,RCC_OSC_IN,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package
+nucleo-f042k6,11,PF1,GPIO,I2C1_SCL,AF1,I2C1_SCL,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package | f042k6-modes
+nucleo-f042k6,11,PF1,GPIO,RCC_OSC_OUT,,RCC_OSC_OUT,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package
+nucleo-f042k6,12,PA8,GPIO,CRS_SYNC,AF4,CRS_SYNC,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,12,PA8,GPIO,RCC_MCO,AF0,RCC_MCO,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,12,PA8,GPIO,TIM1_CH1,AF2,TIM1_CH1,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,12,PA8,GPIO,USART1_CK,AF1,USART1_CK,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,13,PA11,GPIO,CAN_RX,AF4,CAN_RX,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,13,PA11,GPIO,I2C1_SCL,AF5,I2C1_SCL,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,13,PA11,GPIO,TIM1_CH4,AF2,TIM1_CH4,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,13,PA11,GPIO,TSC_G4_IO3,AF3,TSC_G4_IO3,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,13,PA11,GPIO,USART1_CTS,AF1,USART1_CTS,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,13,PA11,GPIO,USB_DM,,USB_DM,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package
+nucleo-f042k6,14,PB5,GPIO,I2C1_SMBA,AF3,I2C1_SMBA,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,14,PB5,GPIO,I2S1_SD,AF0,I2S1_SD,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,14,PB5,GPIO,SPI1_MOSI,AF0,SPI1_MOSI,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,14,PB5,GPIO,SYS_WKUP6,,SYS_WKUP6,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package
+nucleo-f042k6,14,PB5,GPIO,TIM16_BKIN,AF2,TIM16_BKIN,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,14,PB5,GPIO,TIM3_CH2,AF1,TIM3_CH2,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,15,PB4,GPIO,I2S1_MCK,AF0,I2S1_MCK,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,15,PB4,GPIO,SPI1_MISO,AF0,SPI1_MISO,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,15,PB4,GPIO,TIM17_BKIN,AF5,TIM17_BKIN,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,15,PB4,GPIO,TIM3_CH1,AF1,TIM3_CH1,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,15,PB4,GPIO,TSC_G5_IO2,AF3,TSC_G5_IO2,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,16,VIN,POWER,,,,nucleo-f042k6-headers | nucleo-f042k6-top-view,
+nucleo-f042k6,17,GND,GND,,,,nucleo-f042k6-headers | nucleo-f042k6-top-view,
+nucleo-f042k6,18,NRST,SYSTEM,,,,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,
+nucleo-f042k6,19,+5V,POWER,,,,nucleo-f042k6-headers | nucleo-f042k6-top-view,
+nucleo-f042k6,20,PA2,GPIO,ADC_IN2,,ADC_IN2,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package
+nucleo-f042k6,20,PA2,GPIO,SYS_WKUP4,,SYS_WKUP4,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package
+nucleo-f042k6,20,PA2,GPIO,TIM2_CH3,AF2,TIM2_CH3,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package | f042k6-modes
+nucleo-f042k6,20,PA2,GPIO,TSC_G1_IO3,AF3,TSC_G1_IO3,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package | f042k6-modes
+nucleo-f042k6,20,PA2,GPIO,USART2_TX,AF1,USART2_TX,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package | f042k6-modes
+nucleo-f042k6,21,PA7,GPIO,ADC_IN7,,ADC_IN7,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package
+nucleo-f042k6,21,PA7,GPIO,I2S1_SD,AF0,I2S1_SD,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,21,PA7,GPIO,SPI1_MOSI,AF0,SPI1_MOSI,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,21,PA7,GPIO,TIM14_CH1,AF4,TIM14_CH1,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,21,PA7,GPIO,TIM17_CH1,AF5,TIM17_CH1,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,21,PA7,GPIO,TIM1_CH1N,AF2,TIM1_CH1N,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,21,PA7,GPIO,TIM3_CH2,AF1,TIM3_CH2,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,21,PA7,GPIO,TSC_G2_IO4,AF3,TSC_G2_IO4,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,22,PA6,GPIO,ADC_IN6,,ADC_IN6,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package
+nucleo-f042k6,22,PA6,GPIO,I2S1_MCK,AF0,I2S1_MCK,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package | f042k6-modes
+nucleo-f042k6,22,PA6,GPIO,SPI1_MISO,AF0,SPI1_MISO,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package | f042k6-modes
+nucleo-f042k6,22,PA6,GPIO,TIM16_CH1,AF5,TIM16_CH1,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package | f042k6-modes
+nucleo-f042k6,22,PA6,GPIO,TIM1_BKIN,AF2,TIM1_BKIN,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package | f042k6-modes
+nucleo-f042k6,22,PA6,GPIO,TIM3_CH1,AF1,TIM3_CH1,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package | f042k6-modes
+nucleo-f042k6,22,PA6,GPIO,TSC_G2_IO3,AF3,TSC_G2_IO3,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package | f042k6-modes
+nucleo-f042k6,23,PA5,GPIO,ADC_IN5,,ADC_IN5,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package
+nucleo-f042k6,23,PA5,GPIO,CEC,AF1,CEC,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package | f042k6-modes
+nucleo-f042k6,23,PA5,GPIO,I2S1_CK,AF0,I2S1_CK,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package | f042k6-modes
+nucleo-f042k6,23,PA5,GPIO,SPI1_SCK,AF0,SPI1_SCK,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package | f042k6-modes
+nucleo-f042k6,23,PA5,GPIO,TIM2_CH1,AF2,TIM2_CH1,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package | f042k6-modes
+nucleo-f042k6,23,PA5,GPIO,TIM2_ETR,AF2,TIM2_ETR,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package | f042k6-modes
+nucleo-f042k6,23,PA5,GPIO,TSC_G2_IO2,AF3,TSC_G2_IO2,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package | f042k6-modes
+nucleo-f042k6,24,PA4,GPIO,ADC_IN4,,ADC_IN4,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package
+nucleo-f042k6,24,PA4,GPIO,I2S1_WS,AF0,I2S1_WS,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,24,PA4,GPIO,SPI1_NSS,AF0,SPI1_NSS,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,24,PA4,GPIO,TIM14_CH1,AF4,TIM14_CH1,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,24,PA4,GPIO,TSC_G2_IO1,AF3,TSC_G2_IO1,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,24,PA4,GPIO,USART2_CK,AF1,USART2_CK,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,24,PA4,GPIO,USB_NOE,AF2,USB_NOE,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,25,PA3,GPIO,ADC_IN3,,ADC_IN3,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package
+nucleo-f042k6,25,PA3,GPIO,TIM2_CH4,AF2,TIM2_CH4,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,25,PA3,GPIO,TSC_G1_IO4,AF3,TSC_G1_IO4,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,25,PA3,GPIO,USART2_RX,AF1,USART2_RX,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,26,PA1,GPIO,ADC_IN1,,ADC_IN1,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package
+nucleo-f042k6,26,PA1,GPIO,TIM2_CH2,AF2,TIM2_CH2,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,26,PA1,GPIO,TSC_G1_IO2,AF3,TSC_G1_IO2,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,26,PA1,GPIO,USART2_DE,AF1,USART2_DE,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,26,PA1,GPIO,USART2_RTS,AF1,USART2_RTS,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,27,PA0,GPIO,ADC_IN0,,ADC_IN0,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package
+nucleo-f042k6,27,PA0,GPIO,RTC_TAMP2,,RTC_TAMP2,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package
+nucleo-f042k6,27,PA0,GPIO,SYS_WKUP1,,SYS_WKUP1,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package
+nucleo-f042k6,27,PA0,GPIO,TIM2_CH1,AF2,TIM2_CH1,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,27,PA0,GPIO,TIM2_ETR,AF2,TIM2_ETR,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,27,PA0,GPIO,TSC_G1_IO1,AF3,TSC_G1_IO1,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,27,PA0,GPIO,USART2_CTS,AF1,USART2_CTS,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package,f042k6-package | f042k6-modes
+nucleo-f042k6,28,AREF,POWER,,,,nucleo-f042k6-headers | nucleo-f042k6-top-view | nucleo32-bridges,
+nucleo-f042k6,29,+3V3,POWER,,,,nucleo-f042k6-headers | nucleo-f042k6-top-view,
+nucleo-f042k6,30,PB3,GPIO,I2S1_CK,AF0,I2S1_CK,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package | f042k6-modes
+nucleo-f042k6,30,PB3,GPIO,SPI1_SCK,AF0,SPI1_SCK,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package | f042k6-modes
+nucleo-f042k6,30,PB3,GPIO,TIM2_CH2,AF2,TIM2_CH2,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package | f042k6-modes
+nucleo-f042k6,30,PB3,GPIO,TSC_G5_IO1,AF3,TSC_G5_IO1,nucleo-f042k6-headers | nucleo-f042k6-top-view | f042k6-package | nucleo32-bridges,f042k6-package | f042k6-modes
+stm32f042k6t6,1,VDD,POWER,,,,f042k6-package,
+stm32f042k6t6,2,PF0,GPIO,CRS_SYNC,AF0,CRS_SYNC,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,2,PF0,GPIO,I2C1_SDA,AF1,I2C1_SDA,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,2,PF0,GPIO,RCC_OSC_IN,,RCC_OSC_IN,f042k6-package,f042k6-package
+stm32f042k6t6,3,PF1,GPIO,I2C1_SCL,AF1,I2C1_SCL,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,3,PF1,GPIO,RCC_OSC_OUT,,RCC_OSC_OUT,f042k6-package,f042k6-package
+stm32f042k6t6,4,NRST,SYSTEM,,,,f042k6-package,
+stm32f042k6t6,5,VDDA,POWER,,,,f042k6-package,
+stm32f042k6t6,6,PA0,GPIO,ADC_IN0,,ADC_IN0,f042k6-package,f042k6-package
+stm32f042k6t6,6,PA0,GPIO,RTC_TAMP2,,RTC_TAMP2,f042k6-package,f042k6-package
+stm32f042k6t6,6,PA0,GPIO,SYS_WKUP1,,SYS_WKUP1,f042k6-package,f042k6-package
+stm32f042k6t6,6,PA0,GPIO,TIM2_CH1,AF2,TIM2_CH1,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,6,PA0,GPIO,TIM2_ETR,AF2,TIM2_ETR,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,6,PA0,GPIO,TSC_G1_IO1,AF3,TSC_G1_IO1,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,6,PA0,GPIO,USART2_CTS,AF1,USART2_CTS,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,7,PA1,GPIO,ADC_IN1,,ADC_IN1,f042k6-package,f042k6-package
+stm32f042k6t6,7,PA1,GPIO,TIM2_CH2,AF2,TIM2_CH2,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,7,PA1,GPIO,TSC_G1_IO2,AF3,TSC_G1_IO2,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,7,PA1,GPIO,USART2_DE,AF1,USART2_DE,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,7,PA1,GPIO,USART2_RTS,AF1,USART2_RTS,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,8,PA2,GPIO,ADC_IN2,,ADC_IN2,f042k6-package,f042k6-package
+stm32f042k6t6,8,PA2,GPIO,SYS_WKUP4,,SYS_WKUP4,f042k6-package,f042k6-package
+stm32f042k6t6,8,PA2,GPIO,TIM2_CH3,AF2,TIM2_CH3,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,8,PA2,GPIO,TSC_G1_IO3,AF3,TSC_G1_IO3,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,8,PA2,GPIO,USART2_TX,AF1,USART2_TX,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,9,PA3,GPIO,ADC_IN3,,ADC_IN3,f042k6-package,f042k6-package
+stm32f042k6t6,9,PA3,GPIO,TIM2_CH4,AF2,TIM2_CH4,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,9,PA3,GPIO,TSC_G1_IO4,AF3,TSC_G1_IO4,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,9,PA3,GPIO,USART2_RX,AF1,USART2_RX,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,10,PA4,GPIO,ADC_IN4,,ADC_IN4,f042k6-package,f042k6-package
+stm32f042k6t6,10,PA4,GPIO,I2S1_WS,AF0,I2S1_WS,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,10,PA4,GPIO,SPI1_NSS,AF0,SPI1_NSS,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,10,PA4,GPIO,TIM14_CH1,AF4,TIM14_CH1,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,10,PA4,GPIO,TSC_G2_IO1,AF3,TSC_G2_IO1,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,10,PA4,GPIO,USART2_CK,AF1,USART2_CK,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,10,PA4,GPIO,USB_NOE,AF2,USB_NOE,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,11,PA5,GPIO,ADC_IN5,,ADC_IN5,f042k6-package,f042k6-package
+stm32f042k6t6,11,PA5,GPIO,CEC,AF1,CEC,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,11,PA5,GPIO,I2S1_CK,AF0,I2S1_CK,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,11,PA5,GPIO,SPI1_SCK,AF0,SPI1_SCK,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,11,PA5,GPIO,TIM2_CH1,AF2,TIM2_CH1,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,11,PA5,GPIO,TIM2_ETR,AF2,TIM2_ETR,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,11,PA5,GPIO,TSC_G2_IO2,AF3,TSC_G2_IO2,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,12,PA6,GPIO,ADC_IN6,,ADC_IN6,f042k6-package,f042k6-package
+stm32f042k6t6,12,PA6,GPIO,I2S1_MCK,AF0,I2S1_MCK,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,12,PA6,GPIO,SPI1_MISO,AF0,SPI1_MISO,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,12,PA6,GPIO,TIM16_CH1,AF5,TIM16_CH1,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,12,PA6,GPIO,TIM1_BKIN,AF2,TIM1_BKIN,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,12,PA6,GPIO,TIM3_CH1,AF1,TIM3_CH1,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,12,PA6,GPIO,TSC_G2_IO3,AF3,TSC_G2_IO3,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,13,PA7,GPIO,ADC_IN7,,ADC_IN7,f042k6-package,f042k6-package
+stm32f042k6t6,13,PA7,GPIO,I2S1_SD,AF0,I2S1_SD,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,13,PA7,GPIO,SPI1_MOSI,AF0,SPI1_MOSI,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,13,PA7,GPIO,TIM14_CH1,AF4,TIM14_CH1,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,13,PA7,GPIO,TIM17_CH1,AF5,TIM17_CH1,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,13,PA7,GPIO,TIM1_CH1N,AF2,TIM1_CH1N,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,13,PA7,GPIO,TIM3_CH2,AF1,TIM3_CH2,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,13,PA7,GPIO,TSC_G2_IO4,AF3,TSC_G2_IO4,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,14,PB0,GPIO,ADC_IN8,,ADC_IN8,f042k6-package,f042k6-package
+stm32f042k6t6,14,PB0,GPIO,TIM1_CH2N,AF2,TIM1_CH2N,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,14,PB0,GPIO,TIM3_CH3,AF1,TIM3_CH3,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,14,PB0,GPIO,TSC_G3_IO2,AF3,TSC_G3_IO2,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,15,PB1,GPIO,ADC_IN9,,ADC_IN9,f042k6-package,f042k6-package
+stm32f042k6t6,15,PB1,GPIO,TIM14_CH1,AF0,TIM14_CH1,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,15,PB1,GPIO,TIM1_CH3N,AF2,TIM1_CH3N,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,15,PB1,GPIO,TIM3_CH4,AF1,TIM3_CH4,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,15,PB1,GPIO,TSC_G3_IO3,AF3,TSC_G3_IO3,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,16,VSS,GND,,,,f042k6-package,
+stm32f042k6t6,17,VDDIO2,POWER,,,,f042k6-package,
+stm32f042k6t6,18,PA8,GPIO,CRS_SYNC,AF4,CRS_SYNC,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,18,PA8,GPIO,RCC_MCO,AF0,RCC_MCO,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,18,PA8,GPIO,TIM1_CH1,AF2,TIM1_CH1,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,18,PA8,GPIO,USART1_CK,AF1,USART1_CK,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,19,PA9,GPIO,I2C1_SCL,AF4,I2C1_SCL,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,19,PA9,GPIO,TIM1_CH2,AF2,TIM1_CH2,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,19,PA9,GPIO,TSC_G4_IO1,AF3,TSC_G4_IO1,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,19,PA9,GPIO,USART1_TX,AF1,USART1_TX,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,20,PA10,GPIO,I2C1_SDA,AF4,I2C1_SDA,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,20,PA10,GPIO,TIM17_BKIN,AF0,TIM17_BKIN,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,20,PA10,GPIO,TIM1_CH3,AF2,TIM1_CH3,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,20,PA10,GPIO,TSC_G4_IO2,AF3,TSC_G4_IO2,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,20,PA10,GPIO,USART1_RX,AF1,USART1_RX,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,21,PA11,GPIO,CAN_RX,AF4,CAN_RX,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,21,PA11,GPIO,I2C1_SCL,AF5,I2C1_SCL,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,21,PA11,GPIO,TIM1_CH4,AF2,TIM1_CH4,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,21,PA11,GPIO,TSC_G4_IO3,AF3,TSC_G4_IO3,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,21,PA11,GPIO,USART1_CTS,AF1,USART1_CTS,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,21,PA11,GPIO,USB_DM,,USB_DM,f042k6-package,f042k6-package
+stm32f042k6t6,22,PA12,GPIO,CAN_TX,AF4,CAN_TX,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,22,PA12,GPIO,I2C1_SDA,AF5,I2C1_SDA,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,22,PA12,GPIO,TIM1_ETR,AF2,TIM1_ETR,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,22,PA12,GPIO,TSC_G4_IO4,AF3,TSC_G4_IO4,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,22,PA12,GPIO,USART1_DE,AF1,USART1_DE,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,22,PA12,GPIO,USART1_RTS,AF1,USART1_RTS,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,22,PA12,GPIO,USB_DP,,USB_DP,f042k6-package,f042k6-package
+stm32f042k6t6,23,PA13,GPIO,IR_OUT,AF1,IR_OUT,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,23,PA13,GPIO,SYS_SWDIO,AF0,SYS_SWDIO,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,23,PA13,GPIO,USB_NOE,AF2,USB_NOE,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,24,PA14,GPIO,SYS_SWCLK,AF0,SYS_SWCLK,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,24,PA14,GPIO,USART2_TX,AF1,USART2_TX,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,25,PA15,GPIO,I2S1_WS,AF0,I2S1_WS,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,25,PA15,GPIO,SPI1_NSS,AF0,SPI1_NSS,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,25,PA15,GPIO,TIM2_CH1,AF2,TIM2_CH1,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,25,PA15,GPIO,TIM2_ETR,AF2,TIM2_ETR,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,25,PA15,GPIO,USART2_RX,AF1,USART2_RX,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,25,PA15,GPIO,USB_NOE,AF5,USB_NOE,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,26,PB3,GPIO,I2S1_CK,AF0,I2S1_CK,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,26,PB3,GPIO,SPI1_SCK,AF0,SPI1_SCK,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,26,PB3,GPIO,TIM2_CH2,AF2,TIM2_CH2,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,26,PB3,GPIO,TSC_G5_IO1,AF3,TSC_G5_IO1,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,27,PB4,GPIO,I2S1_MCK,AF0,I2S1_MCK,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,27,PB4,GPIO,SPI1_MISO,AF0,SPI1_MISO,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,27,PB4,GPIO,TIM17_BKIN,AF5,TIM17_BKIN,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,27,PB4,GPIO,TIM3_CH1,AF1,TIM3_CH1,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,27,PB4,GPIO,TSC_G5_IO2,AF3,TSC_G5_IO2,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,28,PB5,GPIO,I2C1_SMBA,AF3,I2C1_SMBA,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,28,PB5,GPIO,I2S1_SD,AF0,I2S1_SD,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,28,PB5,GPIO,SPI1_MOSI,AF0,SPI1_MOSI,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,28,PB5,GPIO,SYS_WKUP6,,SYS_WKUP6,f042k6-package,f042k6-package
+stm32f042k6t6,28,PB5,GPIO,TIM16_BKIN,AF2,TIM16_BKIN,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,28,PB5,GPIO,TIM3_CH2,AF1,TIM3_CH2,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,29,PB6,GPIO,I2C1_SCL,AF1,I2C1_SCL,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,29,PB6,GPIO,TIM16_CH1N,AF2,TIM16_CH1N,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,29,PB6,GPIO,TSC_G5_IO3,AF3,TSC_G5_IO3,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,29,PB6,GPIO,USART1_TX,AF0,USART1_TX,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,30,PB7,GPIO,I2C1_SDA,AF1,I2C1_SDA,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,30,PB7,GPIO,TIM17_CH1N,AF2,TIM17_CH1N,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,30,PB7,GPIO,TSC_G5_IO4,AF3,TSC_G5_IO4,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,30,PB7,GPIO,USART1_RX,AF0,USART1_RX,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,31,PB8,GPIO,CAN_RX,AF4,CAN_RX,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,31,PB8,GPIO,CEC,AF0,CEC,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,31,PB8,GPIO,I2C1_SCL,AF1,I2C1_SCL,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,31,PB8,GPIO,TIM16_CH1,AF2,TIM16_CH1,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,31,PB8,GPIO,TSC_SYNC,AF3,TSC_SYNC,f042k6-package,f042k6-package | f042k6-modes
+stm32f042k6t6,32,VSSA,GND,,,,f042k6-package,

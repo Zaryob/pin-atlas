@@ -23,6 +23,23 @@ async function openPlan(page) {
   else await page.locator('#plan-tab').click();
 }
 
+for(const board of boards.filter(b=>['nucleo32Scope','nucleo144SourceScope','blackPillScope'].includes(b.scopeKey))) {
+ test(`${board.id} opens its exact reference and verified package`,async({page})=>{
+  await ready(page);await page.locator('#home-search').fill(board.name);
+  await page.locator(`#home-catalog-container [data-profile="${board.id}"]`).first().click();
+  await expect(page.locator('#function-reference')).toHaveValue(board.id);
+  const pin=board.pins.find(p=>p.type==='GPIO' && p.mcuPin);
+  await page.locator(`#diagram [data-pin="${pin.number}"]`).click();
+  await expect(page.locator(`#diagram [data-mcu-pin="${pin.mcuPin}"]`)).toHaveAttribute('aria-current','true');
+  await ready(page,'#board='+board.mcuProfile);
+  const chip=boards.find(b=>b.id===board.mcuProfile);
+  await expect(page.locator('#diagram [data-pin]')).toHaveCount(chip.packagePins);
+  if(chip.exposedPad===false)await expect(page.locator('#diagram')).not.toContainText('EP · GND');
+  await page.locator(`#package-boards [data-package-board="${board.id}"]`).click();
+  await expect(page.locator('#function-reference')).toHaveValue(board.id);
+ });
+}
+
 test('home loads only the small catalog and a model loads its own pins and MCU',async({page})=>{
  const requested=[];page.on('request',request=>{if(request.url().includes('/data/'))requested.push(new URL(request.url()).pathname);});
  await ready(page);

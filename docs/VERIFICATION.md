@@ -181,3 +181,9 @@ UM1724 raw table cells are hash-locked in `sources/extracted/nucleo-um1724-r14.j
 - **STM32F407VGT6:** a separate LQFP-100 package view, 82 GPIO-capable pads and Cortex-M4 up to 168 MHz. The package XML references ST's shared `STM32F417_gpio_v1_0` GPIO table; the parser limits it to signals actually present in this chip/package XML. No Nucleo header numbering is assigned to this standalone MCU view.
 
 - **STM32F405RGT6:** a separate LQFP-64 package view, 51 GPIO-capable pads and Cortex-M4 up to 168 MHz. The package XML references ST's shared `STM32F417_gpio_v1_0` GPIO table; the parser limits it to signals actually present in this chip/package XML. No Nucleo header numbering is assigned to this standalone MCU view.
+
+## Nucleo-32 / MB1180
+
+NUCLEO-F042K6 uses UM1956 Rev 6 Table 10 (page 24), Figure 3 (page 12), and Tables 7/8 (pages 21/22). CN3 and CN4 retain all 30 physical positions and their own printed labels. STM32F042K6T6 has 32 LQFP perimeter pads and 26 GPIO-capable pads. MCU alternate functions come from its pinned package and declared GPIO Modes XML.
+
+A4/A5 describe their primary PA5/PA6 pads. SB18/SB16 can link them to PB7/PB6 (D4/D5); the primary pads must then remain floating inputs and D4/D5 are unavailable as independent GPIOs. The map does not invent I²C selectors on PA5/PA6. Pin notes also identify PA2/A7 VCP sharing, the D13 LED, oscillator and AREF connections. The raw UM1956 table snapshot is checked against the original PDF and lets CI regenerate without downloading that PDF.

@@ -80,6 +80,7 @@ export const boardFamilies = [
     nameKey: 'familyStm32',
     items: [
       { type: 'layout', id: 'blue-pill' },
+      { type: 'layout', id: 'stm32f042k6t6' },
       { type: 'layout', id: 'stm32f103c8t6' },
       { type: 'layout', id: 'stm32f103rbt6' },
       { type: 'layout', id: 'stm32f103vbt6' },
@@ -101,6 +102,7 @@ export const boardFamilies = [
     id: 'stm32-nucleo',
     nameKey: 'familyStm32Nucleo',
     items: [
+      { type: 'layout', id: 'nucleo-32' },
       { type: 'layout', id: 'nucleo-64' },
       { type: 'layout', id: 'nucleo-h723zg' }
     ]

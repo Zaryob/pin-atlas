@@ -1,6 +1,16 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
 (() => {
   const messages = {
+    "nucleo32Layout": ["STM32 Nucleo-32 ailesi", "STM32 Nucleo-32 family"],
+    "nucleo32Subtitle": ["MB1180 · 30 Arduino Nano kontağı", "MB1180 · 30 Arduino Nano contacts"],
+    "nucleo32Compatible": ["Ortak CN3/CN4 düzeni; işlemciye özgü işlevler model seçicisindedir.", "Shared CN3/CN4 positions; choose a model for its processor functions."],
+    "nucleo32Scope": ["UM1956 Rev 6 · MB1180 CN3/CN4. I/O 3,3 V'tur. A4/A5 ve D4/D5 I²C köprüleri ile osilatör/VCP bağlantılarının pin notlarını kontrol edin.", "UM1956 Rev 6 · MB1180 CN3/CN4. I/O uses 3.3 V. Check pin notes for A4/A5 and D4/D5 I²C bridges, oscillator and VCP connections."],
+    "nucleo32I2cBridge": ["SB16, A5'i D5/PB6'ya; SB18, A4'ü D4/PB7'ye bağlar. Köprü ON iken PA6/PA5 yüzer giriş olmalı; D5/D4 bağımsız GPIO olarak kullanılamaz. Seçenekler ana MCU bacağına aittir; devreyi köprü ayarınıza göre kontrol edin.", "SB16 links A5 to D5/PB6; SB18 links A4 to D4/PB7. With a bridge ON, PA6/PA5 must be floating inputs and D5/D4 cannot be independent GPIOs. Options describe the primary MCU pad; check the circuit against your bridge settings."],
+    "nucleo32Vcp": ["PA2/A7, SB2 üzerinden ST-LINK VCP TX ile ortaktır. A7 analog kullanımı için SB2 OFF olmalıdır.", "PA2/A7 shares ST-LINK VCP TX through SB2. Using A7 as an analog input requires SB2 OFF."],
+    "nucleo32Led": ["PB3/D13, SB15 üzerinden LD3 kullanıcı LED'i ile ortaktır.", "PB3/D13 shares the LD3 user LED through SB15."],
+    "nucleo32Clock": ["D7/D8 osilatör bağlantılarıyla ortaktır. GPIO olarak kullanmadan önce modelin saat kaynağını ve lehim köprülerini kontrol edin.", "D7/D8 share oscillator connections. Check this model's clock source and solder bridges before GPIO use."],
+    "nucleo32Aref": ["CN4.13, SB10 ayarına bağlı harici analog referanstır. VREF+ ile VDD bağlantısını kontrol edin.", "CN4.13 is the external analog reference depending on SB10. Check the VREF+ connection to VDD."],
+    "stm32CubeQfnScope": ["Üreticinin sabit sürümlü XML kaynağındaki UFQFPN çevre bacakları ve GPIO işlevleri. Merkez termal pad bu XML kaynağında numaralandırılmadığından çizimde gösterilmez; bağlantısı için veri sayfasına bakın.", "UFQFPN perimeter pads and GPIO functions from pinned manufacturer XML. The center thermal pad is not numbered in this XML source and is omitted from the drawing; consult the datasheet for its connection."],
     "outputPrint": ["Yazdır / PDF kaydet", "Print / Save PDF"],
     "outputSVG": ["SVG indir", "Download SVG"],
     "outputFunction": ["İşlev", "Function"],

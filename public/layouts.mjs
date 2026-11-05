@@ -4,6 +4,7 @@
 export function buildLayouts(boards) {
   const byId = new Map(boards.map(board => [board.id, board]));
   const nucleo64 = boards.filter(board => board.layoutFamily === 'nucleo-64');
+  const nucleo32 = boards.filter(board => board.layoutFamily === 'nucleo-32');
   const definitions = [
     {
       id: 'pico-family', nameKey: 'picoLayout', subtitleKey: 'picoLayoutSubtitle',
@@ -81,6 +82,12 @@ export function buildLayouts(boards) {
     profileIds:nucleo64.map(board=>board.id), defaultProfile:'nucleo-f401re',
     geometryConnectors:['CN7','CN6','CN8','CN10','CN5','CN9'], sharedContactCount:108,
     references:nucleo64.map(board=>({label:`${board.name} · ${board.mcu}`,profileIds:[board.id]}))
+  });
+  if(nucleo32.length)definitions.push({
+    id:'nucleo-32',nameKey:'nucleo32Layout',subtitleKey:'nucleo32Subtitle',compatibleKey:'nucleo32Compatible',
+    profileIds:nucleo32.map(board=>board.id),defaultProfile:nucleo32[0].id,
+    geometryConnectors:['CN3','CN4'],sharedContactCount:30,
+    references:nucleo32.map(board=>({label:`${board.name} · ${board.mcu}`,profileIds:[board.id]}))
   });
   const grouped = new Set(definitions.flatMap(layout => layout.profileIds));
   const layouts = definitions.map(definition => {

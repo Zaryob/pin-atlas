@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="650" viewBox="0 0 720 650">
+ <rect x="226" y="70" width="268" height="535" rx="8" fill="#284b3e" stroke="#132d25" stroke-width="3"/>
+ <rect x="320" y="58" width="80" height="44" rx="4" fill="#c8cecb" stroke="#52605b"/>
+ <text x="360" y="130" text-anchor="middle" fill="#e0e9e3" font-family="monospace" font-size="14">ST-LINK/V2-1</text>
+ <rect x="313" y="178" width="94" height="68" fill="#26342d" stroke="#83998d"/>
+ <path d="M246 285H474" stroke="#9bb2a4" stroke-dasharray="6 4"/>
+ <rect x="310" y="358" width="100" height="100" fill="#26342d" stroke="#83998d"/>
+ <text x="360" y="400" text-anchor="middle" fill="#e0e9e3" font-family="monospace" font-size="14">STM32</text>
+ <text x="360" y="423" text-anchor="middle" fill="#e0e9e3" font-family="monospace" font-size="12">NUCLEO-32</text>
+ <text x="360" y="557" text-anchor="middle" fill="#e0e9e3" font-family="monospace" font-size="13">MB1180 · TOP</text>
+</svg>

@@ -147,3 +147,9 @@ UM1724 ham tablo hücreleri `sources/extracted/nucleo-um1724-r14.json` içinde h
 - **STM32F407VGT6:** ayrı LQFP-100 paket görünümü, 82 GPIO bacağı ve en fazla 168 MHz Cortex-M4. Paket XML dosyası üreticinin ortak `STM32F417_gpio_v1_0` GPIO tablosunu belirtir; ayrıştırıcı yalnızca bu işlemci/paket XML kaynağında bulunan sinyalleri kullanır. Bu bağımsız MCU görünümüne Nucleo konektör numaraları atanmaz.
 
 - **STM32F405RGT6:** ayrı LQFP-64 paket görünümü, 51 GPIO bacağı ve en fazla 168 MHz Cortex-M4. Paket XML dosyası üreticinin ortak `STM32F417_gpio_v1_0` GPIO tablosunu belirtir; ayrıştırıcı yalnızca bu işlemci/paket XML kaynağında bulunan sinyalleri kullanır. Bu bağımsız MCU görünümüne Nucleo konektör numaraları atanmaz.
+
+## Nucleo-32 / MB1180
+
+NUCLEO-F042K6 için UM1956 Rev 6 Tablo 10 (sayfa 24), Şekil 3 (sayfa 12) ve Tablo 7/8 (sayfa 21/22) kullanılır. CN3/CN4 üzerindeki 30 fiziksel konum ve baskı etiketleri korunur. STM32F042K6T6, 32 LQFP çevre bacağı ve 26 GPIO bacağına sahiptir; işlevler sabit sürümlü üretici XML kaynaklarından alınır.
+
+A4/A5'in ana bacakları PA5/PA6'dır. SB18/SB16 bunları PB7/PB6 (D4/D5) ile bağlayabilir; bu durumda ana bacaklar yüzer giriş olmalı, D4/D5 bağımsız GPIO olarak kullanılmamalıdır. PA5/PA6 üzerinde olmayan I²C seçicileri eklenmez. VCP, LED, osilatör ve AREF bağlantıları pin notlarında açıklanır. Ham UM1956 tablo kaydı özgün PDF ile karşılaştırılır; CI bu PDF'yi indirmeden yeniden üretim yapar.

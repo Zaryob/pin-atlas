@@ -6,6 +6,7 @@ from pathlib import Path, PurePosixPath
 from urllib.parse import urlsplit
 
 from nucleo_sources import build_nucleo
+from stm32_board_sources import build_nucleo32
 
 # Table locations are reviewed data, separate from the reusable parser.
 REGISTRY = json.loads((Path(__file__).resolve().parents[1] / 'sources/stm32-catalog.json').read_text())
@@ -44,9 +45,10 @@ def read_cube_package(cache, docs, ref, model, verified_on):
     assert re.fullmatch(r'[0-9a-f]{40}', package_doc['revision'])
     assert modes_doc['revision'] == package_doc['revision']
     package_name = package.get('Package')
-    match = re.fullmatch(r'LQFP(\d+)', package_name)
+    match = re.fullmatch(r'(LQFP|UFQFPN)(\d+)', package_name)
     assert match, package_name
-    total = int(match[1])
+    total = int(match[2])
+    qfn=match[1]=='UFQFPN'
     pin_ref = ref(f'{model}-package', f'{model}-package', None,
                   f'{package_name} numbered package pins and physical signals', 'manufacturer-xml')
     mode_ref = ref(f'{model}-modes', modes_id, None,
@@ -91,14 +93,15 @@ def read_cube_package(cache, docs, ref, model, verified_on):
     gpio_count = sum(pin['type'] == 'GPIO' for pin in pins)
     assert gpio_count == int(package.findtext('{*}IONb'))
     voltage = package.find('{*}Voltage')
-    name = f'STM32{model.upper()}T6'
+    name = REGISTRY.get('partNames',{}).get(model,f'STM32{model.upper()}T6')
     core, frequency = package.findtext('{*}Core'), package.findtext('{*}Frequency')
     return {'id': name.lower(), 'name': name, 'shortName': name, 'mcu': name,
             'family': 'STMicroelectronics', 'processor': core, 'clock': f'{frequency} MHz',
-            'subtitle': f'LQFP-{total} · {core} · {frequency} MHz',
-            'layout': 'lqfp', 'packageName': f'LQFP-{total}', 'packagePins': total,
+            'subtitle': f'{"UFQFPN" if qfn else "LQFP"}-{total} · {core} · {frequency} MHz',
+            'layout': 'qfn' if qfn else 'lqfp', 'packageName': f'{"UFQFPN" if qfn else "LQFP"}-{total}', 'packagePins': total,
             'gpioCount': gpio_count, 'voltage': f"{voltage.get('Min')}–{voltage.get('Max')} V",
-            'verifiedOn': verified_on, 'scopeKey': 'stm32CubeScope',
+            'verifiedOn': verified_on, 'scopeKey': 'stm32CubeQfnScope' if qfn else 'stm32CubeScope',
+            **({'exposedPad':False} if qfn else {}),
             'source': package_doc['viewUrl'], 'datasheet': f'https://www.st.com/resource/en/datasheet/stm32{model}.pdf',
             'pins': pins}
 
@@ -123,4 +126,7 @@ def build_catalog(cache, docs, ref, verified_on, use_snapshots=False):
         boards.extend([board, chip])
     for model in PACKAGES:
         boards.append(read_cube_package(cache, docs, ref, model, verified_on))
+    for model,page in REGISTRY.get('nucleo32',{}).items():
+        chip=read_cube_package(cache,docs,ref,model,verified_on)
+        boards.extend([build_nucleo32(cache,docs,ref,chip,model,page,use_snapshots),chip])
     return boards

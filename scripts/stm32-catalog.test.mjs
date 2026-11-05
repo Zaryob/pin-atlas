@@ -5,6 +5,16 @@ import {buildLayouts,resolveProfile} from '../public/layouts.mjs';
 const boards=JSON.parse(readFileSync(new URL('../public/data/boards.json',import.meta.url)));
 const layouts=buildLayouts(boards);
 
+test('NUCLEO-F042K6 uses UM1956 header numbering and its own LQFP32 package',()=>{
+ const board=boards.find(b=>b.id==='nucleo-f042k6'),chip=boards.find(b=>b.id===board.mcuProfile);
+ assert.equal(chip.packagePins,32);assert.equal(chip.gpioCount,26);assert.equal(chip.clock,'48 MHz');
+ assert.equal(board.pins.length,30);
+ const tx=board.pins.find(p=>p.physicalLabel==='CN3.1');assert.equal(tx.name,'PA9');assert(tx.functions.some(f=>f.name==='USART1_TX'));
+ const a5=board.pins.find(p=>p.physicalLabel==='CN4.7');assert.equal(a5.name,'PA6');assert.equal(a5.boardCircuitKey,'nucleo32I2cBridge');
+ assert(!a5.functions.some(f=>f.name==='I2C1_SCL'));
+ assert.equal(resolveProfile(layouts,board.id).layout.id,'nucleo-32');
+});
+
 test('Nucleo-64 references share physical positions while preserving old model links',()=>{
   const family=layouts.find(layout=>layout.id==='nucleo-64');
   assert(family.profileIds.includes('nucleo-f446re'));
