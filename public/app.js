@@ -973,6 +973,10 @@ function renderHomeCatalog() {
 
   const query = homeSearchQuery;
   const activeFilter = homeActiveFilter;
+  const searching = Boolean(query) || activeFilter !== 'all';
+  $('#home-view').classList.toggle('is-searching', searching);
+  $('#catalog-title').textContent = t(query ? 'catalogSearchResults' : 'browseAllBoards');
+  $('#browse-all-boards-desc').hidden = searching;
 
   const matchingFamilies = boardFamilies.map(family => {
     if (activeFilter !== 'all') {
@@ -1040,6 +1044,8 @@ function renderHomeCatalog() {
     return { family, items };
   }).filter(Boolean);
 
+  $('#home-search-status').textContent = searching
+    ? t('catalogResultCount', {count:matchingFamilies.reduce((total, family) => total + family.items.length, 0)}) : '';
   if (!matchingFamilies.length) {
     container.innerHTML = `<p class="home-empty" style="color:var(--muted);padding:30px 0;text-align:center;">${esc(t('noBoardsMatchFilter'))}</p>`;
     return;

@@ -757,6 +757,15 @@
   max-width: 620px;
   margin: 0 auto;
 }
+.home-search-status { min-height: 18px; margin: 10px 0 0; color: var(--muted); font-size: 12px; }
+.home-search-status:empty { display: none; }
+.home-view.is-searching .home-stats,
+.home-view.is-searching #featured-section,
+.home-view.is-searching .home-features-section { display: none; }
+.home-view.is-searching .home-hero { padding-top: 12px; padding-bottom: 12px; }
+.home-view.is-searching .home-badge,
+.home-view.is-searching .home-lead { display: none; }
+.home-view.is-searching .home-title { font-size: 28px; margin-bottom: 20px; }
 .home-search-box {
   display: flex;
   align-items: center;

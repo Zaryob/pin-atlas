@@ -7,6 +7,8 @@
     "homeTitle": ["Pin Atlas", "Pin Atlas"],
     "homeLead": ["Geliştirme kartları ve mikrodenetleyiciler için resmî üretici veri sayfalarından doğrulanmış etkileşimli pin haritası, bacak eşleme ve kablolama rehberi.", "Interactive, source-verified pinout guide and wiring planner for maker boards and microcontrollers built directly from official manufacturer documentation."],
     "homeSearchPlaceholder": ["Kart, mikrodenetleyici veya aile ara (ör. RP2040, Nano, ESP32, Nucleo)…", "Search boards, chips, or families (e.g. RP2040, Nano, ESP32, Nucleo)…"],
+    "catalogSearchResults": ["Arama sonuçları", "Search results"],
+    "catalogResultCount": ["{count} sonuç", "{count} results"],
     "statBoards": ["Kart & Yonga", "Boards & MCUs"],
     "statFamilies": ["Kart Ailesi", "Board Families"],
     "statPins": ["Doğrulanmış Pin", "Verified Pins"],
