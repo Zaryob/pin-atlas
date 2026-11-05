@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.8.0 — 2026-11-05
+
+- Add source-backed STM32 board configuration for solder bridges, debug wiring, clocks and fitted components. Apply Nucleo-32 SB16/SB18 MCU rerouting, VCP/LED bridges, MB1364 A4/A5 and Morpho contacts, and WeAct optional-flash constraints to maps and plan validation. Unspecified wiring reserves affected contacts.
+- Preserve existing assignments with visible configuration conflicts. Store configured pins and hardware settings atomically in v2 records; keep v1 backups and support configuration-aware JSON/share previews, cancellation and concurrent-change checks. Include applied settings and evidence in print/SVG output.
+- Suggest up to three compatible SPI, I²C and UART pin sets while locking existing functions and labels. Reuse partial/complete connections, distinguish hardware bus instances and enforce shared-pad, memory and AFIO constraints. Support verified hardware chip select, source/circuit comparisons and explicit application.
+- Run bounded search in a cancellable worker. Discard stale suggestions when requirements, settings or plans change; report exhausted search separately from unsatisfiable requests.
+- Retain the 55,815-byte startup catalog, all 77 profiles and existing physical layouts, English-first localization and Umami. Verify 63 unit cases and 58 desktop/mobile browser cases, including configured-plan migration, previews and worker-generated alternatives.
+
 ## v0.7.0 — 2026-11-05
 
 - Add guided SPI, I²C and UART/USART connections with verified pin choices, source links, circuit notes and protection for existing assignments.
