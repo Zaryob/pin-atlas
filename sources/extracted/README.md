@@ -4,7 +4,7 @@ These JSON files contain raw `pdfplumber` table cells from DS5319 PDF pages 28â€
 
 GitHub-hosted runners can time out downloading ST manuals or their mirrors. CI uses these checked-in extractions with `verify-official-sources.py --table-snapshots`, then applies the same parsing and package restrictions as the original-PDF mode. This includes the Nucleo-64 UM1724 manual, so a restored local PDF cannot hide an external-download dependency. It still compares all generated outputs. This verifies against recorded source cells; it does not independently fetch the snapshotted ST PDFs during CI.
 
-With the locked PDFs in `.cache/primary-sources/` and the pinned source-verification dependencies installed, compare every recorded cell against the originals:
+With the locked PDFs in `.cache/primary-sources/` and the pinned source-verification dependencies installed, compare the DS5319, RM0008 and UM1724 recorded cells against their originals:
 
 ```sh
 python3 scripts/record-st-tables.py

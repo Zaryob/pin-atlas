@@ -61,7 +61,7 @@ test('L476RG retains its MCU, low-power clock and analog input mapping',()=>{
   assert.equal(supply.name,'VBAT');
 });
 
-test('F072RB retains its MCU, low-power clock and analog input mapping',()=>{
+test('F072RB retains its MCU clock and analog input mapping',()=>{
   const board=boards.find(board=>board.id==='nucleo-f072rb');
   const chip=boards.find(board=>board.id==='stm32f072rbt6');
   assert.equal(chip.clock,'48 MHz');assert.equal(chip.gpioCount,51);

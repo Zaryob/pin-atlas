@@ -3,7 +3,7 @@
   const messages = {
     "Home": ["Ana sayfa", "Home"],
     "home": ["Ana sayfa", "Home"],
-    "homeBadge": ["v0.5 · Kriptografik Olarak Doğrulanmış Pin Rehberi", "v0.5 · Source-Verified Pin Guide"],
+    "homeBadge": ["v0.6 · Kriptografik Olarak Doğrulanmış Pin Rehberi", "v0.6 · Source-Verified Pin Guide"],
     "homeTitle": ["Pin Atlas", "Pin Atlas"],
     "homeLead": ["Üretici belgeleri ve açıkça belirtilen kart referanslarıyla doğrulanmış etkileşimli pin haritaları ve bağlantı planları.", "Interactive pin maps and wiring plans checked against manufacturer documentation and identified board references."],
     "homeSearchPlaceholder": ["Kart, mikrodenetleyici veya aile ara (ör. RP2040, Nano, ESP32, Nucleo)…", "Search boards, chips, or families (e.g. RP2040, Nano, ESP32, Nucleo)…"],
