@@ -45,6 +45,32 @@ test('Feather analog header highlights the verified RP2040 package pad',async({p
  await expect(page.locator('#diagram [data-mcu-pin="38"]')).toHaveAttribute('aria-current','true');
 });
 
+test('imports reject duplicate USART routes and incompatible remaps without changing saved plans',async({page})=>{
+ const saved={stm32f405rgt6:{42:{function:'USART1_TX',label:'console'}}};
+ await page.addInitScript(({key,saved})=>localStorage.setItem(key,JSON.stringify(saved)),{key:storageKey,saved});
+ await ready(page,'#board=stm32f405rgt6');await openPlan(page);
+ const invalid=[
+  {version:1,board:'stm32f405rgt6',pins:{42:{function:'USART1_TX',label:''},58:{function:'USART1_TX',label:''}}},
+  {version:1,board:'stm32f103c8t6',pins:{30:{function:'USART1_TX',label:''},43:{function:'USART1_RX',label:''}}}
+ ];
+ for(const payload of invalid){
+  await page.locator('#import-file').setInputFiles({name:'plan.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(payload))});
+  await expect(page.locator('#plan-feedback')).not.toBeEmpty();
+  await expect(page.locator('#incoming-plan-dialog')).toBeHidden();
+  expect(await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),storageKey)).toEqual(saved);
+ }
+});
+
+test('legacy remap conflicts stay visible and retain all stored assignments',async({page})=>{
+ const saved={stm32f103c8t6:{30:{function:'USART1_TX',label:'old TX'},43:{function:'USART1_RX',label:'old RX'}}};
+ await page.addInitScript(({key,saved})=>localStorage.setItem(key,JSON.stringify(saved)),{key:storageKey,saved});
+ await ready(page,'#board=stm32f103c8t6');await openPlan(page);
+ await expect(page.locator('#plan-validation')).toContainText('Your saved plan is preserved');
+ await expect(page.locator('#plan-list')).toContainText('old TX');
+ await expect(page.locator('#plan-list')).toContainText('old RX');
+ expect(await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),storageKey)).toEqual(saved);
+});
+
 test('exact model search shares results with the library and opens the right reference',async({page})=>{
   for (const [query,profile,mcu] of [
     ['Pico W','picow','RP2040'],['Pico 2 W','pico2w','RP2350A'],

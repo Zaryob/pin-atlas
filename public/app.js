@@ -91,7 +91,7 @@ function setBoard(id, initial = false, preferredProfile) {
  rememberedProfiles.set(layout.id, board.id);
  selected = sameLayout && board.pins.some(pin => pin.number === previousPin) ? previousPin : board.pins.find(p => p.type === 'GPIO')?.number || 1;
  try {
-   assignments = validatePlan(savedPlans[board.id] || {}, board, t, { allowDuplicateSignals: true, ignoreLegacyHseAssignments: true });
+   assignments = validatePlan(savedPlans[board.id] || {}, board, t, { allowDuplicateSignals: true, allowConflictingRemaps: true, ignoreLegacyHseAssignments: true });
  } catch { assignments = {}; }
  selectedFn = assignments[selected]?.function || options(pinByNumber(selected))[0].name;
  if (!sameLayout) { filters = new Set(); search = ''; $('#pin-search').value = ''; flipped = rotated = false; connectorZoom = ''; compatibilityQuery=''; $('#compatible-boards').open=false; }
@@ -502,6 +502,8 @@ function renderPlan() {
  for (const id of ['plan-count','plan-tab-count','mobile-plan-count']) $(`#${id}`).textContent = entries.length;
  $('#plan-reference').textContent = planReference(board, t);
  $('#plan-feedback').textContent = '';
+ try { validatePlan(assignments,board,t);$('#plan-validation').textContent=''; }
+ catch(error) { $('#plan-validation').textContent=t('savedPlanConflict',{error:error.message}); }
  renderPeripheral();
  $('#plan-list').innerHTML = entries.length ? entries.map(([n, assignment]) => {
    const pin = pinByNumber(n);
@@ -568,7 +570,7 @@ function addToPlan() {
 }
 
 function showCatalog() {
-  if (dataState !== 'ready') return;
+ if (dataState !== 'ready') return;
   $('#catalog-search').value = '';
   renderCatalog();
   $('#library-dialog').showModal();

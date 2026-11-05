@@ -1,4 +1,5 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
+import {peripheralSignal} from './peripherals.mjs';
 export const physicalLabel = pin => pin.physicalLabel || String(pin.number).padStart(2, '0');
 
 export function options(pin) {
@@ -10,9 +11,9 @@ export function planReference(profile, t = k => k) {
   return mcu && !profile.name.includes(mcu) ? `${profile.name} · ${mcu}` : profile.name;
 }
 
-export function validatePlan(data, target, t, { allowDuplicateSignals = false, ignoreLegacyHseAssignments = false } = {}) {
+export function validatePlan(data, target, t, { allowDuplicateSignals = false, allowConflictingRemaps = false, ignoreLegacyHseAssignments = false } = {}) {
   if (!data || typeof data !== 'object' || Array.isArray(data)) throw new Error(t('invalidPlan'));
-  const clean = {}, nets = new Map(), signals = new Map();
+  const clean = {}, nets = new Map(), signals = new Map(), remaps = new Map();
   for (const [key, value] of Object.entries(data)) {
     // Preserve valid saved entries from plans made before the LQFP-100 HSE correction.
     if (ignoreLegacyHseAssignments && target.id === 'stm32f103vbt6' &&
@@ -28,9 +29,21 @@ export function validatePlan(data, target, t, { allowDuplicateSignals = false, i
       nets.set(pin.net, pin);
     }
     const name = value.function;
-    if (!allowDuplicateSignals && /^(SPI|I2C|UART)\d/.test(name)) {
-      if (signals.has(name)) throw new Error(t('duplicateSignal', { name, pin: physicalLabel(signals.get(name)) }));
-      signals.set(name, pin);
+    const fn = pin.functions.find(fn=>fn.name===name);
+    const identity = fn && peripheralSignal(fn);
+    const signalKey = identity ? `${identity.id}:${identity.role}` : fn && ['SPI','I2C','UART','CAN'].includes(fn.group) &&
+      /^(SPI\d*|I2C\d*|USART\d+|UART\d*|LPUART\d+|FDCAN\d+|CAN\d+)[ _]+/i.test(name)
+      ? name.toUpperCase().replace(/\s*\(MATRIX\)$/,'').replace(/[ _]+/g,':') : null;
+    if (!allowDuplicateSignals && signalKey) {
+      if (signals.has(signalKey)) throw new Error(t('duplicateSignal', { name, pin: physicalLabel(signals.get(signalKey)) }));
+      signals.set(signalKey, pin);
+    }
+    if (fn?.configuration) {
+      const {field,values} = fn.configuration;
+      const allowed = new Set(values.map(String));
+      const common = remaps.has(field) ? new Set([...remaps.get(field)].filter(value=>allowed.has(value))) : allowed;
+      if (!common.size && !allowConflictingRemaps) throw new Error(t('remapConflict',{field,pin:physicalLabel(pin)}));
+      remaps.set(field,common);
     }
     clean[key] = { function: name, label: value.label };
   }
