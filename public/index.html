@@ -35,10 +35,10 @@ title: Pin Atlas — Source-verified pin guide
     <div class="home-hero">
       <div class="home-badge">
         <span class="tiny-dot"></span>
-        <span data-i18n="homeBadge">v0.4 · Kriptografik Olarak Doğrulanmış Pin Rehberi</span>
+        <span data-i18n="homeBadge">v0.4 · Source-Verified Pin Guide</span>
       </div>
       <h1 class="home-title">Pin Atlas</h1>
-      <p class="home-lead" data-i18n="homeLead">Geliştirme kartları ve mikrodenetleyiciler için resmî üretici veri sayfalarından doğrulanmış etkileşimli pin haritası, bacak eşleme ve kablolama rehberi.</p>
+      <p class="home-lead" data-i18n="homeLead">Interactive pin maps and wiring plans checked against manufacturer documentation and identified board references.</p>
       
       <div class="home-search-wrap">
         <label class="home-search-box">
@@ -52,26 +52,26 @@ title: Pin Atlas — Source-verified pin guide
     </div>
 
     <!-- STATS BAR -->
-    <div class="home-stats" aria-label="Pin Atlas istatistikleri">
+    <div class="home-stats" aria-label="Pin Atlas statistics" data-i18n-aria-label="libraryStats">
       <div class="home-stat-item">
         <strong class="stat-number" id="home-stat-boards">51</strong>
-        <span class="stat-label" data-i18n="statBoards">Kart &amp; Yonga</span>
+        <span class="stat-label" data-i18n="statBoards">Boards &amp; MCUs</span>
       </div>
       <div class="home-stat-item">
         <strong class="stat-number" id="home-stat-families">12</strong>
-        <span class="stat-label" data-i18n="statFamilies">Kart Ailesi</span>
+        <span class="stat-label" data-i18n="statFamilies">Board Families</span>
       </div>
       <div class="home-stat-item">
         <strong class="stat-number" id="home-stat-pins">2.797</strong>
-        <span class="stat-label" data-i18n="statPins">Doğrulanmış Pin</span>
+        <span class="stat-label" data-i18n="statPins">Verified Pins</span>
       </div>
       <div class="home-stat-item">
         <strong class="stat-number" id="home-stat-functions">11.632</strong>
-        <span class="stat-label" data-i18n="statFunctions">İşlev Ataması</span>
+        <span class="stat-label" data-i18n="statFunctions">Function Assignments</span>
       </div>
       <div class="home-stat-item">
         <strong class="stat-number" id="home-stat-sources">81</strong>
-        <span class="stat-label" data-i18n="statSources">Kilitli Belge (SHA-256)</span>
+        <span class="stat-label" data-i18n="statSources">Locked Sources (SHA-256)</span>
       </div>
     </div>
 
@@ -79,8 +79,8 @@ title: Pin Atlas — Source-verified pin guide
     <section class="home-section" id="featured-section">
       <div class="home-section-header">
         <div>
-          <h2 class="home-section-title"><span data-i18n="featuredBoards">Öne Çıkan Kartlar</span></h2>
-          <p class="home-section-desc" data-i18n="featuredBoardsDesc">Popüler geliştirme kartları ve mikrodenetleyicilerle hemen çalışmaya başlayın.</p>
+          <h2 class="home-section-title"><span data-i18n="featuredBoards">Featured Boards</span></h2>
+          <p class="home-section-desc" data-i18n="featuredBoardsDesc">Quickly jump into popular development boards and microcontrollers.</p>
         </div>
       </div>
       <div class="featured-grid" id="featured-grid"></div>
@@ -91,7 +91,7 @@ title: Pin Atlas — Source-verified pin guide
       <div class="home-section-header">
         <div>
           <h2 class="home-section-title"><span id="catalog-title" data-i18n="browseAllBoards">All Boards &amp; Microcontrollers</span></h2>
-          <p class="home-section-desc" id="browse-all-boards-desc" data-i18n="browseAllBoardsDesc">Ortak kütüphane düzenlerine göre gruplanmış 30 fiziksel kart biçimi ve 42 kaynak profili.</p>
+          <p class="home-section-desc" id="browse-all-boards-desc" data-i18n="browseAllBoardsDesc">{layouts} physical layouts and {boards} source profiles grouped by verified hardware families.</p>
         </div>
       </div>
       <div id="home-catalog-container"></div>
@@ -101,30 +101,30 @@ title: Pin Atlas — Source-verified pin guide
     <section class="home-section home-features-section">
       <div class="home-section-header">
         <div>
-          <h2 class="home-section-title"><span data-i18n="whyPinAtlas">Neden Pin Atlas?</span></h2>
-          <p class="home-section-desc" data-i18n="whyPinAtlasDesc">Topluluk çizimlerindeki hataları ve pinmux karmaşasını ortadan kaldıran mühendislik yaklaşımı.</p>
+          <h2 class="home-section-title"><span data-i18n="whyPinAtlas">Why Pin Atlas?</span></h2>
+          <p class="home-section-desc" data-i18n="whyPinAtlasDesc">An engineering approach that eliminates pinmux confusion and unverified pinout diagram errors.</p>
         </div>
       </div>
       <div class="features-grid">
         <div class="feature-card">
           <div class="feature-icon"><span data-icon="shield"></span></div>
-          <h3 data-i18n="featureVerifiedTitle">Kriptografik Kaynak Doğrulaması</h3>
-          <p data-i18n="featureVerifiedDesc">Tüm bağlantılar ve alternatif fonksiyonlar, SHA-256 özetleriyle kilitli resmî üretici PDF ve kaynak tablolarından otomatik olarak denetlenir.</p>
+          <h3 data-i18n="featureVerifiedTitle">Cryptographic Source Verification</h3>
+          <p data-i18n="featureVerifiedDesc">Pin positions and alternate functions are checked against hash-locked documents and source tables. Community board references are identified separately.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon"><span data-icon="chip"></span></div>
-          <h3 data-i18n="featureBridgeTitle">Çift Yönlü Çip ↔ Kart Köprüsü</h3>
-          <p data-i18n="featureBridgeDesc">Kart üzerindeki bir pine tıkladığınızda MCU kılıfındaki gerçek bacak; MCU bacağına tıkladığınızda kart üzerindeki temas noktaları anında vurgulanır.</p>
+          <h3 data-i18n="featureBridgeTitle">Bidirectional Chip ↔ Board Bridge</h3>
+          <p data-i18n="featureBridgeDesc">On linked board and MCU views, selecting a header pin highlights its package pad, and selecting a pad reveals the connected board contacts.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon"><span data-icon="bookmark"></span></div>
-          <h3 data-i18n="featurePlannerTitle">Etkileşimli Kablolama Planı</h3>
-          <p data-i18n="featurePlannerDesc">Pinlere özel fonksiyon ve proje etiketleri atayın, sinyal çakışmalarını engelleyin ve planınızı tek tıkla URL linki veya JSON ile paylaşın.</p>
+          <h3 data-i18n="featurePlannerTitle">Interactive Wiring Planner</h3>
+          <p data-i18n="featurePlannerDesc">Assign dedicated pin functions, add custom labels, avoid bus signal collisions, and share your wiring plan via URL or JSON.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon"><span data-icon="globe"></span></div>
-          <h3 data-i18n="featureClientTitle">İki Dilli ve Sıfır Bağımlılık</h3>
-          <p data-i18n="featureClientDesc">Türkçe ve İngilizce tam yerelleştirme, tarayıcıda yerel saklama, sıfır izleyici ve tam veri gizliliği sunan statik mimari.</p>
+          <h3 data-i18n="featureClientTitle">English-first &amp; Local Plans</h3>
+          <p data-i18n="featureClientDesc">English and Turkish interface with wiring plans stored in this browser. The site uses Umami for usage analytics.</p>
         </div>
       </div>
     </section>
@@ -148,7 +148,7 @@ title: Pin Atlas — Source-verified pin guide
       <div class="compatibility-content">
         <div id="compatibility-search-row" class="compatibility-search-row" hidden><label for="compatibility-search" data-i18n="findCompatibleModel">Find a model</label><input id="compatibility-search" type="search" autocomplete="off" placeholder="Search compatible models…" data-i18n-placeholder="compatibleSearchPlaceholder"><span id="compatibility-results" role="status" aria-live="polite"></span></div>
         <ol id="compatibility-list" class="compatibility-list"></ol>
-        <p id="compatibility-empty" class="compatibility-empty" data-i18n="noCompatibleModel" hidden>No matching model.</p>
+        <p id="compatibility-empty" class="compatibility-empty" data-i18n="noCompatibleModel" hidden>No matching model. Try another name or processor.</p>
         <p class="compatibility-footnote" data-i18n="compatibilityIndexNote">Choose a model to open its reference. Shared pinouts may have different functions and electrical limits.</p>
       </div>
     </details>
@@ -196,7 +196,7 @@ title: Pin Atlas — Source-verified pin guide
   <button id="open-pin" aria-haspopup="dialog"><span data-icon="crosshair"></span><span id="selected-pin-label"></span></button><button id="open-plan" aria-haspopup="dialog"><span data-icon="bookmark"></span><span data-i18n="myPlan">My wiring plan</span> <span id="mobile-plan-count">0</span></button>
 </div>
 <dialog id="details-dialog" aria-label="Pin and wiring plan" data-i18n-aria-label="pinAndPlan"></dialog>
-<dialog id="library-dialog" aria-labelledby="library-title"><div class="modal-header"><div><h2 id="library-title"><span data-i18n="boardLibrary">Board library</span></h2></div><button class="icon-button" data-close aria-label="Close library" data-i18n-aria-label="closeLibrary"><span data-icon="close"></span></button></div><label class="catalog-search"><span data-icon="search"></span><input type="search" id="catalog-search" placeholder="Search boards, chips, or families…" data-i18n-placeholder="catalogPlaceholder" aria-label="Search the board library" data-i18n-aria-label="catalogSearch"></label><div id="catalog-grid"></div><p class="catalog-note" data-i18n="catalogScope">Choose a model for its specific functions, or a family to browse its shared layout.</p></dialog>
+<dialog id="library-dialog" aria-labelledby="library-title"><div class="modal-header"><div><h2 id="library-title"><span data-i18n="boardLibrary">Board library</span></h2></div><button class="icon-button" data-close aria-label="Close library" data-i18n-aria-label="closeLibrary"><span data-icon="close"></span></button></div><label class="catalog-search"><span data-icon="search"></span><input type="search" id="catalog-search" placeholder="Search boards, chips, or families…" data-i18n-placeholder="catalogPlaceholder" aria-label="Search the board library" data-i18n-aria-label="catalogSearch"></label><div id="catalog-grid"></div><p class="catalog-note" data-i18n="catalogScope">Search for a model for its specific functions. Choose a family for its shared pinout.</p></dialog>
 <dialog id="help-dialog" aria-labelledby="help-title"><div class="modal-header"><h2 id="help-title"><span data-i18n="helpTitle">Start with a pin</span></h2><button class="icon-button" data-close aria-label="Close help" data-i18n-aria-label="closeHelp"><span data-icon="close"></span></button></div><ol class="help-steps"><li><strong><span data-i18n="helpChoose">Choose a board.</span></strong> <span data-i18n="helpChooseDetail">Open a board or microcontroller from the library.</span></li><li><strong><span data-i18n="helpFind">Find a function.</span></strong> <span data-i18n="helpFindDetail">Use the interface filters to highlight compatible pins.</span> <kbd>/</kbd> <span data-i18n="helpShortcut">opens search.</span></li><li><strong><span data-i18n="helpPlan">Plan your connection.</span></strong> <span data-i18n="helpPlanDetail">Click a pin, select a function, and give it a label.</span></li><li><strong><span data-i18n="helpShare">Share your plan.</span></strong> <span data-i18n="helpShareDetail">Download a JSON file or use Share to copy a link.</span></li></ol><p><span data-i18n="helpStorage">Plans are stored in this browser. A share link includes the selected board, pins, and labels. Check electrical compatibility against the manufacturer’s documentation.</span></p><div class="help-sources"><span data-i18n="manufacturerDocs">Manufacturer documentation</span> <a href="https://datasheets.raspberrypi.com/picow/pico-2-w-datasheet.pdf" target="_blank" rel="noopener"><span data-i18n="picoDatasheet">Pico 2 W datasheet ↗</span></a> · <a href="https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf" target="_blank" rel="noopener"><span data-i18n="rpDatasheet">RP2350 datasheet ↗</span></a> · <a href="https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-reduced-schematics.pdf" target="_blank" rel="noopener"><span data-i18n="piSchematic">Pi 4 schematic ↗</span></a> · <a href="https://github.com/Zaryob/pin-atlas/blob/main/docs/VERIFICATION.md" data-verification-link target="_blank" rel="noopener"><span data-i18n="verification">Verification record ↗</span></a></div></dialog>
 <dialog id="share-dialog" aria-labelledby="share-title"><div class="modal-header"><h2 id="share-title"><span data-i18n="shareTitle">Your plan link is ready</span></h2><button class="icon-button" data-close aria-label="Close sharing dialog" data-i18n-aria-label="closeShare"><span data-icon="close"></span></button></div><p><span data-i18n="shareDescription">Anyone who opens this link can see your board and wiring plan.</span></p><input id="share-url" readonly aria-label="Share link" data-i18n-aria-label="shareLink"><button id="copy-share" class="button primary"><span data-i18n="copyLink">Copy link</span></button></dialog>
 <dialog id="incoming-plan-dialog" aria-labelledby="incoming-plan-title" aria-describedby="incoming-plan-message">

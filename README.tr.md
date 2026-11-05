@@ -106,3 +106,7 @@ Arduino haritaları resmî tam pin şemaları, bağlantı tabloları ve sabitlen
 ESP GPIO matrix seçenekleri etkin yazılım atamasını değil, yapılandırılabilir yönlendirme olanağını gösterir. Girişe özel pinlere çıkış/PWM verilmez; flash/PSRAM’a ayrılmış kontaklar plana eklenemez. ESP çizimlerinde USB alttadır.
 
 **Uyumlu kartlar** bölümü numaralı bir model indeksi açar. İşlemci/referans, seçili model ve kayıtlı plan bilgisi gösterilir; uzun listeler aranabilir. Model seçimi doğru referansı açar. Yalnızca fiziksel uyumluluğu doğrulanan modeller ortak pin düzenine gider; başka kartın alternatif işlevleri atanmaz.
+
+Ana sayfa ve kütüphane araması aynı kataloğu kullanır. Belirli bir modeli aramak, ortak fiziksel düzen içinde o modelin işlemci referansını açar. Öne çıkan kartların adları, GPIO sayıları ve I/O gerilimleri doğrulanmış profillerden alınır. Kütüphane yüklenemezse **Tekrar dene** kullanılabilir; tarayıcıdaki kayıtlı planlar korunur.
+
+Site kullanım analitiği için Umami kullanır. Bağlantı planları tarayıcıda yerel olarak saklanır.

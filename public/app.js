@@ -1,6 +1,7 @@
 import { buildLayouts, resolveProfile } from './layouts.mjs';
 import { compatibleModels, filterCompatibleModels } from './compatibility.mjs';
 import { connectorGroupsFor } from './connectors.mjs';
+import { boardFamilies, homeFilterChips, featuredCards } from './catalog.mjs';
 import { options, physicalLabel, planReference, samePlan, validatePlan } from './plans.mjs';
 const { t, verificationUrl } = window.ZaryobI18n;
 const $ = (selector, root = document) => root.querySelector(selector);
@@ -526,136 +527,6 @@ function addToPlan() {
    $('#add-plan').focus({ preventScroll: true });
  }
 }
-const boardFamilies = [
-  {
-    id: 'raspberry-pi',
-    nameKey: 'familyRaspberryPi',
-    items: [
-      { type: 'layout', id: 'pico-family' },
-      { type: 'layout', id: 'raspberry-pi-40' },
-      { type: 'layout', id: 'rp2040' },
-      {
-        type: 'package-group',
-        id: 'rp2350',
-        name: 'RP2350',
-        subtitleKey: 'rp2350Subtitle',
-        defaultLayout: 'rp2350a',
-        packages: [
-          { id: 'rp2350a', label: 'QFN-60' },
-          { id: 'rp2350b', label: 'QFN-80' }
-        ]
-      }
-    ]
-  },
-  {
-    id: 'arduino',
-    nameKey: 'familyArduino',
-    items: [
-      { type: 'layout', id: 'arduino-uno' },
-      { type: 'layout', id: 'arduino-nano' },
-      { type: 'layout', id: 'arduino-mega-2560' },
-      { type: 'layout', id: 'arduino-micro' }
-    ]
-  },
-  {
-    id: 'seeed',
-    nameKey: 'familySeeed',
-    items: [
-      { type: 'layout', id: 'seeed-xiao' }
-    ]
-  },
-  {
-    id: 'adafruit',
-    nameKey: 'familyAdafruit',
-    items: [
-      { type: 'layout', id: 'adafruit-feather-rp2040' }
-    ]
-  },
-  {
-    id: 'teensy',
-    nameKey: 'familyTeensy',
-    items: [
-      { type: 'layout', id: 'teensy-41' }
-    ]
-  },
-  {
-    id: 'beagleboard',
-    nameKey: 'familyBeagleBoard',
-    items: [
-      { type: 'layout', id: 'beaglebone-black' }
-    ]
-  },
-  {
-    id: 'microbit',
-    nameKey: 'familyMicrobit',
-    items: [
-      { type: 'layout', id: 'microbit-v2' }
-    ]
-  },
-  {
-    id: 'espressif',
-    nameKey: 'familyEspressif',
-    items: [
-      { type: 'layout', id: 'esp32-devkitc-v4' },
-      { type: 'layout', id: 'esp32-s3-devkitc-1' },
-      { type: 'layout', id: 'esp32-c6-devkitc-1' },
-      { type: 'layout', id: 'esp32-c3-devkitm-1' }
-    ]
-  },
-  {
-    id: 'stm32',
-    nameKey: 'familyStm32',
-    items: [
-      { type: 'layout', id: 'blue-pill' },
-      { type: 'layout', id: 'stm32f103c8t6' },
-      { type: 'layout', id: 'stm32f103rbt6' },
-      { type: 'layout', id: 'stm32f103vbt6' },
-      { type: 'layout', id: 'stm32f401ret6' },
-      { type: 'layout', id: 'stm32f411ret6' },
-      { type: 'layout', id: 'stm32g474ret6' },
-      { type: 'layout', id: 'stm32h723zgt6' }
-    ]
-  },
-  {
-    id: 'stm32-nucleo',
-    nameKey: 'familyStm32Nucleo',
-    items: [
-      { type: 'layout', id: 'nucleo-f103rb' },
-      { type: 'layout', id: 'nucleo-f401re' },
-      { type: 'layout', id: 'nucleo-f411re' },
-      { type: 'layout', id: 'nucleo-g474re' },
-      { type: 'layout', id: 'nucleo-h723zg' }
-    ]
-  },
-  {
-    id: 'microchip',
-    nameKey: 'familyMicrochip',
-    items: [
-      {
-        type: 'package-group',
-        id: 'atmega328p',
-        name: 'ATmega328P',
-        subtitleKey: 'atmega328pSubtitle',
-        defaultLayout: 'atmega328p-pdip28',
-        packages: [
-          { id: 'atmega328p-pdip28', label: 'PDIP-28' },
-          { id: 'atmega328p-tqfp32', label: 'TQFP-32' },
-          { id: 'atmega328p-qfn32', label: 'QFN-32' },
-          { id: 'atmega328p-qfn28', label: 'QFN-28' }
-        ]
-      },
-      { type: 'layout', id: 'atmega2560-tqfp100' },
-      { type: 'layout', id: 'atmega2561-tqfp64' }
-    ]
-  },
-  {
-    id: 'nvidia',
-    nameKey: 'familyNvidia',
-    items: [
-      { type: 'layout', id: 'jetson-orin-nano' }
-    ]
-  }
-];
 
 function showCatalog() {
   if (dataState !== 'ready') return;
@@ -810,67 +681,6 @@ function renderCatalog() {
   $('#catalog-grid').innerHTML = query ? renderCatalogResults(catalogMatches(query)) : renderCatalogFamilies().html;
 }
 
-const featuredDefs = [
-  {
-    layoutId: 'pico-family',
-    profileId: 'raspberry-pi-pico',
-    badge: 'Raspberry Pi',
-    titleKey: 'featuredPicoTitle',
-    descKey: 'featuredPicoDesc',
-    specs: '26-30 GPIO · 3.3V · RP2040 / RP2350'
-  },
-  {
-    layoutId: 'esp32-devkitc-v4',
-    profileId: 'esp32-devkitc-v4',
-    badge: 'Espressif',
-    titleKey: 'featuredEsp32Title',
-    descKey: 'featuredEsp32Desc',
-    specs: '28 GPIO · 3.3V / 5V · Xtensa LX6'
-  },
-  {
-    layoutId: 'arduino-nano',
-    profileId: 'arduino-nano',
-    badge: 'Arduino',
-    titleKey: 'featuredNanoTitle',
-    descKey: 'featuredNanoDesc',
-    specs: '14-22 GPIO · 5V / 3.3V · AVR'
-  },
-  {
-    layoutId: 'seeed-xiao',
-    profileId: 'seeed-xiao-rp2040',
-    badge: 'Seeed Studio',
-    titleKey: 'featuredXiaoTitle',
-    descKey: 'featuredXiaoDesc',
-    specs: '11 GPIO · 3.3V / 5V · RP2040'
-  },
-  {
-    layoutId: 'blue-pill',
-    profileId: 'blue-pill',
-    badge: 'STM32',
-    titleKey: 'featuredBluepillTitle',
-    descKey: 'featuredBluepillDesc',
-    specs: '32 GPIO · 3.3V · Cortex-M3'
-  },
-  {
-    layoutId: 'rp2040',
-    profileId: 'rp2040',
-    badge: 'IC / Package',
-    titleKey: 'featuredRp2040Title',
-    descKey: 'featuredRp2040Desc',
-    specs: '30 GPIO · QFN-56 · Dual Cortex-M0+'
-  }
-];
-
-const homeFilterChips = [
-  { id: 'all', labelKey: 'allFamilies' },
-  { id: 'raspberry-pi', labelKey: 'familyRaspberryPi' },
-  { id: 'microbit', labelKey: 'familyMicrobit' },
-  { id: 'espressif', labelKey: 'familyEspressif' },
-  { id: 'arduino', labelKey: 'familyArduino' },
-  { id: 'stm32', labelKey: 'familyStm32' },
-  { id: 'seeed', labelKey: 'familySeeed' },
-  { id: 'chips', labelKey: 'familyChips' }
-];
 
 function updateLibraryCount() {
   const el = $('#library-count');
@@ -942,20 +752,12 @@ function renderHomeFilterChips() {
 }
 
 function renderHomeFeatured() {
-  const grid = $('#featured-grid');
-  if (!grid) return;
-  grid.innerHTML = featuredDefs.map(item => `
-    <div class="featured-card" data-layout="${esc(item.layoutId)}"${item.profileId ? ` data-profile="${esc(item.profileId)}"` : ''} role="button" tabindex="0" aria-label="${esc(t(item.titleKey))}">
-      <div class="featured-card-top">
-        <span class="featured-badge">${esc(item.badge)}</span>
-        <span class="tiny-dot" aria-hidden="true"></span>
-      </div>
-      <h3 class="featured-title">${esc(t(item.titleKey))}</h3>
-      <p class="featured-desc">${esc(t(item.descKey))}</p>
-      <div class="featured-footer">
-        <span class="featured-specs">${esc(item.specs)}</span>
-        <span class="featured-action">${esc(t('featuredOpen'))}</span>
-      </div>
+  $('#featured-grid').innerHTML = featuredCards(layouts, t).map(item => `
+    <div class="featured-card" data-layout="${esc(item.layoutId)}" data-profile="${esc(item.profileId)}" role="button" tabindex="0" aria-label="${esc(item.name)}">
+      <div class="featured-card-top"><span class="featured-badge">${esc(item.family)}</span><span class="tiny-dot" aria-hidden="true"></span></div>
+      <h3 class="featured-title">${esc(item.name)}</h3>
+      <p class="featured-desc">${esc(item.description)}</p>
+      <div class="featured-footer"><span class="featured-specs">${esc(item.specs)}</span><span class="featured-action">${esc(t('featuredOpen'))}</span></div>
     </div>
   `).join('');
 }
