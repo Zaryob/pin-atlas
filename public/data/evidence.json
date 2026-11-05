@@ -994,6 +994,50 @@
       "publisher": "STMicroelectronics",
       "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
       "sha256": "1ccb854fb3b4f18e3508bd6b34e9faa1112cbea646f4993e0f2eeffb3e52da43"
+    },
+    {
+      "id": "f767zi-package",
+      "title": "F767ZI CubeMX package data",
+      "file": "f767zi-package.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F767ZITx.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F767ZITx.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "c3ce62ee6cfa54b47c8cead1bb783b088d4dd9cbebf28a0c4e557aaee4de1928"
+    },
+    {
+      "id": "f767zi-modes",
+      "title": "STM32F76x_gpio_v1_0 GPIO alternate functions",
+      "file": "f767zi-modes.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F76x_gpio_v1_0_Modes.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F76x_gpio_v1_0_Modes.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "b76b99657064ee2f1276d085ab8a277d778b6e38004c0f66666a0cf707fb784f"
+    },
+    {
+      "id": "nucleo-um1974-r11",
+      "title": "STM32 Nucleo-144 · UM1974 Rev 11",
+      "file": "nucleo-um1974-r11.pdf",
+      "url": "https://www.st.com/resource/en/user_manual/dm00244518-stm32-nucleo144-boards-stmicroelectronics.pdf",
+      "viewUrl": "https://www.st.com/resource/en/user_manual/dm00244518-stm32-nucleo144-boards-stmicroelectronics.pdf",
+      "publisher": "STMicroelectronics",
+      "revision": "UM1974 Rev 11",
+      "sha256": "f65943a7382eeb3e59524abb0ac0d7ae9843fdc87840cfa526f97f9fcea21d5e",
+      "tableSnapshot": {
+        "file": "sources/extracted/nucleo-um1974-r11.json",
+        "sha256": "21d1f524f3baa224622e73b31086f076b6c5dd3892e87b93e50dc07ce89f28aa"
+      }
+    },
+    {
+      "id": "nucleo-f767zi-ioc",
+      "title": "NUCLEO-F767ZI official board configuration",
+      "file": "nucleo-f767zi-ioc.ioc",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/boards/A71_Nucleo_NUCLEO-F767ZI_STM32F767ZI_Board_AllConfig.ioc",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/boards/A71_Nucleo_NUCLEO-F767ZI_STM32F767ZI_Board_AllConfig.ioc",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "2c28d56f76b110bfebc7d33f55b68a153460cb33379a60897c0a5e9c065291f6"
     }
   ],
   "references": {
@@ -2812,6 +2856,94 @@
       "page": 12,
       "locator": "Figure 3 · MB1180 top view; CN3 left and CN4 right",
       "method": "visual-diagram"
+    },
+    "f767zi-package": {
+      "document": "f767zi-package",
+      "title": "F767ZI CubeMX package data",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F767ZITx.xml",
+      "page": null,
+      "locator": "LQFP144 numbered package pins and physical signals",
+      "method": "manufacturer-xml"
+    },
+    "f767zi-modes": {
+      "document": "f767zi-modes",
+      "title": "STM32F76x_gpio_v1_0 GPIO alternate functions",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F76x_gpio_v1_0_Modes.xml",
+      "page": null,
+      "locator": "STM32F76x_gpio_v1_0 GPIO alternate function selectors",
+      "method": "manufacturer-xml"
+    },
+    "nucleo-f767zi-drawing": {
+      "document": "nucleo-um1974-r11",
+      "title": "STM32 Nucleo-144 · UM1974 Rev 11",
+      "url": "https://www.st.com/resource/en/user_manual/dm00244518-stm32-nucleo144-boards-stmicroelectronics.pdf#page=15",
+      "page": 15,
+      "locator": "Mechanical drawing · CN7/CN8/CN9/CN10 ST Zio and CN11/CN12 ST Morpho",
+      "method": "visual-diagram"
+    },
+    "nucleo-f767zi-zio-61": {
+      "document": "nucleo-um1974-r11",
+      "title": "STM32 Nucleo-144 · UM1974 Rev 11",
+      "url": "https://www.st.com/resource/en/user_manual/dm00244518-stm32-nucleo144-boards-stmicroelectronics.pdf#page=61",
+      "page": 61,
+      "locator": "UM1974 Rev 11 · Table 19 · NUCLEO-F767ZI ST Zio",
+      "method": "pdf-table"
+    },
+    "nucleo-f767zi-zio-62": {
+      "document": "nucleo-um1974-r11",
+      "title": "STM32 Nucleo-144 · UM1974 Rev 11",
+      "url": "https://www.st.com/resource/en/user_manual/dm00244518-stm32-nucleo144-boards-stmicroelectronics.pdf#page=62",
+      "page": 62,
+      "locator": "UM1974 Rev 11 · Table 19 · NUCLEO-F767ZI ST Zio",
+      "method": "pdf-table"
+    },
+    "nucleo-f767zi-zio-63": {
+      "document": "nucleo-um1974-r11",
+      "title": "STM32 Nucleo-144 · UM1974 Rev 11",
+      "url": "https://www.st.com/resource/en/user_manual/dm00244518-stm32-nucleo144-boards-stmicroelectronics.pdf#page=63",
+      "page": 63,
+      "locator": "UM1974 Rev 11 · Table 19 · NUCLEO-F767ZI ST Zio",
+      "method": "pdf-table"
+    },
+    "nucleo-f767zi-zio-64": {
+      "document": "nucleo-um1974-r11",
+      "title": "STM32 Nucleo-144 · UM1974 Rev 11",
+      "url": "https://www.st.com/resource/en/user_manual/dm00244518-stm32-nucleo144-boards-stmicroelectronics.pdf#page=64",
+      "page": 64,
+      "locator": "UM1974 Rev 11 · Table 19 · NUCLEO-F767ZI ST Zio",
+      "method": "pdf-table"
+    },
+    "nucleo-f767zi-zio-65": {
+      "document": "nucleo-um1974-r11",
+      "title": "STM32 Nucleo-144 · UM1974 Rev 11",
+      "url": "https://www.st.com/resource/en/user_manual/dm00244518-stm32-nucleo144-boards-stmicroelectronics.pdf#page=65",
+      "page": 65,
+      "locator": "UM1974 Rev 11 · Table 19 · NUCLEO-F767ZI ST Zio",
+      "method": "pdf-table"
+    },
+    "nucleo-f767zi-morpho-70": {
+      "document": "nucleo-um1974-r11",
+      "title": "STM32 Nucleo-144 · UM1974 Rev 11",
+      "url": "https://www.st.com/resource/en/user_manual/dm00244518-stm32-nucleo144-boards-stmicroelectronics.pdf#page=70",
+      "page": 70,
+      "locator": "ST Morpho · CN11/CN12 numbered contacts",
+      "method": "pdf-table"
+    },
+    "nucleo-f767zi-morpho-71": {
+      "document": "nucleo-um1974-r11",
+      "title": "STM32 Nucleo-144 · UM1974 Rev 11",
+      "url": "https://www.st.com/resource/en/user_manual/dm00244518-stm32-nucleo144-boards-stmicroelectronics.pdf#page=71",
+      "page": 71,
+      "locator": "ST Morpho · CN11/CN12 numbered contacts",
+      "method": "pdf-table"
+    },
+    "nucleo-f767zi-ioc": {
+      "document": "nucleo-f767zi-ioc",
+      "title": "NUCLEO-F767ZI official board configuration",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/boards/A71_Nucleo_NUCLEO-F767ZI_STM32F767ZI_Board_AllConfig.ioc",
+      "page": null,
+      "locator": "Official board configuration · fitted peripheral and GPIO labels",
+      "method": "hardware-spec"
     },
     "arduino-uno-r3-package-schematic": {
       "document": "arduino-uno-r3-schematic",

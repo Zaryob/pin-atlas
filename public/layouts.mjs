@@ -5,6 +5,7 @@ export function buildLayouts(boards) {
   const byId = new Map(boards.map(board => [board.id, board]));
   const nucleo64 = boards.filter(board => board.layoutFamily === 'nucleo-64');
   const nucleo32 = boards.filter(board => board.layoutFamily === 'nucleo-32');
+  const nucleo144 = boards.filter(board => board.layoutFamily === 'nucleo-144');
   const definitions = [
     {
       id: 'pico-family', nameKey: 'picoLayout', subtitleKey: 'picoLayoutSubtitle',
@@ -89,6 +90,12 @@ export function buildLayouts(boards) {
     geometryConnectors:['CN3','CN4'],sharedContactCount:30,
     references:nucleo32.map(board=>({label:`${board.name} · ${board.mcu}`,profileIds:[board.id]}))
   });
+  if(nucleo144.length)definitions.push({
+    id:'nucleo-144',nameKey:'nucleo144Layout',subtitleKey:'nucleo144Subtitle',compatibleKey:'nucleo144Compatible',
+    profileIds:nucleo144.map(board=>board.id),defaultProfile:nucleo144.find(b=>b.id==='nucleo-h723zg')?.id || nucleo144[0].id,
+    geometryConnectors:['CN7','CN8','CN9','CN10','CN11','CN12'],sharedContactCount:240,
+    references:nucleo144.map(board=>({label:`${board.name} · ${board.mcu}`,profileIds:[board.id]}))
+  });
   const grouped = new Set(definitions.flatMap(layout => layout.profileIds));
   const layouts = definitions.map(definition => {
     const profiles = definition.profileIds.map(id => {
@@ -99,7 +106,7 @@ export function buildLayouts(boards) {
     // capabilities and optional programming connectors belong to each reference.
     const signature = profile => definition.geometryConnectors
       ? profile.pins.filter(pin => definition.geometryConnectors.includes(pin.connector))
-        .map(pin => [pin.physicalLabel, pin.position.x, pin.position.y, pin.position.side])
+        .map(pin => [pin.physicalLabel, pin.position.x, pin.position.y, pin.position.side]).sort((a,b)=>a[0].localeCompare(b[0]))
       : profile.pins.map(pin => [pin.number, pin.name, pin.type]);
     // Runtime metadata is generated only after the full geometry checks below.
     // No pin payload is needed to browse the already verified catalog.

@@ -189,3 +189,7 @@ NUCLEO-F042K6 uses UM1956 Rev 6 Table 10 (page 24), Figure 3 (page 12), and Tabl
 A4/A5 describe their primary PA5/PA6 pads. SB18/SB16 can link them to PB7/PB6 (D4/D5); the primary pads must then remain floating inputs and D4/D5 are unavailable as independent GPIOs. The map does not invent I²C selectors on PA5/PA6. Pin notes also identify PA2/A7 VCP sharing, the D13 LED, oscillator and AREF connections. The raw UM1956 table snapshot is checked against the original PDF and lets CI regenerate without downloading that PDF.
 
 NUCLEO-L432KC uses UM1956 Rev 6 Table 16 (page 30) and shares the verified CN3/CN4 positions with F042K6. Its MCU is STM32L432KCU6, UFQFPN-32, 26 GPIO-capable pads, Cortex-M4 at up to 80 MHz; D7/D8 use PC14/PC15 rather than F042's PF0/PF1. Only perimeter pads enumerated in ST's XML are rendered; the center thermal pad is outside that source's numbered scope.
+
+## Nucleo-144 / MB1137
+
+NUCLEO-F767ZI uses UM1974 Rev 11 Table 19 (pages 61–65), Table 21 (pages 70/71) and the mechanical drawing on page 15. All six headers are represented independently: CN7 (20), CN8 (16), CN9 (30), CN10 (34), CN11 (70) and CN12 (70), totaling 240 physical contacts. These are separate from STM32F767ZIT6's 144 LQFP pads and 114 GPIOs. The MCU clock is up to 216 MHz. Functions and AF selectors use the pinned package's exact GPIO dependency; onboard peripheral notes use ST's pinned board configuration. Repeated power rails do not imply a unique MCU pad.

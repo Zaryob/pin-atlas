@@ -1,6 +1,13 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
 (() => {
   const messages = {
+    "nucleo144Layout": ["STM32 Nucleo-144 ailesi", "STM32 Nucleo-144 family"],
+    "nucleo144Subtitle": ["100 ST Zio + 140 ST Morpho kontağı", "100 ST Zio + 140 ST Morpho contacts"],
+    "nucleo144Compatible": ["Ortak CN7–CN12 fiziksel konumları; model seçimi kendi işlemcisini ve devre notlarını açar.", "Shared CN7–CN12 physical positions; select a model for its own processor and circuit notes."],
+    "nucleo144SourceScope": ["Üreticinin numaralı ST Zio ve ST Morpho tablolarından 240 fiziksel kontak. Konektörler MCU'nun 144 paket bacağından ayrıdır; lehim köprüsü ve dahili devre notlarını kontrol edin.", "240 physical contacts from the manufacturer's numbered ST Zio and ST Morpho tables. Connectors differ from the MCU's 144 package pads; check solder bridge and onboard circuit notes."],
+    "nucleo144AnalogBridge": ["A4/A5, analog ve I²C bağlantıları arasında lehim köprüleriyle seçilir. Buradaki işlevler ana analog MCU bacağına aittir; I²C için kart kılavuzundaki PB9/PB8 köprü ayarlarını uygulayın.", "Solder bridges select analog or I²C connections on A4/A5. These functions belong to the primary analog MCU pad; apply the board manual's PB9/PB8 bridge settings for I²C."],
+    "nucleo144Led": ["Üreticinin kart yapılandırmasında dahili kullanıcı LED'i ile ortak pin.", "This pin shares an onboard user LED in the manufacturer's board configuration."],
+    "nucleo144Button": ["Üreticinin kart yapılandırmasında kullanıcı düğmesiyle ortak pin.", "This pin shares the user button in the manufacturer's board configuration."],
     "nucleo32Layout": ["STM32 Nucleo-32 ailesi", "STM32 Nucleo-32 family"],
     "nucleo32Subtitle": ["MB1180 · 30 Arduino Nano kontağı", "MB1180 · 30 Arduino Nano contacts"],
     "nucleo32Compatible": ["Ortak CN3/CN4 düzeni; işlemciye özgü işlevler model seçicisindedir.", "Shared CN3/CN4 positions; choose a model for its processor functions."],

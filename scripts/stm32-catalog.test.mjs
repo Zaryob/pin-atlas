@@ -5,6 +5,17 @@ import {buildLayouts,resolveProfile} from '../public/layouts.mjs';
 const boards=JSON.parse(readFileSync(new URL('../public/data/boards.json',import.meta.url)));
 const layouts=buildLayouts(boards);
 
+test('NUCLEO-F767ZI exposes the complete six physical headers and its Cortex-M7 package',()=>{
+ const board=boards.find(b=>b.id==='nucleo-f767zi'),chip=boards.find(b=>b.id===board.mcuProfile);
+ assert.equal(chip.packagePins,144);assert.equal(chip.gpioCount,114);assert.equal(chip.clock,'216 MHz');
+ assert.equal(board.pins.length,240);
+ for(const [header,count] of Object.entries({CN7:20,CN8:16,CN9:30,CN10:34,CN11:70,CN12:70}))
+  assert.equal(board.pins.filter(p=>p.connector===header).length,count);
+ const sck=board.pins.find(p=>p.physicalLabel==='CN7.10');assert.equal(sck.name,'PA5');assert.equal(sck.mcuPin,41);
+ assert(sck.functions.some(f=>f.name==='SPI1_SCK' && f.selector==='AF5'));
+ assert.equal(resolveProfile(layouts,board.id).layout.id,'nucleo-144');
+});
+
 test('NUCLEO-L432KC shares the Nucleo32 footprint while retaining QFN pads and LSE pins',()=>{
  const board=boards.find(b=>b.id==='nucleo-l432kc'),chip=boards.find(b=>b.id===board.mcuProfile);
  assert.equal(chip.layout,'qfn');assert.equal(chip.packagePins,32);assert.equal(chip.gpioCount,26);assert.equal(chip.clock,'80 MHz');

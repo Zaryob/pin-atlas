@@ -1,5 +1,6 @@
 """Physical STM32 board contacts from locked manufacturer source tables/CAD."""
 import copy
+from collections import Counter
 import re
 import pdfplumber
 from stm32_sources import SnapshotDocument, verify_snapshot
@@ -11,7 +12,9 @@ def compact(value):
     return re.sub(r'\s+','',re.sub(r'\(\d+\)','',value or ''))
 
 def contact(chip,signal,number,header,index,label,evidence,position):
-    by_name={p['name'].split('/')[0]:p for p in chip['pins']}
+    counts=Counter(p['name'].split('/')[0] for p in chip['pins'])
+    by_name={p['name'].split('/')[0]:p for p in chip['pins'] if counts[p['name'].split('/')[0]]==1}
+    if signal not in by_name and signal+'_C' in by_name:signal+='_C'
     pad=by_name.get(signal)
     pin=copy.deepcopy(pad) if pad else {'type':'GND' if signal in ('GND','AGND') else 'SYSTEM' if signal in ('NC','BOOT0') else 'POWER','functions':[],'evidence':[]}
     pin.update(number=number,name=signal,net=signal,connector=header,connectorPin=index,physicalLabel=f'{header}.{index}',boardLabel=label,position=position)
@@ -57,3 +60,59 @@ def build_nucleo32(cache,docs,ref,chip,model,page,use_snapshots=False):
                          {'width':720,'height':650,'minWidth':680,'artwork':'assets/boards/nucleo-mb1180.svg',
                           'connectorGroups':[{'id':h,'label':h,'contacts':[h]} for h in ('CN3','CN4')]},
                          docs[document]['viewUrl']+f'#page={page}','nucleo32Scope')
+
+def build_nucleo144(cache,docs,ref,chip,model,spec,use_snapshots=False):
+    document=spec['manual'];id='nucleo-'+('h743zi2' if model=='h743zi' else model)
+    drawing=ref(id+'-drawing',document,spec['drawing'],'Mechanical drawing · CN7/CN8/CN9/CN10 ST Zio and CN11/CN12 ST Morpho','visual-diagram')
+    contacts={}
+    def put(header,index,label,raw,pin_ref):
+        label=compact(label);signal=compact(raw).split('or')[0].split('/')[0]
+        if signal in ('','-'):
+            signal=label if label in {'IOREF','NRST','RESET','3V3','+3.3V','5V','+5V','GND','AGND','VIN','VREFP','AVDD'} else 'NC'
+        if signal=='RESET':signal='NRST'
+        key=(header,index);assert key not in contacts,key
+        contacts[key]=(label,signal,pin_ref)
+    with source_document(cache,docs,document,use_snapshots) as pdf:
+        if model=='f767zi':
+            header=None
+            for page,index in spec['zio']:
+                evidence=ref(id+f'-zio-{page}',document,page,'UM1974 Rev 11 · Table 19 · NUCLEO-F767ZI ST Zio')
+                for row in pdf.pages[page-1].extract_tables()[index][1:]:
+                    if not (row[1] or '').isdigit():continue
+                    if row[0]:header=row[0]
+                    put(header,int(row[1]),row[2],row[4],evidence)
+        else:
+            for header,page,index in spec['zio']:
+                evidence=ref(id+f'-zio-{header}-{page}',document,page,f'UM2407 Rev 6 · {header} ST Zio pinout')
+                for row in pdf.pages[page-1].extract_tables()[index][1:]:
+                    for offset in (0,5):
+                        if (row[offset] or '').isdigit():put(header,int(row[offset]),row[offset+1],row[offset+3],evidence)
+        for page,index in spec['morpho']:
+            evidence=ref(id+f'-morpho-{page}',document,page,'ST Morpho · CN11/CN12 numbered contacts')
+            for row in pdf.pages[page-1].extract_tables()[index][2:]:
+                for offset,header in [(0,'CN11'),(2,'CN11'),(4,'CN12'),(6,'CN12')]:
+                    if (row[offset] or '').isdigit():put(header,int(row[offset]),row[offset+1],row[offset+1],evidence)
+    expected={'CN7':20,'CN8':16,'CN9':30,'CN10':34,'CN11':70,'CN12':70}
+    assert {header:sum(h==header for h,n in contacts) for header in expected}==expected
+    pins=[]
+    for header,count in expected.items():
+        for index in range(1,count+1):
+            label,signal,evidence=contacts[header,index]
+            x,y={'CN7':(746,230),'CN8':(354,230),'CN9':(354,435),'CN10':(746,475),'CN11':(126,230),'CN12':(974,230)}[header]
+            pin=contact(chip,signal,len(pins)+1,header,index,label,[evidence,drawing],
+                        {'x':x+26*((index-1)%2),'y':y+20*((index-1)//2),'side':'left' if index%2 else 'right'})
+            if pin['type']=='POWER':assert signal in {'IOREF','3V3','+3.3V','5V','+5V','VIN','VREFP','AVDD','VDD','E5V','U5V','VBAT','3V3_VDD','5V_EXT','5V_USB_STLK'},signal
+            if header=='CN9' and index in (9,11):pin['boardCircuitKey']='nucleo144AnalogBridge'
+            pins.append(pin)
+    ioc_id='nucleo-'+model+'-ioc'
+    if ioc_id in docs:
+        source=ref(ioc_id,ioc_id,None,'Official board configuration · fitted peripheral and GPIO labels','hardware-spec')
+        configuration=dict(line.split('=',1) for line in (cache/docs[ioc_id]['file']).read_text().splitlines() if '=' in line)
+        for pin in pins:
+            signal=configuration.get(pin['name']+'.Signal','');label=configuration.get(pin['name']+'.GPIO_Label','').upper()
+            note='nucleoH7Rmii' if signal.startswith('ETH_') else 'nucleoH7Usb' if signal.startswith('USB_') else 'nucleo144Led' if 'LED' in label or re.match(r'LD\d',label) else 'nucleo144Button' if 'BUTTON' in label or 'BTN' in label else None
+            if note:pin['boardCircuitKey']=note;pin['evidence'].append(source)
+    return board_profile(chip,id,id.upper(),'nucleo-144',pins,
+                         {'width':1100,'height':1040,'minWidth':1000,'artwork':'assets/boards/nucleo-144.svg',
+                          'connectorGroups':[{'id':h,'label':('ST Zio' if h in ('CN7','CN8','CN9','CN10') else 'ST Morpho')+' · '+h,'contacts':[h]} for h in expected]},
+                         docs[document]['viewUrl'],'nucleo144SourceScope')

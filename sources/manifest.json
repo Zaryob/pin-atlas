@@ -995,6 +995,50 @@
       "publisher": "STMicroelectronics",
       "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
       "sha256": "1ccb854fb3b4f18e3508bd6b34e9faa1112cbea646f4993e0f2eeffb3e52da43"
+    },
+    {
+      "id": "f767zi-package",
+      "title": "F767ZI CubeMX package data",
+      "file": "f767zi-package.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F767ZITx.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F767ZITx.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "c3ce62ee6cfa54b47c8cead1bb783b088d4dd9cbebf28a0c4e557aaee4de1928"
+    },
+    {
+      "id": "f767zi-modes",
+      "title": "STM32F76x_gpio_v1_0 GPIO alternate functions",
+      "file": "f767zi-modes.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F76x_gpio_v1_0_Modes.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F76x_gpio_v1_0_Modes.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "b76b99657064ee2f1276d085ab8a277d778b6e38004c0f66666a0cf707fb784f"
+    },
+    {
+      "id": "nucleo-um1974-r11",
+      "title": "STM32 Nucleo-144 · UM1974 Rev 11",
+      "file": "nucleo-um1974-r11.pdf",
+      "url": "https://www.st.com/resource/en/user_manual/dm00244518-stm32-nucleo144-boards-stmicroelectronics.pdf",
+      "viewUrl": "https://www.st.com/resource/en/user_manual/dm00244518-stm32-nucleo144-boards-stmicroelectronics.pdf",
+      "publisher": "STMicroelectronics",
+      "revision": "UM1974 Rev 11",
+      "sha256": "f65943a7382eeb3e59524abb0ac0d7ae9843fdc87840cfa526f97f9fcea21d5e",
+      "tableSnapshot": {
+        "file": "sources/extracted/nucleo-um1974-r11.json",
+        "sha256": "21d1f524f3baa224622e73b31086f076b6c5dd3892e87b93e50dc07ce89f28aa"
+      }
+    },
+    {
+      "id": "nucleo-f767zi-ioc",
+      "title": "NUCLEO-F767ZI official board configuration",
+      "file": "nucleo-f767zi-ioc.ioc",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/boards/A71_Nucleo_NUCLEO-F767ZI_STM32F767ZI_Board_AllConfig.ioc",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/boards/A71_Nucleo_NUCLEO-F767ZI_STM32F767ZI_Board_AllConfig.ioc",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "2c28d56f76b110bfebc7d33f55b68a153460cb33379a60897c0a5e9c065291f6"
     }
   ],
   "publishers": [

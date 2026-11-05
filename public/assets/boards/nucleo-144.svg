@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="1040" viewBox="0 0 1100 1040">
+ <rect x="112" y="70" width="904" height="910" rx="10" fill="#284b3e" stroke="#132d25" stroke-width="4"/>
+ <rect x="830" y="55" width="85" height="50" rx="4" fill="#c8cecb" stroke="#52605b"/>
+ <text x="550" y="145" text-anchor="middle" fill="#e0e9e3" font-family="monospace" font-size="22">ST-LINK · USB / DEBUG</text>
+ <path d="M135 207H995" stroke="#9bb2a4" stroke-dasharray="8 6"/>
+ <rect x="440" y="440" width="220" height="220" rx="5" fill="#26342d" stroke="#83998d" stroke-width="2"/>
+ <text x="550" y="520" text-anchor="middle" fill="#e0e9e3" font-family="monospace" font-size="26">STM32</text>
+ <text x="550" y="560" text-anchor="middle" fill="#e0e9e3" font-family="monospace" font-size="18">LQFP-144</text>
+ <text x="550" y="600" text-anchor="middle" fill="#e0e9e3" font-family="monospace" font-size="15">NUCLEO · TOP VIEW</text>
+ <text x="550" y="965" text-anchor="middle" fill="#e0e9e3" font-family="monospace" font-size="15">CN7–CN10 ST ZIO · CN11/CN12 ST MORPHO</text>
+</svg>
