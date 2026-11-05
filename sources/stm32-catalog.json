@@ -140,7 +140,8 @@
   },
   "partNames": {
     "l432kc": "STM32L432KCU6",
-    "f401cc": "STM32F401CCU6"
+    "f401cc": "STM32F401CCU6",
+    "f411ce": "STM32F411CEU6"
   },
   "nucleo144": {
     "f767zi": {
@@ -227,6 +228,7 @@
     }
   },
   "blackpill": [
-    "f401cc"
+    "f401cc",
+    "f411ce"
   ]
 }

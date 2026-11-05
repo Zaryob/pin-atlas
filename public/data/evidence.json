@@ -1143,6 +1143,17 @@
       "publisher": "WeAct Studio",
       "revision": "6a7f7d434a9d6361f91590d4cdd16b4a70ce7513",
       "sha256": "573759ec9292cb720da7fcdb19979eea169f887d54aaff436f295e3687d0c812"
+    },
+    {
+      "id": "f411ce-package",
+      "title": "F411CE CubeMX package data",
+      "file": "f411ce-package.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F411C(C-E)Ux.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F411C(C-E)Ux.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "962e848cc9ce9682aa74213706ed79583e94f6f6d67dc45e314bc7c83a7fe87d",
+      "gpioModesDocument": "f411re-modes"
     }
   ],
   "references": {
@@ -3273,6 +3284,22 @@
       "page": 1,
       "locator": "v3.1 schematic · PA0 key, PC13 LED, boot, USB and optional SPI flash",
       "method": "visual-diagram"
+    },
+    "f411ce-package": {
+      "document": "f411ce-package",
+      "title": "F411CE CubeMX package data",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F411C(C-E)Ux.xml",
+      "page": null,
+      "locator": "UFQFPN48 numbered package pins and physical signals",
+      "method": "manufacturer-xml"
+    },
+    "f411ce-modes": {
+      "document": "f411re-modes",
+      "title": "STM32F411RE CubeMX modes data",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F411_gpio_v1_0_Modes.xml",
+      "page": null,
+      "locator": "STM32F411_gpio_v1_0 GPIO alternate function selectors",
+      "method": "manufacturer-xml"
     },
     "arduino-uno-r3-package-schematic": {
       "document": "arduino-uno-r3-schematic",

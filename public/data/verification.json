@@ -1,7 +1,7 @@
 {
   "verifiedOn": "2026-11-05",
-  "physicalPins": 5086,
-  "functionAssignments": 23839,
+  "physicalPins": 5178,
+  "functionAssignments": 24181,
   "documents": [
     {
       "id": "rp2350",
@@ -1030,6 +1030,16 @@
       "publisher": "WeAct Studio",
       "revision": "6a7f7d434a9d6361f91590d4cdd16b4a70ce7513",
       "sha256": "573759ec9292cb720da7fcdb19979eea169f887d54aaff436f295e3687d0c812"
+    },
+    {
+      "id": "f411ce-package",
+      "title": "F411CE CubeMX package data",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F411C(C-E)Ux.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F411C(C-E)Ux.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "962e848cc9ce9682aa74213706ed79583e94f6f6d67dc45e314bc7c83a7fe87d",
+      "gpioModesDocument": "f411re-modes"
     }
   ],
   "boards": [
@@ -1710,6 +1720,24 @@
       "id": "stm32f401ccu6",
       "physicalPins": 48,
       "functionAssignments": 129,
+      "physicalSourceMethods": [
+        "manufacturer-xml"
+      ]
+    },
+    {
+      "id": "weact-blackpill-f411ce",
+      "physicalPins": 44,
+      "functionAssignments": 170,
+      "physicalSourceMethods": [
+        "manufacturer-cad",
+        "manufacturer-xml",
+        "visual-diagram"
+      ]
+    },
+    {
+      "id": "stm32f411ceu6",
+      "physicalPins": 48,
+      "functionAssignments": 172,
       "physicalSourceMethods": [
         "manufacturer-xml"
       ]

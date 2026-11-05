@@ -275694,5 +275694,4322 @@
         ]
       }
     ]
+  },
+  {
+    "id": "weact-blackpill-f411ce",
+    "name": "WeAct Black Pill F411CE v3.x",
+    "shortName": "WeAct Black Pill F411CE v3.x",
+    "family": "STM32",
+    "layoutFamily": "black-pill",
+    "layout": "custom",
+    "subtitle": "black-pill · STM32F411CEU6",
+    "diagram": {
+      "width": 900,
+      "height": 820,
+      "minWidth": 850,
+      "artwork": "assets/boards/black-pill.svg",
+      "connectorGroups": [
+        {
+          "id": "LEFT",
+          "label": "LEFT",
+          "contacts": [
+            "LEFT"
+          ]
+        },
+        {
+          "id": "RIGHT",
+          "label": "RIGHT",
+          "contacts": [
+            "RIGHT"
+          ]
+        },
+        {
+          "id": "SWD",
+          "label": "SWD",
+          "contacts": [
+            "SWD"
+          ]
+        }
+      ]
+    },
+    "packagePins": 44,
+    "gpioCount": 34,
+    "uniqueGPIOCount": 34,
+    "voltage": "3.3 V I/O",
+    "mcu": "STM32F411CEU6",
+    "processor": "Arm Cortex-M4",
+    "clock": "100 MHz",
+    "verifiedOn": "2026-11-05",
+    "source": "https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1/blob/6a7f7d434a9d6361f91590d4cdd16b4a70ce7513/README.md",
+    "datasheet": "https://www.st.com/resource/en/datasheet/stm32f411ce.pdf",
+    "mcuProfile": "stm32f411ceu6",
+    "orientation": "usb",
+    "scopeKey": "blackPillScope",
+    "pins": [
+      {
+        "number": 1,
+        "name": "PB12",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C2_SMBA",
+            "signal": "I2C2_SMBA",
+            "group": "I2C",
+            "evidence": "f411ce-package",
+            "selector": "AF4",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2S2_WS",
+            "signal": "I2S2_WS",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2S3_CK",
+            "signal": "I2S3_CK",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2S4_WS",
+            "signal": "I2S4_WS",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI2_NSS",
+            "signal": "SPI2_NSS",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI3_SCK",
+            "signal": "SPI3_SCK",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI4_NSS",
+            "signal": "SPI4_NSS",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM1_BKIN",
+            "signal": "TIM1_BKIN",
+            "group": "TIMER",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PB12",
+        "connector": "LEFT",
+        "connectorPin": 1,
+        "physicalLabel": "PAD.1",
+        "boardLabel": "PB12",
+        "position": {
+          "x": 315.0,
+          "y": 150.0,
+          "side": "left"
+        },
+        "mcuPin": 25,
+        "sharedWith": []
+      },
+      {
+        "number": 2,
+        "name": "PB13",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2S2_CK",
+            "signal": "I2S2_CK",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2S4_CK",
+            "signal": "I2S4_CK",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI2_SCK",
+            "signal": "SPI2_SCK",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI4_SCK",
+            "signal": "SPI4_SCK",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM1_CH1N",
+            "signal": "TIM1_CH1N",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PB13",
+        "connector": "LEFT",
+        "connectorPin": 2,
+        "physicalLabel": "PAD.2",
+        "boardLabel": "PB13",
+        "position": {
+          "x": 315.0,
+          "y": 180.48,
+          "side": "left"
+        },
+        "mcuPin": 26,
+        "sharedWith": []
+      },
+      {
+        "number": 3,
+        "name": "PB14",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2S2_ext_SD",
+            "signal": "I2S2_ext_SD",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SDIO_D6",
+            "signal": "SDIO_D6",
+            "group": "SDIO",
+            "evidence": "f411ce-package",
+            "selector": "AF12",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI2_MISO",
+            "signal": "SPI2_MISO",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM1_CH2N",
+            "signal": "TIM1_CH2N",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PB14",
+        "connector": "LEFT",
+        "connectorPin": 3,
+        "physicalLabel": "PAD.3",
+        "boardLabel": "PB14",
+        "position": {
+          "x": 315.0,
+          "y": 210.96,
+          "side": "left"
+        },
+        "mcuPin": 27,
+        "sharedWith": []
+      },
+      {
+        "number": 4,
+        "name": "PB15",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_EXTI15",
+            "signal": "ADC1_EXTI15",
+            "group": "ADC",
+            "evidence": "f411ce-package"
+          },
+          {
+            "name": "I2S2_SD",
+            "signal": "I2S2_SD",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "RTC_REFIN",
+            "signal": "RTC_REFIN",
+            "group": "SYSTEM",
+            "evidence": "f411ce-package",
+            "selector": "AF0",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SDIO_CK",
+            "signal": "SDIO_CK",
+            "group": "SDIO",
+            "evidence": "f411ce-package",
+            "selector": "AF12",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI2_MOSI",
+            "signal": "SPI2_MOSI",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM1_CH3N",
+            "signal": "TIM1_CH3N",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PB15",
+        "connector": "LEFT",
+        "connectorPin": 4,
+        "physicalLabel": "PAD.4",
+        "boardLabel": "PB15",
+        "position": {
+          "x": 315.0,
+          "y": 241.44,
+          "side": "left"
+        },
+        "mcuPin": 28,
+        "sharedWith": []
+      },
+      {
+        "number": 5,
+        "name": "PA8",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C3_SCL",
+            "signal": "I2C3_SCL",
+            "group": "I2C",
+            "evidence": "f411ce-package",
+            "selector": "AF4",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "RCC_MCO_1",
+            "signal": "RCC_MCO_1",
+            "group": "CLOCK",
+            "evidence": "f411ce-package",
+            "selector": "AF0",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SDIO_D1",
+            "signal": "SDIO_D1",
+            "group": "SDIO",
+            "evidence": "f411ce-package",
+            "selector": "AF12",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM1_CH1",
+            "signal": "TIM1_CH1",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART1_CK",
+            "signal": "USART1_CK",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USB_OTG_FS_SOF",
+            "signal": "USB_OTG_FS_SOF",
+            "group": "USB",
+            "evidence": "f411ce-package",
+            "selector": "AF10",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PA8",
+        "connector": "LEFT",
+        "connectorPin": 5,
+        "physicalLabel": "PAD.5",
+        "boardLabel": "PA8",
+        "position": {
+          "x": 315.0,
+          "y": 271.92,
+          "side": "left"
+        },
+        "mcuPin": 29,
+        "sharedWith": []
+      },
+      {
+        "number": 6,
+        "name": "PA9",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C3_SMBA",
+            "signal": "I2C3_SMBA",
+            "group": "I2C",
+            "evidence": "f411ce-package",
+            "selector": "AF4",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SDIO_D2",
+            "signal": "SDIO_D2",
+            "group": "SDIO",
+            "evidence": "f411ce-package",
+            "selector": "AF12",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM1_CH2",
+            "signal": "TIM1_CH2",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART1_TX",
+            "signal": "USART1_TX",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USB_OTG_FS_VBUS",
+            "signal": "USB_OTG_FS_VBUS",
+            "group": "USB",
+            "evidence": "f411ce-package",
+            "selector": "AF10",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PA9",
+        "connector": "LEFT",
+        "connectorPin": 6,
+        "physicalLabel": "PAD.6",
+        "boardLabel": "PA9",
+        "position": {
+          "x": 315.0,
+          "y": 302.4,
+          "side": "left"
+        },
+        "mcuPin": 30,
+        "sharedWith": []
+      },
+      {
+        "number": 7,
+        "name": "PA10",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2S5_SD",
+            "signal": "I2S5_SD",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI5_MOSI",
+            "signal": "SPI5_MOSI",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM1_CH3",
+            "signal": "TIM1_CH3",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART1_RX",
+            "signal": "USART1_RX",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USB_OTG_FS_ID",
+            "signal": "USB_OTG_FS_ID",
+            "group": "USB",
+            "evidence": "f411ce-package",
+            "selector": "AF10",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PA10",
+        "connector": "LEFT",
+        "connectorPin": 7,
+        "physicalLabel": "PAD.7",
+        "boardLabel": "PA10",
+        "position": {
+          "x": 315.0,
+          "y": 332.88,
+          "side": "left"
+        },
+        "mcuPin": 31,
+        "sharedWith": []
+      },
+      {
+        "number": 8,
+        "name": "PA11",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_EXTI11",
+            "signal": "ADC1_EXTI11",
+            "group": "ADC",
+            "evidence": "f411ce-package"
+          },
+          {
+            "name": "SPI4_MISO",
+            "signal": "SPI4_MISO",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM1_CH4",
+            "signal": "TIM1_CH4",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART1_CTS",
+            "signal": "USART1_CTS",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART6_TX",
+            "signal": "USART6_TX",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF8",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USB_OTG_FS_DM",
+            "signal": "USB_OTG_FS_DM",
+            "group": "USB",
+            "evidence": "f411ce-package",
+            "selector": "AF10",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package",
+          "weact-blackpill-circuits"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PA11",
+        "connector": "LEFT",
+        "connectorPin": 8,
+        "physicalLabel": "PAD.8",
+        "boardLabel": "PA11",
+        "position": {
+          "x": 315.0,
+          "y": 363.36,
+          "side": "left"
+        },
+        "mcuPin": 32,
+        "boardCircuitKey": "blackPillUsb",
+        "sharedWith": []
+      },
+      {
+        "number": 9,
+        "name": "PA12",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI5_MISO",
+            "signal": "SPI5_MISO",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM1_ETR",
+            "signal": "TIM1_ETR",
+            "group": "TIMER",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART1_RTS",
+            "signal": "USART1_RTS",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART6_RX",
+            "signal": "USART6_RX",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF8",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USB_OTG_FS_DP",
+            "signal": "USB_OTG_FS_DP",
+            "group": "USB",
+            "evidence": "f411ce-package",
+            "selector": "AF10",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package",
+          "weact-blackpill-circuits"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PA12",
+        "connector": "LEFT",
+        "connectorPin": 9,
+        "physicalLabel": "PAD.9",
+        "boardLabel": "PA12",
+        "position": {
+          "x": 315.0,
+          "y": 393.84,
+          "side": "left"
+        },
+        "mcuPin": 33,
+        "boardCircuitKey": "blackPillUsb",
+        "sharedWith": []
+      },
+      {
+        "number": 10,
+        "name": "PA15",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_EXTI15",
+            "signal": "ADC1_EXTI15",
+            "group": "ADC",
+            "evidence": "f411ce-package"
+          },
+          {
+            "name": "I2S1_WS",
+            "signal": "I2S1_WS",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2S3_WS",
+            "signal": "I2S3_WS",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI1_NSS",
+            "signal": "SPI1_NSS",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI3_NSS",
+            "signal": "SPI3_NSS",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SYS_JTDI",
+            "signal": "SYS_JTDI",
+            "group": "JTAG",
+            "evidence": "f411ce-package",
+            "selector": "AF0",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM2_CH1",
+            "signal": "TIM2_CH1",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM2_ETR",
+            "signal": "TIM2_ETR",
+            "group": "TIMER",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART1_TX",
+            "signal": "USART1_TX",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PA15",
+        "connector": "LEFT",
+        "connectorPin": 10,
+        "physicalLabel": "PAD.10",
+        "boardLabel": "PA15",
+        "position": {
+          "x": 315.0,
+          "y": 424.32,
+          "side": "left"
+        },
+        "mcuPin": 38,
+        "sharedWith": []
+      },
+      {
+        "number": 11,
+        "name": "PB3",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C2_SDA",
+            "signal": "I2C2_SDA",
+            "group": "I2C",
+            "evidence": "f411ce-package",
+            "selector": "AF9",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2S1_CK",
+            "signal": "I2S1_CK",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2S3_CK",
+            "signal": "I2S3_CK",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI1_SCK",
+            "signal": "SPI1_SCK",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI3_SCK",
+            "signal": "SPI3_SCK",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SYS_JTDO-SWO",
+            "signal": "SYS_JTDO-SWO",
+            "group": "JTAG",
+            "evidence": "f411ce-package",
+            "selector": "AF0",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM2_CH2",
+            "signal": "TIM2_CH2",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART1_RX",
+            "signal": "USART1_RX",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PB3",
+        "connector": "LEFT",
+        "connectorPin": 11,
+        "physicalLabel": "PAD.11",
+        "boardLabel": "PB3",
+        "position": {
+          "x": 315.0,
+          "y": 454.8,
+          "side": "left"
+        },
+        "mcuPin": 39,
+        "sharedWith": []
+      },
+      {
+        "number": 12,
+        "name": "PB4",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C3_SDA",
+            "signal": "I2C3_SDA",
+            "group": "I2C",
+            "evidence": "f411ce-package",
+            "selector": "AF9",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2S3_ext_SD",
+            "signal": "I2S3_ext_SD",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SDIO_D0",
+            "signal": "SDIO_D0",
+            "group": "SDIO",
+            "evidence": "f411ce-package",
+            "selector": "AF12",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI1_MISO",
+            "signal": "SPI1_MISO",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI3_MISO",
+            "signal": "SPI3_MISO",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SYS_JTRST",
+            "signal": "SYS_JTRST",
+            "group": "JTAG",
+            "evidence": "f411ce-package",
+            "selector": "AF0",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM3_CH1",
+            "signal": "TIM3_CH1",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF2",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PB4",
+        "connector": "LEFT",
+        "connectorPin": 12,
+        "physicalLabel": "PAD.12",
+        "boardLabel": "PB4",
+        "position": {
+          "x": 315.0,
+          "y": 485.28,
+          "side": "left"
+        },
+        "mcuPin": 40,
+        "sharedWith": []
+      },
+      {
+        "number": 13,
+        "name": "PB5",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C1_SMBA",
+            "signal": "I2C1_SMBA",
+            "group": "I2C",
+            "evidence": "f411ce-package",
+            "selector": "AF4",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2S1_SD",
+            "signal": "I2S1_SD",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2S3_SD",
+            "signal": "I2S3_SD",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SDIO_D3",
+            "signal": "SDIO_D3",
+            "group": "SDIO",
+            "evidence": "f411ce-package",
+            "selector": "AF12",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI1_MOSI",
+            "signal": "SPI1_MOSI",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI3_MOSI",
+            "signal": "SPI3_MOSI",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM3_CH2",
+            "signal": "TIM3_CH2",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF2",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PB5",
+        "connector": "LEFT",
+        "connectorPin": 13,
+        "physicalLabel": "PAD.13",
+        "boardLabel": "PB5",
+        "position": {
+          "x": 315.0,
+          "y": 515.76,
+          "side": "left"
+        },
+        "mcuPin": 41,
+        "sharedWith": []
+      },
+      {
+        "number": 14,
+        "name": "PB6",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C1_SCL",
+            "signal": "I2C1_SCL",
+            "group": "I2C",
+            "evidence": "f411ce-package",
+            "selector": "AF4",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM4_CH1",
+            "signal": "TIM4_CH1",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF2",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART1_TX",
+            "signal": "USART1_TX",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PB6",
+        "connector": "LEFT",
+        "connectorPin": 14,
+        "physicalLabel": "PAD.14",
+        "boardLabel": "PB6",
+        "position": {
+          "x": 315.0,
+          "y": 546.24,
+          "side": "left"
+        },
+        "mcuPin": 42,
+        "sharedWith": []
+      },
+      {
+        "number": 15,
+        "name": "PB7",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C1_SDA",
+            "signal": "I2C1_SDA",
+            "group": "I2C",
+            "evidence": "f411ce-package",
+            "selector": "AF4",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SDIO_D0",
+            "signal": "SDIO_D0",
+            "group": "SDIO",
+            "evidence": "f411ce-package",
+            "selector": "AF12",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM4_CH2",
+            "signal": "TIM4_CH2",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF2",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART1_RX",
+            "signal": "USART1_RX",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PB7",
+        "connector": "LEFT",
+        "connectorPin": 15,
+        "physicalLabel": "PAD.15",
+        "boardLabel": "PB7",
+        "position": {
+          "x": 315.0,
+          "y": 576.72,
+          "side": "left"
+        },
+        "mcuPin": 43,
+        "sharedWith": []
+      },
+      {
+        "number": 16,
+        "name": "PB8",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C1_SCL",
+            "signal": "I2C1_SCL",
+            "group": "I2C",
+            "evidence": "f411ce-package",
+            "selector": "AF4",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2C3_SDA",
+            "signal": "I2C3_SDA",
+            "group": "I2C",
+            "evidence": "f411ce-package",
+            "selector": "AF9",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2S5_SD",
+            "signal": "I2S5_SD",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SDIO_D4",
+            "signal": "SDIO_D4",
+            "group": "SDIO",
+            "evidence": "f411ce-package",
+            "selector": "AF12",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI5_MOSI",
+            "signal": "SPI5_MOSI",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM10_CH1",
+            "signal": "TIM10_CH1",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF3",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM4_CH3",
+            "signal": "TIM4_CH3",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF2",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PB8",
+        "connector": "LEFT",
+        "connectorPin": 16,
+        "physicalLabel": "PAD.16",
+        "boardLabel": "PB8",
+        "position": {
+          "x": 315.0,
+          "y": 607.2,
+          "side": "left"
+        },
+        "mcuPin": 45,
+        "sharedWith": []
+      },
+      {
+        "number": 17,
+        "name": "PB9",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C1_SDA",
+            "signal": "I2C1_SDA",
+            "group": "I2C",
+            "evidence": "f411ce-package",
+            "selector": "AF4",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2C2_SDA",
+            "signal": "I2C2_SDA",
+            "group": "I2C",
+            "evidence": "f411ce-package",
+            "selector": "AF9",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2S2_WS",
+            "signal": "I2S2_WS",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SDIO_D5",
+            "signal": "SDIO_D5",
+            "group": "SDIO",
+            "evidence": "f411ce-package",
+            "selector": "AF12",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI2_NSS",
+            "signal": "SPI2_NSS",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM11_CH1",
+            "signal": "TIM11_CH1",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF3",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM4_CH4",
+            "signal": "TIM4_CH4",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF2",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PB9",
+        "connector": "LEFT",
+        "connectorPin": 17,
+        "physicalLabel": "PAD.17",
+        "boardLabel": "PB9",
+        "position": {
+          "x": 315.0,
+          "y": 637.68,
+          "side": "left"
+        },
+        "mcuPin": 46,
+        "sharedWith": []
+      },
+      {
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint"
+        ],
+        "number": 18,
+        "name": "5V",
+        "net": "5V",
+        "connector": "LEFT",
+        "connectorPin": 18,
+        "physicalLabel": "PAD.18",
+        "boardLabel": "5V",
+        "position": {
+          "x": 315.0,
+          "y": 668.16,
+          "side": "left"
+        }
+      },
+      {
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint"
+        ],
+        "number": 19,
+        "name": "GND",
+        "net": "GND",
+        "connector": "LEFT",
+        "connectorPin": 19,
+        "physicalLabel": "PAD.19",
+        "boardLabel": "GND",
+        "position": {
+          "x": 315.0,
+          "y": 698.64,
+          "side": "left"
+        }
+      },
+      {
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint"
+        ],
+        "number": 20,
+        "name": "3V3",
+        "net": "3V3",
+        "connector": "LEFT",
+        "connectorPin": 20,
+        "physicalLabel": "PAD.20",
+        "boardLabel": "3V3",
+        "position": {
+          "x": 315.0,
+          "y": 729.12,
+          "side": "left"
+        }
+      },
+      {
+        "number": 21,
+        "name": "VBAT",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package"
+        ],
+        "net": "VBAT",
+        "connector": "RIGHT",
+        "connectorPin": 21,
+        "physicalLabel": "PAD.21",
+        "boardLabel": "VBAT",
+        "position": {
+          "x": 589.32,
+          "y": 729.12,
+          "side": "right"
+        },
+        "mcuPin": 1
+      },
+      {
+        "number": 22,
+        "name": "PC13",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "RTC_AF1",
+            "signal": "RTC_AF1",
+            "group": "SYSTEM",
+            "evidence": "f411ce-package"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package",
+          "weact-blackpill-circuits"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PC13",
+        "connector": "RIGHT",
+        "connectorPin": 22,
+        "physicalLabel": "PAD.22",
+        "boardLabel": "PC13",
+        "position": {
+          "x": 589.32,
+          "y": 698.64,
+          "side": "right"
+        },
+        "mcuPin": 2,
+        "boardCircuitKey": "blackPillLed",
+        "sharedWith": []
+      },
+      {
+        "number": 23,
+        "name": "PC14",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "RCC_OSC32_IN",
+            "signal": "RCC_OSC32_IN",
+            "group": "CLOCK",
+            "evidence": "f411ce-package"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeOsc",
+        "net": "PC14",
+        "connector": "RIGHT",
+        "connectorPin": 23,
+        "physicalLabel": "PAD.23",
+        "boardLabel": "PC14",
+        "position": {
+          "x": 589.32,
+          "y": 668.16,
+          "side": "right"
+        },
+        "mcuPin": 3,
+        "sharedWith": []
+      },
+      {
+        "number": 24,
+        "name": "PC15",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_EXTI15",
+            "signal": "ADC1_EXTI15",
+            "group": "ADC",
+            "evidence": "f411ce-package"
+          },
+          {
+            "name": "RCC_OSC32_OUT",
+            "signal": "RCC_OSC32_OUT",
+            "group": "CLOCK",
+            "evidence": "f411ce-package"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeOsc",
+        "net": "PC15",
+        "connector": "RIGHT",
+        "connectorPin": 24,
+        "physicalLabel": "PAD.24",
+        "boardLabel": "PC15",
+        "position": {
+          "x": 589.32,
+          "y": 637.68,
+          "side": "right"
+        },
+        "mcuPin": 4,
+        "sharedWith": []
+      },
+      {
+        "number": 25,
+        "name": "NRST",
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package"
+        ],
+        "net": "NRST",
+        "connector": "RIGHT",
+        "connectorPin": 25,
+        "physicalLabel": "PAD.25",
+        "boardLabel": "~{RESET}",
+        "position": {
+          "x": 589.32,
+          "y": 607.2,
+          "side": "right"
+        },
+        "mcuPin": 7
+      },
+      {
+        "number": 26,
+        "name": "PA0",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN0",
+            "signal": "ADC1_IN0",
+            "group": "ADC",
+            "evidence": "f411ce-package"
+          },
+          {
+            "name": "SYS_WKUP",
+            "signal": "SYS_WKUP",
+            "group": "SYSTEM",
+            "evidence": "f411ce-package"
+          },
+          {
+            "name": "TIM2_CH1",
+            "signal": "TIM2_CH1",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM2_ETR",
+            "signal": "TIM2_ETR",
+            "group": "TIMER",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM5_CH1",
+            "signal": "TIM5_CH1",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF2",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART2_CTS",
+            "signal": "USART2_CTS",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package",
+          "weact-blackpill-circuits"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PA0",
+        "connector": "RIGHT",
+        "connectorPin": 26,
+        "physicalLabel": "PAD.26",
+        "boardLabel": "PA0",
+        "position": {
+          "x": 589.32,
+          "y": 576.72,
+          "side": "right"
+        },
+        "mcuPin": 10,
+        "boardCircuitKey": "blackPillKey",
+        "sharedWith": []
+      },
+      {
+        "number": 27,
+        "name": "PA1",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN1",
+            "signal": "ADC1_IN1",
+            "group": "ADC",
+            "evidence": "f411ce-package"
+          },
+          {
+            "name": "I2S4_SD",
+            "signal": "I2S4_SD",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI4_MOSI",
+            "signal": "SPI4_MOSI",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM2_CH2",
+            "signal": "TIM2_CH2",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM5_CH2",
+            "signal": "TIM5_CH2",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF2",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART2_RTS",
+            "signal": "USART2_RTS",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PA1",
+        "connector": "RIGHT",
+        "connectorPin": 27,
+        "physicalLabel": "PAD.27",
+        "boardLabel": "PA1",
+        "position": {
+          "x": 589.32,
+          "y": 546.24,
+          "side": "right"
+        },
+        "mcuPin": 11,
+        "sharedWith": []
+      },
+      {
+        "number": 28,
+        "name": "PA2",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN2",
+            "signal": "ADC1_IN2",
+            "group": "ADC",
+            "evidence": "f411ce-package"
+          },
+          {
+            "name": "I2S_CKIN",
+            "signal": "I2S_CKIN",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM2_CH3",
+            "signal": "TIM2_CH3",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM5_CH3",
+            "signal": "TIM5_CH3",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF2",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM9_CH1",
+            "signal": "TIM9_CH1",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF3",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART2_TX",
+            "signal": "USART2_TX",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PA2",
+        "connector": "RIGHT",
+        "connectorPin": 28,
+        "physicalLabel": "PAD.28",
+        "boardLabel": "PA2",
+        "position": {
+          "x": 589.32,
+          "y": 515.76,
+          "side": "right"
+        },
+        "mcuPin": 12,
+        "sharedWith": []
+      },
+      {
+        "number": 29,
+        "name": "PA3",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN3",
+            "signal": "ADC1_IN3",
+            "group": "ADC",
+            "evidence": "f411ce-package"
+          },
+          {
+            "name": "I2S2_MCK",
+            "signal": "I2S2_MCK",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM2_CH4",
+            "signal": "TIM2_CH4",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM5_CH4",
+            "signal": "TIM5_CH4",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF2",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM9_CH2",
+            "signal": "TIM9_CH2",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF3",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART2_RX",
+            "signal": "USART2_RX",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PA3",
+        "connector": "RIGHT",
+        "connectorPin": 29,
+        "physicalLabel": "PAD.29",
+        "boardLabel": "PA3",
+        "position": {
+          "x": 589.32,
+          "y": 485.28,
+          "side": "right"
+        },
+        "mcuPin": 13,
+        "sharedWith": []
+      },
+      {
+        "number": 30,
+        "name": "PA4",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN4",
+            "signal": "ADC1_IN4",
+            "group": "ADC",
+            "evidence": "f411ce-package"
+          },
+          {
+            "name": "I2S1_WS",
+            "signal": "I2S1_WS",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2S3_WS",
+            "signal": "I2S3_WS",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI1_NSS",
+            "signal": "SPI1_NSS",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI3_NSS",
+            "signal": "SPI3_NSS",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART2_CK",
+            "signal": "USART2_CK",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package",
+          "weact-blackpill-circuits"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PA4",
+        "connector": "RIGHT",
+        "connectorPin": 30,
+        "physicalLabel": "PAD.30",
+        "boardLabel": "PA4",
+        "position": {
+          "x": 589.32,
+          "y": 454.8,
+          "side": "right"
+        },
+        "mcuPin": 14,
+        "boardCircuitKey": "blackPillFlash",
+        "sharedWith": []
+      },
+      {
+        "number": 31,
+        "name": "PA5",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN5",
+            "signal": "ADC1_IN5",
+            "group": "ADC",
+            "evidence": "f411ce-package"
+          },
+          {
+            "name": "I2S1_CK",
+            "signal": "I2S1_CK",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI1_SCK",
+            "signal": "SPI1_SCK",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM2_CH1",
+            "signal": "TIM2_CH1",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM2_ETR",
+            "signal": "TIM2_ETR",
+            "group": "TIMER",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package",
+          "weact-blackpill-circuits"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PA5",
+        "connector": "RIGHT",
+        "connectorPin": 31,
+        "physicalLabel": "PAD.31",
+        "boardLabel": "PA5",
+        "position": {
+          "x": 589.32,
+          "y": 424.32,
+          "side": "right"
+        },
+        "mcuPin": 15,
+        "boardCircuitKey": "blackPillFlash",
+        "sharedWith": []
+      },
+      {
+        "number": 32,
+        "name": "PA6",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN6",
+            "signal": "ADC1_IN6",
+            "group": "ADC",
+            "evidence": "f411ce-package"
+          },
+          {
+            "name": "I2S2_MCK",
+            "signal": "I2S2_MCK",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SDIO_CMD",
+            "signal": "SDIO_CMD",
+            "group": "SDIO",
+            "evidence": "f411ce-package",
+            "selector": "AF12",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI1_MISO",
+            "signal": "SPI1_MISO",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM1_BKIN",
+            "signal": "TIM1_BKIN",
+            "group": "TIMER",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM3_CH1",
+            "signal": "TIM3_CH1",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF2",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package",
+          "weact-blackpill-circuits"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PA6",
+        "connector": "RIGHT",
+        "connectorPin": 32,
+        "physicalLabel": "PAD.32",
+        "boardLabel": "PA6",
+        "position": {
+          "x": 589.32,
+          "y": 393.84,
+          "side": "right"
+        },
+        "mcuPin": 16,
+        "boardCircuitKey": "blackPillFlash",
+        "sharedWith": []
+      },
+      {
+        "number": 33,
+        "name": "PA7",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN7",
+            "signal": "ADC1_IN7",
+            "group": "ADC",
+            "evidence": "f411ce-package"
+          },
+          {
+            "name": "I2S1_SD",
+            "signal": "I2S1_SD",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI1_MOSI",
+            "signal": "SPI1_MOSI",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM1_CH1N",
+            "signal": "TIM1_CH1N",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM3_CH2",
+            "signal": "TIM3_CH2",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF2",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package",
+          "weact-blackpill-circuits"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PA7",
+        "connector": "RIGHT",
+        "connectorPin": 33,
+        "physicalLabel": "PAD.33",
+        "boardLabel": "PA7",
+        "position": {
+          "x": 589.32,
+          "y": 363.36,
+          "side": "right"
+        },
+        "mcuPin": 17,
+        "boardCircuitKey": "blackPillFlash",
+        "sharedWith": []
+      },
+      {
+        "number": 34,
+        "name": "PB0",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN8",
+            "signal": "ADC1_IN8",
+            "group": "ADC",
+            "evidence": "f411ce-package"
+          },
+          {
+            "name": "I2S5_CK",
+            "signal": "I2S5_CK",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI5_SCK",
+            "signal": "SPI5_SCK",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM1_CH2N",
+            "signal": "TIM1_CH2N",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM3_CH3",
+            "signal": "TIM3_CH3",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF2",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PB0",
+        "connector": "RIGHT",
+        "connectorPin": 34,
+        "physicalLabel": "PAD.34",
+        "boardLabel": "PB0",
+        "position": {
+          "x": 589.32,
+          "y": 332.88,
+          "side": "right"
+        },
+        "mcuPin": 18,
+        "sharedWith": []
+      },
+      {
+        "number": 35,
+        "name": "PB1",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN9",
+            "signal": "ADC1_IN9",
+            "group": "ADC",
+            "evidence": "f411ce-package"
+          },
+          {
+            "name": "I2S5_WS",
+            "signal": "I2S5_WS",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI5_NSS",
+            "signal": "SPI5_NSS",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM1_CH3N",
+            "signal": "TIM1_CH3N",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM3_CH4",
+            "signal": "TIM3_CH4",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF2",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PB1",
+        "connector": "RIGHT",
+        "connectorPin": 35,
+        "physicalLabel": "PAD.35",
+        "boardLabel": "PB1",
+        "position": {
+          "x": 589.32,
+          "y": 302.4,
+          "side": "right"
+        },
+        "mcuPin": 19,
+        "sharedWith": []
+      },
+      {
+        "number": 36,
+        "name": "PB2",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package",
+          "weact-blackpill-circuits"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PB2",
+        "connector": "RIGHT",
+        "connectorPin": 36,
+        "physicalLabel": "PAD.36",
+        "boardLabel": "BOOT1",
+        "position": {
+          "x": 589.32,
+          "y": 271.92,
+          "side": "right"
+        },
+        "mcuPin": 20,
+        "boardCircuitKey": "blackPillBoot",
+        "sharedWith": []
+      },
+      {
+        "number": 37,
+        "name": "PB10",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C2_SCL",
+            "signal": "I2C2_SCL",
+            "group": "I2C",
+            "evidence": "f411ce-package",
+            "selector": "AF4",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2S2_CK",
+            "signal": "I2S2_CK",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2S3_MCK",
+            "signal": "I2S3_MCK",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SDIO_D7",
+            "signal": "SDIO_D7",
+            "group": "SDIO",
+            "evidence": "f411ce-package",
+            "selector": "AF12",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI2_SCK",
+            "signal": "SPI2_SCK",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM2_CH3",
+            "signal": "TIM2_CH3",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PB10",
+        "connector": "RIGHT",
+        "connectorPin": 37,
+        "physicalLabel": "PAD.37",
+        "boardLabel": "PB10",
+        "position": {
+          "x": 589.32,
+          "y": 241.44,
+          "side": "right"
+        },
+        "mcuPin": 21,
+        "sharedWith": []
+      },
+      {
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint"
+        ],
+        "number": 38,
+        "name": "3V3",
+        "net": "3V3",
+        "connector": "RIGHT",
+        "connectorPin": 38,
+        "physicalLabel": "PAD.38",
+        "boardLabel": "3V3",
+        "position": {
+          "x": 589.32,
+          "y": 210.96,
+          "side": "right"
+        }
+      },
+      {
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint"
+        ],
+        "number": 39,
+        "name": "GND",
+        "net": "GND",
+        "connector": "RIGHT",
+        "connectorPin": 39,
+        "physicalLabel": "PAD.39",
+        "boardLabel": "GND",
+        "position": {
+          "x": 589.32,
+          "y": 180.48,
+          "side": "right"
+        }
+      },
+      {
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint"
+        ],
+        "number": 40,
+        "name": "5V",
+        "net": "5V",
+        "connector": "RIGHT",
+        "connectorPin": 40,
+        "physicalLabel": "PAD.40",
+        "boardLabel": "5V",
+        "position": {
+          "x": 589.32,
+          "y": 150.0,
+          "side": "right"
+        }
+      },
+      {
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint"
+        ],
+        "number": 41,
+        "name": "3V3",
+        "net": "3V3",
+        "connector": "SWD",
+        "connectorPin": 41,
+        "physicalLabel": "PAD.41",
+        "boardLabel": "3V3",
+        "position": {
+          "x": 382.93,
+          "y": 684.0,
+          "side": "left",
+          "angle": 90
+        }
+      },
+      {
+        "number": 42,
+        "name": "PA13",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SYS_JTMS-SWDIO",
+            "signal": "SYS_JTMS-SWDIO",
+            "group": "SWD",
+            "evidence": "f411ce-package",
+            "selector": "AF0",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package",
+          "weact-blackpill-circuits"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PA13",
+        "connector": "SWD",
+        "connectorPin": 42,
+        "physicalLabel": "PAD.42",
+        "boardLabel": "SWDIO",
+        "position": {
+          "x": 428.65,
+          "y": 684.0,
+          "side": "left",
+          "angle": 90
+        },
+        "mcuPin": 34,
+        "boardCircuitKey": "blackPillDebug",
+        "sharedWith": []
+      },
+      {
+        "number": 43,
+        "name": "PA14",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SYS_JTCK-SWCLK",
+            "signal": "SYS_JTCK-SWCLK",
+            "group": "SWD",
+            "evidence": "f411ce-package",
+            "selector": "AF0",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint",
+          "f411ce-package",
+          "weact-blackpill-circuits"
+        ],
+        "noteKey": "stm32CubeGpio",
+        "net": "PA14",
+        "connector": "SWD",
+        "connectorPin": 43,
+        "physicalLabel": "PAD.43",
+        "boardLabel": "SWCLK",
+        "position": {
+          "x": 474.37,
+          "y": 684.0,
+          "side": "left",
+          "angle": 90
+        },
+        "mcuPin": 37,
+        "boardCircuitKey": "blackPillDebug",
+        "sharedWith": []
+      },
+      {
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "weact-blackpill-symbol",
+          "weact-blackpill-footprint"
+        ],
+        "number": 44,
+        "name": "GND",
+        "net": "GND",
+        "connector": "SWD",
+        "connectorPin": 44,
+        "physicalLabel": "PAD.44",
+        "boardLabel": "GND",
+        "position": {
+          "x": 520.09,
+          "y": 684.0,
+          "side": "left",
+          "angle": 90
+        }
+      }
+    ]
+  },
+  {
+    "id": "stm32f411ceu6",
+    "name": "STM32F411CEU6",
+    "shortName": "STM32F411CEU6",
+    "mcu": "STM32F411CEU6",
+    "family": "STMicroelectronics",
+    "processor": "Arm Cortex-M4",
+    "clock": "100 MHz",
+    "subtitle": "UFQFPN-48 · Arm Cortex-M4 · 100 MHz",
+    "layout": "qfn",
+    "packageName": "UFQFPN-48",
+    "packagePins": 48,
+    "gpioCount": 36,
+    "voltage": "1.7–3.6 V",
+    "verifiedOn": "2026-11-05",
+    "scopeKey": "stm32CubeQfnScope",
+    "exposedPad": false,
+    "source": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F411C(C-E)Ux.xml",
+    "datasheet": "https://www.st.com/resource/en/datasheet/stm32f411ce.pdf",
+    "pins": [
+      {
+        "number": 1,
+        "name": "VBAT",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "f411ce-package"
+        ]
+      },
+      {
+        "number": 2,
+        "name": "PC13",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "RTC_AF1",
+            "signal": "RTC_AF1",
+            "group": "SYSTEM",
+            "evidence": "f411ce-package"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 3,
+        "name": "PC14",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "RCC_OSC32_IN",
+            "signal": "RCC_OSC32_IN",
+            "group": "CLOCK",
+            "evidence": "f411ce-package"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeOsc"
+      },
+      {
+        "number": 4,
+        "name": "PC15",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_EXTI15",
+            "signal": "ADC1_EXTI15",
+            "group": "ADC",
+            "evidence": "f411ce-package"
+          },
+          {
+            "name": "RCC_OSC32_OUT",
+            "signal": "RCC_OSC32_OUT",
+            "group": "CLOCK",
+            "evidence": "f411ce-package"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeOsc"
+      },
+      {
+        "number": 5,
+        "name": "PH0",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "RCC_OSC_IN",
+            "signal": "RCC_OSC_IN",
+            "group": "CLOCK",
+            "evidence": "f411ce-package"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeOsc"
+      },
+      {
+        "number": 6,
+        "name": "PH1",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "RCC_OSC_OUT",
+            "signal": "RCC_OSC_OUT",
+            "group": "CLOCK",
+            "evidence": "f411ce-package"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeOsc"
+      },
+      {
+        "number": 7,
+        "name": "NRST",
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "f411ce-package"
+        ]
+      },
+      {
+        "number": 8,
+        "name": "VSSA",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "f411ce-package"
+        ]
+      },
+      {
+        "number": 9,
+        "name": "VDDA",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "f411ce-package"
+        ]
+      },
+      {
+        "number": 10,
+        "name": "PA0",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN0",
+            "signal": "ADC1_IN0",
+            "group": "ADC",
+            "evidence": "f411ce-package"
+          },
+          {
+            "name": "SYS_WKUP",
+            "signal": "SYS_WKUP",
+            "group": "SYSTEM",
+            "evidence": "f411ce-package"
+          },
+          {
+            "name": "TIM2_CH1",
+            "signal": "TIM2_CH1",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM2_ETR",
+            "signal": "TIM2_ETR",
+            "group": "TIMER",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM5_CH1",
+            "signal": "TIM5_CH1",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF2",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART2_CTS",
+            "signal": "USART2_CTS",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 11,
+        "name": "PA1",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN1",
+            "signal": "ADC1_IN1",
+            "group": "ADC",
+            "evidence": "f411ce-package"
+          },
+          {
+            "name": "I2S4_SD",
+            "signal": "I2S4_SD",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI4_MOSI",
+            "signal": "SPI4_MOSI",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM2_CH2",
+            "signal": "TIM2_CH2",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM5_CH2",
+            "signal": "TIM5_CH2",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF2",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART2_RTS",
+            "signal": "USART2_RTS",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 12,
+        "name": "PA2",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN2",
+            "signal": "ADC1_IN2",
+            "group": "ADC",
+            "evidence": "f411ce-package"
+          },
+          {
+            "name": "I2S_CKIN",
+            "signal": "I2S_CKIN",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM2_CH3",
+            "signal": "TIM2_CH3",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM5_CH3",
+            "signal": "TIM5_CH3",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF2",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM9_CH1",
+            "signal": "TIM9_CH1",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF3",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART2_TX",
+            "signal": "USART2_TX",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 13,
+        "name": "PA3",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN3",
+            "signal": "ADC1_IN3",
+            "group": "ADC",
+            "evidence": "f411ce-package"
+          },
+          {
+            "name": "I2S2_MCK",
+            "signal": "I2S2_MCK",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM2_CH4",
+            "signal": "TIM2_CH4",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM5_CH4",
+            "signal": "TIM5_CH4",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF2",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM9_CH2",
+            "signal": "TIM9_CH2",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF3",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART2_RX",
+            "signal": "USART2_RX",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 14,
+        "name": "PA4",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN4",
+            "signal": "ADC1_IN4",
+            "group": "ADC",
+            "evidence": "f411ce-package"
+          },
+          {
+            "name": "I2S1_WS",
+            "signal": "I2S1_WS",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2S3_WS",
+            "signal": "I2S3_WS",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI1_NSS",
+            "signal": "SPI1_NSS",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI3_NSS",
+            "signal": "SPI3_NSS",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART2_CK",
+            "signal": "USART2_CK",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 15,
+        "name": "PA5",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN5",
+            "signal": "ADC1_IN5",
+            "group": "ADC",
+            "evidence": "f411ce-package"
+          },
+          {
+            "name": "I2S1_CK",
+            "signal": "I2S1_CK",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI1_SCK",
+            "signal": "SPI1_SCK",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM2_CH1",
+            "signal": "TIM2_CH1",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM2_ETR",
+            "signal": "TIM2_ETR",
+            "group": "TIMER",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 16,
+        "name": "PA6",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN6",
+            "signal": "ADC1_IN6",
+            "group": "ADC",
+            "evidence": "f411ce-package"
+          },
+          {
+            "name": "I2S2_MCK",
+            "signal": "I2S2_MCK",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SDIO_CMD",
+            "signal": "SDIO_CMD",
+            "group": "SDIO",
+            "evidence": "f411ce-package",
+            "selector": "AF12",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI1_MISO",
+            "signal": "SPI1_MISO",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM1_BKIN",
+            "signal": "TIM1_BKIN",
+            "group": "TIMER",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM3_CH1",
+            "signal": "TIM3_CH1",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF2",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 17,
+        "name": "PA7",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN7",
+            "signal": "ADC1_IN7",
+            "group": "ADC",
+            "evidence": "f411ce-package"
+          },
+          {
+            "name": "I2S1_SD",
+            "signal": "I2S1_SD",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI1_MOSI",
+            "signal": "SPI1_MOSI",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM1_CH1N",
+            "signal": "TIM1_CH1N",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM3_CH2",
+            "signal": "TIM3_CH2",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF2",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 18,
+        "name": "PB0",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN8",
+            "signal": "ADC1_IN8",
+            "group": "ADC",
+            "evidence": "f411ce-package"
+          },
+          {
+            "name": "I2S5_CK",
+            "signal": "I2S5_CK",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI5_SCK",
+            "signal": "SPI5_SCK",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM1_CH2N",
+            "signal": "TIM1_CH2N",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM3_CH3",
+            "signal": "TIM3_CH3",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF2",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 19,
+        "name": "PB1",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_IN9",
+            "signal": "ADC1_IN9",
+            "group": "ADC",
+            "evidence": "f411ce-package"
+          },
+          {
+            "name": "I2S5_WS",
+            "signal": "I2S5_WS",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI5_NSS",
+            "signal": "SPI5_NSS",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM1_CH3N",
+            "signal": "TIM1_CH3N",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM3_CH4",
+            "signal": "TIM3_CH4",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF2",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 20,
+        "name": "PB2",
+        "type": "GPIO",
+        "functions": [],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 21,
+        "name": "PB10",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C2_SCL",
+            "signal": "I2C2_SCL",
+            "group": "I2C",
+            "evidence": "f411ce-package",
+            "selector": "AF4",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2S2_CK",
+            "signal": "I2S2_CK",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2S3_MCK",
+            "signal": "I2S3_MCK",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SDIO_D7",
+            "signal": "SDIO_D7",
+            "group": "SDIO",
+            "evidence": "f411ce-package",
+            "selector": "AF12",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI2_SCK",
+            "signal": "SPI2_SCK",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM2_CH3",
+            "signal": "TIM2_CH3",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 22,
+        "name": "VCAP1",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "f411ce-package"
+        ]
+      },
+      {
+        "number": 23,
+        "name": "VSS",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "f411ce-package"
+        ]
+      },
+      {
+        "number": 24,
+        "name": "VDD",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "f411ce-package"
+        ]
+      },
+      {
+        "number": 25,
+        "name": "PB12",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C2_SMBA",
+            "signal": "I2C2_SMBA",
+            "group": "I2C",
+            "evidence": "f411ce-package",
+            "selector": "AF4",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2S2_WS",
+            "signal": "I2S2_WS",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2S3_CK",
+            "signal": "I2S3_CK",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2S4_WS",
+            "signal": "I2S4_WS",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI2_NSS",
+            "signal": "SPI2_NSS",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI3_SCK",
+            "signal": "SPI3_SCK",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI4_NSS",
+            "signal": "SPI4_NSS",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM1_BKIN",
+            "signal": "TIM1_BKIN",
+            "group": "TIMER",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 26,
+        "name": "PB13",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2S2_CK",
+            "signal": "I2S2_CK",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2S4_CK",
+            "signal": "I2S4_CK",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI2_SCK",
+            "signal": "SPI2_SCK",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI4_SCK",
+            "signal": "SPI4_SCK",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM1_CH1N",
+            "signal": "TIM1_CH1N",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 27,
+        "name": "PB14",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2S2_ext_SD",
+            "signal": "I2S2_ext_SD",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SDIO_D6",
+            "signal": "SDIO_D6",
+            "group": "SDIO",
+            "evidence": "f411ce-package",
+            "selector": "AF12",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI2_MISO",
+            "signal": "SPI2_MISO",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM1_CH2N",
+            "signal": "TIM1_CH2N",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 28,
+        "name": "PB15",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_EXTI15",
+            "signal": "ADC1_EXTI15",
+            "group": "ADC",
+            "evidence": "f411ce-package"
+          },
+          {
+            "name": "I2S2_SD",
+            "signal": "I2S2_SD",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "RTC_REFIN",
+            "signal": "RTC_REFIN",
+            "group": "SYSTEM",
+            "evidence": "f411ce-package",
+            "selector": "AF0",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SDIO_CK",
+            "signal": "SDIO_CK",
+            "group": "SDIO",
+            "evidence": "f411ce-package",
+            "selector": "AF12",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI2_MOSI",
+            "signal": "SPI2_MOSI",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM1_CH3N",
+            "signal": "TIM1_CH3N",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 29,
+        "name": "PA8",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C3_SCL",
+            "signal": "I2C3_SCL",
+            "group": "I2C",
+            "evidence": "f411ce-package",
+            "selector": "AF4",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "RCC_MCO_1",
+            "signal": "RCC_MCO_1",
+            "group": "CLOCK",
+            "evidence": "f411ce-package",
+            "selector": "AF0",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SDIO_D1",
+            "signal": "SDIO_D1",
+            "group": "SDIO",
+            "evidence": "f411ce-package",
+            "selector": "AF12",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM1_CH1",
+            "signal": "TIM1_CH1",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART1_CK",
+            "signal": "USART1_CK",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USB_OTG_FS_SOF",
+            "signal": "USB_OTG_FS_SOF",
+            "group": "USB",
+            "evidence": "f411ce-package",
+            "selector": "AF10",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 30,
+        "name": "PA9",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C3_SMBA",
+            "signal": "I2C3_SMBA",
+            "group": "I2C",
+            "evidence": "f411ce-package",
+            "selector": "AF4",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SDIO_D2",
+            "signal": "SDIO_D2",
+            "group": "SDIO",
+            "evidence": "f411ce-package",
+            "selector": "AF12",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM1_CH2",
+            "signal": "TIM1_CH2",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART1_TX",
+            "signal": "USART1_TX",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USB_OTG_FS_VBUS",
+            "signal": "USB_OTG_FS_VBUS",
+            "group": "USB",
+            "evidence": "f411ce-package",
+            "selector": "AF10",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 31,
+        "name": "PA10",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2S5_SD",
+            "signal": "I2S5_SD",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI5_MOSI",
+            "signal": "SPI5_MOSI",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM1_CH3",
+            "signal": "TIM1_CH3",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART1_RX",
+            "signal": "USART1_RX",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USB_OTG_FS_ID",
+            "signal": "USB_OTG_FS_ID",
+            "group": "USB",
+            "evidence": "f411ce-package",
+            "selector": "AF10",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 32,
+        "name": "PA11",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_EXTI11",
+            "signal": "ADC1_EXTI11",
+            "group": "ADC",
+            "evidence": "f411ce-package"
+          },
+          {
+            "name": "SPI4_MISO",
+            "signal": "SPI4_MISO",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM1_CH4",
+            "signal": "TIM1_CH4",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART1_CTS",
+            "signal": "USART1_CTS",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART6_TX",
+            "signal": "USART6_TX",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF8",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USB_OTG_FS_DM",
+            "signal": "USB_OTG_FS_DM",
+            "group": "USB",
+            "evidence": "f411ce-package",
+            "selector": "AF10",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 33,
+        "name": "PA12",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI5_MISO",
+            "signal": "SPI5_MISO",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM1_ETR",
+            "signal": "TIM1_ETR",
+            "group": "TIMER",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART1_RTS",
+            "signal": "USART1_RTS",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART6_RX",
+            "signal": "USART6_RX",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF8",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USB_OTG_FS_DP",
+            "signal": "USB_OTG_FS_DP",
+            "group": "USB",
+            "evidence": "f411ce-package",
+            "selector": "AF10",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 34,
+        "name": "PA13",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SYS_JTMS-SWDIO",
+            "signal": "SYS_JTMS-SWDIO",
+            "group": "SWD",
+            "evidence": "f411ce-package",
+            "selector": "AF0",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 35,
+        "name": "VSS",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "f411ce-package"
+        ]
+      },
+      {
+        "number": 36,
+        "name": "VDD",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "f411ce-package"
+        ]
+      },
+      {
+        "number": 37,
+        "name": "PA14",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SYS_JTCK-SWCLK",
+            "signal": "SYS_JTCK-SWCLK",
+            "group": "SWD",
+            "evidence": "f411ce-package",
+            "selector": "AF0",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 38,
+        "name": "PA15",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC1_EXTI15",
+            "signal": "ADC1_EXTI15",
+            "group": "ADC",
+            "evidence": "f411ce-package"
+          },
+          {
+            "name": "I2S1_WS",
+            "signal": "I2S1_WS",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2S3_WS",
+            "signal": "I2S3_WS",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI1_NSS",
+            "signal": "SPI1_NSS",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI3_NSS",
+            "signal": "SPI3_NSS",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SYS_JTDI",
+            "signal": "SYS_JTDI",
+            "group": "JTAG",
+            "evidence": "f411ce-package",
+            "selector": "AF0",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM2_CH1",
+            "signal": "TIM2_CH1",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM2_ETR",
+            "signal": "TIM2_ETR",
+            "group": "TIMER",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART1_TX",
+            "signal": "USART1_TX",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 39,
+        "name": "PB3",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C2_SDA",
+            "signal": "I2C2_SDA",
+            "group": "I2C",
+            "evidence": "f411ce-package",
+            "selector": "AF9",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2S1_CK",
+            "signal": "I2S1_CK",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2S3_CK",
+            "signal": "I2S3_CK",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI1_SCK",
+            "signal": "SPI1_SCK",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI3_SCK",
+            "signal": "SPI3_SCK",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SYS_JTDO-SWO",
+            "signal": "SYS_JTDO-SWO",
+            "group": "JTAG",
+            "evidence": "f411ce-package",
+            "selector": "AF0",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM2_CH2",
+            "signal": "TIM2_CH2",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF1",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART1_RX",
+            "signal": "USART1_RX",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 40,
+        "name": "PB4",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C3_SDA",
+            "signal": "I2C3_SDA",
+            "group": "I2C",
+            "evidence": "f411ce-package",
+            "selector": "AF9",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2S3_ext_SD",
+            "signal": "I2S3_ext_SD",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SDIO_D0",
+            "signal": "SDIO_D0",
+            "group": "SDIO",
+            "evidence": "f411ce-package",
+            "selector": "AF12",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI1_MISO",
+            "signal": "SPI1_MISO",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI3_MISO",
+            "signal": "SPI3_MISO",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SYS_JTRST",
+            "signal": "SYS_JTRST",
+            "group": "JTAG",
+            "evidence": "f411ce-package",
+            "selector": "AF0",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM3_CH1",
+            "signal": "TIM3_CH1",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF2",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 41,
+        "name": "PB5",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C1_SMBA",
+            "signal": "I2C1_SMBA",
+            "group": "I2C",
+            "evidence": "f411ce-package",
+            "selector": "AF4",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2S1_SD",
+            "signal": "I2S1_SD",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2S3_SD",
+            "signal": "I2S3_SD",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SDIO_D3",
+            "signal": "SDIO_D3",
+            "group": "SDIO",
+            "evidence": "f411ce-package",
+            "selector": "AF12",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI1_MOSI",
+            "signal": "SPI1_MOSI",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI3_MOSI",
+            "signal": "SPI3_MOSI",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM3_CH2",
+            "signal": "TIM3_CH2",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF2",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 42,
+        "name": "PB6",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C1_SCL",
+            "signal": "I2C1_SCL",
+            "group": "I2C",
+            "evidence": "f411ce-package",
+            "selector": "AF4",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM4_CH1",
+            "signal": "TIM4_CH1",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF2",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART1_TX",
+            "signal": "USART1_TX",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 43,
+        "name": "PB7",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C1_SDA",
+            "signal": "I2C1_SDA",
+            "group": "I2C",
+            "evidence": "f411ce-package",
+            "selector": "AF4",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SDIO_D0",
+            "signal": "SDIO_D0",
+            "group": "SDIO",
+            "evidence": "f411ce-package",
+            "selector": "AF12",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM4_CH2",
+            "signal": "TIM4_CH2",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF2",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "USART1_RX",
+            "signal": "USART1_RX",
+            "group": "UART",
+            "evidence": "f411ce-package",
+            "selector": "AF7",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 44,
+        "name": "BOOT0",
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "f411ce-package"
+        ]
+      },
+      {
+        "number": 45,
+        "name": "PB8",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C1_SCL",
+            "signal": "I2C1_SCL",
+            "group": "I2C",
+            "evidence": "f411ce-package",
+            "selector": "AF4",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2C3_SDA",
+            "signal": "I2C3_SDA",
+            "group": "I2C",
+            "evidence": "f411ce-package",
+            "selector": "AF9",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2S5_SD",
+            "signal": "I2S5_SD",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SDIO_D4",
+            "signal": "SDIO_D4",
+            "group": "SDIO",
+            "evidence": "f411ce-package",
+            "selector": "AF12",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI5_MOSI",
+            "signal": "SPI5_MOSI",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF6",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM10_CH1",
+            "signal": "TIM10_CH1",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF3",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM4_CH3",
+            "signal": "TIM4_CH3",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF2",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 46,
+        "name": "PB9",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C1_SDA",
+            "signal": "I2C1_SDA",
+            "group": "I2C",
+            "evidence": "f411ce-package",
+            "selector": "AF4",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2C2_SDA",
+            "signal": "I2C2_SDA",
+            "group": "I2C",
+            "evidence": "f411ce-package",
+            "selector": "AF9",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "I2S2_WS",
+            "signal": "I2S2_WS",
+            "group": "I2S",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SDIO_D5",
+            "signal": "SDIO_D5",
+            "group": "SDIO",
+            "evidence": "f411ce-package",
+            "selector": "AF12",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "SPI2_NSS",
+            "signal": "SPI2_NSS",
+            "group": "SPI",
+            "evidence": "f411ce-package",
+            "selector": "AF5",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM11_CH1",
+            "signal": "TIM11_CH1",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF3",
+            "configurationEvidence": "f411ce-modes"
+          },
+          {
+            "name": "TIM4_CH4",
+            "signal": "TIM4_CH4",
+            "group": "PWM",
+            "evidence": "f411ce-package",
+            "selector": "AF2",
+            "configurationEvidence": "f411ce-modes"
+          }
+        ],
+        "evidence": [
+          "f411ce-package"
+        ],
+        "noteKey": "stm32CubeGpio"
+      },
+      {
+        "number": 47,
+        "name": "VSS",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "f411ce-package"
+        ]
+      },
+      {
+        "number": 48,
+        "name": "VDD",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "f411ce-package"
+        ]
+      }
+    ]
   }
 ]

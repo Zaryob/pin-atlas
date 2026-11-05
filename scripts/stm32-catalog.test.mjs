@@ -5,6 +5,15 @@ import {buildLayouts,resolveProfile} from '../public/layouts.mjs';
 const boards=JSON.parse(readFileSync(new URL('../public/data/boards.json',import.meta.url)));
 const layouts=buildLayouts(boards);
 
+test('WeAct F411CE shares the verified footprint while retaining its 100 MHz MCU reference',()=>{
+ const board=boards.find(b=>b.id==='weact-blackpill-f411ce'),chip=boards.find(b=>b.id===board.mcuProfile);
+ assert.equal(chip.packagePins,48);assert.equal(chip.gpioCount,36);assert.equal(chip.clock,'100 MHz');
+ assert.equal(chip.name,'STM32F411CEU6');assert.equal(board.pins.length,44);
+ assert.equal(resolveProfile(layouts,board.id).layout.id,'black-pill');
+ assert.notEqual(board.mcuProfile,boards.find(b=>b.id==='weact-blackpill-f401cc').mcuProfile);
+ assert(board.pins.find(p=>p.name==='PA5').functions.some(f=>f.name==='SPI1_SCK' && f.selector==='AF5'));
+});
+
 test('WeAct F401CC uses the manufacturer 44-pad CAD footprint and its own QFN48 package',()=>{
  const board=boards.find(b=>b.id==='weact-blackpill-f401cc'),chip=boards.find(b=>b.id===board.mcuProfile);
  assert.equal(chip.packagePins,48);assert.equal(chip.gpioCount,36);assert.equal(chip.clock,'84 MHz');assert.equal(chip.layout,'qfn');
