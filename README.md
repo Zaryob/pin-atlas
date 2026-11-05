@@ -10,7 +10,9 @@ An English-first pin guide with Turkish localization built from manufacturer doc
 
 ## Pin layouts
 
-The library lists each physical layout once and names its compatible boards:
+The catalog lists each documented hardware model separately under **Development boards**, **MCU packages**, or **Common headers**, then groups models by platform/manufacturer. Type and platform filters combine with model, processor, series, and package searches. Shared geometry is reused internally; selecting NUCLEO-L432KC, for example, opens that model and its own functions rather than a generic Nucleo-32 entry. Compatibility-only aliases lead to a labeled reference, not a newly claimed MCU function map.
+
+The underlying pin layouts include:
 
 - **Raspberry Pi Pico family:** Pico, Pico W, Pico 2, and Pico 2 W share one 40-pin layout with 26 exposed GPIOs. Select the RP2040 function reference for Pico / Pico W, or RP2350A for Pico 2 / Pico 2 W inside that layout.
 - **Raspberry Pi 40-pin GPIO:** B+, A+, Pi 2/3/4/5, Zero models, and 400/500 share one header entry. Choose common GPIO/power/ground connections, the verified BCM2711 alternate functions for Pi 4, or the verified RP1 alternate functions for Pi 5 in the same view. This excludes older 26-pin boards and Compute Modules; some Zero headers are unpopulated and keyboard models have a rotated header.
@@ -38,7 +40,7 @@ The library lists each physical layout once and names its compatible boards:
 - **RP2350A:** QFN-60, 30 Bank 0 GPIOs.
 - **RP2350B:** QFN-80, 48 Bank 0 GPIOs.
 
-The Pico drawing represents the common header and does not claim identical wireless, LED or internal board wiring. Processor references change alternate functions, not physical pin positions. Plans are saved per reference; old model links, exported JSON files, and saved plans remain supported. If multiple old model plans exist for the same processor, they remain available in the function-reference selector without being merged.
+The Pico drawing represents the common header and does not claim identical wireless, LED or internal board wiring. Processor references change alternate functions, not physical pin positions. Plans are saved per reference; old model links, exported JSON files, and saved plans remain supported. If multiple old model plans exist for the same processor, they remain individually available in Compatible boards without being merged.
 
 Boards with a verified MCU package link support selecting a contact or package pin from either drawing. The package view also opens matching board contacts. Board drawings with multiple connectors can zoom to an individual header.
 
@@ -70,7 +72,7 @@ ESP GPIO matrix options describe configurable peripheral routes, not default fir
 
 **Compatible boards** opens a numbered model index with processor/reference details, the active reference and saved-plan indicators. Select a model directly; longer lists can be searched. Physical-only compatibility links open the common pinout rather than another board’s alternate-function map.
 
-Home and library searches use the same catalog. Searching for an exact model opens its own processor reference within the shared physical layout. Featured names, GPIO counts and I/O voltages come from the verified profiles. If the library cannot load, use **Try again**; saved browser plans are retained.
+Home and library searches use the same model catalog and filters. Each model card opens its own processor reference within the shared physical layout, and the workspace heading retains the exact model name. Nucleo-32/64/144 are series labels. MCU packages remain individually selectable, and the common Raspberry Pi header is explicitly physical-only. Featured names, GPIO counts and I/O voltages come from the verified profiles. If the library cannot load, use **Try again**; saved browser plans are retained.
 
 The site uses Umami for usage analytics. Wiring plans are stored locally in the browser.
 

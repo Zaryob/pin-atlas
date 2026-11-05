@@ -1,7 +1,7 @@
 import { buildLayouts, resolveProfile } from './layouts.mjs';
 import { compatibleModels, filterCompatibleModels } from './compatibility.mjs';
 import { connectorGroupsFor } from './connectors.mjs';
-import { boardFamilies, homeFilterChips, featuredCards } from './catalog.mjs';
+import { boardFamilies, homeFilterChips, featuredCards, catalogTypes, buildCatalog, filterCatalog } from './catalog.mjs';
 import { options, physicalLabel, planReference, samePlan, validatePlan } from './plans.mjs';
 import { availablePeripherals, assemblePeripheral } from './peripherals.mjs';
 import {ProfileLibrary} from './profile-library.mjs';
@@ -55,7 +55,8 @@ const subtitle = item => t(`board.${item.id}`, {}, item.subtitle);
 const groups = ['SPI','I2C','UART','PWM','ADC','HSTX','PIO','PCM','I2S','CLOCK','JTAG','DPI','SDIO','SMI','SWD','CAN','TIMER','USB','IRQ','DAC','TOUCH'];
 let evidence = {references:{}};
 let boards, layouts, layout, board, selected = 1, selectedFn, filters = new Set(), search = '', flipped = false, rotated = false, view = 'map', assignments = {}, toastTimer;
-let currentView = 'home', homeActiveFilter = 'all', homeSearchQuery = '';
+let currentView = 'home', homeActiveFilter = 'all', homeSearchQuery = '', homeCatalogType = 'all';
+let libraryCatalogType = 'all', libraryFamily = 'all';
 let dataState = 'loading', dataLoading = false;
 let library, navigationSequence=0;
 let sourceBoard,hardwareSettings={},hardwareRestoreError='';
@@ -149,23 +150,24 @@ function focusWorkspace() {
  $('#board-title').focus({preventScroll:true});
 }
 function renderBoard() {
- document.title = `${layoutTitle(layout)} Pinout — Pin Atlas`;
- $('#board-title').textContent = layoutTitle(layout);
- $('#board-reference').textContent = [board.shortName || board.name, board.mcu && !board.name.includes(board.mcu) ? board.mcu : ''].filter(Boolean).join(' · ');
+ document.title = `${board.name} Pinout — Pin Atlas`;
+ $('#board-title').textContent = board.name;
+ const entry=buildCatalog(layouts,t).find(item=>item.profile===board.id);
+ $('#board-reference').textContent = [entry?.series, board.mcu, isChip(board)?board.packageName:''].filter(Boolean).join(' · ');
  const scope = board.scopeKey ? t(board.scopeKey) : layout.scopeKey ? t(layout.scopeKey) : '';
  $('#board-scope').hidden = !scope;
  $('#board-scope').textContent = scope;
  renderCompatibilityIndex();
  renderHardware();
- $('#library-count').textContent = layouts.length;
+ updateLibraryCount();
  $('#crumb').textContent = board.shortName || board.name;
- $('#board-family').textContent = board.family;
+ $('#board-family').textContent = entry?.familyName || board.family;
  $('#datasheet').href = board.datasheet;
  $('#reference-link').href = board.source;
  $('#reference-link').innerHTML = `${t('officialSource')} <span>↗</span>`;
  $('#pin-count').textContent = t('pinCount', { count: board.packagePins });
  $('#specs').innerHTML = `<span>${icon('chip')}<b>${board.uniqueGPIOCount ?? board.gpioCount}</b>GPIO${board.reservedGPIOCount ? ` (${t('reservedCount', { count: board.reservedGPIOCount })})` : ''}</span><span>${icon('bolt')}<b>${esc(board.voltage)}</b></span>`;
- renderNav(); renderFunctionReference(); renderFilters(); renderMap(); renderDetail(); renderPlan();
+ renderNav(); renderReferenceNote(); renderFilters(); renderMap(); renderDetail(); renderPlan();
 }
 function renderCompatibilityIndex() {
  compatibilityModels=compatibleModels(layout);
@@ -192,23 +194,9 @@ function renderCompatibilityList() {
    return `<li><a href="${esc(target.href)}" data-compatible-model="${esc(model.id)}" data-profile="${esc(model.profileId)}" ${active?'aria-current="true"':''} aria-label="${esc(t('openCompatibleModel',{model:model.name,reference:detail(model)}))}"><span class="compatibility-number" aria-hidden="true">${String(compatibilityModels.indexOf(model)+1).padStart(2,'0')}</span><span class="compatibility-model"><strong>${esc(model.name)}</strong><small>${esc(detail(model))}${saved?`<span class="compatibility-saved">${esc(t('hasSavedPlan'))}</span>`:''}</small></span><span class="compatibility-state">${esc(status)}<span aria-hidden="true">${active?'✓':'→'}</span></span></a></li>`;
  }).join('');
 }
-function renderFunctionReference() {
- $('#function-reference-bar').hidden = !layout.references.length;
+function renderReferenceNote() {
  $('#reference-note').hidden = !layout.references.length;
  $('#reference-note').textContent = layout.id === 'raspberry-pi-40' ? t(board.id === 'raspberry-pi-4' ? 'pi4ReferenceNote' : 'commonReferenceNote') : layout.id === 'pico-family' ? t('picoReferenceNote') : t('headerReferenceNote');
- const choices = layout.references.flatMap(reference => {
-   const hasSavedPlan = id => Object.keys(savedPlans[id] || {}).length > 0;
-   const selectedId = reference.profileIds.includes(board.id) ? board.id : reference.profileIds.find(hasSavedPlan) || reference.profileIds[0];
-   const label = reference.label || t(reference.key);
-   const result = [{id:selectedId, label}];
-   // If both old model slots contain plans, expose them rather than merge or hide data.
-   for (const id of reference.profileIds.filter(id => id !== selectedId && hasSavedPlan(id))) {
-     const profile = boards.find(item => item.id === id);
-     result.push({id, label:`${label} · ${t('savedModelPlan', {model:profile.shortName})}`});
-   }
-   return result;
- });
- $('#function-reference').innerHTML = choices.map(choice => `<option value="${choice.id}" ${choice.id === board.id ? 'selected' : ''}>${esc(choice.label)}</option>`).join('');
 }
 function renderNav() {
  const nav = $('#board-nav');
@@ -245,7 +233,9 @@ function pinGroup(pin, x, y, side, opts = {}) {
  const func = assigned?.label || assigned?.function || matchingFunctions.slice(0,2).map(f=>f.name).join(' · ') || (label !== pin.name && opts.showConnectorLabel ? pin.name : '');
  const left = side === 'left';
  const xSign = left ? -1 : 1;
- let body = `<rect class="pin-hit" x="${left ? -222 : 10}" y="-10" width="212" height="20" rx="4" fill="transparent"/><path d="M0 0h${xSign * 24}" stroke="${active ? 'var(--accent)' : 'var(--line)'}" stroke-width="1"/><circle class="pin-node" r="4.4" fill="${pin.type === 'GPIO' ? '#e2eccc' : '#f2eee6'}" stroke="${color}" stroke-width="1.3"/><text class="pin-number" x="${xSign * 17}" y="3" text-anchor="middle">${esc(pin.connectorPin ?? pin.physicalLabel ?? pin.number)}</text><rect x="${left ? -99 : 30}" y="-8.5" width="69" height="17" rx="3" fill="${color}" fill-opacity="${active ? '.2' : '.09'}"/><text class="pin-label" x="${xSign * 64}" y="3.7" fill="${color}" text-anchor="middle">${esc(label)}</text>${func ? `<text class="pin-function" x="${xSign * 111}" y="3" text-anchor="${left ? 'end' : 'start'}" fill="${assigned ? 'var(--success)' : colors[fn?.group] || color}">${esc(func.length > 24 ? func.slice(0,23)+'…' : func)}</text>` : ''}${assigned ? `<circle r="2" cx="${xSign * 215}" fill="var(--success)"/>` : ''}`;
+ // Include the terminal and its lead in the same target as the label. The
+ // previous target stopped short of the terminal, leaving a dead area at it.
+ let body = `<rect class="pin-hit" x="${left ? -222 : -10}" y="-10" width="232" height="20" rx="4" fill="transparent"/><path d="M0 0h${xSign * 24}" stroke="${active ? 'var(--accent)' : 'var(--line)'}" stroke-width="1"/><circle class="pin-node" r="4.4" fill="${pin.type === 'GPIO' ? '#e2eccc' : '#f2eee6'}" stroke="${color}" stroke-width="1.3"/><text class="pin-number" x="${xSign * 17}" y="3" text-anchor="middle">${esc(pin.connectorPin ?? pin.physicalLabel ?? pin.number)}</text><rect x="${left ? -99 : 30}" y="-8.5" width="69" height="17" rx="3" fill="${color}" fill-opacity="${active ? '.2' : '.09'}"/><text class="pin-label" x="${xSign * 64}" y="3.7" fill="${color}" text-anchor="middle">${esc(label)}</text>${func ? `<text class="pin-function" x="${xSign * 111}" y="3" text-anchor="${left ? 'end' : 'start'}" fill="${assigned ? 'var(--success)' : colors[fn?.group] || color}">${esc(func.length > 24 ? func.slice(0,23)+'…' : func)}</text>` : ''}${assigned ? `<circle r="2" cx="${xSign * 215}" fill="var(--success)"/>` : ''}`;
  if (opts.connector) {
    const contactLabel = label === pin.name ? pin.name : `${label} · ${pin.name}`;
    body = `<rect class="pin-hit" x="${left ? -111 : -12}" y="-10" width="123" height="20" rx="3" fill="transparent"/>
@@ -277,7 +267,7 @@ function renderPico() {
    if (flipped) { x=680-x; side=side==='left'?'right':'left'; }
    pins += pinGroup(pin,x,y,side);
  }
- return `<svg role="group" viewBox="0 0 680 540" aria-label="${esc(t('diagramLabel', { board: layoutTitle(layout) }))}"><g transform="${flipped ? 'translate(680 0) scale(-1 1)' : ''}"><g transform="${rotated ? 'rotate(180 340 269.5)' : ''}">${picoArt()}</g></g>${pins}</svg>`;
+ return `<svg role="group" viewBox="0 0 680 540" aria-label="${esc(t('diagramLabel', { board: board.name }))}"><g transform="${flipped ? 'translate(680 0) scale(-1 1)' : ''}"><g transform="${rotated ? 'rotate(180 340 269.5)' : ''}">${picoArt()}</g></g>${pins}</svg>`;
 }
 function renderHeader() {
  let pins = '';
@@ -288,7 +278,7 @@ function renderHeader() {
    if (flipped) { x=680-x; side=side==='left'?'right':'left'; }
    pins += pinGroup(pin,x,y,side);
  }
- return `<svg role="group" viewBox="0 0 680 540" aria-label="${esc(t('diagramLabel', { board: layoutTitle(layout) }))}"><rect x="308" y="29" width="64" height="480" rx="6" fill="#26372c"/><rect x="315" y="37" width="50" height="464" rx="3" fill="#384c3a"/>${pins}<text x="340" y="530" fill="#869b75" font-family="var(--mono)" font-size="7" text-anchor="middle">${board.headerLabel ? esc(board.headerLabel)+' · ' : ''}${t('headerLegend')}</text></svg>`;
+ return `<svg role="group" viewBox="0 0 680 540" aria-label="${esc(t('diagramLabel', { board: board.name }))}"><rect x="308" y="29" width="64" height="480" rx="6" fill="#26372c"/><rect x="315" y="37" width="50" height="464" rx="3" fill="#384c3a"/>${pins}<text x="340" y="530" fill="#869b75" font-family="var(--mono)" font-size="7" text-anchor="middle">${board.headerLabel ? esc(board.headerLabel)+' · ' : ''}${t('headerLegend')}</text></svg>`;
 }
 function renderDip(profile = board, activePin = selected, contactsByPad = new Map()) {
  const preview = profile !== board;
@@ -358,7 +348,7 @@ function renderCustom() {
    viewBox = [left, top, right - left, bottom - top];
  }
  const minWidth = connectorZoom ? Math.min(820, Math.max(300, Math.ceil(viewBox[2] * 1.2))) : board.diagram.minWidth;
- return `<svg role="group" viewBox="${viewBox.join(' ')}" ${minWidth ? `style="min-width:${minWidth}px;max-height:none"` : ''} aria-label="${esc(t('diagramLabel', { board: layoutTitle(layout) }))}"><g transform="${flipped?`translate(${width} 0) scale(-1 1)`:''}"><g transform="${rotated?`rotate(180 ${width/2} ${height/2})`:''}">${image}</g></g>${pins}</svg>`;
+ return `<svg role="group" viewBox="${viewBox.join(' ')}" ${minWidth ? `style="min-width:${minWidth}px;max-height:none"` : ''} aria-label="${esc(t('diagramLabel', { board: board.name }))}"><g transform="${flipped?`translate(${width} 0) scale(-1 1)`:''}"><g transform="${rotated?`rotate(180 ${width/2} ${height/2})`:''}">${image}</g></g>${pins}</svg>`;
 }
 const renderers = {pico:renderPico,qfn:renderQfn,lqfp:renderQfn,dip:renderDip,header:renderHeader,custom:renderCustom};
 function renderMap() {
@@ -686,161 +676,78 @@ function addToPlan() {
 function showCatalog() {
  if (dataState !== 'ready') return;
   $('#catalog-search').value = '';
+  libraryCatalogType='all';libraryFamily='all';
   renderCatalog();
   $('#library-dialog').showModal();
   $('#catalog-search').focus();
 }
 
-function catalogLayoutDetail(item) {
-  if (item.id === 'nucleo-64') return t('nucleo64Compatible');
-  if (item.id.startsWith('nucleo-')) return `${item.mcu} · ${layoutSubtitle(item)}`;
-  return item.compatibleKey ? t(item.compatibleKey) : layoutSubtitle(item);
+function renderCatalogCard(entry) {
+  const {id,profile,name,detail,specs,series,type,mcuProfile}=entry;
+  const active=layout?.id===id && board?.id===profile;
+  const card=`<button type="button" class="catalog-card ${active?'active':''}" data-layout="${esc(id)}" data-profile="${esc(profile)}"${active?' aria-current="true"':''}>
+    <span class="catalog-card-icon" aria-hidden="true">${icon(type==='chips'?'chip':type==='headers'?'grid':'board')}</span>
+    <span class="catalog-card-body">
+      ${series?`<span class="catalog-card-series">${esc(series)}</span>`:''}
+      <span class="catalog-card-header"><b class="catalog-card-title">${esc(name)}</b><span class="catalog-card-arrow" aria-hidden="true">↗</span></span>
+      <span class="catalog-card-desc">${esc(type==='headers'?t('catalogHeaderNote'):detail)}</span>
+      <span class="catalog-card-specs">${esc(specs)}</span>
+      ${entry.matchedAlias?`<span class="catalog-alias-note">${esc(t('catalogPhysicalMatch',{name:entry.matchedAlias}))}</span>`:''}
+    </span></button>`;
+  const related=type==='chips'?boards.filter(item=>item.mcuProfile===profile):boards.filter(item=>item.id===mcuProfile);
+  const links=related.map(item=>{
+    const target=layouts.find(candidate=>candidate.profileIds.includes(item.id));
+    return `<button type="button" class="catalog-package-btn" data-layout="${esc(target.id)}" data-profile="${esc(item.id)}">${esc(t(type==='chips'?'catalogOpenBoard':'catalogOpenMcu',{name:item.name}))}</button>`;
+  }).join('');
+  const relatedHTML=related.length>1?`<details class="catalog-related"><summary>${esc(t('catalogUsedOn',{count:related.length}))}</summary><div>${links}</div></details>`:related.length?`<div class="catalog-related">${links}</div>`:'';
+  return `<div class="catalog-entry" data-catalog-type="${type}">${card}${relatedHTML}</div>`;
 }
 
-function renderCatalogCard({ id, profile, name, detail, isChip: chip }) {
-  const isActive = layout?.id === id && (!profile || board.id === profile);
-  const card = `<div class="catalog-card ${isActive ? 'active' : ''}" data-layout="${esc(id)}"${profile ? ` data-profile="${esc(profile)}"` : ''} role="button" tabindex="0"${isActive ? ' aria-current="true"' : ''}>
-    <div class="catalog-card-icon" aria-hidden="true">${icon(chip ? 'chip' : 'board')}</div>
-    <div class="catalog-card-body">
-      <div class="catalog-card-header"><b class="catalog-card-title">${esc(name)}</b></div>
-      <small class="catalog-card-desc">${esc(detail)}</small>
-    </div>
-  </div>`;
-  const targetLayout = layouts.find(item => item.id === id);
-  const source = boards.find(item => item.id === (profile || id)) || targetLayout?.profiles.find(item => item.id === targetLayout.defaultProfile);
-  if (!source) return card;
-  const related = chip ? boards.filter(item => item.mcuProfile === source.id)
-    : boards.filter(item => item.id === source.mcuProfile);
-  if (!related.length) return card;
-  const links = related.map(item => {
-    const target = layouts.find(candidate => candidate.profileIds.includes(item.id));
-    return `<button type="button" class="catalog-package-btn" data-layout="${esc(target.id)}" data-profile="${esc(item.id)}">${esc(t(chip ? 'catalogOpenBoard' : 'catalogOpenMcu', { name: item.name }))}</button>`;
-  });
-  return `<div class="catalog-entry">${card}<div class="catalog-related">${links.join('')}</div></div>`;
+function catalogMatches(query='',family='all',type='all') {
+  return filterCatalog(buildCatalog(layouts,t),{query,family,type});
 }
 
-function catalogLayoutIds(activeFilter = 'all') {
-  if (activeFilter === 'all') return new Set(layouts.map(item => item.id));
-  if (activeFilter === 'chips') return new Set(layouts.filter(isChip).map(item => item.id));
-  return new Set(boardFamilies.filter(family => family.id === activeFilter || family.id.startsWith(activeFilter + '-'))
-    .flatMap(family => family.items.flatMap(entry => entry.packages ? entry.packages.map(pkg => pkg.id) : [entry.id])));
+function renderCatalogResults(entries,compact=false) {
+  if(!entries.length)return `<div class="catalog-empty"><p>${esc(t('catalogEmpty'))}</p><button type="button" class="button secondary" data-reset-catalog>${esc(t('catalogReset'))}</button></div>`;
+  return catalogTypes.filter(type=>type.id!=='all').map(type=>{
+    const models=entries.filter(entry=>entry.type===type.id);
+    if(!models.length)return '';
+    const families=boardFamilies.map(family=>{
+      const items=models.filter(entry=>entry.family===family.id);
+      if(!items.length)return '';
+      const cards=`<div class="catalog-model-grid">${items.map(renderCatalogCard).join('')}</div>`;
+      if(compact)return `<details class="catalog-platform"><summary><span>${esc(t(family.nameKey))}</span><span class="catalog-platform-count">${items.length}</span><span class="catalog-platform-chevron" aria-hidden="true">⌄</span></summary>${cards}</details>`;
+      return `<section class="catalog-family"><h4 class="catalog-family-title">${esc(t(family.nameKey))}<span>${items.length}</span></h4>${cards}</section>`;
+    }).join('');
+    return `<section class="catalog-type-section" data-type-section="${type.id}"><div class="catalog-type-heading"><h3>${esc(t(type.labelKey))}</h3><span>${models.length}</span></div>${type.id==='headers'?`<p class="catalog-type-note">${esc(t('catalogHeaderNote'))}</p>`:''}${families}</section>`;
+  }).join('');
 }
 
-function catalogMatches(query, activeFilter = 'all') {
-  const matches = [];
-
-  for (const family of boardFamilies) {
-    for (const entry of family.items) {
-      if (entry.type === 'package-group') {
-        const groupText = `${entry.name} ${t(entry.subtitleKey)} ${entry.packages.map(p => `${p.label} ${p.id}`).join(' ')}`.toLocaleLowerCase();
-        if (groupText.includes(query)) {
-          const matchedPkgs = entry.packages.filter(p => `${p.label} ${p.id}`.toLocaleLowerCase().includes(query));
-          if (matchedPkgs.length && matchedPkgs.length < entry.packages.length) {
-            for (const p of matchedPkgs) {
-              const pkgLayout = layouts.find(l => l.id === p.id);
-              matches.push({
-                id: p.id,
-                name: `${entry.name} (${p.label})`,
-                detail: pkgLayout ? catalogLayoutDetail(pkgLayout) : t(entry.subtitleKey),
-                isChip: true
-              });
-            }
-          } else {
-            matches.push({
-              id: entry.defaultLayout,
-              name: entry.name,
-              detail: t(entry.subtitleKey),
-              packages: entry.packages,
-              isChip: true
-            });
-          }
-        }
-      }
-    }
+function renderTypeControls(container,type,family,query='') {
+  const entries=catalogMatches(query,family);
+  if(!container.children.length)container.innerHTML=catalogTypes.map(item=>`<button type="button" class="catalog-type-button" data-catalog-type-filter="${item.id}"><span></span><small></small></button>`).join('');
+  for(const button of container.children){
+    const item=catalogTypes.find(item=>item.id===button.dataset.catalogTypeFilter),active=type===item.id;
+    button.querySelector('span').textContent=t(item.filterKey || item.labelKey);
+    button.querySelector('small').textContent=item.id==='all'?entries.length:entries.filter(entry=>entry.type===item.id).length;
+    button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));
   }
-
-  for (const item of layouts) {
-    const alreadyMatched = matches.some(m => m.id === item.id || (m.packages && m.packages.some(p => p.id === item.id)));
-    if (alreadyMatched) continue;
-
-    const models = filterCompatibleModels(compatibleModels(item), query, model => `${model.name} ${model.id} ${model.detailKey ? t(model.detailKey) : model.detail} ${model.kind === 'reference' ? item.profiles.find(profile => profile.id === model.profileId)?.mcu || '' : ''}`);
-    if (models.length) {
-      for (const model of models) {
-        matches.push({
-          id: item.id,
-          profile: model.profileId,
-          name: model.name,
-          detail: model.detailKey ? t(model.detailKey) : model.detail,
-          isChip: isChip(item)
-        });
-      }
-    } else {
-      const familyText = [
-        layoutTitle(item),
-        ...boardFamilies.filter(family => family.items.some(entry => entry.id === item.id)).map(family => t(family.nameKey)),
-        catalogLayoutDetail(item),
-        layoutSubtitle(item),
-        ...item.profiles.map(profile => `${profile.name} ${profile.mcu} ${profile.searchTerms || ''}`)
-      ].join(' ').toLocaleLowerCase();
-
-      if (familyText.includes(query)) {
-        matches.push({
-          id: item.id,
-          name: layoutTitle(item),
-          detail: catalogLayoutDetail(item),
-          isChip: isChip(item)
-        });
-      }
-    }
-  }
-
-  const allowed = catalogLayoutIds(activeFilter);
-  return matches.filter(match => allowed.has(match.id));
-}
-
-function renderCatalogResults(matches) {
-  if (!matches.length) return `<p class="catalog-note">${esc(t('noBoard'))}</p>`;
-  return `<div class="catalog-search-results">${matches.map(m => {
-    if (m.packages) return renderPackageCard(m);
-    return renderCatalogCard(m);
-  }).join('')}</div>`;
-}
-
-function renderPackageCard(entry) {
-  const packages = entry.packages;
-  const active = packages.some(pkg => layout?.id === pkg.id);
-  const id = packages.find(pkg => layout?.id === pkg.id)?.id || entry.defaultLayout || entry.id;
-  const name = entry.name, detail = entry.detail || t(entry.subtitleKey);
-  return `<div class="catalog-card ${active ? 'active' : ''}" data-layout="${esc(id)}" role="button" tabindex="0">
-    <div class="catalog-card-icon" aria-hidden="true">${icon('chip')}</div>
-    <div class="catalog-card-body"><div class="catalog-card-header"><b class="catalog-card-title">${esc(name)}</b><span class="catalog-card-count">${t('packageCount', {count:packages.length})}</span></div>
-    <small class="catalog-card-desc">${esc(detail)}</small>
-    <div class="catalog-packages" role="group" aria-label="${esc(name)} ${esc(t('packagesHeading'))}">${packages.map(pkg => `<button type="button" class="catalog-package-btn ${layout?.id === pkg.id ? 'active' : ''}" data-layout="${esc(pkg.id)}" aria-label="${esc(name)} ${esc(pkg.label)}">${esc(pkg.label)}</button>`).join('')}</div></div>
-  </div>`;
-}
-
-function renderCatalogFamilies(activeFilter = 'all', home = false) {
-  const allowed = catalogLayoutIds(activeFilter);
-  const families = boardFamilies.map(family => ({family, entries:family.items.filter(entry =>
-    entry.packages ? entry.packages.some(pkg => allowed.has(pkg.id)) : allowed.has(entry.id))})).filter(group => group.entries.length);
-  const classes = home ? ['home-family-group','home-family-title','home-family-cards'] : ['catalog-family','catalog-family-title','catalog-family-cards'];
-  const html = families.map(({family, entries}) => `<section class="${classes[0]}"><h3 class="${classes[1]}">${esc(t(family.nameKey))} (${entries.length})</h3><div class="${classes[2]}">${entries.map(entry => {
-    if (entry.packages) return renderPackageCard(entry);
-    const item = layouts.find(candidate => candidate.id === entry.id);
-    return item ? renderCatalogCard({id:item.id, name:layoutTitle(item), detail:catalogLayoutDetail(item), isChip:isChip(item)}) : '';
-  }).join('')}</div></section>`).join('');
-  return {html:html || `<p class="catalog-note">${esc(t('noBoardsMatchFilter'))}</p>`, count:families.reduce((total, group) => total + group.entries.length, 0)};
 }
 
 function renderCatalog() {
-  const query = $('#catalog-search').value.toLocaleLowerCase().trim();
-  $('#catalog-grid').innerHTML = query ? renderCatalogResults(catalogMatches(query)) : renderCatalogFamilies().html;
+  const query=$('#catalog-search').value.trim();
+  renderTypeControls($('#library-types'),libraryCatalogType,libraryFamily,query);
+  const select=$('#library-platform');
+  select.innerHTML=homeFilterChips.map(item=>`<option value="${item.id}">${esc(t(item.labelKey))}</option>`).join('');
+  select.value=libraryFamily;
+  const entries=catalogMatches(query,libraryFamily,libraryCatalogType);
+  $('#catalog-grid').innerHTML=renderCatalogResults(entries);
+  $('#library-result-count').textContent=t(entries.length===1?'catalogSingleResult':'catalogResultCount',{count:entries.length});
 }
-
 
 function updateLibraryCount() {
   const el = $('#library-count');
-  if (el && layouts) el.textContent = layouts.length;
+  if (el && boards) el.textContent = boards.length;
 }
 
 function showHomeView() {
@@ -886,12 +793,12 @@ function renderHomeStats() {
   updateLibraryCount();
   const lang = document.documentElement.lang || 'tr';
   const {pins:totalPins,functions:totalFns,sources:totalSources}=library.index.totals;
-  if ($('#home-stat-boards')) $('#home-stat-boards').textContent = boards.length;
-  if ($('#home-stat-families')) $('#home-stat-families').textContent = boardFamilies.length;
+  if ($('#home-stat-boards')) $('#home-stat-boards').textContent = buildCatalog(layouts,t).filter(entry=>entry.type==='boards').length;
+  if ($('#home-stat-families')) $('#home-stat-families').textContent = buildCatalog(layouts,t).filter(entry=>entry.type==='chips').length;
   if ($('#home-stat-pins')) $('#home-stat-pins').textContent = new Intl.NumberFormat(lang).format(totalPins);
   if ($('#home-stat-functions')) $('#home-stat-functions').textContent = new Intl.NumberFormat(lang).format(totalFns);
   if ($('#home-stat-sources')) $('#home-stat-sources').textContent = totalSources;
-  if ($('#browse-all-boards-desc')) $('#browse-all-boards-desc').textContent = t('browseAllBoardsDesc', { layouts: layouts?.length || 30, boards: boards?.length || 42 });
+  if ($('#browse-all-boards-desc')) $('#browse-all-boards-desc').textContent = t('browseAllBoardsDesc');
 }
 
 function renderHomeFilterChips() {
@@ -920,18 +827,15 @@ function renderHomeFeatured() {
 }
 
 function renderHomeCatalog() {
-  if (!layouts) return;
-  const searching = Boolean(homeSearchQuery) || homeActiveFilter !== 'all';
-  $('#home-view').classList.toggle('is-searching', searching);
-  $('#catalog-title').textContent = t(homeSearchQuery ? 'catalogSearchResults' : 'browseAllBoards');
-  $('#browse-all-boards-desc').hidden = searching;
-  let html, count;
-  if (homeSearchQuery) {
-    const matches = catalogMatches(homeSearchQuery, homeActiveFilter);
-    html = renderCatalogResults(matches); count = matches.length;
-  } else ({html, count} = renderCatalogFamilies(homeActiveFilter, true));
-  $('#home-catalog-container').innerHTML = html;
-  $('#home-search-status').textContent = searching ? t(count === 1 ? 'catalogSingleResult' : 'catalogResultCount', {count}) : '';
+  if(!layouts)return;
+  const searching=Boolean(homeSearchQuery)||homeActiveFilter!=='all'||homeCatalogType!=='all';
+  $('#home-view').classList.toggle('is-searching',searching);
+  $('#catalog-title').textContent=t(homeSearchQuery?'catalogSearchResults':'browseAllBoards');
+  renderTypeControls($('#home-catalog-types'),homeCatalogType,homeActiveFilter,homeSearchQuery);
+  const entries=catalogMatches(homeSearchQuery,homeActiveFilter,homeCatalogType);
+  $('#home-catalog-container').innerHTML=renderCatalogResults(entries,!searching);
+  $('#home-search-status').textContent=searching?t(entries.length===1?'catalogSingleResult':'catalogResultCount',{count:entries.length}):'';
+  $('#home-reset-catalog').hidden=!searching;
 }
 
 function planPayload() { return createPlanPayload(sourceBoard,assignments,hardwareSettings); }
@@ -1037,7 +941,6 @@ async function loadHash() {
 }
 $('#board-nav')?.addEventListener('click',e=>{const b=e.target.closest('[data-layout]');if(b)openLayout(b.dataset.layout);});
 $('#library-button')?.addEventListener('click',showCatalog);
-$('#function-reference').addEventListener('change', e => setBoard(layout.id, false, e.target.value));
 $('#compatibility-search').addEventListener('input',e=>{compatibilityQuery=e.target.value;renderCompatibilityList();});
 $('#compatibility-list').addEventListener('click',async e=>{
  const link=e.target.closest('[data-compatible-model]');
@@ -1048,8 +951,27 @@ $('#compatibility-list').addEventListener('click',async e=>{
  $('#compatibility-list').querySelector(`[data-compatible-model="${CSS.escape(model)}"]`)?.focus({preventScroll:true});
 });
 $('#catalog-grid').addEventListener('click',e=>{const b=e.target.closest('[data-layout]');if(b){openLayout(b.dataset.layout, b.dataset.profile);$('#library-dialog').close();focusWorkspace();}});
-$('#catalog-grid').addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.closest('[data-layout]')){e.preventDefault();const b=e.target.closest('[data-layout]');openLayout(b.dataset.layout, b.dataset.profile);$('#library-dialog').close();focusWorkspace();}});
 $('#catalog-search').addEventListener('input',renderCatalog);
+function resetHomeCatalog(){
+  homeSearchQuery='';homeActiveFilter='all';homeCatalogType='all';$('#home-search').value='';
+  renderHomeFilterChips();renderHomeCatalog();$('#home-search').focus({preventScroll:true});
+}
+$('#home-reset-catalog').addEventListener('click',resetHomeCatalog);
+$('#home-catalog-container').addEventListener('click',e=>{if(e.target.closest('[data-reset-catalog]'))resetHomeCatalog();});
+$('#home-catalog-types').addEventListener('click',e=>{
+  const button=e.target.closest('[data-catalog-type-filter]');if(!button)return;
+  homeCatalogType=button.dataset.catalogTypeFilter;renderHomeCatalog();
+});
+$('#library-types').addEventListener('click',e=>{
+  const button=e.target.closest('[data-catalog-type-filter]');if(!button)return;
+  libraryCatalogType=button.dataset.catalogTypeFilter;renderCatalog();
+});
+$('#library-platform').addEventListener('change',e=>{libraryFamily=e.target.value;renderCatalog();});
+$('#catalog-grid').addEventListener('click',e=>{
+  if(!e.target.closest('[data-reset-catalog]'))return;
+  libraryCatalogType='all';libraryFamily='all';$('#catalog-search').value='';renderCatalog();$('#catalog-search').focus();
+});
+
 $('#help-button').addEventListener('click',()=>$('#help-dialog').showModal());
 $$('[data-close]').forEach(b=>b.addEventListener('click',()=>b.closest('dialog').close()));
 $$('dialog').forEach(dialog=>dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}}));
@@ -1256,19 +1178,11 @@ $('#home-catalog-container')?.addEventListener('click', e => {
   const card = e.target.closest('[data-layout]');
   if (card) openLayout(card.dataset.layout, card.dataset.profile);
 });
-$('#home-catalog-container')?.addEventListener('keydown', e => {
-  if (['Enter', ' '].includes(e.key)) {
-    const card = e.target.closest('[data-layout]');
-    if (card) {
-      e.preventDefault();
-      openLayout(card.dataset.layout, card.dataset.profile);
-    }
-  }
-});
 window.addEventListener('zaryob:language', () => {
   renderDataState();
   if (dataState !== 'ready') return;
   if (currentView === 'home') renderHome();
+  if ($('#library-dialog').open) renderCatalog();
   if (!board?.pins) return;
   const draftLabel = $('#custom-label')?.value;
   const hardwareDraft=readHardwareDraft();

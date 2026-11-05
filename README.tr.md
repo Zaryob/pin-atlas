@@ -10,7 +10,9 @@ Yeni profil eklemek için [kart ve MCU doğrulama adımlarını](docs/ADDING-BOA
 
 ## Pin düzenleri
 
-Kütüphanede her fiziksel düzen bir kez listelenir; uyumlu kartlar aynı kayıtta belirtilir:
+Katalogda belgelenmiş her donanım modeli ayrı listelenir: **Geliştirme kartları**, **MCU paketleri** ve **Ortak başlıklar**. Modeller platform/üreticiye göre gruplanır; tür ve platform filtreleri model, işlemci, seri ve paket aramasıyla birlikte çalışır. Ortak fiziksel çizimler içeride paylaşılır. Örneğin NUCLEO-L432KC seçimi genel bir Nucleo-32 girdisini değil, bu modelin kendi işlevlerini açar. Yalnızca fiziksel uyumluluğu bilinen adlar, açıkça belirtilen referansa gider.
+
+Altyapıda kullanılan pin düzenleri:
 
 - **Raspberry Pi Pico ailesi:** Pico, Pico W, Pico 2 ve Pico 2 W için ortak 40-pin düzeni ve 26 GPIO. Aynı ekrandan Pico / Pico W için RP2040, Pico 2 / Pico 2 W için RP2350A işlev referansı seçilir.
 - **Raspberry Pi 40-pin GPIO:** B+, A+, Pi 2/3/4/5, Zero ailesi ve 400/500 tek başlık kaydını paylaşır. Ortak GPIO/güç/toprak, Pi 4 için doğrulanmış BCM2711 veya Pi 5 için doğrulanmış RP1 alternatif işlevleri aynı ekrandan seçilir. 26-pin kartlar ve Compute Module dahil değildir. Bazı Zero başlıkları lehimli değildir; klavyeli modellerde yönü kontrol edin.
@@ -38,7 +40,7 @@ Kütüphanede her fiziksel düzen bir kez listelenir; uyumlu kartlar aynı kayı
 - **RP2350A:** QFN-60, 30 Bank 0 GPIO.
 - **RP2350B:** QFN-80, 48 Bank 0 GPIO.
 
-Pico çizimi ortak başlığı gösterir; modellerin kablosuz, LED ve dahili bağlantılarının aynı olduğunu iddia etmez. İşlev referansı değişince fiziksel pinler aynı kalır. Planlar referans bazında saklanır. Eski model bağlantıları, JSON dosyaları ve kayıtlı planlar desteklenir; aynı işlemci için birden fazla eski plan varsa birleştirilmeden referans seçicisinde erişilebilir kalır.
+Pico çizimi ortak başlığı gösterir; modellerin kablosuz, LED ve dahili bağlantılarının aynı olduğunu iddia etmez. İşlev referansı değişince fiziksel pinler aynı kalır. Planlar referans bazında saklanır. Eski model bağlantıları, JSON dosyaları ve kayıtlı planlar desteklenir; aynı işlemci için birden fazla eski plan varsa birleştirilmeden Uyumlu kartlar bölümünden erişilebilir kalır.
 
 MCU paketi doğrulanmış kartlarda iki çizimden de pin seçilebilir. Paket görünümü eşleşen kart kontaklarını açar. Birden çok konnektörü olan kart çizimlerinde başlıklar ayrı ayrı büyütülebilir.
 
@@ -139,6 +141,6 @@ ESP GPIO matrix seçenekleri etkin yazılım atamasını değil, yapılandırıl
 
 **Uyumlu kartlar** bölümü numaralı bir model indeksi açar. İşlemci/referans, seçili model ve kayıtlı plan bilgisi gösterilir; uzun listeler aranabilir. Model seçimi doğru referansı açar. Yalnızca fiziksel uyumluluğu doğrulanan modeller ortak pin düzenine gider; başka kartın alternatif işlevleri atanmaz.
 
-Ana sayfa ve kütüphane araması aynı kataloğu kullanır. Belirli bir modeli aramak, ortak fiziksel düzen içinde o modelin işlemci referansını açar. Öne çıkan kartların adları, GPIO sayıları ve I/O gerilimleri doğrulanmış profillerden alınır. Kütüphane yüklenemezse **Tekrar dene** kullanılabilir; tarayıcıdaki kayıtlı planlar korunur.
+Ana sayfa ve kütüphane aynı model kataloğunu ve filtreleri kullanır. Her model kartı kendi işlemci referansını açar; çalışma alanı başlığında tam model adı kalır. Nucleo-32/64/144 seri bilgisi olarak gösterilir. MCU paketleri ayrı seçilir; ortak Raspberry Pi başlığı yalnızca fiziksel bağlantıları içerir. Öne çıkan kartların adları, GPIO sayıları ve I/O gerilimleri doğrulanmış profillerden alınır. Kütüphane yüklenemezse **Tekrar dene** kullanılabilir; tarayıcıdaki kayıtlı planlar korunur.
 
 Site kullanım analitiği için Umami kullanır. Bağlantı planları tarayıcıda yerel olarak saklanır.

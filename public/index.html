@@ -15,7 +15,7 @@ title: Pin Atlas — Source-verified pin guide
       <span class="crumb-sep" id="crumb-sep-1" hidden>/</span>
       <span id="board-family" hidden>Raspberry Pi</span>
       <span class="crumb-sep" id="crumb-sep-2" hidden>/</span>
-      <strong id="crumb" hidden>Raspberry Pi Pico family</strong>
+      <strong id="crumb" hidden>Raspberry Pi Pico 2 W</strong>
     </div>
   </div>
   <div class="topbar-right">
@@ -39,27 +39,25 @@ title: Pin Atlas — Source-verified pin guide
       </div>
       <h1 class="home-title">Pin Atlas</h1>
       <p class="home-lead" data-i18n="homeLead">Interactive pin maps and wiring plans checked against manufacturer documentation and identified board references.</p>
-      
+
       <div class="home-search-wrap">
         <label class="home-search-box">
           <span data-icon="search"></span>
           <input id="home-search" type="search" aria-label="Search the board library" data-i18n-aria-label="catalogSearch" placeholder="Kart, mikrodenetleyici veya aile ara (ör. RP2040, Nano, ESP32, Nucleo)…" data-i18n-placeholder="homeSearchPlaceholder" autocomplete="off">
           <kbd aria-hidden="true">/</kbd>
         </label>
-        <div class="home-filter-chips" id="home-filter-chips" role="group" aria-label="Filter board families" data-i18n-aria-label="filterFamilies"></div>
-        <p id="home-search-status" class="home-search-status" role="status" aria-live="polite" aria-atomic="true"></p>
       </div>
     </div>
 
     <!-- STATS BAR -->
     <div class="home-stats" aria-label="Pin Atlas statistics" data-i18n-aria-label="libraryStats">
       <div class="home-stat-item">
-        <strong class="stat-number" id="home-stat-boards">77</strong>
-        <span class="stat-label" data-i18n="statBoards">Boards &amp; MCUs</span>
+        <strong class="stat-number" id="home-stat-boards">46</strong>
+        <span class="stat-label" data-i18n="catalogBoards">Development boards</span>
       </div>
       <div class="home-stat-item">
-        <strong class="stat-number" id="home-stat-families">12</strong>
-        <span class="stat-label" data-i18n="statFamilies">Board Families</span>
+        <strong class="stat-number" id="home-stat-families">30</strong>
+        <span class="stat-label" data-i18n="catalogChips">MCU packages</span>
       </div>
       <div class="home-stat-item">
         <strong class="stat-number" id="home-stat-pins">5,178</strong>
@@ -86,14 +84,17 @@ title: Pin Atlas — Source-verified pin guide
       <div class="featured-grid" id="featured-grid"></div>
     </section>
 
-    <!-- ALL BOARDS & FAMILIES -->
+    <!-- MODEL CATALOG -->
     <section class="home-section" id="catalog-section">
       <div class="home-section-header">
         <div>
-          <h2 class="home-section-title"><span id="catalog-title" data-i18n="browseAllBoards">All Boards &amp; Microcontrollers</span></h2>
-          <p class="home-section-desc" id="browse-all-boards-desc" data-i18n="browseAllBoardsDesc">{layouts} physical layouts and {boards} source profiles grouped by verified hardware families.</p>
+          <h2 class="home-section-title"><span id="catalog-title" data-i18n="browseAllBoards">Hardware catalog</span></h2>
+          <p class="home-section-desc" id="browse-all-boards-desc" data-i18n="browseAllBoardsDesc">Choose your exact model to open its pin map and wiring plan.</p>
         </div>
       </div>
+        <div id="home-catalog-types" class="catalog-types" role="group" aria-label="Hardware type" data-i18n-aria-label="catalogTypeLabel"></div>
+        <div class="home-filter-chips" id="home-filter-chips" role="group" aria-label="Filter board families" data-i18n-aria-label="filterFamilies"></div>
+      <div class="catalog-status-row"><p id="home-search-status" class="home-search-status" role="status" aria-live="polite" aria-atomic="true"></p><button type="button" id="home-reset-catalog" class="catalog-reset" data-i18n="catalogReset" hidden>Clear filters</button></div>
       <div id="home-catalog-container"></div>
     </section>
 
@@ -137,7 +138,7 @@ title: Pin Atlas — Source-verified pin guide
 
   <!-- WORKSPACE VIEW -->
   <section id="workspace-view" class="workspace-view" hidden>
-    <div class="page-heading"><div><h1 id="board-title" tabindex="-1">Raspberry Pi Pico family</h1><p id="board-reference" class="board-reference"></p></div><div class="heading-actions"><a id="datasheet" class="button secondary" target="_blank" rel="noopener"><span data-icon="file"></span><span data-i18n="datasheet">Datasheet</span> <span>↗</span></a></div></div>
+    <div class="page-heading"><div><h1 id="board-title" tabindex="-1">Raspberry Pi Pico 2 W</h1><p id="board-reference" class="board-reference"></p></div><div class="heading-actions"><a id="datasheet" class="button secondary" target="_blank" rel="noopener"><span data-icon="file"></span><span data-i18n="datasheet">Datasheet</span> <span>↗</span></a></div></div>
     <div class="specs" id="specs"></div>
     <details id="compatible-boards" class="compatibility-index" hidden>
       <summary>
@@ -155,17 +156,12 @@ title: Pin Atlas — Source-verified pin guide
     <section class="workspace" aria-label="Pinout workspace" data-i18n-aria-label="workspace">
       <div class="map-panel">
         <div class="panel-heading"><div class="panel-title"><span class="live-dot"></span><span data-i18n="pinMap">Pin map</span> <span id="pin-count">40 pin</span></div><div class="view-switch" aria-label="View" data-i18n-aria-label="view"><button id="map-view" class="active" aria-pressed="true"><span data-icon="chip"></span><span data-i18n="map">Map</span></button><button id="table-view" aria-pressed="false"><span data-icon="list"></span><span data-i18n="table">Table</span></button></div></div>
-        <div id="function-reference-bar" class="function-reference-bar"><label for="function-reference" data-i18n="functionReference">Function reference</label><select id="function-reference" aria-describedby="reference-note"></select></div>
         <div id="package-boards" class="connector-tools" hidden></div>
-        <div class="search-tools"><label class="pin-search"><span data-icon="search"></span><input id="pin-search" type="search" placeholder="Find a pin or function…" data-i18n-placeholder="searchPlaceholder" aria-label="Search for a pin or function" data-i18n-aria-label="search"><kbd>/</kbd></label><details class="view-options" id="filter-options"><summary><span data-i18n="filters">Filters</span> <span id="active-filter-count" hidden></span></summary><div class="filter-bar"><div id="filters"></div><button id="reset-filters" title="Clear filters" data-i18n-title="clearFilters" aria-label="Clear filters" data-i18n-aria-label="clearFilters"><span data-icon="reset"></span></button></div></details><details class="view-options" id="view-options"><summary aria-label="Diagram options" data-i18n-aria-label="diagramOptions"><span data-icon="fit"></span></summary><div class="diagram-tools" id="diagram-tools"><button id="flip-button" class="icon-button" title="Mirror horizontally" data-i18n-title="mirror" aria-label="Mirror horizontally" data-i18n-aria-label="mirror" aria-pressed="false"><span data-icon="flip"></span></button><button id="rotate-button" class="icon-button" title="Rotate 180°" data-i18n-title="rotate" aria-label="Rotate 180 degrees" data-i18n-aria-label="rotateLabel" aria-pressed="false"><span data-icon="rotate"></span></button><button id="reset-view" class="icon-button" title="Reset view" data-i18n-title="resetView" aria-label="Reset view" data-i18n-aria-label="resetView"><span data-icon="fit"></span></button></div></details></div>
+        <div class="search-tools"><label class="pin-search"><span data-icon="search"></span><input id="pin-search" type="search" placeholder="Find a pin or function…" data-i18n-placeholder="searchPlaceholder" aria-label="Search for a pin or function" data-i18n-aria-label="search"><kbd>/</kbd></label><details class="view-options" id="filter-options"><summary><span data-i18n="filters">Filters</span> <span id="active-filter-count" hidden></span></summary><div class="filter-bar"><div id="filters"></div><button id="reset-filters" title="Clear filters" data-i18n-title="clearFilters" aria-label="Clear filters" data-i18n-aria-label="clearFilters"><span data-icon="reset"></span></button></div></details><details class="view-options" id="view-options"><summary aria-label="Diagram options" data-i18n-aria-label="diagramOptions"><span data-icon="fit"></span></summary><div class="view-options-panel"><div id="connector-tools" class="connector-tools" hidden><label for="connector-zoom" data-i18n="connectorZoom">Zoom to connectors</label><select id="connector-zoom"></select></div><div class="diagram-tools" id="diagram-tools"><button id="flip-button" class="icon-button" title="Mirror horizontally" data-i18n-title="mirror" aria-label="Mirror horizontally" data-i18n-aria-label="mirror" aria-pressed="false"><span data-icon="flip"></span></button><button id="rotate-button" class="icon-button" title="Rotate 180°" data-i18n-title="rotate" aria-label="Rotate 180 degrees" data-i18n-aria-label="rotateLabel" aria-pressed="false"><span data-icon="rotate"></span></button><button id="reset-view" class="icon-button" title="Reset view" data-i18n-title="resetView" aria-label="Reset view" data-i18n-aria-label="resetView"><span data-icon="fit"></span></button></div></div></details></div>
         <div id="map-content" class="map-content">
-          <div id="connector-tools" class="connector-tools" hidden>
-            <label for="connector-zoom" data-i18n="connectorZoom">Zoom to connectors</label>
-            <select id="connector-zoom"></select>
-            <p id="connector-bridge-note" class="connector-bridge-note" aria-live="polite" hidden></p>
-          </div>
           <div class="orientation" id="orientation"><span data-i18n="topView">TOP VIEW</span> <span>USB ↑</span></div><p id="diagram-keyboard-help" class="sr-only" data-i18n="pinKeyboardHelp">Use the arrow keys to move in physical pin order and Enter to open details. Home and End move to the first and last pin.</p><div id="diagram" role="group" aria-label="Pin map" data-i18n-aria-label="pinMap" aria-describedby="diagram-keyboard-help"></div><div id="no-matches" hidden><span data-i18n="noMatch">No pins match this search.</span></div><div class="canvas-caption"><span data-icon="cursor"></span><span class="desktop-hint"><span data-i18n="clickPin">Click a pin to see its details.</span></span><span class="mobile-hint"><span data-i18n="tapPin">Scroll sideways for functions; tap a pin.</span></span><span id="match-count"></span></div>
         </div>
+        <p id="connector-bridge-note" class="connector-bridge-note map-bridge-note" aria-live="polite" hidden></p>
         <div id="table-content" class="table-content" hidden></div>
         <p id="reference-note" class="reference-note"></p>
         <div class="legend"><span><i class="dot" style="--dot:#5f8a60"></i>GPIO</span><span><i class="dot" style="--dot:#d78759"></i><span data-i18n="power">Power</span></span><span><i class="dot" style="--dot:#8a9194"></i>GND</span><span><i class="dot" style="--dot:#aa84bb"></i><span data-i18n="system">System</span></span><span class="legend-note"><span data-i18n="physicalNumbers">Physical pin numbers</span></span></div>
@@ -201,7 +197,7 @@ title: Pin Atlas — Source-verified pin guide
 </div>
 <dialog id="details-dialog" aria-label="Pin and wiring plan" data-i18n-aria-label="pinAndPlan"></dialog>
 <section id="print-plan"></section>
-<dialog id="library-dialog" aria-labelledby="library-title"><div class="modal-header"><div><h2 id="library-title"><span data-i18n="boardLibrary">Board library</span></h2></div><button class="icon-button" data-close aria-label="Close library" data-i18n-aria-label="closeLibrary"><span data-icon="close"></span></button></div><label class="catalog-search"><span data-icon="search"></span><input type="search" id="catalog-search" placeholder="Search boards, chips, or families…" data-i18n-placeholder="catalogPlaceholder" aria-label="Search the board library" data-i18n-aria-label="catalogSearch"></label><div id="catalog-grid"></div><p class="catalog-note" data-i18n="catalogScope">Search for a model for its specific functions. Choose a family for its shared pinout.</p></dialog>
+<dialog id="library-dialog" aria-labelledby="library-title"><div class="modal-header"><div><h2 id="library-title"><span data-i18n="boardLibrary">Board library</span></h2></div><button class="icon-button" data-close aria-label="Close library" data-i18n-aria-label="closeLibrary"><span data-icon="close"></span></button></div><label class="catalog-search"><span data-icon="search"></span><input type="search" id="catalog-search" placeholder="Search boards, chips, or families…" data-i18n-placeholder="catalogPlaceholder" aria-label="Search the board library" data-i18n-aria-label="catalogSearch"></label><div id="library-types" class="catalog-types" role="group" aria-label="Hardware type" data-i18n-aria-label="catalogTypeLabel"></div><div class="library-filter-row"><label for="library-platform" data-i18n="catalogPlatformLabel">Platform / manufacturer</label><select id="library-platform"></select><span id="library-result-count" role="status" aria-live="polite"></span></div><div id="catalog-grid"></div><p class="catalog-note" data-i18n="catalogScope">Search for a model for its specific functions. Choose a family for its shared pinout.</p></dialog>
 <dialog id="help-dialog" aria-labelledby="help-title"><div class="modal-header"><h2 id="help-title"><span data-i18n="helpTitle">Start with a pin</span></h2><button class="icon-button" data-close aria-label="Close help" data-i18n-aria-label="closeHelp"><span data-icon="close"></span></button></div><ol class="help-steps"><li><strong><span data-i18n="helpChoose">Choose a board.</span></strong> <span data-i18n="helpChooseDetail">Open a board or microcontroller from the library.</span></li><li><strong><span data-i18n="helpFind">Find a function.</span></strong> <span data-i18n="helpFindDetail">Use the interface filters to highlight compatible pins.</span> <kbd>/</kbd> <span data-i18n="helpShortcut">opens search.</span></li><li><strong><span data-i18n="helpPlan">Plan your connection.</span></strong> <span data-i18n="helpPlanDetail">Click a pin, select a function, and give it a label.</span></li><li><strong><span data-i18n="helpShare">Share your plan.</span></strong> <span data-i18n="helpShareDetail">Download a JSON file or use Share to copy a link.</span></li></ol><p><span data-i18n="helpStorage">Plans are stored in this browser. A share link includes the selected board, pins, and labels. Check electrical compatibility against the manufacturer’s documentation.</span></p><div class="help-sources"><span data-i18n="manufacturerDocs">Manufacturer documentation</span> <a href="https://datasheets.raspberrypi.com/picow/pico-2-w-datasheet.pdf" target="_blank" rel="noopener"><span data-i18n="picoDatasheet">Pico 2 W datasheet ↗</span></a> · <a href="https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf" target="_blank" rel="noopener"><span data-i18n="rpDatasheet">RP2350 datasheet ↗</span></a> · <a href="https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-reduced-schematics.pdf" target="_blank" rel="noopener"><span data-i18n="piSchematic">Pi 4 schematic ↗</span></a> · <a href="https://github.com/Zaryob/pin-atlas/blob/main/docs/VERIFICATION.md" data-verification-link target="_blank" rel="noopener"><span data-i18n="verification">Verification record ↗</span></a></div></dialog>
 <dialog id="share-dialog" aria-labelledby="share-title"><div class="modal-header"><h2 id="share-title"><span data-i18n="shareTitle">Your plan link is ready</span></h2><button class="icon-button" data-close aria-label="Close sharing dialog" data-i18n-aria-label="closeShare"><span data-icon="close"></span></button></div><p><span data-i18n="shareDescription">Anyone who opens this link can see your board and wiring plan.</span></p><input id="share-url" readonly aria-label="Share link" data-i18n-aria-label="shareLink"><button id="copy-share" class="button primary"><span data-i18n="copyLink">Copy link</span></button></dialog>
 <dialog id="incoming-plan-dialog" aria-labelledby="incoming-plan-title" aria-describedby="incoming-plan-message">

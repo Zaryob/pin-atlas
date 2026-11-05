@@ -23,6 +23,12 @@ async function openPlan(page) {
   else await page.locator('#plan-tab').click();
 }
 
+async function chooseCompatibleModel(page,id) {
+  const index=page.locator('#compatible-boards');
+  if(!await index.evaluate(el=>el.open))await index.locator('summary').click();
+  await page.locator(`#compatibility-list [data-compatible-model="${id}"]`).click();
+}
+
 test('Nucleo bridge changes preserve old plans, reroute functions and persist with configuration',async({page})=>{
  const raw=boards.find(b=>b.id==='nucleo-l432kc'),a5=raw.pins.find(p=>p.physicalLabel==='CN4.7');
  const analog=a5.functions.find(f=>f.group==='ADC').name;
@@ -121,10 +127,11 @@ test('Nucleo144 model changes retain the physical contact and old H723 wiring pl
  await page.addInitScript(({key,saved})=>localStorage.setItem(key,JSON.stringify(saved)),{key:storageKey,saved});
  await ready(page,'#board=nucleo-h723zg&pin=21');
  await expect(page.locator('#diagram [data-pin="21"]')).toHaveAttribute('aria-current','true');
- await page.locator('#function-reference').selectOption('nucleo-f767zi');
+ await expect(page.locator('#function-reference-bar')).toHaveCount(0);
+ await chooseCompatibleModel(page,'nucleo-f767zi');
  await expect(page.locator('#app-status')).toBeHidden();
  await expect(page.locator('#diagram [data-pin="14"]')).toHaveAttribute('aria-current','true');
- await page.locator('#function-reference').selectOption('nucleo-h723zg');
+ await chooseCompatibleModel(page,'nucleo-h723zg');
  await expect(page.locator('#app-status')).toBeHidden();
  await expect(page.locator('#diagram [data-pin="21"]')).toHaveAttribute('aria-current','true');
  await openPlan(page);await expect(page.locator('#plan-list')).toContainText('CN7.14');
@@ -136,7 +143,7 @@ for(const board of boards.filter(b=>['nucleo32Scope','nucleo144SourceScope','bla
  test(`${board.id} opens its exact reference and verified package`,async({page})=>{
   await ready(page);await page.locator('#home-search').fill(board.name);
   await page.locator(`#home-catalog-container [data-profile="${board.id}"]`).first().click();
-  await expect(page.locator('#function-reference')).toHaveValue(board.id);
+  await expect(page.locator('#board-title')).toHaveText(board.name);
   const pin=board.pins.find(p=>p.type==='GPIO' && p.mcuPin);
   await page.locator(`#diagram [data-pin="${pin.number}"]`).click();
   await expect(page.locator(`#diagram [data-mcu-pin="${pin.mcuPin}"]`)).toHaveAttribute('aria-current','true');
@@ -145,7 +152,7 @@ for(const board of boards.filter(b=>['nucleo32Scope','nucleo144SourceScope','bla
   await expect(page.locator('#diagram [data-pin]')).toHaveCount(chip.packagePins);
   if(chip.exposedPad===false)await expect(page.locator('#diagram')).not.toContainText('EP · GND');
   await page.locator(`#package-boards [data-package-board="${board.id}"]`).click();
-  await expect(page.locator('#function-reference')).toHaveValue(board.id);
+  await expect(page.locator('#board-title')).toHaveText(board.name);
  });
 }
 
@@ -169,7 +176,7 @@ test('a failed lazy profile retries the selected model and retains browser plans
  await page.locator('#home-catalog-container [data-profile="picow"]').first().click();
  await expect(page.locator('#app-status[role="alert"]')).toBeVisible();
  await page.locator('#retry-data').click();await expect(page.locator('#app-status')).toBeHidden();
- await expect(page.locator('#function-reference')).toHaveValue('picow');
+ await expect(page.locator('#board-title')).toHaveText('Raspberry Pi Pico W');
  expect(await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),storageKey)).toEqual(saved);
 });
 
@@ -292,6 +299,18 @@ test('exact model search shares results with the library and opens the right ref
 
 test('empty searches recover and every featured card uses its verified profile',async({page})=>{
   await ready(page);
+  await expect(page.locator('.home-badge')).toBeVisible();
+  const top=selector=>page.locator(selector).evaluate(el=>el.getBoundingClientRect().top);
+  expect(await top('.home-stats')).toBeLessThan(await top('#featured-section'));
+  expect(await top('#featured-section')).toBeLessThan(await top('#catalog-section'));
+  await expect(page.locator('#home-catalog-container .catalog-platform[open]')).toHaveCount(0);
+  const platform=page.locator('#home-catalog-container .catalog-platform').first();
+  await platform.locator('summary').click();
+  await expect(platform.locator('.catalog-card').first()).toBeVisible();
+  await expect(page.locator('#home-view')).toBeVisible();
+  await platform.locator('summary').click();
+  await page.locator('#home-search').scrollIntoViewIfNeeded();
+
   await expect(page.locator('.mobile-workbar')).toBeHidden();
   const viewport=page.viewportSize();
   await page.setViewportSize({width:320,height:844});
@@ -315,15 +334,40 @@ test('empty searches recover and every featured card uses its verified profile',
   await expect(page.locator('#featured-section')).toBeVisible();
   await page.locator('[data-home-filter="teensy"]').click();
   await expect(page.locator('#home-catalog-container .catalog-card')).toHaveCount(1);
+  await page.locator('#home-reset-catalog').click();
+  await page.locator('#home-catalog-types [data-catalog-type-filter="boards"]').click();
+  await page.locator('[data-home-filter="stm32"]').click();
+  await expect(page.locator('#home-catalog-container [data-type-section="chips"]')).toHaveCount(0);
+  await expect(page.locator('#home-catalog-container .catalog-card[data-profile="nucleo-l432kc"]')).toHaveCount(1);
+  await page.locator('#home-search').fill('nucleo 32');
+  await expect(page.locator('#home-catalog-container .catalog-card')).toHaveCount(2);
+  await page.locator('#home-catalog-container .catalog-card[data-profile="nucleo-l432kc"]').click();
+  await expect(page.locator('#board-title')).toHaveText('NUCLEO-L432KC');
+  await expect(page.locator('#board-reference')).toContainText('Nucleo-32');
+  await expect(page.locator('#compatibility-current')).toHaveText('NUCLEO-L432KC');
+  await page.locator('#menu-button').click();
+  await page.locator('#library-types [data-catalog-type-filter="chips"]').click();
+  await page.locator('#library-platform').selectOption('stm32');
+  await expect(page.locator('#catalog-grid .catalog-card')).toHaveCount(boards.filter(board=>board.id.startsWith('stm32')).length);
+  await page.locator('#catalog-search').fill('no-such-part');
+  await expect(page.locator('#library-result-count')).toHaveText('0 results');
+  await page.locator('#catalog-grid [data-reset-catalog]').click();
+  await expect(page.locator('#catalog-grid .catalog-card')).toHaveCount(boards.length);
+
 });
 
-test('Nucleo connector zoom and table scope agree and SVG bounds stay finite',async({page})=>{
-  for (const id of ['nucleo-f103rb','nucleo-h723zg']) {
+test('shared diagram options expose connector scope and agree with the table',async({page})=>{
+  const {connectorGroupsFor}=await import('../../public/connectors.mjs');
+  for (const id of ['nucleo-f103rb','nucleo-h723zg','arduino-nano-33-ble-sense-rev2']) {
     const board=boards.find(board=>board.id===id);
     await ready(page,'#board='+id);
     const options=await page.locator('#connector-zoom option').evaluateAll(items=>items.map(item=>item.value));
-    expect(options).toEqual(['',...board.diagram.connectorGroups.map(group=>group.id)]);
-    for (const group of board.diagram.connectorGroups) {
+    const groups=connectorGroupsFor(board);
+    expect(options).toEqual(['',...groups.map(group=>group.id)]);
+    await expect(page.locator('#map-content > #connector-tools')).toHaveCount(0);
+    await expect(page.locator('#connector-zoom')).toBeHidden();
+    for (const group of groups) {
+      await page.locator('#view-options > summary').click();
       await page.locator('#connector-zoom').selectOption(group.id);
       const count=board.pins.filter(pin=>group.contacts.includes(pin.connector)).length;
       await expect(page.locator('#diagram [data-pin]')).toHaveCount(count);
@@ -357,9 +401,9 @@ test('keyboard filters retain focus and pin maps have one tab stop with arrow na
   await page.keyboard.press('Home');await expect(page.locator('#diagram [data-pin="1"]')).toBeFocused();
 });
 
-test('new Nucleo models share one catalog entry and link to their exact MCU package',async({page})=>{
+test('Nucleo catalog exposes every model and links to its exact MCU package',async({page})=>{
   await ready(page);
-  await expect(page.locator('#home-catalog-container .catalog-card[data-layout="nucleo-64"]')).toHaveCount(1);
+  await expect(page.locator('#home-catalog-container .catalog-card[data-layout="nucleo-64"]')).toHaveCount(boards.filter(board=>board.layoutFamily==='nucleo-64').length);
   const additions=boards.filter(board=>(!process.env.NUCLEO_TEST_MODEL || board.id===process.env.NUCLEO_TEST_MODEL) && board.layoutFamily==='nucleo-64' &&
     boards.find(chip=>chip.id===board.mcuProfile)?.scopeKey==='stm32CubeScope');
   expect(additions.length).toBeGreaterThan(0);
@@ -367,7 +411,7 @@ test('new Nucleo models share one catalog entry and link to their exact MCU pack
     await ready(page);
     await page.locator('#home-search').fill(board.name);
     await page.locator(`#home-catalog-container .catalog-card[data-profile="${board.id}"]`).click();
-    await expect(page.locator('#function-reference')).toHaveValue(board.id);
+    await expect(page.locator('#board-title')).toHaveText(board.name);
     await expect(page.locator('#board-reference')).toContainText(board.mcu);
     const pin=board.pins.find(pin=>pin.physicalLabel==='CN5.6');
     await page.locator(`#diagram [data-pin="${pin.number}"]`).click();
@@ -375,7 +419,22 @@ test('new Nucleo models share one catalog entry and link to their exact MCU pack
     await ready(page,'#board='+board.mcuProfile);
     await expect(page.locator('#diagram [data-pin]')).toHaveCount(boards.find(chip=>chip.id===board.mcuProfile).packagePins);
     await page.locator(`#package-boards [data-package-board="${board.id}"]`).click();
-    await expect(page.locator('#function-reference')).toHaveValue(board.id);
+    await expect(page.locator('#board-title')).toHaveText(board.name);
+  }
+});
+
+test('LQFP pin terminals select their own pin on all four package edges',async({page})=>{
+  const chip=boards.find(board=>board.id==='stm32f103vbt6');
+  await ready(page,'#board='+chip.id+'&pin=1');
+  for(const [number,dx,dy] of [[2,8,0],[27,0,-8],[52,-8,0],[77,0,8]]){
+    const terminal=page.locator(`#diagram [data-pin="${number}"] .pin-node`);
+    await terminal.evaluate(el=>el.scrollIntoView({block:'center',inline:'center'}));
+    const box=await terminal.boundingBox(),scale=box.width/8.8;
+    await page.mouse.click(box.x+box.width/2+dx*scale,box.y+box.height/2+dy*scale);
+    await expect(page.locator(`#diagram [data-pin="${number}"]`)).toHaveAttribute('aria-current','true');
+    await expect(page.locator('#pin-detail h2')).toHaveText(chip.pins.find(pin=>pin.number===number).name);
+    expect(new URLSearchParams(new URL(page.url()).hash.slice(1)).get('pin')).toBe(String(number));
+    if(await page.locator('#details-dialog').isVisible())await page.locator('#close-details').click();
   }
 });
 
@@ -416,7 +475,7 @@ for (const deepLink of [false,true]) test(`load failure remains visible and retr
   await expect(page.locator('#main')).toHaveAttribute('aria-busy','false');
   expect(await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),storageKey)).toEqual(saved);
   if (deepLink) {
-    await expect(page.locator('#function-reference')).toHaveValue('picow');
+    await expect(page.locator('#board-title')).toHaveText('Raspberry Pi Pico W');
     expect(new URLSearchParams(new URL(page.url()).hash.slice(1)).get('pin')).toBe('4');
     await expect(page.locator('#board-title')).toBeFocused();
   } else await expect(page.locator('#home-search')).toBeFocused();
