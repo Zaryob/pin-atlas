@@ -1,7 +1,7 @@
 {
   "verifiedOn": "2026-11-05",
-  "physicalPins": 3485,
-  "functionAssignments": 15158,
+  "physicalPins": 3657,
+  "functionAssignments": 15773,
   "documents": [
     {
       "id": "rp2350",
@@ -782,6 +782,24 @@
       "publisher": "STMicroelectronics",
       "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
       "sha256": "b2bbae747f13e9dac4507a58a9acec3f5c4bf846f5832ab2f44545fd8a1d79af"
+    },
+    {
+      "id": "l053r8-package",
+      "title": "STM32L053R8 CubeMX package data",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32L053R(6-8)Tx.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32L053R(6-8)Tx.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "66d29d056b2ab55d46937c7ec74ff08a365f58197482f2d6df3302a80f357bb8"
+    },
+    {
+      "id": "l053r8-modes",
+      "title": "STM32L053R8 CubeMX modes data",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32L051_gpio_v1_0_Modes.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32L051_gpio_v1_0_Modes.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "231d60eaac1d5198efd5da046b9c690372da6fa6d337ad09888982b466a2461a"
     }
   ],
   "boards": [
@@ -1317,6 +1335,24 @@
       "id": "stm32f072rbt6",
       "physicalPins": 64,
       "functionAssignments": 232,
+      "physicalSourceMethods": [
+        "manufacturer-xml"
+      ]
+    },
+    {
+      "id": "nucleo-l053r8",
+      "physicalPins": 108,
+      "functionAssignments": 369,
+      "physicalSourceMethods": [
+        "manufacturer-xml",
+        "pdf-table",
+        "visual-diagram"
+      ]
+    },
+    {
+      "id": "stm32l053r8t6",
+      "physicalPins": 64,
+      "functionAssignments": 246,
       "physicalSourceMethods": [
         "manufacturer-xml"
       ]

@@ -139,3 +139,5 @@ UM1724 ham tablo hücreleri `sources/extracted/nucleo-um1724-r14.json` içinde h
 - **NUCLEO-L476RG / STM32L476RGT6:** UM1724 Rev 14 tabloları 23 (pp. 52–53) / 32 (p. 61); Cortex-M4, 80 MHz, LQFP-64 ve 51 GPIO bacağı. Paket pinleri ve AF seçicileri sabit sürümlü üretici XML dosyalarından bağımsız olarak çıkarılır.
 
 - **NUCLEO-F072RB / STM32F072RBT6:** UM1724 Rev 14 tabloları 11 (pp. 37–38) / 26 (p. 55); Cortex-M0, 48 MHz, LQFP-64 ve 51 GPIO bacağı. Paket pinleri ve AF seçicileri sabit sürümlü üretici XML dosyalarından bağımsız olarak çıkarılır.
+
+- **NUCLEO-L053R8 / STM32L053R8T6:** UM1724 Rev 14 tabloları 17 (p. 45) / 30 (p. 59); Cortex-M0+, 32 MHz, LQFP-64 ve 51 GPIO bacağı. Paket pinleri ve AF seçicileri sabit sürümlü üretici XML dosyalarından bağımsız olarak çıkarılır.

@@ -16149,3 +16149,666 @@ stm32f072rbt6,62,PB9,GPIO,SPI2_NSS,AF5,SPI2_NSS,f072rb-package,f072rb-package | 
 stm32f072rbt6,62,PB9,GPIO,TIM17_CH1,AF2,TIM17_CH1,f072rb-package,f072rb-package | f072rb-modes
 stm32f072rbt6,63,VSS,GND,,,,f072rb-package,
 stm32f072rbt6,64,VDD,POWER,,,,f072rb-package,
+nucleo-l053r8,1,PC10,GPIO,LCD_COM4,AF1,LCD_COM4,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,1,PC10,GPIO,LCD_SEG28,AF1,LCD_SEG28,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,1,PC10,GPIO,LPUART1_TX,AF0,LPUART1_TX,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,2,PC11,GPIO,ADC_EXTI11,,ADC_EXTI11,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,2,PC11,GPIO,LCD_COM5,AF1,LCD_COM5,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,2,PC11,GPIO,LCD_SEG29,AF1,LCD_SEG29,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,2,PC11,GPIO,LPUART1_RX,AF0,LPUART1_RX,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,3,PC12,GPIO,LCD_COM6,AF1,LCD_COM6,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,3,PC12,GPIO,LCD_SEG30,AF1,LCD_SEG30,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,4,PD2,GPIO,LCD_COM7,AF1,LCD_COM7,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,4,PD2,GPIO,LCD_SEG31,AF1,LCD_SEG31,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,4,PD2,GPIO,LPUART1_DE,AF0,LPUART1_DE,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,4,PD2,GPIO,LPUART1_RTS,AF0,LPUART1_RTS,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,5,VDD,POWER,,,,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,
+nucleo-l053r8,6,E5V,POWER,,,,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view,
+nucleo-l053r8,7,BOOT0,SYSTEM,,,,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,
+nucleo-l053r8,8,GND,GND,,,,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view,
+nucleo-l053r8,9,NC,SYSTEM,,,,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view,
+nucleo-l053r8,10,NC,SYSTEM,,,,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view,
+nucleo-l053r8,11,NC,SYSTEM,,,,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view,
+nucleo-l053r8,12,IOREF,POWER,,,,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view,
+nucleo-l053r8,13,PA13,GPIO,SYS_SWDIO,AF0,SYS_SWDIO,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,13,PA13,GPIO,USB_NOE,AF2,USB_NOE,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,14,RESET,SYSTEM,,,,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,
+nucleo-l053r8,15,PA14,GPIO,SYS_SWCLK,AF0,SYS_SWCLK,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,15,PA14,GPIO,USART2_TX,AF4,USART2_TX,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,16,+3.3V,POWER,,,,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view,
+nucleo-l053r8,17,PA15,GPIO,LCD_SEG17,AF1,LCD_SEG17,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,17,PA15,GPIO,SPI1_NSS,AF0,SPI1_NSS,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,17,PA15,GPIO,TIM2_CH1,AF5,TIM2_CH1,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,17,PA15,GPIO,TIM2_ETR,AF2,TIM2_ETR,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,17,PA15,GPIO,USART2_RX,AF4,USART2_RX,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,18,+5V,POWER,,,,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view,
+nucleo-l053r8,19,GND,GND,,,,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view,
+nucleo-l053r8,20,GND,GND,,,,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view,
+nucleo-l053r8,21,PB7,GPIO,COMP2_INP,,COMP2_INP,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,21,PB7,GPIO,I2C1_SDA,AF1,I2C1_SDA,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,21,PB7,GPIO,LPTIM1_IN2,AF2,LPTIM1_IN2,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,21,PB7,GPIO,SYS_PVD_IN,,SYS_PVD_IN,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,21,PB7,GPIO,TSC_G5_IO4,AF3,TSC_G5_IO4,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,21,PB7,GPIO,USART1_RX,AF0,USART1_RX,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,22,GND,GND,,,,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view,
+nucleo-l053r8,23,PC13,GPIO,RTC_OUT_ALARM,,RTC_OUT_ALARM,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,23,PC13,GPIO,RTC_OUT_CALIB,,RTC_OUT_CALIB,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,23,PC13,GPIO,RTC_TAMP1,,RTC_TAMP1,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,23,PC13,GPIO,RTC_TS,,RTC_TS,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,23,PC13,GPIO,SYS_WKUP2,,SYS_WKUP2,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,24,VIN,POWER,,,,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view,
+nucleo-l053r8,25,PC14,GPIO,RCC_OSC32_IN,,RCC_OSC32_IN,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package
+nucleo-l053r8,26,NC,SYSTEM,,,,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view,
+nucleo-l053r8,27,PC15,GPIO,RCC_OSC32_OUT,,RCC_OSC32_OUT,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package
+nucleo-l053r8,28,PA0,GPIO,ADC_IN0,,ADC_IN0,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,28,PA0,GPIO,COMP1_INM,,COMP1_INM,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,28,PA0,GPIO,COMP1_OUT,AF7,COMP1_OUT,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,28,PA0,GPIO,RTC_TAMP2,,RTC_TAMP2,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,28,PA0,GPIO,SYS_WKUP1,,SYS_WKUP1,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,28,PA0,GPIO,TIM2_CH1,AF2,TIM2_CH1,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,28,PA0,GPIO,TIM2_ETR,AF5,TIM2_ETR,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,28,PA0,GPIO,TSC_G1_IO1,AF3,TSC_G1_IO1,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,28,PA0,GPIO,USART2_CTS,AF4,USART2_CTS,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,29,PH0,GPIO,CRS_SYNC,AF0,CRS_SYNC,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,29,PH0,GPIO,RCC_OSC_IN,,RCC_OSC_IN,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package
+nucleo-l053r8,30,PA1,GPIO,ADC_IN1,,ADC_IN1,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,30,PA1,GPIO,COMP1_INP,,COMP1_INP,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,30,PA1,GPIO,LCD_SEG0,AF1,LCD_SEG0,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,30,PA1,GPIO,TIM21_ETR,AF5,TIM21_ETR,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,30,PA1,GPIO,TIM2_CH2,AF2,TIM2_CH2,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,30,PA1,GPIO,TSC_G1_IO2,AF3,TSC_G1_IO2,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,30,PA1,GPIO,USART2_DE,AF4,USART2_DE,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,30,PA1,GPIO,USART2_RTS,AF4,USART2_RTS,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,31,PH1,GPIO,RCC_OSC_OUT,,RCC_OSC_OUT,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package
+nucleo-l053r8,32,PA4,GPIO,ADC_IN4,,ADC_IN4,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,32,PA4,GPIO,COMP1_INM,,COMP1_INM,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,32,PA4,GPIO,COMP2_INM,,COMP2_INM,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,32,PA4,GPIO,DAC_OUT1,,DAC_OUT1,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,32,PA4,GPIO,SPI1_NSS,AF0,SPI1_NSS,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,32,PA4,GPIO,TIM22_ETR,AF5,TIM22_ETR,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,32,PA4,GPIO,TSC_G2_IO1,AF3,TSC_G2_IO1,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,32,PA4,GPIO,USART2_CK,AF4,USART2_CK,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,33,VLCD,POWER,,,,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,
+nucleo-l053r8,34,PB0,GPIO,ADC_IN8,,ADC_IN8,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,34,PB0,GPIO,LCD_SEG5,AF1,LCD_SEG5,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,34,PB0,GPIO,LCD_VLCD3,,LCD_VLCD3,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,34,PB0,GPIO,SYS_VREF_OUT_PB0,,SYS_VREF_OUT_PB0,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,34,PB0,GPIO,TSC_G3_IO2,AF3,TSC_G3_IO2,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,35,PC2,GPIO,ADC_IN12,,ADC_IN12,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,35,PC2,GPIO,I2S2_MCK,AF2,I2S2_MCK,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,35,PC2,GPIO,LCD_SEG20,AF1,LCD_SEG20,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,35,PC2,GPIO,LPTIM1_IN2,AF0,LPTIM1_IN2,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,35,PC2,GPIO,SPI2_MISO,AF2,SPI2_MISO,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,35,PC2,GPIO,TSC_G7_IO3,AF3,TSC_G7_IO3,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,36,PC1,GPIO,ADC_IN11,,ADC_IN11,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package
+nucleo-l053r8,36,PC1,GPIO,LCD_SEG19,AF1,LCD_SEG19,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,36,PC1,GPIO,LPTIM1_OUT,AF0,LPTIM1_OUT,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,36,PC1,GPIO,TSC_G7_IO2,AF3,TSC_G7_IO2,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,37,PC3,GPIO,ADC_IN13,,ADC_IN13,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,37,PC3,GPIO,I2S2_SD,AF2,I2S2_SD,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,37,PC3,GPIO,LCD_SEG21,AF1,LCD_SEG21,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,37,PC3,GPIO,LPTIM1_ETR,AF0,LPTIM1_ETR,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,37,PC3,GPIO,SPI2_MOSI,AF2,SPI2_MOSI,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,37,PC3,GPIO,TSC_G7_IO4,AF3,TSC_G7_IO4,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,38,PC0,GPIO,ADC_IN10,,ADC_IN10,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package
+nucleo-l053r8,38,PC0,GPIO,LCD_SEG18,AF1,LCD_SEG18,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,38,PC0,GPIO,LPTIM1_IN1,AF0,LPTIM1_IN1,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,38,PC0,GPIO,TSC_G7_IO1,AF3,TSC_G7_IO1,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,39,NC,SYSTEM,,,,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view,
+nucleo-l053r8,40,IOREF,POWER,,,,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view,
+nucleo-l053r8,41,NRST,SYSTEM,,,,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,
+nucleo-l053r8,42,+3.3V,POWER,,,,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view,
+nucleo-l053r8,43,+5V,POWER,,,,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view,
+nucleo-l053r8,44,GND,GND,,,,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view,
+nucleo-l053r8,45,GND,GND,,,,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view,
+nucleo-l053r8,46,VIN,POWER,,,,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view,
+nucleo-l053r8,47,PA0,GPIO,ADC_IN0,,ADC_IN0,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,47,PA0,GPIO,COMP1_INM,,COMP1_INM,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,47,PA0,GPIO,COMP1_OUT,AF7,COMP1_OUT,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,47,PA0,GPIO,RTC_TAMP2,,RTC_TAMP2,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,47,PA0,GPIO,SYS_WKUP1,,SYS_WKUP1,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,47,PA0,GPIO,TIM2_CH1,AF2,TIM2_CH1,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,47,PA0,GPIO,TIM2_ETR,AF5,TIM2_ETR,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,47,PA0,GPIO,TSC_G1_IO1,AF3,TSC_G1_IO1,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,47,PA0,GPIO,USART2_CTS,AF4,USART2_CTS,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,48,PA1,GPIO,ADC_IN1,,ADC_IN1,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,48,PA1,GPIO,COMP1_INP,,COMP1_INP,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,48,PA1,GPIO,LCD_SEG0,AF1,LCD_SEG0,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,48,PA1,GPIO,TIM21_ETR,AF5,TIM21_ETR,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,48,PA1,GPIO,TIM2_CH2,AF2,TIM2_CH2,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,48,PA1,GPIO,TSC_G1_IO2,AF3,TSC_G1_IO2,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,48,PA1,GPIO,USART2_DE,AF4,USART2_DE,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,48,PA1,GPIO,USART2_RTS,AF4,USART2_RTS,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,49,PA4,GPIO,ADC_IN4,,ADC_IN4,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,49,PA4,GPIO,COMP1_INM,,COMP1_INM,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,49,PA4,GPIO,COMP2_INM,,COMP2_INM,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,49,PA4,GPIO,DAC_OUT1,,DAC_OUT1,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,49,PA4,GPIO,SPI1_NSS,AF0,SPI1_NSS,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,49,PA4,GPIO,TIM22_ETR,AF5,TIM22_ETR,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,49,PA4,GPIO,TSC_G2_IO1,AF3,TSC_G2_IO1,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,49,PA4,GPIO,USART2_CK,AF4,USART2_CK,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,50,PB0,GPIO,ADC_IN8,,ADC_IN8,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,50,PB0,GPIO,LCD_SEG5,AF1,LCD_SEG5,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,50,PB0,GPIO,LCD_VLCD3,,LCD_VLCD3,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,50,PB0,GPIO,SYS_VREF_OUT_PB0,,SYS_VREF_OUT_PB0,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,50,PB0,GPIO,TSC_G3_IO2,AF3,TSC_G3_IO2,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,51,PC1,GPIO,ADC_IN11,,ADC_IN11,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package
+nucleo-l053r8,51,PC1,GPIO,LCD_SEG19,AF1,LCD_SEG19,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,51,PC1,GPIO,LPTIM1_OUT,AF0,LPTIM1_OUT,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,51,PC1,GPIO,TSC_G7_IO2,AF3,TSC_G7_IO2,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,52,PC0,GPIO,ADC_IN10,,ADC_IN10,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package
+nucleo-l053r8,52,PC0,GPIO,LCD_SEG18,AF1,LCD_SEG18,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,52,PC0,GPIO,LPTIM1_IN1,AF0,LPTIM1_IN1,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,52,PC0,GPIO,TSC_G7_IO1,AF3,TSC_G7_IO1,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,53,PC9,GPIO,DAC_EXTI9,,DAC_EXTI9,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,53,PC9,GPIO,LCD_SEG27,AF1,LCD_SEG27,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,53,PC9,GPIO,TIM21_ETR,AF0,TIM21_ETR,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,53,PC9,GPIO,TSC_G8_IO4,AF3,TSC_G8_IO4,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,53,PC9,GPIO,USB_NOE,AF2,USB_NOE,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,54,PC8,GPIO,LCD_SEG26,AF1,LCD_SEG26,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,54,PC8,GPIO,TIM22_ETR,AF0,TIM22_ETR,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,54,PC8,GPIO,TSC_G8_IO3,AF3,TSC_G8_IO3,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,55,PB8,GPIO,I2C1_SCL,AF4,I2C1_SCL,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,55,PB8,GPIO,LCD_SEG16,AF1,LCD_SEG16,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,55,PB8,GPIO,TSC_SYNC,AF3,TSC_SYNC,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,56,PC6,GPIO,LCD_SEG24,AF1,LCD_SEG24,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,56,PC6,GPIO,TIM22_CH1,AF0,TIM22_CH1,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,56,PC6,GPIO,TSC_G8_IO1,AF3,TSC_G8_IO1,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,57,PB9,GPIO,DAC_EXTI9,,DAC_EXTI9,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,57,PB9,GPIO,I2C1_SDA,AF4,I2C1_SDA,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,57,PB9,GPIO,I2S2_WS,AF5,I2S2_WS,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,57,PB9,GPIO,LCD_COM3,AF1,LCD_COM3,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,57,PB9,GPIO,SPI2_NSS,AF5,SPI2_NSS,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,58,PC5,GPIO,ADC_IN15,,ADC_IN15,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,58,PC5,GPIO,LCD_SEG23,AF1,LCD_SEG23,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,58,PC5,GPIO,LPUART1_RX,AF2,LPUART1_RX,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,58,PC5,GPIO,TSC_G3_IO1,AF3,TSC_G3_IO1,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,59,AVDD,POWER,,,,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,
+nucleo-l053r8,60,U5V,POWER,,,,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view,
+nucleo-l053r8,61,GND,GND,,,,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view,
+nucleo-l053r8,62,NC,SYSTEM,,,,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view,
+nucleo-l053r8,63,PA5,GPIO,ADC_IN5,,ADC_IN5,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package
+nucleo-l053r8,63,PA5,GPIO,COMP1_INM,,COMP1_INM,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package
+nucleo-l053r8,63,PA5,GPIO,COMP2_INM,,COMP2_INM,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package
+nucleo-l053r8,63,PA5,GPIO,SPI1_SCK,AF0,SPI1_SCK,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,63,PA5,GPIO,TIM2_CH1,AF5,TIM2_CH1,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,63,PA5,GPIO,TIM2_ETR,AF2,TIM2_ETR,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,63,PA5,GPIO,TSC_G2_IO2,AF3,TSC_G2_IO2,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,64,PA12,GPIO,COMP2_OUT,AF7,COMP2_OUT,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,64,PA12,GPIO,SPI1_MOSI,AF0,SPI1_MOSI,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,64,PA12,GPIO,TSC_G4_IO4,AF3,TSC_G4_IO4,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,64,PA12,GPIO,USART1_DE,AF4,USART1_DE,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,64,PA12,GPIO,USART1_RTS,AF4,USART1_RTS,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,64,PA12,GPIO,USB_DP,,USB_DP,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,65,PA6,GPIO,ADC_IN6,,ADC_IN6,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,65,PA6,GPIO,COMP1_OUT,AF7,COMP1_OUT,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,65,PA6,GPIO,LCD_SEG3,AF1,LCD_SEG3,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,65,PA6,GPIO,LPUART1_CTS,AF4,LPUART1_CTS,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,65,PA6,GPIO,SPI1_MISO,AF0,SPI1_MISO,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,65,PA6,GPIO,TIM22_CH1,AF5,TIM22_CH1,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,65,PA6,GPIO,TSC_G2_IO3,AF3,TSC_G2_IO3,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,66,PA11,GPIO,ADC_EXTI11,,ADC_EXTI11,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,66,PA11,GPIO,COMP1_OUT,AF7,COMP1_OUT,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,66,PA11,GPIO,SPI1_MISO,AF0,SPI1_MISO,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,66,PA11,GPIO,TSC_G4_IO3,AF3,TSC_G4_IO3,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,66,PA11,GPIO,USART1_CTS,AF4,USART1_CTS,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,66,PA11,GPIO,USB_DM,,USB_DM,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,67,PA7,GPIO,ADC_IN7,,ADC_IN7,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,67,PA7,GPIO,COMP2_OUT,AF7,COMP2_OUT,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,67,PA7,GPIO,LCD_SEG4,AF1,LCD_SEG4,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,67,PA7,GPIO,SPI1_MOSI,AF0,SPI1_MOSI,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,67,PA7,GPIO,TIM22_CH2,AF5,TIM22_CH2,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,67,PA7,GPIO,TSC_G2_IO4,AF3,TSC_G2_IO4,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,68,PB12,GPIO,I2S2_WS,AF0,I2S2_WS,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,68,PB12,GPIO,LCD_SEG12,AF1,LCD_SEG12,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,68,PB12,GPIO,LCD_VLCD1,,LCD_VLCD1,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,68,PB12,GPIO,LPUART1_DE,AF2,LPUART1_DE,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,68,PB12,GPIO,LPUART1_RTS,AF2,LPUART1_RTS,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,68,PB12,GPIO,SPI2_NSS,AF0,SPI2_NSS,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,68,PB12,GPIO,TSC_G6_IO2,AF3,TSC_G6_IO2,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,69,PB6,GPIO,COMP2_INP,,COMP2_INP,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,69,PB6,GPIO,I2C1_SCL,AF1,I2C1_SCL,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,69,PB6,GPIO,LPTIM1_ETR,AF2,LPTIM1_ETR,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,69,PB6,GPIO,TSC_G5_IO3,AF3,TSC_G5_IO3,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,69,PB6,GPIO,USART1_TX,AF0,USART1_TX,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,70,PB11,GPIO,ADC_EXTI11,,ADC_EXTI11,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,70,PB11,GPIO,I2C2_SDA,AF6,I2C2_SDA,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,70,PB11,GPIO,LCD_SEG11,AF1,LCD_SEG11,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,70,PB11,GPIO,LPUART1_RX,AF4,LPUART1_RX,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,70,PB11,GPIO,TIM2_CH4,AF2,TIM2_CH4,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,70,PB11,GPIO,TSC_G6_IO1,AF3,TSC_G6_IO1,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,71,PC7,GPIO,LCD_SEG25,AF1,LCD_SEG25,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,71,PC7,GPIO,TIM22_CH2,AF0,TIM22_CH2,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,71,PC7,GPIO,TSC_G8_IO2,AF3,TSC_G8_IO2,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,72,GND,GND,,,,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view,
+nucleo-l053r8,73,PA9,GPIO,DAC_EXTI9,,DAC_EXTI9,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,73,PA9,GPIO,LCD_COM1,AF1,LCD_COM1,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,73,PA9,GPIO,RCC_MCO,AF0,RCC_MCO,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,73,PA9,GPIO,TSC_G4_IO1,AF3,TSC_G4_IO1,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,73,PA9,GPIO,USART1_TX,AF4,USART1_TX,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,74,PB2,GPIO,LCD_VLCD2,,LCD_VLCD2,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,74,PB2,GPIO,LPTIM1_OUT,AF2,LPTIM1_OUT,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,74,PB2,GPIO,TSC_G3_IO4,AF3,TSC_G3_IO4,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,75,PA8,GPIO,CRS_SYNC,AF2,CRS_SYNC,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,75,PA8,GPIO,LCD_COM0,AF1,LCD_COM0,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,75,PA8,GPIO,RCC_MCO,AF0,RCC_MCO,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,75,PA8,GPIO,USART1_CK,AF4,USART1_CK,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,76,PB1,GPIO,ADC_IN9,,ADC_IN9,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,76,PB1,GPIO,LCD_SEG6,AF1,LCD_SEG6,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,76,PB1,GPIO,LPUART1_DE,AF4,LPUART1_DE,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,76,PB1,GPIO,LPUART1_RTS,AF4,LPUART1_RTS,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,76,PB1,GPIO,SYS_VREF_OUT_PB1,,SYS_VREF_OUT_PB1,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,76,PB1,GPIO,TSC_G3_IO3,AF3,TSC_G3_IO3,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,77,PB10,GPIO,I2C2_SCL,AF6,I2C2_SCL,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,77,PB10,GPIO,LCD_SEG10,AF1,LCD_SEG10,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,77,PB10,GPIO,LPUART1_TX,AF4,LPUART1_TX,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,77,PB10,GPIO,SPI2_SCK,AF5,SPI2_SCK,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,77,PB10,GPIO,TIM2_CH3,AF2,TIM2_CH3,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,77,PB10,GPIO,TSC_SYNC,AF3,TSC_SYNC,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,78,PB15,GPIO,I2S2_SD,AF0,I2S2_SD,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,78,PB15,GPIO,LCD_SEG15,AF1,LCD_SEG15,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,78,PB15,GPIO,RTC_REFIN,AF2,RTC_REFIN,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,78,PB15,GPIO,SPI2_MOSI,AF0,SPI2_MOSI,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,79,PB4,GPIO,COMP2_INP,,COMP2_INP,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,79,PB4,GPIO,LCD_SEG8,AF1,LCD_SEG8,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,79,PB4,GPIO,SPI1_MISO,AF0,SPI1_MISO,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,79,PB4,GPIO,TIM22_CH1,AF4,TIM22_CH1,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,79,PB4,GPIO,TSC_G5_IO2,AF3,TSC_G5_IO2,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,80,PB14,GPIO,I2C2_SDA,AF5,I2C2_SDA,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,80,PB14,GPIO,I2S2_MCK,AF0,I2S2_MCK,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,80,PB14,GPIO,LCD_SEG14,AF1,LCD_SEG14,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,80,PB14,GPIO,LPUART1_DE,AF4,LPUART1_DE,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,80,PB14,GPIO,LPUART1_RTS,AF4,LPUART1_RTS,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,80,PB14,GPIO,RTC_OUT_ALARM,AF2,RTC_OUT_ALARM,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,80,PB14,GPIO,RTC_OUT_CALIB,AF2,RTC_OUT_CALIB,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,80,PB14,GPIO,SPI2_MISO,AF0,SPI2_MISO,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,80,PB14,GPIO,TIM21_CH2,AF6,TIM21_CH2,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,80,PB14,GPIO,TSC_G6_IO4,AF3,TSC_G6_IO4,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,81,PB5,GPIO,COMP2_INP,,COMP2_INP,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,81,PB5,GPIO,I2C1_SMBA,AF3,I2C1_SMBA,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,81,PB5,GPIO,LCD_SEG9,AF1,LCD_SEG9,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,81,PB5,GPIO,LPTIM1_IN1,AF2,LPTIM1_IN1,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,81,PB5,GPIO,SPI1_MOSI,AF0,SPI1_MOSI,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,81,PB5,GPIO,TIM22_CH2,AF4,TIM22_CH2,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,82,PB13,GPIO,I2C2_SCL,AF5,I2C2_SCL,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,82,PB13,GPIO,I2S2_CK,AF0,I2S2_CK,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,82,PB13,GPIO,LCD_SEG13,AF1,LCD_SEG13,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,82,PB13,GPIO,LPUART1_CTS,AF4,LPUART1_CTS,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,82,PB13,GPIO,SPI2_SCK,AF0,SPI2_SCK,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,82,PB13,GPIO,TIM21_CH1,AF6,TIM21_CH1,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,82,PB13,GPIO,TSC_G6_IO3,AF3,TSC_G6_IO3,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,83,PB3,GPIO,COMP2_INM,,COMP2_INM,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,83,PB3,GPIO,LCD_SEG7,AF1,LCD_SEG7,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,83,PB3,GPIO,SPI1_SCK,AF0,SPI1_SCK,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,83,PB3,GPIO,TIM2_CH2,AF2,TIM2_CH2,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,83,PB3,GPIO,TSC_G5_IO1,AF3,TSC_G5_IO1,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,84,AGND,GND,,,,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view,
+nucleo-l053r8,85,PA10,GPIO,LCD_COM2,AF1,LCD_COM2,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,85,PA10,GPIO,TSC_G4_IO2,AF3,TSC_G4_IO2,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,85,PA10,GPIO,USART1_RX,AF4,USART1_RX,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,86,PC4,GPIO,ADC_IN14,,ADC_IN14,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,86,PC4,GPIO,LCD_SEG22,AF1,LCD_SEG22,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,86,PC4,GPIO,LPUART1_TX,AF2,LPUART1_TX,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,87,PA2,GPIO,ADC_IN2,,ADC_IN2,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package
+nucleo-l053r8,87,PA2,GPIO,COMP2_INM,,COMP2_INM,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package
+nucleo-l053r8,87,PA2,GPIO,COMP2_OUT,AF7,COMP2_OUT,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,87,PA2,GPIO,LCD_SEG1,AF1,LCD_SEG1,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,87,PA2,GPIO,TIM21_CH1,AF0,TIM21_CH1,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,87,PA2,GPIO,TIM2_CH3,AF2,TIM2_CH3,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,87,PA2,GPIO,TSC_G1_IO3,AF3,TSC_G1_IO3,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,87,PA2,GPIO,USART2_TX,AF4,USART2_TX,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,88,NC,SYSTEM,,,,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view,
+nucleo-l053r8,89,PA3,GPIO,ADC_IN3,,ADC_IN3,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package
+nucleo-l053r8,89,PA3,GPIO,COMP2_INP,,COMP2_INP,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package
+nucleo-l053r8,89,PA3,GPIO,LCD_SEG2,AF1,LCD_SEG2,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,89,PA3,GPIO,TIM21_CH2,AF0,TIM21_CH2,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,89,PA3,GPIO,TIM2_CH4,AF2,TIM2_CH4,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,89,PA3,GPIO,TSC_G1_IO4,AF3,TSC_G1_IO4,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,89,PA3,GPIO,USART2_RX,AF4,USART2_RX,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,90,NC,SYSTEM,,,,nucleo-l053r8-morpho-59 | nucleo-l053r8-top-view,
+nucleo-l053r8,91,PA9,GPIO,DAC_EXTI9,,DAC_EXTI9,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,91,PA9,GPIO,LCD_COM1,AF1,LCD_COM1,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,91,PA9,GPIO,RCC_MCO,AF0,RCC_MCO,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,91,PA9,GPIO,TSC_G4_IO1,AF3,TSC_G4_IO1,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,91,PA9,GPIO,USART1_TX,AF4,USART1_TX,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,92,PC7,GPIO,LCD_SEG25,AF1,LCD_SEG25,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,92,PC7,GPIO,TIM22_CH2,AF0,TIM22_CH2,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,92,PC7,GPIO,TSC_G8_IO2,AF3,TSC_G8_IO2,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,93,PB6,GPIO,COMP2_INP,,COMP2_INP,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,93,PB6,GPIO,I2C1_SCL,AF1,I2C1_SCL,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,93,PB6,GPIO,LPTIM1_ETR,AF2,LPTIM1_ETR,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,93,PB6,GPIO,TSC_G5_IO3,AF3,TSC_G5_IO3,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,93,PB6,GPIO,USART1_TX,AF0,USART1_TX,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,94,PA7,GPIO,ADC_IN7,,ADC_IN7,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,94,PA7,GPIO,COMP2_OUT,AF7,COMP2_OUT,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,94,PA7,GPIO,LCD_SEG4,AF1,LCD_SEG4,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,94,PA7,GPIO,SPI1_MOSI,AF0,SPI1_MOSI,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,94,PA7,GPIO,TIM22_CH2,AF5,TIM22_CH2,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,94,PA7,GPIO,TSC_G2_IO4,AF3,TSC_G2_IO4,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,95,PA6,GPIO,ADC_IN6,,ADC_IN6,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,95,PA6,GPIO,COMP1_OUT,AF7,COMP1_OUT,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,95,PA6,GPIO,LCD_SEG3,AF1,LCD_SEG3,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,95,PA6,GPIO,LPUART1_CTS,AF4,LPUART1_CTS,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,95,PA6,GPIO,SPI1_MISO,AF0,SPI1_MISO,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,95,PA6,GPIO,TIM22_CH1,AF5,TIM22_CH1,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,95,PA6,GPIO,TSC_G2_IO3,AF3,TSC_G2_IO3,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,96,PA5,GPIO,ADC_IN5,,ADC_IN5,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package
+nucleo-l053r8,96,PA5,GPIO,COMP1_INM,,COMP1_INM,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package
+nucleo-l053r8,96,PA5,GPIO,COMP2_INM,,COMP2_INM,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package
+nucleo-l053r8,96,PA5,GPIO,SPI1_SCK,AF0,SPI1_SCK,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,96,PA5,GPIO,TIM2_CH1,AF5,TIM2_CH1,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,96,PA5,GPIO,TIM2_ETR,AF2,TIM2_ETR,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,96,PA5,GPIO,TSC_G2_IO2,AF3,TSC_G2_IO2,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,97,GND,GND,,,,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view,
+nucleo-l053r8,98,AVDD,POWER,,,,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,
+nucleo-l053r8,99,PB9,GPIO,DAC_EXTI9,,DAC_EXTI9,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,99,PB9,GPIO,I2C1_SDA,AF4,I2C1_SDA,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,99,PB9,GPIO,I2S2_WS,AF5,I2S2_WS,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,99,PB9,GPIO,LCD_COM3,AF1,LCD_COM3,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,99,PB9,GPIO,SPI2_NSS,AF5,SPI2_NSS,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,100,PB8,GPIO,I2C1_SCL,AF4,I2C1_SCL,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,100,PB8,GPIO,LCD_SEG16,AF1,LCD_SEG16,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,100,PB8,GPIO,TSC_SYNC,AF3,TSC_SYNC,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,101,PA3,GPIO,ADC_IN3,,ADC_IN3,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package
+nucleo-l053r8,101,PA3,GPIO,COMP2_INP,,COMP2_INP,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package
+nucleo-l053r8,101,PA3,GPIO,LCD_SEG2,AF1,LCD_SEG2,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,101,PA3,GPIO,TIM21_CH2,AF0,TIM21_CH2,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,101,PA3,GPIO,TIM2_CH4,AF2,TIM2_CH4,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,101,PA3,GPIO,TSC_G1_IO4,AF3,TSC_G1_IO4,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,101,PA3,GPIO,USART2_RX,AF4,USART2_RX,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,102,PA2,GPIO,ADC_IN2,,ADC_IN2,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package
+nucleo-l053r8,102,PA2,GPIO,COMP2_INM,,COMP2_INM,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package
+nucleo-l053r8,102,PA2,GPIO,COMP2_OUT,AF7,COMP2_OUT,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,102,PA2,GPIO,LCD_SEG1,AF1,LCD_SEG1,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,102,PA2,GPIO,TIM21_CH1,AF0,TIM21_CH1,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,102,PA2,GPIO,TIM2_CH3,AF2,TIM2_CH3,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,102,PA2,GPIO,TSC_G1_IO3,AF3,TSC_G1_IO3,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,102,PA2,GPIO,USART2_TX,AF4,USART2_TX,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package | nucleo-mb1136-bridges,l053r8-package | l053r8-modes
+nucleo-l053r8,103,PA10,GPIO,LCD_COM2,AF1,LCD_COM2,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,103,PA10,GPIO,TSC_G4_IO2,AF3,TSC_G4_IO2,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,103,PA10,GPIO,USART1_RX,AF4,USART1_RX,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,104,PB3,GPIO,COMP2_INM,,COMP2_INM,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,104,PB3,GPIO,LCD_SEG7,AF1,LCD_SEG7,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,104,PB3,GPIO,SPI1_SCK,AF0,SPI1_SCK,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,104,PB3,GPIO,TIM2_CH2,AF2,TIM2_CH2,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,104,PB3,GPIO,TSC_G5_IO1,AF3,TSC_G5_IO1,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,105,PB5,GPIO,COMP2_INP,,COMP2_INP,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,105,PB5,GPIO,I2C1_SMBA,AF3,I2C1_SMBA,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,105,PB5,GPIO,LCD_SEG9,AF1,LCD_SEG9,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,105,PB5,GPIO,LPTIM1_IN1,AF2,LPTIM1_IN1,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,105,PB5,GPIO,SPI1_MOSI,AF0,SPI1_MOSI,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,105,PB5,GPIO,TIM22_CH2,AF4,TIM22_CH2,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,106,PB4,GPIO,COMP2_INP,,COMP2_INP,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package
+nucleo-l053r8,106,PB4,GPIO,LCD_SEG8,AF1,LCD_SEG8,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,106,PB4,GPIO,SPI1_MISO,AF0,SPI1_MISO,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,106,PB4,GPIO,TIM22_CH1,AF4,TIM22_CH1,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,106,PB4,GPIO,TSC_G5_IO2,AF3,TSC_G5_IO2,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,107,PB10,GPIO,I2C2_SCL,AF6,I2C2_SCL,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,107,PB10,GPIO,LCD_SEG10,AF1,LCD_SEG10,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,107,PB10,GPIO,LPUART1_TX,AF4,LPUART1_TX,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,107,PB10,GPIO,SPI2_SCK,AF5,SPI2_SCK,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,107,PB10,GPIO,TIM2_CH3,AF2,TIM2_CH3,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,107,PB10,GPIO,TSC_SYNC,AF3,TSC_SYNC,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,108,PA8,GPIO,CRS_SYNC,AF2,CRS_SYNC,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,108,PA8,GPIO,LCD_COM0,AF1,LCD_COM0,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,108,PA8,GPIO,RCC_MCO,AF0,RCC_MCO,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+nucleo-l053r8,108,PA8,GPIO,USART1_CK,AF4,USART1_CK,nucleo-l053r8-arduino-45 | nucleo-l053r8-top-view | l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,1,VLCD,POWER,,,,l053r8-package,
+stm32l053r8t6,2,PC13,GPIO,RTC_OUT_ALARM,,RTC_OUT_ALARM,l053r8-package,l053r8-package
+stm32l053r8t6,2,PC13,GPIO,RTC_OUT_CALIB,,RTC_OUT_CALIB,l053r8-package,l053r8-package
+stm32l053r8t6,2,PC13,GPIO,RTC_TAMP1,,RTC_TAMP1,l053r8-package,l053r8-package
+stm32l053r8t6,2,PC13,GPIO,RTC_TS,,RTC_TS,l053r8-package,l053r8-package
+stm32l053r8t6,2,PC13,GPIO,SYS_WKUP2,,SYS_WKUP2,l053r8-package,l053r8-package
+stm32l053r8t6,3,PC14,GPIO,RCC_OSC32_IN,,RCC_OSC32_IN,l053r8-package,l053r8-package
+stm32l053r8t6,4,PC15,GPIO,RCC_OSC32_OUT,,RCC_OSC32_OUT,l053r8-package,l053r8-package
+stm32l053r8t6,5,PH0,GPIO,CRS_SYNC,AF0,CRS_SYNC,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,5,PH0,GPIO,RCC_OSC_IN,,RCC_OSC_IN,l053r8-package,l053r8-package
+stm32l053r8t6,6,PH1,GPIO,RCC_OSC_OUT,,RCC_OSC_OUT,l053r8-package,l053r8-package
+stm32l053r8t6,7,NRST,SYSTEM,,,,l053r8-package,
+stm32l053r8t6,8,PC0,GPIO,ADC_IN10,,ADC_IN10,l053r8-package,l053r8-package
+stm32l053r8t6,8,PC0,GPIO,LCD_SEG18,AF1,LCD_SEG18,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,8,PC0,GPIO,LPTIM1_IN1,AF0,LPTIM1_IN1,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,8,PC0,GPIO,TSC_G7_IO1,AF3,TSC_G7_IO1,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,9,PC1,GPIO,ADC_IN11,,ADC_IN11,l053r8-package,l053r8-package
+stm32l053r8t6,9,PC1,GPIO,LCD_SEG19,AF1,LCD_SEG19,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,9,PC1,GPIO,LPTIM1_OUT,AF0,LPTIM1_OUT,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,9,PC1,GPIO,TSC_G7_IO2,AF3,TSC_G7_IO2,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,10,PC2,GPIO,ADC_IN12,,ADC_IN12,l053r8-package,l053r8-package
+stm32l053r8t6,10,PC2,GPIO,I2S2_MCK,AF2,I2S2_MCK,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,10,PC2,GPIO,LCD_SEG20,AF1,LCD_SEG20,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,10,PC2,GPIO,LPTIM1_IN2,AF0,LPTIM1_IN2,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,10,PC2,GPIO,SPI2_MISO,AF2,SPI2_MISO,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,10,PC2,GPIO,TSC_G7_IO3,AF3,TSC_G7_IO3,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,11,PC3,GPIO,ADC_IN13,,ADC_IN13,l053r8-package,l053r8-package
+stm32l053r8t6,11,PC3,GPIO,I2S2_SD,AF2,I2S2_SD,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,11,PC3,GPIO,LCD_SEG21,AF1,LCD_SEG21,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,11,PC3,GPIO,LPTIM1_ETR,AF0,LPTIM1_ETR,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,11,PC3,GPIO,SPI2_MOSI,AF2,SPI2_MOSI,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,11,PC3,GPIO,TSC_G7_IO4,AF3,TSC_G7_IO4,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,12,VSSA,GND,,,,l053r8-package,
+stm32l053r8t6,13,VDDA,POWER,,,,l053r8-package,
+stm32l053r8t6,14,PA0,GPIO,ADC_IN0,,ADC_IN0,l053r8-package,l053r8-package
+stm32l053r8t6,14,PA0,GPIO,COMP1_INM,,COMP1_INM,l053r8-package,l053r8-package
+stm32l053r8t6,14,PA0,GPIO,COMP1_OUT,AF7,COMP1_OUT,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,14,PA0,GPIO,RTC_TAMP2,,RTC_TAMP2,l053r8-package,l053r8-package
+stm32l053r8t6,14,PA0,GPIO,SYS_WKUP1,,SYS_WKUP1,l053r8-package,l053r8-package
+stm32l053r8t6,14,PA0,GPIO,TIM2_CH1,AF2,TIM2_CH1,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,14,PA0,GPIO,TIM2_ETR,AF5,TIM2_ETR,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,14,PA0,GPIO,TSC_G1_IO1,AF3,TSC_G1_IO1,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,14,PA0,GPIO,USART2_CTS,AF4,USART2_CTS,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,15,PA1,GPIO,ADC_IN1,,ADC_IN1,l053r8-package,l053r8-package
+stm32l053r8t6,15,PA1,GPIO,COMP1_INP,,COMP1_INP,l053r8-package,l053r8-package
+stm32l053r8t6,15,PA1,GPIO,LCD_SEG0,AF1,LCD_SEG0,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,15,PA1,GPIO,TIM21_ETR,AF5,TIM21_ETR,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,15,PA1,GPIO,TIM2_CH2,AF2,TIM2_CH2,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,15,PA1,GPIO,TSC_G1_IO2,AF3,TSC_G1_IO2,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,15,PA1,GPIO,USART2_DE,AF4,USART2_DE,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,15,PA1,GPIO,USART2_RTS,AF4,USART2_RTS,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,16,PA2,GPIO,ADC_IN2,,ADC_IN2,l053r8-package,l053r8-package
+stm32l053r8t6,16,PA2,GPIO,COMP2_INM,,COMP2_INM,l053r8-package,l053r8-package
+stm32l053r8t6,16,PA2,GPIO,COMP2_OUT,AF7,COMP2_OUT,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,16,PA2,GPIO,LCD_SEG1,AF1,LCD_SEG1,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,16,PA2,GPIO,TIM21_CH1,AF0,TIM21_CH1,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,16,PA2,GPIO,TIM2_CH3,AF2,TIM2_CH3,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,16,PA2,GPIO,TSC_G1_IO3,AF3,TSC_G1_IO3,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,16,PA2,GPIO,USART2_TX,AF4,USART2_TX,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,17,PA3,GPIO,ADC_IN3,,ADC_IN3,l053r8-package,l053r8-package
+stm32l053r8t6,17,PA3,GPIO,COMP2_INP,,COMP2_INP,l053r8-package,l053r8-package
+stm32l053r8t6,17,PA3,GPIO,LCD_SEG2,AF1,LCD_SEG2,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,17,PA3,GPIO,TIM21_CH2,AF0,TIM21_CH2,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,17,PA3,GPIO,TIM2_CH4,AF2,TIM2_CH4,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,17,PA3,GPIO,TSC_G1_IO4,AF3,TSC_G1_IO4,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,17,PA3,GPIO,USART2_RX,AF4,USART2_RX,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,18,VSS,GND,,,,l053r8-package,
+stm32l053r8t6,19,VDD,POWER,,,,l053r8-package,
+stm32l053r8t6,20,PA4,GPIO,ADC_IN4,,ADC_IN4,l053r8-package,l053r8-package
+stm32l053r8t6,20,PA4,GPIO,COMP1_INM,,COMP1_INM,l053r8-package,l053r8-package
+stm32l053r8t6,20,PA4,GPIO,COMP2_INM,,COMP2_INM,l053r8-package,l053r8-package
+stm32l053r8t6,20,PA4,GPIO,DAC_OUT1,,DAC_OUT1,l053r8-package,l053r8-package
+stm32l053r8t6,20,PA4,GPIO,SPI1_NSS,AF0,SPI1_NSS,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,20,PA4,GPIO,TIM22_ETR,AF5,TIM22_ETR,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,20,PA4,GPIO,TSC_G2_IO1,AF3,TSC_G2_IO1,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,20,PA4,GPIO,USART2_CK,AF4,USART2_CK,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,21,PA5,GPIO,ADC_IN5,,ADC_IN5,l053r8-package,l053r8-package
+stm32l053r8t6,21,PA5,GPIO,COMP1_INM,,COMP1_INM,l053r8-package,l053r8-package
+stm32l053r8t6,21,PA5,GPIO,COMP2_INM,,COMP2_INM,l053r8-package,l053r8-package
+stm32l053r8t6,21,PA5,GPIO,SPI1_SCK,AF0,SPI1_SCK,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,21,PA5,GPIO,TIM2_CH1,AF5,TIM2_CH1,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,21,PA5,GPIO,TIM2_ETR,AF2,TIM2_ETR,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,21,PA5,GPIO,TSC_G2_IO2,AF3,TSC_G2_IO2,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,22,PA6,GPIO,ADC_IN6,,ADC_IN6,l053r8-package,l053r8-package
+stm32l053r8t6,22,PA6,GPIO,COMP1_OUT,AF7,COMP1_OUT,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,22,PA6,GPIO,LCD_SEG3,AF1,LCD_SEG3,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,22,PA6,GPIO,LPUART1_CTS,AF4,LPUART1_CTS,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,22,PA6,GPIO,SPI1_MISO,AF0,SPI1_MISO,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,22,PA6,GPIO,TIM22_CH1,AF5,TIM22_CH1,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,22,PA6,GPIO,TSC_G2_IO3,AF3,TSC_G2_IO3,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,23,PA7,GPIO,ADC_IN7,,ADC_IN7,l053r8-package,l053r8-package
+stm32l053r8t6,23,PA7,GPIO,COMP2_OUT,AF7,COMP2_OUT,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,23,PA7,GPIO,LCD_SEG4,AF1,LCD_SEG4,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,23,PA7,GPIO,SPI1_MOSI,AF0,SPI1_MOSI,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,23,PA7,GPIO,TIM22_CH2,AF5,TIM22_CH2,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,23,PA7,GPIO,TSC_G2_IO4,AF3,TSC_G2_IO4,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,24,PC4,GPIO,ADC_IN14,,ADC_IN14,l053r8-package,l053r8-package
+stm32l053r8t6,24,PC4,GPIO,LCD_SEG22,AF1,LCD_SEG22,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,24,PC4,GPIO,LPUART1_TX,AF2,LPUART1_TX,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,25,PC5,GPIO,ADC_IN15,,ADC_IN15,l053r8-package,l053r8-package
+stm32l053r8t6,25,PC5,GPIO,LCD_SEG23,AF1,LCD_SEG23,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,25,PC5,GPIO,LPUART1_RX,AF2,LPUART1_RX,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,25,PC5,GPIO,TSC_G3_IO1,AF3,TSC_G3_IO1,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,26,PB0,GPIO,ADC_IN8,,ADC_IN8,l053r8-package,l053r8-package
+stm32l053r8t6,26,PB0,GPIO,LCD_SEG5,AF1,LCD_SEG5,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,26,PB0,GPIO,LCD_VLCD3,,LCD_VLCD3,l053r8-package,l053r8-package
+stm32l053r8t6,26,PB0,GPIO,SYS_VREF_OUT_PB0,,SYS_VREF_OUT_PB0,l053r8-package,l053r8-package
+stm32l053r8t6,26,PB0,GPIO,TSC_G3_IO2,AF3,TSC_G3_IO2,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,27,PB1,GPIO,ADC_IN9,,ADC_IN9,l053r8-package,l053r8-package
+stm32l053r8t6,27,PB1,GPIO,LCD_SEG6,AF1,LCD_SEG6,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,27,PB1,GPIO,LPUART1_DE,AF4,LPUART1_DE,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,27,PB1,GPIO,LPUART1_RTS,AF4,LPUART1_RTS,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,27,PB1,GPIO,SYS_VREF_OUT_PB1,,SYS_VREF_OUT_PB1,l053r8-package,l053r8-package
+stm32l053r8t6,27,PB1,GPIO,TSC_G3_IO3,AF3,TSC_G3_IO3,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,28,PB2,GPIO,LCD_VLCD2,,LCD_VLCD2,l053r8-package,l053r8-package
+stm32l053r8t6,28,PB2,GPIO,LPTIM1_OUT,AF2,LPTIM1_OUT,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,28,PB2,GPIO,TSC_G3_IO4,AF3,TSC_G3_IO4,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,29,PB10,GPIO,I2C2_SCL,AF6,I2C2_SCL,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,29,PB10,GPIO,LCD_SEG10,AF1,LCD_SEG10,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,29,PB10,GPIO,LPUART1_TX,AF4,LPUART1_TX,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,29,PB10,GPIO,SPI2_SCK,AF5,SPI2_SCK,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,29,PB10,GPIO,TIM2_CH3,AF2,TIM2_CH3,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,29,PB10,GPIO,TSC_SYNC,AF3,TSC_SYNC,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,30,PB11,GPIO,ADC_EXTI11,,ADC_EXTI11,l053r8-package,l053r8-package
+stm32l053r8t6,30,PB11,GPIO,I2C2_SDA,AF6,I2C2_SDA,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,30,PB11,GPIO,LCD_SEG11,AF1,LCD_SEG11,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,30,PB11,GPIO,LPUART1_RX,AF4,LPUART1_RX,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,30,PB11,GPIO,TIM2_CH4,AF2,TIM2_CH4,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,30,PB11,GPIO,TSC_G6_IO1,AF3,TSC_G6_IO1,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,31,VSS,GND,,,,l053r8-package,
+stm32l053r8t6,32,VDD,POWER,,,,l053r8-package,
+stm32l053r8t6,33,PB12,GPIO,I2S2_WS,AF0,I2S2_WS,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,33,PB12,GPIO,LCD_SEG12,AF1,LCD_SEG12,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,33,PB12,GPIO,LCD_VLCD1,,LCD_VLCD1,l053r8-package,l053r8-package
+stm32l053r8t6,33,PB12,GPIO,LPUART1_DE,AF2,LPUART1_DE,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,33,PB12,GPIO,LPUART1_RTS,AF2,LPUART1_RTS,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,33,PB12,GPIO,SPI2_NSS,AF0,SPI2_NSS,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,33,PB12,GPIO,TSC_G6_IO2,AF3,TSC_G6_IO2,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,34,PB13,GPIO,I2C2_SCL,AF5,I2C2_SCL,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,34,PB13,GPIO,I2S2_CK,AF0,I2S2_CK,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,34,PB13,GPIO,LCD_SEG13,AF1,LCD_SEG13,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,34,PB13,GPIO,LPUART1_CTS,AF4,LPUART1_CTS,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,34,PB13,GPIO,SPI2_SCK,AF0,SPI2_SCK,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,34,PB13,GPIO,TIM21_CH1,AF6,TIM21_CH1,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,34,PB13,GPIO,TSC_G6_IO3,AF3,TSC_G6_IO3,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,35,PB14,GPIO,I2C2_SDA,AF5,I2C2_SDA,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,35,PB14,GPIO,I2S2_MCK,AF0,I2S2_MCK,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,35,PB14,GPIO,LCD_SEG14,AF1,LCD_SEG14,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,35,PB14,GPIO,LPUART1_DE,AF4,LPUART1_DE,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,35,PB14,GPIO,LPUART1_RTS,AF4,LPUART1_RTS,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,35,PB14,GPIO,RTC_OUT_ALARM,AF2,RTC_OUT_ALARM,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,35,PB14,GPIO,RTC_OUT_CALIB,AF2,RTC_OUT_CALIB,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,35,PB14,GPIO,SPI2_MISO,AF0,SPI2_MISO,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,35,PB14,GPIO,TIM21_CH2,AF6,TIM21_CH2,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,35,PB14,GPIO,TSC_G6_IO4,AF3,TSC_G6_IO4,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,36,PB15,GPIO,I2S2_SD,AF0,I2S2_SD,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,36,PB15,GPIO,LCD_SEG15,AF1,LCD_SEG15,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,36,PB15,GPIO,RTC_REFIN,AF2,RTC_REFIN,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,36,PB15,GPIO,SPI2_MOSI,AF0,SPI2_MOSI,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,37,PC6,GPIO,LCD_SEG24,AF1,LCD_SEG24,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,37,PC6,GPIO,TIM22_CH1,AF0,TIM22_CH1,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,37,PC6,GPIO,TSC_G8_IO1,AF3,TSC_G8_IO1,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,38,PC7,GPIO,LCD_SEG25,AF1,LCD_SEG25,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,38,PC7,GPIO,TIM22_CH2,AF0,TIM22_CH2,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,38,PC7,GPIO,TSC_G8_IO2,AF3,TSC_G8_IO2,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,39,PC8,GPIO,LCD_SEG26,AF1,LCD_SEG26,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,39,PC8,GPIO,TIM22_ETR,AF0,TIM22_ETR,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,39,PC8,GPIO,TSC_G8_IO3,AF3,TSC_G8_IO3,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,40,PC9,GPIO,DAC_EXTI9,,DAC_EXTI9,l053r8-package,l053r8-package
+stm32l053r8t6,40,PC9,GPIO,LCD_SEG27,AF1,LCD_SEG27,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,40,PC9,GPIO,TIM21_ETR,AF0,TIM21_ETR,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,40,PC9,GPIO,TSC_G8_IO4,AF3,TSC_G8_IO4,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,40,PC9,GPIO,USB_NOE,AF2,USB_NOE,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,41,PA8,GPIO,CRS_SYNC,AF2,CRS_SYNC,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,41,PA8,GPIO,LCD_COM0,AF1,LCD_COM0,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,41,PA8,GPIO,RCC_MCO,AF0,RCC_MCO,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,41,PA8,GPIO,USART1_CK,AF4,USART1_CK,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,42,PA9,GPIO,DAC_EXTI9,,DAC_EXTI9,l053r8-package,l053r8-package
+stm32l053r8t6,42,PA9,GPIO,LCD_COM1,AF1,LCD_COM1,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,42,PA9,GPIO,RCC_MCO,AF0,RCC_MCO,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,42,PA9,GPIO,TSC_G4_IO1,AF3,TSC_G4_IO1,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,42,PA9,GPIO,USART1_TX,AF4,USART1_TX,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,43,PA10,GPIO,LCD_COM2,AF1,LCD_COM2,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,43,PA10,GPIO,TSC_G4_IO2,AF3,TSC_G4_IO2,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,43,PA10,GPIO,USART1_RX,AF4,USART1_RX,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,44,PA11,GPIO,ADC_EXTI11,,ADC_EXTI11,l053r8-package,l053r8-package
+stm32l053r8t6,44,PA11,GPIO,COMP1_OUT,AF7,COMP1_OUT,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,44,PA11,GPIO,SPI1_MISO,AF0,SPI1_MISO,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,44,PA11,GPIO,TSC_G4_IO3,AF3,TSC_G4_IO3,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,44,PA11,GPIO,USART1_CTS,AF4,USART1_CTS,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,44,PA11,GPIO,USB_DM,,USB_DM,l053r8-package,l053r8-package
+stm32l053r8t6,45,PA12,GPIO,COMP2_OUT,AF7,COMP2_OUT,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,45,PA12,GPIO,SPI1_MOSI,AF0,SPI1_MOSI,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,45,PA12,GPIO,TSC_G4_IO4,AF3,TSC_G4_IO4,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,45,PA12,GPIO,USART1_DE,AF4,USART1_DE,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,45,PA12,GPIO,USART1_RTS,AF4,USART1_RTS,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,45,PA12,GPIO,USB_DP,,USB_DP,l053r8-package,l053r8-package
+stm32l053r8t6,46,PA13,GPIO,SYS_SWDIO,AF0,SYS_SWDIO,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,46,PA13,GPIO,USB_NOE,AF2,USB_NOE,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,47,VSS,GND,,,,l053r8-package,
+stm32l053r8t6,48,VDD_USB,POWER,,,,l053r8-package,
+stm32l053r8t6,49,PA14,GPIO,SYS_SWCLK,AF0,SYS_SWCLK,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,49,PA14,GPIO,USART2_TX,AF4,USART2_TX,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,50,PA15,GPIO,LCD_SEG17,AF1,LCD_SEG17,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,50,PA15,GPIO,SPI1_NSS,AF0,SPI1_NSS,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,50,PA15,GPIO,TIM2_CH1,AF5,TIM2_CH1,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,50,PA15,GPIO,TIM2_ETR,AF2,TIM2_ETR,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,50,PA15,GPIO,USART2_RX,AF4,USART2_RX,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,51,PC10,GPIO,LCD_COM4,AF1,LCD_COM4,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,51,PC10,GPIO,LCD_SEG28,AF1,LCD_SEG28,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,51,PC10,GPIO,LPUART1_TX,AF0,LPUART1_TX,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,52,PC11,GPIO,ADC_EXTI11,,ADC_EXTI11,l053r8-package,l053r8-package
+stm32l053r8t6,52,PC11,GPIO,LCD_COM5,AF1,LCD_COM5,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,52,PC11,GPIO,LCD_SEG29,AF1,LCD_SEG29,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,52,PC11,GPIO,LPUART1_RX,AF0,LPUART1_RX,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,53,PC12,GPIO,LCD_COM6,AF1,LCD_COM6,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,53,PC12,GPIO,LCD_SEG30,AF1,LCD_SEG30,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,54,PD2,GPIO,LCD_COM7,AF1,LCD_COM7,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,54,PD2,GPIO,LCD_SEG31,AF1,LCD_SEG31,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,54,PD2,GPIO,LPUART1_DE,AF0,LPUART1_DE,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,54,PD2,GPIO,LPUART1_RTS,AF0,LPUART1_RTS,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,55,PB3,GPIO,COMP2_INM,,COMP2_INM,l053r8-package,l053r8-package
+stm32l053r8t6,55,PB3,GPIO,LCD_SEG7,AF1,LCD_SEG7,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,55,PB3,GPIO,SPI1_SCK,AF0,SPI1_SCK,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,55,PB3,GPIO,TIM2_CH2,AF2,TIM2_CH2,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,55,PB3,GPIO,TSC_G5_IO1,AF3,TSC_G5_IO1,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,56,PB4,GPIO,COMP2_INP,,COMP2_INP,l053r8-package,l053r8-package
+stm32l053r8t6,56,PB4,GPIO,LCD_SEG8,AF1,LCD_SEG8,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,56,PB4,GPIO,SPI1_MISO,AF0,SPI1_MISO,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,56,PB4,GPIO,TIM22_CH1,AF4,TIM22_CH1,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,56,PB4,GPIO,TSC_G5_IO2,AF3,TSC_G5_IO2,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,57,PB5,GPIO,COMP2_INP,,COMP2_INP,l053r8-package,l053r8-package
+stm32l053r8t6,57,PB5,GPIO,I2C1_SMBA,AF3,I2C1_SMBA,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,57,PB5,GPIO,LCD_SEG9,AF1,LCD_SEG9,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,57,PB5,GPIO,LPTIM1_IN1,AF2,LPTIM1_IN1,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,57,PB5,GPIO,SPI1_MOSI,AF0,SPI1_MOSI,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,57,PB5,GPIO,TIM22_CH2,AF4,TIM22_CH2,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,58,PB6,GPIO,COMP2_INP,,COMP2_INP,l053r8-package,l053r8-package
+stm32l053r8t6,58,PB6,GPIO,I2C1_SCL,AF1,I2C1_SCL,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,58,PB6,GPIO,LPTIM1_ETR,AF2,LPTIM1_ETR,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,58,PB6,GPIO,TSC_G5_IO3,AF3,TSC_G5_IO3,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,58,PB6,GPIO,USART1_TX,AF0,USART1_TX,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,59,PB7,GPIO,COMP2_INP,,COMP2_INP,l053r8-package,l053r8-package
+stm32l053r8t6,59,PB7,GPIO,I2C1_SDA,AF1,I2C1_SDA,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,59,PB7,GPIO,LPTIM1_IN2,AF2,LPTIM1_IN2,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,59,PB7,GPIO,SYS_PVD_IN,,SYS_PVD_IN,l053r8-package,l053r8-package
+stm32l053r8t6,59,PB7,GPIO,TSC_G5_IO4,AF3,TSC_G5_IO4,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,59,PB7,GPIO,USART1_RX,AF0,USART1_RX,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,60,BOOT0,SYSTEM,,,,l053r8-package,
+stm32l053r8t6,61,PB8,GPIO,I2C1_SCL,AF4,I2C1_SCL,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,61,PB8,GPIO,LCD_SEG16,AF1,LCD_SEG16,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,61,PB8,GPIO,TSC_SYNC,AF3,TSC_SYNC,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,62,PB9,GPIO,DAC_EXTI9,,DAC_EXTI9,l053r8-package,l053r8-package
+stm32l053r8t6,62,PB9,GPIO,I2C1_SDA,AF4,I2C1_SDA,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,62,PB9,GPIO,I2S2_WS,AF5,I2S2_WS,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,62,PB9,GPIO,LCD_COM3,AF1,LCD_COM3,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,62,PB9,GPIO,SPI2_NSS,AF5,SPI2_NSS,l053r8-package,l053r8-package | l053r8-modes
+stm32l053r8t6,63,VSS,GND,,,,l053r8-package,
+stm32l053r8t6,64,VDD,POWER,,,,l053r8-package,
