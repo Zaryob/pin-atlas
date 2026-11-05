@@ -571,7 +571,8 @@ $('#suggest-form').addEventListener('submit',event=>{
  if(hardwareRestoreError||!sameHardware(readHardwareDraft(),hardwareSettings)){$('#suggest-feedback').textContent=t('suggestApplyHardware');return;}
  try{validatePlan(assignments,board,t);}catch(error){$('#suggest-feedback').textContent=t('savedPlanConflict',{error:error.message});return;}
  const id=suggestionSequence;
- suggestionSnapshot={profile:board.id,pins:structuredClone(assignments),hardware:{...hardwareSettings}};
+ suggestionSnapshot={profile:board.id,pins:structuredClone(assignments),hardware:{...hardwareSettings},
+  stored:JSON.stringify(readPlanRecords(localStorage,savedRecords)[board.id]??null)};
  $('#suggest-run').disabled=true;$('#suggest-cancel').hidden=false;$('#suggest-feedback').textContent=t('suggestSearching');
  const fail=()=>{if(id!==suggestionSequence)return;suggestionWorker?.terminate();suggestionWorker=undefined;$('#suggest-run').disabled=false;$('#suggest-cancel').hidden=true;$('#suggest-feedback').textContent=t('suggestFailed');};
  try{
@@ -602,12 +603,11 @@ $('#suggest-results').addEventListener('click',event=>{
  const button=event.target.closest('[data-apply-suggestion]');if(!button||!suggestionResult||!suggestionSnapshot)return;
  const alternative=suggestionResult.alternatives[Number(button.dataset.applySuggestion)],snapshot=suggestionSnapshot;
  try{
-  const records=readPlanRecords(localStorage,savedRecords),record=records[board.id];
-  const storedPins=record?.pins||{},storedHardware=normalizeHardware(sourceBoard,record?.hardware||{},t);
+  const stored=JSON.stringify(readPlanRecords(localStorage,savedRecords)[board.id]??null);
   if(snapshot.profile!==board.id||!samePlan(snapshot.pins,assignments)||!sameHardware(snapshot.hardware,hardwareSettings)||
-     !samePlan(snapshot.pins,storedPins)||!sameHardware(snapshot.hardware,storedHardware)||!sameHardware(readHardwareDraft(),hardwareSettings))throw new Error(t('suggestStale'));
+     snapshot.stored!==stored||!sameHardware(readHardwareDraft(),hardwareSettings))throw new Error(t('suggestStale'));
   assignments=applySuggestion(assignments,alternative,board,t);
-  const stored=persist();renderMap();renderDetail();renderPlan();$('#plan-feedback').textContent=t(stored?'suggestApplied':'storageUnavailable');$('#plan-feedback').focus();
+  const saved=persist();renderMap();renderDetail();renderPlan();$('#plan-feedback').textContent=t(saved?'suggestApplied':'storageUnavailable');$('#plan-feedback').focus();
  }catch(error){invalidateSuggestions();$('#suggest-feedback').textContent=error.message;}
 });
 function renderPlan() {

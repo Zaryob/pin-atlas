@@ -23,6 +23,99 @@ async function openPlan(page) {
   else await page.locator('#plan-tab').click();
 }
 
+test('Nucleo bridge changes preserve old plans, reroute functions and persist with configuration',async({page})=>{
+ const raw=boards.find(b=>b.id==='nucleo-l432kc'),a5=raw.pins.find(p=>p.physicalLabel==='CN4.7');
+ const analog=a5.functions.find(f=>f.group==='ADC').name;
+ const saved={[raw.id]:{[a5.number]:{function:analog,label:'keep analog'}}};
+ await page.addInitScript(({key,saved})=>localStorage.setItem(key,JSON.stringify(saved)),{key:storageKey,saved});
+ await ready(page,'#board=nucleo-l432kc');await openPlan(page);
+ await page.locator('#hardware-config summary').first().click();
+ await page.locator('[data-hardware="SB16"]').selectOption('on');
+ await page.locator('#pin-suggestions summary').click();await page.locator('#suggest-run').click();
+ await expect(page.locator('#suggest-feedback')).toContainText('pending board configuration');
+ await page.locator('#apply-hardware').click();
+ await expect(page.locator('#plan-validation')).toContainText('unavailable on the applied board route');
+ await expect(page.locator('#plan-list')).toContainText('keep analog');
+ await page.reload();await expect(page.locator('#app-status')).toBeHidden();await openPlan(page);
+ await expect(page.locator('[data-hardware="SB16"]')).toHaveValue('on');
+ await page.locator('#hardware-config summary').first().click();
+ await page.locator('[data-hardware="SB16"]').selectOption('off');await page.locator('#apply-hardware').click();
+ await expect(page.locator('#plan-validation')).toBeEmpty();
+ const event=page.waitForEvent('download');await page.locator('#export-button').click();
+ const exported=JSON.parse(readFileSync(await (await event).path(),'utf8'));
+ expect(exported.version).toBe(2);expect(exported.hardware.SB16).toBe('off');expect(exported.pins).toEqual(saved[raw.id]);
+ expect(await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),storageKey)).toEqual(saved);
+});
+
+test('hardware import and share preview keep pins and settings together until saved',async({page})=>{
+ const raw=boards.find(b=>b.id==='nucleo-l432kc'),a5=raw.pins.find(p=>p.physicalLabel==='CN4.7');
+ const payload={version:2,board:raw.id,pins:{[a5.number]:{function:'GPIO',label:'routed'}},hardware:{SB16:'on',SB18:'off'}};
+ await ready(page,'#board=nucleo-l432kc');await openPlan(page);
+ const importFile=()=>page.locator('#import-file').setInputFiles({name:'configured.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(payload))});
+ await importFile();await expect(page.locator('#incoming-plan-configuration')).toContainText('SB16');
+ await page.locator('#incoming-plan-dialog [data-close]').last().click();
+ expect(await page.evaluate(()=>localStorage.getItem('pin-atlas:plans:v2'))).toBeNull();
+ await expect(page.locator('[data-hardware="SB16"]')).toHaveValue('unknown');
+ await importFile();await page.locator('#save-incoming-plan').click();
+ await expect(page.locator('#incoming-plan-dialog')).toBeHidden();
+ await expect(page.locator('#plan-list')).toContainText('routed');
+ await expect(page.locator('[data-hardware="SB16"]')).toHaveValue('on');
+ await page.locator('#share-button').click();const url=await page.locator('#share-url').inputValue();
+ await page.locator('#share-dialog [data-close]').click();
+ const tab=await page.context().newPage();await tab.goto(url);
+ await expect(tab.locator('#incoming-plan-configuration')).toContainText('ON · connected');
+ await tab.locator('#incoming-plan-dialog [data-close]').last().click();await tab.close();
+ expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('pin-atlas:plans:v2'))['nucleo-l432kc'].hardware.SB16)).toBe('on');
+});
+
+test('worker suggests and compares one SPI plus two UARTs without replacing a locked signal',async({page})=>{
+ const saved={picow:{1:{function:'UART0 TX',label:'console'}}};
+ await page.addInitScript(({key,saved})=>{if(!localStorage.getItem(key))localStorage.setItem(key,JSON.stringify(saved));},{key:storageKey,saved});
+ await ready(page,'#board=pico-family&profile=picow');await openPlan(page);
+ await page.locator('#pin-suggestions summary').click();await page.locator('#suggest-run').click();
+ await expect(page.locator('.suggestion')).toHaveCount(3);
+ await expect(page.locator('.suggestion').first()).toContainText('UART0');
+ await expect(page.locator('.suggestion').first()).toContainText('UART1');
+ await expect(page.locator('.suggestion').first()).toContainText('7 new pins · 1 assignments kept');
+ await page.locator('[data-apply-suggestion="0"]').click();
+ await expect(page.locator('#plan-count')).toHaveText('8');
+ expect(await page.evaluate(key=>JSON.parse(localStorage.getItem(key)).picow[1],storageKey)).toEqual(saved.picow[1]);
+ await page.reload();await expect(page.locator('#app-status')).toBeHidden();await openPlan(page);
+ await expect(page.locator('#plan-count')).toHaveText('8');
+ await page.locator('#pin-suggestions summary').click();await page.locator('#suggest-run').click();
+ await expect(page.locator('.suggestion').first()).toContainText('0 new pins · 8 assignments kept');
+});
+
+test('changed requirements discard suggestions and stale external plans cannot be overwritten',async({page})=>{
+ await ready(page,'#board=pico-family&profile=picow');await openPlan(page);
+ await page.locator('#pin-suggestions summary').click();await page.locator('#suggest-run').click();
+ await expect(page.locator('.suggestion')).toHaveCount(3);
+ await page.locator('[data-suggest-count="UART"]').fill('1');
+ await expect(page.locator('.suggestion')).toHaveCount(0);
+ await page.locator('#suggest-run').click();await expect(page.locator('.suggestion')).toHaveCount(3);
+ const other={1:{function:'GPIO',label:'other tab'}};
+ await page.evaluate(({key,other})=>localStorage.setItem(key,JSON.stringify({picow:other})),{key:storageKey,other});
+ await page.locator('[data-apply-suggestion="0"]').click();
+ await expect(page.locator('#suggest-feedback')).toContainText('changed');
+ expect(await page.evaluate(key=>JSON.parse(localStorage.getItem(key)).picow,storageKey)).toEqual(other);
+});
+
+test('suggestions keep working in memory after browser storage reaches its quota',async({page})=>{
+ await ready(page,'#board=pico-family&profile=picow');await openPlan(page);
+ await page.evaluate(()=>{
+  const original=Storage.prototype.setItem;
+  Storage.prototype.setItem=function(key,value){if(key.startsWith('pin-atlas:plans:'))throw new DOMException('Quota exceeded','QuotaExceededError');return original.call(this,key,value);};
+ });
+ await page.locator('#pin-suggestions summary').click();await page.locator('#suggest-run').click();
+ await expect(page.locator('.suggestion')).toHaveCount(3);await page.locator('[data-apply-suggestion="0"]').click();
+ await expect(page.locator('#plan-count')).toHaveText('8');
+ await expect(page.locator('#plan-feedback')).toContainText('Browser storage is unavailable');
+ await page.locator('#suggest-run').click();await expect(page.locator('.suggestion')).toHaveCount(1);
+ await page.locator('[data-apply-suggestion="0"]').click();
+ await expect(page.locator('#plan-count')).toHaveText('8');
+ await expect(page.locator('#suggest-feedback')).toBeEmpty();
+});
+
 test('Nucleo144 model changes retain the physical contact and old H723 wiring plans',async({page})=>{
  const saved={'nucleo-h723zg':{21:{function:'SPI1_MOSI',label:'legacy MOSI'}}};
  await page.addInitScript(({key,saved})=>localStorage.setItem(key,JSON.stringify(saved)),{key:storageKey,saved});
