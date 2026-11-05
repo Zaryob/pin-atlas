@@ -17,9 +17,13 @@ The library lists each physical layout once and names its compatible boards:
 - **NVIDIA Jetson Orin Nano:** the NVIDIA P3768 developer-kit carrier’s 40-pin J12 header, with SPI, I²C, UART, I²S, PWM and clock capabilities from the carrier specification. This is a separate pin map from Raspberry Pi; header signal names and pinmux requirements differ.
 - **STM32 Blue Pill:** the STM32-base community reference with two 20-pin side headers and four SWD connections. H1/H2/SWD positions are distinct from MCU package pins; the diagram includes the MCU pin mapping and shared LED, crystal, USB and debug connections. Check clone wiring and chip markings.
 - **STM32F103 packages:** separate LQFP-48 (STM32F103C8T6 / STM32F103CBT6 with 37 GPIOs), LQFP-64 (STM32F103RBT6 / STM32F103R8T6 with 51 GPIOs), and LQFP-100 (STM32F103VBT6 / STM32F103V8T6 with 80 GPIOs) views with raw MCU functions and full AFIO remap conditions from RM0008.
-- **STM32 Nucleo-64 family:** compatible MB1136 and MB1367 references share one 108-contact Arduino/ST Morpho entry. Select the exact model to retain its MCU functions, package links and solder-bridge notes. Nucleo-144 boards have separate physical entries.
+- **STM32 Nucleo-32 family:** F042K6 and L432KC share 30 MB1180 CN3/CN4 contacts, with separate LQFP-32 / UFQFPN-32 MCU references and I²C, VCP and oscillator bridge notes.
+- **STM32 Nucleo-64 family:** compatible MB1136 and MB1367 references share one 108-contact Arduino/ST Morpho entry. Select the exact model to retain its MCU functions, package links and solder-bridge notes.
+- **STM32 Nucleo-144 family:** F767ZI, H743ZI2 and H723ZG share 240 verified physical ST Zio/Morpho positions across CN7–CN12. Model references retain their own MCU, power nets and circuit restrictions; the corrected H723 mapping preserves existing assignment IDs.
+- **WeAct Black Pill v3.x:** F401CC and F411CE share one 44-contact entry, including four SWD contacts. Electrical names and positions are parsed from the manufacturer's pinned KiCad symbol and footprint; package references, USB, boot, key, LED and optional-flash notes remain explicit.
 - **Additional Nucleo models:** F446RE, F303RE, L476RG, F072RB, L053R8 and L152RE, each linked to its exact STM32 package. Their pin maps use the locked UM1724 manual tables and pinned manufacturer XML; CI verifies the recorded tables without downloading the manual PDF.
 - **STM32 package views:** STM32F446RET6, F303RET6, L476RGT6, F072RBT6, L053R8T6 and L152RET6 (LQFP-64), plus standalone STM32F405RGT6 (LQFP-64) and STM32F407VGT6 (LQFP-100). Package pad numbers and GPIO alternate-function selectors come from ST's pinned XML sources.
+- **Additional STM32 packages:** F042K6T6 (LQFP-32), L432KCU6 (UFQFPN-32), F767ZIT6 / H743ZIT6 (LQFP-144), and F401CCU6 / F411CEU6 (UFQFPN-48), linked to their exact board references. UFQFPN drawings cover the perimeter pads numbered by the source XML.
 - **Arduino UNO-format headers:** UNO R3, Leonardo, UNO R4 Minima and UNO R4 WiFi share 32 main-header positions in one entry. Choose the MCU reference for the correct I²C, SPI, ADC, PWM, DAC and CAN signals. Each reference includes its six-contact main-MCU SPI/ICSP connector; BOOT replaces NC on R4.
 - **Arduino Nano headers:** classic Nano and Nano Every share 30 side contacts in one entry. Classic Nano adds six ICSP contacts and has analog-only A6/A7; Every has digital-capable A6/A7, different PWM support and no ICSP in this map.
 - **Arduino Mega 2560 Rev3:** 92 header contacts including the end header and main MCU ICSP, 70 independent GPIOs, 16 analog inputs and 15 PWM outputs. SPI uses D50–D53.
@@ -41,6 +45,12 @@ Boards with a verified MCU package link support selecting a contact or package p
 The [verification summary](public/data/verification.json) lists the dataset totals and source profiles. The central GND pad on RP2040 and RP2350 packages sits outside the perimeter pin count. The schematic drawings show pin positions and are not mechanical CAD layouts.
 
 ## Usage
+
+**Add a peripheral** in the wiring plan selects verified SPI, I²C or UART/USART signal roles from one peripheral instance. It preserves existing assignments and shows the selected pins' circuit notes and sources. Duplicate routes and incompatible STM32 AFIO remap settings are rejected; conflicting legacy browser entries remain visible with a warning.
+
+**Print / Save PDF** creates a source-backed wiring table through the browser's print dialog. **Download SVG** includes the full top-view pin map, selected functions, labels and source locators; colors and artwork are embedded for offline use.
+
+The home page loads a roughly 56 KB catalog summary. Pin maps and their evidence load on demand with content-addressed profile files, cached navigation and a persistent retry that retains the selected model and saved plans.
 
 Select pins, filter interfaces, search, switch to a table, mirror or rotate the diagram by 180°, add custom labels, and save a wiring plan per board. Start with an unfiltered map. Pin details prioritize matching or common functions; expand **More functions** for the rest. References are expandable, and the wiring plan has its own tab. On smaller screens, pin selection opens a detail sheet with a persistent save action. Import and export plans as JSON or share them with a link. Filters match any selected interface. The map displays the first two matching functions, and the table displays all matches.
 
@@ -73,7 +83,7 @@ python3 scripts/jekyll.py install
 npm run dev
 ```
 
-Open `http://127.0.0.1:4173`. Run `npm run build` to generate `_site/` from `public/` and check the built asset paths. Run `npm run check` for the JavaScript, data, and static path checks.
+Open `http://127.0.0.1:4173`. Run `npm run build` to generate `_site/` from `public/` and check the built asset paths. The repository checks require the Python packages in `requirements-source-verification.txt` (including the profile schema validator); install them in your Python environment before `npm run check`.
 
 For browser regression checks, install the test dependencies and Chromium, then build the GitHub Pages project-path preview:
 
@@ -105,14 +115,17 @@ To regenerate the dataset after reviewing the sources, run:
 
 ```sh
 python3 scripts/verify-official-sources.py --write
+npm run build:data
 npm run check
 ```
 
 `--write` regenerates `boards.json`, `evidence.json`, and `verification.json` in `public/data/` and the pin-by-pin CSV in `sources/`. When changing a document revision, review the manufacturer document and update its hash and any affected visual observations.
 
+`npm run build:data` generates the small runtime catalog and profile/evidence bundles after validating full shared geometry. `npm run check` verifies that these files match the source dataset. The separate [weekly source audit](.github/workflows/source-audit.yml) cold-downloads recorded URLs and checks their hashes, keeping external CDN availability out of the deployment path.
+
 ## Add a board
 
-Blue Pill, the listed Arduino/Espressif references and AVR/STM32 packages are supported. Additional boards and packages need their own source records. Add the manufacturer, model, revision, physical connections, alternate functions, and official source locations together. Update the generator and source records alongside the dataset so the change passes verification.
+Follow [Adding a verified board or MCU](docs/ADDING-BOARDS.md). Profiles must satisfy the common JSON schema, board/package net contracts and source locks. Add the manufacturer, exact model/revision, physical connections, functions and source locations together; update the generator, runtime bundles and regression checks alongside the dataset.
 
 Diagram renderers are `pico`, `header`, `dip`, `qfn`, `lqfp`, and `custom`. The quad renderer uses the verified `packageName` for TQFP/LQFP and expands dense 100-pin packages to keep their labels separated. A `custom` board can use a local SVG and `pins[].position` coordinates. SVG paths resolve from the app base, including deployments under `/pin-atlas/`. The coordinates mark the connection center, `side` sets the label direction, and `angle` controls optional rotation.
 

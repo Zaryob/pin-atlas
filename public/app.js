@@ -543,7 +543,7 @@ function renderPeripheralPins() {
 function renderPeripheralNotes() {
  const bus=availablePeripherals(board).find(bus=>bus.id===$('#peripheral-bus').value);
  const chosen=$$('[data-peripheral-role]').map(el=>bus?.candidates.find(c=>c.key===el.value)).filter(Boolean);
- $('#peripheral-notes').innerHTML=`<p>${esc(t('peripheralElectrical',{voltage:board.voltage}))}</p>`+chosen.map(({pin,fn})=>{
+ $('#peripheral-notes').innerHTML=`<p>${esc(t('peripheralElectrical',{voltage:board.voltage}))}</p>${bus?.group==='SPI'?`<p>${esc(t('peripheralChipSelect'))}</p>`:''}`+chosen.map(({pin,fn})=>{
    const notes=[pin.noteKey?t(pin.noteKey):pin.note, pin.strapping?t('espStrappingNote'):'',pin.boardCircuitKey?t(pin.boardCircuitKey):'',pin.analogCautionKey?t(pin.analogCautionKey):'',pin.fiveVoltTolerant!==undefined?t(pin.fiveVoltTolerant?'stm32FTNote':'stm32NonFTNote'):'',fn.configuration?t('remapNote'):''].filter(Boolean);
    return `<p><strong>${esc(physicalLabel(pin)+' · '+pin.name)}</strong> ${esc(notes.join(' '))} ${referenceLink(fn.configurationEvidence || fn.evidence,t('functionSource'),'')}</p>`;
  }).join('');
@@ -1097,7 +1097,7 @@ $('#export-svg').addEventListener('click',async()=>{
  try {filters=new Set();search='';connectorZoom='';flipped=rotated=false;markup=renderers[board.layout]();}
  finally {({filters,search,connectorZoom,flipped,rotated}=state);}
  const host=document.createElement('div');host.className='output-diagram'+(isChip(board)?' qfn-diagram':'');
- host.style.cssText='position:absolute;left:-20000px;top:0;width:1000px;pointer-events:none';host.innerHTML=markup;
+ host.style.cssText='position:absolute;left:-20000px;top:0;width:1000px;pointer-events:none;--paper:#fff;--surface:#f4f6f2;--ink:#17221d;--muted:#53645a;--line:#ced8d0;--accent:#286449;--pin-gpio:#246a43;--pin-power:#9c4c13;--pin-gnd:#4b5b62;--pin-system:#745291;--pin-adc:#8c5518';host.innerHTML=markup;
  host.querySelectorAll('.selected,.net-contact').forEach(node=>node.classList.remove('selected','net-contact'));
  document.body.append(host);
  try {

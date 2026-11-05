@@ -156,9 +156,11 @@ test('SVG and printable PDF retain model, labels, full board geometry and source
  const parsed=await page.evaluate(svg=>{
   const xml=new DOMParser().parseFromString(svg,'image/svg+xml');
   return {errors:xml.querySelectorAll('parsererror').length,pins:xml.querySelectorAll('[data-pin]').length,
-   images:[...xml.querySelectorAll('image')].map(img=>img.getAttribute('href'))};
+   images:[...xml.querySelectorAll('image')].map(img=>img.getAttribute('href')),
+   labelFill:xml.querySelector('.connector-signal')?.getAttribute('fill')};
  },svg);
  expect(parsed.errors).toBe(0);expect(parsed.pins).toBe(108);
+ expect(parsed.labelFill).toBe('rgb(23, 34, 29)');
  expect(parsed.images.length).toBeGreaterThan(0);expect(parsed.images.every(href=>href.startsWith('data:'))).toBe(true);
  await expect(page.locator('#connector-zoom')).toHaveValue('CN7');
  await page.evaluate(()=>window.dispatchEvent(new Event('beforeprint')));
