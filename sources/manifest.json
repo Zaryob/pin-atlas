@@ -890,6 +890,26 @@
       "publisher": "STMicroelectronics",
       "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
       "sha256": "231d60eaac1d5198efd5da046b9c690372da6fa6d337ad09888982b466a2461a"
+    },
+    {
+      "id": "l152re-package",
+      "title": "STM32L152RE CubeMX package data",
+      "file": "l152re-package.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32L152RETx.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32L152RETx.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "4999bbe777c51c85cc8ac1a465a977458dae5556d04b087e85fbf39bb091031c"
+    },
+    {
+      "id": "l152re-modes",
+      "title": "STM32L152RE CubeMX modes data",
+      "file": "l152re-modes.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32L162xE_gpio_v1_0_Modes.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32L162xE_gpio_v1_0_Modes.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "d2e5b2fe0afc431c0979e25bb5e41ecf781d6e7ea2d109901cbceffabaf15e90"
     }
   ],
   "publishers": [

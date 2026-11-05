@@ -13,6 +13,7 @@ MODELS = {
     'l476rg': {'arduino': [(52, 1), (53, 0)], 'morpho': [(61, 0)], 'tables': (23, 32)},
     'f072rb': {'arduino': [(37, 0), (38, 0)], 'morpho': [(55, 0)], 'tables': (11, 26)},
     'l053r8': {'arduino': [(45, 0)], 'morpho': [(59, 0)], 'tables': (17, 30)},
+    'l152re': {'arduino': [(50, 0), (51, 0)], 'morpho': [(59, 0)], 'tables': (21, 30)},
 }
 PACKAGES = ()
 

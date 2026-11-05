@@ -84,3 +84,15 @@ test('L053R8 retains its MCU, low-power clock and analog input mapping',()=>{
   const supply=board.pins.find(pin=>pin.physicalLabel==='CN7.33');
   assert.equal(supply.name,'VLCD');
 });
+
+test('L152RE retains its MCU, low-power clock and analog input mapping',()=>{
+  const board=boards.find(board=>board.id==='nucleo-l152re');
+  const chip=boards.find(board=>board.id==='stm32l152ret6');
+  assert.equal(chip.clock,'32 MHz');assert.equal(chip.gpioCount,51);
+  assert.equal(chip.packagePins,64);assert(chip.processor.includes('Cortex-M3'));
+  const a0=board.pins.find(pin=>pin.physicalLabel==='CN8.1');
+  assert.equal(a0.name,'PA0');assert.equal(a0.mcuPin,14);
+  assert(a0.functions.some(fn=>fn.name==='ADC_IN0'));
+  const supply=board.pins.find(pin=>pin.physicalLabel==='CN7.33');
+  assert.equal(supply.name,'VLCD');
+});

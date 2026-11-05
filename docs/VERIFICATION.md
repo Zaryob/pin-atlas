@@ -175,3 +175,5 @@ UM1724 raw table cells are hash-locked in `sources/extracted/nucleo-um1724-r14.j
 - **NUCLEO-F072RB / STM32F072RBT6:** UM1724 Rev 14 tables 11 (pp. 37–38) / 26 (p. 55); Cortex-M0, 48 MHz, LQFP-64 and 51 GPIO-capable pads. Package pins and AF selectors are independently extracted from the pinned manufacturer XML.
 
 - **NUCLEO-L053R8 / STM32L053R8T6:** UM1724 Rev 14 tables 17 (p. 45) / 30 (p. 59); Cortex-M0+, 32 MHz, LQFP-64 and 51 GPIO-capable pads. Package pins and AF selectors are independently extracted from the pinned manufacturer XML.
+
+- **NUCLEO-L152RE / STM32L152RET6:** UM1724 Rev 14 tables 21 (pp. 50–51) / 30 (p. 59); Cortex-M3, 32 MHz, LQFP-64 and 51 GPIO-capable pads. Package pins and AF selectors are independently extracted from the pinned manufacturer XML.
