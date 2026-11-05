@@ -169,3 +169,5 @@ The shared Nucleo-64 catalog groups connector positions only. Each model retains
 UM1724 raw table cells are hash-locked in `sources/extracted/nucleo-um1724-r14.json`. CI applies the same parser to those cells and does not require the manual PDF to be cached or downloadable. The original-PDF path remains available for independent comparison.
 
 - **NUCLEO-F303RE / STM32F303RET6:** UM1724 Table 14 (pp. 41–42) and Table 26 (p. 55); Cortex-M4, 72 MHz, LQFP-64 with 51 GPIO-capable pads. Table 14 omits the D0 row: CN9.1 uses the common MB1136 position, and D0 → PA3 is corroborated by the pinned official STM32duino F303RE variant. The supplementary source is attached to that contact.
+
+- **NUCLEO-L476RG / STM32L476RGT6:** UM1724 Rev 14 tables 23 (pp. 52–53) / 32 (p. 61); Cortex-M4, 80 MHz, LQFP-64 and 51 GPIO-capable pads. Package pins and AF selectors are independently extracted from the pinned manufacturer XML.

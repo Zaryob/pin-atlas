@@ -829,6 +829,26 @@
       "publisher": "STMicroelectronics",
       "revision": "b18163265c827fc3b1f1396c4d09221b4821a405",
       "sha256": "e822dd21c70403a0b18f5fbcf125acb0a4ec4eb9a54f6e17fd6657381a249c56"
+    },
+    {
+      "id": "l476rg-package",
+      "title": "STM32L476RG CubeMX package data",
+      "file": "l476rg-package.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32L476R(C-E-G)Tx.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32L476R(C-E-G)Tx.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "982e5774b8667f7e7a9a1204edfa4c0ccee62a7560cc890eeffce73763e93da7"
+    },
+    {
+      "id": "l476rg-modes",
+      "title": "STM32L476RG CubeMX modes data",
+      "file": "l476rg-modes.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32L47x_gpio_v1_0_Modes.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32L47x_gpio_v1_0_Modes.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "02304a9fab76e957140923a766f367928e3a89550849acbe9ee4b050ba1a893e"
     }
   ],
   "references": {
@@ -2353,6 +2373,54 @@
       "method": "pdf-table"
     },
     "nucleo-f303re-top-view": {
+      "document": "nucleo-um1724-r14",
+      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
+      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=32",
+      "page": 32,
+      "locator": "MB1136 top view · connector positions, rows and numbering",
+      "method": "visual-diagram"
+    },
+    "l476rg-package": {
+      "document": "l476rg-package",
+      "title": "STM32L476RG CubeMX package data",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32L476R(C-E-G)Tx.xml",
+      "page": null,
+      "locator": "LQFP64 numbered package pins and physical signals",
+      "method": "manufacturer-xml"
+    },
+    "l476rg-modes": {
+      "document": "l476rg-modes",
+      "title": "STM32L476RG CubeMX modes data",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32L47x_gpio_v1_0_Modes.xml",
+      "page": null,
+      "locator": "STM32L47x_gpio_v1_0 GPIO alternate function selectors",
+      "method": "manufacturer-xml"
+    },
+    "nucleo-l476rg-arduino-52": {
+      "document": "nucleo-um1724-r14",
+      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
+      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=52",
+      "page": 52,
+      "locator": "Table 23 · Arduino headers",
+      "method": "pdf-table"
+    },
+    "nucleo-l476rg-arduino-53": {
+      "document": "nucleo-um1724-r14",
+      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
+      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=53",
+      "page": 53,
+      "locator": "Table 23 · Arduino headers",
+      "method": "pdf-table"
+    },
+    "nucleo-l476rg-morpho-61": {
+      "document": "nucleo-um1724-r14",
+      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
+      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=61",
+      "page": 61,
+      "locator": "Table 32 · ST Morpho headers",
+      "method": "pdf-table"
+    },
+    "nucleo-l476rg-top-view": {
       "document": "nucleo-um1724-r14",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
       "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=32",

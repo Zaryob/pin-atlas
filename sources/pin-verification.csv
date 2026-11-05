@@ -14410,3 +14410,1102 @@ stm32f303ret6,62,PB9,GPIO,TIM8_CH3,AF10,TIM8_CH3,f303re-package,f303re-package |
 stm32f303ret6,62,PB9,GPIO,USART3_TX,AF7,USART3_TX,f303re-package,f303re-package | f303re-modes
 stm32f303ret6,63,VSS,GND,,,,f303re-package,
 stm32f303ret6,64,VDD,POWER,,,,f303re-package,
+nucleo-l476rg,1,PC10,GPIO,LCD_COM4,AF11,LCD_COM4,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,1,PC10,GPIO,LCD_SEG28,AF11,LCD_SEG28,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,1,PC10,GPIO,LCD_SEG40,AF11,LCD_SEG40,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,1,PC10,GPIO,SAI2_SCK_B,AF13,SAI2_SCK_B,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,1,PC10,GPIO,SDMMC1_D2,AF12,SDMMC1_D2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,1,PC10,GPIO,SPI3_SCK,AF6,SPI3_SCK,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,1,PC10,GPIO,TSC_G3_IO2,AF9,TSC_G3_IO2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,1,PC10,GPIO,UART4_TX,AF8,UART4_TX,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,1,PC10,GPIO,USART3_TX,AF7,USART3_TX,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,2,PC11,GPIO,ADC1_EXTI11,,ADC1_EXTI11,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,2,PC11,GPIO,ADC2_EXTI11,,ADC2_EXTI11,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,2,PC11,GPIO,ADC3_EXTI11,,ADC3_EXTI11,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,2,PC11,GPIO,LCD_COM5,AF11,LCD_COM5,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,2,PC11,GPIO,LCD_SEG29,AF11,LCD_SEG29,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,2,PC11,GPIO,LCD_SEG41,AF11,LCD_SEG41,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,2,PC11,GPIO,SAI2_MCLK_B,AF13,SAI2_MCLK_B,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,2,PC11,GPIO,SDMMC1_D3,AF12,SDMMC1_D3,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,2,PC11,GPIO,SPI3_MISO,AF6,SPI3_MISO,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,2,PC11,GPIO,TSC_G3_IO3,AF9,TSC_G3_IO3,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,2,PC11,GPIO,UART4_RX,AF8,UART4_RX,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,2,PC11,GPIO,USART3_RX,AF7,USART3_RX,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,3,PC12,GPIO,LCD_COM6,AF11,LCD_COM6,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,3,PC12,GPIO,LCD_SEG30,AF11,LCD_SEG30,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,3,PC12,GPIO,LCD_SEG42,AF11,LCD_SEG42,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,3,PC12,GPIO,SAI2_SD_B,AF13,SAI2_SD_B,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,3,PC12,GPIO,SDMMC1_CK,AF12,SDMMC1_CK,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,3,PC12,GPIO,SPI3_MOSI,AF6,SPI3_MOSI,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,3,PC12,GPIO,TSC_G3_IO4,AF9,TSC_G3_IO4,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,3,PC12,GPIO,UART5_TX,AF8,UART5_TX,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,3,PC12,GPIO,USART3_CK,AF7,USART3_CK,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,4,PD2,GPIO,LCD_COM7,AF11,LCD_COM7,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,4,PD2,GPIO,LCD_SEG31,AF11,LCD_SEG31,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,4,PD2,GPIO,LCD_SEG43,AF11,LCD_SEG43,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,4,PD2,GPIO,SDMMC1_CMD,AF12,SDMMC1_CMD,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,4,PD2,GPIO,TIM3_ETR,AF2,TIM3_ETR,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,4,PD2,GPIO,TSC_SYNC,AF9,TSC_SYNC,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,4,PD2,GPIO,UART5_RX,AF8,UART5_RX,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,4,PD2,GPIO,USART3_DE,AF7,USART3_DE,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,4,PD2,GPIO,USART3_RTS,AF7,USART3_RTS,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,5,VDD,POWER,,,,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,
+nucleo-l476rg,6,E5V,POWER,,,,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view,
+nucleo-l476rg,7,BOOT0,SYSTEM,,,,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,
+nucleo-l476rg,8,GND,GND,,,,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view,
+nucleo-l476rg,9,NC,SYSTEM,,,,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view,
+nucleo-l476rg,10,NC,SYSTEM,,,,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view,
+nucleo-l476rg,11,NC,SYSTEM,,,,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view,
+nucleo-l476rg,12,IOREF,POWER,,,,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view,
+nucleo-l476rg,13,PA13,GPIO,IR_OUT,AF1,IR_OUT,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,13,PA13,GPIO,SYS_JTMS-SWDIO,AF0,SYS_JTMS-SWDIO,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,13,PA13,GPIO,USB_OTG_FS_NOE,AF10,USB_OTG_FS_NOE,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,14,RESET,SYSTEM,,,,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,
+nucleo-l476rg,15,PA14,GPIO,SYS_JTCK-SWCLK,AF0,SYS_JTCK-SWCLK,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,16,+3.3V,POWER,,,,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view,
+nucleo-l476rg,17,PA15,GPIO,ADC1_EXTI15,,ADC1_EXTI15,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,17,PA15,GPIO,ADC2_EXTI15,,ADC2_EXTI15,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,17,PA15,GPIO,ADC3_EXTI15,,ADC3_EXTI15,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,17,PA15,GPIO,LCD_SEG17,AF11,LCD_SEG17,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,17,PA15,GPIO,SAI2_FS_B,AF13,SAI2_FS_B,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,17,PA15,GPIO,SPI1_NSS,AF5,SPI1_NSS,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,17,PA15,GPIO,SPI3_NSS,AF6,SPI3_NSS,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,17,PA15,GPIO,SYS_JTDI,AF0,SYS_JTDI,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,17,PA15,GPIO,TIM2_CH1,AF1,TIM2_CH1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,17,PA15,GPIO,TIM2_ETR,AF2,TIM2_ETR,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,17,PA15,GPIO,TSC_G3_IO1,AF9,TSC_G3_IO1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,17,PA15,GPIO,UART4_DE,AF8,UART4_DE,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,17,PA15,GPIO,UART4_RTS,AF8,UART4_RTS,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,18,+5V,POWER,,,,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view,
+nucleo-l476rg,19,GND,GND,,,,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view,
+nucleo-l476rg,20,GND,GND,,,,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view,
+nucleo-l476rg,21,PB7,GPIO,COMP2_INM,,COMP2_INM,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,21,PB7,GPIO,DFSDM1_CKIN5,AF6,DFSDM1_CKIN5,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,21,PB7,GPIO,I2C1_SDA,AF4,I2C1_SDA,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,21,PB7,GPIO,LCD_SEG21,AF11,LCD_SEG21,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,21,PB7,GPIO,LPTIM1_IN2,AF1,LPTIM1_IN2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,21,PB7,GPIO,SYS_PVD_IN,,SYS_PVD_IN,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,21,PB7,GPIO,TIM17_CH1N,AF14,TIM17_CH1N,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,21,PB7,GPIO,TIM4_CH2,AF2,TIM4_CH2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,21,PB7,GPIO,TIM8_BKIN,AF3,TIM8_BKIN,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,21,PB7,GPIO,TIM8_BKIN_COMP1,AF13,TIM8_BKIN_COMP1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,21,PB7,GPIO,TSC_G2_IO4,AF9,TSC_G2_IO4,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,21,PB7,GPIO,UART4_CTS,AF8,UART4_CTS,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,21,PB7,GPIO,USART1_RX,AF7,USART1_RX,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,22,GND,GND,,,,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view,
+nucleo-l476rg,23,PC13,GPIO,RTC_OUT_ALARM,,RTC_OUT_ALARM,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,23,PC13,GPIO,RTC_OUT_CALIB,,RTC_OUT_CALIB,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,23,PC13,GPIO,RTC_TAMP1,,RTC_TAMP1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,23,PC13,GPIO,RTC_TS,,RTC_TS,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,23,PC13,GPIO,SYS_WKUP2,,SYS_WKUP2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,24,VIN,POWER,,,,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view,
+nucleo-l476rg,25,PC14,GPIO,RCC_OSC32_IN,,RCC_OSC32_IN,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,26,NC,SYSTEM,,,,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view,
+nucleo-l476rg,27,PC15,GPIO,ADC1_EXTI15,,ADC1_EXTI15,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,27,PC15,GPIO,ADC2_EXTI15,,ADC2_EXTI15,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,27,PC15,GPIO,ADC3_EXTI15,,ADC3_EXTI15,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,27,PC15,GPIO,RCC_OSC32_OUT,,RCC_OSC32_OUT,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,28,PA0,GPIO,ADC1_IN5,,ADC1_IN5,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,28,PA0,GPIO,ADC2_IN5,,ADC2_IN5,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,28,PA0,GPIO,OPAMP1_VINP,,OPAMP1_VINP,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,28,PA0,GPIO,RTC_TAMP2,,RTC_TAMP2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,28,PA0,GPIO,SAI1_EXTCLK,AF13,SAI1_EXTCLK,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,28,PA0,GPIO,SYS_WKUP1,,SYS_WKUP1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,28,PA0,GPIO,TIM2_CH1,AF1,TIM2_CH1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,28,PA0,GPIO,TIM2_ETR,AF14,TIM2_ETR,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,28,PA0,GPIO,TIM5_CH1,AF2,TIM5_CH1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,28,PA0,GPIO,TIM8_ETR,AF3,TIM8_ETR,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,28,PA0,GPIO,UART4_TX,AF8,UART4_TX,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,28,PA0,GPIO,USART2_CTS,AF7,USART2_CTS,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,29,PH0,GPIO,RCC_OSC_IN,,RCC_OSC_IN,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,30,PA1,GPIO,ADC1_IN6,,ADC1_IN6,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,30,PA1,GPIO,ADC2_IN6,,ADC2_IN6,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,30,PA1,GPIO,LCD_SEG0,AF11,LCD_SEG0,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,30,PA1,GPIO,OPAMP1_VINM,,OPAMP1_VINM,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,30,PA1,GPIO,TIM15_CH1N,AF14,TIM15_CH1N,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,30,PA1,GPIO,TIM2_CH2,AF1,TIM2_CH2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,30,PA1,GPIO,TIM5_CH2,AF2,TIM5_CH2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,30,PA1,GPIO,UART4_RX,AF8,UART4_RX,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,30,PA1,GPIO,USART2_DE,AF7,USART2_DE,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,30,PA1,GPIO,USART2_RTS,AF7,USART2_RTS,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,31,PH1,GPIO,RCC_OSC_OUT,,RCC_OSC_OUT,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,32,PA4,GPIO,ADC1_IN9,,ADC1_IN9,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,32,PA4,GPIO,ADC2_IN9,,ADC2_IN9,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,32,PA4,GPIO,DAC1_OUT1,,DAC1_OUT1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,32,PA4,GPIO,LPTIM2_OUT,AF14,LPTIM2_OUT,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,32,PA4,GPIO,SAI1_FS_B,AF13,SAI1_FS_B,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,32,PA4,GPIO,SPI1_NSS,AF5,SPI1_NSS,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,32,PA4,GPIO,SPI3_NSS,AF6,SPI3_NSS,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,32,PA4,GPIO,USART2_CK,AF7,USART2_CK,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,33,VBAT,POWER,,,,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,
+nucleo-l476rg,34,PB0,GPIO,ADC1_IN15,,ADC1_IN15,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,34,PB0,GPIO,ADC2_IN15,,ADC2_IN15,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,34,PB0,GPIO,COMP1_OUT,AF12,COMP1_OUT,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,34,PB0,GPIO,LCD_SEG5,AF11,LCD_SEG5,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,34,PB0,GPIO,OPAMP2_VOUT,,OPAMP2_VOUT,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,34,PB0,GPIO,QUADSPI_BK1_IO1,AF10,QUADSPI_BK1_IO1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,34,PB0,GPIO,TIM1_CH2N,AF1,TIM1_CH2N,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,34,PB0,GPIO,TIM3_CH3,AF2,TIM3_CH3,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,34,PB0,GPIO,TIM8_CH2N,AF3,TIM8_CH2N,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,34,PB0,GPIO,USART3_CK,AF7,USART3_CK,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,35,PC2,GPIO,ADC1_IN3,,ADC1_IN3,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,35,PC2,GPIO,ADC2_IN3,,ADC2_IN3,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,35,PC2,GPIO,ADC3_IN3,,ADC3_IN3,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,35,PC2,GPIO,DFSDM1_CKOUT,AF6,DFSDM1_CKOUT,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,35,PC2,GPIO,LCD_SEG20,AF11,LCD_SEG20,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,35,PC2,GPIO,LPTIM1_IN2,AF1,LPTIM1_IN2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,35,PC2,GPIO,SPI2_MISO,AF5,SPI2_MISO,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,36,PC1,GPIO,ADC1_IN2,,ADC1_IN2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,36,PC1,GPIO,ADC2_IN2,,ADC2_IN2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,36,PC1,GPIO,ADC3_IN2,,ADC3_IN2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,36,PC1,GPIO,DFSDM1_CKIN4,AF6,DFSDM1_CKIN4,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,36,PC1,GPIO,I2C3_SDA,AF4,I2C3_SDA,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,36,PC1,GPIO,LCD_SEG19,AF11,LCD_SEG19,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,36,PC1,GPIO,LPTIM1_OUT,AF1,LPTIM1_OUT,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,36,PC1,GPIO,LPUART1_TX,AF8,LPUART1_TX,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,37,PC3,GPIO,ADC1_IN4,,ADC1_IN4,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,37,PC3,GPIO,ADC2_IN4,,ADC2_IN4,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,37,PC3,GPIO,ADC3_IN4,,ADC3_IN4,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,37,PC3,GPIO,LCD_VLCD,AF11,LCD_VLCD,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,37,PC3,GPIO,LPTIM1_ETR,AF1,LPTIM1_ETR,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,37,PC3,GPIO,LPTIM2_ETR,AF14,LPTIM2_ETR,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,37,PC3,GPIO,SAI1_SD_A,AF13,SAI1_SD_A,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,37,PC3,GPIO,SPI2_MOSI,AF5,SPI2_MOSI,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,38,PC0,GPIO,ADC1_IN1,,ADC1_IN1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,38,PC0,GPIO,ADC2_IN1,,ADC2_IN1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,38,PC0,GPIO,ADC3_IN1,,ADC3_IN1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,38,PC0,GPIO,DFSDM1_DATIN4,AF6,DFSDM1_DATIN4,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,38,PC0,GPIO,I2C3_SCL,AF4,I2C3_SCL,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,38,PC0,GPIO,LCD_SEG18,AF11,LCD_SEG18,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,38,PC0,GPIO,LPTIM1_IN1,AF1,LPTIM1_IN1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,38,PC0,GPIO,LPTIM2_IN1,AF14,LPTIM2_IN1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,38,PC0,GPIO,LPUART1_RX,AF8,LPUART1_RX,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,39,NC,SYSTEM,,,,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view,
+nucleo-l476rg,40,IOREF,POWER,,,,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view,
+nucleo-l476rg,41,NRST,SYSTEM,,,,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,
+nucleo-l476rg,42,+3.3V,POWER,,,,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view,
+nucleo-l476rg,43,+5V,POWER,,,,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view,
+nucleo-l476rg,44,GND,GND,,,,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view,
+nucleo-l476rg,45,GND,GND,,,,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view,
+nucleo-l476rg,46,VIN,POWER,,,,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view,
+nucleo-l476rg,47,PA0,GPIO,ADC1_IN5,,ADC1_IN5,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,47,PA0,GPIO,ADC2_IN5,,ADC2_IN5,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,47,PA0,GPIO,OPAMP1_VINP,,OPAMP1_VINP,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,47,PA0,GPIO,RTC_TAMP2,,RTC_TAMP2,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,47,PA0,GPIO,SAI1_EXTCLK,AF13,SAI1_EXTCLK,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,47,PA0,GPIO,SYS_WKUP1,,SYS_WKUP1,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,47,PA0,GPIO,TIM2_CH1,AF1,TIM2_CH1,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,47,PA0,GPIO,TIM2_ETR,AF14,TIM2_ETR,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,47,PA0,GPIO,TIM5_CH1,AF2,TIM5_CH1,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,47,PA0,GPIO,TIM8_ETR,AF3,TIM8_ETR,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,47,PA0,GPIO,UART4_TX,AF8,UART4_TX,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,47,PA0,GPIO,USART2_CTS,AF7,USART2_CTS,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,48,PA1,GPIO,ADC1_IN6,,ADC1_IN6,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,48,PA1,GPIO,ADC2_IN6,,ADC2_IN6,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,48,PA1,GPIO,LCD_SEG0,AF11,LCD_SEG0,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,48,PA1,GPIO,OPAMP1_VINM,,OPAMP1_VINM,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,48,PA1,GPIO,TIM15_CH1N,AF14,TIM15_CH1N,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,48,PA1,GPIO,TIM2_CH2,AF1,TIM2_CH2,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,48,PA1,GPIO,TIM5_CH2,AF2,TIM5_CH2,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,48,PA1,GPIO,UART4_RX,AF8,UART4_RX,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,48,PA1,GPIO,USART2_DE,AF7,USART2_DE,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,48,PA1,GPIO,USART2_RTS,AF7,USART2_RTS,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,49,PA4,GPIO,ADC1_IN9,,ADC1_IN9,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,49,PA4,GPIO,ADC2_IN9,,ADC2_IN9,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,49,PA4,GPIO,DAC1_OUT1,,DAC1_OUT1,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,49,PA4,GPIO,LPTIM2_OUT,AF14,LPTIM2_OUT,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,49,PA4,GPIO,SAI1_FS_B,AF13,SAI1_FS_B,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,49,PA4,GPIO,SPI1_NSS,AF5,SPI1_NSS,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,49,PA4,GPIO,SPI3_NSS,AF6,SPI3_NSS,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,49,PA4,GPIO,USART2_CK,AF7,USART2_CK,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,50,PB0,GPIO,ADC1_IN15,,ADC1_IN15,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,50,PB0,GPIO,ADC2_IN15,,ADC2_IN15,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,50,PB0,GPIO,COMP1_OUT,AF12,COMP1_OUT,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,50,PB0,GPIO,LCD_SEG5,AF11,LCD_SEG5,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,50,PB0,GPIO,OPAMP2_VOUT,,OPAMP2_VOUT,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,50,PB0,GPIO,QUADSPI_BK1_IO1,AF10,QUADSPI_BK1_IO1,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,50,PB0,GPIO,TIM1_CH2N,AF1,TIM1_CH2N,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,50,PB0,GPIO,TIM3_CH3,AF2,TIM3_CH3,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,50,PB0,GPIO,TIM8_CH2N,AF3,TIM8_CH2N,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,50,PB0,GPIO,USART3_CK,AF7,USART3_CK,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,51,PC1,GPIO,ADC1_IN2,,ADC1_IN2,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,51,PC1,GPIO,ADC2_IN2,,ADC2_IN2,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,51,PC1,GPIO,ADC3_IN2,,ADC3_IN2,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,51,PC1,GPIO,DFSDM1_CKIN4,AF6,DFSDM1_CKIN4,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,51,PC1,GPIO,I2C3_SDA,AF4,I2C3_SDA,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,51,PC1,GPIO,LCD_SEG19,AF11,LCD_SEG19,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,51,PC1,GPIO,LPTIM1_OUT,AF1,LPTIM1_OUT,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,51,PC1,GPIO,LPUART1_TX,AF8,LPUART1_TX,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,52,PC0,GPIO,ADC1_IN1,,ADC1_IN1,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,52,PC0,GPIO,ADC2_IN1,,ADC2_IN1,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,52,PC0,GPIO,ADC3_IN1,,ADC3_IN1,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,52,PC0,GPIO,DFSDM1_DATIN4,AF6,DFSDM1_DATIN4,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,52,PC0,GPIO,I2C3_SCL,AF4,I2C3_SCL,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,52,PC0,GPIO,LCD_SEG18,AF11,LCD_SEG18,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,52,PC0,GPIO,LPTIM1_IN1,AF1,LPTIM1_IN1,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,52,PC0,GPIO,LPTIM2_IN1,AF14,LPTIM2_IN1,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,52,PC0,GPIO,LPUART1_RX,AF8,LPUART1_RX,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,53,PC9,GPIO,DAC1_EXTI9,,DAC1_EXTI9,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,53,PC9,GPIO,LCD_SEG27,AF11,LCD_SEG27,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,53,PC9,GPIO,SAI2_EXTCLK,AF13,SAI2_EXTCLK,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,53,PC9,GPIO,SDMMC1_D1,AF12,SDMMC1_D1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,53,PC9,GPIO,TIM3_CH4,AF2,TIM3_CH4,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,53,PC9,GPIO,TIM8_BKIN2,AF1,TIM8_BKIN2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,53,PC9,GPIO,TIM8_BKIN2_COMP1,AF14,TIM8_BKIN2_COMP1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,53,PC9,GPIO,TIM8_CH4,AF3,TIM8_CH4,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,53,PC9,GPIO,TSC_G4_IO4,AF9,TSC_G4_IO4,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,53,PC9,GPIO,USB_OTG_FS_NOE,AF10,USB_OTG_FS_NOE,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,54,PC8,GPIO,LCD_SEG26,AF11,LCD_SEG26,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,54,PC8,GPIO,SDMMC1_D0,AF12,SDMMC1_D0,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,54,PC8,GPIO,TIM3_CH3,AF2,TIM3_CH3,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,54,PC8,GPIO,TIM8_CH3,AF3,TIM8_CH3,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,54,PC8,GPIO,TSC_G4_IO3,AF9,TSC_G4_IO3,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,55,PB8,GPIO,CAN1_RX,AF9,CAN1_RX,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,55,PB8,GPIO,DFSDM1_DATIN6,AF6,DFSDM1_DATIN6,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,55,PB8,GPIO,I2C1_SCL,AF4,I2C1_SCL,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,55,PB8,GPIO,LCD_SEG16,AF11,LCD_SEG16,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,55,PB8,GPIO,SAI1_MCLK_A,AF13,SAI1_MCLK_A,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,55,PB8,GPIO,SDMMC1_D4,AF12,SDMMC1_D4,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,55,PB8,GPIO,TIM16_CH1,AF14,TIM16_CH1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,55,PB8,GPIO,TIM4_CH3,AF2,TIM4_CH3,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,56,PC6,GPIO,DFSDM1_CKIN3,AF6,DFSDM1_CKIN3,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,56,PC6,GPIO,LCD_SEG24,AF11,LCD_SEG24,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,56,PC6,GPIO,SAI2_MCLK_A,AF13,SAI2_MCLK_A,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,56,PC6,GPIO,SDMMC1_D6,AF12,SDMMC1_D6,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,56,PC6,GPIO,TIM3_CH1,AF2,TIM3_CH1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,56,PC6,GPIO,TIM8_CH1,AF3,TIM8_CH1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,56,PC6,GPIO,TSC_G4_IO1,AF9,TSC_G4_IO1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,57,PB9,GPIO,CAN1_TX,AF9,CAN1_TX,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,57,PB9,GPIO,DAC1_EXTI9,,DAC1_EXTI9,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,57,PB9,GPIO,DFSDM1_CKIN6,AF6,DFSDM1_CKIN6,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,57,PB9,GPIO,I2C1_SDA,AF4,I2C1_SDA,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,57,PB9,GPIO,IR_OUT,AF1,IR_OUT,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,57,PB9,GPIO,LCD_COM3,AF11,LCD_COM3,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,57,PB9,GPIO,SAI1_FS_A,AF13,SAI1_FS_A,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,57,PB9,GPIO,SDMMC1_D5,AF12,SDMMC1_D5,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,57,PB9,GPIO,SPI2_NSS,AF5,SPI2_NSS,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,57,PB9,GPIO,TIM17_CH1,AF14,TIM17_CH1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,57,PB9,GPIO,TIM4_CH4,AF2,TIM4_CH4,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,58,PC5,GPIO,ADC1_IN14,,ADC1_IN14,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,58,PC5,GPIO,ADC2_IN14,,ADC2_IN14,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,58,PC5,GPIO,COMP1_INP,,COMP1_INP,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,58,PC5,GPIO,LCD_SEG23,AF11,LCD_SEG23,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,58,PC5,GPIO,SYS_WKUP5,,SYS_WKUP5,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,58,PC5,GPIO,USART3_RX,AF7,USART3_RX,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,59,AVDD,POWER,,,,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,
+nucleo-l476rg,60,U5V,POWER,,,,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view,
+nucleo-l476rg,61,GND,GND,,,,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view,
+nucleo-l476rg,62,NC,SYSTEM,,,,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view,
+nucleo-l476rg,63,PA5,GPIO,ADC1_IN10,,ADC1_IN10,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,63,PA5,GPIO,ADC2_IN10,,ADC2_IN10,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,63,PA5,GPIO,DAC1_OUT2,,DAC1_OUT2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,63,PA5,GPIO,LPTIM2_ETR,AF14,LPTIM2_ETR,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,63,PA5,GPIO,SPI1_SCK,AF5,SPI1_SCK,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,63,PA5,GPIO,TIM2_CH1,AF1,TIM2_CH1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,63,PA5,GPIO,TIM2_ETR,AF2,TIM2_ETR,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,63,PA5,GPIO,TIM8_CH1N,AF3,TIM8_CH1N,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,64,PA12,GPIO,CAN1_TX,AF9,CAN1_TX,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,64,PA12,GPIO,TIM1_ETR,AF1,TIM1_ETR,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,64,PA12,GPIO,USART1_DE,AF7,USART1_DE,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,64,PA12,GPIO,USART1_RTS,AF7,USART1_RTS,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,64,PA12,GPIO,USB_OTG_FS_DP,AF10,USB_OTG_FS_DP,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,65,PA6,GPIO,ADC1_IN11,,ADC1_IN11,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,65,PA6,GPIO,ADC2_IN11,,ADC2_IN11,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,65,PA6,GPIO,LCD_SEG3,AF11,LCD_SEG3,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,65,PA6,GPIO,OPAMP2_VINP,,OPAMP2_VINP,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,65,PA6,GPIO,QUADSPI_BK1_IO3,AF10,QUADSPI_BK1_IO3,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,65,PA6,GPIO,SPI1_MISO,AF5,SPI1_MISO,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,65,PA6,GPIO,TIM16_CH1,AF14,TIM16_CH1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,65,PA6,GPIO,TIM1_BKIN,AF1,TIM1_BKIN,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,65,PA6,GPIO,TIM1_BKIN_COMP2,AF12,TIM1_BKIN_COMP2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,65,PA6,GPIO,TIM3_CH1,AF2,TIM3_CH1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,65,PA6,GPIO,TIM8_BKIN,AF3,TIM8_BKIN,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,65,PA6,GPIO,TIM8_BKIN_COMP2,AF13,TIM8_BKIN_COMP2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,65,PA6,GPIO,USART3_CTS,AF7,USART3_CTS,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,66,PA11,GPIO,ADC1_EXTI11,,ADC1_EXTI11,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,66,PA11,GPIO,ADC2_EXTI11,,ADC2_EXTI11,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,66,PA11,GPIO,ADC3_EXTI11,,ADC3_EXTI11,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,66,PA11,GPIO,CAN1_RX,AF9,CAN1_RX,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,66,PA11,GPIO,TIM1_BKIN2,AF2,TIM1_BKIN2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,66,PA11,GPIO,TIM1_BKIN2_COMP1,AF12,TIM1_BKIN2_COMP1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,66,PA11,GPIO,TIM1_CH4,AF1,TIM1_CH4,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,66,PA11,GPIO,USART1_CTS,AF7,USART1_CTS,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,66,PA11,GPIO,USB_OTG_FS_DM,AF10,USB_OTG_FS_DM,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,67,PA7,GPIO,ADC1_IN12,,ADC1_IN12,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,67,PA7,GPIO,ADC2_IN12,,ADC2_IN12,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,67,PA7,GPIO,LCD_SEG4,AF11,LCD_SEG4,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,67,PA7,GPIO,OPAMP2_VINM,,OPAMP2_VINM,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,67,PA7,GPIO,QUADSPI_BK1_IO2,AF10,QUADSPI_BK1_IO2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,67,PA7,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,67,PA7,GPIO,TIM17_CH1,AF14,TIM17_CH1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,67,PA7,GPIO,TIM1_CH1N,AF1,TIM1_CH1N,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,67,PA7,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,67,PA7,GPIO,TIM8_CH1N,AF3,TIM8_CH1N,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,68,PB12,GPIO,DFSDM1_DATIN1,AF6,DFSDM1_DATIN1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,68,PB12,GPIO,I2C2_SMBA,AF4,I2C2_SMBA,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,68,PB12,GPIO,LCD_SEG12,AF11,LCD_SEG12,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,68,PB12,GPIO,LPUART1_DE,AF8,LPUART1_DE,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,68,PB12,GPIO,LPUART1_RTS,AF8,LPUART1_RTS,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,68,PB12,GPIO,SAI2_FS_A,AF13,SAI2_FS_A,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,68,PB12,GPIO,SPI2_NSS,AF5,SPI2_NSS,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,68,PB12,GPIO,SWPMI1_IO,AF12,SWPMI1_IO,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,68,PB12,GPIO,TIM15_BKIN,AF14,TIM15_BKIN,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,68,PB12,GPIO,TIM1_BKIN,AF1,TIM1_BKIN,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,68,PB12,GPIO,TIM1_BKIN_COMP2,AF3,TIM1_BKIN_COMP2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,68,PB12,GPIO,TSC_G1_IO1,AF9,TSC_G1_IO1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,68,PB12,GPIO,USART3_CK,AF7,USART3_CK,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,69,PB6,GPIO,COMP2_INP,,COMP2_INP,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,69,PB6,GPIO,DFSDM1_DATIN5,AF6,DFSDM1_DATIN5,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,69,PB6,GPIO,I2C1_SCL,AF4,I2C1_SCL,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,69,PB6,GPIO,LPTIM1_ETR,AF1,LPTIM1_ETR,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,69,PB6,GPIO,SAI1_FS_B,AF13,SAI1_FS_B,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,69,PB6,GPIO,TIM16_CH1N,AF14,TIM16_CH1N,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,69,PB6,GPIO,TIM4_CH1,AF2,TIM4_CH1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,69,PB6,GPIO,TIM8_BKIN2,AF3,TIM8_BKIN2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,69,PB6,GPIO,TIM8_BKIN2_COMP2,AF12,TIM8_BKIN2_COMP2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,69,PB6,GPIO,TSC_G2_IO3,AF9,TSC_G2_IO3,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,69,PB6,GPIO,USART1_TX,AF7,USART1_TX,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,70,PB11,GPIO,ADC1_EXTI11,,ADC1_EXTI11,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,70,PB11,GPIO,ADC2_EXTI11,,ADC2_EXTI11,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,70,PB11,GPIO,ADC3_EXTI11,,ADC3_EXTI11,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,70,PB11,GPIO,COMP2_OUT,AF12,COMP2_OUT,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,70,PB11,GPIO,DFSDM1_CKIN7,AF6,DFSDM1_CKIN7,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,70,PB11,GPIO,I2C2_SDA,AF4,I2C2_SDA,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,70,PB11,GPIO,LCD_SEG11,AF11,LCD_SEG11,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,70,PB11,GPIO,LPUART1_TX,AF8,LPUART1_TX,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,70,PB11,GPIO,QUADSPI_NCS,AF10,QUADSPI_NCS,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,70,PB11,GPIO,TIM2_CH4,AF1,TIM2_CH4,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,70,PB11,GPIO,USART3_RX,AF7,USART3_RX,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,71,PC7,GPIO,DFSDM1_DATIN3,AF6,DFSDM1_DATIN3,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,71,PC7,GPIO,LCD_SEG25,AF11,LCD_SEG25,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,71,PC7,GPIO,SAI2_MCLK_B,AF13,SAI2_MCLK_B,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,71,PC7,GPIO,SDMMC1_D7,AF12,SDMMC1_D7,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,71,PC7,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,71,PC7,GPIO,TIM8_CH2,AF3,TIM8_CH2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,71,PC7,GPIO,TSC_G4_IO2,AF9,TSC_G4_IO2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,72,GND,GND,,,,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view,
+nucleo-l476rg,73,PA9,GPIO,DAC1_EXTI9,,DAC1_EXTI9,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,73,PA9,GPIO,LCD_COM1,AF11,LCD_COM1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,73,PA9,GPIO,TIM15_BKIN,AF14,TIM15_BKIN,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,73,PA9,GPIO,TIM1_CH2,AF1,TIM1_CH2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,73,PA9,GPIO,USART1_TX,AF7,USART1_TX,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,73,PA9,GPIO,USB_OTG_FS_VBUS,,USB_OTG_FS_VBUS,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,74,PB2,GPIO,COMP1_INP,,COMP1_INP,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,74,PB2,GPIO,DFSDM1_CKIN0,AF6,DFSDM1_CKIN0,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,74,PB2,GPIO,I2C3_SMBA,AF4,I2C3_SMBA,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,74,PB2,GPIO,LPTIM1_OUT,AF1,LPTIM1_OUT,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,74,PB2,GPIO,RTC_OUT_ALARM,AF0,RTC_OUT_ALARM,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,74,PB2,GPIO,RTC_OUT_CALIB,AF0,RTC_OUT_CALIB,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,75,PA8,GPIO,LCD_COM0,AF11,LCD_COM0,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,75,PA8,GPIO,LPTIM2_OUT,AF14,LPTIM2_OUT,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,75,PA8,GPIO,RCC_MCO,AF0,RCC_MCO,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,75,PA8,GPIO,TIM1_CH1,AF1,TIM1_CH1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,75,PA8,GPIO,USART1_CK,AF7,USART1_CK,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,75,PA8,GPIO,USB_OTG_FS_SOF,AF10,USB_OTG_FS_SOF,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,76,PB1,GPIO,ADC1_IN16,,ADC1_IN16,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,76,PB1,GPIO,ADC2_IN16,,ADC2_IN16,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,76,PB1,GPIO,COMP1_INM,,COMP1_INM,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,76,PB1,GPIO,DFSDM1_DATIN0,AF6,DFSDM1_DATIN0,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,76,PB1,GPIO,LCD_SEG6,AF11,LCD_SEG6,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,76,PB1,GPIO,LPTIM2_IN1,AF14,LPTIM2_IN1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,76,PB1,GPIO,QUADSPI_BK1_IO0,AF10,QUADSPI_BK1_IO0,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,76,PB1,GPIO,TIM1_CH3N,AF1,TIM1_CH3N,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,76,PB1,GPIO,TIM3_CH4,AF2,TIM3_CH4,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,76,PB1,GPIO,TIM8_CH3N,AF3,TIM8_CH3N,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,76,PB1,GPIO,USART3_DE,AF7,USART3_DE,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,76,PB1,GPIO,USART3_RTS,AF7,USART3_RTS,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,77,PB10,GPIO,COMP1_OUT,AF12,COMP1_OUT,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,77,PB10,GPIO,DFSDM1_DATIN7,AF6,DFSDM1_DATIN7,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,77,PB10,GPIO,I2C2_SCL,AF4,I2C2_SCL,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,77,PB10,GPIO,LCD_SEG10,AF11,LCD_SEG10,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,77,PB10,GPIO,LPUART1_RX,AF8,LPUART1_RX,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,77,PB10,GPIO,QUADSPI_CLK,AF10,QUADSPI_CLK,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,77,PB10,GPIO,SAI1_SCK_A,AF13,SAI1_SCK_A,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,77,PB10,GPIO,SPI2_SCK,AF5,SPI2_SCK,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,77,PB10,GPIO,TIM2_CH3,AF1,TIM2_CH3,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,77,PB10,GPIO,USART3_TX,AF7,USART3_TX,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,78,PB15,GPIO,ADC1_EXTI15,,ADC1_EXTI15,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,78,PB15,GPIO,ADC2_EXTI15,,ADC2_EXTI15,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,78,PB15,GPIO,ADC3_EXTI15,,ADC3_EXTI15,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,78,PB15,GPIO,DFSDM1_CKIN2,AF6,DFSDM1_CKIN2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,78,PB15,GPIO,LCD_SEG15,AF11,LCD_SEG15,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,78,PB15,GPIO,RTC_REFIN,AF0,RTC_REFIN,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,78,PB15,GPIO,SAI2_SD_A,AF13,SAI2_SD_A,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,78,PB15,GPIO,SPI2_MOSI,AF5,SPI2_MOSI,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,78,PB15,GPIO,SWPMI1_SUSPEND,AF12,SWPMI1_SUSPEND,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,78,PB15,GPIO,TIM15_CH2,AF14,TIM15_CH2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,78,PB15,GPIO,TIM1_CH3N,AF1,TIM1_CH3N,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,78,PB15,GPIO,TIM8_CH3N,AF3,TIM8_CH3N,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,78,PB15,GPIO,TSC_G1_IO4,AF9,TSC_G1_IO4,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,79,PB4,GPIO,COMP2_INP,,COMP2_INP,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,79,PB4,GPIO,LCD_SEG8,AF11,LCD_SEG8,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,79,PB4,GPIO,SAI1_MCLK_B,AF13,SAI1_MCLK_B,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,79,PB4,GPIO,SPI1_MISO,AF5,SPI1_MISO,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,79,PB4,GPIO,SPI3_MISO,AF6,SPI3_MISO,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,79,PB4,GPIO,SYS_JTRST,AF0,SYS_JTRST,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,79,PB4,GPIO,TIM17_BKIN,AF14,TIM17_BKIN,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,79,PB4,GPIO,TIM3_CH1,AF2,TIM3_CH1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,79,PB4,GPIO,TSC_G2_IO1,AF9,TSC_G2_IO1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,79,PB4,GPIO,UART5_DE,AF8,UART5_DE,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,79,PB4,GPIO,UART5_RTS,AF8,UART5_RTS,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,79,PB4,GPIO,USART1_CTS,AF7,USART1_CTS,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,80,PB14,GPIO,DFSDM1_DATIN2,AF6,DFSDM1_DATIN2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,80,PB14,GPIO,I2C2_SDA,AF4,I2C2_SDA,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,80,PB14,GPIO,LCD_SEG14,AF11,LCD_SEG14,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,80,PB14,GPIO,SAI2_MCLK_A,AF13,SAI2_MCLK_A,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,80,PB14,GPIO,SPI2_MISO,AF5,SPI2_MISO,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,80,PB14,GPIO,SWPMI1_RX,AF12,SWPMI1_RX,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,80,PB14,GPIO,TIM15_CH1,AF14,TIM15_CH1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,80,PB14,GPIO,TIM1_CH2N,AF1,TIM1_CH2N,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,80,PB14,GPIO,TIM8_CH2N,AF3,TIM8_CH2N,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,80,PB14,GPIO,TSC_G1_IO3,AF9,TSC_G1_IO3,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,80,PB14,GPIO,USART3_DE,AF7,USART3_DE,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,80,PB14,GPIO,USART3_RTS,AF7,USART3_RTS,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,81,PB5,GPIO,COMP2_OUT,AF12,COMP2_OUT,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,81,PB5,GPIO,I2C1_SMBA,AF4,I2C1_SMBA,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,81,PB5,GPIO,LCD_SEG9,AF11,LCD_SEG9,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,81,PB5,GPIO,LPTIM1_IN1,AF1,LPTIM1_IN1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,81,PB5,GPIO,SAI1_SD_B,AF13,SAI1_SD_B,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,81,PB5,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,81,PB5,GPIO,SPI3_MOSI,AF6,SPI3_MOSI,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,81,PB5,GPIO,TIM16_BKIN,AF14,TIM16_BKIN,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,81,PB5,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,81,PB5,GPIO,TSC_G2_IO2,AF9,TSC_G2_IO2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,81,PB5,GPIO,UART5_CTS,AF8,UART5_CTS,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,81,PB5,GPIO,USART1_CK,AF7,USART1_CK,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,82,PB13,GPIO,DFSDM1_CKIN1,AF6,DFSDM1_CKIN1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,82,PB13,GPIO,I2C2_SCL,AF4,I2C2_SCL,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,82,PB13,GPIO,LCD_SEG13,AF11,LCD_SEG13,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,82,PB13,GPIO,LPUART1_CTS,AF8,LPUART1_CTS,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,82,PB13,GPIO,SAI2_SCK_A,AF13,SAI2_SCK_A,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,82,PB13,GPIO,SPI2_SCK,AF5,SPI2_SCK,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,82,PB13,GPIO,SWPMI1_TX,AF12,SWPMI1_TX,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,82,PB13,GPIO,TIM15_CH1N,AF14,TIM15_CH1N,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,82,PB13,GPIO,TIM1_CH1N,AF1,TIM1_CH1N,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,82,PB13,GPIO,TSC_G1_IO2,AF9,TSC_G1_IO2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,82,PB13,GPIO,USART3_CTS,AF7,USART3_CTS,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,83,PB3,GPIO,COMP2_INM,,COMP2_INM,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,83,PB3,GPIO,LCD_SEG7,AF11,LCD_SEG7,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,83,PB3,GPIO,SAI1_SCK_B,AF13,SAI1_SCK_B,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,83,PB3,GPIO,SPI1_SCK,AF5,SPI1_SCK,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,83,PB3,GPIO,SPI3_SCK,AF6,SPI3_SCK,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,83,PB3,GPIO,SYS_JTDO-SWO,AF0,SYS_JTDO-SWO,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,83,PB3,GPIO,TIM2_CH2,AF1,TIM2_CH2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,83,PB3,GPIO,USART1_DE,AF7,USART1_DE,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,83,PB3,GPIO,USART1_RTS,AF7,USART1_RTS,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,84,AGND,GND,,,,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view,
+nucleo-l476rg,85,PA10,GPIO,LCD_COM2,AF11,LCD_COM2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,85,PA10,GPIO,TIM17_BKIN,AF14,TIM17_BKIN,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,85,PA10,GPIO,TIM1_CH3,AF1,TIM1_CH3,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,85,PA10,GPIO,USART1_RX,AF7,USART1_RX,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,85,PA10,GPIO,USB_OTG_FS_ID,AF10,USB_OTG_FS_ID,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,86,PC4,GPIO,ADC1_IN13,,ADC1_IN13,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,86,PC4,GPIO,ADC2_IN13,,ADC2_IN13,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,86,PC4,GPIO,COMP1_INM,,COMP1_INM,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,86,PC4,GPIO,LCD_SEG22,AF11,LCD_SEG22,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,86,PC4,GPIO,USART3_TX,AF7,USART3_TX,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,87,PA2,GPIO,ADC1_IN7,,ADC1_IN7,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,87,PA2,GPIO,ADC2_IN7,,ADC2_IN7,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,87,PA2,GPIO,LCD_SEG1,AF11,LCD_SEG1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,87,PA2,GPIO,RCC_LSCO,,RCC_LSCO,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,87,PA2,GPIO,SAI2_EXTCLK,AF13,SAI2_EXTCLK,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,87,PA2,GPIO,SYS_WKUP4,,SYS_WKUP4,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,87,PA2,GPIO,TIM15_CH1,AF14,TIM15_CH1,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,87,PA2,GPIO,TIM2_CH3,AF1,TIM2_CH3,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,87,PA2,GPIO,TIM5_CH3,AF2,TIM5_CH3,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,87,PA2,GPIO,USART2_TX,AF7,USART2_TX,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,88,NC,SYSTEM,,,,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view,
+nucleo-l476rg,89,PA3,GPIO,ADC1_IN8,,ADC1_IN8,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,89,PA3,GPIO,ADC2_IN8,,ADC2_IN8,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,89,PA3,GPIO,LCD_SEG2,AF11,LCD_SEG2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,89,PA3,GPIO,OPAMP1_VOUT,,OPAMP1_VOUT,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,89,PA3,GPIO,TIM15_CH2,AF14,TIM15_CH2,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,89,PA3,GPIO,TIM2_CH4,AF1,TIM2_CH4,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,89,PA3,GPIO,TIM5_CH4,AF2,TIM5_CH4,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,89,PA3,GPIO,USART2_RX,AF7,USART2_RX,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,90,NC,SYSTEM,,,,nucleo-l476rg-morpho-61 | nucleo-l476rg-top-view,
+nucleo-l476rg,91,PA9,GPIO,DAC1_EXTI9,,DAC1_EXTI9,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,91,PA9,GPIO,LCD_COM1,AF11,LCD_COM1,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,91,PA9,GPIO,TIM15_BKIN,AF14,TIM15_BKIN,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,91,PA9,GPIO,TIM1_CH2,AF1,TIM1_CH2,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,91,PA9,GPIO,USART1_TX,AF7,USART1_TX,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,91,PA9,GPIO,USB_OTG_FS_VBUS,,USB_OTG_FS_VBUS,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,92,PC7,GPIO,DFSDM1_DATIN3,AF6,DFSDM1_DATIN3,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,92,PC7,GPIO,LCD_SEG25,AF11,LCD_SEG25,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,92,PC7,GPIO,SAI2_MCLK_B,AF13,SAI2_MCLK_B,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,92,PC7,GPIO,SDMMC1_D7,AF12,SDMMC1_D7,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,92,PC7,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,92,PC7,GPIO,TIM8_CH2,AF3,TIM8_CH2,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,92,PC7,GPIO,TSC_G4_IO2,AF9,TSC_G4_IO2,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,93,PB6,GPIO,COMP2_INP,,COMP2_INP,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,93,PB6,GPIO,DFSDM1_DATIN5,AF6,DFSDM1_DATIN5,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,93,PB6,GPIO,I2C1_SCL,AF4,I2C1_SCL,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,93,PB6,GPIO,LPTIM1_ETR,AF1,LPTIM1_ETR,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,93,PB6,GPIO,SAI1_FS_B,AF13,SAI1_FS_B,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,93,PB6,GPIO,TIM16_CH1N,AF14,TIM16_CH1N,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,93,PB6,GPIO,TIM4_CH1,AF2,TIM4_CH1,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,93,PB6,GPIO,TIM8_BKIN2,AF3,TIM8_BKIN2,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,93,PB6,GPIO,TIM8_BKIN2_COMP2,AF12,TIM8_BKIN2_COMP2,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,93,PB6,GPIO,TSC_G2_IO3,AF9,TSC_G2_IO3,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,93,PB6,GPIO,USART1_TX,AF7,USART1_TX,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,94,PA7,GPIO,ADC1_IN12,,ADC1_IN12,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,94,PA7,GPIO,ADC2_IN12,,ADC2_IN12,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,94,PA7,GPIO,LCD_SEG4,AF11,LCD_SEG4,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,94,PA7,GPIO,OPAMP2_VINM,,OPAMP2_VINM,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,94,PA7,GPIO,QUADSPI_BK1_IO2,AF10,QUADSPI_BK1_IO2,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,94,PA7,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,94,PA7,GPIO,TIM17_CH1,AF14,TIM17_CH1,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,94,PA7,GPIO,TIM1_CH1N,AF1,TIM1_CH1N,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,94,PA7,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,94,PA7,GPIO,TIM8_CH1N,AF3,TIM8_CH1N,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,95,PA6,GPIO,ADC1_IN11,,ADC1_IN11,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,95,PA6,GPIO,ADC2_IN11,,ADC2_IN11,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,95,PA6,GPIO,LCD_SEG3,AF11,LCD_SEG3,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,95,PA6,GPIO,OPAMP2_VINP,,OPAMP2_VINP,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,95,PA6,GPIO,QUADSPI_BK1_IO3,AF10,QUADSPI_BK1_IO3,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,95,PA6,GPIO,SPI1_MISO,AF5,SPI1_MISO,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,95,PA6,GPIO,TIM16_CH1,AF14,TIM16_CH1,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,95,PA6,GPIO,TIM1_BKIN,AF1,TIM1_BKIN,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,95,PA6,GPIO,TIM1_BKIN_COMP2,AF12,TIM1_BKIN_COMP2,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,95,PA6,GPIO,TIM3_CH1,AF2,TIM3_CH1,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,95,PA6,GPIO,TIM8_BKIN,AF3,TIM8_BKIN,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,95,PA6,GPIO,TIM8_BKIN_COMP2,AF13,TIM8_BKIN_COMP2,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,95,PA6,GPIO,USART3_CTS,AF7,USART3_CTS,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,96,PA5,GPIO,ADC1_IN10,,ADC1_IN10,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,96,PA5,GPIO,ADC2_IN10,,ADC2_IN10,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,96,PA5,GPIO,DAC1_OUT2,,DAC1_OUT2,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,96,PA5,GPIO,LPTIM2_ETR,AF14,LPTIM2_ETR,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,96,PA5,GPIO,SPI1_SCK,AF5,SPI1_SCK,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,96,PA5,GPIO,TIM2_CH1,AF1,TIM2_CH1,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,96,PA5,GPIO,TIM2_ETR,AF2,TIM2_ETR,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,96,PA5,GPIO,TIM8_CH1N,AF3,TIM8_CH1N,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,97,GND,GND,,,,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view,
+nucleo-l476rg,98,AVDD,POWER,,,,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,
+nucleo-l476rg,99,PB9,GPIO,CAN1_TX,AF9,CAN1_TX,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,99,PB9,GPIO,DAC1_EXTI9,,DAC1_EXTI9,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,99,PB9,GPIO,DFSDM1_CKIN6,AF6,DFSDM1_CKIN6,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,99,PB9,GPIO,I2C1_SDA,AF4,I2C1_SDA,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,99,PB9,GPIO,IR_OUT,AF1,IR_OUT,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,99,PB9,GPIO,LCD_COM3,AF11,LCD_COM3,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,99,PB9,GPIO,SAI1_FS_A,AF13,SAI1_FS_A,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,99,PB9,GPIO,SDMMC1_D5,AF12,SDMMC1_D5,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,99,PB9,GPIO,SPI2_NSS,AF5,SPI2_NSS,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,99,PB9,GPIO,TIM17_CH1,AF14,TIM17_CH1,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,99,PB9,GPIO,TIM4_CH4,AF2,TIM4_CH4,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,100,PB8,GPIO,CAN1_RX,AF9,CAN1_RX,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,100,PB8,GPIO,DFSDM1_DATIN6,AF6,DFSDM1_DATIN6,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,100,PB8,GPIO,I2C1_SCL,AF4,I2C1_SCL,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,100,PB8,GPIO,LCD_SEG16,AF11,LCD_SEG16,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,100,PB8,GPIO,SAI1_MCLK_A,AF13,SAI1_MCLK_A,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,100,PB8,GPIO,SDMMC1_D4,AF12,SDMMC1_D4,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,100,PB8,GPIO,TIM16_CH1,AF14,TIM16_CH1,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,100,PB8,GPIO,TIM4_CH3,AF2,TIM4_CH3,nucleo-l476rg-arduino-52 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,101,PA3,GPIO,ADC1_IN8,,ADC1_IN8,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,101,PA3,GPIO,ADC2_IN8,,ADC2_IN8,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,101,PA3,GPIO,LCD_SEG2,AF11,LCD_SEG2,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,101,PA3,GPIO,OPAMP1_VOUT,,OPAMP1_VOUT,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,101,PA3,GPIO,TIM15_CH2,AF14,TIM15_CH2,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,101,PA3,GPIO,TIM2_CH4,AF1,TIM2_CH4,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,101,PA3,GPIO,TIM5_CH4,AF2,TIM5_CH4,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,101,PA3,GPIO,USART2_RX,AF7,USART2_RX,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,102,PA2,GPIO,ADC1_IN7,,ADC1_IN7,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,102,PA2,GPIO,ADC2_IN7,,ADC2_IN7,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,102,PA2,GPIO,LCD_SEG1,AF11,LCD_SEG1,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,102,PA2,GPIO,RCC_LSCO,,RCC_LSCO,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,102,PA2,GPIO,SAI2_EXTCLK,AF13,SAI2_EXTCLK,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,102,PA2,GPIO,SYS_WKUP4,,SYS_WKUP4,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package
+nucleo-l476rg,102,PA2,GPIO,TIM15_CH1,AF14,TIM15_CH1,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,102,PA2,GPIO,TIM2_CH3,AF1,TIM2_CH3,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,102,PA2,GPIO,TIM5_CH3,AF2,TIM5_CH3,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,102,PA2,GPIO,USART2_TX,AF7,USART2_TX,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package | nucleo-mb1136-bridges,l476rg-package | l476rg-modes
+nucleo-l476rg,103,PA10,GPIO,LCD_COM2,AF11,LCD_COM2,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,103,PA10,GPIO,TIM17_BKIN,AF14,TIM17_BKIN,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,103,PA10,GPIO,TIM1_CH3,AF1,TIM1_CH3,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,103,PA10,GPIO,USART1_RX,AF7,USART1_RX,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,103,PA10,GPIO,USB_OTG_FS_ID,AF10,USB_OTG_FS_ID,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,104,PB3,GPIO,COMP2_INM,,COMP2_INM,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,104,PB3,GPIO,LCD_SEG7,AF11,LCD_SEG7,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,104,PB3,GPIO,SAI1_SCK_B,AF13,SAI1_SCK_B,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,104,PB3,GPIO,SPI1_SCK,AF5,SPI1_SCK,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,104,PB3,GPIO,SPI3_SCK,AF6,SPI3_SCK,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,104,PB3,GPIO,SYS_JTDO-SWO,AF0,SYS_JTDO-SWO,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,104,PB3,GPIO,TIM2_CH2,AF1,TIM2_CH2,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,104,PB3,GPIO,USART1_DE,AF7,USART1_DE,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,104,PB3,GPIO,USART1_RTS,AF7,USART1_RTS,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,105,PB5,GPIO,COMP2_OUT,AF12,COMP2_OUT,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,105,PB5,GPIO,I2C1_SMBA,AF4,I2C1_SMBA,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,105,PB5,GPIO,LCD_SEG9,AF11,LCD_SEG9,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,105,PB5,GPIO,LPTIM1_IN1,AF1,LPTIM1_IN1,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,105,PB5,GPIO,SAI1_SD_B,AF13,SAI1_SD_B,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,105,PB5,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,105,PB5,GPIO,SPI3_MOSI,AF6,SPI3_MOSI,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,105,PB5,GPIO,TIM16_BKIN,AF14,TIM16_BKIN,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,105,PB5,GPIO,TIM3_CH2,AF2,TIM3_CH2,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,105,PB5,GPIO,TSC_G2_IO2,AF9,TSC_G2_IO2,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,105,PB5,GPIO,UART5_CTS,AF8,UART5_CTS,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,105,PB5,GPIO,USART1_CK,AF7,USART1_CK,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,106,PB4,GPIO,COMP2_INP,,COMP2_INP,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package
+nucleo-l476rg,106,PB4,GPIO,LCD_SEG8,AF11,LCD_SEG8,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,106,PB4,GPIO,SAI1_MCLK_B,AF13,SAI1_MCLK_B,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,106,PB4,GPIO,SPI1_MISO,AF5,SPI1_MISO,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,106,PB4,GPIO,SPI3_MISO,AF6,SPI3_MISO,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,106,PB4,GPIO,SYS_JTRST,AF0,SYS_JTRST,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,106,PB4,GPIO,TIM17_BKIN,AF14,TIM17_BKIN,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,106,PB4,GPIO,TIM3_CH1,AF2,TIM3_CH1,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,106,PB4,GPIO,TSC_G2_IO1,AF9,TSC_G2_IO1,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,106,PB4,GPIO,UART5_DE,AF8,UART5_DE,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,106,PB4,GPIO,UART5_RTS,AF8,UART5_RTS,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,106,PB4,GPIO,USART1_CTS,AF7,USART1_CTS,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,107,PB10,GPIO,COMP1_OUT,AF12,COMP1_OUT,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,107,PB10,GPIO,DFSDM1_DATIN7,AF6,DFSDM1_DATIN7,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,107,PB10,GPIO,I2C2_SCL,AF4,I2C2_SCL,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,107,PB10,GPIO,LCD_SEG10,AF11,LCD_SEG10,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,107,PB10,GPIO,LPUART1_RX,AF8,LPUART1_RX,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,107,PB10,GPIO,QUADSPI_CLK,AF10,QUADSPI_CLK,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,107,PB10,GPIO,SAI1_SCK_A,AF13,SAI1_SCK_A,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,107,PB10,GPIO,SPI2_SCK,AF5,SPI2_SCK,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,107,PB10,GPIO,TIM2_CH3,AF1,TIM2_CH3,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,107,PB10,GPIO,USART3_TX,AF7,USART3_TX,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,108,PA8,GPIO,LCD_COM0,AF11,LCD_COM0,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,108,PA8,GPIO,LPTIM2_OUT,AF14,LPTIM2_OUT,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,108,PA8,GPIO,RCC_MCO,AF0,RCC_MCO,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,108,PA8,GPIO,TIM1_CH1,AF1,TIM1_CH1,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,108,PA8,GPIO,USART1_CK,AF7,USART1_CK,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+nucleo-l476rg,108,PA8,GPIO,USB_OTG_FS_SOF,AF10,USB_OTG_FS_SOF,nucleo-l476rg-arduino-53 | nucleo-l476rg-top-view | l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,1,VBAT,POWER,,,,l476rg-package,
+stm32l476rgt6,2,PC13,GPIO,RTC_OUT_ALARM,,RTC_OUT_ALARM,l476rg-package,l476rg-package
+stm32l476rgt6,2,PC13,GPIO,RTC_OUT_CALIB,,RTC_OUT_CALIB,l476rg-package,l476rg-package
+stm32l476rgt6,2,PC13,GPIO,RTC_TAMP1,,RTC_TAMP1,l476rg-package,l476rg-package
+stm32l476rgt6,2,PC13,GPIO,RTC_TS,,RTC_TS,l476rg-package,l476rg-package
+stm32l476rgt6,2,PC13,GPIO,SYS_WKUP2,,SYS_WKUP2,l476rg-package,l476rg-package
+stm32l476rgt6,3,PC14,GPIO,RCC_OSC32_IN,,RCC_OSC32_IN,l476rg-package,l476rg-package
+stm32l476rgt6,4,PC15,GPIO,ADC1_EXTI15,,ADC1_EXTI15,l476rg-package,l476rg-package
+stm32l476rgt6,4,PC15,GPIO,ADC2_EXTI15,,ADC2_EXTI15,l476rg-package,l476rg-package
+stm32l476rgt6,4,PC15,GPIO,ADC3_EXTI15,,ADC3_EXTI15,l476rg-package,l476rg-package
+stm32l476rgt6,4,PC15,GPIO,RCC_OSC32_OUT,,RCC_OSC32_OUT,l476rg-package,l476rg-package
+stm32l476rgt6,5,PH0,GPIO,RCC_OSC_IN,,RCC_OSC_IN,l476rg-package,l476rg-package
+stm32l476rgt6,6,PH1,GPIO,RCC_OSC_OUT,,RCC_OSC_OUT,l476rg-package,l476rg-package
+stm32l476rgt6,7,NRST,SYSTEM,,,,l476rg-package,
+stm32l476rgt6,8,PC0,GPIO,ADC1_IN1,,ADC1_IN1,l476rg-package,l476rg-package
+stm32l476rgt6,8,PC0,GPIO,ADC2_IN1,,ADC2_IN1,l476rg-package,l476rg-package
+stm32l476rgt6,8,PC0,GPIO,ADC3_IN1,,ADC3_IN1,l476rg-package,l476rg-package
+stm32l476rgt6,8,PC0,GPIO,DFSDM1_DATIN4,AF6,DFSDM1_DATIN4,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,8,PC0,GPIO,I2C3_SCL,AF4,I2C3_SCL,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,8,PC0,GPIO,LCD_SEG18,AF11,LCD_SEG18,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,8,PC0,GPIO,LPTIM1_IN1,AF1,LPTIM1_IN1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,8,PC0,GPIO,LPTIM2_IN1,AF14,LPTIM2_IN1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,8,PC0,GPIO,LPUART1_RX,AF8,LPUART1_RX,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,9,PC1,GPIO,ADC1_IN2,,ADC1_IN2,l476rg-package,l476rg-package
+stm32l476rgt6,9,PC1,GPIO,ADC2_IN2,,ADC2_IN2,l476rg-package,l476rg-package
+stm32l476rgt6,9,PC1,GPIO,ADC3_IN2,,ADC3_IN2,l476rg-package,l476rg-package
+stm32l476rgt6,9,PC1,GPIO,DFSDM1_CKIN4,AF6,DFSDM1_CKIN4,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,9,PC1,GPIO,I2C3_SDA,AF4,I2C3_SDA,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,9,PC1,GPIO,LCD_SEG19,AF11,LCD_SEG19,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,9,PC1,GPIO,LPTIM1_OUT,AF1,LPTIM1_OUT,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,9,PC1,GPIO,LPUART1_TX,AF8,LPUART1_TX,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,10,PC2,GPIO,ADC1_IN3,,ADC1_IN3,l476rg-package,l476rg-package
+stm32l476rgt6,10,PC2,GPIO,ADC2_IN3,,ADC2_IN3,l476rg-package,l476rg-package
+stm32l476rgt6,10,PC2,GPIO,ADC3_IN3,,ADC3_IN3,l476rg-package,l476rg-package
+stm32l476rgt6,10,PC2,GPIO,DFSDM1_CKOUT,AF6,DFSDM1_CKOUT,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,10,PC2,GPIO,LCD_SEG20,AF11,LCD_SEG20,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,10,PC2,GPIO,LPTIM1_IN2,AF1,LPTIM1_IN2,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,10,PC2,GPIO,SPI2_MISO,AF5,SPI2_MISO,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,11,PC3,GPIO,ADC1_IN4,,ADC1_IN4,l476rg-package,l476rg-package
+stm32l476rgt6,11,PC3,GPIO,ADC2_IN4,,ADC2_IN4,l476rg-package,l476rg-package
+stm32l476rgt6,11,PC3,GPIO,ADC3_IN4,,ADC3_IN4,l476rg-package,l476rg-package
+stm32l476rgt6,11,PC3,GPIO,LCD_VLCD,AF11,LCD_VLCD,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,11,PC3,GPIO,LPTIM1_ETR,AF1,LPTIM1_ETR,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,11,PC3,GPIO,LPTIM2_ETR,AF14,LPTIM2_ETR,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,11,PC3,GPIO,SAI1_SD_A,AF13,SAI1_SD_A,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,11,PC3,GPIO,SPI2_MOSI,AF5,SPI2_MOSI,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,12,VSSA/VREF-,GND,,,,l476rg-package,
+stm32l476rgt6,13,VDDA/VREF+,POWER,,,,l476rg-package,
+stm32l476rgt6,14,PA0,GPIO,ADC1_IN5,,ADC1_IN5,l476rg-package,l476rg-package
+stm32l476rgt6,14,PA0,GPIO,ADC2_IN5,,ADC2_IN5,l476rg-package,l476rg-package
+stm32l476rgt6,14,PA0,GPIO,OPAMP1_VINP,,OPAMP1_VINP,l476rg-package,l476rg-package
+stm32l476rgt6,14,PA0,GPIO,RTC_TAMP2,,RTC_TAMP2,l476rg-package,l476rg-package
+stm32l476rgt6,14,PA0,GPIO,SAI1_EXTCLK,AF13,SAI1_EXTCLK,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,14,PA0,GPIO,SYS_WKUP1,,SYS_WKUP1,l476rg-package,l476rg-package
+stm32l476rgt6,14,PA0,GPIO,TIM2_CH1,AF1,TIM2_CH1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,14,PA0,GPIO,TIM2_ETR,AF14,TIM2_ETR,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,14,PA0,GPIO,TIM5_CH1,AF2,TIM5_CH1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,14,PA0,GPIO,TIM8_ETR,AF3,TIM8_ETR,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,14,PA0,GPIO,UART4_TX,AF8,UART4_TX,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,14,PA0,GPIO,USART2_CTS,AF7,USART2_CTS,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,15,PA1,GPIO,ADC1_IN6,,ADC1_IN6,l476rg-package,l476rg-package
+stm32l476rgt6,15,PA1,GPIO,ADC2_IN6,,ADC2_IN6,l476rg-package,l476rg-package
+stm32l476rgt6,15,PA1,GPIO,LCD_SEG0,AF11,LCD_SEG0,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,15,PA1,GPIO,OPAMP1_VINM,,OPAMP1_VINM,l476rg-package,l476rg-package
+stm32l476rgt6,15,PA1,GPIO,TIM15_CH1N,AF14,TIM15_CH1N,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,15,PA1,GPIO,TIM2_CH2,AF1,TIM2_CH2,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,15,PA1,GPIO,TIM5_CH2,AF2,TIM5_CH2,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,15,PA1,GPIO,UART4_RX,AF8,UART4_RX,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,15,PA1,GPIO,USART2_DE,AF7,USART2_DE,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,15,PA1,GPIO,USART2_RTS,AF7,USART2_RTS,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,16,PA2,GPIO,ADC1_IN7,,ADC1_IN7,l476rg-package,l476rg-package
+stm32l476rgt6,16,PA2,GPIO,ADC2_IN7,,ADC2_IN7,l476rg-package,l476rg-package
+stm32l476rgt6,16,PA2,GPIO,LCD_SEG1,AF11,LCD_SEG1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,16,PA2,GPIO,RCC_LSCO,,RCC_LSCO,l476rg-package,l476rg-package
+stm32l476rgt6,16,PA2,GPIO,SAI2_EXTCLK,AF13,SAI2_EXTCLK,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,16,PA2,GPIO,SYS_WKUP4,,SYS_WKUP4,l476rg-package,l476rg-package
+stm32l476rgt6,16,PA2,GPIO,TIM15_CH1,AF14,TIM15_CH1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,16,PA2,GPIO,TIM2_CH3,AF1,TIM2_CH3,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,16,PA2,GPIO,TIM5_CH3,AF2,TIM5_CH3,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,16,PA2,GPIO,USART2_TX,AF7,USART2_TX,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,17,PA3,GPIO,ADC1_IN8,,ADC1_IN8,l476rg-package,l476rg-package
+stm32l476rgt6,17,PA3,GPIO,ADC2_IN8,,ADC2_IN8,l476rg-package,l476rg-package
+stm32l476rgt6,17,PA3,GPIO,LCD_SEG2,AF11,LCD_SEG2,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,17,PA3,GPIO,OPAMP1_VOUT,,OPAMP1_VOUT,l476rg-package,l476rg-package
+stm32l476rgt6,17,PA3,GPIO,TIM15_CH2,AF14,TIM15_CH2,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,17,PA3,GPIO,TIM2_CH4,AF1,TIM2_CH4,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,17,PA3,GPIO,TIM5_CH4,AF2,TIM5_CH4,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,17,PA3,GPIO,USART2_RX,AF7,USART2_RX,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,18,VSS,GND,,,,l476rg-package,
+stm32l476rgt6,19,VDD,POWER,,,,l476rg-package,
+stm32l476rgt6,20,PA4,GPIO,ADC1_IN9,,ADC1_IN9,l476rg-package,l476rg-package
+stm32l476rgt6,20,PA4,GPIO,ADC2_IN9,,ADC2_IN9,l476rg-package,l476rg-package
+stm32l476rgt6,20,PA4,GPIO,DAC1_OUT1,,DAC1_OUT1,l476rg-package,l476rg-package
+stm32l476rgt6,20,PA4,GPIO,LPTIM2_OUT,AF14,LPTIM2_OUT,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,20,PA4,GPIO,SAI1_FS_B,AF13,SAI1_FS_B,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,20,PA4,GPIO,SPI1_NSS,AF5,SPI1_NSS,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,20,PA4,GPIO,SPI3_NSS,AF6,SPI3_NSS,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,20,PA4,GPIO,USART2_CK,AF7,USART2_CK,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,21,PA5,GPIO,ADC1_IN10,,ADC1_IN10,l476rg-package,l476rg-package
+stm32l476rgt6,21,PA5,GPIO,ADC2_IN10,,ADC2_IN10,l476rg-package,l476rg-package
+stm32l476rgt6,21,PA5,GPIO,DAC1_OUT2,,DAC1_OUT2,l476rg-package,l476rg-package
+stm32l476rgt6,21,PA5,GPIO,LPTIM2_ETR,AF14,LPTIM2_ETR,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,21,PA5,GPIO,SPI1_SCK,AF5,SPI1_SCK,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,21,PA5,GPIO,TIM2_CH1,AF1,TIM2_CH1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,21,PA5,GPIO,TIM2_ETR,AF2,TIM2_ETR,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,21,PA5,GPIO,TIM8_CH1N,AF3,TIM8_CH1N,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,22,PA6,GPIO,ADC1_IN11,,ADC1_IN11,l476rg-package,l476rg-package
+stm32l476rgt6,22,PA6,GPIO,ADC2_IN11,,ADC2_IN11,l476rg-package,l476rg-package
+stm32l476rgt6,22,PA6,GPIO,LCD_SEG3,AF11,LCD_SEG3,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,22,PA6,GPIO,OPAMP2_VINP,,OPAMP2_VINP,l476rg-package,l476rg-package
+stm32l476rgt6,22,PA6,GPIO,QUADSPI_BK1_IO3,AF10,QUADSPI_BK1_IO3,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,22,PA6,GPIO,SPI1_MISO,AF5,SPI1_MISO,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,22,PA6,GPIO,TIM16_CH1,AF14,TIM16_CH1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,22,PA6,GPIO,TIM1_BKIN,AF1,TIM1_BKIN,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,22,PA6,GPIO,TIM1_BKIN_COMP2,AF12,TIM1_BKIN_COMP2,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,22,PA6,GPIO,TIM3_CH1,AF2,TIM3_CH1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,22,PA6,GPIO,TIM8_BKIN,AF3,TIM8_BKIN,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,22,PA6,GPIO,TIM8_BKIN_COMP2,AF13,TIM8_BKIN_COMP2,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,22,PA6,GPIO,USART3_CTS,AF7,USART3_CTS,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,23,PA7,GPIO,ADC1_IN12,,ADC1_IN12,l476rg-package,l476rg-package
+stm32l476rgt6,23,PA7,GPIO,ADC2_IN12,,ADC2_IN12,l476rg-package,l476rg-package
+stm32l476rgt6,23,PA7,GPIO,LCD_SEG4,AF11,LCD_SEG4,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,23,PA7,GPIO,OPAMP2_VINM,,OPAMP2_VINM,l476rg-package,l476rg-package
+stm32l476rgt6,23,PA7,GPIO,QUADSPI_BK1_IO2,AF10,QUADSPI_BK1_IO2,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,23,PA7,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,23,PA7,GPIO,TIM17_CH1,AF14,TIM17_CH1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,23,PA7,GPIO,TIM1_CH1N,AF1,TIM1_CH1N,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,23,PA7,GPIO,TIM3_CH2,AF2,TIM3_CH2,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,23,PA7,GPIO,TIM8_CH1N,AF3,TIM8_CH1N,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,24,PC4,GPIO,ADC1_IN13,,ADC1_IN13,l476rg-package,l476rg-package
+stm32l476rgt6,24,PC4,GPIO,ADC2_IN13,,ADC2_IN13,l476rg-package,l476rg-package
+stm32l476rgt6,24,PC4,GPIO,COMP1_INM,,COMP1_INM,l476rg-package,l476rg-package
+stm32l476rgt6,24,PC4,GPIO,LCD_SEG22,AF11,LCD_SEG22,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,24,PC4,GPIO,USART3_TX,AF7,USART3_TX,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,25,PC5,GPIO,ADC1_IN14,,ADC1_IN14,l476rg-package,l476rg-package
+stm32l476rgt6,25,PC5,GPIO,ADC2_IN14,,ADC2_IN14,l476rg-package,l476rg-package
+stm32l476rgt6,25,PC5,GPIO,COMP1_INP,,COMP1_INP,l476rg-package,l476rg-package
+stm32l476rgt6,25,PC5,GPIO,LCD_SEG23,AF11,LCD_SEG23,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,25,PC5,GPIO,SYS_WKUP5,,SYS_WKUP5,l476rg-package,l476rg-package
+stm32l476rgt6,25,PC5,GPIO,USART3_RX,AF7,USART3_RX,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,26,PB0,GPIO,ADC1_IN15,,ADC1_IN15,l476rg-package,l476rg-package
+stm32l476rgt6,26,PB0,GPIO,ADC2_IN15,,ADC2_IN15,l476rg-package,l476rg-package
+stm32l476rgt6,26,PB0,GPIO,COMP1_OUT,AF12,COMP1_OUT,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,26,PB0,GPIO,LCD_SEG5,AF11,LCD_SEG5,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,26,PB0,GPIO,OPAMP2_VOUT,,OPAMP2_VOUT,l476rg-package,l476rg-package
+stm32l476rgt6,26,PB0,GPIO,QUADSPI_BK1_IO1,AF10,QUADSPI_BK1_IO1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,26,PB0,GPIO,TIM1_CH2N,AF1,TIM1_CH2N,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,26,PB0,GPIO,TIM3_CH3,AF2,TIM3_CH3,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,26,PB0,GPIO,TIM8_CH2N,AF3,TIM8_CH2N,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,26,PB0,GPIO,USART3_CK,AF7,USART3_CK,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,27,PB1,GPIO,ADC1_IN16,,ADC1_IN16,l476rg-package,l476rg-package
+stm32l476rgt6,27,PB1,GPIO,ADC2_IN16,,ADC2_IN16,l476rg-package,l476rg-package
+stm32l476rgt6,27,PB1,GPIO,COMP1_INM,,COMP1_INM,l476rg-package,l476rg-package
+stm32l476rgt6,27,PB1,GPIO,DFSDM1_DATIN0,AF6,DFSDM1_DATIN0,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,27,PB1,GPIO,LCD_SEG6,AF11,LCD_SEG6,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,27,PB1,GPIO,LPTIM2_IN1,AF14,LPTIM2_IN1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,27,PB1,GPIO,QUADSPI_BK1_IO0,AF10,QUADSPI_BK1_IO0,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,27,PB1,GPIO,TIM1_CH3N,AF1,TIM1_CH3N,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,27,PB1,GPIO,TIM3_CH4,AF2,TIM3_CH4,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,27,PB1,GPIO,TIM8_CH3N,AF3,TIM8_CH3N,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,27,PB1,GPIO,USART3_DE,AF7,USART3_DE,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,27,PB1,GPIO,USART3_RTS,AF7,USART3_RTS,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,28,PB2,GPIO,COMP1_INP,,COMP1_INP,l476rg-package,l476rg-package
+stm32l476rgt6,28,PB2,GPIO,DFSDM1_CKIN0,AF6,DFSDM1_CKIN0,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,28,PB2,GPIO,I2C3_SMBA,AF4,I2C3_SMBA,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,28,PB2,GPIO,LPTIM1_OUT,AF1,LPTIM1_OUT,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,28,PB2,GPIO,RTC_OUT_ALARM,AF0,RTC_OUT_ALARM,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,28,PB2,GPIO,RTC_OUT_CALIB,AF0,RTC_OUT_CALIB,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,29,PB10,GPIO,COMP1_OUT,AF12,COMP1_OUT,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,29,PB10,GPIO,DFSDM1_DATIN7,AF6,DFSDM1_DATIN7,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,29,PB10,GPIO,I2C2_SCL,AF4,I2C2_SCL,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,29,PB10,GPIO,LCD_SEG10,AF11,LCD_SEG10,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,29,PB10,GPIO,LPUART1_RX,AF8,LPUART1_RX,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,29,PB10,GPIO,QUADSPI_CLK,AF10,QUADSPI_CLK,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,29,PB10,GPIO,SAI1_SCK_A,AF13,SAI1_SCK_A,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,29,PB10,GPIO,SPI2_SCK,AF5,SPI2_SCK,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,29,PB10,GPIO,TIM2_CH3,AF1,TIM2_CH3,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,29,PB10,GPIO,USART3_TX,AF7,USART3_TX,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,30,PB11,GPIO,ADC1_EXTI11,,ADC1_EXTI11,l476rg-package,l476rg-package
+stm32l476rgt6,30,PB11,GPIO,ADC2_EXTI11,,ADC2_EXTI11,l476rg-package,l476rg-package
+stm32l476rgt6,30,PB11,GPIO,ADC3_EXTI11,,ADC3_EXTI11,l476rg-package,l476rg-package
+stm32l476rgt6,30,PB11,GPIO,COMP2_OUT,AF12,COMP2_OUT,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,30,PB11,GPIO,DFSDM1_CKIN7,AF6,DFSDM1_CKIN7,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,30,PB11,GPIO,I2C2_SDA,AF4,I2C2_SDA,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,30,PB11,GPIO,LCD_SEG11,AF11,LCD_SEG11,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,30,PB11,GPIO,LPUART1_TX,AF8,LPUART1_TX,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,30,PB11,GPIO,QUADSPI_NCS,AF10,QUADSPI_NCS,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,30,PB11,GPIO,TIM2_CH4,AF1,TIM2_CH4,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,30,PB11,GPIO,USART3_RX,AF7,USART3_RX,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,31,VSS,GND,,,,l476rg-package,
+stm32l476rgt6,32,VDD,POWER,,,,l476rg-package,
+stm32l476rgt6,33,PB12,GPIO,DFSDM1_DATIN1,AF6,DFSDM1_DATIN1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,33,PB12,GPIO,I2C2_SMBA,AF4,I2C2_SMBA,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,33,PB12,GPIO,LCD_SEG12,AF11,LCD_SEG12,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,33,PB12,GPIO,LPUART1_DE,AF8,LPUART1_DE,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,33,PB12,GPIO,LPUART1_RTS,AF8,LPUART1_RTS,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,33,PB12,GPIO,SAI2_FS_A,AF13,SAI2_FS_A,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,33,PB12,GPIO,SPI2_NSS,AF5,SPI2_NSS,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,33,PB12,GPIO,SWPMI1_IO,AF12,SWPMI1_IO,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,33,PB12,GPIO,TIM15_BKIN,AF14,TIM15_BKIN,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,33,PB12,GPIO,TIM1_BKIN,AF1,TIM1_BKIN,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,33,PB12,GPIO,TIM1_BKIN_COMP2,AF3,TIM1_BKIN_COMP2,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,33,PB12,GPIO,TSC_G1_IO1,AF9,TSC_G1_IO1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,33,PB12,GPIO,USART3_CK,AF7,USART3_CK,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,34,PB13,GPIO,DFSDM1_CKIN1,AF6,DFSDM1_CKIN1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,34,PB13,GPIO,I2C2_SCL,AF4,I2C2_SCL,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,34,PB13,GPIO,LCD_SEG13,AF11,LCD_SEG13,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,34,PB13,GPIO,LPUART1_CTS,AF8,LPUART1_CTS,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,34,PB13,GPIO,SAI2_SCK_A,AF13,SAI2_SCK_A,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,34,PB13,GPIO,SPI2_SCK,AF5,SPI2_SCK,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,34,PB13,GPIO,SWPMI1_TX,AF12,SWPMI1_TX,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,34,PB13,GPIO,TIM15_CH1N,AF14,TIM15_CH1N,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,34,PB13,GPIO,TIM1_CH1N,AF1,TIM1_CH1N,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,34,PB13,GPIO,TSC_G1_IO2,AF9,TSC_G1_IO2,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,34,PB13,GPIO,USART3_CTS,AF7,USART3_CTS,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,35,PB14,GPIO,DFSDM1_DATIN2,AF6,DFSDM1_DATIN2,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,35,PB14,GPIO,I2C2_SDA,AF4,I2C2_SDA,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,35,PB14,GPIO,LCD_SEG14,AF11,LCD_SEG14,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,35,PB14,GPIO,SAI2_MCLK_A,AF13,SAI2_MCLK_A,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,35,PB14,GPIO,SPI2_MISO,AF5,SPI2_MISO,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,35,PB14,GPIO,SWPMI1_RX,AF12,SWPMI1_RX,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,35,PB14,GPIO,TIM15_CH1,AF14,TIM15_CH1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,35,PB14,GPIO,TIM1_CH2N,AF1,TIM1_CH2N,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,35,PB14,GPIO,TIM8_CH2N,AF3,TIM8_CH2N,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,35,PB14,GPIO,TSC_G1_IO3,AF9,TSC_G1_IO3,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,35,PB14,GPIO,USART3_DE,AF7,USART3_DE,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,35,PB14,GPIO,USART3_RTS,AF7,USART3_RTS,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,36,PB15,GPIO,ADC1_EXTI15,,ADC1_EXTI15,l476rg-package,l476rg-package
+stm32l476rgt6,36,PB15,GPIO,ADC2_EXTI15,,ADC2_EXTI15,l476rg-package,l476rg-package
+stm32l476rgt6,36,PB15,GPIO,ADC3_EXTI15,,ADC3_EXTI15,l476rg-package,l476rg-package
+stm32l476rgt6,36,PB15,GPIO,DFSDM1_CKIN2,AF6,DFSDM1_CKIN2,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,36,PB15,GPIO,LCD_SEG15,AF11,LCD_SEG15,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,36,PB15,GPIO,RTC_REFIN,AF0,RTC_REFIN,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,36,PB15,GPIO,SAI2_SD_A,AF13,SAI2_SD_A,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,36,PB15,GPIO,SPI2_MOSI,AF5,SPI2_MOSI,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,36,PB15,GPIO,SWPMI1_SUSPEND,AF12,SWPMI1_SUSPEND,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,36,PB15,GPIO,TIM15_CH2,AF14,TIM15_CH2,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,36,PB15,GPIO,TIM1_CH3N,AF1,TIM1_CH3N,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,36,PB15,GPIO,TIM8_CH3N,AF3,TIM8_CH3N,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,36,PB15,GPIO,TSC_G1_IO4,AF9,TSC_G1_IO4,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,37,PC6,GPIO,DFSDM1_CKIN3,AF6,DFSDM1_CKIN3,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,37,PC6,GPIO,LCD_SEG24,AF11,LCD_SEG24,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,37,PC6,GPIO,SAI2_MCLK_A,AF13,SAI2_MCLK_A,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,37,PC6,GPIO,SDMMC1_D6,AF12,SDMMC1_D6,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,37,PC6,GPIO,TIM3_CH1,AF2,TIM3_CH1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,37,PC6,GPIO,TIM8_CH1,AF3,TIM8_CH1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,37,PC6,GPIO,TSC_G4_IO1,AF9,TSC_G4_IO1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,38,PC7,GPIO,DFSDM1_DATIN3,AF6,DFSDM1_DATIN3,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,38,PC7,GPIO,LCD_SEG25,AF11,LCD_SEG25,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,38,PC7,GPIO,SAI2_MCLK_B,AF13,SAI2_MCLK_B,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,38,PC7,GPIO,SDMMC1_D7,AF12,SDMMC1_D7,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,38,PC7,GPIO,TIM3_CH2,AF2,TIM3_CH2,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,38,PC7,GPIO,TIM8_CH2,AF3,TIM8_CH2,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,38,PC7,GPIO,TSC_G4_IO2,AF9,TSC_G4_IO2,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,39,PC8,GPIO,LCD_SEG26,AF11,LCD_SEG26,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,39,PC8,GPIO,SDMMC1_D0,AF12,SDMMC1_D0,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,39,PC8,GPIO,TIM3_CH3,AF2,TIM3_CH3,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,39,PC8,GPIO,TIM8_CH3,AF3,TIM8_CH3,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,39,PC8,GPIO,TSC_G4_IO3,AF9,TSC_G4_IO3,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,40,PC9,GPIO,DAC1_EXTI9,,DAC1_EXTI9,l476rg-package,l476rg-package
+stm32l476rgt6,40,PC9,GPIO,LCD_SEG27,AF11,LCD_SEG27,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,40,PC9,GPIO,SAI2_EXTCLK,AF13,SAI2_EXTCLK,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,40,PC9,GPIO,SDMMC1_D1,AF12,SDMMC1_D1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,40,PC9,GPIO,TIM3_CH4,AF2,TIM3_CH4,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,40,PC9,GPIO,TIM8_BKIN2,AF1,TIM8_BKIN2,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,40,PC9,GPIO,TIM8_BKIN2_COMP1,AF14,TIM8_BKIN2_COMP1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,40,PC9,GPIO,TIM8_CH4,AF3,TIM8_CH4,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,40,PC9,GPIO,TSC_G4_IO4,AF9,TSC_G4_IO4,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,40,PC9,GPIO,USB_OTG_FS_NOE,AF10,USB_OTG_FS_NOE,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,41,PA8,GPIO,LCD_COM0,AF11,LCD_COM0,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,41,PA8,GPIO,LPTIM2_OUT,AF14,LPTIM2_OUT,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,41,PA8,GPIO,RCC_MCO,AF0,RCC_MCO,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,41,PA8,GPIO,TIM1_CH1,AF1,TIM1_CH1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,41,PA8,GPIO,USART1_CK,AF7,USART1_CK,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,41,PA8,GPIO,USB_OTG_FS_SOF,AF10,USB_OTG_FS_SOF,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,42,PA9,GPIO,DAC1_EXTI9,,DAC1_EXTI9,l476rg-package,l476rg-package
+stm32l476rgt6,42,PA9,GPIO,LCD_COM1,AF11,LCD_COM1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,42,PA9,GPIO,TIM15_BKIN,AF14,TIM15_BKIN,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,42,PA9,GPIO,TIM1_CH2,AF1,TIM1_CH2,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,42,PA9,GPIO,USART1_TX,AF7,USART1_TX,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,42,PA9,GPIO,USB_OTG_FS_VBUS,,USB_OTG_FS_VBUS,l476rg-package,l476rg-package
+stm32l476rgt6,43,PA10,GPIO,LCD_COM2,AF11,LCD_COM2,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,43,PA10,GPIO,TIM17_BKIN,AF14,TIM17_BKIN,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,43,PA10,GPIO,TIM1_CH3,AF1,TIM1_CH3,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,43,PA10,GPIO,USART1_RX,AF7,USART1_RX,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,43,PA10,GPIO,USB_OTG_FS_ID,AF10,USB_OTG_FS_ID,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,44,PA11,GPIO,ADC1_EXTI11,,ADC1_EXTI11,l476rg-package,l476rg-package
+stm32l476rgt6,44,PA11,GPIO,ADC2_EXTI11,,ADC2_EXTI11,l476rg-package,l476rg-package
+stm32l476rgt6,44,PA11,GPIO,ADC3_EXTI11,,ADC3_EXTI11,l476rg-package,l476rg-package
+stm32l476rgt6,44,PA11,GPIO,CAN1_RX,AF9,CAN1_RX,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,44,PA11,GPIO,TIM1_BKIN2,AF2,TIM1_BKIN2,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,44,PA11,GPIO,TIM1_BKIN2_COMP1,AF12,TIM1_BKIN2_COMP1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,44,PA11,GPIO,TIM1_CH4,AF1,TIM1_CH4,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,44,PA11,GPIO,USART1_CTS,AF7,USART1_CTS,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,44,PA11,GPIO,USB_OTG_FS_DM,AF10,USB_OTG_FS_DM,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,45,PA12,GPIO,CAN1_TX,AF9,CAN1_TX,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,45,PA12,GPIO,TIM1_ETR,AF1,TIM1_ETR,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,45,PA12,GPIO,USART1_DE,AF7,USART1_DE,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,45,PA12,GPIO,USART1_RTS,AF7,USART1_RTS,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,45,PA12,GPIO,USB_OTG_FS_DP,AF10,USB_OTG_FS_DP,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,46,PA13,GPIO,IR_OUT,AF1,IR_OUT,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,46,PA13,GPIO,SYS_JTMS-SWDIO,AF0,SYS_JTMS-SWDIO,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,46,PA13,GPIO,USB_OTG_FS_NOE,AF10,USB_OTG_FS_NOE,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,47,VSS,GND,,,,l476rg-package,
+stm32l476rgt6,48,VDDUSB,POWER,,,,l476rg-package,
+stm32l476rgt6,49,PA14,GPIO,SYS_JTCK-SWCLK,AF0,SYS_JTCK-SWCLK,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,50,PA15,GPIO,ADC1_EXTI15,,ADC1_EXTI15,l476rg-package,l476rg-package
+stm32l476rgt6,50,PA15,GPIO,ADC2_EXTI15,,ADC2_EXTI15,l476rg-package,l476rg-package
+stm32l476rgt6,50,PA15,GPIO,ADC3_EXTI15,,ADC3_EXTI15,l476rg-package,l476rg-package
+stm32l476rgt6,50,PA15,GPIO,LCD_SEG17,AF11,LCD_SEG17,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,50,PA15,GPIO,SAI2_FS_B,AF13,SAI2_FS_B,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,50,PA15,GPIO,SPI1_NSS,AF5,SPI1_NSS,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,50,PA15,GPIO,SPI3_NSS,AF6,SPI3_NSS,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,50,PA15,GPIO,SYS_JTDI,AF0,SYS_JTDI,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,50,PA15,GPIO,TIM2_CH1,AF1,TIM2_CH1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,50,PA15,GPIO,TIM2_ETR,AF2,TIM2_ETR,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,50,PA15,GPIO,TSC_G3_IO1,AF9,TSC_G3_IO1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,50,PA15,GPIO,UART4_DE,AF8,UART4_DE,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,50,PA15,GPIO,UART4_RTS,AF8,UART4_RTS,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,51,PC10,GPIO,LCD_COM4,AF11,LCD_COM4,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,51,PC10,GPIO,LCD_SEG28,AF11,LCD_SEG28,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,51,PC10,GPIO,LCD_SEG40,AF11,LCD_SEG40,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,51,PC10,GPIO,SAI2_SCK_B,AF13,SAI2_SCK_B,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,51,PC10,GPIO,SDMMC1_D2,AF12,SDMMC1_D2,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,51,PC10,GPIO,SPI3_SCK,AF6,SPI3_SCK,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,51,PC10,GPIO,TSC_G3_IO2,AF9,TSC_G3_IO2,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,51,PC10,GPIO,UART4_TX,AF8,UART4_TX,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,51,PC10,GPIO,USART3_TX,AF7,USART3_TX,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,52,PC11,GPIO,ADC1_EXTI11,,ADC1_EXTI11,l476rg-package,l476rg-package
+stm32l476rgt6,52,PC11,GPIO,ADC2_EXTI11,,ADC2_EXTI11,l476rg-package,l476rg-package
+stm32l476rgt6,52,PC11,GPIO,ADC3_EXTI11,,ADC3_EXTI11,l476rg-package,l476rg-package
+stm32l476rgt6,52,PC11,GPIO,LCD_COM5,AF11,LCD_COM5,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,52,PC11,GPIO,LCD_SEG29,AF11,LCD_SEG29,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,52,PC11,GPIO,LCD_SEG41,AF11,LCD_SEG41,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,52,PC11,GPIO,SAI2_MCLK_B,AF13,SAI2_MCLK_B,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,52,PC11,GPIO,SDMMC1_D3,AF12,SDMMC1_D3,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,52,PC11,GPIO,SPI3_MISO,AF6,SPI3_MISO,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,52,PC11,GPIO,TSC_G3_IO3,AF9,TSC_G3_IO3,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,52,PC11,GPIO,UART4_RX,AF8,UART4_RX,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,52,PC11,GPIO,USART3_RX,AF7,USART3_RX,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,53,PC12,GPIO,LCD_COM6,AF11,LCD_COM6,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,53,PC12,GPIO,LCD_SEG30,AF11,LCD_SEG30,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,53,PC12,GPIO,LCD_SEG42,AF11,LCD_SEG42,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,53,PC12,GPIO,SAI2_SD_B,AF13,SAI2_SD_B,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,53,PC12,GPIO,SDMMC1_CK,AF12,SDMMC1_CK,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,53,PC12,GPIO,SPI3_MOSI,AF6,SPI3_MOSI,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,53,PC12,GPIO,TSC_G3_IO4,AF9,TSC_G3_IO4,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,53,PC12,GPIO,UART5_TX,AF8,UART5_TX,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,53,PC12,GPIO,USART3_CK,AF7,USART3_CK,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,54,PD2,GPIO,LCD_COM7,AF11,LCD_COM7,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,54,PD2,GPIO,LCD_SEG31,AF11,LCD_SEG31,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,54,PD2,GPIO,LCD_SEG43,AF11,LCD_SEG43,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,54,PD2,GPIO,SDMMC1_CMD,AF12,SDMMC1_CMD,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,54,PD2,GPIO,TIM3_ETR,AF2,TIM3_ETR,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,54,PD2,GPIO,TSC_SYNC,AF9,TSC_SYNC,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,54,PD2,GPIO,UART5_RX,AF8,UART5_RX,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,54,PD2,GPIO,USART3_DE,AF7,USART3_DE,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,54,PD2,GPIO,USART3_RTS,AF7,USART3_RTS,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,55,PB3,GPIO,COMP2_INM,,COMP2_INM,l476rg-package,l476rg-package
+stm32l476rgt6,55,PB3,GPIO,LCD_SEG7,AF11,LCD_SEG7,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,55,PB3,GPIO,SAI1_SCK_B,AF13,SAI1_SCK_B,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,55,PB3,GPIO,SPI1_SCK,AF5,SPI1_SCK,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,55,PB3,GPIO,SPI3_SCK,AF6,SPI3_SCK,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,55,PB3,GPIO,SYS_JTDO-SWO,AF0,SYS_JTDO-SWO,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,55,PB3,GPIO,TIM2_CH2,AF1,TIM2_CH2,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,55,PB3,GPIO,USART1_DE,AF7,USART1_DE,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,55,PB3,GPIO,USART1_RTS,AF7,USART1_RTS,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,56,PB4,GPIO,COMP2_INP,,COMP2_INP,l476rg-package,l476rg-package
+stm32l476rgt6,56,PB4,GPIO,LCD_SEG8,AF11,LCD_SEG8,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,56,PB4,GPIO,SAI1_MCLK_B,AF13,SAI1_MCLK_B,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,56,PB4,GPIO,SPI1_MISO,AF5,SPI1_MISO,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,56,PB4,GPIO,SPI3_MISO,AF6,SPI3_MISO,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,56,PB4,GPIO,SYS_JTRST,AF0,SYS_JTRST,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,56,PB4,GPIO,TIM17_BKIN,AF14,TIM17_BKIN,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,56,PB4,GPIO,TIM3_CH1,AF2,TIM3_CH1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,56,PB4,GPIO,TSC_G2_IO1,AF9,TSC_G2_IO1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,56,PB4,GPIO,UART5_DE,AF8,UART5_DE,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,56,PB4,GPIO,UART5_RTS,AF8,UART5_RTS,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,56,PB4,GPIO,USART1_CTS,AF7,USART1_CTS,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,57,PB5,GPIO,COMP2_OUT,AF12,COMP2_OUT,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,57,PB5,GPIO,I2C1_SMBA,AF4,I2C1_SMBA,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,57,PB5,GPIO,LCD_SEG9,AF11,LCD_SEG9,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,57,PB5,GPIO,LPTIM1_IN1,AF1,LPTIM1_IN1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,57,PB5,GPIO,SAI1_SD_B,AF13,SAI1_SD_B,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,57,PB5,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,57,PB5,GPIO,SPI3_MOSI,AF6,SPI3_MOSI,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,57,PB5,GPIO,TIM16_BKIN,AF14,TIM16_BKIN,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,57,PB5,GPIO,TIM3_CH2,AF2,TIM3_CH2,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,57,PB5,GPIO,TSC_G2_IO2,AF9,TSC_G2_IO2,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,57,PB5,GPIO,UART5_CTS,AF8,UART5_CTS,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,57,PB5,GPIO,USART1_CK,AF7,USART1_CK,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,58,PB6,GPIO,COMP2_INP,,COMP2_INP,l476rg-package,l476rg-package
+stm32l476rgt6,58,PB6,GPIO,DFSDM1_DATIN5,AF6,DFSDM1_DATIN5,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,58,PB6,GPIO,I2C1_SCL,AF4,I2C1_SCL,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,58,PB6,GPIO,LPTIM1_ETR,AF1,LPTIM1_ETR,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,58,PB6,GPIO,SAI1_FS_B,AF13,SAI1_FS_B,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,58,PB6,GPIO,TIM16_CH1N,AF14,TIM16_CH1N,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,58,PB6,GPIO,TIM4_CH1,AF2,TIM4_CH1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,58,PB6,GPIO,TIM8_BKIN2,AF3,TIM8_BKIN2,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,58,PB6,GPIO,TIM8_BKIN2_COMP2,AF12,TIM8_BKIN2_COMP2,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,58,PB6,GPIO,TSC_G2_IO3,AF9,TSC_G2_IO3,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,58,PB6,GPIO,USART1_TX,AF7,USART1_TX,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,59,PB7,GPIO,COMP2_INM,,COMP2_INM,l476rg-package,l476rg-package
+stm32l476rgt6,59,PB7,GPIO,DFSDM1_CKIN5,AF6,DFSDM1_CKIN5,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,59,PB7,GPIO,I2C1_SDA,AF4,I2C1_SDA,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,59,PB7,GPIO,LCD_SEG21,AF11,LCD_SEG21,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,59,PB7,GPIO,LPTIM1_IN2,AF1,LPTIM1_IN2,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,59,PB7,GPIO,SYS_PVD_IN,,SYS_PVD_IN,l476rg-package,l476rg-package
+stm32l476rgt6,59,PB7,GPIO,TIM17_CH1N,AF14,TIM17_CH1N,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,59,PB7,GPIO,TIM4_CH2,AF2,TIM4_CH2,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,59,PB7,GPIO,TIM8_BKIN,AF3,TIM8_BKIN,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,59,PB7,GPIO,TIM8_BKIN_COMP1,AF13,TIM8_BKIN_COMP1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,59,PB7,GPIO,TSC_G2_IO4,AF9,TSC_G2_IO4,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,59,PB7,GPIO,UART4_CTS,AF8,UART4_CTS,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,59,PB7,GPIO,USART1_RX,AF7,USART1_RX,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,60,BOOT0,SYSTEM,,,,l476rg-package,
+stm32l476rgt6,61,PB8,GPIO,CAN1_RX,AF9,CAN1_RX,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,61,PB8,GPIO,DFSDM1_DATIN6,AF6,DFSDM1_DATIN6,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,61,PB8,GPIO,I2C1_SCL,AF4,I2C1_SCL,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,61,PB8,GPIO,LCD_SEG16,AF11,LCD_SEG16,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,61,PB8,GPIO,SAI1_MCLK_A,AF13,SAI1_MCLK_A,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,61,PB8,GPIO,SDMMC1_D4,AF12,SDMMC1_D4,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,61,PB8,GPIO,TIM16_CH1,AF14,TIM16_CH1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,61,PB8,GPIO,TIM4_CH3,AF2,TIM4_CH3,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,62,PB9,GPIO,CAN1_TX,AF9,CAN1_TX,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,62,PB9,GPIO,DAC1_EXTI9,,DAC1_EXTI9,l476rg-package,l476rg-package
+stm32l476rgt6,62,PB9,GPIO,DFSDM1_CKIN6,AF6,DFSDM1_CKIN6,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,62,PB9,GPIO,I2C1_SDA,AF4,I2C1_SDA,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,62,PB9,GPIO,IR_OUT,AF1,IR_OUT,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,62,PB9,GPIO,LCD_COM3,AF11,LCD_COM3,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,62,PB9,GPIO,SAI1_FS_A,AF13,SAI1_FS_A,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,62,PB9,GPIO,SDMMC1_D5,AF12,SDMMC1_D5,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,62,PB9,GPIO,SPI2_NSS,AF5,SPI2_NSS,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,62,PB9,GPIO,TIM17_CH1,AF14,TIM17_CH1,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,62,PB9,GPIO,TIM4_CH4,AF2,TIM4_CH4,l476rg-package,l476rg-package | l476rg-modes
+stm32l476rgt6,63,VSS,GND,,,,l476rg-package,
+stm32l476rgt6,64,VDD,POWER,,,,l476rg-package,

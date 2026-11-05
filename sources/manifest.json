@@ -830,6 +830,26 @@
       "publisher": "STMicroelectronics",
       "revision": "b18163265c827fc3b1f1396c4d09221b4821a405",
       "sha256": "e822dd21c70403a0b18f5fbcf125acb0a4ec4eb9a54f6e17fd6657381a249c56"
+    },
+    {
+      "id": "l476rg-package",
+      "title": "STM32L476RG CubeMX package data",
+      "file": "l476rg-package.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32L476R(C-E-G)Tx.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32L476R(C-E-G)Tx.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "982e5774b8667f7e7a9a1204edfa4c0ccee62a7560cc890eeffce73763e93da7"
+    },
+    {
+      "id": "l476rg-modes",
+      "title": "STM32L476RG CubeMX modes data",
+      "file": "l476rg-modes.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32L47x_gpio_v1_0_Modes.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32L47x_gpio_v1_0_Modes.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "02304a9fab76e957140923a766f367928e3a89550849acbe9ee4b050ba1a893e"
     }
   ],
   "publishers": [

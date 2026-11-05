@@ -135,3 +135,5 @@ Ortak Nucleo-64 kaydı yalnızca konektör konumlarını gruplar. Her modelin MC
 UM1724 ham tablo hücreleri `sources/extracted/nucleo-um1724-r14.json` içinde hash ile kilitlidir. CI aynı ayrıştırıcıyı bu hücrelere uygular; PDF önbelleği veya erişilebilir bir PDF sunucusu gerektirmez. Bağımsız karşılaştırma için özgün PDF yolu korunur.
 
 - **NUCLEO-F303RE / STM32F303RET6:** UM1724 Tablo 14 (s. 41–42) ve Tablo 26 (s. 55); Cortex-M4, 72 MHz, LQFP-64 ve 51 GPIO bacağı. Tablo 14, D0 satırını atlar: CN9.1 ortak MB1136 konumundan, D0 → PA3 eşlemesi sabit sürümlü resmî STM32duino F303RE varyantından doğrulanır. Ek kaynak ilgili temas noktasına bağlanır.
+
+- **NUCLEO-L476RG / STM32L476RGT6:** UM1724 Rev 14 tabloları 23 (pp. 52–53) / 32 (p. 61); Cortex-M4, 80 MHz, LQFP-64 ve 51 GPIO bacağı. Paket pinleri ve AF seçicileri sabit sürümlü üretici XML dosyalarından bağımsız olarak çıkarılır.

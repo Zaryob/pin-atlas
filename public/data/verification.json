@@ -1,7 +1,7 @@
 {
   "verifiedOn": "2026-11-05",
-  "physicalPins": 3141,
-  "functionAssignments": 13515,
+  "physicalPins": 3313,
+  "functionAssignments": 14566,
   "documents": [
     {
       "id": "rp2350",
@@ -746,6 +746,24 @@
       "publisher": "STMicroelectronics",
       "revision": "b18163265c827fc3b1f1396c4d09221b4821a405",
       "sha256": "e822dd21c70403a0b18f5fbcf125acb0a4ec4eb9a54f6e17fd6657381a249c56"
+    },
+    {
+      "id": "l476rg-package",
+      "title": "STM32L476RG CubeMX package data",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32L476R(C-E-G)Tx.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32L476R(C-E-G)Tx.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "982e5774b8667f7e7a9a1204edfa4c0ccee62a7560cc890eeffce73763e93da7"
+    },
+    {
+      "id": "l476rg-modes",
+      "title": "STM32L476RG CubeMX modes data",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32L47x_gpio_v1_0_Modes.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32L47x_gpio_v1_0_Modes.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "02304a9fab76e957140923a766f367928e3a89550849acbe9ee4b050ba1a893e"
     }
   ],
   "boards": [
@@ -1245,6 +1263,24 @@
       "id": "stm32f303ret6",
       "physicalPins": 64,
       "functionAssignments": 413,
+      "physicalSourceMethods": [
+        "manufacturer-xml"
+      ]
+    },
+    {
+      "id": "nucleo-l476rg",
+      "physicalPins": 108,
+      "functionAssignments": 627,
+      "physicalSourceMethods": [
+        "manufacturer-xml",
+        "pdf-table",
+        "visual-diagram"
+      ]
+    },
+    {
+      "id": "stm32l476rgt6",
+      "physicalPins": 64,
+      "functionAssignments": 424,
       "physicalSourceMethods": [
         "manufacturer-xml"
       ]
