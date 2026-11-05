@@ -131,8 +131,21 @@ title: Pin Atlas — Source-verified pin guide
 
   <!-- WORKSPACE VIEW -->
   <section id="workspace-view" class="workspace-view" hidden>
-    <div class="page-heading"><div><h1 id="board-title">Raspberry Pi Pico family</h1></div><div class="heading-actions"><a id="datasheet" class="button secondary" target="_blank" rel="noopener"><span data-icon="file"></span><span data-i18n="datasheet">Datasheet</span> <span>↗</span></a></div></div>
+    <div class="page-heading"><div><h1 id="board-title">Raspberry Pi Pico family</h1><p id="board-reference" class="board-reference"></p></div><div class="heading-actions"><a id="datasheet" class="button secondary" target="_blank" rel="noopener"><span data-icon="file"></span><span data-i18n="datasheet">Datasheet</span> <span>↗</span></a></div></div>
     <div class="specs" id="specs"></div>
+    <details id="compatible-boards" class="compatibility-index" hidden>
+      <summary>
+        <span class="compatibility-heading"><span id="compatibility-title" data-i18n="compatibleBoards">Compatible boards</span><span id="compatibility-count" class="compatibility-count"></span></span>
+        <span class="compatibility-current"><span data-i18n="activeReference">Active reference</span><strong id="compatibility-current"></strong></span>
+        <span class="compatibility-toggle"><span class="index-closed" data-i18n="viewModelIndex">View index</span><span class="index-open" data-i18n="hideModelIndex">Hide index</span><span class="index-chevron" aria-hidden="true">⌄</span></span>
+      </summary>
+      <div class="compatibility-content">
+        <div id="compatibility-search-row" class="compatibility-search-row" hidden><label for="compatibility-search" data-i18n="findCompatibleModel">Find a model</label><input id="compatibility-search" type="search" autocomplete="off" placeholder="Search compatible models…" data-i18n-placeholder="compatibleSearchPlaceholder"><span id="compatibility-results" role="status" aria-live="polite"></span></div>
+        <ol id="compatibility-list" class="compatibility-list"></ol>
+        <p id="compatibility-empty" class="compatibility-empty" data-i18n="noCompatibleModel" hidden>No matching model.</p>
+        <p class="compatibility-footnote" data-i18n="compatibilityIndexNote">Choose a model to open its reference. Shared pinouts may have different functions and electrical limits.</p>
+      </div>
+    </details>
     <section class="workspace" aria-label="Pinout workspace" data-i18n-aria-label="workspace">
       <div class="map-panel">
         <div class="panel-heading"><div class="panel-title"><span class="live-dot"></span><span data-i18n="pinMap">Pin map</span> <span id="pin-count">40 pin</span></div><div class="view-switch" aria-label="View" data-i18n-aria-label="view"><button id="map-view" class="active" aria-pressed="true"><span data-icon="chip"></span><span data-i18n="map">Map</span></button><button id="table-view" aria-pressed="false"><span data-icon="list"></span><span data-i18n="table">Table</span></button></div></div>
@@ -166,19 +179,6 @@ title: Pin Atlas — Source-verified pin guide
         </aside>
       </div>
     </section>
-    <details id="compatible-boards" class="compatibility-index" hidden>
-      <summary>
-        <span class="compatibility-heading"><span id="compatibility-title" data-i18n="compatibleBoards">Compatible boards</span><span id="compatibility-count" class="compatibility-count"></span></span>
-        <span class="compatibility-current"><span data-i18n="activeReference">Active reference</span><strong id="compatibility-current"></strong></span>
-        <span class="compatibility-toggle"><span class="index-closed" data-i18n="viewModelIndex">View index</span><span class="index-open" data-i18n="hideModelIndex">Hide index</span><span class="index-chevron" aria-hidden="true">⌄</span></span>
-      </summary>
-      <div class="compatibility-content">
-        <div id="compatibility-search-row" class="compatibility-search-row" hidden><label for="compatibility-search" data-i18n="findCompatibleModel">Find a model</label><input id="compatibility-search" type="search" autocomplete="off" placeholder="Search compatible models…" data-i18n-placeholder="compatibleSearchPlaceholder"><span id="compatibility-results" role="status" aria-live="polite"></span></div>
-        <ol id="compatibility-list" class="compatibility-list"></ol>
-        <p id="compatibility-empty" class="compatibility-empty" data-i18n="noCompatibleModel" hidden>No matching model.</p>
-        <p class="compatibility-footnote" data-i18n="compatibilityIndexNote">Choose a model to open its reference. Shared pinouts may have different functions and electrical limits.</p>
-      </div>
-    </details>
     <p id="board-scope" class="board-scope" hidden></p>
     <div class="below-workspace"><div><span data-icon="info"></span><p><strong><span data-i18n="orientationNote">Reading the diagram</span></strong><span data-i18n="schematicNote">The board illustration is schematic. Pin numbers identify physical connections. Alternate functions depend on the selected board and processor.</span></p></div><a id="reference-link" target="_blank" rel="noopener"><span data-i18n="officialSource">Pin reference</span> <span>↗</span></a></div>
     <footer><span>© 2026 Süleyman Poyraz · Pin Atlas</span><span><a href="https://github.com/Zaryob/pin-atlas"><span data-i18n="sourceCode">Source code ↗</span></a> · GPLv3</span></footer>

@@ -120,6 +120,7 @@ function openLayout(id, profile) {
 function renderBoard() {
  document.title = `${layoutTitle(layout)} Pinout — Pin Atlas`;
  $('#board-title').textContent = layoutTitle(layout);
+ $('#board-reference').textContent = [board.shortName || board.name, board.mcu && !board.name.includes(board.mcu) ? board.mcu : ''].filter(Boolean).join(' · ');
  const scope = board.scopeKey ? t(board.scopeKey) : layout.scopeKey ? t(layout.scopeKey) : '';
  $('#board-scope').hidden = !scope;
  $('#board-scope').textContent = scope;
@@ -660,7 +661,7 @@ function showCatalog() {
 }
 
 function catalogLayoutDetail(item) {
-  if (item.id.startsWith('nucleo-')) return t('nucleoCatalogDetail', { mcu: item.mcu });
+  if (item.id.startsWith('nucleo-')) return `${item.mcu} · ${layoutSubtitle(item)}`;
   return item.compatibleKey ? t(item.compatibleKey) : layoutSubtitle(item);
 }
 
@@ -673,7 +674,8 @@ function renderCatalogCard({ id, profile, name, detail, isChip: chip }) {
       <small class="catalog-card-desc">${esc(detail)}</small>
     </div>
   </div>`;
-  const source = boards.find(item => item.id === (profile || id));
+  const targetLayout = layouts.find(item => item.id === id);
+  const source = boards.find(item => item.id === (profile || id)) || targetLayout?.profiles.find(item => item.id === targetLayout.defaultProfile);
   if (!source) return card;
   const related = chip ? boards.filter(item => item.mcuProfile === source.id)
     : boards.filter(item => item.id === source.mcuProfile);
@@ -685,48 +687,14 @@ function renderCatalogCard({ id, profile, name, detail, isChip: chip }) {
   return `<div class="catalog-entry">${card}<div class="catalog-related">${links.join('')}</div></div>`;
 }
 
-function renderCatalog() {
-  const query = $('#catalog-search').value.toLocaleLowerCase().trim();
-  const grid = $('#catalog-grid');
+function catalogLayoutIds(activeFilter = 'all') {
+  if (activeFilter === 'all') return new Set(layouts.map(item => item.id));
+  if (activeFilter === 'chips') return new Set(layouts.filter(isChip).map(item => item.id));
+  return new Set(boardFamilies.filter(family => family.id === activeFilter || family.id.startsWith(activeFilter + '-'))
+    .flatMap(family => family.items.flatMap(entry => entry.packages ? entry.packages.map(pkg => pkg.id) : [entry.id])));
+}
 
-  if (!query) {
-    grid.innerHTML = `<div class="catalog-families">${boardFamilies.map(family => {
-      const cardsHtml = family.items.map(entry => {
-        if (entry.type === 'layout') {
-          const item = layouts.find(l => l.id === entry.id);
-          if (!item) return '';
-          return renderCatalogCard({ id: item.id, name: layoutTitle(item), detail: catalogLayoutDetail(item), isChip: isChip(item) });
-        } else if (entry.type === 'package-group') {
-          const isGroupActive = entry.packages.some(p => layout && layout.id === p.id);
-          const activePkg = entry.packages.find(p => layout && layout.id === p.id);
-          const activeId = activePkg ? activePkg.id : entry.defaultLayout;
-          return `<div class="catalog-card ${isGroupActive ? 'active' : ''}" data-layout="${esc(activeId)}" role="button" tabindex="0">
-            <div class="catalog-card-icon" aria-hidden="true">${icon('chip')}</div>
-            <div class="catalog-card-body">
-              <div class="catalog-card-header">
-                <b class="catalog-card-title">${esc(entry.name)}</b>
-                <span class="catalog-card-count">${t('packageCount', { count: entry.packages.length })}</span>
-              </div>
-              <small class="catalog-card-desc">${esc(t(entry.subtitleKey))}</small>
-              <div class="catalog-packages" role="group" aria-label="${esc(entry.name)} ${esc(t('packagesHeading'))}">
-                ${entry.packages.map(p => `
-                  <button type="button" class="catalog-package-btn ${layout && layout.id === p.id ? 'active' : ''}" data-layout="${esc(p.id)}" title="${esc(entry.name)} · ${esc(p.label)}" aria-label="${esc(entry.name)} ${esc(p.label)}">${esc(p.label)}</button>
-                `).join('')}
-              </div>
-            </div>
-          </div>`;
-        }
-        return '';
-      }).join('');
-
-      return `<section class="catalog-family">
-        <h3 class="catalog-family-title">${esc(t(family.nameKey))}</h3>
-        <div class="catalog-family-cards">${cardsHtml}</div>
-      </section>`;
-    }).join('')}</div>`;
-    return;
-  }
-
+function catalogMatches(query, activeFilter = 'all') {
   const matches = [];
 
   for (const family of boardFamilies) {
@@ -763,7 +731,7 @@ function renderCatalog() {
     const alreadyMatched = matches.some(m => m.id === item.id || (m.packages && m.packages.some(p => p.id === item.id)));
     if (alreadyMatched) continue;
 
-    const models = filterCompatibleModels(compatibleModels(item), query, model => `${model.name} ${model.id}`);
+    const models = filterCompatibleModels(compatibleModels(item), query, model => `${model.name} ${model.id} ${model.detailKey ? t(model.detailKey) : model.detail} ${model.kind === 'reference' ? item.profiles.find(profile => profile.id === model.profileId)?.mcu || '' : ''}`);
     if (models.length) {
       for (const model of models) {
         matches.push({
@@ -777,6 +745,7 @@ function renderCatalog() {
     } else {
       const familyText = [
         layoutTitle(item),
+        ...boardFamilies.filter(family => family.items.some(entry => entry.id === item.id)).map(family => t(family.nameKey)),
         catalogLayoutDetail(item),
         layoutSubtitle(item),
         ...item.profiles.map(profile => `${profile.name} ${profile.mcu} ${profile.searchTerms || ''}`)
@@ -793,32 +762,47 @@ function renderCatalog() {
     }
   }
 
-  if (!matches.length) {
-    grid.innerHTML = `<p class="catalog-note">${t('noBoard')}</p>`;
-    return;
-  }
+  const allowed = catalogLayoutIds(activeFilter);
+  return matches.filter(match => allowed.has(match.id));
+}
 
-  grid.innerHTML = `<div class="catalog-search-results">${matches.map(m => {
-    const isActive = layout && layout.id === m.id && (!m.profile || board.id === m.profile);
-    if (m.packages) {
-      return `<div class="catalog-card ${isActive ? 'active' : ''}" data-layout="${esc(m.id)}" role="button" tabindex="0">
-        <div class="catalog-card-icon" aria-hidden="true">${icon('chip')}</div>
-        <div class="catalog-card-body">
-          <div class="catalog-card-header">
-            <b class="catalog-card-title">${esc(m.name)}</b>
-            <span class="catalog-card-count">${t('packageCount', { count: m.packages.length })}</span>
-          </div>
-          <small class="catalog-card-desc">${esc(m.detail)}</small>
-          <div class="catalog-packages" role="group" aria-label="${esc(m.name)} ${esc(t('packagesHeading'))}">
-            ${m.packages.map(p => `
-              <button type="button" class="catalog-package-btn ${layout && layout.id === p.id ? 'active' : ''}" data-layout="${esc(p.id)}" title="${esc(m.name)} · ${esc(p.label)}" aria-label="${esc(m.name)} ${esc(p.label)}">${esc(p.label)}</button>
-            `).join('')}
-          </div>
-        </div>
-      </div>`;
-    }
+function renderCatalogResults(matches) {
+  if (!matches.length) return `<p class="catalog-note">${esc(t('noBoard'))}</p>`;
+  return `<div class="catalog-search-results">${matches.map(m => {
+    if (m.packages) return renderPackageCard(m);
     return renderCatalogCard(m);
   }).join('')}</div>`;
+}
+
+function renderPackageCard(entry) {
+  const packages = entry.packages;
+  const active = packages.some(pkg => layout?.id === pkg.id);
+  const id = packages.find(pkg => layout?.id === pkg.id)?.id || entry.defaultLayout || entry.id;
+  const name = entry.name, detail = entry.detail || t(entry.subtitleKey);
+  return `<div class="catalog-card ${active ? 'active' : ''}" data-layout="${esc(id)}" role="button" tabindex="0">
+    <div class="catalog-card-icon" aria-hidden="true">${icon('chip')}</div>
+    <div class="catalog-card-body"><div class="catalog-card-header"><b class="catalog-card-title">${esc(name)}</b><span class="catalog-card-count">${t('packageCount', {count:packages.length})}</span></div>
+    <small class="catalog-card-desc">${esc(detail)}</small>
+    <div class="catalog-packages" role="group" aria-label="${esc(name)} ${esc(t('packagesHeading'))}">${packages.map(pkg => `<button type="button" class="catalog-package-btn ${layout?.id === pkg.id ? 'active' : ''}" data-layout="${esc(pkg.id)}" aria-label="${esc(name)} ${esc(pkg.label)}">${esc(pkg.label)}</button>`).join('')}</div></div>
+  </div>`;
+}
+
+function renderCatalogFamilies(activeFilter = 'all', home = false) {
+  const allowed = catalogLayoutIds(activeFilter);
+  const families = boardFamilies.map(family => ({family, entries:family.items.filter(entry =>
+    entry.packages ? entry.packages.some(pkg => allowed.has(pkg.id)) : allowed.has(entry.id))})).filter(group => group.entries.length);
+  const classes = home ? ['home-family-group','home-family-title','home-family-cards'] : ['catalog-family','catalog-family-title','catalog-family-cards'];
+  const html = families.map(({family, entries}) => `<section class="${classes[0]}"><h3 class="${classes[1]}">${esc(t(family.nameKey))} (${entries.length})</h3><div class="${classes[2]}">${entries.map(entry => {
+    if (entry.packages) return renderPackageCard(entry);
+    const item = layouts.find(candidate => candidate.id === entry.id);
+    return item ? renderCatalogCard({id:item.id, name:layoutTitle(item), detail:catalogLayoutDetail(item), isChip:isChip(item)}) : '';
+  }).join('')}</div></section>`).join('');
+  return {html:html || `<p class="catalog-note">${esc(t('noBoardsMatchFilter'))}</p>`, count:families.reduce((total, group) => total + group.entries.length, 0)};
+}
+
+function renderCatalog() {
+  const query = $('#catalog-search').value.toLocaleLowerCase().trim();
+  $('#catalog-grid').innerHTML = query ? renderCatalogResults(catalogMatches(query)) : renderCatalogFamilies().html;
 }
 
 const featuredDefs = [
@@ -968,98 +952,20 @@ function renderHomeFeatured() {
 }
 
 function renderHomeCatalog() {
-  const container = $('#home-catalog-container');
-  if (!container || !layouts) return;
-
-  const query = homeSearchQuery;
-  const activeFilter = homeActiveFilter;
-  const searching = Boolean(query) || activeFilter !== 'all';
+  if (!layouts) return;
+  const searching = Boolean(homeSearchQuery) || homeActiveFilter !== 'all';
   $('#home-view').classList.toggle('is-searching', searching);
-  $('#catalog-title').textContent = t(query ? 'catalogSearchResults' : 'browseAllBoards');
+  $('#catalog-title').textContent = t(homeSearchQuery ? 'catalogSearchResults' : 'browseAllBoards');
   $('#browse-all-boards-desc').hidden = searching;
-
-  const matchingFamilies = boardFamilies.map(family => {
-    if (activeFilter !== 'all') {
-      if (activeFilter === 'chips') {
-        const isChipsFamily = family.id === 'microchip' || family.items.some(entry => entry.type === 'package-group');
-        if (!isChipsFamily && !family.items.some(entry => {
-          const l = layouts.find(item => item.id === entry.id);
-          return l && isChip(l);
-        })) {
-          return null;
-        }
-      } else if (family.id !== activeFilter && !family.id.startsWith(activeFilter)) {
-        return null;
-      }
-    }
-
-    const items = family.items.map(entry => {
-      if (entry.type === 'layout') {
-        const item = layouts.find(l => l.id === entry.id);
-        if (!item) return null;
-        if (activeFilter === 'chips' && !isChip(item)) return null;
-
-        if (query) {
-          const title = layoutTitle(item).toLowerCase();
-          const subtitle = catalogLayoutDetail(item).toLowerCase();
-          const profiles = item.profiles.map(p => p.name.toLowerCase()).join(' ');
-          const mcu = (item.mcu || '').toLowerCase();
-          const familyName = t(family.nameKey).toLowerCase();
-          const searchMatch = title.includes(query) || subtitle.includes(query) || profiles.includes(query) || mcu.includes(query) || familyName.includes(query);
-          if (!searchMatch) return null;
-        }
-        return renderCatalogCard({ id: item.id, name: layoutTitle(item), detail: catalogLayoutDetail(item), isChip: isChip(item) });
-      } else if (entry.type === 'package-group') {
-        if (query) {
-          const name = entry.name.toLowerCase();
-          const desc = t(entry.subtitleKey).toLowerCase();
-          const pkgs = entry.packages.map(p => p.label.toLowerCase()).join(' ');
-          const familyName = t(family.nameKey).toLowerCase();
-          const searchMatch = name.includes(query) || desc.includes(query) || pkgs.includes(query) || familyName.includes(query);
-          if (!searchMatch) return null;
-        }
-        const isGroupActive = entry.packages.some(p => layout && layout.id === p.id);
-        const activePkg = entry.packages.find(p => layout && layout.id === p.id);
-        const activeId = activePkg ? activePkg.id : entry.defaultLayout;
-        return `<div class="catalog-card ${isGroupActive ? 'active' : ''}" data-layout="${esc(activeId)}" role="button" tabindex="0">
-          <div class="catalog-card-icon" aria-hidden="true">${icon('chip')}</div>
-          <div class="catalog-card-body">
-            <div class="catalog-card-header">
-              <b class="catalog-card-title">${esc(entry.name)}</b>
-              <span class="catalog-card-count">${t('packageCount', { count: entry.packages.length })}</span>
-            </div>
-            <small class="catalog-card-desc">${esc(t(entry.subtitleKey))}</small>
-            <div class="catalog-packages" role="group" aria-label="${esc(entry.name)} ${esc(t('packagesHeading'))}">
-              ${entry.packages.map(p => `
-                <button type="button" class="catalog-package-btn ${layout && layout.id === p.id ? 'active' : ''}" data-layout="${esc(p.id)}" title="${esc(entry.name)} · ${esc(p.label)}" aria-label="${esc(entry.name)} ${esc(p.label)}">${esc(p.label)}</button>
-              `).join('')}
-            </div>
-          </div>
-        </div>`;
-      }
-      return null;
-    }).filter(Boolean);
-
-    if (!items.length) return null;
-    return { family, items };
-  }).filter(Boolean);
-
-  $('#home-search-status').textContent = searching
-    ? t('catalogResultCount', {count:matchingFamilies.reduce((total, family) => total + family.items.length, 0)}) : '';
-  if (!matchingFamilies.length) {
-    container.innerHTML = `<p class="home-empty" style="color:var(--muted);padding:30px 0;text-align:center;">${esc(t('noBoardsMatchFilter'))}</p>`;
-    return;
-  }
-
-  container.innerHTML = `<div class="home-catalog-families">${matchingFamilies.map(({ family, items }) => `
-    <div class="home-family-group">
-      <h3 class="home-family-title">${esc(t(family.nameKey))} (${items.length})</h3>
-      <div class="home-family-cards">
-        ${items.join('')}
-      </div>
-    </div>
-  `).join('')}</div>`;
+  let html, count;
+  if (homeSearchQuery) {
+    const matches = catalogMatches(homeSearchQuery, homeActiveFilter);
+    html = renderCatalogResults(matches); count = matches.length;
+  } else ({html, count} = renderCatalogFamilies(homeActiveFilter, true));
+  $('#home-catalog-container').innerHTML = html;
+  $('#home-search-status').textContent = searching ? t('catalogResultCount', {count}) : '';
 }
+
 function planPayload() { return {version:1,board:board.id,pins:assignments}; }
 function encode(value) { return btoa(Array.from(new TextEncoder().encode(JSON.stringify(value)),b=>String.fromCharCode(b)).join('')); }
 function decode(value) { if(value.length>16000) throw new Error(t('linkTooLong')); return JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(value),c=>c.charCodeAt(0)))); }

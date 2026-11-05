@@ -759,6 +759,8 @@
 }
 .home-search-status { min-height: 18px; margin: 10px 0 0; color: var(--muted); font-size: 12px; }
 .home-search-status:empty { display: none; }
+.board-reference { color: var(--muted); font-size: 13px; margin: 8px 0 0; }
+.page-heading .board-reference { display: block; }
 .home-view.is-searching .home-stats,
 .home-view.is-searching #featured-section,
 .home-view.is-searching .home-features-section { display: none; }
