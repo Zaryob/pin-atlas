@@ -1,6 +1,16 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
 (() => {
   const messages = {
+    "peripheralAdd": ["Çevrebirim ekle", "Add a peripheral"],
+    "peripheralBus": ["Çevrebirim", "Peripheral"],
+    "peripheralChoosePin": ["Pin seçin…", "Choose a pin…"],
+    "peripheralChoosePins": ["Her sinyal için bu çevrebirime ait bir pin seçin.", "Choose a pin from this peripheral for every signal."],
+    "peripheralPinConflict": ["Her sinyal ayrı bir fiziksel GPIO kullanmalı.", "Each signal must use a separate physical GPIO."],
+    "peripheralOccupied": ["Seçilen pin başka bir işlev için planda kullanılıyor.", "A selected pin is already assigned to another function."],
+    "peripheralOccupiedShort": ["Planda kullanılıyor", "Already assigned"],
+    "peripheralElectrical": ["I/O: {voltage}. Bağlayacağınız cihazın gerilimini ve seçilen pinlerin notlarını kontrol edin. İşlevler yazılım yapılandırması gerektirir; SPI CS pinini ayrıca ekleyin.", "I/O: {voltage}. Check the connected device's voltage and the selected pin notes. Functions require firmware configuration; add SPI chip select separately."],
+    "peripheralSave": ["Bağlantıyı plana ekle", "Add connection to plan"],
+    "peripheralSaved": ["Çevrebirim bağlantısı plana eklendi.", "Peripheral connection added to the plan."],
     "Home": ["Ana sayfa", "Home"],
     "home": ["Ana sayfa", "Home"],
     "homeBadge": ["v0.6 · Kriptografik Olarak Doğrulanmış Pin Rehberi", "v0.6 · Source-Verified Pin Guide"],

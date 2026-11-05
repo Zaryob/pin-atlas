@@ -23,6 +23,22 @@ async function openPlan(page) {
   else await page.locator('#plan-tab').click();
 }
 
+test('guided peripheral connections save exact bus signals and survive refresh',async({page})=>{
+ await ready(page,'#board=pico-family&profile=picow');await openPlan(page);
+ await page.locator('#peripheral-builder summary').click();
+ await page.locator('#peripheral-bus').selectOption('I2C0');
+ await page.locator('[data-peripheral-role="SDA"]').selectOption(JSON.stringify([1,'I2C0 SDA']));
+ await page.locator('[data-peripheral-role="SCL"]').selectOption(JSON.stringify([2,'I2C0 SCL']));
+ await expect(page.locator('#peripheral-notes a')).toHaveCount(2);
+ await page.locator('#peripheral-form button[type="submit"]').click();
+ await expect(page.locator('#plan-feedback')).toContainText('Peripheral connection added');
+ const saved={1:{function:'I2C0 SDA',label:''},2:{function:'I2C0 SCL',label:''}};
+ expect(await page.evaluate(key=>JSON.parse(localStorage.getItem(key)).picow,storageKey)).toEqual(saved);
+ await page.reload();await expect(page.locator('#app-status')).toBeHidden();await openPlan(page);
+ await expect(page.locator('#plan-list')).toContainText('I2C0 SDA');
+ await expect(page.locator('#plan-list')).toContainText('I2C0 SCL');
+});
+
 test('exact model search shares results with the library and opens the right reference',async({page})=>{
   for (const [query,profile,mcu] of [
     ['Pico W','picow','RP2040'],['Pico 2 W','pico2w','RP2350A'],

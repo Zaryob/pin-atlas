@@ -1067,3 +1067,13 @@
 .pin-atlas-site .button { white-space: normal; overflow-wrap: anywhere; }
 .pin-atlas-site .button > span { min-width: 0; }
 .pin-atlas-site :is(.home-lead,.home-section-title,.home-family-title,.catalog-card-desc) { overflow-wrap: anywhere; }
+
+/* Guided peripheral selection stays inside the existing plan panel. */
+#peripheral-builder { margin: 1rem 0; padding: .8rem; border: 1px solid var(--line); border-radius: .5rem; }
+#peripheral-builder summary { cursor: pointer; font-weight: 600; }
+#peripheral-form { display: grid; gap: .65rem; margin-top: .8rem; min-width: 0; }
+#peripheral-form label { display: grid; gap: .3rem; }
+#peripheral-form select { width: 100%; min-width: 0; max-width: 100%; }
+#peripheral-fields { display: grid; gap: .6rem; }
+#peripheral-notes { font-size: .85rem; overflow-wrap: anywhere; }
+#peripheral-feedback { color: var(--danger, #b85446); }

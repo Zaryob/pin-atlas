@@ -3,6 +3,7 @@ import { compatibleModels, filterCompatibleModels } from './compatibility.mjs';
 import { connectorGroupsFor } from './connectors.mjs';
 import { boardFamilies, homeFilterChips, featuredCards } from './catalog.mjs';
 import { options, physicalLabel, planReference, samePlan, validatePlan } from './plans.mjs';
+import { availablePeripherals, assemblePeripheral } from './peripherals.mjs';
 const { t, verificationUrl } = window.ZaryobI18n;
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -501,11 +502,48 @@ function renderPlan() {
  for (const id of ['plan-count','plan-tab-count','mobile-plan-count']) $(`#${id}`).textContent = entries.length;
  $('#plan-reference').textContent = planReference(board, t);
  $('#plan-feedback').textContent = '';
+ renderPeripheral();
  $('#plan-list').innerHTML = entries.length ? entries.map(([n, assignment]) => {
    const pin = pinByNumber(n);
    return `<div class="plan-row"><button data-select-pin="${n}">${planEntry(pin, assignment)}</button><button class="remove-plan" data-remove-pin="${n}" aria-label="${esc(t('removePin', { pin: physicalLabel(pin) }))}">×</button></div>`;
  }).join('') : `<p class="empty-plan">${t('emptyPlan')}<br>${t('emptyPlanHint')}</p>`;
 }
+function renderPeripheral() {
+ const buses=availablePeripherals(board);
+ $('#peripheral-builder').hidden=!buses.length;
+ $('#peripheral-bus').innerHTML=buses.map(bus=>`<option value="${esc(bus.id)}">${esc(bus.id)} · ${bus.roles.join(' / ')}</option>`).join('');
+ renderPeripheralPins();
+}
+function renderPeripheralPins() {
+ const bus=availablePeripherals(board).find(bus=>bus.id===$('#peripheral-bus').value);
+ $('#peripheral-fields').innerHTML=bus?bus.roles.map(role=>`<label>${role}<select data-peripheral-role="${role}" required><option value="">${esc(t('peripheralChoosePin'))}</option>${bus.candidates.filter(c=>c.role===role).map(c=>{
+   const occupied=assignments[c.pin.number] && assignments[c.pin.number].function!==c.fn.name;
+   return `<option value="${esc(c.key)}" ${occupied?'disabled':''}>${esc(physicalLabel(c.pin)+' · '+c.pin.name+' · '+c.fn.name+(c.fn.selector?' · '+c.fn.selector:''))}${occupied?' · '+esc(t('peripheralOccupiedShort')):''}</option>`;
+ }).join('')}</select></label>`).join(''):'';
+ $('#peripheral-feedback').textContent='';renderPeripheralNotes();
+}
+function renderPeripheralNotes() {
+ const bus=availablePeripherals(board).find(bus=>bus.id===$('#peripheral-bus').value);
+ const chosen=$$('[data-peripheral-role]').map(el=>bus?.candidates.find(c=>c.key===el.value)).filter(Boolean);
+ $('#peripheral-notes').innerHTML=`<p>${esc(t('peripheralElectrical',{voltage:board.voltage}))}</p>`+chosen.map(({pin,fn})=>{
+   const notes=[pin.noteKey?t(pin.noteKey):pin.note, pin.strapping?t('espStrappingNote'):'',pin.boardCircuitKey?t(pin.boardCircuitKey):'',pin.analogCautionKey?t(pin.analogCautionKey):'',pin.fiveVoltTolerant!==undefined?t(pin.fiveVoltTolerant?'stm32FTNote':'stm32NonFTNote'):'',fn.configuration?t('remapNote'):''].filter(Boolean);
+   return `<p><strong>${esc(physicalLabel(pin)+' · '+pin.name)}</strong> ${esc(notes.join(' '))} ${referenceLink(fn.configurationEvidence || fn.evidence,t('functionSource'),'')}</p>`;
+ }).join('');
+}
+$('#peripheral-bus').addEventListener('change',renderPeripheralPins);
+$('#peripheral-fields').addEventListener('change',renderPeripheralNotes);
+$('#peripheral-form').addEventListener('submit',event=>{
+ event.preventDefault();
+ const bus=availablePeripherals(board).find(bus=>bus.id===$('#peripheral-bus').value);
+ try {
+   const selections=Object.fromEntries($$('[data-peripheral-role]').map(el=>[el.dataset.peripheralRole,el.value]));
+   const candidate=assemblePeripheral(bus,selections,assignments,t);
+   assignments=validatePlan(candidate,board,t);
+ } catch(error) { $('#peripheral-feedback').textContent=error.message;return; }
+ const stored=persist();renderMap();renderDetail();renderPlan();
+ $('#plan-feedback').textContent=t(stored?'peripheralSaved':'storageUnavailable');
+ $('#peripheral-builder summary').focus();
+});
 function addToPlan() {
  const functionName = $('input[name="pin-function"]:checked')?.value;
  if (!functionName) return;
