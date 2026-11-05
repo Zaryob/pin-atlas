@@ -13,4 +13,4 @@ _site/
 .sass-cache/
 .bundle/
 vendor/
-Gemfile.lock
+playwright-report/

@@ -63,6 +63,17 @@ npm run dev
 
 Tarayıcıda `http://127.0.0.1:4173` adresini açın. `npm run build`, siteyi `public/` içeriğinden `_site/` altında üretir ve çıktıdaki dosya yollarını denetler. JavaScript, veri ve statik dosya yolu kontrolleri için `npm run check` çalıştırın.
 
+Tarayıcı regresyon kontrolleri için test bağımlılıklarını ve Chromium'u kurup GitHub Pages proje yolu altında bir önizleme oluşturun:
+
+```sh
+npm ci
+npx playwright install chromium
+npm run build:ui
+npm run test:ui
+```
+
+Tarayıcı testleri masaüstü ve mobil koyu görünümü, modele özel aramayı, konektör yakınlaştırmasını, klavye kullanımını, yükleme hatasından kurtarmayı ve kayıtlı/içe aktarılan/paylaşılan planları denetler. CI bunları dağıtımdan önce çalıştırır ve derlenmiş dosya yollarını kontrol eder. Test raporları ve iz kayıtları yayımlanan siteye eklenmez.
+
 Fontlar yereldir. Açık/koyu/sistem teması ve TR/EN dil tercihi `zaryob.github.io` ile paylaşılır. İngilizce arayüz `?lang=en`, Türkçe arayüz `?lang=tr` ile doğrudan açılabilir. Dil değiştiğinde açık kart, filtreler ve bağlantı planı korunur.
 
 ## Üretici belgelerinden tekrar doğrulama

@@ -14,9 +14,15 @@ concurrency:
 
 jobs:
   validate:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          cache: npm
+      - name: Install test dependencies
+        run: npm ci
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -36,10 +42,24 @@ jobs:
         run: python scripts/verify-official-sources.py --table-snapshots
       - name: Check JavaScript and board data
         run: npm run check
+      - name: Build and check the project-path preview
+        run: npm run build:ui
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Test desktop and mobile user flows
+        run: npm run test:ui
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: browser-test-results
+          path: |
+            .cache/playwright-results/
+            playwright-report/
+          if-no-files-found: ignore
 
   build-and-deploy:
     needs: validate
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       pages: write
       id-token: write
@@ -59,6 +79,8 @@ jobs:
           JEKYLL_ENV: production
           PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
         run: bundle exec jekyll build --baseurl "$PAGES_BASE_PATH"
+      - name: Check compiled asset paths
+        run: python3 scripts/check-static-paths.py --require-built
       - uses: actions/upload-pages-artifact@v4
         with:
           path: _site

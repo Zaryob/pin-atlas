@@ -71,6 +71,17 @@ npm run dev
 
 Open `http://127.0.0.1:4173`. Run `npm run build` to generate `_site/` from `public/` and check the built asset paths. Run `npm run check` for the JavaScript, data, and static path checks.
 
+For browser regression checks, install the test dependencies and Chromium, then build the GitHub Pages project-path preview:
+
+```sh
+npm ci
+npx playwright install chromium
+npm run build:ui
+npm run test:ui
+```
+
+The browser suite checks desktop and mobile dark views, model-specific search, connector zoom, keyboard navigation, loading recovery, and saved/imported/shared plans. CI runs it before deployment and checks the final compiled asset paths. Test reports and traces stay outside the published site.
+
 Fonts are bundled locally. English is the default language. The theme and EN/TR language preferences are shared with `zaryob.github.io`. Use `?lang=en` or `?lang=tr` to open the interface in a specific language. Switching languages preserves the current board, filters, and wiring plan.
 
 ## Recheck against manufacturer documentation

@@ -1,5 +1,6 @@
 """Check deployable local references under a GitHub Pages project prefix."""
 from html.parser import HTMLParser
+import argparse
 from pathlib import Path
 import re
 from urllib.parse import unquote, urlsplit
@@ -7,6 +8,11 @@ from urllib.parse import unquote, urlsplit
 BASE = Path(__file__).resolve().parents[1]
 site_root = BASE / '_site'
 public_root = BASE / 'public'
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--require-built', action='store_true', help='Fail if the Jekyll output has not been built')
+args = parser.parse_args()
+if args.require_built:
+    assert (site_root / 'index.html').is_file(), 'Missing _site/index.html; build Jekyll before deployment checks'
 
 # Verify static files exist in public
 for css in public_root.rglob('*.css'):
