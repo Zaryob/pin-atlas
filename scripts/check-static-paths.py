@@ -24,7 +24,8 @@ for css in public_root.rglob('*.css'):
 
 source = (public_root / 'app.js').read_text()
 assert "fetch('/" not in source and 'fetch("/' not in source
-assert "['boards.json','evidence.json']" in source
+assert "fetchDataJSON('catalog.json'" in source
+assert (public_root/'data/catalog.json').is_file()
 
 # If _site exists, verify compiled output
 if site_root.is_dir() and (site_root / 'index.html').is_file():

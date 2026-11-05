@@ -94,6 +94,13 @@ export function buildLayouts(boards) {
       ? profile.pins.filter(pin => definition.geometryConnectors.includes(pin.connector))
         .map(pin => [pin.physicalLabel, pin.position.x, pin.position.y, pin.position.side])
       : profile.pins.map(pin => [pin.number, pin.name, pin.type]);
+    // Runtime metadata is generated only after the full geometry checks below.
+    // No pin payload is needed to browse the already verified catalog.
+    if (profiles.every(profile=>!profile.pins)) {
+      for(const profile of profiles) if(profile.physicalLayout!==definition.id || profile.layout!==profiles[0].layout)
+        throw new Error(`Invalid catalog layout: ${profile.id}`);
+      return {...byId.get(definition.defaultProfile),...definition,profiles};
+    }
     const physicalPins = signature(profiles[0]);
     if (definition.sharedContactCount && physicalPins.length !== definition.sharedContactCount) {
       throw new Error(`Incomplete shared header: ${definition.id}`);

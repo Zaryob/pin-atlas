@@ -1,6 +1,8 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
 (() => {
   const messages = {
+    "profileLoading": ["Pin haritası yükleniyor…", "Loading pin map…"],
+    "profileLoadFailed": ["Pin haritası yüklenemedi", "Pin map could not be loaded"],
     "remapConflict": ["Seçili pinlerin {field} yönlendirme koşulları çelişiyor ({pin} dahil). Aynı yönlendirme ayarında çalışan pinleri seçin.", "Selected pins require incompatible {field} settings (including {pin}). Choose pins that support the same routing setting."],
     "savedPlanConflict": ["Kayıtlı planınız korundu; çakışan seçimleri düzeltin: {error}", "Your saved plan is preserved; resolve these conflicting choices: {error}"],
     "peripheralAdd": ["Çevrebirim ekle", "Add a peripheral"],

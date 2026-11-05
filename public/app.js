@@ -4,6 +4,7 @@ import { connectorGroupsFor } from './connectors.mjs';
 import { boardFamilies, homeFilterChips, featuredCards } from './catalog.mjs';
 import { options, physicalLabel, planReference, samePlan, validatePlan } from './plans.mjs';
 import { availablePeripherals, assemblePeripheral } from './peripherals.mjs';
+import {ProfileLibrary} from './profile-library.mjs';
 const { t, verificationUrl } = window.ZaryobI18n;
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -52,6 +53,7 @@ let evidence = {references:{}};
 let boards, layouts, layout, board, selected = 1, selectedFn, filters = new Set(), search = '', flipped = false, rotated = false, view = 'map', assignments = {}, toastTimer;
 let currentView = 'home', homeActiveFilter = 'all', homeSearchQuery = '';
 let dataState = 'loading', dataLoading = false;
+let library, navigationSequence=0;
 const storageKey = 'pin-atlas:plans:v1';
 const rememberedProfiles = new Map();
 let compatibilityModels = [], compatibilityQuery = '';
@@ -81,8 +83,18 @@ function persist() {
 function pinByNumber(n) { return board.pins.find(p => p.number === Number(n)); }
 function inConnectorZoom(pin) { return !connectorZoom || connectorGroups.find(group => group.id === connectorZoom)?.contacts.includes(pin.connector); }
 function matches(pin) { const text = [pin.number, pin.name, pin.physicalLabel, pin.boardLabel, pin.mcuPort, pin.arduinoPin !== undefined ? `D${pin.arduinoPin}` : '', ...pin.functions.flatMap(f => [f.name,f.signal]), assignments[pin.number]?.label].join(' ').toLowerCase(); return text.includes(search.toLowerCase().trim()) && (!filters.size || pin.functions.some(f => filters.has(f.group))); }
-function setBoard(id, initial = false, preferredProfile) {
+async function setBoard(id, initial = false, preferredProfile) {
  const next = resolveProfile(layouts, id, preferredProfile);
+ const sequence=++navigationSequence, wasHome=currentView==='home';
+ if(!initial){
+   const hash='#'+new URLSearchParams({board:next.layout.id,profile:next.profile.id});
+   if(wasHome)history.pushState(null,'',hash);else history.replaceState(null,'',hash);
+ }
+ dataState='loading';renderDataState();
+ try {await library.workspace(next.profile.id);}
+ catch {if(sequence===navigationSequence){dataState='error';renderDataState();}return false;}
+ if(sequence!==navigationSequence)return false;
+ dataState='ready';
  const sameLayout = layout?.id === next.layout.id;
  const previousPin = selected;
  layout = next.layout; board = next.profile;
@@ -97,26 +109,26 @@ function setBoard(id, initial = false, preferredProfile) {
  if (!sameLayout) { filters = new Set(); search = ''; $('#pin-search').value = ''; flipped = rotated = false; connectorZoom = ''; compatibilityQuery=''; $('#compatible-boards').open=false; }
  const available = new Set(board.pins.flatMap(pin => pin.functions.map(fn => fn.group)));
  filters = new Set([...filters].filter(group => available.has(group)));
- const wasHome = currentView === 'home';
  showWorkspaceView();
  renderBoard();
+ renderDataState();
  if (!initial) {
    const hash = `#${new URLSearchParams({board:layout.id,profile:board.id,pin:selected})}`;
-   if (wasHome) history.pushState(null, '', hash);
-   else history.replaceState(null, '', hash);
+   history.replaceState(null, '', hash);
  }
  if ($('#details-dialog').open) $('#details-dialog').close();
  setDetailTab('pin');
+ return true;
 }
-function openLayout(id, profile) {
+async function openLayout(id, profile) {
  if (dataState !== 'ready') return;
  const target = layouts.find(item => item.id === id);
  if (!target) return;
  const wasHome = currentView === 'home';
  // Reopen the last function reference, including legacy saved model plans.
  const savedProfile = target.profiles.find(profile => Object.keys(savedPlans[profile.id] || {}).length)?.id;
- setBoard(id, false, profile || rememberedProfiles.get(id) || savedProfile);
- if (wasHome && !$('#library-dialog').open) focusWorkspace();
+ const opened=await setBoard(id, false, profile || rememberedProfiles.get(id) || savedProfile);
+ if (opened && wasHome && !$('#library-dialog').open) focusWorkspace();
 }
 function focusWorkspace() {
  window.scrollTo(0, 0);
@@ -770,9 +782,7 @@ function renderHomeStats() {
   if (!boards) return;
   updateLibraryCount();
   const lang = document.documentElement.lang || 'tr';
-  const totalPins = boards.reduce((acc, b) => acc + (b.pins?.length || 0), 0);
-  const totalFns = boards.reduce((acc, b) => acc + b.pins.reduce((sum, p) => sum + (p.functions?.length || 0), 0), 0);
-  const totalSources = evidence?.documents?.length || 62;
+  const {pins:totalPins,functions:totalFns,sources:totalSources}=library.index.totals;
   if ($('#home-stat-boards')) $('#home-stat-boards').textContent = boards.length;
   if ($('#home-stat-families')) $('#home-stat-families').textContent = boardFamilies.length;
   if ($('#home-stat-pins')) $('#home-stat-pins').textContent = new Intl.NumberFormat(lang).format(totalPins);
@@ -858,7 +868,7 @@ function previewPlan(target, pins, pin) {
 previewDialog.addEventListener('close', () => {
  if (!previewDialog.open) pendingPlan = undefined;
 });
-$('#save-incoming-plan').addEventListener('click', () => {
+$('#save-incoming-plan').addEventListener('click', async () => {
  if (!pendingPlan) return;
  const { target, pins, pin, existing } = pendingPlan;
  savedPlans = readSavedPlans(savedPlans);
@@ -869,7 +879,7 @@ $('#save-incoming-plan').addEventListener('click', () => {
    return;
  }
  previewDialog.close();
- setBoard(target.id, false, target.id);
+ if(!await setBoard(target.id, false, target.id))return;
  if (pin && pinByNumber(pin)) selected = Number(pin);
  assignments = pins;
  selectedFn = assignments[selected]?.function || options(pinByNumber(selected))[0].name;
@@ -880,25 +890,29 @@ $('#save-incoming-plan').addEventListener('click', () => {
  $('#plan-tab').focus();
 });
 
-function loadHash() {
+async function loadHash() {
   const hash = location.hash.slice(1);
   if (!hash || hash === 'home') {
+    ++navigationSequence;dataState='ready';
     if (!layout) {
       const next = resolveProfile(layouts, layouts[0].id);
       layout = next.layout; board = next.profile;
     }
     showHomeView();
+    renderDataState();
     return;
   }
   const params = new URLSearchParams(hash);
   const pin = params.get('pin');
   let target = params.get('board'), payload;
   if (!target && !params.has('plan')) {
+    ++navigationSequence;dataState='ready';
     if (!layout) {
       const next = resolveProfile(layouts, layouts[0].id);
       layout = next.layout; board = next.profile;
     }
     showHomeView();
+    renderDataState();
     return;
   }
   if (params.has('plan')) {
@@ -906,13 +920,15 @@ function loadHash() {
       const data = decode(params.get('plan'));
       const profile = boards.find(item => item.id === data?.board);
       if (data?.version !== 1 || !profile) throw new Error(t('unsupportedFormat'));
-      payload = { target: profile, pins: validatePlan(data.pins, profile, t) };
+      payload = { target: profile, rawPins:data.pins };
       target = profile.id;
     } catch (error) {
       toast(t('shareFailed', { error: error.message }));
     }
   }
-  setBoard(target || layouts[0].id, true, payload ? payload.target.id : params.get('profile'));
+  if(!await setBoard(target || layouts[0].id, true, payload ? payload.target.id : params.get('profile')))return;
+  if(payload)try{payload.pins=validatePlan(payload.rawPins,payload.target,t);}
+  catch(error){toast(t('shareFailed',{error:error.message}));payload=undefined;}
   if (pin && pinByNumber(pin)) choosePin(pin, false);
   if (params.has('plan')) {
     params.delete('plan');
@@ -927,12 +943,12 @@ $('#board-nav')?.addEventListener('click',e=>{const b=e.target.closest('[data-la
 $('#library-button')?.addEventListener('click',showCatalog);
 $('#function-reference').addEventListener('change', e => setBoard(layout.id, false, e.target.value));
 $('#compatibility-search').addEventListener('input',e=>{compatibilityQuery=e.target.value;renderCompatibilityList();});
-$('#compatibility-list').addEventListener('click',e=>{
+$('#compatibility-list').addEventListener('click',async e=>{
  const link=e.target.closest('[data-compatible-model]');
  if(!link || e.button!==0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey)return;
  e.preventDefault();
  const model=link.dataset.compatibleModel,profile=link.dataset.profile;
- setBoard(layout.id,false,profile);
+ if(!await setBoard(layout.id,false,profile))return;
  $('#compatibility-list').querySelector(`[data-compatible-model="${CSS.escape(model)}"]`)?.focus({preventScroll:true});
 });
 $('#catalog-grid').addEventListener('click',e=>{const b=e.target.closest('[data-layout]');if(b){openLayout(b.dataset.layout, b.dataset.profile);$('#library-dialog').close();focusWorkspace();}});
@@ -974,10 +990,10 @@ $('#pin-search').addEventListener('input',e=>{search=e.target.value;renderMap();
 $('#flip-button').addEventListener('click',()=>{flipped=!flipped;renderMap();});
 $('#rotate-button').addEventListener('click',()=>{rotated=!rotated;renderMap();});
 $('#reset-view').addEventListener('click',()=>{flipped=rotated=false;connectorZoom='';renderMap();});
-$('#package-boards').addEventListener('click', e => {
+$('#package-boards').addEventListener('click', async e => {
  const button = e.target.closest('[data-package-board]');
  if (!button) return;
- setBoard(button.dataset.packageBoard);
+ if(!await setBoard(button.dataset.packageBoard))return;
  setView('map');
  if (button.dataset.boardPin) choosePin(button.dataset.boardPin, false);
 });
@@ -1069,6 +1085,7 @@ $('#import-file').addEventListener('change',async e=>{
   if(file.size>100000)throw new Error(t('fileTooLarge'));
   const payload=JSON.parse(await file.text());const target=boards.find(b=>b.id===payload?.board);
   if(payload?.version!==1||!target)throw new Error(t('unsupportedFile'));
+  await library.workspace(target.id);
   previewPlan(target, validatePlan(payload.pins, target, t));
  }catch(error){$('#plan-feedback').textContent=error.message||t('importFailed');}finally{e.target.value='';}
 });
@@ -1130,20 +1147,20 @@ window.addEventListener('zaryob:language', () => {
   renderDataState();
   if (dataState !== 'ready') return;
   if (currentView === 'home') renderHome();
-  if (!board) return;
+  if (!board?.pins) return;
   const draftLabel = $('#custom-label')?.value;
   renderBoard();
   if (draftLabel !== undefined) $('#custom-label').value = draftLabel;
   if ($('#library-dialog').open) renderCatalog();
   if (previewDialog.open) renderIncomingPlan();
 });
-window.addEventListener('hashchange',()=>{if(dataState === 'ready' && location.hash!=='#main')loadHash();});
+window.addEventListener('hashchange',()=>{if(library && location.hash!=='#main')loadHash();});
 function renderDataState() {
  const ready = dataState === 'ready', failed = dataState === 'error';
  $('#main').setAttribute('aria-busy', String(dataState === 'loading'));
  $('#app-status').hidden = ready;
  $('#app-status').setAttribute('role', failed ? 'alert' : 'status');
- $('#app-status-title').textContent = t(failed ? 'libraryLoadFailed' : 'libraryLoading');
+ $('#app-status-title').textContent = t(library ? (failed?'profileLoadFailed':'profileLoading') : (failed?'libraryLoadFailed':'libraryLoading'));
  $('#app-status-message').textContent = t(failed ? 'libraryLoadRecovery' : 'libraryLoadingDetail');
  $('#retry-data').textContent = t('retryData');
  $('#retry-data').hidden = !failed;
@@ -1155,36 +1172,41 @@ function renderDataState() {
  $('#workspace-view').hidden = !ready || currentView !== 'workspace';
  $('.mobile-workbar').hidden = !ready || currentView !== 'workspace';
 }
+async function fetchDataJSON(name,retry=false) {
+ const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),25000);
+ try {
+   const response=await fetch(new URL('./data/'+name,appBase),{signal:controller.signal,cache:retry?'reload':'default'});
+   if(!response.ok)throw new Error('Data request failed');
+   return await response.json();
+ } finally {clearTimeout(timer);}
+}
 async function loadData(retry = false) {
  if (dataLoading) return;
  dataLoading = true;
+ ++navigationSequence;
  dataState = 'loading';
  renderDataState();
  if (retry) $('#app-status').focus({preventScroll:true});
- const controller = new AbortController();
- const timer = setTimeout(() => controller.abort(), 25000);
  try {
-   const [nextBoards, nextEvidence] = await Promise.all(['boards.json','evidence.json'].map(async name => {
-     const response = await fetch(new URL('./data/'+name,appBase), {signal:controller.signal, cache:retry ? 'reload' : 'default'});
-     if (!response.ok) throw new Error('Library request failed');
-     return response.json();
-   }));
-   const nextLayouts = buildLayouts(nextBoards);
-   boards = nextBoards; evidence = nextEvidence; layouts = nextLayouts;
+   const index=await fetchDataJSON('catalog.json',retry);
+   const nextLibrary=new ProfileLibrary(index,name=>fetchDataJSON(name,retry),nextEvidence=>{
+     if(library!==nextLibrary)return;
+     Object.assign(evidence.references,nextEvidence.references);
+   });
+   const nextLayouts=buildLayouts(nextLibrary.profiles);
+   library=nextLibrary;boards=library.profiles;evidence={references:{}};layouts=nextLayouts;
    updateLibraryCount();
-   loadHash();
-   dataState = 'ready';
+   await loadHash();
+   if(dataState!=='ready')return;
    renderDataState();
    if (retry) {
      if (currentView === 'home') $('#home-search').focus({preventScroll:true});
      else focusWorkspace();
    }
  } catch {
-   controller.abort();
    dataState = 'error';
    renderDataState();
  } finally {
-   clearTimeout(timer);
    dataLoading = false;
  }
 }

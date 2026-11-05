@@ -23,6 +23,45 @@ async function openPlan(page) {
   else await page.locator('#plan-tab').click();
 }
 
+test('home loads only the small catalog and a model loads its own pins and MCU',async({page})=>{
+ const requested=[];page.on('request',request=>{if(request.url().includes('/data/'))requested.push(new URL(request.url()).pathname);});
+ await ready(page);
+ expect(requested.map(path=>path.split('/').pop())).toEqual(['catalog.json']);
+ await page.locator('#home-search').fill('Pico W');
+ await page.locator('#home-catalog-container [data-profile="picow"]').first().click();
+ await expect(page.locator('#app-status')).toBeHidden();
+ expect(requested.filter(path=>path.includes('/profiles/')).length).toBe(2);
+ expect(requested.every(path=>!path.endsWith('/boards.json') && !path.endsWith('/evidence.json'))).toBe(true);
+});
+
+test('a failed lazy profile retries the selected model and retains browser plans',async({page})=>{
+ const saved={picow:{1:{function:'GPIO',label:'kept'}}};
+ await page.addInitScript(({key,saved})=>localStorage.setItem(key,JSON.stringify(saved)),{key:storageKey,saved});
+ let attempts=0;
+ await page.route('**/data/profiles/picow.*.json',route=>++attempts===1?route.fulfill({status:503,body:'unavailable'}):route.continue());
+ await ready(page);await page.locator('#home-search').fill('Pico W');
+ await page.locator('#home-catalog-container [data-profile="picow"]').first().click();
+ await expect(page.locator('#app-status[role="alert"]')).toBeVisible();
+ await page.locator('#retry-data').click();await expect(page.locator('#app-status')).toBeHidden();
+ await expect(page.locator('#function-reference')).toHaveValue('picow');
+ expect(await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),storageKey)).toEqual(saved);
+});
+
+test('returning home during a pin download prevents a late navigation',async({page})=>{
+ let release;
+ const waiting=new Promise(resolve=>release=resolve);
+ await page.route('**/data/profiles/picow.*.json',async route=>{await waiting;await route.continue();});
+ await ready(page);await page.locator('#home-search').fill('Pico W');
+ await page.locator('#home-catalog-container [data-profile="picow"]').first().click();
+ await expect(page.locator('#app-status')).toBeVisible();
+ await page.evaluate(()=>location.hash='#home');
+ await expect(page.locator('#home-view')).toBeVisible();
+ const loaded=page.waitForResponse(response=>response.url().includes('/profiles/picow.'));
+ release();await loaded;
+ await expect(page.locator('#home-view')).toBeVisible();
+ await expect(page).toHaveURL(/#home$/);
+});
+
 test('guided peripheral connections save exact bus signals and survive refresh',async({page})=>{
  await ready(page,'#board=pico-family&profile=picow');await openPlan(page);
  await page.locator('#peripheral-builder summary').click();
@@ -212,7 +251,7 @@ for (const deepLink of [false,true]) test(`load failure remains visible and retr
   const saved={picow:{1:{function:'GPIO',label:'preserved'}}};
   await page.addInitScript(({key,saved})=>localStorage.setItem(key,JSON.stringify(saved)),{key:storageKey,saved});
   let attempts=0;
-  await page.route('**/data/boards.json',route=>++attempts===1
+  await page.route('**/data/catalog.json',route=>++attempts===1
     ? route.fulfill({status:503,body:'unavailable'}) : route.continue());
   await page.goto('./?lang=en'+(deepLink?'#board=pico-family&profile=picow&pin=4':''));
   await expect(page.locator('#app-status[role="alert"]')).toBeVisible();
