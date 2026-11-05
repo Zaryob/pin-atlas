@@ -97975,7 +97975,7 @@
           "y": 222,
           "side": "left"
         },
-        "mcuPin": 30,
+        "mcuPin": 38,
         "note": "Analog input A0 (ADC0)"
       },
       {
@@ -98069,7 +98069,7 @@
           "y": 250,
           "side": "left"
         },
-        "mcuPin": 31,
+        "mcuPin": 39,
         "note": "Analog input A1 (ADC1)"
       },
       {
@@ -98163,7 +98163,7 @@
           "y": 278,
           "side": "left"
         },
-        "mcuPin": 32,
+        "mcuPin": 40,
         "note": "Analog input A2 (ADC2)"
       },
       {
@@ -98257,7 +98257,7 @@
           "y": 306,
           "side": "left"
         },
-        "mcuPin": 33,
+        "mcuPin": 41,
         "note": "Analog input A3 (ADC3)"
       },
       {
@@ -98353,7 +98353,7 @@
           "y": 334,
           "side": "left"
         },
-        "mcuPin": 28
+        "mcuPin": 36
       },
       {
         "number": 10,
@@ -98448,7 +98448,7 @@
           "y": 362,
           "side": "left"
         },
-        "mcuPin": 29
+        "mcuPin": 37
       },
       {
         "number": 11,
@@ -98535,7 +98535,7 @@
           "y": 390,
           "side": "left"
         },
-        "mcuPin": 21,
+        "mcuPin": 29,
         "note": "Default hardware SPI0 SCK"
       },
       {
@@ -98623,7 +98623,7 @@
           "y": 418,
           "side": "left"
         },
-        "mcuPin": 22,
+        "mcuPin": 30,
         "note": "Default hardware SPI0 MOSI (TX)"
       },
       {
@@ -98719,7 +98719,7 @@
           "y": 446,
           "side": "left"
         },
-        "mcuPin": 23,
+        "mcuPin": 31,
         "note": "Default hardware SPI0 MISO (RX)"
       },
       {
@@ -99333,7 +99333,7 @@
           "y": 306,
           "side": "right"
         },
-        "mcuPin": 10
+        "mcuPin": 11
       },
       {
         "number": 21,
@@ -99420,7 +99420,7 @@
           "y": 334,
           "side": "right"
         },
-        "mcuPin": 11
+        "mcuPin": 12
       },
       {
         "number": 22,
@@ -99507,7 +99507,7 @@
           "y": 362,
           "side": "right"
         },
-        "mcuPin": 12
+        "mcuPin": 13
       },
       {
         "number": 23,
@@ -99594,7 +99594,7 @@
           "y": 390,
           "side": "right"
         },
-        "mcuPin": 13
+        "mcuPin": 14
       },
       {
         "number": 24,
@@ -99681,7 +99681,7 @@
           "y": 418,
           "side": "right"
         },
-        "mcuPin": 14
+        "mcuPin": 15
       },
       {
         "number": 25,
@@ -99768,7 +99768,7 @@
           "y": 446,
           "side": "right"
         },
-        "mcuPin": 15,
+        "mcuPin": 16,
         "note": "Connected to onboard red user LED"
       },
       {
@@ -105497,8 +105497,7 @@
           "x": 644,
           "y": 214,
           "side": "left"
-        },
-        "mcuPin": "PWR_BUT"
+        }
       },
       {
         "number": 56,

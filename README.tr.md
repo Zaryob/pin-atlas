@@ -1,5 +1,7 @@
 # Pin Atlas
 
+Yeni profil eklemek için [kart ve MCU doğrulama adımlarını](docs/ADDING-BOARDS.md) izleyin.
+
 [English](README.md) · [Türkçe](README.tr.md)
 
 [Canlı site](https://zaryob.github.io/pin-atlas/?lang=tr) · [Doğrulama kaydı](docs/VERIFICATION.tr.md) · [Pin bazında karşılaştırma](sources/pin-verification.csv)

@@ -1,10 +1,13 @@
 """Fast offline contract checks; manufacturer comparison runs separately in CI."""
 import json,re
+from catalog_contract import validate_catalog, validate_registry
 from pathlib import Path
 from urllib.parse import urlsplit
 root=Path(__file__).resolve().parents[1]
 read=lambda name:json.loads((root/name).read_text())
 boards=read('public/data/boards.json');evidence=read('public/data/evidence.json');report=read('public/data/verification.json');manifest=read('sources/manifest.json')
+validate_catalog(boards,manifest['documents'])
+validate_registry(read('sources/stm32-catalog.json'),{d['id']:d for d in manifest['documents']})
 assert len({b['id'] for b in boards})==len(boards)
 refs=evidence['references'];docids={d['id'] for d in manifest['documents']}
 for r in refs.values():
@@ -236,10 +239,10 @@ assert mb[14]['boardCircuitKey']=='microbitButtonBNote'
 assert mb[20]['boardCircuitKey']=='microbitI2cPullupNote'
 feather=lookup['adafruit-feather-rp2040']
 assert len(feather)==28 and sum(p['type']=='GPIO' for p in feather.values())==21
-assert feather[5]['name']=='A0' and feather[5]['net']=='GPIO26' and feather[5]['mcuPin']==30
-assert feather[11]['name']=='SCK' and feather[11]['net']=='GPIO18' and feather[11]['mcuPin']==21
+assert feather[5]['name']=='A0' and feather[5]['net']=='GPIO26' and feather[5]['mcuPin']==38
+assert feather[11]['name']=='SCK' and feather[11]['net']=='GPIO18' and feather[11]['mcuPin']==29
 assert feather[17]['name']=='SDA' and feather[17]['net']=='GPIO2' and feather[17]['mcuPin']==4
-assert feather[25]['name']=='D13' and feather[25]['net']=='GPIO13' and feather[25]['mcuPin']==15
+assert feather[25]['name']=='D13' and feather[25]['net']=='GPIO13' and feather[25]['mcuPin']==16
 assert feather[28]['name']=='VBAT' and feather[28]['type']=='POWER'
 assert any(f['group']=='ADC' and f['name']=='ADC0' for f in feather[5]['functions'])
 print(f"Checked {report['physicalPins']} pins, {report['functionAssignments']} function references and model-specific corner cases.")

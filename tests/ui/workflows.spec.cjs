@@ -39,6 +39,12 @@ test('guided peripheral connections save exact bus signals and survive refresh',
  await expect(page.locator('#plan-list')).toContainText('I2C0 SCL');
 });
 
+test('Feather analog header highlights the verified RP2040 package pad',async({page})=>{
+ await ready(page,'#board=adafruit-feather-rp2040');
+ await page.locator('#diagram [data-pin="5"]').click();
+ await expect(page.locator('#diagram [data-mcu-pin="38"]')).toHaveAttribute('aria-current','true');
+});
+
 test('exact model search shares results with the library and opens the right reference',async({page})=>{
   for (const [query,profile,mcu] of [
     ['Pico W','picow','RP2040'],['Pico 2 W','pico2w','RP2350A'],

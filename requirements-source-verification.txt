@@ -1,1 +1,2 @@
 pdfplumber==0.11.9
+jsonschema==4.26.0

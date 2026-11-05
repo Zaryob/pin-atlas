@@ -90,7 +90,7 @@ def build_beaglebone(cache, docs, obs, ref, verified_on):
             'net': net,
             'position': pos
         }
-        if proc: pin['mcuPin'] = proc
+        if proc and re.fullmatch(r'[A-Z]{1,3}[1-9][0-9]*',proc): pin['mcuPin'] = proc
 
         if ptype == 'GPIO':
             pin['noteKey'] = 'bbbGpioNote'
@@ -154,7 +154,7 @@ def build_beaglebone(cache, docs, obs, ref, verified_on):
             'net': net,
             'position': pos
         }
-        if proc and proc not in ('VADC', 'AGND'): pin['mcuPin'] = proc
+        if proc and re.fullmatch(r'[A-Z]{1,3}[1-9][0-9]*',proc): pin['mcuPin'] = proc
 
         if ptype == 'GPIO':
             pin['noteKey'] = 'bbbGpioNote'

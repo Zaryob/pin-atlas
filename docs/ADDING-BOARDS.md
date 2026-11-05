@@ -1,0 +1,11 @@
+# Adding a verified board or MCU
+
+1. Identify the exact board revision, fitted MCU and package. Record physical connector positions separately from MCU pad numbers. Group a board with an existing layout only after matching its connector geometry; keep power nets and processor functions reference-specific.
+2. Add source records to `sources/manifest.json`: stable ID, publisher, revision, source URL, view URL, cache filename and SHA-256. Pin GitHub sources to a full commit. A GPIO table must be the dependency named by the package XML, including shared tables with a different chip name.
+3. For supported UM1724 Nucleo-64 models, add explicit Arduino/Morpho table page and index locations to `sources/stm32-catalog.json`. Add standalone package models under `packages`. Reuse shared GPIO documents through `gpioModesDocument`. Other layouts require a source-specific builder; do not reinterpret the Nucleo-64 geometry.
+4. Extract original source facts. If CI needs a PDF-independent path, record raw source cells, pin both the original PDF and extraction hashes, and compare the original and recorded parsing results. Never use generated board assignments as source snapshots. Document manual errors with independent evidence.
+5. Run `python3 scripts/verify-official-sources.py --table-snapshots --write`, then `npm run check`. Profiles must satisfy `sources/board.schema.json` and the shared catalog contracts, including valid board-to-MCU net/pad links.
+6. Register the layout/reference in the catalog and add English-first labels with Turkish translations. Add hardware-specific assertions and verify search, pin selection, board/package navigation and saved-plan compatibility on desktop and mobile.
+7. Run `python3 scripts/audit-source-downloads.py --document SOURCE_ID` for each added document. This deliberately ignores local caches. Review generated data, evidence, verification totals and the CSV together; commit and push the completed addition.
+
+The weekly **Audit source downloads without cache** workflow detects remote availability and revision changes without making deployment depend on the ST CDN. Its artifact records attempted URLs and hashes. Failed availability checks require investigation; hash mismatches require a deliberate source review, never an automatic lock update.

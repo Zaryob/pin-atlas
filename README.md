@@ -1,5 +1,7 @@
 # Pin Atlas
 
+Contributing a profile? Follow the [board and MCU verification workflow](docs/ADDING-BOARDS.md).
+
 [English](README.md) · [Türkçe](README.tr.md)
 
 [Live site](https://zaryob.github.io/pin-atlas/?lang=en) · [Verification record](docs/VERIFICATION.md) · [Pin-by-pin comparison](sources/pin-verification.csv)

@@ -1,21 +1,16 @@
 """Build additional STM32 packages and Nucleo-64 references from pinned ST sources."""
+import json
 import re
 import xml.etree.ElementTree as ET
-from pathlib import PurePosixPath
+from pathlib import Path, PurePosixPath
 from urllib.parse import urlsplit
 
 from nucleo_sources import build_nucleo
 
-# Explicit manual table locations prevent selecting an adjacent model's continuation.
-MODELS = {
-    'f446re': {'arduino': [(47, 1), (48, 0)], 'morpho': [(58, 0)], 'tables': (19, 29)},
-    'f303re': {'arduino': [(41, 0), (42, 0)], 'morpho': [(55, 0)], 'tables': (14, 26)},
-    'l476rg': {'arduino': [(52, 1), (53, 0)], 'morpho': [(61, 0)], 'tables': (23, 32)},
-    'f072rb': {'arduino': [(37, 0), (38, 0)], 'morpho': [(55, 0)], 'tables': (11, 26)},
-    'l053r8': {'arduino': [(45, 0)], 'morpho': [(59, 0)], 'tables': (17, 30)},
-    'l152re': {'arduino': [(50, 0), (51, 0)], 'morpho': [(59, 0)], 'tables': (21, 30)},
-}
-PACKAGES = ('f407vg', 'f405rg')
+# Table locations are reviewed data, separate from the reusable parser.
+REGISTRY = json.loads((Path(__file__).resolve().parents[1] / 'sources/stm32-catalog.json').read_text())
+MODELS = REGISTRY['nucleo64']
+PACKAGES = REGISTRY['packages']
 
 
 def stm32_group(signal):

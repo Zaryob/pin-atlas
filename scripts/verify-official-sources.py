@@ -433,7 +433,8 @@ def build(use_snapshots=False):
     rp2040_phys = ref('rp2040-qfn56-physical','rp2040',12,'Figure 3 · QFN-56 top view and exposed GND pad','visual-diagram')
     boards.extend(build_seeed(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn'],bank2040,rp2040_phys))
     boards.extend(build_microbit(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn']))
-    boards.extend(build_feather_rp2040(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn'],bank2040,rp2040_phys))
+    rp2040_chip=rp2040_package(bank2040,board_base)
+    boards.extend(build_feather_rp2040(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn'],bank2040,rp2040_phys,rp2040_chip))
     boards.extend(build_teensy_41(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn']))
     boards.extend(build_beaglebone(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn']))
     for total,chip in [(60,'rp2350a'),(80,'rp2350b')]:
@@ -441,7 +442,7 @@ def build(use_snapshots=False):
     boards.extend(f4_chips)
     boards.append(g4_chip)
     boards.append(h7_chip)
-    boards.append(rp2040_package(bank2040,board_base))
+    boards.append(rp2040_chip)
     boards.extend(build_stm32_catalog(CACHE,DOCS,ref,MANIFEST['verifiedOn'],use_snapshots=use_snapshots))
     link_board_packages(boards)
     return boards
