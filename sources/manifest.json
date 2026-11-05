@@ -910,6 +910,26 @@
       "publisher": "STMicroelectronics",
       "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
       "sha256": "d2e5b2fe0afc431c0979e25bb5e41ecf781d6e7ea2d109901cbceffabaf15e90"
+    },
+    {
+      "id": "f407vg-package",
+      "title": "STM32F407VG CubeMX package data",
+      "file": "f407vg-package.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F407V(E-G)Tx.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F407V(E-G)Tx.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "3771e470e578568e70ee9c10af40173641c29c6e267cf5b268204a8b8aefbea7"
+    },
+    {
+      "id": "f407vg-modes",
+      "title": "STM32F407VG CubeMX modes data",
+      "file": "f407vg-modes.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F417_gpio_v1_0_Modes.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F417_gpio_v1_0_Modes.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "8ccd37f14a82da3b2acbe858e687f8e8b2df8b18fd8e5a711cfff11ad834ee6e"
     }
   ],
   "publishers": [

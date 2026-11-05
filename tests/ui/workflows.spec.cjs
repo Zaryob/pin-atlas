@@ -140,6 +140,26 @@ test('new Nucleo models share one catalog entry and link to their exact MCU pack
   }
 });
 
+test('standalone STM32 packages render all pads and retain searchable hardware selectors',async({page})=>{
+  const packages=boards.filter(chip=>chip.scopeKey==='stm32CubeScope' &&
+    !boards.some(board=>board.mcuProfile===chip.id) &&
+    (!process.env.STM32_TEST_PACKAGE || chip.id===process.env.STM32_TEST_PACKAGE));
+  expect(packages.length).toBeGreaterThan(0);
+  for(const chip of packages){
+    await ready(page,'#board='+chip.id);
+    await expect(page.locator('#board-title')).toHaveText(chip.name);
+    await expect(page.locator('#diagram [data-pin]')).toHaveCount(chip.packagePins);
+    const extent=await page.evaluate(()=>({width:document.documentElement.scrollWidth,viewport:innerWidth}));
+    expect(extent.width).toBeLessThanOrEqual(extent.viewport+1);
+    await page.locator('#pin-search').fill('USART1_TX');
+    await page.locator('#table-view').click();
+    const matches=chip.pins.filter(pin=>pin.functions.some(fn=>fn.name==='USART1_TX'));
+    expect(matches.length).toBeGreaterThan(0);
+    await expect(page.locator('#table-content tbody tr')).toHaveCount(matches.length);
+    await expect(page.locator('#table-content')).toContainText('USART1_TX · AF7');
+  }
+});
+
 for (const deepLink of [false,true]) test(`load failure remains visible and retry restores ${deepLink?'a model link':'the catalog'}`,async({page})=>{
   const saved={picow:{1:{function:'GPIO',label:'preserved'}}};
   await page.addInitScript(({key,saved})=>localStorage.setItem(key,JSON.stringify(saved)),{key:storageKey,saved});

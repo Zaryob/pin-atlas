@@ -96,3 +96,10 @@ test('L152RE retains its MCU, low-power clock and analog input mapping',()=>{
   const supply=board.pins.find(pin=>pin.physicalLabel==='CN7.33');
   assert.equal(supply.name,'VLCD');
 });
+
+test('F407VG exposes its own package geometry and USART selector',()=>{
+ const chip=boards.find(board=>board.id==='stm32f407vgt6');
+ assert.equal(chip.packagePins,100);assert.equal(chip.gpioCount,82);assert.equal(chip.clock,'168 MHz');
+ const tx=chip.pins.find(pin=>pin.name==='PA9');assert.equal(tx.number,68);
+ assert(tx.functions.some(fn=>fn.name==='USART1_TX' && fn.selector==='AF7'));
+});
