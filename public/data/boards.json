@@ -23907,7 +23907,33 @@
       "width": 900,
       "height": 720,
       "artwork": "assets/boards/nucleo-mb1136.svg",
-      "minWidth": 760
+      "minWidth": 760,
+      "connectorGroups": [
+        {
+          "id": "arduino",
+          "label": "Arduino",
+          "contacts": [
+            "CN5",
+            "CN6",
+            "CN8",
+            "CN9"
+          ]
+        },
+        {
+          "id": "CN7",
+          "label": "ST Morpho · CN7",
+          "contacts": [
+            "CN7"
+          ]
+        },
+        {
+          "id": "CN10",
+          "label": "ST Morpho · CN10",
+          "contacts": [
+            "CN10"
+          ]
+        }
+      ]
     },
     "packagePins": 108,
     "gpioCount": 73,
@@ -28727,7 +28753,33 @@
       "width": 900,
       "height": 720,
       "artwork": "assets/boards/nucleo-mb1136.svg",
-      "minWidth": 760
+      "minWidth": 760,
+      "connectorGroups": [
+        {
+          "id": "arduino",
+          "label": "Arduino",
+          "contacts": [
+            "CN5",
+            "CN6",
+            "CN8",
+            "CN9"
+          ]
+        },
+        {
+          "id": "CN7",
+          "label": "ST Morpho · CN7",
+          "contacts": [
+            "CN7"
+          ]
+        },
+        {
+          "id": "CN10",
+          "label": "ST Morpho · CN10",
+          "contacts": [
+            "CN10"
+          ]
+        }
+      ]
     },
     "packagePins": 108,
     "gpioCount": 72,
@@ -33272,7 +33324,33 @@
       "width": 900,
       "height": 720,
       "artwork": "assets/boards/nucleo-mb1136.svg",
-      "minWidth": 760
+      "minWidth": 760,
+      "connectorGroups": [
+        {
+          "id": "arduino",
+          "label": "Arduino",
+          "contacts": [
+            "CN5",
+            "CN6",
+            "CN8",
+            "CN9"
+          ]
+        },
+        {
+          "id": "CN7",
+          "label": "ST Morpho · CN7",
+          "contacts": [
+            "CN7"
+          ]
+        },
+        {
+          "id": "CN10",
+          "label": "ST Morpho · CN10",
+          "contacts": [
+            "CN10"
+          ]
+        }
+      ]
     },
     "packagePins": 108,
     "gpioCount": 72,
@@ -38389,7 +38467,33 @@
       "width": 900,
       "height": 720,
       "artwork": "assets/boards/nucleo-mb1136.svg",
-      "minWidth": 760
+      "minWidth": 760,
+      "connectorGroups": [
+        {
+          "id": "arduino",
+          "label": "Arduino",
+          "contacts": [
+            "CN5",
+            "CN6",
+            "CN8",
+            "CN9"
+          ]
+        },
+        {
+          "id": "CN7",
+          "label": "ST Morpho · CN7",
+          "contacts": [
+            "CN7"
+          ]
+        },
+        {
+          "id": "CN10",
+          "label": "ST Morpho · CN10",
+          "contacts": [
+            "CN10"
+          ]
+        }
+      ]
     },
     "packagePins": 108,
     "gpioCount": 76,
@@ -47640,7 +47744,30 @@
       "width": 960,
       "height": 840,
       "artwork": "assets/boards/nucleo-h723zg.svg",
-      "minWidth": 800
+      "minWidth": 800,
+      "connectorGroups": [
+        {
+          "id": "CN7",
+          "label": "ST Zio · CN7",
+          "contacts": [
+            "CN7"
+          ]
+        },
+        {
+          "id": "CN8",
+          "label": "ST Zio · CN8",
+          "contacts": [
+            "CN8"
+          ]
+        },
+        {
+          "id": "MORPHO",
+          "label": "ST Morpho",
+          "contacts": [
+            "MORPHO"
+          ]
+        }
+      ]
     },
     "packagePins": 131,
     "gpioCount": 114,

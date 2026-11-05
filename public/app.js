@@ -1,5 +1,6 @@
 import { buildLayouts, resolveProfile } from './layouts.mjs';
 import { compatibleModels, filterCompatibleModels } from './compatibility.mjs';
+import { connectorGroupsFor } from './connectors.mjs';
 import { options, physicalLabel, planReference, samePlan, validatePlan } from './plans.mjs';
 const { t, verificationUrl } = window.ZaryobI18n;
 const $ = (selector, root = document) => root.querySelector(selector);
@@ -51,11 +52,6 @@ let currentView = 'home', homeActiveFilter = 'all', homeSearchQuery = '';
 const storageKey = 'pin-atlas:plans:v1';
 const rememberedProfiles = new Map();
 let compatibilityModels = [], compatibilityQuery = '';
-const nucleoConnectorGroups = [
-  {id:'arduino', label:'Arduino', contacts:['CN5','CN6','CN8','CN9']},
-  {id:'CN7', label:'ST Morpho · CN7', contacts:['CN7']},
-  {id:'CN10', label:'ST Morpho · CN10', contacts:['CN10']}
-];
 let connectorGroups = [];
 let connectorZoom = '';
 const layoutTitle = item => item.nameKey ? t(item.nameKey) : item.name;
@@ -87,8 +83,7 @@ function setBoard(id, initial = false, preferredProfile) {
  const sameLayout = layout?.id === next.layout.id;
  const previousPin = selected;
  layout = next.layout; board = next.profile;
- connectorGroups = board.id.startsWith('nucleo-') ? nucleoConnectorGroups :
-   [...new Set(board.pins.map(pin => pin.connector).filter(Boolean))].map(id => ({id, label:id, contacts:[id]}));
+ connectorGroups = connectorGroupsFor(board);
  if (!connectorGroups.some(group => group.id === connectorZoom)) connectorZoom = '';
  rememberedProfiles.set(layout.id, board.id);
  selected = sameLayout && board.pins.some(pin => pin.number === previousPin) ? previousPin : board.pins.find(p => p.type === 'GPIO')?.number || 1;
@@ -310,7 +305,7 @@ function renderCustom() {
    pinGroup(pin,x,y,side,{angle,compact,padWidth,showConnectorLabel,connector:showConnectorLabel,connected:connected.has(physicalLabel(pin))})
  ).join('');
  let viewBox = [0, 0, width, height];
- if (connectorZoom) {
+ if (connectorZoom && contacts.length) {
    const bounds = contacts.map(({x,y,side,angle,compact,padWidth}) => {
      if (compact) return [x - padWidth / 2 - 8, y - 25, x + padWidth / 2 + 8, y + 38];
      const lead = showConnectorLabel ? 122 : 230;
@@ -399,8 +394,9 @@ function renderPackageBoards(pad) {
  }).join('') : '';
 }
 function renderTable() {
- const pins=board.pins.filter(matches);
- $('#table-content').innerHTML = `<table class="pin-table"><thead><tr><th>${t('physical')}</th><th>${t('pinName')}</th><th>${t('functions')}</th><th>${t('label')}</th><th><span class="sr-only">${t('details')}</span></th></tr></thead><tbody>${pins.map(p=>`<tr data-pin="${p.number}" class="${p.number===selected?'selected':''}" aria-current="${p.number===selected?'true':'false'}"><td>${esc(physicalLabel(p))}</td><td class="table-name" style="color:${colors[p.type]}">${esc(p.name)}</td><td>${p.functions.filter(f=>!filters.size||filters.has(f.group)).map(f=>`<span style="--color:${colors[f.group]||colors.SYSTEM}">${esc(f.name)}${f.selector ? ' · '+esc(f.selector) : ''}</span>`).join('')||'—'}</td><td>${esc(assignments[p.number]?.label||'—')}</td><td><button class="table-details" data-pin="${p.number}" aria-label="${esc(t('selectPin', {pin:physicalLabel(p),name:p.name}))}">${t('details')} →</button></td></tr>`).join('')}</tbody>${!pins.length?`<caption>${t('noMatch')}</caption>`:''}</table>`;
+ const pins=board.pins.filter(pin => inConnectorZoom(pin) && matches(pin));
+ const caption=[connectorGroups.find(group => group.id === connectorZoom)?.label, !pins.length ? t('noMatch') : ''].filter(Boolean).join(' · ');
+ $('#table-content').innerHTML = `<table class="pin-table">${caption ? `<caption>${esc(caption)}</caption>` : ''}<thead><tr><th>${t('physical')}</th><th>${t('pinName')}</th><th>${t('functions')}</th><th>${t('label')}</th><th><span class="sr-only">${t('details')}</span></th></tr></thead><tbody>${pins.map(p=>`<tr data-pin="${p.number}" class="${p.number===selected?'selected':''}" aria-current="${p.number===selected?'true':'false'}"><td>${esc(physicalLabel(p))}</td><td class="table-name" style="color:${colors[p.type]}">${esc(p.name)}</td><td>${p.functions.filter(f=>!filters.size||filters.has(f.group)).map(f=>`<span style="--color:${colors[f.group]||colors.SYSTEM}">${esc(f.name)}${f.selector ? ' · '+esc(f.selector) : ''}</span>`).join('')||'—'}</td><td>${esc(assignments[p.number]?.label||'—')}</td><td><button class="table-details" data-pin="${p.number}" aria-label="${esc(t('selectPin', {pin:physicalLabel(p),name:p.name}))}">${t('details')} →</button></td></tr>`).join('')}</tbody></table>`;
 }
 function renderDetail() {
  const pin=pinByNumber(selected), opts=options(pin);
@@ -1128,8 +1124,11 @@ $('#package-boards').addEventListener('click', e => {
 });
 $('#connector-zoom').addEventListener('change', e => {
  connectorZoom = e.target.value;
- renderMap();
- $('.board-pin-map').scrollLeft = 0;
+ const next = board.pins.find(pin => inConnectorZoom(pin) && matches(pin)) || board.pins.find(inConnectorZoom);
+ if (!inConnectorZoom(pinByNumber(selected)) && next) choosePin(next.number, false);
+ else renderMap();
+ const map = $('.board-pin-map');
+ if (map) map.scrollLeft = 0;
 });
 $('#map-view').addEventListener('click',()=>setView('map'));$('#table-view').addEventListener('click',()=>setView('table'));
 function selectPackagePad(number) {

@@ -6,6 +6,18 @@ import xml.etree.ElementTree as ET
 import pdfplumber
 from stm32_sources import SnapshotDocument, verify_snapshot
 
+# Connector navigation belongs to the carrier layout, not the MCU family.
+NUCLEO_64_CONNECTOR_GROUPS = [
+    {'id': 'arduino', 'label': 'Arduino', 'contacts': ['CN5', 'CN6', 'CN8', 'CN9']},
+    {'id': 'CN7', 'label': 'ST Morpho · CN7', 'contacts': ['CN7']},
+    {'id': 'CN10', 'label': 'ST Morpho · CN10', 'contacts': ['CN10']},
+]
+NUCLEO_144_CONNECTOR_GROUPS = [
+    {'id': 'CN7', 'label': 'ST Zio · CN7', 'contacts': ['CN7']},
+    {'id': 'CN8', 'label': 'ST Zio · CN8', 'contacts': ['CN8']},
+    {'id': 'MORPHO', 'label': 'ST Morpho', 'contacts': ['MORPHO']},
+]
+
 
 def read_f4_chip(cache, docs, ref, model, verified_on, category):
     package_id, modes_id = f'{model}-package', f'{model}-modes'
@@ -153,7 +165,8 @@ def build_nucleo(cache, docs, ref, chip, model):
     return {
         'id': board_id, 'name': board_id.upper(), 'family': 'STM32', 'shortName': board_id.upper(),
         'subtitle': 'Nucleo-64 · MB1136 · Arduino Uno and ST Morpho', 'layout': 'custom',
-        'diagram': {'width': 900, 'height': 720, 'artwork': 'assets/boards/nucleo-mb1136.svg', 'minWidth': 760},
+        'diagram': {'width': 900, 'height': 720, 'artwork': 'assets/boards/nucleo-mb1136.svg', 'minWidth': 760,
+                    'connectorGroups': copy.deepcopy(NUCLEO_64_CONNECTOR_GROUPS)},
         'packagePins': len(pins), 'gpioCount': sum(pin['type'] == 'GPIO' for pin in pins),
         'uniqueGPIOCount': len({pin['net'] for pin in pins if pin['type'] == 'GPIO'}),
         'voltage': '3.3 V I/O', 'mcu': chip['mcu'], 'processor': chip['processor'], 'clock': chip['clock'],
@@ -333,7 +346,8 @@ def build_nucleo_g474(cache, docs, ref, chip, use_snapshots=False):
     return {
         'id': board_id, 'name': 'NUCLEO-G474RE', 'family': 'STM32', 'shortName': 'NUCLEO-G474RE',
         'subtitle': 'Nucleo-64 · MB1367 · Arduino Uno and ST Morpho', 'layout': 'custom',
-        'diagram': {'width': 900, 'height': 720, 'artwork': 'assets/boards/nucleo-mb1136.svg', 'minWidth': 760},
+        'diagram': {'width': 900, 'height': 720, 'artwork': 'assets/boards/nucleo-mb1136.svg', 'minWidth': 760,
+                    'connectorGroups': copy.deepcopy(NUCLEO_64_CONNECTOR_GROUPS)},
         'packagePins': len(pins), 'gpioCount': sum(pin['type'] == 'GPIO' for pin in pins),
         'uniqueGPIOCount': len({pin['net'] for pin in pins if pin['type'] == 'GPIO'}),
         'voltage': '3.3 V I/O', 'mcu': chip['mcu'], 'processor': chip['processor'], 'clock': chip['clock'],
@@ -557,7 +571,8 @@ def build_nucleo_h723(cache, docs, ref, chip):
     return {
         'id': board_id, 'name': 'NUCLEO-H723ZG', 'family': 'STM32', 'shortName': 'NUCLEO-H723ZG',
         'subtitle': 'Nucleo-144 · MB1364 · ST Zio and ST Morpho', 'layout': 'custom',
-        'diagram': {'width': 960, 'height': 840, 'artwork': 'assets/boards/nucleo-h723zg.svg', 'minWidth': 800},
+        'diagram': {'width': 960, 'height': 840, 'artwork': 'assets/boards/nucleo-h723zg.svg', 'minWidth': 800,
+                    'connectorGroups': copy.deepcopy(NUCLEO_144_CONNECTOR_GROUPS)},
         'packagePins': len(pins), 'gpioCount': sum(pin['type'] == 'GPIO' for pin in pins),
         'uniqueGPIOCount': len({pin['name'] for pin in pins if pin['type'] == 'GPIO'}),
         'voltage': '3.3 V I/O', 'mcu': chip['mcu'], 'processor': chip['processor'], 'clock': chip['clock'],
