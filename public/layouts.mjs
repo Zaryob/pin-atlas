@@ -6,6 +6,7 @@ export function buildLayouts(boards) {
   const nucleo64 = boards.filter(board => board.layoutFamily === 'nucleo-64');
   const nucleo32 = boards.filter(board => board.layoutFamily === 'nucleo-32');
   const nucleo144 = boards.filter(board => board.layoutFamily === 'nucleo-144');
+  const blackpill=boards.filter(board=>board.layoutFamily==='black-pill');
   const definitions = [
     {
       id: 'pico-family', nameKey: 'picoLayout', subtitleKey: 'picoLayoutSubtitle',
@@ -95,6 +96,12 @@ export function buildLayouts(boards) {
     profileIds:nucleo144.map(board=>board.id),defaultProfile:nucleo144.find(b=>b.id==='nucleo-h723zg')?.id || nucleo144[0].id,
     geometryConnectors:['CN7','CN8','CN9','CN10','CN11','CN12'],sharedContactCount:240,
     references:nucleo144.map(board=>({label:`${board.name} · ${board.mcu}`,profileIds:[board.id]}))
+  });
+  if(blackpill.length)definitions.push({
+    id:'black-pill',nameKey:'blackPillLayout',subtitleKey:'blackPillSubtitle',compatibleKey:'blackPillCompatible',
+    profileIds:blackpill.map(board=>board.id),defaultProfile:blackpill[0].id,
+    geometryConnectors:['LEFT','RIGHT','SWD'],sharedContactCount:44,
+    references:blackpill.map(board=>({label:`${board.name} · ${board.mcu}`,profileIds:[board.id]}))
   });
   const grouped = new Set(definitions.flatMap(layout => layout.profileIds));
   const layouts = definitions.map(definition => {

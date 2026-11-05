@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="820" viewBox="0 0 900 820">
+ <rect x="300" y="113" width="304" height="651" rx="8" fill="#253238" stroke="#101c20" stroke-width="3"/>
+ <rect x="409" y="103" width="84" height="48" rx="4" fill="#c7cfcc" stroke="#52605b"/>
+ <text x="451" y="193" text-anchor="middle" fill="#dce6e0" font-family="monospace" font-size="14">WeAct · USB-C</text>
+ <rect x="392" y="342" width="118" height="118" fill="#182522" stroke="#82978b"/>
+ <text x="451" y="391" text-anchor="middle" fill="#dce6e0" font-family="monospace" font-size="18">STM32</text>
+ <text x="451" y="420" text-anchor="middle" fill="#dce6e0" font-family="monospace" font-size="12">UFQFPN-48</text>
+ <text x="451" y="543" text-anchor="middle" fill="#dce6e0" font-family="monospace" font-size="16">BLACK PILL</text>
+ <text x="451" y="570" text-anchor="middle" fill="#dce6e0" font-family="monospace" font-size="12">v3.x · TOP VIEW</text>
+ <text x="451" y="636" text-anchor="middle" fill="#a3b5aa" font-family="monospace" font-size="12">SWD</text>
+</svg>

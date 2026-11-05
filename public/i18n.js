@@ -1,6 +1,16 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
 (() => {
   const messages = {
+    "blackPillLayout": ["WeAct Black Pill ailesi", "WeAct Black Pill family"],
+    "blackPillSubtitle": ["v3.x · 40 yan kontak + 4 SWD", "v3.x · 40 side contacts + 4 SWD"],
+    "blackPillCompatible": ["WeAct v3.0/v3.1 ortak ayak izi; işlemci işlevleri referansa özgüdür. Klon kartlar dahil değildir.", "Shared WeAct v3.0/v3.1 footprint; processor functions remain reference-specific. Clones are not included."],
+    "blackPillScope": ["WeAct'in KiCad sembolü/ayak izi ve v3.1 şeması. PAD numaraları KiCad kontak kimlikleridir; MCU bacakları veya kart üstü baskı numaraları değildir. GPIO 3,3 V'tur; 5V güç hattı ayrıdır. Klonları ayrıca kontrol edin.", "WeAct KiCad symbol/footprint and v3.1 schematic. PAD numbers identify KiCad contacts, not MCU pads or printed board numbers. GPIO uses 3.3 V; the 5V power rail is separate. Check clones independently."],
+    "blackPillKey": ["PA0, v3.x kartta 330 Ω üzerinden kullanıcı KEY düğmesine bağlıdır.", "PA0 connects to the user KEY button through 330 Ω on v3.x boards."],
+    "blackPillLed": ["PC13 yerleşik kullanıcı LED'iyle ortaktır.", "PC13 shares the onboard user LED."],
+    "blackPillUsb": ["PA11/PA12, yerleşik USB-C veri hatlarıyla ortaktır. Başka GPIO/çevrebirim kullanımı için USB bağlantısını serbest bırakın.", "PA11/PA12 share the onboard USB-C data lines. Release the USB connection before using other GPIO/peripheral functions."],
+    "blackPillBoot": ["PB2, BOOT1 ağıyla ortaktır ve önyükleme ayarı için pull-down içerir. Başlangıç seviyesini devreye göre kontrol edin.", "PB2 shares BOOT1 and its boot-setting pull-down. Check its startup level against your circuit."],
+    "blackPillFlash": ["PA4/PA5/PA6/PA7, isteğe bağlı SPI flash bağlantılarıdır (CS/SCK/MISO/MOSI). Flash yongasının takılı olup olmadığını kontrol edin.", "PA4/PA5/PA6/PA7 connect optional SPI flash (CS/SCK/MISO/MOSI). Check whether a flash chip is fitted."],
+    "blackPillDebug": ["SWD başlığı PA13/PA14 ile ortaktır. Diğer işlevler için programlayıcı ve debug yapılandırmasını serbest bırakın.", "The SWD header shares PA13/PA14. Release the programmer and debug configuration before other functions."],
     "retiredFunction": ["{pin} üzerindeki {name}, düzeltilmiş kart kapsamına göre kullanılamaz. Geçerli bir işlev seçin.", "{name} on {pin} is unavailable under the corrected board scope. Choose a supported function."],
     "nucleo144SdBridge": ["CN12.1/2 üzerindeki PC9/PC8 bağlantıları SB15/SB14 üzerinden seçilir. Köprüler OFF iken Morpho temasları bağlı değildir; SDMMC pinlerini kullanmadan önce ayarları kontrol edin.", "PC9/PC8 reach CN12.1/2 through SB15/SB14. These Morpho contacts are disconnected with the bridges OFF; check the settings before using the SDMMC pins."],
     "nucleo144Pf11": ["UM2407, MB1364 üzerinde PF11'in yalnızca GPIO olarak kullanılmasını ve ADC_IN olarak kullanılmamasını belirtir (SB65). Bu kart görünümünde analog ADC girişleri çıkarılır; dijital EXTI tetikleri korunur.", "UM2407 restricts PF11 on MB1364 to GPIO use and prohibits ADC_IN use (SB65). Analog ADC inputs are excluded here; digital EXTI triggers remain available."],

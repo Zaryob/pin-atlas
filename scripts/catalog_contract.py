@@ -34,7 +34,7 @@ def validate_catalog(boards, documents):
 
 def validate_registry(registry, docs):
     assert registry['version'] == 1
-    models = list(registry['nucleo64']) + registry['packages'] + list(registry.get('nucleo32',{})) + list(registry.get('nucleo144',{}))
+    models = list(registry['nucleo64']) + registry['packages'] + list(registry.get('nucleo32',{})) + list(registry.get('nucleo144',{})) + registry.get('blackpill',[])
     assert len(set(models)) == len(models), 'Duplicate STM32 model'
     for model in models:
         package = docs[f'{model}-package']

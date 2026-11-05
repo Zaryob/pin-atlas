@@ -6,7 +6,7 @@ from pathlib import Path, PurePosixPath
 from urllib.parse import urlsplit
 
 from nucleo_sources import build_nucleo
-from stm32_board_sources import build_nucleo32,build_nucleo144
+from stm32_board_sources import build_nucleo32,build_nucleo144,build_blackpill
 
 # Table locations are reviewed data, separate from the reusable parser.
 REGISTRY = json.loads((Path(__file__).resolve().parents[1] / 'sources/stm32-catalog.json').read_text())
@@ -132,4 +132,7 @@ def build_catalog(cache, docs, ref, verified_on, use_snapshots=False):
     for model,spec in REGISTRY.get('nucleo144',{}).items():
         chip=read_cube_package(cache,docs,ref,model,verified_on)
         boards.extend([build_nucleo144(cache,docs,ref,chip,model,spec,use_snapshots),chip])
+    for model in REGISTRY.get('blackpill',[]):
+        chip=read_cube_package(cache,docs,ref,model,verified_on)
+        boards.extend([build_blackpill(cache,docs,ref,chip,model),chip])
     return boards

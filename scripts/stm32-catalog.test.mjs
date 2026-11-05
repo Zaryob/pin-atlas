@@ -5,6 +5,17 @@ import {buildLayouts,resolveProfile} from '../public/layouts.mjs';
 const boards=JSON.parse(readFileSync(new URL('../public/data/boards.json',import.meta.url)));
 const layouts=buildLayouts(boards);
 
+test('WeAct F401CC uses the manufacturer 44-pad CAD footprint and its own QFN48 package',()=>{
+ const board=boards.find(b=>b.id==='weact-blackpill-f401cc'),chip=boards.find(b=>b.id===board.mcuProfile);
+ assert.equal(chip.packagePins,48);assert.equal(chip.gpioCount,36);assert.equal(chip.clock,'84 MHz');assert.equal(chip.layout,'qfn');
+ assert.equal(board.pins.length,44);assert.equal(board.uniqueGPIOCount,34);
+ assert.equal(board.pins[0].name,'PB12');assert.equal(board.pins[0].physicalLabel,'PAD.1');assert.equal(board.pins[0].position.x,315);
+ assert.equal(board.pins[39].name,'5V');
+ const swd=board.pins.find(p=>p.number===42);assert.equal(swd.name,'PA13');assert.equal(swd.connector,'SWD');
+ assert.equal(board.pins.find(p=>p.number===36).name,'PB2');
+ assert.equal(resolveProfile(layouts,board.id).layout.id,'black-pill');
+});
+
 test('MB1364 H743ZI2 and corrected H723 share physical connectors without renumbering legacy assignments',()=>{
  const h743=boards.find(b=>b.id==='nucleo-h743zi2'),chip=boards.find(b=>b.id===h743.mcuProfile);
  assert.equal(chip.packagePins,144);assert.equal(chip.gpioCount,114);assert.equal(chip.clock,'480 MHz');

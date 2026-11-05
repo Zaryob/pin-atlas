@@ -167,3 +167,9 @@ NUCLEO-H743ZI2, MB1364 kartıdır; eski MB1137 NUCLEO-H743ZI ile karıştırılm
 H723 görünümü aynı numaralı fiziksel tablolardan yeniden üretilir. Önceki 131 mantıksal kayıt altı konektörün tamamını temsil etmiyordu. `sources/legacy-h723-pin-ids.json` eşlemesi eski 131 atama kimliğinin elektriksel sinyalini ve MCU bacağını korur; ek fiziksel kontaklar 132–240 kimliklerini alır. Eski varyant ayrıştırıcısı yalnızca eski kimlikleri doğrular, fiziksel konektör kanıtı olarak kullanılmaz. Gerçek etiketler UM2407'den gelir. Model değişimi, dahili numaralar farklı olsa da aynı fiziksel kontağı korur.
 
 Artık kullanılamayan PF11 analog işlevleri veya tekrarlanan fiziksel hat içeren eski tarayıcı planları uyarıyla korunur. Yeni atamalar, JSON içe aktarımı ve paylaşım önizlemesi geçersiz seçimleri reddeder. Yazdırma/SVG çıktıları da uyarıyı içerir.
+
+## WeAct Black Pill v3.x
+
+F401CC referansı STM32F401CCU6 (UFQFPN-48, 36 GPIO, en fazla 84 MHz) kullanır. WeAct'in resmî deposu `6a7f7d434a9d6361f91590d4cdd16b4a70ce7513` commit'ine sabitlenmiştir. KiCad sembolü 44 elektriksel pad adını; ayak izi dosyası tüm pad koordinatlarını ve USB-C yönünü sağlar. İki ham CAD dosyası ayrı ayrı ayrıştırılır ve 1–44 kimliklerinde eşleşmelidir. Arayüzde PAD numaraları KiCad kimlikleridir; kart baskısı veya MCU bacak numaraları değildir. İki yan başlık 40, SWD dört kontak sunar. Üreticinin v3.1 notları v3.0 pin tanımının değişmediğini belirtir; klonlar kapsam dışındadır.
+
+v3.1 şeması PA0 kullanıcı düğmesi (330 Ω), PC13 LED, PB2/BOOT1, PA11/PA12 USB-C, PA13/PA14 SWD ve isteğe bağlı PA4/PA5/PA6/PA7 SPI flash bağlantılarını doğrular. MCU işlevleri ve bacakları tam ST XML kaynağından gelir; ortak F401 GPIO Modes belgesi çoğaltılmadan kullanılır.

@@ -1082,6 +1082,67 @@
       "publisher": "STMicroelectronics",
       "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
       "sha256": "95a7cc04b3d5d33a13654d8b0e70b7bb709762ecf45f4aea5bacb80011e605cf"
+    },
+    {
+      "id": "f401cc-package",
+      "title": "F401CC CubeMX package data",
+      "file": "f401cc-package.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F401C(B-C)Ux.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F401C(B-C)Ux.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "367709d75b2401b73f15fee9df8c0efe8c2b7607ba20be373642a78a2548f464",
+      "gpioModesDocument": "f401re-modes"
+    },
+    {
+      "id": "weact-blackpill-symbol",
+      "title": "Black Pill v3 manufacturer electrical symbol",
+      "file": "weact-blackpill-symbol.kicad_sym",
+      "url": "https://raw.githubusercontent.com/WeActStudio/WeActStudio.MiniSTM32F4x1/6a7f7d434a9d6361f91590d4cdd16b4a70ce7513/Hardware/KiCAD/WeAct-BlackPillv3.kicad_sym",
+      "viewUrl": "https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1/blob/6a7f7d434a9d6361f91590d4cdd16b4a70ce7513/Hardware/KiCAD/WeAct-BlackPillv3.kicad_sym",
+      "publisher": "WeAct Studio",
+      "revision": "6a7f7d434a9d6361f91590d4cdd16b4a70ce7513",
+      "sha256": "f4c7cda1e6e637add1822cadb066a7504607fa13e09f2bd39df4d6f700c69047"
+    },
+    {
+      "id": "weact-blackpill-footprint",
+      "title": "Black Pill v3 manufacturer 44-pad footprint",
+      "file": "weact-blackpill-footprint.kicad_mod",
+      "url": "https://raw.githubusercontent.com/WeActStudio/WeActStudio.MiniSTM32F4x1/6a7f7d434a9d6361f91590d4cdd16b4a70ce7513/Hardware/KiCAD/WeAct.pretty/WeAct-BlackPill_DIP-40_W15.24mm-SWD.kicad_mod",
+      "viewUrl": "https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1/blob/6a7f7d434a9d6361f91590d4cdd16b4a70ce7513/Hardware/KiCAD/WeAct.pretty/WeAct-BlackPill_DIP-40_W15.24mm-SWD.kicad_mod",
+      "publisher": "WeAct Studio",
+      "revision": "6a7f7d434a9d6361f91590d4cdd16b4a70ce7513",
+      "sha256": "0471e96920efae81ed43f2a1c0a5aa4526ae8c3db9da9c60cd873c9463f2b612"
+    },
+    {
+      "id": "weact-blackpill-schematic",
+      "title": "WeAct MiniF4x1Cx v3.1 schematic",
+      "file": "weact-blackpill-schematic.pdf",
+      "url": "https://raw.githubusercontent.com/WeActStudio/WeActStudio.MiniSTM32F4x1/6a7f7d434a9d6361f91590d4cdd16b4a70ce7513/Hardware/MiniF4x1Cx_V31%20SchDoc.pdf",
+      "viewUrl": "https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1/blob/6a7f7d434a9d6361f91590d4cdd16b4a70ce7513/Hardware/MiniF4x1Cx_V31%20SchDoc.pdf",
+      "publisher": "WeAct Studio",
+      "revision": "6a7f7d434a9d6361f91590d4cdd16b4a70ce7513",
+      "sha256": "4ba1ee95b1d49f6a2dd3441f6910bc1b29be45d0431638368d56bfb59e08e565"
+    },
+    {
+      "id": "weact-blackpill-revisions",
+      "title": "WeAct MiniF4x1 hardware release notes",
+      "file": "weact-blackpill-revisions.md",
+      "url": "https://raw.githubusercontent.com/WeActStudio/WeActStudio.MiniSTM32F4x1/6a7f7d434a9d6361f91590d4cdd16b4a70ce7513/Hardware/README.md",
+      "viewUrl": "https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1/blob/6a7f7d434a9d6361f91590d4cdd16b4a70ce7513/Hardware/README.md",
+      "publisher": "WeAct Studio",
+      "revision": "6a7f7d434a9d6361f91590d4cdd16b4a70ce7513",
+      "sha256": "5ec3e20b6a6d11f5db7590d3b2fcb0b4a6682d62b0d6bc1666a7d5e4747b48db"
+    },
+    {
+      "id": "weact-blackpill-readme",
+      "title": "WeAct supported STM32F401/F411 variants",
+      "file": "weact-blackpill-readme.md",
+      "url": "https://raw.githubusercontent.com/WeActStudio/WeActStudio.MiniSTM32F4x1/6a7f7d434a9d6361f91590d4cdd16b4a70ce7513/README.md",
+      "viewUrl": "https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1/blob/6a7f7d434a9d6361f91590d4cdd16b4a70ce7513/README.md",
+      "publisher": "WeAct Studio",
+      "revision": "6a7f7d434a9d6361f91590d4cdd16b4a70ce7513",
+      "sha256": "573759ec9292cb720da7fcdb19979eea169f887d54aaff436f295e3687d0c812"
     }
   ],
   "references": {
@@ -3172,6 +3233,46 @@
       "page": null,
       "locator": "Official board configuration · fitted peripheral and GPIO labels",
       "method": "hardware-spec"
+    },
+    "f401cc-package": {
+      "document": "f401cc-package",
+      "title": "F401CC CubeMX package data",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F401C(B-C)Ux.xml",
+      "page": null,
+      "locator": "UFQFPN48 numbered package pins and physical signals",
+      "method": "manufacturer-xml"
+    },
+    "f401cc-modes": {
+      "document": "f401re-modes",
+      "title": "STM32F401RE CubeMX modes data",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F401_gpio_v1_0_Modes.xml",
+      "page": null,
+      "locator": "STM32F401_gpio_v1_0 GPIO alternate function selectors",
+      "method": "manufacturer-xml"
+    },
+    "weact-blackpill-symbol": {
+      "document": "weact-blackpill-symbol",
+      "title": "Black Pill v3 manufacturer electrical symbol",
+      "url": "https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1/blob/6a7f7d434a9d6361f91590d4cdd16b4a70ce7513/Hardware/KiCAD/WeAct-BlackPillv3.kicad_sym",
+      "page": null,
+      "locator": "KiCad symbol · 44 manufacturer pad names",
+      "method": "manufacturer-cad"
+    },
+    "weact-blackpill-footprint": {
+      "document": "weact-blackpill-footprint",
+      "title": "Black Pill v3 manufacturer 44-pad footprint",
+      "url": "https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1/blob/6a7f7d434a9d6361f91590d4cdd16b4a70ce7513/Hardware/KiCAD/WeAct.pretty/WeAct-BlackPill_DIP-40_W15.24mm-SWD.kicad_mod",
+      "page": null,
+      "locator": "KiCad footprint · all 44 pad coordinates; USB-C at negative Y",
+      "method": "manufacturer-cad"
+    },
+    "weact-blackpill-circuits": {
+      "document": "weact-blackpill-schematic",
+      "title": "WeAct MiniF4x1Cx v3.1 schematic",
+      "url": "https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1/blob/6a7f7d434a9d6361f91590d4cdd16b4a70ce7513/Hardware/MiniF4x1Cx_V31%20SchDoc.pdf#page=1",
+      "page": 1,
+      "locator": "v3.1 schematic · PA0 key, PC13 LED, boot, USB and optional SPI flash",
+      "method": "visual-diagram"
     },
     "arduino-uno-r3-package-schematic": {
       "document": "arduino-uno-r3-schematic",

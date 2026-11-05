@@ -149,3 +149,51 @@ def preserve_h723_assignments(board,legacy):
     board['pins'].sort(key=lambda p:p['number'])
     assert number==241
     return board
+
+def kicad_expression(text):
+    tokens=iter(re.findall(r'"(?:\\.|[^"\\])*"|[()]|[^\s()]+',text))
+    def parse(first):
+        if first!='(':return json.loads(first) if first.startswith('"') else first
+        result=[]
+        for token in tokens:
+            if token==')':return result
+            result.append(parse(token))
+        raise ValueError('Unclosed KiCad expression')
+    return parse(next(tokens))
+
+def cad_nodes(node,kind):
+    if isinstance(node,list):
+        if node and node[0]==kind:yield node
+        for item in node:yield from cad_nodes(item,kind)
+
+def cad_child(node,key):
+    return next(item for item in node if isinstance(item,list) and item and item[0]==key)
+
+def build_blackpill(cache,docs,ref,chip,model):
+    symbol_id,footprint_id='weact-blackpill-symbol','weact-blackpill-footprint'
+    symbol=kicad_expression((cache/docs[symbol_id]['file']).read_text())
+    footprint=kicad_expression((cache/docs[footprint_id]['file']).read_text())
+    raw_pins=list(cad_nodes(symbol,'pin'));raw_pads=[pad for pad in cad_nodes(footprint,'pad') if pad[1].isdigit()]
+    names={int(cad_child(pin,'number')[1]):cad_child(pin,'name')[1] for pin in raw_pins}
+    positions={int(pad[1]):list(map(float,cad_child(pad,'at')[1:3])) for pad in raw_pads}
+    assert len(raw_pins)==len(raw_pads)==44 and set(names)==set(positions)==set(range(1,45))
+    readme=(cache/docs['weact-blackpill-readme']['file']).read_text()
+    revisions=(cache/docs['weact-blackpill-revisions']['file']).read_text()
+    assert chip['mcu'] in readme and 'pin definition unchanged' in revisions
+    pin_ref=ref('weact-blackpill-symbol',symbol_id,None,'KiCad symbol · 44 manufacturer pad names','manufacturer-cad')
+    shape_ref=ref('weact-blackpill-footprint',footprint_id,None,'KiCad footprint · all 44 pad coordinates; USB-C at negative Y','manufacturer-cad')
+    circuit_ref=ref('weact-blackpill-circuits','weact-blackpill-schematic',1,'v3.1 schematic · PA0 key, PC13 LED, boot, USB and optional SPI flash','visual-diagram')
+    pins=[]
+    for number in range(1,45):
+        label=names[number];signal={'~{RESET}':'NRST','BOOT1':'PB2','SWDIO':'PA13','SWCLK':'PA14'}.get(label,label)
+        x,y=positions[number];header='LEFT' if number<=20 else 'RIGHT' if number<=40 else 'SWD'
+        pin=contact(chip,signal,number,header,number,label,[pin_ref,shape_ref],
+                    {'x':round(450+x*18,2),'y':round(150+(y+20.7)*12,2),'side':'left' if number<=20 or number>40 else 'right',**({'angle':90} if number>40 else {})})
+        pin['physicalLabel']=f'PAD.{number}'
+        note='blackPillKey' if signal=='PA0' else 'blackPillLed' if signal=='PC13' else 'blackPillUsb' if signal in ('PA11','PA12') else 'blackPillBoot' if signal=='PB2' else 'blackPillFlash' if signal in ('PA4','PA5','PA6','PA7') else 'blackPillDebug' if signal in ('PA13','PA14') else None
+        if note:pin['boardCircuitKey']=note;pin['evidence'].append(circuit_ref)
+        pins.append(pin)
+    return board_profile(chip,'weact-blackpill-'+model,'WeAct Black Pill '+model.upper()+' v3.x','black-pill',pins,
+                         {'width':900,'height':820,'minWidth':850,'artwork':'assets/boards/black-pill.svg',
+                          'connectorGroups':[{'id':h,'label':h,'contacts':[h]} for h in ('LEFT','RIGHT','SWD')]},
+                         docs['weact-blackpill-readme']['viewUrl'],'blackPillScope')
