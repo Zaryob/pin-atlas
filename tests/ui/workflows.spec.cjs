@@ -19,7 +19,8 @@ async function ready(page,hash='') {
   await expect(page.locator('#app-status')).toBeHidden();
 }
 async function openPlan(page) {
-  if (await page.locator('#open-plan').isVisible()) await page.locator('#open-plan').click();
+  if (await page.locator('#details-dialog').isVisible()) await page.locator('#plan-tab').click();
+  else if (await page.locator('#open-plan').isVisible()) await page.locator('#open-plan').click();
   else await page.locator('#plan-tab').click();
 }
 
@@ -247,7 +248,9 @@ test('SVG and printable PDF retain model, labels, full board geometry and source
  const board=boards.find(b=>b.id==='nucleo-f446re'),pin=board.pins.find(p=>p.physicalLabel==='CN8.1');
  const saved={[board.id]:{[pin.number]:{function:'ADC1_IN0',label:'sensor <&> Türkçe'}}};
  await page.addInitScript(({key,saved})=>localStorage.setItem(key,JSON.stringify(saved)),{key:storageKey,saved});
- await ready(page,'#board='+board.id);await page.locator('#connector-zoom').selectOption('CN7');
+ await ready(page,'#board='+board.id);
+ await page.locator('#view-options > summary').click();await page.locator('#connector-zoom').selectOption('CN7');
+ await page.locator('#view-options > summary').click();
  await openPlan(page);
  const event=page.waitForEvent('download');await page.locator('#export-svg').click();
  const svg=readFileSync(await(await event).path(),'utf8');
@@ -421,6 +424,112 @@ test('Nucleo catalog exposes every model and links to its exact MCU package',asy
     await page.locator(`#package-boards [data-package-board="${board.id}"]`).click();
     await expect(page.locator('#board-title')).toHaveText(board.name);
   }
+});
+
+// Each renderer uses the same selection, transform and detail-panel contract.
+for(const id of ['picow','raspberry-pi-5','rp2040','stm32f103vbt6','atmega328p-pdip28','arduino-nano-33-ble-sense-rev2','nucleo-h723zg']){
+ test(`${id} keeps pin selection consistent through mirror, rotation and table views`,async({page})=>{
+  const raw=boards.find(board=>board.id===id);
+  await ready(page,'#board='+id);
+  await expect(page.locator('#hardware-kind')).toHaveText(['qfn','lqfp','dip'].includes(raw.layout)?'MCU packages':'Development boards');
+  await expect(page.locator('#specs').getByText(raw.voltage,{exact:true})).toBeVisible();
+  const pins=raw.pins.filter(pin=>pin.type==='GPIO' && !pin.reserved).slice(0,2);
+  let selected;
+  for(const [i,action] of [null,'flip-button','rotate-button','flip-button'].entries()){
+    if(action){
+      await page.locator('#view-options > summary').click();
+      await page.locator('#'+action).click();
+    }
+    selected=pins[i%2];
+    await page.locator(`#diagram [data-pin="${selected.number}"] .pin-node`).click();
+    await expect(page.locator(`#diagram [data-pin="${selected.number}"]`)).toHaveAttribute('aria-current','true');
+    await expect(page.locator('#pin-detail h2')).toHaveText(selected.name.replace('_ADC',' / A'));
+    if(page.viewportSize().width<=970){
+      await expect(page.locator('#details-dialog')).toBeVisible();
+      await page.keyboard.press('Escape');
+      await expect(page.locator(`#diagram [data-pin="${selected.number}"]`)).toBeFocused();
+    } else await expect(page.locator('#details-home .details-panel')).toBeVisible();
+  }
+  await page.locator('#table-view').click();
+  await expect(page.locator(`#table-content tr.selected[data-pin="${selected.number}"]`)).toHaveCount(1);
+  await page.locator('#map-view').click();
+  await page.locator('#view-options > summary').click();await page.locator('#reset-view').click();
+  await expect(page.locator('#flip-button')).toHaveAttribute('aria-pressed','false');
+  await expect(page.locator('#rotate-button')).toHaveAttribute('aria-pressed','false');
+  const visible=await page.locator(`#diagram [data-pin="${selected.number}"] .pin-node`).evaluate(node=>{
+    const scroller=node.closest('.board-pin-map') || document.querySelector('#diagram');
+    const pin=node.getBoundingClientRect(),map=scroller.getBoundingClientRect();
+    return pin.left>=map.left-1 && pin.right<=map.right+1;
+  });
+  expect(visible).toBe(true);
+ });
+}
+
+test('MCU preview pads use the same detail interaction and keep keyboard focus',async({page})=>{
+ const raw=boards.find(board=>board.id==='nucleo-l432kc');
+ const pin=raw.pins.find(pin=>pin.type==='GPIO' && pin.mcuPin);
+ await ready(page,'#board='+raw.id);
+ const pad=page.locator(`#diagram [data-mcu-pin="${pin.mcuPin}"]`);
+ await pad.click();
+ await expect(pad).toHaveAttribute('aria-current','true');
+ if(page.viewportSize().width<=970){
+   await expect(page.locator('#details-dialog')).toBeVisible();await page.keyboard.press('Escape');
+ }
+ await expect(pad).toBeFocused();
+ await page.keyboard.press('ArrowRight');
+ await expect(page.locator('#details-dialog')).toBeHidden();
+ const active=page.locator('#diagram [data-mcu-pin][aria-current="true"]');
+ await expect(active).toBeFocused();
+ await page.keyboard.press('Enter');
+ if(page.viewportSize().width<=970){
+   await expect(page.locator('#details-dialog')).toBeVisible();await page.keyboard.press('Escape');
+ }
+ await expect(active).toBeFocused();
+});
+
+test('map updates retain the left edge and opening details preserves the scroll position',async({page})=>{
+ for(const id of ['stm32f103vbt6','nucleo-h723zg']){
+  await ready(page,'#board='+id);
+  const scroller=page.locator('#diagram .board-pin-map').first();
+  const map=await scroller.count()?scroller:page.locator('#diagram');
+  await map.evaluate(el=>{el.scrollLeft=0;});
+  await page.locator('#pin-search').fill('PA');
+  expect(await map.evaluate(el=>el.scrollLeft)).toBe(0);
+  await page.locator('#pin-search').fill('');
+  expect(await map.evaluate(el=>el.scrollLeft)).toBe(0);
+  if(page.viewportSize().width<=970){
+    await page.locator('#open-pin').click();await page.keyboard.press('Escape');
+    await expect(page.locator('#open-pin')).toBeFocused();
+    expect(await map.evaluate(el=>el.scrollLeft)).toBe(0);
+  }
+ }
+});
+
+test('compact details use the full width, scroll above a fixed action and preserve edits on resize',async({page})=>{
+ for(const width of [320,727]){
+  await page.setViewportSize({width,height:793});
+  await ready(page,'#board=stm32f103vbt6&pin=3');
+  await page.locator('#open-pin').click();
+  await expect(page.locator('#details-dialog')).toBeVisible();
+  const dimensions=await page.locator('#details-dialog').evaluate(dialog=>{
+    const body=dialog.querySelector('.pin-detail-body'),note=dialog.querySelector('.pin-description');
+    return {width:dialog.clientWidth,scrollWidth:dialog.scrollWidth,body:body.clientWidth,note:note.getBoundingClientRect().width};
+  });
+  expect(dimensions.scrollWidth).toBeLessThanOrEqual(dimensions.width+1);
+  expect(dimensions.note).toBeGreaterThan(dimensions.body*.8);
+  const action=page.locator('#add-plan'),before=await action.boundingBox();
+  await page.locator('.pin-detail-body').evaluate(el=>{el.scrollTop=el.scrollHeight;});
+  const after=await action.boundingBox();expect(Math.abs(after.y-before.y)).toBeLessThan(1);
+  await expect(action).toBeInViewport();
+  await page.locator('#custom-label').fill('draft survives resizing');
+  await page.keyboard.press('Escape');await expect(page.locator('#open-pin')).toBeFocused();
+  await page.locator('#open-pin').click();
+  await expect(page.locator('#custom-label')).toHaveValue('draft survives resizing');
+  await page.setViewportSize({width:1100,height:900});
+  await expect(page.locator('#details-dialog')).toBeHidden();
+  await expect(page.locator('#details-home .details-panel')).toBeVisible();
+  await expect(page.locator('#custom-label')).toHaveValue('draft survives resizing');
+ }
 });
 
 test('LQFP pin terminals select their own pin on all four package edges',async({page})=>{

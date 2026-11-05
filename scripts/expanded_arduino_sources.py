@@ -134,7 +134,7 @@ def build_expanded_arduino(cache,docs,obs,ref,verified_on,base_boards):
         clock='64 MHz' if is_ble else '48 MHz' if r4 else '20 MHz' if model=='nano-every' else '16 MHz'
         voltage='3.3 V I/O' if is_ble else '5 V I/O'
         processor='Arm Cortex-M4F' if is_ble else 'Arm Cortex-M4' if r4 else '8-bit AVR'
-        board.update(id=id,name=name,shortName=name.replace('Arduino ',''),mcu=mcu,processor=processor,clock=clock,family='Arduino',subtitle=mcu+' · '+clock+' · '+voltage+(' · BLE + Sensors' if is_ble else ''),scopeKey=id+'Scope',compatibleKey=id+'Compatible',source=docs[docid]['url'],datasheet=docs.get(id+'-datasheet',docs[docid])['url'])
+        board.update(id=id,name=name,shortName=name.replace('Arduino ',''),mcu=mcu,processor=processor,clock=clock,voltage=voltage,family='Arduino',subtitle=mcu+' · '+clock+' · '+voltage+(' · BLE + Sensors' if is_ble else ''),scopeKey=id+'Scope',compatibleKey=id+'Compatible',source=docs[docid]['url'],datasheet=docs.get(id+'-datasheet',docs[docid])['url'])
         board['diagram']['artwork']='assets/boards/'+id+'.svg'
         result=finish(board,pins)
         assert result['uniqueGPIOCount']==(22 if is_ble else 23 if model=='leonardo' else 24 if model=='micro' else 22 if model=='nano-every' else 20)

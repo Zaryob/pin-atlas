@@ -79561,7 +79561,7 @@
     "packagePins": 30,
     "gpioCount": 22,
     "uniqueGPIOCount": 22,
-    "voltage": "5 V I/O",
+    "voltage": "3.3 V I/O",
     "mcu": "nRF52840",
     "processor": "Arm Cortex-M4F",
     "clock": "64 MHz",

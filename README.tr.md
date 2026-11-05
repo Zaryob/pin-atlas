@@ -62,7 +62,7 @@ Pin seçimi, arayüz filtreleri, metin araması, tablo, aynalama, 180° döndür
 
 Her pinin detayında, fiziksel bağlantıyı ve alternatif işlevlerini destekleyen **resmî belge, PDF sayfası ve tablo/şekil numarası** bulunur. `F0…F11` RP2350 işlev seçicilerini, `ALT0…ALT5` BCM2711 seçicilerini belirtir. ADC kaydı bir dijital işlev seçici değildir. `GPIO` seçeneği uygulamanın genel giriş/çıkış planlama etiketidir; ayrıca bir üretici seçici numarası olarak sayılmaz.
 
-Filtreler başlangıçta kapalıdır. Pin detayında ilgili işlevler öne çıkarılır; diğer işlevler ve kaynaklar açılır bölümlerdedir. Planın ayrı sekmesi vardır. Küçük ekranlarda pine dokunmak, kaydetme düğmesi sabit kalan bir detay paneli açar.
+Filtreler başlangıçta kapalıdır. Pin detayında ilgili işlevler öne çıkarılır; diğer işlevler ve kaynaklar açılır bölümlerdedir. Planın ayrı sekmesi vardır. Kart başlıkları ve çıplak MCU paketleri aynı seçim davranışını kullanır: küçük ekranlarda pine dokunmak, genişliği tam kullanan ve kaydetme düğmesi sabit kalan bir detay paneli açar; masaüstünde yan panel güncellenir. Panel kapanınca odak seçilen pine veya paneli açan düğmeye döner. Seçim ve filtreleme sırasında en sol konum dahil haritanın kaydırması korunur; aynalama, döndürme ve sıfırlama seçili pini görünür tutar.
 
 Jetson çevre birimleri uygun pinmux/Jetson-IO yapılandırması ve yazılım desteği gerektirir; plan kaydetmek cihazı yapılandırmaz. Sinyaller 3.3 V seviyesindedir; açık drenajlı I²C ve zayıf TXB0108 sürüşü için pin detayındaki elektriksel notlara bakın. Jetson adları taşıyıcı kart sinyalleridir; Linux veri yolu numaraları veya F/ALT seçicileri değildir.
 

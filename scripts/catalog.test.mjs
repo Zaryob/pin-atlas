@@ -56,3 +56,13 @@ test('featured cards retain exact model links and verified GPIO and I/O values',
   assert(xiao.specs.includes('3.3 V I/O'));assert(!xiao.specs.includes('5V'));
   assert(featuredCards(layouts).find(card=>card.profileId==='pico2w').specs.startsWith('26 GPIO'));
 });
+
+
+test('Nano 33 BLE keeps its documented 3.3 V I/O instead of inheriting classic Nano voltage',()=>{
+  const ble=boards.find(board=>board.id==='arduino-nano-33-ble-sense-rev2');
+  assert.equal(ble.voltage,'3.3 V I/O');
+  assert.equal(catalog.find(entry=>entry.profile===ble.id).specs,'22 GPIO · 3.3 V I/O');
+  for(const id of ['arduino-nano-classic','arduino-nano-every','arduino-uno-r3','arduino-uno-r4-minima']){
+    assert.equal(boards.find(board=>board.id===id).voltage,'5 V I/O');
+  }
+});
