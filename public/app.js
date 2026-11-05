@@ -49,6 +49,7 @@ const groups = ['SPI','I2C','UART','PWM','ADC','HSTX','PIO','PCM','I2S','CLOCK',
 let evidence = {references:{}};
 let boards, layouts, layout, board, selected = 1, selectedFn, filters = new Set(), search = '', flipped = false, rotated = false, view = 'map', assignments = {}, toastTimer;
 let currentView = 'home', homeActiveFilter = 'all', homeSearchQuery = '';
+let dataState = 'loading', dataLoading = false;
 const storageKey = 'pin-atlas:plans:v1';
 const rememberedProfiles = new Map();
 let compatibilityModels = [], compatibilityQuery = '';
@@ -106,6 +107,7 @@ function setBoard(id, initial = false, preferredProfile) {
  setDetailTab('pin');
 }
 function openLayout(id, profile) {
+ if (dataState !== 'ready') return;
  const target = layouts.find(item => item.id === id);
  if (!target) return;
  const wasHome = currentView === 'home';
@@ -656,6 +658,7 @@ const boardFamilies = [
 ];
 
 function showCatalog() {
+  if (dataState !== 'ready') return;
   $('#catalog-search').value = '';
   renderCatalog();
   $('#library-dialog').showModal();
@@ -1224,6 +1227,7 @@ $('#import-file').addEventListener('change',async e=>{
  }catch(error){$('#plan-feedback').textContent=error.message||t('importFailed');}finally{e.target.value='';}
 });
 document.addEventListener('keydown', e => {
+  if (dataState !== 'ready') return;
   if (e.key === '/' && !/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName) && !$('dialog[open]')) {
     e.preventDefault();
     if (currentView === 'home') $('#home-search')?.focus();
@@ -1234,6 +1238,7 @@ document.addEventListener('keydown', e => {
 $('#home-breadcrumb-link')?.addEventListener('click', e => {
   e.preventDefault();
   location.hash = '#home';
+  if (dataState !== 'ready') return;
   showHomeView();
   window.scrollTo(0, 0);
   $('#home-search').focus({preventScroll:true});
@@ -1276,6 +1281,8 @@ $('#home-catalog-container')?.addEventListener('keydown', e => {
   }
 });
 window.addEventListener('zaryob:language', () => {
+  renderDataState();
+  if (dataState !== 'ready') return;
   if (currentView === 'home') renderHome();
   if (!board) return;
   const draftLabel = $('#custom-label')?.value;
@@ -1284,9 +1291,55 @@ window.addEventListener('zaryob:language', () => {
   if ($('#library-dialog').open) renderCatalog();
   if (previewDialog.open) renderIncomingPlan();
 });
-window.addEventListener('hashchange',()=>{if(boards && location.hash!=='#main')loadHash();});
-try {
- const [boardResult, evidenceResult] = await Promise.all(['boards.json','evidence.json'].map(name=>fetch(new URL('./data/'+name,appBase))));
- if(!boardResult.ok || !evidenceResult.ok)throw new Error(t('loadFailed'));
- [boards,evidence] = await Promise.all([boardResult.json(),evidenceResult.json()]);layouts=buildLayouts(boards);updateLibraryCount();loadHash();
-} catch(error) { $('#diagram').innerHTML=`<p data-i18n="reloadHint" style="padding:40px;line-height:2">${t('reloadHint')}</p>`;toast(error.message); }
+window.addEventListener('hashchange',()=>{if(dataState === 'ready' && location.hash!=='#main')loadHash();});
+function renderDataState() {
+ const ready = dataState === 'ready', failed = dataState === 'error';
+ $('#main').setAttribute('aria-busy', String(dataState === 'loading'));
+ $('#app-status').hidden = ready;
+ $('#app-status').setAttribute('role', failed ? 'alert' : 'status');
+ $('#app-status-title').textContent = t(failed ? 'libraryLoadFailed' : 'libraryLoading');
+ $('#app-status-message').textContent = t(failed ? 'libraryLoadRecovery' : 'libraryLoadingDetail');
+ $('#retry-data').textContent = t('retryData');
+ $('#retry-data').hidden = !failed;
+ $('#menu-button').disabled = !ready;
+ $('#library-count').hidden = !ready;
+ $('#home-search').disabled = !ready;
+ $('#catalog-search').disabled = !ready;
+ $('#home-view').hidden = !ready || currentView !== 'home';
+ $('#workspace-view').hidden = !ready || currentView !== 'workspace';
+}
+async function loadData(retry = false) {
+ if (dataLoading) return;
+ dataLoading = true;
+ dataState = 'loading';
+ renderDataState();
+ if (retry) $('#app-status').focus({preventScroll:true});
+ const controller = new AbortController();
+ const timer = setTimeout(() => controller.abort(), 25000);
+ try {
+   const [nextBoards, nextEvidence] = await Promise.all(['boards.json','evidence.json'].map(async name => {
+     const response = await fetch(new URL('./data/'+name,appBase), {signal:controller.signal, cache:retry ? 'reload' : 'default'});
+     if (!response.ok) throw new Error('Library request failed');
+     return response.json();
+   }));
+   const nextLayouts = buildLayouts(nextBoards);
+   boards = nextBoards; evidence = nextEvidence; layouts = nextLayouts;
+   updateLibraryCount();
+   loadHash();
+   dataState = 'ready';
+   renderDataState();
+   if (retry) {
+     if (currentView === 'home') $('#home-search').focus({preventScroll:true});
+     else focusWorkspace();
+   }
+ } catch {
+   controller.abort();
+   dataState = 'error';
+   renderDataState();
+ } finally {
+   clearTimeout(timer);
+   dataLoading = false;
+ }
+}
+$('#retry-data').addEventListener('click', () => loadData(true));
+loadData();

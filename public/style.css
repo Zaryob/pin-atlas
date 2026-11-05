@@ -720,6 +720,10 @@
   margin: 0 auto;
   padding: 10px 0 60px;
 }
+.app-status { max-width: 760px; margin: 40px auto; padding: 24px; border: 1px solid var(--line); background: var(--surface); }
+.app-status h1 { margin: 0 0 12px; font-size: 24px; }
+.app-status p { color: var(--muted); line-height: 1.7; }
+.app-status .button { min-height: 44px; margin-top: 12px; }
 .home-hero {
   text-align: center;
   padding: 44px 16px 28px;

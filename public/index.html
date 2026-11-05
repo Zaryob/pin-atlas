@@ -5,10 +5,10 @@ title: Pin Atlas — Source-verified pin guide
 <div class="shell">
 <header class="topbar">
   <div class="topbar-left">
-    <button id="menu-button" class="button primary board-picker-btn" aria-haspopup="dialog" aria-label="Open board library" data-i18n-aria-label="chooseBoard">
+    <button id="menu-button" class="button primary board-picker-btn" aria-haspopup="dialog" aria-label="Open board library" data-i18n-aria-label="chooseBoard" disabled>
       <span data-icon="grid"></span>
       <span data-i18n="boardLibrary">Board library</span>
-      <span class="count" id="library-count">31</span>
+      <span class="count" id="library-count" hidden></span>
     </button>
     <div class="breadcrumbs">
       <a href="#home" id="home-breadcrumb-link" class="home-crumb"><span data-icon="home"></span><span data-i18n="home">Home</span></a>
@@ -22,10 +22,16 @@ title: Pin Atlas — Source-verified pin guide
     <button id="help-button" class="button secondary help-btn" aria-label="How to use" data-i18n-aria-label="help"><span data-icon="book"></span><span data-i18n="help">How to use</span> <span>↗</span></button>
   </div>
 </header>
-<main id="main">
+<main id="main" aria-busy="true">
+  <section id="app-status" class="app-status" role="status" tabindex="-1" aria-labelledby="app-status-title" aria-describedby="app-status-message">
+    <h1 id="app-status-title" data-i18n="libraryLoading">Loading board library…</h1>
+    <p id="app-status-message" data-i18n="libraryLoadingDetail">Preparing the pin maps and their source references.</p>
+    <button id="retry-data" class="button primary" data-i18n="retryData" hidden>Try again</button>
+  </section>
+  <noscript><p class="app-status">Enable JavaScript to explore the pin maps and save wiring plans. You can also read the <a href="https://github.com/Zaryob/pin-atlas/blob/main/docs/VERIFICATION.md">verification record</a>.</p></noscript>
 
   <!-- HOME VIEW -->
-  <section id="home-view" class="home-view">
+  <section id="home-view" class="home-view" hidden>
     <div class="home-hero">
       <div class="home-badge">
         <span class="tiny-dot"></span>
