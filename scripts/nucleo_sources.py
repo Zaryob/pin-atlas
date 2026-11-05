@@ -75,37 +75,46 @@ def read_f4_chip(cache, docs, ref, model, verified_on, category):
             'pins': pins}
 
 
-def build_nucleo(cache, docs, ref, chip, model):
+def build_nucleo(cache, docs, ref, chip, model, use_snapshots=False, table_spec=None, extra_arduino=()):
     document = 'nucleo-um1724-r14'
     board_id = f'nucleo-{model}'
     url = docs[document]['viewUrl']
-    arduino_pages = (39,) if model == 'f103rb' else (43, 44)
-    morpho_pages = (55, 56) if model == 'f103rb' else (58,)
-    arduino_table = 12 if model == 'f103rb' else 16
-    morpho_table = 27 if model == 'f103rb' else 29
+    table_spec = table_spec or {
+        'arduino': [(39, -1)] if model == 'f103rb' else [(43, -1), (44, -1)],
+        'morpho': [(55, -1), (56, -1)] if model == 'f103rb' else [(58, -1)],
+        'tables': (12, 27) if model == 'f103rb' else (16, 29),
+    }
+    arduino_table, morpho_table = table_spec['tables']
     connectors = {name: {} for name in ('CN7', 'CN6', 'CN8', 'CN10', 'CN5', 'CN9')}
     bridges_ref = ref('nucleo-mb1136-bridges', document, 26, 'Table 10 · solder bridges and alternate connections (pp. 26–27)')
-    with pdfplumber.open(cache / docs[document]['file']) as pdf:
-        for page in arduino_pages:
+    source = SnapshotDocument(verify_snapshot(docs[document], cache.parents[1])) if use_snapshots else pdfplumber.open(cache / docs[document]['file'])
+    with source as pdf:
+        for page, table_index in table_spec['arduino']:
             evidence = ref(f'{board_id}-arduino-{page}', document, page, f'Table {arduino_table} · Arduino headers')
             tables = pdf.pages[page - 1].extract_tables()
             # Page 43 has the preceding model’s continuation above this table.
-            for heading, number, label, signal, _ in tables[-1][1:]:
+            for heading, number, label, signal, _ in tables[table_index][1:]:
                 if heading and heading.startswith('CN'):
                     connector = heading.split()[0]
                 if number and number.isdigit():
                     connectors[connector][int(number)] = (label, signal or label, evidence)
-        for page in morpho_pages:
+        for page, table_index in table_spec['morpho']:
             evidence = ref(f'{board_id}-morpho-{page}', document, page, f'Table {morpho_table} · ST Morpho headers')
-            rows = pdf.pages[page - 1].extract_tables()[-1][2:]
+            rows = pdf.pages[page - 1].extract_tables()[table_index][2:]
             for row in rows:
                 for header, number, signal in (('CN7', row[0], row[1]), ('CN7', row[3], row[2]),
                                                 ('CN10', row[4], row[5]), ('CN10', row[7], row[6])):
                     connectors[header][int(number)] = (None, signal, evidence)
 
+    for header, number, label, signal, evidence in extra_arduino:
+        assert number not in connectors[header], 'Review the supplementary source against the manual revision'
+        connectors[header][number] = (label, signal, evidence)
     sizes = [38, 8, 6, 38, 10, 8]
     assert all(sorted(pins) == list(range(1, count + 1)) for pins, count in zip(connectors.values(), sizes))
     by_name = {pin['name']: pin for pin in chip['pins']}
+    for pin in chip['pins']:
+        if '/' in pin['name']:
+            by_name.setdefault(pin['name'].split('/')[0], pin)
     aliases = {'RESET': 'NRST', 'AVDD': 'VDDA', 'PD0': 'OSC_IN', 'PD1': 'OSC_OUT'}
     notes = {
         'PA2': 'nucleoUsart', 'PA3': 'nucleoUsart', 'PA5': 'nucleoLed',
@@ -170,7 +179,7 @@ def build_nucleo(cache, docs, ref, chip, model):
         'packagePins': len(pins), 'gpioCount': sum(pin['type'] == 'GPIO' for pin in pins),
         'uniqueGPIOCount': len({pin['net'] for pin in pins if pin['type'] == 'GPIO'}),
         'voltage': '3.3 V I/O', 'mcu': chip['mcu'], 'processor': chip['processor'], 'clock': chip['clock'],
-        'verifiedOn': chip['verifiedOn'], 'scopeKey': 'nucleoF103Scope', 'source': f'{url}#page={arduino_pages[0]}',
+        'verifiedOn': chip['verifiedOn'], 'scopeKey': 'nucleoF103Scope', 'source': f"{url}#page={table_spec['arduino'][0][0]}",
         'datasheet': chip['datasheet'], 'orientation': 'usb', 'pins': pins,
         **({'mcuProfile': chip['id']} if 'id' in chip else {}),
     }

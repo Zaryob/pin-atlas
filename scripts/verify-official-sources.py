@@ -415,11 +415,11 @@ def build(use_snapshots=False):
     boards.append(jetson_orin_nano())
     stm32_boards=build_stm32(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn'],use_snapshots)
     boards.extend(stm32_boards)
-    boards.append(build_nucleo(CACHE,DOCS,ref,stm32_boards[2],'f103rb'))
+    boards.append(build_nucleo(CACHE,DOCS,ref,stm32_boards[2],'f103rb',use_snapshots=use_snapshots))
     f4_chips=[]
     for model in ('f401re','f411re'):
         chip=read_f4_chip(CACHE,DOCS,ref,model,MANIFEST['verifiedOn'],category)
-        boards.append(build_nucleo(CACHE,DOCS,ref,chip,model))
+        boards.append(build_nucleo(CACHE,DOCS,ref,chip,model,use_snapshots=use_snapshots))
         f4_chips.append(chip)
     g4_chip=read_g4_chip(CACHE,DOCS,ref,MANIFEST['verifiedOn'],category)
     boards.append(build_nucleo_g474(CACHE,DOCS,ref,g4_chip,use_snapshots=use_snapshots))

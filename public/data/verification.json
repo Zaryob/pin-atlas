@@ -526,7 +526,11 @@
       "sha256": "bec8ccba84e244df785a9bbdd427e74ab974f34ed52d62ba5df3d82098925b96",
       "downloadUrls": [
         "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf"
-      ]
+      ],
+      "tableSnapshot": {
+        "file": "sources/extracted/nucleo-um1724-r14.json",
+        "sha256": "521113c2df3977b7c8b3f0c58d352395c65f3255779d6093f4c265126d42d4f0"
+      }
     },
     {
       "id": "f401re-package",

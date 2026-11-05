@@ -5,7 +5,8 @@ from pathlib import Path
 import pdfplumber
 
 ROOT=Path(__file__).resolve().parents[1]
-PAGES={'stm32f103':range(28,34),'stm32-rm0008':range(175,182)}
+PAGES={'stm32f103':range(28,34),'stm32-rm0008':range(175,182),
+       'nucleo-um1724-r14':sorted({26,27,30,32,*range(37,63)})}
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
@@ -31,6 +32,6 @@ def main():
         elif path.read_bytes()!=raw or spec['sha256']!=digest:
             sys.exit(f"ST table snapshot differs from original PDF: {doc['id']}")
     if args.write:manifest_path.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
-    print('ST table snapshots match the two hash-locked original PDFs.' if not args.write else 'ST table snapshots refreshed; review the diff and regenerate verification outputs.')
+    print(f'ST table snapshots match {len(PAGES)} hash-locked original PDFs.' if not args.write else 'ST table snapshots refreshed; review the diff and regenerate verification outputs.')
 
 if __name__=='__main__':main()
