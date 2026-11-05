@@ -938,17 +938,33 @@ async function loadHash() {
     return;
   }
   const params = new URLSearchParams(hash);
+  const searchParams = new URLSearchParams(location.search);
+  const queryParam = searchParams.get('q') || searchParams.get('highlight') || params.get('q') || params.get('highlight');
   const pin = params.get('pin');
   let target = params.get('board'), payload;
   if (!target && !params.has('plan')) {
-    ++navigationSequence;dataState='ready';
-    if (!layout) {
-      const next = resolveProfile(layouts, layouts[0].id);
-      layout = next.layout; board = next.profile;
+    const directMatch = queryParam && boards.find(b => b.id.toLowerCase() === queryParam.toLowerCase() || b.name.toLowerCase() === queryParam.toLowerCase());
+    if (directMatch) {
+      target = directMatch.layout;
+      params.set('profile', directMatch.id);
+    } else {
+      ++navigationSequence;dataState='ready';
+      if (!layout) {
+        const next = resolveProfile(layouts, layouts[0].id);
+        layout = next.layout; board = next.profile;
+      }
+      showHomeView();
+      renderDataState();
+      if (queryParam) {
+        homeSearchQuery = queryParam.toLowerCase().trim();
+        if ($('#home-search')) $('#home-search').value = queryParam;
+        renderHomeCatalog();
+        requestAnimationFrame(() => {
+          $('#home-search')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+      }
+      return;
     }
-    showHomeView();
-    renderDataState();
-    return;
   }
   if (params.has('plan')) {
     try {
@@ -973,6 +989,15 @@ async function loadHash() {
   }
   if (payload) previewPlan(payload,pin);
   else if (previewDialog.open) previewDialog.close();
+  if (queryParam) {
+    search = queryParam;
+    if ($('#pin-search')) $('#pin-search').value = queryParam;
+    renderMap();
+    renderDetailPreservingDraft();
+    requestAnimationFrame(() => {
+      $('#pin-search')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }
 }
 $('#board-nav')?.addEventListener('click',e=>{const b=e.target.closest('[data-layout]');if(b)openLayout(b.dataset.layout);});
 $('#library-button')?.addEventListener('click',showCatalog);

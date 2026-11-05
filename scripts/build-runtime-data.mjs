@@ -24,7 +24,18 @@ for(const board of boards){
 files.set('catalog.json',JSON.stringify({version:1,verifiedOn:boards[0].verifiedOn,
  totals:{pins:boards.reduce((n,b)=>n+b.pins.length,0),functions:profiles.reduce((n,b)=>n+b.functionAssignments,0),sources:evidence.documents.length},profiles})+'\n');
 const write=process.argv.includes('--write'),directory=root+'public/data/';
-if(write)mkdirSync(directory+'profiles',{recursive:true});
+if(write) {
+  mkdirSync(directory+'profiles',{recursive:true});
+  const searchEntries = [];
+  for (const p of profiles) {
+    const url = `/pin-atlas/?q=${encodeURIComponent(p.name)}&highlight=${encodeURIComponent(p.name)}#board=${encodeURIComponent(p.layout)}&profile=${encodeURIComponent(p.id)}`;
+    const desc = (p.subtitle || '') + (p.mcu ? ' · ' + p.mcu : '') + (p.family ? ' · ' + p.family : '');
+    for (const lang of ['tr', 'en']) {
+      searchEntries.push({ lang, title: p.name, url, type: 'pin-atlas/', description: desc });
+    }
+  }
+  writeFileSync(root+'public/search.json', JSON.stringify(searchEntries, null, 2) + '\n');
+}
 for(const [name,content] of files){
  if(write)writeFileSync(directory+name,content);
  else if(!existsSync(directory+name)||readFileSync(directory+name,'utf8')!==content)throw new Error(`Runtime data differs: ${name}. Run npm run build:data after reviewing source data.`);
