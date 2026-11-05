@@ -167,3 +167,5 @@ The shared Nucleo-64 catalog groups connector positions only. Each model retains
 - **NUCLEO-F446RE / STM32F446RET6:** UM1724 Rev 14 Table 19 (pp. 47–48) and Table 29 (p. 58); LQFP-64, 50 GPIO-capable pads, Cortex-M4, up to 180 MHz. Raw STM32 AF selectors come from the F446 GPIO Modes source.
 
 UM1724 raw table cells are hash-locked in `sources/extracted/nucleo-um1724-r14.json`. CI applies the same parser to those cells and does not require the manual PDF to be cached or downloadable. The original-PDF path remains available for independent comparison.
+
+- **NUCLEO-F303RE / STM32F303RET6:** UM1724 Table 14 (pp. 41–42) and Table 26 (p. 55); Cortex-M4, 72 MHz, LQFP-64 with 51 GPIO-capable pads. Table 14 omits the D0 row: CN9.1 uses the common MB1136 position, and D0 → PA3 is corroborated by the pinned official STM32duino F303RE variant. The supplementary source is attached to that contact.

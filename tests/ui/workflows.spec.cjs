@@ -121,8 +121,9 @@ test('keyboard filters retain focus and pin maps have one tab stop with arrow na
 test('new Nucleo models share one catalog entry and link to their exact MCU package',async({page})=>{
   await ready(page);
   await expect(page.locator('#home-catalog-container .catalog-card[data-layout="nucleo-64"]')).toHaveCount(1);
-  const additions=boards.filter(board=>board.layoutFamily==='nucleo-64' &&
+  const additions=boards.filter(board=>(!process.env.NUCLEO_TEST_MODEL || board.id===process.env.NUCLEO_TEST_MODEL) && board.layoutFamily==='nucleo-64' &&
     boards.find(chip=>chip.id===board.mcuProfile)?.scopeKey==='stm32CubeScope');
+  expect(additions.length).toBeGreaterThan(0);
   for(const board of additions){
     await ready(page);
     await page.locator('#home-search').fill(board.name);

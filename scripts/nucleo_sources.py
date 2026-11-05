@@ -120,6 +120,7 @@ def build_nucleo(cache, docs, ref, chip, model, use_snapshots=False, table_spec=
         'PA2': 'nucleoUsart', 'PA3': 'nucleoUsart', 'PA5': 'nucleoLed',
         'PC14': 'nucleoLse', 'PC15': 'nucleoLse',
         'PD0': 'nucleoHse', 'PD1': 'nucleoHse', 'PH0': 'nucleoF4Hse', 'PH1': 'nucleoF4Hse',
+        'PF0': 'nucleoF4Hse', 'PF1': 'nucleoF4Hse',
     }
     drawing_page = 30 if model == 'f103rb' else 32
     drawing_ref = ref(f'{board_id}-top-view', document, drawing_page,

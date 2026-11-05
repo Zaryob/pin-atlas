@@ -36,3 +36,15 @@ test('STM32F446 package and Nucleo contacts retain independently documented ADC 
   assert.equal(sck.name,'PA5');assert.equal(sck.mcuPin,21);
   assert(sck.functions.some(fn=>fn.name==='SPI1_SCK' && fn.selector==='AF5'));
 });
+
+test('F303RE D0 is corroborated by the pinned ST variant rather than an invented manual row',()=>{
+  const board=boards.find(board=>board.id==='nucleo-f303re');
+  const chip=boards.find(board=>board.id==='stm32f303ret6');
+  assert.equal(chip.clock,'72 MHz');assert.equal(chip.gpioCount,51);
+  const d0=board.pins.find(pin=>pin.physicalLabel==='CN9.1');
+  assert.equal(d0.name,'PA3');assert.equal(d0.mcuPin,17);
+  assert(d0.evidence.includes('nucleo-f303re-d0'));
+  assert(d0.functions.some(fn=>fn.name==='USART2_RX'));
+  const analog=board.pins.find(pin=>pin.physicalLabel==='CN8.1');
+  assert(analog.functions.some(fn=>fn.name==='ADC1_IN1'));
+});

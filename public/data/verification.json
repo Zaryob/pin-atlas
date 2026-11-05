@@ -1,7 +1,7 @@
 {
   "verifiedOn": "2026-11-05",
-  "physicalPins": 2969,
-  "functionAssignments": 12476,
+  "physicalPins": 3141,
+  "functionAssignments": 13515,
   "documents": [
     {
       "id": "rp2350",
@@ -719,6 +719,33 @@
       "publisher": "STMicroelectronics",
       "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
       "sha256": "fe95087cfca51ece0d091a844246d564c12c378f74decd3e780d06c15de53a6c"
+    },
+    {
+      "id": "f303re-package",
+      "title": "STM32F303RE CubeMX package data",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F303R(D-E)Tx.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F303R(D-E)Tx.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "1905ab8d4fcfdf6c02efb1c4ce58cd3c269c1d9a8c3f2b56e4a6e78cf8cf6fbc"
+    },
+    {
+      "id": "f303re-modes",
+      "title": "STM32F303RE CubeMX modes data",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F303E_gpio_v1_0_Modes.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F303E_gpio_v1_0_Modes.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "d59b0c93f09357100bad1aeef554737cfc74be9b265b17990527ec3b05d0fd14"
+    },
+    {
+      "id": "nucleo-f303re-variant-cpp",
+      "title": "NUCLEO-F303RE official Arduino D0 corroboration",
+      "url": "https://raw.githubusercontent.com/stm32duino/Arduino_Core_STM32/b18163265c827fc3b1f1396c4d09221b4821a405/variants/STM32F3xx/F303R(D-E)T/variant_NUCLEO_F303RE.cpp",
+      "viewUrl": "https://github.com/stm32duino/Arduino_Core_STM32/blob/b18163265c827fc3b1f1396c4d09221b4821a405/variants/STM32F3xx/F303R(D-E)T/variant_NUCLEO_F303RE.cpp",
+      "publisher": "STMicroelectronics",
+      "revision": "b18163265c827fc3b1f1396c4d09221b4821a405",
+      "sha256": "e822dd21c70403a0b18f5fbcf125acb0a4ec4eb9a54f6e17fd6657381a249c56"
     }
   ],
   "boards": [
@@ -1199,6 +1226,25 @@
       "id": "stm32f446ret6",
       "physicalPins": 64,
       "functionAssignments": 333,
+      "physicalSourceMethods": [
+        "manufacturer-xml"
+      ]
+    },
+    {
+      "id": "nucleo-f303re",
+      "physicalPins": 108,
+      "functionAssignments": 626,
+      "physicalSourceMethods": [
+        "code-variant",
+        "manufacturer-xml",
+        "pdf-table",
+        "visual-diagram"
+      ]
+    },
+    {
+      "id": "stm32f303ret6",
+      "physicalPins": 64,
+      "functionAssignments": 413,
       "physicalSourceMethods": [
         "manufacturer-xml"
       ]

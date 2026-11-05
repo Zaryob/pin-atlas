@@ -799,6 +799,36 @@
       "publisher": "STMicroelectronics",
       "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
       "sha256": "fe95087cfca51ece0d091a844246d564c12c378f74decd3e780d06c15de53a6c"
+    },
+    {
+      "id": "f303re-package",
+      "title": "STM32F303RE CubeMX package data",
+      "file": "f303re-package.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F303R(D-E)Tx.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F303R(D-E)Tx.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "1905ab8d4fcfdf6c02efb1c4ce58cd3c269c1d9a8c3f2b56e4a6e78cf8cf6fbc"
+    },
+    {
+      "id": "f303re-modes",
+      "title": "STM32F303RE CubeMX modes data",
+      "file": "f303re-modes.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F303E_gpio_v1_0_Modes.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F303E_gpio_v1_0_Modes.xml",
+      "publisher": "STMicroelectronics",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
+      "sha256": "d59b0c93f09357100bad1aeef554737cfc74be9b265b17990527ec3b05d0fd14"
+    },
+    {
+      "id": "nucleo-f303re-variant-cpp",
+      "title": "NUCLEO-F303RE official Arduino D0 corroboration",
+      "file": "variant_nucleo_f303re.cpp",
+      "url": "https://raw.githubusercontent.com/stm32duino/Arduino_Core_STM32/b18163265c827fc3b1f1396c4d09221b4821a405/variants/STM32F3xx/F303R(D-E)T/variant_NUCLEO_F303RE.cpp",
+      "viewUrl": "https://github.com/stm32duino/Arduino_Core_STM32/blob/b18163265c827fc3b1f1396c4d09221b4821a405/variants/STM32F3xx/F303R(D-E)T/variant_NUCLEO_F303RE.cpp",
+      "publisher": "STMicroelectronics",
+      "revision": "b18163265c827fc3b1f1396c4d09221b4821a405",
+      "sha256": "e822dd21c70403a0b18f5fbcf125acb0a4ec4eb9a54f6e17fd6657381a249c56"
     }
   ],
   "references": {
@@ -2267,6 +2297,62 @@
       "method": "pdf-table"
     },
     "nucleo-f446re-top-view": {
+      "document": "nucleo-um1724-r14",
+      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
+      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=32",
+      "page": 32,
+      "locator": "MB1136 top view · connector positions, rows and numbering",
+      "method": "visual-diagram"
+    },
+    "f303re-package": {
+      "document": "f303re-package",
+      "title": "STM32F303RE CubeMX package data",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F303R(D-E)Tx.xml",
+      "page": null,
+      "locator": "LQFP64 numbered package pins and physical signals",
+      "method": "manufacturer-xml"
+    },
+    "f303re-modes": {
+      "document": "f303re-modes",
+      "title": "STM32F303RE CubeMX modes data",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32F303E_gpio_v1_0_Modes.xml",
+      "page": null,
+      "locator": "STM32F303E_gpio_v1_0 GPIO alternate function selectors",
+      "method": "manufacturer-xml"
+    },
+    "nucleo-f303re-d0": {
+      "document": "nucleo-f303re-variant-cpp",
+      "title": "NUCLEO-F303RE official Arduino D0 corroboration",
+      "url": "https://github.com/stm32duino/Arduino_Core_STM32/blob/b18163265c827fc3b1f1396c4d09221b4821a405/variants/STM32F3xx/F303R(D-E)T/variant_NUCLEO_F303RE.cpp",
+      "page": null,
+      "locator": "digitalPin[0] · Arduino D0; CN9.1 position from the common MB1136 layout",
+      "method": "code-variant"
+    },
+    "nucleo-f303re-arduino-41": {
+      "document": "nucleo-um1724-r14",
+      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
+      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=41",
+      "page": 41,
+      "locator": "Table 14 · Arduino headers",
+      "method": "pdf-table"
+    },
+    "nucleo-f303re-arduino-42": {
+      "document": "nucleo-um1724-r14",
+      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
+      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=42",
+      "page": 42,
+      "locator": "Table 14 · Arduino headers",
+      "method": "pdf-table"
+    },
+    "nucleo-f303re-morpho-55": {
+      "document": "nucleo-um1724-r14",
+      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
+      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=55",
+      "page": 55,
+      "locator": "Table 26 · ST Morpho headers",
+      "method": "pdf-table"
+    },
+    "nucleo-f303re-top-view": {
       "document": "nucleo-um1724-r14",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
       "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=32",

@@ -133,3 +133,5 @@ Ortak Nucleo-64 kaydı yalnızca konektör konumlarını gruplar. Her modelin MC
 - **NUCLEO-F446RE / STM32F446RET6:** UM1724 Rev 14 Tablo 19 (s. 47–48) ve Tablo 29 (s. 58); LQFP-64, 50 GPIO bacağı, Cortex-M4, en fazla 180 MHz. AF seçicileri F446 GPIO Modes kaynağından alınır.
 
 UM1724 ham tablo hücreleri `sources/extracted/nucleo-um1724-r14.json` içinde hash ile kilitlidir. CI aynı ayrıştırıcıyı bu hücrelere uygular; PDF önbelleği veya erişilebilir bir PDF sunucusu gerektirmez. Bağımsız karşılaştırma için özgün PDF yolu korunur.
+
+- **NUCLEO-F303RE / STM32F303RET6:** UM1724 Tablo 14 (s. 41–42) ve Tablo 26 (s. 55); Cortex-M4, 72 MHz, LQFP-64 ve 51 GPIO bacağı. Tablo 14, D0 satırını atlar: CN9.1 ortak MB1136 konumundan, D0 → PA3 eşlemesi sabit sürümlü resmî STM32duino F303RE varyantından doğrulanır. Ek kaynak ilgili temas noktasına bağlanır.

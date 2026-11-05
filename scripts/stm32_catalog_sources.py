@@ -9,6 +9,7 @@ from nucleo_sources import build_nucleo
 # Explicit manual table locations prevent selecting an adjacent model's continuation.
 MODELS = {
     'f446re': {'arduino': [(47, 1), (48, 0)], 'morpho': [(58, 0)], 'tables': (19, 29)},
+    'f303re': {'arduino': [(41, 0), (42, 0)], 'morpho': [(55, 0)], 'tables': (14, 26)},
 }
 PACKAGES = ()
 
@@ -105,7 +106,19 @@ def build_catalog(cache, docs, ref, verified_on, use_snapshots=False):
     boards = []
     for model, table_spec in MODELS.items():
         chip = read_cube_package(cache, docs, ref, model, verified_on)
-        board = build_nucleo(cache, docs, ref, chip, model, use_snapshots=use_snapshots, table_spec=table_spec)
+        extra = []
+        if model == 'f303re':
+            # UM1724 Table 14 omits D0. The shared MB1136 drawing identifies
+            # CN9.1; ST's pinned variant independently maps Arduino D0 to PA3.
+            document = 'nucleo-f303re-variant-cpp'
+            text = (cache / docs[document]['file']).read_text()
+            array = re.search(r'const PinName digitalPin\[\]\s*=\s*\{(.*?)\};', text, re.S)[1]
+            match = re.search(r'^\s*(P[A-K]_\d+),\s*//D0(?:/|\s)', array, re.M)
+            assert match, 'Review the F303RE D0 corroboration'
+            evidence = ref('nucleo-f303re-d0', document, None,
+                           'digitalPin[0] · Arduino D0; CN9.1 position from the common MB1136 layout', 'code-variant')
+            extra.append(('CN9', 1, 'D0', match[1].replace('_', ''), evidence))
+        board = build_nucleo(cache, docs, ref, chip, model, use_snapshots=use_snapshots, table_spec=table_spec, extra_arduino=extra)
         boards.extend([board, chip])
     for model in PACKAGES:
         boards.append(read_cube_package(cache, docs, ref, model, verified_on))
