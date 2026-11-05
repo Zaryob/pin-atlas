@@ -44,4 +44,8 @@ class Handler(SimpleHTTPRequestHandler):
         self.project_request(head=True)
 
 
-ThreadingHTTPServer(('127.0.0.1', args.port), partial(Handler, directory=str(root))).serve_forever()
+class ThreadingServer(ThreadingHTTPServer):
+    request_queue_size = 128
+
+
+ThreadingServer(('127.0.0.1', args.port), partial(Handler, directory=str(root))).serve_forever()

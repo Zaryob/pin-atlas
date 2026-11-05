@@ -82700,6 +82700,1181 @@
     ]
   },
   {
+    "id": "arduino-nano-esp32",
+    "name": "Arduino Nano ESP32",
+    "shortName": "Nano ESP32",
+    "family": "Arduino",
+    "subtitle": "ESP32-S3 (NORA-W106) · 240 MHz · 3.3 V I/O · Wi-Fi + BLE",
+    "layout": "custom",
+    "diagram": {
+      "width": 820,
+      "height": 780,
+      "artwork": "assets/boards/arduino-nano-esp32.svg"
+    },
+    "orientation": "usb",
+    "packagePins": 30,
+    "gpioCount": 24,
+    "uniqueGPIOCount": 24,
+    "voltage": "3.3 V I/O",
+    "mcu": "ESP32-S3",
+    "processor": "Xtensa dual-core 32-bit LX7",
+    "clock": "240 MHz",
+    "compatibleKey": "arduinoNanoEsp32Compatible",
+    "scopeKey": "arduinoNanoEsp32Scope",
+    "verifiedOn": "2026-11-05",
+    "source": "https://docs.arduino.cc/resources/pinouts/ABX00083-full-pinout.pdf",
+    "datasheet": "https://docs.arduino.cc/resources/schematics/ABX00083-schematics.pdf",
+    "pins": [
+      {
+        "physicalLabel": "L.1",
+        "connector": "L",
+        "connectorPin": 1,
+        "name": "D13",
+        "boardLabel": "D13",
+        "type": "GPIO",
+        "net": "GPIO48",
+        "position": {
+          "x": 280,
+          "y": 110,
+          "side": "left"
+        },
+        "evidence": [
+          "arduino-nano-esp32-headers",
+          "arduino-nano-esp32-signals"
+        ],
+        "functions": [
+          {
+            "name": "SPI SCK",
+            "group": "SPI",
+            "signal": "SCK",
+            "evidence": "arduino-nano-esp32-headers"
+          },
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "arduino-nano-esp32-headers"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO48",
+            "evidence": "arduino-nano-esp32-headers"
+          }
+        ],
+        "arduinoPin": 13,
+        "mcuPort": "GPIO48",
+        "noteKey": "arduinoNanoEsp32GpioNote",
+        "number": 1
+      },
+      {
+        "physicalLabel": "L.2",
+        "connector": "L",
+        "connectorPin": 2,
+        "name": "3V3",
+        "boardLabel": "3V3",
+        "type": "POWER",
+        "net": "+3V3",
+        "position": {
+          "x": 280,
+          "y": 138,
+          "side": "left"
+        },
+        "evidence": [
+          "arduino-nano-esp32-headers",
+          "arduino-nano-esp32-schematic-ref"
+        ],
+        "functions": [],
+        "number": 2
+      },
+      {
+        "physicalLabel": "L.3",
+        "connector": "L",
+        "connectorPin": 3,
+        "name": "B0",
+        "boardLabel": "B0",
+        "type": "GPIO",
+        "net": "GPIO46",
+        "position": {
+          "x": 280,
+          "y": 166,
+          "side": "left"
+        },
+        "evidence": [
+          "arduino-nano-esp32-headers",
+          "arduino-nano-esp32-signals"
+        ],
+        "functions": [
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "arduino-nano-esp32-headers"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO46",
+            "evidence": "arduino-nano-esp32-headers"
+          }
+        ],
+        "arduinoPin": 14,
+        "mcuPort": "GPIO46",
+        "noteKey": "arduinoNanoEsp32B0Note",
+        "strapping": true,
+        "number": 3
+      },
+      {
+        "physicalLabel": "L.4",
+        "connector": "L",
+        "connectorPin": 4,
+        "name": "A0",
+        "boardLabel": "A0",
+        "type": "GPIO",
+        "net": "GPIO1",
+        "position": {
+          "x": 280,
+          "y": 194,
+          "side": "left"
+        },
+        "evidence": [
+          "arduino-nano-esp32-headers",
+          "arduino-nano-esp32-signals"
+        ],
+        "functions": [
+          {
+            "name": "ADC1_CH0",
+            "group": "ADC",
+            "signal": "ADC1_CH0",
+            "evidence": "arduino-nano-esp32-signals"
+          },
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "arduino-nano-esp32-headers"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO1",
+            "evidence": "arduino-nano-esp32-headers"
+          }
+        ],
+        "arduinoPin": 17,
+        "mcuPort": "GPIO1",
+        "noteKey": "arduinoNanoEsp32GpioNote",
+        "number": 4
+      },
+      {
+        "physicalLabel": "L.5",
+        "connector": "L",
+        "connectorPin": 5,
+        "name": "A1",
+        "boardLabel": "A1",
+        "type": "GPIO",
+        "net": "GPIO2",
+        "position": {
+          "x": 280,
+          "y": 222,
+          "side": "left"
+        },
+        "evidence": [
+          "arduino-nano-esp32-headers",
+          "arduino-nano-esp32-signals"
+        ],
+        "functions": [
+          {
+            "name": "ADC1_CH1",
+            "group": "ADC",
+            "signal": "ADC1_CH1",
+            "evidence": "arduino-nano-esp32-signals"
+          },
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "arduino-nano-esp32-headers"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO2",
+            "evidence": "arduino-nano-esp32-headers"
+          }
+        ],
+        "arduinoPin": 18,
+        "mcuPort": "GPIO2",
+        "noteKey": "arduinoNanoEsp32GpioNote",
+        "number": 5
+      },
+      {
+        "physicalLabel": "L.6",
+        "connector": "L",
+        "connectorPin": 6,
+        "name": "A2",
+        "boardLabel": "A2",
+        "type": "GPIO",
+        "net": "GPIO3",
+        "position": {
+          "x": 280,
+          "y": 250,
+          "side": "left"
+        },
+        "evidence": [
+          "arduino-nano-esp32-headers",
+          "arduino-nano-esp32-signals"
+        ],
+        "functions": [
+          {
+            "name": "ADC1_CH2",
+            "group": "ADC",
+            "signal": "ADC1_CH2",
+            "evidence": "arduino-nano-esp32-signals"
+          },
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "arduino-nano-esp32-headers"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO3",
+            "evidence": "arduino-nano-esp32-headers"
+          }
+        ],
+        "arduinoPin": 19,
+        "mcuPort": "GPIO3",
+        "noteKey": "arduinoNanoEsp32GpioNote",
+        "number": 6
+      },
+      {
+        "physicalLabel": "L.7",
+        "connector": "L",
+        "connectorPin": 7,
+        "name": "A3",
+        "boardLabel": "A3",
+        "type": "GPIO",
+        "net": "GPIO4",
+        "position": {
+          "x": 280,
+          "y": 278,
+          "side": "left"
+        },
+        "evidence": [
+          "arduino-nano-esp32-headers",
+          "arduino-nano-esp32-signals"
+        ],
+        "functions": [
+          {
+            "name": "ADC1_CH3",
+            "group": "ADC",
+            "signal": "ADC1_CH3",
+            "evidence": "arduino-nano-esp32-signals"
+          },
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "arduino-nano-esp32-headers"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO4",
+            "evidence": "arduino-nano-esp32-headers"
+          }
+        ],
+        "arduinoPin": 20,
+        "mcuPort": "GPIO4",
+        "noteKey": "arduinoNanoEsp32GpioNote",
+        "number": 7
+      },
+      {
+        "physicalLabel": "L.8",
+        "connector": "L",
+        "connectorPin": 8,
+        "name": "A4",
+        "boardLabel": "A4",
+        "type": "GPIO",
+        "net": "GPIO11",
+        "position": {
+          "x": 280,
+          "y": 306,
+          "side": "left"
+        },
+        "evidence": [
+          "arduino-nano-esp32-headers",
+          "arduino-nano-esp32-signals"
+        ],
+        "functions": [
+          {
+            "name": "I2C SDA",
+            "group": "I2C",
+            "signal": "SDA",
+            "evidence": "arduino-nano-esp32-headers"
+          },
+          {
+            "name": "ADC2_CH0",
+            "group": "ADC",
+            "signal": "ADC2_CH0",
+            "evidence": "arduino-nano-esp32-signals"
+          },
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "arduino-nano-esp32-headers"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO11",
+            "evidence": "arduino-nano-esp32-headers"
+          }
+        ],
+        "arduinoPin": 21,
+        "mcuPort": "GPIO11",
+        "noteKey": "arduinoNanoEsp32GpioNote",
+        "number": 8
+      },
+      {
+        "physicalLabel": "L.9",
+        "connector": "L",
+        "connectorPin": 9,
+        "name": "A5",
+        "boardLabel": "A5",
+        "type": "GPIO",
+        "net": "GPIO12",
+        "position": {
+          "x": 280,
+          "y": 334,
+          "side": "left"
+        },
+        "evidence": [
+          "arduino-nano-esp32-headers",
+          "arduino-nano-esp32-signals"
+        ],
+        "functions": [
+          {
+            "name": "I2C SCL",
+            "group": "I2C",
+            "signal": "SCL",
+            "evidence": "arduino-nano-esp32-headers"
+          },
+          {
+            "name": "ADC2_CH1",
+            "group": "ADC",
+            "signal": "ADC2_CH1",
+            "evidence": "arduino-nano-esp32-signals"
+          },
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "arduino-nano-esp32-headers"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO12",
+            "evidence": "arduino-nano-esp32-headers"
+          }
+        ],
+        "arduinoPin": 22,
+        "mcuPort": "GPIO12",
+        "noteKey": "arduinoNanoEsp32GpioNote",
+        "number": 9
+      },
+      {
+        "physicalLabel": "L.10",
+        "connector": "L",
+        "connectorPin": 10,
+        "name": "A6",
+        "boardLabel": "A6",
+        "type": "GPIO",
+        "net": "GPIO13",
+        "position": {
+          "x": 280,
+          "y": 362,
+          "side": "left"
+        },
+        "evidence": [
+          "arduino-nano-esp32-headers",
+          "arduino-nano-esp32-signals"
+        ],
+        "functions": [
+          {
+            "name": "ADC2_CH2",
+            "group": "ADC",
+            "signal": "ADC2_CH2",
+            "evidence": "arduino-nano-esp32-signals"
+          },
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "arduino-nano-esp32-headers"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO13",
+            "evidence": "arduino-nano-esp32-headers"
+          }
+        ],
+        "arduinoPin": 23,
+        "mcuPort": "GPIO13",
+        "noteKey": "arduinoNanoEsp32GpioNote",
+        "number": 10
+      },
+      {
+        "physicalLabel": "L.11",
+        "connector": "L",
+        "connectorPin": 11,
+        "name": "A7",
+        "boardLabel": "A7",
+        "type": "GPIO",
+        "net": "GPIO14",
+        "position": {
+          "x": 280,
+          "y": 390,
+          "side": "left"
+        },
+        "evidence": [
+          "arduino-nano-esp32-headers",
+          "arduino-nano-esp32-signals"
+        ],
+        "functions": [
+          {
+            "name": "ADC2_CH3",
+            "group": "ADC",
+            "signal": "ADC2_CH3",
+            "evidence": "arduino-nano-esp32-signals"
+          },
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "arduino-nano-esp32-headers"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO14",
+            "evidence": "arduino-nano-esp32-headers"
+          }
+        ],
+        "arduinoPin": 24,
+        "mcuPort": "GPIO14",
+        "noteKey": "arduinoNanoEsp32GpioNote",
+        "number": 11
+      },
+      {
+        "physicalLabel": "L.12",
+        "connector": "L",
+        "connectorPin": 12,
+        "name": "VUSB",
+        "boardLabel": "VUSB",
+        "type": "POWER",
+        "net": "VUSB",
+        "position": {
+          "x": 280,
+          "y": 418,
+          "side": "left"
+        },
+        "evidence": [
+          "arduino-nano-esp32-headers",
+          "arduino-nano-esp32-schematic-ref"
+        ],
+        "functions": [],
+        "noteKey": "arduinoVusbNote",
+        "number": 12
+      },
+      {
+        "physicalLabel": "L.13",
+        "connector": "L",
+        "connectorPin": 13,
+        "name": "B1",
+        "boardLabel": "B1",
+        "type": "GPIO",
+        "net": "GPIO0",
+        "position": {
+          "x": 280,
+          "y": 446,
+          "side": "left"
+        },
+        "evidence": [
+          "arduino-nano-esp32-headers",
+          "arduino-nano-esp32-signals"
+        ],
+        "functions": [
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "arduino-nano-esp32-headers"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO0",
+            "evidence": "arduino-nano-esp32-headers"
+          }
+        ],
+        "arduinoPin": 16,
+        "mcuPort": "GPIO0",
+        "noteKey": "arduinoNanoEsp32B1Note",
+        "strapping": true,
+        "number": 13
+      },
+      {
+        "physicalLabel": "L.14",
+        "connector": "L",
+        "connectorPin": 14,
+        "name": "GND",
+        "boardLabel": "GND",
+        "type": "GND",
+        "net": "GND",
+        "position": {
+          "x": 280,
+          "y": 474,
+          "side": "left"
+        },
+        "evidence": [
+          "arduino-nano-esp32-headers",
+          "arduino-nano-esp32-schematic-ref"
+        ],
+        "functions": [],
+        "number": 14
+      },
+      {
+        "physicalLabel": "L.15",
+        "connector": "L",
+        "connectorPin": 15,
+        "name": "VIN",
+        "boardLabel": "VIN",
+        "type": "POWER",
+        "net": "VIN",
+        "position": {
+          "x": 280,
+          "y": 502,
+          "side": "left"
+        },
+        "evidence": [
+          "arduino-nano-esp32-headers",
+          "arduino-nano-esp32-schematic-ref"
+        ],
+        "functions": [],
+        "noteKey": "arduinoVinNote",
+        "number": 15
+      },
+      {
+        "physicalLabel": "R.1",
+        "connector": "R",
+        "connectorPin": 1,
+        "name": "D12",
+        "boardLabel": "D12",
+        "type": "GPIO",
+        "net": "GPIO47",
+        "position": {
+          "x": 540,
+          "y": 110,
+          "side": "right"
+        },
+        "evidence": [
+          "arduino-nano-esp32-headers",
+          "arduino-nano-esp32-signals"
+        ],
+        "functions": [
+          {
+            "name": "SPI CIPO / MISO",
+            "group": "SPI",
+            "signal": "CIPO",
+            "evidence": "arduino-nano-esp32-headers"
+          },
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "arduino-nano-esp32-headers"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO47",
+            "evidence": "arduino-nano-esp32-headers"
+          }
+        ],
+        "arduinoPin": 12,
+        "mcuPort": "GPIO47",
+        "noteKey": "arduinoNanoEsp32GpioNote",
+        "number": 16
+      },
+      {
+        "physicalLabel": "R.2",
+        "connector": "R",
+        "connectorPin": 2,
+        "name": "D11",
+        "boardLabel": "D11",
+        "type": "GPIO",
+        "net": "GPIO38",
+        "position": {
+          "x": 540,
+          "y": 138,
+          "side": "right"
+        },
+        "evidence": [
+          "arduino-nano-esp32-headers",
+          "arduino-nano-esp32-signals"
+        ],
+        "functions": [
+          {
+            "name": "SPI COPI / MOSI",
+            "group": "SPI",
+            "signal": "COPI",
+            "evidence": "arduino-nano-esp32-headers"
+          },
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "arduino-nano-esp32-headers"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO38",
+            "evidence": "arduino-nano-esp32-headers"
+          }
+        ],
+        "arduinoPin": 11,
+        "mcuPort": "GPIO38",
+        "noteKey": "arduinoNanoEsp32GpioNote",
+        "number": 17
+      },
+      {
+        "physicalLabel": "R.3",
+        "connector": "R",
+        "connectorPin": 3,
+        "name": "D10",
+        "boardLabel": "D10",
+        "type": "GPIO",
+        "net": "GPIO21",
+        "position": {
+          "x": 540,
+          "y": 166,
+          "side": "right"
+        },
+        "evidence": [
+          "arduino-nano-esp32-headers",
+          "arduino-nano-esp32-signals"
+        ],
+        "functions": [
+          {
+            "name": "SPI SS",
+            "group": "SPI",
+            "signal": "SS",
+            "evidence": "arduino-nano-esp32-headers"
+          },
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "arduino-nano-esp32-headers"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO21",
+            "evidence": "arduino-nano-esp32-headers"
+          }
+        ],
+        "arduinoPin": 10,
+        "mcuPort": "GPIO21",
+        "noteKey": "arduinoNanoEsp32GpioNote",
+        "number": 18
+      },
+      {
+        "physicalLabel": "R.4",
+        "connector": "R",
+        "connectorPin": 4,
+        "name": "D9",
+        "boardLabel": "D9",
+        "type": "GPIO",
+        "net": "GPIO18",
+        "position": {
+          "x": 540,
+          "y": 194,
+          "side": "right"
+        },
+        "evidence": [
+          "arduino-nano-esp32-headers",
+          "arduino-nano-esp32-signals"
+        ],
+        "functions": [
+          {
+            "name": "Serial1 RX",
+            "group": "UART",
+            "signal": "RX1",
+            "evidence": "arduino-nano-esp32-signals"
+          },
+          {
+            "name": "ADC2_CH7",
+            "group": "ADC",
+            "signal": "ADC2_CH7",
+            "evidence": "arduino-nano-esp32-signals"
+          },
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "arduino-nano-esp32-headers"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO18",
+            "evidence": "arduino-nano-esp32-headers"
+          }
+        ],
+        "arduinoPin": 9,
+        "mcuPort": "GPIO18",
+        "noteKey": "arduinoNanoEsp32GpioNote",
+        "number": 19
+      },
+      {
+        "physicalLabel": "R.5",
+        "connector": "R",
+        "connectorPin": 5,
+        "name": "D8",
+        "boardLabel": "D8",
+        "type": "GPIO",
+        "net": "GPIO17",
+        "position": {
+          "x": 540,
+          "y": 222,
+          "side": "right"
+        },
+        "evidence": [
+          "arduino-nano-esp32-headers",
+          "arduino-nano-esp32-signals"
+        ],
+        "functions": [
+          {
+            "name": "Serial1 TX",
+            "group": "UART",
+            "signal": "TX1",
+            "evidence": "arduino-nano-esp32-signals"
+          },
+          {
+            "name": "ADC2_CH6",
+            "group": "ADC",
+            "signal": "ADC2_CH6",
+            "evidence": "arduino-nano-esp32-signals"
+          },
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "arduino-nano-esp32-headers"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO17",
+            "evidence": "arduino-nano-esp32-headers"
+          }
+        ],
+        "arduinoPin": 8,
+        "mcuPort": "GPIO17",
+        "noteKey": "arduinoNanoEsp32GpioNote",
+        "number": 20
+      },
+      {
+        "physicalLabel": "R.6",
+        "connector": "R",
+        "connectorPin": 6,
+        "name": "D7",
+        "boardLabel": "D7",
+        "type": "GPIO",
+        "net": "GPIO10",
+        "position": {
+          "x": 540,
+          "y": 250,
+          "side": "right"
+        },
+        "evidence": [
+          "arduino-nano-esp32-headers",
+          "arduino-nano-esp32-signals"
+        ],
+        "functions": [
+          {
+            "name": "ADC1_CH9",
+            "group": "ADC",
+            "signal": "ADC1_CH9",
+            "evidence": "arduino-nano-esp32-signals"
+          },
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "arduino-nano-esp32-headers"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO10",
+            "evidence": "arduino-nano-esp32-headers"
+          }
+        ],
+        "arduinoPin": 7,
+        "mcuPort": "GPIO10",
+        "noteKey": "arduinoNanoEsp32GpioNote",
+        "number": 21
+      },
+      {
+        "physicalLabel": "R.7",
+        "connector": "R",
+        "connectorPin": 7,
+        "name": "D6",
+        "boardLabel": "D6",
+        "type": "GPIO",
+        "net": "GPIO9",
+        "position": {
+          "x": 540,
+          "y": 278,
+          "side": "right"
+        },
+        "evidence": [
+          "arduino-nano-esp32-headers",
+          "arduino-nano-esp32-signals"
+        ],
+        "functions": [
+          {
+            "name": "ADC1_CH8",
+            "group": "ADC",
+            "signal": "ADC1_CH8",
+            "evidence": "arduino-nano-esp32-signals"
+          },
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "arduino-nano-esp32-headers"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO9",
+            "evidence": "arduino-nano-esp32-headers"
+          }
+        ],
+        "arduinoPin": 6,
+        "mcuPort": "GPIO9",
+        "noteKey": "arduinoNanoEsp32GpioNote",
+        "number": 22
+      },
+      {
+        "physicalLabel": "R.8",
+        "connector": "R",
+        "connectorPin": 8,
+        "name": "D5",
+        "boardLabel": "D5",
+        "type": "GPIO",
+        "net": "GPIO8",
+        "position": {
+          "x": 540,
+          "y": 306,
+          "side": "right"
+        },
+        "evidence": [
+          "arduino-nano-esp32-headers",
+          "arduino-nano-esp32-signals"
+        ],
+        "functions": [
+          {
+            "name": "ADC1_CH7",
+            "group": "ADC",
+            "signal": "ADC1_CH7",
+            "evidence": "arduino-nano-esp32-signals"
+          },
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "arduino-nano-esp32-headers"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO8",
+            "evidence": "arduino-nano-esp32-headers"
+          }
+        ],
+        "arduinoPin": 5,
+        "mcuPort": "GPIO8",
+        "noteKey": "arduinoNanoEsp32GpioNote",
+        "number": 23
+      },
+      {
+        "physicalLabel": "R.9",
+        "connector": "R",
+        "connectorPin": 9,
+        "name": "D4",
+        "boardLabel": "D4",
+        "type": "GPIO",
+        "net": "GPIO7",
+        "position": {
+          "x": 540,
+          "y": 334,
+          "side": "right"
+        },
+        "evidence": [
+          "arduino-nano-esp32-headers",
+          "arduino-nano-esp32-signals"
+        ],
+        "functions": [
+          {
+            "name": "ADC1_CH6",
+            "group": "ADC",
+            "signal": "ADC1_CH6",
+            "evidence": "arduino-nano-esp32-signals"
+          },
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "arduino-nano-esp32-headers"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO7",
+            "evidence": "arduino-nano-esp32-headers"
+          }
+        ],
+        "arduinoPin": 4,
+        "mcuPort": "GPIO7",
+        "noteKey": "arduinoNanoEsp32GpioNote",
+        "number": 24
+      },
+      {
+        "physicalLabel": "R.10",
+        "connector": "R",
+        "connectorPin": 10,
+        "name": "D3",
+        "boardLabel": "D3",
+        "type": "GPIO",
+        "net": "GPIO6",
+        "position": {
+          "x": 540,
+          "y": 362,
+          "side": "right"
+        },
+        "evidence": [
+          "arduino-nano-esp32-headers",
+          "arduino-nano-esp32-signals"
+        ],
+        "functions": [
+          {
+            "name": "ADC1_CH5",
+            "group": "ADC",
+            "signal": "ADC1_CH5",
+            "evidence": "arduino-nano-esp32-signals"
+          },
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "arduino-nano-esp32-headers"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO6",
+            "evidence": "arduino-nano-esp32-headers"
+          }
+        ],
+        "arduinoPin": 3,
+        "mcuPort": "GPIO6",
+        "noteKey": "arduinoNanoEsp32GpioNote",
+        "number": 25
+      },
+      {
+        "physicalLabel": "R.11",
+        "connector": "R",
+        "connectorPin": 11,
+        "name": "D2",
+        "boardLabel": "D2",
+        "type": "GPIO",
+        "net": "GPIO5",
+        "position": {
+          "x": 540,
+          "y": 390,
+          "side": "right"
+        },
+        "evidence": [
+          "arduino-nano-esp32-headers",
+          "arduino-nano-esp32-signals"
+        ],
+        "functions": [
+          {
+            "name": "ADC1_CH4",
+            "group": "ADC",
+            "signal": "ADC1_CH4",
+            "evidence": "arduino-nano-esp32-signals"
+          },
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "arduino-nano-esp32-headers"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO5",
+            "evidence": "arduino-nano-esp32-headers"
+          }
+        ],
+        "arduinoPin": 2,
+        "mcuPort": "GPIO5",
+        "noteKey": "arduinoNanoEsp32GpioNote",
+        "number": 26
+      },
+      {
+        "physicalLabel": "R.12",
+        "connector": "R",
+        "connectorPin": 12,
+        "name": "GND",
+        "boardLabel": "GND",
+        "type": "GND",
+        "net": "GND",
+        "position": {
+          "x": 540,
+          "y": 418,
+          "side": "right"
+        },
+        "evidence": [
+          "arduino-nano-esp32-headers",
+          "arduino-nano-esp32-schematic-ref"
+        ],
+        "functions": [],
+        "number": 27
+      },
+      {
+        "physicalLabel": "R.13",
+        "connector": "R",
+        "connectorPin": 13,
+        "name": "RESET",
+        "boardLabel": "RESET",
+        "type": "SYSTEM",
+        "net": "RESET",
+        "position": {
+          "x": 540,
+          "y": 446,
+          "side": "right"
+        },
+        "evidence": [
+          "arduino-nano-esp32-headers",
+          "arduino-nano-esp32-schematic-ref"
+        ],
+        "functions": [],
+        "noteKey": "arduinoResetNote",
+        "number": 28
+      },
+      {
+        "physicalLabel": "R.14",
+        "connector": "R",
+        "connectorPin": 14,
+        "name": "D0",
+        "boardLabel": "D0",
+        "type": "GPIO",
+        "net": "GPIO44",
+        "position": {
+          "x": 540,
+          "y": 474,
+          "side": "right"
+        },
+        "evidence": [
+          "arduino-nano-esp32-headers",
+          "arduino-nano-esp32-signals"
+        ],
+        "functions": [
+          {
+            "name": "Serial0 RX",
+            "group": "UART",
+            "signal": "RX0",
+            "evidence": "arduino-nano-esp32-signals"
+          },
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "arduino-nano-esp32-headers"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO44",
+            "evidence": "arduino-nano-esp32-headers"
+          }
+        ],
+        "arduinoPin": 0,
+        "mcuPort": "GPIO44",
+        "noteKey": "arduinoNanoEsp32SerialNote",
+        "number": 29
+      },
+      {
+        "physicalLabel": "R.15",
+        "connector": "R",
+        "connectorPin": 15,
+        "name": "D1",
+        "boardLabel": "D1",
+        "type": "GPIO",
+        "net": "GPIO43",
+        "position": {
+          "x": 540,
+          "y": 502,
+          "side": "right"
+        },
+        "evidence": [
+          "arduino-nano-esp32-headers",
+          "arduino-nano-esp32-signals"
+        ],
+        "functions": [
+          {
+            "name": "Serial0 TX",
+            "group": "UART",
+            "signal": "TX0",
+            "evidence": "arduino-nano-esp32-signals"
+          },
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "arduino-nano-esp32-headers"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO43",
+            "evidence": "arduino-nano-esp32-headers"
+          }
+        ],
+        "arduinoPin": 1,
+        "mcuPort": "GPIO43",
+        "noteKey": "arduinoNanoEsp32SerialNote",
+        "number": 30
+      }
+    ],
+    "category": "Arduino",
+    "wireless": true
+  },
+  {
     "id": "esp32-devkitc-v4",
     "name": "ESP32-DevKitC V4",
     "shortName": "ESP32-DevKitC V4",
@@ -108492,6 +109667,622 @@
         },
         "noteKey": "espGpioNote",
         "boardCircuitKey": "espUartBridgeNote"
+      }
+    ]
+  },
+  {
+    "id": "xiao-samd21",
+    "name": "Seeed Studio XIAO SAMD21",
+    "shortName": "XIAO SAMD21",
+    "subtitle": "ATSAMD21G18A · Cortex-M0+ · 48 MHz · 3.3 V I/O",
+    "layout": "custom",
+    "category": "Seeed Studio",
+    "family": "Seeed Studio",
+    "packageName": "14-contact header",
+    "packagePins": 14,
+    "gpioCount": 11,
+    "uniqueGPIOCount": 11,
+    "voltage": "3.3 V I/O",
+    "mcu": "SAMD21",
+    "processor": "Cortex-M0+",
+    "clock": "48 MHz",
+    "diagram": {
+      "width": 820,
+      "height": 480,
+      "artwork": "assets/boards/seeed-xiao-samd21.svg"
+    },
+    "source": "https://wiki.seeedstudio.com/Seeeduino-XIAO/",
+    "datasheet": "https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-v1.0-SCH-191112.pdf",
+    "verifiedOn": "2026-11-05",
+    "pins": [
+      {
+        "number": 1,
+        "physicalLabel": "L.1",
+        "connector": "L",
+        "connectorPin": 1,
+        "name": "D0_A0",
+        "boardLabel": "D0",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC_IN0",
+            "group": "ADC",
+            "signal": "ADC_IN0",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "DAC_VOUT",
+            "group": "DAC",
+            "signal": "DAC_VOUT",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO interrupt",
+            "evidence": "xiao-samd21-header"
+          }
+        ],
+        "evidence": [
+          "xiao-samd21-header"
+        ],
+        "net": "PA02",
+        "position": {
+          "x": 280,
+          "y": 140,
+          "side": "left"
+        }
+      },
+      {
+        "number": 2,
+        "physicalLabel": "L.2",
+        "connector": "L",
+        "connectorPin": 2,
+        "name": "D1_A1",
+        "boardLabel": "D1",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC_IN4",
+            "group": "ADC",
+            "signal": "ADC_IN4",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "TC0_WO0",
+            "group": "PWM",
+            "signal": "TC0_WO0",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "SERCOM0_PAD0",
+            "group": "SPI",
+            "signal": "SERCOM0_PAD0",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO interrupt",
+            "evidence": "xiao-samd21-header"
+          }
+        ],
+        "evidence": [
+          "xiao-samd21-header"
+        ],
+        "net": "PA04",
+        "position": {
+          "x": 280,
+          "y": 175,
+          "side": "left"
+        }
+      },
+      {
+        "number": 3,
+        "physicalLabel": "L.3",
+        "connector": "L",
+        "connectorPin": 3,
+        "name": "D2_A2",
+        "boardLabel": "D2",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC_IN18",
+            "group": "ADC",
+            "signal": "ADC_IN18",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "TC0_WO2",
+            "group": "PWM",
+            "signal": "TC0_WO2",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "SERCOM0_PAD2",
+            "group": "SPI",
+            "signal": "SERCOM0_PAD2",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "SERCOM2_PAD2",
+            "group": "I2C",
+            "signal": "SERCOM2_PAD2",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO interrupt",
+            "evidence": "xiao-samd21-header"
+          }
+        ],
+        "evidence": [
+          "xiao-samd21-header"
+        ],
+        "net": "PA10",
+        "position": {
+          "x": 280,
+          "y": 210,
+          "side": "left"
+        }
+      },
+      {
+        "number": 4,
+        "physicalLabel": "L.4",
+        "connector": "L",
+        "connectorPin": 4,
+        "name": "D3_A3",
+        "boardLabel": "D3",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "ADC_IN19",
+            "group": "ADC",
+            "signal": "ADC_IN19",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "TC0_WO3",
+            "group": "PWM",
+            "signal": "TC0_WO3",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "SERCOM0_PAD3",
+            "group": "SPI",
+            "signal": "SERCOM0_PAD3",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "SERCOM2_PAD3",
+            "group": "I2C",
+            "signal": "SERCOM2_PAD3",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO interrupt",
+            "evidence": "xiao-samd21-header"
+          }
+        ],
+        "evidence": [
+          "xiao-samd21-header"
+        ],
+        "net": "PA11",
+        "position": {
+          "x": 280,
+          "y": 245,
+          "side": "left"
+        }
+      },
+      {
+        "number": 5,
+        "physicalLabel": "L.5",
+        "connector": "L",
+        "connectorPin": 5,
+        "name": "D4_A4_SDA",
+        "boardLabel": "D4",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C0 SDA",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "ADC_IN16",
+            "group": "ADC",
+            "signal": "ADC_IN16",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "TC1_WO2",
+            "group": "PWM",
+            "signal": "TC1_WO2",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "SERCOM2_PAD0",
+            "group": "I2C",
+            "signal": "SERCOM2_PAD0",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO interrupt",
+            "evidence": "xiao-samd21-header"
+          }
+        ],
+        "evidence": [
+          "xiao-samd21-header"
+        ],
+        "net": "PA08",
+        "position": {
+          "x": 280,
+          "y": 280,
+          "side": "left"
+        }
+      },
+      {
+        "number": 6,
+        "physicalLabel": "L.6",
+        "connector": "L",
+        "connectorPin": 6,
+        "name": "D5_A5_SCL",
+        "boardLabel": "D5",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C0 SCL",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "ADC_IN17",
+            "group": "ADC",
+            "signal": "ADC_IN17",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "TC1_WO3",
+            "group": "PWM",
+            "signal": "TC1_WO3",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "SERCOM2_PAD1",
+            "group": "I2C",
+            "signal": "SERCOM2_PAD1",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO interrupt",
+            "evidence": "xiao-samd21-header"
+          }
+        ],
+        "evidence": [
+          "xiao-samd21-header"
+        ],
+        "net": "PA09",
+        "position": {
+          "x": 280,
+          "y": 315,
+          "side": "left"
+        }
+      },
+      {
+        "number": 7,
+        "physicalLabel": "L.7",
+        "connector": "L",
+        "connectorPin": 7,
+        "name": "D6_A6_TX",
+        "boardLabel": "D6",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "UART0 TX",
+            "group": "UART",
+            "signal": "UART0 TX",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "ADC_IN2",
+            "group": "ADC",
+            "signal": "ADC_IN2",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "TC4_WO0",
+            "group": "PWM",
+            "signal": "TC4_WO0",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "SERCOM4_PAD0",
+            "group": "UART",
+            "signal": "SERCOM4_PAD0",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO interrupt",
+            "evidence": "xiao-samd21-header"
+          }
+        ],
+        "evidence": [
+          "xiao-samd21-header"
+        ],
+        "net": "PB08",
+        "position": {
+          "x": 280,
+          "y": 350,
+          "side": "left"
+        }
+      },
+      {
+        "number": 8,
+        "physicalLabel": "R.1",
+        "connector": "R",
+        "connectorPin": 1,
+        "name": "5V",
+        "boardLabel": "5V",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "xiao-samd21-header"
+        ],
+        "net": "5V",
+        "position": {
+          "x": 540,
+          "y": 140,
+          "side": "right"
+        }
+      },
+      {
+        "number": 9,
+        "physicalLabel": "R.2",
+        "connector": "R",
+        "connectorPin": 2,
+        "name": "GND",
+        "boardLabel": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "xiao-samd21-header"
+        ],
+        "net": "GND",
+        "position": {
+          "x": 540,
+          "y": 175,
+          "side": "right"
+        }
+      },
+      {
+        "number": 10,
+        "physicalLabel": "R.3",
+        "connector": "R",
+        "connectorPin": 3,
+        "name": "3V3",
+        "boardLabel": "3V3",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "xiao-samd21-header"
+        ],
+        "net": "3V3",
+        "position": {
+          "x": 540,
+          "y": 210,
+          "side": "right"
+        }
+      },
+      {
+        "number": 11,
+        "physicalLabel": "R.4",
+        "connector": "R",
+        "connectorPin": 4,
+        "name": "D10_A10_MOSI",
+        "boardLabel": "D10",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 MOSI",
+            "group": "SPI",
+            "signal": "SPI0 MOSI",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "ADC_IN6",
+            "group": "ADC",
+            "signal": "ADC_IN6",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "TC1_WO0",
+            "group": "PWM",
+            "signal": "TC1_WO0",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "SERCOM0_PAD2",
+            "group": "SPI",
+            "signal": "SERCOM0_PAD2",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO interrupt",
+            "evidence": "xiao-samd21-header"
+          }
+        ],
+        "evidence": [
+          "xiao-samd21-header"
+        ],
+        "net": "PA06",
+        "position": {
+          "x": 540,
+          "y": 245,
+          "side": "right"
+        }
+      },
+      {
+        "number": 12,
+        "physicalLabel": "R.5",
+        "connector": "R",
+        "connectorPin": 5,
+        "name": "D9_A9_MISO",
+        "boardLabel": "D9",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 MISO",
+            "group": "SPI",
+            "signal": "SPI0 MISO",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "ADC_IN5",
+            "group": "ADC",
+            "signal": "ADC_IN5",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "TC0_WO1",
+            "group": "PWM",
+            "signal": "TC0_WO1",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "SERCOM0_PAD1",
+            "group": "SPI",
+            "signal": "SERCOM0_PAD1",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO interrupt",
+            "evidence": "xiao-samd21-header"
+          }
+        ],
+        "evidence": [
+          "xiao-samd21-header"
+        ],
+        "net": "PA05",
+        "position": {
+          "x": 540,
+          "y": 280,
+          "side": "right"
+        }
+      },
+      {
+        "number": 13,
+        "physicalLabel": "R.6",
+        "connector": "R",
+        "connectorPin": 6,
+        "name": "D8_A8_SCK",
+        "boardLabel": "D8",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 SCK",
+            "group": "SPI",
+            "signal": "SPI0 SCK",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "ADC_IN7",
+            "group": "ADC",
+            "signal": "ADC_IN7",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "TC1_WO1",
+            "group": "PWM",
+            "signal": "TC1_WO1",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "SERCOM0_PAD3",
+            "group": "SPI",
+            "signal": "SERCOM0_PAD3",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO interrupt",
+            "evidence": "xiao-samd21-header"
+          }
+        ],
+        "evidence": [
+          "xiao-samd21-header"
+        ],
+        "net": "PA07",
+        "position": {
+          "x": 540,
+          "y": 315,
+          "side": "right"
+        }
+      },
+      {
+        "number": 14,
+        "physicalLabel": "R.7",
+        "connector": "R",
+        "connectorPin": 7,
+        "name": "D7_A7_RX",
+        "boardLabel": "D7",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "UART0 RX",
+            "group": "UART",
+            "signal": "UART0 RX",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "ADC_IN3",
+            "group": "ADC",
+            "signal": "ADC_IN3",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "TC4_WO1",
+            "group": "PWM",
+            "signal": "TC4_WO1",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "SERCOM4_PAD1",
+            "group": "UART",
+            "signal": "SERCOM4_PAD1",
+            "evidence": "xiao-samd21-header"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO interrupt",
+            "evidence": "xiao-samd21-header"
+          }
+        ],
+        "evidence": [
+          "xiao-samd21-header"
+        ],
+        "net": "PB09",
+        "position": {
+          "x": 540,
+          "y": 350,
+          "side": "right"
+        }
       }
     ]
   },

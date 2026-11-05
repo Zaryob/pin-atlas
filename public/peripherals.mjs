@@ -1,5 +1,5 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
-const roles = { SPI: ['SCK', 'MISO', 'MOSI'], I2C: ['SCL', 'SDA'], UART: ['TX', 'RX'] };
+const roles = { SPI: ['SCK', 'MISO', 'MOSI'], I2C: ['SCL', 'SDA'], UART: ['TX', 'RX'], CAN: ['TX', 'RX'] };
 
 // Read only signals already verified for this profile. Matrix routes remain
 // capabilities; no default pinmux or bus number is invented for Arduino aliases.
@@ -10,6 +10,16 @@ export function peripheralSignal(fn) {
   if (!match) {
     const uart = name.match(/^U(\d+)(TX|RX)D$/);
     if (uart) match = [name, 'UART'+uart[1], uart[2]];
+  }
+  if (!match && fn.group === 'CAN') {
+    const can = name.match(/^(?:FD)?CAN(\d*)[ _]+(TX|RX)|^(?:FD)?CAN(\d*)(TX|RX)|^CAN_(TX|RX)|^DCAN(\d*)[ _]+(TX|RX)/i);
+    if (can) {
+      const num = can[1] || can[3] || can[6] || '';
+      const prefix = name.startsWith('FDCAN') ? 'FDCAN' : 'CAN';
+      const bus = prefix + (num || '1');
+      const role = (can[2] || can[4] || can[5] || can[7]).toUpperCase();
+      match = [name, bus, role];
+    }
   }
   if (!match) return null;
   let role = match[2].split(/[ _(]/)[0];

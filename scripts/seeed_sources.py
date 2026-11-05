@@ -196,4 +196,93 @@ def build_seeed(cache, docs, observations, ref, verified_on, bank2040, rp2040_ph
         'pins': pins_c3
     }
 
-    return [board_rp2040, board_c3]
+    # 3. Seeed Studio XIAO SAMD21
+    schematic_samd21 = cache / docs['xiao-samd21-schematic']['file']
+    assert schematic_samd21.exists()
+
+    physical_samd21 = ref('xiao-samd21-header', 'xiao-samd21-schematic', 1,
+                          'Sheet 1/1 · connectors J2 (D0–D6) and J4 (D7–D10, 3V3, GND, 5V)', 'visual-diagram')
+
+    pin_defs_samd21 = [
+        # (number, connector, connPin, name, boardLabel, net, pinType, functions, x, y, side)
+        (1,  'L', 1, 'D0_A0', 'D0', 'PA02', 'GPIO',
+         [('ADC_IN0', 'ADC'), ('DAC_VOUT', 'DAC'), ('GPIO interrupt', 'IRQ')], 280, 140, 'left'),
+        (2,  'L', 2, 'D1_A1', 'D1', 'PA04', 'GPIO',
+         [('ADC_IN4', 'ADC'), ('TC0_WO0', 'PWM'), ('SERCOM0_PAD0', 'SPI'), ('GPIO interrupt', 'IRQ')], 280, 175, 'left'),
+        (3,  'L', 3, 'D2_A2', 'D2', 'PA10', 'GPIO',
+         [('ADC_IN18', 'ADC'), ('TC0_WO2', 'PWM'), ('SERCOM0_PAD2', 'SPI'), ('SERCOM2_PAD2', 'I2C'), ('GPIO interrupt', 'IRQ')], 280, 210, 'left'),
+        (4,  'L', 4, 'D3_A3', 'D3', 'PA11', 'GPIO',
+         [('ADC_IN19', 'ADC'), ('TC0_WO3', 'PWM'), ('SERCOM0_PAD3', 'SPI'), ('SERCOM2_PAD3', 'I2C'), ('GPIO interrupt', 'IRQ')], 280, 245, 'left'),
+        (5,  'L', 5, 'D4_A4_SDA', 'D4', 'PA08', 'GPIO',
+         [('I2C0 SDA', 'I2C'), ('ADC_IN16', 'ADC'), ('TC1_WO2', 'PWM'), ('SERCOM2_PAD0', 'I2C'), ('GPIO interrupt', 'IRQ')], 280, 280, 'left'),
+        (6,  'L', 6, 'D5_A5_SCL', 'D5', 'PA09', 'GPIO',
+         [('I2C0 SCL', 'I2C'), ('ADC_IN17', 'ADC'), ('TC1_WO3', 'PWM'), ('SERCOM2_PAD1', 'I2C'), ('GPIO interrupt', 'IRQ')], 280, 315, 'left'),
+        (7,  'L', 7, 'D6_A6_TX', 'D6', 'PB08', 'GPIO',
+         [('UART0 TX', 'UART'), ('ADC_IN2', 'ADC'), ('TC4_WO0', 'PWM'), ('SERCOM4_PAD0', 'UART'), ('GPIO interrupt', 'IRQ')], 280, 350, 'left'),
+        (8,  'R', 1, '5V', '5V', '5V', 'POWER', [], 540, 140, 'right'),
+        (9,  'R', 2, 'GND', 'GND', 'GND', 'GND', [], 540, 175, 'right'),
+        (10, 'R', 3, '3V3', '3V3', '3V3', 'POWER', [], 540, 210, 'right'),
+        (11, 'R', 4, 'D10_A10_MOSI', 'D10', 'PA06', 'GPIO',
+         [('SPI0 MOSI', 'SPI'), ('ADC_IN6', 'ADC'), ('TC1_WO0', 'PWM'), ('SERCOM0_PAD2', 'SPI'), ('GPIO interrupt', 'IRQ')], 540, 245, 'right'),
+        (12, 'R', 5, 'D9_A9_MISO', 'D9', 'PA05', 'GPIO',
+         [('SPI0 MISO', 'SPI'), ('ADC_IN5', 'ADC'), ('TC0_WO1', 'PWM'), ('SERCOM0_PAD1', 'SPI'), ('GPIO interrupt', 'IRQ')], 540, 280, 'right'),
+        (13, 'R', 6, 'D8_A8_SCK', 'D8', 'PA07', 'GPIO',
+         [('SPI0 SCK', 'SPI'), ('ADC_IN7', 'ADC'), ('TC1_WO1', 'PWM'), ('SERCOM0_PAD3', 'SPI'), ('GPIO interrupt', 'IRQ')], 540, 315, 'right'),
+        (14, 'R', 7, 'D7_A7_RX', 'D7', 'PB09', 'GPIO',
+         [('UART0 RX', 'UART'), ('ADC_IN3', 'ADC'), ('TC4_WO1', 'PWM'), ('SERCOM4_PAD1', 'UART'), ('GPIO interrupt', 'IRQ')], 540, 350, 'right'),
+    ]
+
+    pins_samd21 = []
+    for number, conn, connPin, name, label, net, ptype, fns, x, y, side in pin_defs_samd21:
+        functions = []
+        ev = [physical_samd21]
+        for sig, grp in fns:
+            functions.append({
+                'name': sig,
+                'group': grp,
+                'signal': sig,
+                'evidence': physical_samd21
+            })
+        pin = {
+            'number': number,
+            'physicalLabel': f'{conn}.{connPin}',
+            'connector': conn,
+            'connectorPin': connPin,
+            'name': name,
+            'boardLabel': label,
+            'type': ptype,
+            'functions': functions,
+            'evidence': ev,
+            'net': net,
+            'position': {'x': x, 'y': y, 'side': side}
+        }
+        pins_samd21.append(pin)
+
+    board_samd21 = {
+        'id': 'xiao-samd21',
+        'name': 'Seeed Studio XIAO SAMD21',
+        'shortName': 'XIAO SAMD21',
+        'subtitle': 'ATSAMD21G18A · Cortex-M0+ · 48 MHz · 3.3 V I/O',
+        'layout': 'custom',
+        'category': 'Seeed Studio',
+        'family': 'Seeed Studio',
+        'packageName': '14-contact header',
+        'packagePins': 14,
+        'gpioCount': 11,
+        'uniqueGPIOCount': 11,
+        'voltage': '3.3 V I/O',
+        'mcu': 'SAMD21',
+        'processor': 'Cortex-M0+',
+        'clock': '48 MHz',
+        'diagram': {
+            'width': 820,
+            'height': 480,
+            'artwork': 'assets/boards/seeed-xiao-samd21.svg'
+        },
+        'source': 'https://wiki.seeedstudio.com/Seeeduino-XIAO/',
+        'datasheet': docs['xiao-samd21-schematic']['url'],
+        'verifiedOn': verified_on,
+        'pins': pins_samd21
+    }
+
+    return [board_rp2040, board_c3, board_samd21]

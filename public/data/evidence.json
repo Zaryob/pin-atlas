@@ -289,6 +289,24 @@
       "sha256": "83cdcd696e8f2855bf34fb5cbe004a37d73027e87203cd195f81ef5e72e66063"
     },
     {
+      "id": "arduino-nano-esp32-pinout",
+      "title": "Arduino Nano ESP32 full pinout",
+      "publisher": "Arduino",
+      "revision": "2024-04-18",
+      "file": "arduino-nano-esp32-pinout.pdf",
+      "url": "https://docs.arduino.cc/resources/pinouts/ABX00083-full-pinout.pdf",
+      "sha256": "2418c2a90c9099d20f3425647607ce0b2ba426a0f1ff04ced50416fc789dc47d"
+    },
+    {
+      "id": "arduino-nano-esp32-schematic",
+      "title": "Arduino Nano ESP32 schematic",
+      "publisher": "Arduino",
+      "revision": "v1.1",
+      "file": "arduino-nano-esp32-schematic.pdf",
+      "url": "https://docs.arduino.cc/resources/schematics/ABX00083-schematics.pdf",
+      "sha256": "ff7a7c1d0a997a9701ef16c4b598fe253ea8c1237a6ba0d380c78a6148de296a"
+    },
+    {
       "id": "arduino-nano-33-ble-sense-rev2-variant",
       "title": "Arduino mbed core · variants/ARDUINO_NANO33BLE/variant.cpp",
       "publisher": "Arduino",
@@ -719,6 +737,15 @@
       "publisher": "Seeed Studio",
       "revision": "v1.3 · 2026-01-15",
       "sha256": "60d7d447d0d37b0c3ff6c50d372a45d50f750070b8b9d68ca7b906df43365081"
+    },
+    {
+      "id": "xiao-samd21-schematic",
+      "title": "Seeed Studio XIAO SAMD21 Schematic",
+      "file": "xiao-samd21-schematic.pdf",
+      "url": "https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-v1.0-SCH-191112.pdf",
+      "publisher": "Seeed Studio",
+      "revision": "v1.0 · 2019-11-12",
+      "sha256": "f039346edf6ba6144b76900986e9ace912271147532604430e6f47b77f7f2507"
     },
     {
       "id": "microbit-v2-schematic",
@@ -2245,6 +2272,30 @@
       "locator": "g_pin_cfg · RA4M1 port map; initVariant · six Arduino PWM channels",
       "method": "source-code"
     },
+    "arduino-nano-esp32-headers": {
+      "document": "arduino-nano-esp32-pinout",
+      "title": "Arduino Nano ESP32 full pinout",
+      "url": "https://docs.arduino.cc/resources/pinouts/ABX00083-full-pinout.pdf#page=1",
+      "page": 1,
+      "locator": "Main headers · USB-C at top · connector positions, digital and analog pinout",
+      "method": "visual-diagram"
+    },
+    "arduino-nano-esp32-signals": {
+      "document": "arduino-nano-esp32-pinout",
+      "title": "Arduino Nano ESP32 full pinout",
+      "url": "https://docs.arduino.cc/resources/pinouts/ABX00083-full-pinout.pdf#page=3",
+      "page": 3,
+      "locator": "Advanced Section · ESP32-S3 GPIO mappings, ADC channels, and secondary UART",
+      "method": "pdf-text"
+    },
+    "arduino-nano-esp32-schematic-ref": {
+      "document": "arduino-nano-esp32-schematic",
+      "title": "Arduino Nano ESP32 schematic",
+      "url": "https://docs.arduino.cc/resources/schematics/ABX00083-schematics.pdf#page=1",
+      "page": 1,
+      "locator": "Sheet 1/2 · JP1/JP2 header connections, power rails, and strapping pins",
+      "method": "visual-diagram"
+    },
     "esp32-devkitc-v4-header": {
       "document": "esp32-devkit-guide",
       "title": "esp32-devkitc official user guide",
@@ -2596,6 +2647,14 @@
       "page": 30,
       "locator": "Boot configurations · strapping levels sampled during reset",
       "method": "pdf-table"
+    },
+    "xiao-samd21-header": {
+      "document": "xiao-samd21-schematic",
+      "title": "Seeed Studio XIAO SAMD21 Schematic",
+      "url": "https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-v1.0-SCH-191112.pdf#page=1",
+      "page": 1,
+      "locator": "Sheet 1/1 · connectors J2 (D0–D6) and J4 (D7–D10, 3V3, GND, 5V)",
+      "method": "visual-diagram"
     },
     "microbit-v2-header": {
       "document": "microbit-v2-schematic",

@@ -365,6 +365,20 @@
   },
   {
     "lang": "tr",
+    "title": "Arduino Nano ESP32",
+    "url": "/pin-atlas/?q=Arduino%20Nano%20ESP32&highlight=Arduino%20Nano%20ESP32#board=custom&profile=arduino-nano-esp32",
+    "type": "pin-atlas/",
+    "description": "ESP32-S3 (NORA-W106) · 240 MHz · 3.3 V I/O · Wi-Fi + BLE · ESP32-S3 · Arduino"
+  },
+  {
+    "lang": "en",
+    "title": "Arduino Nano ESP32",
+    "url": "/pin-atlas/?q=Arduino%20Nano%20ESP32&highlight=Arduino%20Nano%20ESP32#board=custom&profile=arduino-nano-esp32",
+    "type": "pin-atlas/",
+    "description": "ESP32-S3 (NORA-W106) · 240 MHz · 3.3 V I/O · Wi-Fi + BLE · ESP32-S3 · Arduino"
+  },
+  {
+    "lang": "tr",
     "title": "ESP32-DevKitC V4",
     "url": "/pin-atlas/?q=ESP32-DevKitC%20V4&highlight=ESP32-DevKitC%20V4#board=custom&profile=esp32-devkitc-v4",
     "type": "pin-atlas/",
@@ -558,6 +572,20 @@
     "url": "/pin-atlas/?q=Seeed%20Studio%20XIAO%20ESP32C3&highlight=Seeed%20Studio%20XIAO%20ESP32C3#board=custom&profile=xiao-esp32c3",
     "type": "pin-atlas/",
     "description": "ESP32-C3 · RISC-V · 160 MHz · Wi-Fi + BLE · 3.3 V I/O · ESP32-C3 · Seeed Studio"
+  },
+  {
+    "lang": "tr",
+    "title": "Seeed Studio XIAO SAMD21",
+    "url": "/pin-atlas/?q=Seeed%20Studio%20XIAO%20SAMD21&highlight=Seeed%20Studio%20XIAO%20SAMD21#board=custom&profile=xiao-samd21",
+    "type": "pin-atlas/",
+    "description": "ATSAMD21G18A · Cortex-M0+ · 48 MHz · 3.3 V I/O · SAMD21 · Seeed Studio"
+  },
+  {
+    "lang": "en",
+    "title": "Seeed Studio XIAO SAMD21",
+    "url": "/pin-atlas/?q=Seeed%20Studio%20XIAO%20SAMD21&highlight=Seeed%20Studio%20XIAO%20SAMD21#board=custom&profile=xiao-samd21",
+    "type": "pin-atlas/",
+    "description": "ATSAMD21G18A · Cortex-M0+ · 48 MHz · 3.3 V I/O · SAMD21 · Seeed Studio"
   },
   {
     "lang": "tr",

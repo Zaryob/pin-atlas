@@ -622,3 +622,22 @@ test('saved plans survive refresh, import previews, share previews and language 
   await expect(page.locator('#board-reference')).toContainText('RP2040');
   expect(await page.evaluate(key=>JSON.parse(localStorage.getItem(key)).picow,storageKey)).toEqual(saved);
 });
+
+test('CAN peripheral suggestions and electrical tolerance badges render correctly', async({page})=>{
+  await ready(page, '#board=nucleo-g474re');
+  await page.locator('#diagram [data-pin="28"] .pin-node').click();
+  if (page.viewportSize().width <= 970) {
+    await expect(page.locator('#details-dialog')).toBeVisible();
+    await expect(page.locator('#details-dialog .pin-badge')).toBeVisible();
+  } else {
+    await expect(page.locator('#details-home .pin-badge')).toBeVisible();
+  }
+  await openPlan(page);
+  await page.locator('#pin-suggestions summary').click();
+  await page.locator('[data-suggest-count="SPI"]').fill('0');
+  await page.locator('[data-suggest-count="UART"]').fill('1');
+  await page.locator('[data-suggest-count="CAN"]').fill('1');
+  await page.locator('#suggest-run').click();
+  await expect(page.locator('.suggestion')).toHaveCount(3);
+  await expect(page.locator('.suggestion').first()).toContainText('FDCAN');
+});

@@ -7,7 +7,7 @@ import {electricalKeys} from './hardware-config.mjs';
 // A bounded search is intentionally reported as incomplete rather than impossible.
 export function suggestPins(board,requests,assignments={},options={}){
  const {maxNodes=20000,maxAlternatives=3,includeSPIChipSelect=true}=options;
- const counts=Object.fromEntries(['SPI','I2C','UART'].map(group=>[group,Number(requests?.[group]??0)]));
+ const counts=Object.fromEntries(['SPI','I2C','UART','CAN'].map(group=>[group,Number(requests?.[group]??0)]));
  if(Object.values(counts).some(n=>!Number.isInteger(n)||n<0||n>4)||Object.values(counts).reduce((a,b)=>a+b,0)>6||!Object.values(counts).some(Boolean))return {status:'invalid',alternatives:[],nodes:0};
  try{validatePlan(assignments,board,k=>k);}catch(error){return {status:'blocked',error:error.message,alternatives:[],nodes:0};}
  const buses=availablePeripherals(board,{includeSPIChipSelect}),locked=new Map();

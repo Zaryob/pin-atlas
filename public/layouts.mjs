@@ -42,12 +42,13 @@ export function buildLayouts(boards) {
     {
       id: 'arduino-nano', nameKey: 'nanoLayout', subtitleKey: 'nanoLayoutSubtitle',
       compatibleKey: 'nanoCompatible',
-      profileIds: ['arduino-nano-classic', 'arduino-nano-every', 'arduino-nano-33-ble-sense-rev2'], defaultProfile: 'arduino-nano-classic',
+      profileIds: ['arduino-nano-classic', 'arduino-nano-every', 'arduino-nano-33-ble-sense-rev2', 'arduino-nano-esp32'], defaultProfile: 'arduino-nano-classic',
       geometryConnectors: ['L', 'R'], sharedContactCount: 30,
       references: [
         {key: 'nanoClassicReference', profileIds: ['arduino-nano-classic']},
         {key: 'nanoEveryReference', profileIds: ['arduino-nano-every']},
-        {key: 'nano33BleSenseRev2Reference', profileIds: ['arduino-nano-33-ble-sense-rev2']}
+        {key: 'nano33BleSenseRev2Reference', profileIds: ['arduino-nano-33-ble-sense-rev2']},
+        {key: 'nanoEsp32Reference', profileIds: ['arduino-nano-esp32']}
       ]
     },
     {
@@ -71,11 +72,12 @@ export function buildLayouts(boards) {
     {
       id: 'seeed-xiao', nameKey: 'xiaoLayout', subtitleKey: 'xiaoLayoutSubtitle',
       compatibleKey: 'xiaoCompatible',
-      profileIds: ['xiao-rp2040', 'xiao-esp32c3'], defaultProfile: 'xiao-rp2040',
+      profileIds: ['xiao-rp2040', 'xiao-esp32c3', 'xiao-samd21'], defaultProfile: 'xiao-rp2040',
       geometryConnectors: ['L', 'R'], sharedContactCount: 14,
       references: [
         {key: 'xiaoRp2040Reference', profileIds: ['xiao-rp2040']},
-        {key: 'xiaoEsp32c3Reference', profileIds: ['xiao-esp32c3']}
+        {key: 'xiaoEsp32c3Reference', profileIds: ['xiao-esp32c3']},
+        {key: 'xiaoSamd21Reference', profileIds: ['xiao-samd21']}
       ]
     }
   ];

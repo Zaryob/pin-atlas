@@ -70,3 +70,15 @@ test('vendor CS and TXD aliases preserve real channels and never invent bus numb
  assert.notEqual(peripheralSignal({name:'SPI0_CE0_N',group:'SPI'}).channel,peripheralSignal({name:'SPI0_CE1_N',group:'SPI'}).channel);
  assert.equal(peripheralSignal({name:'TX','group':'UART'}),null);
 });
+
+test('solver finds compatible CAN bus pins and respects existing assignments',()=>{
+ const g474=board('nucleo-g474re');
+ const result=suggestPins(g474,{CAN:1,UART:1});
+ assert.equal(result.status,'ready');
+ assert(result.alternatives.length>0);
+ const canConn=result.alternatives[0].connections.find(c=>c.group==='CAN');
+ assert(canConn);
+ assert.equal(canConn.signals.length,2);
+ assert(canConn.signals.some(s=>s.role==='TX'));
+ assert(canConn.signals.some(s=>s.role==='RX'));
+});

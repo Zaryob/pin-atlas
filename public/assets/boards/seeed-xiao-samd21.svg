@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="480" viewBox="0 0 820 480">
+<g font-family="monospace" text-anchor="middle">
+ <rect x="270" y="55" width="280" height="370" rx="14" fill="#1b2a26" stroke="#48685e" stroke-width="2"/>
+ <rect x="282" y="67" width="256" height="346" rx="10" fill="none" stroke="#2e4a42" stroke-dasharray="4 6"/>
+ <rect x="270" y="130" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="270" y="165" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="270" y="200" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="270" y="235" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="270" y="270" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="270" y="305" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="270" y="340" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="536" y="130" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="536" y="165" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="536" y="200" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="536" y="235" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="536" y="270" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="536" y="305" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="536" y="340" width="14" height="20" rx="2" fill="#cfab5b" stroke="#796434"/>
+ <rect x="375" y="32" width="70" height="46" rx="6" fill="#c4cdcf" stroke="#5d737b" stroke-width="1.5"/>
+ <text x="410" y="61" font-size="11" fill="#293c41" font-weight="bold">USB-C</text>
+ <rect x="296" y="74" width="26" height="20" rx="3" fill="#b0b8ba" stroke="#5a686b"/>
+ <text x="309" y="88" font-size="8" fill="#1e2d30">RST</text>
+ <text x="410" y="142" font-size="15" font-weight="bold" fill="#e8f3ef">Seeed Studio</text>
+ <text x="410" y="162" font-size="12" fill="#9db08f">XIAO SAMD21</text>
+ <rect x="355" y="180" width="110" height="110" rx="5" fill="#27362f" stroke="#5c7a6e"/>
+ <circle cx="367" cy="192" r="3" fill="#a9b796"/>
+ <text x="410" y="232" font-size="15" font-weight="bold" fill="#dce6d0">SAMD21</text>
+ <text x="410" y="252" font-size="10" fill="#9db08f">ARM Cortex-M0+</text>
+ <text x="410" y="270" font-size="9" fill="#758f7e">48 MHz · 3.3 V I/O</text>
+ <rect x="398" y="318" width="24" height="24" rx="3" fill="#2d3d36" stroke="#4d665b"/>
+ <circle cx="410" cy="330" r="5" fill="#eab308"/>
+ <text x="410" y="356" font-size="9" fill="#9db08f">LED (L)</text>
+ <text x="296" y="114" font-size="10" font-weight="bold" fill="#7ba598">L</text>
+ <text x="524" y="114" font-size="10" font-weight="bold" fill="#7ba598">R</text>
+</g>
+</svg>

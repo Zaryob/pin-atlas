@@ -10,6 +10,10 @@ test('peripheral roles retain manufacturer functions and exact bus instances',()
  assert.equal(peripheralSignal({name:'USART1_TX',group:'UART'}).id,'USART1');
  assert.equal(peripheralSignal({name:'U0RXD',group:'UART'}).role,'RX');
  assert.equal(peripheralSignal({name:'USART1_CTS',group:'UART'}),null);
+ assert.deepEqual(peripheralSignal({name:'CAN1_TX',group:'CAN'}),{id:'CAN1',group:'CAN',role:'TX'});
+ assert.deepEqual(peripheralSignal({name:'CANRX',group:'CAN'}),{id:'CAN1',group:'CAN',role:'RX'});
+ assert.deepEqual(peripheralSignal({name:'FDCAN1_TX',group:'CAN'}),{id:'FDCAN1',group:'CAN',role:'TX'});
+ assert.deepEqual(peripheralSignal({name:'CAN2 RX',group:'CAN'}),{id:'CAN2',group:'CAN',role:'RX'});
  for(const board of boards) for(const bus of availablePeripherals(board)) {
   for(const candidate of bus.candidates) {
    assert(!candidate.pin.reserved);assert(candidate.pin.functions.includes(candidate.fn));
@@ -29,4 +33,7 @@ test('guided connections preserve labels and refuse occupied pins or mixed buses
  assert.throws(()=>assemblePeripheral(bus,{...picks,SCL:'[2,"I2C1 SCL"]'},saved),/peripheralChoosePins/);
  const duplicate={...bus,candidates:bus.candidates.map(c=>({...c,pin:{...c.pin,net:'same-net'}}))};
  assert.throws(()=>assemblePeripheral(duplicate,picks,{}),/peripheralPinConflict/);
+ const bluePill=boards.find(b=>b.id==='blue-pill');
+ const canBus=availablePeripherals(bluePill).find(b=>b.id==='CAN1');
+ assert(canBus);assert.equal(canBus.group,'CAN');assert.deepEqual(canBus.roles,['TX','RX']);
 });

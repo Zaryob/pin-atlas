@@ -6431,6 +6431,86 @@ arduino-uno-r4-wifi,36,GND,GND,,,,arduino-uno-r4-wifi-headers,
 arduino-uno-r4-wifi,37,COPI,GPIO,SPI COPI / MOSI,,MOSI,arduino-uno-r4-wifi-headers | arduino-uno-r4-wifi-variant,arduino-uno-r4-wifi-variant
 arduino-uno-r4-wifi,37,COPI,GPIO,PWM,,PWM,arduino-uno-r4-wifi-headers | arduino-uno-r4-wifi-variant,arduino-uno-r4-wifi-variant
 arduino-uno-r4-wifi,38,5V,POWER,,,,arduino-uno-r4-wifi-headers,
+arduino-nano-esp32,1,D13,GPIO,SPI SCK,,SCK,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,1,D13,GPIO,PWM,,PWM,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,1,D13,GPIO,GPIO interrupt,,GPIO48,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,2,3V3,POWER,,,,arduino-nano-esp32-headers | arduino-nano-esp32-schematic-ref,
+arduino-nano-esp32,3,B0,GPIO,PWM,,PWM,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,3,B0,GPIO,GPIO interrupt,,GPIO46,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,4,A0,GPIO,ADC1_CH0,,ADC1_CH0,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-signals
+arduino-nano-esp32,4,A0,GPIO,PWM,,PWM,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,4,A0,GPIO,GPIO interrupt,,GPIO1,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,5,A1,GPIO,ADC1_CH1,,ADC1_CH1,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-signals
+arduino-nano-esp32,5,A1,GPIO,PWM,,PWM,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,5,A1,GPIO,GPIO interrupt,,GPIO2,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,6,A2,GPIO,ADC1_CH2,,ADC1_CH2,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-signals
+arduino-nano-esp32,6,A2,GPIO,PWM,,PWM,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,6,A2,GPIO,GPIO interrupt,,GPIO3,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,7,A3,GPIO,ADC1_CH3,,ADC1_CH3,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-signals
+arduino-nano-esp32,7,A3,GPIO,PWM,,PWM,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,7,A3,GPIO,GPIO interrupt,,GPIO4,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,8,A4,GPIO,I2C SDA,,SDA,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,8,A4,GPIO,ADC2_CH0,,ADC2_CH0,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-signals
+arduino-nano-esp32,8,A4,GPIO,PWM,,PWM,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,8,A4,GPIO,GPIO interrupt,,GPIO11,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,9,A5,GPIO,I2C SCL,,SCL,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,9,A5,GPIO,ADC2_CH1,,ADC2_CH1,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-signals
+arduino-nano-esp32,9,A5,GPIO,PWM,,PWM,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,9,A5,GPIO,GPIO interrupt,,GPIO12,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,10,A6,GPIO,ADC2_CH2,,ADC2_CH2,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-signals
+arduino-nano-esp32,10,A6,GPIO,PWM,,PWM,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,10,A6,GPIO,GPIO interrupt,,GPIO13,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,11,A7,GPIO,ADC2_CH3,,ADC2_CH3,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-signals
+arduino-nano-esp32,11,A7,GPIO,PWM,,PWM,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,11,A7,GPIO,GPIO interrupt,,GPIO14,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,12,VUSB,POWER,,,,arduino-nano-esp32-headers | arduino-nano-esp32-schematic-ref,
+arduino-nano-esp32,13,B1,GPIO,PWM,,PWM,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,13,B1,GPIO,GPIO interrupt,,GPIO0,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,14,GND,GND,,,,arduino-nano-esp32-headers | arduino-nano-esp32-schematic-ref,
+arduino-nano-esp32,15,VIN,POWER,,,,arduino-nano-esp32-headers | arduino-nano-esp32-schematic-ref,
+arduino-nano-esp32,16,D12,GPIO,SPI CIPO / MISO,,CIPO,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,16,D12,GPIO,PWM,,PWM,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,16,D12,GPIO,GPIO interrupt,,GPIO47,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,17,D11,GPIO,SPI COPI / MOSI,,COPI,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,17,D11,GPIO,PWM,,PWM,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,17,D11,GPIO,GPIO interrupt,,GPIO38,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,18,D10,GPIO,SPI SS,,SS,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,18,D10,GPIO,PWM,,PWM,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,18,D10,GPIO,GPIO interrupt,,GPIO21,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,19,D9,GPIO,Serial1 RX,,RX1,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-signals
+arduino-nano-esp32,19,D9,GPIO,ADC2_CH7,,ADC2_CH7,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-signals
+arduino-nano-esp32,19,D9,GPIO,PWM,,PWM,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,19,D9,GPIO,GPIO interrupt,,GPIO18,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,20,D8,GPIO,Serial1 TX,,TX1,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-signals
+arduino-nano-esp32,20,D8,GPIO,ADC2_CH6,,ADC2_CH6,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-signals
+arduino-nano-esp32,20,D8,GPIO,PWM,,PWM,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,20,D8,GPIO,GPIO interrupt,,GPIO17,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,21,D7,GPIO,ADC1_CH9,,ADC1_CH9,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-signals
+arduino-nano-esp32,21,D7,GPIO,PWM,,PWM,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,21,D7,GPIO,GPIO interrupt,,GPIO10,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,22,D6,GPIO,ADC1_CH8,,ADC1_CH8,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-signals
+arduino-nano-esp32,22,D6,GPIO,PWM,,PWM,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,22,D6,GPIO,GPIO interrupt,,GPIO9,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,23,D5,GPIO,ADC1_CH7,,ADC1_CH7,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-signals
+arduino-nano-esp32,23,D5,GPIO,PWM,,PWM,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,23,D5,GPIO,GPIO interrupt,,GPIO8,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,24,D4,GPIO,ADC1_CH6,,ADC1_CH6,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-signals
+arduino-nano-esp32,24,D4,GPIO,PWM,,PWM,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,24,D4,GPIO,GPIO interrupt,,GPIO7,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,25,D3,GPIO,ADC1_CH5,,ADC1_CH5,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-signals
+arduino-nano-esp32,25,D3,GPIO,PWM,,PWM,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,25,D3,GPIO,GPIO interrupt,,GPIO6,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,26,D2,GPIO,ADC1_CH4,,ADC1_CH4,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-signals
+arduino-nano-esp32,26,D2,GPIO,PWM,,PWM,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,26,D2,GPIO,GPIO interrupt,,GPIO5,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,27,GND,GND,,,,arduino-nano-esp32-headers | arduino-nano-esp32-schematic-ref,
+arduino-nano-esp32,28,RESET,SYSTEM,,,,arduino-nano-esp32-headers | arduino-nano-esp32-schematic-ref,
+arduino-nano-esp32,29,D0,GPIO,Serial0 RX,,RX0,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-signals
+arduino-nano-esp32,29,D0,GPIO,PWM,,PWM,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,29,D0,GPIO,GPIO interrupt,,GPIO44,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,30,D1,GPIO,Serial0 TX,,TX0,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-signals
+arduino-nano-esp32,30,D1,GPIO,PWM,,PWM,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
+arduino-nano-esp32,30,D1,GPIO,GPIO interrupt,,GPIO43,arduino-nano-esp32-headers | arduino-nano-esp32-signals,arduino-nano-esp32-headers
 esp32-devkitc-v4,1,3V3,POWER,,,,esp32-devkitc-v4-header | esp32-devkitc-v4-orientation,
 esp32-devkitc-v4,2,EN,SYSTEM,,,,esp32-devkitc-v4-header | esp32-devkitc-v4-orientation,
 esp32-devkitc-v4,3,GPIO36,GPIO,ADC1_CH0,,ADC1_CH0,esp32-devkitc-v4-header | esp32-devkitc-v4-orientation,esp32-devkitc-v4-header
@@ -9032,6 +9112,61 @@ xiao-esp32c3,14,D7,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,xiao-esp32c3-head
 xiao-esp32c3,14,D7,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,xiao-esp32c3-header,xiao-esp32c3-matrix
 xiao-esp32c3,14,D7,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,xiao-esp32c3-header,xiao-esp32c3-matrix
 xiao-esp32c3,14,D7,GPIO,GPIO interrupt,,GPIO20,xiao-esp32c3-header,xiao-esp32c3-matrix
+xiao-samd21,1,D0_A0,GPIO,ADC_IN0,,ADC_IN0,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,1,D0_A0,GPIO,DAC_VOUT,,DAC_VOUT,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,1,D0_A0,GPIO,GPIO interrupt,,GPIO interrupt,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,2,D1_A1,GPIO,ADC_IN4,,ADC_IN4,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,2,D1_A1,GPIO,TC0_WO0,,TC0_WO0,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,2,D1_A1,GPIO,SERCOM0_PAD0,,SERCOM0_PAD0,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,2,D1_A1,GPIO,GPIO interrupt,,GPIO interrupt,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,3,D2_A2,GPIO,ADC_IN18,,ADC_IN18,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,3,D2_A2,GPIO,TC0_WO2,,TC0_WO2,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,3,D2_A2,GPIO,SERCOM0_PAD2,,SERCOM0_PAD2,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,3,D2_A2,GPIO,SERCOM2_PAD2,,SERCOM2_PAD2,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,3,D2_A2,GPIO,GPIO interrupt,,GPIO interrupt,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,4,D3_A3,GPIO,ADC_IN19,,ADC_IN19,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,4,D3_A3,GPIO,TC0_WO3,,TC0_WO3,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,4,D3_A3,GPIO,SERCOM0_PAD3,,SERCOM0_PAD3,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,4,D3_A3,GPIO,SERCOM2_PAD3,,SERCOM2_PAD3,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,4,D3_A3,GPIO,GPIO interrupt,,GPIO interrupt,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,5,D4_A4_SDA,GPIO,I2C0 SDA,,I2C0 SDA,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,5,D4_A4_SDA,GPIO,ADC_IN16,,ADC_IN16,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,5,D4_A4_SDA,GPIO,TC1_WO2,,TC1_WO2,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,5,D4_A4_SDA,GPIO,SERCOM2_PAD0,,SERCOM2_PAD0,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,5,D4_A4_SDA,GPIO,GPIO interrupt,,GPIO interrupt,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,6,D5_A5_SCL,GPIO,I2C0 SCL,,I2C0 SCL,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,6,D5_A5_SCL,GPIO,ADC_IN17,,ADC_IN17,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,6,D5_A5_SCL,GPIO,TC1_WO3,,TC1_WO3,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,6,D5_A5_SCL,GPIO,SERCOM2_PAD1,,SERCOM2_PAD1,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,6,D5_A5_SCL,GPIO,GPIO interrupt,,GPIO interrupt,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,7,D6_A6_TX,GPIO,UART0 TX,,UART0 TX,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,7,D6_A6_TX,GPIO,ADC_IN2,,ADC_IN2,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,7,D6_A6_TX,GPIO,TC4_WO0,,TC4_WO0,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,7,D6_A6_TX,GPIO,SERCOM4_PAD0,,SERCOM4_PAD0,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,7,D6_A6_TX,GPIO,GPIO interrupt,,GPIO interrupt,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,8,5V,POWER,,,,xiao-samd21-header,
+xiao-samd21,9,GND,GND,,,,xiao-samd21-header,
+xiao-samd21,10,3V3,POWER,,,,xiao-samd21-header,
+xiao-samd21,11,D10_A10_MOSI,GPIO,SPI0 MOSI,,SPI0 MOSI,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,11,D10_A10_MOSI,GPIO,ADC_IN6,,ADC_IN6,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,11,D10_A10_MOSI,GPIO,TC1_WO0,,TC1_WO0,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,11,D10_A10_MOSI,GPIO,SERCOM0_PAD2,,SERCOM0_PAD2,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,11,D10_A10_MOSI,GPIO,GPIO interrupt,,GPIO interrupt,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,12,D9_A9_MISO,GPIO,SPI0 MISO,,SPI0 MISO,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,12,D9_A9_MISO,GPIO,ADC_IN5,,ADC_IN5,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,12,D9_A9_MISO,GPIO,TC0_WO1,,TC0_WO1,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,12,D9_A9_MISO,GPIO,SERCOM0_PAD1,,SERCOM0_PAD1,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,12,D9_A9_MISO,GPIO,GPIO interrupt,,GPIO interrupt,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,13,D8_A8_SCK,GPIO,SPI0 SCK,,SPI0 SCK,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,13,D8_A8_SCK,GPIO,ADC_IN7,,ADC_IN7,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,13,D8_A8_SCK,GPIO,TC1_WO1,,TC1_WO1,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,13,D8_A8_SCK,GPIO,SERCOM0_PAD3,,SERCOM0_PAD3,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,13,D8_A8_SCK,GPIO,GPIO interrupt,,GPIO interrupt,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,14,D7_A7_RX,GPIO,UART0 RX,,UART0 RX,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,14,D7_A7_RX,GPIO,ADC_IN3,,ADC_IN3,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,14,D7_A7_RX,GPIO,TC4_WO1,,TC4_WO1,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,14,D7_A7_RX,GPIO,SERCOM4_PAD1,,SERCOM4_PAD1,xiao-samd21-header,xiao-samd21-header
+xiao-samd21,14,D7_A7_RX,GPIO,GPIO interrupt,,GPIO interrupt,xiao-samd21-header,xiao-samd21-header
 microbit-v2,1,P0,GPIO,AIN0,,AIN0,microbit-v2-header,microbit-v2-functions
 microbit-v2,1,P0,GPIO,TOUCH,,TOUCH,microbit-v2-header,microbit-v2-functions
 microbit-v2,1,P0,GPIO,PWM,,PWM,microbit-v2-header,microbit-v2-functions

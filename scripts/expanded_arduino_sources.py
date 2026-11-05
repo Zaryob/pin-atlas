@@ -139,4 +139,160 @@ def build_expanded_arduino(cache,docs,obs,ref,verified_on,base_boards):
         result=finish(board,pins)
         assert result['uniqueGPIOCount']==(22 if is_ble else 23 if model=='leonardo' else 24 if model=='micro' else 22 if model=='nano-every' else 20)
         out.append(result)
+    out.append(build_nano_esp32(cache, docs, obs, ref, verified_on, base['arduino-nano-classic']))
     return out
+
+def build_nano_esp32(cache, docs, obs, ref, verified_on, template):
+    docid = 'arduino-nano-esp32-pinout'
+    schematic_id = 'arduino-nano-esp32-schematic'
+    headers = ref('arduino-nano-esp32-headers', docid, 1,
+                  'Main headers · USB-C at top · connector positions, digital and analog pinout', 'visual-diagram')
+    signals = ref('arduino-nano-esp32-signals', docid, 3,
+                  'Advanced Section · ESP32-S3 GPIO mappings, ADC channels, and secondary UART', 'pdf-text')
+    schematic = ref('arduino-nano-esp32-schematic-ref', schematic_id, 1,
+                    'Sheet 1/2 · JP1/JP2 header connections, power rails, and strapping pins', 'visual-diagram')
+
+    board = copy.deepcopy(template)
+    board.update(
+        id='arduino-nano-esp32',
+        name='Arduino Nano ESP32',
+        shortName='Nano ESP32',
+        subtitle='ESP32-S3 (NORA-W106) · 240 MHz · 3.3 V I/O · Wi-Fi + BLE',
+        layout='custom',
+        category='Arduino',
+        family='Arduino',
+        voltage='3.3 V I/O',
+        mcu='ESP32-S3',
+        processor='Xtensa dual-core 32-bit LX7',
+        clock='240 MHz',
+        wireless=True,
+        scopeKey='arduinoNanoEsp32Scope',
+        compatibleKey='arduinoNanoEsp32Compatible',
+        source=docs[docid]['url'],
+        datasheet=docs[schematic_id]['url']
+    )
+    board['diagram']['artwork'] = 'assets/boards/arduino-nano-esp32.svg'
+
+    # (connector, connPin, name, boardLabel, net, ptype, arduinoPin, fns, noteKey, strapping)
+    pin_defs = [
+        # Left side
+        ('L', 1, 'D13', 'D13', 'GPIO48', 'GPIO', 13,
+         [('SPI SCK', 'SPI', 'SCK'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO48')],
+         'arduinoNanoEsp32GpioNote', False),
+        ('L', 2, '3V3', '3V3', '+3V3', 'POWER', None, [], None, False),
+        ('L', 3, 'B0', 'B0', 'GPIO46', 'GPIO', 14,
+         [('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO46')],
+         'arduinoNanoEsp32B0Note', True),
+        ('L', 4, 'A0', 'A0', 'GPIO1', 'GPIO', 17,
+         [('ADC1_CH0', 'ADC', 'ADC1_CH0'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO1')],
+         'arduinoNanoEsp32GpioNote', False),
+        ('L', 5, 'A1', 'A1', 'GPIO2', 'GPIO', 18,
+         [('ADC1_CH1', 'ADC', 'ADC1_CH1'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO2')],
+         'arduinoNanoEsp32GpioNote', False),
+        ('L', 6, 'A2', 'A2', 'GPIO3', 'GPIO', 19,
+         [('ADC1_CH2', 'ADC', 'ADC1_CH2'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO3')],
+         'arduinoNanoEsp32GpioNote', False),
+        ('L', 7, 'A3', 'A3', 'GPIO4', 'GPIO', 20,
+         [('ADC1_CH3', 'ADC', 'ADC1_CH3'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO4')],
+         'arduinoNanoEsp32GpioNote', False),
+        ('L', 8, 'A4', 'A4', 'GPIO11', 'GPIO', 21,
+         [('I2C SDA', 'I2C', 'SDA'), ('ADC2_CH0', 'ADC', 'ADC2_CH0'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO11')],
+         'arduinoNanoEsp32GpioNote', False),
+        ('L', 9, 'A5', 'A5', 'GPIO12', 'GPIO', 22,
+         [('I2C SCL', 'I2C', 'SCL'), ('ADC2_CH1', 'ADC', 'ADC2_CH1'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO12')],
+         'arduinoNanoEsp32GpioNote', False),
+        ('L', 10, 'A6', 'A6', 'GPIO13', 'GPIO', 23,
+         [('ADC2_CH2', 'ADC', 'ADC2_CH2'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO13')],
+         'arduinoNanoEsp32GpioNote', False),
+        ('L', 11, 'A7', 'A7', 'GPIO14', 'GPIO', 24,
+         [('ADC2_CH3', 'ADC', 'ADC2_CH3'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO14')],
+         'arduinoNanoEsp32GpioNote', False),
+        ('L', 12, 'VUSB', 'VUSB', 'VUSB', 'POWER', None, [], 'arduinoVusbNote', False),
+        ('L', 13, 'B1', 'B1', 'GPIO0', 'GPIO', 16,
+         [('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO0')],
+         'arduinoNanoEsp32B1Note', True),
+        ('L', 14, 'GND', 'GND', 'GND', 'GND', None, [], None, False),
+        ('L', 15, 'VIN', 'VIN', 'VIN', 'POWER', None, [], 'arduinoVinNote', False),
+        # Right side
+        ('R', 1, 'D12', 'D12', 'GPIO47', 'GPIO', 12,
+         [('SPI CIPO / MISO', 'SPI', 'CIPO'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO47')],
+         'arduinoNanoEsp32GpioNote', False),
+        ('R', 2, 'D11', 'D11', 'GPIO38', 'GPIO', 11,
+         [('SPI COPI / MOSI', 'SPI', 'COPI'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO38')],
+         'arduinoNanoEsp32GpioNote', False),
+        ('R', 3, 'D10', 'D10', 'GPIO21', 'GPIO', 10,
+         [('SPI SS', 'SPI', 'SS'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO21')],
+         'arduinoNanoEsp32GpioNote', False),
+        ('R', 4, 'D9', 'D9', 'GPIO18', 'GPIO', 9,
+         [('Serial1 RX', 'UART', 'RX1'), ('ADC2_CH7', 'ADC', 'ADC2_CH7'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO18')],
+         'arduinoNanoEsp32GpioNote', False),
+        ('R', 5, 'D8', 'D8', 'GPIO17', 'GPIO', 8,
+         [('Serial1 TX', 'UART', 'TX1'), ('ADC2_CH6', 'ADC', 'ADC2_CH6'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO17')],
+         'arduinoNanoEsp32GpioNote', False),
+        ('R', 6, 'D7', 'D7', 'GPIO10', 'GPIO', 7,
+         [('ADC1_CH9', 'ADC', 'ADC1_CH9'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO10')],
+         'arduinoNanoEsp32GpioNote', False),
+        ('R', 7, 'D6', 'D6', 'GPIO9', 'GPIO', 6,
+         [('ADC1_CH8', 'ADC', 'ADC1_CH8'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO9')],
+         'arduinoNanoEsp32GpioNote', False),
+        ('R', 8, 'D5', 'D5', 'GPIO8', 'GPIO', 5,
+         [('ADC1_CH7', 'ADC', 'ADC1_CH7'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO8')],
+         'arduinoNanoEsp32GpioNote', False),
+        ('R', 9, 'D4', 'D4', 'GPIO7', 'GPIO', 4,
+         [('ADC1_CH6', 'ADC', 'ADC1_CH6'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO7')],
+         'arduinoNanoEsp32GpioNote', False),
+        ('R', 10, 'D3', 'D3', 'GPIO6', 'GPIO', 3,
+         [('ADC1_CH5', 'ADC', 'ADC1_CH5'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO6')],
+         'arduinoNanoEsp32GpioNote', False),
+        ('R', 11, 'D2', 'D2', 'GPIO5', 'GPIO', 2,
+         [('ADC1_CH4', 'ADC', 'ADC1_CH4'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO5')],
+         'arduinoNanoEsp32GpioNote', False),
+        ('R', 12, 'GND', 'GND', 'GND', 'GND', None, [], None, False),
+        ('R', 13, 'RESET', 'RESET', 'RESET', 'SYSTEM', None, [], 'arduinoResetNote', False),
+        ('R', 14, 'D0', 'D0', 'GPIO44', 'GPIO', 0,
+         [('Serial0 RX', 'UART', 'RX0'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO44')],
+         'arduinoNanoEsp32SerialNote', False),
+        ('R', 15, 'D1', 'D1', 'GPIO43', 'GPIO', 1,
+         [('Serial0 TX', 'UART', 'TX0'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO43')],
+         'arduinoNanoEsp32SerialNote', False)
+    ]
+
+    pins = []
+    for conn, connPin, name, label, net, ptype, apin, fns, noteKey, strapping in pin_defs:
+        idx = connPin - 1
+        pos = {'x': 280 if conn == 'L' else 540, 'y': 110 + idx * 28, 'side': 'left' if conn == 'L' else 'right'}
+        ev = [headers, schematic] if ptype in ('POWER', 'SYSTEM', 'GND') else [headers, signals]
+        functions = []
+        for sig, grp, mcu_sig in fns:
+            functions.append({
+                'name': sig,
+                'group': grp,
+                'signal': mcu_sig,
+                'evidence': signals if grp in ('ADC', 'UART') else headers
+            })
+        p = {
+            'physicalLabel': f'{conn}.{connPin}',
+            'connector': conn,
+            'connectorPin': connPin,
+            'name': name,
+            'boardLabel': label,
+            'type': ptype,
+            'net': net,
+            'position': pos,
+            'evidence': ev,
+            'functions': functions
+        }
+        if apin is not None:
+            p['arduinoPin'] = apin
+        if ptype == 'GPIO':
+            p['mcuPort'] = net
+        if noteKey:
+            p['noteKey'] = noteKey
+        if strapping:
+            p['strapping'] = True
+        pins.append(p)
+
+    res = finish(board, pins)
+    assert res['uniqueGPIOCount'] == 24
+    assert res['packagePins'] == 30
+    return res
