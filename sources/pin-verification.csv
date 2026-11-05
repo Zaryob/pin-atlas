@@ -18036,3 +18036,281 @@ stm32f407vgt6,98,PE1,GPIO,DCMI_D3,AF13,DCMI_D3,f407vg-package,f407vg-package | f
 stm32f407vgt6,98,PE1,GPIO,FSMC_NBL1,AF12,FSMC_NBL1,f407vg-package,f407vg-package | f407vg-modes
 stm32f407vgt6,99,VSS,GND,,,,f407vg-package,
 stm32f407vgt6,100,VDD,POWER,,,,f407vg-package,
+stm32f405rgt6,1,VBAT,POWER,,,,f405rg-package,
+stm32f405rgt6,2,PC13,GPIO,RTC_AF1,AF0,RTC_AF1,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,3,PC14,GPIO,RCC_OSC32_IN,AF0,RCC_OSC32_IN,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,4,PC15,GPIO,ADC1_EXTI15,,ADC1_EXTI15,f405rg-package,f405rg-package
+stm32f405rgt6,4,PC15,GPIO,ADC2_EXTI15,,ADC2_EXTI15,f405rg-package,f405rg-package
+stm32f405rgt6,4,PC15,GPIO,ADC3_EXTI15,,ADC3_EXTI15,f405rg-package,f405rg-package
+stm32f405rgt6,4,PC15,GPIO,RCC_OSC32_OUT,AF0,RCC_OSC32_OUT,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,5,PH0,GPIO,RCC_OSC_IN,AF0,RCC_OSC_IN,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,6,PH1,GPIO,RCC_OSC_OUT,AF0,RCC_OSC_OUT,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,7,NRST,SYSTEM,,,,f405rg-package,
+stm32f405rgt6,8,PC0,GPIO,ADC1_IN10,,ADC1_IN10,f405rg-package,f405rg-package
+stm32f405rgt6,8,PC0,GPIO,ADC2_IN10,,ADC2_IN10,f405rg-package,f405rg-package
+stm32f405rgt6,8,PC0,GPIO,ADC3_IN10,,ADC3_IN10,f405rg-package,f405rg-package
+stm32f405rgt6,8,PC0,GPIO,USB_OTG_HS_ULPI_STP,AF10,USB_OTG_HS_ULPI_STP,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,9,PC1,GPIO,ADC1_IN11,,ADC1_IN11,f405rg-package,f405rg-package
+stm32f405rgt6,9,PC1,GPIO,ADC2_IN11,,ADC2_IN11,f405rg-package,f405rg-package
+stm32f405rgt6,9,PC1,GPIO,ADC3_IN11,,ADC3_IN11,f405rg-package,f405rg-package
+stm32f405rgt6,10,PC2,GPIO,ADC1_IN12,,ADC1_IN12,f405rg-package,f405rg-package
+stm32f405rgt6,10,PC2,GPIO,ADC2_IN12,,ADC2_IN12,f405rg-package,f405rg-package
+stm32f405rgt6,10,PC2,GPIO,ADC3_IN12,,ADC3_IN12,f405rg-package,f405rg-package
+stm32f405rgt6,10,PC2,GPIO,I2S2_ext_SD,AF6,I2S2_ext_SD,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,10,PC2,GPIO,SPI2_MISO,AF5,SPI2_MISO,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,10,PC2,GPIO,USB_OTG_HS_ULPI_DIR,AF10,USB_OTG_HS_ULPI_DIR,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,11,PC3,GPIO,ADC1_IN13,,ADC1_IN13,f405rg-package,f405rg-package
+stm32f405rgt6,11,PC3,GPIO,ADC2_IN13,,ADC2_IN13,f405rg-package,f405rg-package
+stm32f405rgt6,11,PC3,GPIO,ADC3_IN13,,ADC3_IN13,f405rg-package,f405rg-package
+stm32f405rgt6,11,PC3,GPIO,I2S2_SD,AF5,I2S2_SD,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,11,PC3,GPIO,SPI2_MOSI,AF5,SPI2_MOSI,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,11,PC3,GPIO,USB_OTG_HS_ULPI_NXT,AF10,USB_OTG_HS_ULPI_NXT,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,12,VSSA,GND,,,,f405rg-package,
+stm32f405rgt6,13,VDDA,POWER,,,,f405rg-package,
+stm32f405rgt6,14,PA0,GPIO,ADC1_IN0,,ADC1_IN0,f405rg-package,f405rg-package
+stm32f405rgt6,14,PA0,GPIO,ADC2_IN0,,ADC2_IN0,f405rg-package,f405rg-package
+stm32f405rgt6,14,PA0,GPIO,ADC3_IN0,,ADC3_IN0,f405rg-package,f405rg-package
+stm32f405rgt6,14,PA0,GPIO,SYS_WKUP,AF0,SYS_WKUP,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,14,PA0,GPIO,TIM2_CH1,AF1,TIM2_CH1,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,14,PA0,GPIO,TIM2_ETR,AF1,TIM2_ETR,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,14,PA0,GPIO,TIM5_CH1,AF2,TIM5_CH1,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,14,PA0,GPIO,TIM8_ETR,AF3,TIM8_ETR,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,14,PA0,GPIO,UART4_TX,AF8,UART4_TX,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,14,PA0,GPIO,USART2_CTS,AF7,USART2_CTS,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,15,PA1,GPIO,ADC1_IN1,,ADC1_IN1,f405rg-package,f405rg-package
+stm32f405rgt6,15,PA1,GPIO,ADC2_IN1,,ADC2_IN1,f405rg-package,f405rg-package
+stm32f405rgt6,15,PA1,GPIO,ADC3_IN1,,ADC3_IN1,f405rg-package,f405rg-package
+stm32f405rgt6,15,PA1,GPIO,TIM2_CH2,AF1,TIM2_CH2,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,15,PA1,GPIO,TIM5_CH2,AF2,TIM5_CH2,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,15,PA1,GPIO,UART4_RX,AF8,UART4_RX,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,15,PA1,GPIO,USART2_RTS,AF7,USART2_RTS,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,16,PA2,GPIO,ADC1_IN2,,ADC1_IN2,f405rg-package,f405rg-package
+stm32f405rgt6,16,PA2,GPIO,ADC2_IN2,,ADC2_IN2,f405rg-package,f405rg-package
+stm32f405rgt6,16,PA2,GPIO,ADC3_IN2,,ADC3_IN2,f405rg-package,f405rg-package
+stm32f405rgt6,16,PA2,GPIO,TIM2_CH3,AF1,TIM2_CH3,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,16,PA2,GPIO,TIM5_CH3,AF2,TIM5_CH3,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,16,PA2,GPIO,TIM9_CH1,AF3,TIM9_CH1,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,16,PA2,GPIO,USART2_TX,AF7,USART2_TX,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,17,PA3,GPIO,ADC1_IN3,,ADC1_IN3,f405rg-package,f405rg-package
+stm32f405rgt6,17,PA3,GPIO,ADC2_IN3,,ADC2_IN3,f405rg-package,f405rg-package
+stm32f405rgt6,17,PA3,GPIO,ADC3_IN3,,ADC3_IN3,f405rg-package,f405rg-package
+stm32f405rgt6,17,PA3,GPIO,TIM2_CH4,AF1,TIM2_CH4,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,17,PA3,GPIO,TIM5_CH4,AF2,TIM5_CH4,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,17,PA3,GPIO,TIM9_CH2,AF3,TIM9_CH2,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,17,PA3,GPIO,USART2_RX,AF7,USART2_RX,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,17,PA3,GPIO,USB_OTG_HS_ULPI_D0,AF10,USB_OTG_HS_ULPI_D0,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,18,VSS,GND,,,,f405rg-package,
+stm32f405rgt6,19,VDD,POWER,,,,f405rg-package,
+stm32f405rgt6,20,PA4,GPIO,ADC1_IN4,,ADC1_IN4,f405rg-package,f405rg-package
+stm32f405rgt6,20,PA4,GPIO,ADC2_IN4,,ADC2_IN4,f405rg-package,f405rg-package
+stm32f405rgt6,20,PA4,GPIO,DAC_OUT1,,DAC_OUT1,f405rg-package,f405rg-package
+stm32f405rgt6,20,PA4,GPIO,I2S3_WS,AF6,I2S3_WS,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,20,PA4,GPIO,SPI1_NSS,AF5,SPI1_NSS,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,20,PA4,GPIO,SPI3_NSS,AF6,SPI3_NSS,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,20,PA4,GPIO,USART2_CK,AF7,USART2_CK,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,20,PA4,GPIO,USB_OTG_HS_SOF,AF12,USB_OTG_HS_SOF,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,21,PA5,GPIO,ADC1_IN5,,ADC1_IN5,f405rg-package,f405rg-package
+stm32f405rgt6,21,PA5,GPIO,ADC2_IN5,,ADC2_IN5,f405rg-package,f405rg-package
+stm32f405rgt6,21,PA5,GPIO,DAC_OUT2,,DAC_OUT2,f405rg-package,f405rg-package
+stm32f405rgt6,21,PA5,GPIO,SPI1_SCK,AF5,SPI1_SCK,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,21,PA5,GPIO,TIM2_CH1,AF1,TIM2_CH1,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,21,PA5,GPIO,TIM2_ETR,AF1,TIM2_ETR,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,21,PA5,GPIO,TIM8_CH1N,AF3,TIM8_CH1N,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,21,PA5,GPIO,USB_OTG_HS_ULPI_CK,AF10,USB_OTG_HS_ULPI_CK,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,22,PA6,GPIO,ADC1_IN6,,ADC1_IN6,f405rg-package,f405rg-package
+stm32f405rgt6,22,PA6,GPIO,ADC2_IN6,,ADC2_IN6,f405rg-package,f405rg-package
+stm32f405rgt6,22,PA6,GPIO,SPI1_MISO,AF5,SPI1_MISO,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,22,PA6,GPIO,TIM13_CH1,AF9,TIM13_CH1,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,22,PA6,GPIO,TIM1_BKIN,AF1,TIM1_BKIN,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,22,PA6,GPIO,TIM3_CH1,AF2,TIM3_CH1,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,22,PA6,GPIO,TIM8_BKIN,AF3,TIM8_BKIN,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,23,PA7,GPIO,ADC1_IN7,,ADC1_IN7,f405rg-package,f405rg-package
+stm32f405rgt6,23,PA7,GPIO,ADC2_IN7,,ADC2_IN7,f405rg-package,f405rg-package
+stm32f405rgt6,23,PA7,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,23,PA7,GPIO,TIM14_CH1,AF9,TIM14_CH1,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,23,PA7,GPIO,TIM1_CH1N,AF1,TIM1_CH1N,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,23,PA7,GPIO,TIM3_CH2,AF2,TIM3_CH2,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,23,PA7,GPIO,TIM8_CH1N,AF3,TIM8_CH1N,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,24,PC4,GPIO,ADC1_IN14,,ADC1_IN14,f405rg-package,f405rg-package
+stm32f405rgt6,24,PC4,GPIO,ADC2_IN14,,ADC2_IN14,f405rg-package,f405rg-package
+stm32f405rgt6,25,PC5,GPIO,ADC1_IN15,,ADC1_IN15,f405rg-package,f405rg-package
+stm32f405rgt6,25,PC5,GPIO,ADC2_IN15,,ADC2_IN15,f405rg-package,f405rg-package
+stm32f405rgt6,26,PB0,GPIO,ADC1_IN8,,ADC1_IN8,f405rg-package,f405rg-package
+stm32f405rgt6,26,PB0,GPIO,ADC2_IN8,,ADC2_IN8,f405rg-package,f405rg-package
+stm32f405rgt6,26,PB0,GPIO,TIM1_CH2N,AF1,TIM1_CH2N,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,26,PB0,GPIO,TIM3_CH3,AF2,TIM3_CH3,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,26,PB0,GPIO,TIM8_CH2N,AF3,TIM8_CH2N,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,26,PB0,GPIO,USB_OTG_HS_ULPI_D1,AF10,USB_OTG_HS_ULPI_D1,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,27,PB1,GPIO,ADC1_IN9,,ADC1_IN9,f405rg-package,f405rg-package
+stm32f405rgt6,27,PB1,GPIO,ADC2_IN9,,ADC2_IN9,f405rg-package,f405rg-package
+stm32f405rgt6,27,PB1,GPIO,TIM1_CH3N,AF1,TIM1_CH3N,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,27,PB1,GPIO,TIM3_CH4,AF2,TIM3_CH4,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,27,PB1,GPIO,TIM8_CH3N,AF3,TIM8_CH3N,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,27,PB1,GPIO,USB_OTG_HS_ULPI_D2,AF10,USB_OTG_HS_ULPI_D2,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,28,PB2,GPIO,,,,f405rg-package,
+stm32f405rgt6,29,PB10,GPIO,I2C2_SCL,AF4,I2C2_SCL,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,29,PB10,GPIO,I2S2_CK,AF5,I2S2_CK,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,29,PB10,GPIO,SPI2_SCK,AF5,SPI2_SCK,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,29,PB10,GPIO,TIM2_CH3,AF1,TIM2_CH3,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,29,PB10,GPIO,USART3_TX,AF7,USART3_TX,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,29,PB10,GPIO,USB_OTG_HS_ULPI_D3,AF10,USB_OTG_HS_ULPI_D3,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,30,PB11,GPIO,ADC1_EXTI11,,ADC1_EXTI11,f405rg-package,f405rg-package
+stm32f405rgt6,30,PB11,GPIO,ADC2_EXTI11,,ADC2_EXTI11,f405rg-package,f405rg-package
+stm32f405rgt6,30,PB11,GPIO,ADC3_EXTI11,,ADC3_EXTI11,f405rg-package,f405rg-package
+stm32f405rgt6,30,PB11,GPIO,I2C2_SDA,AF4,I2C2_SDA,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,30,PB11,GPIO,TIM2_CH4,AF1,TIM2_CH4,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,30,PB11,GPIO,USART3_RX,AF7,USART3_RX,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,30,PB11,GPIO,USB_OTG_HS_ULPI_D4,AF10,USB_OTG_HS_ULPI_D4,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,31,VCAP_1,POWER,,,,f405rg-package,
+stm32f405rgt6,32,VDD,POWER,,,,f405rg-package,
+stm32f405rgt6,33,PB12,GPIO,CAN2_RX,AF9,CAN2_RX,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,33,PB12,GPIO,I2C2_SMBA,AF4,I2C2_SMBA,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,33,PB12,GPIO,I2S2_WS,AF5,I2S2_WS,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,33,PB12,GPIO,SPI2_NSS,AF5,SPI2_NSS,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,33,PB12,GPIO,TIM1_BKIN,AF1,TIM1_BKIN,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,33,PB12,GPIO,USART3_CK,AF7,USART3_CK,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,33,PB12,GPIO,USB_OTG_HS_ID,AF12,USB_OTG_HS_ID,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,33,PB12,GPIO,USB_OTG_HS_ULPI_D5,AF10,USB_OTG_HS_ULPI_D5,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,34,PB13,GPIO,CAN2_TX,AF9,CAN2_TX,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,34,PB13,GPIO,I2S2_CK,AF5,I2S2_CK,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,34,PB13,GPIO,SPI2_SCK,AF5,SPI2_SCK,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,34,PB13,GPIO,TIM1_CH1N,AF1,TIM1_CH1N,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,34,PB13,GPIO,USART3_CTS,AF7,USART3_CTS,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,34,PB13,GPIO,USB_OTG_HS_ULPI_D6,AF10,USB_OTG_HS_ULPI_D6,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,34,PB13,GPIO,USB_OTG_HS_VBUS,,USB_OTG_HS_VBUS,f405rg-package,f405rg-package
+stm32f405rgt6,35,PB14,GPIO,I2S2_ext_SD,AF6,I2S2_ext_SD,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,35,PB14,GPIO,SPI2_MISO,AF5,SPI2_MISO,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,35,PB14,GPIO,TIM12_CH1,AF9,TIM12_CH1,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,35,PB14,GPIO,TIM1_CH2N,AF1,TIM1_CH2N,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,35,PB14,GPIO,TIM8_CH2N,AF3,TIM8_CH2N,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,35,PB14,GPIO,USART3_RTS,AF7,USART3_RTS,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,35,PB14,GPIO,USB_OTG_HS_DM,AF12,USB_OTG_HS_DM,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,36,PB15,GPIO,ADC1_EXTI15,,ADC1_EXTI15,f405rg-package,f405rg-package
+stm32f405rgt6,36,PB15,GPIO,ADC2_EXTI15,,ADC2_EXTI15,f405rg-package,f405rg-package
+stm32f405rgt6,36,PB15,GPIO,ADC3_EXTI15,,ADC3_EXTI15,f405rg-package,f405rg-package
+stm32f405rgt6,36,PB15,GPIO,I2S2_SD,AF5,I2S2_SD,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,36,PB15,GPIO,RTC_REFIN,AF0,RTC_REFIN,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,36,PB15,GPIO,SPI2_MOSI,AF5,SPI2_MOSI,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,36,PB15,GPIO,TIM12_CH2,AF9,TIM12_CH2,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,36,PB15,GPIO,TIM1_CH3N,AF1,TIM1_CH3N,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,36,PB15,GPIO,TIM8_CH3N,AF3,TIM8_CH3N,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,36,PB15,GPIO,USB_OTG_HS_DP,AF12,USB_OTG_HS_DP,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,37,PC6,GPIO,I2S2_MCK,AF5,I2S2_MCK,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,37,PC6,GPIO,SDIO_D6,AF12,SDIO_D6,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,37,PC6,GPIO,TIM3_CH1,AF2,TIM3_CH1,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,37,PC6,GPIO,TIM8_CH1,AF3,TIM8_CH1,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,37,PC6,GPIO,USART6_TX,AF8,USART6_TX,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,38,PC7,GPIO,I2S3_MCK,AF6,I2S3_MCK,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,38,PC7,GPIO,SDIO_D7,AF12,SDIO_D7,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,38,PC7,GPIO,TIM3_CH2,AF2,TIM3_CH2,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,38,PC7,GPIO,TIM8_CH2,AF3,TIM8_CH2,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,38,PC7,GPIO,USART6_RX,AF8,USART6_RX,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,39,PC8,GPIO,SDIO_D0,AF12,SDIO_D0,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,39,PC8,GPIO,TIM3_CH3,AF2,TIM3_CH3,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,39,PC8,GPIO,TIM8_CH3,AF3,TIM8_CH3,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,39,PC8,GPIO,USART6_CK,AF8,USART6_CK,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,40,PC9,GPIO,DAC_EXTI9,,DAC_EXTI9,f405rg-package,f405rg-package
+stm32f405rgt6,40,PC9,GPIO,I2C3_SDA,AF4,I2C3_SDA,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,40,PC9,GPIO,I2S_CKIN,AF5,I2S_CKIN,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,40,PC9,GPIO,RCC_MCO_2,AF0,RCC_MCO_2,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,40,PC9,GPIO,SDIO_D1,AF12,SDIO_D1,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,40,PC9,GPIO,TIM3_CH4,AF2,TIM3_CH4,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,40,PC9,GPIO,TIM8_CH4,AF3,TIM8_CH4,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,41,PA8,GPIO,I2C3_SCL,AF4,I2C3_SCL,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,41,PA8,GPIO,RCC_MCO_1,AF0,RCC_MCO_1,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,41,PA8,GPIO,TIM1_CH1,AF1,TIM1_CH1,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,41,PA8,GPIO,USART1_CK,AF7,USART1_CK,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,41,PA8,GPIO,USB_OTG_FS_SOF,AF10,USB_OTG_FS_SOF,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,42,PA9,GPIO,DAC_EXTI9,,DAC_EXTI9,f405rg-package,f405rg-package
+stm32f405rgt6,42,PA9,GPIO,I2C3_SMBA,AF4,I2C3_SMBA,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,42,PA9,GPIO,TIM1_CH2,AF1,TIM1_CH2,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,42,PA9,GPIO,USART1_TX,AF7,USART1_TX,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,42,PA9,GPIO,USB_OTG_FS_VBUS,,USB_OTG_FS_VBUS,f405rg-package,f405rg-package
+stm32f405rgt6,43,PA10,GPIO,TIM1_CH3,AF1,TIM1_CH3,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,43,PA10,GPIO,USART1_RX,AF7,USART1_RX,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,43,PA10,GPIO,USB_OTG_FS_ID,AF10,USB_OTG_FS_ID,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,44,PA11,GPIO,ADC1_EXTI11,,ADC1_EXTI11,f405rg-package,f405rg-package
+stm32f405rgt6,44,PA11,GPIO,ADC2_EXTI11,,ADC2_EXTI11,f405rg-package,f405rg-package
+stm32f405rgt6,44,PA11,GPIO,ADC3_EXTI11,,ADC3_EXTI11,f405rg-package,f405rg-package
+stm32f405rgt6,44,PA11,GPIO,CAN1_RX,AF9,CAN1_RX,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,44,PA11,GPIO,TIM1_CH4,AF1,TIM1_CH4,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,44,PA11,GPIO,USART1_CTS,AF7,USART1_CTS,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,44,PA11,GPIO,USB_OTG_FS_DM,AF10,USB_OTG_FS_DM,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,45,PA12,GPIO,CAN1_TX,AF9,CAN1_TX,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,45,PA12,GPIO,TIM1_ETR,AF1,TIM1_ETR,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,45,PA12,GPIO,USART1_RTS,AF7,USART1_RTS,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,45,PA12,GPIO,USB_OTG_FS_DP,AF10,USB_OTG_FS_DP,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,46,PA13,GPIO,SYS_JTMS-SWDIO,AF0,SYS_JTMS-SWDIO,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,47,VCAP_2,POWER,,,,f405rg-package,
+stm32f405rgt6,48,VDD,POWER,,,,f405rg-package,
+stm32f405rgt6,49,PA14,GPIO,SYS_JTCK-SWCLK,AF0,SYS_JTCK-SWCLK,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,50,PA15,GPIO,ADC1_EXTI15,,ADC1_EXTI15,f405rg-package,f405rg-package
+stm32f405rgt6,50,PA15,GPIO,ADC2_EXTI15,,ADC2_EXTI15,f405rg-package,f405rg-package
+stm32f405rgt6,50,PA15,GPIO,ADC3_EXTI15,,ADC3_EXTI15,f405rg-package,f405rg-package
+stm32f405rgt6,50,PA15,GPIO,I2S3_WS,AF6,I2S3_WS,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,50,PA15,GPIO,SPI1_NSS,AF5,SPI1_NSS,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,50,PA15,GPIO,SPI3_NSS,AF6,SPI3_NSS,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,50,PA15,GPIO,SYS_JTDI,AF0,SYS_JTDI,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,50,PA15,GPIO,TIM2_CH1,AF1,TIM2_CH1,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,50,PA15,GPIO,TIM2_ETR,AF1,TIM2_ETR,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,51,PC10,GPIO,I2S3_CK,AF6,I2S3_CK,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,51,PC10,GPIO,SDIO_D2,AF12,SDIO_D2,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,51,PC10,GPIO,SPI3_SCK,AF6,SPI3_SCK,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,51,PC10,GPIO,UART4_TX,AF8,UART4_TX,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,51,PC10,GPIO,USART3_TX,AF7,USART3_TX,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,52,PC11,GPIO,ADC1_EXTI11,,ADC1_EXTI11,f405rg-package,f405rg-package
+stm32f405rgt6,52,PC11,GPIO,ADC2_EXTI11,,ADC2_EXTI11,f405rg-package,f405rg-package
+stm32f405rgt6,52,PC11,GPIO,ADC3_EXTI11,,ADC3_EXTI11,f405rg-package,f405rg-package
+stm32f405rgt6,52,PC11,GPIO,I2S3_ext_SD,AF5,I2S3_ext_SD,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,52,PC11,GPIO,SDIO_D3,AF12,SDIO_D3,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,52,PC11,GPIO,SPI3_MISO,AF6,SPI3_MISO,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,52,PC11,GPIO,UART4_RX,AF8,UART4_RX,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,52,PC11,GPIO,USART3_RX,AF7,USART3_RX,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,53,PC12,GPIO,I2S3_SD,AF6,I2S3_SD,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,53,PC12,GPIO,SDIO_CK,AF12,SDIO_CK,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,53,PC12,GPIO,SPI3_MOSI,AF6,SPI3_MOSI,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,53,PC12,GPIO,UART5_TX,AF8,UART5_TX,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,53,PC12,GPIO,USART3_CK,AF7,USART3_CK,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,54,PD2,GPIO,SDIO_CMD,AF12,SDIO_CMD,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,54,PD2,GPIO,TIM3_ETR,AF2,TIM3_ETR,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,54,PD2,GPIO,UART5_RX,AF8,UART5_RX,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,55,PB3,GPIO,I2S3_CK,AF6,I2S3_CK,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,55,PB3,GPIO,SPI1_SCK,AF5,SPI1_SCK,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,55,PB3,GPIO,SPI3_SCK,AF6,SPI3_SCK,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,55,PB3,GPIO,SYS_JTDO-SWO,AF0,SYS_JTDO-SWO,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,55,PB3,GPIO,TIM2_CH2,AF1,TIM2_CH2,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,56,PB4,GPIO,I2S3_ext_SD,AF7,I2S3_ext_SD,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,56,PB4,GPIO,SPI1_MISO,AF5,SPI1_MISO,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,56,PB4,GPIO,SPI3_MISO,AF6,SPI3_MISO,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,56,PB4,GPIO,SYS_JTRST,AF0,SYS_JTRST,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,56,PB4,GPIO,TIM3_CH1,AF2,TIM3_CH1,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,57,PB5,GPIO,CAN2_RX,AF9,CAN2_RX,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,57,PB5,GPIO,I2C1_SMBA,AF4,I2C1_SMBA,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,57,PB5,GPIO,I2S3_SD,AF6,I2S3_SD,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,57,PB5,GPIO,SPI1_MOSI,AF5,SPI1_MOSI,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,57,PB5,GPIO,SPI3_MOSI,AF6,SPI3_MOSI,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,57,PB5,GPIO,TIM3_CH2,AF2,TIM3_CH2,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,57,PB5,GPIO,USB_OTG_HS_ULPI_D7,AF10,USB_OTG_HS_ULPI_D7,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,58,PB6,GPIO,CAN2_TX,AF9,CAN2_TX,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,58,PB6,GPIO,I2C1_SCL,AF4,I2C1_SCL,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,58,PB6,GPIO,TIM4_CH1,AF2,TIM4_CH1,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,58,PB6,GPIO,USART1_TX,AF7,USART1_TX,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,59,PB7,GPIO,I2C1_SDA,AF4,I2C1_SDA,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,59,PB7,GPIO,TIM4_CH2,AF2,TIM4_CH2,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,59,PB7,GPIO,USART1_RX,AF7,USART1_RX,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,60,BOOT0,SYSTEM,,,,f405rg-package,
+stm32f405rgt6,61,PB8,GPIO,CAN1_RX,AF9,CAN1_RX,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,61,PB8,GPIO,I2C1_SCL,AF4,I2C1_SCL,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,61,PB8,GPIO,SDIO_D4,AF12,SDIO_D4,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,61,PB8,GPIO,TIM10_CH1,AF3,TIM10_CH1,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,61,PB8,GPIO,TIM4_CH3,AF2,TIM4_CH3,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,62,PB9,GPIO,CAN1_TX,AF9,CAN1_TX,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,62,PB9,GPIO,DAC_EXTI9,,DAC_EXTI9,f405rg-package,f405rg-package
+stm32f405rgt6,62,PB9,GPIO,I2C1_SDA,AF4,I2C1_SDA,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,62,PB9,GPIO,I2S2_WS,AF5,I2S2_WS,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,62,PB9,GPIO,SDIO_D5,AF12,SDIO_D5,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,62,PB9,GPIO,SPI2_NSS,AF5,SPI2_NSS,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,62,PB9,GPIO,TIM11_CH1,AF3,TIM11_CH1,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,62,PB9,GPIO,TIM4_CH4,AF2,TIM4_CH4,f405rg-package,f405rg-package | f405rg-modes
+stm32f405rgt6,63,VSS,GND,,,,f405rg-package,
+stm32f405rgt6,64,VDD,POWER,,,,f405rg-package,

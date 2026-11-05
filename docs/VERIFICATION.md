@@ -179,3 +179,5 @@ UM1724 raw table cells are hash-locked in `sources/extracted/nucleo-um1724-r14.j
 - **NUCLEO-L152RE / STM32L152RET6:** UM1724 Rev 14 tables 21 (pp. 50–51) / 30 (p. 59); Cortex-M3, 32 MHz, LQFP-64 and 51 GPIO-capable pads. Package pins and AF selectors are independently extracted from the pinned manufacturer XML.
 
 - **STM32F407VGT6:** a separate LQFP-100 package view, 82 GPIO-capable pads and Cortex-M4 up to 168 MHz. The package XML references ST's shared `STM32F417_gpio_v1_0` GPIO table; the parser limits it to signals actually present in this chip/package XML. No Nucleo header numbering is assigned to this standalone MCU view.
+
+- **STM32F405RGT6:** a separate LQFP-64 package view, 51 GPIO-capable pads and Cortex-M4 up to 168 MHz. The package XML references ST's shared `STM32F417_gpio_v1_0` GPIO table; the parser limits it to signals actually present in this chip/package XML. No Nucleo header numbering is assigned to this standalone MCU view.

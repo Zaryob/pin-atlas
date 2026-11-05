@@ -15,7 +15,7 @@ MODELS = {
     'l053r8': {'arduino': [(45, 0)], 'morpho': [(59, 0)], 'tables': (17, 30)},
     'l152re': {'arduino': [(50, 0), (51, 0)], 'morpho': [(59, 0)], 'tables': (21, 30)},
 }
-PACKAGES = ('f407vg',)
+PACKAGES = ('f407vg', 'f405rg')
 
 
 def stm32_group(signal):
@@ -37,7 +37,9 @@ def stm32_group(signal):
 
 
 def read_cube_package(cache, docs, ref, model, verified_on):
-    package_doc, modes_doc = docs[f'{model}-package'], docs[f'{model}-modes']
+    package_doc = docs[f'{model}-package']
+    modes_id = package_doc.get('gpioModesDocument', f'{model}-modes')
+    modes_doc = docs[modes_id]
     package = ET.parse(cache / package_doc['file']).getroot()
     modes = ET.parse(cache / modes_doc['file']).getroot()
     gpio_version = package.find("{*}IP[@Name='GPIO']").get('Version')
@@ -52,7 +54,7 @@ def read_cube_package(cache, docs, ref, model, verified_on):
     total = int(match[1])
     pin_ref = ref(f'{model}-package', f'{model}-package', None,
                   f'{package_name} numbered package pins and physical signals', 'manufacturer-xml')
-    mode_ref = ref(f'{model}-modes', f'{model}-modes', None,
+    mode_ref = ref(f'{model}-modes', modes_id, None,
                    f'{gpio_version} GPIO alternate function selectors', 'manufacturer-xml')
     selectors = {}
     for pad in modes.findall('{*}GPIO_Pin'):

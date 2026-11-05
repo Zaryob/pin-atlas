@@ -93,6 +93,7 @@ export const boardFamilies = [
       { type: 'layout', id: 'stm32l053r8t6' },
       { type: 'layout', id: 'stm32l152ret6' },
       { type: 'layout', id: 'stm32f407vgt6' },
+      { type: 'layout', id: 'stm32f405rgt6' },
       { type: 'layout', id: 'stm32f303ret6' }
     ]
   },

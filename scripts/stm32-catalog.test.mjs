@@ -103,3 +103,10 @@ test('F407VG exposes its own package geometry and USART selector',()=>{
  const tx=chip.pins.find(pin=>pin.name==='PA9');assert.equal(tx.number,68);
  assert(tx.functions.some(fn=>fn.name==='USART1_TX' && fn.selector==='AF7'));
 });
+
+test('F405RG exposes its own package geometry and USART selector',()=>{
+ const chip=boards.find(board=>board.id==='stm32f405rgt6');
+ assert.equal(chip.packagePins,64);assert.equal(chip.gpioCount,51);assert.equal(chip.clock,'168 MHz');
+ const tx=chip.pins.find(pin=>pin.name==='PA9');assert.equal(tx.number,42);
+ assert(tx.functions.some(fn=>fn.name==='USART1_TX' && fn.selector==='AF7'));
+});
