@@ -32,7 +32,10 @@ export function validatePlan(data, target, t, { allowDuplicateSignals = false, a
     }
     if (!allowSharedNets && ['GPIO', 'ADC'].includes(pin.type)) {
       for(const net of electricalKeys(pin)){
-       if (nets.has(net)) throw new Error(t('sharedSignal', { pin: physicalLabel(nets.get(net)) }));
+       if (nets.has(net)) {
+        const occupied=nets.get(net);
+        throw new Error(t('sharedSignal', { signal:occupied.net||occupied.name,pin:physicalLabel(occupied),function:clean[occupied.number].function }));
+       }
        nets.set(net, pin);
       }
     }

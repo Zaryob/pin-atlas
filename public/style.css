@@ -1068,7 +1068,7 @@
 .pin-atlas-site .button > span { min-width: 0; }
 .pin-atlas-site :is(.home-lead,.home-section-title,.home-family-title,.catalog-card-desc) { overflow-wrap: anywhere; }
 
-/* Guided peripheral selection stays inside the existing plan panel. */
+/* Guided peripheral selection shares the expandable plan workspace. */
 #peripheral-builder { margin: 1rem 0; padding: .8rem; border: 1px solid var(--line); border-radius: .5rem; }
 #peripheral-builder summary { cursor: pointer; font-weight: 600; }
 #peripheral-form { display: grid; gap: .65rem; margin-top: .8rem; min-width: 0; }
@@ -1126,6 +1126,49 @@
 .suggestion-evidence { margin: 10px 0 14px; font-size: var(--text-xs); }
 #pin-suggestions .suggestion-evidence summary { font-weight: 400; }
 #pin-suggestions .suggestion-evidence p { font-size: inherit; }
+
+/* Planning uses the page width; the pin map remains available beside it. */
+#plan-layout-toggle { margin: 0 0 8px; font-size: var(--text-sm); }
+.plan-tools { min-width: 0; }
+.plan-group { min-width: 0; border-top: 1px solid var(--line); padding-top: 12px; }
+.plan-group h3 { font-size: var(--text-base); margin: 0; color: var(--accent); }
+.circuit-notes { padding: 12px; margin: 12px 0; background: var(--surface); border-left: 3px solid var(--accent); overflow-wrap: anywhere; }
+.circuit-notes h4 { margin: 0 0 8px; font-size: var(--text-sm); }
+.circuit-notes ul { list-style: none; padding: 0; margin: 0; }
+.circuit-notes li { padding: 6px 0; font-size: var(--text-sm); line-height: 1.7; }
+.circuit-notes li strong, .circuit-notes li span { display: block; }
+.pin-occupancy { padding: 12px; margin: 12px 0; border-left: 3px solid var(--accent); background: var(--selection); font-size: var(--text-sm); overflow-wrap: anywhere; }
+.pin-occupancy p { margin-top: 0; }
+.pin-group.occupied-alias .pin-node { stroke: var(--accent); stroke-width: 2; stroke-dasharray: 2 2; }
+.pin-guidance { padding: 0 18px; }
+.pin-guidance h3 { font-size: var(--text-sm); color: var(--muted); margin: 0; }
+.pin-guidance .pin-description { font-size: var(--text-sm); }
+.peripheral-guidance summary { cursor: pointer; }
+#suggest-results { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,20rem),1fr)); gap: 14px; align-items: start; }
+.suggest-compare-control { grid-column: 1 / -1; display: flex; align-items: start; gap: 10px; font-size: var(--text-sm); margin-top: 14px; }
+.suggest-compare-control input { flex: none; margin-top: 5px; }
+.suggestion { margin-top: 0; }
+#pin-suggestions .suggest-comparison { color: var(--accent); font-weight: 500; }
+.suggestion .changed-signal { border-left: 3px solid var(--accent); padding-left: 10px; background: var(--selection); }
+.suggestion .signal-change-label { color: var(--accent); font-weight: 500; }
+.only-differences .suggestion:not([data-alternative-index="0"]) :is(.unchanged-signal,.suggestion-bus:not(.has-changes)) { display: none; }
+@media (min-width: 971px) {
+ .workspace.plan-workspace { grid-template-columns: minmax(0,1fr); }
+ .plan-workspace > .map-panel { display: none; }
+ .plan-workspace #details-home { position: static; }
+ .plan-workspace #details-home .details-panel { max-height: none; }
+ .plan-workspace #details-home #plan-panel { overflow: visible; }
+ .plan-workspace .detail-tabs { max-width: 580px; }
+ .plan-workspace .plan-tools { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 18px; align-items: start; }
+ .plan-workspace #pin-suggestions { grid-column: 1 / -1; }
+ .plan-workspace #hardware-controls { grid-template-columns: repeat(2,minmax(0,1fr)); }
+ .plan-workspace #plan-list { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,20rem),1fr)); gap: 18px; margin-top: 16px; }
+ .plan-workspace .plan-actions { justify-content: start; }
+ .plan-workspace .plan-actions button, .plan-workspace .plan-actions #share-button { flex: 0 1 auto; }
+}
+@media (max-width: 970px) {
+ #plan-layout-toggle { display: none; }
+}
 
 /* Model catalog: type → platform → exact documented hardware. */
 .home-filter-chips { justify-content: flex-start; gap: 6px; margin: 12px 0; }

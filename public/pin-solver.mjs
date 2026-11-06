@@ -2,6 +2,7 @@
 import {availablePeripherals,peripheralSignal} from './peripherals.mjs';
 import {validatePlan,samePlan} from './plans.mjs';
 import {electricalKeys} from './hardware-config.mjs';
+import {pinNotes,circuitNotes} from './pin-notes.mjs';
 
 // All assignments are locked, including labels. Search only extends a valid plan.
 // A bounded search is intentionally reported as incomplete rather than impossible.
@@ -30,7 +31,7 @@ export function suggestPins(board,requests,assignments={},options={}){
  let nodes=0,truncated=false,solutions=0;
  const alternatives=[],seen=new Set();
  const limit=()=>{if(nodes>=maxNodes||solutions>=Math.max(30,maxAlternatives*30)){truncated=true;return true;}return false;};
- const warning=pin=>Number(!!(pin.boardCircuitKey||pin.noteKey));
+ const warning=pin=>pinNotes(pin).specific.length;
  function record(plan,chosen){
   const connections=[...completed,...chosen].filter(bus=>counts[bus.group]).map(bus=>({id:bus.id,group:bus.group,signals:bus.roles.map(role=>{
    const c=bus.candidates.find(c=>c.role===role&&plan[c.pin.number]?.function===c.fn.name);
@@ -39,7 +40,7 @@ export function suggestPins(board,requests,assignments={},options={}){
   const addedPins=Object.keys(plan).filter(key=>!assignments[key]);
   const signature=connections.map(bus=>bus.id+':'+bus.signals.map(s=>s.role+'@'+electricalKeys(board.pins.find(p=>p.number===s.pin)).join(',')).join(';')).sort().join('|');
   if(seen.has(signature))return;seen.add(signature);solutions++;
-  const warnings=addedPins.filter(n=>warning(board.pins.find(p=>String(p.number)===n))).length;
+  const warnings=circuitNotes(Object.keys(plan).map(n=>board.pins.find(p=>String(p.number)===n))).length;
   alternatives.push({pins:plan,connections,addedPins:addedPins.length,warnings});
   alternatives.sort((a,b)=>a.addedPins-b.addedPins||a.warnings-b.warnings);
   alternatives.splice(maxAlternatives);

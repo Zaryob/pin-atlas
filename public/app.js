@@ -3,11 +3,13 @@ import { compatibleModels, filterCompatibleModels } from './compatibility.mjs';
 import { connectorGroupsFor } from './connectors.mjs';
 import { boardFamilies, homeFilterChips, featuredCards, catalogTypes, buildCatalog, filterCatalog } from './catalog.mjs';
 import { options, physicalLabel, planReference, samePlan, validatePlan } from './plans.mjs';
-import { availablePeripherals, assemblePeripheral } from './peripherals.mjs';
+import { availablePeripherals, assemblePeripheral,peripheralSignal } from './peripherals.mjs';
+import {pinAssignment,assignmentMessage} from './pin-assignments.mjs';
+import {pinNotes,circuitNotes} from './pin-notes.mjs';
 import {ProfileLibrary} from './profile-library.mjs';
 import {planReport,reportHTML,reportSVG,standaloneDiagram} from './plan-output.mjs';
 import {configureBoard,normalizeHardware,sameHardware,hardwareSummary} from './hardware-config.mjs';
-import {readPlanRecords,writePlanRecord,planPayload as createPlanPayload,decodePlanPayload} from './plan-records.mjs';
+import {readPlanRecords,writePlanRecord,planPayload as createPlanPayload,exportPlanPayload,decodePlanPayload} from './plan-records.mjs';
 import {applySuggestion} from './pin-solver.mjs';
 const { t, verificationUrl } = window.ZaryobI18n;
 const $ = (selector, root = document) => root.querySelector(selector);
@@ -53,7 +55,7 @@ const familyKeys = { GPIO: 'generalIO', POWER: 'power', GND: 'ground', SYSTEM: '
 const familyName = type => t(familyKeys[type] || type);
 const subtitle = item => t(`board.${item.id}`, {}, item.subtitle);
 const groups = ['SPI','I2C','UART','PWM','ADC','HSTX','PIO','PCM','I2S','CLOCK','JTAG','DPI','SDIO','SMI','SWD','CAN','TIMER','USB','IRQ','DAC','TOUCH'];
-let evidence = {references:{}};
+let evidence = {references:{},documents:[]};
 let boards, layouts, layout, board, selected = 1, selectedFn, filters = new Set(), search = '', flipped = false, rotated = false, view = 'map', assignments = {}, toastTimer;
 let currentView = 'home', homeActiveFilter = 'all', homeSearchQuery = '', homeCatalogType = 'all';
 let libraryCatalogType = 'all', libraryFamily = 'all';
@@ -169,7 +171,7 @@ function renderBoard() {
  $('#reference-link').innerHTML = `${t('officialSource')} <span>↗</span>`;
  $('#pin-count').textContent = t('pinCount', { count: board.packagePins });
  $('#specs').innerHTML = `<span>${icon('chip')}<b>${board.uniqueGPIOCount ?? board.gpioCount}</b>GPIO${board.reservedGPIOCount ? ` (${t('reservedCount', { count: board.reservedGPIOCount })})` : ''}</span><span>${icon('bolt')}<b>${esc(board.voltage)}</b></span>`;
- renderNav(); renderReferenceNote(); renderFilters(); renderMap(); renderDetail(); renderPlan();
+ renderNav(); renderReferenceNote(); renderFilters(); renderMap(); renderDetail(); renderPlan();syncPlanLayout();
 }
 function renderCompatibilityIndex() {
  compatibilityModels=compatibleModels(layout);
@@ -231,6 +233,8 @@ function choosePin(number, reveal = true) {
 function pinGroup(pin, x, y, side, opts = {}) {
  const active = pin.number === (opts.preview ? opts.activePin : selected);
  const match = opts.preview || matches(pin), assigned = opts.preview ? null : assignments[pin.number];
+ const occupied=opts.preview?null:pinAssignment(pin,assignments,board,{otherContactOnly:true});
+ const occupancy=occupied?assignmentMessage(occupied,t):'';
  const color = colors[pin.type] || colors.SYSTEM;
  const matchingFunctions = opts.preview ? [] : pin.functions.filter(f => filters.has(f.group) || (search.trim() && f.name.toLowerCase().includes(search.trim().toLowerCase())));
  const fn = matchingFunctions[0];
@@ -257,7 +261,7 @@ function pinGroup(pin, x, y, side, opts = {}) {
      : 'aria-hidden="true"';
    return `<g class="pin-group ${active ? 'selected package-pad' : ''}" ${action} transform="translate(${x} ${y})${opts.angle ? ` rotate(${opts.angle})` : ''}">${body}</g>`;
  }
- return `<g class="pin-group ${pin.hardwareBlocked?'hardware-unavailable':''} ${opts.connected ? 'net-contact' : ''} ${active ? 'selected' : ''} ${match ? '' : 'dimmed'} ${assigned ? 'assigned' : ''}" data-pin="${pin.number}" role="button" tabindex="${active ? '0' : '-1'}" aria-label="${esc(t('selectPin', { pin: physicalLabel(pin), name: label !== pin.name && opts.showConnectorLabel ? `${label} · ${pin.name}` : pin.name }))}${func && !opts.connector ? ', '+esc(func) : ''}${pin.hardwareBlocked?', '+esc(t('hwUnavailable')):''}"${active ? ' aria-current="true"' : ''} transform="translate(${x} ${y})${opts.angle ? ` rotate(${opts.angle})` : ''}"><title>Pin ${esc(pin.physicalLabel || pin.number)} · ${esc(pin.name)}${func ? ' · '+esc(func) : ''}${pin.hardwareBlocked?' · '+esc(t('hwUnavailable')):''}</title><g aria-hidden="true">${body}</g></g>`;
+ return `<g class="pin-group ${pin.hardwareBlocked?'hardware-unavailable':''} ${occupied?'occupied-alias':''} ${opts.connected ? 'net-contact' : ''} ${active ? 'selected' : ''} ${match ? '' : 'dimmed'} ${assigned ? 'assigned' : ''}" data-pin="${pin.number}" role="button" tabindex="${active ? '0' : '-1'}" aria-label="${esc(t('selectPin', { pin: physicalLabel(pin), name: label !== pin.name && opts.showConnectorLabel ? `${label} · ${pin.name}` : pin.name }))}${func && !opts.connector ? ', '+esc(func) : ''}${pin.hardwareBlocked?', '+esc(t('hwUnavailable')):''}${occupancy?', '+esc(occupancy):''}"${active ? ' aria-current="true"' : ''} transform="translate(${x} ${y})${opts.angle ? ` rotate(${opts.angle})` : ''}"><title>Pin ${esc(pin.physicalLabel || pin.number)} · ${esc(pin.name)}${func ? ' · '+esc(func) : ''}${pin.hardwareBlocked?' · '+esc(t('hwUnavailable')):''}${occupancy?' · '+esc(occupancy):''}</title><g aria-hidden="true">${body}</g></g>`;
 }
 function picoArt() {
  const pads=Array.from({length:20},(_,i)=>[278,402].map(x=>`<circle cx="${x}" cy="${48+i*23}" r="5" fill="var(--paper)" stroke="var(--accent)" stroke-width="1.2"/>`).join('')).join('');
@@ -463,18 +467,21 @@ function electricalBadgeHTML(pin) {
  if (board.voltage?.includes('5 V') || board.voltage?.includes('5.5 V')) return ` <span class="pin-badge badge-info" title="${esc(t('fiveVoltLogicNote'))}">5V Logic</span>`;
  return '';
 }
-function pinAlertsHTML(pin) {
- const alerts = [];
- if (pin.strapping) alerts.push(`<div class="pin-callout callout-warning"><strong>⚠️ ${esc(t('strappingWarningTitle'))}</strong>: ${esc(t('espStrappingNote'))}</div>`);
- if (pin.noteKey === 'espInputOnlyNote') alerts.push(`<div class="pin-callout callout-info"><strong>ℹ️ ${esc(t('inputOnlyTitle'))}</strong>: ${esc(t('espInputOnlyNote'))}</div>`);
- return alerts.join('');
+const noteText=note=>note.key?t(note.key):note.text;
+function circuitNotesHTML(pins){
+ const notes=circuitNotes(pins);
+ return notes.length?`<section class="circuit-notes"><h4>${esc(t('boardConstraints'))}</h4><ul>${notes.map(note=>`<li><strong>${esc(note.pins.map(pin=>physicalLabel(pin)+' · '+pin.name).join(' / '))}</strong><span>${esc(noteText(note))}</span></li>`).join('')}</ul></section>`:'';
+}
+function generalNotesHTML(pins){
+ const notes=new Map();
+ for(const pin of pins)for(const note of pinNotes(pin).general)notes.set(note.key||note.text,note);
+ return [...notes.values()].map(note=>`<p>${esc(noteText(note))}</p>`).join('');
 }
 function renderDetail() {
  const pin=pinByNumber(selected), opts=options(pin);
  const descriptions = { GPIO: 'gpioDescription', GND: 'groundDescription', POWER: 'powerDescription', SYSTEM: 'systemDescription', ADC: 'analogDescription' };
- const noteBoard = board.layout === 'pico' ? 'pico2w' : board.id;
- let description = pin.noteKey ? t(pin.noteKey) : pin.reserved ? t('reservedNote') : t(`note.${noteBoard}.${pin.number}`, {}, pin.note || t(descriptions[pin.type] || 'systemDescription'));
- description += [pin.strapping ? t('espStrappingNote') : '',pin.boardCircuitKey ? t(pin.boardCircuitKey) : '',pin.analogCautionKey ? t(pin.analogCautionKey) : ''].filter(Boolean).map(note=>' '+note).join('');
+ const general=pinNotes(pin).general;
+ let description = general.length ? noteText(general[0]) : pin.reserved ? t('reservedNote') : t(descriptions[pin.type] || 'systemDescription');
  if (board.mcu === 'RP2040' && pin.number === 30) description = description.replace('RP2350', 'RP2040');
  const query = search.trim().toLowerCase();
  const relevant = f => filters.has(f.group) || (query && f.name.toLowerCase().includes(query));
@@ -490,8 +497,10 @@ function renderDetail() {
    return `<label class="function-option" style="--color:${colors[f.group]||colors.SYSTEM}"><input type="radio" name="pin-function" value="${esc(f.name)}" ${selectedFn===f.name?'checked':''} ${pin.reserved || pin.hardwareBlocked?'disabled':''}><span class="function-option-name">${esc(f.name)}</span><small>${esc(note)}</small></label>`;
  };
  const hasPlan=!!assignments[selected];
+ const occupied=pinAssignment(pin,assignments,board,{otherContactOnly:true});
+ const occupancy=occupied?`<div class="pin-occupancy"><p>${esc(assignmentMessage(occupied,t))}</p><button type="button" class="button secondary" data-open-assignment="${occupied.pin.number}">${esc(t('openOccupiedPin'))}</button></div>`:'';
  $('#selected-pin-label').textContent = `${pin.name} · ${t('details')}`;
- $('#pin-detail').innerHTML=`<div class="pin-detail-body"><div class="pin-hero"><div class="pin-identity"><h2>${esc(pin.name.replace('_ADC',' / A'))}</h2><span class="physical-pin">${t('physicalPin')} <strong>${esc(physicalLabel(pin))}</strong>${pin.boardLabel && pin.boardLabel!==pin.name ? `<span class="mcu-pin-label"> · ${esc(t('boardLabel',{label:pin.boardLabel}))}</span>` : ''}${pin.mcuPort ? `<span class="mcu-pin-label">${pin.arduinoPin!==undefined?` · Arduino D${pin.arduinoPin}`:''} · ${t('mcuPort', {port:pin.mcuPort})}</span>` : ''}${pin.mcuPin ? `<span class="mcu-pin-label"> · ${t('mcuPin', {pin:pin.mcuPin})}</span>` : ''}</span></div><span class="pin-type" style="color:${colors[pin.type]}">${familyName(pin.type)} · ${esc(pin.type === 'GPIO' ? board.voltage : '')}${electricalBadgeHTML(pin)}</span>${referenceLink(pin.evidence[0], t('pinSource'), 'pin-source')}<p class="pin-description">${esc(description)}${pin.fiveVoltTolerant !== undefined ? ' '+esc(t(pin.fiveVoltTolerant ? 'stm32FTNote' : 'stm32NonFTNote')) : ''}</p>${pinAlertsHTML(pin)}${sharedNote}${pinHardwareHTML(pin)}</div><fieldset class="function-section"><legend class="small-label">${t(opts.length>1 ? 'chooseFunction' : 'pinFunction')}</legend>${filters.size || query ? `<p class="function-hint">${t('matchingFunctions')}</p>` : ''}<div class="function-list">${primary.map(option).join('')}</div>${more.length ? `<details class="more-functions"><summary>${t('allFunctions', {count:more.length})}</summary><div class="function-list">${more.map(option).join('')}</div></details>` : ''}<div id="function-source"></div></fieldset><div class="label-section"><label class="small-label" for="custom-label">${t('projectLabel')} <span>${t('optional')}</span></label><input id="custom-label" maxlength="40" placeholder="${esc(t('labelExample'))}" value="${esc(assignments[selected]?.label||'')}"></div>${renderPinEvidence(pin)}</div><div class="detail-action"><button id="add-plan" class="add-plan" ${pin.reserved || pin.hardwareBlocked ? 'disabled' : ''}>${icon(hasPlan?'check':'plus')}${t(pin.hardwareBlocked ? 'hwUnavailable' : pin.reserved ? (pin.reservedLabel || (pin.name==='NC' ? 'unconnected' : 'reserved')) : hasPlan ? 'updatePin' : 'addPin')}</button><div class="pin-save-feedback"><span id="pin-save-status" role="status"></span><button id="view-saved-plan" hidden>${t('viewPlan')}</button></div></div>`;
+ $('#pin-detail').innerHTML=`<div class="pin-detail-body"><div class="pin-hero"><div class="pin-identity"><h2>${esc(pin.name.replace('_ADC',' / A'))}</h2><span class="physical-pin">${t('physicalPin')} <strong>${esc(physicalLabel(pin))}</strong>${pin.boardLabel && pin.boardLabel!==pin.name ? `<span class="mcu-pin-label"> · ${esc(t('boardLabel',{label:pin.boardLabel}))}</span>` : ''}${pin.mcuPort ? `<span class="mcu-pin-label">${pin.arduinoPin!==undefined?` · Arduino D${pin.arduinoPin}`:''} · ${t('mcuPort', {port:pin.mcuPort})}</span>` : ''}${pin.mcuPin ? `<span class="mcu-pin-label"> · ${t('mcuPin', {pin:pin.mcuPin})}</span>` : ''}</span></div><span class="pin-type" style="color:${colors[pin.type]}">${familyName(pin.type)} · ${esc(pin.type === 'GPIO' ? board.voltage : '')}${electricalBadgeHTML(pin)}</span>${occupancy}${pinHardwareHTML(pin)}${circuitNotesHTML([pin])}${sharedNote}${referenceLink(pin.evidence[0], t('pinSource'), 'pin-source')}</div><fieldset class="function-section"><legend class="small-label">${t(opts.length>1 ? 'chooseFunction' : 'pinFunction')}</legend>${filters.size || query ? `<p class="function-hint">${t('matchingFunctions')}</p>` : ''}<div class="function-list">${primary.map(option).join('')}</div>${more.length ? `<details class="more-functions"><summary>${t('allFunctions', {count:more.length})}</summary><div class="function-list">${more.map(option).join('')}</div></details>` : ''}<div id="function-source"></div></fieldset><div class="label-section"><label class="small-label" for="custom-label">${t('projectLabel')} <span>${t('optional')}</span></label><input id="custom-label" maxlength="40" placeholder="${esc(t('labelExample'))}" value="${esc(assignments[selected]?.label||'')}"></div><div class="pin-guidance"><h3>${esc(t('generalGuidance'))}</h3><p class="pin-description">${esc(description)}${pin.fiveVoltTolerant !== undefined ? ' '+esc(t(pin.fiveVoltTolerant ? 'stm32FTNote' : 'stm32NonFTNote')) : ''}</p></div>${renderPinEvidence(pin)}</div><div class="detail-action"><button id="add-plan" class="add-plan" ${pin.reserved || pin.hardwareBlocked || occupied ? 'disabled' : ''}>${icon(hasPlan?'check':'plus')}${t(occupied?'peripheralOccupiedShort':pin.hardwareBlocked ? 'hwUnavailable' : pin.reserved ? (pin.reservedLabel || (pin.name==='NC' ? 'unconnected' : 'reserved')) : hasPlan ? 'updatePin' : 'addPin')}</button><div class="pin-save-feedback"><span id="pin-save-status" role="status"></span><button id="view-saved-plan" hidden>${t('viewPlan')}</button></div></div>`;
  renderFunctionSource(pin);
 }
 function referenceLink(key, label, className) {
@@ -511,7 +520,7 @@ function renderPinEvidence(pin) {
  const keys = [...new Set([...pin.evidence, ...pin.functions.flatMap(f=>[f.evidence,f.configurationEvidence].filter(Boolean))])];
  return `<details class="pin-evidence"><summary>${t('pinEvidence')}</summary><ul>${keys.map(key=>{const r=evidence.references[key];return `<li><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)} ↗</a><small>${esc(r.locator)}${r.page ? ` · ${t('pdfPage', { page: r.page })}` : ''}</small></li>`;}).join('')}</ul><p>${esc(t('verifiedOn', { date: board.verifiedOn }))} · <a href="${verificationUrl()}" target="_blank" rel="noopener">${t('method')}</a></p></details>`;
 }
-let detailTab = 'pin', detailReturnTarget=null;
+let detailTab = 'pin', detailReturnTarget=null,expandedPlan=true;
 const compactLayout = matchMedia('(max-width: 970px)');
 function setDetailTab(tab) {
  detailTab = tab;
@@ -520,12 +529,21 @@ function setDetailTab(tab) {
   $(`#${id}`).setAttribute('aria-selected', tab === value);
   $(`#${id}`).tabIndex = tab === value ? 0 : -1;
  }
+ syncPlanLayout();
 }
+function syncPlanLayout(){
+ const wide=detailTab==='plan'&&expandedPlan&&!compactLayout.matches;
+ $('.workspace').classList.toggle('plan-workspace',wide);
+ $('#plan-layout-toggle').textContent=t(wide?'planShowMap':'planExpand');
+ $('#plan-layout-toggle').setAttribute('aria-expanded',String(wide));
+}
+$('#plan-layout-toggle').addEventListener('click',()=>{expandedPlan=!expandedPlan;syncPlanLayout();});
 function syncDetailsLayout() {
  detailReturnTarget=null;
  if ($('#details-dialog').open) $('#details-dialog').close();
  const panel = $('.details-panel');
  (compactLayout.matches ? $('#details-dialog') : $('#details-home')).append(panel);
+ syncPlanLayout();
 }
 function showDetails(tab,returnTarget) {
  setDetailTab(tab);
@@ -599,7 +617,7 @@ $('#hardware-form').addEventListener('submit',event=>{
 function invalidateSuggestions(){
  ++suggestionSequence;suggestionWorker?.terminate();suggestionWorker=undefined;
  suggestionResult=suggestionSnapshot=undefined;
- $('#suggest-results').innerHTML='';$('#suggest-feedback').textContent='';
+ $('#suggest-results').innerHTML='';$('#suggest-compare-controls').innerHTML='';$('#suggest-feedback').textContent='';
  $('#suggest-run').disabled=false;$('#suggest-cancel').hidden=true;
 }
 function suggestionRequests(){return Object.fromEntries($$('[data-suggest-count]').map(input=>[input.dataset.suggestCount,Number(input.value)]));}
@@ -630,14 +648,24 @@ $('#suggest-form').addEventListener('submit',event=>{
 function renderSuggestions(){
  const result=suggestionResult;if(!result)return;
  $('#suggest-feedback').textContent=t(({ready:'suggestReady',blocked:'suggestBlocked',invalid:'suggestInvalid',impossible:'suggestImpossible',limited:'suggestLimited'})[result.status]||'suggestFailed')+(result.truncated&&result.status==='ready'?' '+t('suggestBounded'):'');
- $('#suggest-results').innerHTML=result.alternatives.map((alternative,index)=>`<article class="suggestion"><h3>${esc(t('suggestOption',{n:index+1}))}</h3><p>${esc(t('suggestStats',{added:alternative.addedPins,kept:Object.keys(suggestionSnapshot.pins).length,warnings:alternative.warnings}))}</p>${alternative.connections.map(connection=>`<h4>${esc(connection.id)}</h4><ul>${connection.signals.map(signal=>{
-  const pin=pinByNumber(signal.pin),locked=!!suggestionSnapshot.pins[signal.pin];
-  return `<li title="${esc(signal.function)}"><b>${esc(signal.role)}</b> · ${esc(physicalLabel(pin))} · ${esc(pin.name)}${signal.selector?' · '+esc(signal.selector):''}${locked?`<small>${esc(t('suggestLocked'))}</small>`:''}</li>`;
- }).join('')}</ul>`).join('')}<details class="suggestion-evidence"><summary>${esc(t('suggestEvidence'))}</summary>${alternative.connections.flatMap(connection=>connection.signals.map(signal=>{
-  const pin=pinByNumber(signal.pin);
-  return `<p><b>${esc(physicalLabel(pin)+' · '+signal.function)}</b>${[...new Set([pin.boardCircuitKey,pin.noteKey].filter(Boolean))].map(key=>`<small>${esc(t(key))}</small>`).join('')}${signal.evidence?referenceLink(signal.evidence,t('functionSource'),''):''}</p>`;
- })).join('')}</details><button type="button" class="button secondary" data-apply-suggestion="${index}">${esc(t('suggestUse'))}</button></article>`).join('');
+ const identity=signal=>JSON.stringify([signal.pin,signal.function,signal.selector]);
+ const baseline=new Map(result.alternatives[0]?.connections.flatMap(connection=>connection.signals.map(signal=>[connection.id+':'+signal.role,identity(signal)]))||[]);
+ $('#suggest-results').classList.remove('only-differences');
+ $('#suggest-compare-controls').innerHTML=result.alternatives.length>1?`<label class="suggest-compare-control"><input id="suggest-only-differences" type="checkbox">${esc(t('suggestOnlyChanges'))}</label>`:'';
+ $('#suggest-results').innerHTML=result.alternatives.map((alternative,index)=>{
+  const changed=(connection,signal)=>index>0&&baseline.get(connection.id+':'+signal.role)!==identity(signal);
+  const count=alternative.connections.reduce((n,connection)=>n+connection.signals.filter(signal=>changed(connection,signal)).length,0);
+  const pins=Object.keys(alternative.pins).map(pinByNumber);
+  const keys=[...new Set(pins.flatMap(pin=>{const fn=pin.functions.find(fn=>fn.name===alternative.pins[pin.number].function);return [...pin.evidence,fn?.evidence,fn?.configurationEvidence].filter(Boolean);} ))];
+  return `<article class="suggestion" data-alternative-index="${index}"><h3>${esc(t('suggestOption',{n:index+1}))}</h3><p class="suggest-comparison">${esc(t(index?'suggestDifferences':'suggestReference',{count}))}</p><p>${esc(t('suggestStats',{added:alternative.addedPins,kept:Object.keys(suggestionSnapshot.pins).length,warnings:alternative.warnings}))}</p>${alternative.connections.map(connection=>`<section class="suggestion-bus ${connection.signals.some(signal=>changed(connection,signal))?'has-changes':''}"><h4>${esc(connection.id)}</h4><ul>${connection.signals.map(signal=>{
+   const pin=pinByNumber(signal.pin),locked=!!suggestionSnapshot.pins[signal.pin],different=changed(connection,signal);
+   return `<li class="${different?'changed-signal':'unchanged-signal'}" title="${esc(signal.function)}"><b>${esc(signal.role)}</b> · ${esc(physicalLabel(pin))} · ${esc(pin.name)}${signal.selector?' · '+esc(signal.selector):''}${locked?`<small>${esc(t('suggestLocked'))}</small>`:''}${different?`<small class="signal-change-label">${esc(t('suggestChanged'))}</small>`:''}</li>`;
+  }).join('')}</ul></section>`).join('')}${circuitNotesHTML(pins)}<details class="suggestion-evidence"><summary>${esc(t('suggestEvidence'))}</summary>${generalNotesHTML(pins)}${keys.map(key=>`<p>${referenceLink(key,t('functionSource'),'')}</p>`).join('')}</details><button type="button" class="button secondary" data-apply-suggestion="${index}">${esc(t('suggestUse'))}</button></article>`;
+ }).join('');
 }
+$('#pin-suggestions').addEventListener('change',event=>{
+ if(event.target.id==='suggest-only-differences')$('#suggest-results').classList.toggle('only-differences',event.target.checked);
+});
 $('#suggest-results').addEventListener('click',event=>{
  const button=event.target.closest('[data-apply-suggestion]');if(!button||!suggestionResult||!suggestionSnapshot)return;
  const alternative=suggestionResult.alternatives[Number(button.dataset.applySuggestion)],snapshot=suggestionSnapshot;
@@ -658,10 +686,17 @@ function renderPlan() {
  try { validatePlan(assignments,board,t);$('#plan-validation').textContent=''; }
  catch(error) { $('#plan-validation').textContent=t('savedPlanConflict',{error:error.message}); }
  renderPeripheral();
- $('#plan-list').innerHTML = entries.length ? entries.map(([n, assignment]) => {
+ const connections=new Map();
+ for(const [n,assignment] of entries){
+  const fn=pinByNumber(n)?.functions.find(fn=>fn.name===assignment.function);
+  const group=fn&&peripheralSignal(fn)?.id||t('planOther');
+  if(!connections.has(group))connections.set(group,[]);
+  connections.get(group).push([n,assignment]);
+ }
+ $('#plan-list').innerHTML = entries.length ? [...connections].map(([group,pins])=>`<section class="plan-group"><h3>${esc(group)}</h3>${pins.map(([n, assignment]) => {
    const pin = pinByNumber(n);
    return `<div class="plan-row"><button data-select-pin="${n}">${planEntry(pin, assignment)}</button><button class="remove-plan" data-remove-pin="${n}" aria-label="${esc(t('removePin', { pin: physicalLabel(pin) }))}">×</button></div>`;
- }).join('') : `<p class="empty-plan">${t('emptyPlan')}<br>${t('emptyPlanHint')}</p>`;
+ }).join('')}</section>`).join('') : `<p class="empty-plan">${t('emptyPlan')}<br>${t('emptyPlanHint')}</p>`;
 }
 function renderPeripheral() {
  const buses=availablePeripherals(board);
@@ -672,18 +707,21 @@ function renderPeripheral() {
 function renderPeripheralPins() {
  const bus=availablePeripherals(board).find(bus=>bus.id===$('#peripheral-bus').value);
  $('#peripheral-fields').innerHTML=bus?bus.roles.map(role=>`<label>${role}<select data-peripheral-role="${role}" required><option value="">${esc(t('peripheralChoosePin'))}</option>${bus.candidates.filter(c=>c.role===role).map(c=>{
-   const occupied=assignments[c.pin.number] && assignments[c.pin.number].function!==c.fn.name;
-   return `<option value="${esc(c.key)}" ${occupied?'disabled':''}>${esc(physicalLabel(c.pin)+' · '+c.pin.name+' · '+c.fn.name+(c.fn.selector?' · '+c.fn.selector:''))}${occupied?' · '+esc(t('peripheralOccupiedShort')):''}</option>`;
+   const occupied=pinAssignment(c.pin,assignments,board);
+   const blocked=occupied&&(occupied.pin.number!==c.pin.number||occupied.assignment.function!==c.fn.name);
+   return `<option value="${esc(c.key)}" ${blocked?'disabled':''}>${esc(physicalLabel(c.pin)+' · '+c.pin.name+' · '+c.fn.name+(c.fn.selector?' · '+c.fn.selector:''))}${blocked?' · '+esc(assignmentMessage(occupied,t)):''}</option>`;
  }).join('')}</select></label>`).join(''):'';
  $('#peripheral-feedback').textContent='';renderPeripheralNotes();
 }
 function renderPeripheralNotes() {
  const bus=availablePeripherals(board).find(bus=>bus.id===$('#peripheral-bus').value);
  const chosen=$$('[data-peripheral-role]').map(el=>bus?.candidates.find(c=>c.key===el.value)).filter(Boolean);
- $('#peripheral-notes').innerHTML=`<p>${esc(t('peripheralElectrical',{voltage:board.voltage}))}</p>${bus?.group==='SPI'?`<p>${esc(t('peripheralChipSelect'))}</p>`:''}${bus?.group==='CAN'?`<p>${esc(t('peripheralCanTransceiver'))}</p>`:''}`+chosen.map(({pin,fn})=>{
-   const notes=[pin.noteKey?t(pin.noteKey):pin.note, pin.strapping?t('espStrappingNote'):'',pin.boardCircuitKey?t(pin.boardCircuitKey):'',pin.analogCautionKey?t(pin.analogCautionKey):'',pin.fiveVoltTolerant!==undefined?t(pin.fiveVoltTolerant?'stm32FTNote':'stm32NonFTNote'):'',fn.configuration?t('remapNote'):''].filter(Boolean);
-   return `<p><strong>${esc(physicalLabel(pin)+' · '+pin.name)}</strong> ${esc(notes.join(' '))} ${referenceLink(fn.configurationEvidence || fn.evidence,t('functionSource'),'')}</p>`;
- }).join('');
+ const pins=chosen.map(candidate=>candidate.pin);
+ const sources=[...new Set(chosen.flatMap(({pin,fn})=>[...pin.evidence,fn.configurationEvidence,fn.evidence].filter(Boolean)))];
+ const remap=chosen.some(({fn})=>fn.configuration)?`<p>${esc(t('remapNote'))}</p>`:'';
+ $('#peripheral-notes').innerHTML=circuitNotesHTML(pins)+(bus?.group==='CAN'?`<p class="hardware-note">${esc(t('peripheralCanTransceiver'))}</p>`:'')+
+  `<p>${esc(t('peripheralElectrical',{voltage:board.voltage}))}</p>${bus?.group==='SPI'?`<p>${esc(t('peripheralChipSelect'))}</p>`:''}`+
+  (chosen.length?`<details class="peripheral-guidance"><summary>${esc(t('suggestEvidence'))}</summary>${generalNotesHTML(pins)}${remap}${sources.map(key=>`<p>${referenceLink(key,t('functionSource'),'')}</p>`).join('')}</details>`:'');
 }
 $('#peripheral-bus').addEventListener('change',renderPeripheralPins);
 $('#peripheral-fields').addEventListener('change',renderPeripheralNotes);
@@ -704,6 +742,8 @@ function addToPlan() {
  if (!functionName) return;
  const candidate = { ...assignments, [selected]: { function: functionName, label: $('#custom-label').value.trim() } };
  try {
+   const occupied=pinAssignment(pinByNumber(selected),assignments,board,{otherContactOnly:true});
+   if(occupied)throw new Error(assignmentMessage(occupied,t));
    assignments = validatePlan(candidate, board, t);
  } catch (error) {
    $('#pin-save-status').textContent = error.message;
@@ -910,6 +950,8 @@ function renderIncomingPlan() {
  const replaces=Object.keys(existing).length>0 && !samePlan(existing,pins) || !sameHardware(existingHardware,hardware);
  $('#incoming-plan-reference').textContent=planReference(target,t);
  $('#incoming-plan-message').textContent=t(replaces?'replacePlanMessage':'incomingPlanMessage');
+ $('#incoming-plan-revision').hidden=!pendingPlan.revisionMismatch;
+ $('#incoming-plan-revision').textContent=pendingPlan.revisionMismatch?t('exportRevisionChanged'):'';
  const rows=hardwareSummary(target,hardware,t);
  $('#incoming-plan-configuration').innerHTML=rows.length?`<p>${esc(t('hwIncoming'))}</p><dl>${rows.map(row=>`<div><dt>${esc(row.label)}</dt><dd>${esc(row.value)}</dd></div>`).join('')}</dl>`:'';
  $('#incoming-plan-list').innerHTML=Object.entries(pins).map(([n,assignment])=>`<li>${planEntry(target.pins.find(pin=>String(pin.number)===n),assignment)}</li>`).join('')||`<li>${t('emptyIncomingPlan')}</li>`;
@@ -984,7 +1026,7 @@ async function loadHash() {
     try {
       const data = decode(params.get('plan'));
       const profile = boards.find(item => item.id === data?.board);
-      if (![1,2].includes(data?.version) || !profile) throw new Error(t('unsupportedFormat'));
+      if (![1,2,3].includes(data?.version) || !profile) throw new Error(t('unsupportedFormat'));
       payload = { target:profile, raw:data };
       target = profile.id;
     } catch (error) {
@@ -1164,6 +1206,8 @@ $('#pin-detail').addEventListener('change', e => {
  $('#view-saved-plan').hidden = true;
 });
 $('#pin-detail').addEventListener('click', e => {
+ const occupied=e.target.closest('[data-open-assignment]');
+ if(occupied){choosePin(occupied.dataset.openAssignment);return;}
  if (e.target.closest('#add-plan')) addToPlan();
  if (e.target.closest('#view-saved-plan')) {
    showDetails('plan');
@@ -1173,7 +1217,7 @@ $('#pin-detail').addEventListener('click', e => {
 $('#plan-list').addEventListener('click',e=>{const remove=e.target.closest('[data-remove-pin]'),select=e.target.closest('[data-select-pin]');if(remove){delete assignments[remove.dataset.removePin];const stored=persist();renderPlan();renderMap();renderDetail();$('#plan-feedback').textContent=t(stored?'pinRemoved':'storageUnavailable');}else if(select)choosePin(select.dataset.selectPin);});
 $('#share-button').addEventListener('click',share);
 $('#copy-share').addEventListener('click',async()=>{try{await navigator.clipboard.writeText($('#share-url').value);toast(t('linkCopied'));$('#share-dialog').close();}catch{$('#share-url').focus();$('#share-url').select();toast(t('manualCopy'));}});
-$('#export-button').addEventListener('click',()=>{const blob=new Blob([JSON.stringify(planPayload(),null,2)],{type:'application/json'});const link=document.createElement('a');link.href=URL.createObjectURL(blob);link.download=`pin-atlas-${board.id}.json`;link.click();setTimeout(()=>URL.revokeObjectURL(link.href),1000);toast(t('planDownloaded'));});
+$('#export-button').addEventListener('click',()=>{const blob=new Blob([JSON.stringify(exportPlanPayload(sourceBoard,assignments,hardwareSettings,evidence),null,2)],{type:'application/json'});const link=document.createElement('a');link.href=URL.createObjectURL(blob);link.download=`pin-atlas-${board.id}.json`;link.click();setTimeout(()=>URL.revokeObjectURL(link.href),1000);toast(t('planDownloaded'));});
 function preparePrint(){
  if(currentView!=='workspace'||!board?.pins)return;
  $('#print-plan').innerHTML=reportHTML(planReport(board,assignments,evidence,t),t);
@@ -1204,9 +1248,9 @@ $('#import-button').addEventListener('click',()=>$('#import-file').click());
 $('#import-file').addEventListener('change',async e=>{
  const file=e.target.files[0];if(!file)return;
  try{
-  if(file.size>100000)throw new Error(t('fileTooLarge'));
+  if(file.size>1000000)throw new Error(t('fileTooLarge'));
   const payload=JSON.parse(await file.text());const target=boards.find(b=>b.id===payload?.board);
-  if(![1,2].includes(payload?.version)||!target)throw new Error(t('unsupportedFile'));
+  if(![1,2,3].includes(payload?.version)||!target)throw new Error(t('unsupportedFile'));
   await library.workspace(target.id);
   previewPlan(decodePlanPayload(payload,target,savedHardware(target),t));
  }catch(error){$('#plan-feedback').textContent=error.message||t('importFailed');}finally{e.target.value='';}
@@ -1309,9 +1353,10 @@ async function loadData(retry = false) {
    const nextLibrary=new ProfileLibrary(index,name=>fetchDataJSON(name,retry),nextEvidence=>{
      if(library!==nextLibrary)return;
      Object.assign(evidence.references,nextEvidence.references);
+     for(const document of nextEvidence.documents||[])if(!evidence.documents.some(existing=>existing.id===document.id))evidence.documents.push(document);
    });
    const nextLayouts=buildLayouts(nextLibrary.profiles);
-   library=nextLibrary;boards=library.profiles;evidence={references:{}};layouts=nextLayouts;
+   library=nextLibrary;boards=library.profiles;evidence={references:{},documents:[]};layouts=nextLayouts;
    updateLibraryCount();
    await loadHash();
    if(dataState!=='ready')return;

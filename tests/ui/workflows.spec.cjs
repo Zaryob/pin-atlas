@@ -30,6 +30,87 @@ async function chooseCompatibleModel(page,id) {
   await page.locator(`#compatibility-list [data-compatible-model="${id}"]`).click();
 }
 
+test('occupied aliases name the saved contact in both the peripheral picker and pin details',async({page})=>{
+ const raw=boards.find(b=>b.id==='nucleo-f446re');
+ const saved=raw.pins.find(p=>p.physicalLabel==='CN5.9'),alias=raw.pins.find(p=>p.physicalLabel==='CN10.5');
+ await page.addInitScript(({key,id,number})=>localStorage.setItem(key,JSON.stringify({[id]:{[number]:{function:'I2C1_SDA',label:'sensor'}}})),{key:storageKey,id:raw.id,number:saved.number});
+ await ready(page,'#board=nucleo-64&profile=nucleo-f446re');await openPlan(page);
+ await page.locator('#peripheral-builder summary').click();await page.locator('#peripheral-bus').selectOption('CAN1');
+ const option=page.locator('[data-peripheral-role="TX"] option').filter({hasText:'CN10.5 · PB9'});
+ await expect(option).toHaveJSProperty('disabled',true);await expect(option).toContainText('CN5.9 for I2C1_SDA');
+ if(await page.locator('#details-dialog').isVisible())await page.locator('#close-details').click();
+ else await page.locator('#detail-tab').click();
+ await page.locator(`#diagram [data-pin="${alias.number}"]`).click();
+ await expect(page.locator('.pin-occupancy')).toContainText('PB9 is already used on CN5.9 for I2C1_SDA');
+ await expect(page.locator('#add-plan')).toBeDisabled();
+ await page.locator('[data-open-assignment]').click();
+ await expect(page.locator('#pin-detail .physical-pin strong')).toHaveText('CN5.9');
+ await expect(page.locator('#add-plan')).toBeEnabled();
+});
+
+test('plans expand on desktop and comparison highlights only real route differences',async({page})=>{
+ await ready(page,'#board=pico-family&profile=picow');await openPlan(page);
+ if(page.viewportSize().width>970){
+  await expect(page.locator('.workspace')).toHaveClass(/plan-workspace/);
+  expect((await page.locator('#plan-panel').boundingBox()).width).toBeGreaterThan(1000);
+  await page.locator('#plan-layout-toggle').click();await expect(page.locator('.map-panel')).toBeVisible();
+  await page.locator('#plan-layout-toggle').click();
+ }
+ await page.locator('#pin-suggestions summary').click();await page.locator('#suggest-run').click();
+ await expect(page.locator('.suggestion')).toHaveCount(3);
+ if(page.viewportSize().width>970)expect((await page.locator('.suggestion').first().boundingBox()).width).toBeGreaterThan(400);
+ await expect(page.locator('.suggestion').first().locator('.changed-signal')).toHaveCount(0);
+ const other=page.locator('.suggestion').nth(1);
+ expect(await other.locator('.changed-signal').count()).toBeGreaterThan(0);
+ await page.locator('#suggest-only-differences').check();
+ for(const row of await other.locator('.unchanged-signal').all())await expect(row).toBeHidden();
+ await page.locator('[data-apply-suggestion="0"]').click();
+ await expect(page.locator('#plan-list .plan-group')).toHaveCount(3);
+ await expect(page.locator('#plan-count')).toHaveText('8');
+});
+
+test('physical warnings precede pin choices and generic guidance is deduplicated in suggestions',async({page})=>{
+ const raw=boards.find(b=>b.id==='nucleo-f446re'),clock=raw.pins.find(p=>p.physicalLabel==='CN5.6');
+ await page.addInitScript(({key,id,number})=>localStorage.setItem(key,JSON.stringify({[id]:{[number]:{function:'SPI1_SCK',label:'FLASH_SCK'}}})),{key:storageKey,id:raw.id,number:clock.number});
+ await ready(page,`#board=nucleo-64&profile=nucleo-f446re&pin=${clock.number}`);
+ if(page.viewportSize().width<=970)await page.locator('#open-pin').click();
+ await expect(page.locator('#pin-detail .circuit-notes')).toContainText('SB21');
+ expect(await page.locator('#pin-detail').evaluate(el=>Boolean(el.querySelector('.circuit-notes').compareDocumentPosition(el.querySelector('.function-section'))&Node.DOCUMENT_POSITION_FOLLOWING))).toBe(true);
+ await openPlan(page);await page.locator('#pin-suggestions summary').click();
+ await page.locator('[data-suggest-count="I2C"]').fill('1');await page.locator('[data-suggest-count="UART"]').fill('1');
+ await page.locator('#suggest-run').click();await expect(page.locator('.suggestion')).toHaveCount(3);
+ const first=page.locator('.suggestion').first();
+ await expect(first).toContainText('1 distinct hardware notes');
+ await expect(first.locator('.circuit-notes li')).toHaveCount(1);
+ await expect(first.locator('.circuit-notes')).toContainText('SB21');
+ await expect(first.locator('.circuit-notes')).not.toContainText('GPIO pad in this package');
+ await first.locator('.suggestion-evidence summary').click();
+ await expect(first.locator('.suggestion-evidence p').filter({hasText:'GPIO pad in this package'})).toHaveCount(1);
+});
+
+test('readable JSON round trips with source hashes and warns when the dataset revision changes',async({page})=>{
+ await ready(page,'#board=pico-family&profile=picow&pin=1');
+ if(page.viewportSize().width<=970)await page.locator('#open-pin').click();
+ await page.locator('#custom-label').fill('sensor');await page.locator('#add-plan').click();await openPlan(page);
+ const download=page.waitForEvent('download');await page.locator('#export-button').click();
+ const payload=JSON.parse(readFileSync(await (await download).path(),'utf8'));
+ expect(payload.version).toBe(3);expect(payload.pins[0]).toMatchObject({physical:'01',signal:'GP0',label:'sensor'});
+ expect(payload.provenance.profile.revision).toMatch(/^[a-f0-9]{16}$/);
+ expect(payload.provenance.documents.length).toBeGreaterThan(0);
+ expect(payload.provenance.documents.every(document=>/^[a-f0-9]{64}$/.test(document.sha256))).toBe(true);
+ const upload=()=>page.locator('#import-file').setInputFiles({name:'plan.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(payload))});
+ await upload();await expect(page.locator('#incoming-plan-revision')).toBeHidden();
+ await page.locator('#save-incoming-plan').click();await expect(page.locator('#plan-list')).toContainText('sensor');
+ payload.provenance.profile.file='profiles/picow.0000000000000000.json';
+ await upload();await expect(page.locator('#incoming-plan-revision')).toBeVisible();
+ await expect(page.locator('#incoming-plan-revision')).toContainText('different board data revision');
+ await page.locator('#incoming-plan-dialog [data-close]').last().click();
+ payload.pins[0].signal='WRONG';await upload();
+ await expect(page.locator('#incoming-plan-dialog')).toBeHidden();
+ await expect(page.locator('#plan-feedback')).toContainText('does not match the current board data');
+ await expect(page.locator('#plan-list')).toContainText('sensor');
+});
+
 test('catalog types fit a narrow screen with enlarged Turkish and English text',async({page})=>{
   await page.setViewportSize({width:320,height:960});
   for(const language of ['tr','en'])for(const scale of [1,2]) {
@@ -101,7 +182,9 @@ test('Nucleo bridge changes preserve old plans, reroute functions and persist wi
  await expect(page.locator('#plan-validation')).toBeEmpty();
  const event=page.waitForEvent('download');await page.locator('#export-button').click();
  const exported=JSON.parse(readFileSync(await (await event).path(),'utf8'));
- expect(exported.version).toBe(2);expect(exported.hardware.SB16).toBe('off');expect(exported.pins).toEqual(saved[raw.id]);
+ expect(exported.version).toBe(3);expect(exported.hardware.SB16).toBe('off');
+ expect(exported.pins).toEqual([expect.objectContaining({physical:'CN4.7',signal:'PA6',function:analog,label:'keep analog'})]);
+ expect(exported.provenance.profile.revision).toMatch(/^[a-f0-9]{16}$/);
  expect(await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),storageKey)).toEqual(saved);
 });
 
@@ -253,7 +336,8 @@ test('guided peripheral connections save exact bus signals and survive refresh',
  await page.locator('#peripheral-bus').selectOption('I2C0');
  await page.locator('[data-peripheral-role="SDA"]').selectOption(JSON.stringify([1,'I2C0 SDA']));
  await page.locator('[data-peripheral-role="SCL"]').selectOption(JSON.stringify([2,'I2C0 SCL']));
- await expect(page.locator('#peripheral-notes a')).toHaveCount(2);
+ await expect(page.locator('#peripheral-notes')).toContainText('RP2040');
+ expect(await page.locator('#peripheral-notes a').count()).toBeGreaterThan(0);
  await page.locator('#peripheral-form button[type="submit"]').click();
  await expect(page.locator('#plan-feedback')).toContainText('Peripheral connection added');
  const saved={1:{function:'I2C0 SDA',label:''},2:{function:'I2C0 SCL',label:''}};
@@ -654,8 +738,8 @@ test('saved plans survive refresh, import previews, share previews and language 
   await expect(page.locator('#plan-list')).toContainText('I2C0 SDA');
   const downloadEvent=page.waitForEvent('download');await page.locator('#export-button').click();
   const exported=JSON.parse(readFileSync(await (await downloadEvent).path(),'utf8'));
-  expect(exported).toEqual({version:1,board:'picow',pins:saved});
-  const incoming={...exported,pins:{1:{function:'I2C0 SDA',label:'incoming'}}};
+  expect(exported).toMatchObject({version:3,board:'picow',pins:[{physical:'01',signal:'GP0',function:'I2C0 SDA',label:'sensor'}]});
+  const incoming={...exported,pins:exported.pins.map(pin=>({...pin,label:'incoming'}))};
   await page.locator('#import-file').setInputFiles({name:'plan.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(incoming))});
   await expect(page.locator('#incoming-plan-dialog')).toBeVisible();
   await page.locator('#incoming-plan-dialog [data-close]').last().click();

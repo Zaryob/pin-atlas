@@ -1,4 +1,6 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
+import {electricalKeys} from './hardware-config.mjs';
+import {pinAssignment,assignmentMessage} from './pin-assignments.mjs';
 const roles = { SPI: ['SCK', 'MISO', 'MOSI'], I2C: ['SCL', 'SDA'], UART: ['TX', 'RX'], CAN: ['TX', 'RX'] };
 
 // Read only signals already verified for this profile. Matrix routes remain
@@ -38,7 +40,7 @@ export function availablePeripherals(board,{includeSPIChipSelect=false}={}) {
     for (const fn of pin.functions) {
       const signal = peripheralSignal(fn);
       if (!signal) continue;
-      if (!buses.has(signal.id)) buses.set(signal.id, {...signal, roles:signal.group==='SPI'&&includeSPIChipSelect?[...roles.SPI,'CS']:roles[signal.group], candidates:[]});
+      if (!buses.has(signal.id)) buses.set(signal.id, {...signal, roles:signal.group==='SPI'&&includeSPIChipSelect?[...roles.SPI,'CS']:roles[signal.group], candidates:[],contacts:board.pins});
       buses.get(signal.id).candidates.push({pin, fn, role:signal.role, key:JSON.stringify([pin.number,fn.name])});
     }
   }
@@ -51,9 +53,11 @@ export function assemblePeripheral(bus, selections, assignments, t=k=>k) {
   for (const role of bus.roles) {
     const candidate = bus.candidates.find(c=>c.role===role && c.key===selections[role]);
     if (!candidate || candidate.pin.reserved) throw new Error(t('peripheralChoosePins'));
-    const {pin,fn} = candidate, net=pin.net || String(pin.number);
-    if (used.has(net)) throw new Error(t('peripheralPinConflict'));
-    used.add(net);
+    const {pin,fn} = candidate, keys=[...electricalKeys(pin),...(pin.net?['net:'+pin.net]:[])];
+    const occupied=pinAssignment(pin,assignments,{pins:bus.contacts},{otherContactOnly:true});
+    if(occupied)throw new Error(assignmentMessage(occupied,t));
+    if (keys.some(key=>used.has(key))) throw new Error(t('peripheralPinConflict'));
+    keys.forEach(key=>used.add(key));
     if (assignments[pin.number] && assignments[pin.number].function!==fn.name) throw new Error(t('peripheralOccupied'));
     next[pin.number] = {function:fn.name, label:assignments[pin.number]?.label || ''};
   }
