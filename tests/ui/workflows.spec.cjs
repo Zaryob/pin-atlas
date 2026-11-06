@@ -30,6 +30,57 @@ async function chooseCompatibleModel(page,id) {
   await page.locator(`#compatibility-list [data-compatible-model="${id}"]`).click();
 }
 
+test('catalog types fit a narrow screen with enlarged Turkish and English text',async({page})=>{
+  await page.setViewportSize({width:320,height:960});
+  for(const language of ['tr','en'])for(const scale of [1,2]) {
+    await page.goto('about:blank');
+    await page.goto('./?lang='+language);
+    await expect(page.locator('#app-status')).toBeHidden();
+    await page.addStyleTag({content:`html { font-size: ${100*scale}% !important; }`});
+    await page.evaluate(()=>document.fonts.ready);
+    await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);
+    const buttons=page.locator('#home-catalog-types .catalog-type-button');
+    await expect(buttons).toHaveCount(4);
+    for(const button of await buttons.all()) {
+      expect(await button.evaluate(el=>el.scrollWidth-el.clientWidth)).toBeLessThanOrEqual(1);
+      await expect(button.locator('small')).toBeVisible();
+    }
+  }
+});
+
+test('suggestion text and library fields grow with the reader text setting',async({page})=>{
+  for(const scale of [1,2]) {
+    await page.goto('about:blank');
+    await ready(page,'#board=pico-family&profile=picow');
+    await page.addStyleTag({content:`html { font-size: ${100*scale}% !important; }`});
+    await openPlan(page);
+    await page.locator('#pin-suggestions summary').click();
+    const sizes=await page.locator('#pin-suggestions').evaluate(el=>({
+      description:parseFloat(getComputedStyle(el.querySelector('p')).fontSize),
+      labels:[...el.querySelectorAll('.suggest-counts label,.suggest-cs-label')].map(node=>parseFloat(getComputedStyle(node).fontSize)),
+      inputs:[...el.querySelectorAll('.suggest-counts input')].map(node=>parseFloat(getComputedStyle(node).fontSize)),
+    }));
+    expect(sizes.description).toBeGreaterThanOrEqual(14*scale);
+    expect(sizes.labels.every(size=>size>=14*scale)).toBe(true);
+    expect(sizes.inputs.every(size=>size>=16*scale)).toBe(true);
+    await page.locator('#suggest-run').click();
+    await expect(page.locator('.suggestion')).toHaveCount(3);
+    const resultSizes=await page.locator('.suggestion').first().evaluate(el=>({
+      rows:[...el.querySelectorAll('li')].map(node=>parseFloat(getComputedStyle(node).fontSize)),
+      metadata:[...el.querySelectorAll('small,a,.suggestion-evidence,.suggestion-evidence p')].map(node=>parseFloat(getComputedStyle(node).fontSize)),
+    }));
+    expect(resultSizes.rows.length).toBeGreaterThan(0);
+    expect(resultSizes.rows.every(size=>size>=14*scale)).toBe(true);
+    expect(resultSizes.metadata.every(size=>size>=13*scale)).toBe(true);
+    if(await page.locator('#details-dialog').isVisible())await page.locator('#close-details').click();
+    await page.locator('#menu-button').click();
+    await expect(page.locator('#library-dialog')).toBeVisible();
+    const filters=await page.locator('.library-filter-row select').evaluateAll(nodes=>nodes.filter(node=>node.checkVisibility()).map(node=>parseFloat(getComputedStyle(node).fontSize)));
+    expect(filters.length).toBeGreaterThan(0);
+    expect(filters.every(size=>size>=16*scale)).toBe(true);
+  }
+});
+
 test('Nucleo bridge changes preserve old plans, reroute functions and persist with configuration',async({page})=>{
  const raw=boards.find(b=>b.id==='nucleo-l432kc'),a5=raw.pins.find(p=>p.physicalLabel==='CN4.7');
  const analog=a5.functions.find(f=>f.group==='ADC').name;
