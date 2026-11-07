@@ -205,6 +205,7 @@
     "familyChips": ["Mikrodenetleyici Kılıfları (IC)", "Microcontroller Packages (IC)"],
     "featuredOpen": ["Aç →", "Open →"],
     "noBoardsMatchFilter": ["Arama kriterine uygun kart bulunamadı.", "No boards match the current search filter."],
+    "Posts, guides, system calls, pinouts and ELF analysis": ["Yazılar, kılavuzlar, sistem çağrıları, pin atlası ve ELF analizi", "Posts, guides, system calls, pinouts and ELF analysis"],
     "Switch project": ["Proje değiştir", "Switch project"],
     "Zaryob projects": ["Zaryob projeleri", "Zaryob projects"],
     "Zaryob home": ["Zaryob ana sayfa", "Zaryob home"],
@@ -675,16 +676,9 @@
     "note.pico2w.39": ["Ana besleme girişi: 1.8–5.5 V.", "Main supply input, rated for 1.8–5.5 V."],
     "note.pico2w.40": ["USB VBUS hattı; USB ile beslenirken nominal 5 V.", "USB VBUS, nominally 5 V when powered over USB."]
   };
-  const supported = ['tr', 'en'];
-  const storageKey = 'zaryob-language';
-  const query = new URLSearchParams(location.search).get('lang');
-  let language = 'en';
-  try {
-    const saved = localStorage.getItem(storageKey);
-    if (supported.includes(saved)) language = saved;
-  } catch { /* Language preference is optional. */ }
-  if (supported.includes(query)) language = query;
-  document.documentElement.lang = language;
+  const state = window.ZaryobLanguage;
+  const { supported } = state;
+  let language = state.language;
 
   const t = (key, values = {}, fallback = key) => {
     const message = Object.hasOwn(messages, key) ? messages[key][language === 'en' ? 1 : 0] : fallback;
@@ -708,19 +702,12 @@
   }
   function setLanguage(next, updateUrl = true) {
     if (!supported.includes(next)) return;
-    language = next;
-    try { localStorage.setItem(storageKey, language); } catch { /* Page-local fallback. */ }
-    if (updateUrl) {
-      const url = new URL(location.href);
-      url.searchParams.set('lang', language);
-      history.replaceState(history.state, '', url);
-    }
-    renderLanguage();
+    state.set(next, { updateUrl });
   }
-  window.ZaryobI18n = { t, apply, verificationUrl };
+  state.subscribe(next => { language = next; renderLanguage(); });
+  window.ZaryobI18n = { t, apply, verificationUrl, setLanguage, get language() { return language; } };
   document.addEventListener('DOMContentLoaded', () => {
-    if (supported.includes(query)) setLanguage(query, false);
-    else renderLanguage();
+    renderLanguage();
     document.querySelectorAll('[data-console-language]').forEach(select => {
       select.addEventListener('change', () => setLanguage(select.value));
     });
