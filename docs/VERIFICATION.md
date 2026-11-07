@@ -2,7 +2,7 @@
 
 [English](VERIFICATION.md) · [Türkçe](VERIFICATION.tr.md)
 
-Reviewed on **4 November 2026**. The review covers forty-one board, header, and chip profiles, **2,080 physical pin records, and 6,619 function assignments**. Shared physical pins are counted once per profile. The count excludes the app’s generic `GPIO` planning option and the unnumbered QFN center GND pads. Each placement of a signal on a different pin counts separately.
+Catalog snapshot from the generated data dated **5 November 2026**: **79 board, header, and chip profiles, 5,222 physical pin records, and 24,307 function assignments**. Totals are recorded in [`public/data/verification.json`](../public/data/verification.json); these counts do not certify that every pin was independently reviewed. Shared physical pins are counted once per profile. The count excludes the app’s generic `GPIO` planning option and unnumbered QFN center GND pads. Each placement of a signal on a different pin counts separately.
 
 ## Sources by pin map
 
@@ -61,7 +61,7 @@ The verified QFN-60 IOVDD list uses **1,11,20,30,38,45** from the two figures. T
 ## Reproduce the verification
 
 1. The [source manifest](../sources/manifest.json) records each source revision, document URL or commit, and SHA-256 hash. It includes the three identified Blue Pill community references.
-2. `scripts/verify-official-sources.py` downloads and checks those sources, then rereads the PDF tables. It normalizes whitespace where cells wrap across lines.
+2. `scripts/verify-official-sources.py` downloads and checks those sources, then rereads the PDF tables or commit-pinned manufacturer Markdown connector tables. It normalizes whitespace where cells wrap across lines.
    CI passes `--table-snapshots` to use the recorded ST table extractions in `sources/extracted/`, avoiding ST CDN timeouts. Each extraction is hash-locked and identifies the original locked PDF hash. The same parser rebuilds the STM32 data from either input, and both modes check the remaining sources. The default command rereads the original ST PDFs.
 3. The physical pin number, name, type, alternate function, manufacturer signal, and F/ALT selector must match the published record.
 4. Figure-only observations are marked separately. Reusing them during an automated run preserves the prior visual review. A changed hash requires a fresh source review.

@@ -2,7 +2,7 @@
 
 [English](VERIFICATION.md) · [Türkçe](VERIFICATION.tr.md)
 
-**4 Kasım 2026** tarihli inceleme, kırk bir kart, başlık ve çip profilindeki **2.080 fiziksel pin kaydını ve 6.619 alternatif işlev atamasını** kapsar. Ortak bağlantılar profil başına sayılır. Sayımda uygulamanın soyut `GPIO` seçeneği ve numarasız QFN merkez GND pedi yoktur. Aynı sinyalin farklı pinlerde bulunması ayrı bir atamadır.
+**5 Kasım 2026** tarihli üretilmiş veri özeti: **79 kart, başlık ve çip profili; 5.222 fiziksel pin kaydı ve 24.307 işlev ataması**. Toplamlar [`public/data/verification.json`](../public/data/verification.json) dosyasındadır; bu sayılar her pinin bağımsız olarak incelendiği anlamına gelmez. Ortak bağlantılar profil başına sayılır. Sayımda uygulamanın soyut `GPIO` seçeneği ve numarasız QFN merkez GND pedi yoktur. Aynı sinyalin farklı pinlerde bulunması ayrı bir atamadır.
 
 ## Her haritanın dayanağı
 
