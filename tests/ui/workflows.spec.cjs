@@ -776,3 +776,32 @@ test('CAN peripheral suggestions and electrical tolerance badges render correctl
   await expect(page.locator('.suggestion')).toHaveCount(3);
   await expect(page.locator('.suggestion').first()).toContainText('FDCAN');
 });
+
+test('PWM servo aliases require consent on both pins and export the shared signal explicitly',async({page})=>{
+ const first={function:'PWM0 A',label:'servo1'};
+ await page.addInitScript(({key,first})=>localStorage.setItem(key,JSON.stringify({pico:{1:first}})),{key:storageKey,first});
+ await ready(page,'#board=pico-family&profile=pico&pin=21');
+ if(page.viewportSize().width<=970)await page.locator('#open-pin').click();
+ const pwm=page.locator('input[name="pin-function"][value="PWM0 A"]');
+ if(!await pwm.isVisible())await page.locator('.more-functions summary').click();
+ await pwm.check();await page.locator('#custom-label').fill('servo2');await page.locator('#add-plan').click();
+ await expect(page.locator('#pin-save-status')).toContainText('two servos cannot be controlled independently');
+ await page.locator('#shared-pwm').check();await page.locator('#add-plan').click();
+ await expect(page.locator('#pin-save-status')).toContainText('confirm sharing on both assignments');
+ expect(await page.evaluate(key=>Object.keys(JSON.parse(localStorage.getItem(key)).pico).length,storageKey)).toBe(1);
+ if(await page.locator('#details-dialog').isVisible())await page.locator('#close-details').click();
+ await page.locator('#diagram [data-pin="1"]').click();
+ await page.locator('#shared-pwm').check();await page.locator('#add-plan').click();
+ if(await page.locator('#details-dialog').isVisible())await page.locator('#close-details').click();
+ await page.locator('#diagram [data-pin="21"]').click();
+ if(!await pwm.isVisible())await page.locator('.more-functions summary').click();
+ await pwm.check();await page.locator('#shared-pwm').check();await page.locator('#custom-label').fill('same signal');
+ await page.locator('#add-plan').click();await openPlan(page);
+ await expect(page.locator('#plan-count')).toHaveText('2');
+ await expect(page.locator('#plan-validation')).toContainText('without independent control');
+ const download=page.waitForEvent('download');await page.locator('#export-button').click();
+ const exported=JSON.parse(readFileSync(await (await download).path(),'utf8'));
+ expect(exported.pins.every(p=>p.sharedPWM===true)).toBe(true);
+ await page.locator('#import-file').setInputFiles({name:'shared-pwm.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(exported))});
+ await expect(page.locator('#incoming-plan-dialog')).toBeVisible();
+});

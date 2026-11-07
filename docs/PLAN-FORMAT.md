@@ -28,3 +28,11 @@ share links continue using those formats: numeric pin IDs with function/label
 entries, plus hardware settings in version 2. Exporting does not rewrite existing
 browser records. Version 3 downloads preserve pin assignments, labels and board
 settings when imported, and do not require the original internal numeric IDs.
+
+RP2040/RP2350 PWM assignments may include `sharedPWM: true`. This is an explicit
+acknowledgement that pads on the same slice/channel carry one duty/frequency
+signal. Every assignment sharing that channel must opt in; labels alone do not
+establish consent. The flag survives compact v1/v2 records and v3 downloads.
+Other functions cannot use it. Separate A/B channels in a slice still share
+frequency/counter settings; plan, suggestion and printed output notes retain
+that constraint. Frequency values are not modeled or checked.

@@ -11,6 +11,7 @@ import {planReport,reportHTML,reportSVG,standaloneDiagram} from './plan-output.m
 import {configureBoard,normalizeHardware,sameHardware,hardwareSummary} from './hardware-config.mjs';
 import {readPlanRecords,writePlanRecord,planPayload as createPlanPayload,exportPlanPayload,decodePlanPayload} from './plan-records.mjs';
 import {applySuggestion} from './pin-solver.mjs';
+import {pwmResource,pwmNotes} from './pwm-resources.mjs';
 const { t, verificationUrl } = window.ZaryobI18n;
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -468,6 +469,7 @@ function electricalBadgeHTML(pin) {
  return '';
 }
 const noteText=note=>note.key?t(note.key):note.text;
+function pwmNotesHTML(plan){const notes=pwmNotes(plan,board,t);return notes.length?`<section class="pwm-notes"><h4>${esc(t('pwmConstraints'))}</h4>${notes.map(note=>`<p>${esc(note)}</p>`).join('')}</section>`:'';}
 function circuitNotesHTML(pins){
  const notes=circuitNotes(pins);
  return notes.length?`<section class="circuit-notes"><h4>${esc(t('boardConstraints'))}</h4><ul>${notes.map(note=>`<li><strong>${esc(note.pins.map(pin=>physicalLabel(pin)+' · '+pin.name).join(' / '))}</strong><span>${esc(noteText(note))}</span></li>`).join('')}</ul></section>`:'';
@@ -500,7 +502,7 @@ function renderDetail() {
  const occupied=pinAssignment(pin,assignments,board,{otherContactOnly:true});
  const occupancy=occupied?`<div class="pin-occupancy"><p>${esc(assignmentMessage(occupied,t))}</p><button type="button" class="button secondary" data-open-assignment="${occupied.pin.number}">${esc(t('openOccupiedPin'))}</button></div>`:'';
  $('#selected-pin-label').textContent = `${pin.name} · ${t('details')}`;
- $('#pin-detail').innerHTML=`<div class="pin-detail-body"><div class="pin-hero"><div class="pin-identity"><h2>${esc(pin.name.replace('_ADC',' / A'))}</h2><span class="physical-pin">${t('physicalPin')} <strong>${esc(physicalLabel(pin))}</strong>${pin.boardLabel && pin.boardLabel!==pin.name ? `<span class="mcu-pin-label"> · ${esc(t('boardLabel',{label:pin.boardLabel}))}</span>` : ''}${pin.mcuPort ? `<span class="mcu-pin-label">${pin.arduinoPin!==undefined?` · Arduino D${pin.arduinoPin}`:''} · ${t('mcuPort', {port:pin.mcuPort})}</span>` : ''}${pin.mcuPin ? `<span class="mcu-pin-label"> · ${t('mcuPin', {pin:pin.mcuPin})}</span>` : ''}</span></div><span class="pin-type" style="color:${colors[pin.type]}">${familyName(pin.type)} · ${esc(pin.type === 'GPIO' ? board.voltage : '')}${electricalBadgeHTML(pin)}</span>${occupancy}${pinHardwareHTML(pin)}${circuitNotesHTML([pin])}${sharedNote}${referenceLink(pin.evidence[0], t('pinSource'), 'pin-source')}</div><fieldset class="function-section"><legend class="small-label">${t(opts.length>1 ? 'chooseFunction' : 'pinFunction')}</legend>${filters.size || query ? `<p class="function-hint">${t('matchingFunctions')}</p>` : ''}<div class="function-list">${primary.map(option).join('')}</div>${more.length ? `<details class="more-functions"><summary>${t('allFunctions', {count:more.length})}</summary><div class="function-list">${more.map(option).join('')}</div></details>` : ''}<div id="function-source"></div></fieldset><div class="label-section"><label class="small-label" for="custom-label">${t('projectLabel')} <span>${t('optional')}</span></label><input id="custom-label" maxlength="40" placeholder="${esc(t('labelExample'))}" value="${esc(assignments[selected]?.label||'')}"></div><div class="pin-guidance"><h3>${esc(t('generalGuidance'))}</h3><p class="pin-description">${esc(description)}${pin.fiveVoltTolerant !== undefined ? ' '+esc(t(pin.fiveVoltTolerant ? 'stm32FTNote' : 'stm32NonFTNote')) : ''}</p></div>${renderPinEvidence(pin)}</div><div class="detail-action"><button id="add-plan" class="add-plan" ${pin.reserved || pin.hardwareBlocked || occupied ? 'disabled' : ''}>${icon(hasPlan?'check':'plus')}${t(occupied?'peripheralOccupiedShort':pin.hardwareBlocked ? 'hwUnavailable' : pin.reserved ? (pin.reservedLabel || (pin.name==='NC' ? 'unconnected' : 'reserved')) : hasPlan ? 'updatePin' : 'addPin')}</button><div class="pin-save-feedback"><span id="pin-save-status" role="status"></span><button id="view-saved-plan" hidden>${t('viewPlan')}</button></div></div>`;
+ $('#pin-detail').innerHTML=`<div class="pin-detail-body"><div class="pin-hero"><div class="pin-identity"><h2>${esc(pin.name.replace('_ADC',' / A'))}</h2><span class="physical-pin">${t('physicalPin')} <strong>${esc(physicalLabel(pin))}</strong>${pin.boardLabel && pin.boardLabel!==pin.name ? `<span class="mcu-pin-label"> · ${esc(t('boardLabel',{label:pin.boardLabel}))}</span>` : ''}${pin.mcuPort ? `<span class="mcu-pin-label">${pin.arduinoPin!==undefined?` · Arduino D${pin.arduinoPin}`:''} · ${t('mcuPort', {port:pin.mcuPort})}</span>` : ''}${pin.mcuPin ? `<span class="mcu-pin-label"> · ${t('mcuPin', {pin:pin.mcuPin})}</span>` : ''}</span></div><span class="pin-type" style="color:${colors[pin.type]}">${familyName(pin.type)} · ${esc(pin.type === 'GPIO' ? board.voltage : '')}${electricalBadgeHTML(pin)}</span>${occupancy}${pinHardwareHTML(pin)}${circuitNotesHTML([pin])}${sharedNote}${referenceLink(pin.evidence[0], t('pinSource'), 'pin-source')}</div><fieldset class="function-section"><legend class="small-label">${t(opts.length>1 ? 'chooseFunction' : 'pinFunction')}</legend>${filters.size || query ? `<p class="function-hint">${t('matchingFunctions')}</p>` : ''}<div class="function-list">${primary.map(option).join('')}</div>${more.length ? `<details class="more-functions"><summary>${t('allFunctions', {count:more.length})}</summary><div class="function-list">${more.map(option).join('')}</div></details>` : ''}<div id="function-source"></div></fieldset><div class="label-section"><label class="small-label" for="custom-label">${t('projectLabel')} <span>${t('optional')}</span></label><input id="custom-label" maxlength="40" placeholder="${esc(t('labelExample'))}" value="${esc(assignments[selected]?.label||'')}"></div><div class="pin-guidance"><h3>${esc(t('generalGuidance'))}</h3><p class="pin-description">${esc(description)}${pin.fiveVoltTolerant !== undefined ? ' '+esc(t(pin.fiveVoltTolerant ? 'stm32FTNote' : 'stm32NonFTNote')) : ''}</p></div>${pin.functions.some(fn=>pwmResource(fn,board)) ? `<section id="pwm-settings" ${pwmResource(pin.functions.find(f=>f.name===selectedFn),board)?'':'hidden'}><label class="pwm-sharing"><input id="shared-pwm" type="checkbox" ${assignments[selected]?.sharedPWM?'checked':''}>${esc(t('pwmShareConsent'))}</label><p>${esc(t('pwmFrequencyNote'))}</p></section>` : ''}${renderPinEvidence(pin)}</div><div class="detail-action"><button id="add-plan" class="add-plan" ${pin.reserved || pin.hardwareBlocked || occupied ? 'disabled' : ''}>${icon(hasPlan?'check':'plus')}${t(occupied?'peripheralOccupiedShort':pin.hardwareBlocked ? 'hwUnavailable' : pin.reserved ? (pin.reservedLabel || (pin.name==='NC' ? 'unconnected' : 'reserved')) : hasPlan ? 'updatePin' : 'addPin')}</button><div class="pin-save-feedback"><span id="pin-save-status" role="status"></span><button id="view-saved-plan" hidden>${t('viewPlan')}</button></div></div>`;
  renderFunctionSource(pin);
 }
 function referenceLink(key, label, className) {
@@ -579,7 +581,7 @@ $('#open-mcu').addEventListener('click', () => {
 function planEntry(pin, assignment) {
  const phys = pin ? physicalLabel(pin) : '';
  const name = pin?.name || '';
- return `<span class="plan-line"><span class="plan-phys">${t('physicalPin')} ${esc(phys)}</span> · <strong>${esc(name)}</strong> · <span class="plan-fn">${esc(assignment.function)}</span></span>${assignment.label ? `<small class="plan-label">${esc(assignment.label)}</small>` : ''}`;
+ return `<span class="plan-line"><span class="plan-phys">${t('physicalPin')} ${esc(phys)}</span> · <strong>${esc(name)}</strong> · <span class="plan-fn">${esc(assignment.function)}</span></span>${assignment.sharedPWM ? `<small class="plan-label">${esc(t('pwmShareMarked'))}</small>` : ''}${assignment.label ? `<small class="plan-label">${esc(assignment.label)}</small>` : ''}`;
 }
 function pinHardwareHTML(pin){
  const controls=board.hardware?.controls||[];
@@ -660,7 +662,7 @@ function renderSuggestions(){
   return `<article class="suggestion" data-alternative-index="${index}"><h3>${esc(t('suggestOption',{n:index+1}))}</h3><p class="suggest-comparison">${esc(t(index?'suggestDifferences':'suggestReference',{count}))}</p><p>${esc(t('suggestStats',{added:alternative.addedPins,kept:Object.keys(suggestionSnapshot.pins).length,warnings:alternative.warnings}))}</p>${alternative.connections.map(connection=>`<section class="suggestion-bus ${connection.signals.some(signal=>changed(connection,signal))?'has-changes':''}"><h4>${esc(connection.id)}</h4><ul>${connection.signals.map(signal=>{
    const pin=pinByNumber(signal.pin),locked=!!suggestionSnapshot.pins[signal.pin],different=changed(connection,signal);
    return `<li class="${different?'changed-signal':'unchanged-signal'}" title="${esc(signal.function)}"><b>${esc(signal.role)}</b> · ${esc(physicalLabel(pin))} · ${esc(pin.name)}${signal.selector?' · '+esc(signal.selector):''}${locked?`<small>${esc(t('suggestLocked'))}</small>`:''}${different?`<small class="signal-change-label">${esc(t('suggestChanged'))}</small>`:''}</li>`;
-  }).join('')}</ul></section>`).join('')}${circuitNotesHTML(pins)}<details class="suggestion-evidence"><summary>${esc(t('suggestEvidence'))}</summary>${generalNotesHTML(pins)}${keys.map(key=>`<p>${referenceLink(key,t('functionSource'),'')}</p>`).join('')}</details><button type="button" class="button secondary" data-apply-suggestion="${index}">${esc(t('suggestUse'))}</button></article>`;
+  }).join('')}</ul></section>`).join('')}${circuitNotesHTML(pins)}${pwmNotesHTML(alternative.pins)}<details class="suggestion-evidence"><summary>${esc(t('suggestEvidence'))}</summary>${generalNotesHTML(pins)}${keys.map(key=>`<p>${referenceLink(key,t('functionSource'),'')}</p>`).join('')}</details><button type="button" class="button secondary" data-apply-suggestion="${index}">${esc(t('suggestUse'))}</button></article>`;
  }).join('');
 }
 $('#pin-suggestions').addEventListener('change',event=>{
@@ -683,7 +685,7 @@ function renderPlan() {
  $('#plan-reference').textContent = planReference(board, t);
  $('#plan-feedback').textContent = '';
  $('#print-plan-button').disabled=!entries.length;$('#export-svg').disabled=!entries.length;
- try { validatePlan(assignments,board,t);$('#plan-validation').textContent=''; }
+ try { validatePlan(assignments,board,t);$('#plan-validation').textContent=pwmNotes(assignments,board,t).join(' '); }
  catch(error) { $('#plan-validation').textContent=t('savedPlanConflict',{error:error.message}); }
  renderPeripheral();
  const connections=new Map();
@@ -740,7 +742,7 @@ $('#peripheral-form').addEventListener('submit',event=>{
 function addToPlan() {
  const functionName = $('input[name="pin-function"]:checked')?.value;
  if (!functionName) return;
- const candidate = { ...assignments, [selected]: { function: functionName, label: $('#custom-label').value.trim() } };
+ const candidate = { ...assignments, [selected]: { function: functionName, label: $('#custom-label').value.trim(), ...($('#shared-pwm')?.checked && pwmResource(pinByNumber(selected).functions.find(f=>f.name===functionName),board)?{sharedPWM:true}:{}) } };
  try {
    const occupied=pinAssignment(pinByNumber(selected),assignments,board,{otherContactOnly:true});
    if(occupied)throw new Error(assignmentMessage(occupied,t));
@@ -1194,13 +1196,20 @@ for(const element of [$('#diagram'),$('#table-content')]) {
  });
 }
 function renderDetailPreservingDraft() {
- const label = $('#custom-label')?.value;
+ const label = $('#custom-label')?.value, shared = $('#shared-pwm')?.checked;
  renderDetail();
+ if ($('#shared-pwm') && shared !== undefined) $('#shared-pwm').checked=shared;
  if (label !== undefined) $('#custom-label').value = label;
 }
 $('#pin-detail').addEventListener('change', e => {
  if (e.target.name !== 'pin-function') return;
  selectedFn = e.target.value;
+ const pwmSettings=$('#pwm-settings');
+ if(pwmSettings){
+   const active=!!pwmResource(pinByNumber(selected).functions.find(f=>f.name===selectedFn),board);
+   pwmSettings.hidden=!active;
+   if(!active)$('#shared-pwm').checked=false;
+ }
  renderFunctionSource(pinByNumber(selected));
  $('#pin-save-status').textContent = '';
  $('#view-saved-plan').hidden = true;

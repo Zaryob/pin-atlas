@@ -82,3 +82,14 @@ test('solver finds compatible CAN bus pins and respects existing assignments',()
  assert(canConn.signals.some(s=>s.role==='TX'));
  assert(canConn.signals.some(s=>s.role==='RX'));
 });
+
+test('PWM conflicts block suggestions while shared slice/fan-out notes remain counted',()=>{
+ const b=board('pico'),locked={1:entry('PWM0 A','servo1'),21:entry('PWM0 A','servo2')};
+ const blocked=suggestPins(b,{SPI:1,I2C:1},locked);
+ assert.equal(blocked.status,'blocked');assert.equal(blocked.error,'pwmDuplicate');
+ const shared=Object.fromEntries(Object.entries(locked).map(([n,e])=>[n,{...e,sharedPWM:true}]));
+ for(const pins of [shared,{1:entry('PWM0 A'),2:entry('PWM0 B')}]){
+  const result=suggestPins(b,{SPI:1,I2C:1},pins);assert.equal(result.status,'ready');
+  for(const a of result.alternatives){assert(a.warnings>=1);assert.deepEqual(applySuggestion(pins,a,b),a.pins);}
+ }
+});

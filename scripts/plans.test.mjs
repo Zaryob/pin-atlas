@@ -67,3 +67,17 @@ test('H723 retired ADC assignments and duplicate net entries are preserved only 
  assert.throws(()=>validatePlan(plan,board,t),/sharedSignal/);
  assert.deepEqual(validatePlan(plan,board,t,{allowSharedNets:true}),plan);
 });
+
+test('RP PWM channels require explicit sharing and preserve consent through validation',()=>{
+ const independent={1:entry('PWM0 A','servo1'),21:entry('PWM0 A','servo2')};
+ assert.throws(()=>validatePlan(independent,pico,t),/pwmDuplicate/);
+ const partial={...independent,21:{...independent[21],sharedPWM:true}};
+ assert.throws(()=>validatePlan(partial,pico,t),/pwmDuplicate/);
+ const shared=Object.fromEntries(Object.entries(independent).map(([n,e])=>[n,{...e,sharedPWM:true}]));
+ assert.deepEqual(validatePlan(shared,pico,t),shared);
+ assert.deepEqual(validatePlan(independent,pico,t,{allowDuplicateSignals:true}),independent);
+ assert(!samePlan(independent,shared));
+ assert.throws(()=>validatePlan({1:{...entry('GPIO'),sharedPWM:true}},pico,t),/invalidAssignment/);
+ assert.throws(()=>validatePlan({1:{...entry('PWM0 A'),sharedPWM:'true'}},pico,t),/invalidAssignment/);
+ assert.doesNotThrow(()=>validatePlan({1:entry('PWM0 A'),2:entry('PWM0 B')},pico,t));
+});

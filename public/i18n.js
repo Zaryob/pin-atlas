@@ -1,6 +1,13 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
 (() => {
   const messages = {
+    "pwmShareMarked": ["Ortak PWM sinyali onaylandı; bağımsız duty yok.", "Shared PWM signal acknowledged; no independent duty."],
+    "pwmConstraints": ["PWM kaynak kısıtları", "PWM resource constraints"],
+    "pwmDuplicate": ["{name}, pin {pin} ile aynı PWM kanalını paylaşır; iki servo bağımsız kontrol edilemez. Aynı sinyali bilerek çoğaltıyorsanız iki atamada da paylaşımı onaylayın.", "{name} shares a PWM channel with pin {pin}; two servos cannot be controlled independently. To deliberately duplicate one signal, confirm sharing on both assignments."],
+    "pwmShareConsent": ["Bu PWM sinyalini başka pine de taşıyorum; bağımsız duty kontrolü beklemiyorum.", "I intend to share this PWM signal with another pin; I do not expect independent duty control."],
+    "pwmFrequencyNote": ["Aynı PWM slice içindeki A/B kanalları aynı sayaç ve frekansı paylaşır. Farklı frekans gereken cihazlar için farklı slice seçin.", "A/B channels in one PWM slice share a counter and frequency. Use different slices for devices requiring different frequencies."],
+    "pwmSharedFrequency": ["{slice} A/B kanalları aynı frekansı ve sayaç ayarlarını paylaşır; bağımsız frekans kullanılamaz.", "{slice} A/B channels share frequency and counter settings; independent frequencies are unavailable."],
+    "pwmFanoutNote": ["{channel} birden fazla pine taşınıyor: aynı duty ve frekans, bağımsız çıkışlar değil.", "{channel} is routed to multiple pins: the same duty and frequency, without independent control."],
     "pinOccupied": ["{signal}, {pin} üzerinde {function} için kullanılıyor.", "{signal} is already used on {pin} for {function}."],
     "openOccupiedPin": ["Mevcut atamayı aç", "Open existing assignment"],
     "planExpand": ["Planı genişlet", "Expand plan"],

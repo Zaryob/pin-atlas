@@ -38,7 +38,7 @@ export function exportPlanPayload(source,pins,hardware={},evidence={references:{
   const references=[...new Set([...pin.evidence,fn?.evidence,fn?.configurationEvidence].filter(Boolean))].sort();
   references.forEach(key=>keys.add(key));
   return {physical:physicalLabel(pin),signal:pin.name,mcuPin:pin.mcuPin??null,
-   function:entry.function,selector:fn?.selector||null,label:entry.label,sources:references};
+   function:entry.function,selector:fn?.selector||null,label:entry.label,...(entry.sharedPWM === true ? {sharedPWM:true} : {}),sources:references};
  }).sort((a,b)=>a.physical.localeCompare(b.physical,'en',{numeric:true}));
  for(const control of source.hardware?.controls||[])control.evidence.forEach(key=>keys.add(key));
  const references=Object.fromEntries([...keys].sort().filter(key=>evidence.references[key]).map(key=>[key,evidence.references[key]]));
@@ -64,7 +64,7 @@ export function decodePlanPayload(payload,source,fallbackHardware={},t=k=>k){
    const fn=pin?.functions.find(fn=>fn.name===row.function);
    if(!pin || entries[pin.number] || row.signal!==pin.name || row.mcuPin!==(pin.mcuPin??null) ||
       row.selector!==(fn?.selector||null))throw new Error(t('exportContactChanged'));
-   entries[pin.number]={function:row.function,label:row.label};
+   entries[pin.number]={function:row.function,label:row.label,...(row.sharedPWM !== undefined ? {sharedPWM:row.sharedPWM} : {})};
   }
   pins=entries;
   revisionMismatch=!!(source.dataFile && payload.provenance.profile.file && source.dataFile!==payload.provenance.profile.file);

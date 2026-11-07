@@ -1,6 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
 import {peripheralSignal} from './peripherals.mjs';
 import {electricalKeys} from './hardware-config.mjs';
+import {pwmResource} from './pwm-resources.mjs';
 export const physicalLabel = pin => pin.physicalLabel || String(pin.number).padStart(2, '0');
 
 export function options(pin) {
@@ -41,6 +42,8 @@ export function validatePlan(data, target, t, { allowDuplicateSignals = false, a
     }
     const name = value.function;
     const fn = pin.functions.find(fn=>fn.name===name);
+    const pwm = pwmResource(fn, target);
+    if (value.sharedPWM !== undefined && (typeof value.sharedPWM !== 'boolean' || !pwm)) throw new Error(t('invalidAssignment'));
     const identity = fn && peripheralSignal(fn);
     const signalKey = identity ? `${identity.id}:${identity.channel||identity.role}` : fn && ['SPI','I2C','UART','CAN'].includes(fn.group) &&
       /^(SPI\d*|I2C\d*|USART\d+|UART\d*|LPUART\d+|FDCAN\d+|CAN\d+)[ _]+/i.test(name)
@@ -49,6 +52,12 @@ export function validatePlan(data, target, t, { allowDuplicateSignals = false, a
       if (signals.has(signalKey)) throw new Error(t('duplicateSignal', { name, pin: physicalLabel(signals.get(signalKey)) }));
       signals.set(signalKey, pin);
     }
+    if (pwm) {
+      const key = 'PWM:'+pwm.id, previous = signals.get(key);
+      if (!allowDuplicateSignals && previous && !(value.sharedPWM === true && clean[previous.number].sharedPWM === true))
+        throw new Error(t('pwmDuplicate', {name, pin:physicalLabel(previous)}));
+      signals.set(key, pin);
+    }
     if (fn?.configuration) {
       const {field,values} = fn.configuration;
       const allowed = new Set(values.map(String));
@@ -56,7 +65,7 @@ export function validatePlan(data, target, t, { allowDuplicateSignals = false, a
       if (!common.size && !allowConflictingRemaps) throw new Error(t('remapConflict',{field,pin:physicalLabel(pin)}));
       remaps.set(field,common);
     }
-    clean[key] = { function: name, label: value.label };
+    clean[key] = { function: name, label: value.label, ...(value.sharedPWM === true ? {sharedPWM:true} : {}) };
   }
   return clean;
 }
@@ -64,5 +73,5 @@ export function validatePlan(data, target, t, { allowDuplicateSignals = false, a
 export function samePlan(first, second) {
   const entries = Object.entries(first);
   return entries.length === Object.keys(second).length &&
-    entries.every(([pin, entry]) => entry?.function === second[pin]?.function && entry?.label === second[pin]?.label);
+    entries.every(([pin, entry]) => entry?.function === second[pin]?.function && entry?.label === second[pin]?.label && !!entry?.sharedPWM === !!second[pin]?.sharedPWM);
 }

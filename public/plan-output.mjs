@@ -1,6 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
 import {physicalLabel,planReference,validatePlan} from './plans.mjs';
 import {hardwareSummary} from './hardware-config.mjs';
+import {pwmNotes} from './pwm-resources.mjs';
 export const escapeText=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function planReport(board,assignments,evidence,t=k=>k){
  const sources=new Map();
@@ -14,6 +15,7 @@ export function planReport(board,assignments,evidence,t=k=>k){
  const hardware=hardwareSummary(board,board.appliedHardware||{},t);
  for(const row of hardware)for(const key of row.evidence)if(evidence.references[key])sources.set(key,evidence.references[key]);
  let warning='';try{validatePlan(assignments,board,t);}catch(error){warning=error.message;}
+ warning=[warning,...pwmNotes(assignments,board,t)].filter(Boolean).join(' ');
  const sourceList=[...sources].map(([id,ref])=>({id,...ref}));
  for(const row of rows)row.references=row.keys.map(key=>sourceList.findIndex(source=>source.id===key)+1).filter(Boolean);
  return {model:planReference(board,t),date:board.verifiedOn,voltage:board.voltage,rows,sources:sourceList,warning,hardware};
