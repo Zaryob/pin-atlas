@@ -176,3 +176,21 @@ test('F405RG exposes its own package geometry and USART selector',()=>{
  const tx=chip.pins.find(pin=>pin.name==='PA9');assert.equal(tx.number,42);
  assert(tx.functions.some(fn=>fn.name==='USART1_TX' && fn.selector==='AF7'));
 });
+
+test('ADC filters distinguish analog IN/INP/INN channels from digital triggers across STM32 profiles',()=>{
+ const b=boards.find(b=>b.id==='nucleo-f446re'),pc11=b.pins.find(p=>p.physicalLabel==='CN7.2');
+ assert(!pc11.functions.some(f=>f.group==='ADC'));
+ assert(pc11.functions.some(f=>f.name==='ADC1_EXTI11'&&f.group==='ADC_TRIGGER'));
+ const pa0=b.pins.find(p=>p.physicalLabel==='CN8.1');
+ assert(pa0.functions.some(f=>f.name==='ADC1_IN0'&&f.group==='ADC'));
+ let analog=0,trigger=0;
+ for(const b of boards.filter(b=>b.mcu.startsWith('STM32')))for(const p of b.pins)for(const f of p.functions){
+  if(/^ADC\d*_IN[PN]?\d+[a-z]?$/.test(f.name)){assert.equal(f.group,'ADC');analog++;}
+  if(/^ADC\d*_(EXTI|TIM)/.test(f.name)){assert.equal(f.group,'ADC_TRIGGER');trigger++;}
+ }
+ for(const name of ['ADC_IN0','ADC_IN0b']){
+  const channels=boards.flatMap(b=>b.pins.flatMap(p=>p.functions.filter(f=>f.name===name)));
+  assert(channels.length>0,name);assert(channels.every(f=>f.group==='ADC'),name);
+ }
+ assert(analog>100);assert(trigger>100);
+});

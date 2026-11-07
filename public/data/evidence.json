@@ -1224,6 +1224,14 @@
       "locator": "§14.8.2.2 · Tables 1674–1679 · package pin list",
       "method": "pdf-table"
     },
+    "rp2350-input-limits": {
+      "document": "rp2350",
+      "title": "RP2350 Datasheet",
+      "url": "https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf#page=1332",
+      "page": 1332,
+      "locator": "§14.8.2.1 · Table 1673 · FT input conditions; pin types in Tables 1674–1679",
+      "method": "pdf-table"
+    },
     "rp-pin-list-p1334": {
       "document": "rp2350",
       "title": "RP2350 Datasheet",

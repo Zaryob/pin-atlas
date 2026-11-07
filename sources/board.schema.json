@@ -162,6 +162,7 @@
         "name": {"type": "string", "minLength": 1}, "signal": {"type": "string", "minLength": 1},
         "group": {"type": "string", "minLength": 1}, "evidence": {"type": "string", "minLength": 1},
         "configurationEvidence": {"type": "string", "minLength": 1},
+        "mode": {"enum": ["spi-controller-single", "spi-device-single"]},
         "configuration": {"type": "object", "required": ["field", "values"], "properties": {
           "field": {"type": "string", "minLength": 1}, "values": {"type": "array", "minItems": 1}
         }}
@@ -174,6 +175,14 @@
         "type": {"enum": ["GPIO", "POWER", "GND", "SYSTEM", "ADC"]},
         "functions": {"type": "array", "items": {"$ref": "#/$defs/function"}},
         "evidence": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+        "inputTolerance": {
+          "type": "object", "required": ["kind", "evidence"],
+          "properties": {
+            "kind": {"enum": ["rp2350-ft", "rp2350-analog"]},
+            "evidence": {"type": "string", "minLength": 1}
+          },
+          "additionalProperties": false
+        },
         "mcuPin": {"oneOf": [{"type": "integer", "minimum": 1}, {"type": "string", "pattern": "^[A-Z]{1,3}[1-9][0-9]*$"}]}, "connector": {"type": "string", "minLength": 1},
         "position": {"type": "object", "required": ["x", "y", "side"], "properties": {
           "x": {"type": "number"}, "y": {"type": "number"}, "side": {"enum": ["left", "right", "top", "bottom"]}

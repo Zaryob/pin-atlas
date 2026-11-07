@@ -25,7 +25,10 @@ export function suggestPins(board,requests,assignments={},options={}){
    return partial(b)-partial(a)||a.id.localeCompare(b.id,undefined,{numeric:true});
   });
   const needed=Math.max(0,counts[group]-completed.filter(b=>b.group===group).length);
-  if(needed>byGroup[group].length)return {status:'impossible',alternatives:[],nodes:0};
+  if(needed>byGroup[group].length){
+   const unsupported=group==='SPI' && board.pins.some(p=>!p.reserved&&!p.hardwareBlocked&&p.functions.some(fn=>fn.group==='SPI'&&/SIO\[/.test(fn.name)&&!fn.mode));
+   return {status:unsupported?'unsupported':'impossible',alternatives:[],nodes:0};
+  }
   for(let i=0;i<needed;i++)tasks.push(group);
  }
  tasks.sort((a,b)=>byGroup[a].length-byGroup[b].length);

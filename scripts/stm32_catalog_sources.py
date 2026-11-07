@@ -15,9 +15,11 @@ PACKAGES = REGISTRY['packages']
 
 
 def stm32_group(signal):
+    if signal.startswith('ADC'):
+        return 'ADC' if re.fullmatch(r'ADC\d*_IN[PN]?\d+[a-z]?', signal) else 'ADC_TRIGGER'
     for prefixes, group in [
         (('USART', 'UART', 'LPUART'), 'UART'), (('I2C',), 'I2C'),
-        (('I2S', 'SAI'), 'I2S'), (('SPI',), 'SPI'), (('ADC',), 'ADC'),
+        (('I2S', 'SAI'), 'I2S'), (('SPI',), 'SPI'),
         (('DAC',), 'DAC'), (('CAN', 'FDCAN'), 'CAN'), (('USB',), 'USB'),
         (('SDIO', 'SDMMC'), 'SDIO'), (('RCC', 'MCO', 'LSCO'), 'CLOCK'),
     ]:

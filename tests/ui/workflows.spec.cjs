@@ -805,3 +805,46 @@ test('PWM servo aliases require consent on both pins and export the shared signa
  await page.locator('#import-file').setInputFiles({name:'shared-pwm.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(exported))});
  await expect(page.locator('#incoming-plan-dialog')).toBeVisible();
 });
+
+test('Pico 2 FT inputs retain supply/off-state conditions and ADC pins stay non-FT',async({page})=>{
+ await ready(page,'#board=pico-family&profile=pico2&pin=1');
+ if(page.viewportSize().width<=970)await page.locator('#open-pin').click();
+ const badge=page.locator('#pin-detail .pin-badge');
+ await expect(badge).toHaveText('Conditional 5.5V input');
+ await expect(badge).toHaveAttribute('title',/only with IOVDD=3.3 V/);
+ await expect(badge).toHaveAttribute('title',/does not provide a 5 V output/);
+ await expect(badge).toHaveAttribute('title',/IOVDD=0 V/);
+ if(await page.locator('#details-dialog').isVisible())await page.locator('#close-details').click();
+ await page.locator('#diagram [data-pin="31"]').click();
+ await expect(badge).toHaveText('Non-FT ADC/GPIO');
+ await expect(badge).toHaveAttribute('title',/without FT 5.5 V input tolerance/);
+});
+
+test('Pi 5 SPI suggestions expose standard controller roles with documented header pins',async({page})=>{
+ await ready(page,'#board=raspberry-pi-40&profile=raspberry-pi-5');await openPlan(page);
+ await page.locator('#peripheral-builder summary').click();
+ await page.locator('#peripheral-bus').selectOption('SPI0');
+ await expect(page.locator('#peripheral-notes')).toContainText('SIO[0]=MOSI, SIO[1]=MISO');
+ await expect(page.locator('#peripheral-bus option[value="SPI4"]')).toHaveCount(0);
+ for(const [role,pin] of [['MOSI',19],['MISO',21],['SCK',23]])
+  await expect(page.locator(`[data-peripheral-role="${role}"] option`).filter({hasText:String(pin).padStart(2,'0')+' ·'})).toHaveCount(1);
+ await page.locator('#pin-suggestions summary').click();
+ await page.locator('[data-suggest-count="SPI"]').fill('1');
+ await page.locator('[data-suggest-count="I2C"]').fill('0');
+ await page.locator('[data-suggest-count="UART"]').fill('0');
+ await page.locator('#suggest-run').click();await expect(page.locator('.suggestion')).toHaveCount(3);
+ await expect(page.locator('.suggestion').first()).toContainText('SPI0');
+});
+
+test('STM32 digital ADC triggers are separate from analog-input filtering',async({page})=>{
+ await ready(page,'#board=nucleo-64&profile=nucleo-f446re&pin=2');
+ if(page.viewportSize().width<=970)await page.locator('#open-pin').click();
+ await expect(page.locator('#pin-detail')).toContainText('Digital ADC trigger; not an analog sampling input.');
+ if(await page.locator('#details-dialog').isVisible())await page.locator('#close-details').click();
+ await page.locator('#filter-options summary').click();
+ await page.locator('[data-filter="ADC"]').click();
+ await expect(page.locator('#diagram [data-pin="2"]')).toHaveClass(/dimmed/);
+ await page.locator('[data-filter="ADC"]').click();
+ await page.locator('[data-filter="ADC_TRIGGER"]').click();
+ await expect(page.locator('#diagram [data-pin="2"]')).not.toHaveClass(/dimmed/);
+});

@@ -37,3 +37,18 @@ test('guided connections preserve labels and refuse occupied pins or mixed buses
  const canBus=availablePeripherals(bluePill).find(b=>b.id==='CAN1');
  assert(canBus);assert.equal(canBus.group,'CAN');assert.deepEqual(canBus.roles,['TX','RX']);
 });
+
+test('RP1 SPI uses explicit single-lane controller roles and keeps array CS identities',()=>{
+ const b=boards.find(b=>b.id==='raspberry-pi-5');
+ const buses=availablePeripherals(b,{includeSPIChipSelect:true});
+ const spi=buses.filter(b=>b.group==='SPI');
+ assert.deepEqual(spi.map(b=>b.id),['SPI0','SPI1','SPI3','SPI5']);
+ const spi0=spi.find(b=>b.id==='SPI0');assert.equal(spi0.mode,'spi-controller-single');
+ for(const [role,pin,name] of [['MOSI',19,'SPI0_SIO[0]'],['MISO',21,'SPI0_SIO[1]'],['SCK',23,'SPI0_SCLK'],['CS',24,'SPI0_CSn[0]']])
+  assert(spi0.candidates.some(c=>c.role===role&&c.pin.number===pin&&c.fn.name===name),role);
+ const chipSelects=spi0.candidates.filter(c=>c.role==='CS');
+ assert.equal(new Set(chipSelects.map(c=>peripheralSignal(c.fn).channel)).size,4);
+ assert.equal(peripheralSignal({name:'SPI0_SIO[0]',group:'SPI'}),null);
+ assert.equal(peripheralSignal({name:'SPI4_SIO[0]',group:'SPI',mode:'spi-device-single'}),null);
+ assert(availablePeripherals(boards.find(b=>b.id==='raspberry-pi-4')).some(b=>b.id==='SPI0'));
+});

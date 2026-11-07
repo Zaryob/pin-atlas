@@ -67,6 +67,8 @@ def acquire(use_snapshots=False):
             sys.exit(f"Source hash mismatch: {doc['id']}. Review the new manufacturer revision; do not silently update the lock.")
 
 def category(name):
+    if re.match(r'ADC\d*_',name):
+        return 'ADC' if re.fullmatch(r'ADC\d*_IN[PN]?\d+[a-z]?',name) else 'ADC_TRIGGER'
     if name.startswith('SPI'):return 'SPI'
     if name.startswith('I2S'):return 'I2S'
     if re.match(r'(I2C|SDA\d|SCL\d)',name):return 'I2C'
@@ -138,6 +140,12 @@ def rp_tables():
                                     adc=name.split('_')[1];fs.append(function(adc,None,evidence))
                             elif name in bank1:fs=copy.deepcopy(bank1[name])
                             package[total][n]={'number':n,'name':name,'type':kind(name),'functions':fs,'evidence':[evidence]}
+                            if name.startswith('GPIO'):
+                                pad_type=clean(row[3])
+                                assert pad_type in ('Digital IO (FT)','Digital IO / Analogue'), (name,pad_type)
+                                limits=ref('rp2350-input-limits','rp2350',1332,'§14.8.2.1 · Table 1673 · FT input conditions; pin types in Tables 1674–1679')
+                                package[total][n]['inputTolerance']={'kind':'rp2350-ft' if '(FT)' in pad_type else 'rp2350-analog','evidence':limits}
+                                package[total][n]['evidence'].append(limits)
         for total,chip,page in [(60,'rp2350a',16),(80,'rp2350b',17)]:
             evidence=ref(f'{chip}-iovdd','rp2350',page,'§1.2.1 · '+('Figure 2' if total==60 else 'Figure 3')+' · IOVDD pads (Table 1679 discrepancy reviewed)','visual-diagram')
             for n in OBS['rp2350-iovdd'][chip]:
@@ -271,6 +279,10 @@ def pi5():
                     pin=next(p for p in pins.values() if p['name']=='GPIO'+str(gp))
                     evidence=ref(f'rp1-alt-p{index+1}','rp1-peripherals',index+1,'§3.1.1 · Table 4 · GPIO function selection a0–a8')
                     pin['functions']=[function(clean(value),alt,evidence,True) for alt,value in enumerate(row[1:]) if clean(value)]
+                    for fn in pin['functions']:
+                        if fn['group']=='SPI':
+                            instance=re.match(r'SPI(\d+)',fn['name'])[1]
+                            fn['mode']='spi-device-single' if instance=='4' else 'spi-controller-single'
         assert found==set(range(28))
     return list(pins.values())
 
@@ -397,6 +409,10 @@ def link_board_packages(boards):
                     continue
                 pad=by_name[name]
             pin['mcuPin']=pad['number']
+            if pad.get('inputTolerance'):
+                pin['inputTolerance']=copy.deepcopy(pad['inputTolerance'])
+                if pin['inputTolerance']['evidence'] not in pin['evidence']:
+                    pin['evidence'].append(pin['inputTolerance']['evidence'])
             if pad['evidence'][0] not in pin['evidence']:
                 pin['evidence'].append(pad['evidence'][0])
 

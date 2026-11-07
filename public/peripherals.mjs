@@ -7,6 +7,9 @@ const roles = { SPI: ['SCK', 'MISO', 'MOSI'], I2C: ['SCL', 'SDA'], UART: ['TX', 
 // capabilities; no default pinmux or bus number is invented for Arduino aliases.
 export function peripheralSignal(fn) {
   if (!roles[fn.group]) return null;
+  // The guided SPI workflow is single-lane controller mode. RP1 SPI4 is
+  // device-only; retain its mux functions for manual use, not controller routing.
+  if (fn.mode === 'spi-device-single') return null;
   const name = fn.name.toUpperCase();
   let match = name.match(/^(SPI\d*|I2C\d*|USART\d+|LPUART\d+|UART\d*)[ _]+(.+)$/);
   if (!match) {
@@ -25,12 +28,13 @@ export function peripheralSignal(fn) {
   }
   if (!match) return null;
   let role = match[2].split(/[ _(]/)[0];
+  if (fn.mode === 'spi-controller-single' && /^SIO\[[01]\]$/.test(role)) role = role === 'SIO[0]' ? 'MOSI' : 'MISO';
   if (fn.group === 'UART') role = ({TXD:'TX',RXD:'RX'})[role] || role;
   if (fn.group === 'SPI') role = ({RX:'MISO', TX:'MOSI', CIPO:'MISO', COPI:'MOSI', SCLK:'SCK', CLK:'SCK'})[role] || role;
-  const channel=fn.group==='SPI' && /^(?:(?:NSS|SS|CS|CE)\d*|CSN)$/.test(role)?role:null;
+  const channel=fn.group==='SPI' && /^(?:(?:NSS|SS|CS|CE)\d*|CSN(?:\[\d+\])?)$/.test(role)?role:null;
   if(channel)role='CS';
   if (!roles[fn.group].includes(role) && !channel) return null;
-  return {id:match[1], group:fn.group, role, ...(channel?{channel}:{})};
+  return {id:match[1], group:fn.group, role, ...(channel?{channel}:{}), ...(fn.mode?{mode:fn.mode}:{})};
 }
 
 export function availablePeripherals(board,{includeSPIChipSelect=false}={}) {

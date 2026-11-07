@@ -1297,6 +1297,7 @@
   color: var(--ink);
 }
 
+:root { --pin-adc-trigger: var(--pin-timer); }
 .pwm-sharing { display: flex; align-items: flex-start; gap: .6rem; margin-top: 1rem; }
 .pwm-sharing input { margin-top: .25rem; flex-shrink: 0; }
 .pwm-notes { margin-block: 1rem; }

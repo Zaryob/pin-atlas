@@ -50,12 +50,12 @@ const isChip = item => ['qfn','lqfp','dip'].includes(item.layout);
 const icon = name => `<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">${icons[name] || icons.chip}</svg>`;
 function hydrateIcons(root = document) { $$('[data-icon]', root).forEach(el => el.innerHTML = icon(el.dataset.icon)); }
 hydrateIcons();
-const colors = Object.fromEntries(['GPIO','POWER','GND','SYSTEM','SPI','I2C','UART','PWM','ADC','HSTX','PIO','USB','QMI','SIO','PCM','I2S','CLOCK','JTAG','DPI','SDIO','SMI','SWD','CAN','TIMER','IRQ','DAC','TOUCH'].map(group => [group, `var(--pin-${group.toLowerCase()})`]));
+const colors = Object.fromEntries(['GPIO','POWER','GND','SYSTEM','SPI','I2C','UART','PWM','ADC','HSTX','PIO','USB','QMI','SIO','PCM','I2S','CLOCK','JTAG','DPI','SDIO','SMI','SWD','CAN','TIMER','IRQ','DAC','TOUCH','ADC_TRIGGER'].map(group => [group, `var(--pin-${group.toLowerCase().replace('_','-')})`]));
 const appBase = new URL('./', import.meta.url);
 const familyKeys = { GPIO: 'generalIO', POWER: 'power', GND: 'ground', SYSTEM: 'system', ADC: 'analog' };
 const familyName = type => t(familyKeys[type] || type);
 const subtitle = item => t(`board.${item.id}`, {}, item.subtitle);
-const groups = ['SPI','I2C','UART','PWM','ADC','HSTX','PIO','PCM','I2S','CLOCK','JTAG','DPI','SDIO','SMI','SWD','CAN','TIMER','USB','IRQ','DAC','TOUCH'];
+const groups = ['SPI','I2C','UART','PWM','ADC','HSTX','PIO','PCM','I2S','CLOCK','JTAG','DPI','SDIO','SMI','SWD','CAN','TIMER','USB','IRQ','DAC','TOUCH','ADC_TRIGGER'];
 let evidence = {references:{},documents:[]};
 let boards, layouts, layout, board, selected = 1, selectedFn, filters = new Set(), search = '', flipped = false, rotated = false, view = 'map', assignments = {}, toastTimer;
 let currentView = 'home', homeActiveFilter = 'all', homeSearchQuery = '', homeCatalogType = 'all';
@@ -218,7 +218,7 @@ function renderFilters() {
  if (disclosure.hidden) disclosure.open = false;
  $('#active-filter-count').hidden = !filters.size;
  $('#active-filter-count').textContent = filters.size;
- $('#filters').innerHTML = groups.filter(g => available.has(g)).map(g => `<button class="filter ${filters.has(g) ? 'active' : ''}" data-filter="${g}" style="--color:${colors[g]}" aria-pressed="${filters.has(g)}"><i></i>${g === 'I2C' ? 'I²C' : g}</button>`).join('');
+ $('#filters').innerHTML = groups.filter(g => available.has(g)).map(g => `<button class="filter ${filters.has(g) ? 'active' : ''}" data-filter="${g}" style="--color:${colors[g]}" aria-pressed="${filters.has(g)}"><i></i>${g === 'I2C' ? 'I²C' : esc(t(g))}</button>`).join('');
 }
 function choosePin(number, reveal = true) {
  selected = Number(number); const p = pinByNumber(selected);
@@ -462,6 +462,7 @@ function renderTable() {
 }
 function electricalBadgeHTML(pin) {
  if (pin.type !== 'GPIO' && pin.type !== 'ADC') return '';
+ if (pin.inputTolerance) return ` <span class="pin-badge ${pin.inputTolerance.kind==='rp2350-ft'?'badge-ft':'badge-warn'}" title="${esc(t(pin.inputTolerance.kind==='rp2350-ft'?'rp2350FTNote':'rp2350AnalogNote'))}">${esc(t(pin.inputTolerance.kind==='rp2350-ft'?'rp2350FTLabel':'rp2350AnalogLabel'))}</span>`;
  if (pin.fiveVoltTolerant === true) return ` <span class="pin-badge badge-ft" title="${esc(t('stm32FTNote'))}">5V FT</span>`;
  if (pin.fiveVoltTolerant === false) return ` <span class="pin-badge badge-warn" title="${esc(t('stm32NonFTNote'))}">3.3V Only</span>`;
  if (board.voltage?.includes('3.3 V') || board.voltage?.includes('3.6 V')) return ` <span class="pin-badge badge-warn" title="${esc(t('threeVoltOnlyNote'))}">3.3V Only</span>`;
@@ -494,6 +495,7 @@ function renderDetail() {
    let note = '';
    if (pin.reserved) note = t(pin.reservedLabel || (pin.name === 'NC' ? 'unconnected' : 'reserved'));
    else if (f.configuration?.field) note = `${f.selector || f.configuration.field} · ${t('remap')}`;
+   else if (f.group==='ADC_TRIGGER') note = t('adcTriggerNote');
    else if (f.selector) note = f.selector;
    else if (f === opts[0]) note = t('default');
    return `<label class="function-option" style="--color:${colors[f.group]||colors.SYSTEM}"><input type="radio" name="pin-function" value="${esc(f.name)}" ${selectedFn===f.name?'checked':''} ${pin.reserved || pin.hardwareBlocked?'disabled':''}><span class="function-option-name">${esc(f.name)}</span><small>${esc(note)}</small></label>`;
@@ -502,7 +504,7 @@ function renderDetail() {
  const occupied=pinAssignment(pin,assignments,board,{otherContactOnly:true});
  const occupancy=occupied?`<div class="pin-occupancy"><p>${esc(assignmentMessage(occupied,t))}</p><button type="button" class="button secondary" data-open-assignment="${occupied.pin.number}">${esc(t('openOccupiedPin'))}</button></div>`:'';
  $('#selected-pin-label').textContent = `${pin.name} · ${t('details')}`;
- $('#pin-detail').innerHTML=`<div class="pin-detail-body"><div class="pin-hero"><div class="pin-identity"><h2>${esc(pin.name.replace('_ADC',' / A'))}</h2><span class="physical-pin">${t('physicalPin')} <strong>${esc(physicalLabel(pin))}</strong>${pin.boardLabel && pin.boardLabel!==pin.name ? `<span class="mcu-pin-label"> · ${esc(t('boardLabel',{label:pin.boardLabel}))}</span>` : ''}${pin.mcuPort ? `<span class="mcu-pin-label">${pin.arduinoPin!==undefined?` · Arduino D${pin.arduinoPin}`:''} · ${t('mcuPort', {port:pin.mcuPort})}</span>` : ''}${pin.mcuPin ? `<span class="mcu-pin-label"> · ${t('mcuPin', {pin:pin.mcuPin})}</span>` : ''}</span></div><span class="pin-type" style="color:${colors[pin.type]}">${familyName(pin.type)} · ${esc(pin.type === 'GPIO' ? board.voltage : '')}${electricalBadgeHTML(pin)}</span>${occupancy}${pinHardwareHTML(pin)}${circuitNotesHTML([pin])}${sharedNote}${referenceLink(pin.evidence[0], t('pinSource'), 'pin-source')}</div><fieldset class="function-section"><legend class="small-label">${t(opts.length>1 ? 'chooseFunction' : 'pinFunction')}</legend>${filters.size || query ? `<p class="function-hint">${t('matchingFunctions')}</p>` : ''}<div class="function-list">${primary.map(option).join('')}</div>${more.length ? `<details class="more-functions"><summary>${t('allFunctions', {count:more.length})}</summary><div class="function-list">${more.map(option).join('')}</div></details>` : ''}<div id="function-source"></div></fieldset><div class="label-section"><label class="small-label" for="custom-label">${t('projectLabel')} <span>${t('optional')}</span></label><input id="custom-label" maxlength="40" placeholder="${esc(t('labelExample'))}" value="${esc(assignments[selected]?.label||'')}"></div><div class="pin-guidance"><h3>${esc(t('generalGuidance'))}</h3><p class="pin-description">${esc(description)}${pin.fiveVoltTolerant !== undefined ? ' '+esc(t(pin.fiveVoltTolerant ? 'stm32FTNote' : 'stm32NonFTNote')) : ''}</p></div>${pin.functions.some(fn=>pwmResource(fn,board)) ? `<section id="pwm-settings" ${pwmResource(pin.functions.find(f=>f.name===selectedFn),board)?'':'hidden'}><label class="pwm-sharing"><input id="shared-pwm" type="checkbox" ${assignments[selected]?.sharedPWM?'checked':''}>${esc(t('pwmShareConsent'))}</label><p>${esc(t('pwmFrequencyNote'))}</p></section>` : ''}${renderPinEvidence(pin)}</div><div class="detail-action"><button id="add-plan" class="add-plan" ${pin.reserved || pin.hardwareBlocked || occupied ? 'disabled' : ''}>${icon(hasPlan?'check':'plus')}${t(occupied?'peripheralOccupiedShort':pin.hardwareBlocked ? 'hwUnavailable' : pin.reserved ? (pin.reservedLabel || (pin.name==='NC' ? 'unconnected' : 'reserved')) : hasPlan ? 'updatePin' : 'addPin')}</button><div class="pin-save-feedback"><span id="pin-save-status" role="status"></span><button id="view-saved-plan" hidden>${t('viewPlan')}</button></div></div>`;
+ $('#pin-detail').innerHTML=`<div class="pin-detail-body"><div class="pin-hero"><div class="pin-identity"><h2>${esc(pin.name.replace('_ADC',' / A'))}</h2><span class="physical-pin">${t('physicalPin')} <strong>${esc(physicalLabel(pin))}</strong>${pin.boardLabel && pin.boardLabel!==pin.name ? `<span class="mcu-pin-label"> · ${esc(t('boardLabel',{label:pin.boardLabel}))}</span>` : ''}${pin.mcuPort ? `<span class="mcu-pin-label">${pin.arduinoPin!==undefined?` · Arduino D${pin.arduinoPin}`:''} · ${t('mcuPort', {port:pin.mcuPort})}</span>` : ''}${pin.mcuPin ? `<span class="mcu-pin-label"> · ${t('mcuPin', {pin:pin.mcuPin})}</span>` : ''}</span></div><span class="pin-type" style="color:${colors[pin.type]}">${familyName(pin.type)} · ${esc(pin.type === 'GPIO' ? board.voltage : '')}${electricalBadgeHTML(pin)}</span>${occupancy}${pinHardwareHTML(pin)}${circuitNotesHTML([pin])}${sharedNote}${referenceLink(pin.evidence[0], t('pinSource'), 'pin-source')}</div><fieldset class="function-section"><legend class="small-label">${t(opts.length>1 ? 'chooseFunction' : 'pinFunction')}</legend>${filters.size || query ? `<p class="function-hint">${t('matchingFunctions')}</p>` : ''}<div class="function-list">${primary.map(option).join('')}</div>${more.length ? `<details class="more-functions"><summary>${t('allFunctions', {count:more.length})}</summary><div class="function-list">${more.map(option).join('')}</div></details>` : ''}<div id="function-source"></div></fieldset><div class="label-section"><label class="small-label" for="custom-label">${t('projectLabel')} <span>${t('optional')}</span></label><input id="custom-label" maxlength="40" placeholder="${esc(t('labelExample'))}" value="${esc(assignments[selected]?.label||'')}"></div><div class="pin-guidance"><h3>${esc(t('generalGuidance'))}</h3><p class="pin-description">${esc(description)}${pin.fiveVoltTolerant !== undefined ? ' '+esc(t(pin.fiveVoltTolerant ? 'stm32FTNote' : 'stm32NonFTNote')) : ''}</p></div>${pin.inputTolerance ? `<p class="hardware-note">${esc(t(pin.inputTolerance.kind==='rp2350-ft'?'rp2350FTNote':'rp2350AnalogNote'))}</p>` : ''}${pin.functions.some(fn=>pwmResource(fn,board)) ? `<section id="pwm-settings" ${pwmResource(pin.functions.find(f=>f.name===selectedFn),board)?'':'hidden'}><label class="pwm-sharing"><input id="shared-pwm" type="checkbox" ${assignments[selected]?.sharedPWM?'checked':''}>${esc(t('pwmShareConsent'))}</label><p>${esc(t('pwmFrequencyNote'))}</p></section>` : ''}${renderPinEvidence(pin)}</div><div class="detail-action"><button id="add-plan" class="add-plan" ${pin.reserved || pin.hardwareBlocked || occupied ? 'disabled' : ''}>${icon(hasPlan?'check':'plus')}${t(occupied?'peripheralOccupiedShort':pin.hardwareBlocked ? 'hwUnavailable' : pin.reserved ? (pin.reservedLabel || (pin.name==='NC' ? 'unconnected' : 'reserved')) : hasPlan ? 'updatePin' : 'addPin')}</button><div class="pin-save-feedback"><span id="pin-save-status" role="status"></span><button id="view-saved-plan" hidden>${t('viewPlan')}</button></div></div>`;
  renderFunctionSource(pin);
 }
 function referenceLink(key, label, className) {
@@ -649,7 +651,7 @@ $('#suggest-form').addEventListener('submit',event=>{
 });
 function renderSuggestions(){
  const result=suggestionResult;if(!result)return;
- $('#suggest-feedback').textContent=t(({ready:'suggestReady',blocked:'suggestBlocked',invalid:'suggestInvalid',impossible:'suggestImpossible',limited:'suggestLimited'})[result.status]||'suggestFailed')+(result.truncated&&result.status==='ready'?' '+t('suggestBounded'):'');
+ $('#suggest-feedback').textContent=t(({ready:'suggestReady',blocked:'suggestBlocked',invalid:'suggestInvalid',impossible:'suggestImpossible',unsupported:'suggestUnsupported',limited:'suggestLimited'})[result.status]||'suggestFailed')+(result.truncated&&result.status==='ready'?' '+t('suggestBounded'):'');
  const identity=signal=>JSON.stringify([signal.pin,signal.function,signal.selector]);
  const baseline=new Map(result.alternatives[0]?.connections.flatMap(connection=>connection.signals.map(signal=>[connection.id+':'+signal.role,identity(signal)]))||[]);
  $('#suggest-results').classList.remove('only-differences');
@@ -703,7 +705,7 @@ function renderPlan() {
 function renderPeripheral() {
  const buses=availablePeripherals(board);
  $('#peripheral-builder').hidden=!buses.length;
- $('#peripheral-bus').innerHTML=buses.map(bus=>`<option value="${esc(bus.id)}">${esc(bus.id)} · ${bus.roles.join(' / ')}</option>`).join('');
+ $('#peripheral-bus').innerHTML=buses.map(bus=>`<option value="${esc(bus.id)}">${esc(bus.id)}${bus.mode?' · '+esc(t('spiControllerSingle')):''} · ${bus.roles.join(' / ')}</option>`).join('');
  renderPeripheralPins();
 }
 function renderPeripheralPins() {
@@ -721,7 +723,7 @@ function renderPeripheralNotes() {
  const pins=chosen.map(candidate=>candidate.pin);
  const sources=[...new Set(chosen.flatMap(({pin,fn})=>[...pin.evidence,fn.configurationEvidence,fn.evidence].filter(Boolean)))];
  const remap=chosen.some(({fn})=>fn.configuration)?`<p>${esc(t('remapNote'))}</p>`:'';
- $('#peripheral-notes').innerHTML=circuitNotesHTML(pins)+(bus?.group==='CAN'?`<p class="hardware-note">${esc(t('peripheralCanTransceiver'))}</p>`:'')+
+ $('#peripheral-notes').innerHTML=circuitNotesHTML(pins)+(bus?.mode?`<p>${esc(t('rp1SpiModeNote'))}</p>`:'')+(bus?.group==='CAN'?`<p class="hardware-note">${esc(t('peripheralCanTransceiver'))}</p>`:'')+
   `<p>${esc(t('peripheralElectrical',{voltage:board.voltage}))}</p>${bus?.group==='SPI'?`<p>${esc(t('peripheralChipSelect'))}</p>`:''}`+
   (chosen.length?`<details class="peripheral-guidance"><summary>${esc(t('suggestEvidence'))}</summary>${generalNotesHTML(pins)}${remap}${sources.map(key=>`<p>${referenceLink(key,t('functionSource'),'')}</p>`).join('')}</details>`:'');
 }

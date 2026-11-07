@@ -105,9 +105,14 @@
         ],
         "evidence": [
           "pico-header",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 2
+        "mcuPin": 2,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 2,
@@ -197,9 +202,14 @@
         ],
         "evidence": [
           "pico-header",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 3
+        "mcuPin": 3,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 3,
@@ -306,9 +316,14 @@
         ],
         "evidence": [
           "pico-header",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 4
+        "mcuPin": 4,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 5,
@@ -406,9 +421,14 @@
         ],
         "evidence": [
           "pico-header",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 5
+        "mcuPin": 5,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 6,
@@ -498,9 +518,14 @@
         ],
         "evidence": [
           "pico-header",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 7
+        "mcuPin": 7,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 7,
@@ -590,9 +615,14 @@
         ],
         "evidence": [
           "pico-header",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 8
+        "mcuPin": 8,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 8,
@@ -691,9 +721,14 @@
         ],
         "evidence": [
           "pico-header",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 9
+        "mcuPin": 9,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 10,
@@ -783,9 +818,14 @@
         ],
         "evidence": [
           "pico-header",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 10
+        "mcuPin": 10,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 11,
@@ -875,9 +915,14 @@
         ],
         "evidence": [
           "pico-header",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 12
+        "mcuPin": 12,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 12,
@@ -959,9 +1004,14 @@
         ],
         "evidence": [
           "pico-header",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 13
+        "mcuPin": 13,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 13,
@@ -1060,9 +1110,14 @@
         ],
         "evidence": [
           "pico-header",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 14
+        "mcuPin": 14,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 15,
@@ -1152,9 +1207,14 @@
         ],
         "evidence": [
           "pico-header",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 15
+        "mcuPin": 15,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 16,
@@ -1252,9 +1312,14 @@
         ],
         "evidence": [
           "pico-header",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 16
+        "mcuPin": 16,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 17,
@@ -1352,9 +1417,14 @@
         ],
         "evidence": [
           "pico-header",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 17
+        "mcuPin": 17,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 18,
@@ -1469,9 +1539,14 @@
         ],
         "evidence": [
           "pico-header",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 18
+        "mcuPin": 18,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 20,
@@ -1577,9 +1652,14 @@
         ],
         "evidence": [
           "pico-header",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 19
+        "mcuPin": 19,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 21,
@@ -1669,9 +1749,14 @@
         ],
         "evidence": [
           "pico-header",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 27
+        "mcuPin": 27,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 22,
@@ -1761,9 +1846,14 @@
         ],
         "evidence": [
           "pico-header",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 28
+        "mcuPin": 28,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 23,
@@ -1870,9 +1960,14 @@
         ],
         "evidence": [
           "pico-header",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 29
+        "mcuPin": 29,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 25,
@@ -1978,9 +2073,14 @@
         ],
         "evidence": [
           "pico-header",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 31
+        "mcuPin": 31,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 26,
@@ -2070,9 +2170,14 @@
         ],
         "evidence": [
           "pico-header",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 32
+        "mcuPin": 32,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 27,
@@ -2162,9 +2267,14 @@
         ],
         "evidence": [
           "pico-header",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 33
+        "mcuPin": 33,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 28,
@@ -2271,9 +2381,14 @@
         ],
         "evidence": [
           "pico-header",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 34
+        "mcuPin": 34,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 30,
@@ -2382,9 +2497,14 @@
         ],
         "evidence": [
           "pico-header",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 40
+        "mcuPin": 40,
+        "inputTolerance": {
+          "kind": "rp2350-analog",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 32,
@@ -2480,9 +2600,14 @@
         ],
         "evidence": [
           "pico-header",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 41
+        "mcuPin": 41,
+        "inputTolerance": {
+          "kind": "rp2350-analog",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 33,
@@ -2581,9 +2706,14 @@
         ],
         "evidence": [
           "pico-header",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 42
+        "mcuPin": 42,
+        "inputTolerance": {
+          "kind": "rp2350-analog",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 35,
@@ -4467,7 +4597,8 @@
             "signal": "SPI0_CSn[3]",
             "evidence": "rp1-alt-p16",
             "alt": 0,
-            "selector": "ALT0"
+            "selector": "ALT0",
+            "mode": "spi-controller-single"
           },
           {
             "name": "DPI_VSYNC",
@@ -4531,7 +4662,8 @@
             "signal": "SPI2_SIO[0]",
             "evidence": "rp1-alt-p16",
             "alt": 8,
-            "selector": "ALT8"
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
           }
         ],
         "evidence": [
@@ -4560,7 +4692,8 @@
             "signal": "SPI0_CSn[2]",
             "evidence": "rp1-alt-p16",
             "alt": 0,
-            "selector": "ALT0"
+            "selector": "ALT0",
+            "mode": "spi-controller-single"
           },
           {
             "name": "DPI_HSYNC",
@@ -4624,7 +4757,8 @@
             "signal": "SPI2_SCLK",
             "evidence": "rp1-alt-p16",
             "alt": 8,
-            "selector": "ALT8"
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
           }
         ],
         "evidence": [
@@ -4717,7 +4851,8 @@
             "signal": "SPI3_CSn[0]",
             "evidence": "rp1-alt-p16",
             "alt": 8,
-            "selector": "ALT8"
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
           }
         ],
         "evidence": [
@@ -4800,7 +4935,8 @@
             "signal": "SPI5_SIO[0]",
             "evidence": "rp1-alt-p16",
             "alt": 8,
-            "selector": "ALT8"
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
           }
         ],
         "evidence": [
@@ -4893,7 +5029,8 @@
             "signal": "SPI5_SCLK",
             "evidence": "rp1-alt-p16",
             "alt": 8,
-            "selector": "ALT8"
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
           }
         ],
         "evidence": [
@@ -4912,7 +5049,8 @@
             "signal": "SPI1_CSn[1]",
             "evidence": "rp1-alt-p16",
             "alt": 0,
-            "selector": "ALT0"
+            "selector": "ALT0",
+            "mode": "spi-controller-single"
           },
           {
             "name": "DPI_D[13]",
@@ -4979,7 +5117,8 @@
             "signal": "SPI1_CSn[0]",
             "evidence": "rp1-alt-p16",
             "alt": 0,
-            "selector": "ALT0"
+            "selector": "ALT0",
+            "mode": "spi-controller-single"
           },
           {
             "name": "DPI_D[14]",
@@ -5126,7 +5265,8 @@
             "signal": "SPI1_CSn[1]",
             "evidence": "rp1-alt-p17",
             "alt": 8,
-            "selector": "ALT8"
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
           }
         ],
         "evidence": [
@@ -5371,7 +5511,8 @@
             "signal": "SPI2_CSn[1]",
             "evidence": "rp1-alt-p17",
             "alt": 8,
-            "selector": "ALT8"
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
           }
         ],
         "evidence": [
@@ -5390,7 +5531,8 @@
             "signal": "SPI0_SIO[0]",
             "evidence": "rp1-alt-p16",
             "alt": 0,
-            "selector": "ALT0"
+            "selector": "ALT0",
+            "mode": "spi-controller-single"
           },
           {
             "name": "DPI_D[6]",
@@ -5446,7 +5588,8 @@
             "signal": "SPI4_SIO[1]",
             "evidence": "rp1-alt-p16",
             "alt": 8,
-            "selector": "ALT8"
+            "selector": "ALT8",
+            "mode": "spi-device-single"
           }
         ],
         "evidence": [
@@ -5475,7 +5618,8 @@
             "signal": "SPI0_SIO[1]",
             "evidence": "rp1-alt-p16",
             "alt": 0,
-            "selector": "ALT0"
+            "selector": "ALT0",
+            "mode": "spi-controller-single"
           },
           {
             "name": "DPI_D[5]",
@@ -5531,7 +5675,8 @@
             "signal": "SPI4_SIO[0]",
             "evidence": "rp1-alt-p16",
             "alt": 8,
-            "selector": "ALT8"
+            "selector": "ALT8",
+            "mode": "spi-device-single"
           }
         ],
         "evidence": [
@@ -5614,7 +5759,8 @@
             "signal": "SPI3_CSn[1]",
             "evidence": "rp1-alt-p17",
             "alt": 8,
-            "selector": "ALT8"
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
           }
         ],
         "evidence": [
@@ -5633,7 +5779,8 @@
             "signal": "SPI0_SCLK",
             "evidence": "rp1-alt-p16",
             "alt": 0,
-            "selector": "ALT0"
+            "selector": "ALT0",
+            "mode": "spi-controller-single"
           },
           {
             "name": "DPI_D[7]",
@@ -5689,7 +5836,8 @@
             "signal": "SPI4_SCLK",
             "evidence": "rp1-alt-p16",
             "alt": 8,
-            "selector": "ALT8"
+            "selector": "ALT8",
+            "mode": "spi-device-single"
           }
         ],
         "evidence": [
@@ -5708,7 +5856,8 @@
             "signal": "SPI0_CSn[0]",
             "evidence": "rp1-alt-p16",
             "alt": 0,
-            "selector": "ALT0"
+            "selector": "ALT0",
+            "mode": "spi-controller-single"
           },
           {
             "name": "DPI_D[4]",
@@ -5764,7 +5913,8 @@
             "signal": "SPI4_CSn[0]",
             "evidence": "rp1-alt-p16",
             "alt": 8,
-            "selector": "ALT8"
+            "selector": "ALT8",
+            "mode": "spi-device-single"
           }
         ],
         "evidence": [
@@ -5793,7 +5943,8 @@
             "signal": "SPI0_CSn[1]",
             "evidence": "rp1-alt-p16",
             "alt": 0,
-            "selector": "ALT0"
+            "selector": "ALT0",
+            "mode": "spi-controller-single"
           },
           {
             "name": "DPI_D[3]",
@@ -5857,7 +6008,8 @@
             "signal": "SPI3_SCLK",
             "evidence": "rp1-alt-p16",
             "alt": 8,
-            "selector": "ALT8"
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
           }
         ],
         "evidence": [
@@ -5876,7 +6028,8 @@
             "signal": "SPI0_SIO[3]",
             "evidence": "rp1-alt-p16",
             "alt": 0,
-            "selector": "ALT0"
+            "selector": "ALT0",
+            "mode": "spi-controller-single"
           },
           {
             "name": "DPI_PCLK",
@@ -5932,7 +6085,8 @@
             "signal": "SPI2_CSn[0]",
             "evidence": "rp1-alt-p16",
             "alt": 8,
-            "selector": "ALT8"
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
           }
         ],
         "evidence": [
@@ -5953,7 +6107,8 @@
             "signal": "SPI0_SIO[2]",
             "evidence": "rp1-alt-p16",
             "alt": 0,
-            "selector": "ALT0"
+            "selector": "ALT0",
+            "mode": "spi-controller-single"
           },
           {
             "name": "DPI_DE",
@@ -6009,7 +6164,8 @@
             "signal": "SPI2_SIO[1]",
             "evidence": "rp1-alt-p16",
             "alt": 8,
-            "selector": "ALT8"
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
           }
         ],
         "evidence": [
@@ -6094,7 +6250,8 @@
             "signal": "SPI3_SIO[1]",
             "evidence": "rp1-alt-p16",
             "alt": 8,
-            "selector": "ALT8"
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
           }
         ],
         "evidence": [
@@ -6187,7 +6344,8 @@
             "signal": "SPI3_SIO[0]",
             "evidence": "rp1-alt-p16",
             "alt": 8,
-            "selector": "ALT8"
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
           }
         ],
         "evidence": [
@@ -6270,7 +6428,8 @@
             "signal": "SPI5_CSn[0]",
             "evidence": "rp1-alt-p16",
             "alt": 8,
-            "selector": "ALT8"
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
           }
         ],
         "evidence": [
@@ -6353,7 +6512,8 @@
             "signal": "SPI5_SIO[1]",
             "evidence": "rp1-alt-p16",
             "alt": 8,
-            "selector": "ALT8"
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
           }
         ],
         "evidence": [
@@ -6382,7 +6542,8 @@
             "signal": "SPI1_SIO[1]",
             "evidence": "rp1-alt-p16",
             "alt": 0,
-            "selector": "ALT0"
+            "selector": "ALT0",
+            "mode": "spi-controller-single"
           },
           {
             "name": "DPI_D[15]",
@@ -6457,7 +6618,8 @@
             "signal": "SPI1_CSn[2]",
             "evidence": "rp1-alt-p16",
             "alt": 0,
-            "selector": "ALT0"
+            "selector": "ALT0",
+            "mode": "spi-controller-single"
           },
           {
             "name": "DPI_D[12]",
@@ -6588,7 +6750,8 @@
             "signal": "SPI5_CSn[1]",
             "evidence": "rp1-alt-p17",
             "alt": 8,
-            "selector": "ALT8"
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
           }
         ],
         "evidence": [
@@ -6607,7 +6770,8 @@
             "signal": "SPI1_SIO[0]",
             "evidence": "rp1-alt-p16",
             "alt": 0,
-            "selector": "ALT0"
+            "selector": "ALT0",
+            "mode": "spi-controller-single"
           },
           {
             "name": "DPI_D[16]",
@@ -6692,7 +6856,8 @@
             "signal": "SPI1_SCLK",
             "evidence": "rp1-alt-p16",
             "alt": 0,
-            "selector": "ALT0"
+            "selector": "ALT0",
+            "mode": "spi-controller-single"
           },
           {
             "name": "DPI_D[17]",
@@ -11212,9 +11377,14 @@
         ],
         "evidence": [
           "pico2-physical",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 2
+        "mcuPin": 2,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 2,
@@ -11304,9 +11474,14 @@
         ],
         "evidence": [
           "pico2-physical",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 3
+        "mcuPin": 3,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 3,
@@ -11413,9 +11588,14 @@
         ],
         "evidence": [
           "pico2-physical",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 4
+        "mcuPin": 4,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 5,
@@ -11513,9 +11693,14 @@
         ],
         "evidence": [
           "pico2-physical",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 5
+        "mcuPin": 5,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 6,
@@ -11605,9 +11790,14 @@
         ],
         "evidence": [
           "pico2-physical",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 7
+        "mcuPin": 7,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 7,
@@ -11697,9 +11887,14 @@
         ],
         "evidence": [
           "pico2-physical",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 8
+        "mcuPin": 8,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 8,
@@ -11798,9 +11993,14 @@
         ],
         "evidence": [
           "pico2-physical",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 9
+        "mcuPin": 9,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 10,
@@ -11890,9 +12090,14 @@
         ],
         "evidence": [
           "pico2-physical",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 10
+        "mcuPin": 10,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 11,
@@ -11982,9 +12187,14 @@
         ],
         "evidence": [
           "pico2-physical",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 12
+        "mcuPin": 12,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 12,
@@ -12066,9 +12276,14 @@
         ],
         "evidence": [
           "pico2-physical",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 13
+        "mcuPin": 13,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 13,
@@ -12167,9 +12382,14 @@
         ],
         "evidence": [
           "pico2-physical",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 14
+        "mcuPin": 14,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 15,
@@ -12259,9 +12479,14 @@
         ],
         "evidence": [
           "pico2-physical",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 15
+        "mcuPin": 15,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 16,
@@ -12359,9 +12584,14 @@
         ],
         "evidence": [
           "pico2-physical",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 16
+        "mcuPin": 16,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 17,
@@ -12459,9 +12689,14 @@
         ],
         "evidence": [
           "pico2-physical",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 17
+        "mcuPin": 17,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 18,
@@ -12576,9 +12811,14 @@
         ],
         "evidence": [
           "pico2-physical",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 18
+        "mcuPin": 18,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 20,
@@ -12684,9 +12924,14 @@
         ],
         "evidence": [
           "pico2-physical",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 19
+        "mcuPin": 19,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 21,
@@ -12776,9 +13021,14 @@
         ],
         "evidence": [
           "pico2-physical",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 27
+        "mcuPin": 27,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 22,
@@ -12868,9 +13118,14 @@
         ],
         "evidence": [
           "pico2-physical",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 28
+        "mcuPin": 28,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 23,
@@ -12977,9 +13232,14 @@
         ],
         "evidence": [
           "pico2-physical",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 29
+        "mcuPin": 29,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 25,
@@ -13085,9 +13345,14 @@
         ],
         "evidence": [
           "pico2-physical",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 31
+        "mcuPin": 31,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 26,
@@ -13177,9 +13442,14 @@
         ],
         "evidence": [
           "pico2-physical",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 32
+        "mcuPin": 32,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 27,
@@ -13269,9 +13539,14 @@
         ],
         "evidence": [
           "pico2-physical",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 33
+        "mcuPin": 33,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 28,
@@ -13378,9 +13653,14 @@
         ],
         "evidence": [
           "pico2-physical",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 34
+        "mcuPin": 34,
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 30,
@@ -13488,9 +13768,14 @@
         ],
         "evidence": [
           "pico2-physical",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 40
+        "mcuPin": 40,
+        "inputTolerance": {
+          "kind": "rp2350-analog",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 32,
@@ -13586,9 +13871,14 @@
         ],
         "evidence": [
           "pico2-physical",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 41
+        "mcuPin": 41,
+        "inputTolerance": {
+          "kind": "rp2350-analog",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 33,
@@ -13686,9 +13976,14 @@
         ],
         "evidence": [
           "pico2-physical",
+          "rp2350-input-limits",
           "rp-pin-list-p1333"
         ],
-        "mcuPin": 42
+        "mcuPin": 42,
+        "inputTolerance": {
+          "kind": "rp2350-analog",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 35,
@@ -29635,7 +29930,7 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f401re-package"
           },
           {
@@ -30035,7 +30330,7 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f401re-package"
           },
           {
@@ -30334,7 +30629,7 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f401re-package"
           },
           {
@@ -31883,7 +32178,7 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f401re-package"
           },
           {
@@ -32443,7 +32738,7 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f401re-package"
           },
           {
@@ -34406,7 +34701,7 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f411re-package"
           },
           {
@@ -34806,7 +35101,7 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f411re-package"
           },
           {
@@ -35129,7 +35424,7 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f411re-package"
           },
           {
@@ -36822,7 +37117,7 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f411re-package"
           },
           {
@@ -37496,7 +37791,7 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f411re-package"
           },
           {
@@ -39796,13 +40091,13 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -39974,19 +40269,19 @@
           {
             "name": "ADC3_EXTI2",
             "signal": "ADC3_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC4_EXTI2",
             "signal": "ADC4_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC5_EXTI2",
             "signal": "ADC5_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -40549,13 +40844,13 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -41024,13 +41319,13 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -41700,19 +41995,19 @@
           {
             "name": "ADC3_EXTI2",
             "signal": "ADC3_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC4_EXTI2",
             "signal": "ADC4_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC5_EXTI2",
             "signal": "ADC5_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -41878,19 +42173,19 @@
           {
             "name": "ADC3_EXTI3",
             "signal": "ADC3_EXTI3",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC4_EXTI3",
             "signal": "ADC4_EXTI3",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC5_EXTI3",
             "signal": "ADC5_EXTI3",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -43892,13 +44187,13 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -44420,7 +44715,7 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -44432,7 +44727,7 @@
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -44778,19 +45073,19 @@
           {
             "name": "ADC3_EXTI2",
             "signal": "ADC3_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC4_EXTI2",
             "signal": "ADC4_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC5_EXTI2",
             "signal": "ADC5_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -45308,13 +45603,13 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -45979,19 +46274,19 @@
           {
             "name": "ADC3_EXTI3",
             "signal": "ADC3_EXTI3",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC4_EXTI3",
             "signal": "ADC4_EXTI3",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC5_EXTI3",
             "signal": "ADC5_EXTI3",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -46377,19 +46672,19 @@
           {
             "name": "ADC3_EXTI2",
             "signal": "ADC3_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC4_EXTI2",
             "signal": "ADC4_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC5_EXTI2",
             "signal": "ADC5_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -46544,19 +46839,19 @@
           {
             "name": "ADC3_EXTI3",
             "signal": "ADC3_EXTI3",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC4_EXTI3",
             "signal": "ADC4_EXTI3",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC5_EXTI3",
             "signal": "ADC5_EXTI3",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -47734,19 +48029,19 @@
           {
             "name": "ADC3_EXTI3",
             "signal": "ADC3_EXTI3",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC4_EXTI3",
             "signal": "ADC4_EXTI3",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC5_EXTI3",
             "signal": "ADC5_EXTI3",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -47904,19 +48199,19 @@
           {
             "name": "ADC3_EXTI2",
             "signal": "ADC3_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC4_EXTI2",
             "signal": "ADC4_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC5_EXTI2",
             "signal": "ADC5_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -48204,19 +48499,19 @@
           {
             "name": "ADC3_EXTI3",
             "signal": "ADC3_EXTI3",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC4_EXTI3",
             "signal": "ADC4_EXTI3",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC5_EXTI3",
             "signal": "ADC5_EXTI3",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -49884,19 +50179,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -50293,19 +50588,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -51380,19 +51675,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -51814,19 +52109,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -52971,19 +53266,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -53578,19 +53873,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -53800,19 +54095,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -54795,19 +55090,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -57747,19 +58042,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -58620,19 +58915,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -59602,19 +59897,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -60104,19 +60399,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -60688,19 +60983,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -60950,19 +61245,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -62141,19 +62436,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -62856,19 +63151,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -67428,19 +67723,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -68061,19 +68356,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -69576,19 +69871,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -69830,19 +70125,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -70187,19 +70482,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -70397,19 +70692,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -121163,8 +121458,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 3,
@@ -121253,8 +121553,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 4,
@@ -121351,8 +121656,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 5,
@@ -121449,8 +121759,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 6,
@@ -121548,8 +121863,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 8,
@@ -121638,8 +121958,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 9,
@@ -121728,8 +122053,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 10,
@@ -121818,8 +122148,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 11,
@@ -121917,8 +122252,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 13,
@@ -121999,8 +122339,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 14,
@@ -122089,8 +122434,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 15,
@@ -122179,8 +122529,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 16,
@@ -122277,8 +122632,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 17,
@@ -122375,8 +122735,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 18,
@@ -122481,8 +122846,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 19,
@@ -122587,8 +122957,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 20,
@@ -122740,8 +123115,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 28,
@@ -122830,8 +123210,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 29,
@@ -122928,8 +123313,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 30,
@@ -123043,8 +123433,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 32,
@@ -123133,8 +123528,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 33,
@@ -123223,8 +123623,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 34,
@@ -123321,8 +123726,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 35,
@@ -123419,8 +123829,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 36,
@@ -123509,8 +123924,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 37,
@@ -123599,8 +124019,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 38,
@@ -123713,8 +124138,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-analog",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 41,
@@ -123809,8 +124239,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-analog",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 42,
@@ -123897,8 +124332,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-analog",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 43,
@@ -123985,8 +124425,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1334"
-        ]
+          "rp-pin-list-p1334",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-analog",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 44,
@@ -124526,8 +124971,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 2,
@@ -124616,8 +125066,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 3,
@@ -124706,8 +125161,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 4,
@@ -124796,8 +125256,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 5,
@@ -124895,8 +125360,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 7,
@@ -124977,8 +125447,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 8,
@@ -125067,8 +125542,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 9,
@@ -125157,8 +125637,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 10,
@@ -125264,8 +125749,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 12,
@@ -125362,8 +125852,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 13,
@@ -125468,8 +125963,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 14,
@@ -125574,8 +126074,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 15,
@@ -125673,8 +126178,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 17,
@@ -125763,8 +126273,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 18,
@@ -125861,8 +126376,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 19,
@@ -125967,8 +126487,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 20,
@@ -126057,8 +126582,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 21,
@@ -126147,8 +126677,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 22,
@@ -126245,8 +126780,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 23,
@@ -126343,8 +126883,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 24,
@@ -126442,8 +126987,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 26,
@@ -126532,8 +127082,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 27,
@@ -126622,8 +127177,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1334"
-        ]
+          "rp-pin-list-p1334",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 28,
@@ -126712,8 +127272,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1334"
-        ]
+          "rp-pin-list-p1334",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 29,
@@ -126857,8 +127422,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1334"
-        ]
+          "rp-pin-list-p1334",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 37,
@@ -126939,8 +127509,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1334"
-        ]
+          "rp-pin-list-p1334",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 38,
@@ -127029,8 +127604,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1334"
-        ]
+          "rp-pin-list-p1334",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 39,
@@ -127119,8 +127699,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1334"
-        ]
+          "rp-pin-list-p1334",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 40,
@@ -127201,8 +127786,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1334"
-        ]
+          "rp-pin-list-p1334",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 41,
@@ -127292,8 +127882,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1334"
-        ]
+          "rp-pin-list-p1334",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 43,
@@ -127382,8 +127977,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1334"
-        ]
+          "rp-pin-list-p1334",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 44,
@@ -127472,8 +128072,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1334"
-        ]
+          "rp-pin-list-p1334",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 45,
@@ -127554,8 +128159,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1334"
-        ]
+          "rp-pin-list-p1334",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 46,
@@ -127636,8 +128246,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1334"
-        ]
+          "rp-pin-list-p1334",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 47,
@@ -127726,8 +128341,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1334"
-        ]
+          "rp-pin-list-p1334",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 48,
@@ -127816,8 +128436,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1334"
-        ]
+          "rp-pin-list-p1334",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 49,
@@ -127904,8 +128529,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1334"
-        ]
+          "rp-pin-list-p1334",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-analog",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 50,
@@ -128010,8 +128640,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1334"
-        ]
+          "rp-pin-list-p1334",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-analog",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 53,
@@ -128106,8 +128741,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1334"
-        ]
+          "rp-pin-list-p1334",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-analog",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 54,
@@ -128202,8 +128842,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1334"
-        ]
+          "rp-pin-list-p1334",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-analog",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 55,
@@ -128290,8 +128935,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1334"
-        ]
+          "rp-pin-list-p1334",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-analog",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 56,
@@ -128378,8 +129028,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1334"
-        ]
+          "rp-pin-list-p1334",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-analog",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 57,
@@ -128474,8 +129129,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1334"
-        ]
+          "rp-pin-list-p1334",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-analog",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 58,
@@ -128578,8 +129238,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1334"
-        ]
+          "rp-pin-list-p1334",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-analog",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 59,
@@ -129110,8 +129775,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 78,
@@ -129200,8 +129870,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 79,
@@ -129298,8 +129973,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       },
       {
         "number": 80,
@@ -129396,8 +130076,13 @@
           }
         ],
         "evidence": [
-          "rp-pin-list-p1333"
-        ]
+          "rp-pin-list-p1333",
+          "rp2350-input-limits"
+        ],
+        "inputTolerance": {
+          "kind": "rp2350-ft",
+          "evidence": "rp2350-input-limits"
+        }
       }
     ]
   },
@@ -129468,7 +130153,7 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f401re-package"
           },
           {
@@ -130305,7 +130990,7 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f401re-package"
           },
           {
@@ -130645,7 +131330,7 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f401re-package"
           },
           {
@@ -130789,7 +131474,7 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f401re-package"
           },
           {
@@ -130887,7 +131572,7 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f401re-package"
           },
           {
@@ -131554,7 +132239,7 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f411re-package"
           },
           {
@@ -132567,7 +133252,7 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f411re-package"
           },
           {
@@ -132965,7 +133650,7 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f411re-package"
           },
           {
@@ -133125,7 +133810,7 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f411re-package"
           },
           {
@@ -133239,7 +133924,7 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f411re-package"
           },
           {
@@ -134028,13 +134713,13 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -134328,19 +135013,19 @@
           {
             "name": "ADC3_EXTI2",
             "signal": "ADC3_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC4_EXTI2",
             "signal": "ADC4_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC5_EXTI2",
             "signal": "ADC5_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -134408,19 +135093,19 @@
           {
             "name": "ADC3_EXTI3",
             "signal": "ADC3_EXTI3",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC4_EXTI3",
             "signal": "ADC4_EXTI3",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC5_EXTI3",
             "signal": "ADC5_EXTI3",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -134730,19 +135415,19 @@
           {
             "name": "ADC3_EXTI2",
             "signal": "ADC3_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC4_EXTI2",
             "signal": "ADC4_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC5_EXTI2",
             "signal": "ADC5_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -134878,19 +135563,19 @@
           {
             "name": "ADC3_EXTI3",
             "signal": "ADC3_EXTI3",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC4_EXTI3",
             "signal": "ADC4_EXTI3",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC5_EXTI3",
             "signal": "ADC5_EXTI3",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -135772,19 +136457,19 @@
           {
             "name": "ADC3_EXTI2",
             "signal": "ADC3_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC4_EXTI2",
             "signal": "ADC4_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC5_EXTI2",
             "signal": "ADC5_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -136064,7 +136749,7 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -136076,7 +136761,7 @@
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -136518,13 +137203,13 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -137298,13 +137983,13 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -137684,13 +138369,13 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -137900,13 +138585,13 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -138052,19 +138737,19 @@
           {
             "name": "ADC3_EXTI2",
             "signal": "ADC3_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC4_EXTI2",
             "signal": "ADC4_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC5_EXTI2",
             "signal": "ADC5_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -138104,19 +138789,19 @@
           {
             "name": "ADC3_EXTI3",
             "signal": "ADC3_EXTI3",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC4_EXTI3",
             "signal": "ADC4_EXTI3",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
             "name": "ADC5_EXTI3",
             "signal": "ADC5_EXTI3",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "g474re-package"
           },
           {
@@ -139670,19 +140355,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -142606,7 +143291,7 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -142618,13 +143303,13 @@
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -142862,19 +143547,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -143288,19 +143973,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -143592,19 +144277,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -143774,19 +144459,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -144266,19 +144951,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -144546,19 +145231,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -144918,19 +145603,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -146176,19 +146861,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -146457,19 +147142,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -146719,19 +147404,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -147777,19 +148462,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -148261,19 +148946,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h723zg-package"
           },
           {
@@ -152195,19 +152880,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f446re-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f446re-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f446re-package"
           },
           {
@@ -152684,19 +153369,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f446re-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f446re-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f446re-package"
           },
           {
@@ -153045,19 +153730,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f446re-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f446re-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f446re-package"
           },
           {
@@ -155388,19 +156073,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f446re-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f446re-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f446re-package"
           },
           {
@@ -156269,19 +156954,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f446re-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f446re-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f446re-package"
           },
           {
@@ -158846,19 +159531,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f446re-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f446re-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f446re-package"
           },
           {
@@ -160376,19 +161061,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f446re-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f446re-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f446re-package"
           },
           {
@@ -160948,19 +161633,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f446re-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f446re-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f446re-package"
           },
           {
@@ -161108,19 +161793,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f446re-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f446re-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f446re-package"
           },
           {
@@ -161276,19 +161961,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f446re-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f446re-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f446re-package"
           },
           {
@@ -162261,13 +162946,13 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
@@ -162401,13 +163086,13 @@
           {
             "name": "ADC3_EXTI2",
             "signal": "ADC3_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC4_EXTI2",
             "signal": "ADC4_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
@@ -162804,25 +163489,25 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC4_EXTI15",
             "signal": "ADC4_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
@@ -163229,25 +163914,25 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC4_EXTI15",
             "signal": "ADC4_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
@@ -163888,13 +164573,13 @@
           {
             "name": "ADC3_EXTI2",
             "signal": "ADC3_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC4_EXTI2",
             "signal": "ADC4_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
@@ -165698,13 +166383,13 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
@@ -166102,7 +166787,7 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
@@ -166114,7 +166799,7 @@
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
@@ -166379,13 +167064,13 @@
           {
             "name": "ADC3_EXTI2",
             "signal": "ADC3_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC4_EXTI2",
             "signal": "ADC4_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
@@ -166687,25 +167372,25 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC4_EXTI15",
             "signal": "ADC4_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
@@ -167494,13 +168179,13 @@
           {
             "name": "ADC3_EXTI2",
             "signal": "ADC3_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC4_EXTI2",
             "signal": "ADC4_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
@@ -168663,13 +169348,13 @@
           {
             "name": "ADC3_EXTI2",
             "signal": "ADC3_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC4_EXTI2",
             "signal": "ADC4_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
@@ -169653,25 +170338,25 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC4_EXTI15",
             "signal": "ADC4_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
@@ -169879,13 +170564,13 @@
           {
             "name": "ADC3_EXTI2",
             "signal": "ADC3_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC4_EXTI2",
             "signal": "ADC4_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
@@ -170167,13 +170852,13 @@
           {
             "name": "ADC3_EXTI2",
             "signal": "ADC3_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC4_EXTI2",
             "signal": "ADC4_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
@@ -171011,13 +171696,13 @@
           {
             "name": "ADC3_EXTI2",
             "signal": "ADC3_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC4_EXTI2",
             "signal": "ADC4_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
@@ -171125,7 +171810,7 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
@@ -171137,7 +171822,7 @@
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
@@ -171475,25 +172160,25 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC4_EXTI15",
             "signal": "ADC4_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
@@ -172003,13 +172688,13 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
@@ -172329,25 +173014,25 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC4_EXTI15",
             "signal": "ADC4_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
@@ -172503,13 +173188,13 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
@@ -172617,13 +173302,13 @@
           {
             "name": "ADC3_EXTI2",
             "signal": "ADC3_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
             "name": "ADC4_EXTI2",
             "signal": "ADC4_EXTI2",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f303re-package"
           },
           {
@@ -173566,19 +174251,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
@@ -174151,19 +174836,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
@@ -174598,19 +175283,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
@@ -177075,19 +177760,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
@@ -177505,19 +178190,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
@@ -178146,19 +178831,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
@@ -181099,19 +181784,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
@@ -182585,19 +183270,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
@@ -183017,19 +183702,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
@@ -183565,19 +184250,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
@@ -183765,19 +184450,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
@@ -183957,19 +184642,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l476rg-package"
           },
           {
@@ -193302,7 +193987,7 @@
           {
             "name": "ADC_EXTI11",
             "signal": "ADC_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l053r8-package"
           },
           {
@@ -195999,7 +196684,7 @@
           {
             "name": "ADC_EXTI11",
             "signal": "ADC_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l053r8-package"
           },
           {
@@ -196281,7 +196966,7 @@
           {
             "name": "ADC_EXTI11",
             "signal": "ADC_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l053r8-package"
           },
           {
@@ -199980,7 +200665,7 @@
           {
             "name": "ADC_EXTI11",
             "signal": "ADC_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l053r8-package"
           },
           {
@@ -200602,7 +201287,7 @@
           {
             "name": "ADC_EXTI11",
             "signal": "ADC_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l053r8-package"
           },
           {
@@ -200872,7 +201557,7 @@
           {
             "name": "ADC_EXTI11",
             "signal": "ADC_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l053r8-package"
           },
           {
@@ -201618,7 +202303,7 @@
           {
             "name": "ADC_EXTI11",
             "signal": "ADC_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l152re-package"
           },
           {
@@ -202159,7 +202844,7 @@
           {
             "name": "ADC_EXTI15",
             "signal": "ADC_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l152re-package"
           },
           {
@@ -202560,7 +203245,7 @@
           {
             "name": "ADC_EXTI15",
             "signal": "ADC_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l152re-package"
           },
           {
@@ -204645,7 +205330,7 @@
           {
             "name": "ADC_EXTI11",
             "signal": "ADC_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l152re-package"
           },
           {
@@ -204959,7 +205644,7 @@
           {
             "name": "ADC_EXTI11",
             "signal": "ADC_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l152re-package"
           },
           {
@@ -205402,7 +206087,7 @@
           {
             "name": "ADC_EXTI15",
             "signal": "ADC_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l152re-package"
           },
           {
@@ -207902,7 +208587,7 @@
           {
             "name": "ADC_EXTI15",
             "signal": "ADC_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l152re-package"
           },
           {
@@ -209130,7 +209815,7 @@
           {
             "name": "ADC_EXTI11",
             "signal": "ADC_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l152re-package"
           },
           {
@@ -209416,7 +210101,7 @@
           {
             "name": "ADC_EXTI15",
             "signal": "ADC_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l152re-package"
           },
           {
@@ -209832,7 +210517,7 @@
           {
             "name": "ADC_EXTI11",
             "signal": "ADC_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l152re-package"
           },
           {
@@ -210008,7 +210693,7 @@
           {
             "name": "ADC_EXTI15",
             "signal": "ADC_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l152re-package"
           },
           {
@@ -210170,7 +210855,7 @@
           {
             "name": "ADC_EXTI11",
             "signal": "ADC_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l152re-package"
           },
           {
@@ -211211,19 +211896,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f407vg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f407vg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f407vg-package"
           },
           {
@@ -212519,19 +213204,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f407vg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f407vg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f407vg-package"
           },
           {
@@ -212677,19 +213362,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f407vg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f407vg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f407vg-package"
           },
           {
@@ -212797,19 +213482,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f407vg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f407vg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f407vg-package"
           },
           {
@@ -213107,19 +213792,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f407vg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f407vg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f407vg-package"
           },
           {
@@ -213303,19 +213988,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f407vg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f407vg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f407vg-package"
           },
           {
@@ -213461,19 +214146,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f407vg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f407vg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f407vg-package"
           },
           {
@@ -213905,19 +214590,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f407vg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f407vg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f407vg-package"
           },
           {
@@ -214074,19 +214759,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f407vg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f407vg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f407vg-package"
           },
           {
@@ -214210,19 +214895,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f407vg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f407vg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f407vg-package"
           },
           {
@@ -215339,19 +216024,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f405rg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f405rg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f405rg-package"
           },
           {
@@ -216396,19 +217081,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f405rg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f405rg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f405rg-package"
           },
           {
@@ -216682,19 +217367,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f405rg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f405rg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f405rg-package"
           },
           {
@@ -217110,19 +217795,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f405rg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f405rg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f405rg-package"
           },
           {
@@ -217270,19 +217955,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f405rg-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f405rg-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f405rg-package"
           },
           {
@@ -217398,19 +218083,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f405rg-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f405rg-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f405rg-package"
           },
           {
@@ -222035,7 +222720,7 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l432kc-package"
           },
           {
@@ -222147,7 +222832,7 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l432kc-package"
           },
           {
@@ -223621,7 +224306,7 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l432kc-package"
           },
           {
@@ -224563,7 +225248,7 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l432kc-package"
           },
           {
@@ -224805,7 +225490,7 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "l432kc-package"
           },
           {
@@ -227803,19 +228488,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
@@ -230396,19 +231081,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
@@ -231653,19 +232338,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
@@ -232544,19 +233229,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
@@ -232744,19 +233429,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
@@ -236752,19 +237437,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
@@ -237979,19 +238664,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
@@ -238440,19 +239125,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
@@ -240734,19 +241419,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
@@ -241488,19 +242173,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
@@ -241850,19 +242535,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
@@ -245106,19 +245791,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
@@ -245607,19 +246292,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
@@ -246019,19 +246704,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
@@ -246667,19 +247352,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
@@ -247876,19 +248561,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
@@ -248323,19 +249008,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
@@ -249137,19 +249822,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f767zi-package"
           },
           {
@@ -250815,19 +251500,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -251395,19 +252080,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -252580,19 +253265,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -253285,19 +253970,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -256489,19 +257174,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -257879,19 +258564,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -258545,19 +259230,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -258989,19 +259674,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -259213,19 +259898,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -259887,19 +260572,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -260358,19 +261043,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -263322,19 +264007,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -263784,19 +264469,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -265231,19 +265916,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -265777,19 +266462,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -266649,19 +267334,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -268429,19 +269114,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -268684,19 +269369,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -269106,19 +269791,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -269310,19 +269995,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -269558,19 +270243,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -269708,19 +270393,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -271267,19 +271952,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -273750,7 +274435,7 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -273762,13 +274447,13 @@
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -273954,19 +274639,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -274367,19 +275052,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -274667,19 +275352,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -274851,19 +275536,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -275305,19 +275990,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -275597,19 +276282,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -275905,19 +276590,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -277114,19 +277799,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -277411,19 +278096,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -277635,19 +278320,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -278513,19 +279198,19 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI11",
             "signal": "ADC2_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI11",
             "signal": "ADC3_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -278881,19 +279566,19 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC2_EXTI15",
             "signal": "ADC2_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
             "name": "ADC3_EXTI15",
             "signal": "ADC3_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "h743zi-package"
           },
           {
@@ -280271,7 +280956,7 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f401cc-package"
           },
           {
@@ -280503,7 +281188,7 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f401cc-package"
           },
           {
@@ -280627,7 +281312,7 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f401cc-package"
           },
           {
@@ -281275,7 +281960,7 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f401cc-package"
           },
           {
@@ -282432,7 +283117,7 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f401cc-package"
           },
           {
@@ -283141,7 +283826,7 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f401cc-package"
           },
           {
@@ -283317,7 +284002,7 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f401cc-package"
           },
           {
@@ -283465,7 +284150,7 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f401cc-package"
           },
           {
@@ -284291,7 +284976,7 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f411ce-package"
           },
           {
@@ -284565,7 +285250,7 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f411ce-package"
           },
           {
@@ -284705,7 +285390,7 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f411ce-package"
           },
           {
@@ -285465,7 +286150,7 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f411ce-package"
           },
           {
@@ -286742,7 +287427,7 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f411ce-package"
           },
           {
@@ -287627,7 +288312,7 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f411ce-package"
           },
           {
@@ -287845,7 +288530,7 @@
           {
             "name": "ADC1_EXTI11",
             "signal": "ADC1_EXTI11",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f411ce-package"
           },
           {
@@ -288009,7 +288694,7 @@
           {
             "name": "ADC1_EXTI15",
             "signal": "ADC1_EXTI15",
-            "group": "ADC",
+            "group": "ADC_TRIGGER",
             "evidence": "f411ce-package"
           },
           {

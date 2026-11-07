@@ -2,12 +2,22 @@
 (() => {
   const messages = {
     "pwmShareMarked": ["Ortak PWM sinyali onaylandı; bağımsız duty yok.", "Shared PWM signal acknowledged; no independent duty."],
+    "suggestUnsupported": ["Bu SPI adlandırması veya modu planlayıcıda desteklenmiyor. Bu sonuç donanımın SPI sunmadığı anlamına gelmez; modu ve kaynakları inceleyin.", "This SPI naming or mode is not supported by the planner. This does not mean the hardware lacks SPI; review its mode and sources."],
     "pwmConstraints": ["PWM kaynak kısıtları", "PWM resource constraints"],
     "pwmDuplicate": ["{name}, pin {pin} ile aynı PWM kanalını paylaşır; iki servo bağımsız kontrol edilemez. Aynı sinyali bilerek çoğaltıyorsanız iki atamada da paylaşımı onaylayın.", "{name} shares a PWM channel with pin {pin}; two servos cannot be controlled independently. To deliberately duplicate one signal, confirm sharing on both assignments."],
     "pwmShareConsent": ["Bu PWM sinyalini başka pine de taşıyorum; bağımsız duty kontrolü beklemiyorum.", "I intend to share this PWM signal with another pin; I do not expect independent duty control."],
     "pwmFrequencyNote": ["Aynı PWM slice içindeki A/B kanalları aynı sayaç ve frekansı paylaşır. Farklı frekans gereken cihazlar için farklı slice seçin.", "A/B channels in one PWM slice share a counter and frequency. Use different slices for devices requiring different frequencies."],
     "pwmSharedFrequency": ["{slice} A/B kanalları aynı frekansı ve sayaç ayarlarını paylaşır; bağımsız frekans kullanılamaz.", "{slice} A/B channels share frequency and counter settings; independent frequencies are unavailable."],
     "pwmFanoutNote": ["{channel} birden fazla pine taşınıyor: aynı duty ve frekans, bağımsız çıkışlar değil.", "{channel} is routed to multiple pins: the same duty and frequency, without independent control."],
+    "rp2350FTLabel": ["Koşullu 5.5V giriş", "Conditional 5.5V input"],
+    "rp2350FTNote": ["RP2350 FT dijital giriş: yalnız IOVDD=3.3 V ile 5.5 V giriş toleransı. Çıkış seviyesi IOVDD ile sınırlıdır; 5 V çıkış sağlamaz. IOVDD=0 V iken bu 5.5 V toleransı geçerli değildir; güç kapalıyken 5 V bağlamayın.", "RP2350 FT digital input: 5.5 V input tolerance only with IOVDD=3.3 V. Output level is limited by IOVDD; this does not provide a 5 V output. The 5.5 V tolerance does not apply with IOVDD=0 V; do not apply 5 V while unpowered."],
+    "rp2350AnalogLabel": ["FT olmayan ADC/GPIO", "Non-FT ADC/GPIO"],
+    "rp2350AnalogNote": ["RP2350 standart dijital/analog pin; FT 5.5 V giriş toleransı yoktur. Dijital sınırları IOVDD, ADC giriş aralığını ADC_AVDD belirler. 5 V bağlamayın; güç kapalı durumunu ayrıca kontrol edin.", "RP2350 standard digital/analog pin without FT 5.5 V input tolerance. IOVDD determines digital limits; ADC_AVDD determines the ADC input range. Do not apply 5 V; check unpowered conditions separately."],
+    "ADC_TRIGGER": ["ADC dijital tetik", "ADC digital trigger"],
+    "adcTriggerNote": ["Dijital ADC tetiği; analog örnekleme girişi değildir.", "Digital ADC trigger; not an analog sampling input."],
+    "spiControllerSingle": ["SPI controller · tek veri hattı çifti", "SPI controller · single-lane"],
+    "rp1SpiModeNote": ["RP1 için standart, tek veri hattı çiftli controller modu: SIO[0]=MOSI, SIO[1]=MISO. Dual/quad ve cihaz modu bu önerinin kapsamı dışındadır; SPI4 yalnız cihaz modudur.", "RP1 uses standard single-lane controller mode here: SIO[0]=MOSI, SIO[1]=MISO. Dual/quad and device modes require separate configuration; SPI4 is device-only."],
+
     "pinOccupied": ["{signal}, {pin} üzerinde {function} için kullanılıyor.", "{signal} is already used on {pin} for {function}."],
     "openOccupiedPin": ["Mevcut atamayı aç", "Open existing assignment"],
     "planExpand": ["Planı genişlet", "Expand plan"],

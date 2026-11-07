@@ -93,3 +93,12 @@ test('PWM conflicts block suggestions while shared slice/fan-out notes remain co
   for(const a of result.alternatives){assert(a.warnings>=1);assert.deepEqual(applySuggestion(pins,a,b),a.pins);}
  }
 });
+
+test('Pi 5 standard controller SPI routes work; unsupported SIO semantics are not impossible hardware',()=>{
+ const b=board('raspberry-pi-5'),result=suggestPins(b,{SPI:1});assert.equal(result.status,'ready');
+ assert(result.alternatives.some(a=>a.connections.some(c=>c.id==='SPI0')));
+ for(const a of result.alternatives)assert(!a.connections.some(c=>c.id==='SPI4'));
+ const unknown=structuredClone(b);for(const p of unknown.pins)for(const f of p.functions)delete f.mode;
+ assert.equal(suggestPins(unknown,{SPI:1}).status,'unsupported');
+ assert.equal(suggestPins(board('raspberry-pi-4'),{SPI:1}).status,'ready');
+});
