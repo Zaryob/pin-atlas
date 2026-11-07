@@ -157,9 +157,11 @@
       "id": "arduino-uno-r3-datasheet",
       "title": "Arduino UNO R3 datasheet",
       "publisher": "Arduino",
-      "revision": "Modified 2026-11-03",
-      "url": "https://docs.arduino.cc/resources/datasheets/A000066-datasheet.pdf",
-      "sha256": "7decc9caca757eae23241053e0c84ded9ca95c3260b9ad9521f19479a044ad49"
+      "revision": "arduino/docs-content · cb938e96b391e636011690e4db1348dc38db4deb",
+      "url": "https://raw.githubusercontent.com/arduino/docs-content/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/uno/boards/uno-rev3/datasheet/en-datasheet.md",
+      "sha256": "a33705fbb1944cab1972f08e5485422bcb11f870f60af3ce5c2dd41f62559ae9",
+      "viewUrl": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/uno/boards/uno-rev3/datasheet/en-datasheet.md",
+      "pdfUrl": "https://docs.arduino.cc/resources/datasheets/A000066-datasheet.pdf"
     },
     {
       "id": "arduino-nano-classic-pinout",
@@ -181,9 +183,11 @@
       "id": "arduino-mega-2560-datasheet",
       "title": "Arduino Mega 2560 Rev3 datasheet",
       "publisher": "Arduino",
-      "revision": "Modified 2026-11-03",
-      "url": "https://docs.arduino.cc/resources/datasheets/A000067-datasheet.pdf",
-      "sha256": "0f328efd35c157ae10ae206d924e2c876d2d0514fb591270cf328d1cbbb252dc"
+      "revision": "arduino/docs-content · cb938e96b391e636011690e4db1348dc38db4deb",
+      "url": "https://raw.githubusercontent.com/arduino/docs-content/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/mega/boards/mega-2560/datasheet/en-datasheet.md",
+      "sha256": "68bb2532402a97f5abe1c1d86ab46545fa0b1d1b6cfdb0220a00642e4a806110",
+      "viewUrl": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/mega/boards/mega-2560/datasheet/en-datasheet.md",
+      "pdfUrl": "https://docs.arduino.cc/resources/datasheets/A000067-datasheet.pdf"
     },
     {
       "id": "arduino-avr-standard",
@@ -240,9 +244,11 @@
       "id": "arduino-nano-every-datasheet",
       "title": "Arduino nano-every datasheet",
       "publisher": "Arduino",
-      "revision": "Snapshot reviewed 2026-11-04",
-      "url": "https://docs.arduino.cc/resources/datasheets/ABX00028-datasheet.pdf",
-      "sha256": "80e42abe28b0b78a1b2f2ca683029861dcf7b5c2f85ac6211bf0d99cd2572f35"
+      "revision": "arduino/docs-content · cb938e96b391e636011690e4db1348dc38db4deb",
+      "url": "https://raw.githubusercontent.com/arduino/docs-content/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/nano/boards/nano-every/datasheet/datasheet.md",
+      "sha256": "609a89229c9d12dc1d64648ad2e3eebeceeec0204ab7bde24ec78de5134ac1f8",
+      "viewUrl": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/nano/boards/nano-every/datasheet/datasheet.md",
+      "pdfUrl": "https://docs.arduino.cc/resources/datasheets/ABX00028-datasheet.pdf"
     },
     {
       "id": "arduino-nano-33-ble-sense-rev2-pinout",
@@ -329,9 +335,11 @@
       "id": "arduino-uno-r4-minima-datasheet",
       "title": "Arduino uno-r4-minima datasheet",
       "publisher": "Arduino",
-      "revision": "Snapshot reviewed 2026-11-04",
-      "url": "https://docs.arduino.cc/resources/datasheets/ABX00080-datasheet.pdf",
-      "sha256": "52c207cfd5fd90d3195097a52eb3d38327f438157e428787ab0e1afc73df67c7"
+      "revision": "arduino/docs-content · cb938e96b391e636011690e4db1348dc38db4deb",
+      "url": "https://raw.githubusercontent.com/arduino/docs-content/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/uno/boards/uno-r4-minima/datasheet/en-datasheet.md",
+      "sha256": "d0759d8ef36fb14a2d5cf04d2c91c076e5d606867d859789483f5778143bbf11",
+      "viewUrl": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/uno/boards/uno-r4-minima/datasheet/en-datasheet.md",
+      "pdfUrl": "https://docs.arduino.cc/resources/datasheets/ABX00080-datasheet.pdf"
     },
     {
       "id": "arduino-uno-r4-wifi-pinout",
@@ -345,9 +353,11 @@
       "id": "arduino-uno-r4-wifi-datasheet",
       "title": "Arduino uno-r4-wifi datasheet",
       "publisher": "Arduino",
-      "revision": "Snapshot reviewed 2026-11-04",
-      "url": "https://docs.arduino.cc/resources/datasheets/ABX00087-datasheet.pdf",
-      "sha256": "7453eb59e66d408db007dca4260e4e7c022b484d950131b088e9217268842af1"
+      "revision": "arduino/docs-content · cb938e96b391e636011690e4db1348dc38db4deb",
+      "url": "https://raw.githubusercontent.com/arduino/docs-content/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/uno/boards/uno-r4-wifi/datasheet/en-datasheet.md",
+      "sha256": "16fd35c1a23f56189ea6ca28c4060a76fb494597f8c8c2242b7dcf4a2333a4e4",
+      "viewUrl": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/uno/boards/uno-r4-wifi/datasheet/en-datasheet.md",
+      "pdfUrl": "https://docs.arduino.cc/resources/datasheets/ABX00087-datasheet.pdf"
     },
     {
       "id": "arduino-avr-leonardo",
@@ -1228,7 +1238,7 @@
       "physicalPins": 38,
       "functionAssignments": 30,
       "physicalSourceMethods": [
-        "pdf-table",
+        "manufacturer-source-table",
         "source-code",
         "visual-diagram"
       ]
@@ -1247,7 +1257,7 @@
       "physicalPins": 92,
       "functionAssignments": 58,
       "physicalSourceMethods": [
-        "pdf-table",
+        "manufacturer-source-table",
         "source-code",
         "visual-diagram"
       ]

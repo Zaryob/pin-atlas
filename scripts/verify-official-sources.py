@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Rebuild/check pin facts against hash-locked manufacturer documents.
 
-Tables are extracted afresh with pdfplumber, or from hash-locked raw ST table
-snapshots when requested. Outline-only diagrams use recorded visual observations.
+Tables are extracted afresh with pdfplumber, from commit-pinned manufacturer
+Markdown, or from hash-locked raw ST table snapshots when requested. Outline-only diagrams use recorded visual observations.
 """
 import argparse,copy,csv,hashlib,io,json,re,subprocess,sys
 from pathlib import Path

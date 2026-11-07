@@ -2,6 +2,25 @@
 import re
 import pdfplumber
 
+def connector_tables(text, headings):
+    """Read named connector tables from commit-pinned manufacturer Markdown.
+
+    Generated PDFs embed the build date, so byte locks on their mutable URLs
+    cannot reproduce a review. Keep header names/order and all four raw cells.
+    """
+    tables=[]
+    for heading in headings:
+        sections=re.findall(r'^### '+re.escape(heading)+r'\s*\n(.*?)(?=^#{2,3} |\Z)',text,re.M|re.S)
+        assert len(sections)==1, ('Missing/ambiguous connector heading',heading)
+        rows=[[cell.strip().replace('**','') for cell in line.strip().strip('|').split('|')]
+              for line in sections[0].splitlines() if line.lstrip().startswith('|')]
+        assert rows[0]==['Pin','Function','Type','Description'], (heading,rows[:1])
+        rows=[row for row in rows[2:] if row[0].isdigit()]
+        assert rows and all(len(row)==4 for row in rows), heading
+        assert [int(row[0]) for row in rows]==list(range(1,len(rows)+1)),heading
+        tables.append(rows)
+    return tables
+
 def core_tables(text):
     # Select the ATmega328P branch, not the older ATmega8 PWM implementation.
     text=re.sub(r'#if defined\(__AVR_ATmega8__\).*?#else\n(.*?)#endif',r'\1',text,flags=re.S)
@@ -97,12 +116,10 @@ def build_arduino(cache,docs,observations,ref,verified_on):
             center=410;icsp_y=600
         else:
             dsid=id+'-datasheet'
-            with pdfplumber.open(cache/docs[dsid]['file']) as pdf:
-                tables=pdf.pages[9].extract_tables()
-                analog_rows=tables[0][1:];digital_rows=tables[1][1:]
-                if variant=='mega':digital_rows+=pdf.pages[10].extract_tables()[0][1:]
-                end_rows=[pdf.pages[11].extract_tables()[2][1:],pdf.pages[12].extract_tables()[0][1:]] if variant=='mega' else []
-            table_ref=ref(id+'-connector-tables',dsid,10,'§5 · Connector Pinouts · numbering cross-checked against the full pinout; duplicate SDA/SCL and D0 label typos resolved using the diagram','pdf-table')
+            headings=['Analog','Digital','Digital Pins D22 - D53 LHS','Digital Pins D22 - D53 RHS'] if variant=='mega' else ['JANALOG','JDIGITAL']
+            tables=connector_tables((cache/docs[dsid]['file']).read_text(),headings)
+            analog_rows,digital_rows=tables[:2];end_rows=tables[2:]
+            table_ref=ref(id+'-connector-tables',dsid,None,'Connector Pinouts · '+', '.join(headings)+' · numbering cross-checked against full pinout; duplicate SDA/SCL and label typos resolved using the diagram','manufacturer-source-table')
             def normalize(value):
                 if value in ('SS','MOSI','MISO','SCK') and variant=='standard':return 'D'+str(defines['PIN_SPI_'+value])
                 return re.match(r'[AD]\d+',value)[0] if re.match(r'[AD]\d+',value) else value
@@ -134,7 +151,7 @@ def build_arduino(cache,docs,observations,ref,verified_on):
             if shared and pin['type'] in ('GPIO','ADC','SYSTEM') and pin['name']!='NC':pin['sharedWith']=shared
         assert len(pins)==total
         assert len({p['net'] for p in pins if p['type']=='GPIO'})==unique
-        board={'id':id,'name':title,'shortName':title.replace('Arduino ',''),'family':'Arduino AVR','subtitle':mcu+' · 16 MHz · 5 V I/O','layout':'custom','diagram':{'width':820 if model=='nano-classic' else 900 if variant=='standard' else 1200,'height':780 if model=='nano-classic' else 860 if variant=='standard' else 1160,'artwork':'assets/boards/'+id+'.svg'},'orientation':'usb','packagePins':total,'gpioCount':sum(p['type']=='GPIO' for p in pins),'uniqueGPIOCount':unique,'voltage':'5 V I/O','mcu':mcu,'processor':'8-bit AVR','clock':'16 MHz','compatibleKey':id+'Compatible','scopeKey':id+'Scope','verifiedOn':verified_on,'source':docs[docid]['url'],'datasheet':docs.get(id+'-datasheet',docs[docid])['url'],'pins':pins}
+        board={'id':id,'name':title,'shortName':title.replace('Arduino ',''),'family':'Arduino AVR','subtitle':mcu+' · 16 MHz · 5 V I/O','layout':'custom','diagram':{'width':820 if model=='nano-classic' else 900 if variant=='standard' else 1200,'height':780 if model=='nano-classic' else 860 if variant=='standard' else 1160,'artwork':'assets/boards/'+id+'.svg'},'orientation':'usb','packagePins':total,'gpioCount':sum(p['type']=='GPIO' for p in pins),'uniqueGPIOCount':unique,'voltage':'5 V I/O','mcu':mcu,'processor':'8-bit AVR','clock':'16 MHz','compatibleKey':id+'Compatible','scopeKey':id+'Scope','verifiedOn':verified_on,'source':docs[docid]['url'],'datasheet':docs.get(id+'-datasheet',docs[docid]).get('pdfUrl',docs.get(id+'-datasheet',docs[docid])['url']),'pins':pins}
         if variant=='mega':board['diagram']['minWidth']=1000
         boards.append(board)
     return boards
