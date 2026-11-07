@@ -600,7 +600,7 @@
     "shareLink": ["Paylaşım bağlantısı", "Share link"],
     "copyLink": ["Bağlantıyı kopyala", "Copy link"],
     "pageTitle": ["Pin Atlas — Kaynakları doğrulanmış pin rehberi.", "Pin Atlas — Source-verified pin guide"],
-    "description": ["Raspberry Pi, Pico ve RP2350 için interaktif pinout rehberi. Pinleri keşfedin, arayüzleri filtreleyin ve bağlantı planınızı kaydedin.", "Interactive pinout guide for Raspberry Pi, Pico, and RP2350. Explore pins, filter interfaces, and save wiring plans."],
+    "description": ["Raspberry Pi, Pico, Arduino, ESP ve STM32 kartları ve çipleri için interaktif pinout rehberi. Pinleri keşfedin, arayüzleri filtreleyin ve bağlantı planınızı kaydedin.", "Interactive pinout guide for Raspberry Pi, Pico, Arduino, ESP, and STM32 boards and chips. Explore pins, filter interfaces, and save wiring plans."],
     "generalIO": ["Genel amaçlı I/O", "General-purpose I/O"],
     "ground": ["Toprak", "Ground"],
     "analog": ["Analog", "Analog"],

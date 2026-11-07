@@ -848,3 +848,13 @@ test('STM32 digital ADC triggers are separate from analog-input filtering',async
  await page.locator('[data-filter="ADC_TRIGGER"]').click();
  await expect(page.locator('#diagram [data-pin="2"]')).not.toHaveClass(/dimmed/);
 });
+
+test('social metadata points to the deployed PNG and covers the catalog families',async({page,request})=>{
+ await ready(page);
+ for(const family of ['Arduino','ESP','STM32'])await expect(page.locator('meta[property="og:description"]')).toHaveAttribute('content',new RegExp(family));
+ await expect(page.locator('meta[property="og:url"]')).toHaveAttribute('content','https://zaryob.github.io/pin-atlas/');
+ await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute('content','summary_large_image');
+ const imageUrl=await page.locator('meta[property="og:image"]').getAttribute('content');
+ const response=await request.get(new URL(imageUrl).pathname);expect(response.ok()).toBe(true);
+ expect(response.headers()['content-type']).toContain('image/png');
+});
