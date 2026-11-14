@@ -244,8 +244,28 @@ feather=lookup['adafruit-feather-rp2040']
 assert len(feather)==28 and sum(p['type']=='GPIO' for p in feather.values())==21
 assert feather[5]['name']=='A0' and feather[5]['net']=='GPIO26' and feather[5]['mcuPin']==38
 assert feather[11]['name']=='SCK' and feather[11]['net']=='GPIO18' and feather[11]['mcuPin']==29
-assert feather[17]['name']=='SDA' and feather[17]['net']=='GPIO2' and feather[17]['mcuPin']==4
-assert feather[25]['name']=='D13' and feather[25]['net']=='GPIO13' and feather[25]['mcuPin']==16
-assert feather[28]['name']=='VBAT' and feather[28]['type']=='POWER'
+# Right header counts from the USB end: VBAT is opposite A0, SDA opposite D4.
+assert feather[17]['name']=='VBAT' and feather[17]['type']=='POWER' and feather[17]['position']['y']==feather[5]['position']['y']
+assert feather[28]['name']=='SDA' and feather[28]['net']=='GPIO2' and feather[28]['mcuPin']==4 and feather[28]['position']['y']==feather[16]['position']['y']
+assert feather[3]['name']=='3V3' and feather[3]['type']=='POWER' and not any(p['name']=='AREF' for p in feather.values())
+assert feather[20]['name']=='D13' and feather[20]['net']=='GPIO13' and feather[20]['mcuPin']==16
 assert any(f['group']=='ADC' and f['name']=='ADC0' for f in feather[5]['functions'])
 print(f"Checked {report['physicalPins']} pins, {report['functionAssignments']} function references and model-specific corner cases.")
+
+# Teensy 4.1: ports follow cores/teensy4/core_pins.h, functions follow PJRC card 11a/11b.
+teensy={p['physicalLabel']:p for p in next(b for b in boards if b['id']=='teensy-41')['pins']}
+teensy_signals=lambda label:{f['signal'] for f in teensy[label]['functions']}
+assert [teensy[f'SD.{i}']['name'] for i in range(1,9)]==['42','43','GND','44','3.3V','45','46','47']
+assert teensy['R.23']['mcuPort']=='GPIO7[29]' and 'RX8' in teensy_signals('R.23') and 'PWM' not in teensy_signals('R.23')
+assert teensy['R.22']['mcuPort']=='GPIO7[28]' and 'TX8' in teensy_signals('R.22')
+assert teensy['R.18']['mcuPort']=='GPIO6[29]' and {'A15','MISO1','OUT1A'}<=teensy_signals('R.18')
+assert teensy_signals('R.16')=={'A17',teensy['R.16']['net']} and 'PWM' not in teensy_signals('R.6')|teensy_signals('R.7')
+assert teensy['SD.1']['mcuPort']=='GPIO8[15]' and teensy['SD.8']['mcuPort']=='GPIO8[16]'
+
+# NUCLEO-G474RE: UM2505 puts D0/D1 on USART1 PC5/PC4 by default, not LPUART1 PA3/PA2.
+g474={p['physicalLabel']:p for p in next(b for b in boards if b['id']=='nucleo-g474re')['pins']}
+assert g474['CN9.1']['net']=='PC5' and g474['CN9.2']['net']=='PC4' and g474['CN10.37']['net']=='PC5' and g474['CN10.35']['net']=='PC4'
+assert all(g474[label]['boardCircuitKey']=='nucleoG4Usart' for label in ('CN9.1','CN9.2','CN10.35','CN10.37'))
+assert not any(str(p.get('boardCircuitKey','')) in ('nucleoA45','nucleoUsart','nucleoLed','nucleoLse','nucleoHse') for p in g474.values())
+g474_chip={p['number']:p for p in next(b for b in boards if b['id']=='stm32g474ret6')['pins']}
+assert g474_chip[28]['name']=='VREF+' and g474_chip[29]['name']=='VDDA'

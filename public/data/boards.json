@@ -39978,7 +39978,7 @@
     },
     "packagePins": 108,
     "gpioCount": 76,
-    "uniqueGPIOCount": 52,
+    "uniqueGPIOCount": 50,
     "voltage": "3.3 V I/O",
     "mcu": "STM32G474RET6",
     "processor": "Arm Cortex-M4",
@@ -41283,7 +41283,7 @@
         "connectorPin": 25,
         "physicalLabel": "CN7.25",
         "mcuPin": 3,
-        "boardCircuitKey": "nucleoLse",
+        "boardCircuitKey": "nucleoG4Lse",
         "position": {
           "x": 148,
           "y": 528,
@@ -41346,7 +41346,7 @@
         "connectorPin": 27,
         "physicalLabel": "CN7.27",
         "mcuPin": 4,
-        "boardCircuitKey": "nucleoLse",
+        "boardCircuitKey": "nucleoG4Lse",
         "position": {
           "x": 148,
           "y": 552,
@@ -41540,7 +41540,7 @@
         "connectorPin": 29,
         "physicalLabel": "CN7.29",
         "mcuPin": 5,
-        "boardCircuitKey": "nucleoHse",
+        "boardCircuitKey": "nucleoG4Hse",
         "position": {
           "x": 148,
           "y": 576,
@@ -41732,7 +41732,7 @@
         "connectorPin": 31,
         "physicalLabel": "CN7.31",
         "mcuPin": 6,
-        "boardCircuitKey": "nucleoHse",
+        "boardCircuitKey": "nucleoG4Hse",
         "position": {
           "x": 148,
           "y": 600,
@@ -42143,7 +42143,7 @@
         "connectorPin": 36,
         "physicalLabel": "CN7.36",
         "mcuPin": 9,
-        "boardCircuitKey": "nucleoA45",
+        "boardCircuitKey": "nucleoG4A45",
         "position": {
           "x": 176,
           "y": 648,
@@ -42325,7 +42325,7 @@
         "connectorPin": 38,
         "physicalLabel": "CN7.38",
         "mcuPin": 8,
-        "boardCircuitKey": "nucleoA45",
+        "boardCircuitKey": "nucleoG4A45",
         "position": {
           "x": 176,
           "y": 672,
@@ -43086,7 +43086,7 @@
         "physicalLabel": "CN8.5",
         "boardLabel": "A4",
         "mcuPin": 9,
-        "boardCircuitKey": "nucleoA45",
+        "boardCircuitKey": "nucleoG4A45",
         "position": {
           "x": 310,
           "y": 648,
@@ -43156,7 +43156,7 @@
         "physicalLabel": "CN8.6",
         "boardLabel": "A5",
         "mcuPin": 8,
-        "boardCircuitKey": "nucleoA45",
+        "boardCircuitKey": "nucleoG4A45",
         "position": {
           "x": 310,
           "y": 672,
@@ -43779,23 +43779,33 @@
           "y": 288,
           "side": "right"
         },
-        "sharedWith": []
+        "sharedWith": [
+          "CN10.37",
+          "CN9.1"
+        ]
       },
       {
         "number": 59,
-        "name": "VDDA",
-        "type": "POWER",
-        "functions": [],
+        "name": "VREF+",
+        "type": "SYSTEM",
+        "functions": [
+          {
+            "name": "VREFBUF_OUT",
+            "signal": "VREFBUF_OUT",
+            "group": "SYSTEM",
+            "evidence": "g474re-package"
+          }
+        ],
         "evidence": [
           "nucleo-g474re-morpho-32",
           "nucleo-g474re-top-view",
           "g474re-package"
         ],
-        "net": "VDDA",
+        "net": "VREF+",
         "connector": "CN10",
         "connectorPin": 7,
         "physicalLabel": "CN10.7",
-        "mcuPin": 29,
+        "mcuPin": 28,
         "position": {
           "x": 724,
           "y": 312,
@@ -43953,7 +43963,7 @@
         "connectorPin": 11,
         "physicalLabel": "CN10.11",
         "mcuPin": 19,
-        "boardCircuitKey": "nucleoLed",
+        "boardCircuitKey": "nucleoG4Led",
         "position": {
           "x": 724,
           "y": 360,
@@ -46656,128 +46666,49 @@
           "y": 624,
           "side": "right"
         },
-        "sharedWith": []
+        "sharedWith": [
+          "CN10.35",
+          "CN9.2"
+        ]
       },
       {
         "number": 87,
-        "name": "PA2",
+        "name": "PC4",
         "type": "GPIO",
         "functions": [
           {
-            "name": "ADC1_IN3",
-            "signal": "ADC1_IN3",
+            "name": "ADC2_IN5",
+            "signal": "ADC2_IN5",
             "group": "ADC",
             "evidence": "g474re-package"
           },
           {
-            "name": "ADC3_EXTI2",
-            "signal": "ADC3_EXTI2",
-            "group": "ADC_TRIGGER",
-            "evidence": "g474re-package"
-          },
-          {
-            "name": "ADC4_EXTI2",
-            "signal": "ADC4_EXTI2",
-            "group": "ADC_TRIGGER",
-            "evidence": "g474re-package"
-          },
-          {
-            "name": "ADC5_EXTI2",
-            "signal": "ADC5_EXTI2",
-            "group": "ADC_TRIGGER",
-            "evidence": "g474re-package"
-          },
-          {
-            "name": "COMP2_INM",
-            "signal": "COMP2_INM",
-            "group": "ADC",
-            "evidence": "g474re-package"
-          },
-          {
-            "name": "COMP2_OUT",
-            "signal": "COMP2_OUT",
-            "group": "ADC",
+            "name": "I2C2_SCL",
+            "signal": "I2C2_SCL",
+            "group": "I2C",
             "evidence": "g474re-package",
-            "selector": "AF8",
+            "selector": "AF4",
             "configurationEvidence": "g474re-modes"
           },
           {
-            "name": "LPUART1_TX",
-            "signal": "LPUART1_TX",
-            "group": "UART",
-            "evidence": "g474re-package",
-            "selector": "AF12",
-            "configurationEvidence": "g474re-modes"
-          },
-          {
-            "name": "OPAMP1_VOUT",
-            "signal": "OPAMP1_VOUT",
-            "group": "ADC",
-            "evidence": "g474re-package"
-          },
-          {
-            "name": "QUADSPI1_BK1_NCS",
-            "signal": "QUADSPI1_BK1_NCS",
+            "name": "QUADSPI1_BK2_IO3",
+            "signal": "QUADSPI1_BK2_IO3",
             "group": "SPI",
             "evidence": "g474re-package",
             "selector": "AF10",
             "configurationEvidence": "g474re-modes"
           },
           {
-            "name": "RCC_LSCO",
-            "signal": "RCC_LSCO",
-            "group": "SYSTEM",
-            "evidence": "g474re-package"
-          },
-          {
-            "name": "SYS_WKUP4",
-            "signal": "SYS_WKUP4",
-            "group": "SYSTEM",
-            "evidence": "g474re-package"
-          },
-          {
-            "name": "TIM15_CH1",
-            "signal": "TIM15_CH1",
-            "group": "PWM",
-            "evidence": "g474re-package",
-            "selector": "AF9",
-            "configurationEvidence": "g474re-modes"
-          },
-          {
-            "name": "TIM2_CH3",
-            "signal": "TIM2_CH3",
-            "group": "PWM",
-            "evidence": "g474re-package",
-            "selector": "AF1",
-            "configurationEvidence": "g474re-modes"
-          },
-          {
-            "name": "TIM5_CH3",
-            "signal": "TIM5_CH3",
-            "group": "PWM",
+            "name": "TIM1_ETR",
+            "signal": "TIM1_ETR",
+            "group": "TIMER",
             "evidence": "g474re-package",
             "selector": "AF2",
             "configurationEvidence": "g474re-modes"
           },
           {
-            "name": "UCPD1_FRSTX1",
-            "signal": "UCPD1_FRSTX1",
-            "group": "USB",
-            "evidence": "g474re-package",
-            "selector": "AF14",
-            "configurationEvidence": "g474re-modes"
-          },
-          {
-            "name": "UCPD1_FRSTX2",
-            "signal": "UCPD1_FRSTX2",
-            "group": "USB",
-            "evidence": "g474re-package",
-            "selector": "AF14",
-            "configurationEvidence": "g474re-modes"
-          },
-          {
-            "name": "USART2_TX",
-            "signal": "USART2_TX",
+            "name": "USART1_TX",
+            "signal": "USART1_TX",
             "group": "UART",
             "evidence": "g474re-package",
             "selector": "AF7",
@@ -46790,18 +46721,19 @@
           "g474re-package",
           "nucleo-g474-bridges"
         ],
-        "net": "PA2",
+        "net": "PC4",
         "connector": "CN10",
         "connectorPin": 35,
         "physicalLabel": "CN10.35",
-        "mcuPin": 14,
-        "boardCircuitKey": "nucleoA45",
+        "mcuPin": 22,
+        "boardCircuitKey": "nucleoG4Usart",
         "position": {
           "x": 724,
           "y": 648,
           "side": "left"
         },
         "sharedWith": [
+          "CN10.34",
           "CN9.2"
         ]
       },
@@ -46827,45 +46759,21 @@
       },
       {
         "number": 89,
-        "name": "PA3",
+        "name": "PC5",
         "type": "GPIO",
         "functions": [
           {
-            "name": "ADC1_IN4",
-            "signal": "ADC1_IN4",
+            "name": "ADC2_IN11",
+            "signal": "ADC2_IN11",
             "group": "ADC",
             "evidence": "g474re-package"
           },
           {
-            "name": "ADC3_EXTI3",
-            "signal": "ADC3_EXTI3",
-            "group": "ADC_TRIGGER",
-            "evidence": "g474re-package"
-          },
-          {
-            "name": "ADC4_EXTI3",
-            "signal": "ADC4_EXTI3",
-            "group": "ADC_TRIGGER",
-            "evidence": "g474re-package"
-          },
-          {
-            "name": "ADC5_EXTI3",
-            "signal": "ADC5_EXTI3",
-            "group": "ADC_TRIGGER",
-            "evidence": "g474re-package"
-          },
-          {
-            "name": "COMP2_INP",
-            "signal": "COMP2_INP",
-            "group": "ADC",
-            "evidence": "g474re-package"
-          },
-          {
-            "name": "LPUART1_RX",
-            "signal": "LPUART1_RX",
-            "group": "UART",
+            "name": "HRTIM1_EEV10",
+            "signal": "HRTIM1_EEV10",
+            "group": "PWM",
             "evidence": "g474re-package",
-            "selector": "AF12",
+            "selector": "AF13",
             "configurationEvidence": "g474re-modes"
           },
           {
@@ -46875,8 +46783,8 @@
             "evidence": "g474re-package"
           },
           {
-            "name": "OPAMP1_VINM0",
-            "signal": "OPAMP1_VINM0",
+            "name": "OPAMP1_VINM1",
+            "signal": "OPAMP1_VINM1",
             "group": "ADC",
             "evidence": "g474re-package"
           },
@@ -46887,86 +46795,56 @@
             "evidence": "g474re-package"
           },
           {
-            "name": "OPAMP1_VINP",
-            "signal": "OPAMP1_VINP",
+            "name": "OPAMP2_VINM",
+            "signal": "OPAMP2_VINM",
             "group": "ADC",
             "evidence": "g474re-package"
           },
           {
-            "name": "OPAMP1_VINP_SEC",
-            "signal": "OPAMP1_VINP_SEC",
+            "name": "OPAMP2_VINM1",
+            "signal": "OPAMP2_VINM1",
             "group": "ADC",
             "evidence": "g474re-package"
           },
           {
-            "name": "OPAMP5_VINM",
-            "signal": "OPAMP5_VINM",
+            "name": "OPAMP2_VINM_SEC",
+            "signal": "OPAMP2_VINM_SEC",
             "group": "ADC",
             "evidence": "g474re-package"
           },
           {
-            "name": "OPAMP5_VINM1",
-            "signal": "OPAMP5_VINM1",
-            "group": "ADC",
-            "evidence": "g474re-package"
-          },
-          {
-            "name": "OPAMP5_VINM_SEC",
-            "signal": "OPAMP5_VINM_SEC",
-            "group": "ADC",
-            "evidence": "g474re-package"
-          },
-          {
-            "name": "QUADSPI1_CLK",
-            "signal": "QUADSPI1_CLK",
-            "group": "SPI",
-            "evidence": "g474re-package",
-            "selector": "AF10",
-            "configurationEvidence": "g474re-modes"
-          },
-          {
-            "name": "SAI1_CK1",
-            "signal": "SAI1_CK1",
+            "name": "SAI1_D3",
+            "signal": "SAI1_D3",
             "group": "I2S",
             "evidence": "g474re-package",
             "selector": "AF3",
             "configurationEvidence": "g474re-modes"
           },
           {
-            "name": "SAI1_MCLK_A",
-            "signal": "SAI1_MCLK_A",
-            "group": "I2S",
-            "evidence": "g474re-package",
-            "selector": "AF13",
-            "configurationEvidence": "g474re-modes"
+            "name": "SYS_WKUP5",
+            "signal": "SYS_WKUP5",
+            "group": "SYSTEM",
+            "evidence": "g474re-package"
           },
           {
-            "name": "TIM15_CH2",
-            "signal": "TIM15_CH2",
-            "group": "PWM",
-            "evidence": "g474re-package",
-            "selector": "AF9",
-            "configurationEvidence": "g474re-modes"
-          },
-          {
-            "name": "TIM2_CH4",
-            "signal": "TIM2_CH4",
-            "group": "PWM",
-            "evidence": "g474re-package",
-            "selector": "AF1",
-            "configurationEvidence": "g474re-modes"
-          },
-          {
-            "name": "TIM5_CH4",
-            "signal": "TIM5_CH4",
-            "group": "PWM",
+            "name": "TIM15_BKIN",
+            "signal": "TIM15_BKIN",
+            "group": "TIMER",
             "evidence": "g474re-package",
             "selector": "AF2",
             "configurationEvidence": "g474re-modes"
           },
           {
-            "name": "USART2_RX",
-            "signal": "USART2_RX",
+            "name": "TIM1_CH4N",
+            "signal": "TIM1_CH4N",
+            "group": "PWM",
+            "evidence": "g474re-package",
+            "selector": "AF6",
+            "configurationEvidence": "g474re-modes"
+          },
+          {
+            "name": "USART1_RX",
+            "signal": "USART1_RX",
             "group": "UART",
             "evidence": "g474re-package",
             "selector": "AF7",
@@ -46979,18 +46857,19 @@
           "g474re-package",
           "nucleo-g474-bridges"
         ],
-        "net": "PA3",
+        "net": "PC5",
         "connector": "CN10",
         "connectorPin": 37,
         "physicalLabel": "CN10.37",
-        "mcuPin": 17,
-        "boardCircuitKey": "nucleoA45",
+        "mcuPin": 23,
+        "boardCircuitKey": "nucleoG4Usart",
         "position": {
           "x": 724,
           "y": 672,
           "side": "left"
         },
         "sharedWith": [
+          "CN10.6",
           "CN9.1"
         ]
       },
@@ -47702,7 +47581,7 @@
         "physicalLabel": "CN5.6",
         "boardLabel": "SCK/D13",
         "mcuPin": 19,
-        "boardCircuitKey": "nucleoLed",
+        "boardCircuitKey": "nucleoG4Led",
         "position": {
           "x": 590,
           "y": 348,
@@ -47735,19 +47614,26 @@
       {
         "number": 98,
         "name": "VREF+",
-        "type": "POWER",
-        "functions": [],
+        "type": "SYSTEM",
+        "functions": [
+          {
+            "name": "VREFBUF_OUT",
+            "signal": "VREFBUF_OUT",
+            "group": "SYSTEM",
+            "evidence": "g474re-package"
+          }
+        ],
         "evidence": [
           "nucleo-g474re-arduino-31",
           "nucleo-g474re-top-view",
           "g474re-package"
         ],
-        "net": "VDDA",
+        "net": "VREF+",
         "connector": "CN5",
         "connectorPin": 8,
         "physicalLabel": "CN5.8",
         "boardLabel": "VREFP",
-        "mcuPin": 29,
+        "mcuPin": 28,
         "position": {
           "x": 590,
           "y": 300,
@@ -48017,45 +47903,21 @@
       },
       {
         "number": 101,
-        "name": "PA3",
+        "name": "PC5",
         "type": "GPIO",
         "functions": [
           {
-            "name": "ADC1_IN4",
-            "signal": "ADC1_IN4",
+            "name": "ADC2_IN11",
+            "signal": "ADC2_IN11",
             "group": "ADC",
             "evidence": "g474re-package"
           },
           {
-            "name": "ADC3_EXTI3",
-            "signal": "ADC3_EXTI3",
-            "group": "ADC_TRIGGER",
-            "evidence": "g474re-package"
-          },
-          {
-            "name": "ADC4_EXTI3",
-            "signal": "ADC4_EXTI3",
-            "group": "ADC_TRIGGER",
-            "evidence": "g474re-package"
-          },
-          {
-            "name": "ADC5_EXTI3",
-            "signal": "ADC5_EXTI3",
-            "group": "ADC_TRIGGER",
-            "evidence": "g474re-package"
-          },
-          {
-            "name": "COMP2_INP",
-            "signal": "COMP2_INP",
-            "group": "ADC",
-            "evidence": "g474re-package"
-          },
-          {
-            "name": "LPUART1_RX",
-            "signal": "LPUART1_RX",
-            "group": "UART",
+            "name": "HRTIM1_EEV10",
+            "signal": "HRTIM1_EEV10",
+            "group": "PWM",
             "evidence": "g474re-package",
-            "selector": "AF12",
+            "selector": "AF13",
             "configurationEvidence": "g474re-modes"
           },
           {
@@ -48065,8 +47927,8 @@
             "evidence": "g474re-package"
           },
           {
-            "name": "OPAMP1_VINM0",
-            "signal": "OPAMP1_VINM0",
+            "name": "OPAMP1_VINM1",
+            "signal": "OPAMP1_VINM1",
             "group": "ADC",
             "evidence": "g474re-package"
           },
@@ -48077,86 +47939,56 @@
             "evidence": "g474re-package"
           },
           {
-            "name": "OPAMP1_VINP",
-            "signal": "OPAMP1_VINP",
+            "name": "OPAMP2_VINM",
+            "signal": "OPAMP2_VINM",
             "group": "ADC",
             "evidence": "g474re-package"
           },
           {
-            "name": "OPAMP1_VINP_SEC",
-            "signal": "OPAMP1_VINP_SEC",
+            "name": "OPAMP2_VINM1",
+            "signal": "OPAMP2_VINM1",
             "group": "ADC",
             "evidence": "g474re-package"
           },
           {
-            "name": "OPAMP5_VINM",
-            "signal": "OPAMP5_VINM",
+            "name": "OPAMP2_VINM_SEC",
+            "signal": "OPAMP2_VINM_SEC",
             "group": "ADC",
             "evidence": "g474re-package"
           },
           {
-            "name": "OPAMP5_VINM1",
-            "signal": "OPAMP5_VINM1",
-            "group": "ADC",
-            "evidence": "g474re-package"
-          },
-          {
-            "name": "OPAMP5_VINM_SEC",
-            "signal": "OPAMP5_VINM_SEC",
-            "group": "ADC",
-            "evidence": "g474re-package"
-          },
-          {
-            "name": "QUADSPI1_CLK",
-            "signal": "QUADSPI1_CLK",
-            "group": "SPI",
-            "evidence": "g474re-package",
-            "selector": "AF10",
-            "configurationEvidence": "g474re-modes"
-          },
-          {
-            "name": "SAI1_CK1",
-            "signal": "SAI1_CK1",
+            "name": "SAI1_D3",
+            "signal": "SAI1_D3",
             "group": "I2S",
             "evidence": "g474re-package",
             "selector": "AF3",
             "configurationEvidence": "g474re-modes"
           },
           {
-            "name": "SAI1_MCLK_A",
-            "signal": "SAI1_MCLK_A",
-            "group": "I2S",
-            "evidence": "g474re-package",
-            "selector": "AF13",
-            "configurationEvidence": "g474re-modes"
+            "name": "SYS_WKUP5",
+            "signal": "SYS_WKUP5",
+            "group": "SYSTEM",
+            "evidence": "g474re-package"
           },
           {
-            "name": "TIM15_CH2",
-            "signal": "TIM15_CH2",
-            "group": "PWM",
-            "evidence": "g474re-package",
-            "selector": "AF9",
-            "configurationEvidence": "g474re-modes"
-          },
-          {
-            "name": "TIM2_CH4",
-            "signal": "TIM2_CH4",
-            "group": "PWM",
-            "evidence": "g474re-package",
-            "selector": "AF1",
-            "configurationEvidence": "g474re-modes"
-          },
-          {
-            "name": "TIM5_CH4",
-            "signal": "TIM5_CH4",
-            "group": "PWM",
+            "name": "TIM15_BKIN",
+            "signal": "TIM15_BKIN",
+            "group": "TIMER",
             "evidence": "g474re-package",
             "selector": "AF2",
             "configurationEvidence": "g474re-modes"
           },
           {
-            "name": "USART2_RX",
-            "signal": "USART2_RX",
+            "name": "TIM1_CH4N",
+            "signal": "TIM1_CH4N",
+            "group": "PWM",
+            "evidence": "g474re-package",
+            "selector": "AF6",
+            "configurationEvidence": "g474re-modes"
+          },
+          {
+            "name": "USART1_RX",
+            "signal": "USART1_RX",
             "group": "UART",
             "evidence": "g474re-package",
             "selector": "AF7",
@@ -48169,142 +48001,61 @@
           "g474re-package",
           "nucleo-g474-bridges"
         ],
-        "net": "PA3",
+        "net": "PC5",
         "connector": "CN9",
         "connectorPin": 1,
         "physicalLabel": "CN9.1",
         "boardLabel": "RX/D0",
-        "mcuPin": 17,
-        "boardCircuitKey": "nucleoA45",
+        "mcuPin": 23,
+        "boardCircuitKey": "nucleoG4Usart",
         "position": {
           "x": 590,
           "y": 672,
           "side": "left"
         },
         "sharedWith": [
+          "CN10.6",
           "CN10.37"
         ]
       },
       {
         "number": 102,
-        "name": "PA2",
+        "name": "PC4",
         "type": "GPIO",
         "functions": [
           {
-            "name": "ADC1_IN3",
-            "signal": "ADC1_IN3",
+            "name": "ADC2_IN5",
+            "signal": "ADC2_IN5",
             "group": "ADC",
             "evidence": "g474re-package"
           },
           {
-            "name": "ADC3_EXTI2",
-            "signal": "ADC3_EXTI2",
-            "group": "ADC_TRIGGER",
-            "evidence": "g474re-package"
-          },
-          {
-            "name": "ADC4_EXTI2",
-            "signal": "ADC4_EXTI2",
-            "group": "ADC_TRIGGER",
-            "evidence": "g474re-package"
-          },
-          {
-            "name": "ADC5_EXTI2",
-            "signal": "ADC5_EXTI2",
-            "group": "ADC_TRIGGER",
-            "evidence": "g474re-package"
-          },
-          {
-            "name": "COMP2_INM",
-            "signal": "COMP2_INM",
-            "group": "ADC",
-            "evidence": "g474re-package"
-          },
-          {
-            "name": "COMP2_OUT",
-            "signal": "COMP2_OUT",
-            "group": "ADC",
+            "name": "I2C2_SCL",
+            "signal": "I2C2_SCL",
+            "group": "I2C",
             "evidence": "g474re-package",
-            "selector": "AF8",
+            "selector": "AF4",
             "configurationEvidence": "g474re-modes"
           },
           {
-            "name": "LPUART1_TX",
-            "signal": "LPUART1_TX",
-            "group": "UART",
-            "evidence": "g474re-package",
-            "selector": "AF12",
-            "configurationEvidence": "g474re-modes"
-          },
-          {
-            "name": "OPAMP1_VOUT",
-            "signal": "OPAMP1_VOUT",
-            "group": "ADC",
-            "evidence": "g474re-package"
-          },
-          {
-            "name": "QUADSPI1_BK1_NCS",
-            "signal": "QUADSPI1_BK1_NCS",
+            "name": "QUADSPI1_BK2_IO3",
+            "signal": "QUADSPI1_BK2_IO3",
             "group": "SPI",
             "evidence": "g474re-package",
             "selector": "AF10",
             "configurationEvidence": "g474re-modes"
           },
           {
-            "name": "RCC_LSCO",
-            "signal": "RCC_LSCO",
-            "group": "SYSTEM",
-            "evidence": "g474re-package"
-          },
-          {
-            "name": "SYS_WKUP4",
-            "signal": "SYS_WKUP4",
-            "group": "SYSTEM",
-            "evidence": "g474re-package"
-          },
-          {
-            "name": "TIM15_CH1",
-            "signal": "TIM15_CH1",
-            "group": "PWM",
-            "evidence": "g474re-package",
-            "selector": "AF9",
-            "configurationEvidence": "g474re-modes"
-          },
-          {
-            "name": "TIM2_CH3",
-            "signal": "TIM2_CH3",
-            "group": "PWM",
-            "evidence": "g474re-package",
-            "selector": "AF1",
-            "configurationEvidence": "g474re-modes"
-          },
-          {
-            "name": "TIM5_CH3",
-            "signal": "TIM5_CH3",
-            "group": "PWM",
+            "name": "TIM1_ETR",
+            "signal": "TIM1_ETR",
+            "group": "TIMER",
             "evidence": "g474re-package",
             "selector": "AF2",
             "configurationEvidence": "g474re-modes"
           },
           {
-            "name": "UCPD1_FRSTX1",
-            "signal": "UCPD1_FRSTX1",
-            "group": "USB",
-            "evidence": "g474re-package",
-            "selector": "AF14",
-            "configurationEvidence": "g474re-modes"
-          },
-          {
-            "name": "UCPD1_FRSTX2",
-            "signal": "UCPD1_FRSTX2",
-            "group": "USB",
-            "evidence": "g474re-package",
-            "selector": "AF14",
-            "configurationEvidence": "g474re-modes"
-          },
-          {
-            "name": "USART2_TX",
-            "signal": "USART2_TX",
+            "name": "USART1_TX",
+            "signal": "USART1_TX",
             "group": "UART",
             "evidence": "g474re-package",
             "selector": "AF7",
@@ -48317,19 +48068,20 @@
           "g474re-package",
           "nucleo-g474-bridges"
         ],
-        "net": "PA2",
+        "net": "PC4",
         "connector": "CN9",
         "connectorPin": 2,
         "physicalLabel": "CN9.2",
         "boardLabel": "TX/D1",
-        "mcuPin": 14,
-        "boardCircuitKey": "nucleoA45",
+        "mcuPin": 22,
+        "boardCircuitKey": "nucleoG4Usart",
         "position": {
           "x": 590,
           "y": 648,
           "side": "left"
         },
         "sharedWith": [
+          "CN10.34",
           "CN10.35"
         ]
       },
@@ -111422,7 +111174,7 @@
     },
     "packagePins": 28,
     "gpioCount": 21,
-    "voltage": "3.3 V I/O · 5 V tolerant VBUS",
+    "voltage": "3.3 V I/O · 5 V USB VBUS",
     "mcu": "RP2040",
     "processor": "Dual ARM Cortex-M0+",
     "clock": "133 MHz",
@@ -111472,16 +111224,16 @@
           "y": 138,
           "side": "left"
         },
-        "note": "3.3 V regulated power output (up to 500 mA)"
+        "note": "3.3 V regulated power output (500 mA peak)"
       },
       {
         "number": 3,
         "physicalLabel": "LEFT.3",
         "connector": "LEFT",
         "connectorPin": 3,
-        "name": "AREF",
-        "boardLabel": "AREF",
-        "net": "AREF",
+        "name": "3V3",
+        "boardLabel": "3.3V",
+        "net": "3V3",
         "type": "POWER",
         "functions": [],
         "evidence": [
@@ -111493,7 +111245,7 @@
           "y": 166,
           "side": "left"
         },
-        "note": "ADC reference voltage (default 3.3 V)"
+        "note": "Second 3.3 V regulator output pin (not an ADC reference input)"
       },
       {
         "number": 4,
@@ -112622,704 +112374,69 @@
         "physicalLabel": "RIGHT.1",
         "connector": "RIGHT",
         "connectorPin": 1,
-        "name": "SDA",
-        "boardLabel": "SDA",
-        "net": "GPIO2",
-        "type": "GPIO",
-        "functions": [
-          {
-            "name": "SPI0 SCK",
-            "group": "SPI",
-            "signal": "SPI0 SCK",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 1,
-            "selector": "F1"
-          },
-          {
-            "name": "UART0 CTS",
-            "group": "UART",
-            "signal": "UART0 CTS",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 2,
-            "selector": "F2"
-          },
-          {
-            "name": "I2C1 SDA",
-            "group": "I2C",
-            "signal": "I2C1 SDA",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 3,
-            "selector": "F3"
-          },
-          {
-            "name": "PWM1 A",
-            "group": "PWM",
-            "signal": "PWM1 A",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 4,
-            "selector": "F4"
-          },
-          {
-            "name": "SIO",
-            "group": "SIO",
-            "signal": "SIO",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 5,
-            "selector": "F5"
-          },
-          {
-            "name": "PIO0",
-            "group": "PIO",
-            "signal": "PIO0",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 6,
-            "selector": "F6"
-          },
-          {
-            "name": "PIO1",
-            "group": "PIO",
-            "signal": "PIO1",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 7,
-            "selector": "F7"
-          },
-          {
-            "name": "USB VBUS EN",
-            "group": "USB",
-            "signal": "USB VBUS EN",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 9,
-            "selector": "F9"
-          }
-        ],
+        "name": "VBAT",
+        "boardLabel": "VBAT",
+        "net": "VBAT",
+        "type": "POWER",
+        "functions": [],
         "evidence": [
           "feather-rp2040-pinout",
-          "feather-rp2040-top-view",
-          "rp2040-qfn56-physical"
+          "feather-rp2040-top-view"
         ],
         "position": {
           "x": 543,
           "y": 222,
           "side": "right"
         },
-        "mcuPin": 4,
-        "note": "Default hardware I2C1 SDA · Shared with STEMMA QT connector"
+        "note": "Positive battery input from 2-pin JST-PH connector"
       },
       {
         "number": 18,
         "physicalLabel": "RIGHT.2",
         "connector": "RIGHT",
         "connectorPin": 2,
-        "name": "SCL",
-        "boardLabel": "SCL",
-        "net": "GPIO3",
-        "type": "GPIO",
-        "functions": [
-          {
-            "name": "SPI0 TX",
-            "group": "SPI",
-            "signal": "SPI0 TX",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 1,
-            "selector": "F1"
-          },
-          {
-            "name": "UART0 RTS",
-            "group": "UART",
-            "signal": "UART0 RTS",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 2,
-            "selector": "F2"
-          },
-          {
-            "name": "I2C1 SCL",
-            "group": "I2C",
-            "signal": "I2C1 SCL",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 3,
-            "selector": "F3"
-          },
-          {
-            "name": "PWM1 B",
-            "group": "PWM",
-            "signal": "PWM1 B",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 4,
-            "selector": "F4"
-          },
-          {
-            "name": "SIO",
-            "group": "SIO",
-            "signal": "SIO",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 5,
-            "selector": "F5"
-          },
-          {
-            "name": "PIO0",
-            "group": "PIO",
-            "signal": "PIO0",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 6,
-            "selector": "F6"
-          },
-          {
-            "name": "PIO1",
-            "group": "PIO",
-            "signal": "PIO1",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 7,
-            "selector": "F7"
-          },
-          {
-            "name": "USB OVCUR DET",
-            "group": "USB",
-            "signal": "USB OVCUR DET",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 9,
-            "selector": "F9"
-          }
-        ],
+        "name": "EN",
+        "boardLabel": "EN",
+        "net": "EN",
+        "type": "SYSTEM",
+        "functions": [],
         "evidence": [
           "feather-rp2040-pinout",
-          "feather-rp2040-top-view",
-          "rp2040-qfn56-physical"
+          "feather-rp2040-top-view"
         ],
         "position": {
           "x": 543,
           "y": 250,
           "side": "right"
         },
-        "mcuPin": 5,
-        "note": "Default hardware I2C1 SCL · Shared with STEMMA QT connector"
+        "note": "3.3 V regulator enable pin (pull low to shut down)"
       },
       {
         "number": 19,
         "physicalLabel": "RIGHT.3",
         "connector": "RIGHT",
         "connectorPin": 3,
-        "name": "D5",
-        "boardLabel": "D5",
-        "net": "GPIO7",
-        "type": "GPIO",
-        "functions": [
-          {
-            "name": "SPI0 TX",
-            "group": "SPI",
-            "signal": "SPI0 TX",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 1,
-            "selector": "F1"
-          },
-          {
-            "name": "UART1 RTS",
-            "group": "UART",
-            "signal": "UART1 RTS",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 2,
-            "selector": "F2"
-          },
-          {
-            "name": "I2C1 SCL",
-            "group": "I2C",
-            "signal": "I2C1 SCL",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 3,
-            "selector": "F3"
-          },
-          {
-            "name": "PWM3 B",
-            "group": "PWM",
-            "signal": "PWM3 B",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 4,
-            "selector": "F4"
-          },
-          {
-            "name": "SIO",
-            "group": "SIO",
-            "signal": "SIO",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 5,
-            "selector": "F5"
-          },
-          {
-            "name": "PIO0",
-            "group": "PIO",
-            "signal": "PIO0",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 6,
-            "selector": "F6"
-          },
-          {
-            "name": "PIO1",
-            "group": "PIO",
-            "signal": "PIO1",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 7,
-            "selector": "F7"
-          },
-          {
-            "name": "USB VBUS DET",
-            "group": "USB",
-            "signal": "USB VBUS DET",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 9,
-            "selector": "F9"
-          }
-        ],
+        "name": "VBUS",
+        "boardLabel": "VBUS",
+        "net": "VBUS",
+        "type": "POWER",
+        "functions": [],
         "evidence": [
           "feather-rp2040-pinout",
-          "feather-rp2040-top-view",
-          "rp2040-qfn56-physical"
+          "feather-rp2040-top-view"
         ],
         "position": {
           "x": 543,
           "y": 278,
           "side": "right"
         },
-        "mcuPin": 9
+        "note": "5 V power to/from the USB Type-C connector"
       },
       {
         "number": 20,
         "physicalLabel": "RIGHT.4",
         "connector": "RIGHT",
         "connectorPin": 4,
-        "name": "D6",
-        "boardLabel": "D6",
-        "net": "GPIO8",
-        "type": "GPIO",
-        "functions": [
-          {
-            "name": "SPI1 RX",
-            "group": "SPI",
-            "signal": "SPI1 RX",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 1,
-            "selector": "F1"
-          },
-          {
-            "name": "UART1 TX",
-            "group": "UART",
-            "signal": "UART1 TX",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 2,
-            "selector": "F2"
-          },
-          {
-            "name": "I2C0 SDA",
-            "group": "I2C",
-            "signal": "I2C0 SDA",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 3,
-            "selector": "F3"
-          },
-          {
-            "name": "PWM4 A",
-            "group": "PWM",
-            "signal": "PWM4 A",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 4,
-            "selector": "F4"
-          },
-          {
-            "name": "SIO",
-            "group": "SIO",
-            "signal": "SIO",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 5,
-            "selector": "F5"
-          },
-          {
-            "name": "PIO0",
-            "group": "PIO",
-            "signal": "PIO0",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 6,
-            "selector": "F6"
-          },
-          {
-            "name": "PIO1",
-            "group": "PIO",
-            "signal": "PIO1",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 7,
-            "selector": "F7"
-          },
-          {
-            "name": "USB VBUS EN",
-            "group": "USB",
-            "signal": "USB VBUS EN",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 9,
-            "selector": "F9"
-          }
-        ],
-        "evidence": [
-          "feather-rp2040-pinout",
-          "feather-rp2040-top-view",
-          "rp2040-qfn56-physical"
-        ],
-        "position": {
-          "x": 543,
-          "y": 306,
-          "side": "right"
-        },
-        "mcuPin": 11
-      },
-      {
-        "number": 21,
-        "physicalLabel": "RIGHT.5",
-        "connector": "RIGHT",
-        "connectorPin": 5,
-        "name": "D9",
-        "boardLabel": "D9",
-        "net": "GPIO9",
-        "type": "GPIO",
-        "functions": [
-          {
-            "name": "SPI1 CSn",
-            "group": "SPI",
-            "signal": "SPI1 CSn",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 1,
-            "selector": "F1"
-          },
-          {
-            "name": "UART1 RX",
-            "group": "UART",
-            "signal": "UART1 RX",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 2,
-            "selector": "F2"
-          },
-          {
-            "name": "I2C0 SCL",
-            "group": "I2C",
-            "signal": "I2C0 SCL",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 3,
-            "selector": "F3"
-          },
-          {
-            "name": "PWM4 B",
-            "group": "PWM",
-            "signal": "PWM4 B",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 4,
-            "selector": "F4"
-          },
-          {
-            "name": "SIO",
-            "group": "SIO",
-            "signal": "SIO",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 5,
-            "selector": "F5"
-          },
-          {
-            "name": "PIO0",
-            "group": "PIO",
-            "signal": "PIO0",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 6,
-            "selector": "F6"
-          },
-          {
-            "name": "PIO1",
-            "group": "PIO",
-            "signal": "PIO1",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 7,
-            "selector": "F7"
-          },
-          {
-            "name": "USB OVCUR DET",
-            "group": "USB",
-            "signal": "USB OVCUR DET",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 9,
-            "selector": "F9"
-          }
-        ],
-        "evidence": [
-          "feather-rp2040-pinout",
-          "feather-rp2040-top-view",
-          "rp2040-qfn56-physical"
-        ],
-        "position": {
-          "x": 543,
-          "y": 334,
-          "side": "right"
-        },
-        "mcuPin": 12
-      },
-      {
-        "number": 22,
-        "physicalLabel": "RIGHT.6",
-        "connector": "RIGHT",
-        "connectorPin": 6,
-        "name": "D10",
-        "boardLabel": "D10",
-        "net": "GPIO10",
-        "type": "GPIO",
-        "functions": [
-          {
-            "name": "SPI1 SCK",
-            "group": "SPI",
-            "signal": "SPI1 SCK",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 1,
-            "selector": "F1"
-          },
-          {
-            "name": "UART1 CTS",
-            "group": "UART",
-            "signal": "UART1 CTS",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 2,
-            "selector": "F2"
-          },
-          {
-            "name": "I2C1 SDA",
-            "group": "I2C",
-            "signal": "I2C1 SDA",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 3,
-            "selector": "F3"
-          },
-          {
-            "name": "PWM5 A",
-            "group": "PWM",
-            "signal": "PWM5 A",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 4,
-            "selector": "F4"
-          },
-          {
-            "name": "SIO",
-            "group": "SIO",
-            "signal": "SIO",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 5,
-            "selector": "F5"
-          },
-          {
-            "name": "PIO0",
-            "group": "PIO",
-            "signal": "PIO0",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 6,
-            "selector": "F6"
-          },
-          {
-            "name": "PIO1",
-            "group": "PIO",
-            "signal": "PIO1",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 7,
-            "selector": "F7"
-          },
-          {
-            "name": "USB VBUS DET",
-            "group": "USB",
-            "signal": "USB VBUS DET",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 9,
-            "selector": "F9"
-          }
-        ],
-        "evidence": [
-          "feather-rp2040-pinout",
-          "feather-rp2040-top-view",
-          "rp2040-qfn56-physical"
-        ],
-        "position": {
-          "x": 543,
-          "y": 362,
-          "side": "right"
-        },
-        "mcuPin": 13
-      },
-      {
-        "number": 23,
-        "physicalLabel": "RIGHT.7",
-        "connector": "RIGHT",
-        "connectorPin": 7,
-        "name": "D11",
-        "boardLabel": "D11",
-        "net": "GPIO11",
-        "type": "GPIO",
-        "functions": [
-          {
-            "name": "SPI1 TX",
-            "group": "SPI",
-            "signal": "SPI1 TX",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 1,
-            "selector": "F1"
-          },
-          {
-            "name": "UART1 RTS",
-            "group": "UART",
-            "signal": "UART1 RTS",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 2,
-            "selector": "F2"
-          },
-          {
-            "name": "I2C1 SCL",
-            "group": "I2C",
-            "signal": "I2C1 SCL",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 3,
-            "selector": "F3"
-          },
-          {
-            "name": "PWM5 B",
-            "group": "PWM",
-            "signal": "PWM5 B",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 4,
-            "selector": "F4"
-          },
-          {
-            "name": "SIO",
-            "group": "SIO",
-            "signal": "SIO",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 5,
-            "selector": "F5"
-          },
-          {
-            "name": "PIO0",
-            "group": "PIO",
-            "signal": "PIO0",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 6,
-            "selector": "F6"
-          },
-          {
-            "name": "PIO1",
-            "group": "PIO",
-            "signal": "PIO1",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 7,
-            "selector": "F7"
-          },
-          {
-            "name": "USB VBUS EN",
-            "group": "USB",
-            "signal": "USB VBUS EN",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 9,
-            "selector": "F9"
-          }
-        ],
-        "evidence": [
-          "feather-rp2040-pinout",
-          "feather-rp2040-top-view",
-          "rp2040-qfn56-physical"
-        ],
-        "position": {
-          "x": 543,
-          "y": 390,
-          "side": "right"
-        },
-        "mcuPin": 14
-      },
-      {
-        "number": 24,
-        "physicalLabel": "RIGHT.8",
-        "connector": "RIGHT",
-        "connectorPin": 8,
-        "name": "D12",
-        "boardLabel": "D12",
-        "net": "GPIO12",
-        "type": "GPIO",
-        "functions": [
-          {
-            "name": "SPI1 RX",
-            "group": "SPI",
-            "signal": "SPI1 RX",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 1,
-            "selector": "F1"
-          },
-          {
-            "name": "UART0 TX",
-            "group": "UART",
-            "signal": "UART0 TX",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 2,
-            "selector": "F2"
-          },
-          {
-            "name": "I2C0 SDA",
-            "group": "I2C",
-            "signal": "I2C0 SDA",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 3,
-            "selector": "F3"
-          },
-          {
-            "name": "PWM6 A",
-            "group": "PWM",
-            "signal": "PWM6 A",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 4,
-            "selector": "F4"
-          },
-          {
-            "name": "SIO",
-            "group": "SIO",
-            "signal": "SIO",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 5,
-            "selector": "F5"
-          },
-          {
-            "name": "PIO0",
-            "group": "PIO",
-            "signal": "PIO0",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 6,
-            "selector": "F6"
-          },
-          {
-            "name": "PIO1",
-            "group": "PIO",
-            "signal": "PIO1",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 7,
-            "selector": "F7"
-          },
-          {
-            "name": "USB OVCUR DET",
-            "group": "USB",
-            "signal": "USB OVCUR DET",
-            "evidence": "rp2040-bank0-p13",
-            "alt": 9,
-            "selector": "F9"
-          }
-        ],
-        "evidence": [
-          "feather-rp2040-pinout",
-          "feather-rp2040-top-view",
-          "rp2040-qfn56-physical"
-        ],
-        "position": {
-          "x": 543,
-          "y": 418,
-          "side": "right"
-        },
-        "mcuPin": 15
-      },
-      {
-        "number": 25,
-        "physicalLabel": "RIGHT.9",
-        "connector": "RIGHT",
-        "connectorPin": 9,
         "name": "D13",
         "boardLabel": "D13",
         "net": "GPIO13",
@@ -113397,74 +112514,709 @@
         ],
         "position": {
           "x": 543,
-          "y": 446,
+          "y": 306,
           "side": "right"
         },
         "mcuPin": 16,
         "note": "Connected to onboard red user LED"
       },
       {
+        "number": 21,
+        "physicalLabel": "RIGHT.5",
+        "connector": "RIGHT",
+        "connectorPin": 5,
+        "name": "D12",
+        "boardLabel": "D12",
+        "net": "GPIO12",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 RX",
+            "group": "SPI",
+            "signal": "SPI1 RX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 TX",
+            "group": "UART",
+            "signal": "UART0 TX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SDA",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM6 A",
+            "group": "PWM",
+            "signal": "PWM6 A",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB OVCUR DET",
+            "group": "USB",
+            "signal": "USB OVCUR DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "feather-rp2040-pinout",
+          "feather-rp2040-top-view",
+          "rp2040-qfn56-physical"
+        ],
+        "position": {
+          "x": 543,
+          "y": 334,
+          "side": "right"
+        },
+        "mcuPin": 15
+      },
+      {
+        "number": 22,
+        "physicalLabel": "RIGHT.6",
+        "connector": "RIGHT",
+        "connectorPin": 6,
+        "name": "D11",
+        "boardLabel": "D11",
+        "net": "GPIO11",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 TX",
+            "group": "SPI",
+            "signal": "SPI1 TX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 RTS",
+            "group": "UART",
+            "signal": "UART1 RTS",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SCL",
+            "group": "I2C",
+            "signal": "I2C1 SCL",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM5 B",
+            "group": "PWM",
+            "signal": "PWM5 B",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS EN",
+            "group": "USB",
+            "signal": "USB VBUS EN",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "feather-rp2040-pinout",
+          "feather-rp2040-top-view",
+          "rp2040-qfn56-physical"
+        ],
+        "position": {
+          "x": 543,
+          "y": 362,
+          "side": "right"
+        },
+        "mcuPin": 14
+      },
+      {
+        "number": 23,
+        "physicalLabel": "RIGHT.7",
+        "connector": "RIGHT",
+        "connectorPin": 7,
+        "name": "D10",
+        "boardLabel": "D10",
+        "net": "GPIO10",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 SCK",
+            "group": "SPI",
+            "signal": "SPI1 SCK",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 CTS",
+            "group": "UART",
+            "signal": "UART1 CTS",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SDA",
+            "group": "I2C",
+            "signal": "I2C1 SDA",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM5 A",
+            "group": "PWM",
+            "signal": "PWM5 A",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS DET",
+            "group": "USB",
+            "signal": "USB VBUS DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "feather-rp2040-pinout",
+          "feather-rp2040-top-view",
+          "rp2040-qfn56-physical"
+        ],
+        "position": {
+          "x": 543,
+          "y": 390,
+          "side": "right"
+        },
+        "mcuPin": 13
+      },
+      {
+        "number": 24,
+        "physicalLabel": "RIGHT.8",
+        "connector": "RIGHT",
+        "connectorPin": 8,
+        "name": "D9",
+        "boardLabel": "D9",
+        "net": "GPIO9",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 CSn",
+            "group": "SPI",
+            "signal": "SPI1 CSn",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 RX",
+            "group": "UART",
+            "signal": "UART1 RX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SCL",
+            "group": "I2C",
+            "signal": "I2C0 SCL",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM4 B",
+            "group": "PWM",
+            "signal": "PWM4 B",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB OVCUR DET",
+            "group": "USB",
+            "signal": "USB OVCUR DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "feather-rp2040-pinout",
+          "feather-rp2040-top-view",
+          "rp2040-qfn56-physical"
+        ],
+        "position": {
+          "x": 543,
+          "y": 418,
+          "side": "right"
+        },
+        "mcuPin": 12
+      },
+      {
+        "number": 25,
+        "physicalLabel": "RIGHT.9",
+        "connector": "RIGHT",
+        "connectorPin": 9,
+        "name": "D6",
+        "boardLabel": "D6",
+        "net": "GPIO8",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1 RX",
+            "group": "SPI",
+            "signal": "SPI1 RX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 TX",
+            "group": "UART",
+            "signal": "UART1 TX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C0 SDA",
+            "group": "I2C",
+            "signal": "I2C0 SDA",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM4 A",
+            "group": "PWM",
+            "signal": "PWM4 A",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS EN",
+            "group": "USB",
+            "signal": "USB VBUS EN",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
+        "evidence": [
+          "feather-rp2040-pinout",
+          "feather-rp2040-top-view",
+          "rp2040-qfn56-physical"
+        ],
+        "position": {
+          "x": 543,
+          "y": 446,
+          "side": "right"
+        },
+        "mcuPin": 11
+      },
+      {
         "number": 26,
         "physicalLabel": "RIGHT.10",
         "connector": "RIGHT",
         "connectorPin": 10,
-        "name": "VBUS",
-        "boardLabel": "VBUS",
-        "net": "VBUS",
-        "type": "POWER",
-        "functions": [],
+        "name": "D5",
+        "boardLabel": "D5",
+        "net": "GPIO7",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 TX",
+            "group": "SPI",
+            "signal": "SPI0 TX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART1 RTS",
+            "group": "UART",
+            "signal": "UART1 RTS",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SCL",
+            "group": "I2C",
+            "signal": "I2C1 SCL",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM3 B",
+            "group": "PWM",
+            "signal": "PWM3 B",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS DET",
+            "group": "USB",
+            "signal": "USB VBUS DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
         "evidence": [
           "feather-rp2040-pinout",
-          "feather-rp2040-top-view"
+          "feather-rp2040-top-view",
+          "rp2040-qfn56-physical"
         ],
         "position": {
           "x": 543,
           "y": 474,
           "side": "right"
         },
-        "note": "5 V power input from USB Type-C connector"
+        "mcuPin": 9
       },
       {
         "number": 27,
         "physicalLabel": "RIGHT.11",
         "connector": "RIGHT",
         "connectorPin": 11,
-        "name": "EN",
-        "boardLabel": "EN",
-        "net": "EN",
-        "type": "SYSTEM",
-        "functions": [],
+        "name": "SCL",
+        "boardLabel": "SCL",
+        "net": "GPIO3",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 TX",
+            "group": "SPI",
+            "signal": "SPI0 TX",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 RTS",
+            "group": "UART",
+            "signal": "UART0 RTS",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SCL",
+            "group": "I2C",
+            "signal": "I2C1 SCL",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM1 B",
+            "group": "PWM",
+            "signal": "PWM1 B",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB OVCUR DET",
+            "group": "USB",
+            "signal": "USB OVCUR DET",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
         "evidence": [
           "feather-rp2040-pinout",
-          "feather-rp2040-top-view"
+          "feather-rp2040-top-view",
+          "rp2040-qfn56-physical"
         ],
         "position": {
           "x": 543,
           "y": 502,
           "side": "right"
         },
-        "note": "3.3 V regulator enable pin (pull low to shut down)"
+        "mcuPin": 5,
+        "note": "Default hardware I2C1 SCL · Shared with STEMMA QT connector"
       },
       {
         "number": 28,
         "physicalLabel": "RIGHT.12",
         "connector": "RIGHT",
         "connectorPin": 12,
-        "name": "VBAT",
-        "boardLabel": "VBAT",
-        "net": "VBAT",
-        "type": "POWER",
-        "functions": [],
+        "name": "SDA",
+        "boardLabel": "SDA",
+        "net": "GPIO2",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0 SCK",
+            "group": "SPI",
+            "signal": "SPI0 SCK",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 1,
+            "selector": "F1"
+          },
+          {
+            "name": "UART0 CTS",
+            "group": "UART",
+            "signal": "UART0 CTS",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 2,
+            "selector": "F2"
+          },
+          {
+            "name": "I2C1 SDA",
+            "group": "I2C",
+            "signal": "I2C1 SDA",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 3,
+            "selector": "F3"
+          },
+          {
+            "name": "PWM1 A",
+            "group": "PWM",
+            "signal": "PWM1 A",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 4,
+            "selector": "F4"
+          },
+          {
+            "name": "SIO",
+            "group": "SIO",
+            "signal": "SIO",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 5,
+            "selector": "F5"
+          },
+          {
+            "name": "PIO0",
+            "group": "PIO",
+            "signal": "PIO0",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 6,
+            "selector": "F6"
+          },
+          {
+            "name": "PIO1",
+            "group": "PIO",
+            "signal": "PIO1",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 7,
+            "selector": "F7"
+          },
+          {
+            "name": "USB VBUS EN",
+            "group": "USB",
+            "signal": "USB VBUS EN",
+            "evidence": "rp2040-bank0-p13",
+            "alt": 9,
+            "selector": "F9"
+          }
+        ],
         "evidence": [
           "feather-rp2040-pinout",
-          "feather-rp2040-top-view"
+          "feather-rp2040-top-view",
+          "rp2040-qfn56-physical"
         ],
         "position": {
           "x": 543,
           "y": 530,
           "side": "right"
         },
-        "note": "Positive battery input from 2-pin JST-PH connector"
+        "mcuPin": 4,
+        "note": "Default hardware I2C1 SDA · Shared with STEMMA QT connector"
       }
     ]
   },
@@ -113482,8 +113234,8 @@
     },
     "orientation": "usb-top",
     "packagePins": 67,
-    "gpioCount": 46,
-    "uniqueGPIOCount": 46,
+    "gpioCount": 48,
+    "uniqueGPIOCount": 48,
     "voltage": "3.3 V I/O",
     "mcu": "i.MX RT1062",
     "processor": "Arm Cortex-M7",
@@ -113526,6 +113278,12 @@
             "name": "UART1 RX",
             "group": "UART",
             "signal": "RX1",
+            "evidence": "teensy41-front"
+          },
+          {
+            "name": "SPI1 CS",
+            "group": "SPI",
+            "signal": "CS1",
             "evidence": "teensy41-front"
           },
           {
@@ -113573,6 +113331,12 @@
             "name": "UART1 TX",
             "group": "UART",
             "signal": "TX1",
+            "evidence": "teensy41-front"
+          },
+          {
+            "name": "SPI1 MISO",
+            "group": "SPI",
+            "signal": "MISO1",
             "evidence": "teensy41-front"
           },
           {
@@ -113881,6 +113645,12 @@
             "evidence": "teensy41-front"
           },
           {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "teensy41-front"
+          },
+          {
             "name": "GPIO interrupt",
             "group": "IRQ",
             "signal": "GPIO7[16]",
@@ -114004,6 +113774,12 @@
             "evidence": "teensy41-front"
           },
           {
+            "name": "CAN1 TX",
+            "group": "CAN",
+            "signal": "CTX1",
+            "evidence": "teensy41-front"
+          },
+          {
             "name": "PWM",
             "group": "PWM",
             "signal": "PWM",
@@ -114048,6 +113824,12 @@
             "name": "MQSL",
             "group": "AUDIO",
             "signal": "MQSL",
+            "evidence": "teensy41-front"
+          },
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
             "evidence": "teensy41-front"
           },
           {
@@ -114100,7 +113882,7 @@
         "type": "GPIO",
         "functions": [
           {
-            "name": "ADC1_CH10",
+            "name": "ADC1_IN1",
             "group": "ADC",
             "signal": "A10",
             "evidence": "teensy41-front"
@@ -114153,7 +113935,7 @@
         "type": "GPIO",
         "functions": [
           {
-            "name": "ADC1_CH11",
+            "name": "ADC1_IN2",
             "group": "ADC",
             "signal": "A11",
             "evidence": "teensy41-front"
@@ -114206,7 +113988,7 @@
         "type": "GPIO",
         "functions": [
           {
-            "name": "ADC1_CH12",
+            "name": "ADC2_IN3",
             "group": "ADC",
             "signal": "A12",
             "evidence": "teensy41-front"
@@ -114247,7 +114029,7 @@
         "type": "GPIO",
         "functions": [
           {
-            "name": "ADC1_CH13",
+            "name": "ADC2_IN4",
             "group": "ADC",
             "signal": "A13",
             "evidence": "teensy41-front"
@@ -114534,7 +114316,7 @@
         "type": "GPIO",
         "functions": [
           {
-            "name": "ADC1_CH9",
+            "name": "ADC1_IN14",
             "group": "ADC",
             "signal": "A9",
             "evidence": "teensy41-front"
@@ -114587,7 +114369,7 @@
         "type": "GPIO",
         "functions": [
           {
-            "name": "ADC1_CH8",
+            "name": "ADC1_IN13",
             "group": "ADC",
             "signal": "A8",
             "evidence": "teensy41-front"
@@ -114634,7 +114416,7 @@
         "type": "GPIO",
         "functions": [
           {
-            "name": "ADC1_CH7",
+            "name": "ADC1_IN0",
             "group": "ADC",
             "signal": "A7",
             "evidence": "teensy41-front"
@@ -114646,9 +114428,9 @@
             "evidence": "teensy41-front"
           },
           {
-            "name": "PWM",
-            "group": "PWM",
-            "signal": "PWM",
+            "name": "I2S1 BCLK1",
+            "group": "AUDIO",
+            "signal": "BCLK1",
             "evidence": "teensy41-front"
           },
           {
@@ -114681,7 +114463,7 @@
         "type": "GPIO",
         "functions": [
           {
-            "name": "ADC1_CH6",
+            "name": "ADC1_IN15",
             "group": "ADC",
             "signal": "A6",
             "evidence": "teensy41-front"
@@ -114693,9 +114475,9 @@
             "evidence": "teensy41-front"
           },
           {
-            "name": "PWM",
-            "group": "PWM",
-            "signal": "PWM",
+            "name": "I2S1 LRCLK1",
+            "group": "AUDIO",
+            "signal": "LRCLK1",
             "evidence": "teensy41-front"
           },
           {
@@ -114728,7 +114510,7 @@
         "type": "GPIO",
         "functions": [
           {
-            "name": "ADC1_CH5",
+            "name": "ADC1_IN5",
             "group": "ADC",
             "signal": "A5",
             "evidence": "teensy41-front"
@@ -114775,7 +114557,7 @@
         "type": "GPIO",
         "functions": [
           {
-            "name": "ADC1_CH4",
+            "name": "ADC1_IN6",
             "group": "ADC",
             "signal": "A4",
             "evidence": "teensy41-front"
@@ -114822,7 +114604,7 @@
         "type": "GPIO",
         "functions": [
           {
-            "name": "ADC1_CH3",
+            "name": "ADC1_IN11",
             "group": "ADC",
             "signal": "A3",
             "evidence": "teensy41-front"
@@ -114869,7 +114651,7 @@
         "type": "GPIO",
         "functions": [
           {
-            "name": "ADC1_CH2",
+            "name": "ADC1_IN12",
             "group": "ADC",
             "signal": "A2",
             "evidence": "teensy41-front"
@@ -114916,7 +114698,7 @@
         "type": "GPIO",
         "functions": [
           {
-            "name": "ADC1_CH1",
+            "name": "ADC1_IN8",
             "group": "ADC",
             "signal": "A1",
             "evidence": "teensy41-front"
@@ -114969,7 +114751,7 @@
         "type": "GPIO",
         "functions": [
           {
-            "name": "ADC1_CH0",
+            "name": "ADC1_IN7",
             "group": "ADC",
             "signal": "A0",
             "evidence": "teensy41-front"
@@ -115088,21 +114870,9 @@
         "type": "GPIO",
         "functions": [
           {
-            "name": "ADC2_CH17",
+            "name": "ADC1_IN10",
             "group": "ADC",
             "signal": "A17",
-            "evidence": "teensy41-front"
-          },
-          {
-            "name": "SPI1 MISO",
-            "group": "SPI",
-            "signal": "MISO1",
-            "evidence": "teensy41-front"
-          },
-          {
-            "name": "UART8 RX",
-            "group": "UART",
-            "signal": "RX8",
             "evidence": "teensy41-front"
           },
           {
@@ -115135,21 +114905,9 @@
         "type": "GPIO",
         "functions": [
           {
-            "name": "ADC2_CH16",
+            "name": "ADC1_IN9",
             "group": "ADC",
             "signal": "A16",
-            "evidence": "teensy41-front"
-          },
-          {
-            "name": "SPI1 CS",
-            "group": "SPI",
-            "signal": "CS1",
-            "evidence": "teensy41-front"
-          },
-          {
-            "name": "UART8 TX",
-            "group": "UART",
-            "signal": "TX8",
             "evidence": "teensy41-front"
           },
           {
@@ -115182,35 +114940,41 @@
         "type": "GPIO",
         "functions": [
           {
-            "name": "ADC2_CH15",
+            "name": "ADC2_IN2",
             "group": "ADC",
             "signal": "A15",
             "evidence": "teensy41-front"
           },
           {
-            "name": "I2S2 MCLK2",
+            "name": "SPI1 MISO",
+            "group": "SPI",
+            "signal": "MISO1",
+            "evidence": "teensy41-front"
+          },
+          {
+            "name": "I2S1 OUT1A",
             "group": "AUDIO",
-            "signal": "MCLK2",
+            "signal": "OUT1A",
             "evidence": "teensy41-front"
           },
           {
             "name": "GPIO interrupt",
             "group": "IRQ",
-            "signal": "GPIO8[16]",
+            "signal": "GPIO6[29]",
             "evidence": "teensy41-front"
           }
         ],
         "evidence": [
           "teensy41-front"
         ],
-        "net": "GPIO8[16]",
+        "net": "GPIO6[29]",
         "position": {
           "x": 540,
           "y": 552,
           "side": "right"
         },
         "arduinoPin": 39,
-        "mcuPort": "GPIO8[16]",
+        "mcuPort": "GPIO6[29]",
         "noteKey": "teensyGpioNote"
       },
       {
@@ -115223,15 +114987,9 @@
         "type": "GPIO",
         "functions": [
           {
-            "name": "ADC2_CH14",
+            "name": "ADC2_IN1",
             "group": "ADC",
             "signal": "A14",
-            "evidence": "teensy41-front"
-          },
-          {
-            "name": "I2S1 IN1",
-            "group": "AUDIO",
-            "signal": "IN1",
             "evidence": "teensy41-front"
           },
           {
@@ -115241,23 +114999,29 @@
             "evidence": "teensy41-front"
           },
           {
+            "name": "I2S1 IN1",
+            "group": "AUDIO",
+            "signal": "IN1",
+            "evidence": "teensy41-front"
+          },
+          {
             "name": "GPIO interrupt",
             "group": "IRQ",
-            "signal": "GPIO8[17]",
+            "signal": "GPIO6[28]",
             "evidence": "teensy41-front"
           }
         ],
         "evidence": [
           "teensy41-front"
         ],
-        "net": "GPIO8[17]",
+        "net": "GPIO6[28]",
         "position": {
           "x": 540,
           "y": 578,
           "side": "right"
         },
         "arduinoPin": 38,
-        "mcuPort": "GPIO8[17]",
+        "mcuPort": "GPIO6[28]",
         "noteKey": "teensyGpioNote"
       },
       {
@@ -115276,23 +115040,29 @@
             "evidence": "teensy41-front"
           },
           {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "teensy41-front"
+          },
+          {
             "name": "GPIO interrupt",
             "group": "IRQ",
-            "signal": "GPIO8[12]",
+            "signal": "GPIO7[19]",
             "evidence": "teensy41-front"
           }
         ],
         "evidence": [
           "teensy41-front"
         ],
-        "net": "GPIO8[12]",
+        "net": "GPIO7[19]",
         "position": {
           "x": 540,
           "y": 604,
           "side": "right"
         },
         "arduinoPin": 37,
-        "mcuPort": "GPIO8[12]",
+        "mcuPort": "GPIO7[19]",
         "noteKey": "teensyGpioNote"
       },
       {
@@ -115319,21 +115089,21 @@
           {
             "name": "GPIO interrupt",
             "group": "IRQ",
-            "signal": "GPIO8[13]",
+            "signal": "GPIO7[18]",
             "evidence": "teensy41-front"
           }
         ],
         "evidence": [
           "teensy41-front"
         ],
-        "net": "GPIO8[13]",
+        "net": "GPIO7[18]",
         "position": {
           "x": 540,
           "y": 630,
           "side": "right"
         },
         "arduinoPin": 36,
-        "mcuPort": "GPIO8[13]",
+        "mcuPort": "GPIO7[18]",
         "noteKey": "teensyGpioNote"
       },
       {
@@ -115346,35 +115116,29 @@
         "type": "GPIO",
         "functions": [
           {
-            "name": "I2S1 BCLK1",
-            "group": "AUDIO",
-            "signal": "BCLK1",
-            "evidence": "teensy41-front"
-          },
-          {
-            "name": "PWM",
-            "group": "PWM",
-            "signal": "PWM",
+            "name": "UART8 TX",
+            "group": "UART",
+            "signal": "TX8",
             "evidence": "teensy41-front"
           },
           {
             "name": "GPIO interrupt",
             "group": "IRQ",
-            "signal": "GPIO8[14]",
+            "signal": "GPIO7[28]",
             "evidence": "teensy41-front"
           }
         ],
         "evidence": [
           "teensy41-front"
         ],
-        "net": "GPIO8[14]",
+        "net": "GPIO7[28]",
         "position": {
           "x": 540,
           "y": 656,
           "side": "right"
         },
         "arduinoPin": 35,
-        "mcuPort": "GPIO8[14]",
+        "mcuPort": "GPIO7[28]",
         "noteKey": "teensyGpioNote"
       },
       {
@@ -115387,35 +115151,29 @@
         "type": "GPIO",
         "functions": [
           {
-            "name": "I2S1 LRCLK1",
-            "group": "AUDIO",
-            "signal": "LRCLK1",
-            "evidence": "teensy41-front"
-          },
-          {
-            "name": "PWM",
-            "group": "PWM",
-            "signal": "PWM",
+            "name": "UART8 RX",
+            "group": "UART",
+            "signal": "RX8",
             "evidence": "teensy41-front"
           },
           {
             "name": "GPIO interrupt",
             "group": "IRQ",
-            "signal": "GPIO8[15]",
+            "signal": "GPIO7[29]",
             "evidence": "teensy41-front"
           }
         ],
         "evidence": [
           "teensy41-front"
         ],
-        "net": "GPIO8[15]",
+        "net": "GPIO7[29]",
         "position": {
           "x": 540,
           "y": 682,
           "side": "right"
         },
         "arduinoPin": 34,
-        "mcuPort": "GPIO8[15]",
+        "mcuPort": "GPIO7[29]",
         "noteKey": "teensyGpioNote"
       },
       {
@@ -115428,9 +115186,9 @@
         "type": "GPIO",
         "functions": [
           {
-            "name": "I2S1 OUT1A",
+            "name": "I2S2 MCLK2",
             "group": "AUDIO",
-            "signal": "OUT1A",
+            "signal": "MCLK2",
             "evidence": "teensy41-front"
           },
           {
@@ -115794,9 +115552,21 @@
             "evidence": "teensy41-back"
           },
           {
+            "name": "SPI2 MISO",
+            "group": "SPI",
+            "signal": "MISO2",
+            "evidence": "teensy41-back"
+          },
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "teensy41-back"
+          },
+          {
             "name": "GPIO interrupt",
             "group": "IRQ",
-            "signal": "GPIO6[28]",
+            "signal": "GPIO8[15]",
             "evidence": "teensy41-back"
           }
         ],
@@ -115804,7 +115574,7 @@
           "teensy41-back",
           "teensy41-schematic"
         ],
-        "net": "GPIO6[28]",
+        "net": "GPIO8[15]",
         "position": {
           "x": 370,
           "y": 640,
@@ -115813,7 +115583,7 @@
           "padWidth": 24
         },
         "arduinoPin": 42,
-        "mcuPort": "GPIO6[28]",
+        "mcuPort": "GPIO8[15]",
         "noteKey": "teensySdNote"
       },
       {
@@ -115832,9 +115602,21 @@
             "evidence": "teensy41-back"
           },
           {
+            "name": "SPI2 MOSI",
+            "group": "SPI",
+            "signal": "MOSI2",
+            "evidence": "teensy41-back"
+          },
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "teensy41-back"
+          },
+          {
             "name": "GPIO interrupt",
             "group": "IRQ",
-            "signal": "GPIO6[29]",
+            "signal": "GPIO8[14]",
             "evidence": "teensy41-back"
           }
         ],
@@ -115842,7 +115624,7 @@
           "teensy41-back",
           "teensy41-schematic"
         ],
-        "net": "GPIO6[29]",
+        "net": "GPIO8[14]",
         "position": {
           "x": 396,
           "y": 640,
@@ -115851,7 +115633,7 @@
           "padWidth": 24
         },
         "arduinoPin": 43,
-        "mcuPort": "GPIO6[29]",
+        "mcuPort": "GPIO8[14]",
         "noteKey": "teensySdNote"
       },
       {
@@ -115859,22 +115641,15 @@
         "physicalLabel": "SD.3",
         "connector": "SD",
         "connectorPin": 3,
-        "name": "CLK",
-        "boardLabel": "CLK",
-        "type": "SYSTEM",
-        "functions": [
-          {
-            "name": "SDIO CLK",
-            "group": "SDIO",
-            "signal": "CLK",
-            "evidence": "teensy41-back"
-          }
-        ],
+        "name": "GND",
+        "boardLabel": "GND",
+        "type": "GND",
+        "functions": [],
         "evidence": [
           "teensy41-back",
           "teensy41-schematic"
         ],
-        "net": "SD_CLK",
+        "net": "GND",
         "position": {
           "x": 422,
           "y": 640,
@@ -115888,14 +115663,38 @@
         "physicalLabel": "SD.4",
         "connector": "SD",
         "connectorPin": 4,
-        "name": "3.3V",
-        "boardLabel": "3.3V",
-        "type": "POWER",
+        "name": "44",
+        "boardLabel": "CLK",
+        "type": "GPIO",
         "functions": [
           {
-            "name": "SDIO 3.3V",
+            "name": "SDIO CLK",
             "group": "SDIO",
-            "signal": "3.3V",
+            "signal": "CLK",
+            "evidence": "teensy41-back"
+          },
+          {
+            "name": "SPI2 CS",
+            "group": "SPI",
+            "signal": "CS2",
+            "evidence": "teensy41-back"
+          },
+          {
+            "name": "I2C1 SDA",
+            "group": "I2C",
+            "signal": "SDA1",
+            "evidence": "teensy41-back"
+          },
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "teensy41-back"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO8[13]",
             "evidence": "teensy41-back"
           }
         ],
@@ -115903,36 +115702,32 @@
           "teensy41-back",
           "teensy41-schematic"
         ],
-        "net": "3.3V",
+        "net": "GPIO8[13]",
         "position": {
           "x": 448,
           "y": 640,
           "side": "right",
           "compact": true,
           "padWidth": 24
-        }
+        },
+        "arduinoPin": 44,
+        "mcuPort": "GPIO8[13]",
+        "noteKey": "teensySdNote"
       },
       {
         "number": 64,
         "physicalLabel": "SD.5",
         "connector": "SD",
         "connectorPin": 5,
-        "name": "CMD",
-        "boardLabel": "CMD",
-        "type": "SYSTEM",
-        "functions": [
-          {
-            "name": "SDIO CMD",
-            "group": "SDIO",
-            "signal": "CMD",
-            "evidence": "teensy41-back"
-          }
-        ],
+        "name": "3.3V",
+        "boardLabel": "3.3V",
+        "type": "POWER",
+        "functions": [],
         "evidence": [
           "teensy41-back",
           "teensy41-schematic"
         ],
-        "net": "SD_CMD",
+        "net": "3.3V",
         "position": {
           "x": 370,
           "y": 666,
@@ -115946,14 +115741,38 @@
         "physicalLabel": "SD.6",
         "connector": "SD",
         "connectorPin": 6,
-        "name": "GND",
-        "boardLabel": "GND",
-        "type": "GND",
+        "name": "45",
+        "boardLabel": "CMD",
+        "type": "GPIO",
         "functions": [
           {
-            "name": "SDIO GND",
+            "name": "SDIO CMD",
             "group": "SDIO",
-            "signal": "GND",
+            "signal": "CMD",
+            "evidence": "teensy41-back"
+          },
+          {
+            "name": "SPI2 SCK",
+            "group": "SPI",
+            "signal": "SCK2",
+            "evidence": "teensy41-back"
+          },
+          {
+            "name": "I2C1 SCL",
+            "group": "I2C",
+            "signal": "SCL1",
+            "evidence": "teensy41-back"
+          },
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "teensy41-back"
+          },
+          {
+            "name": "GPIO interrupt",
+            "group": "IRQ",
+            "signal": "GPIO8[12]",
             "evidence": "teensy41-back"
           }
         ],
@@ -115961,14 +115780,17 @@
           "teensy41-back",
           "teensy41-schematic"
         ],
-        "net": "GND",
+        "net": "GPIO8[12]",
         "position": {
           "x": 396,
           "y": 666,
           "side": "right",
           "compact": true,
           "padWidth": 24
-        }
+        },
+        "arduinoPin": 45,
+        "mcuPort": "GPIO8[12]",
+        "noteKey": "teensySdNote"
       },
       {
         "number": 66,
@@ -115986,9 +115808,21 @@
             "evidence": "teensy41-back"
           },
           {
+            "name": "UART5 RX",
+            "group": "UART",
+            "signal": "RX5",
+            "evidence": "teensy41-back"
+          },
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "teensy41-back"
+          },
+          {
             "name": "GPIO interrupt",
             "group": "IRQ",
-            "signal": "GPIO6[15]",
+            "signal": "GPIO8[17]",
             "evidence": "teensy41-back"
           }
         ],
@@ -115996,7 +115830,7 @@
           "teensy41-back",
           "teensy41-schematic"
         ],
-        "net": "GPIO6[15]",
+        "net": "GPIO8[17]",
         "position": {
           "x": 422,
           "y": 666,
@@ -116005,7 +115839,7 @@
           "padWidth": 24
         },
         "arduinoPin": 46,
-        "mcuPort": "GPIO6[15]",
+        "mcuPort": "GPIO8[17]",
         "noteKey": "teensySdNote"
       },
       {
@@ -116024,9 +115858,21 @@
             "evidence": "teensy41-back"
           },
           {
+            "name": "UART5 TX",
+            "group": "UART",
+            "signal": "TX5",
+            "evidence": "teensy41-back"
+          },
+          {
+            "name": "PWM",
+            "group": "PWM",
+            "signal": "PWM",
+            "evidence": "teensy41-back"
+          },
+          {
             "name": "GPIO interrupt",
             "group": "IRQ",
-            "signal": "GPIO6[14]",
+            "signal": "GPIO8[16]",
             "evidence": "teensy41-back"
           }
         ],
@@ -116034,7 +115880,7 @@
           "teensy41-back",
           "teensy41-schematic"
         ],
-        "net": "GPIO6[14]",
+        "net": "GPIO8[16]",
         "position": {
           "x": 448,
           "y": 666,
@@ -116043,7 +115889,7 @@
           "padWidth": 24
         },
         "arduinoPin": 47,
-        "mcuPort": "GPIO6[14]",
+        "mcuPort": "GPIO8[16]",
         "noteKey": "teensySdNote"
       }
     ]
@@ -136568,7 +136414,7 @@
       },
       {
         "number": 28,
-        "name": "VDDA",
+        "name": "VREF+",
         "type": "SYSTEM",
         "functions": [
           {

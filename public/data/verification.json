@@ -1,7 +1,7 @@
 {
   "verifiedOn": "2026-11-05",
   "physicalPins": 5222,
-  "functionAssignments": 24307,
+  "functionAssignments": 24284,
   "documents": [
     {
       "id": "rp2350",
@@ -1215,7 +1215,7 @@
     {
       "id": "nucleo-g474re",
       "physicalPins": 108,
-      "functionAssignments": 916,
+      "functionAssignments": 878,
       "physicalSourceMethods": [
         "manufacturer-xml",
         "pdf-table",
@@ -1486,7 +1486,7 @@
     {
       "id": "teensy-41",
       "physicalPins": 67,
-      "functionAssignments": 170,
+      "functionAssignments": 185,
       "physicalSourceMethods": [
         "schematic",
         "visual-diagram"

@@ -209,8 +209,6 @@ def read_g4_chip(cache, docs, ref, verified_on, category):
         name = pad.get('Name')
         port = re.match(r'P[A-I]\d+', name)
         clean_name = port[0] if port else name
-        if clean_name == 'VREF+':
-            clean_name = 'VDDA'
         pin_type = 'GPIO' if port else 'GND' if clean_name.startswith('VSS') else 'POWER' if pad.get('Type') == 'Power' else 'SYSTEM'
         functions = []
         for signal in pad.findall('{*}Signal'):
@@ -297,15 +295,20 @@ def build_nucleo_g474(cache, docs, ref, chip, use_snapshots=False):
     by_name = {pin['name']: pin for pin in chip['pins']}
     aliases = {
         'RESET': 'PG10', 'NRST': 'PG10', 'PG10-NRST': 'PG10',
-        'AVDD': 'VDDA', 'VREFP': 'VDDA', 'VREF+': 'VDDA',
+        'AVDD': 'VDDA', 'VREFP': 'VREF+',
         'BOOT0': 'PB8', 'BOOT0(2)': 'PB8',
         '3V3': '+3.3V', '5V': '+5V', '5V_USB_CHGR': 'U5V',
     }
+    # MB1367 has its own solder-bridge numbering; the MB1136 notes do not apply.
     notes = {
-        'PA2': 'nucleoUsart', 'PA3': 'nucleoUsart', 'PA5': 'nucleoLed',
-        'PC14': 'nucleoLse', 'PC15': 'nucleoLse',
-        'PF0': 'nucleoHse', 'PF1': 'nucleoHse',
+        'PA5': 'nucleoG4Led',
+        'PC14': 'nucleoG4Lse', 'PC15': 'nucleoG4Lse',
+        'PF0': 'nucleoG4Hse', 'PF1': 'nucleoG4Hse',
     }
+    # Cells that list two MCU pins. UM2505 Table 10: D1/D0 and CN10.35/37 are on
+    # USART1 PC4/PC5 by default (SB13/SB19 ON); LPUART1 PA2/PA3 serves the ST-LINK
+    # virtual COM port (SB17/SB23 ON). A4/A5 list the analog route first.
+    default_route = {'PA2 / PC4': 'PC4', 'PA3 / PC5': 'PC5'}
     drawing_ref = ref(f'{board_id}-top-view', document, 24,
                       'MB1367 top view · connector positions, rows and numbering', 'visual-diagram')
     pins = []
@@ -313,7 +316,7 @@ def build_nucleo_g474(cache, docs, ref, chip, use_snapshots=False):
         for number, (label, raw, evidence) in sorted(contacts.items()):
             raw = ' '.join(raw.split())
             signal = re.sub(r'\(\d+\)', '', raw).split(' or ')[0].strip()
-            signal = signal.split('/')[0].strip()
+            signal = default_route.get(signal) or signal.split('/')[0].strip()
             if signal == '-':
                 signal = label or 'NC'
             mapped = aliases.get(signal, signal)
@@ -334,7 +337,9 @@ def build_nucleo_g474(cache, docs, ref, chip, use_snapshots=False):
                 pin['reserved'] = True
             else:
                 assert mapped in {'VDD', 'E5V', 'GND', 'AGND', 'IOREF', '+3.3V', '+5V', 'VIN', 'U5V', 'VBAT'}, mapped
-            note = 'nucleoA45' if '/' in raw else notes.get(mapped)
+            note = notes.get(mapped)
+            if '/' in raw:
+                note = 'nucleoG4Usart' if raw in default_route else 'nucleoG4A45'
             if note:
                 pin['boardCircuitKey'] = note
                 pin['evidence'].append(bridges_ref)

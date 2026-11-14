@@ -3281,7 +3281,7 @@ nucleo-g474re,58,PC5,GPIO,SYS_WKUP5,,SYS_WKUP5,nucleo-g474re-morpho-32 | nucleo-
 nucleo-g474re,58,PC5,GPIO,TIM15_BKIN,AF2,TIM15_BKIN,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
 nucleo-g474re,58,PC5,GPIO,TIM1_CH4N,AF6,TIM1_CH4N,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
 nucleo-g474re,58,PC5,GPIO,USART1_RX,AF7,USART1_RX,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
-nucleo-g474re,59,VDDA,POWER,,,,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,
+nucleo-g474re,59,VREF+,SYSTEM,VREFBUF_OUT,,VREFBUF_OUT,nucleo-g474re-morpho-32 | nucleo-g474re-top-view | g474re-package,g474re-package
 nucleo-g474re,60,U5V,POWER,,,,nucleo-g474re-morpho-32 | nucleo-g474re-top-view,
 nucleo-g474re,61,GND,GND,,,,nucleo-g474re-morpho-32 | nucleo-g474re-top-view,
 nucleo-g474re,62,NC,SYSTEM,,,,nucleo-g474re-morpho-32 | nucleo-g474re-top-view,
@@ -3591,45 +3591,25 @@ nucleo-g474re,86,PC4,GPIO,I2C2_SCL,AF4,I2C2_SCL,nucleo-g474re-morpho-33 | nucleo
 nucleo-g474re,86,PC4,GPIO,QUADSPI1_BK2_IO3,AF10,QUADSPI1_BK2_IO3,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
 nucleo-g474re,86,PC4,GPIO,TIM1_ETR,AF2,TIM1_ETR,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
 nucleo-g474re,86,PC4,GPIO,USART1_TX,AF7,USART1_TX,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
-nucleo-g474re,87,PA2,GPIO,ADC1_IN3,,ADC1_IN3,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,87,PA2,GPIO,ADC3_EXTI2,,ADC3_EXTI2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,87,PA2,GPIO,ADC4_EXTI2,,ADC4_EXTI2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,87,PA2,GPIO,ADC5_EXTI2,,ADC5_EXTI2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,87,PA2,GPIO,COMP2_INM,,COMP2_INM,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,87,PA2,GPIO,COMP2_OUT,AF8,COMP2_OUT,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,87,PA2,GPIO,LPUART1_TX,AF12,LPUART1_TX,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,87,PA2,GPIO,OPAMP1_VOUT,,OPAMP1_VOUT,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,87,PA2,GPIO,QUADSPI1_BK1_NCS,AF10,QUADSPI1_BK1_NCS,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,87,PA2,GPIO,RCC_LSCO,,RCC_LSCO,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,87,PA2,GPIO,SYS_WKUP4,,SYS_WKUP4,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,87,PA2,GPIO,TIM15_CH1,AF9,TIM15_CH1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,87,PA2,GPIO,TIM2_CH3,AF1,TIM2_CH3,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,87,PA2,GPIO,TIM5_CH3,AF2,TIM5_CH3,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,87,PA2,GPIO,UCPD1_FRSTX1,AF14,UCPD1_FRSTX1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,87,PA2,GPIO,UCPD1_FRSTX2,AF14,UCPD1_FRSTX2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,87,PA2,GPIO,USART2_TX,AF7,USART2_TX,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,87,PC4,GPIO,ADC2_IN5,,ADC2_IN5,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,87,PC4,GPIO,I2C2_SCL,AF4,I2C2_SCL,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,87,PC4,GPIO,QUADSPI1_BK2_IO3,AF10,QUADSPI1_BK2_IO3,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,87,PC4,GPIO,TIM1_ETR,AF2,TIM1_ETR,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,87,PC4,GPIO,USART1_TX,AF7,USART1_TX,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
 nucleo-g474re,88,NC,SYSTEM,,,,nucleo-g474re-morpho-33 | nucleo-g474re-top-view,
-nucleo-g474re,89,PA3,GPIO,ADC1_IN4,,ADC1_IN4,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,89,PA3,GPIO,ADC3_EXTI3,,ADC3_EXTI3,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,89,PA3,GPIO,ADC4_EXTI3,,ADC4_EXTI3,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,89,PA3,GPIO,ADC5_EXTI3,,ADC5_EXTI3,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,89,PA3,GPIO,COMP2_INP,,COMP2_INP,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,89,PA3,GPIO,LPUART1_RX,AF12,LPUART1_RX,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,89,PA3,GPIO,OPAMP1_VINM,,OPAMP1_VINM,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,89,PA3,GPIO,OPAMP1_VINM0,,OPAMP1_VINM0,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,89,PA3,GPIO,OPAMP1_VINM_SEC,,OPAMP1_VINM_SEC,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,89,PA3,GPIO,OPAMP1_VINP,,OPAMP1_VINP,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,89,PA3,GPIO,OPAMP1_VINP_SEC,,OPAMP1_VINP_SEC,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,89,PA3,GPIO,OPAMP5_VINM,,OPAMP5_VINM,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,89,PA3,GPIO,OPAMP5_VINM1,,OPAMP5_VINM1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,89,PA3,GPIO,OPAMP5_VINM_SEC,,OPAMP5_VINM_SEC,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,89,PA3,GPIO,QUADSPI1_CLK,AF10,QUADSPI1_CLK,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,89,PA3,GPIO,SAI1_CK1,AF3,SAI1_CK1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,89,PA3,GPIO,SAI1_MCLK_A,AF13,SAI1_MCLK_A,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,89,PA3,GPIO,TIM15_CH2,AF9,TIM15_CH2,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,89,PA3,GPIO,TIM2_CH4,AF1,TIM2_CH4,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,89,PA3,GPIO,TIM5_CH4,AF2,TIM5_CH4,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,89,PA3,GPIO,USART2_RX,AF7,USART2_RX,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,89,PC5,GPIO,ADC2_IN11,,ADC2_IN11,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,89,PC5,GPIO,HRTIM1_EEV10,AF13,HRTIM1_EEV10,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,89,PC5,GPIO,OPAMP1_VINM,,OPAMP1_VINM,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,89,PC5,GPIO,OPAMP1_VINM1,,OPAMP1_VINM1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,89,PC5,GPIO,OPAMP1_VINM_SEC,,OPAMP1_VINM_SEC,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,89,PC5,GPIO,OPAMP2_VINM,,OPAMP2_VINM,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,89,PC5,GPIO,OPAMP2_VINM1,,OPAMP2_VINM1,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,89,PC5,GPIO,OPAMP2_VINM_SEC,,OPAMP2_VINM_SEC,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,89,PC5,GPIO,SAI1_D3,AF3,SAI1_D3,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,89,PC5,GPIO,SYS_WKUP5,,SYS_WKUP5,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,89,PC5,GPIO,TIM15_BKIN,AF2,TIM15_BKIN,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,89,PC5,GPIO,TIM1_CH4N,AF6,TIM1_CH4N,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,89,PC5,GPIO,USART1_RX,AF7,USART1_RX,nucleo-g474re-morpho-33 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
 nucleo-g474re,90,NC,SYSTEM,,,,nucleo-g474re-morpho-33 | nucleo-g474re-top-view,
 nucleo-g474re,91,PA9,GPIO,ADC5_IN2,,ADC5_IN2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
 nucleo-g474re,91,PA9,GPIO,COMP5_OUT,AF8,COMP5_OUT,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
@@ -3705,7 +3685,7 @@ nucleo-g474re,96,PA5,GPIO,TIM2_ETR,AF2,TIM2_ETR,nucleo-g474re-arduino-31 | nucle
 nucleo-g474re,96,PA5,GPIO,UCPD1_FRSTX1,AF14,UCPD1_FRSTX1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
 nucleo-g474re,96,PA5,GPIO,UCPD1_FRSTX2,AF14,UCPD1_FRSTX2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
 nucleo-g474re,97,GND,GND,,,,nucleo-g474re-arduino-31 | nucleo-g474re-top-view,
-nucleo-g474re,98,VREF+,POWER,,,,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,
+nucleo-g474re,98,VREF+,SYSTEM,VREFBUF_OUT,,VREFBUF_OUT,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
 nucleo-g474re,99,PB9,GPIO,COMP2_OUT,AF8,COMP2_OUT,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
 nucleo-g474re,99,PB9,GPIO,DAC1_EXTI9,,DAC1_EXTI9,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
 nucleo-g474re,99,PB9,GPIO,DAC2_EXTI9,,DAC2_EXTI9,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
@@ -3733,44 +3713,24 @@ nucleo-g474re,100,PB8,GPIO,TIM1_BKIN,AF12,TIM1_BKIN,nucleo-g474re-arduino-31 | n
 nucleo-g474re,100,PB8,GPIO,TIM4_CH3,AF2,TIM4_CH3,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
 nucleo-g474re,100,PB8,GPIO,TIM8_CH2,AF10,TIM8_CH2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
 nucleo-g474re,100,PB8,GPIO,USART3_RX,AF7,USART3_RX,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
-nucleo-g474re,101,PA3,GPIO,ADC1_IN4,,ADC1_IN4,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,101,PA3,GPIO,ADC3_EXTI3,,ADC3_EXTI3,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,101,PA3,GPIO,ADC4_EXTI3,,ADC4_EXTI3,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,101,PA3,GPIO,ADC5_EXTI3,,ADC5_EXTI3,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,101,PA3,GPIO,COMP2_INP,,COMP2_INP,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,101,PA3,GPIO,LPUART1_RX,AF12,LPUART1_RX,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,101,PA3,GPIO,OPAMP1_VINM,,OPAMP1_VINM,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,101,PA3,GPIO,OPAMP1_VINM0,,OPAMP1_VINM0,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,101,PA3,GPIO,OPAMP1_VINM_SEC,,OPAMP1_VINM_SEC,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,101,PA3,GPIO,OPAMP1_VINP,,OPAMP1_VINP,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,101,PA3,GPIO,OPAMP1_VINP_SEC,,OPAMP1_VINP_SEC,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,101,PA3,GPIO,OPAMP5_VINM,,OPAMP5_VINM,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,101,PA3,GPIO,OPAMP5_VINM1,,OPAMP5_VINM1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,101,PA3,GPIO,OPAMP5_VINM_SEC,,OPAMP5_VINM_SEC,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,101,PA3,GPIO,QUADSPI1_CLK,AF10,QUADSPI1_CLK,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,101,PA3,GPIO,SAI1_CK1,AF3,SAI1_CK1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,101,PA3,GPIO,SAI1_MCLK_A,AF13,SAI1_MCLK_A,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,101,PA3,GPIO,TIM15_CH2,AF9,TIM15_CH2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,101,PA3,GPIO,TIM2_CH4,AF1,TIM2_CH4,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,101,PA3,GPIO,TIM5_CH4,AF2,TIM5_CH4,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,101,PA3,GPIO,USART2_RX,AF7,USART2_RX,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,102,PA2,GPIO,ADC1_IN3,,ADC1_IN3,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,102,PA2,GPIO,ADC3_EXTI2,,ADC3_EXTI2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,102,PA2,GPIO,ADC4_EXTI2,,ADC4_EXTI2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,102,PA2,GPIO,ADC5_EXTI2,,ADC5_EXTI2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,102,PA2,GPIO,COMP2_INM,,COMP2_INM,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,102,PA2,GPIO,COMP2_OUT,AF8,COMP2_OUT,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,102,PA2,GPIO,LPUART1_TX,AF12,LPUART1_TX,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,102,PA2,GPIO,OPAMP1_VOUT,,OPAMP1_VOUT,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,102,PA2,GPIO,QUADSPI1_BK1_NCS,AF10,QUADSPI1_BK1_NCS,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,102,PA2,GPIO,RCC_LSCO,,RCC_LSCO,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,102,PA2,GPIO,SYS_WKUP4,,SYS_WKUP4,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
-nucleo-g474re,102,PA2,GPIO,TIM15_CH1,AF9,TIM15_CH1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,102,PA2,GPIO,TIM2_CH3,AF1,TIM2_CH3,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,102,PA2,GPIO,TIM5_CH3,AF2,TIM5_CH3,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,102,PA2,GPIO,UCPD1_FRSTX1,AF14,UCPD1_FRSTX1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,102,PA2,GPIO,UCPD1_FRSTX2,AF14,UCPD1_FRSTX2,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
-nucleo-g474re,102,PA2,GPIO,USART2_TX,AF7,USART2_TX,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,101,PC5,GPIO,ADC2_IN11,,ADC2_IN11,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,101,PC5,GPIO,HRTIM1_EEV10,AF13,HRTIM1_EEV10,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,101,PC5,GPIO,OPAMP1_VINM,,OPAMP1_VINM,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,101,PC5,GPIO,OPAMP1_VINM1,,OPAMP1_VINM1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,101,PC5,GPIO,OPAMP1_VINM_SEC,,OPAMP1_VINM_SEC,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,101,PC5,GPIO,OPAMP2_VINM,,OPAMP2_VINM,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,101,PC5,GPIO,OPAMP2_VINM1,,OPAMP2_VINM1,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,101,PC5,GPIO,OPAMP2_VINM_SEC,,OPAMP2_VINM_SEC,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,101,PC5,GPIO,SAI1_D3,AF3,SAI1_D3,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,101,PC5,GPIO,SYS_WKUP5,,SYS_WKUP5,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,101,PC5,GPIO,TIM15_BKIN,AF2,TIM15_BKIN,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,101,PC5,GPIO,TIM1_CH4N,AF6,TIM1_CH4N,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,101,PC5,GPIO,USART1_RX,AF7,USART1_RX,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,102,PC4,GPIO,ADC2_IN5,,ADC2_IN5,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package
+nucleo-g474re,102,PC4,GPIO,I2C2_SCL,AF4,I2C2_SCL,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,102,PC4,GPIO,QUADSPI1_BK2_IO3,AF10,QUADSPI1_BK2_IO3,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,102,PC4,GPIO,TIM1_ETR,AF2,TIM1_ETR,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
+nucleo-g474re,102,PC4,GPIO,USART1_TX,AF7,USART1_TX,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package | nucleo-g474-bridges,g474re-package | g474re-modes
 nucleo-g474re,103,PA10,GPIO,COMP6_OUT,AF8,COMP6_OUT,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
 nucleo-g474re,103,PA10,GPIO,CRS_SYNC,AF3,CRS_SYNC,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package | g474re-modes
 nucleo-g474re,103,PA10,GPIO,DAC1_EXTI10,,DAC1_EXTI10,nucleo-g474re-arduino-31 | nucleo-g474re-top-view | g474re-package,g474re-package
@@ -9233,7 +9193,7 @@ microbit-v2,21,P20,GPIO,PWM,,PWM,microbit-v2-header,microbit-v2-functions
 microbit-v2,21,P20,GPIO,UART,,UART,microbit-v2-header,microbit-v2-functions
 adafruit-feather-rp2040,1,RESET,SYSTEM,,,,feather-rp2040-pinout | feather-rp2040-top-view,
 adafruit-feather-rp2040,2,3V3,POWER,,,,feather-rp2040-pinout | feather-rp2040-top-view,
-adafruit-feather-rp2040,3,AREF,POWER,,,,feather-rp2040-pinout | feather-rp2040-top-view,
+adafruit-feather-rp2040,3,3V3,POWER,,,,feather-rp2040-pinout | feather-rp2040-top-view,
 adafruit-feather-rp2040,4,GND,GND,,,,feather-rp2040-pinout | feather-rp2040-top-view,
 adafruit-feather-rp2040,5,A0,GPIO,SPI1 SCK,F1,SPI1 SCK,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
 adafruit-feather-rp2040,5,A0,GPIO,UART1 CTS,F2,UART1 CTS,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p14
@@ -9338,87 +9298,89 @@ adafruit-feather-rp2040,16,D4,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp
 adafruit-feather-rp2040,16,D4,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
 adafruit-feather-rp2040,16,D4,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
 adafruit-feather-rp2040,16,D4,GPIO,USB OVCUR DET,F9,USB OVCUR DET,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,17,SDA,GPIO,SPI0 SCK,F1,SPI0 SCK,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,17,SDA,GPIO,UART0 CTS,F2,UART0 CTS,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,17,SDA,GPIO,I2C1 SDA,F3,I2C1 SDA,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,17,SDA,GPIO,PWM1 A,F4,PWM1 A,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,17,SDA,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,17,SDA,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,17,SDA,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,17,SDA,GPIO,USB VBUS EN,F9,USB VBUS EN,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,18,SCL,GPIO,SPI0 TX,F1,SPI0 TX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,18,SCL,GPIO,UART0 RTS,F2,UART0 RTS,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,18,SCL,GPIO,I2C1 SCL,F3,I2C1 SCL,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,18,SCL,GPIO,PWM1 B,F4,PWM1 B,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,18,SCL,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,18,SCL,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,18,SCL,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,18,SCL,GPIO,USB OVCUR DET,F9,USB OVCUR DET,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,19,D5,GPIO,SPI0 TX,F1,SPI0 TX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,19,D5,GPIO,UART1 RTS,F2,UART1 RTS,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,19,D5,GPIO,I2C1 SCL,F3,I2C1 SCL,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,19,D5,GPIO,PWM3 B,F4,PWM3 B,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,19,D5,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,19,D5,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,19,D5,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,19,D5,GPIO,USB VBUS DET,F9,USB VBUS DET,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,20,D6,GPIO,SPI1 RX,F1,SPI1 RX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,20,D6,GPIO,UART1 TX,F2,UART1 TX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,20,D6,GPIO,I2C0 SDA,F3,I2C0 SDA,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,20,D6,GPIO,PWM4 A,F4,PWM4 A,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,20,D6,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,20,D6,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,20,D6,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,20,D6,GPIO,USB VBUS EN,F9,USB VBUS EN,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,21,D9,GPIO,SPI1 CSn,F1,SPI1 CSn,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,21,D9,GPIO,UART1 RX,F2,UART1 RX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,21,D9,GPIO,I2C0 SCL,F3,I2C0 SCL,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,21,D9,GPIO,PWM4 B,F4,PWM4 B,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,21,D9,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,21,D9,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,21,D9,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,21,D9,GPIO,USB OVCUR DET,F9,USB OVCUR DET,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,22,D10,GPIO,SPI1 SCK,F1,SPI1 SCK,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,22,D10,GPIO,UART1 CTS,F2,UART1 CTS,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,22,D10,GPIO,I2C1 SDA,F3,I2C1 SDA,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,22,D10,GPIO,PWM5 A,F4,PWM5 A,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,22,D10,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,22,D10,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,22,D10,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,22,D10,GPIO,USB VBUS DET,F9,USB VBUS DET,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,23,D11,GPIO,SPI1 TX,F1,SPI1 TX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,23,D11,GPIO,UART1 RTS,F2,UART1 RTS,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,23,D11,GPIO,I2C1 SCL,F3,I2C1 SCL,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,23,D11,GPIO,PWM5 B,F4,PWM5 B,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,23,D11,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,23,D11,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,23,D11,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,23,D11,GPIO,USB VBUS EN,F9,USB VBUS EN,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,24,D12,GPIO,SPI1 RX,F1,SPI1 RX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,24,D12,GPIO,UART0 TX,F2,UART0 TX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,24,D12,GPIO,I2C0 SDA,F3,I2C0 SDA,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,24,D12,GPIO,PWM6 A,F4,PWM6 A,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,24,D12,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,24,D12,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,24,D12,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,24,D12,GPIO,USB OVCUR DET,F9,USB OVCUR DET,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,25,D13,GPIO,SPI1 CSn,F1,SPI1 CSn,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,25,D13,GPIO,UART0 RX,F2,UART0 RX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,25,D13,GPIO,I2C0 SCL,F3,I2C0 SCL,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,25,D13,GPIO,PWM6 B,F4,PWM6 B,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,25,D13,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,25,D13,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,25,D13,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,25,D13,GPIO,USB VBUS DET,F9,USB VBUS DET,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
-adafruit-feather-rp2040,26,VBUS,POWER,,,,feather-rp2040-pinout | feather-rp2040-top-view,
-adafruit-feather-rp2040,27,EN,SYSTEM,,,,feather-rp2040-pinout | feather-rp2040-top-view,
-adafruit-feather-rp2040,28,VBAT,POWER,,,,feather-rp2040-pinout | feather-rp2040-top-view,
+adafruit-feather-rp2040,17,VBAT,POWER,,,,feather-rp2040-pinout | feather-rp2040-top-view,
+adafruit-feather-rp2040,18,EN,SYSTEM,,,,feather-rp2040-pinout | feather-rp2040-top-view,
+adafruit-feather-rp2040,19,VBUS,POWER,,,,feather-rp2040-pinout | feather-rp2040-top-view,
+adafruit-feather-rp2040,20,D13,GPIO,SPI1 CSn,F1,SPI1 CSn,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,20,D13,GPIO,UART0 RX,F2,UART0 RX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,20,D13,GPIO,I2C0 SCL,F3,I2C0 SCL,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,20,D13,GPIO,PWM6 B,F4,PWM6 B,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,20,D13,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,20,D13,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,20,D13,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,20,D13,GPIO,USB VBUS DET,F9,USB VBUS DET,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,21,D12,GPIO,SPI1 RX,F1,SPI1 RX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,21,D12,GPIO,UART0 TX,F2,UART0 TX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,21,D12,GPIO,I2C0 SDA,F3,I2C0 SDA,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,21,D12,GPIO,PWM6 A,F4,PWM6 A,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,21,D12,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,21,D12,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,21,D12,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,21,D12,GPIO,USB OVCUR DET,F9,USB OVCUR DET,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,22,D11,GPIO,SPI1 TX,F1,SPI1 TX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,22,D11,GPIO,UART1 RTS,F2,UART1 RTS,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,22,D11,GPIO,I2C1 SCL,F3,I2C1 SCL,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,22,D11,GPIO,PWM5 B,F4,PWM5 B,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,22,D11,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,22,D11,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,22,D11,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,22,D11,GPIO,USB VBUS EN,F9,USB VBUS EN,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,23,D10,GPIO,SPI1 SCK,F1,SPI1 SCK,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,23,D10,GPIO,UART1 CTS,F2,UART1 CTS,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,23,D10,GPIO,I2C1 SDA,F3,I2C1 SDA,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,23,D10,GPIO,PWM5 A,F4,PWM5 A,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,23,D10,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,23,D10,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,23,D10,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,23,D10,GPIO,USB VBUS DET,F9,USB VBUS DET,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,24,D9,GPIO,SPI1 CSn,F1,SPI1 CSn,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,24,D9,GPIO,UART1 RX,F2,UART1 RX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,24,D9,GPIO,I2C0 SCL,F3,I2C0 SCL,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,24,D9,GPIO,PWM4 B,F4,PWM4 B,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,24,D9,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,24,D9,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,24,D9,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,24,D9,GPIO,USB OVCUR DET,F9,USB OVCUR DET,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,25,D6,GPIO,SPI1 RX,F1,SPI1 RX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,25,D6,GPIO,UART1 TX,F2,UART1 TX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,25,D6,GPIO,I2C0 SDA,F3,I2C0 SDA,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,25,D6,GPIO,PWM4 A,F4,PWM4 A,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,25,D6,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,25,D6,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,25,D6,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,25,D6,GPIO,USB VBUS EN,F9,USB VBUS EN,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,26,D5,GPIO,SPI0 TX,F1,SPI0 TX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,26,D5,GPIO,UART1 RTS,F2,UART1 RTS,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,26,D5,GPIO,I2C1 SCL,F3,I2C1 SCL,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,26,D5,GPIO,PWM3 B,F4,PWM3 B,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,26,D5,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,26,D5,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,26,D5,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,26,D5,GPIO,USB VBUS DET,F9,USB VBUS DET,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,27,SCL,GPIO,SPI0 TX,F1,SPI0 TX,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,27,SCL,GPIO,UART0 RTS,F2,UART0 RTS,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,27,SCL,GPIO,I2C1 SCL,F3,I2C1 SCL,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,27,SCL,GPIO,PWM1 B,F4,PWM1 B,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,27,SCL,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,27,SCL,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,27,SCL,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,27,SCL,GPIO,USB OVCUR DET,F9,USB OVCUR DET,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,28,SDA,GPIO,SPI0 SCK,F1,SPI0 SCK,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,28,SDA,GPIO,UART0 CTS,F2,UART0 CTS,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,28,SDA,GPIO,I2C1 SDA,F3,I2C1 SDA,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,28,SDA,GPIO,PWM1 A,F4,PWM1 A,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,28,SDA,GPIO,SIO,F5,SIO,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,28,SDA,GPIO,PIO0,F6,PIO0,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,28,SDA,GPIO,PIO1,F7,PIO1,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
+adafruit-feather-rp2040,28,SDA,GPIO,USB VBUS EN,F9,USB VBUS EN,feather-rp2040-pinout | feather-rp2040-top-view | rp2040-qfn56-physical,rp2040-bank0-p13
 teensy-41,1,GND,GND,,,,teensy41-front,
 teensy-41,2,0,GPIO,UART1 RX,,RX1,teensy41-front,teensy41-front
+teensy-41,2,0,GPIO,SPI1 CS,,CS1,teensy41-front,teensy41-front
 teensy-41,2,0,GPIO,CAN2 RX,,CRX2,teensy41-front,teensy41-front
 teensy-41,2,0,GPIO,PWM,,PWM,teensy41-front,teensy41-front
 teensy-41,2,0,GPIO,GPIO interrupt,,GPIO6[3],teensy41-front,teensy41-front
 teensy-41,3,1,GPIO,UART1 TX,,TX1,teensy41-front,teensy41-front
+teensy-41,3,1,GPIO,SPI1 MISO,,MISO1,teensy41-front,teensy41-front
 teensy-41,3,1,GPIO,CAN2 TX,,CTX2,teensy41-front,teensy41-front
 teensy-41,3,1,GPIO,PWM,,PWM,teensy41-front,teensy41-front
 teensy-41,3,1,GPIO,GPIO interrupt,,GPIO6[2],teensy41-front,teensy41-front
@@ -9443,6 +9405,7 @@ teensy-41,9,7,GPIO,PWM,,PWM,teensy41-front,teensy41-front
 teensy-41,9,7,GPIO,GPIO interrupt,,GPIO7[17],teensy41-front,teensy41-front
 teensy-41,10,8,GPIO,UART2 TX,,TX2,teensy41-front,teensy41-front
 teensy-41,10,8,GPIO,I2S1 IN1,,IN1,teensy41-front,teensy41-front
+teensy-41,10,8,GPIO,PWM,,PWM,teensy41-front,teensy41-front
 teensy-41,10,8,GPIO,GPIO interrupt,,GPIO7[16],teensy41-front,teensy41-front
 teensy-41,11,9,GPIO,I2S1 OUT1C,,OUT1C,teensy41-front,teensy41-front
 teensy-41,11,9,GPIO,PWM,,PWM,teensy41-front,teensy41-front
@@ -9452,26 +9415,28 @@ teensy-41,12,10,GPIO,MQSR,,MQSR,teensy41-front,teensy41-front
 teensy-41,12,10,GPIO,PWM,,PWM,teensy41-front,teensy41-front
 teensy-41,12,10,GPIO,GPIO interrupt,,GPIO7[0],teensy41-front,teensy41-front
 teensy-41,13,11,GPIO,SPI0 MOSI,,MOSI,teensy41-front,teensy41-front
+teensy-41,13,11,GPIO,CAN1 TX,,CTX1,teensy41-front,teensy41-front
 teensy-41,13,11,GPIO,PWM,,PWM,teensy41-front,teensy41-front
 teensy-41,13,11,GPIO,GPIO interrupt,,GPIO7[2],teensy41-front,teensy41-front
 teensy-41,14,12,GPIO,SPI0 MISO,,MISO,teensy41-front,teensy41-front
 teensy-41,14,12,GPIO,MQSL,,MQSL,teensy41-front,teensy41-front
+teensy-41,14,12,GPIO,PWM,,PWM,teensy41-front,teensy41-front
 teensy-41,14,12,GPIO,GPIO interrupt,,GPIO7[1],teensy41-front,teensy41-front
 teensy-41,15,3.3V,POWER,,,,teensy41-front,
-teensy-41,16,24,GPIO,ADC1_CH10,,A10,teensy41-front,teensy41-front
+teensy-41,16,24,GPIO,ADC1_IN1,,A10,teensy41-front,teensy41-front
 teensy-41,16,24,GPIO,UART6 TX,,TX6,teensy41-front,teensy41-front
 teensy-41,16,24,GPIO,I2C2 SCL,,SCL2,teensy41-front,teensy41-front
 teensy-41,16,24,GPIO,PWM,,PWM,teensy41-front,teensy41-front
 teensy-41,16,24,GPIO,GPIO interrupt,,GPIO6[12],teensy41-front,teensy41-front
-teensy-41,17,25,GPIO,ADC1_CH11,,A11,teensy41-front,teensy41-front
+teensy-41,17,25,GPIO,ADC1_IN2,,A11,teensy41-front,teensy41-front
 teensy-41,17,25,GPIO,UART6 RX,,RX6,teensy41-front,teensy41-front
 teensy-41,17,25,GPIO,I2C2 SDA,,SDA2,teensy41-front,teensy41-front
 teensy-41,17,25,GPIO,PWM,,PWM,teensy41-front,teensy41-front
 teensy-41,17,25,GPIO,GPIO interrupt,,GPIO6[13],teensy41-front,teensy41-front
-teensy-41,18,26,GPIO,ADC1_CH12,,A12,teensy41-front,teensy41-front
+teensy-41,18,26,GPIO,ADC2_IN3,,A12,teensy41-front,teensy41-front
 teensy-41,18,26,GPIO,SPI1 MOSI,,MOSI1,teensy41-front,teensy41-front
 teensy-41,18,26,GPIO,GPIO interrupt,,GPIO6[30],teensy41-front,teensy41-front
-teensy-41,19,27,GPIO,ADC1_CH13,,A13,teensy41-front,teensy41-front
+teensy-41,19,27,GPIO,ADC2_IN4,,A13,teensy41-front,teensy41-front
 teensy-41,19,27,GPIO,SPI1 SCK,,SCK1,teensy41-front,teensy41-front
 teensy-41,19,27,GPIO,GPIO interrupt,,GPIO6[31],teensy41-front,teensy41-front
 teensy-41,20,28,GPIO,UART7 RX,,RX7,teensy41-front,teensy41-front
@@ -9489,45 +9454,45 @@ teensy-41,24,32,GPIO,GPIO interrupt,,GPIO7[12],teensy41-front,teensy41-front
 teensy-41,25,VIN,POWER,,,,teensy41-front,
 teensy-41,26,GND,GND,,,,teensy41-front,
 teensy-41,27,3.3V,POWER,,,,teensy41-front,
-teensy-41,28,23,GPIO,ADC1_CH9,,A9,teensy41-front,teensy41-front
+teensy-41,28,23,GPIO,ADC1_IN14,,A9,teensy41-front,teensy41-front
 teensy-41,28,23,GPIO,CAN1 RX,,CRX1,teensy41-front,teensy41-front
 teensy-41,28,23,GPIO,I2S1 MCLK1,,MCLK1,teensy41-front,teensy41-front
 teensy-41,28,23,GPIO,PWM,,PWM,teensy41-front,teensy41-front
 teensy-41,28,23,GPIO,GPIO interrupt,,GPIO6[25],teensy41-front,teensy41-front
-teensy-41,29,22,GPIO,ADC1_CH8,,A8,teensy41-front,teensy41-front
+teensy-41,29,22,GPIO,ADC1_IN13,,A8,teensy41-front,teensy41-front
 teensy-41,29,22,GPIO,CAN1 TX,,CTX1,teensy41-front,teensy41-front
 teensy-41,29,22,GPIO,PWM,,PWM,teensy41-front,teensy41-front
 teensy-41,29,22,GPIO,GPIO interrupt,,GPIO6[24],teensy41-front,teensy41-front
-teensy-41,30,21,GPIO,ADC1_CH7,,A7,teensy41-front,teensy41-front
+teensy-41,30,21,GPIO,ADC1_IN0,,A7,teensy41-front,teensy41-front
 teensy-41,30,21,GPIO,UART5 RX,,RX5,teensy41-front,teensy41-front
-teensy-41,30,21,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,30,21,GPIO,I2S1 BCLK1,,BCLK1,teensy41-front,teensy41-front
 teensy-41,30,21,GPIO,GPIO interrupt,,GPIO6[27],teensy41-front,teensy41-front
-teensy-41,31,20,GPIO,ADC1_CH6,,A6,teensy41-front,teensy41-front
+teensy-41,31,20,GPIO,ADC1_IN15,,A6,teensy41-front,teensy41-front
 teensy-41,31,20,GPIO,UART5 TX,,TX5,teensy41-front,teensy41-front
-teensy-41,31,20,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,31,20,GPIO,I2S1 LRCLK1,,LRCLK1,teensy41-front,teensy41-front
 teensy-41,31,20,GPIO,GPIO interrupt,,GPIO6[26],teensy41-front,teensy41-front
-teensy-41,32,19,GPIO,ADC1_CH5,,A5,teensy41-front,teensy41-front
+teensy-41,32,19,GPIO,ADC1_IN5,,A5,teensy41-front,teensy41-front
 teensy-41,32,19,GPIO,I2C0 SCL,,SCL,teensy41-front,teensy41-front
 teensy-41,32,19,GPIO,PWM,,PWM,teensy41-front,teensy41-front
 teensy-41,32,19,GPIO,GPIO interrupt,,GPIO6[16],teensy41-front,teensy41-front
-teensy-41,33,18,GPIO,ADC1_CH4,,A4,teensy41-front,teensy41-front
+teensy-41,33,18,GPIO,ADC1_IN6,,A4,teensy41-front,teensy41-front
 teensy-41,33,18,GPIO,I2C0 SDA,,SDA,teensy41-front,teensy41-front
 teensy-41,33,18,GPIO,PWM,,PWM,teensy41-front,teensy41-front
 teensy-41,33,18,GPIO,GPIO interrupt,,GPIO6[17],teensy41-front,teensy41-front
-teensy-41,34,17,GPIO,ADC1_CH3,,A3,teensy41-front,teensy41-front
+teensy-41,34,17,GPIO,ADC1_IN11,,A3,teensy41-front,teensy41-front
 teensy-41,34,17,GPIO,UART4 TX,,TX4,teensy41-front,teensy41-front
 teensy-41,34,17,GPIO,I2C1 SDA,,SDA1,teensy41-front,teensy41-front
 teensy-41,34,17,GPIO,GPIO interrupt,,GPIO6[22],teensy41-front,teensy41-front
-teensy-41,35,16,GPIO,ADC1_CH2,,A2,teensy41-front,teensy41-front
+teensy-41,35,16,GPIO,ADC1_IN12,,A2,teensy41-front,teensy41-front
 teensy-41,35,16,GPIO,UART4 RX,,RX4,teensy41-front,teensy41-front
 teensy-41,35,16,GPIO,I2C1 SCL,,SCL1,teensy41-front,teensy41-front
 teensy-41,35,16,GPIO,GPIO interrupt,,GPIO6[23],teensy41-front,teensy41-front
-teensy-41,36,15,GPIO,ADC1_CH1,,A1,teensy41-front,teensy41-front
+teensy-41,36,15,GPIO,ADC1_IN8,,A1,teensy41-front,teensy41-front
 teensy-41,36,15,GPIO,UART3 RX,,RX3,teensy41-front,teensy41-front
 teensy-41,36,15,GPIO,SPDIF IN,,SPDIF_IN,teensy41-front,teensy41-front
 teensy-41,36,15,GPIO,PWM,,PWM,teensy41-front,teensy41-front
 teensy-41,36,15,GPIO,GPIO interrupt,,GPIO6[19],teensy41-front,teensy41-front
-teensy-41,37,14,GPIO,ADC1_CH0,,A0,teensy41-front,teensy41-front
+teensy-41,37,14,GPIO,ADC1_IN7,,A0,teensy41-front,teensy41-front
 teensy-41,37,14,GPIO,UART3 TX,,TX3,teensy41-front,teensy41-front
 teensy-41,37,14,GPIO,SPDIF OUT,,SPDIF_OUT,teensy41-front,teensy41-front
 teensy-41,37,14,GPIO,PWM,,PWM,teensy41-front,teensy41-front
@@ -9537,33 +9502,29 @@ teensy-41,38,13,GPIO,LED,,LED_BUILTIN,teensy41-front,teensy41-front
 teensy-41,38,13,GPIO,PWM,,PWM,teensy41-front,teensy41-front
 teensy-41,38,13,GPIO,GPIO interrupt,,GPIO7[3],teensy41-front,teensy41-front
 teensy-41,39,GND,GND,,,,teensy41-front,
-teensy-41,40,41,GPIO,ADC2_CH17,,A17,teensy41-front,teensy41-front
-teensy-41,40,41,GPIO,SPI1 MISO,,MISO1,teensy41-front,teensy41-front
-teensy-41,40,41,GPIO,UART8 RX,,RX8,teensy41-front,teensy41-front
+teensy-41,40,41,GPIO,ADC1_IN10,,A17,teensy41-front,teensy41-front
 teensy-41,40,41,GPIO,GPIO interrupt,,GPIO6[21],teensy41-front,teensy41-front
-teensy-41,41,40,GPIO,ADC2_CH16,,A16,teensy41-front,teensy41-front
-teensy-41,41,40,GPIO,SPI1 CS,,CS1,teensy41-front,teensy41-front
-teensy-41,41,40,GPIO,UART8 TX,,TX8,teensy41-front,teensy41-front
+teensy-41,41,40,GPIO,ADC1_IN9,,A16,teensy41-front,teensy41-front
 teensy-41,41,40,GPIO,GPIO interrupt,,GPIO6[20],teensy41-front,teensy41-front
-teensy-41,42,39,GPIO,ADC2_CH15,,A15,teensy41-front,teensy41-front
-teensy-41,42,39,GPIO,I2S2 MCLK2,,MCLK2,teensy41-front,teensy41-front
-teensy-41,42,39,GPIO,GPIO interrupt,,GPIO8[16],teensy41-front,teensy41-front
-teensy-41,43,38,GPIO,ADC2_CH14,,A14,teensy41-front,teensy41-front
-teensy-41,43,38,GPIO,I2S1 IN1,,IN1,teensy41-front,teensy41-front
+teensy-41,42,39,GPIO,ADC2_IN2,,A15,teensy41-front,teensy41-front
+teensy-41,42,39,GPIO,SPI1 MISO,,MISO1,teensy41-front,teensy41-front
+teensy-41,42,39,GPIO,I2S1 OUT1A,,OUT1A,teensy41-front,teensy41-front
+teensy-41,42,39,GPIO,GPIO interrupt,,GPIO6[29],teensy41-front,teensy41-front
+teensy-41,43,38,GPIO,ADC2_IN1,,A14,teensy41-front,teensy41-front
 teensy-41,43,38,GPIO,SPI1 CS,,CS1,teensy41-front,teensy41-front
-teensy-41,43,38,GPIO,GPIO interrupt,,GPIO8[17],teensy41-front,teensy41-front
+teensy-41,43,38,GPIO,I2S1 IN1,,IN1,teensy41-front,teensy41-front
+teensy-41,43,38,GPIO,GPIO interrupt,,GPIO6[28],teensy41-front,teensy41-front
 teensy-41,44,37,GPIO,SPI0 CS,,CS,teensy41-front,teensy41-front
-teensy-41,44,37,GPIO,GPIO interrupt,,GPIO8[12],teensy41-front,teensy41-front
+teensy-41,44,37,GPIO,PWM,,PWM,teensy41-front,teensy41-front
+teensy-41,44,37,GPIO,GPIO interrupt,,GPIO7[19],teensy41-front,teensy41-front
 teensy-41,45,36,GPIO,SPI0 CS,,CS,teensy41-front,teensy41-front
 teensy-41,45,36,GPIO,PWM,,PWM,teensy41-front,teensy41-front
-teensy-41,45,36,GPIO,GPIO interrupt,,GPIO8[13],teensy41-front,teensy41-front
-teensy-41,46,35,GPIO,I2S1 BCLK1,,BCLK1,teensy41-front,teensy41-front
-teensy-41,46,35,GPIO,PWM,,PWM,teensy41-front,teensy41-front
-teensy-41,46,35,GPIO,GPIO interrupt,,GPIO8[14],teensy41-front,teensy41-front
-teensy-41,47,34,GPIO,I2S1 LRCLK1,,LRCLK1,teensy41-front,teensy41-front
-teensy-41,47,34,GPIO,PWM,,PWM,teensy41-front,teensy41-front
-teensy-41,47,34,GPIO,GPIO interrupt,,GPIO8[15],teensy41-front,teensy41-front
-teensy-41,48,33,GPIO,I2S1 OUT1A,,OUT1A,teensy41-front,teensy41-front
+teensy-41,45,36,GPIO,GPIO interrupt,,GPIO7[18],teensy41-front,teensy41-front
+teensy-41,46,35,GPIO,UART8 TX,,TX8,teensy41-front,teensy41-front
+teensy-41,46,35,GPIO,GPIO interrupt,,GPIO7[28],teensy41-front,teensy41-front
+teensy-41,47,34,GPIO,UART8 RX,,RX8,teensy41-front,teensy41-front
+teensy-41,47,34,GPIO,GPIO interrupt,,GPIO7[29],teensy41-front,teensy41-front
+teensy-41,48,33,GPIO,I2S2 MCLK2,,MCLK2,teensy41-front,teensy41-front
 teensy-41,48,33,GPIO,PWM,,PWM,teensy41-front,teensy41-front
 teensy-41,48,33,GPIO,GPIO interrupt,,GPIO9[7],teensy41-front,teensy41-front
 teensy-41,49,5V,POWER,USB Host 5V,,5V,teensy41-back | teensy41-schematic,teensy41-back
@@ -9578,17 +9539,33 @@ teensy-41,57,GND,GND,Ethernet GND,,GND,teensy41-back | teensy41-schematic,teensy
 teensy-41,58,TX-,SYSTEM,Ethernet TX-,,ETH_TX-,teensy41-back | teensy41-schematic,teensy41-back
 teensy-41,59,TX+,SYSTEM,Ethernet TX+,,ETH_TX+,teensy41-back | teensy41-schematic,teensy41-back
 teensy-41,60,42,GPIO,SDIO DAT1,,DAT1,teensy41-back | teensy41-schematic,teensy41-back
-teensy-41,60,42,GPIO,GPIO interrupt,,GPIO6[28],teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,60,42,GPIO,SPI2 MISO,,MISO2,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,60,42,GPIO,PWM,,PWM,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,60,42,GPIO,GPIO interrupt,,GPIO8[15],teensy41-back | teensy41-schematic,teensy41-back
 teensy-41,61,43,GPIO,SDIO DAT0,,DAT0,teensy41-back | teensy41-schematic,teensy41-back
-teensy-41,61,43,GPIO,GPIO interrupt,,GPIO6[29],teensy41-back | teensy41-schematic,teensy41-back
-teensy-41,62,CLK,SYSTEM,SDIO CLK,,CLK,teensy41-back | teensy41-schematic,teensy41-back
-teensy-41,63,3.3V,POWER,SDIO 3.3V,,3.3V,teensy41-back | teensy41-schematic,teensy41-back
-teensy-41,64,CMD,SYSTEM,SDIO CMD,,CMD,teensy41-back | teensy41-schematic,teensy41-back
-teensy-41,65,GND,GND,SDIO GND,,GND,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,61,43,GPIO,SPI2 MOSI,,MOSI2,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,61,43,GPIO,PWM,,PWM,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,61,43,GPIO,GPIO interrupt,,GPIO8[14],teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,62,GND,GND,,,,teensy41-back | teensy41-schematic,
+teensy-41,63,44,GPIO,SDIO CLK,,CLK,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,63,44,GPIO,SPI2 CS,,CS2,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,63,44,GPIO,I2C1 SDA,,SDA1,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,63,44,GPIO,PWM,,PWM,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,63,44,GPIO,GPIO interrupt,,GPIO8[13],teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,64,3.3V,POWER,,,,teensy41-back | teensy41-schematic,
+teensy-41,65,45,GPIO,SDIO CMD,,CMD,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,65,45,GPIO,SPI2 SCK,,SCK2,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,65,45,GPIO,I2C1 SCL,,SCL1,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,65,45,GPIO,PWM,,PWM,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,65,45,GPIO,GPIO interrupt,,GPIO8[12],teensy41-back | teensy41-schematic,teensy41-back
 teensy-41,66,46,GPIO,SDIO DAT3,,DAT3,teensy41-back | teensy41-schematic,teensy41-back
-teensy-41,66,46,GPIO,GPIO interrupt,,GPIO6[15],teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,66,46,GPIO,UART5 RX,,RX5,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,66,46,GPIO,PWM,,PWM,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,66,46,GPIO,GPIO interrupt,,GPIO8[17],teensy41-back | teensy41-schematic,teensy41-back
 teensy-41,67,47,GPIO,SDIO DAT2,,DAT2,teensy41-back | teensy41-schematic,teensy41-back
-teensy-41,67,47,GPIO,GPIO interrupt,,GPIO6[14],teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,67,47,GPIO,UART5 TX,,TX5,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,67,47,GPIO,PWM,,PWM,teensy41-back | teensy41-schematic,teensy41-back
+teensy-41,67,47,GPIO,GPIO interrupt,,GPIO8[16],teensy41-back | teensy41-schematic,teensy41-back
 beaglebone-black,1,GND,GND,,,,bbb-p8-p9-table,
 beaglebone-black,2,GND,GND,,,,bbb-p8-p9-table,
 beaglebone-black,3,GPIO1_6,GPIO,gpmc_ad6 (Mode 0),Mode 0,gpmc_ad6,bbb-p8-p9-table,bbb-p8-p9-table
@@ -11662,7 +11639,7 @@ stm32g474ret6,26,PB2,GPIO,RTC_OUT2,AF0,RTC_OUT2,g474re-package,g474re-package | 
 stm32g474ret6,26,PB2,GPIO,TIM20_CH1,AF3,TIM20_CH1,g474re-package,g474re-package | g474re-modes
 stm32g474ret6,26,PB2,GPIO,TIM5_CH1,AF2,TIM5_CH1,g474re-package,g474re-package | g474re-modes
 stm32g474ret6,27,VSSA,GND,,,,g474re-package,
-stm32g474ret6,28,VDDA,SYSTEM,VREFBUF_OUT,,VREFBUF_OUT,g474re-package,g474re-package
+stm32g474ret6,28,VREF+,SYSTEM,VREFBUF_OUT,,VREFBUF_OUT,g474re-package,g474re-package
 stm32g474ret6,29,VDDA,POWER,,,,g474re-package,
 stm32g474ret6,30,PB10,GPIO,COMP5_INM,,COMP5_INM,g474re-package,g474re-package
 stm32g474ret6,30,PB10,GPIO,DAC1_EXTI10,,DAC1_EXTI10,g474re-package,g474re-package
