@@ -8,7 +8,7 @@ Contributing a profile? Follow the [board and MCU verification workflow](docs/AD
 
 A pin guide in English and Turkish, built from manufacturer documentation and identified board references. View physical pin positions, alternate functions, and wiring plans in one workspace. The interface, schematic drawings, and application code were made for this project. The console theme is shared with my personal site.
 
-The catalog has 79 board, header, and chip profiles with 5,226 physical pin records and 24,290 function assignments, taken from 128 hash-locked source documents. The dataset's verification date is still 5 November 2026: on 14–15 November 2026 only the changed profiles were checked again, not the whole catalog.
+The catalog has 89 board, header, and chip profiles with 5,865 physical pin records and 25,613 function assignments, taken from 151 hash-locked source documents. The dataset's verification date is still 5 November 2026: on 14–15 November 2026 only the changed profiles were checked again, not the whole catalog.
 
 ## Pin layouts
 
@@ -17,7 +17,7 @@ The catalog lists each documented hardware model separately under **Development 
 The underlying pin layouts include:
 
 - **Raspberry Pi Pico family:** Pico, Pico W, Pico 2, and Pico 2 W share one 40-pin layout with 26 exposed GPIOs. Select the RP2040 function reference for Pico / Pico W, or RP2350A for Pico 2 / Pico 2 W inside that layout.
-- **Raspberry Pi 40-pin GPIO:** B+, A+, Pi 2/3/4/5, Zero models, and 400/500 share one header entry. Choose common GPIO/power/ground connections, the verified BCM2711 alternate functions for Pi 4, or the verified RP1 alternate functions for Pi 5 in the same view. This excludes older 26-pin boards and Compute Modules; some Zero headers are unpopulated and keyboard models have a rotated header.
+- **Raspberry Pi 40-pin GPIO:** B+, A+, Pi 2/3/4/5, Zero models, and 400/500 share one header entry. Choose common GPIO/power/ground connections or a model reference in the same view: BCM2711 alternate functions for Pi 4, RP1 for Pi 5 and Pi 500, and the BCM2835 peripheral table for Zero W, Zero 2 W and Pi 3 Model B+. This excludes older 26-pin boards and Compute Modules; some Zero headers are unpopulated and keyboard models have a rotated header.
 - **NVIDIA Jetson Orin Nano:** the NVIDIA P3768 developer-kit carrier’s 40-pin J12 header, with SPI, I²C, UART, I²S, PWM and clock capabilities from the carrier specification. This is a separate pin map from Raspberry Pi; header signal names and pinmux requirements differ.
 - **STM32 Blue Pill:** the STM32-base community reference with two 20-pin side headers and four SWD connections. H1/H2/SWD positions are distinct from MCU package pins; the diagram includes the MCU pin mapping and shared LED, crystal, USB and debug connections. Check clone wiring and chip markings.
 - **STM32F103 packages:** separate LQFP-48 (STM32F103C8T6 / STM32F103CBT6 with 37 GPIOs), LQFP-64 (STM32F103RBT6 / STM32F103R8T6 with 51 GPIOs), and LQFP-100 (STM32F103VBT6 / STM32F103V8T6 with 80 GPIOs) views with raw MCU functions and full AFIO remap conditions from RM0008.
@@ -126,7 +126,7 @@ GitHub Actions runs `python3 scripts/verify-official-sources.py --table-snapshot
 
 - **Parsed from the document.** The generator reads PDF tables, XML, KiCad or source files from the locked copy. This covers most STM32, Raspberry Pi, Espressif, Arduino core, Jetson, BeagleBone Black and micro:bit data.
 - **Hand-recorded tables.** The generators for Adafruit Feather RP2040 and Teensy 4.1 contain tables typed in from the cited pinout and do not open the locked document. For Teensy, the PWM, ADC and port data were cross-checked against the Teensy core source, which is not a locked document.
-- **Visual reading.** Some contact positions and labels were read by eye from a drawing or photo and recorded in `sources/manual-observations.json`. In [`public/data/verification.json`](public/data/verification.json), 53 of the 79 profiles list `visual-diagram` (or `visual-photo`) among their `physicalSourceMethods`. In 482 of the 5,226 pin records (9.2 %), every physical evidence reference is a visual reading. Four profiles rest entirely on visual reading: RP2040 (QFN-56), ATmega2560 (TQFP-100), ATmega2561 (TQFP-64) and Seeed Studio XIAO RP2040.
+- **Visual reading.** Some contact positions and labels were read by eye from a drawing or photo and recorded in `sources/manual-observations.json`. In [`public/data/verification.json`](public/data/verification.json), 56 of the 89 profiles list `visual-diagram` (or `visual-photo`) among their `physicalSourceMethods`. In 510 of the 5,865 pin records (8.7 %), every physical evidence reference is a visual reading. Four profiles rest entirely on visual reading: RP2040 (QFN-56), ATmega2560 (TQFP-100), ATmega2561 (TQFP-64) and Seeed Studio XIAO RP2040.
 
 The same record explains the IOVDD discrepancy in RP2350 Release 8. See the full method in the [verification record](docs/VERIFICATION.md).
 

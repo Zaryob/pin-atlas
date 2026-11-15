@@ -10,7 +10,7 @@ test('catalog contains one entry per shared footprint', () => {
   assert.deepEqual(layouts.slice(0,7).map(layout => layout.id), ['pico-family','raspberry-pi-40','arduino-uno','arduino-nano','esp32-devkitc-v4','esp32-s3-devkitc-1','seeed-xiao']);
   assert.equal(new Set(layouts.map(layout => layout.id)).size,layouts.length);
   assert.equal(layouts[0].profiles.length, 4);
-  assert.equal(layouts[1].profiles.length, 3);
+  assert.equal(layouts[1].profiles.length, 7);
   assert.equal(new Set(layouts.flatMap(layout => layout.profileIds)).size, boards.length);
 });
 

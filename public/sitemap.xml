@@ -545,6 +545,62 @@ permalink: /sitemap.xml
     <lastmod>2026-11-14</lastmod>
   </url>
   <url>
+    <loc>https://zaryob.github.io/pin-atlas/boards/raspberry-pi-zero-w/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/raspberry-pi-zero-w/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/raspberry-pi-zero-w/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/raspberry-pi-zero-w/" />
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://zaryob.github.io/pin-atlas/tr/boards/raspberry-pi-zero-w/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/raspberry-pi-zero-w/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/raspberry-pi-zero-w/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/raspberry-pi-zero-w/" />
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://zaryob.github.io/pin-atlas/boards/raspberry-pi-zero-2-w/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/raspberry-pi-zero-2-w/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/raspberry-pi-zero-2-w/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/raspberry-pi-zero-2-w/" />
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://zaryob.github.io/pin-atlas/tr/boards/raspberry-pi-zero-2-w/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/raspberry-pi-zero-2-w/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/raspberry-pi-zero-2-w/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/raspberry-pi-zero-2-w/" />
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://zaryob.github.io/pin-atlas/boards/raspberry-pi-3b-plus/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/raspberry-pi-3b-plus/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/raspberry-pi-3b-plus/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/raspberry-pi-3b-plus/" />
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://zaryob.github.io/pin-atlas/tr/boards/raspberry-pi-3b-plus/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/raspberry-pi-3b-plus/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/raspberry-pi-3b-plus/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/raspberry-pi-3b-plus/" />
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://zaryob.github.io/pin-atlas/boards/raspberry-pi-500/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/raspberry-pi-500/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/raspberry-pi-500/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/raspberry-pi-500/" />
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://zaryob.github.io/pin-atlas/tr/boards/raspberry-pi-500/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/raspberry-pi-500/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/raspberry-pi-500/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/raspberry-pi-500/" />
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
     <loc>https://zaryob.github.io/pin-atlas/boards/atmega328p-pdip28/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/atmega328p-pdip28/" />
     <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/atmega328p-pdip28/" />

@@ -519,6 +519,62 @@
   },
   {
     "lang": "tr",
+    "title": "Raspberry Pi Zero W",
+    "url": "/pin-atlas/#board=raspberry-pi-40&profile=raspberry-pi-zero-w",
+    "type": "pin-atlas/",
+    "description": "J8 · 40-pin yuva (lehimsiz) · BCM2835 alternatif işlevleri · BCM2835 · Raspberry Pi"
+  },
+  {
+    "lang": "en",
+    "title": "Raspberry Pi Zero W",
+    "url": "/pin-atlas/#board=raspberry-pi-40&profile=raspberry-pi-zero-w",
+    "type": "pin-atlas/",
+    "description": "J8 · 40-pin footprint (unpopulated) · BCM2835 alternate functions · BCM2835 · Raspberry Pi"
+  },
+  {
+    "lang": "tr",
+    "title": "Raspberry Pi Zero 2 W",
+    "url": "/pin-atlas/#board=raspberry-pi-40&profile=raspberry-pi-zero-2-w",
+    "type": "pin-atlas/",
+    "description": "J8 · 40-pin yuva (lehimsiz) · RP3A0 (BCM2710A1) alternatif işlevleri · RP3A0 (BCM2710A1) · Raspberry Pi"
+  },
+  {
+    "lang": "en",
+    "title": "Raspberry Pi Zero 2 W",
+    "url": "/pin-atlas/#board=raspberry-pi-40&profile=raspberry-pi-zero-2-w",
+    "type": "pin-atlas/",
+    "description": "J8 · 40-pin footprint (unpopulated) · RP3A0 (BCM2710A1) alternate functions · RP3A0 (BCM2710A1) · Raspberry Pi"
+  },
+  {
+    "lang": "tr",
+    "title": "Raspberry Pi 3 Model B+",
+    "url": "/pin-atlas/#board=raspberry-pi-40&profile=raspberry-pi-3b-plus",
+    "type": "pin-atlas/",
+    "description": "J8 · 40 pin · BCM2837B0 alternatif işlevleri · BCM2837B0 · Raspberry Pi"
+  },
+  {
+    "lang": "en",
+    "title": "Raspberry Pi 3 Model B+",
+    "url": "/pin-atlas/#board=raspberry-pi-40&profile=raspberry-pi-3b-plus",
+    "type": "pin-atlas/",
+    "description": "J8 · 40 pins · BCM2837B0 alternate functions · BCM2837B0 · Raspberry Pi"
+  },
+  {
+    "lang": "tr",
+    "title": "Raspberry Pi 500",
+    "url": "/pin-atlas/#board=raspberry-pi-40&profile=raspberry-pi-500",
+    "type": "pin-atlas/",
+    "description": "Arka 40-pin GPIO başlığı · RP1 alternatif işlevleri · BCM2712 / RP1 · Raspberry Pi"
+  },
+  {
+    "lang": "en",
+    "title": "Raspberry Pi 500",
+    "url": "/pin-atlas/#board=raspberry-pi-40&profile=raspberry-pi-500",
+    "type": "pin-atlas/",
+    "description": "Rear 40-pin GPIO header · RP1 alternate functions · BCM2712 / RP1 · Raspberry Pi"
+  },
+  {
+    "lang": "tr",
     "title": "ATmega328P · PDIP-28",
     "url": "/pin-atlas/#board=atmega328p-pdip28&profile=atmega328p-pdip28",
     "type": "pin-atlas/",

@@ -20,11 +20,16 @@ export function buildLayouts(boards) {
     {
       id: 'raspberry-pi-40', nameKey: 'piLayout', subtitleKey: 'piLayoutSubtitle',
       compatibleKey: 'piCompatible', scopeKey: 'piLayoutScope',
-      profileIds: ['raspberry-pi-40', 'raspberry-pi-4', 'raspberry-pi-5'], defaultProfile: 'raspberry-pi-40',
+      profileIds: ['raspberry-pi-40', 'raspberry-pi-4', 'raspberry-pi-5', 'raspberry-pi-zero-w', 'raspberry-pi-zero-2-w',
+        'raspberry-pi-3b-plus', 'raspberry-pi-500'], defaultProfile: 'raspberry-pi-40',
       references: [
         {key: 'commonReference', profileIds: ['raspberry-pi-40']},
         {key: 'bcm2711Reference', profileIds: ['raspberry-pi-4']},
-        {key: 'rp1Reference', profileIds: ['raspberry-pi-5']}
+        {key: 'rp1Reference', profileIds: ['raspberry-pi-5']},
+        {key: 'bcm2835ZeroWReference', profileIds: ['raspberry-pi-zero-w']},
+        {key: 'rp3a0Zero2WReference', profileIds: ['raspberry-pi-zero-2-w']},
+        {key: 'bcm2837b0Pi3bPlusReference', profileIds: ['raspberry-pi-3b-plus']},
+        {key: 'rp1Pi500Reference', profileIds: ['raspberry-pi-500']}
       ]
     },
     {

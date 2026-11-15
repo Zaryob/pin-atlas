@@ -116651,6 +116651,5999 @@
     ]
   },
   {
+    "family": "Raspberry Pi",
+    "voltage": "3.3 V I/O",
+    "verifiedOn": "2026-11-05",
+    "layout": "header",
+    "packagePins": 40,
+    "gpioCount": 28,
+    "reservedGPIOCount": 2,
+    "id": "raspberry-pi-zero-w",
+    "scopeKey": "piZeroWScope",
+    "name": "Raspberry Pi Zero W",
+    "shortName": "Zero W",
+    "subtitle": "J8 · 40-pin footprint (unpopulated) · BCM2835 alternate functions",
+    "mcu": "BCM2835",
+    "processor": "1 × ARM1176JZF-S",
+    "clock": "1 GHz",
+    "wireless": true,
+    "searchTerms": "Zero W WH BCM2835 ARM11",
+    "source": "https://pip-assets.raspberrypi.com/categories/592-raspberry-pi-zero-w/documents/RP-008368-DS-1-raspberry-pi-zero-w-reduced-schematics.pdf",
+    "datasheet": "https://pip-assets.raspberrypi.com/categories/579-raspberry-pi-zero/documents/RP-008249-DS-1-bcm2835-peripherals.pdf",
+    "pins": [
+      {
+        "number": 1,
+        "name": "3V3",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 2,
+        "name": "5V",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 3,
+        "name": "GPIO2",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C1 SDA",
+            "group": "I2C",
+            "signal": "SDA1",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SA3",
+            "group": "SMI",
+            "signal": "SA3",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 1,
+            "selector": "ALT1"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8",
+          "pi-gpio-electrical"
+        ],
+        "warnings": [
+          "piI2cPullupNote"
+        ],
+        "noteEvidence": {
+          "piI2cPullupNote": [
+            "pi-gpio-electrical"
+          ]
+        }
+      },
+      {
+        "number": 4,
+        "name": "5V",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 5,
+        "name": "GPIO3",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C1 SCL",
+            "group": "I2C",
+            "signal": "SCL1",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SA2",
+            "group": "SMI",
+            "signal": "SA2",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 1,
+            "selector": "ALT1"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8",
+          "pi-gpio-electrical"
+        ],
+        "warnings": [
+          "piI2cPullupNote"
+        ],
+        "noteEvidence": {
+          "piI2cPullupNote": [
+            "pi-gpio-electrical"
+          ]
+        }
+      },
+      {
+        "number": 6,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 7,
+        "name": "GPIO4",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "GPCLK0",
+            "group": "CLOCK",
+            "signal": "GPCLK0",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SA1",
+            "group": "SMI",
+            "signal": "SA1",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "ARM_TDI",
+            "group": "JTAG",
+            "signal": "ARM_TDI",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 8,
+        "name": "GPIO14",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "UART0 TX",
+            "group": "UART",
+            "signal": "TXD0",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD6",
+            "group": "SMI",
+            "signal": "SD6",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "UART1 TX",
+            "group": "UART",
+            "signal": "TXD1",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 9,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 10,
+        "name": "GPIO15",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "UART0 RX",
+            "group": "UART",
+            "signal": "RXD0",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD7",
+            "group": "SMI",
+            "signal": "SD7",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "UART1 RX",
+            "group": "UART",
+            "signal": "RXD1",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 11,
+        "name": "GPIO17",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SD9",
+            "group": "SMI",
+            "signal": "SD9",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "UART0 RTS",
+            "group": "UART",
+            "signal": "RTS0",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "SPI1_CE1_N",
+            "group": "SPI",
+            "signal": "SPI1_CE1_N",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "UART1 RTS",
+            "group": "UART",
+            "signal": "RTS1",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 12,
+        "name": "GPIO18",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "PCM_CLK",
+            "group": "PCM",
+            "signal": "PCM_CLK",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD10",
+            "group": "SMI",
+            "signal": "SD10",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "BSCSL SDA / MOSI",
+            "group": "SYSTEM",
+            "signal": "BSCSL SDA / MOSI",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "SPI1_CE0_N",
+            "group": "SPI",
+            "signal": "SPI1_CE0_N",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "PWM0",
+            "group": "PWM",
+            "signal": "PWM0",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 13,
+        "name": "GPIO27",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SD1_DAT3",
+            "group": "SDIO",
+            "signal": "SD1_DAT3",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "ARM_TMS",
+            "group": "JTAG",
+            "signal": "ARM_TMS",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 4,
+            "selector": "ALT4"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 14,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 15,
+        "name": "GPIO22",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SD14",
+            "group": "SMI",
+            "signal": "SD14",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "SD1_CLK",
+            "group": "SDIO",
+            "signal": "SD1_CLK",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "ARM_TRST",
+            "group": "JTAG",
+            "signal": "ARM_TRST",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 4,
+            "selector": "ALT4"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 16,
+        "name": "GPIO23",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SD15",
+            "group": "SMI",
+            "signal": "SD15",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "SD1_CMD",
+            "group": "SDIO",
+            "signal": "SD1_CMD",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "ARM_RTCK",
+            "group": "JTAG",
+            "signal": "ARM_RTCK",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 4,
+            "selector": "ALT4"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 17,
+        "name": "3V3",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 18,
+        "name": "GPIO24",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SD16",
+            "group": "SMI",
+            "signal": "SD16",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "SD1_DAT0",
+            "group": "SDIO",
+            "signal": "SD1_DAT0",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "ARM_TDO",
+            "group": "JTAG",
+            "signal": "ARM_TDO",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 4,
+            "selector": "ALT4"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 19,
+        "name": "GPIO10",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0_MOSI",
+            "group": "SPI",
+            "signal": "SPI0_MOSI",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD2",
+            "group": "SMI",
+            "signal": "SD2",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 1,
+            "selector": "ALT1"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 20,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 21,
+        "name": "GPIO9",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0_MISO",
+            "group": "SPI",
+            "signal": "SPI0_MISO",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD1",
+            "group": "SMI",
+            "signal": "SD1",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 1,
+            "selector": "ALT1"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 22,
+        "name": "GPIO25",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SD17",
+            "group": "SMI",
+            "signal": "SD17",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "SD1_DAT1",
+            "group": "SDIO",
+            "signal": "SD1_DAT1",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "ARM_TCK",
+            "group": "JTAG",
+            "signal": "ARM_TCK",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 4,
+            "selector": "ALT4"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 23,
+        "name": "GPIO11",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0_SCLK",
+            "group": "SPI",
+            "signal": "SPI0_SCLK",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD3",
+            "group": "SMI",
+            "signal": "SD3",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 1,
+            "selector": "ALT1"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 24,
+        "name": "GPIO8",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0_CE0_N",
+            "group": "SPI",
+            "signal": "SPI0_CE0_N",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD0",
+            "group": "SMI",
+            "signal": "SD0",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 1,
+            "selector": "ALT1"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 25,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 26,
+        "name": "GPIO7",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0_CE1_N",
+            "group": "SPI",
+            "signal": "SPI0_CE1_N",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SWE_N / SRW_N",
+            "group": "SMI",
+            "signal": "SWE_N / SRW_N",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 1,
+            "selector": "ALT1"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 27,
+        "name": "GPIO0",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C0 SDA",
+            "group": "I2C",
+            "signal": "SDA0",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SA5",
+            "group": "SMI",
+            "signal": "SA5",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 1,
+            "selector": "ALT1"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ],
+        "noteKey": "reservedNote",
+        "reserved": true
+      },
+      {
+        "number": 28,
+        "name": "GPIO1",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C0 SCL",
+            "group": "I2C",
+            "signal": "SCL0",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SA4",
+            "group": "SMI",
+            "signal": "SA4",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 1,
+            "selector": "ALT1"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ],
+        "noteKey": "reservedNote",
+        "reserved": true
+      },
+      {
+        "number": 29,
+        "name": "GPIO5",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "GPCLK1",
+            "group": "CLOCK",
+            "signal": "GPCLK1",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SA0",
+            "group": "SMI",
+            "signal": "SA0",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "ARM_TDO",
+            "group": "JTAG",
+            "signal": "ARM_TDO",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 30,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 31,
+        "name": "GPIO6",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "GPCLK2",
+            "group": "CLOCK",
+            "signal": "GPCLK2",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SOE_N / SE",
+            "group": "SMI",
+            "signal": "SOE_N / SE",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "ARM_RTCK",
+            "group": "JTAG",
+            "signal": "ARM_RTCK",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 32,
+        "name": "GPIO12",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "PWM0",
+            "group": "PWM",
+            "signal": "PWM0",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD4",
+            "group": "SMI",
+            "signal": "SD4",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "ARM_TMS",
+            "group": "JTAG",
+            "signal": "ARM_TMS",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 33,
+        "name": "GPIO13",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "PWM1",
+            "group": "PWM",
+            "signal": "PWM1",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD5",
+            "group": "SMI",
+            "signal": "SD5",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "ARM_TCK",
+            "group": "JTAG",
+            "signal": "ARM_TCK",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 34,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 35,
+        "name": "GPIO19",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "PCM_FS",
+            "group": "PCM",
+            "signal": "PCM_FS",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD11",
+            "group": "SMI",
+            "signal": "SD11",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "BSCSL SCL / SCLK",
+            "group": "SYSTEM",
+            "signal": "BSCSL SCL / SCLK",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "SPI1_MISO",
+            "group": "SPI",
+            "signal": "SPI1_MISO",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "PWM1",
+            "group": "PWM",
+            "signal": "PWM1",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 36,
+        "name": "GPIO16",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SD8",
+            "group": "SMI",
+            "signal": "SD8",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "UART0 CTS",
+            "group": "UART",
+            "signal": "CTS0",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "SPI1_CE2_N",
+            "group": "SPI",
+            "signal": "SPI1_CE2_N",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "UART1 CTS",
+            "group": "UART",
+            "signal": "CTS1",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 37,
+        "name": "GPIO26",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SD1_DAT2",
+            "group": "SDIO",
+            "signal": "SD1_DAT2",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "ARM_TDI",
+            "group": "JTAG",
+            "signal": "ARM_TDI",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 4,
+            "selector": "ALT4"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 38,
+        "name": "GPIO20",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "PCM_DIN",
+            "group": "PCM",
+            "signal": "PCM_DIN",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD12",
+            "group": "SMI",
+            "signal": "SD12",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "BSCSL / MISO",
+            "group": "SYSTEM",
+            "signal": "BSCSL / MISO",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "SPI1_MOSI",
+            "group": "SPI",
+            "signal": "SPI1_MOSI",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "GPCLK0",
+            "group": "CLOCK",
+            "signal": "GPCLK0",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 39,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "number": 40,
+        "name": "GPIO21",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "PCM_DOUT",
+            "group": "PCM",
+            "signal": "PCM_DOUT",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD13",
+            "group": "SMI",
+            "signal": "SD13",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "BSCSL / CE_N",
+            "group": "SYSTEM",
+            "signal": "BSCSL / CE_N",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "SPI1_SCLK",
+            "group": "SPI",
+            "signal": "SPI1_SCLK",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "GPCLK1",
+            "group": "CLOCK",
+            "signal": "GPCLK1",
+            "evidence": "bcm2835-alt-p102",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-w-j8"
+        ]
+      }
+    ],
+    "cautions": [
+      {
+        "key": "piNot5vCaution",
+        "evidence": [
+          "pi-gpio-electrical"
+        ]
+      },
+      {
+        "key": "piCurrentCaution",
+        "evidence": [
+          "pi-gpio-electrical"
+        ]
+      },
+      {
+        "key": "piZeroHeaderCaution",
+        "evidence": [
+          "pi-zero-model-list",
+          "pi-zero-w-j8"
+        ]
+      },
+      {
+        "key": "piBcm2835FunctionsCaution",
+        "evidence": [
+          "bcm2835-alt-p102",
+          "pi-proc-bcm2835",
+          "pi-gpio-alt-references"
+        ]
+      },
+      {
+        "key": "piBcm283xLevelsCaution",
+        "evidence": [
+          "pi-gpio-bcm283x-levels"
+        ]
+      }
+    ]
+  },
+  {
+    "family": "Raspberry Pi",
+    "voltage": "3.3 V I/O",
+    "verifiedOn": "2026-11-05",
+    "layout": "header",
+    "packagePins": 40,
+    "gpioCount": 28,
+    "reservedGPIOCount": 2,
+    "id": "raspberry-pi-zero-2-w",
+    "scopeKey": "piZero2WScope",
+    "name": "Raspberry Pi Zero 2 W",
+    "shortName": "Zero 2 W",
+    "subtitle": "J8 · 40-pin footprint (unpopulated) · RP3A0 (BCM2710A1) alternate functions",
+    "mcu": "RP3A0 (BCM2710A1)",
+    "processor": "4 × Arm Cortex-A53",
+    "clock": "1 GHz",
+    "wireless": true,
+    "searchTerms": "Zero 2 W WH RP3A0 BCM2710A1 BCM2837 Cortex-A53",
+    "source": "https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008360-DS-1-raspberry-pi-zero-2-w-reduced-schematics.pdf",
+    "datasheet": "https://pip-assets.raspberrypi.com/categories/579-raspberry-pi-zero/documents/RP-008249-DS-1-bcm2835-peripherals.pdf",
+    "pins": [
+      {
+        "number": 1,
+        "name": "3V3",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 2,
+        "name": "5V",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 3,
+        "name": "GPIO2",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C1 SDA",
+            "group": "I2C",
+            "signal": "SDA1",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SA3",
+            "group": "SMI",
+            "signal": "SA3",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8",
+          "pi-gpio-electrical"
+        ],
+        "warnings": [
+          "piI2cPullupNote"
+        ],
+        "noteEvidence": {
+          "piI2cPullupNote": [
+            "pi-gpio-electrical"
+          ]
+        }
+      },
+      {
+        "number": 4,
+        "name": "5V",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 5,
+        "name": "GPIO3",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C1 SCL",
+            "group": "I2C",
+            "signal": "SCL1",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SA2",
+            "group": "SMI",
+            "signal": "SA2",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8",
+          "pi-gpio-electrical"
+        ],
+        "warnings": [
+          "piI2cPullupNote"
+        ],
+        "noteEvidence": {
+          "piI2cPullupNote": [
+            "pi-gpio-electrical"
+          ]
+        }
+      },
+      {
+        "number": 6,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 7,
+        "name": "GPIO4",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "GPCLK0",
+            "group": "CLOCK",
+            "signal": "GPCLK0",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SA1",
+            "group": "SMI",
+            "signal": "SA1",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "ARM_TDI",
+            "group": "JTAG",
+            "signal": "ARM_TDI",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 8,
+        "name": "GPIO14",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "UART0 TX",
+            "group": "UART",
+            "signal": "TXD0",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD6",
+            "group": "SMI",
+            "signal": "SD6",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "UART1 TX",
+            "group": "UART",
+            "signal": "TXD1",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 9,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 10,
+        "name": "GPIO15",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "UART0 RX",
+            "group": "UART",
+            "signal": "RXD0",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD7",
+            "group": "SMI",
+            "signal": "SD7",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "UART1 RX",
+            "group": "UART",
+            "signal": "RXD1",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 11,
+        "name": "GPIO17",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SD9",
+            "group": "SMI",
+            "signal": "SD9",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "UART0 RTS",
+            "group": "UART",
+            "signal": "RTS0",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "SPI1_CE1_N",
+            "group": "SPI",
+            "signal": "SPI1_CE1_N",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "UART1 RTS",
+            "group": "UART",
+            "signal": "RTS1",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 12,
+        "name": "GPIO18",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "PCM_CLK",
+            "group": "PCM",
+            "signal": "PCM_CLK",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD10",
+            "group": "SMI",
+            "signal": "SD10",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "BSCSL SDA / MOSI",
+            "group": "SYSTEM",
+            "signal": "BSCSL SDA / MOSI",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "SPI1_CE0_N",
+            "group": "SPI",
+            "signal": "SPI1_CE0_N",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "PWM0",
+            "group": "PWM",
+            "signal": "PWM0",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 13,
+        "name": "GPIO27",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SD1_DAT3",
+            "group": "SDIO",
+            "signal": "SD1_DAT3",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "ARM_TMS",
+            "group": "JTAG",
+            "signal": "ARM_TMS",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 4,
+            "selector": "ALT4"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 14,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 15,
+        "name": "GPIO22",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SD14",
+            "group": "SMI",
+            "signal": "SD14",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "SD1_CLK",
+            "group": "SDIO",
+            "signal": "SD1_CLK",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "ARM_TRST",
+            "group": "JTAG",
+            "signal": "ARM_TRST",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 4,
+            "selector": "ALT4"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 16,
+        "name": "GPIO23",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SD15",
+            "group": "SMI",
+            "signal": "SD15",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "SD1_CMD",
+            "group": "SDIO",
+            "signal": "SD1_CMD",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "ARM_RTCK",
+            "group": "JTAG",
+            "signal": "ARM_RTCK",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 4,
+            "selector": "ALT4"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 17,
+        "name": "3V3",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 18,
+        "name": "GPIO24",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SD16",
+            "group": "SMI",
+            "signal": "SD16",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "SD1_DAT0",
+            "group": "SDIO",
+            "signal": "SD1_DAT0",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "ARM_TDO",
+            "group": "JTAG",
+            "signal": "ARM_TDO",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 4,
+            "selector": "ALT4"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 19,
+        "name": "GPIO10",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0_MOSI",
+            "group": "SPI",
+            "signal": "SPI0_MOSI",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD2",
+            "group": "SMI",
+            "signal": "SD2",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 20,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 21,
+        "name": "GPIO9",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0_MISO",
+            "group": "SPI",
+            "signal": "SPI0_MISO",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD1",
+            "group": "SMI",
+            "signal": "SD1",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 22,
+        "name": "GPIO25",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SD17",
+            "group": "SMI",
+            "signal": "SD17",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "SD1_DAT1",
+            "group": "SDIO",
+            "signal": "SD1_DAT1",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "ARM_TCK",
+            "group": "JTAG",
+            "signal": "ARM_TCK",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 4,
+            "selector": "ALT4"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 23,
+        "name": "GPIO11",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0_SCLK",
+            "group": "SPI",
+            "signal": "SPI0_SCLK",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD3",
+            "group": "SMI",
+            "signal": "SD3",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 24,
+        "name": "GPIO8",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0_CE0_N",
+            "group": "SPI",
+            "signal": "SPI0_CE0_N",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD0",
+            "group": "SMI",
+            "signal": "SD0",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 25,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 26,
+        "name": "GPIO7",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0_CE1_N",
+            "group": "SPI",
+            "signal": "SPI0_CE1_N",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SWE_N / SRW_N",
+            "group": "SMI",
+            "signal": "SWE_N / SRW_N",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 27,
+        "name": "GPIO0",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C0 SDA",
+            "group": "I2C",
+            "signal": "SDA0",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SA5",
+            "group": "SMI",
+            "signal": "SA5",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ],
+        "noteKey": "reservedNote",
+        "reserved": true
+      },
+      {
+        "number": 28,
+        "name": "GPIO1",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C0 SCL",
+            "group": "I2C",
+            "signal": "SCL0",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SA4",
+            "group": "SMI",
+            "signal": "SA4",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ],
+        "noteKey": "reservedNote",
+        "reserved": true
+      },
+      {
+        "number": 29,
+        "name": "GPIO5",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "GPCLK1",
+            "group": "CLOCK",
+            "signal": "GPCLK1",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SA0",
+            "group": "SMI",
+            "signal": "SA0",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "ARM_TDO",
+            "group": "JTAG",
+            "signal": "ARM_TDO",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 30,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 31,
+        "name": "GPIO6",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "GPCLK2",
+            "group": "CLOCK",
+            "signal": "GPCLK2",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SOE_N / SE",
+            "group": "SMI",
+            "signal": "SOE_N / SE",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "ARM_RTCK",
+            "group": "JTAG",
+            "signal": "ARM_RTCK",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 32,
+        "name": "GPIO12",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "PWM0",
+            "group": "PWM",
+            "signal": "PWM0",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD4",
+            "group": "SMI",
+            "signal": "SD4",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "ARM_TMS",
+            "group": "JTAG",
+            "signal": "ARM_TMS",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 33,
+        "name": "GPIO13",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "PWM1",
+            "group": "PWM",
+            "signal": "PWM1",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD5",
+            "group": "SMI",
+            "signal": "SD5",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "ARM_TCK",
+            "group": "JTAG",
+            "signal": "ARM_TCK",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 34,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 35,
+        "name": "GPIO19",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "PCM_FS",
+            "group": "PCM",
+            "signal": "PCM_FS",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD11",
+            "group": "SMI",
+            "signal": "SD11",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "BSCSL SCL / SCLK",
+            "group": "SYSTEM",
+            "signal": "BSCSL SCL / SCLK",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "SPI1_MISO",
+            "group": "SPI",
+            "signal": "SPI1_MISO",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "PWM1",
+            "group": "PWM",
+            "signal": "PWM1",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 36,
+        "name": "GPIO16",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SD8",
+            "group": "SMI",
+            "signal": "SD8",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "UART0 CTS",
+            "group": "UART",
+            "signal": "CTS0",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "SPI1_CE2_N",
+            "group": "SPI",
+            "signal": "SPI1_CE2_N",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "UART1 CTS",
+            "group": "UART",
+            "signal": "CTS1",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 37,
+        "name": "GPIO26",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SD1_DAT2",
+            "group": "SDIO",
+            "signal": "SD1_DAT2",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "ARM_TDI",
+            "group": "JTAG",
+            "signal": "ARM_TDI",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 4,
+            "selector": "ALT4"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 38,
+        "name": "GPIO20",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "PCM_DIN",
+            "group": "PCM",
+            "signal": "PCM_DIN",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD12",
+            "group": "SMI",
+            "signal": "SD12",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "BSCSL / MISO",
+            "group": "SYSTEM",
+            "signal": "BSCSL / MISO",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "SPI1_MOSI",
+            "group": "SPI",
+            "signal": "SPI1_MOSI",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "GPCLK0",
+            "group": "CLOCK",
+            "signal": "GPCLK0",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 39,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "number": 40,
+        "name": "GPIO21",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "PCM_DOUT",
+            "group": "PCM",
+            "signal": "PCM_DOUT",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD13",
+            "group": "SMI",
+            "signal": "SD13",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "BSCSL / CE_N",
+            "group": "SYSTEM",
+            "signal": "BSCSL / CE_N",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "SPI1_SCLK",
+            "group": "SPI",
+            "signal": "SPI1_SCLK",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "GPCLK1",
+            "group": "CLOCK",
+            "signal": "GPCLK1",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-zero-2-w-j8"
+        ]
+      }
+    ],
+    "cautions": [
+      {
+        "key": "piNot5vCaution",
+        "evidence": [
+          "pi-gpio-electrical"
+        ]
+      },
+      {
+        "key": "piCurrentCaution",
+        "evidence": [
+          "pi-gpio-electrical"
+        ]
+      },
+      {
+        "key": "piZeroHeaderCaution",
+        "evidence": [
+          "pi-zero-model-list",
+          "pi-zero-2-w-brief-spec",
+          "pi-zero-2-w-j8"
+        ]
+      },
+      {
+        "key": "piBcm2837FunctionsCaution",
+        "evidence": [
+          "bcm2835-alt-p102-bcm2837",
+          "pi-proc-rp3a0",
+          "pi-proc-bcm2837",
+          "pi-proc-bcm2836",
+          "pi-proc-bcm2835",
+          "pi-gpio-alt-references"
+        ]
+      },
+      {
+        "key": "piBcm283xLevelsCaution",
+        "evidence": [
+          "pi-gpio-bcm283x-levels"
+        ]
+      }
+    ]
+  },
+  {
+    "family": "Raspberry Pi",
+    "voltage": "3.3 V I/O",
+    "verifiedOn": "2026-11-05",
+    "layout": "header",
+    "packagePins": 40,
+    "gpioCount": 28,
+    "reservedGPIOCount": 2,
+    "id": "raspberry-pi-3b-plus",
+    "scopeKey": "pi3bPlusScope",
+    "name": "Raspberry Pi 3 Model B+",
+    "shortName": "Pi 3 Model B+",
+    "subtitle": "J8 · 40 pins · BCM2837B0 alternate functions",
+    "mcu": "BCM2837B0",
+    "processor": "4 × Arm Cortex-A53",
+    "clock": "1.4 GHz",
+    "wireless": true,
+    "searchTerms": "Pi 3 B+ 3B+ Model B Plus BCM2837B0 BCM2837 Cortex-A53",
+    "source": "https://pip-assets.raspberrypi.com/categories/532-raspberry-pi-3-model-b/documents/RP-008339-DS-1-raspberry-pi-3-b-plus-reduced-schematics.pdf",
+    "datasheet": "https://pip-assets.raspberrypi.com/categories/579-raspberry-pi-zero/documents/RP-008249-DS-1-bcm2835-peripherals.pdf",
+    "pins": [
+      {
+        "number": 1,
+        "name": "3V3",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 2,
+        "name": "5V",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 3,
+        "name": "GPIO2",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C1 SDA",
+            "group": "I2C",
+            "signal": "SDA1",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SA3",
+            "group": "SMI",
+            "signal": "SA3",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8",
+          "pi-gpio-electrical"
+        ],
+        "warnings": [
+          "piI2cPullupNote"
+        ],
+        "noteEvidence": {
+          "piI2cPullupNote": [
+            "pi-gpio-electrical"
+          ]
+        }
+      },
+      {
+        "number": 4,
+        "name": "5V",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 5,
+        "name": "GPIO3",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C1 SCL",
+            "group": "I2C",
+            "signal": "SCL1",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SA2",
+            "group": "SMI",
+            "signal": "SA2",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8",
+          "pi-gpio-electrical"
+        ],
+        "warnings": [
+          "piI2cPullupNote"
+        ],
+        "noteEvidence": {
+          "piI2cPullupNote": [
+            "pi-gpio-electrical"
+          ]
+        }
+      },
+      {
+        "number": 6,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 7,
+        "name": "GPIO4",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "GPCLK0",
+            "group": "CLOCK",
+            "signal": "GPCLK0",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SA1",
+            "group": "SMI",
+            "signal": "SA1",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "ARM_TDI",
+            "group": "JTAG",
+            "signal": "ARM_TDI",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 8,
+        "name": "GPIO14",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "UART0 TX",
+            "group": "UART",
+            "signal": "TXD0",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD6",
+            "group": "SMI",
+            "signal": "SD6",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "UART1 TX",
+            "group": "UART",
+            "signal": "TXD1",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 9,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 10,
+        "name": "GPIO15",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "UART0 RX",
+            "group": "UART",
+            "signal": "RXD0",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD7",
+            "group": "SMI",
+            "signal": "SD7",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "UART1 RX",
+            "group": "UART",
+            "signal": "RXD1",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 11,
+        "name": "GPIO17",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SD9",
+            "group": "SMI",
+            "signal": "SD9",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "UART0 RTS",
+            "group": "UART",
+            "signal": "RTS0",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "SPI1_CE1_N",
+            "group": "SPI",
+            "signal": "SPI1_CE1_N",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "UART1 RTS",
+            "group": "UART",
+            "signal": "RTS1",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 12,
+        "name": "GPIO18",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "PCM_CLK",
+            "group": "PCM",
+            "signal": "PCM_CLK",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD10",
+            "group": "SMI",
+            "signal": "SD10",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "BSCSL SDA / MOSI",
+            "group": "SYSTEM",
+            "signal": "BSCSL SDA / MOSI",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "SPI1_CE0_N",
+            "group": "SPI",
+            "signal": "SPI1_CE0_N",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "PWM0",
+            "group": "PWM",
+            "signal": "PWM0",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 13,
+        "name": "GPIO27",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SD1_DAT3",
+            "group": "SDIO",
+            "signal": "SD1_DAT3",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "ARM_TMS",
+            "group": "JTAG",
+            "signal": "ARM_TMS",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 4,
+            "selector": "ALT4"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 14,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 15,
+        "name": "GPIO22",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SD14",
+            "group": "SMI",
+            "signal": "SD14",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "SD1_CLK",
+            "group": "SDIO",
+            "signal": "SD1_CLK",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "ARM_TRST",
+            "group": "JTAG",
+            "signal": "ARM_TRST",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 4,
+            "selector": "ALT4"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 16,
+        "name": "GPIO23",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SD15",
+            "group": "SMI",
+            "signal": "SD15",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "SD1_CMD",
+            "group": "SDIO",
+            "signal": "SD1_CMD",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "ARM_RTCK",
+            "group": "JTAG",
+            "signal": "ARM_RTCK",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 4,
+            "selector": "ALT4"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 17,
+        "name": "3V3",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 18,
+        "name": "GPIO24",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SD16",
+            "group": "SMI",
+            "signal": "SD16",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "SD1_DAT0",
+            "group": "SDIO",
+            "signal": "SD1_DAT0",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "ARM_TDO",
+            "group": "JTAG",
+            "signal": "ARM_TDO",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 4,
+            "selector": "ALT4"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 19,
+        "name": "GPIO10",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0_MOSI",
+            "group": "SPI",
+            "signal": "SPI0_MOSI",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD2",
+            "group": "SMI",
+            "signal": "SD2",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 20,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 21,
+        "name": "GPIO9",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0_MISO",
+            "group": "SPI",
+            "signal": "SPI0_MISO",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD1",
+            "group": "SMI",
+            "signal": "SD1",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 22,
+        "name": "GPIO25",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SD17",
+            "group": "SMI",
+            "signal": "SD17",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "SD1_DAT1",
+            "group": "SDIO",
+            "signal": "SD1_DAT1",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "ARM_TCK",
+            "group": "JTAG",
+            "signal": "ARM_TCK",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 4,
+            "selector": "ALT4"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 23,
+        "name": "GPIO11",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0_SCLK",
+            "group": "SPI",
+            "signal": "SPI0_SCLK",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD3",
+            "group": "SMI",
+            "signal": "SD3",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 24,
+        "name": "GPIO8",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0_CE0_N",
+            "group": "SPI",
+            "signal": "SPI0_CE0_N",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD0",
+            "group": "SMI",
+            "signal": "SD0",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 25,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 26,
+        "name": "GPIO7",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0_CE1_N",
+            "group": "SPI",
+            "signal": "SPI0_CE1_N",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SWE_N / SRW_N",
+            "group": "SMI",
+            "signal": "SWE_N / SRW_N",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 27,
+        "name": "GPIO0",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C0 SDA",
+            "group": "I2C",
+            "signal": "SDA0",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SA5",
+            "group": "SMI",
+            "signal": "SA5",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ],
+        "noteKey": "reservedNote",
+        "reserved": true
+      },
+      {
+        "number": 28,
+        "name": "GPIO1",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "I2C0 SCL",
+            "group": "I2C",
+            "signal": "SCL0",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SA4",
+            "group": "SMI",
+            "signal": "SA4",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ],
+        "noteKey": "reservedNote",
+        "reserved": true
+      },
+      {
+        "number": 29,
+        "name": "GPIO5",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "GPCLK1",
+            "group": "CLOCK",
+            "signal": "GPCLK1",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SA0",
+            "group": "SMI",
+            "signal": "SA0",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "ARM_TDO",
+            "group": "JTAG",
+            "signal": "ARM_TDO",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 30,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 31,
+        "name": "GPIO6",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "GPCLK2",
+            "group": "CLOCK",
+            "signal": "GPCLK2",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SOE_N / SE",
+            "group": "SMI",
+            "signal": "SOE_N / SE",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "ARM_RTCK",
+            "group": "JTAG",
+            "signal": "ARM_RTCK",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 32,
+        "name": "GPIO12",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "PWM0",
+            "group": "PWM",
+            "signal": "PWM0",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD4",
+            "group": "SMI",
+            "signal": "SD4",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "ARM_TMS",
+            "group": "JTAG",
+            "signal": "ARM_TMS",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 33,
+        "name": "GPIO13",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "PWM1",
+            "group": "PWM",
+            "signal": "PWM1",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD5",
+            "group": "SMI",
+            "signal": "SD5",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "ARM_TCK",
+            "group": "JTAG",
+            "signal": "ARM_TCK",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 34,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 35,
+        "name": "GPIO19",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "PCM_FS",
+            "group": "PCM",
+            "signal": "PCM_FS",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD11",
+            "group": "SMI",
+            "signal": "SD11",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "BSCSL SCL / SCLK",
+            "group": "SYSTEM",
+            "signal": "BSCSL SCL / SCLK",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "SPI1_MISO",
+            "group": "SPI",
+            "signal": "SPI1_MISO",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "PWM1",
+            "group": "PWM",
+            "signal": "PWM1",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 36,
+        "name": "GPIO16",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SD8",
+            "group": "SMI",
+            "signal": "SD8",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "UART0 CTS",
+            "group": "UART",
+            "signal": "CTS0",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "SPI1_CE2_N",
+            "group": "SPI",
+            "signal": "SPI1_CE2_N",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "UART1 CTS",
+            "group": "UART",
+            "signal": "CTS1",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 37,
+        "name": "GPIO26",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SD1_DAT2",
+            "group": "SDIO",
+            "signal": "SD1_DAT2",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "ARM_TDI",
+            "group": "JTAG",
+            "signal": "ARM_TDI",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 4,
+            "selector": "ALT4"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 38,
+        "name": "GPIO20",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "PCM_DIN",
+            "group": "PCM",
+            "signal": "PCM_DIN",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD12",
+            "group": "SMI",
+            "signal": "SD12",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "BSCSL / MISO",
+            "group": "SYSTEM",
+            "signal": "BSCSL / MISO",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "SPI1_MOSI",
+            "group": "SPI",
+            "signal": "SPI1_MOSI",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "GPCLK0",
+            "group": "CLOCK",
+            "signal": "GPCLK0",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 39,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      },
+      {
+        "number": 40,
+        "name": "GPIO21",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "PCM_DOUT",
+            "group": "PCM",
+            "signal": "PCM_DOUT",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "SD13",
+            "group": "SMI",
+            "signal": "SD13",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "BSCSL / CE_N",
+            "group": "SYSTEM",
+            "signal": "BSCSL / CE_N",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "SPI1_SCLK",
+            "group": "SPI",
+            "signal": "SPI1_SCLK",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "GPCLK1",
+            "group": "CLOCK",
+            "signal": "GPCLK1",
+            "evidence": "bcm2835-alt-p102-bcm2837",
+            "alt": 5,
+            "selector": "ALT5"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-3b-plus-j8"
+        ]
+      }
+    ],
+    "cautions": [
+      {
+        "key": "piNot5vCaution",
+        "evidence": [
+          "pi-gpio-electrical"
+        ]
+      },
+      {
+        "key": "piCurrentCaution",
+        "evidence": [
+          "pi-gpio-electrical"
+        ]
+      },
+      {
+        "key": "piBcm2837FunctionsCaution",
+        "evidence": [
+          "bcm2835-alt-p102-bcm2837",
+          "pi-proc-bcm2837b0",
+          "pi-proc-bcm2837",
+          "pi-proc-bcm2836",
+          "pi-proc-bcm2835",
+          "pi-gpio-alt-references"
+        ]
+      },
+      {
+        "key": "piBcm283xLevelsCaution",
+        "evidence": [
+          "pi-gpio-bcm283x-levels"
+        ]
+      },
+      {
+        "key": "pi3bPlusPowerCaution",
+        "evidence": [
+          "pi-3b-plus-brief-spec"
+        ]
+      }
+    ]
+  },
+  {
+    "family": "Raspberry Pi",
+    "voltage": "3.3 V I/O",
+    "verifiedOn": "2026-11-05",
+    "layout": "header",
+    "packagePins": 40,
+    "gpioCount": 28,
+    "reservedGPIOCount": 2,
+    "id": "raspberry-pi-500",
+    "scopeKey": "pi500Scope",
+    "name": "Raspberry Pi 500",
+    "shortName": "Pi 500",
+    "subtitle": "Rear 40-pin GPIO header · RP1 alternate functions",
+    "mcu": "BCM2712 / RP1",
+    "processor": "4 × Arm Cortex-A76 / RP1 I/O",
+    "clock": "2.4 GHz",
+    "wireless": true,
+    "searchTerms": "Pi 500 keyboard computer BCM2712 RP1 Cortex-A76",
+    "source": "https://pip-assets.raspberrypi.com/categories/1115-raspberry-pi-500/documents/RP-008349-DS-4-raspberry-pi-500-product-brief.pdf",
+    "datasheet": "https://datasheets.raspberrypi.com/rp1/rp1-peripherals.pdf",
+    "pins": [
+      {
+        "number": 1,
+        "name": "3V3",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 2,
+        "name": "5V",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 3,
+        "name": "GPIO2",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0_CSn[3]",
+            "group": "SPI",
+            "signal": "SPI0_CSn[3]",
+            "evidence": "rp1-alt-p16",
+            "alt": 0,
+            "selector": "ALT0",
+            "mode": "spi-controller-single"
+          },
+          {
+            "name": "DPI_VSYNC",
+            "group": "DPI",
+            "signal": "DPI_VSYNC",
+            "evidence": "rp1-alt-p16",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "UART1_CTS",
+            "group": "UART",
+            "signal": "UART1_CTS",
+            "evidence": "rp1-alt-p16",
+            "alt": 2,
+            "selector": "ALT2"
+          },
+          {
+            "name": "I2C1_SDA",
+            "group": "I2C",
+            "signal": "I2C1_SDA",
+            "evidence": "rp1-alt-p16",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "UART0_IR_RX",
+            "group": "UART",
+            "signal": "UART0_IR_RX",
+            "evidence": "rp1-alt-p16",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "SYS_RIO[2]",
+            "group": "SYSTEM",
+            "signal": "SYS_RIO[2]",
+            "evidence": "rp1-alt-p16",
+            "alt": 5,
+            "selector": "ALT5"
+          },
+          {
+            "name": "PROC_RIO[2]",
+            "group": "SYSTEM",
+            "signal": "PROC_RIO[2]",
+            "evidence": "rp1-alt-p16",
+            "alt": 6,
+            "selector": "ALT6"
+          },
+          {
+            "name": "PIO[2]",
+            "group": "PIO",
+            "signal": "PIO[2]",
+            "evidence": "rp1-alt-p16",
+            "alt": 7,
+            "selector": "ALT7"
+          },
+          {
+            "name": "SPI2_SIO[0]",
+            "group": "SPI",
+            "signal": "SPI2_SIO[0]",
+            "evidence": "rp1-alt-p16",
+            "alt": 8,
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec",
+          "pi-gpio-electrical"
+        ],
+        "warnings": [
+          "piI2cPullupNote"
+        ],
+        "noteEvidence": {
+          "piI2cPullupNote": [
+            "pi-gpio-electrical"
+          ]
+        }
+      },
+      {
+        "number": 4,
+        "name": "5V",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 5,
+        "name": "GPIO3",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0_CSn[2]",
+            "group": "SPI",
+            "signal": "SPI0_CSn[2]",
+            "evidence": "rp1-alt-p16",
+            "alt": 0,
+            "selector": "ALT0",
+            "mode": "spi-controller-single"
+          },
+          {
+            "name": "DPI_HSYNC",
+            "group": "DPI",
+            "signal": "DPI_HSYNC",
+            "evidence": "rp1-alt-p16",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "UART1_RTS",
+            "group": "UART",
+            "signal": "UART1_RTS",
+            "evidence": "rp1-alt-p16",
+            "alt": 2,
+            "selector": "ALT2"
+          },
+          {
+            "name": "I2C1_SCL",
+            "group": "I2C",
+            "signal": "I2C1_SCL",
+            "evidence": "rp1-alt-p16",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "UART0_IR_TX",
+            "group": "UART",
+            "signal": "UART0_IR_TX",
+            "evidence": "rp1-alt-p16",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "SYS_RIO[3]",
+            "group": "SYSTEM",
+            "signal": "SYS_RIO[3]",
+            "evidence": "rp1-alt-p16",
+            "alt": 5,
+            "selector": "ALT5"
+          },
+          {
+            "name": "PROC_RIO[3]",
+            "group": "SYSTEM",
+            "signal": "PROC_RIO[3]",
+            "evidence": "rp1-alt-p16",
+            "alt": 6,
+            "selector": "ALT6"
+          },
+          {
+            "name": "PIO[3]",
+            "group": "PIO",
+            "signal": "PIO[3]",
+            "evidence": "rp1-alt-p16",
+            "alt": 7,
+            "selector": "ALT7"
+          },
+          {
+            "name": "SPI2_SCLK",
+            "group": "SPI",
+            "signal": "SPI2_SCLK",
+            "evidence": "rp1-alt-p16",
+            "alt": 8,
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec",
+          "pi-gpio-electrical"
+        ],
+        "warnings": [
+          "piI2cPullupNote"
+        ],
+        "noteEvidence": {
+          "piI2cPullupNote": [
+            "pi-gpio-electrical"
+          ]
+        }
+      },
+      {
+        "number": 6,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 7,
+        "name": "GPIO4",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "GPCLK[0]",
+            "group": "CLOCK",
+            "signal": "GPCLK[0]",
+            "evidence": "rp1-alt-p16",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "DPI_D[0]",
+            "group": "DPI",
+            "signal": "DPI_D[0]",
+            "evidence": "rp1-alt-p16",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "UART2_TX",
+            "group": "UART",
+            "signal": "UART2_TX",
+            "evidence": "rp1-alt-p16",
+            "alt": 2,
+            "selector": "ALT2"
+          },
+          {
+            "name": "I2C2_SDA",
+            "group": "I2C",
+            "signal": "I2C2_SDA",
+            "evidence": "rp1-alt-p16",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "UART0_RI",
+            "group": "UART",
+            "signal": "UART0_RI",
+            "evidence": "rp1-alt-p16",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "SYS_RIO[4]",
+            "group": "SYSTEM",
+            "signal": "SYS_RIO[4]",
+            "evidence": "rp1-alt-p16",
+            "alt": 5,
+            "selector": "ALT5"
+          },
+          {
+            "name": "PROC_RIO[4]",
+            "group": "SYSTEM",
+            "signal": "PROC_RIO[4]",
+            "evidence": "rp1-alt-p16",
+            "alt": 6,
+            "selector": "ALT6"
+          },
+          {
+            "name": "PIO[4]",
+            "group": "PIO",
+            "signal": "PIO[4]",
+            "evidence": "rp1-alt-p16",
+            "alt": 7,
+            "selector": "ALT7"
+          },
+          {
+            "name": "SPI3_CSn[0]",
+            "group": "SPI",
+            "signal": "SPI3_CSn[0]",
+            "evidence": "rp1-alt-p16",
+            "alt": 8,
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 8,
+        "name": "GPIO14",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "PWM0[2]",
+            "group": "PWM",
+            "signal": "PWM0[2]",
+            "evidence": "rp1-alt-p16",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "DPI_D[10]",
+            "group": "DPI",
+            "signal": "DPI_D[10]",
+            "evidence": "rp1-alt-p16",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "UART4_CTS",
+            "group": "UART",
+            "signal": "UART4_CTS",
+            "evidence": "rp1-alt-p16",
+            "alt": 2,
+            "selector": "ALT2"
+          },
+          {
+            "name": "I2C3_SDA",
+            "group": "I2C",
+            "signal": "I2C3_SDA",
+            "evidence": "rp1-alt-p16",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "UART0_TX",
+            "group": "UART",
+            "signal": "UART0_TX",
+            "evidence": "rp1-alt-p16",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "SYS_RIO[14]",
+            "group": "SYSTEM",
+            "signal": "SYS_RIO[14]",
+            "evidence": "rp1-alt-p16",
+            "alt": 5,
+            "selector": "ALT5"
+          },
+          {
+            "name": "PROC_RIO[14]",
+            "group": "SYSTEM",
+            "signal": "PROC_RIO[14]",
+            "evidence": "rp1-alt-p16",
+            "alt": 6,
+            "selector": "ALT6"
+          },
+          {
+            "name": "PIO[14]",
+            "group": "PIO",
+            "signal": "PIO[14]",
+            "evidence": "rp1-alt-p16",
+            "alt": 7,
+            "selector": "ALT7"
+          },
+          {
+            "name": "SPI5_SIO[0]",
+            "group": "SPI",
+            "signal": "SPI5_SIO[0]",
+            "evidence": "rp1-alt-p16",
+            "alt": 8,
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 9,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 10,
+        "name": "GPIO15",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "PWM0[3]",
+            "group": "PWM",
+            "signal": "PWM0[3]",
+            "evidence": "rp1-alt-p16",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "DPI_D[11]",
+            "group": "DPI",
+            "signal": "DPI_D[11]",
+            "evidence": "rp1-alt-p16",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "UART4_RTS",
+            "group": "UART",
+            "signal": "UART4_RTS",
+            "evidence": "rp1-alt-p16",
+            "alt": 2,
+            "selector": "ALT2"
+          },
+          {
+            "name": "I2C3_SCL",
+            "group": "I2C",
+            "signal": "I2C3_SCL",
+            "evidence": "rp1-alt-p16",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "UART0_RX",
+            "group": "UART",
+            "signal": "UART0_RX",
+            "evidence": "rp1-alt-p16",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "SYS_RIO[15]",
+            "group": "SYSTEM",
+            "signal": "SYS_RIO[15]",
+            "evidence": "rp1-alt-p16",
+            "alt": 5,
+            "selector": "ALT5"
+          },
+          {
+            "name": "PROC_RIO[15]",
+            "group": "SYSTEM",
+            "signal": "PROC_RIO[15]",
+            "evidence": "rp1-alt-p16",
+            "alt": 6,
+            "selector": "ALT6"
+          },
+          {
+            "name": "PIO[15]",
+            "group": "PIO",
+            "signal": "PIO[15]",
+            "evidence": "rp1-alt-p16",
+            "alt": 7,
+            "selector": "ALT7"
+          },
+          {
+            "name": "SPI5_SCLK",
+            "group": "SPI",
+            "signal": "SPI5_SCLK",
+            "evidence": "rp1-alt-p16",
+            "alt": 8,
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 11,
+        "name": "GPIO17",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1_CSn[1]",
+            "group": "SPI",
+            "signal": "SPI1_CSn[1]",
+            "evidence": "rp1-alt-p16",
+            "alt": 0,
+            "selector": "ALT0",
+            "mode": "spi-controller-single"
+          },
+          {
+            "name": "DPI_D[13]",
+            "group": "DPI",
+            "signal": "DPI_D[13]",
+            "evidence": "rp1-alt-p16",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "MIPI1_DSI_TE",
+            "group": "SYSTEM",
+            "signal": "MIPI1_DSI_TE",
+            "evidence": "rp1-alt-p16",
+            "alt": 2,
+            "selector": "ALT2"
+          },
+          {
+            "name": "UART0_RTS",
+            "group": "UART",
+            "signal": "UART0_RTS",
+            "evidence": "rp1-alt-p16",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "SYS_RIO[17]",
+            "group": "SYSTEM",
+            "signal": "SYS_RIO[17]",
+            "evidence": "rp1-alt-p16",
+            "alt": 5,
+            "selector": "ALT5"
+          },
+          {
+            "name": "PROC_RIO[17]",
+            "group": "SYSTEM",
+            "signal": "PROC_RIO[17]",
+            "evidence": "rp1-alt-p16",
+            "alt": 6,
+            "selector": "ALT6"
+          },
+          {
+            "name": "PIO[17]",
+            "group": "PIO",
+            "signal": "PIO[17]",
+            "evidence": "rp1-alt-p16",
+            "alt": 7,
+            "selector": "ALT7"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 12,
+        "name": "GPIO18",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1_CSn[0]",
+            "group": "SPI",
+            "signal": "SPI1_CSn[0]",
+            "evidence": "rp1-alt-p16",
+            "alt": 0,
+            "selector": "ALT0",
+            "mode": "spi-controller-single"
+          },
+          {
+            "name": "DPI_D[14]",
+            "group": "DPI",
+            "signal": "DPI_D[14]",
+            "evidence": "rp1-alt-p16",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "I2S0_SCLK",
+            "group": "I2S",
+            "signal": "I2S0_SCLK",
+            "evidence": "rp1-alt-p16",
+            "alt": 2,
+            "selector": "ALT2"
+          },
+          {
+            "name": "PWM0[2]",
+            "group": "PWM",
+            "signal": "PWM0[2]",
+            "evidence": "rp1-alt-p16",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "I2S1_SCLK",
+            "group": "I2S",
+            "signal": "I2S1_SCLK",
+            "evidence": "rp1-alt-p16",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "SYS_RIO[18]",
+            "group": "SYSTEM",
+            "signal": "SYS_RIO[18]",
+            "evidence": "rp1-alt-p16",
+            "alt": 5,
+            "selector": "ALT5"
+          },
+          {
+            "name": "PROC_RIO[18]",
+            "group": "SYSTEM",
+            "signal": "PROC_RIO[18]",
+            "evidence": "rp1-alt-p16",
+            "alt": 6,
+            "selector": "ALT6"
+          },
+          {
+            "name": "PIO[18]",
+            "group": "PIO",
+            "signal": "PIO[18]",
+            "evidence": "rp1-alt-p16",
+            "alt": 7,
+            "selector": "ALT7"
+          },
+          {
+            "name": "GPCLK[1]",
+            "group": "CLOCK",
+            "signal": "GPCLK[1]",
+            "evidence": "rp1-alt-p16",
+            "alt": 8,
+            "selector": "ALT8"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 13,
+        "name": "GPIO27",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SDIO0_DAT[3]",
+            "group": "SDIO",
+            "signal": "SDIO0_DAT[3]",
+            "evidence": "rp1-alt-p17",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "DPI_D[23]",
+            "group": "DPI",
+            "signal": "DPI_D[23]",
+            "evidence": "rp1-alt-p17",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "I2S0_SDO[3]",
+            "group": "I2S",
+            "signal": "I2S0_SDO[3]",
+            "evidence": "rp1-alt-p17",
+            "alt": 2,
+            "selector": "ALT2"
+          },
+          {
+            "name": "AUDIO_IN_DAT1",
+            "group": "PCM",
+            "signal": "AUDIO_IN_DAT1",
+            "evidence": "rp1-alt-p17",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "I2S1_SDO[3]",
+            "group": "I2S",
+            "signal": "I2S1_SDO[3]",
+            "evidence": "rp1-alt-p17",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "SYS_RIO[27]",
+            "group": "SYSTEM",
+            "signal": "SYS_RIO[27]",
+            "evidence": "rp1-alt-p17",
+            "alt": 5,
+            "selector": "ALT5"
+          },
+          {
+            "name": "PROC_RIO[27]",
+            "group": "SYSTEM",
+            "signal": "PROC_RIO[27]",
+            "evidence": "rp1-alt-p17",
+            "alt": 6,
+            "selector": "ALT6"
+          },
+          {
+            "name": "PIO[27]",
+            "group": "PIO",
+            "signal": "PIO[27]",
+            "evidence": "rp1-alt-p17",
+            "alt": 7,
+            "selector": "ALT7"
+          },
+          {
+            "name": "SPI1_CSn[1]",
+            "group": "SPI",
+            "signal": "SPI1_CSn[1]",
+            "evidence": "rp1-alt-p17",
+            "alt": 8,
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 14,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 15,
+        "name": "GPIO22",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SDIO0_CLK",
+            "group": "SDIO",
+            "signal": "SDIO0_CLK",
+            "evidence": "rp1-alt-p17",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "DPI_D[18]",
+            "group": "DPI",
+            "signal": "DPI_D[18]",
+            "evidence": "rp1-alt-p17",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "I2S0_SDI[1]",
+            "group": "I2S",
+            "signal": "I2S0_SDI[1]",
+            "evidence": "rp1-alt-p17",
+            "alt": 2,
+            "selector": "ALT2"
+          },
+          {
+            "name": "I2C3_SDA",
+            "group": "I2C",
+            "signal": "I2C3_SDA",
+            "evidence": "rp1-alt-p17",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "I2S1_SDI[1]",
+            "group": "I2S",
+            "signal": "I2S1_SDI[1]",
+            "evidence": "rp1-alt-p17",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "SYS_RIO[22]",
+            "group": "SYSTEM",
+            "signal": "SYS_RIO[22]",
+            "evidence": "rp1-alt-p17",
+            "alt": 5,
+            "selector": "ALT5"
+          },
+          {
+            "name": "PROC_RIO[22]",
+            "group": "SYSTEM",
+            "signal": "PROC_RIO[22]",
+            "evidence": "rp1-alt-p17",
+            "alt": 6,
+            "selector": "ALT6"
+          },
+          {
+            "name": "PIO[22]",
+            "group": "PIO",
+            "signal": "PIO[22]",
+            "evidence": "rp1-alt-p17",
+            "alt": 7,
+            "selector": "ALT7"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 16,
+        "name": "GPIO23",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SDIO0_CMD",
+            "group": "SDIO",
+            "signal": "SDIO0_CMD",
+            "evidence": "rp1-alt-p17",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "DPI_D[19]",
+            "group": "DPI",
+            "signal": "DPI_D[19]",
+            "evidence": "rp1-alt-p17",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "I2S0_SDO[1]",
+            "group": "I2S",
+            "signal": "I2S0_SDO[1]",
+            "evidence": "rp1-alt-p17",
+            "alt": 2,
+            "selector": "ALT2"
+          },
+          {
+            "name": "I2C3_SCL",
+            "group": "I2C",
+            "signal": "I2C3_SCL",
+            "evidence": "rp1-alt-p17",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "I2S1_SDO[1]",
+            "group": "I2S",
+            "signal": "I2S1_SDO[1]",
+            "evidence": "rp1-alt-p17",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "SYS_RIO[23]",
+            "group": "SYSTEM",
+            "signal": "SYS_RIO[23]",
+            "evidence": "rp1-alt-p17",
+            "alt": 5,
+            "selector": "ALT5"
+          },
+          {
+            "name": "PROC_RIO[23]",
+            "group": "SYSTEM",
+            "signal": "PROC_RIO[23]",
+            "evidence": "rp1-alt-p17",
+            "alt": 6,
+            "selector": "ALT6"
+          },
+          {
+            "name": "PIO[23]",
+            "group": "PIO",
+            "signal": "PIO[23]",
+            "evidence": "rp1-alt-p17",
+            "alt": 7,
+            "selector": "ALT7"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 17,
+        "name": "3V3",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 18,
+        "name": "GPIO24",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SDIO0_DAT[0]",
+            "group": "SDIO",
+            "signal": "SDIO0_DAT[0]",
+            "evidence": "rp1-alt-p17",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "DPI_D[20]",
+            "group": "DPI",
+            "signal": "DPI_D[20]",
+            "evidence": "rp1-alt-p17",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "I2S0_SDI[2]",
+            "group": "I2S",
+            "signal": "I2S0_SDI[2]",
+            "evidence": "rp1-alt-p17",
+            "alt": 2,
+            "selector": "ALT2"
+          },
+          {
+            "name": "I2S1_SDI[2]",
+            "group": "I2S",
+            "signal": "I2S1_SDI[2]",
+            "evidence": "rp1-alt-p17",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "SYS_RIO[24]",
+            "group": "SYSTEM",
+            "signal": "SYS_RIO[24]",
+            "evidence": "rp1-alt-p17",
+            "alt": 5,
+            "selector": "ALT5"
+          },
+          {
+            "name": "PROC_RIO[24]",
+            "group": "SYSTEM",
+            "signal": "PROC_RIO[24]",
+            "evidence": "rp1-alt-p17",
+            "alt": 6,
+            "selector": "ALT6"
+          },
+          {
+            "name": "PIO[24]",
+            "group": "PIO",
+            "signal": "PIO[24]",
+            "evidence": "rp1-alt-p17",
+            "alt": 7,
+            "selector": "ALT7"
+          },
+          {
+            "name": "SPI2_CSn[1]",
+            "group": "SPI",
+            "signal": "SPI2_CSn[1]",
+            "evidence": "rp1-alt-p17",
+            "alt": 8,
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 19,
+        "name": "GPIO10",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0_SIO[0]",
+            "group": "SPI",
+            "signal": "SPI0_SIO[0]",
+            "evidence": "rp1-alt-p16",
+            "alt": 0,
+            "selector": "ALT0",
+            "mode": "spi-controller-single"
+          },
+          {
+            "name": "DPI_D[6]",
+            "group": "DPI",
+            "signal": "DPI_D[6]",
+            "evidence": "rp1-alt-p16",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "UART3_CTS",
+            "group": "UART",
+            "signal": "UART3_CTS",
+            "evidence": "rp1-alt-p16",
+            "alt": 2,
+            "selector": "ALT2"
+          },
+          {
+            "name": "I2C1_SDA",
+            "group": "I2C",
+            "signal": "I2C1_SDA",
+            "evidence": "rp1-alt-p16",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "SYS_RIO[10]",
+            "group": "SYSTEM",
+            "signal": "SYS_RIO[10]",
+            "evidence": "rp1-alt-p16",
+            "alt": 5,
+            "selector": "ALT5"
+          },
+          {
+            "name": "PROC_RIO[10]",
+            "group": "SYSTEM",
+            "signal": "PROC_RIO[10]",
+            "evidence": "rp1-alt-p16",
+            "alt": 6,
+            "selector": "ALT6"
+          },
+          {
+            "name": "PIO[10]",
+            "group": "PIO",
+            "signal": "PIO[10]",
+            "evidence": "rp1-alt-p16",
+            "alt": 7,
+            "selector": "ALT7"
+          },
+          {
+            "name": "SPI4_SIO[1]",
+            "group": "SPI",
+            "signal": "SPI4_SIO[1]",
+            "evidence": "rp1-alt-p16",
+            "alt": 8,
+            "selector": "ALT8",
+            "mode": "spi-device-single"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 20,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 21,
+        "name": "GPIO9",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0_SIO[1]",
+            "group": "SPI",
+            "signal": "SPI0_SIO[1]",
+            "evidence": "rp1-alt-p16",
+            "alt": 0,
+            "selector": "ALT0",
+            "mode": "spi-controller-single"
+          },
+          {
+            "name": "DPI_D[5]",
+            "group": "DPI",
+            "signal": "DPI_D[5]",
+            "evidence": "rp1-alt-p16",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "UART3_RX",
+            "group": "UART",
+            "signal": "UART3_RX",
+            "evidence": "rp1-alt-p16",
+            "alt": 2,
+            "selector": "ALT2"
+          },
+          {
+            "name": "I2C0_SCL",
+            "group": "I2C",
+            "signal": "I2C0_SCL",
+            "evidence": "rp1-alt-p16",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "SYS_RIO[9]",
+            "group": "SYSTEM",
+            "signal": "SYS_RIO[9]",
+            "evidence": "rp1-alt-p16",
+            "alt": 5,
+            "selector": "ALT5"
+          },
+          {
+            "name": "PROC_RIO[9]",
+            "group": "SYSTEM",
+            "signal": "PROC_RIO[9]",
+            "evidence": "rp1-alt-p16",
+            "alt": 6,
+            "selector": "ALT6"
+          },
+          {
+            "name": "PIO[9]",
+            "group": "PIO",
+            "signal": "PIO[9]",
+            "evidence": "rp1-alt-p16",
+            "alt": 7,
+            "selector": "ALT7"
+          },
+          {
+            "name": "SPI4_SIO[0]",
+            "group": "SPI",
+            "signal": "SPI4_SIO[0]",
+            "evidence": "rp1-alt-p16",
+            "alt": 8,
+            "selector": "ALT8",
+            "mode": "spi-device-single"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 22,
+        "name": "GPIO25",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SDIO0_DAT[1]",
+            "group": "SDIO",
+            "signal": "SDIO0_DAT[1]",
+            "evidence": "rp1-alt-p17",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "DPI_D[21]",
+            "group": "DPI",
+            "signal": "DPI_D[21]",
+            "evidence": "rp1-alt-p17",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "I2S0_SDO[2]",
+            "group": "I2S",
+            "signal": "I2S0_SDO[2]",
+            "evidence": "rp1-alt-p17",
+            "alt": 2,
+            "selector": "ALT2"
+          },
+          {
+            "name": "AUDIO_IN_CLK",
+            "group": "PCM",
+            "signal": "AUDIO_IN_CLK",
+            "evidence": "rp1-alt-p17",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "I2S1_SDO[2]",
+            "group": "I2S",
+            "signal": "I2S1_SDO[2]",
+            "evidence": "rp1-alt-p17",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "SYS_RIO[25]",
+            "group": "SYSTEM",
+            "signal": "SYS_RIO[25]",
+            "evidence": "rp1-alt-p17",
+            "alt": 5,
+            "selector": "ALT5"
+          },
+          {
+            "name": "PROC_RIO[25]",
+            "group": "SYSTEM",
+            "signal": "PROC_RIO[25]",
+            "evidence": "rp1-alt-p17",
+            "alt": 6,
+            "selector": "ALT6"
+          },
+          {
+            "name": "PIO[25]",
+            "group": "PIO",
+            "signal": "PIO[25]",
+            "evidence": "rp1-alt-p17",
+            "alt": 7,
+            "selector": "ALT7"
+          },
+          {
+            "name": "SPI3_CSn[1]",
+            "group": "SPI",
+            "signal": "SPI3_CSn[1]",
+            "evidence": "rp1-alt-p17",
+            "alt": 8,
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 23,
+        "name": "GPIO11",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0_SCLK",
+            "group": "SPI",
+            "signal": "SPI0_SCLK",
+            "evidence": "rp1-alt-p16",
+            "alt": 0,
+            "selector": "ALT0",
+            "mode": "spi-controller-single"
+          },
+          {
+            "name": "DPI_D[7]",
+            "group": "DPI",
+            "signal": "DPI_D[7]",
+            "evidence": "rp1-alt-p16",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "UART3_RTS",
+            "group": "UART",
+            "signal": "UART3_RTS",
+            "evidence": "rp1-alt-p16",
+            "alt": 2,
+            "selector": "ALT2"
+          },
+          {
+            "name": "I2C1_SCL",
+            "group": "I2C",
+            "signal": "I2C1_SCL",
+            "evidence": "rp1-alt-p16",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "SYS_RIO[11]",
+            "group": "SYSTEM",
+            "signal": "SYS_RIO[11]",
+            "evidence": "rp1-alt-p16",
+            "alt": 5,
+            "selector": "ALT5"
+          },
+          {
+            "name": "PROC_RIO[11]",
+            "group": "SYSTEM",
+            "signal": "PROC_RIO[11]",
+            "evidence": "rp1-alt-p16",
+            "alt": 6,
+            "selector": "ALT6"
+          },
+          {
+            "name": "PIO[11]",
+            "group": "PIO",
+            "signal": "PIO[11]",
+            "evidence": "rp1-alt-p16",
+            "alt": 7,
+            "selector": "ALT7"
+          },
+          {
+            "name": "SPI4_SCLK",
+            "group": "SPI",
+            "signal": "SPI4_SCLK",
+            "evidence": "rp1-alt-p16",
+            "alt": 8,
+            "selector": "ALT8",
+            "mode": "spi-device-single"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 24,
+        "name": "GPIO8",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0_CSn[0]",
+            "group": "SPI",
+            "signal": "SPI0_CSn[0]",
+            "evidence": "rp1-alt-p16",
+            "alt": 0,
+            "selector": "ALT0",
+            "mode": "spi-controller-single"
+          },
+          {
+            "name": "DPI_D[4]",
+            "group": "DPI",
+            "signal": "DPI_D[4]",
+            "evidence": "rp1-alt-p16",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "UART3_TX",
+            "group": "UART",
+            "signal": "UART3_TX",
+            "evidence": "rp1-alt-p16",
+            "alt": 2,
+            "selector": "ALT2"
+          },
+          {
+            "name": "I2C0_SDA",
+            "group": "I2C",
+            "signal": "I2C0_SDA",
+            "evidence": "rp1-alt-p16",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "SYS_RIO[8]",
+            "group": "SYSTEM",
+            "signal": "SYS_RIO[8]",
+            "evidence": "rp1-alt-p16",
+            "alt": 5,
+            "selector": "ALT5"
+          },
+          {
+            "name": "PROC_RIO[8]",
+            "group": "SYSTEM",
+            "signal": "PROC_RIO[8]",
+            "evidence": "rp1-alt-p16",
+            "alt": 6,
+            "selector": "ALT6"
+          },
+          {
+            "name": "PIO[8]",
+            "group": "PIO",
+            "signal": "PIO[8]",
+            "evidence": "rp1-alt-p16",
+            "alt": 7,
+            "selector": "ALT7"
+          },
+          {
+            "name": "SPI4_CSn[0]",
+            "group": "SPI",
+            "signal": "SPI4_CSn[0]",
+            "evidence": "rp1-alt-p16",
+            "alt": 8,
+            "selector": "ALT8",
+            "mode": "spi-device-single"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 25,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 26,
+        "name": "GPIO7",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0_CSn[1]",
+            "group": "SPI",
+            "signal": "SPI0_CSn[1]",
+            "evidence": "rp1-alt-p16",
+            "alt": 0,
+            "selector": "ALT0",
+            "mode": "spi-controller-single"
+          },
+          {
+            "name": "DPI_D[3]",
+            "group": "DPI",
+            "signal": "DPI_D[3]",
+            "evidence": "rp1-alt-p16",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "UART2_RTS",
+            "group": "UART",
+            "signal": "UART2_RTS",
+            "evidence": "rp1-alt-p16",
+            "alt": 2,
+            "selector": "ALT2"
+          },
+          {
+            "name": "I2C3_SCL",
+            "group": "I2C",
+            "signal": "I2C3_SCL",
+            "evidence": "rp1-alt-p16",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "UART0_DSR",
+            "group": "UART",
+            "signal": "UART0_DSR",
+            "evidence": "rp1-alt-p16",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "SYS_RIO[7]",
+            "group": "SYSTEM",
+            "signal": "SYS_RIO[7]",
+            "evidence": "rp1-alt-p16",
+            "alt": 5,
+            "selector": "ALT5"
+          },
+          {
+            "name": "PROC_RIO[7]",
+            "group": "SYSTEM",
+            "signal": "PROC_RIO[7]",
+            "evidence": "rp1-alt-p16",
+            "alt": 6,
+            "selector": "ALT6"
+          },
+          {
+            "name": "PIO[7]",
+            "group": "PIO",
+            "signal": "PIO[7]",
+            "evidence": "rp1-alt-p16",
+            "alt": 7,
+            "selector": "ALT7"
+          },
+          {
+            "name": "SPI3_SCLK",
+            "group": "SPI",
+            "signal": "SPI3_SCLK",
+            "evidence": "rp1-alt-p16",
+            "alt": 8,
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 27,
+        "name": "GPIO0",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0_SIO[3]",
+            "group": "SPI",
+            "signal": "SPI0_SIO[3]",
+            "evidence": "rp1-alt-p16",
+            "alt": 0,
+            "selector": "ALT0",
+            "mode": "spi-controller-single"
+          },
+          {
+            "name": "DPI_PCLK",
+            "group": "DPI",
+            "signal": "DPI_PCLK",
+            "evidence": "rp1-alt-p16",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "UART1_TX",
+            "group": "UART",
+            "signal": "UART1_TX",
+            "evidence": "rp1-alt-p16",
+            "alt": 2,
+            "selector": "ALT2"
+          },
+          {
+            "name": "I2C0_SDA",
+            "group": "I2C",
+            "signal": "I2C0_SDA",
+            "evidence": "rp1-alt-p16",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "SYS_RIO[0]",
+            "group": "SYSTEM",
+            "signal": "SYS_RIO[0]",
+            "evidence": "rp1-alt-p16",
+            "alt": 5,
+            "selector": "ALT5"
+          },
+          {
+            "name": "PROC_RIO[0]",
+            "group": "SYSTEM",
+            "signal": "PROC_RIO[0]",
+            "evidence": "rp1-alt-p16",
+            "alt": 6,
+            "selector": "ALT6"
+          },
+          {
+            "name": "PIO[0]",
+            "group": "PIO",
+            "signal": "PIO[0]",
+            "evidence": "rp1-alt-p16",
+            "alt": 7,
+            "selector": "ALT7"
+          },
+          {
+            "name": "SPI2_CSn[0]",
+            "group": "SPI",
+            "signal": "SPI2_CSn[0]",
+            "evidence": "rp1-alt-p16",
+            "alt": 8,
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ],
+        "noteKey": "reservedNote",
+        "reserved": true
+      },
+      {
+        "number": 28,
+        "name": "GPIO1",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI0_SIO[2]",
+            "group": "SPI",
+            "signal": "SPI0_SIO[2]",
+            "evidence": "rp1-alt-p16",
+            "alt": 0,
+            "selector": "ALT0",
+            "mode": "spi-controller-single"
+          },
+          {
+            "name": "DPI_DE",
+            "group": "DPI",
+            "signal": "DPI_DE",
+            "evidence": "rp1-alt-p16",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "UART1_RX",
+            "group": "UART",
+            "signal": "UART1_RX",
+            "evidence": "rp1-alt-p16",
+            "alt": 2,
+            "selector": "ALT2"
+          },
+          {
+            "name": "I2C0_SCL",
+            "group": "I2C",
+            "signal": "I2C0_SCL",
+            "evidence": "rp1-alt-p16",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "SYS_RIO[1]",
+            "group": "SYSTEM",
+            "signal": "SYS_RIO[1]",
+            "evidence": "rp1-alt-p16",
+            "alt": 5,
+            "selector": "ALT5"
+          },
+          {
+            "name": "PROC_RIO[1]",
+            "group": "SYSTEM",
+            "signal": "PROC_RIO[1]",
+            "evidence": "rp1-alt-p16",
+            "alt": 6,
+            "selector": "ALT6"
+          },
+          {
+            "name": "PIO[1]",
+            "group": "PIO",
+            "signal": "PIO[1]",
+            "evidence": "rp1-alt-p16",
+            "alt": 7,
+            "selector": "ALT7"
+          },
+          {
+            "name": "SPI2_SIO[1]",
+            "group": "SPI",
+            "signal": "SPI2_SIO[1]",
+            "evidence": "rp1-alt-p16",
+            "alt": 8,
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ],
+        "noteKey": "reservedNote",
+        "reserved": true
+      },
+      {
+        "number": 29,
+        "name": "GPIO5",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "GPCLK[1]",
+            "group": "CLOCK",
+            "signal": "GPCLK[1]",
+            "evidence": "rp1-alt-p16",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "DPI_D[1]",
+            "group": "DPI",
+            "signal": "DPI_D[1]",
+            "evidence": "rp1-alt-p16",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "UART2_RX",
+            "group": "UART",
+            "signal": "UART2_RX",
+            "evidence": "rp1-alt-p16",
+            "alt": 2,
+            "selector": "ALT2"
+          },
+          {
+            "name": "I2C2_SCL",
+            "group": "I2C",
+            "signal": "I2C2_SCL",
+            "evidence": "rp1-alt-p16",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "UART0_DTR",
+            "group": "UART",
+            "signal": "UART0_DTR",
+            "evidence": "rp1-alt-p16",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "SYS_RIO[5]",
+            "group": "SYSTEM",
+            "signal": "SYS_RIO[5]",
+            "evidence": "rp1-alt-p16",
+            "alt": 5,
+            "selector": "ALT5"
+          },
+          {
+            "name": "PROC_RIO[5]",
+            "group": "SYSTEM",
+            "signal": "PROC_RIO[5]",
+            "evidence": "rp1-alt-p16",
+            "alt": 6,
+            "selector": "ALT6"
+          },
+          {
+            "name": "PIO[5]",
+            "group": "PIO",
+            "signal": "PIO[5]",
+            "evidence": "rp1-alt-p16",
+            "alt": 7,
+            "selector": "ALT7"
+          },
+          {
+            "name": "SPI3_SIO[1]",
+            "group": "SPI",
+            "signal": "SPI3_SIO[1]",
+            "evidence": "rp1-alt-p16",
+            "alt": 8,
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 30,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 31,
+        "name": "GPIO6",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "GPCLK[2]",
+            "group": "CLOCK",
+            "signal": "GPCLK[2]",
+            "evidence": "rp1-alt-p16",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "DPI_D[2]",
+            "group": "DPI",
+            "signal": "DPI_D[2]",
+            "evidence": "rp1-alt-p16",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "UART2_CTS",
+            "group": "UART",
+            "signal": "UART2_CTS",
+            "evidence": "rp1-alt-p16",
+            "alt": 2,
+            "selector": "ALT2"
+          },
+          {
+            "name": "I2C3_SDA",
+            "group": "I2C",
+            "signal": "I2C3_SDA",
+            "evidence": "rp1-alt-p16",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "UART0_DCD",
+            "group": "UART",
+            "signal": "UART0_DCD",
+            "evidence": "rp1-alt-p16",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "SYS_RIO[6]",
+            "group": "SYSTEM",
+            "signal": "SYS_RIO[6]",
+            "evidence": "rp1-alt-p16",
+            "alt": 5,
+            "selector": "ALT5"
+          },
+          {
+            "name": "PROC_RIO[6]",
+            "group": "SYSTEM",
+            "signal": "PROC_RIO[6]",
+            "evidence": "rp1-alt-p16",
+            "alt": 6,
+            "selector": "ALT6"
+          },
+          {
+            "name": "PIO[6]",
+            "group": "PIO",
+            "signal": "PIO[6]",
+            "evidence": "rp1-alt-p16",
+            "alt": 7,
+            "selector": "ALT7"
+          },
+          {
+            "name": "SPI3_SIO[0]",
+            "group": "SPI",
+            "signal": "SPI3_SIO[0]",
+            "evidence": "rp1-alt-p16",
+            "alt": 8,
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 32,
+        "name": "GPIO12",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "PWM0[0]",
+            "group": "PWM",
+            "signal": "PWM0[0]",
+            "evidence": "rp1-alt-p16",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "DPI_D[8]",
+            "group": "DPI",
+            "signal": "DPI_D[8]",
+            "evidence": "rp1-alt-p16",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "UART4_TX",
+            "group": "UART",
+            "signal": "UART4_TX",
+            "evidence": "rp1-alt-p16",
+            "alt": 2,
+            "selector": "ALT2"
+          },
+          {
+            "name": "I2C2_SDA",
+            "group": "I2C",
+            "signal": "I2C2_SDA",
+            "evidence": "rp1-alt-p16",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "AUDIO_OUT_L",
+            "group": "PCM",
+            "signal": "AUDIO_OUT_L",
+            "evidence": "rp1-alt-p16",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "SYS_RIO[12]",
+            "group": "SYSTEM",
+            "signal": "SYS_RIO[12]",
+            "evidence": "rp1-alt-p16",
+            "alt": 5,
+            "selector": "ALT5"
+          },
+          {
+            "name": "PROC_RIO[12]",
+            "group": "SYSTEM",
+            "signal": "PROC_RIO[12]",
+            "evidence": "rp1-alt-p16",
+            "alt": 6,
+            "selector": "ALT6"
+          },
+          {
+            "name": "PIO[12]",
+            "group": "PIO",
+            "signal": "PIO[12]",
+            "evidence": "rp1-alt-p16",
+            "alt": 7,
+            "selector": "ALT7"
+          },
+          {
+            "name": "SPI5_CSn[0]",
+            "group": "SPI",
+            "signal": "SPI5_CSn[0]",
+            "evidence": "rp1-alt-p16",
+            "alt": 8,
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 33,
+        "name": "GPIO13",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "PWM0[1]",
+            "group": "PWM",
+            "signal": "PWM0[1]",
+            "evidence": "rp1-alt-p16",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "DPI_D[9]",
+            "group": "DPI",
+            "signal": "DPI_D[9]",
+            "evidence": "rp1-alt-p16",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "UART4_RX",
+            "group": "UART",
+            "signal": "UART4_RX",
+            "evidence": "rp1-alt-p16",
+            "alt": 2,
+            "selector": "ALT2"
+          },
+          {
+            "name": "I2C2_SCL",
+            "group": "I2C",
+            "signal": "I2C2_SCL",
+            "evidence": "rp1-alt-p16",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "AUDIO_OUT_R",
+            "group": "PCM",
+            "signal": "AUDIO_OUT_R",
+            "evidence": "rp1-alt-p16",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "SYS_RIO[13]",
+            "group": "SYSTEM",
+            "signal": "SYS_RIO[13]",
+            "evidence": "rp1-alt-p16",
+            "alt": 5,
+            "selector": "ALT5"
+          },
+          {
+            "name": "PROC_RIO[13]",
+            "group": "SYSTEM",
+            "signal": "PROC_RIO[13]",
+            "evidence": "rp1-alt-p16",
+            "alt": 6,
+            "selector": "ALT6"
+          },
+          {
+            "name": "PIO[13]",
+            "group": "PIO",
+            "signal": "PIO[13]",
+            "evidence": "rp1-alt-p16",
+            "alt": 7,
+            "selector": "ALT7"
+          },
+          {
+            "name": "SPI5_SIO[1]",
+            "group": "SPI",
+            "signal": "SPI5_SIO[1]",
+            "evidence": "rp1-alt-p16",
+            "alt": 8,
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 34,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 35,
+        "name": "GPIO19",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1_SIO[1]",
+            "group": "SPI",
+            "signal": "SPI1_SIO[1]",
+            "evidence": "rp1-alt-p16",
+            "alt": 0,
+            "selector": "ALT0",
+            "mode": "spi-controller-single"
+          },
+          {
+            "name": "DPI_D[15]",
+            "group": "DPI",
+            "signal": "DPI_D[15]",
+            "evidence": "rp1-alt-p16",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "I2S0_WS",
+            "group": "I2S",
+            "signal": "I2S0_WS",
+            "evidence": "rp1-alt-p16",
+            "alt": 2,
+            "selector": "ALT2"
+          },
+          {
+            "name": "PWM0[3]",
+            "group": "PWM",
+            "signal": "PWM0[3]",
+            "evidence": "rp1-alt-p16",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "I2S1_WS",
+            "group": "I2S",
+            "signal": "I2S1_WS",
+            "evidence": "rp1-alt-p16",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "SYS_RIO[19]",
+            "group": "SYSTEM",
+            "signal": "SYS_RIO[19]",
+            "evidence": "rp1-alt-p16",
+            "alt": 5,
+            "selector": "ALT5"
+          },
+          {
+            "name": "PROC_RIO[19]",
+            "group": "SYSTEM",
+            "signal": "PROC_RIO[19]",
+            "evidence": "rp1-alt-p16",
+            "alt": 6,
+            "selector": "ALT6"
+          },
+          {
+            "name": "PIO[19]",
+            "group": "PIO",
+            "signal": "PIO[19]",
+            "evidence": "rp1-alt-p16",
+            "alt": 7,
+            "selector": "ALT7"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 36,
+        "name": "GPIO16",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1_CSn[2]",
+            "group": "SPI",
+            "signal": "SPI1_CSn[2]",
+            "evidence": "rp1-alt-p16",
+            "alt": 0,
+            "selector": "ALT0",
+            "mode": "spi-controller-single"
+          },
+          {
+            "name": "DPI_D[12]",
+            "group": "DPI",
+            "signal": "DPI_D[12]",
+            "evidence": "rp1-alt-p16",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "MIPI0_DSI_TE",
+            "group": "SYSTEM",
+            "signal": "MIPI0_DSI_TE",
+            "evidence": "rp1-alt-p16",
+            "alt": 2,
+            "selector": "ALT2"
+          },
+          {
+            "name": "UART0_CTS",
+            "group": "UART",
+            "signal": "UART0_CTS",
+            "evidence": "rp1-alt-p16",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "SYS_RIO[16]",
+            "group": "SYSTEM",
+            "signal": "SYS_RIO[16]",
+            "evidence": "rp1-alt-p16",
+            "alt": 5,
+            "selector": "ALT5"
+          },
+          {
+            "name": "PROC_RIO[16]",
+            "group": "SYSTEM",
+            "signal": "PROC_RIO[16]",
+            "evidence": "rp1-alt-p16",
+            "alt": 6,
+            "selector": "ALT6"
+          },
+          {
+            "name": "PIO[16]",
+            "group": "PIO",
+            "signal": "PIO[16]",
+            "evidence": "rp1-alt-p16",
+            "alt": 7,
+            "selector": "ALT7"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 37,
+        "name": "GPIO26",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SDIO0_DAT[2]",
+            "group": "SDIO",
+            "signal": "SDIO0_DAT[2]",
+            "evidence": "rp1-alt-p17",
+            "alt": 0,
+            "selector": "ALT0"
+          },
+          {
+            "name": "DPI_D[22]",
+            "group": "DPI",
+            "signal": "DPI_D[22]",
+            "evidence": "rp1-alt-p17",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "I2S0_SDI[3]",
+            "group": "I2S",
+            "signal": "I2S0_SDI[3]",
+            "evidence": "rp1-alt-p17",
+            "alt": 2,
+            "selector": "ALT2"
+          },
+          {
+            "name": "AUDIO_IN_DAT0",
+            "group": "PCM",
+            "signal": "AUDIO_IN_DAT0",
+            "evidence": "rp1-alt-p17",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "I2S1_SDI[3]",
+            "group": "I2S",
+            "signal": "I2S1_SDI[3]",
+            "evidence": "rp1-alt-p17",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "SYS_RIO[26]",
+            "group": "SYSTEM",
+            "signal": "SYS_RIO[26]",
+            "evidence": "rp1-alt-p17",
+            "alt": 5,
+            "selector": "ALT5"
+          },
+          {
+            "name": "PROC_RIO[26]",
+            "group": "SYSTEM",
+            "signal": "PROC_RIO[26]",
+            "evidence": "rp1-alt-p17",
+            "alt": 6,
+            "selector": "ALT6"
+          },
+          {
+            "name": "PIO[26]",
+            "group": "PIO",
+            "signal": "PIO[26]",
+            "evidence": "rp1-alt-p17",
+            "alt": 7,
+            "selector": "ALT7"
+          },
+          {
+            "name": "SPI5_CSn[1]",
+            "group": "SPI",
+            "signal": "SPI5_CSn[1]",
+            "evidence": "rp1-alt-p17",
+            "alt": 8,
+            "selector": "ALT8",
+            "mode": "spi-controller-single"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 38,
+        "name": "GPIO20",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1_SIO[0]",
+            "group": "SPI",
+            "signal": "SPI1_SIO[0]",
+            "evidence": "rp1-alt-p16",
+            "alt": 0,
+            "selector": "ALT0",
+            "mode": "spi-controller-single"
+          },
+          {
+            "name": "DPI_D[16]",
+            "group": "DPI",
+            "signal": "DPI_D[16]",
+            "evidence": "rp1-alt-p16",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "I2S0_SDI[0]",
+            "group": "I2S",
+            "signal": "I2S0_SDI[0]",
+            "evidence": "rp1-alt-p16",
+            "alt": 2,
+            "selector": "ALT2"
+          },
+          {
+            "name": "GPCLK[0]",
+            "group": "CLOCK",
+            "signal": "GPCLK[0]",
+            "evidence": "rp1-alt-p16",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "I2S1_SDI[0]",
+            "group": "I2S",
+            "signal": "I2S1_SDI[0]",
+            "evidence": "rp1-alt-p16",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "SYS_RIO[20]",
+            "group": "SYSTEM",
+            "signal": "SYS_RIO[20]",
+            "evidence": "rp1-alt-p16",
+            "alt": 5,
+            "selector": "ALT5"
+          },
+          {
+            "name": "PROC_RIO[20]",
+            "group": "SYSTEM",
+            "signal": "PROC_RIO[20]",
+            "evidence": "rp1-alt-p16",
+            "alt": 6,
+            "selector": "ALT6"
+          },
+          {
+            "name": "PIO[20]",
+            "group": "PIO",
+            "signal": "PIO[20]",
+            "evidence": "rp1-alt-p16",
+            "alt": 7,
+            "selector": "ALT7"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 39,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      },
+      {
+        "number": 40,
+        "name": "GPIO21",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SPI1_SCLK",
+            "group": "SPI",
+            "signal": "SPI1_SCLK",
+            "evidence": "rp1-alt-p16",
+            "alt": 0,
+            "selector": "ALT0",
+            "mode": "spi-controller-single"
+          },
+          {
+            "name": "DPI_D[17]",
+            "group": "DPI",
+            "signal": "DPI_D[17]",
+            "evidence": "rp1-alt-p16",
+            "alt": 1,
+            "selector": "ALT1"
+          },
+          {
+            "name": "I2S0_SDO[0]",
+            "group": "I2S",
+            "signal": "I2S0_SDO[0]",
+            "evidence": "rp1-alt-p16",
+            "alt": 2,
+            "selector": "ALT2"
+          },
+          {
+            "name": "GPCLK[1]",
+            "group": "CLOCK",
+            "signal": "GPCLK[1]",
+            "evidence": "rp1-alt-p16",
+            "alt": 3,
+            "selector": "ALT3"
+          },
+          {
+            "name": "I2S1_SDO[0]",
+            "group": "I2S",
+            "signal": "I2S1_SDO[0]",
+            "evidence": "rp1-alt-p16",
+            "alt": 4,
+            "selector": "ALT4"
+          },
+          {
+            "name": "SYS_RIO[21]",
+            "group": "SYSTEM",
+            "signal": "SYS_RIO[21]",
+            "evidence": "rp1-alt-p16",
+            "alt": 5,
+            "selector": "ALT5"
+          },
+          {
+            "name": "PROC_RIO[21]",
+            "group": "SYSTEM",
+            "signal": "PROC_RIO[21]",
+            "evidence": "rp1-alt-p16",
+            "alt": 6,
+            "selector": "ALT6"
+          },
+          {
+            "name": "PIO[21]",
+            "group": "PIO",
+            "signal": "PIO[21]",
+            "evidence": "rp1-alt-p16",
+            "alt": 7,
+            "selector": "ALT7"
+          }
+        ],
+        "evidence": [
+          "pi-header-doc",
+          "pi-keyboard-spec",
+          "pi-500-brief-spec"
+        ]
+      }
+    ],
+    "cautions": [
+      {
+        "key": "piNot5vCaution",
+        "evidence": [
+          "pi-gpio-electrical"
+        ]
+      },
+      {
+        "key": "piCurrentCaution",
+        "evidence": [
+          "pi-gpio-electrical"
+        ]
+      },
+      {
+        "key": "piKeyboardHeaderCaution",
+        "evidence": [
+          "pi-gpio-keyboard-orientation",
+          "pi-keyboard-spec"
+        ]
+      },
+      {
+        "key": "pi500Rp1Caution",
+        "evidence": [
+          "pi-500-brief-spec",
+          "pi-keyboard-spec",
+          "rp1-alt-p16"
+        ]
+      },
+      {
+        "key": "piRp1LevelsCaution",
+        "evidence": [
+          "pi-gpio-rp1-levels"
+        ]
+      }
+    ]
+  },
+  {
     "id": "atmega328p-pdip28",
     "name": "ATmega328P · PDIP-28",
     "shortName": "ATmega328P PDIP-28",

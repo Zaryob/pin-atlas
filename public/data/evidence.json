@@ -1367,6 +1367,139 @@
       "publisher": "Raspberry Pi Ltd",
       "revision": "RP-008180-DS",
       "sha256": "80070fefd8db6e8abc6e146c8b7b5fb318ba129cc1e28826936d547fde79c863"
+    },
+    {
+      "id": "bcm2835-peripherals",
+      "title": "BCM2835 ARM Peripherals",
+      "file": "bcm2835-peripherals.pdf",
+      "url": "https://pip-assets.raspberrypi.com/categories/579-raspberry-pi-zero/documents/RP-008249-DS-1-bcm2835-peripherals.pdf",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "RP-008249-DS-1",
+      "sha256": "5e446658d154c4447381ef62c1a3ce4102715e437fe488e2b93e798b60c4004e"
+    },
+    {
+      "id": "pi-zero-w-schematic",
+      "title": "Raspberry Pi Zero W Reduced Schematics",
+      "file": "pi-zero-w-schematic.pdf",
+      "url": "https://pip-assets.raspberrypi.com/categories/592-raspberry-pi-zero-w/documents/RP-008368-DS-1-raspberry-pi-zero-w-reduced-schematics.pdf",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "RP-008368-DS-1",
+      "sha256": "737fdb376ee876b049d9523e1fc0e4098c3ac9707bbd2468f668f08326709816"
+    },
+    {
+      "id": "pi-zero-2-w-schematic",
+      "title": "Raspberry Pi Zero 2 W Reduced Schematics",
+      "file": "pi-zero-2-w-schematic.pdf",
+      "url": "https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008360-DS-1-raspberry-pi-zero-2-w-reduced-schematics.pdf",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "RP-008360-DS-1",
+      "sha256": "ea9b808fce2cb6cada3f2364bf020afce86cb58f592b029c76e68e44c5806395"
+    },
+    {
+      "id": "pi-zero-2-w-brief",
+      "title": "Raspberry Pi Zero 2 W Product Brief",
+      "file": "pi-zero-2-w-brief.pdf",
+      "url": "https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008359-DS-1-raspberry-pi-zero-2-w-product-brief.pdf",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "RP-008359-DS-1 · published April 2024",
+      "sha256": "503f348880c00c543e99383ca8759a0b60c1b511cc3c27f216720866159a2bff"
+    },
+    {
+      "id": "pi-3b-plus-schematic",
+      "title": "Raspberry Pi 3 Model B+ Reduced Schematics",
+      "file": "pi-3b-plus-schematic.pdf",
+      "url": "https://pip-assets.raspberrypi.com/categories/532-raspberry-pi-3-model-b/documents/RP-008339-DS-1-raspberry-pi-3-b-plus-reduced-schematics.pdf",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "RP-008339-DS-1",
+      "sha256": "d012d5d0d69c495f24726ea96271e9884aa7bd8873c2694bb1028a8b7b2f6f95"
+    },
+    {
+      "id": "pi-3b-plus-brief",
+      "title": "Raspberry Pi 3 Model B+ Product Brief",
+      "file": "pi-3b-plus-brief.pdf",
+      "url": "https://pip-assets.raspberrypi.com/categories/532-raspberry-pi-3-model-b/documents/RP-008338-DS-2-raspberry-pi-3-b-plus-product-brief.pdf",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "RP-008338-DS-2 · published October 2025",
+      "sha256": "345192be568ea8ab2f1f7bdb43ca5edf36e20bdd9b1bf96081299a91a2a88f3f"
+    },
+    {
+      "id": "pi-500-brief",
+      "title": "Raspberry Pi 500 Product Brief",
+      "file": "pi-500-brief.pdf",
+      "url": "https://pip-assets.raspberrypi.com/categories/1115-raspberry-pi-500/documents/RP-008349-DS-4-raspberry-pi-500-product-brief.pdf",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "RP-008349-DS-4 · published April 2026",
+      "sha256": "4875ad6a81fa4725a7a1d415278083fb412b68ac02ef1422a52128839da8baec"
+    },
+    {
+      "id": "pi-processor-bcm2835",
+      "title": "Raspberry Pi processors documentation · BCM2835",
+      "file": "pi-processor-bcm2835.adoc",
+      "url": "https://raw.githubusercontent.com/raspberrypi/documentation/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2835.adoc",
+      "viewUrl": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2835.adoc",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "0fb416315f8f6c1949c0614989075d3e5805104b",
+      "sha256": "f71698a0373a0ef80c14266cb465ee620032f0609e8028abeeb1da3e53de2407"
+    },
+    {
+      "id": "pi-processor-bcm2836",
+      "title": "Raspberry Pi processors documentation · BCM2836",
+      "file": "pi-processor-bcm2836.adoc",
+      "url": "https://raw.githubusercontent.com/raspberrypi/documentation/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2836.adoc",
+      "viewUrl": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2836.adoc",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "0fb416315f8f6c1949c0614989075d3e5805104b",
+      "sha256": "cbece3045376be08cb59c15dc53102c7c02ce76cdc51af24bb825c71fafab0da"
+    },
+    {
+      "id": "pi-processor-bcm2837",
+      "title": "Raspberry Pi processors documentation · BCM2837",
+      "file": "pi-processor-bcm2837.adoc",
+      "url": "https://raw.githubusercontent.com/raspberrypi/documentation/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2837.adoc",
+      "viewUrl": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2837.adoc",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "0fb416315f8f6c1949c0614989075d3e5805104b",
+      "sha256": "b1d1bbb63940aff8de6919e7859067c365c9d6e2b2612b765cde0e3590607314"
+    },
+    {
+      "id": "pi-processor-bcm2837b0",
+      "title": "Raspberry Pi processors documentation · BCM2837B0",
+      "file": "pi-processor-bcm2837b0.adoc",
+      "url": "https://raw.githubusercontent.com/raspberrypi/documentation/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2837b0.adoc",
+      "viewUrl": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2837b0.adoc",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "0fb416315f8f6c1949c0614989075d3e5805104b",
+      "sha256": "ce5561826219ba6d89bff2a17d75b4b598908f1abe237570f5adca2c16e07e94"
+    },
+    {
+      "id": "pi-processor-rp3a0",
+      "title": "Raspberry Pi processors documentation · RP3A0",
+      "file": "pi-processor-rp3a0.adoc",
+      "url": "https://raw.githubusercontent.com/raspberrypi/documentation/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/rp3a0.adoc",
+      "viewUrl": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/rp3a0.adoc",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "0fb416315f8f6c1949c0614989075d3e5805104b",
+      "sha256": "20b9db413e4e0bda1e93d61fc3c96999210421ac425dc6818e3a1a54127eb657"
+    },
+    {
+      "id": "pi-zero-models",
+      "title": "Raspberry Pi Zero models documentation · introduction and model list",
+      "file": "pi-zero-intro.adoc",
+      "url": "https://raw.githubusercontent.com/raspberrypi/documentation/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/zero/zero-intro.adoc",
+      "viewUrl": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/zero/zero-intro.adoc",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "0fb416315f8f6c1949c0614989075d3e5805104b",
+      "sha256": "d1855bc7c67e44deb19eb14976ad45a73abcadbd294368d35833a5fd94ff862b"
+    },
+    {
+      "id": "pi-keyboard-computers",
+      "title": "Raspberry Pi keyboard computers documentation",
+      "file": "pi-keyboard-computers.adoc",
+      "url": "https://raw.githubusercontent.com/raspberrypi/documentation/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/keyboard-computers/intro.adoc",
+      "viewUrl": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/keyboard-computers/intro.adoc",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "0fb416315f8f6c1949c0614989075d3e5805104b",
+      "sha256": "194955580149e9b55fb757801b9ce00b04f4aec2a640a42313c5f66b3968f816"
     }
   ],
   "references": {
@@ -2745,6 +2878,158 @@
       "page": 26,
       "locator": "§4.3 · Electrical specifications · GPIO_VREF and absolute maximum ratings",
       "method": "pdf-text"
+    },
+    "pi-proc-bcm2835": {
+      "document": "pi-processor-bcm2835",
+      "title": "Raspberry Pi processors documentation · BCM2835",
+      "url": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2835.adoc",
+      "page": null,
+      "locator": "BCM2835 · used in Raspberry Pi Zero W; peripheral specification and its known-errors note",
+      "method": "manufacturer-source-text"
+    },
+    "pi-proc-bcm2836": {
+      "document": "pi-processor-bcm2836",
+      "title": "Raspberry Pi processors documentation · BCM2836",
+      "url": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2836.adoc",
+      "page": null,
+      "locator": "BCM2836 · underlying architecture identical to BCM2835",
+      "method": "manufacturer-source-text"
+    },
+    "pi-proc-bcm2837": {
+      "document": "pi-processor-bcm2837",
+      "title": "Raspberry Pi processors documentation · BCM2837",
+      "url": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2837.adoc",
+      "page": null,
+      "locator": "BCM2837 · underlying architecture identical to BCM2836",
+      "method": "manufacturer-source-text"
+    },
+    "pi-proc-bcm2837b0": {
+      "document": "pi-processor-bcm2837b0",
+      "title": "Raspberry Pi processors documentation · BCM2837B0",
+      "url": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2837b0.adoc",
+      "page": null,
+      "locator": "BCM2837B0 · used in Raspberry Pi 3 Model B+; architecture identical to BCM2837",
+      "method": "manufacturer-source-text"
+    },
+    "pi-proc-rp3a0": {
+      "document": "pi-processor-rp3a0",
+      "title": "Raspberry Pi processors documentation · RP3A0",
+      "url": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/rp3a0.adoc",
+      "page": null,
+      "locator": "RP3A0 · BCM2710A1 is the die inside BCM2837; used by Raspberry Pi Zero 2 W",
+      "method": "manufacturer-source-text"
+    },
+    "pi-gpio-alt-references": {
+      "document": "pi-gpio",
+      "title": "Raspberry Pi GPIO documentation",
+      "url": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc",
+      "page": null,
+      "locator": "Pin functions · BCM2835 peripherals datasheet named for earlier families and Zero models",
+      "method": "manufacturer-source-text"
+    },
+    "bcm2835-alt-p102": {
+      "document": "bcm2835-peripherals",
+      "title": "BCM2835 ARM Peripherals",
+      "url": "https://pip-assets.raspberrypi.com/categories/579-raspberry-pi-zero/documents/RP-008249-DS-1-bcm2835-peripherals.pdf#page=102",
+      "page": 102,
+      "locator": "§6.2 · Alternative Function Assignments · GPIO0–27 ALT0–ALT5",
+      "method": "pdf-table"
+    },
+    "bcm2835-alt-p102-bcm2837": {
+      "document": "bcm2835-peripherals",
+      "title": "BCM2835 ARM Peripherals",
+      "url": "https://pip-assets.raspberrypi.com/categories/579-raspberry-pi-zero/documents/RP-008249-DS-1-bcm2835-peripherals.pdf#page=102",
+      "page": 102,
+      "locator": "§6.2 · Alternative Function Assignments · GPIO0–27 ALT0–ALT5, applied to BCM2837B0 / RP3A0 (BCM2710A1) because Raspberry Pi documents them as BCM2835-architecture devices",
+      "method": "pdf-table"
+    },
+    "pi-gpio-bcm283x-levels": {
+      "document": "pi-gpio",
+      "title": "Raspberry Pi GPIO documentation",
+      "url": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc",
+      "page": null,
+      "locator": "Voltage specifications · BCM2835, BCM2836, BCM2837 and RP3A0 table (V_IL, V_IH, pulls, drive strength)",
+      "method": "manufacturer-source-table"
+    },
+    "pi-gpio-rp1-levels": {
+      "document": "pi-gpio",
+      "title": "Raspberry Pi GPIO documentation",
+      "url": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc",
+      "page": null,
+      "locator": "Voltage specifications · RP1 products table (Raspberry Pi 5, 500, 500+)",
+      "method": "manufacturer-source-table"
+    },
+    "pi-gpio-keyboard-orientation": {
+      "document": "pi-gpio",
+      "title": "Raspberry Pi GPIO documentation",
+      "url": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc",
+      "page": null,
+      "locator": "Pin layout · header on the rear of keyboard computers, rotated 180°, pins 1 and 40 labelled",
+      "method": "manufacturer-source-text"
+    },
+    "pi-zero-model-list": {
+      "document": "pi-zero-models",
+      "title": "Raspberry Pi Zero models documentation · introduction and model list",
+      "url": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/zero/zero-intro.adoc",
+      "page": null,
+      "locator": "Zero models · common ports (mini HDMI, 2 × micro USB), unpopulated header on models without H / \"with headers\", model list table",
+      "method": "manufacturer-source-table"
+    },
+    "pi-zero-2-w-brief-spec": {
+      "document": "pi-zero-2-w-brief",
+      "title": "Raspberry Pi Zero 2 W Product Brief",
+      "url": "https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008359-DS-1-raspberry-pi-zero-2-w-product-brief.pdf#page=2",
+      "page": 2,
+      "locator": "Overview and Specification · RP3A0 / BCM2710A1, unpopulated HAT-compatible 40-pin header footprint",
+      "method": "pdf-text"
+    },
+    "pi-3b-plus-brief-spec": {
+      "document": "pi-3b-plus-brief",
+      "title": "Raspberry Pi 3 Model B+ Product Brief",
+      "url": "https://pip-assets.raspberrypi.com/categories/532-raspberry-pi-3-model-b/documents/RP-008338-DS-2-raspberry-pi-3-b-plus-product-brief.pdf#page=3",
+      "page": 3,
+      "locator": "Specification · BCM2837B0 @ 1.4 GHz; 5 V DC input via GPIO header",
+      "method": "pdf-text"
+    },
+    "pi-500-brief-spec": {
+      "document": "pi-500-brief",
+      "title": "Raspberry Pi 500 Product Brief",
+      "url": "https://pip-assets.raspberrypi.com/categories/1115-raspberry-pi-500/documents/RP-008349-DS-4-raspberry-pi-500-product-brief.pdf#page=2",
+      "page": 2,
+      "locator": "Overview · same processor and RP1 I/O controller as Raspberry Pi 5; Specification · horizontal 40-pin GPIO header",
+      "method": "pdf-text"
+    },
+    "pi-keyboard-spec": {
+      "document": "pi-keyboard-computers",
+      "title": "Raspberry Pi keyboard computers documentation",
+      "url": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/keyboard-computers/intro.adoc",
+      "page": null,
+      "locator": "Specifications table · SoC and I/O controller (BCM2712 + RP1) and GPIO (horizontal 40-pin header) rows",
+      "method": "manufacturer-source-table"
+    },
+    "pi-zero-w-j8": {
+      "document": "pi-zero-w-schematic",
+      "title": "Raspberry Pi Zero W Reduced Schematics",
+      "url": "https://pip-assets.raspberrypi.com/categories/592-raspberry-pi-zero-w/documents/RP-008368-DS-1-raspberry-pi-zero-w-reduced-schematics.pdf#page=1",
+      "page": 1,
+      "locator": "J8 · GPIO net labels matched to contacts · footprint marked DNF (not fitted); power and ground visually checked",
+      "method": "schematic-net-labels+visual-power"
+    },
+    "pi-zero-2-w-j8": {
+      "document": "pi-zero-2-w-schematic",
+      "title": "Raspberry Pi Zero 2 W Reduced Schematics",
+      "url": "https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008360-DS-1-raspberry-pi-zero-2-w-reduced-schematics.pdf#page=1",
+      "page": 1,
+      "locator": "J8 · GPIO net labels matched to contacts · footprint marked DNF (not fitted); power and ground visually checked",
+      "method": "schematic-net-labels+visual-power"
+    },
+    "pi-3b-plus-j8": {
+      "document": "pi-3b-plus-schematic",
+      "title": "Raspberry Pi 3 Model B+ Reduced Schematics",
+      "url": "https://pip-assets.raspberrypi.com/categories/532-raspberry-pi-3-model-b/documents/RP-008339-DS-1-raspberry-pi-3-b-plus-reduced-schematics.pdf#page=1",
+      "page": 1,
+      "locator": "J8 · GPIO net labels matched to contacts; power and ground visually checked",
+      "method": "schematic-net-labels+visual-power"
     },
     "atmega328p-reset-fuse": {
       "document": "atmega328p-datasheet",

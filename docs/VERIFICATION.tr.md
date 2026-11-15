@@ -2,7 +2,7 @@
 
 [English](VERIFICATION.md) · [Türkçe](VERIFICATION.tr.md)
 
-Üretilmiş veriden katalog özeti: **79 kart, başlık ve yonga profili; 5.226 fiziksel pin kaydı ve 24.290 işlev ataması**. Bunlar [`sources/manifest.json`](../sources/manifest.json) içindeki **hash ile kilitlenmiş 128 kaynak kaydından** alınır. Verinin `verifiedOn` tarihi bilerek **5 Kasım 2026** olarak bırakıldı: 14–15 Kasım 2026'da kataloğun tamamı değil, yalnızca o günlerde değişen profiller yeniden denetlendi. Toplamlar [`public/data/verification.json`](../public/data/verification.json) içinde kayıtlıdır; bu sayılar her pinin bağımsız olarak incelendiğini belgelemez. Ortak fiziksel pinler profil başına bir kez sayılır. Sayıma uygulamanın genel `GPIO` planlama seçeneği ve numarasız QFN merkez GND pedleri dahil değildir. Bir sinyalin farklı bir pine her yerleşimi ayrı sayılır.
+Üretilmiş veriden katalog özeti: **89 kart, başlık ve yonga profili; 5.865 fiziksel pin kaydı ve 25.613 işlev ataması**. Bunlar [`sources/manifest.json`](../sources/manifest.json) içindeki **hash ile kilitlenmiş 151 kaynak kaydından** alınır. Verinin `verifiedOn` tarihi bilerek **5 Kasım 2026** olarak bırakıldı: 14–15 Kasım 2026'da kataloğun tamamı değil, yalnızca o günlerde değişen profiller yeniden denetlendi. Toplamlar [`public/data/verification.json`](../public/data/verification.json) içinde kayıtlıdır; bu sayılar her pinin bağımsız olarak incelendiğini belgelemez. Ortak fiziksel pinler profil başına bir kez sayılır. Sayıma uygulamanın genel `GPIO` planlama seçeneği ve numarasız QFN merkez GND pedleri dahil değildir. Bir sinyalin farklı bir pine her yerleşimi ayrı sayılır.
 
 ## Pin haritalarına göre kaynaklar
 
@@ -23,7 +23,7 @@
 
 ### Ortak Raspberry Pi 40 pinlik başlık
 
-Ortak profil yalnızca sabitlenmiş Raspberry Pi GPIO dokümantasyonundaki fiziksel pin tablosunu kullanır. Bu belge B+ ve sonrası ile bütün Zero modellerinin standart düzenini ve klavyeli bilgisayarlardaki döndürülmüş yönü açıkça tanımlar. Bazı Zero başlıkları lehimli değildir. Profil eski 26 pinlik kartları ve Compute Module'leri kapsamaz. Bilerek hiçbir BCM2711 alternatif işlev kaydı veya Pi 4 şema kanıtı taşımaz: bu işlevler için Pi 4 profilini seçin. HAT EEPROM pinleri 27/28 ayrılmış kalır.
+Ortak profil yalnızca sabitlenmiş Raspberry Pi GPIO dokümantasyonundaki fiziksel pin tablosunu kullanır. Bu belge B+ ve sonrası ile bütün Zero modellerinin standart düzenini ve klavyeli bilgisayarlardaki döndürülmüş yönü açıkça tanımlar. Bazı Zero başlıkları lehimli değildir. Profil eski 26 pinlik kartları ve Compute Module'leri kapsamaz. Bilerek hiçbir alternatif işlev kaydı veya kart şeması kanıtı taşımaz: bu işlevler için Pi 3 Model B+, Pi 4, Pi 5, Zero W, Zero 2 W veya Pi 500 profilini seçin. HAT EEPROM pinleri 27/28 ayrılmış kalır.
 
 ### Raspberry Pi 4 Model B / J8
 
@@ -39,6 +39,19 @@ Ortak profil yalnızca sabitlenmiş Raspberry Pi GPIO dokümantasyonundaki fizik
 - Alternatif işlevler [Raspberry Pi RP1 Peripherals, §3.1.1, Table 4, PDF s. 16–17](https://datasheets.raspberrypi.com/rp1/rp1-peripherals.pdf#page=16) içindeki GPIO0–27, ALT0–ALT8 (a0–a8) hücrelerinden gelir.
 - Fiziksel 27 ve 28 numaralı pinler, HAT kimlik EEPROM'una ayrılmış GPIO0 ve GPIO1'i taşır.
 - RP1 alternatif işlevleri BCM2711'den ayrı UART, SPI, I2C, I2S, PWM, PIO, DPI, SDIO ve PCM ses seçenekleri sunar.
+
+### Raspberry Pi Zero W, Zero 2 W ve 3 Model B+ / J8
+
+- 40 fiziksel pin, ortak başlıkla aynı GPIO dokümantasyonu tablosunu kullanır. Her kartta 28 GPIO hat etiketi (ID_SD/ID_SC dahil), kartın kendi basitleştirilmiş şemasında koordinatlarla J8 temaslarına eşlendi: [Zero W, RP-008368-DS-1](https://pip-assets.raspberrypi.com/categories/592-raspberry-pi-zero-w/documents/RP-008368-DS-1-raspberry-pi-zero-w-reduced-schematics.pdf#page=1), [Zero 2 W, RP-008360-DS-1](https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008360-DS-1-raspberry-pi-zero-2-w-reduced-schematics.pdf#page=1) ve [3 Model B+, RP-008339-DS-1](https://pip-assets.raspberrypi.com/categories/532-raspberry-pi-3-model-b/documents/RP-008339-DS-1-raspberry-pi-3-b-plus-reduced-schematics.pdf#page=1). Güç ve toprak görsel olarak kontrol edildi. İki Zero şemasında da J8 DNF (takılmaz) olarak işaretlidir.
+- Alternatif işlevler [BCM2835 ARM Peripherals, §6.2, PDF s. 102](https://pip-assets.raspberrypi.com/categories/579-raspberry-pi-zero/documents/RP-008249-DS-1-bcm2835-peripherals.pdf#page=102) içindeki GPIO0–27, ALT0–ALT5 hücrelerinden gelir; boş ve `<reserved>` hücreler atlanır (kart başına 83 atama). [GPIO dokümantasyonu](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc) eski aileler ve Zero modelleri için bu tabloyu gösterir.
+- Zero W BCM2835 kullanır ([işlemci belgesi](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2835.adoc); bu belge çevre birimi dokümanında bilinen hatalar olduğunu da belirtir). 3 Model B+ (BCM2837B0) ve Zero 2 W (BCM2710A1 kalıplı RP3A0) için aynı tablo kullanılır; Raspberry Pi işlemci belgelerine göre BCM2710A1, BCM2837'nin kalıbıdır, BCM2837B0 ile BCM2837 aynı mimaridedir, BCM2837 ve BCM2836 ise farklı Arm çekirdekli BCM2835'tir ([rp3a0](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/rp3a0.adoc), [bcm2837b0](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2837b0.adoc), [bcm2837](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2837.adoc), [bcm2836](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2836.adoc)). İşlevler bu dayanağı açıkça yazan ayrı bir kanıt kaydı taşır.
+- Yalnızca BCM2711'de bulunan seçimler kopyalanmaz: bu kartlarda UART2–5, SPI3–6, I2C3–6 veya ALT2 DPI kaydı yoktur (BCM2835 tablosu GPIO0–27 için ALT2'yi ayrılmış gösterir). PWM, BCM2835 adlarını (`PWM0`/`PWM1`) korur; GPIO14/15'teki ALT5 mini UART'tır (`TXD1`/`RXD1`).
+- Uyarılar: lehimsiz Zero başlığı ([Zero modelleri belgesi](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/zero/zero-intro.adoc), [Zero 2 W ürün özeti](https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008359-DS-1-raspberry-pi-zero-2-w-product-brief.pdf#page=2) ve DNF işareti); GPIO dokümantasyonundaki BCM2835/BCM2836/BCM2837/RP3A0 gerilim tablosu (V_IL ≤ 0,9 V, V_IH ≥ 1,6 V, varsayılan 8 mA / en fazla 16 mA sürüş, 50–65 kΩ pull dirençleri); 3 Model B+ için GPIO başlığından 5 V DC giriş ([ürün özeti, Specification](https://pip-assets.raspberrypi.com/categories/532-raspberry-pi-3-model-b/documents/RP-008338-DS-2-raspberry-pi-3-b-plus-product-brief.pdf#page=3)).
+
+### Raspberry Pi 500 / arka 40 pinlik başlık
+
+- [Klavyeli bilgisayarlar belgesi](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/keyboard-computers/intro.adoc) yatay 40 pinlik GPIO başlığını ve RP1 G/Ç denetleyicili BCM2712'yi listeler; [Pi 500 ürün özeti, RP-008349-DS-4](https://pip-assets.raspberrypi.com/categories/1115-raspberry-pi-500/documents/RP-008349-DS-4-raspberry-pi-500-product-brief.pdf#page=2) Pi 500'ün Pi 5 ile aynı işlemciye ve RP1 G/Ç denetleyicisine sahip olduğunu belirtir. Bu nedenle profil, standart 40 pin numaralandırmasında Pi 5'in RP1 işlevlerini (RP1 Peripherals, Table 4) yeniden kullanır.
+- Pi 500 için yayımlanmış şema olmadığından hat etiketi karşılaştırması yapılamadı. GPIO dokümantasyonu klavyeli bilgisayar başlığının arka yüzde ve 180° döndürülmüş olduğunu, 1 ve 40 numaralı pinlerin etiketli olduğunu belirtir; profil bunu uyarı olarak kaydeder ve arka panel görünümü çizmez. Pi 500'ü adıyla anan RP1 gerilim tablosu da uyarı olarak eklenmiştir.
 
 ### RP2350A / QFN-60
 
@@ -80,7 +93,7 @@ SHA-256 kilidi, atıf yapılan belgenin incelenen belge olduğunu ve değişmedi
 
 - **Belgeden ayrıştırılmış:** kilitli kopyadan okunan PDF tabloları, üretici XML'i, KiCad dosyaları, Markdown/RST tabloları veya kaynak kod. STM32, Raspberry Pi, Espressif, Arduino çekirdeği, Jetson, BeagleBone Black ve micro:bit verisinin çoğu böyledir.
 - **Elle kaydedilmiş tablolar:** Adafruit Feather RP2040 ve Teensy 4.1 üretici betikleri, atıf yapılan pin şemasından elle girilmiş tablolar içerir ve kilitli belgeyi açmaz. Teensy'nin PWM, ADC ve port verisi Teensy çekirdek kaynak koduyla çapraz denetlendi.
-- **Görsel okumalar:** 79 profilden 53'ü yöntemleri arasında `visual-diagram` (veya `visual-photo`) listeler. 5.226 pin kaydından 482'sinde (%9,2) bütün fiziksel kanıt başvuruları görsel okumadır. RP2040 (QFN-56), ATmega2560 (TQFP-100), ATmega2561 (TQFP-64) ve Seeed Studio XIAO RP2040 tümüyle görsel okumalara dayanır.
+- **Görsel okumalar:** 89 profilden 56'sı yöntemleri arasında `visual-diagram` (veya `visual-photo`) listeler. 5.865 pin kaydından 510'unda (%8,7) bütün fiziksel kanıt başvuruları görsel okumadır. RP2040 (QFN-56), ATmega2560 (TQFP-100), ATmega2561 (TQFP-64) ve Seeed Studio XIAO RP2040 tümüyle görsel okumalara dayanır.
 
 ### Kaynaklı uyarılar
 
@@ -246,7 +259,7 @@ F411CE referansı STM32F411CEU6'yı (UFQFPN-48, GPIO olarak kullanılabilen 36 b
 - **ESP32-C6-DevKitC-1 v1.2:** `5c06bf18…` commit'indeki `esp-dev-kits` kılavuzu ve pin düzeni görseli, ayrıca ESP32-C6 veri sayfası (v1.5'e kilitli; yukarıdaki iki doğrulama kipine bakın).
 - **BBC micro:bit V2:** micro:bit geliştirici dokümantasyonunun kenar konektörü sayfasından (`dev-docs`, `469ea5f9…`) ve V2 şemasından (`17aae030…`) fiziksel sırayla 25 ön şerit. 1–21 numaralı pin kimlikleri önceki anlamlarını korur; küçük 3V ve GND şeritleri yeni 22–25 kimlikleridir. P19/P20, kart üstünde 4,7 kΩ pull-up'ları olan harici I²C veri yoludur; V2'de hareket sensörü ayrı bir iç veri yolundadır. Bir kart uyarısı güç kaynağı sayfasındaki kenar konektörü akım bütçesini verir.
 - **RP2350 errata maddesi E9:** Pico 2, Pico 2 W, RP2350A ve RP2350B'nin her Bank 0 GPIO'su, RP2350 veri sayfasındaki (Ek D.5.1, s. 1359–1360) RP2350-E9 giriş kaçağı uyarısını taşır. RP2040 profilleri taşımaz.
-- **Raspberry Pi 40 pinlik başlık:** kart uyarıları pinlerin 5 V toleranslı olmadığını belirtir ve pin başına 16 mA, toplamda 50 mA sınırını verir; GPIO2/GPIO3 sabit 1,8 kΩ pull-up'ları taşır.
+- **Raspberry Pi 40 pinlik başlık:** kart uyarıları pinlerin 5 V toleranslı olmadığını belirtir ve pin başına 16 mA, toplamda 50 mA sınırını verir; GPIO2/GPIO3 sabit 1,8 kΩ pull-up'ları taşır. Zero W, Zero 2 W ve 3 Model B+ ayrıca BCM2835 ailesi gerilim tablosunu; Zero kartları lehimsiz başlık uyarısını; Pi 500 ise döndürülmüş arka başlık ve RP1 gerilim tablosu uyarılarını taşır.
 - **Kanıt konumları:** ATmega2561 PDI/PDO referansı artık s. 84'teki Table 13-17 notunu, ESP32 s. 16 referansı ise Table 2-1 notlarını gösterir.
 
 ## Yol haritası eklemeleri için resmî kaynaklar ve doğrulama ölçütleri
@@ -282,12 +295,12 @@ Pin Atlas kataloğuna eklenecek yeni modeller için geçerli resmî birincil bel
 - **Doğrulama ölçütleri:** Mega biçimli başlıklarda 76 GPIO kontağı; STM32H747XI çift çekirdekli (Cortex-M7 + Cortex-M4) sinyal yönlendirmesi; Murata 1DX Wi-Fi/BLE modül yalıtımı; USB-A host ve USB-C programlama portu hatları; tüm başlıklarda 3,3 V G/Ç gerilim sınırı.
 
 ### Raspberry Pi Compute Module 4 ve 5 (CM4 / CM5)
-- **Belgeler:** `RP-008343-DS-1-raspberry-pi-cm4-datasheet.pdf`, `RP-008350-DS-1-raspberry-pi-cm5-datasheet.pdf` ve resmî Raspberry Pi CM4/CM5 basitleştirilmiş şemaları.
-- **Doğrulama ölçütleri:** Çift 100 pinli Hirose DF40 asma kat (mezzanine) konnektörleri (toplam 200 temas); Konnektör 1 (güç, PCIe, Ethernet, HDMI, USB, DSI, CSI) ve Konnektör 2 (GPIO bloğu, SDIO, ikincil HDMI/CSI/DSI) ayrımı; yapılandırılabilir GPIO_VREF gerilim alanı (1,8 V veya 3,3 V); PCIe diferansiyel çiftleri ve Gigabit Ethernet PHY magnetik hatları.
+- **Belgeler:** [Compute Module 4 Datasheet, RP-008168-DS](https://datasheets.raspberrypi.com/cm4/cm4-datasheet.pdf) (Table 6, pin düzeni; §4 GPIO_VREF/PCIe metni) ve [Compute Module 5 Datasheet, RP-008180-DS](https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf) (Table 5, pin düzeni; §4.3 elektriksel özellikler). GPIO alternatif işlevleri doğrulanmış Pi 4 (BCM2711) ve Pi 5 (RP1) tablolarından gelir.
+- **Doğrulama ölçütleri:** Çift 100 pinli Hirose DF40 asma kat (mezzanine) konnektörleri (toplam 200 temas). Konnektör 1 (CN1, pin 1–100) Ethernet, GPIO bloğu (GPIO0–27), SD kart sinyallerini ve gücü taşır; Konnektör 2 (CN2, pin 101–200) USB, PCIe, HDMI ve kamera/ekran arayüzlerini taşır (CM4'te CSI ve DSI, CM5'te birleşik MIPI0/MIPI1). Yapılandırılabilir GPIO_VREF gerilim alanı (1,8 V veya 3,3 V).
 
 ### Raspberry Pi RM2 kablosuz modülü
-- **Belgeler:** `RP-008304-DS-3-pico-2-w-datasheet.pdf` (§2.3, §4.2), Infineon CYW43439 veri sayfası ve Raspberry Pi RM2 Donanım Entegrasyon Kılavuzu.
-- **Doğrulama ölçütleri:** Kastelasyonlu lehim kenar pedi numaralandırması; gSPI veri yolu hatları (CLK, MOSI/SDIO, MISO, CS); WL_REG_ON regülatör etkinleştirme; WL_HOST_WAKE kesme hattı; 3V3_WL güç hattı; kart üstü PCB anten yolu ile harici U.FL konnektör pedi ayrımı.
+- **Belgeler:** [Raspberry Pi Radio Module 2 Datasheet, RP-008943-DS-7](https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf): Table 2 (her pinin işlevi), Table 1 (modülle haberleşmek için gereken ana sistem GPIO bağlantıları) ve §2.6 (elektriksel özellikler).
+- **Doğrulama ölçütleri:** Table 2'deki kastelasyonlu ped numaralandırması; gSPI hatları (SCLK, DIN/MOSI, DOUT/MISO, CS) ve nIRQ; WL_REG_ON ve BT_REG_ON etkinleştirme hatları; VIN 3,0–4,8 V ve VDDIO 1,8 V / 3,3 V beslemeleri; modül GPIO0.
 
 ### Espressif ESP8266 (AI-Thinker ESP-12F ve ESP-01)
 - **Belgeler:** Espressif `ESP8266EX Datasheet` (v6.9), `ESP8266 Technical Reference Manual` ve AI-Thinker `ESP-12F Module Specification`.

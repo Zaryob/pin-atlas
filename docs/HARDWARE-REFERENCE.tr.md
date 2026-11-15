@@ -1,6 +1,6 @@
 # Donanım araştırması ve teknik referans
 
-İnceleme: 2026-11-14. 85 profil ayrı ayrı kapsanır. 50 profil için nitelendirilmiş tarih bilgisi vardır; 35 profilin kesin ilk üretim/satış tarihi doğrulanmamıştır. MCU veri sayfasının ilk yayını, kartın üretim yılı olarak sunulmaz.
+İnceleme: 2026-11-14. 89 profil ayrı ayrı kapsanır. 54 profil için nitelendirilmiş tarih bilgisi vardır; 35 profilin kesin ilk üretim/satış tarihi doğrulanmamıştır. MCU veri sayfasının ilk yayını, kartın üretim yılı olarak sunulmaz.
 
 Bu dosya `sources/hardware-details.json` kayıtlarından `npm run build:data` ile üretilir. Her özellik ve notun kaynak bağlantısı yanındadır. Canlı üretici sayfalarının içeriği değişebilir; pin kanıtlarının kilitli sürüm ve SHA-256 bilgileri ayrı `sources/manifest.json` kaydında korunur. Yeni teknik bilgi incelemesi, önceki pin doğrulama tarihini değiştirmez.
 
@@ -125,7 +125,7 @@ Kartta 26 GPIO ve 3 harici ADC girişi vardır. GP29 kart içi ölçümlerde kul
 
 Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.
 
-Bu profil yalnızca ortak fiziksel pinleri kapsar. Alternatif işlevler için Pi 4 veya Pi 5 profilini açın. [Raspberry Pi GPIO documentation](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc)
+Bu profil yalnızca ortak fiziksel pinleri kapsar. Alternatif işlevler için Pi 3 Model B+, Pi 4, Pi 5, Zero W, Zero 2 W veya Pi 500 profilini açın. [Raspberry Pi GPIO documentation](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc)
 
 ### NVIDIA Jetson Orin Nano
 
@@ -637,6 +637,66 @@ Devre / kart belgeleri: [Raspberry Pi Compute Module 4 Datasheet](https://datash
 BCM2712 SoC ve RP1 I/O denetleyicisi ile PCIe Gen 2/3 ×1, 2× USB 3.0, çift 4Kp60 HDMI, fan tacho/PWM ve RTC batarya desteği sunar. [Raspberry Pi Compute Module 5 Datasheet](https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf)
 
 Devre / kart belgeleri: [Raspberry Pi Compute Module 5 Datasheet](https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf)
+
+### Raspberry Pi Zero W
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=raspberry-pi-40&profile=raspberry-pi-zero-w) · [Pin referansı](https://pip-assets.raspberrypi.com/categories/592-raspberry-pi-zero-w/documents/RP-008368-DS-1-raspberry-pi-zero-w-reduced-schematics.pdf) · [Datasheet](https://pip-assets.raspberrypi.com/categories/579-raspberry-pi-zero/documents/RP-008249-DS-1-bcm2835-peripherals.pdf)
+
+- **İlk satış / çıkış:** 2017-02-28. [Raspberry Pi Zero W joins the family](https://www.raspberrypi.com/news/raspberry-pi-zero-w-joins-family/)
+- **İşlemci:** 1 × ARM1176JZF-S (32-bit). [Raspberry Pi processors documentation · BCM2835](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2835.adoc), [Raspberry Pi Zero models documentation · introduction and model list](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/zero/zero-intro.adoc)
+- **Saat hızı / üst sınır:** 1 GHz. [Raspberry Pi processors documentation · BCM2835](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2835.adoc), [Raspberry Pi Zero models documentation · introduction and model list](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/zero/zero-intro.adoc)
+- **RAM:** 512 MB (Zero W). [Raspberry Pi processors documentation · BCM2835](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2835.adoc), [Raspberry Pi Zero models documentation · introduction and model list](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/zero/zero-intro.adoc)
+- **Program Flash’ı / depolama:** microSD kart yuvası. [Raspberry Pi processors documentation · BCM2835](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2835.adoc), [Raspberry Pi Zero models documentation · introduction and model list](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/zero/zero-intro.adoc)
+- **Besleme / mantık:** Güç girişi iki mikro USB bağlantı noktasından biri üzerinden. [Raspberry Pi Zero models documentation · introduction and model list](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/zero/zero-intro.adoc)
+
+40 pin başlıkta 3.3 V GPIO kullanılır. Fiziksel pin numarası BCM GPIO numarasından farklıdır. 27/28 HAT kimlik EEPROM hattıdır. Başlık yuvası lehimsiz gelir (WH modelinde takılıdır). [Raspberry Pi GPIO documentation](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc), [Raspberry Pi Zero models documentation · introduction and model list](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/zero/zero-intro.adoc), [Raspberry Pi Zero W Reduced Schematics](https://pip-assets.raspberrypi.com/categories/592-raspberry-pi-zero-w/documents/RP-008368-DS-1-raspberry-pi-zero-w-reduced-schematics.pdf)
+
+Devre / kart belgeleri: [Raspberry Pi Zero W Reduced Schematics](https://pip-assets.raspberrypi.com/categories/592-raspberry-pi-zero-w/documents/RP-008368-DS-1-raspberry-pi-zero-w-reduced-schematics.pdf), [BCM2835 ARM Peripherals](https://pip-assets.raspberrypi.com/categories/579-raspberry-pi-zero/documents/RP-008249-DS-1-bcm2835-peripherals.pdf)
+
+### Raspberry Pi Zero 2 W
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=raspberry-pi-40&profile=raspberry-pi-zero-2-w) · [Pin referansı](https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008360-DS-1-raspberry-pi-zero-2-w-reduced-schematics.pdf) · [Datasheet](https://pip-assets.raspberrypi.com/categories/579-raspberry-pi-zero/documents/RP-008249-DS-1-bcm2835-peripherals.pdf)
+
+- **İlk satış / çıkış:** 2021-10-28. [New product: Raspberry Pi Zero 2 W on sale now](https://www.raspberrypi.com/news/new-raspberry-pi-zero-2-w-2/)
+- **İşlemci:** 4 × Arm Cortex-A53 (64-bit). [Raspberry Pi processors documentation · RP3A0](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/rp3a0.adoc), [Raspberry Pi Zero 2 W Product Brief](https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008359-DS-1-raspberry-pi-zero-2-w-product-brief.pdf)
+- **Saat hızı / üst sınır:** 1 GHz. [Raspberry Pi processors documentation · RP3A0](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/rp3a0.adoc), [Raspberry Pi Zero 2 W Product Brief](https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008359-DS-1-raspberry-pi-zero-2-w-product-brief.pdf)
+- **RAM:** 512 MB LPDDR2 (paket içinde). [Raspberry Pi processors documentation · RP3A0](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/rp3a0.adoc), [Raspberry Pi Zero 2 W Product Brief](https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008359-DS-1-raspberry-pi-zero-2-w-product-brief.pdf)
+- **Program Flash’ı / depolama:** microSD kart yuvası. [Raspberry Pi processors documentation · RP3A0](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/rp3a0.adoc), [Raspberry Pi Zero 2 W Product Brief](https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008359-DS-1-raspberry-pi-zero-2-w-product-brief.pdf)
+- **Besleme / mantık:** mikro USB ile 5 V DC 2.5 A. [Raspberry Pi Zero 2 W Product Brief](https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008359-DS-1-raspberry-pi-zero-2-w-product-brief.pdf)
+
+40 pin başlıkta 3.3 V GPIO kullanılır. Fiziksel pin numarası BCM GPIO numarasından farklıdır. 27/28 HAT kimlik EEPROM hattıdır. Başlık yuvası lehimsiz gelir (“with headers” modelinde takılıdır). [Raspberry Pi GPIO documentation](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc), [Raspberry Pi Zero 2 W Product Brief](https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008359-DS-1-raspberry-pi-zero-2-w-product-brief.pdf), [Raspberry Pi Zero 2 W Reduced Schematics](https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008360-DS-1-raspberry-pi-zero-2-w-reduced-schematics.pdf)
+
+Devre / kart belgeleri: [Raspberry Pi Zero 2 W Reduced Schematics](https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008360-DS-1-raspberry-pi-zero-2-w-reduced-schematics.pdf), [Raspberry Pi Zero 2 W Product Brief](https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008359-DS-1-raspberry-pi-zero-2-w-product-brief.pdf), [BCM2835 ARM Peripherals](https://pip-assets.raspberrypi.com/categories/579-raspberry-pi-zero/documents/RP-008249-DS-1-bcm2835-peripherals.pdf)
+
+### Raspberry Pi 3 Model B+
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=raspberry-pi-40&profile=raspberry-pi-3b-plus) · [Pin referansı](https://pip-assets.raspberrypi.com/categories/532-raspberry-pi-3-model-b/documents/RP-008339-DS-1-raspberry-pi-3-b-plus-reduced-schematics.pdf) · [Datasheet](https://pip-assets.raspberrypi.com/categories/579-raspberry-pi-zero/documents/RP-008249-DS-1-bcm2835-peripherals.pdf)
+
+- **İlk satış / çıkış:** 2018-03-14. [Raspberry Pi 3 Model B+ on sale now at $35](https://www.raspberrypi.com/news/raspberry-pi-3-model-bplus-sale-now-35/)
+- **İşlemci:** 4 × Arm Cortex-A53 (64-bit). [Raspberry Pi processors documentation · BCM2837B0](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2837b0.adoc), [Raspberry Pi 3 Model B+ Product Brief](https://pip-assets.raspberrypi.com/categories/532-raspberry-pi-3-model-b/documents/RP-008338-DS-2-raspberry-pi-3-b-plus-product-brief.pdf)
+- **Saat hızı / üst sınır:** 1.4 GHz. [Raspberry Pi processors documentation · BCM2837B0](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2837b0.adoc), [Raspberry Pi 3 Model B+ Product Brief](https://pip-assets.raspberrypi.com/categories/532-raspberry-pi-3-model-b/documents/RP-008338-DS-2-raspberry-pi-3-b-plus-product-brief.pdf)
+- **RAM:** 1 GB (3 Model B+). [Raspberry Pi processors documentation · BCM2837B0](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2837b0.adoc), [Raspberry Pi 3 Model B+ Product Brief](https://pip-assets.raspberrypi.com/categories/532-raspberry-pi-3-model-b/documents/RP-008338-DS-2-raspberry-pi-3-b-plus-product-brief.pdf)
+- **Program Flash’ı / depolama:** microSD kart yuvası. [Raspberry Pi processors documentation · BCM2837B0](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2837b0.adoc), [Raspberry Pi 3 Model B+ Product Brief](https://pip-assets.raspberrypi.com/categories/532-raspberry-pi-3-model-b/documents/RP-008338-DS-2-raspberry-pi-3-b-plus-product-brief.pdf)
+- **Besleme / mantık:** mikro USB ile 5 V / 2.5 A; GPIO başlığından 5 V DC; PoE HAT ile PoE. [Raspberry Pi 3 Model B+ Product Brief](https://pip-assets.raspberrypi.com/categories/532-raspberry-pi-3-model-b/documents/RP-008338-DS-2-raspberry-pi-3-b-plus-product-brief.pdf)
+
+40 pin başlıkta 3.3 V GPIO kullanılır. Fiziksel pin numarası BCM GPIO numarasından farklıdır. 27/28 HAT kimlik EEPROM hattıdır. [Raspberry Pi GPIO documentation](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc)
+
+Devre / kart belgeleri: [Raspberry Pi 3 Model B+ Reduced Schematics](https://pip-assets.raspberrypi.com/categories/532-raspberry-pi-3-model-b/documents/RP-008339-DS-1-raspberry-pi-3-b-plus-reduced-schematics.pdf), [Raspberry Pi 3 Model B+ Product Brief](https://pip-assets.raspberrypi.com/categories/532-raspberry-pi-3-model-b/documents/RP-008338-DS-2-raspberry-pi-3-b-plus-product-brief.pdf), [BCM2835 ARM Peripherals](https://pip-assets.raspberrypi.com/categories/579-raspberry-pi-zero/documents/RP-008249-DS-1-bcm2835-peripherals.pdf)
+
+### Raspberry Pi 500
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=raspberry-pi-40&profile=raspberry-pi-500) · [Pin referansı](https://pip-assets.raspberrypi.com/categories/1115-raspberry-pi-500/documents/RP-008349-DS-4-raspberry-pi-500-product-brief.pdf) · [Datasheet](https://datasheets.raspberrypi.com/rp1/rp1-peripherals.pdf)
+
+- **İlk satış / çıkış:** 2024-12-09. [Raspberry Pi 500 and Raspberry Pi Monitor on sale now](https://www.raspberrypi.com/news/raspberry-pi-500-and-raspberry-pi-monitor-on-sale-now/)
+- **İşlemci:** 4 × Arm Cortex-A76 (64-bit); RP1 I/O. [Raspberry Pi 5 specifications](https://www.raspberrypi.com/products/raspberry-pi-5/)
+- **Saat hızı / üst sınır:** 2.4 GHz. [Raspberry Pi 5 specifications](https://www.raspberrypi.com/products/raspberry-pi-5/)
+- **RAM:** 8 GB LPDDR4X-4267. [Raspberry Pi 500 Product Brief](https://pip-assets.raspberrypi.com/categories/1115-raspberry-pi-500/documents/RP-008349-DS-4-raspberry-pi-500-product-brief.pdf), [Raspberry Pi keyboard computers documentation](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/keyboard-computers/intro.adoc)
+- **Program Flash’ı / depolama:** microSD kart yuvası. [Raspberry Pi 500 Product Brief](https://pip-assets.raspberrypi.com/categories/1115-raspberry-pi-500/documents/RP-008349-DS-4-raspberry-pi-500-product-brief.pdf), [Raspberry Pi keyboard computers documentation](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/keyboard-computers/intro.adoc)
+- **Besleme / mantık:** USB-C ile 5 V / 5 A (25 W); çevre birimleri için 600 mA sınırı. [Raspberry Pi 500 Product Brief](https://pip-assets.raspberrypi.com/categories/1115-raspberry-pi-500/documents/RP-008349-DS-4-raspberry-pi-500-product-brief.pdf), [Raspberry Pi keyboard computers documentation](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/keyboard-computers/intro.adoc)
+
+40 pin başlıkta 3.3 V GPIO kullanılır. Fiziksel pin numarası BCM GPIO numarasından farklıdır. 27/28 HAT kimlik EEPROM hattıdır. Başlık klavyenin arka yüzündedir ve standart kartlara göre 180° döndürülmüştür. [Raspberry Pi GPIO documentation](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc), [Raspberry Pi keyboard computers documentation](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/keyboard-computers/intro.adoc)
+
+Devre / kart belgeleri: [Raspberry Pi 500 Product Brief](https://pip-assets.raspberrypi.com/categories/1115-raspberry-pi-500/documents/RP-008349-DS-4-raspberry-pi-500-product-brief.pdf), [Raspberry Pi RP1 Peripherals](https://datasheets.raspberrypi.com/rp1/rp1-peripherals.pdf)
 
 ### ATmega328P · PDIP-28
 

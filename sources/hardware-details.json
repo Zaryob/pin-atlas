@@ -919,6 +919,108 @@
       "url": "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf",
       "publisher": "Espressif",
       "locator": "Module overview; ordering information: 4 / 8 / 16 MB Flash variants"
+    },
+    "bcm2835-peripherals": {
+      "title": "BCM2835 ARM Peripherals",
+      "url": "https://pip-assets.raspberrypi.com/categories/579-raspberry-pi-zero/documents/RP-008249-DS-1-bcm2835-peripherals.pdf",
+      "publisher": "Raspberry Pi Ltd",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "pi-zero-w-schematic": {
+      "title": "Raspberry Pi Zero W Reduced Schematics",
+      "url": "https://pip-assets.raspberrypi.com/categories/592-raspberry-pi-zero-w/documents/RP-008368-DS-1-raspberry-pi-zero-w-reduced-schematics.pdf",
+      "publisher": "Raspberry Pi Ltd",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "pi-zero-2-w-schematic": {
+      "title": "Raspberry Pi Zero 2 W Reduced Schematics",
+      "url": "https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008360-DS-1-raspberry-pi-zero-2-w-reduced-schematics.pdf",
+      "publisher": "Raspberry Pi Ltd",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "pi-3b-plus-schematic": {
+      "title": "Raspberry Pi 3 Model B+ Reduced Schematics",
+      "url": "https://pip-assets.raspberrypi.com/categories/532-raspberry-pi-3-model-b/documents/RP-008339-DS-1-raspberry-pi-3-b-plus-reduced-schematics.pdf",
+      "publisher": "Raspberry Pi Ltd",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "pi-zero-2-w-brief": {
+      "title": "Raspberry Pi Zero 2 W Product Brief",
+      "url": "https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008359-DS-1-raspberry-pi-zero-2-w-product-brief.pdf",
+      "publisher": "Raspberry Pi Ltd",
+      "locator": "Overview and Specification · RP3A0 / BCM2710A1, 1 GHz, 512 MB LPDDR2, 5 V DC 2.5 A; locked in sources/manifest.json"
+    },
+    "pi-3b-plus-brief": {
+      "title": "Raspberry Pi 3 Model B+ Product Brief",
+      "url": "https://pip-assets.raspberrypi.com/categories/532-raspberry-pi-3-model-b/documents/RP-008338-DS-2-raspberry-pi-3-b-plus-product-brief.pdf",
+      "publisher": "Raspberry Pi Ltd",
+      "locator": "Specification · BCM2837B0 @ 1.4 GHz, 1 GB, 5 V / 2.5 A micro USB or 5 V via GPIO header; locked in sources/manifest.json"
+    },
+    "pi-500-brief": {
+      "title": "Raspberry Pi 500 Product Brief",
+      "url": "https://pip-assets.raspberrypi.com/categories/1115-raspberry-pi-500/documents/RP-008349-DS-4-raspberry-pi-500-product-brief.pdf",
+      "publisher": "Raspberry Pi Ltd",
+      "locator": "Overview and Specification · Cortex-A76 @ 2.4 GHz with RP1, 8 GB LPDDR4X-4267, 5 V DC via USB, microSD; locked in sources/manifest.json"
+    },
+    "pi-zero-models": {
+      "title": "Raspberry Pi Zero models documentation · introduction and model list",
+      "url": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/zero/zero-intro.adoc",
+      "publisher": "Raspberry Pi Ltd",
+      "locator": "Model list · Zero W (2017, BCM2835, 512 MB, 1 GHz ARM11) and Zero 2 W (2021, RP3A0, 512 MB); common ports; locked in sources/manifest.json"
+    },
+    "pi-keyboard-computers": {
+      "title": "Raspberry Pi keyboard computers documentation",
+      "url": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/keyboard-computers/intro.adoc",
+      "publisher": "Raspberry Pi Ltd",
+      "locator": "Specifications table · Raspberry Pi 500 power input 5 V / 5 A USB-C with a 600 mA peripheral limit; locked in sources/manifest.json"
+    },
+    "pi-processor-bcm2835": {
+      "title": "Raspberry Pi processors documentation · BCM2835",
+      "url": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2835.adoc",
+      "publisher": "Raspberry Pi Ltd",
+      "locator": "BCM2835 · single-core ARM1176JZF-S; used in Zero W; locked in sources/manifest.json"
+    },
+    "pi-processor-rp3a0": {
+      "title": "Raspberry Pi processors documentation · RP3A0",
+      "url": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/rp3a0.adoc",
+      "publisher": "Raspberry Pi Ltd",
+      "locator": "RP3A0 · BCM2710A1 with 512 MB DRAM, quad-core Cortex-A53 at 1 GHz; locked in sources/manifest.json"
+    },
+    "pi-processor-bcm2837b0": {
+      "title": "Raspberry Pi processors documentation · BCM2837B0",
+      "url": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2837b0.adoc",
+      "publisher": "Raspberry Pi Ltd",
+      "locator": "BCM2837B0 · Cortex-A53 up to 1.4 GHz on 3B+; locked in sources/manifest.json"
+    },
+    "pi-zero-w-launch": {
+      "title": "Raspberry Pi Zero W joins the family",
+      "url": "https://www.raspberrypi.com/news/raspberry-pi-zero-w-joins-family/",
+      "publisher": "Raspberry Pi",
+      "locator": "Publication date (2017-02-28)"
+    },
+    "pi-zero-2-w-launch": {
+      "title": "New product: Raspberry Pi Zero 2 W on sale now",
+      "url": "https://www.raspberrypi.com/news/new-raspberry-pi-zero-2-w-2/",
+      "publisher": "Raspberry Pi",
+      "locator": "Publication date (2021-10-28)"
+    },
+    "pi-3b-plus-launch": {
+      "title": "Raspberry Pi 3 Model B+ on sale now at $35",
+      "url": "https://www.raspberrypi.com/news/raspberry-pi-3-model-bplus-sale-now-35/",
+      "publisher": "Raspberry Pi",
+      "locator": "Publication date (2018-03-14)"
+    },
+    "pi-500-launch": {
+      "title": "Raspberry Pi 500 and Raspberry Pi Monitor on sale now",
+      "url": "https://www.raspberrypi.com/news/raspberry-pi-500-and-raspberry-pi-monitor-on-sale-now/",
+      "publisher": "Raspberry Pi",
+      "locator": "Publication date (2024-12-09)"
+    },
+    "rp1-peripherals": {
+      "title": "Raspberry Pi RP1 Peripherals",
+      "url": "https://datasheets.raspberrypi.com/rp1/rp1-peripherals.pdf",
+      "publisher": "Raspberry Pi Ltd",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
     }
   },
   "chips": {
@@ -1586,6 +1688,57 @@
         "jetson-storage"
       ],
       "notes": []
+    },
+    "BCM2835": {
+      "cpu": "1 × ARM1176JZF-S (32-bit)",
+      "clock": "1 GHz",
+      "ram": {
+        "tr": "512 MB (Zero W)",
+        "en": "512 MB (Zero W)"
+      },
+      "flash": {
+        "tr": "microSD kart yuvası",
+        "en": "microSD card slot"
+      },
+      "sources": [
+        "pi-processor-bcm2835",
+        "pi-zero-models"
+      ],
+      "notes": []
+    },
+    "RP3A0 (BCM2710A1)": {
+      "cpu": "4 × Arm Cortex-A53 (64-bit)",
+      "clock": "1 GHz",
+      "ram": {
+        "tr": "512 MB LPDDR2 (paket içinde)",
+        "en": "512 MB LPDDR2 (in package)"
+      },
+      "flash": {
+        "tr": "microSD kart yuvası",
+        "en": "microSD card slot"
+      },
+      "sources": [
+        "pi-processor-rp3a0",
+        "pi-zero-2-w-brief"
+      ],
+      "notes": []
+    },
+    "BCM2837B0": {
+      "cpu": "4 × Arm Cortex-A53 (64-bit)",
+      "clock": "1.4 GHz",
+      "ram": {
+        "tr": "1 GB (3 Model B+)",
+        "en": "1 GB (3 Model B+)"
+      },
+      "flash": {
+        "tr": "microSD kart yuvası",
+        "en": "microSD card slot"
+      },
+      "sources": [
+        "pi-processor-bcm2837b0",
+        "pi-3b-plus-brief"
+      ],
+      "notes": []
     }
   },
   "profiles": {
@@ -1902,8 +2055,8 @@
       "notes": [
         {
           "text": {
-            "tr": "Bu profil yalnızca ortak fiziksel pinleri kapsar. Alternatif işlevler için Pi 4 veya Pi 5 profilini açın.",
-            "en": "This profile covers common physical pins only. Open the Pi 4 or Pi 5 profile for alternate functions."
+            "tr": "Bu profil yalnızca ortak fiziksel pinleri kapsar. Alternatif işlevler için Pi 3 Model B+, Pi 4, Pi 5, Zero W, Zero 2 W veya Pi 500 profilini açın.",
+            "en": "This profile covers common physical pins only. Open the Pi 3 Model B+, Pi 4, Pi 5, Zero W, Zero 2 W or Pi 500 profile for alternate functions."
           },
           "sources": [
             "pi-gpio"
@@ -4648,6 +4801,158 @@
       "datasheet": "https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf",
       "documents": [
         "cm5-datasheet"
+      ]
+    },
+    "raspberry-pi-zero-w": {
+      "chip": "BCM2835",
+      "sources": [
+        "pi-zero-models"
+      ],
+      "power": {
+        "tr": "Güç girişi iki mikro USB bağlantı noktasından biri üzerinden",
+        "en": "Power input through one of the two micro USB ports"
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "40 pin başlıkta 3.3 V GPIO kullanılır. Fiziksel pin numarası BCM GPIO numarasından farklıdır. 27/28 HAT kimlik EEPROM hattıdır. Başlık yuvası lehimsiz gelir (WH modelinde takılıdır).",
+            "en": "40-pin header uses 3.3 V GPIO. Physical pin numbers differ from BCM GPIO numbers. Pins 27/28 are the HAT ID EEPROM bus. The header footprint ships unpopulated (fitted on the WH model)."
+          },
+          "sources": [
+            "pi-gpio",
+            "pi-zero-models",
+            "pi-zero-w-schematic"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2017-02-28",
+        "kind": "launch",
+        "sources": [
+          "pi-zero-w-launch"
+        ]
+      },
+      "pinSource": "https://pip-assets.raspberrypi.com/categories/592-raspberry-pi-zero-w/documents/RP-008368-DS-1-raspberry-pi-zero-w-reduced-schematics.pdf",
+      "datasheet": "https://pip-assets.raspberrypi.com/categories/579-raspberry-pi-zero/documents/RP-008249-DS-1-bcm2835-peripherals.pdf",
+      "documents": [
+        "pi-zero-w-schematic",
+        "bcm2835-peripherals"
+      ]
+    },
+    "raspberry-pi-zero-2-w": {
+      "chip": "RP3A0 (BCM2710A1)",
+      "sources": [
+        "pi-zero-2-w-brief"
+      ],
+      "power": {
+        "tr": "mikro USB ile 5 V DC 2.5 A",
+        "en": "5 V DC 2.5 A via micro USB"
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "40 pin başlıkta 3.3 V GPIO kullanılır. Fiziksel pin numarası BCM GPIO numarasından farklıdır. 27/28 HAT kimlik EEPROM hattıdır. Başlık yuvası lehimsiz gelir (“with headers” modelinde takılıdır).",
+            "en": "40-pin header uses 3.3 V GPIO. Physical pin numbers differ from BCM GPIO numbers. Pins 27/28 are the HAT ID EEPROM bus. The header footprint ships unpopulated (fitted on the “with headers” model)."
+          },
+          "sources": [
+            "pi-gpio",
+            "pi-zero-2-w-brief",
+            "pi-zero-2-w-schematic"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2021-10-28",
+        "kind": "launch",
+        "sources": [
+          "pi-zero-2-w-launch"
+        ]
+      },
+      "pinSource": "https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008360-DS-1-raspberry-pi-zero-2-w-reduced-schematics.pdf",
+      "datasheet": "https://pip-assets.raspberrypi.com/categories/579-raspberry-pi-zero/documents/RP-008249-DS-1-bcm2835-peripherals.pdf",
+      "documents": [
+        "pi-zero-2-w-schematic",
+        "pi-zero-2-w-brief",
+        "bcm2835-peripherals"
+      ]
+    },
+    "raspberry-pi-3b-plus": {
+      "chip": "BCM2837B0",
+      "sources": [
+        "pi-3b-plus-brief"
+      ],
+      "power": {
+        "tr": "mikro USB ile 5 V / 2.5 A; GPIO başlığından 5 V DC; PoE HAT ile PoE",
+        "en": "5 V / 2.5 A via micro USB; 5 V DC via GPIO header; PoE with PoE HAT"
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "40 pin başlıkta 3.3 V GPIO kullanılır. Fiziksel pin numarası BCM GPIO numarasından farklıdır. 27/28 HAT kimlik EEPROM hattıdır.",
+            "en": "40-pin header uses 3.3 V GPIO. Physical pin numbers differ from BCM GPIO numbers. Pins 27/28 are the HAT ID EEPROM bus."
+          },
+          "sources": [
+            "pi-gpio"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2018-03-14",
+        "kind": "launch",
+        "sources": [
+          "pi-3b-plus-launch"
+        ]
+      },
+      "pinSource": "https://pip-assets.raspberrypi.com/categories/532-raspberry-pi-3-model-b/documents/RP-008339-DS-1-raspberry-pi-3-b-plus-reduced-schematics.pdf",
+      "datasheet": "https://pip-assets.raspberrypi.com/categories/579-raspberry-pi-zero/documents/RP-008249-DS-1-bcm2835-peripherals.pdf",
+      "documents": [
+        "pi-3b-plus-schematic",
+        "pi-3b-plus-brief",
+        "bcm2835-peripherals"
+      ]
+    },
+    "raspberry-pi-500": {
+      "chip": "BCM2712 / RP1",
+      "ram": {
+        "tr": "8 GB LPDDR4X-4267",
+        "en": "8 GB LPDDR4X-4267"
+      },
+      "flash": {
+        "tr": "microSD kart yuvası",
+        "en": "microSD card slot"
+      },
+      "sources": [
+        "pi-500-brief",
+        "pi-keyboard-computers"
+      ],
+      "power": {
+        "tr": "USB-C ile 5 V / 5 A (25 W); çevre birimleri için 600 mA sınırı",
+        "en": "5 V / 5 A (25 W) via USB-C with a 600 mA peripheral limit"
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "40 pin başlıkta 3.3 V GPIO kullanılır. Fiziksel pin numarası BCM GPIO numarasından farklıdır. 27/28 HAT kimlik EEPROM hattıdır. Başlık klavyenin arka yüzündedir ve standart kartlara göre 180° döndürülmüştür.",
+            "en": "40-pin header uses 3.3 V GPIO. Physical pin numbers differ from BCM GPIO numbers. Pins 27/28 are the HAT ID EEPROM bus. The header is on the rear of the keyboard and rotated 180° compared with a standard board."
+          },
+          "sources": [
+            "pi-gpio",
+            "pi-keyboard-computers"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2024-12-09",
+        "kind": "launch",
+        "sources": [
+          "pi-500-launch"
+        ]
+      },
+      "pinSource": "https://pip-assets.raspberrypi.com/categories/1115-raspberry-pi-500/documents/RP-008349-DS-4-raspberry-pi-500-product-brief.pdf",
+      "datasheet": "https://datasheets.raspberrypi.com/rp1/rp1-peripherals.pdf",
+      "documents": [
+        "pi-500-brief",
+        "rp1-peripherals"
       ]
     }
   }

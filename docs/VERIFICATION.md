@@ -2,7 +2,7 @@
 
 [English](VERIFICATION.md) · [Türkçe](VERIFICATION.tr.md)
 
-Catalog snapshot from the generated data: **79 board, header, and chip profiles, 5,226 physical pin records, and 24,290 function assignments**, taken from **128 hash-locked source records** in [`sources/manifest.json`](../sources/manifest.json). The data's `verifiedOn` date stays **5 November 2026** on purpose: on 14–15 November 2026 only the profiles changed on those days were checked again, not the whole catalog. Totals are recorded in [`public/data/verification.json`](../public/data/verification.json); these counts do not certify that every pin was independently reviewed. Shared physical pins are counted once per profile. The count excludes the app’s generic `GPIO` planning option and unnumbered QFN center GND pads. Each placement of a signal on a different pin counts separately.
+Catalog snapshot from the generated data: **89 board, header, and chip profiles, 5,865 physical pin records, and 25,613 function assignments**, taken from **151 hash-locked source records** in [`sources/manifest.json`](../sources/manifest.json). The data's `verifiedOn` date stays **5 November 2026** on purpose: on 14–15 November 2026 only the profiles changed on those days were checked again, not the whole catalog. Totals are recorded in [`public/data/verification.json`](../public/data/verification.json); these counts do not certify that every pin was independently reviewed. Shared physical pins are counted once per profile. The count excludes the app’s generic `GPIO` planning option and unnumbered QFN center GND pads. Each placement of a signal on a different pin counts separately.
 
 ## Sources by pin map
 
@@ -23,7 +23,7 @@ Catalog snapshot from the generated data: **79 board, header, and chip profiles,
 
 ### Common Raspberry Pi 40-pin header
 
-The common profile uses only the physical pin table in the pinned Raspberry Pi GPIO documentation. That document explicitly describes the standard layout for B+ and later and all Zero models, and the rotated orientation on keyboard computers. Some Zero headers are unpopulated. The profile excludes older 26-pin boards and Compute Modules. It deliberately carries no BCM2711 alternate function records or Pi 4 schematic evidence: choose the Pi 4 profile for those functions. HAT EEPROM pins 27/28 remain reserved.
+The common profile uses only the physical pin table in the pinned Raspberry Pi GPIO documentation. That document explicitly describes the standard layout for B+ and later and all Zero models, and the rotated orientation on keyboard computers. Some Zero headers are unpopulated. The profile excludes older 26-pin boards and Compute Modules. It deliberately carries no alternate function records or board schematic evidence: choose the Pi 3 Model B+, Pi 4, Pi 5, Zero W, Zero 2 W or Pi 500 profile for those functions. HAT EEPROM pins 27/28 remain reserved.
 
 ### Raspberry Pi 4 Model B / J8
 
@@ -39,6 +39,19 @@ The common profile uses only the physical pin table in the pinned Raspberry Pi G
 - Alternate functions come from GPIO0–27, ALT0–ALT8 (a0–a8), in [Raspberry Pi RP1 Peripherals, §3.1.1, Table 4, PDF pages 16–17](https://datasheets.raspberrypi.com/rp1/rp1-peripherals.pdf#page=16).
 - Physical pins 27 and 28 carry GPIO0 and GPIO1, reserved for the HAT identification EEPROM.
 - RP1 alternate functions provide UART, SPI, I2C, I2S, PWM, PIO, DPI, SDIO, and PCM audio options distinct from BCM2711.
+
+### Raspberry Pi Zero W, Zero 2 W and 3 Model B+ / J8
+
+- The 40 physical pins use the same GPIO documentation table as the common header. On each board, the 28 GPIO net labels (including ID_SD/ID_SC) were matched to J8 contacts by coordinates in that board's own reduced schematic: [Zero W, RP-008368-DS-1](https://pip-assets.raspberrypi.com/categories/592-raspberry-pi-zero-w/documents/RP-008368-DS-1-raspberry-pi-zero-w-reduced-schematics.pdf#page=1), [Zero 2 W, RP-008360-DS-1](https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008360-DS-1-raspberry-pi-zero-2-w-reduced-schematics.pdf#page=1) and [3 Model B+, RP-008339-DS-1](https://pip-assets.raspberrypi.com/categories/532-raspberry-pi-3-model-b/documents/RP-008339-DS-1-raspberry-pi-3-b-plus-reduced-schematics.pdf#page=1). Power and ground were checked visually. On both Zero schematics J8 is marked DNF (not fitted).
+- Alternate functions come from GPIO0–27, ALT0–ALT5, in [BCM2835 ARM Peripherals, §6.2, PDF page 102](https://pip-assets.raspberrypi.com/categories/579-raspberry-pi-zero/documents/RP-008249-DS-1-bcm2835-peripherals.pdf#page=102); blank and `<reserved>` cells are skipped (83 assignments per board). The [GPIO documentation](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc) names this table for earlier families and Zero models.
+- Zero W uses BCM2835 ([processor documentation](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2835.adoc), which also warns that the peripheral document contains known errors). For 3 Model B+ (BCM2837B0) and Zero 2 W (RP3A0 with a BCM2710A1 die) the same table is used because Raspberry Pi's processor documentation states that BCM2710A1 is the BCM2837 die, that BCM2837B0 shares the BCM2837 architecture, and that BCM2837 and BCM2836 are BCM2835 with different Arm cores ([rp3a0](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/rp3a0.adoc), [bcm2837b0](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2837b0.adoc), [bcm2837](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2837.adoc), [bcm2836](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2836.adoc)). The functions carry a separate evidence record that states this reliance.
+- BCM2711-only selectors are not copied: these boards have no UART2–5, SPI3–6, I2C3–6 or ALT2 DPI entries (the BCM2835 table prints ALT2 as reserved for GPIO0–27). PWM keeps the BCM2835 names `PWM0`/`PWM1`, and ALT5 on GPIO14/15 is the mini UART (`TXD1`/`RXD1`).
+- Cautions: the unpopulated Zero header ([Zero models documentation](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/zero/zero-intro.adoc), [Zero 2 W product brief](https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008359-DS-1-raspberry-pi-zero-2-w-product-brief.pdf#page=2) and the DNF marking); the BCM2835/BCM2836/BCM2837/RP3A0 voltage table in the GPIO documentation (V_IL ≤ 0.9 V, V_IH ≥ 1.6 V, 8 mA default / 16 mA maximum drive, 50–65 kΩ pulls); and 5 V DC input via the GPIO header on 3 Model B+ ([product brief, Specification](https://pip-assets.raspberrypi.com/categories/532-raspberry-pi-3-model-b/documents/RP-008338-DS-2-raspberry-pi-3-b-plus-product-brief.pdf#page=3)).
+
+### Raspberry Pi 500 / rear 40-pin header
+
+- The [keyboard computers documentation](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/keyboard-computers/intro.adoc) lists a horizontal 40-pin GPIO header and BCM2712 with the RP1 I/O controller; the [Pi 500 product brief, RP-008349-DS-4](https://pip-assets.raspberrypi.com/categories/1115-raspberry-pi-500/documents/RP-008349-DS-4-raspberry-pi-500-product-brief.pdf#page=2) states that Pi 500 has the same processor and RP1 I/O controller as Pi 5. The profile therefore reuses the Pi 5 RP1 functions (RP1 Peripherals, Table 4) on the standard 40-pin numbering.
+- No Pi 500 schematic is published, so there is no net-label cross-check. The GPIO documentation states that the keyboard-computer header is on the rear and rotated 180° with pins 1 and 40 labelled; the profile records that as a caution and does not draw a rear-panel view. The RP1 voltage table, which names Pi 500, is attached as a caution.
 
 ### RP2350A / QFN-60
 
@@ -80,7 +93,7 @@ A SHA-256 lock proves that the cited document is the one that was reviewed and t
 
 - **Parsed from the document:** PDF tables, manufacturer XML, KiCad files, Markdown/RST tables or source code read from the locked copy. This covers most STM32, Raspberry Pi, Espressif, Arduino core, Jetson, BeagleBone Black and micro:bit data.
 - **Hand-recorded tables:** the Adafruit Feather RP2040 and Teensy 4.1 generators contain tables typed in from the cited pinout and do not open the locked document. Teensy PWM, ADC and port data were cross-checked against the Teensy core source.
-- **Visual readings:** 53 of the 79 profiles list `visual-diagram` (or `visual-photo`) among their methods. In 482 of the 5,226 pin records (9.2 %), every physical evidence reference is a visual reading. RP2040 (QFN-56), ATmega2560 (TQFP-100), ATmega2561 (TQFP-64) and Seeed Studio XIAO RP2040 rest entirely on visual readings.
+- **Visual readings:** 56 of the 89 profiles list `visual-diagram` (or `visual-photo`) among their methods. In 510 of the 5,865 pin records (8.7 %), every physical evidence reference is a visual reading. RP2040 (QFN-56), ATmega2560 (TQFP-100), ATmega2561 (TQFP-64) and Seeed Studio XIAO RP2040 rest entirely on visual readings.
 
 ### Sourced warnings
 
@@ -246,7 +259,7 @@ The F411CE reference uses STM32F411CEU6 (UFQFPN-48, 36 GPIO-capable pads, up to 
 - **ESP32-C6-DevKitC-1 v1.2:** the `esp-dev-kits` guide and pin-layout image at `5c06bf18…`, with the ESP32-C6 data sheet (locked at v1.5; see the two verification modes above).
 - **BBC micro:bit V2:** the 25 front strips in physical order, from the micro:bit developer documentation edge-connector page (`dev-docs` at `469ea5f9…`) and the V2 schematic (`17aae030…`). Pin IDs 1–21 keep their earlier meaning; the small 3V and GND strips are new IDs 22–25. P19/P20 are the external I²C bus with on-board 4.7 kΩ pull-ups; on V2 the motion sensor is on a separate internal bus. A board caution gives the edge-connector current budget from the power-supply page.
 - **RP2350 erratum E9:** every Bank 0 GPIO of Pico 2, Pico 2 W, RP2350A and RP2350B carries the RP2350-E9 input-leakage warning from the RP2350 data sheet (Appendix D.5.1, pp. 1359–1360). RP2040 profiles do not.
-- **Raspberry Pi 40-pin header:** board cautions state that the pins are not 5 V tolerant and give 16 mA per pin and 50 mA in total; GPIO2/GPIO3 carry the fixed 1.8 kΩ pull-ups.
+- **Raspberry Pi 40-pin header:** board cautions state that the pins are not 5 V tolerant and give 16 mA per pin and 50 mA in total; GPIO2/GPIO3 carry the fixed 1.8 kΩ pull-ups. Zero W, Zero 2 W and 3 Model B+ add the BCM2835-family voltage table; the Zero boards add the unpopulated-header caution; Pi 500 adds the rotated rear-header and RP1 voltage-table cautions.
 - **Evidence locators:** the ATmega2561 PDI/PDO reference now points to the Table 13-17 note on p. 84, and the ESP32 p. 16 reference to the Table 2-1 notes.
 
 ## Primary sources and verification standards for roadmap additions
@@ -282,12 +295,12 @@ The following official primary documents and verification rules govern additions
 - **Verification criteria:** 76 GPIO contacts on Mega-format headers; STM32H747XI dual-core (Cortex-M7 + Cortex-M4) signal routing; Murata 1DX Wi-Fi/BLE module isolation; USB-A host and USB-C programming port nets; 3.3 V I/O voltage boundary across all header pins.
 
 ### Raspberry Pi Compute Module 4 and 5 (CM4 / CM5)
-- **Documents:** `RP-008343-DS-1-raspberry-pi-cm4-datasheet.pdf`, `RP-008350-DS-1-raspberry-pi-cm5-datasheet.pdf`, and the official Raspberry Pi CM4/CM5 reduced schematics.
-- **Verification criteria:** Dual 100-pin Hirose DF40 mezzanine connectors (200 contacts total); separate Connector 1 (power, PCIe, Ethernet, HDMI, USB, DSI, CSI) and Connector 2 (GPIO bank, SDIO, secondary HDMI/CSI/DSI); configurable GPIO_VREF voltage domain (1.8 V versus 3.3 V); PCIe differential pairs and Gigabit Ethernet PHY magnetics versus direct transceiver pads.
+- **Documents:** [Compute Module 4 Datasheet, RP-008168-DS](https://datasheets.raspberrypi.com/cm4/cm4-datasheet.pdf) (Table 6, pinout; §4 GPIO_VREF/PCIe text) and [Compute Module 5 Datasheet, RP-008180-DS](https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf) (Table 5, pinout; §4.3 electrical specifications). GPIO alternate functions reuse the verified Pi 4 (BCM2711) and Pi 5 (RP1) tables.
+- **Verification criteria:** Dual 100-pin Hirose DF40 mezzanine connectors (200 contacts total). Connector 1 (CN1, pins 1–100) carries Ethernet, the GPIO bank (GPIO0–27), SD-card signals and power; Connector 2 (CN2, pins 101–200) carries USB, PCIe, HDMI and the camera/display interfaces (CSI and DSI on CM4, combined MIPI0/MIPI1 on CM5). Configurable GPIO_VREF voltage domain (1.8 V versus 3.3 V).
 
 ### Raspberry Pi RM2 wireless module
-- **Documents:** `RP-008304-DS-3-pico-2-w-datasheet.pdf` (§2.3, §4.2), Infineon CYW43439 datasheet, and Raspberry Pi RM2 Hardware Integration Guide.
-- **Verification criteria:** Castellated edge pad numbering; gSPI bus lines (CLK, MOSI/SDIO, MISO, CS); WL_REG_ON regulator enable; WL_HOST_WAKE interrupt line; 3V3_WL power net; distinction between on-board PCB antenna path and external U.FL connector pad.
+- **Documents:** [Raspberry Pi Radio Module 2 Datasheet, RP-008943-DS-7](https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf): Table 2 (function of each pin), Table 1 (host GPIO connections needed to communicate with the module) and §2.6 (electrical specifications).
+- **Verification criteria:** Castellated pad numbering from Table 2; gSPI lines (SCLK, DIN/MOSI, DOUT/MISO, CS) and nIRQ; WL_REG_ON and BT_REG_ON enables; VIN 3.0–4.8 V and VDDIO 1.8 V / 3.3 V supplies; module GPIO0.
 
 ### Espressif ESP8266 (AI-Thinker ESP-12F and ESP-01)
 - **Documents:** Espressif `ESP8266EX Datasheet` (v6.9), `ESP8266 Technical Reference Manual`, and AI-Thinker `ESP-12F Module Specification`.

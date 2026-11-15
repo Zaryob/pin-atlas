@@ -213,7 +213,9 @@ function renderCompatibilityList() {
 }
 function renderReferenceNote() {
  $('#reference-note').hidden = !layout.references.length;
- $('#reference-note').textContent = layout.id === 'raspberry-pi-40' ? t(board.id === 'raspberry-pi-4' ? 'pi4ReferenceNote' : 'commonReferenceNote') : layout.id === 'pico-family' ? t('picoReferenceNote') : t('headerReferenceNote');
+ const piNotes = {'raspberry-pi-4':'pi4ReferenceNote','raspberry-pi-5':'rp1ReferenceNote','raspberry-pi-500':'pi500ReferenceNote',
+   'raspberry-pi-zero-w':'bcm2835ReferenceNote','raspberry-pi-zero-2-w':'bcm2837ReferenceNote','raspberry-pi-3b-plus':'bcm2837ReferenceNote'};
+ $('#reference-note').textContent = layout.id === 'raspberry-pi-40' ? t(piNotes[board.id] || 'commonReferenceNote') : layout.id === 'pico-family' ? t('picoReferenceNote') : t('headerReferenceNote');
 }
 function renderNav() {
  const nav = $('#board-nav');

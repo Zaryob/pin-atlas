@@ -3,21 +3,25 @@
 export function compatibleModels(layout) {
   if (!layout.compatibleKey && layout.profiles.length === 1) return [];
   if (layout.id === 'raspberry-pi-40') {
+    // Models with a verified processor reference open it; the rest share the common pinout.
     return [
       ['pi-b-plus','Raspberry Pi Model B+'],
       ['pi-a-plus','Raspberry Pi Model A+'],
       ['pi-2','Raspberry Pi 2 Model B'],
-      ['pi-3','Raspberry Pi 3 family'],
+      ['pi-3','Raspberry Pi 3 Model B / A+'],
+      ['raspberry-pi-3b-plus','Raspberry Pi 3 Model B+'],
       ['raspberry-pi-4','Raspberry Pi 4 Model B'],
       ['raspberry-pi-5','Raspberry Pi 5'],
       ['pi-zero','Raspberry Pi Zero'],
-      ['pi-zero-w','Raspberry Pi Zero W'],
-      ['pi-zero-2-w','Raspberry Pi Zero 2 W'],
+      ['raspberry-pi-zero-w','Raspberry Pi Zero W'],
+      ['raspberry-pi-zero-2-w','Raspberry Pi Zero 2 W'],
       ['pi-400','Raspberry Pi 400'],
-      ['pi-500','Raspberry Pi 500']
-    ].map(([id,name]) => ({id,name,profileId:['raspberry-pi-4','raspberry-pi-5'].includes(id) ? id : 'raspberry-pi-40',
-      kind:['raspberry-pi-4','raspberry-pi-5'].includes(id) ? 'reference' : 'physical',
-      detailKey:id === 'raspberry-pi-4' ? 'bcm2711Reference' : (id === 'raspberry-pi-5' ? 'rp1Reference' : 'commonReference')}));
+      ['raspberry-pi-500','Raspberry Pi 500']
+    ].map(([id,name]) => {
+      const reference = layout.profileIds.includes(id) && id !== 'raspberry-pi-40';
+      return {id,name,profileId:reference ? id : 'raspberry-pi-40',kind:reference ? 'reference' : 'physical',
+        detailKey:reference ? layout.references.find(item => item.profileIds.includes(id)).key : 'commonReference'};
+    });
   }
   if (layout.id === 'stm32f103c8t6') {
     return [

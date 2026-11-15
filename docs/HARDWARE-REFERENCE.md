@@ -1,6 +1,6 @@
 # Hardware research and technical reference
 
-Reviewed: 2026-11-14. All 85 profiles are covered individually. 50 have a qualified historical date; exact first production/sale dates remain unverified for 35. An MCU datasheet’s initial publication is not presented as a board’s production year.
+Reviewed: 2026-11-14. All 89 profiles are covered individually. 54 have a qualified historical date; exact first production/sale dates remain unverified for 35. An MCU datasheet’s initial publication is not presented as a board’s production year.
 
 Generated from `sources/hardware-details.json` by `npm run build:data`. Each fact and note carries source links. Live manufacturer pages may change; the locked versions and SHA-256 values for pin evidence remain in `sources/manifest.json`. The technical review does not change the previous pin-verification date.
 
@@ -125,7 +125,7 @@ Board exposes 26 GPIOs and 3 external ADC inputs. GP29 is used for on-board meas
 
 First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year.
 
-This profile covers common physical pins only. Open the Pi 4 or Pi 5 profile for alternate functions. [Raspberry Pi GPIO documentation](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc)
+This profile covers common physical pins only. Open the Pi 3 Model B+, Pi 4, Pi 5, Zero W, Zero 2 W or Pi 500 profile for alternate functions. [Raspberry Pi GPIO documentation](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc)
 
 ### NVIDIA Jetson Orin Nano
 
@@ -637,6 +637,66 @@ Circuit / board documents: [Raspberry Pi Compute Module 4 Datasheet](https://dat
 Features BCM2712 SoC and RP1 I/O controller with PCIe Gen 2/3 x1, 2× USB 3.0, dual 4Kp60 HDMI, fan tacho/PWM, and RTC battery support. [Raspberry Pi Compute Module 5 Datasheet](https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf)
 
 Circuit / board documents: [Raspberry Pi Compute Module 5 Datasheet](https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf)
+
+### Raspberry Pi Zero W
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=raspberry-pi-40&profile=raspberry-pi-zero-w) · [Pin reference](https://pip-assets.raspberrypi.com/categories/592-raspberry-pi-zero-w/documents/RP-008368-DS-1-raspberry-pi-zero-w-reduced-schematics.pdf) · [Datasheet](https://pip-assets.raspberrypi.com/categories/579-raspberry-pi-zero/documents/RP-008249-DS-1-bcm2835-peripherals.pdf)
+
+- **Initial sale / release:** 2017-02-28. [Raspberry Pi Zero W joins the family](https://www.raspberrypi.com/news/raspberry-pi-zero-w-joins-family/)
+- **Processor:** 1 × ARM1176JZF-S (32-bit). [Raspberry Pi processors documentation · BCM2835](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2835.adoc), [Raspberry Pi Zero models documentation · introduction and model list](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/zero/zero-intro.adoc)
+- **Clock / maximum:** 1 GHz. [Raspberry Pi processors documentation · BCM2835](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2835.adoc), [Raspberry Pi Zero models documentation · introduction and model list](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/zero/zero-intro.adoc)
+- **RAM:** 512 MB (Zero W). [Raspberry Pi processors documentation · BCM2835](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2835.adoc), [Raspberry Pi Zero models documentation · introduction and model list](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/zero/zero-intro.adoc)
+- **Program Flash / storage:** microSD card slot. [Raspberry Pi processors documentation · BCM2835](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2835.adoc), [Raspberry Pi Zero models documentation · introduction and model list](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/zero/zero-intro.adoc)
+- **Power / logic:** Power input through one of the two micro USB ports. [Raspberry Pi Zero models documentation · introduction and model list](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/zero/zero-intro.adoc)
+
+40-pin header uses 3.3 V GPIO. Physical pin numbers differ from BCM GPIO numbers. Pins 27/28 are the HAT ID EEPROM bus. The header footprint ships unpopulated (fitted on the WH model). [Raspberry Pi GPIO documentation](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc), [Raspberry Pi Zero models documentation · introduction and model list](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/zero/zero-intro.adoc), [Raspberry Pi Zero W Reduced Schematics](https://pip-assets.raspberrypi.com/categories/592-raspberry-pi-zero-w/documents/RP-008368-DS-1-raspberry-pi-zero-w-reduced-schematics.pdf)
+
+Circuit / board documents: [Raspberry Pi Zero W Reduced Schematics](https://pip-assets.raspberrypi.com/categories/592-raspberry-pi-zero-w/documents/RP-008368-DS-1-raspberry-pi-zero-w-reduced-schematics.pdf), [BCM2835 ARM Peripherals](https://pip-assets.raspberrypi.com/categories/579-raspberry-pi-zero/documents/RP-008249-DS-1-bcm2835-peripherals.pdf)
+
+### Raspberry Pi Zero 2 W
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=raspberry-pi-40&profile=raspberry-pi-zero-2-w) · [Pin reference](https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008360-DS-1-raspberry-pi-zero-2-w-reduced-schematics.pdf) · [Datasheet](https://pip-assets.raspberrypi.com/categories/579-raspberry-pi-zero/documents/RP-008249-DS-1-bcm2835-peripherals.pdf)
+
+- **Initial sale / release:** 2021-10-28. [New product: Raspberry Pi Zero 2 W on sale now](https://www.raspberrypi.com/news/new-raspberry-pi-zero-2-w-2/)
+- **Processor:** 4 × Arm Cortex-A53 (64-bit). [Raspberry Pi processors documentation · RP3A0](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/rp3a0.adoc), [Raspberry Pi Zero 2 W Product Brief](https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008359-DS-1-raspberry-pi-zero-2-w-product-brief.pdf)
+- **Clock / maximum:** 1 GHz. [Raspberry Pi processors documentation · RP3A0](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/rp3a0.adoc), [Raspberry Pi Zero 2 W Product Brief](https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008359-DS-1-raspberry-pi-zero-2-w-product-brief.pdf)
+- **RAM:** 512 MB LPDDR2 (in package). [Raspberry Pi processors documentation · RP3A0](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/rp3a0.adoc), [Raspberry Pi Zero 2 W Product Brief](https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008359-DS-1-raspberry-pi-zero-2-w-product-brief.pdf)
+- **Program Flash / storage:** microSD card slot. [Raspberry Pi processors documentation · RP3A0](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/rp3a0.adoc), [Raspberry Pi Zero 2 W Product Brief](https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008359-DS-1-raspberry-pi-zero-2-w-product-brief.pdf)
+- **Power / logic:** 5 V DC 2.5 A via micro USB. [Raspberry Pi Zero 2 W Product Brief](https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008359-DS-1-raspberry-pi-zero-2-w-product-brief.pdf)
+
+40-pin header uses 3.3 V GPIO. Physical pin numbers differ from BCM GPIO numbers. Pins 27/28 are the HAT ID EEPROM bus. The header footprint ships unpopulated (fitted on the “with headers” model). [Raspberry Pi GPIO documentation](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc), [Raspberry Pi Zero 2 W Product Brief](https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008359-DS-1-raspberry-pi-zero-2-w-product-brief.pdf), [Raspberry Pi Zero 2 W Reduced Schematics](https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008360-DS-1-raspberry-pi-zero-2-w-reduced-schematics.pdf)
+
+Circuit / board documents: [Raspberry Pi Zero 2 W Reduced Schematics](https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008360-DS-1-raspberry-pi-zero-2-w-reduced-schematics.pdf), [Raspberry Pi Zero 2 W Product Brief](https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008359-DS-1-raspberry-pi-zero-2-w-product-brief.pdf), [BCM2835 ARM Peripherals](https://pip-assets.raspberrypi.com/categories/579-raspberry-pi-zero/documents/RP-008249-DS-1-bcm2835-peripherals.pdf)
+
+### Raspberry Pi 3 Model B+
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=raspberry-pi-40&profile=raspberry-pi-3b-plus) · [Pin reference](https://pip-assets.raspberrypi.com/categories/532-raspberry-pi-3-model-b/documents/RP-008339-DS-1-raspberry-pi-3-b-plus-reduced-schematics.pdf) · [Datasheet](https://pip-assets.raspberrypi.com/categories/579-raspberry-pi-zero/documents/RP-008249-DS-1-bcm2835-peripherals.pdf)
+
+- **Initial sale / release:** 2018-03-14. [Raspberry Pi 3 Model B+ on sale now at $35](https://www.raspberrypi.com/news/raspberry-pi-3-model-bplus-sale-now-35/)
+- **Processor:** 4 × Arm Cortex-A53 (64-bit). [Raspberry Pi processors documentation · BCM2837B0](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2837b0.adoc), [Raspberry Pi 3 Model B+ Product Brief](https://pip-assets.raspberrypi.com/categories/532-raspberry-pi-3-model-b/documents/RP-008338-DS-2-raspberry-pi-3-b-plus-product-brief.pdf)
+- **Clock / maximum:** 1.4 GHz. [Raspberry Pi processors documentation · BCM2837B0](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2837b0.adoc), [Raspberry Pi 3 Model B+ Product Brief](https://pip-assets.raspberrypi.com/categories/532-raspberry-pi-3-model-b/documents/RP-008338-DS-2-raspberry-pi-3-b-plus-product-brief.pdf)
+- **RAM:** 1 GB (3 Model B+). [Raspberry Pi processors documentation · BCM2837B0](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2837b0.adoc), [Raspberry Pi 3 Model B+ Product Brief](https://pip-assets.raspberrypi.com/categories/532-raspberry-pi-3-model-b/documents/RP-008338-DS-2-raspberry-pi-3-b-plus-product-brief.pdf)
+- **Program Flash / storage:** microSD card slot. [Raspberry Pi processors documentation · BCM2837B0](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2837b0.adoc), [Raspberry Pi 3 Model B+ Product Brief](https://pip-assets.raspberrypi.com/categories/532-raspberry-pi-3-model-b/documents/RP-008338-DS-2-raspberry-pi-3-b-plus-product-brief.pdf)
+- **Power / logic:** 5 V / 2.5 A via micro USB; 5 V DC via GPIO header; PoE with PoE HAT. [Raspberry Pi 3 Model B+ Product Brief](https://pip-assets.raspberrypi.com/categories/532-raspberry-pi-3-model-b/documents/RP-008338-DS-2-raspberry-pi-3-b-plus-product-brief.pdf)
+
+40-pin header uses 3.3 V GPIO. Physical pin numbers differ from BCM GPIO numbers. Pins 27/28 are the HAT ID EEPROM bus. [Raspberry Pi GPIO documentation](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc)
+
+Circuit / board documents: [Raspberry Pi 3 Model B+ Reduced Schematics](https://pip-assets.raspberrypi.com/categories/532-raspberry-pi-3-model-b/documents/RP-008339-DS-1-raspberry-pi-3-b-plus-reduced-schematics.pdf), [Raspberry Pi 3 Model B+ Product Brief](https://pip-assets.raspberrypi.com/categories/532-raspberry-pi-3-model-b/documents/RP-008338-DS-2-raspberry-pi-3-b-plus-product-brief.pdf), [BCM2835 ARM Peripherals](https://pip-assets.raspberrypi.com/categories/579-raspberry-pi-zero/documents/RP-008249-DS-1-bcm2835-peripherals.pdf)
+
+### Raspberry Pi 500
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=raspberry-pi-40&profile=raspberry-pi-500) · [Pin reference](https://pip-assets.raspberrypi.com/categories/1115-raspberry-pi-500/documents/RP-008349-DS-4-raspberry-pi-500-product-brief.pdf) · [Datasheet](https://datasheets.raspberrypi.com/rp1/rp1-peripherals.pdf)
+
+- **Initial sale / release:** 2024-12-09. [Raspberry Pi 500 and Raspberry Pi Monitor on sale now](https://www.raspberrypi.com/news/raspberry-pi-500-and-raspberry-pi-monitor-on-sale-now/)
+- **Processor:** 4 × Arm Cortex-A76 (64-bit); RP1 I/O. [Raspberry Pi 5 specifications](https://www.raspberrypi.com/products/raspberry-pi-5/)
+- **Clock / maximum:** 2.4 GHz. [Raspberry Pi 5 specifications](https://www.raspberrypi.com/products/raspberry-pi-5/)
+- **RAM:** 8 GB LPDDR4X-4267. [Raspberry Pi 500 Product Brief](https://pip-assets.raspberrypi.com/categories/1115-raspberry-pi-500/documents/RP-008349-DS-4-raspberry-pi-500-product-brief.pdf), [Raspberry Pi keyboard computers documentation](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/keyboard-computers/intro.adoc)
+- **Program Flash / storage:** microSD card slot. [Raspberry Pi 500 Product Brief](https://pip-assets.raspberrypi.com/categories/1115-raspberry-pi-500/documents/RP-008349-DS-4-raspberry-pi-500-product-brief.pdf), [Raspberry Pi keyboard computers documentation](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/keyboard-computers/intro.adoc)
+- **Power / logic:** 5 V / 5 A (25 W) via USB-C with a 600 mA peripheral limit. [Raspberry Pi 500 Product Brief](https://pip-assets.raspberrypi.com/categories/1115-raspberry-pi-500/documents/RP-008349-DS-4-raspberry-pi-500-product-brief.pdf), [Raspberry Pi keyboard computers documentation](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/keyboard-computers/intro.adoc)
+
+40-pin header uses 3.3 V GPIO. Physical pin numbers differ from BCM GPIO numbers. Pins 27/28 are the HAT ID EEPROM bus. The header is on the rear of the keyboard and rotated 180° compared with a standard board. [Raspberry Pi GPIO documentation](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc), [Raspberry Pi keyboard computers documentation](https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/keyboard-computers/intro.adoc)
+
+Circuit / board documents: [Raspberry Pi 500 Product Brief](https://pip-assets.raspberrypi.com/categories/1115-raspberry-pi-500/documents/RP-008349-DS-4-raspberry-pi-500-product-brief.pdf), [Raspberry Pi RP1 Peripherals](https://datasheets.raspberrypi.com/rp1/rp1-peripherals.pdf)
 
 ### ATmega328P · PDIP-28
 

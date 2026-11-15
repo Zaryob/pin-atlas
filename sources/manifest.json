@@ -1368,6 +1368,139 @@
       "publisher": "Raspberry Pi Ltd",
       "revision": "RP-008180-DS",
       "sha256": "80070fefd8db6e8abc6e146c8b7b5fb318ba129cc1e28826936d547fde79c863"
+    },
+    {
+      "id": "bcm2835-peripherals",
+      "title": "BCM2835 ARM Peripherals",
+      "file": "bcm2835-peripherals.pdf",
+      "url": "https://pip-assets.raspberrypi.com/categories/579-raspberry-pi-zero/documents/RP-008249-DS-1-bcm2835-peripherals.pdf",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "RP-008249-DS-1",
+      "sha256": "5e446658d154c4447381ef62c1a3ce4102715e437fe488e2b93e798b60c4004e"
+    },
+    {
+      "id": "pi-zero-w-schematic",
+      "title": "Raspberry Pi Zero W Reduced Schematics",
+      "file": "pi-zero-w-schematic.pdf",
+      "url": "https://pip-assets.raspberrypi.com/categories/592-raspberry-pi-zero-w/documents/RP-008368-DS-1-raspberry-pi-zero-w-reduced-schematics.pdf",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "RP-008368-DS-1",
+      "sha256": "737fdb376ee876b049d9523e1fc0e4098c3ac9707bbd2468f668f08326709816"
+    },
+    {
+      "id": "pi-zero-2-w-schematic",
+      "title": "Raspberry Pi Zero 2 W Reduced Schematics",
+      "file": "pi-zero-2-w-schematic.pdf",
+      "url": "https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008360-DS-1-raspberry-pi-zero-2-w-reduced-schematics.pdf",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "RP-008360-DS-1",
+      "sha256": "ea9b808fce2cb6cada3f2364bf020afce86cb58f592b029c76e68e44c5806395"
+    },
+    {
+      "id": "pi-zero-2-w-brief",
+      "title": "Raspberry Pi Zero 2 W Product Brief",
+      "file": "pi-zero-2-w-brief.pdf",
+      "url": "https://pip-assets.raspberrypi.com/categories/584-raspberry-pi-zero-2-w/documents/RP-008359-DS-1-raspberry-pi-zero-2-w-product-brief.pdf",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "RP-008359-DS-1 · published April 2024",
+      "sha256": "503f348880c00c543e99383ca8759a0b60c1b511cc3c27f216720866159a2bff"
+    },
+    {
+      "id": "pi-3b-plus-schematic",
+      "title": "Raspberry Pi 3 Model B+ Reduced Schematics",
+      "file": "pi-3b-plus-schematic.pdf",
+      "url": "https://pip-assets.raspberrypi.com/categories/532-raspberry-pi-3-model-b/documents/RP-008339-DS-1-raspberry-pi-3-b-plus-reduced-schematics.pdf",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "RP-008339-DS-1",
+      "sha256": "d012d5d0d69c495f24726ea96271e9884aa7bd8873c2694bb1028a8b7b2f6f95"
+    },
+    {
+      "id": "pi-3b-plus-brief",
+      "title": "Raspberry Pi 3 Model B+ Product Brief",
+      "file": "pi-3b-plus-brief.pdf",
+      "url": "https://pip-assets.raspberrypi.com/categories/532-raspberry-pi-3-model-b/documents/RP-008338-DS-2-raspberry-pi-3-b-plus-product-brief.pdf",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "RP-008338-DS-2 · published October 2025",
+      "sha256": "345192be568ea8ab2f1f7bdb43ca5edf36e20bdd9b1bf96081299a91a2a88f3f"
+    },
+    {
+      "id": "pi-500-brief",
+      "title": "Raspberry Pi 500 Product Brief",
+      "file": "pi-500-brief.pdf",
+      "url": "https://pip-assets.raspberrypi.com/categories/1115-raspberry-pi-500/documents/RP-008349-DS-4-raspberry-pi-500-product-brief.pdf",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "RP-008349-DS-4 · published April 2026",
+      "sha256": "4875ad6a81fa4725a7a1d415278083fb412b68ac02ef1422a52128839da8baec"
+    },
+    {
+      "id": "pi-processor-bcm2835",
+      "title": "Raspberry Pi processors documentation · BCM2835",
+      "file": "pi-processor-bcm2835.adoc",
+      "url": "https://raw.githubusercontent.com/raspberrypi/documentation/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2835.adoc",
+      "viewUrl": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2835.adoc",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "0fb416315f8f6c1949c0614989075d3e5805104b",
+      "sha256": "f71698a0373a0ef80c14266cb465ee620032f0609e8028abeeb1da3e53de2407"
+    },
+    {
+      "id": "pi-processor-bcm2836",
+      "title": "Raspberry Pi processors documentation · BCM2836",
+      "file": "pi-processor-bcm2836.adoc",
+      "url": "https://raw.githubusercontent.com/raspberrypi/documentation/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2836.adoc",
+      "viewUrl": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2836.adoc",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "0fb416315f8f6c1949c0614989075d3e5805104b",
+      "sha256": "cbece3045376be08cb59c15dc53102c7c02ce76cdc51af24bb825c71fafab0da"
+    },
+    {
+      "id": "pi-processor-bcm2837",
+      "title": "Raspberry Pi processors documentation · BCM2837",
+      "file": "pi-processor-bcm2837.adoc",
+      "url": "https://raw.githubusercontent.com/raspberrypi/documentation/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2837.adoc",
+      "viewUrl": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2837.adoc",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "0fb416315f8f6c1949c0614989075d3e5805104b",
+      "sha256": "b1d1bbb63940aff8de6919e7859067c365c9d6e2b2612b765cde0e3590607314"
+    },
+    {
+      "id": "pi-processor-bcm2837b0",
+      "title": "Raspberry Pi processors documentation · BCM2837B0",
+      "file": "pi-processor-bcm2837b0.adoc",
+      "url": "https://raw.githubusercontent.com/raspberrypi/documentation/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2837b0.adoc",
+      "viewUrl": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/bcm2837b0.adoc",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "0fb416315f8f6c1949c0614989075d3e5805104b",
+      "sha256": "ce5561826219ba6d89bff2a17d75b4b598908f1abe237570f5adca2c16e07e94"
+    },
+    {
+      "id": "pi-processor-rp3a0",
+      "title": "Raspberry Pi processors documentation · RP3A0",
+      "file": "pi-processor-rp3a0.adoc",
+      "url": "https://raw.githubusercontent.com/raspberrypi/documentation/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/rp3a0.adoc",
+      "viewUrl": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/processors/rp3a0.adoc",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "0fb416315f8f6c1949c0614989075d3e5805104b",
+      "sha256": "20b9db413e4e0bda1e93d61fc3c96999210421ac425dc6818e3a1a54127eb657"
+    },
+    {
+      "id": "pi-zero-models",
+      "title": "Raspberry Pi Zero models documentation · introduction and model list",
+      "file": "pi-zero-intro.adoc",
+      "url": "https://raw.githubusercontent.com/raspberrypi/documentation/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/zero/zero-intro.adoc",
+      "viewUrl": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/zero/zero-intro.adoc",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "0fb416315f8f6c1949c0614989075d3e5805104b",
+      "sha256": "d1855bc7c67e44deb19eb14976ad45a73abcadbd294368d35833a5fd94ff862b"
+    },
+    {
+      "id": "pi-keyboard-computers",
+      "title": "Raspberry Pi keyboard computers documentation",
+      "file": "pi-keyboard-computers.adoc",
+      "url": "https://raw.githubusercontent.com/raspberrypi/documentation/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/keyboard-computers/intro.adoc",
+      "viewUrl": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/keyboard-computers/intro.adoc",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "0fb416315f8f6c1949c0614989075d3e5805104b",
+      "sha256": "194955580149e9b55fb757801b9ce00b04f4aec2a640a42313c5f66b3968f816"
     }
   ],
   "publishers": [

@@ -110,9 +110,13 @@ def attach_warnings(boards, ref, cache, docs):
                    'can supply up to 16 mA to an attached device, and all GPIO pins combined can supply a maximum total current of 50 mA'):
         assert phrase in adoc, phrase
     pi_ref = ref('pi-gpio-electrical', 'pi-gpio', None, 'GPIO pads and voltage · 3.3 V only warning, fixed GP2/GP3 pull-ups, per-pin and total current', 'manufacturer-source-text')
-    for board_id in ('raspberry-pi-4', 'raspberry-pi-5', 'raspberry-pi-40'):
+    for board_id in ('raspberry-pi-4', 'raspberry-pi-5', 'raspberry-pi-40', 'raspberry-pi-zero-w', 'raspberry-pi-zero-2-w',
+                     'raspberry-pi-3b-plus', 'raspberry-pi-500'):
         board = by_id[board_id]
+        # Generic header cautions come first; model-specific ones follow.
+        specific = board.pop('cautions', [])
         caution(board, 'piNot5vCaution', pi_ref); caution(board, 'piCurrentCaution', pi_ref)
+        board['cautions'].extend(specific)
         for pin in board['pins']:
             if pin['name'] in ('GPIO2', 'GPIO3'):
                 assert pin['number'] in (3, 5); warn(pin, 'piI2cPullupNote', pi_ref)

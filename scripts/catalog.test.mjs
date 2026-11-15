@@ -34,7 +34,8 @@ test('search tolerates punctuation and word order and respects series numbers an
 });
 
 test('compatibility-only models resolve to the common documented reference without new catalog entries',()=>{
-  assert.deepEqual(filterCatalog(catalog,{query:'Raspberry Pi Zero'}).map(e=>e.profile),['raspberry-pi-40']);
+  assert.deepEqual(filterCatalog(catalog,{query:'Raspberry Pi 400'}).map(e=>e.profile),['raspberry-pi-40']);
+  assert.deepEqual(filterCatalog(catalog,{query:'Raspberry Pi Zero'}).map(e=>e.profile),['raspberry-pi-zero-2-w','raspberry-pi-zero-w','raspberry-pi-40']);
   assert.deepEqual(filterCatalog(catalog,{query:'STM32F103CBT6'}).map(e=>e.profile),['stm32f103c8t6']);
   assert(!catalog.some(e=>e.name==='STM32F103CBT6'));
   assert.equal(filterCatalog(catalog,{query:'STM32F103CBT6'})[0].matchedAlias,'STM32F103CBT6');

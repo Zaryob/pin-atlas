@@ -34,7 +34,7 @@ for b in boards:
                 assert f['configuration']['field'] and f['configuration']['values']
                 assert not f.get('alt')
             if 'alt' in f:
-                assert f['selector']==('ALT' if b['id'] in ('raspberry-pi-4','raspberry-pi-5','raspberry-pi-cm4','raspberry-pi-cm5') else 'F')+str(f['alt'])
+                assert f['selector']==('ALT' if b['id'] in ('raspberry-pi-4','raspberry-pi-5','raspberry-pi-cm4','raspberry-pi-cm5','raspberry-pi-zero-w','raspberry-pi-zero-2-w','raspberry-pi-3b-plus','raspberry-pi-500') else 'F')+str(f['alt'])
 lookup={b['id']:{p['number']:p for p in b['pins']} for b in boards}
 assert lookup['pico2w'][1]['name']=='GP0' and lookup['pico2w'][40]['name']=='VBUS'
 assert not any(p['name'] in {'GP23','GP24','GP25','GP29'} for p in lookup['pico2w'].values())
@@ -341,6 +341,29 @@ assert next(p for p in uno.values() if p['name']=='IOREF')['noteKey']=='arduinoI
 for id in ('raspberry-pi-4','raspberry-pi-5','raspberry-pi-40'):
     assert {c['key'] for c in board_by_id[id]['cautions']}=={'piNot5vCaution','piCurrentCaution'}
     assert all('piI2cPullupNote' in lookup[id][n]['warnings'] for n in (3,5)) and all(lookup[id][n]['noteKey']=='reservedNote' for n in (27,28))
+# Zero W / Zero 2 W / Pi 3 Model B+ use the BCM2835 §6.2 table; Pi 500 reuses the Pi 5 RP1 table.
+bcm283x=('raspberry-pi-zero-w','raspberry-pi-zero-2-w','raspberry-pi-3b-plus')
+for id in (*bcm283x,'raspberry-pi-500'):
+    assert [p['name'] for p in lookup[id].values()]==[p['name'] for p in lookup['raspberry-pi-4'].values()]
+    assert [c['key'] for c in board_by_id[id]['cautions']][:2]==['piNot5vCaution','piCurrentCaution']
+    assert all('piI2cPullupNote' in lookup[id][n]['warnings'] for n in (3,5))
+    assert all(lookup[id][n]['reserved'] and lookup[id][n]['noteKey']=='reservedNote' for n in (27,28))
+    assert 'pi4-j8' not in {r for p in lookup[id].values() for r in p['evidence']}
+for id in bcm283x:
+    fs={f['signal'] for p in lookup[id].values() for f in p['functions']}
+    assert len([f for p in lookup[id].values() for f in p['functions']])==83
+    assert not any(re.fullmatch(r'(TXD|RXD|CTS|RTS)[2-5]|(SDA|SCL)[3-6]|SPI[3-6]_\w+|DPI_\w+|PCLK|DE|LCD_\w+',s) for s in fs),id
+    assert any(f['signal']=='TXD1' and f['selector']=='ALT5' for f in lookup[id][8]['functions'])
+    assert any(f['signal']=='PWM0' and f['selector']=='ALT0' for f in lookup[id][32]['functions'])
+    assert 'piBcm283xLevelsCaution' in {c['key'] for c in board_by_id[id]['cautions']}
+assert {f['evidence'] for p in lookup['raspberry-pi-zero-w'].values() for f in p['functions']}=={'bcm2835-alt-p102'}
+for id in ('raspberry-pi-zero-2-w','raspberry-pi-3b-plus'):
+    assert {f['evidence'] for p in lookup[id].values() for f in p['functions']}=={'bcm2835-alt-p102-bcm2837'}
+    assert 'piBcm2837FunctionsCaution' in {c['key'] for c in board_by_id[id]['cautions']}
+for id in ('raspberry-pi-zero-w','raspberry-pi-zero-2-w'):
+    assert 'piZeroHeaderCaution' in {c['key'] for c in board_by_id[id]['cautions']}
+assert [p['functions'] for p in lookup['raspberry-pi-500'].values()]==[p['functions'] for p in lookup['raspberry-pi-5'].values()]
+assert {'piKeyboardHeaderCaution','pi500Rp1Caution'}<={c['key'] for c in board_by_id['raspberry-pi-500']['cautions']}
 # Pico 2 W special pins use i18n keys; subtitles are English in the data.
 assert all(lookup['pico2w'][n]['noteKey']==f'note.pico2w.{n}' for n in (30,33,35,36,37,39,40))
 # Teensy 4.1: voltage caution and the six SD-socket signal pads.
