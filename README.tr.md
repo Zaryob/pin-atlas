@@ -140,7 +140,7 @@ npm run check
 
 `--write`, `public/data/` içindeki `boards.json`, `evidence.json` ve `verification.json` dosyalarını ve `sources/` içindeki pin bazında CSV'yi yeniden üretir. Bir belge revizyonunu değiştirirken üretici belgesini inceleyin ve hash'ini ve etkilenen görsel gözlemleri güncelleyin.
 
-`npm run build:data`, tam ortak geometriyi doğruladıktan sonra küçük çalışma zamanı kataloğunu ve profil/kanıt paketlerini üretir. `npm run check`, bu dosyaların kaynak veri kümesiyle eşleştiğini doğrular. Ayrı [haftalık kaynak denetimi](.github/workflows/source-audit.yml) kayıtlı adresleri önbelleksiz indirip hash'lerini kontrol eder; böylece dış CDN erişimi dağıtım yolunun dışında kalır.
+`npm run build:data`, tam ortak geometriyi doğruladıktan sonra küçük çalışma zamanı kataloğunu ve profil/kanıt paketlerini üretir. Aynı veriden arama motorlarının okuyabildiği pin haritası sayfalarını (`public/boards/` İngilizce, `public/tr/boards/` Türkçe), `public/sitemap.xml` ve `public/search.json` dosyalarını da üretir; dağıtım işi yalnızca Jekyll çalıştırdığı için bunlar da `public/data/` gibi depoya eklenir. Elle düzenlemeyin. `npm run check`, bu dosyaların kaynak veri kümesiyle eşleştiğini doğrular. Ayrı [haftalık kaynak denetimi](.github/workflows/source-audit.yml) kayıtlı adresleri önbelleksiz indirip hash'lerini kontrol eder; böylece dış CDN erişimi dağıtım yolunun dışında kalır.
 
 ## Kart ekleme
 

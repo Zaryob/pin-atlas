@@ -731,7 +731,7 @@
   padding: 10px 0 60px;
 }
 .app-status { max-width: 760px; margin: 40px auto; padding: 24px; border: 1px solid var(--line); background: var(--surface); }
-.app-status h1 { margin: 0 0 12px; font-size: var(--text-h1); }
+.app-status h2 { margin: 0 0 12px; font-size: var(--text-h1); }
 .app-status p { color: var(--muted); line-height: 1.7; }
 .app-status .button { min-height: 44px; margin-top: 12px; }
 .home-hero {
@@ -1341,3 +1341,67 @@
 .note-sources { display: block; color: var(--muted); font-size: var(--text-xs); overflow-wrap: anywhere; }
 .note-sources a { color: inherit; }
 .trademark-note { flex-basis: 100%; color: var(--muted); font-size: var(--text-xs); }
+
+/* A link that named an unknown board or profile. */
+.link-notice { display: flex; align-items: start; justify-content: space-between; gap: 12px; max-width: 950px; margin: 0 auto 20px; padding: 12px 16px; border: 1px solid var(--control-border); border-left: 3px solid var(--danger); background: var(--surface); font-size: var(--text-sm); line-height: 1.7; }
+.link-notice p { margin: 0; overflow-wrap: anywhere; }
+.link-notice .icon-button { flex-shrink: 0; min-width: 32px; min-height: 32px; }
+
+/* Generated pinout pages (scripts/static-pages.mjs, layout board.html). */
+.static-main { max-width: 1180px; padding-bottom: 0; }
+.static-crumbs { display: flex; flex-wrap: wrap; gap: 8px; color: var(--muted); font-size: var(--text-xs); margin-bottom: 22px; }
+.static-crumbs span[aria-hidden] { color: var(--accent); }
+.static-heading h1 { overflow-wrap: anywhere; }
+.static-lead { margin: 10px 0 0; color: var(--muted); font-size: var(--text-sm); max-width: 950px; }
+.static-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin: 22px 0 26px; color: var(--muted); font-size: var(--text-xs); }
+.static-actions .button { font-weight: 500; }
+.static-language { margin-left: auto; }
+.static-section { margin: 34px 0 0; }
+.static-section > h2 { margin: 0 0 14px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+.static-section > h2 small { color: var(--muted); font-size: var(--text-xs); font-weight: 400; margin-left: 6px; }
+.static-section h3 { margin: 22px 0 8px; font-size: var(--text-base); }
+.static-section li, .static-general p { font-size: var(--text-sm); line-height: 1.7; }
+.static-page .board-cautions { margin-top: 30px; }
+.static-page .board-cautions h2 { margin: 0 0 6px; font-size: var(--text-base); }
+.static-facts { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1px; margin: 0; border: 1px solid var(--line); background: var(--line); }
+.static-facts > div { padding: 11px 14px; background: var(--paper); min-width: 0; }
+.static-facts dt { color: var(--muted); font-size: var(--text-xs); }
+.static-facts dd { margin: 3px 0 0; font-size: var(--text-sm); overflow-wrap: anywhere; }
+.static-facts dd a, .static-pins td:last-child a, .static-section li > a + a { font-size: var(--text-xs); }
+.static-pins { width: 100%; border-collapse: collapse; font-size: var(--text-xs); text-align: left; }
+.static-pins caption { caption-side: top; text-align: left; color: var(--muted); padding: 0 0 12px; }
+.static-pins thead th { padding: 10px; color: var(--muted); background: var(--surface); font-weight: 400; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.static-pins tbody :is(th,td) { padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.static-pins tbody th { color: var(--accent); font-weight: 500; white-space: nowrap; }
+.static-pins td b { display: block; overflow-wrap: anywhere; }
+.static-pins td small { color: var(--muted); }
+.static-pins td > small { display: block; margin-top: 3px; }
+.static-pins tr:target { background: var(--selection); }
+.static-functions span { display: inline-block; margin: 0 4px 4px 0; padding: 2px 5px; border: 1px solid var(--line); background: var(--surface); overflow-wrap: anywhere; }
+.static-notes { min-width: 180px; max-width: 360px; }
+.static-notes p { margin: 0; line-height: 1.6; }
+.static-notes p + p { margin-top: 6px; }
+.static-flags { color: var(--muted); }
+.static-links, .static-index { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 6px 18px; }
+.static-index { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px 24px; }
+.static-index small, .static-sources li small { display: block; color: var(--muted); font-size: var(--text-xs); overflow-wrap: anywhere; }
+.static-sources :is(ol,ul) { margin: 0; padding-left: 26px; }
+.static-sources li + li { margin-top: 8px; }
+.static-footer { flex-wrap: wrap; margin-top: 44px; }
+@media (max-width: 760px) {
+  /* Each pin becomes a labelled card; the column names come from the table's own custom properties. */
+  .static-pins thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+  .static-pins, .static-pins tbody, .static-pins tr, .static-pins :is(th,td) { display: block; }
+  .static-pins caption { display: block; }
+  .static-pins tbody tr { border: 1px solid var(--line); margin-bottom: 10px; padding: 4px 0; }
+  .static-pins tbody :is(th,td) { position: relative; border: 0; padding: 5px 10px 5px 112px; min-height: 30px; white-space: normal; overflow-wrap: anywhere; }
+  .static-pins tbody :is(th,td)::before { position: absolute; left: 10px; top: 5px; width: 94px; color: var(--muted); font-weight: 400; }
+  .static-pins tbody th::before { content: var(--label-1); }
+  .static-pins td:nth-child(2)::before { content: var(--label-2); }
+  .static-pins td:nth-child(3)::before { content: var(--label-3); }
+  .static-pins td:nth-child(4)::before { content: var(--label-4); }
+  .static-pins td:nth-child(5)::before { content: var(--label-5); }
+  .static-pins td:nth-child(6)::before { content: var(--label-6); }
+  .static-pins tbody td.static-notes { min-width: 0; max-width: none; min-height: 52px; }
+  .static-language { margin-left: 0; }
+}

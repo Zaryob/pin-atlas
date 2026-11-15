@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Pin Atlas — Source-verified pin guide
+title: Pin Atlas — Source-verified pinout guide
 ---
 <div class="shell">
 <header class="topbar">
@@ -23,12 +23,13 @@ title: Pin Atlas — Source-verified pin guide
   </div>
 </header>
 <main id="main" aria-busy="true">
+  <div id="link-notice" class="link-notice" role="alert" hidden><p id="link-notice-text"></p><button type="button" id="dismiss-link-notice" class="icon-button" aria-label="Dismiss this notice" data-i18n-aria-label="dismissNotice"><span data-icon="close"></span></button></div>
   <section id="app-status" class="app-status" role="status" tabindex="-1" aria-labelledby="app-status-title" aria-describedby="app-status-message">
-    <h1 id="app-status-title" data-i18n="libraryLoading">Loading board library…</h1>
+    <h2 id="app-status-title" data-i18n="libraryLoading">Loading board library…</h2>
     <p id="app-status-message" data-i18n="libraryLoadingDetail">Preparing the pin maps and their source references.</p>
     <button id="retry-data" class="button primary" data-i18n="retryData" hidden>Try again</button>
   </section>
-  <noscript><p class="app-status">Enable JavaScript to explore the pin maps and save wiring plans. You can also read the <a href="https://github.com/Zaryob/pin-atlas/blob/main/docs/VERIFICATION.md">verification record</a>.</p></noscript>
+  <noscript><p class="app-status">Enable JavaScript to explore the pin maps and save wiring plans. The <a href="{{ '/boards/' | relative_url }}">pinout pages</a> list every pin of every board without JavaScript. You can also read the <a href="https://github.com/Zaryob/pin-atlas/blob/main/docs/VERIFICATION.md">verification record</a>.</p></noscript>
 
   <!-- HOME VIEW -->
   <section id="home-view" class="home-view" hidden>
@@ -90,6 +91,7 @@ title: Pin Atlas — Source-verified pin guide
         <div>
           <h2 class="home-section-title"><span id="catalog-title" data-i18n="browseAllBoards">Hardware catalog</span></h2>
           <p class="home-section-desc" id="browse-all-boards-desc" data-i18n="browseAllBoardsDesc">Choose your exact model to open its pin map and wiring plan.</p>
+          <p class="home-section-desc"><a id="static-index-link" href="{{ '/boards/' | relative_url }}"><span data-i18n="staticIndexLink">Browse every pinout as a plain page</span> →</a></p>
         </div>
       </div>
         <div id="home-catalog-types" class="catalog-types" role="group" aria-label="Hardware type" data-i18n-aria-label="catalogTypeLabel"></div>
@@ -138,7 +140,7 @@ title: Pin Atlas — Source-verified pin guide
 
   <!-- WORKSPACE VIEW -->
   <section id="workspace-view" class="workspace-view" hidden>
-    <div class="page-heading"><div><span id="hardware-kind" class="hardware-kind"></span><h1 id="board-title" tabindex="-1">Raspberry Pi Pico 2 W</h1><p id="board-reference" class="board-reference"></p></div><div class="heading-actions"><a id="datasheet" class="button secondary" target="_blank" rel="noopener"><span data-icon="file"></span><span data-i18n="datasheet">Datasheet</span> <span>↗</span></a></div></div>
+    <div class="page-heading"><div><span id="hardware-kind" class="hardware-kind"></span><h1 id="board-title" tabindex="-1">Raspberry Pi Pico 2 W</h1><p id="board-reference" class="board-reference"></p></div><div class="heading-actions"><a id="static-page" class="button secondary"><span data-icon="list"></span><span data-i18n="staticPageLink">Pin table page</span></a><a id="datasheet" class="button secondary" target="_blank" rel="noopener"><span data-icon="file"></span><span data-i18n="datasheet">Datasheet</span> <span>↗</span></a></div></div>
     <div class="specs" id="specs"></div>
     <details id="compatible-boards" class="compatibility-index" hidden>
       <summary>

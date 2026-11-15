@@ -1,0 +1,44 @@
+<!doctype html>
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+<html lang="{{ page.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="2ddfb587-71f9-4068-a66b-1f92ad4bf209"></script>
+  <meta name="theme-color" content="#f5f3ed">
+  <title>{{ page.title | escape }}</title>
+  <meta name="description" content="{{ page.description | escape }}">
+  <link rel="canonical" href="{{ page.canonical }}">
+  <link rel="alternate" hreflang="en" href="{{ page.alternate_en }}">
+  <link rel="alternate" hreflang="tr" href="{{ page.alternate_tr }}">
+  <link rel="alternate" hreflang="x-default" href="{{ page.alternate_en }}">
+  <meta property="og:type" content="{{ page.og_type | default: 'article' }}">
+  <meta property="og:site_name" content="Pin Atlas">
+  <meta property="og:title" content="{{ page.title | escape }}">
+  <meta property="og:description" content="{{ page.description | escape }}">
+  <meta property="og:url" content="{{ page.canonical }}">
+  <meta property="og:locale" content="{% if page.lang == 'tr' %}tr_TR{% else %}en_US{% endif %}">
+  <meta property="og:image" content="https://zaryob.github.io/pin-atlas/assets/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Pin Atlas — Explore pins and plan connections">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title | escape }}">
+  <meta name="twitter:description" content="{{ page.description | escape }}">
+  <meta name="twitter:image" content="https://zaryob.github.io/pin-atlas/assets/social-card.png">
+  <meta name="twitter:image:alt" content="Pin Atlas — Explore pins and plan connections">
+  <script type="application/ld+json">{{ page.json_ld }}</script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23171a1f'/%3E%3Cpath d='M10 12h20v16H10z' stroke='%23e2b56f' fill='none' stroke-width='3'/%3E%3C/svg%3E">
+  <script src="{{ '/assets/console/language.js' | relative_url }}"></script>
+  <script src="{{ '/assets/console/i18n.js' | relative_url }}"></script>
+  <script src="{{ '/assets/console/theme.js' | relative_url }}"></script>
+  <link rel="stylesheet" href="{{ '/assets/console/theme.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+</head>
+<body class="pin-atlas-site static-page">
+  {% include console-header.html %}
+  <a class="skip" href="#main">{% if page.lang == 'tr' %}İçeriğe geç{% else %}Skip to content{% endif %}</a>
+{{ content }}
+{% include console-suite.html %}
+</body>
+</html>

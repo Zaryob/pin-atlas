@@ -1,4 +1,4 @@
-import { buildLayouts, resolveProfile } from './layouts.mjs';
+import { buildLayouts, resolveProfile, resolveLinkTarget } from './layouts.mjs';
 import { compatibleModels, filterCompatibleModels } from './compatibility.mjs';
 import { connectorGroupsFor } from './connectors.mjs';
 import { boardFamilies, homeFilterChips, featuredCards, catalogTypes, buildCatalog, filterCatalog } from './catalog.mjs';
@@ -79,6 +79,14 @@ function readSavedPlans() {
 function savedHardware(profile){return normalizeHardware(profile,savedRecords[profile.id]?.hardware||{},t);}
 function configuredProfile(profile){try{return configureBoard(profile,savedHardware(profile),t);}catch{return configureBoard(profile,{},t);}}
 let savedPlans = readSavedPlans();
+// A link that names something outside the catalog says so instead of quietly opening another board.
+let linkNotice;
+function renderLinkNotice() {
+ $('#link-notice').hidden=!linkNotice;
+ $('#link-notice-text').textContent=linkNotice?t(linkNotice.key,linkNotice.values):'';
+}
+function setLinkNotice(notice){linkNotice=notice;renderLinkNotice();}
+$('#dismiss-link-notice').addEventListener('click',()=>setLinkNotice());
 function toast(message) { $('#toast').textContent = message; $('#toast').classList.add('visible'); clearTimeout(toastTimer); toastTimer = setTimeout(() => $('#toast').classList.remove('visible'), 3500); }
 function persist() {
  invalidateSuggestions();
@@ -96,7 +104,7 @@ function pinByNumber(n) { return board.pins.find(p => p.number === Number(n)); }
 function inConnectorZoom(pin) { return !connectorZoom || connectorGroups.find(group => group.id === connectorZoom)?.contacts.includes(pin.connector); }
 function matches(pin) { const text = [pin.number, pin.name, pin.physicalLabel, pin.boardLabel, pin.mcuPort, pin.arduinoPin !== undefined ? `D${pin.arduinoPin}` : '', ...pin.functions.flatMap(f => [f.name,f.signal]), assignments[pin.number]?.label].join(' ').toLowerCase(); return text.includes(search.toLowerCase().trim()) && (!filters.size || (!pin.hardwareBlocked && pin.functions.some(f => filters.has(f.group)))); }
 async function setBoard(id, initial = false, preferredProfile,preferredHardware) {
- invalidateSuggestions();
+ invalidateSuggestions();setLinkNotice();
  const next = resolveProfile(layouts, id, preferredProfile);
  const sequence=++navigationSequence, wasHome=currentView==='home';
  if(!initial){
@@ -170,6 +178,7 @@ function renderBoard() {
  $('#crumb').textContent = board.shortName || board.name;
  $('#board-family').textContent = entry?.familyName || board.family;
  $('#datasheet').href = board.datasheet;
+ $('#static-page').href = new URL(`${document.documentElement.lang==='tr'?'tr/':''}boards/${board.id}/`, appBase).href;
  $('#reference-link').href = board.source;
  $('#reference-link').innerHTML = `${t('officialSource')} <span>↗</span>`;
  $('#pin-count').textContent = t('pinCount', { count: board.packagePins });
@@ -884,6 +893,7 @@ function showWorkspaceView() {
 }
 
 function renderHome() {
+  $('#static-index-link').href = new URL(`${document.documentElement.lang==='tr'?'tr/':''}boards/`, appBase).href;
   renderHomeStats();
   renderHomeFilterChips();
   renderHomeFeatured();
@@ -997,6 +1007,7 @@ $('#save-incoming-plan').addEventListener('click',async()=>{
 
 async function loadHash() {
   const hash = location.hash.slice(1);
+  setLinkNotice();
   if (!hash || hash === 'home') {
     ++navigationSequence;dataState='ready';
     if (!layout) {
@@ -1011,12 +1022,27 @@ async function loadHash() {
   const searchParams = new URLSearchParams(location.search);
   const queryParam = searchParams.get('q') || searchParams.get('highlight') || params.get('q') || params.get('highlight');
   const pin = params.get('pin');
-  let target = params.get('board'), payload;
+  let target = params.get('board'), profileTarget = params.get('profile'), payload, unknownName;
+  if ((target || profileTarget) && !params.has('plan')) {
+    const link = resolveLinkTarget(layouts, {board:target, profile:profileTarget});
+    if (!link.layout) {
+      ++navigationSequence;dataState='ready';
+      if (!layout) {
+        const next = resolveProfile(layouts, layouts[0].id);
+        layout = next.layout; board = next.profile;
+      }
+      showHomeView();
+      renderDataState();
+      setLinkNotice({key:'unknownBoardLink',values:{name:link.unknown}});
+      return;
+    }
+    target = link.layout; profileTarget = link.profile; unknownName = link.unknown;
+  }
   if (!target && !params.has('plan')) {
     const directMatch = queryParam && boards.find(b => b.id.toLowerCase() === queryParam.toLowerCase() || b.name.toLowerCase() === queryParam.toLowerCase());
     if (directMatch) {
-      target = directMatch.layout;
-      params.set('profile', directMatch.id);
+      target = directMatch.id;
+      profileTarget = directMatch.id;
     } else {
       ++navigationSequence;dataState='ready';
       if (!layout) {
@@ -1047,7 +1073,14 @@ async function loadHash() {
       toast(t('shareFailed', { error: error.message }));
     }
   }
-  if(!await setBoard(target || layouts[0].id, true, payload ? payload.target.id : params.get('profile')))return;
+  if(!await setBoard(target || layouts[0].id, true, payload ? payload.target.id : profileTarget))return;
+  if (unknownName) setLinkNotice({key:'unknownProfileLink',values:{name:unknownName,board:board.name}});
+  // Keep the address on the one canonical form, whatever shape the link arrived in.
+  if (!params.has('plan') && (params.get('board') !== layout.id || params.get('profile') !== board.id)) {
+    const canonical = new URLSearchParams({board:layout.id, profile:board.id});
+    for (const [key, value] of params) if (!canonical.has(key)) canonical.append(key, value);
+    history.replaceState(null, '', `#${canonical}`);
+  }
   if(payload)try{payload=decodePlanPayload(payload.raw,payload.target,savedHardware(payload.target),t);}
   catch(error){toast(t('shareFailed',{error:error.message}));payload=undefined;}
   if (pin && pinByNumber(pin)) { choosePin(pin, false); revealMapPin(undefined,false); }
@@ -1059,7 +1092,14 @@ async function loadHash() {
   }
   if (payload) previewPlan(payload,pin);
   else if (previewDialog.open) previewDialog.close();
-  if (queryParam) {
+  // A query that only repeats the board's name is how older search links named the board, not a pin filter.
+  const namesBoard = [board.id, board.name, board.shortName].some(name => name && name.toLowerCase() === queryParam?.trim().toLowerCase());
+  if (namesBoard && location.search) {
+    const address = new URL(location.href);
+    for (const key of ['q','highlight']) if (address.searchParams.get(key)?.trim().toLowerCase() === queryParam.trim().toLowerCase()) address.searchParams.delete(key);
+    history.replaceState(null, '', address);
+  }
+  if (queryParam && !namesBoard) {
     search = queryParam;
     if ($('#pin-search')) $('#pin-search').value = queryParam;
     renderMap();
@@ -1322,7 +1362,7 @@ $('#home-catalog-container')?.addEventListener('click', e => {
   if (card) openLayout(card.dataset.layout, card.dataset.profile);
 });
 window.addEventListener('zaryob:language', () => {
-  renderDataState();
+  renderDataState();renderLinkNotice();
   if (dataState !== 'ready') return;
   if (currentView === 'home') renderHome();
   if ($('#library-dialog').open) renderCatalog();

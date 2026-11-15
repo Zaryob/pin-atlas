@@ -149,3 +149,15 @@ export function resolveProfile(layouts, id, preferredProfile) {
     : id !== layout.id && layout.profileIds.includes(id) ? id : layout.defaultProfile;
   return {layout, profile: layout.profiles.find(profile => profile.id === profileId)};
 }
+
+// A link may name a layout, a profile, or both. A known profile decides, so a link
+// carrying only `profile` (or a stale `board`) still opens that exact profile.
+// `unknown` is the name that matched nothing; without `layout` nothing could be opened.
+export function resolveLinkTarget(layouts, {board, profile} = {}) {
+  const owner = id => id ? layouts.find(layout => layout.profileIds.includes(id)) : undefined;
+  if (owner(profile)) return {layout: owner(profile).id, profile};
+  const layout = layouts.find(item => item.id === board);
+  if (layout) return {layout: layout.id, ...(profile ? {unknown: profile} : {})};
+  if (owner(board)) return {layout: owner(board).id, profile: board, ...(profile ? {unknown: profile} : {})};
+  return {unknown: profile || board || ''};
+}

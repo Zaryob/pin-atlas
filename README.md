@@ -140,7 +140,7 @@ npm run check
 
 `--write` regenerates `boards.json`, `evidence.json`, and `verification.json` in `public/data/` and the pin-by-pin CSV in `sources/`. When changing a document revision, review the manufacturer document and update its hash and any affected visual observations.
 
-`npm run build:data` generates the small runtime catalog and profile/evidence bundles after validating full shared geometry. `npm run check` verifies that these files match the source dataset. The separate [weekly source audit](.github/workflows/source-audit.yml) cold-downloads recorded URLs and checks their hashes, keeping external CDN availability out of the deployment path.
+`npm run build:data` generates the small runtime catalog and profile/evidence bundles after validating full shared geometry. It also generates the crawlable pinout pages under `public/boards/` (English) and `public/tr/boards/` (Turkish), `public/sitemap.xml` and `public/search.json` from the same data; these are committed like `public/data/`, because the deployment job runs only Jekyll. Do not edit them by hand. `npm run check` verifies that these files match the source dataset. The separate [weekly source audit](.github/workflows/source-audit.yml) cold-downloads recorded URLs and checks their hashes, keeping external CDN availability out of the deployment path.
 
 ## Add a board
 

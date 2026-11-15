@@ -46,4 +46,28 @@ if site_root.is_dir() and (site_root / 'index.html').is_file():
                 assert target.exists(), f'Missing asset in _site: {value}'
     Check().feed(index_text)
 
+    # Generated pinout pages link with relative paths; resolve them from each page's own folder.
+    class PageCheck(HTMLParser):
+        def __init__(self, page):
+            super().__init__()
+            self.page = page
+        def handle_starttag(self, tag, attrs):
+            attrs = dict(attrs)
+            for attribute in ('src', 'href'):
+                value = attrs.get(attribute, '')
+                if not value or value.startswith(('#', 'data:')) or urlsplit(value).scheme:
+                    continue
+                path_str = unquote(urlsplit(value).path)
+                if path_str.startswith('/'):
+                    target = site_root / path_str.lstrip('/').removeprefix('pin-atlas/')
+                else:
+                    target = (self.page.parent / path_str).resolve()
+                assert target.exists() and site_root.resolve() in [target, *target.parents], f'Missing target in {self.page}: {value}'
+    pages = [*site_root.glob('boards/**/index.html'), *site_root.glob('tr/boards/**/index.html')]
+    assert len(pages) >= 4, 'Missing generated pinout pages; run npm run build:data'
+    for page in pages:
+        text = page.read_text()
+        assert not text.startswith('---'), f'Unprocessed Jekyll front matter: {page}'
+        PageCheck(page).feed(text)
+
 print('Static entry point, bundled fonts and module-relative data paths checked for /pin-atlas/.')
