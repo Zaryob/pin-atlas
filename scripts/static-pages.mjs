@@ -161,7 +161,7 @@ function indexPage({site,language,t,catalog,totals}) {
   const title = t('staticIndexTitle'), description = t('staticIndexDescription',{count:catalog.length,pins:totals.pins.toLocaleString('en-US')});
   const groups = boardFamilies.map(family => {
     const entries = catalog.filter(entry => entry.family === family.id);
-    return `<section class="static-section" aria-labelledby="family-${family.id}"><h2 id="family-${family.id}">${esc(t(family.nameKey))} <small>${entries.length}</small></h2><ul class="static-index">${entries.map(entry => `<li><a href="${esc(entry.profile)}/">${esc(entry.name)}</a><small>${esc([entry.detail,entry.specs].filter(Boolean).join(' · '))}</small></li>`).join('')}</ul></section>`;
+    return `<section class="static-section" aria-labelledby="family-${family.id}"><h2 id="family-${family.id}">${esc(t(family.nameKey))} <small>${entries.length}</small></h2><ul class="static-index">${entries.map(entry => `<li><a href="${esc(entry.profile)}/">${esc(entry.name)}</a><small>${esc([...new Set([entry.detail,entry.specs].filter(Boolean).join(' · ').split(' · '))].join(' · '))}</small></li>`).join('')}</ul></section>`;
   }).join('\n');
   const body = `<main id="main" class="static-main" lang="${language}">
 <nav class="static-crumbs" aria-label="${esc(t('staticBreadcrumb'))}"><a href="${prefix}">Pin Atlas</a><span aria-hidden="true">/</span><span>${esc(t('staticBoards'))}</span></nav>
