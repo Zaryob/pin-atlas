@@ -336,7 +336,7 @@ function renderQfn(profile = board, activePin = selected, contactsByPad = new Ma
 function renderCustom() {
  const {width,height,artwork} = board.diagram;
  const image = /^(?:\.\/|\/)?assets\/[a-zA-Z0-9_./-]+\.svg$/.test(artwork || '') ? `<image href="${esc(new URL(artwork.replace(/^\//,''), appBase).href)}" width="${width}" height="${height}"/>` : '';
- const showConnectorLabel = board.id.startsWith('nucleo-');
+ const showConnectorLabel = board.id.startsWith('nucleo-') || board.diagram.connectorStyle === true;
  const selectedPin = pinByNumber(selected);
  const connected = new Set(selectedPin.sharedWith || []);
  if (selectedPin.mcuPin) {

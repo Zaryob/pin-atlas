@@ -103634,7 +103634,7 @@
     "wireless": true,
     "diagram": {
       "width": 820,
-      "height": 580,
+      "height": 720,
       "artwork": "assets/boards/raspberry-pi-rm2.svg"
     },
     "orientation": "usb-bottom",
@@ -103805,7 +103805,7 @@
         "number": 8,
         "physicalLabel": "Pin 8",
         "connector": "BOTTOM",
-        "connectorPin": 1,
+        "connectorPin": 8,
         "name": "GPIO0",
         "boardLabel": "GPIO0",
         "type": "GPIO",
@@ -103824,7 +103824,8 @@
         "position": {
           "x": 305,
           "y": 452,
-          "side": "left"
+          "side": "right",
+          "angle": 90
         },
         "noteKey": "rm2Gpio0Note"
       },
@@ -103832,7 +103833,7 @@
         "number": 9,
         "physicalLabel": "Pin 9",
         "connector": "BOTTOM",
-        "connectorPin": 2,
+        "connectorPin": 9,
         "name": "gSPI_CS",
         "boardLabel": "CS",
         "type": "SYSTEM",
@@ -103851,7 +103852,8 @@
         "position": {
           "x": 345,
           "y": 452,
-          "side": "left"
+          "side": "right",
+          "angle": 90
         },
         "noteKey": "rm2CsNote"
       },
@@ -103859,7 +103861,7 @@
         "number": 10,
         "physicalLabel": "Pin 10",
         "connector": "BOTTOM",
-        "connectorPin": 3,
+        "connectorPin": 10,
         "name": "nIRQ",
         "boardLabel": "nIRQ",
         "type": "SYSTEM",
@@ -103878,7 +103880,8 @@
         "position": {
           "x": 385,
           "y": 452,
-          "side": "left"
+          "side": "right",
+          "angle": 90
         },
         "noteKey": "rm2IrqNote",
         "boardCircuitKey": "rm2IrqCircuit"
@@ -103887,7 +103890,7 @@
         "number": 11,
         "physicalLabel": "Pin 11",
         "connector": "BOTTOM",
-        "connectorPin": 4,
+        "connectorPin": 11,
         "name": "GND",
         "boardLabel": "GND",
         "type": "GND",
@@ -103899,14 +103902,15 @@
         "position": {
           "x": 425,
           "y": 452,
-          "side": "right"
+          "side": "right",
+          "angle": 90
         }
       },
       {
         "number": 12,
         "physicalLabel": "Pin 12",
         "connector": "BOTTOM",
-        "connectorPin": 5,
+        "connectorPin": 12,
         "name": "WL_REG_ON",
         "boardLabel": "WL_ON",
         "type": "SYSTEM",
@@ -103925,7 +103929,8 @@
         "position": {
           "x": 465,
           "y": 452,
-          "side": "right"
+          "side": "right",
+          "angle": 90
         },
         "noteKey": "rm2WlOnNote"
       },
@@ -103933,7 +103938,7 @@
         "number": 13,
         "physicalLabel": "Pin 13",
         "connector": "BOTTOM",
-        "connectorPin": 6,
+        "connectorPin": 13,
         "name": "BT_REG_ON",
         "boardLabel": "BT_ON",
         "type": "SYSTEM",
@@ -103952,7 +103957,8 @@
         "position": {
           "x": 505,
           "y": 452,
-          "side": "right"
+          "side": "right",
+          "angle": 90
         },
         "noteKey": "rm2BtOnNote"
       },
@@ -103960,7 +103966,7 @@
         "number": 14,
         "physicalLabel": "Pin 14",
         "connector": "BOTTOM",
-        "connectorPin": 7,
+        "connectorPin": 14,
         "name": "VDDIO",
         "boardLabel": "VDDIO",
         "type": "POWER",
@@ -103972,7 +103978,8 @@
         "position": {
           "x": 545,
           "y": 452,
-          "side": "right"
+          "side": "right",
+          "angle": 90
         },
         "noteKey": "rm2VddioNote"
       },
@@ -103980,7 +103987,7 @@
         "number": 15,
         "physicalLabel": "Pin 15",
         "connector": "RIGHT",
-        "connectorPin": 1,
+        "connectorPin": 15,
         "name": "GND",
         "boardLabel": "GND",
         "type": "GND",
@@ -103999,7 +104006,7 @@
         "number": 16,
         "physicalLabel": "Pin 16",
         "connector": "RIGHT",
-        "connectorPin": 2,
+        "connectorPin": 16,
         "name": "VIN",
         "boardLabel": "VIN",
         "type": "POWER",
@@ -104019,7 +104026,7 @@
         "number": 17,
         "physicalLabel": "Pin 17",
         "connector": "RIGHT",
-        "connectorPin": 3,
+        "connectorPin": 17,
         "name": "GPIO2",
         "boardLabel": "GPIO2",
         "type": "GPIO",
@@ -104046,7 +104053,7 @@
         "number": 18,
         "physicalLabel": "Pin 18",
         "connector": "RIGHT",
-        "connectorPin": 4,
+        "connectorPin": 18,
         "name": "GPIO1",
         "boardLabel": "GPIO1",
         "type": "GPIO",
@@ -104073,7 +104080,7 @@
         "number": 19,
         "physicalLabel": "Pin 19",
         "connector": "RIGHT",
-        "connectorPin": 5,
+        "connectorPin": 19,
         "name": "NC",
         "boardLabel": "NC",
         "type": "SYSTEM",
@@ -104093,7 +104100,7 @@
         "number": 20,
         "physicalLabel": "Pin 20",
         "connector": "RIGHT",
-        "connectorPin": 6,
+        "connectorPin": 20,
         "name": "NC",
         "boardLabel": "NC",
         "type": "SYSTEM",
@@ -104113,7 +104120,7 @@
         "number": 21,
         "physicalLabel": "Pin 21",
         "connector": "RIGHT",
-        "connectorPin": 7,
+        "connectorPin": 21,
         "name": "GND",
         "boardLabel": "GND",
         "type": "GND",
@@ -104149,8 +104156,10 @@
     "processor": "Broadcom BCM2711 (4 × Arm Cortex-A72 @ 1.5 GHz)",
     "clock": "1.5 GHz",
     "diagram": {
-      "width": 920,
-      "height": 780,
+      "width": 1160,
+      "height": 1380,
+      "minWidth": 1000,
+      "connectorStyle": true,
       "artwork": "assets/boards/compute-module-4-5.svg"
     },
     "orientation": "usb-bottom",
@@ -104186,8 +104195,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 236,
-          "y": 96.0,
+          "x": 270,
+          "y": 140,
           "side": "left"
         }
       },
@@ -104205,9 +104214,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 284,
-          "y": 96.0,
-          "side": "left"
+          "x": 310,
+          "y": 140,
+          "side": "right"
         }
       },
       {
@@ -104231,8 +104240,8 @@
         ],
         "net": "Ethernet_Pair3_P",
         "position": {
-          "x": 236,
-          "y": 107.6,
+          "x": 270,
+          "y": 164,
           "side": "left"
         }
       },
@@ -104257,9 +104266,9 @@
         ],
         "net": "Ethernet_Pair1_P",
         "position": {
-          "x": 284,
-          "y": 107.6,
-          "side": "left"
+          "x": 310,
+          "y": 164,
+          "side": "right"
         }
       },
       {
@@ -104283,8 +104292,8 @@
         ],
         "net": "Ethernet_Pair3_N",
         "position": {
-          "x": 236,
-          "y": 119.2,
+          "x": 270,
+          "y": 188,
           "side": "left"
         }
       },
@@ -104309,9 +104318,9 @@
         ],
         "net": "Ethernet_Pair1_N",
         "position": {
-          "x": 284,
-          "y": 119.2,
-          "side": "left"
+          "x": 310,
+          "y": 188,
+          "side": "right"
         }
       },
       {
@@ -104328,8 +104337,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 236,
-          "y": 130.8,
+          "x": 270,
+          "y": 212,
           "side": "left"
         }
       },
@@ -104347,9 +104356,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 284,
-          "y": 130.8,
-          "side": "left"
+          "x": 310,
+          "y": 212,
+          "side": "right"
         }
       },
       {
@@ -104373,8 +104382,8 @@
         ],
         "net": "Ethernet_Pair2_N",
         "position": {
-          "x": 236,
-          "y": 142.4,
+          "x": 270,
+          "y": 236,
           "side": "left"
         }
       },
@@ -104399,9 +104408,9 @@
         ],
         "net": "Ethernet_Pair0_N",
         "position": {
-          "x": 284,
-          "y": 142.4,
-          "side": "left"
+          "x": 310,
+          "y": 236,
+          "side": "right"
         }
       },
       {
@@ -104425,8 +104434,8 @@
         ],
         "net": "Ethernet_Pair2_P",
         "position": {
-          "x": 236,
-          "y": 154.0,
+          "x": 270,
+          "y": 260,
           "side": "left"
         }
       },
@@ -104451,9 +104460,9 @@
         ],
         "net": "Ethernet_Pair0_P",
         "position": {
-          "x": 284,
-          "y": 154.0,
-          "side": "left"
+          "x": 310,
+          "y": 260,
+          "side": "right"
         }
       },
       {
@@ -104470,8 +104479,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 236,
-          "y": 165.6,
+          "x": 270,
+          "y": 284,
           "side": "left"
         }
       },
@@ -104489,9 +104498,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 284,
-          "y": 165.6,
-          "side": "left"
+          "x": 310,
+          "y": 284,
+          "side": "right"
         }
       },
       {
@@ -104515,8 +104524,8 @@
         ],
         "net": "Ethernet_nLED3",
         "position": {
-          "x": 236,
-          "y": 177.2,
+          "x": 270,
+          "y": 308,
           "side": "left"
         }
       },
@@ -104541,9 +104550,9 @@
         ],
         "net": "Ethernet_SYNC_IN",
         "position": {
-          "x": 284,
-          "y": 177.2,
-          "side": "left"
+          "x": 310,
+          "y": 308,
+          "side": "right"
         }
       },
       {
@@ -104567,8 +104576,8 @@
         ],
         "net": "Ethernet_nLED2",
         "position": {
-          "x": 236,
-          "y": 188.8,
+          "x": 270,
+          "y": 332,
           "side": "left"
         }
       },
@@ -104593,9 +104602,9 @@
         ],
         "net": "Ethernet_SYNC_OUT",
         "position": {
-          "x": 284,
-          "y": 188.8,
-          "side": "left"
+          "x": 310,
+          "y": 332,
+          "side": "right"
         }
       },
       {
@@ -104619,8 +104628,8 @@
         ],
         "net": "Ethernet_nLED1",
         "position": {
-          "x": 236,
-          "y": 200.4,
+          "x": 270,
+          "y": 356,
           "side": "left"
         }
       },
@@ -104645,9 +104654,9 @@
         ],
         "net": "EEPROM_nWP",
         "position": {
-          "x": 284,
-          "y": 200.4,
-          "side": "left"
+          "x": 310,
+          "y": 356,
+          "side": "right"
         }
       },
       {
@@ -104671,8 +104680,8 @@
         ],
         "net": "Pi_nLED_Activity",
         "position": {
-          "x": 236,
-          "y": 212.0,
+          "x": 270,
+          "y": 380,
           "side": "left"
         }
       },
@@ -104690,9 +104699,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 284,
-          "y": 212.0,
-          "side": "left"
+          "x": 310,
+          "y": 380,
+          "side": "right"
         }
       },
       {
@@ -104709,8 +104718,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 236,
-          "y": 223.6,
+          "x": 270,
+          "y": 404,
           "side": "left"
         }
       },
@@ -104769,9 +104778,9 @@
         ],
         "net": "GPIO26",
         "position": {
-          "x": 284,
-          "y": 223.6,
-          "side": "left"
+          "x": 310,
+          "y": 404,
+          "side": "right"
         }
       },
       {
@@ -104837,8 +104846,8 @@
         ],
         "net": "GPIO21",
         "position": {
-          "x": 236,
-          "y": 235.2,
+          "x": 270,
+          "y": 428,
           "side": "left"
         }
       },
@@ -104905,9 +104914,9 @@
         ],
         "net": "GPIO19",
         "position": {
-          "x": 284,
-          "y": 235.2,
-          "side": "left"
+          "x": 310,
+          "y": 428,
+          "side": "right"
         }
       },
       {
@@ -104973,8 +104982,8 @@
         ],
         "net": "GPIO20",
         "position": {
-          "x": 236,
-          "y": 246.8,
+          "x": 270,
+          "y": 452,
           "side": "left"
         }
       },
@@ -105041,9 +105050,9 @@
         ],
         "net": "GPIO13",
         "position": {
-          "x": 284,
-          "y": 246.8,
-          "side": "left"
+          "x": 310,
+          "y": 452,
+          "side": "right"
         }
       },
       {
@@ -105101,8 +105110,8 @@
         ],
         "net": "GPIO16",
         "position": {
-          "x": 236,
-          "y": 258.4,
+          "x": 270,
+          "y": 476,
           "side": "left"
         }
       },
@@ -105169,9 +105178,9 @@
         ],
         "net": "GPIO6",
         "position": {
-          "x": 284,
-          "y": 258.4,
-          "side": "left"
+          "x": 310,
+          "y": 476,
+          "side": "right"
         }
       },
       {
@@ -105237,8 +105246,8 @@
         ],
         "net": "GPIO12",
         "position": {
-          "x": 236,
-          "y": 270.0,
+          "x": 270,
+          "y": 500,
           "side": "left"
         }
       },
@@ -105256,9 +105265,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 284,
-          "y": 270.0,
-          "side": "left"
+          "x": 310,
+          "y": 500,
+          "side": "right"
         }
       },
       {
@@ -105275,8 +105284,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 236,
-          "y": 281.6,
+          "x": 270,
+          "y": 524,
           "side": "left"
         }
       },
@@ -105343,9 +105352,9 @@
         ],
         "net": "GPIO5",
         "position": {
-          "x": 284,
-          "y": 281.6,
-          "side": "left"
+          "x": 310,
+          "y": 524,
+          "side": "right"
         }
       },
       {
@@ -105411,8 +105420,8 @@
         ],
         "net": "ID_SC",
         "position": {
-          "x": 236,
-          "y": 293.2,
+          "x": 270,
+          "y": 548,
           "side": "left"
         }
       },
@@ -105479,9 +105488,9 @@
         ],
         "net": "ID_SD",
         "position": {
-          "x": 284,
-          "y": 293.2,
-          "side": "left"
+          "x": 310,
+          "y": 548,
+          "side": "right"
         }
       },
       {
@@ -105547,8 +105556,8 @@
         ],
         "net": "GPIO7",
         "position": {
-          "x": 236,
-          "y": 304.8,
+          "x": 270,
+          "y": 572,
           "side": "left"
         }
       },
@@ -105615,9 +105624,9 @@
         ],
         "net": "GPIO11",
         "position": {
-          "x": 284,
-          "y": 304.8,
-          "side": "left"
+          "x": 310,
+          "y": 572,
+          "side": "right"
         }
       },
       {
@@ -105683,8 +105692,8 @@
         ],
         "net": "GPIO8",
         "position": {
-          "x": 236,
-          "y": 316.4,
+          "x": 270,
+          "y": 596,
           "side": "left"
         }
       },
@@ -105751,9 +105760,9 @@
         ],
         "net": "GPIO9",
         "position": {
-          "x": 284,
-          "y": 316.4,
-          "side": "left"
+          "x": 310,
+          "y": 596,
+          "side": "right"
         }
       },
       {
@@ -105819,8 +105828,8 @@
         ],
         "net": "GPIO25",
         "position": {
-          "x": 236,
-          "y": 328.0,
+          "x": 270,
+          "y": 620,
           "side": "left"
         }
       },
@@ -105838,9 +105847,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 284,
-          "y": 328.0,
-          "side": "left"
+          "x": 310,
+          "y": 620,
+          "side": "right"
         }
       },
       {
@@ -105857,8 +105866,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 236,
-          "y": 339.6,
+          "x": 270,
+          "y": 644,
           "side": "left"
         }
       },
@@ -105925,9 +105934,9 @@
         ],
         "net": "GPIO10",
         "position": {
-          "x": 284,
-          "y": 339.6,
-          "side": "left"
+          "x": 310,
+          "y": 644,
+          "side": "right"
         }
       },
       {
@@ -105993,8 +106002,8 @@
         ],
         "net": "GPIO24",
         "position": {
-          "x": 236,
-          "y": 351.2,
+          "x": 270,
+          "y": 668,
           "side": "left"
         }
       },
@@ -106061,9 +106070,9 @@
         ],
         "net": "GPIO22",
         "position": {
-          "x": 284,
-          "y": 351.2,
-          "side": "left"
+          "x": 310,
+          "y": 668,
+          "side": "right"
         }
       },
       {
@@ -106129,8 +106138,8 @@
         ],
         "net": "GPIO23",
         "position": {
-          "x": 236,
-          "y": 362.8,
+          "x": 270,
+          "y": 692,
           "side": "left"
         }
       },
@@ -106189,9 +106198,9 @@
         ],
         "net": "GPIO27",
         "position": {
-          "x": 284,
-          "y": 362.8,
-          "side": "left"
+          "x": 310,
+          "y": 692,
+          "side": "right"
         }
       },
       {
@@ -106257,8 +106266,8 @@
         ],
         "net": "GPIO18",
         "position": {
-          "x": 236,
-          "y": 374.4,
+          "x": 270,
+          "y": 716,
           "side": "left"
         }
       },
@@ -106317,9 +106326,9 @@
         ],
         "net": "GPIO17",
         "position": {
-          "x": 284,
-          "y": 374.4,
-          "side": "left"
+          "x": 310,
+          "y": 716,
+          "side": "right"
         }
       },
       {
@@ -106385,8 +106394,8 @@
         ],
         "net": "GPIO15",
         "position": {
-          "x": 236,
-          "y": 386.0,
+          "x": 270,
+          "y": 740,
           "side": "left"
         }
       },
@@ -106404,9 +106413,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 284,
-          "y": 386.0,
-          "side": "left"
+          "x": 310,
+          "y": 740,
+          "side": "right"
         }
       },
       {
@@ -106423,8 +106432,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 236,
-          "y": 397.6,
+          "x": 270,
+          "y": 764,
           "side": "left"
         }
       },
@@ -106491,9 +106500,9 @@
         ],
         "net": "GPIO4",
         "position": {
-          "x": 284,
-          "y": 397.6,
-          "side": "left"
+          "x": 310,
+          "y": 764,
+          "side": "right"
         }
       },
       {
@@ -106559,8 +106568,8 @@
         ],
         "net": "GPIO14",
         "position": {
-          "x": 236,
-          "y": 409.2,
+          "x": 270,
+          "y": 788,
           "side": "left"
         }
       },
@@ -106627,9 +106636,9 @@
         ],
         "net": "GPIO3",
         "position": {
-          "x": 284,
-          "y": 409.2,
-          "side": "left"
+          "x": 310,
+          "y": 788,
+          "side": "right"
         }
       },
       {
@@ -106653,8 +106662,8 @@
         ],
         "net": "SD_CLK",
         "position": {
-          "x": 236,
-          "y": 420.8,
+          "x": 270,
+          "y": 812,
           "side": "left"
         }
       },
@@ -106721,9 +106730,9 @@
         ],
         "net": "GPIO2",
         "position": {
-          "x": 284,
-          "y": 420.8,
-          "side": "left"
+          "x": 310,
+          "y": 812,
+          "side": "right"
         }
       },
       {
@@ -106740,8 +106749,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 236,
-          "y": 432.4,
+          "x": 270,
+          "y": 836,
           "side": "left"
         }
       },
@@ -106759,9 +106768,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 284,
-          "y": 432.4,
-          "side": "left"
+          "x": 310,
+          "y": 836,
+          "side": "right"
         }
       },
       {
@@ -106785,8 +106794,8 @@
         ],
         "net": "SD_DAT3",
         "position": {
-          "x": 236,
-          "y": 444.0,
+          "x": 270,
+          "y": 860,
           "side": "left"
         }
       },
@@ -106811,9 +106820,9 @@
         ],
         "net": "SD_CMD",
         "position": {
-          "x": 284,
-          "y": 444.0,
-          "side": "left"
+          "x": 310,
+          "y": 860,
+          "side": "right"
         }
       },
       {
@@ -106837,8 +106846,8 @@
         ],
         "net": "SD_DAT0",
         "position": {
-          "x": 236,
-          "y": 455.6,
+          "x": 270,
+          "y": 884,
           "side": "left"
         }
       },
@@ -106863,9 +106872,9 @@
         ],
         "net": "SD_DAT5",
         "position": {
-          "x": 284,
-          "y": 455.6,
-          "side": "left"
+          "x": 310,
+          "y": 884,
+          "side": "right"
         }
       },
       {
@@ -106882,8 +106891,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 236,
-          "y": 467.2,
+          "x": 270,
+          "y": 908,
           "side": "left"
         }
       },
@@ -106901,9 +106910,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 284,
-          "y": 467.2,
-          "side": "left"
+          "x": 310,
+          "y": 908,
+          "side": "right"
         }
       },
       {
@@ -106927,8 +106936,8 @@
         ],
         "net": "SD_DAT1",
         "position": {
-          "x": 236,
-          "y": 478.8,
+          "x": 270,
+          "y": 932,
           "side": "left"
         }
       },
@@ -106953,9 +106962,9 @@
         ],
         "net": "SD_DAT4",
         "position": {
-          "x": 284,
-          "y": 478.8,
-          "side": "left"
+          "x": 310,
+          "y": 932,
+          "side": "right"
         }
       },
       {
@@ -106979,8 +106988,8 @@
         ],
         "net": "SD_DAT2",
         "position": {
-          "x": 236,
-          "y": 490.4,
+          "x": 270,
+          "y": 956,
           "side": "left"
         }
       },
@@ -107005,9 +107014,9 @@
         ],
         "net": "SD_DAT7",
         "position": {
-          "x": 284,
-          "y": 490.4,
-          "side": "left"
+          "x": 310,
+          "y": 956,
+          "side": "right"
         }
       },
       {
@@ -107024,8 +107033,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 236,
-          "y": 502.0,
+          "x": 270,
+          "y": 980,
           "side": "left"
         }
       },
@@ -107050,9 +107059,9 @@
         ],
         "net": "SD_DAT6",
         "position": {
-          "x": 284,
-          "y": 502.0,
-          "side": "left"
+          "x": 310,
+          "y": 980,
+          "side": "right"
         }
       },
       {
@@ -107076,8 +107085,8 @@
         ],
         "net": "SD_VDD_OVERRIDE",
         "position": {
-          "x": 236,
-          "y": 513.6,
+          "x": 270,
+          "y": 1004,
           "side": "left"
         }
       },
@@ -107095,9 +107104,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 284,
-          "y": 513.6,
-          "side": "left"
+          "x": 310,
+          "y": 1004,
+          "side": "right"
         }
       },
       {
@@ -107121,8 +107130,8 @@
         ],
         "net": "SD_PWR_ON",
         "position": {
-          "x": 236,
-          "y": 525.2,
+          "x": 270,
+          "y": 1028,
           "side": "left"
         }
       },
@@ -107147,9 +107156,9 @@
         ],
         "net": "Reserved",
         "position": {
-          "x": 284,
-          "y": 525.2,
-          "side": "left"
+          "x": 310,
+          "y": 1028,
+          "side": "right"
         }
       },
       {
@@ -107166,8 +107175,8 @@
         ],
         "net": "+5V (Input)",
         "position": {
-          "x": 236,
-          "y": 536.8,
+          "x": 270,
+          "y": 1052,
           "side": "left"
         }
       },
@@ -107185,9 +107194,9 @@
         ],
         "net": "GPIO_VREF",
         "position": {
-          "x": 284,
-          "y": 536.8,
-          "side": "left"
+          "x": 310,
+          "y": 1052,
+          "side": "right"
         }
       },
       {
@@ -107204,8 +107213,8 @@
         ],
         "net": "+5V (Input)",
         "position": {
-          "x": 236,
-          "y": 548.4,
+          "x": 270,
+          "y": 1076,
           "side": "left"
         }
       },
@@ -107230,9 +107239,9 @@
         ],
         "net": "SCL0",
         "position": {
-          "x": 284,
-          "y": 548.4,
-          "side": "left"
+          "x": 310,
+          "y": 1076,
+          "side": "right"
         }
       },
       {
@@ -107249,8 +107258,8 @@
         ],
         "net": "+5V (Input)",
         "position": {
-          "x": 236,
-          "y": 560.0,
+          "x": 270,
+          "y": 1100,
           "side": "left"
         }
       },
@@ -107275,9 +107284,9 @@
         ],
         "net": "SDA0",
         "position": {
-          "x": 284,
-          "y": 560.0,
-          "side": "left"
+          "x": 310,
+          "y": 1100,
+          "side": "right"
         }
       },
       {
@@ -107294,8 +107303,8 @@
         ],
         "net": "+5V (Input)",
         "position": {
-          "x": 236,
-          "y": 571.6,
+          "x": 270,
+          "y": 1124,
           "side": "left"
         }
       },
@@ -107313,9 +107322,9 @@
         ],
         "net": "CM4_3.3V (Output)",
         "position": {
-          "x": 284,
-          "y": 571.6,
-          "side": "left"
+          "x": 310,
+          "y": 1124,
+          "side": "right"
         }
       },
       {
@@ -107332,8 +107341,8 @@
         ],
         "net": "+5V (Input)",
         "position": {
-          "x": 236,
-          "y": 583.2,
+          "x": 270,
+          "y": 1148,
           "side": "left"
         }
       },
@@ -107351,9 +107360,9 @@
         ],
         "net": "CM4_3.3V (Output)",
         "position": {
-          "x": 284,
-          "y": 583.2,
-          "side": "left"
+          "x": 310,
+          "y": 1148,
+          "side": "right"
         }
       },
       {
@@ -107370,8 +107379,8 @@
         ],
         "net": "+5V (Input)",
         "position": {
-          "x": 236,
-          "y": 594.8,
+          "x": 270,
+          "y": 1172,
           "side": "left"
         }
       },
@@ -107389,9 +107398,9 @@
         ],
         "net": "CM4_1.8V (Output)",
         "position": {
-          "x": 284,
-          "y": 594.8,
-          "side": "left"
+          "x": 310,
+          "y": 1172,
+          "side": "right"
         }
       },
       {
@@ -107415,8 +107424,8 @@
         ],
         "net": "WL_nDisable",
         "position": {
-          "x": 236,
-          "y": 606.4,
+          "x": 270,
+          "y": 1196,
           "side": "left"
         }
       },
@@ -107434,9 +107443,9 @@
         ],
         "net": "CM4_1.8V (Output)",
         "position": {
-          "x": 284,
-          "y": 606.4,
-          "side": "left"
+          "x": 310,
+          "y": 1196,
+          "side": "right"
         }
       },
       {
@@ -107460,8 +107469,8 @@
         ],
         "net": "BT_nDisable",
         "position": {
-          "x": 236,
-          "y": 618.0,
+          "x": 270,
+          "y": 1220,
           "side": "left"
         }
       },
@@ -107486,9 +107495,9 @@
         ],
         "net": "RUN_PG",
         "position": {
-          "x": 284,
-          "y": 618.0,
-          "side": "left"
+          "x": 310,
+          "y": 1220,
+          "side": "right"
         }
       },
       {
@@ -107512,8 +107521,8 @@
         ],
         "net": "nRPIBOOT",
         "position": {
-          "x": 236,
-          "y": 629.6,
+          "x": 270,
+          "y": 1244,
           "side": "left"
         }
       },
@@ -107538,9 +107547,9 @@
         ],
         "net": "AnalogIP1",
         "position": {
-          "x": 284,
-          "y": 629.6,
-          "side": "left"
+          "x": 310,
+          "y": 1244,
+          "side": "right"
         }
       },
       {
@@ -107564,8 +107573,8 @@
         ],
         "net": "PI_LED_nPWR",
         "position": {
-          "x": 236,
-          "y": 641.2,
+          "x": 270,
+          "y": 1268,
           "side": "left"
         }
       },
@@ -107590,9 +107599,9 @@
         ],
         "net": "AnalogIP0",
         "position": {
-          "x": 284,
-          "y": 641.2,
-          "side": "left"
+          "x": 310,
+          "y": 1268,
+          "side": "right"
         }
       },
       {
@@ -107616,8 +107625,8 @@
         ],
         "net": "Camera_GPIO",
         "position": {
-          "x": 236,
-          "y": 652.8,
+          "x": 270,
+          "y": 1292,
           "side": "left"
         }
       },
@@ -107635,9 +107644,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 284,
-          "y": 652.8,
-          "side": "left"
+          "x": 310,
+          "y": 1292,
+          "side": "right"
         }
       },
       {
@@ -107661,8 +107670,8 @@
         ],
         "net": "GLOBAL_EN",
         "position": {
-          "x": 236,
-          "y": 664.4,
+          "x": 270,
+          "y": 1316,
           "side": "left"
         }
       },
@@ -107687,9 +107696,9 @@
         ],
         "net": "nEXTRST",
         "position": {
-          "x": 284,
-          "y": 664.4,
-          "side": "left"
+          "x": 310,
+          "y": 1316,
+          "side": "right"
         }
       },
       {
@@ -107713,9 +107722,9 @@
         ],
         "net": "USB_OTG_ID",
         "position": {
-          "x": 636,
-          "y": 96.0,
-          "side": "right"
+          "x": 850,
+          "y": 140,
+          "side": "left"
         }
       },
       {
@@ -107739,8 +107748,8 @@
         ],
         "net": "PCIe_CLK_nREQ",
         "position": {
-          "x": 684,
-          "y": 96.0,
+          "x": 890,
+          "y": 140,
           "side": "right"
         }
       },
@@ -107765,9 +107774,9 @@
         ],
         "net": "USB_N",
         "position": {
-          "x": 636,
-          "y": 107.6,
-          "side": "right"
+          "x": 850,
+          "y": 164,
+          "side": "left"
         }
       },
       {
@@ -107791,8 +107800,8 @@
         ],
         "net": "Reserved",
         "position": {
-          "x": 684,
-          "y": 107.6,
+          "x": 890,
+          "y": 164,
           "side": "right"
         }
       },
@@ -107817,9 +107826,9 @@
         ],
         "net": "USB_P",
         "position": {
-          "x": 636,
-          "y": 119.2,
-          "side": "right"
+          "x": 850,
+          "y": 188,
+          "side": "left"
         }
       },
       {
@@ -107843,8 +107852,8 @@
         ],
         "net": "Reserved",
         "position": {
-          "x": 684,
-          "y": 119.2,
+          "x": 890,
+          "y": 188,
           "side": "right"
         }
       },
@@ -107862,9 +107871,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 636,
-          "y": 130.8,
-          "side": "right"
+          "x": 850,
+          "y": 212,
+          "side": "left"
         }
       },
       {
@@ -107881,8 +107890,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 130.8,
+          "x": 890,
+          "y": 212,
           "side": "right"
         }
       },
@@ -107907,9 +107916,9 @@
         ],
         "net": "PCIe_nRST",
         "position": {
-          "x": 636,
-          "y": 142.4,
-          "side": "right"
+          "x": 850,
+          "y": 236,
+          "side": "left"
         }
       },
       {
@@ -107933,8 +107942,8 @@
         ],
         "net": "PCIe_CLK_P",
         "position": {
-          "x": 684,
-          "y": 142.4,
+          "x": 890,
+          "y": 236,
           "side": "right"
         }
       },
@@ -107959,9 +107968,9 @@
         ],
         "net": "VDAC_COMP",
         "position": {
-          "x": 636,
-          "y": 154.0,
-          "side": "right"
+          "x": 850,
+          "y": 260,
+          "side": "left"
         }
       },
       {
@@ -107985,8 +107994,8 @@
         ],
         "net": "PCIe_CLK_N",
         "position": {
-          "x": 684,
-          "y": 154.0,
+          "x": 890,
+          "y": 260,
           "side": "right"
         }
       },
@@ -108004,9 +108013,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 636,
-          "y": 165.6,
-          "side": "right"
+          "x": 850,
+          "y": 284,
+          "side": "left"
         }
       },
       {
@@ -108023,8 +108032,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 165.6,
+          "x": 890,
+          "y": 284,
           "side": "right"
         }
       },
@@ -108049,9 +108058,9 @@
         ],
         "net": "CAM1_D0_N",
         "position": {
-          "x": 636,
-          "y": 177.2,
-          "side": "right"
+          "x": 850,
+          "y": 308,
+          "side": "left"
         }
       },
       {
@@ -108075,8 +108084,8 @@
         ],
         "net": "PCIe_RX_P",
         "position": {
-          "x": 684,
-          "y": 177.2,
+          "x": 890,
+          "y": 308,
           "side": "right"
         }
       },
@@ -108101,9 +108110,9 @@
         ],
         "net": "CAM1_D0_P",
         "position": {
-          "x": 636,
-          "y": 188.8,
-          "side": "right"
+          "x": 850,
+          "y": 332,
+          "side": "left"
         }
       },
       {
@@ -108127,8 +108136,8 @@
         ],
         "net": "PCIe_RX_N",
         "position": {
-          "x": 684,
-          "y": 188.8,
+          "x": 890,
+          "y": 332,
           "side": "right"
         }
       },
@@ -108146,9 +108155,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 636,
-          "y": 200.4,
-          "side": "right"
+          "x": 850,
+          "y": 356,
+          "side": "left"
         }
       },
       {
@@ -108165,8 +108174,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 200.4,
+          "x": 890,
+          "y": 356,
           "side": "right"
         }
       },
@@ -108191,9 +108200,9 @@
         ],
         "net": "CAM1_D1_N",
         "position": {
-          "x": 636,
-          "y": 212.0,
-          "side": "right"
+          "x": 850,
+          "y": 380,
+          "side": "left"
         }
       },
       {
@@ -108217,8 +108226,8 @@
         ],
         "net": "PCIe_TX_P",
         "position": {
-          "x": 684,
-          "y": 212.0,
+          "x": 890,
+          "y": 380,
           "side": "right"
         }
       },
@@ -108243,9 +108252,9 @@
         ],
         "net": "CAM1_D1_P",
         "position": {
-          "x": 636,
-          "y": 223.6,
-          "side": "right"
+          "x": 850,
+          "y": 404,
+          "side": "left"
         }
       },
       {
@@ -108269,8 +108278,8 @@
         ],
         "net": "PCIe_TX_N",
         "position": {
-          "x": 684,
-          "y": 223.6,
+          "x": 890,
+          "y": 404,
           "side": "right"
         }
       },
@@ -108288,9 +108297,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 636,
-          "y": 235.2,
-          "side": "right"
+          "x": 850,
+          "y": 428,
+          "side": "left"
         }
       },
       {
@@ -108307,8 +108316,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 235.2,
+          "x": 890,
+          "y": 428,
           "side": "right"
         }
       },
@@ -108333,9 +108342,9 @@
         ],
         "net": "CAM1_C_N",
         "position": {
-          "x": 636,
-          "y": 246.8,
-          "side": "right"
+          "x": 850,
+          "y": 452,
+          "side": "left"
         }
       },
       {
@@ -108359,8 +108368,8 @@
         ],
         "net": "CAM0_D0_N",
         "position": {
-          "x": 684,
-          "y": 246.8,
+          "x": 890,
+          "y": 452,
           "side": "right"
         }
       },
@@ -108385,9 +108394,9 @@
         ],
         "net": "CAM1_C_P",
         "position": {
-          "x": 636,
-          "y": 258.4,
-          "side": "right"
+          "x": 850,
+          "y": 476,
+          "side": "left"
         }
       },
       {
@@ -108411,8 +108420,8 @@
         ],
         "net": "CAM0_D0_P",
         "position": {
-          "x": 684,
-          "y": 258.4,
+          "x": 890,
+          "y": 476,
           "side": "right"
         }
       },
@@ -108430,9 +108439,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 636,
-          "y": 270.0,
-          "side": "right"
+          "x": 850,
+          "y": 500,
+          "side": "left"
         }
       },
       {
@@ -108449,8 +108458,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 270.0,
+          "x": 890,
+          "y": 500,
           "side": "right"
         }
       },
@@ -108475,9 +108484,9 @@
         ],
         "net": "CAM1_D2_N",
         "position": {
-          "x": 636,
-          "y": 281.6,
-          "side": "right"
+          "x": 850,
+          "y": 524,
+          "side": "left"
         }
       },
       {
@@ -108501,8 +108510,8 @@
         ],
         "net": "CAM0_D1_N",
         "position": {
-          "x": 684,
-          "y": 281.6,
+          "x": 890,
+          "y": 524,
           "side": "right"
         }
       },
@@ -108527,9 +108536,9 @@
         ],
         "net": "CAM1_D2_P",
         "position": {
-          "x": 636,
-          "y": 293.2,
-          "side": "right"
+          "x": 850,
+          "y": 548,
+          "side": "left"
         }
       },
       {
@@ -108553,8 +108562,8 @@
         ],
         "net": "CAM0_D1_P",
         "position": {
-          "x": 684,
-          "y": 293.2,
+          "x": 890,
+          "y": 548,
           "side": "right"
         }
       },
@@ -108572,9 +108581,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 636,
-          "y": 304.8,
-          "side": "right"
+          "x": 850,
+          "y": 572,
+          "side": "left"
         }
       },
       {
@@ -108591,8 +108600,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 304.8,
+          "x": 890,
+          "y": 572,
           "side": "right"
         }
       },
@@ -108617,9 +108626,9 @@
         ],
         "net": "CAM1_D3_N",
         "position": {
-          "x": 636,
-          "y": 316.4,
-          "side": "right"
+          "x": 850,
+          "y": 596,
+          "side": "left"
         }
       },
       {
@@ -108643,8 +108652,8 @@
         ],
         "net": "CAM0_C_N",
         "position": {
-          "x": 684,
-          "y": 316.4,
+          "x": 890,
+          "y": 596,
           "side": "right"
         }
       },
@@ -108669,9 +108678,9 @@
         ],
         "net": "CAM1_D3_P",
         "position": {
-          "x": 636,
-          "y": 328.0,
-          "side": "right"
+          "x": 850,
+          "y": 620,
+          "side": "left"
         }
       },
       {
@@ -108695,8 +108704,8 @@
         ],
         "net": "CAM0_C_P",
         "position": {
-          "x": 684,
-          "y": 328.0,
+          "x": 890,
+          "y": 620,
           "side": "right"
         }
       },
@@ -108721,9 +108730,9 @@
         ],
         "net": "HDMI1_HOTPLUG",
         "position": {
-          "x": 636,
-          "y": 339.6,
-          "side": "right"
+          "x": 850,
+          "y": 644,
+          "side": "left"
         }
       },
       {
@@ -108740,8 +108749,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 339.6,
+          "x": 890,
+          "y": 644,
           "side": "right"
         }
       },
@@ -108766,9 +108775,9 @@
         ],
         "net": "HDMI1_SDA",
         "position": {
-          "x": 636,
-          "y": 351.2,
-          "side": "right"
+          "x": 850,
+          "y": 668,
+          "side": "left"
         }
       },
       {
@@ -108792,8 +108801,8 @@
         ],
         "net": "HDMI1_TX2_P",
         "position": {
-          "x": 684,
-          "y": 351.2,
+          "x": 890,
+          "y": 668,
           "side": "right"
         }
       },
@@ -108818,9 +108827,9 @@
         ],
         "net": "HDMI1_SCL",
         "position": {
-          "x": 636,
-          "y": 362.8,
-          "side": "right"
+          "x": 850,
+          "y": 692,
+          "side": "left"
         }
       },
       {
@@ -108844,8 +108853,8 @@
         ],
         "net": "HDMI1_TX2_N",
         "position": {
-          "x": 684,
-          "y": 362.8,
+          "x": 890,
+          "y": 692,
           "side": "right"
         }
       },
@@ -108870,9 +108879,9 @@
         ],
         "net": "HDMI1_CEC",
         "position": {
-          "x": 636,
-          "y": 374.4,
-          "side": "right"
+          "x": 850,
+          "y": 716,
+          "side": "left"
         }
       },
       {
@@ -108889,8 +108898,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 374.4,
+          "x": 890,
+          "y": 716,
           "side": "right"
         }
       },
@@ -108915,9 +108924,9 @@
         ],
         "net": "HDMI0_CEC",
         "position": {
-          "x": 636,
-          "y": 386.0,
-          "side": "right"
+          "x": 850,
+          "y": 740,
+          "side": "left"
         }
       },
       {
@@ -108941,8 +108950,8 @@
         ],
         "net": "HDMI1_TX1_P",
         "position": {
-          "x": 684,
-          "y": 386.0,
+          "x": 890,
+          "y": 740,
           "side": "right"
         }
       },
@@ -108967,9 +108976,9 @@
         ],
         "net": "HDMI0_HOTPLUG",
         "position": {
-          "x": 636,
-          "y": 397.6,
-          "side": "right"
+          "x": 850,
+          "y": 764,
+          "side": "left"
         }
       },
       {
@@ -108993,8 +109002,8 @@
         ],
         "net": "HDMI1_TX1_N",
         "position": {
-          "x": 684,
-          "y": 397.6,
+          "x": 890,
+          "y": 764,
           "side": "right"
         }
       },
@@ -109012,9 +109021,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 636,
-          "y": 409.2,
-          "side": "right"
+          "x": 850,
+          "y": 788,
+          "side": "left"
         }
       },
       {
@@ -109031,8 +109040,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 409.2,
+          "x": 890,
+          "y": 788,
           "side": "right"
         }
       },
@@ -109057,9 +109066,9 @@
         ],
         "net": "DSI0_D0_N",
         "position": {
-          "x": 636,
-          "y": 420.8,
-          "side": "right"
+          "x": 850,
+          "y": 812,
+          "side": "left"
         }
       },
       {
@@ -109083,8 +109092,8 @@
         ],
         "net": "HDMI1_TX0_P",
         "position": {
-          "x": 684,
-          "y": 420.8,
+          "x": 890,
+          "y": 812,
           "side": "right"
         }
       },
@@ -109109,9 +109118,9 @@
         ],
         "net": "DSI0_D0_P",
         "position": {
-          "x": 636,
-          "y": 432.4,
-          "side": "right"
+          "x": 850,
+          "y": 836,
+          "side": "left"
         }
       },
       {
@@ -109135,8 +109144,8 @@
         ],
         "net": "HDMI1_TX0_N",
         "position": {
-          "x": 684,
-          "y": 432.4,
+          "x": 890,
+          "y": 836,
           "side": "right"
         }
       },
@@ -109154,9 +109163,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 636,
-          "y": 444.0,
-          "side": "right"
+          "x": 850,
+          "y": 860,
+          "side": "left"
         }
       },
       {
@@ -109173,8 +109182,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 444.0,
+          "x": 890,
+          "y": 860,
           "side": "right"
         }
       },
@@ -109199,9 +109208,9 @@
         ],
         "net": "DSI0_D1_N",
         "position": {
-          "x": 636,
-          "y": 455.6,
-          "side": "right"
+          "x": 850,
+          "y": 884,
+          "side": "left"
         }
       },
       {
@@ -109225,8 +109234,8 @@
         ],
         "net": "HDMI1_CLK_P",
         "position": {
-          "x": 684,
-          "y": 455.6,
+          "x": 890,
+          "y": 884,
           "side": "right"
         }
       },
@@ -109251,9 +109260,9 @@
         ],
         "net": "DSI0_D1_P",
         "position": {
-          "x": 636,
-          "y": 467.2,
-          "side": "right"
+          "x": 850,
+          "y": 908,
+          "side": "left"
         }
       },
       {
@@ -109277,8 +109286,8 @@
         ],
         "net": "HDMI1_CLK_N",
         "position": {
-          "x": 684,
-          "y": 467.2,
+          "x": 890,
+          "y": 908,
           "side": "right"
         }
       },
@@ -109296,9 +109305,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 636,
-          "y": 478.8,
-          "side": "right"
+          "x": 850,
+          "y": 932,
+          "side": "left"
         }
       },
       {
@@ -109315,8 +109324,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 478.8,
+          "x": 890,
+          "y": 932,
           "side": "right"
         }
       },
@@ -109341,9 +109350,9 @@
         ],
         "net": "DSI0_C_N",
         "position": {
-          "x": 636,
-          "y": 490.4,
-          "side": "right"
+          "x": 850,
+          "y": 956,
+          "side": "left"
         }
       },
       {
@@ -109367,8 +109376,8 @@
         ],
         "net": "HDMI0_TX2_P",
         "position": {
-          "x": 684,
-          "y": 490.4,
+          "x": 890,
+          "y": 956,
           "side": "right"
         }
       },
@@ -109393,9 +109402,9 @@
         ],
         "net": "DSI0_C_P",
         "position": {
-          "x": 636,
-          "y": 502.0,
-          "side": "right"
+          "x": 850,
+          "y": 980,
+          "side": "left"
         }
       },
       {
@@ -109419,8 +109428,8 @@
         ],
         "net": "HDMI0_TX2_N",
         "position": {
-          "x": 684,
-          "y": 502.0,
+          "x": 890,
+          "y": 980,
           "side": "right"
         }
       },
@@ -109438,9 +109447,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 636,
-          "y": 513.6,
-          "side": "right"
+          "x": 850,
+          "y": 1004,
+          "side": "left"
         }
       },
       {
@@ -109457,8 +109466,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 513.6,
+          "x": 890,
+          "y": 1004,
           "side": "right"
         }
       },
@@ -109483,9 +109492,9 @@
         ],
         "net": "DSI1_D0_N",
         "position": {
-          "x": 636,
-          "y": 525.2,
-          "side": "right"
+          "x": 850,
+          "y": 1028,
+          "side": "left"
         }
       },
       {
@@ -109509,8 +109518,8 @@
         ],
         "net": "HDMI0_TX1_P",
         "position": {
-          "x": 684,
-          "y": 525.2,
+          "x": 890,
+          "y": 1028,
           "side": "right"
         }
       },
@@ -109535,9 +109544,9 @@
         ],
         "net": "DSI1_D0_P",
         "position": {
-          "x": 636,
-          "y": 536.8,
-          "side": "right"
+          "x": 850,
+          "y": 1052,
+          "side": "left"
         }
       },
       {
@@ -109561,8 +109570,8 @@
         ],
         "net": "HDMI0_TX1_N",
         "position": {
-          "x": 684,
-          "y": 536.8,
+          "x": 890,
+          "y": 1052,
           "side": "right"
         }
       },
@@ -109580,9 +109589,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 636,
-          "y": 548.4,
-          "side": "right"
+          "x": 850,
+          "y": 1076,
+          "side": "left"
         }
       },
       {
@@ -109599,8 +109608,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 548.4,
+          "x": 890,
+          "y": 1076,
           "side": "right"
         }
       },
@@ -109625,9 +109634,9 @@
         ],
         "net": "DSI1_D1_N",
         "position": {
-          "x": 636,
-          "y": 560.0,
-          "side": "right"
+          "x": 850,
+          "y": 1100,
+          "side": "left"
         }
       },
       {
@@ -109651,8 +109660,8 @@
         ],
         "net": "HDMI0_TX0_P",
         "position": {
-          "x": 684,
-          "y": 560.0,
+          "x": 890,
+          "y": 1100,
           "side": "right"
         }
       },
@@ -109677,9 +109686,9 @@
         ],
         "net": "DSI1_D1_P",
         "position": {
-          "x": 636,
-          "y": 571.6,
-          "side": "right"
+          "x": 850,
+          "y": 1124,
+          "side": "left"
         }
       },
       {
@@ -109703,8 +109712,8 @@
         ],
         "net": "HDMI0_TX0_N",
         "position": {
-          "x": 684,
-          "y": 571.6,
+          "x": 890,
+          "y": 1124,
           "side": "right"
         }
       },
@@ -109722,9 +109731,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 636,
-          "y": 583.2,
-          "side": "right"
+          "x": 850,
+          "y": 1148,
+          "side": "left"
         }
       },
       {
@@ -109741,8 +109750,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 583.2,
+          "x": 890,
+          "y": 1148,
           "side": "right"
         }
       },
@@ -109767,9 +109776,9 @@
         ],
         "net": "DSI1_C_N",
         "position": {
-          "x": 636,
-          "y": 594.8,
-          "side": "right"
+          "x": 850,
+          "y": 1172,
+          "side": "left"
         }
       },
       {
@@ -109793,8 +109802,8 @@
         ],
         "net": "HDMI0_CLK_P",
         "position": {
-          "x": 684,
-          "y": 594.8,
+          "x": 890,
+          "y": 1172,
           "side": "right"
         }
       },
@@ -109819,9 +109828,9 @@
         ],
         "net": "DSI1_C_P",
         "position": {
-          "x": 636,
-          "y": 606.4,
-          "side": "right"
+          "x": 850,
+          "y": 1196,
+          "side": "left"
         }
       },
       {
@@ -109845,8 +109854,8 @@
         ],
         "net": "HDMI0_CLK_N",
         "position": {
-          "x": 684,
-          "y": 606.4,
+          "x": 890,
+          "y": 1196,
           "side": "right"
         }
       },
@@ -109864,9 +109873,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 636,
-          "y": 618.0,
-          "side": "right"
+          "x": 850,
+          "y": 1220,
+          "side": "left"
         }
       },
       {
@@ -109883,8 +109892,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 618.0,
+          "x": 890,
+          "y": 1220,
           "side": "right"
         }
       },
@@ -109909,9 +109918,9 @@
         ],
         "net": "DSI1_D2_N",
         "position": {
-          "x": 636,
-          "y": 629.6,
-          "side": "right"
+          "x": 850,
+          "y": 1244,
+          "side": "left"
         }
       },
       {
@@ -109935,8 +109944,8 @@
         ],
         "net": "DSI1_D3_N",
         "position": {
-          "x": 684,
-          "y": 629.6,
+          "x": 890,
+          "y": 1244,
           "side": "right"
         }
       },
@@ -109961,9 +109970,9 @@
         ],
         "net": "DSI1_D2_P",
         "position": {
-          "x": 636,
-          "y": 641.2,
-          "side": "right"
+          "x": 850,
+          "y": 1268,
+          "side": "left"
         }
       },
       {
@@ -109987,8 +109996,8 @@
         ],
         "net": "DSI1_D3_P",
         "position": {
-          "x": 684,
-          "y": 641.2,
+          "x": 890,
+          "y": 1268,
           "side": "right"
         }
       },
@@ -110006,9 +110015,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 636,
-          "y": 652.8,
-          "side": "right"
+          "x": 850,
+          "y": 1292,
+          "side": "left"
         }
       },
       {
@@ -110025,8 +110034,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 652.8,
+          "x": 890,
+          "y": 1292,
           "side": "right"
         }
       },
@@ -110051,9 +110060,9 @@
         ],
         "net": "HDMI0_SDA",
         "position": {
-          "x": 636,
-          "y": 664.4,
-          "side": "right"
+          "x": 850,
+          "y": 1316,
+          "side": "left"
         }
       },
       {
@@ -110077,8 +110086,8 @@
         ],
         "net": "HDMI0_SCL",
         "position": {
-          "x": 684,
-          "y": 664.4,
+          "x": 890,
+          "y": 1316,
           "side": "right"
         }
       }
@@ -110103,8 +110112,10 @@
     "processor": "Broadcom BCM2712 (4 × Arm Cortex-A76 @ 2.4 GHz) + RP1 I/O",
     "clock": "2.4 GHz",
     "diagram": {
-      "width": 920,
-      "height": 780,
+      "width": 1160,
+      "height": 1380,
+      "minWidth": 1000,
+      "connectorStyle": true,
       "artwork": "assets/boards/compute-module-4-5.svg"
     },
     "orientation": "usb-bottom",
@@ -110140,8 +110151,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 236,
-          "y": 96.0,
+          "x": 270,
+          "y": 140,
           "side": "left"
         }
       },
@@ -110159,9 +110170,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 284,
-          "y": 96.0,
-          "side": "left"
+          "x": 310,
+          "y": 140,
+          "side": "right"
         }
       },
       {
@@ -110185,8 +110196,8 @@
         ],
         "net": "Ethernet_Pair3_P",
         "position": {
-          "x": 236,
-          "y": 107.6,
+          "x": 270,
+          "y": 164,
           "side": "left"
         }
       },
@@ -110211,9 +110222,9 @@
         ],
         "net": "Ethernet_Pair1_P",
         "position": {
-          "x": 284,
-          "y": 107.6,
-          "side": "left"
+          "x": 310,
+          "y": 164,
+          "side": "right"
         }
       },
       {
@@ -110237,8 +110248,8 @@
         ],
         "net": "Ethernet_Pair3_N",
         "position": {
-          "x": 236,
-          "y": 119.2,
+          "x": 270,
+          "y": 188,
           "side": "left"
         }
       },
@@ -110263,9 +110274,9 @@
         ],
         "net": "Ethernet_Pair1_N",
         "position": {
-          "x": 284,
-          "y": 119.2,
-          "side": "left"
+          "x": 310,
+          "y": 188,
+          "side": "right"
         }
       },
       {
@@ -110282,8 +110293,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 236,
-          "y": 130.8,
+          "x": 270,
+          "y": 212,
           "side": "left"
         }
       },
@@ -110301,9 +110312,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 284,
-          "y": 130.8,
-          "side": "left"
+          "x": 310,
+          "y": 212,
+          "side": "right"
         }
       },
       {
@@ -110327,8 +110338,8 @@
         ],
         "net": "Ethernet_Pair2_N",
         "position": {
-          "x": 236,
-          "y": 142.4,
+          "x": 270,
+          "y": 236,
           "side": "left"
         }
       },
@@ -110353,9 +110364,9 @@
         ],
         "net": "Ethernet_Pair0_N",
         "position": {
-          "x": 284,
-          "y": 142.4,
-          "side": "left"
+          "x": 310,
+          "y": 236,
+          "side": "right"
         }
       },
       {
@@ -110379,8 +110390,8 @@
         ],
         "net": "Ethernet_Pair2_P",
         "position": {
-          "x": 236,
-          "y": 154.0,
+          "x": 270,
+          "y": 260,
           "side": "left"
         }
       },
@@ -110405,9 +110416,9 @@
         ],
         "net": "Ethernet_Pair0_P",
         "position": {
-          "x": 284,
-          "y": 154.0,
-          "side": "left"
+          "x": 310,
+          "y": 260,
+          "side": "right"
         }
       },
       {
@@ -110424,8 +110435,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 236,
-          "y": 165.6,
+          "x": 270,
+          "y": 284,
           "side": "left"
         }
       },
@@ -110443,9 +110454,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 284,
-          "y": 165.6,
-          "side": "left"
+          "x": 310,
+          "y": 284,
+          "side": "right"
         }
       },
       {
@@ -110469,8 +110480,8 @@
         ],
         "net": "Ethernet_nLED3",
         "position": {
-          "x": 236,
-          "y": 177.2,
+          "x": 270,
+          "y": 308,
           "side": "left"
         }
       },
@@ -110495,9 +110506,9 @@
         ],
         "net": "Fan_Tacho",
         "position": {
-          "x": 284,
-          "y": 177.2,
-          "side": "left"
+          "x": 310,
+          "y": 308,
+          "side": "right"
         }
       },
       {
@@ -110521,8 +110532,8 @@
         ],
         "net": "Ethernet_nLED2",
         "position": {
-          "x": 236,
-          "y": 188.8,
+          "x": 270,
+          "y": 332,
           "side": "left"
         }
       },
@@ -110547,9 +110558,9 @@
         ],
         "net": "Ethernet_SYNC_OUT",
         "position": {
-          "x": 284,
-          "y": 188.8,
-          "side": "left"
+          "x": 310,
+          "y": 332,
+          "side": "right"
         }
       },
       {
@@ -110573,8 +110584,8 @@
         ],
         "net": "Fan_PWM",
         "position": {
-          "x": 236,
-          "y": 200.4,
+          "x": 270,
+          "y": 356,
           "side": "left"
         }
       },
@@ -110599,9 +110610,9 @@
         ],
         "net": "EEPROM_nWP",
         "position": {
-          "x": 284,
-          "y": 200.4,
-          "side": "left"
+          "x": 310,
+          "y": 356,
+          "side": "right"
         }
       },
       {
@@ -110625,8 +110636,8 @@
         ],
         "net": "LED_nACT",
         "position": {
-          "x": 236,
-          "y": 212.0,
+          "x": 270,
+          "y": 380,
           "side": "left"
         }
       },
@@ -110644,9 +110655,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 284,
-          "y": 212.0,
-          "side": "left"
+          "x": 310,
+          "y": 380,
+          "side": "right"
         }
       },
       {
@@ -110663,8 +110674,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 236,
-          "y": 223.6,
+          "x": 270,
+          "y": 404,
           "side": "left"
         }
       },
@@ -110756,9 +110767,9 @@
         ],
         "net": "GPIO26",
         "position": {
-          "x": 284,
-          "y": 223.6,
-          "side": "left"
+          "x": 310,
+          "y": 404,
+          "side": "right"
         }
       },
       {
@@ -110841,8 +110852,8 @@
         ],
         "net": "GPIO21",
         "position": {
-          "x": 236,
-          "y": 235.2,
+          "x": 270,
+          "y": 428,
           "side": "left"
         }
       },
@@ -110926,9 +110937,9 @@
         ],
         "net": "GPIO19",
         "position": {
-          "x": 284,
-          "y": 235.2,
-          "side": "left"
+          "x": 310,
+          "y": 428,
+          "side": "right"
         }
       },
       {
@@ -111011,8 +111022,8 @@
         ],
         "net": "GPIO20",
         "position": {
-          "x": 236,
-          "y": 246.8,
+          "x": 270,
+          "y": 452,
           "side": "left"
         }
       },
@@ -111104,9 +111115,9 @@
         ],
         "net": "GPIO13",
         "position": {
-          "x": 284,
-          "y": 246.8,
-          "side": "left"
+          "x": 310,
+          "y": 452,
+          "side": "right"
         }
       },
       {
@@ -111181,8 +111192,8 @@
         ],
         "net": "GPIO16",
         "position": {
-          "x": 236,
-          "y": 258.4,
+          "x": 270,
+          "y": 476,
           "side": "left"
         }
       },
@@ -111274,9 +111285,9 @@
         ],
         "net": "GPIO6",
         "position": {
-          "x": 284,
-          "y": 258.4,
-          "side": "left"
+          "x": 310,
+          "y": 476,
+          "side": "right"
         }
       },
       {
@@ -111367,8 +111378,8 @@
         ],
         "net": "GPIO12",
         "position": {
-          "x": 236,
-          "y": 270.0,
+          "x": 270,
+          "y": 500,
           "side": "left"
         }
       },
@@ -111386,9 +111397,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 284,
-          "y": 270.0,
-          "side": "left"
+          "x": 310,
+          "y": 500,
+          "side": "right"
         }
       },
       {
@@ -111405,8 +111416,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 236,
-          "y": 281.6,
+          "x": 270,
+          "y": 524,
           "side": "left"
         }
       },
@@ -111498,9 +111509,9 @@
         ],
         "net": "GPIO5",
         "position": {
-          "x": 284,
-          "y": 281.6,
-          "side": "left"
+          "x": 310,
+          "y": 524,
+          "side": "right"
         }
       },
       {
@@ -111584,8 +111595,8 @@
         ],
         "net": "ID_SC",
         "position": {
-          "x": 236,
-          "y": 293.2,
+          "x": 270,
+          "y": 548,
           "side": "left"
         }
       },
@@ -111670,9 +111681,9 @@
         ],
         "net": "ID_SD",
         "position": {
-          "x": 284,
-          "y": 293.2,
-          "side": "left"
+          "x": 310,
+          "y": 548,
+          "side": "right"
         }
       },
       {
@@ -111764,8 +111775,8 @@
         ],
         "net": "GPIO7",
         "position": {
-          "x": 236,
-          "y": 304.8,
+          "x": 270,
+          "y": 572,
           "side": "left"
         }
       },
@@ -111850,9 +111861,9 @@
         ],
         "net": "GPIO11",
         "position": {
-          "x": 284,
-          "y": 304.8,
-          "side": "left"
+          "x": 310,
+          "y": 572,
+          "side": "right"
         }
       },
       {
@@ -111936,8 +111947,8 @@
         ],
         "net": "GPIO8",
         "position": {
-          "x": 236,
-          "y": 316.4,
+          "x": 270,
+          "y": 596,
           "side": "left"
         }
       },
@@ -112022,9 +112033,9 @@
         ],
         "net": "GPIO9",
         "position": {
-          "x": 284,
-          "y": 316.4,
-          "side": "left"
+          "x": 310,
+          "y": 596,
+          "side": "right"
         }
       },
       {
@@ -112115,8 +112126,8 @@
         ],
         "net": "GPIO25",
         "position": {
-          "x": 236,
-          "y": 328.0,
+          "x": 270,
+          "y": 620,
           "side": "left"
         }
       },
@@ -112134,9 +112145,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 284,
-          "y": 328.0,
-          "side": "left"
+          "x": 310,
+          "y": 620,
+          "side": "right"
         }
       },
       {
@@ -112153,8 +112164,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 236,
-          "y": 339.6,
+          "x": 270,
+          "y": 644,
           "side": "left"
         }
       },
@@ -112239,9 +112250,9 @@
         ],
         "net": "GPIO10",
         "position": {
-          "x": 284,
-          "y": 339.6,
-          "side": "left"
+          "x": 310,
+          "y": 644,
+          "side": "right"
         }
       },
       {
@@ -112324,8 +112335,8 @@
         ],
         "net": "GPIO24",
         "position": {
-          "x": 236,
-          "y": 351.2,
+          "x": 270,
+          "y": 668,
           "side": "left"
         }
       },
@@ -112408,9 +112419,9 @@
         ],
         "net": "GPIO22",
         "position": {
-          "x": 284,
-          "y": 351.2,
-          "side": "left"
+          "x": 310,
+          "y": 668,
+          "side": "right"
         }
       },
       {
@@ -112492,8 +112503,8 @@
         ],
         "net": "GPIO23",
         "position": {
-          "x": 236,
-          "y": 362.8,
+          "x": 270,
+          "y": 692,
           "side": "left"
         }
       },
@@ -112585,9 +112596,9 @@
         ],
         "net": "GPIO27",
         "position": {
-          "x": 284,
-          "y": 362.8,
-          "side": "left"
+          "x": 310,
+          "y": 692,
+          "side": "right"
         }
       },
       {
@@ -112678,8 +112689,8 @@
         ],
         "net": "GPIO18",
         "position": {
-          "x": 236,
-          "y": 374.4,
+          "x": 270,
+          "y": 716,
           "side": "left"
         }
       },
@@ -112755,9 +112766,9 @@
         ],
         "net": "GPIO17",
         "position": {
-          "x": 284,
-          "y": 374.4,
-          "side": "left"
+          "x": 310,
+          "y": 716,
+          "side": "right"
         }
       },
       {
@@ -112848,8 +112859,8 @@
         ],
         "net": "GPIO15",
         "position": {
-          "x": 236,
-          "y": 386.0,
+          "x": 270,
+          "y": 740,
           "side": "left"
         }
       },
@@ -112867,9 +112878,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 284,
-          "y": 386.0,
-          "side": "left"
+          "x": 310,
+          "y": 740,
+          "side": "right"
         }
       },
       {
@@ -112886,8 +112897,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 236,
-          "y": 397.6,
+          "x": 270,
+          "y": 764,
           "side": "left"
         }
       },
@@ -112979,9 +112990,9 @@
         ],
         "net": "GPIO4",
         "position": {
-          "x": 284,
-          "y": 397.6,
-          "side": "left"
+          "x": 310,
+          "y": 764,
+          "side": "right"
         }
       },
       {
@@ -113072,8 +113083,8 @@
         ],
         "net": "GPIO14",
         "position": {
-          "x": 236,
-          "y": 409.2,
+          "x": 270,
+          "y": 788,
           "side": "left"
         }
       },
@@ -113166,9 +113177,9 @@
         ],
         "net": "GPIO3",
         "position": {
-          "x": 284,
-          "y": 409.2,
-          "side": "left"
+          "x": 310,
+          "y": 788,
+          "side": "right"
         }
       },
       {
@@ -113192,8 +113203,8 @@
         ],
         "net": "SD_CLK",
         "position": {
-          "x": 236,
-          "y": 420.8,
+          "x": 270,
+          "y": 812,
           "side": "left"
         }
       },
@@ -113286,9 +113297,9 @@
         ],
         "net": "GPIO2",
         "position": {
-          "x": 284,
-          "y": 420.8,
-          "side": "left"
+          "x": 310,
+          "y": 812,
+          "side": "right"
         }
       },
       {
@@ -113305,8 +113316,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 236,
-          "y": 432.4,
+          "x": 270,
+          "y": 836,
           "side": "left"
         }
       },
@@ -113324,9 +113335,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 284,
-          "y": 432.4,
-          "side": "left"
+          "x": 310,
+          "y": 836,
+          "side": "right"
         }
       },
       {
@@ -113350,8 +113361,8 @@
         ],
         "net": "SD_DAT3",
         "position": {
-          "x": 236,
-          "y": 444.0,
+          "x": 270,
+          "y": 860,
           "side": "left"
         }
       },
@@ -113376,9 +113387,9 @@
         ],
         "net": "SD_CMD",
         "position": {
-          "x": 284,
-          "y": 444.0,
-          "side": "left"
+          "x": 310,
+          "y": 860,
+          "side": "right"
         }
       },
       {
@@ -113402,8 +113413,8 @@
         ],
         "net": "SD_DAT0",
         "position": {
-          "x": 236,
-          "y": 455.6,
+          "x": 270,
+          "y": 884,
           "side": "left"
         }
       },
@@ -113428,9 +113439,9 @@
         ],
         "net": "SD_DAT5",
         "position": {
-          "x": 284,
-          "y": 455.6,
-          "side": "left"
+          "x": 310,
+          "y": 884,
+          "side": "right"
         }
       },
       {
@@ -113447,8 +113458,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 236,
-          "y": 467.2,
+          "x": 270,
+          "y": 908,
           "side": "left"
         }
       },
@@ -113466,9 +113477,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 284,
-          "y": 467.2,
-          "side": "left"
+          "x": 310,
+          "y": 908,
+          "side": "right"
         }
       },
       {
@@ -113492,8 +113503,8 @@
         ],
         "net": "SD_DAT1",
         "position": {
-          "x": 236,
-          "y": 478.8,
+          "x": 270,
+          "y": 932,
           "side": "left"
         }
       },
@@ -113518,9 +113529,9 @@
         ],
         "net": "SD_DAT4",
         "position": {
-          "x": 284,
-          "y": 478.8,
-          "side": "left"
+          "x": 310,
+          "y": 932,
+          "side": "right"
         }
       },
       {
@@ -113544,8 +113555,8 @@
         ],
         "net": "SD_DAT2",
         "position": {
-          "x": 236,
-          "y": 490.4,
+          "x": 270,
+          "y": 956,
           "side": "left"
         }
       },
@@ -113570,9 +113581,9 @@
         ],
         "net": "SD_DAT7",
         "position": {
-          "x": 284,
-          "y": 490.4,
-          "side": "left"
+          "x": 310,
+          "y": 956,
+          "side": "right"
         }
       },
       {
@@ -113589,8 +113600,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 236,
-          "y": 502.0,
+          "x": 270,
+          "y": 980,
           "side": "left"
         }
       },
@@ -113615,9 +113626,9 @@
         ],
         "net": "SD_DAT6",
         "position": {
-          "x": 284,
-          "y": 502.0,
-          "side": "left"
+          "x": 310,
+          "y": 980,
+          "side": "right"
         }
       },
       {
@@ -113641,8 +113652,8 @@
         ],
         "net": "SD_VDD_OVERRIDE",
         "position": {
-          "x": 236,
-          "y": 513.6,
+          "x": 270,
+          "y": 1004,
           "side": "left"
         }
       },
@@ -113660,9 +113671,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 284,
-          "y": 513.6,
-          "side": "left"
+          "x": 310,
+          "y": 1004,
+          "side": "right"
         }
       },
       {
@@ -113686,8 +113697,8 @@
         ],
         "net": "SD_PWR_ON",
         "position": {
-          "x": 236,
-          "y": 525.2,
+          "x": 270,
+          "y": 1028,
           "side": "left"
         }
       },
@@ -113705,9 +113716,9 @@
         ],
         "net": "VBAT",
         "position": {
-          "x": 284,
-          "y": 525.2,
-          "side": "left"
+          "x": 310,
+          "y": 1028,
+          "side": "right"
         }
       },
       {
@@ -113724,8 +113735,8 @@
         ],
         "net": "5V (Input)",
         "position": {
-          "x": 236,
-          "y": 536.8,
+          "x": 270,
+          "y": 1052,
           "side": "left"
         }
       },
@@ -113743,9 +113754,9 @@
         ],
         "net": "GPIO_VREF",
         "position": {
-          "x": 284,
-          "y": 536.8,
-          "side": "left"
+          "x": 310,
+          "y": 1052,
+          "side": "right"
         }
       },
       {
@@ -113762,8 +113773,8 @@
         ],
         "net": "5V (Input)",
         "position": {
-          "x": 236,
-          "y": 548.4,
+          "x": 270,
+          "y": 1076,
           "side": "left"
         }
       },
@@ -113788,9 +113799,9 @@
         ],
         "net": "SCL0",
         "position": {
-          "x": 284,
-          "y": 548.4,
-          "side": "left"
+          "x": 310,
+          "y": 1076,
+          "side": "right"
         }
       },
       {
@@ -113807,8 +113818,8 @@
         ],
         "net": "5V (Input)",
         "position": {
-          "x": 236,
-          "y": 560.0,
+          "x": 270,
+          "y": 1100,
           "side": "left"
         }
       },
@@ -113833,9 +113844,9 @@
         ],
         "net": "SDA0",
         "position": {
-          "x": 284,
-          "y": 560.0,
-          "side": "left"
+          "x": 310,
+          "y": 1100,
+          "side": "right"
         }
       },
       {
@@ -113852,8 +113863,8 @@
         ],
         "net": "5V (Input)",
         "position": {
-          "x": 236,
-          "y": 571.6,
+          "x": 270,
+          "y": 1124,
           "side": "left"
         }
       },
@@ -113871,9 +113882,9 @@
         ],
         "net": "CM5_3.3V (Output)",
         "position": {
-          "x": 284,
-          "y": 571.6,
-          "side": "left"
+          "x": 310,
+          "y": 1124,
+          "side": "right"
         }
       },
       {
@@ -113890,8 +113901,8 @@
         ],
         "net": "5V (Input)",
         "position": {
-          "x": 236,
-          "y": 583.2,
+          "x": 270,
+          "y": 1148,
           "side": "left"
         }
       },
@@ -113909,9 +113920,9 @@
         ],
         "net": "CM5_3.3V (Output)",
         "position": {
-          "x": 284,
-          "y": 583.2,
-          "side": "left"
+          "x": 310,
+          "y": 1148,
+          "side": "right"
         }
       },
       {
@@ -113928,8 +113939,8 @@
         ],
         "net": "5V (Input)",
         "position": {
-          "x": 236,
-          "y": 594.8,
+          "x": 270,
+          "y": 1172,
           "side": "left"
         }
       },
@@ -113947,9 +113958,9 @@
         ],
         "net": "CM5_1.8V (Output)",
         "position": {
-          "x": 284,
-          "y": 594.8,
-          "side": "left"
+          "x": 310,
+          "y": 1172,
+          "side": "right"
         }
       },
       {
@@ -113973,8 +113984,8 @@
         ],
         "net": "WL_nDisable",
         "position": {
-          "x": 236,
-          "y": 606.4,
+          "x": 270,
+          "y": 1196,
           "side": "left"
         }
       },
@@ -113992,9 +114003,9 @@
         ],
         "net": "CM5_1.8V (Output)",
         "position": {
-          "x": 284,
-          "y": 606.4,
-          "side": "left"
+          "x": 310,
+          "y": 1196,
+          "side": "right"
         }
       },
       {
@@ -114018,8 +114029,8 @@
         ],
         "net": "BT_nDisable",
         "position": {
-          "x": 236,
-          "y": 618.0,
+          "x": 270,
+          "y": 1220,
           "side": "left"
         }
       },
@@ -114044,9 +114055,9 @@
         ],
         "net": "PWR_Button",
         "position": {
-          "x": 284,
-          "y": 618.0,
-          "side": "left"
+          "x": 310,
+          "y": 1220,
+          "side": "right"
         }
       },
       {
@@ -114070,8 +114081,8 @@
         ],
         "net": "nRPIBOOT",
         "position": {
-          "x": 236,
-          "y": 629.6,
+          "x": 270,
+          "y": 1244,
           "side": "left"
         }
       },
@@ -114096,9 +114107,9 @@
         ],
         "net": "CC1",
         "position": {
-          "x": 284,
-          "y": 629.6,
-          "side": "left"
+          "x": 310,
+          "y": 1244,
+          "side": "right"
         }
       },
       {
@@ -114122,8 +114133,8 @@
         ],
         "net": "LED_nPWR",
         "position": {
-          "x": 236,
-          "y": 641.2,
+          "x": 270,
+          "y": 1268,
           "side": "left"
         }
       },
@@ -114148,9 +114159,9 @@
         ],
         "net": "CC2",
         "position": {
-          "x": 284,
-          "y": 641.2,
-          "side": "left"
+          "x": 310,
+          "y": 1268,
+          "side": "right"
         }
       },
       {
@@ -114174,8 +114185,8 @@
         ],
         "net": "CAM_GPIO0",
         "position": {
-          "x": 236,
-          "y": 652.8,
+          "x": 270,
+          "y": 1292,
           "side": "left"
         }
       },
@@ -114193,9 +114204,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 284,
-          "y": 652.8,
-          "side": "left"
+          "x": 310,
+          "y": 1292,
+          "side": "right"
         }
       },
       {
@@ -114219,8 +114230,8 @@
         ],
         "net": "PMIC_Enable",
         "position": {
-          "x": 236,
-          "y": 664.4,
+          "x": 270,
+          "y": 1316,
           "side": "left"
         }
       },
@@ -114245,9 +114256,9 @@
         ],
         "net": "CAM_GPIO1",
         "position": {
-          "x": 284,
-          "y": 664.4,
-          "side": "left"
+          "x": 310,
+          "y": 1316,
+          "side": "right"
         }
       },
       {
@@ -114271,9 +114282,9 @@
         ],
         "net": "USB_OTG_ID",
         "position": {
-          "x": 636,
-          "y": 96.0,
-          "side": "right"
+          "x": 850,
+          "y": 140,
+          "side": "left"
         }
       },
       {
@@ -114297,8 +114308,8 @@
         ],
         "net": "PCIe_CLK_nREQ",
         "position": {
-          "x": 684,
-          "y": 96.0,
+          "x": 890,
+          "y": 140,
           "side": "right"
         }
       },
@@ -114323,9 +114334,9 @@
         ],
         "net": "USB_N",
         "position": {
-          "x": 636,
-          "y": 107.6,
-          "side": "right"
+          "x": 850,
+          "y": 164,
+          "side": "left"
         }
       },
       {
@@ -114349,8 +114360,8 @@
         ],
         "net": "PCIE_nWAKE",
         "position": {
-          "x": 684,
-          "y": 107.6,
+          "x": 890,
+          "y": 164,
           "side": "right"
         }
       },
@@ -114375,9 +114386,9 @@
         ],
         "net": "USB_P",
         "position": {
-          "x": 636,
-          "y": 119.2,
-          "side": "right"
+          "x": 850,
+          "y": 188,
+          "side": "left"
         }
       },
       {
@@ -114401,8 +114412,8 @@
         ],
         "net": "PCIE_PWR_EN",
         "position": {
-          "x": 684,
-          "y": 119.2,
+          "x": 890,
+          "y": 188,
           "side": "right"
         }
       },
@@ -114420,9 +114431,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 636,
-          "y": 130.8,
-          "side": "right"
+          "x": 850,
+          "y": 212,
+          "side": "left"
         }
       },
       {
@@ -114439,8 +114450,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 130.8,
+          "x": 890,
+          "y": 212,
           "side": "right"
         }
       },
@@ -114465,9 +114476,9 @@
         ],
         "net": "PCIe_nRST",
         "position": {
-          "x": 636,
-          "y": 142.4,
-          "side": "right"
+          "x": 850,
+          "y": 236,
+          "side": "left"
         }
       },
       {
@@ -114491,8 +114502,8 @@
         ],
         "net": "PCIe_CLK_P",
         "position": {
-          "x": 684,
-          "y": 142.4,
+          "x": 890,
+          "y": 236,
           "side": "right"
         }
       },
@@ -114517,9 +114528,9 @@
         ],
         "net": "VBUS_EN",
         "position": {
-          "x": 636,
-          "y": 154.0,
-          "side": "right"
+          "x": 850,
+          "y": 260,
+          "side": "left"
         }
       },
       {
@@ -114543,8 +114554,8 @@
         ],
         "net": "PCIe_CLK_N",
         "position": {
-          "x": 684,
-          "y": 154.0,
+          "x": 890,
+          "y": 260,
           "side": "right"
         }
       },
@@ -114562,9 +114573,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 636,
-          "y": 165.6,
-          "side": "right"
+          "x": 850,
+          "y": 284,
+          "side": "left"
         }
       },
       {
@@ -114581,8 +114592,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 165.6,
+          "x": 890,
+          "y": 284,
           "side": "right"
         }
       },
@@ -114607,9 +114618,9 @@
         ],
         "net": "MIPI0_D0_N",
         "position": {
-          "x": 636,
-          "y": 177.2,
-          "side": "right"
+          "x": 850,
+          "y": 308,
+          "side": "left"
         }
       },
       {
@@ -114633,8 +114644,8 @@
         ],
         "net": "PCIe_RX_P",
         "position": {
-          "x": 684,
-          "y": 177.2,
+          "x": 890,
+          "y": 308,
           "side": "right"
         }
       },
@@ -114659,9 +114670,9 @@
         ],
         "net": "MIPI0_D0_P",
         "position": {
-          "x": 636,
-          "y": 188.8,
-          "side": "right"
+          "x": 850,
+          "y": 332,
+          "side": "left"
         }
       },
       {
@@ -114685,8 +114696,8 @@
         ],
         "net": "PCIe_RX_N",
         "position": {
-          "x": 684,
-          "y": 188.8,
+          "x": 890,
+          "y": 332,
           "side": "right"
         }
       },
@@ -114704,9 +114715,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 636,
-          "y": 200.4,
-          "side": "right"
+          "x": 850,
+          "y": 356,
+          "side": "left"
         }
       },
       {
@@ -114723,8 +114734,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 200.4,
+          "x": 890,
+          "y": 356,
           "side": "right"
         }
       },
@@ -114749,9 +114760,9 @@
         ],
         "net": "MIPI0_D1_N",
         "position": {
-          "x": 636,
-          "y": 212.0,
-          "side": "right"
+          "x": 850,
+          "y": 380,
+          "side": "left"
         }
       },
       {
@@ -114775,8 +114786,8 @@
         ],
         "net": "PCIe_TX_P",
         "position": {
-          "x": 684,
-          "y": 212.0,
+          "x": 890,
+          "y": 380,
           "side": "right"
         }
       },
@@ -114801,9 +114812,9 @@
         ],
         "net": "MIPI0_D1_P",
         "position": {
-          "x": 636,
-          "y": 223.6,
-          "side": "right"
+          "x": 850,
+          "y": 404,
+          "side": "left"
         }
       },
       {
@@ -114827,8 +114838,8 @@
         ],
         "net": "PCIe_TX_N",
         "position": {
-          "x": 684,
-          "y": 223.6,
+          "x": 890,
+          "y": 404,
           "side": "right"
         }
       },
@@ -114846,9 +114857,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 636,
-          "y": 235.2,
-          "side": "right"
+          "x": 850,
+          "y": 428,
+          "side": "left"
         }
       },
       {
@@ -114865,8 +114876,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 235.2,
+          "x": 890,
+          "y": 428,
           "side": "right"
         }
       },
@@ -114891,9 +114902,9 @@
         ],
         "net": "MIPI0_C_N",
         "position": {
-          "x": 636,
-          "y": 246.8,
-          "side": "right"
+          "x": 850,
+          "y": 452,
+          "side": "left"
         }
       },
       {
@@ -114917,8 +114928,8 @@
         ],
         "net": "USB3-0-RX_N",
         "position": {
-          "x": 684,
-          "y": 246.8,
+          "x": 890,
+          "y": 452,
           "side": "right"
         }
       },
@@ -114943,9 +114954,9 @@
         ],
         "net": "MIPI0_C_P",
         "position": {
-          "x": 636,
-          "y": 258.4,
-          "side": "right"
+          "x": 850,
+          "y": 476,
+          "side": "left"
         }
       },
       {
@@ -114969,8 +114980,8 @@
         ],
         "net": "USB3-0-RX_P",
         "position": {
-          "x": 684,
-          "y": 258.4,
+          "x": 890,
+          "y": 476,
           "side": "right"
         }
       },
@@ -114988,9 +114999,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 636,
-          "y": 270.0,
-          "side": "right"
+          "x": 850,
+          "y": 500,
+          "side": "left"
         }
       },
       {
@@ -115007,8 +115018,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 270.0,
+          "x": 890,
+          "y": 500,
           "side": "right"
         }
       },
@@ -115033,9 +115044,9 @@
         ],
         "net": "MIPI0_D2_N",
         "position": {
-          "x": 636,
-          "y": 281.6,
-          "side": "right"
+          "x": 850,
+          "y": 524,
+          "side": "left"
         }
       },
       {
@@ -115059,8 +115070,8 @@
         ],
         "net": "USB3-0-DP",
         "position": {
-          "x": 684,
-          "y": 281.6,
+          "x": 890,
+          "y": 524,
           "side": "right"
         }
       },
@@ -115085,9 +115096,9 @@
         ],
         "net": "MIPI0_D2_P",
         "position": {
-          "x": 636,
-          "y": 293.2,
-          "side": "right"
+          "x": 850,
+          "y": 548,
+          "side": "left"
         }
       },
       {
@@ -115111,8 +115122,8 @@
         ],
         "net": "USB3-0-DM",
         "position": {
-          "x": 684,
-          "y": 293.2,
+          "x": 890,
+          "y": 548,
           "side": "right"
         }
       },
@@ -115130,9 +115141,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 636,
-          "y": 304.8,
-          "side": "right"
+          "x": 850,
+          "y": 572,
+          "side": "left"
         }
       },
       {
@@ -115149,8 +115160,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 304.8,
+          "x": 890,
+          "y": 572,
           "side": "right"
         }
       },
@@ -115175,9 +115186,9 @@
         ],
         "net": "MIPI0_D3_N",
         "position": {
-          "x": 636,
-          "y": 316.4,
-          "side": "right"
+          "x": 850,
+          "y": 596,
+          "side": "left"
         }
       },
       {
@@ -115201,8 +115212,8 @@
         ],
         "net": "USB3-0-TX_N",
         "position": {
-          "x": 684,
-          "y": 316.4,
+          "x": 890,
+          "y": 596,
           "side": "right"
         }
       },
@@ -115227,9 +115238,9 @@
         ],
         "net": "MIPI0_D3_P",
         "position": {
-          "x": 636,
-          "y": 328.0,
-          "side": "right"
+          "x": 850,
+          "y": 620,
+          "side": "left"
         }
       },
       {
@@ -115253,8 +115264,8 @@
         ],
         "net": "USB3-0-TX_P",
         "position": {
-          "x": 684,
-          "y": 328.0,
+          "x": 890,
+          "y": 620,
           "side": "right"
         }
       },
@@ -115279,9 +115290,9 @@
         ],
         "net": "HDMI1_HOTPLUG",
         "position": {
-          "x": 636,
-          "y": 339.6,
-          "side": "right"
+          "x": 850,
+          "y": 644,
+          "side": "left"
         }
       },
       {
@@ -115298,8 +115309,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 339.6,
+          "x": 890,
+          "y": 644,
           "side": "right"
         }
       },
@@ -115324,9 +115335,9 @@
         ],
         "net": "HDMI1_SDA",
         "position": {
-          "x": 636,
-          "y": 351.2,
-          "side": "right"
+          "x": 850,
+          "y": 668,
+          "side": "left"
         }
       },
       {
@@ -115350,8 +115361,8 @@
         ],
         "net": "HDMI1_TX2_P",
         "position": {
-          "x": 684,
-          "y": 351.2,
+          "x": 890,
+          "y": 668,
           "side": "right"
         }
       },
@@ -115376,9 +115387,9 @@
         ],
         "net": "HDMI1_SCL",
         "position": {
-          "x": 636,
-          "y": 362.8,
-          "side": "right"
+          "x": 850,
+          "y": 692,
+          "side": "left"
         }
       },
       {
@@ -115402,8 +115413,8 @@
         ],
         "net": "HDMI1_TX2_N",
         "position": {
-          "x": 684,
-          "y": 362.8,
+          "x": 890,
+          "y": 692,
           "side": "right"
         }
       },
@@ -115428,9 +115439,9 @@
         ],
         "net": "HDMI1_CEC",
         "position": {
-          "x": 636,
-          "y": 374.4,
-          "side": "right"
+          "x": 850,
+          "y": 716,
+          "side": "left"
         }
       },
       {
@@ -115447,8 +115458,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 374.4,
+          "x": 890,
+          "y": 716,
           "side": "right"
         }
       },
@@ -115473,9 +115484,9 @@
         ],
         "net": "HDMI0_CEC",
         "position": {
-          "x": 636,
-          "y": 386.0,
-          "side": "right"
+          "x": 850,
+          "y": 740,
+          "side": "left"
         }
       },
       {
@@ -115499,8 +115510,8 @@
         ],
         "net": "HDMI1_TX1_P",
         "position": {
-          "x": 684,
-          "y": 386.0,
+          "x": 890,
+          "y": 740,
           "side": "right"
         }
       },
@@ -115525,9 +115536,9 @@
         ],
         "net": "HDMI0_HOTPLUG",
         "position": {
-          "x": 636,
-          "y": 397.6,
-          "side": "right"
+          "x": 850,
+          "y": 764,
+          "side": "left"
         }
       },
       {
@@ -115551,8 +115562,8 @@
         ],
         "net": "HDMI1_TX1_N",
         "position": {
-          "x": 684,
-          "y": 397.6,
+          "x": 890,
+          "y": 764,
           "side": "right"
         }
       },
@@ -115570,9 +115581,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 636,
-          "y": 409.2,
-          "side": "right"
+          "x": 850,
+          "y": 788,
+          "side": "left"
         }
       },
       {
@@ -115589,8 +115600,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 409.2,
+          "x": 890,
+          "y": 788,
           "side": "right"
         }
       },
@@ -115615,9 +115626,9 @@
         ],
         "net": "USB3-1-RX_N",
         "position": {
-          "x": 636,
-          "y": 420.8,
-          "side": "right"
+          "x": 850,
+          "y": 812,
+          "side": "left"
         }
       },
       {
@@ -115641,8 +115652,8 @@
         ],
         "net": "HDMI1_TX0_P",
         "position": {
-          "x": 684,
-          "y": 420.8,
+          "x": 890,
+          "y": 812,
           "side": "right"
         }
       },
@@ -115667,9 +115678,9 @@
         ],
         "net": "USB3-1-RX_P",
         "position": {
-          "x": 636,
-          "y": 432.4,
-          "side": "right"
+          "x": 850,
+          "y": 836,
+          "side": "left"
         }
       },
       {
@@ -115693,8 +115704,8 @@
         ],
         "net": "HDMI1_TX0_N",
         "position": {
-          "x": 684,
-          "y": 432.4,
+          "x": 890,
+          "y": 836,
           "side": "right"
         }
       },
@@ -115712,9 +115723,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 636,
-          "y": 444.0,
-          "side": "right"
+          "x": 850,
+          "y": 860,
+          "side": "left"
         }
       },
       {
@@ -115731,8 +115742,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 444.0,
+          "x": 890,
+          "y": 860,
           "side": "right"
         }
       },
@@ -115757,9 +115768,9 @@
         ],
         "net": "USB3-1-DP",
         "position": {
-          "x": 636,
-          "y": 455.6,
-          "side": "right"
+          "x": 850,
+          "y": 884,
+          "side": "left"
         }
       },
       {
@@ -115783,8 +115794,8 @@
         ],
         "net": "HDMI1_CLK_P",
         "position": {
-          "x": 684,
-          "y": 455.6,
+          "x": 890,
+          "y": 884,
           "side": "right"
         }
       },
@@ -115809,9 +115820,9 @@
         ],
         "net": "USB3-1-DM",
         "position": {
-          "x": 636,
-          "y": 467.2,
-          "side": "right"
+          "x": 850,
+          "y": 908,
+          "side": "left"
         }
       },
       {
@@ -115835,8 +115846,8 @@
         ],
         "net": "HDMI1_CLK_N",
         "position": {
-          "x": 684,
-          "y": 467.2,
+          "x": 890,
+          "y": 908,
           "side": "right"
         }
       },
@@ -115854,9 +115865,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 636,
-          "y": 478.8,
-          "side": "right"
+          "x": 850,
+          "y": 932,
+          "side": "left"
         }
       },
       {
@@ -115873,8 +115884,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 478.8,
+          "x": 890,
+          "y": 932,
           "side": "right"
         }
       },
@@ -115899,9 +115910,9 @@
         ],
         "net": "USB3-1-TX_N",
         "position": {
-          "x": 636,
-          "y": 490.4,
-          "side": "right"
+          "x": 850,
+          "y": 956,
+          "side": "left"
         }
       },
       {
@@ -115925,8 +115936,8 @@
         ],
         "net": "HDMI0_TX2_P",
         "position": {
-          "x": 684,
-          "y": 490.4,
+          "x": 890,
+          "y": 956,
           "side": "right"
         }
       },
@@ -115951,9 +115962,9 @@
         ],
         "net": "USB3-1-TX_P",
         "position": {
-          "x": 636,
-          "y": 502.0,
-          "side": "right"
+          "x": 850,
+          "y": 980,
+          "side": "left"
         }
       },
       {
@@ -115977,8 +115988,8 @@
         ],
         "net": "HDMI0_TX2_N",
         "position": {
-          "x": 684,
-          "y": 502.0,
+          "x": 890,
+          "y": 980,
           "side": "right"
         }
       },
@@ -115996,9 +116007,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 636,
-          "y": 513.6,
-          "side": "right"
+          "x": 850,
+          "y": 1004,
+          "side": "left"
         }
       },
       {
@@ -116015,8 +116026,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 513.6,
+          "x": 890,
+          "y": 1004,
           "side": "right"
         }
       },
@@ -116041,9 +116052,9 @@
         ],
         "net": "MIPI1_D0_N",
         "position": {
-          "x": 636,
-          "y": 525.2,
-          "side": "right"
+          "x": 850,
+          "y": 1028,
+          "side": "left"
         }
       },
       {
@@ -116067,8 +116078,8 @@
         ],
         "net": "HDMI0_TX1_P",
         "position": {
-          "x": 684,
-          "y": 525.2,
+          "x": 890,
+          "y": 1028,
           "side": "right"
         }
       },
@@ -116093,9 +116104,9 @@
         ],
         "net": "MIPI1_D0_P",
         "position": {
-          "x": 636,
-          "y": 536.8,
-          "side": "right"
+          "x": 850,
+          "y": 1052,
+          "side": "left"
         }
       },
       {
@@ -116119,8 +116130,8 @@
         ],
         "net": "HDMI0_TX1_N",
         "position": {
-          "x": 684,
-          "y": 536.8,
+          "x": 890,
+          "y": 1052,
           "side": "right"
         }
       },
@@ -116138,9 +116149,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 636,
-          "y": 548.4,
-          "side": "right"
+          "x": 850,
+          "y": 1076,
+          "side": "left"
         }
       },
       {
@@ -116157,8 +116168,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 548.4,
+          "x": 890,
+          "y": 1076,
           "side": "right"
         }
       },
@@ -116183,9 +116194,9 @@
         ],
         "net": "MIPI1_D1_N",
         "position": {
-          "x": 636,
-          "y": 560.0,
-          "side": "right"
+          "x": 850,
+          "y": 1100,
+          "side": "left"
         }
       },
       {
@@ -116209,8 +116220,8 @@
         ],
         "net": "HDMI0_TX0_P",
         "position": {
-          "x": 684,
-          "y": 560.0,
+          "x": 890,
+          "y": 1100,
           "side": "right"
         }
       },
@@ -116235,9 +116246,9 @@
         ],
         "net": "MIPI1_D1_P",
         "position": {
-          "x": 636,
-          "y": 571.6,
-          "side": "right"
+          "x": 850,
+          "y": 1124,
+          "side": "left"
         }
       },
       {
@@ -116261,8 +116272,8 @@
         ],
         "net": "HDMI0_TX0_N",
         "position": {
-          "x": 684,
-          "y": 571.6,
+          "x": 890,
+          "y": 1124,
           "side": "right"
         }
       },
@@ -116280,9 +116291,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 636,
-          "y": 583.2,
-          "side": "right"
+          "x": 850,
+          "y": 1148,
+          "side": "left"
         }
       },
       {
@@ -116299,8 +116310,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 583.2,
+          "x": 890,
+          "y": 1148,
           "side": "right"
         }
       },
@@ -116325,9 +116336,9 @@
         ],
         "net": "MIPI1_C_N",
         "position": {
-          "x": 636,
-          "y": 594.8,
-          "side": "right"
+          "x": 850,
+          "y": 1172,
+          "side": "left"
         }
       },
       {
@@ -116351,8 +116362,8 @@
         ],
         "net": "HDMI0_CLK_P",
         "position": {
-          "x": 684,
-          "y": 594.8,
+          "x": 890,
+          "y": 1172,
           "side": "right"
         }
       },
@@ -116377,9 +116388,9 @@
         ],
         "net": "MIPI1_C_P",
         "position": {
-          "x": 636,
-          "y": 606.4,
-          "side": "right"
+          "x": 850,
+          "y": 1196,
+          "side": "left"
         }
       },
       {
@@ -116403,8 +116414,8 @@
         ],
         "net": "HDMI0_CLK_N",
         "position": {
-          "x": 684,
-          "y": 606.4,
+          "x": 890,
+          "y": 1196,
           "side": "right"
         }
       },
@@ -116422,9 +116433,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 636,
-          "y": 618.0,
-          "side": "right"
+          "x": 850,
+          "y": 1220,
+          "side": "left"
         }
       },
       {
@@ -116441,8 +116452,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 618.0,
+          "x": 890,
+          "y": 1220,
           "side": "right"
         }
       },
@@ -116467,9 +116478,9 @@
         ],
         "net": "MIPI1_D2_N",
         "position": {
-          "x": 636,
-          "y": 629.6,
-          "side": "right"
+          "x": 850,
+          "y": 1244,
+          "side": "left"
         }
       },
       {
@@ -116493,8 +116504,8 @@
         ],
         "net": "MIPI1_D3_N",
         "position": {
-          "x": 684,
-          "y": 629.6,
+          "x": 890,
+          "y": 1244,
           "side": "right"
         }
       },
@@ -116519,9 +116530,9 @@
         ],
         "net": "MIPI1_D2_P",
         "position": {
-          "x": 636,
-          "y": 641.2,
-          "side": "right"
+          "x": 850,
+          "y": 1268,
+          "side": "left"
         }
       },
       {
@@ -116545,8 +116556,8 @@
         ],
         "net": "MIPI1_D3_P",
         "position": {
-          "x": 684,
-          "y": 641.2,
+          "x": 890,
+          "y": 1268,
           "side": "right"
         }
       },
@@ -116564,9 +116575,9 @@
         ],
         "net": "GND",
         "position": {
-          "x": 636,
-          "y": 652.8,
-          "side": "right"
+          "x": 850,
+          "y": 1292,
+          "side": "left"
         }
       },
       {
@@ -116583,8 +116594,8 @@
         ],
         "net": "GND",
         "position": {
-          "x": 684,
-          "y": 652.8,
+          "x": 890,
+          "y": 1292,
           "side": "right"
         }
       },
@@ -116609,9 +116620,9 @@
         ],
         "net": "HDMI0_SDA",
         "position": {
-          "x": 636,
-          "y": 664.4,
-          "side": "right"
+          "x": 850,
+          "y": 1316,
+          "side": "left"
         }
       },
       {
@@ -116635,8 +116646,8 @@
         ],
         "net": "HDMI0_SCL",
         "position": {
-          "x": 684,
-          "y": 664.4,
+          "x": 890,
+          "y": 1316,
           "side": "right"
         }
       }

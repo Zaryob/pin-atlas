@@ -19,7 +19,7 @@ def build_rm2(cache, docs, obs, ref, verified_on):
                '§2.6 · Electrical specifications · Vin 3.0 V to 4.8 V, VDDIO 1.8 V / 3.3 V', 'pdf-text')
 
     raw_defs = [
-        # (pinNum, conn, connPin, name, label, net, ptype, fns, strap, noteKey, boardCircuitKey, x, y, side)
+        # (pinNum, conn, connPin, name, label, net, ptype, fns, strap, noteKey, boardCircuitKey, x, y, side[, angle])
         (1,  'LEFT', 1, 'GND', 'GND', 'GND', 'GND', [], False, None, None, 270, 160, 'left'),
         (2,  'LEFT', 2, 'NC', 'NC', 'NC', 'SYSTEM', [], False, 'rm2NcNote', None, 270, 200, 'left'),
         (3,  'LEFT', 3, 'gSPI_SCLK', 'SCLK', 'SPI_CLK', 'SYSTEM', [('gSPI CLK', 'SPI', 'SCLK')], False, 'rm2SclkNote', None, 270, 240, 'left'),
@@ -28,13 +28,13 @@ def build_rm2(cache, docs, obs, ref, verified_on):
         (6,  'LEFT', 6, 'gSPI_MISO', 'DOUT', 'SPI_DOUT', 'SYSTEM', [('gSPI DOUT', 'SPI', 'MISO')], False, 'rm2DoutNote', 'rm2DoutCircuit', 270, 360, 'left'),
         (7,  'LEFT', 7, 'GND', 'GND', 'GND', 'GND', [], False, None, None, 270, 400, 'left'),
 
-        (8,  'BOTTOM', 1, 'GPIO0', 'GPIO0', 'CYW_GPIO0', 'GPIO', [('GPIO0', 'GPIO', 'GPIO0')], False, 'rm2Gpio0Note', None, 305, 452, 'left'),
-        (9,  'BOTTOM', 2, 'gSPI_CS', 'CS', 'SPI_CS', 'SYSTEM', [('gSPI CS', 'SPI', 'CS')], False, 'rm2CsNote', None, 345, 452, 'left'),
-        (10, 'BOTTOM', 3, 'nIRQ', 'nIRQ', 'CYW_nIRQ', 'SYSTEM', [('nIRQ', 'IRQ', 'nIRQ')], False, 'rm2IrqNote', 'rm2IrqCircuit', 385, 452, 'left'),
-        (11, 'BOTTOM', 4, 'GND', 'GND', 'GND', 'GND', [], False, None, None, 425, 452, 'right'),
-        (12, 'BOTTOM', 5, 'WL_REG_ON', 'WL_ON', 'WL_REG_ON', 'SYSTEM', [('WL_REG_ON', 'SYSTEM', 'REG_ON')], False, 'rm2WlOnNote', None, 465, 452, 'right'),
-        (13, 'BOTTOM', 6, 'BT_REG_ON', 'BT_ON', 'BT_REG_ON', 'SYSTEM', [('BT_REG_ON', 'SYSTEM', 'REG_ON')], False, 'rm2BtOnNote', None, 505, 452, 'right'),
-        (14, 'BOTTOM', 7, 'VDDIO', 'VDDIO', 'VDDIO', 'POWER', [], False, 'rm2VddioNote', None, 545, 452, 'right'),
+        (8,  'BOTTOM', 1, 'GPIO0', 'GPIO0', 'CYW_GPIO0', 'GPIO', [('GPIO0', 'GPIO', 'GPIO0')], False, 'rm2Gpio0Note', None, 305, 452, 'right', 90),
+        (9,  'BOTTOM', 2, 'gSPI_CS', 'CS', 'SPI_CS', 'SYSTEM', [('gSPI CS', 'SPI', 'CS')], False, 'rm2CsNote', None, 345, 452, 'right', 90),
+        (10, 'BOTTOM', 3, 'nIRQ', 'nIRQ', 'CYW_nIRQ', 'SYSTEM', [('nIRQ', 'IRQ', 'nIRQ')], False, 'rm2IrqNote', 'rm2IrqCircuit', 385, 452, 'right', 90),
+        (11, 'BOTTOM', 4, 'GND', 'GND', 'GND', 'GND', [], False, None, None, 425, 452, 'right', 90),
+        (12, 'BOTTOM', 5, 'WL_REG_ON', 'WL_ON', 'WL_REG_ON', 'SYSTEM', [('WL_REG_ON', 'SYSTEM', 'REG_ON')], False, 'rm2WlOnNote', None, 465, 452, 'right', 90),
+        (13, 'BOTTOM', 6, 'BT_REG_ON', 'BT_ON', 'BT_REG_ON', 'SYSTEM', [('BT_REG_ON', 'SYSTEM', 'REG_ON')], False, 'rm2BtOnNote', None, 505, 452, 'right', 90),
+        (14, 'BOTTOM', 7, 'VDDIO', 'VDDIO', 'VDDIO', 'POWER', [], False, 'rm2VddioNote', None, 545, 452, 'right', 90),
 
         (15, 'RIGHT', 1, 'GND', 'GND', 'GND', 'GND', [], False, None, None, 550, 400, 'right'),
         (16, 'RIGHT', 2, 'VIN', 'VIN', 'VBAT', 'POWER', [], False, 'rm2VinNote', None, 550, 360, 'right'),
@@ -46,7 +46,8 @@ def build_rm2(cache, docs, obs, ref, verified_on):
     ]
 
     pins = []
-    for num, conn, connPin, name, label, net, ptype, fns, strap, noteKey, circuitKey, x, y, side in raw_defs:
+    for num, conn, connPin, name, label, net, ptype, fns, strap, noteKey, circuitKey, x, y, side, *rest in raw_defs:
+        angle = rest[0] if rest else 0
         functions = []
         for fname, fgroup, fsignal in fns:
             functions.append({
@@ -59,14 +60,15 @@ def build_rm2(cache, docs, obs, ref, verified_on):
             'number': num,
             'physicalLabel': f'Pin {num}',
             'connector': conn,
-            'connectorPin': connPin,
+            # The datasheet numbers the pads 1-21 around the module; show that number.
+            'connectorPin': num,
             'name': name,
             'boardLabel': label,
             'type': ptype,
             'functions': functions,
             'evidence': [phys],
             'net': net,
-            'position': {'x': x, 'y': y, 'side': side}
+            'position': {'x': x, 'y': y, 'side': side, **({'angle': angle} if angle else {})}
         }
         if noteKey:
             pin['noteKey'] = noteKey
@@ -94,7 +96,7 @@ def build_rm2(cache, docs, obs, ref, verified_on):
         'wireless': True,
         'diagram': {
             'width': 820,
-            'height': 580,
+            'height': 720,
             'artwork': 'assets/boards/raspberry-pi-rm2.svg'
         },
         'orientation': 'usb-bottom',

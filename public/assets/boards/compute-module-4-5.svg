@@ -1,52 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="920" height="780" viewBox="0 0 920 780">
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="1380" viewBox="0 0 1160 1380">
+<!-- Raspberry Pi Compute Module 4 / 5: the two 100-way board-to-board connectors.
+     Schematic, not to scale. Odd contacts are drawn in the left column of each
+     connector and labelled to the left; even contacts in the right column, labelled
+     to the right. Contact positions come from scripts/cm_sources.py. -->
 <g font-family="monospace" text-anchor="middle">
- <!-- PCB Substrate 55mm x 40mm proportional -->
- <rect x="160" y="50" width="600" height="680" rx="10" fill="#182723" stroke="#48685e" stroke-width="2"/>
- <rect x="174" y="64" width="572" height="652" rx="8" fill="none" stroke="#2a453d" stroke-dasharray="4 6"/>
+ <text x="290" y="96" font-size="14" font-weight="bold" fill="#cfab5b">CN1</text>
+ <text x="290" y="114" font-size="10" fill="#8faab8">contacts 1–100</text>
+ <rect x="252" y="124" width="76" height="1200" rx="6" fill="#182723" stroke="#48685e" stroke-width="2"/>
+ <rect x="262" y="132" width="56" height="1184" rx="3" fill="#13201c" stroke="#2a453d" stroke-dasharray="4 6"/>
+ <text x="270" y="1342" font-size="9" fill="#6d8896">odd</text>
+ <text x="310" y="1342" font-size="9" fill="#6d8896">even</text>
 
- <!-- Mounting Holes in 4 Corners (M2.5) -->
- <circle cx="195" cy="85" r="14" fill="#13201c" stroke="#cfab5b" stroke-width="2"/>
- <circle cx="725" cy="85" r="14" fill="#13201c" stroke="#cfab5b" stroke-width="2"/>
- <circle cx="195" cy="695" r="14" fill="#13201c" stroke="#cfab5b" stroke-width="2"/>
- <circle cx="725" cy="695" r="14" fill="#13201c" stroke="#cfab5b" stroke-width="2"/>
+ <text x="870" y="96" font-size="14" font-weight="bold" fill="#cfab5b">CN2</text>
+ <text x="870" y="114" font-size="10" fill="#8faab8">contacts 101–200</text>
+ <rect x="832" y="124" width="76" height="1200" rx="6" fill="#182723" stroke="#48685e" stroke-width="2"/>
+ <rect x="842" y="132" width="56" height="1184" rx="3" fill="#13201c" stroke="#2a453d" stroke-dasharray="4 6"/>
+ <text x="850" y="1342" font-size="9" fill="#6d8896">odd</text>
+ <text x="890" y="1342" font-size="9" fill="#6d8896">even</text>
 
- <!-- Center SoC and Components -->
- <rect x="360" y="240" width="200" height="190" rx="6" fill="#202e35" stroke="#526b78" stroke-width="2"/>
- <circle cx="372" cy="252" r="3" fill="#88a1af"/>
- <text x="460" y="295" font-size="17" font-weight="bold" fill="#f0f6f8">Raspberry Pi</text>
- <text x="460" y="325" font-size="14" font-weight="bold" fill="#cfab5b">Compute Module</text>
- <text x="460" y="352" font-size="12" fill="#8faab8">CM4 / CM5 Mezzanine</text>
- <text x="460" y="378" font-size="10" fill="#6d8896">BCM2711 / BCM2712</text>
- <text x="460" y="402" font-size="9" fill="#587482">200 High-Density Contacts</text>
-
- <!-- LPDDR4 / LPDDR4X SDRAM -->
- <rect x="385" y="140" width="150" height="75" rx="4" fill="#1c282e" stroke="#425863"/>
- <text x="460" y="174" font-size="12" font-weight="bold" fill="#8faab8">LPDDR4 / LPDDR4X</text>
- <text x="460" y="196" font-size="10" fill="#587482">1GB / 2GB / 4GB / 8GB</text>
-
- <!-- PMIC power IC -->
- <rect x="400" y="460" width="120" height="70" rx="4" fill="#1c282e" stroke="#425863"/>
- <text x="460" y="492" font-size="11" font-weight="bold" fill="#8faab8">PMIC</text>
- <text x="460" y="512" font-size="9" fill="#587482">Power Management</text>
-
- <!-- Hirose DF40 Mezzanine Connector 1 (CN1 - Left) -->
- <rect x="220" y="85" width="80" height="610" rx="4" fill="#101a18" stroke="#3d574e" stroke-width="1.5"/>
- <text x="260" y="75" font-size="12" font-weight="bold" fill="#cfab5b">CN1 (1–100)</text>
- <text x="260" y="715" font-size="9" fill="#8faab8">Hirose DF40</text>
- <!-- CN1 Contact rows visual hint -->
- <line x1="236" y1="96" x2="236" y2="670" stroke="#cfab5b" stroke-width="2" stroke-dasharray="3 8.6"/>
- <line x1="284" y1="96" x2="284" y2="670" stroke="#cfab5b" stroke-width="2" stroke-dasharray="3 8.6"/>
-
- <!-- Hirose DF40 Mezzanine Connector 2 (CN2 - Right) -->
- <rect x="620" y="85" width="80" height="610" rx="4" fill="#101a18" stroke="#3d574e" stroke-width="1.5"/>
- <text x="660" y="75" font-size="12" font-weight="bold" fill="#cfab5b">CN2 (101–200)</text>
- <text x="660" y="715" font-size="9" fill="#8faab8">Hirose DF40</text>
- <!-- CN2 Contact rows visual hint -->
- <line x1="636" y1="96" x2="636" y2="670" stroke="#cfab5b" stroke-width="2" stroke-dasharray="3 8.6"/>
- <line x1="684" y1="96" x2="684" y2="670" stroke="#cfab5b" stroke-width="2" stroke-dasharray="3 8.6"/>
-
- <!-- Header Annotations -->
- <text x="460" y="580" font-size="11" fill="#7ed4b2">CN1: Gigabit Ethernet · GPIO Bank (0–27) · SDIO · USB · Power</text>
- <text x="460" y="605" font-size="11" fill="#7fc3ff">CN2: PCIe Gen 2/3 · 2× MIPI CSI · 2× MIPI DSI · 2× HDMI</text>
+ <text x="580" y="40" font-size="15" font-weight="bold" fill="#5f7d8c">Raspberry Pi Compute Module 4 / 5</text>
+ <text x="580" y="60" font-size="10" fill="#6d8896">2 × 100-way board-to-board connectors · schematic, not to scale</text>
 </g>
 </svg>

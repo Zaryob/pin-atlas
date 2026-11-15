@@ -68,6 +68,11 @@ def build_compute_modules(cache, docs, obs, ref, verified_on, pi4_pins, pi5_pins
             return sig.split()[0]
         return sig
 
+    # Diagram geometry (schematic, not to scale). A label occupies ~232 px beside its
+    # contact, so CN2's left labels start well after CN1's right labels end.
+    CN1_ODD_X, CN2_ODD_X, COLUMN_GAP = 270, 850, 40
+    TOP_ROW_Y, ROW_PITCH = 140, 24
+
     def generate_pins(table, ref_doc, gpio_funcs, is_cm5=False):
         pins = []
         for pin_num in range(1, 201):
@@ -81,17 +86,18 @@ def build_compute_modules(cache, docs, obs, ref, verified_on, pi4_pins, pi5_pins
                 conn_pin = pin_num
                 phys_label = f'CN1.{pin_num}'
                 row = (pin_num - 1) // 2
-                x = 236 if pin_num % 2 == 1 else 284
-                side = 'left'
+                x = CN1_ODD_X if pin_num % 2 == 1 else CN1_ODD_X + COLUMN_GAP
             else:
                 conn = 'CN2'
                 conn_pin = pin_num - 100
                 phys_label = f'CN2.{conn_pin}'
                 row = (pin_num - 101) // 2
-                x = 636 if pin_num % 2 == 1 else 684
-                side = 'right'
+                x = CN2_ODD_X if pin_num % 2 == 1 else CN2_ODD_X + COLUMN_GAP
 
-            y = round(96 + row * 11.6, 1)
+            # Odd contacts are labelled to the left, even contacts to the right, so
+            # the two rows of one connector never share a label column.
+            side = 'left' if pin_num % 2 == 1 else 'right'
+            y = TOP_ROW_Y + row * ROW_PITCH
 
             # Functions
             functions = []
@@ -155,8 +161,11 @@ def build_compute_modules(cache, docs, obs, ref, verified_on, pi4_pins, pi5_pins
         'processor': 'Broadcom BCM2711 (4 × Arm Cortex-A72 @ 1.5 GHz)',
         'clock': '1.5 GHz',
         'diagram': {
-            'width': 920,
-            'height': 780,
+            'width': 1160,
+            'height': 1380,
+            'minWidth': 1000,
+            # Numbered contact boxes with free-length signal names, as on the Nucleo connectors.
+            'connectorStyle': True,
             'artwork': 'assets/boards/compute-module-4-5.svg'
         },
         'orientation': 'usb-bottom',
@@ -189,8 +198,11 @@ def build_compute_modules(cache, docs, obs, ref, verified_on, pi4_pins, pi5_pins
         'processor': 'Broadcom BCM2712 (4 × Arm Cortex-A76 @ 2.4 GHz) + RP1 I/O',
         'clock': '2.4 GHz',
         'diagram': {
-            'width': 920,
-            'height': 780,
+            'width': 1160,
+            'height': 1380,
+            'minWidth': 1000,
+            # Numbered contact boxes with free-length signal names, as on the Nucleo connectors.
+            'connectorStyle': True,
             'artwork': 'assets/boards/compute-module-4-5.svg'
         },
         'orientation': 'usb-bottom',
