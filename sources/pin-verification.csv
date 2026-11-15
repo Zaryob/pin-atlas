@@ -9169,6 +9169,142 @@ xiao-nrf52840,13,D8,GPIO,GPIO interrupt,,P1.13,xiao-nrf52840-header | xiao-nrf52
 xiao-nrf52840,14,D7,GPIO,UART0 RX,,RX,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
 xiao-nrf52840,14,D7,GPIO,PWM,,PWM,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
 xiao-nrf52840,14,D7,GPIO,GPIO interrupt,,P1.12,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-esp32s3,1,D0,GPIO,ADC1_CH0,,ADC1_CH0,xiao-esp32s3-header,xiao-esp32s3-header
+xiao-esp32s3,1,D0,GPIO,TOUCH1,,TOUCH1,xiao-esp32s3-header,xiao-esp32s3-header
+xiao-esp32s3,1,D0,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,1,D0,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,1,D0,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,1,D0,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,1,D0,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,1,D0,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,1,D0,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,1,D0,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,1,D0,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,1,D0,GPIO,GPIO interrupt,,GPIO1,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,2,D1,GPIO,ADC1_CH1,,ADC1_CH1,xiao-esp32s3-header,xiao-esp32s3-header
+xiao-esp32s3,2,D1,GPIO,TOUCH2,,TOUCH2,xiao-esp32s3-header,xiao-esp32s3-header
+xiao-esp32s3,2,D1,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,2,D1,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,2,D1,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,2,D1,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,2,D1,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,2,D1,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,2,D1,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,2,D1,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,2,D1,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,2,D1,GPIO,GPIO interrupt,,GPIO2,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,3,D2,GPIO,ADC1_CH2,,ADC1_CH2,xiao-esp32s3-header | xiao-esp32s3-strapping,xiao-esp32s3-header
+xiao-esp32s3,3,D2,GPIO,TOUCH3,,TOUCH3,xiao-esp32s3-header | xiao-esp32s3-strapping,xiao-esp32s3-header
+xiao-esp32s3,3,D2,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,xiao-esp32s3-header | xiao-esp32s3-strapping,xiao-esp32s3-matrix
+xiao-esp32s3,3,D2,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,xiao-esp32s3-header | xiao-esp32s3-strapping,xiao-esp32s3-matrix
+xiao-esp32s3,3,D2,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,xiao-esp32s3-header | xiao-esp32s3-strapping,xiao-esp32s3-matrix
+xiao-esp32s3,3,D2,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,xiao-esp32s3-header | xiao-esp32s3-strapping,xiao-esp32s3-matrix
+xiao-esp32s3,3,D2,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,xiao-esp32s3-header | xiao-esp32s3-strapping,xiao-esp32s3-matrix
+xiao-esp32s3,3,D2,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,xiao-esp32s3-header | xiao-esp32s3-strapping,xiao-esp32s3-matrix
+xiao-esp32s3,3,D2,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,xiao-esp32s3-header | xiao-esp32s3-strapping,xiao-esp32s3-matrix
+xiao-esp32s3,3,D2,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,xiao-esp32s3-header | xiao-esp32s3-strapping,xiao-esp32s3-matrix
+xiao-esp32s3,3,D2,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,xiao-esp32s3-header | xiao-esp32s3-strapping,xiao-esp32s3-matrix
+xiao-esp32s3,3,D2,GPIO,GPIO interrupt,,GPIO3,xiao-esp32s3-header | xiao-esp32s3-strapping,xiao-esp32s3-matrix
+xiao-esp32s3,4,D3,GPIO,ADC1_CH3,,ADC1_CH3,xiao-esp32s3-header,xiao-esp32s3-header
+xiao-esp32s3,4,D3,GPIO,TOUCH4,,TOUCH4,xiao-esp32s3-header,xiao-esp32s3-header
+xiao-esp32s3,4,D3,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,4,D3,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,4,D3,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,4,D3,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,4,D3,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,4,D3,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,4,D3,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,4,D3,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,4,D3,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,4,D3,GPIO,GPIO interrupt,,GPIO4,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,5,D4,GPIO,ADC1_CH4,,ADC1_CH4,xiao-esp32s3-header,xiao-esp32s3-header
+xiao-esp32s3,5,D4,GPIO,TOUCH5,,TOUCH5,xiao-esp32s3-header,xiao-esp32s3-header
+xiao-esp32s3,5,D4,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,5,D4,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,5,D4,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,5,D4,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,5,D4,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,5,D4,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,5,D4,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,5,D4,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,5,D4,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,5,D4,GPIO,GPIO interrupt,,GPIO5,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,6,D5,GPIO,ADC1_CH5,,ADC1_CH5,xiao-esp32s3-header,xiao-esp32s3-header
+xiao-esp32s3,6,D5,GPIO,TOUCH6,,TOUCH6,xiao-esp32s3-header,xiao-esp32s3-header
+xiao-esp32s3,6,D5,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,6,D5,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,6,D5,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,6,D5,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,6,D5,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,6,D5,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,6,D5,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,6,D5,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,6,D5,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,6,D5,GPIO,GPIO interrupt,,GPIO6,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,7,D6,GPIO,U0TXD,,U0TXD,xiao-esp32s3-header,xiao-esp32s3-header
+xiao-esp32s3,7,D6,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,7,D6,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,7,D6,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,7,D6,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,7,D6,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,7,D6,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,7,D6,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,7,D6,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,7,D6,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,7,D6,GPIO,GPIO interrupt,,GPIO43,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,8,5V,POWER,,,,xiao-esp32s3-header,
+xiao-esp32s3,9,GND,GND,,,,xiao-esp32s3-header,
+xiao-esp32s3,10,3V3,POWER,,,,xiao-esp32s3-header,
+xiao-esp32s3,11,D10,GPIO,ADC1_CH8,,ADC1_CH8,xiao-esp32s3-header,xiao-esp32s3-header
+xiao-esp32s3,11,D10,GPIO,TOUCH9,,TOUCH9,xiao-esp32s3-header,xiao-esp32s3-header
+xiao-esp32s3,11,D10,GPIO,FSPIHD,,FSPIHD,xiao-esp32s3-header,xiao-esp32s3-header
+xiao-esp32s3,11,D10,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,11,D10,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,11,D10,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,11,D10,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,11,D10,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,11,D10,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,11,D10,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,11,D10,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,11,D10,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,11,D10,GPIO,GPIO interrupt,,GPIO9,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,12,D9,GPIO,ADC1_CH7,,ADC1_CH7,xiao-esp32s3-header,xiao-esp32s3-header
+xiao-esp32s3,12,D9,GPIO,TOUCH8,,TOUCH8,xiao-esp32s3-header,xiao-esp32s3-header
+xiao-esp32s3,12,D9,GPIO,FSPIWP,,FSPIWP,xiao-esp32s3-header,xiao-esp32s3-header
+xiao-esp32s3,12,D9,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,12,D9,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,12,D9,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,12,D9,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,12,D9,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,12,D9,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,12,D9,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,12,D9,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,12,D9,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,12,D9,GPIO,GPIO interrupt,,GPIO8,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,13,D8,GPIO,ADC1_CH6,,ADC1_CH6,xiao-esp32s3-header,xiao-esp32s3-header
+xiao-esp32s3,13,D8,GPIO,TOUCH7,,TOUCH7,xiao-esp32s3-header,xiao-esp32s3-header
+xiao-esp32s3,13,D8,GPIO,FSPICLK,,FSPICLK,xiao-esp32s3-header,xiao-esp32s3-header
+xiao-esp32s3,13,D8,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,13,D8,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,13,D8,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,13,D8,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,13,D8,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,13,D8,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,13,D8,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,13,D8,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,13,D8,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,13,D8,GPIO,GPIO interrupt,,GPIO7,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,14,D7,GPIO,U0RXD,,U0RXD,xiao-esp32s3-header,xiao-esp32s3-header
+xiao-esp32s3,14,D7,GPIO,UART1 RX (matrix),GPIO matrix,UART1 RX,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,14,D7,GPIO,UART1 TX (matrix),GPIO matrix,UART1 TX,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,14,D7,GPIO,SPI2 MISO (matrix),GPIO matrix,SPI2 MISO,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,14,D7,GPIO,SPI2 MOSI (matrix),GPIO matrix,SPI2 MOSI,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,14,D7,GPIO,SPI2 SCK (matrix),GPIO matrix,SPI2 SCK,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,14,D7,GPIO,SPI2 CS (matrix),GPIO matrix,SPI2 CS,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,14,D7,GPIO,I2C0 SDA (matrix),GPIO matrix,I2C0 SDA,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,14,D7,GPIO,I2C0 SCL (matrix),GPIO matrix,I2C0 SCL,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,14,D7,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,xiao-esp32s3-header,xiao-esp32s3-matrix
+xiao-esp32s3,14,D7,GPIO,GPIO interrupt,,GPIO44,xiao-esp32s3-header,xiao-esp32s3-matrix
 microbit-v2,1,P0,GPIO,AIN0,,AIN0,microbit-v2-header | microbit-v2-edge-table,microbit-v2-functions
 microbit-v2,1,P0,GPIO,TOUCH,,TOUCH,microbit-v2-header | microbit-v2-edge-table,microbit-v2-functions
 microbit-v2,1,P0,GPIO,PWM,,PWM,microbit-v2-header | microbit-v2-edge-table,microbit-v2-functions

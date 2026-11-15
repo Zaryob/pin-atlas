@@ -450,4 +450,126 @@ def build_seeed(cache, docs, observations, ref, verified_on, bank2040, rp2040_ph
         'pins': pins_nrf52840
     }
 
-    return [board_rp2040, board_c3, board_samd21, board_nrf52840]
+    # 5. Seeed Studio XIAO ESP32S3
+    schematic_s3 = cache / docs['xiao-esp32s3-schematic']['file']
+    assert schematic_s3.exists()
+    pins_file_s3 = cache / docs['xiao-esp32s3-pins-arduino']['file']
+    assert pins_file_s3.exists()
+    pins_text_s3 = pins_file_s3.read_text()
+    assert 'static const uint8_t TX = 43;' in pins_text_s3
+    assert 'static const uint8_t RX = 44;' in pins_text_s3
+    assert 'static const uint8_t SDA = 5;' in pins_text_s3
+    assert 'static const uint8_t SCL = 6;' in pins_text_s3
+    assert 'static const uint8_t SCK = 7;' in pins_text_s3
+    assert 'static const uint8_t MISO = 8;' in pins_text_s3
+    assert 'static const uint8_t MOSI = 9;' in pins_text_s3
+    assert 'static const uint8_t D0 = 1;' in pins_text_s3
+
+    physical_s3 = ref('xiao-esp32s3-header', 'xiao-esp32s3-schematic', 4,
+                      'Sheet 4/4 · connectors J2 (D0–D6) and J1 (D7–D10, 3V3, GND, 5V)', 'visual-diagram')
+    pins_ref_s3 = ref('xiao-esp32s3-pins-ref', 'xiao-esp32s3-pins-arduino', None,
+                      'pins_arduino.h · ESP32-S3 GPIO mappings and default buses', 'source-code')
+    matrix_s3 = ref('xiao-esp32s3-matrix', 'esp32s3-datasheet', 20,
+                    'I/O pins / IO MUX and GPIO Matrix · routable peripheral capabilities', 'pdf-text')
+    boot_s3 = ref('xiao-esp32s3-strapping', 'esp32s3-datasheet', 32,
+                  'Boot configurations · strapping levels sampled during reset')
+
+    s3_straps = {0, 3, 45, 46}
+    s3_matrix_routes = [
+        ('UART1 RX', 'UART'), ('UART1 TX', 'UART'),
+        ('SPI2 MISO', 'SPI'), ('SPI2 MOSI', 'SPI'), ('SPI2 SCK', 'SPI'), ('SPI2 CS', 'SPI'),
+        ('I2C0 SDA', 'I2C'), ('I2C0 SCL', 'I2C'),
+        ('LEDC PWM', 'PWM')
+    ]
+
+    pin_defs_s3 = [
+        # (number, connector, connPin, name, boardLabel, net, pinType, gpio, dedicated_list, x, y, side)
+        (1,  'L', 1, 'D0',  'D0',  'GPIO1',  'GPIO', 1,  [('ADC1_CH0', 'ADC'), ('TOUCH1', 'TOUCH')], 280, 140, 'left'),
+        (2,  'L', 2, 'D1',  'D1',  'GPIO2',  'GPIO', 2,  [('ADC1_CH1', 'ADC'), ('TOUCH2', 'TOUCH')], 280, 175, 'left'),
+        (3,  'L', 3, 'D2',  'D2',  'GPIO3',  'GPIO', 3,  [('ADC1_CH2', 'ADC'), ('TOUCH3', 'TOUCH')], 280, 210, 'left'),
+        (4,  'L', 4, 'D3',  'D3',  'GPIO4',  'GPIO', 4,  [('ADC1_CH3', 'ADC'), ('TOUCH4', 'TOUCH')], 280, 245, 'left'),
+        (5,  'L', 5, 'D4',  'D4',  'GPIO5',  'GPIO', 5,  [('ADC1_CH4', 'ADC'), ('TOUCH5', 'TOUCH')], 280, 280, 'left'),
+        (6,  'L', 6, 'D5',  'D5',  'GPIO6',  'GPIO', 6,  [('ADC1_CH5', 'ADC'), ('TOUCH6', 'TOUCH')], 280, 315, 'left'),
+        (7,  'L', 7, 'D6',  'D6',  'GPIO43', 'GPIO', 43, [('U0TXD', 'UART')], 280, 350, 'left'),
+        (8,  'R', 1, '5V',  '5V',  '5V',     'POWER', None, [], 540, 140, 'right'),
+        (9,  'R', 2, 'GND', 'GND', 'GND',    'GND',   None, [], 540, 175, 'right'),
+        (10, 'R', 3, '3V3', '3V3', '3V3',    'POWER', None, [], 540, 210, 'right'),
+        (11, 'R', 4, 'D10', 'D10', 'GPIO9',  'GPIO', 9,  [('ADC1_CH8', 'ADC'), ('TOUCH9', 'TOUCH'), ('FSPIHD', 'SPI')], 540, 245, 'right'),
+        (12, 'R', 5, 'D9',  'D9',  'GPIO8',  'GPIO', 8,  [('ADC1_CH7', 'ADC'), ('TOUCH8', 'TOUCH'), ('FSPIWP', 'SPI')], 540, 280, 'right'),
+        (13, 'R', 6, 'D8',  'D8',  'GPIO7',  'GPIO', 7,  [('ADC1_CH6', 'ADC'), ('TOUCH7', 'TOUCH'), ('FSPICLK', 'SPI')], 540, 315, 'right'),
+        (14, 'R', 7, 'D7',  'D7',  'GPIO44', 'GPIO', 44, [('U0RXD', 'UART')], 540, 350, 'right'),
+    ]
+
+    pins_s3 = []
+    for number, conn, connPin, name, label, net, ptype, gpio, dedicated, x, y, side in pin_defs_s3:
+        functions = []
+        ev = [physical_s3]
+        pin = {
+            'number': number,
+            'physicalLabel': f'{conn}.{connPin}',
+            'connector': conn,
+            'connectorPin': connPin,
+            'name': name,
+            'boardLabel': label,
+            'type': ptype,
+            'functions': functions,
+            'evidence': ev,
+            'net': net,
+            'position': {'x': x, 'y': y, 'side': side}
+        }
+        if gpio is not None:
+            pin['noteKey'] = 'espGpioNote'
+            for sig, grp in dedicated:
+                functions.append({
+                    'name': sig,
+                    'group': grp,
+                    'signal': sig,
+                    'evidence': physical_s3
+                })
+            for sig, grp in s3_matrix_routes:
+                functions.append({
+                    'name': f'{sig} (matrix)',
+                    'group': grp,
+                    'signal': sig,
+                    'selector': 'GPIO matrix',
+                    'evidence': matrix_s3
+                })
+            functions.append({
+                'name': 'GPIO interrupt',
+                'group': 'IRQ',
+                'signal': net,
+                'evidence': matrix_s3
+            })
+            if gpio in s3_straps:
+                pin['strapping'] = True
+                pin['evidence'].append(boot_s3)
+        pins_s3.append(pin)
+
+    board_s3 = {
+        'id': 'xiao-esp32s3',
+        'name': 'Seeed Studio XIAO ESP32S3',
+        'shortName': 'XIAO ESP32S3',
+        'subtitle': 'ESP32-S3R8 · Xtensa LX7 · 240 MHz · Wi-Fi + BLE · 3.3 V I/O',
+        'layout': 'custom',
+        'category': 'Seeed Studio',
+        'family': 'Seeed Studio',
+        'packageName': '14-contact header',
+        'packagePins': 14,
+        'gpioCount': 11,
+        'uniqueGPIOCount': 11,
+        'voltage': '3.3 V I/O',
+        'mcu': 'ESP32-S3',
+        'processor': 'Xtensa',
+        'clock': '240 MHz',
+        'diagram': {
+            'width': 820,
+            'height': 480,
+            'artwork': 'assets/boards/seeed-xiao-esp32s3.svg'
+        },
+        'source': 'https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/',
+        'datasheet': docs['xiao-esp32s3-schematic']['url'],
+        'verifiedOn': verified_on,
+        'pins': pins_s3
+    }
+
+    return [board_rp2040, board_c3, board_samd21, board_nrf52840, board_s3]

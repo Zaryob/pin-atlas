@@ -1,7 +1,7 @@
 {
   "verifiedOn": "2026-11-05",
-  "physicalPins": 5240,
-  "functionAssignments": 24325,
+  "physicalPins": 5254,
+  "functionAssignments": 24458,
   "documents": [
     {
       "id": "rp2350",
@@ -710,6 +710,23 @@
       "publisher": "Seeed Studio",
       "revision": "667f05fdaafd01a05d8027d7dbbf1f4e0b137047",
       "sha256": "808b26ec190cd802861bb0fbfa048623248c4c864c766b83ca8972bdfdade2ac"
+    },
+    {
+      "id": "xiao-esp32s3-schematic",
+      "title": "Seeed Studio XIAO ESP32S3 Schematic",
+      "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003751_XIAO%20ESP32S3_v1.4_SCH_260226.pdf.pdf",
+      "publisher": "Seeed Studio",
+      "revision": "v1.4 · 2026-02-10",
+      "sha256": "15993097cd695d177af352f4664ca91290a99c833f51d122d1165ef222f9923c"
+    },
+    {
+      "id": "xiao-esp32s3-pins-arduino",
+      "title": "ESP32 Arduino core · variants/XIAO_ESP32S3/pins_arduino.h",
+      "url": "https://raw.githubusercontent.com/espressif/arduino-esp32/6bfcd6d9a9a7ecd07d656a7a88673c93e7d4d537/variants/XIAO_ESP32S3/pins_arduino.h",
+      "viewUrl": "https://github.com/espressif/arduino-esp32/blob/6bfcd6d9a9a7ecd07d656a7a88673c93e7d4d537/variants/XIAO_ESP32S3/pins_arduino.h",
+      "publisher": "Espressif",
+      "revision": "6bfcd6d9a9a7ecd07d656a7a88673c93e7d4d537",
+      "sha256": "8da0bfde21f829ad1ecf90b20412f4870d5a4261a826fd05b688bc895497e11a"
     },
     {
       "id": "microbit-v2-schematic",
@@ -1581,6 +1598,15 @@
       "functionAssignments": 35,
       "physicalSourceMethods": [
         "source-code",
+        "visual-diagram"
+      ]
+    },
+    {
+      "id": "xiao-esp32s3",
+      "physicalPins": 14,
+      "functionAssignments": 133,
+      "physicalSourceMethods": [
+        "pdf-table",
         "visual-diagram"
       ]
     },

@@ -1,6 +1,6 @@
 # Donanım araştırması ve teknik referans
 
-İnceleme: 2026-11-14. 80 profil ayrı ayrı kapsanır. 45 profil için nitelendirilmiş tarih bilgisi vardır; 35 profilin kesin ilk üretim/satış tarihi doğrulanmamıştır. MCU veri sayfasının ilk yayını, kartın üretim yılı olarak sunulmaz.
+İnceleme: 2026-11-14. 81 profil ayrı ayrı kapsanır. 46 profil için nitelendirilmiş tarih bilgisi vardır; 35 profilin kesin ilk üretim/satış tarihi doğrulanmamıştır. MCU veri sayfasının ilk yayını, kartın üretim yılı olarak sunulmaz.
 
 Bu dosya `sources/hardware-details.json` kayıtlarından `npm run build:data` ile üretilir. Her özellik ve notun kaynak bağlantısı yanındadır. Canlı üretici sayfalarının içeriği değişebilir; pin kanıtlarının kilitli sürüm ve SHA-256 bilgileri ayrı `sources/manifest.json` kaydında korunur. Yeni teknik bilgi incelemesi, önceki pin doğrulama tarihini değiştirmez.
 
@@ -731,6 +731,23 @@ Devre / kart belgeleri: [Seeed Studio XIAO SAMD21 Schematic](https://files.seeed
 Standart 14 temaslı XIAO sürümü: 11 GPIO + 3 güç/toprak teması. nRF52840 BLE ve dahili anten. Sense modelinde ek olarak LSM6DS3TR-C 6-eksen IMU ve PDM mikrofon bulunur. [XIAO nRF52840 specifications](https://wiki.seeedstudio.com/XIAO_BLE/)
 
 Devre / kart belgeleri: [Seeed Studio XIAO nRF52840 Sense Schematic](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf)
+
+### Seeed Studio XIAO ESP32S3
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=seeed-xiao&profile=xiao-esp32s3) · [Pin referansı](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/) · [Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003751_XIAO%20ESP32S3_v1.4_SCH_260226.pdf.pdf)
+
+- **İlk satış / çıkış:** 2023-03-27. [Seeed Studio XIAO ESP32S3 launch](https://www.seeedstudio.com/blog/2023/03/27/seeed-studio-xiao-esp32s3-sense/)
+- **İşlemci:** 2 × Xtensa LX7. [ESP32S3 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf)
+- **Saat hızı / üst sınır:** 240 MHz. [ESP32S3 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf)
+- **RAM:** 512 KB SRAM + 16 KB RTC SRAM. [ESP32S3 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf)
+- **Program Flash’ı / depolama:** 8 MB Flash. [XIAO ESP32S3 specifications](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/), [Seeed Studio XIAO ESP32S3 Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003751_XIAO%20ESP32S3_v1.4_SCH_260226.pdf.pdf)
+- **Sabit ROM:** 384 KB ROM. [ESP32S3 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf)
+- **Harici PSRAM:** 8 MB PSRAM (Octal). [XIAO ESP32S3 specifications](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/), [Seeed Studio XIAO ESP32S3 Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003751_XIAO%20ESP32S3_v1.4_SCH_260226.pdf.pdf)
+- **Besleme / mantık:** USB-C: 5 V; GPIO: 3.3 V. 5 V güç pini GPIO toleransı anlamına gelmez.. [XIAO ESP32S3 specifications](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/), [Seeed Studio XIAO ESP32S3 Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003751_XIAO%20ESP32S3_v1.4_SCH_260226.pdf.pdf)
+
+Standart 14 temaslı XIAO sürümü: 11 GPIO + 3 güç/toprak teması. ESP32-S3R8, 8 MB Flash ve 8 MB Octal PSRAM barındırır. Sense eklenti kartı OV2640 kamera ve dahili dijital mikrofon ile SD kart yuvası sağlar. [XIAO ESP32S3 specifications](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)
+
+Devre / kart belgeleri: [Seeed Studio XIAO ESP32S3 Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003751_XIAO%20ESP32S3_v1.4_SCH_260226.pdf.pdf)
 
 ### BBC micro:bit V2
 

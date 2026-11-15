@@ -789,6 +789,25 @@
       "sha256": "808b26ec190cd802861bb0fbfa048623248c4c864c766b83ca8972bdfdade2ac"
     },
     {
+      "id": "xiao-esp32s3-schematic",
+      "title": "Seeed Studio XIAO ESP32S3 Schematic",
+      "file": "xiao-esp32s3-schematic.pdf",
+      "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003751_XIAO%20ESP32S3_v1.4_SCH_260226.pdf.pdf",
+      "publisher": "Seeed Studio",
+      "revision": "v1.4 · 2026-02-10",
+      "sha256": "15993097cd695d177af352f4664ca91290a99c833f51d122d1165ef222f9923c"
+    },
+    {
+      "id": "xiao-esp32s3-pins-arduino",
+      "title": "ESP32 Arduino core · variants/XIAO_ESP32S3/pins_arduino.h",
+      "file": "xiao-esp32s3-pins-arduino.h",
+      "url": "https://raw.githubusercontent.com/espressif/arduino-esp32/6bfcd6d9a9a7ecd07d656a7a88673c93e7d4d537/variants/XIAO_ESP32S3/pins_arduino.h",
+      "viewUrl": "https://github.com/espressif/arduino-esp32/blob/6bfcd6d9a9a7ecd07d656a7a88673c93e7d4d537/variants/XIAO_ESP32S3/pins_arduino.h",
+      "publisher": "Espressif",
+      "revision": "6bfcd6d9a9a7ecd07d656a7a88673c93e7d4d537",
+      "sha256": "8da0bfde21f829ad1ecf90b20412f4870d5a4261a826fd05b688bc895497e11a"
+    },
+    {
       "id": "microbit-v2-schematic",
       "title": "BBC micro:bit V2 Schematic",
       "file": "microbit-v2-schematic.pdf",
@@ -2853,6 +2872,38 @@
       "page": null,
       "locator": "g_ADigitalPinMap · nRF52840 port mappings and peripheral assignments",
       "method": "source-code"
+    },
+    "xiao-esp32s3-header": {
+      "document": "xiao-esp32s3-schematic",
+      "title": "Seeed Studio XIAO ESP32S3 Schematic",
+      "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003751_XIAO%20ESP32S3_v1.4_SCH_260226.pdf.pdf#page=4",
+      "page": 4,
+      "locator": "Sheet 4/4 · connectors J2 (D0–D6) and J1 (D7–D10, 3V3, GND, 5V)",
+      "method": "visual-diagram"
+    },
+    "xiao-esp32s3-pins-ref": {
+      "document": "xiao-esp32s3-pins-arduino",
+      "title": "ESP32 Arduino core · variants/XIAO_ESP32S3/pins_arduino.h",
+      "url": "https://github.com/espressif/arduino-esp32/blob/6bfcd6d9a9a7ecd07d656a7a88673c93e7d4d537/variants/XIAO_ESP32S3/pins_arduino.h",
+      "page": null,
+      "locator": "pins_arduino.h · ESP32-S3 GPIO mappings and default buses",
+      "method": "source-code"
+    },
+    "xiao-esp32s3-matrix": {
+      "document": "esp32s3-datasheet",
+      "title": "ESP32S3 series datasheet",
+      "url": "https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf#page=20",
+      "page": 20,
+      "locator": "I/O pins / IO MUX and GPIO Matrix · routable peripheral capabilities",
+      "method": "pdf-text"
+    },
+    "xiao-esp32s3-strapping": {
+      "document": "esp32s3-datasheet",
+      "title": "ESP32S3 series datasheet",
+      "url": "https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf#page=32",
+      "page": 32,
+      "locator": "Boot configurations · strapping levels sampled during reset",
+      "method": "pdf-table"
     },
     "microbit-v2-header": {
       "document": "microbit-v2-schematic",

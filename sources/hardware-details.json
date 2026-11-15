@@ -668,6 +668,18 @@
       "publisher": "Seeed Studio",
       "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
     },
+    "xiao-s3-spec": {
+      "title": "XIAO ESP32S3 specifications",
+      "url": "https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/",
+      "publisher": "Seeed Studio",
+      "locator": "Features; specifications; resources"
+    },
+    "xiao-esp32s3-schematic": {
+      "title": "Seeed Studio XIAO ESP32S3 Schematic",
+      "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003751_XIAO%20ESP32S3_v1.4_SCH_260226.pdf.pdf",
+      "publisher": "Seeed Studio",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
     "microbit-spec": {
       "title": "micro:bit v2.0 hardware",
       "url": "https://tech.microbit.org/hardware/2-0-revision/",
@@ -793,6 +805,12 @@
       "url": "https://www.seeedstudio.com/blog/2021/12/07/seeed-xiao-ble-nrf52840-sense/",
       "publisher": "Seeed Studio",
       "locator": "Manufacturer product launch blog post; 7 December 2021"
+    },
+    "xiao-s3-history": {
+      "title": "Seeed Studio XIAO ESP32S3 launch",
+      "url": "https://www.seeedstudio.com/blog/2023/03/27/seeed-studio-xiao-esp32s3-sense/",
+      "publisher": "Seeed Studio",
+      "locator": "Manufacturer product launch blog post; 27 March 2023"
     },
     "microbit-history": {
       "title": "New BBC micro:bit announced",
@@ -4176,6 +4194,42 @@
       "datasheet": "https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf",
       "documents": [
         "xiao-nrf52840-sense-schematic"
+      ]
+    },
+    "xiao-esp32s3": {
+      "chip": "ESP32-S3",
+      "flash": "8 MB Flash",
+      "psram": "8 MB PSRAM (Octal)",
+      "sources": [
+        "xiao-s3-spec",
+        "xiao-esp32s3-schematic"
+      ],
+      "power": {
+        "tr": "USB-C: 5 V; GPIO: 3.3 V. 5 V güç pini GPIO toleransı anlamına gelmez.",
+        "en": "USB-C: 5 V; GPIO: 3.3 V. A 5 V power pin does not imply 5 V GPIO tolerance."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Standart 14 temaslı XIAO sürümü: 11 GPIO + 3 güç/toprak teması. ESP32-S3R8, 8 MB Flash ve 8 MB Octal PSRAM barındırır. Sense eklenti kartı OV2640 kamera ve dahili dijital mikrofon ile SD kart yuvası sağlar.",
+            "en": "Standard 14-contact XIAO: 11 GPIO + 3 power/ground contacts. Houses ESP32-S3R8 with 8 MB Flash and 8 MB Octal PSRAM. The Sense add-on board provides an OV2640 camera, digital microphone, and microSD card slot."
+          },
+          "sources": [
+            "xiao-s3-spec"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2023-03-27",
+        "kind": "launch",
+        "sources": [
+          "xiao-s3-history"
+        ]
+      },
+      "pinSource": "https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/",
+      "datasheet": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003751_XIAO%20ESP32S3_v1.4_SCH_260226.pdf.pdf",
+      "documents": [
+        "xiao-esp32s3-schematic"
       ]
     },
     "microbit-v2": {

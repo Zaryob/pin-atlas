@@ -1,6 +1,6 @@
 # Hardware research and technical reference
 
-Reviewed: 2026-11-14. All 80 profiles are covered individually. 45 have a qualified historical date; exact first production/sale dates remain unverified for 35. An MCU datasheet’s initial publication is not presented as a board’s production year.
+Reviewed: 2026-11-14. All 81 profiles are covered individually. 46 have a qualified historical date; exact first production/sale dates remain unverified for 35. An MCU datasheet’s initial publication is not presented as a board’s production year.
 
 Generated from `sources/hardware-details.json` by `npm run build:data`. Each fact and note carries source links. Live manufacturer pages may change; the locked versions and SHA-256 values for pin evidence remain in `sources/manifest.json`. The technical review does not change the previous pin-verification date.
 
@@ -731,6 +731,23 @@ Circuit / board documents: [Seeed Studio XIAO SAMD21 Schematic](https://files.se
 Standard 14-contact XIAO: 11 GPIO + 3 power/ground contacts. nRF52840 BLE and internal antenna. The Sense variant adds an onboard LSM6DS3TR-C 6-axis IMU and PDM microphone. [XIAO nRF52840 specifications](https://wiki.seeedstudio.com/XIAO_BLE/)
 
 Circuit / board documents: [Seeed Studio XIAO nRF52840 Sense Schematic](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf)
+
+### Seeed Studio XIAO ESP32S3
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=seeed-xiao&profile=xiao-esp32s3) · [Pin reference](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/) · [Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003751_XIAO%20ESP32S3_v1.4_SCH_260226.pdf.pdf)
+
+- **Initial sale / release:** 2023-03-27. [Seeed Studio XIAO ESP32S3 launch](https://www.seeedstudio.com/blog/2023/03/27/seeed-studio-xiao-esp32s3-sense/)
+- **Processor:** 2 × Xtensa LX7. [ESP32S3 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf)
+- **Clock / maximum:** 240 MHz. [ESP32S3 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf)
+- **RAM:** 512 KB SRAM + 16 KB RTC SRAM. [ESP32S3 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf)
+- **Program Flash / storage:** 8 MB Flash. [XIAO ESP32S3 specifications](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/), [Seeed Studio XIAO ESP32S3 Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003751_XIAO%20ESP32S3_v1.4_SCH_260226.pdf.pdf)
+- **Fixed ROM:** 384 KB ROM. [ESP32S3 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf)
+- **External PSRAM:** 8 MB PSRAM (Octal). [XIAO ESP32S3 specifications](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/), [Seeed Studio XIAO ESP32S3 Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003751_XIAO%20ESP32S3_v1.4_SCH_260226.pdf.pdf)
+- **Power / logic:** USB-C: 5 V; GPIO: 3.3 V. A 5 V power pin does not imply 5 V GPIO tolerance.. [XIAO ESP32S3 specifications](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/), [Seeed Studio XIAO ESP32S3 Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003751_XIAO%20ESP32S3_v1.4_SCH_260226.pdf.pdf)
+
+Standard 14-contact XIAO: 11 GPIO + 3 power/ground contacts. Houses ESP32-S3R8 with 8 MB Flash and 8 MB Octal PSRAM. The Sense add-on board provides an OV2640 camera, digital microphone, and microSD card slot. [XIAO ESP32S3 specifications](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)
+
+Circuit / board documents: [Seeed Studio XIAO ESP32S3 Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003751_XIAO%20ESP32S3_v1.4_SCH_260226.pdf.pdf)
 
 ### BBC micro:bit V2
 
