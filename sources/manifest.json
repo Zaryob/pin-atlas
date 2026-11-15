@@ -1348,6 +1348,26 @@
       "publisher": "Raspberry Pi Ltd",
       "revision": "RP-008943-DS-7",
       "sha256": "0f611d884ce6cbc3dae5d7eb5f30ffbda5e2ec0632086c338dff4f2e74fc4007"
+    },
+    {
+      "id": "cm4-datasheet",
+      "title": "Raspberry Pi Compute Module 4 Datasheet",
+      "file": "cm4-datasheet.pdf",
+      "url": "https://datasheets.raspberrypi.com/cm4/cm4-datasheet.pdf",
+      "viewUrl": "https://www.raspberrypi.com/documentation/computers/compute-module.html",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "RP-008168-DS",
+      "sha256": "d6946f8bb3e0276defa95b99b9d402a01a4805d3de02d53f835e93044ea7af97"
+    },
+    {
+      "id": "cm5-datasheet",
+      "title": "Raspberry Pi Compute Module 5 Datasheet",
+      "file": "cm5-datasheet.pdf",
+      "url": "https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf",
+      "viewUrl": "https://www.raspberrypi.com/documentation/computers/compute-module.html",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "RP-008180-DS",
+      "sha256": "80070fefd8db6e8abc6e146c8b7b5fb318ba129cc1e28826936d547fde79c863"
     }
   ],
   "publishers": [

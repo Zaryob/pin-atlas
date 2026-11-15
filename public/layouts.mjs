@@ -81,6 +81,16 @@ export function buildLayouts(boards) {
         {key: 'xiaoNrf52840Reference', profileIds: ['xiao-nrf52840']},
         {key: 'xiaoEsp32s3Reference', profileIds: ['xiao-esp32s3']}
       ]
+    },
+    {
+      id: 'compute-module', nameKey: 'cmLayout', subtitleKey: 'cmLayoutSubtitle',
+      compatibleKey: 'cmCompatible', sharedContactCount: 200,
+      profileIds: ['raspberry-pi-cm4', 'raspberry-pi-cm5'], defaultProfile: 'raspberry-pi-cm4',
+      geometryConnectors: ['CN1', 'CN2'],
+      references: [
+        {key: 'cm4Reference', profileIds: ['raspberry-pi-cm4']},
+        {key: 'cm5Reference', profileIds: ['raspberry-pi-cm5']}
+      ]
     }
   ];
   if (nucleo64.length) definitions.push({

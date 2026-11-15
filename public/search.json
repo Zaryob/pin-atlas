@@ -491,6 +491,34 @@
   },
   {
     "lang": "tr",
+    "title": "Raspberry Pi Compute Module 4",
+    "url": "/pin-atlas/#board=compute-module&profile=raspberry-pi-cm4",
+    "type": "pin-atlas/",
+    "description": "BCM2711 · 4 × Cortex-A72 · Dual 100-pin Hirose DF40 · BCM2711 · Raspberry Pi"
+  },
+  {
+    "lang": "en",
+    "title": "Raspberry Pi Compute Module 4",
+    "url": "/pin-atlas/#board=compute-module&profile=raspberry-pi-cm4",
+    "type": "pin-atlas/",
+    "description": "BCM2711 · 4 × Cortex-A72 · Dual 100-pin Hirose DF40 · BCM2711 · Raspberry Pi"
+  },
+  {
+    "lang": "tr",
+    "title": "Raspberry Pi Compute Module 5",
+    "url": "/pin-atlas/#board=compute-module&profile=raspberry-pi-cm5",
+    "type": "pin-atlas/",
+    "description": "BCM2712 / RP1 · 4 × Cortex-A76 · Dual 100-pin Hirose DF40 · BCM2712 / RP1 · Raspberry Pi"
+  },
+  {
+    "lang": "en",
+    "title": "Raspberry Pi Compute Module 5",
+    "url": "/pin-atlas/#board=compute-module&profile=raspberry-pi-cm5",
+    "type": "pin-atlas/",
+    "description": "BCM2712 / RP1 · 4 × Cortex-A76 · Dual 100-pin Hirose DF40 · BCM2712 / RP1 · Raspberry Pi"
+  },
+  {
+    "lang": "tr",
     "title": "ATmega328P · PDIP-28",
     "url": "/pin-atlas/#board=atmega328p-pdip28&profile=atmega328p-pdip28",
     "type": "pin-atlas/",

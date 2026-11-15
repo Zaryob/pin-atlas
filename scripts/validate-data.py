@@ -34,7 +34,7 @@ for b in boards:
                 assert f['configuration']['field'] and f['configuration']['values']
                 assert not f.get('alt')
             if 'alt' in f:
-                assert f['selector']==('ALT' if b['id'] in ('raspberry-pi-4','raspberry-pi-5') else 'F')+str(f['alt'])
+                assert f['selector']==('ALT' if b['id'] in ('raspberry-pi-4','raspberry-pi-5','raspberry-pi-cm4','raspberry-pi-cm5') else 'F')+str(f['alt'])
 lookup={b['id']:{p['number']:p for p in b['pins']} for b in boards}
 assert lookup['pico2w'][1]['name']=='GP0' and lookup['pico2w'][40]['name']=='VBUS'
 assert not any(p['name'] in {'GP23','GP24','GP25','GP29'} for p in lookup['pico2w'].values())

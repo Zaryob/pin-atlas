@@ -1347,6 +1347,26 @@
       "publisher": "Raspberry Pi Ltd",
       "revision": "RP-008943-DS-7",
       "sha256": "0f611d884ce6cbc3dae5d7eb5f30ffbda5e2ec0632086c338dff4f2e74fc4007"
+    },
+    {
+      "id": "cm4-datasheet",
+      "title": "Raspberry Pi Compute Module 4 Datasheet",
+      "file": "cm4-datasheet.pdf",
+      "url": "https://datasheets.raspberrypi.com/cm4/cm4-datasheet.pdf",
+      "viewUrl": "https://www.raspberrypi.com/documentation/computers/compute-module.html",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "RP-008168-DS",
+      "sha256": "d6946f8bb3e0276defa95b99b9d402a01a4805d3de02d53f835e93044ea7af97"
+    },
+    {
+      "id": "cm5-datasheet",
+      "title": "Raspberry Pi Compute Module 5 Datasheet",
+      "file": "cm5-datasheet.pdf",
+      "url": "https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf",
+      "viewUrl": "https://www.raspberrypi.com/documentation/computers/compute-module.html",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "RP-008180-DS",
+      "sha256": "80070fefd8db6e8abc6e146c8b7b5fb318ba129cc1e28826936d547fde79c863"
     }
   ],
   "references": {
@@ -2692,6 +2712,38 @@
       "url": "https://www.raspberrypi.com/documentation/microcontrollers/radio-modules.html#page=12",
       "page": 12,
       "locator": "§2.6 · Electrical specifications · Vin 3.0 V to 4.8 V, VDDIO 1.8 V / 3.3 V",
+      "method": "pdf-text"
+    },
+    "cm4-pinout": {
+      "document": "cm4-datasheet",
+      "title": "Raspberry Pi Compute Module 4 Datasheet",
+      "url": "https://www.raspberrypi.com/documentation/computers/compute-module.html#page=17",
+      "page": 17,
+      "locator": "Table 6 · Pinout for the Raspberry Pi Compute Module 4",
+      "method": "table"
+    },
+    "cm4-electrical": {
+      "document": "cm4-datasheet",
+      "title": "Raspberry Pi Compute Module 4 Datasheet",
+      "url": "https://www.raspberrypi.com/documentation/computers/compute-module.html#page=16",
+      "page": 16,
+      "locator": "§4 · Pinout and electrical specification · GPIO_VREF and PCIe",
+      "method": "pdf-text"
+    },
+    "cm5-pinout": {
+      "document": "cm5-datasheet",
+      "title": "Raspberry Pi Compute Module 5 Datasheet",
+      "url": "https://www.raspberrypi.com/documentation/computers/compute-module.html#page=18",
+      "page": 18,
+      "locator": "Table 5 · Pinout for the Raspberry Pi Compute Module 5",
+      "method": "table"
+    },
+    "cm5-electrical": {
+      "document": "cm5-datasheet",
+      "title": "Raspberry Pi Compute Module 5 Datasheet",
+      "url": "https://www.raspberrypi.com/documentation/computers/compute-module.html#page=26",
+      "page": 26,
+      "locator": "§4.3 · Electrical specifications · GPIO_VREF and absolute maximum ratings",
       "method": "pdf-text"
     },
     "atmega328p-reset-fuse": {

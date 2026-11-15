@@ -1,6 +1,6 @@
 # Hardware research and technical reference
 
-Reviewed: 2026-11-14. All 83 profiles are covered individually. 48 have a qualified historical date; exact first production/sale dates remain unverified for 35. An MCU datasheet’s initial publication is not presented as a board’s production year.
+Reviewed: 2026-11-14. All 85 profiles are covered individually. 50 have a qualified historical date; exact first production/sale dates remain unverified for 35. An MCU datasheet’s initial publication is not presented as a board’s production year.
 
 Generated from `sources/hardware-details.json` by `npm run build:data`. Each fact and note carries source links. Live manufacturer pages may change; the locked versions and SHA-256 values for pin evidence remain in `sources/manifest.json`. The technical review does not change the previous pin-verification date.
 
@@ -607,6 +607,36 @@ Infineon CYW43439 single-band (2.4 GHz) Wi-Fi 4 (802.11n) and Bluetooth 5.2 radi
 21 castellated SMT edge pads, shared 2.4 GHz onboard PCB antenna, low pin-count gSPI bus, and 3 GPIO expander pins. [Raspberry Pi Radio Module 2 Datasheet](https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf)
 
 Circuit / board documents: [Raspberry Pi Radio Module 2 Datasheet](https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf)
+
+### Raspberry Pi Compute Module 4
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=compute-module&profile=raspberry-pi-cm4) · [Pin reference](https://www.raspberrypi.com/documentation/computers/compute-module.html) · [Datasheet](https://datasheets.raspberrypi.com/cm4/cm4-datasheet.pdf)
+
+- **Initial sale / release:** 2020-10-19. [Raspberry Pi Compute Module 4 Product Documentation](https://www.raspberrypi.com/documentation/computers/compute-module.html)
+- **Processor:** 4 × Arm Cortex-A72 (64-bit). [Raspberry Pi 4 product brief](https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf)
+- **Clock / maximum:** 1.8 GHz; original boards 1.5 GHz. [Raspberry Pi 4 product brief](https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf)
+- **RAM:** 1 / 2 / 3 / 4 / 8 GB LPDDR4; model dependent. [Raspberry Pi 4 product brief](https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf)
+- **Program Flash / storage:** Optional eMMC (8/16/32 GB) or Lite (external SD). [Raspberry Pi Compute Module 4 Product Documentation](https://www.raspberrypi.com/documentation/computers/compute-module.html), [Raspberry Pi Compute Module 4 Datasheet](https://datasheets.raspberrypi.com/cm4/cm4-datasheet.pdf)
+- **Power / logic:** 5 V main power input (4.75-5.25 V). Select 3.3 V or 1.8 V I/O via GPIO_VREF.. [Raspberry Pi Compute Module 4 Product Documentation](https://www.raspberrypi.com/documentation/computers/compute-module.html), [Raspberry Pi Compute Module 4 Datasheet](https://datasheets.raspberrypi.com/cm4/cm4-datasheet.pdf)
+
+Provides 200 contacts across dual 100-pin Hirose DF40 mezzanine connectors. Includes PCIe Gen 2 x1, Gigabit Ethernet PHY, dual HDMI 2.0, and 28 GPIOs. [Raspberry Pi Compute Module 4 Datasheet](https://datasheets.raspberrypi.com/cm4/cm4-datasheet.pdf)
+
+Circuit / board documents: [Raspberry Pi Compute Module 4 Datasheet](https://datasheets.raspberrypi.com/cm4/cm4-datasheet.pdf)
+
+### Raspberry Pi Compute Module 5
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=compute-module&profile=raspberry-pi-cm5) · [Pin reference](https://www.raspberrypi.com/documentation/computers/compute-module.html) · [Datasheet](https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf)
+
+- **Initial sale / release:** 2024-11-26. [Raspberry Pi Compute Module 5 Product Documentation](https://www.raspberrypi.com/documentation/computers/compute-module.html)
+- **Processor:** 4 × Arm Cortex-A76 (64-bit); RP1 I/O. [Raspberry Pi 5 specifications](https://www.raspberrypi.com/products/raspberry-pi-5/)
+- **Clock / maximum:** 2.4 GHz. [Raspberry Pi 5 specifications](https://www.raspberrypi.com/products/raspberry-pi-5/)
+- **RAM:** 1 / 2 / 4 / 8 / 16 GB LPDDR4X; model dependent. [Raspberry Pi 5 specifications](https://www.raspberrypi.com/products/raspberry-pi-5/)
+- **Program Flash / storage:** Optional eMMC (16/32/64 GB) or Lite (external SD). [Raspberry Pi Compute Module 5 Product Documentation](https://www.raspberrypi.com/documentation/computers/compute-module.html), [Raspberry Pi Compute Module 5 Datasheet](https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf)
+- **Power / logic:** 5 V main power input (4.75-5.25 V). Select 3.3 V or 1.8 V I/O via GPIO_VREF.. [Raspberry Pi Compute Module 5 Product Documentation](https://www.raspberrypi.com/documentation/computers/compute-module.html), [Raspberry Pi Compute Module 5 Datasheet](https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf)
+
+Features BCM2712 SoC and RP1 I/O controller with PCIe Gen 2/3 x1, 2× USB 3.0, dual 4Kp60 HDMI, fan tacho/PWM, and RTC battery support. [Raspberry Pi Compute Module 5 Datasheet](https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf)
+
+Circuit / board documents: [Raspberry Pi Compute Module 5 Datasheet](https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf)
 
 ### ATmega328P · PDIP-28
 

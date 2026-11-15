@@ -650,6 +650,30 @@
       "publisher": "Raspberry Pi Ltd",
       "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
     },
+    "cm4-spec": {
+      "title": "Raspberry Pi Compute Module 4 Product Documentation",
+      "url": "https://www.raspberrypi.com/documentation/computers/compute-module.html",
+      "publisher": "Raspberry Pi Ltd",
+      "locator": "Official product documentation, hardware design guide and pinout"
+    },
+    "cm4-datasheet": {
+      "title": "Raspberry Pi Compute Module 4 Datasheet",
+      "url": "https://datasheets.raspberrypi.com/cm4/cm4-datasheet.pdf",
+      "publisher": "Raspberry Pi Ltd",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "cm5-spec": {
+      "title": "Raspberry Pi Compute Module 5 Product Documentation",
+      "url": "https://www.raspberrypi.com/documentation/computers/compute-module.html",
+      "publisher": "Raspberry Pi Ltd",
+      "locator": "Official product documentation, hardware design guide and pinout"
+    },
+    "cm5-datasheet": {
+      "title": "Raspberry Pi Compute Module 5 Datasheet",
+      "url": "https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf",
+      "publisher": "Raspberry Pi Ltd",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
     "xiao-rp-spec": {
       "title": "XIAO RP2040 specifications",
       "url": "https://wiki.seeedstudio.com/XIAO-RP2040/",
@@ -4554,6 +4578,76 @@
       "datasheet": "https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf",
       "documents": [
         "rm2-datasheet"
+      ]
+    },
+    "raspberry-pi-cm4": {
+      "chip": "BCM2711",
+      "flash": "Optional eMMC (8/16/32 GB) or Lite (external SD)",
+      "sources": [
+        "cm4-spec",
+        "cm4-datasheet"
+      ],
+      "power": {
+        "tr": "5 V güç girişi (4.75–5.25 V). GPIO_VREF ile 3.3 V veya 1.8 V I/O seçilebilir.",
+        "en": "5 V main power input (4.75-5.25 V). Select 3.3 V or 1.8 V I/O via GPIO_VREF."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Çift 100-pin Hirose DF40 asma kat konnektöründe 200 temas sunar. PCIe Gen 2 ×1, dahili Gigabit Ethernet PHY, 2× HDMI 2.0 ve 28 GPIO barındırır.",
+            "en": "Provides 200 contacts across dual 100-pin Hirose DF40 mezzanine connectors. Includes PCIe Gen 2 x1, Gigabit Ethernet PHY, dual HDMI 2.0, and 28 GPIOs."
+          },
+          "sources": [
+            "cm4-datasheet"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2020-10-19",
+        "kind": "launch",
+        "sources": [
+          "cm4-spec"
+        ]
+      },
+      "pinSource": "https://datasheets.raspberrypi.com/cm4/cm4-datasheet.pdf",
+      "datasheet": "https://datasheets.raspberrypi.com/cm4/cm4-datasheet.pdf",
+      "documents": [
+        "cm4-datasheet"
+      ]
+    },
+    "raspberry-pi-cm5": {
+      "chip": "BCM2712 / RP1",
+      "flash": "Optional eMMC (16/32/64 GB) or Lite (external SD)",
+      "sources": [
+        "cm5-spec",
+        "cm5-datasheet"
+      ],
+      "power": {
+        "tr": "5 V güç girişi (4.75–5.25 V). GPIO_VREF ile 3.3 V veya 1.8 V I/O seçilebilir.",
+        "en": "5 V main power input (4.75-5.25 V). Select 3.3 V or 1.8 V I/O via GPIO_VREF."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "BCM2712 SoC ve RP1 I/O denetleyicisi ile PCIe Gen 2/3 ×1, 2× USB 3.0, çift 4Kp60 HDMI, fan tacho/PWM ve RTC batarya desteği sunar.",
+            "en": "Features BCM2712 SoC and RP1 I/O controller with PCIe Gen 2/3 x1, 2× USB 3.0, dual 4Kp60 HDMI, fan tacho/PWM, and RTC battery support."
+          },
+          "sources": [
+            "cm5-datasheet"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2024-11-26",
+        "kind": "launch",
+        "sources": [
+          "cm5-spec"
+        ]
+      },
+      "pinSource": "https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf",
+      "datasheet": "https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf",
+      "documents": [
+        "cm5-datasheet"
       ]
     }
   }

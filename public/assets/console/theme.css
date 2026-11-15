@@ -263,7 +263,7 @@ mark, .console-highlight { background: var(--selection); color: var(--ink); outl
   .console-brand { min-width: 0; flex-shrink: 1; margin: 0; overflow: hidden; text-overflow: ellipsis; }
   .console-projects { flex: 1 1 0; min-width: 44px; }
   .console-projects > summary { overflow: hidden; }
-  .console-project-path { flex: 1 1 auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .console-project-path { flex: 0 1 auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .console-prompt-dollar { flex-shrink: 0; }
   .console-header-actions { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 8px; margin-left: auto; }
   .console-js .console-search-compact { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 40px; padding: 8px; }

@@ -1,6 +1,6 @@
 # Donanım araştırması ve teknik referans
 
-İnceleme: 2026-11-14. 83 profil ayrı ayrı kapsanır. 48 profil için nitelendirilmiş tarih bilgisi vardır; 35 profilin kesin ilk üretim/satış tarihi doğrulanmamıştır. MCU veri sayfasının ilk yayını, kartın üretim yılı olarak sunulmaz.
+İnceleme: 2026-11-14. 85 profil ayrı ayrı kapsanır. 50 profil için nitelendirilmiş tarih bilgisi vardır; 35 profilin kesin ilk üretim/satış tarihi doğrulanmamıştır. MCU veri sayfasının ilk yayını, kartın üretim yılı olarak sunulmaz.
 
 Bu dosya `sources/hardware-details.json` kayıtlarından `npm run build:data` ile üretilir. Her özellik ve notun kaynak bağlantısı yanındadır. Canlı üretici sayfalarının içeriği değişebilir; pin kanıtlarının kilitli sürüm ve SHA-256 bilgileri ayrı `sources/manifest.json` kaydında korunur. Yeni teknik bilgi incelemesi, önceki pin doğrulama tarihini değiştirmez.
 
@@ -607,6 +607,36 @@ Infineon CYW43439 tek bantlı (2.4 GHz) Wi-Fi 4 (802.11n) ve Bluetooth 5.2 telsi
 21 kastelasyonlu lehim kenar pedi, paylaşımlı 2.4 GHz dahili PCB anteni, düşük pin sayılı gSPI arayüzü ve 3 GPIO genişletici pini sunar. [Raspberry Pi Radio Module 2 Datasheet](https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf)
 
 Devre / kart belgeleri: [Raspberry Pi Radio Module 2 Datasheet](https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf)
+
+### Raspberry Pi Compute Module 4
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=compute-module&profile=raspberry-pi-cm4) · [Pin referansı](https://www.raspberrypi.com/documentation/computers/compute-module.html) · [Datasheet](https://datasheets.raspberrypi.com/cm4/cm4-datasheet.pdf)
+
+- **İlk satış / çıkış:** 2020-10-19. [Raspberry Pi Compute Module 4 Product Documentation](https://www.raspberrypi.com/documentation/computers/compute-module.html)
+- **İşlemci:** 4 × Arm Cortex-A72 (64-bit). [Raspberry Pi 4 product brief](https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf)
+- **Saat hızı / üst sınır:** 1.8 GHz; ilk sürümlerde 1.5 GHz. [Raspberry Pi 4 product brief](https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf)
+- **RAM:** 1 / 2 / 3 / 4 / 8 GB LPDDR4; modele bağlı. [Raspberry Pi 4 product brief](https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf)
+- **Program Flash’ı / depolama:** Optional eMMC (8/16/32 GB) or Lite (external SD). [Raspberry Pi Compute Module 4 Product Documentation](https://www.raspberrypi.com/documentation/computers/compute-module.html), [Raspberry Pi Compute Module 4 Datasheet](https://datasheets.raspberrypi.com/cm4/cm4-datasheet.pdf)
+- **Besleme / mantık:** 5 V güç girişi (4.75–5.25 V). GPIO_VREF ile 3.3 V veya 1.8 V I/O seçilebilir.. [Raspberry Pi Compute Module 4 Product Documentation](https://www.raspberrypi.com/documentation/computers/compute-module.html), [Raspberry Pi Compute Module 4 Datasheet](https://datasheets.raspberrypi.com/cm4/cm4-datasheet.pdf)
+
+Çift 100-pin Hirose DF40 asma kat konnektöründe 200 temas sunar. PCIe Gen 2 ×1, dahili Gigabit Ethernet PHY, 2× HDMI 2.0 ve 28 GPIO barındırır. [Raspberry Pi Compute Module 4 Datasheet](https://datasheets.raspberrypi.com/cm4/cm4-datasheet.pdf)
+
+Devre / kart belgeleri: [Raspberry Pi Compute Module 4 Datasheet](https://datasheets.raspberrypi.com/cm4/cm4-datasheet.pdf)
+
+### Raspberry Pi Compute Module 5
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=compute-module&profile=raspberry-pi-cm5) · [Pin referansı](https://www.raspberrypi.com/documentation/computers/compute-module.html) · [Datasheet](https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf)
+
+- **İlk satış / çıkış:** 2024-11-26. [Raspberry Pi Compute Module 5 Product Documentation](https://www.raspberrypi.com/documentation/computers/compute-module.html)
+- **İşlemci:** 4 × Arm Cortex-A76 (64-bit); RP1 I/O. [Raspberry Pi 5 specifications](https://www.raspberrypi.com/products/raspberry-pi-5/)
+- **Saat hızı / üst sınır:** 2.4 GHz. [Raspberry Pi 5 specifications](https://www.raspberrypi.com/products/raspberry-pi-5/)
+- **RAM:** 1 / 2 / 4 / 8 / 16 GB LPDDR4X; modele bağlı. [Raspberry Pi 5 specifications](https://www.raspberrypi.com/products/raspberry-pi-5/)
+- **Program Flash’ı / depolama:** Optional eMMC (16/32/64 GB) or Lite (external SD). [Raspberry Pi Compute Module 5 Product Documentation](https://www.raspberrypi.com/documentation/computers/compute-module.html), [Raspberry Pi Compute Module 5 Datasheet](https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf)
+- **Besleme / mantık:** 5 V güç girişi (4.75–5.25 V). GPIO_VREF ile 3.3 V veya 1.8 V I/O seçilebilir.. [Raspberry Pi Compute Module 5 Product Documentation](https://www.raspberrypi.com/documentation/computers/compute-module.html), [Raspberry Pi Compute Module 5 Datasheet](https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf)
+
+BCM2712 SoC ve RP1 I/O denetleyicisi ile PCIe Gen 2/3 ×1, 2× USB 3.0, çift 4Kp60 HDMI, fan tacho/PWM ve RTC batarya desteği sunar. [Raspberry Pi Compute Module 5 Datasheet](https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf)
+
+Devre / kart belgeleri: [Raspberry Pi Compute Module 5 Datasheet](https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf)
 
 ### ATmega328P · PDIP-28
 
