@@ -6,7 +6,8 @@ import pdfplumber
 
 ROOT=Path(__file__).resolve().parents[1]
 PAGES={'stm32f103':range(28,34),'stm32-rm0008':range(175,182),
-       'nucleo-um1724-r14':sorted({26,27,30,32,*range(37,63)}),
+       'nucleo-um1724-r17':sorted({27,28,31,33,*range(38,64)}),
+       'nucleo-g4-um2505':[30,31,32,33],
        'nucleo-um1956-r6':[12,13,21,22,24,30,31,32],
        'nucleo-um1974-r11':[14,15,31,32,33,34,35,37,61,62,63,64,65,70,71],
        'nucleo-um2407-r6':[15,16,31,32,33,34,38,39,40,41,42,43,44]}

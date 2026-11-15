@@ -163,10 +163,11 @@
       "id": "arduino-uno-r3-pinout",
       "title": "Arduino UNO R3 full pinout",
       "publisher": "Arduino",
-      "revision": "2022-10-06",
+      "revision": "2022-10-06 · arduino/docs-content · cb938e96b391e636011690e4db1348dc38db4deb",
       "file": "arduino-uno-r3-pinout.pdf",
-      "url": "https://docs.arduino.cc/resources/pinouts/A000066-full-pinout.pdf",
-      "sha256": "088b4d7d776abf443cb050c31875221aa5fc7f0533470b33e035c249cf240007"
+      "url": "https://raw.githubusercontent.com/arduino/docs-content/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/uno/boards/uno-rev3/downloads/A000066-full-pinout.pdf",
+      "sha256": "088b4d7d776abf443cb050c31875221aa5fc7f0533470b33e035c249cf240007",
+      "viewUrl": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/uno/boards/uno-rev3/downloads/A000066-full-pinout.pdf"
     },
     {
       "id": "arduino-uno-r3-datasheet",
@@ -183,19 +184,21 @@
       "id": "arduino-nano-classic-pinout",
       "title": "Arduino Nano (classic) full pinout",
       "publisher": "Arduino",
-      "revision": "2021-06-30",
+      "revision": "2021-06-30 · arduino/docs-content · cb938e96b391e636011690e4db1348dc38db4deb",
       "file": "arduino-nano-classic-pinout.pdf",
-      "url": "https://docs.arduino.cc/resources/pinouts/A000005-full-pinout.pdf",
-      "sha256": "2b9140b09cb66c788c1c4e01da33498a63e245fc133ac7d32697e140b00ea317"
+      "url": "https://raw.githubusercontent.com/arduino/docs-content/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/nano/boards/nano/downloads/A000005-full-pinout.pdf",
+      "sha256": "2b9140b09cb66c788c1c4e01da33498a63e245fc133ac7d32697e140b00ea317",
+      "viewUrl": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/nano/boards/nano/downloads/A000005-full-pinout.pdf"
     },
     {
       "id": "arduino-mega-2560-pinout",
       "title": "Arduino Mega 2560 Rev3 full pinout",
       "publisher": "Arduino",
-      "revision": "2020-12-16",
+      "revision": "2020-12-16 · arduino/docs-content · cb938e96b391e636011690e4db1348dc38db4deb",
       "file": "arduino-mega-2560-pinout.pdf",
-      "url": "https://docs.arduino.cc/resources/pinouts/A000067-full-pinout.pdf",
-      "sha256": "ecc6204d0683269e8ee3f328764c92932121f2d98daca7fd3ff3ea45bd4d090f"
+      "url": "https://raw.githubusercontent.com/arduino/docs-content/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/mega/boards/mega-2560/downloads/A000067-full-pinout.pdf",
+      "sha256": "ecc6204d0683269e8ee3f328764c92932121f2d98daca7fd3ff3ea45bd4d090f",
+      "viewUrl": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/mega/boards/mega-2560/downloads/A000067-full-pinout.pdf"
     },
     {
       "id": "arduino-mega-2560-datasheet",
@@ -242,28 +245,31 @@
       "id": "arduino-leonardo-pinout",
       "title": "Arduino leonardo full pinout",
       "publisher": "Arduino",
-      "revision": "2025-11-25",
+      "revision": "2025-11-25 · arduino/docs-content · cb938e96b391e636011690e4db1348dc38db4deb",
       "file": "leonardo-full-pinout.pdf",
-      "url": "https://docs.arduino.cc/resources/pinouts/A000057-full-pinout.pdf",
-      "sha256": "a7bf8c0087aa44cf7c3b0e958f10389340b6c7b3425ca4047aa1e42d9818821e"
+      "url": "https://raw.githubusercontent.com/arduino/docs-content/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/hero/boards/leonardo/downloads/A000057-full-pinout.pdf",
+      "sha256": "a7bf8c0087aa44cf7c3b0e958f10389340b6c7b3425ca4047aa1e42d9818821e",
+      "viewUrl": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/hero/boards/leonardo/downloads/A000057-full-pinout.pdf"
     },
     {
       "id": "arduino-micro-pinout",
       "title": "Arduino micro full pinout",
       "publisher": "Arduino",
-      "revision": "2020-11-10",
+      "revision": "2020-11-10 · arduino/docs-content · cb938e96b391e636011690e4db1348dc38db4deb",
       "file": "micro-full-pinout.pdf",
-      "url": "https://docs.arduino.cc/resources/pinouts/A000053-full-pinout.pdf",
-      "sha256": "4e39fad1819d23b646e83af885cd129276ffe7a736c620f7c7959ebe56706a4f"
+      "url": "https://raw.githubusercontent.com/arduino/docs-content/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/hero/boards/micro/downloads/A000053-full-pinout.pdf",
+      "sha256": "4e39fad1819d23b646e83af885cd129276ffe7a736c620f7c7959ebe56706a4f",
+      "viewUrl": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/hero/boards/micro/downloads/A000053-full-pinout.pdf"
     },
     {
       "id": "arduino-nano-every-pinout",
       "title": "Arduino nano-every full pinout",
       "publisher": "Arduino",
-      "revision": "2021-12-15",
+      "revision": "2021-12-15 · arduino/docs-content · cb938e96b391e636011690e4db1348dc38db4deb",
       "file": "nano-every-full-pinout.pdf",
-      "url": "https://docs.arduino.cc/resources/pinouts/ABX00028-full-pinout.pdf",
-      "sha256": "028f44dd75001dcdfe181e581ea8a51385af2ccc65e68012f87dc9cc1252f2bb"
+      "url": "https://raw.githubusercontent.com/arduino/docs-content/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/nano/boards/nano-every/downloads/ABX00028-full-pinout.pdf",
+      "sha256": "028f44dd75001dcdfe181e581ea8a51385af2ccc65e68012f87dc9cc1252f2bb",
+      "viewUrl": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/nano/boards/nano-every/downloads/ABX00028-full-pinout.pdf"
     },
     {
       "id": "arduino-nano-every-datasheet",
@@ -280,37 +286,41 @@
       "id": "arduino-nano-33-ble-sense-rev2-pinout",
       "title": "Arduino Nano 33 BLE Sense Rev2 full pinout",
       "publisher": "Arduino",
-      "revision": "2022-12-22",
+      "revision": "2022-12-22 · arduino/docs-content · cb938e96b391e636011690e4db1348dc38db4deb",
       "file": "nano-33-ble-sense-rev2-pinout.pdf",
-      "url": "https://docs.arduino.cc/resources/pinouts/ABX00069-full-pinout.pdf",
-      "sha256": "ef39158198f440c89aaba1412e56af93da83a4af3f44f30ba601b90d020ee879"
+      "url": "https://raw.githubusercontent.com/arduino/docs-content/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/nano/boards/nano-33-ble-sense-rev2/downloads/ABX00069-full-pinout.pdf",
+      "sha256": "ef39158198f440c89aaba1412e56af93da83a4af3f44f30ba601b90d020ee879",
+      "viewUrl": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/nano/boards/nano-33-ble-sense-rev2/downloads/ABX00069-full-pinout.pdf"
     },
     {
       "id": "arduino-nano-33-ble-sense-rev2-schematic",
       "title": "Arduino Nano 33 BLE Sense Rev2 schematic",
       "publisher": "Arduino",
-      "revision": "Rev2",
+      "revision": "Rev2 · arduino/docs-content · cb938e96b391e636011690e4db1348dc38db4deb",
       "file": "nano-33-ble-sense-rev2-schematic.pdf",
-      "url": "https://docs.arduino.cc/resources/schematics/ABX00069-schematics.pdf",
-      "sha256": "83cdcd696e8f2855bf34fb5cbe004a37d73027e87203cd195f81ef5e72e66063"
+      "url": "https://raw.githubusercontent.com/arduino/docs-content/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/nano/boards/nano-33-ble-sense-rev2/downloads/ABX00069-schematics.pdf",
+      "sha256": "83cdcd696e8f2855bf34fb5cbe004a37d73027e87203cd195f81ef5e72e66063",
+      "viewUrl": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/nano/boards/nano-33-ble-sense-rev2/downloads/ABX00069-schematics.pdf"
     },
     {
       "id": "arduino-nano-esp32-pinout",
       "title": "Arduino Nano ESP32 full pinout",
       "publisher": "Arduino",
-      "revision": "2024-04-18",
+      "revision": "2024-04-18 · arduino/docs-content · cb938e96b391e636011690e4db1348dc38db4deb",
       "file": "arduino-nano-esp32-pinout.pdf",
-      "url": "https://docs.arduino.cc/resources/pinouts/ABX00083-full-pinout.pdf",
-      "sha256": "2418c2a90c9099d20f3425647607ce0b2ba426a0f1ff04ced50416fc789dc47d"
+      "url": "https://raw.githubusercontent.com/arduino/docs-content/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/nano/boards/nano-esp32/downloads/ABX00083-full-pinout.pdf",
+      "sha256": "2418c2a90c9099d20f3425647607ce0b2ba426a0f1ff04ced50416fc789dc47d",
+      "viewUrl": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/nano/boards/nano-esp32/downloads/ABX00083-full-pinout.pdf"
     },
     {
       "id": "arduino-nano-esp32-schematic",
       "title": "Arduino Nano ESP32 schematic",
       "publisher": "Arduino",
-      "revision": "v1.1",
+      "revision": "v1.1 · arduino/docs-content · cb938e96b391e636011690e4db1348dc38db4deb",
       "file": "arduino-nano-esp32-schematic.pdf",
-      "url": "https://docs.arduino.cc/resources/schematics/ABX00083-schematics.pdf",
-      "sha256": "ff7a7c1d0a997a9701ef16c4b598fe253ea8c1237a6ba0d380c78a6148de296a"
+      "url": "https://raw.githubusercontent.com/arduino/docs-content/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/nano/boards/nano-esp32/downloads/ABX00083-schematics.pdf",
+      "sha256": "ff7a7c1d0a997a9701ef16c4b598fe253ea8c1237a6ba0d380c78a6148de296a",
+      "viewUrl": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/nano/boards/nano-esp32/downloads/ABX00083-schematics.pdf"
     },
     {
       "id": "arduino-nano-33-ble-sense-rev2-variant",
@@ -362,10 +372,11 @@
       "id": "arduino-uno-r4-minima-pinout",
       "title": "Arduino uno-r4-minima full pinout",
       "publisher": "Arduino",
-      "revision": "2023-11-27",
+      "revision": "2023-11-27 · arduino/docs-content · cb938e96b391e636011690e4db1348dc38db4deb",
       "file": "uno-r4-minima-full-pinout.pdf",
-      "url": "https://docs.arduino.cc/resources/pinouts/ABX00080-full-pinout.pdf",
-      "sha256": "853b0664a1cf51040738a51385693f9a5c615d4337035d6b36c3c00f6ff76f3c"
+      "url": "https://raw.githubusercontent.com/arduino/docs-content/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/uno/boards/uno-r4-minima/downloads/ABX00080-full-pinout.pdf",
+      "sha256": "853b0664a1cf51040738a51385693f9a5c615d4337035d6b36c3c00f6ff76f3c",
+      "viewUrl": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/uno/boards/uno-r4-minima/downloads/ABX00080-full-pinout.pdf"
     },
     {
       "id": "arduino-uno-r4-minima-datasheet",
@@ -382,10 +393,11 @@
       "id": "arduino-uno-r4-wifi-pinout",
       "title": "Arduino uno-r4-wifi full pinout",
       "publisher": "Arduino",
-      "revision": "2025-04-23",
+      "revision": "2025-04-23 · arduino/docs-content · cb938e96b391e636011690e4db1348dc38db4deb",
       "file": "uno-r4-wifi-full-pinout.pdf",
-      "url": "https://docs.arduino.cc/resources/pinouts/ABX00087-full-pinout.pdf",
-      "sha256": "5c4dc5fcee15d3f870eb3a01f0c114993032f39e4d8facc52f84dd75d7ce26cc"
+      "url": "https://raw.githubusercontent.com/arduino/docs-content/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/uno/boards/uno-r4-wifi/downloads/ABX00087-full-pinout.pdf",
+      "sha256": "5c4dc5fcee15d3f870eb3a01f0c114993032f39e4d8facc52f84dd75d7ce26cc",
+      "viewUrl": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/uno/boards/uno-r4-wifi/downloads/ABX00087-full-pinout.pdf"
     },
     {
       "id": "arduino-uno-r4-wifi-datasheet",
@@ -603,20 +615,17 @@
       "sha256": "978a018098bc1a136d3232b1b58aa3c652324c9b693a99830e0770bed2c76fb4"
     },
     {
-      "id": "nucleo-um1724-r14",
+      "id": "nucleo-um1724-r17",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "file": "nucleo-um1724-r14.pdf",
-      "viewUrl": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf",
+      "file": "nucleo-um1724-r17.pdf",
+      "viewUrl": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf",
       "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf",
       "publisher": "STMicroelectronics",
-      "revision": "UM1724 Rev 14 · August 2020",
-      "sha256": "bec8ccba84e244df785a9bbdd427e74ab974f34ed52d62ba5df3d82098925b96",
-      "downloadUrls": [
-        "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf"
-      ],
+      "revision": "UM1724 Rev 17 · September 2025",
+      "sha256": "576d9bee3bc32c8ee70bf0d77cf9494cec06ea7c1d9ff98eebf2738cb9314a14",
       "tableSnapshot": {
-        "file": "sources/extracted/nucleo-um1724-r14.json",
-        "sha256": "521113c2df3977b7c8b3f0c58d352395c65f3255779d6093f4c265126d42d4f0"
+        "file": "sources/extracted/nucleo-um1724-r17.json",
+        "sha256": "8d8c7dd9c96cfad615bd438feb40065ec344d5ad63c553e4b7ef1777d723d12c"
       }
     },
     {
@@ -666,69 +675,72 @@
       "url": "https://www.st.com/resource/en/user_manual/um2505-stm32g4-nucleo64-boards-stmicroelectronics.pdf",
       "viewUrl": "https://www.st.com/resource/en/user_manual/um2505-stm32g4-nucleo64-boards-stmicroelectronics.pdf",
       "publisher": "STMicroelectronics",
-      "revision": "UM2505 Rev 2 · October 2019",
-      "sha256": "d862980338d3b393f5f880790cc7c56105cff0a6931ca89b20b3967542feb685",
+      "revision": "UM2505 Rev 7 · May 2026",
+      "sha256": "35549bd8805ed884ce0e0eeceb9ce94097ecba2a7d95560e6d1109fb119fd3d4",
       "tableSnapshot": {
         "file": "sources/extracted/nucleo-g4-um2505.json",
-        "sha256": "2410eacc0a3bd31539a270b7bb075f027ae0223a2a2470ffb6636bc01a173668"
+        "sha256": "c08c715491b7e261d41da69e79363ce06945b8c97f5bf145e9da10e2b4fa4153"
       }
     },
     {
       "id": "g474re-package",
       "title": "STM32G474RE CubeMX package data",
       "file": "g474re-package.xml",
-      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/master/mcu/STM32G474R(B-C-E)Tx.xml",
-      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/master/mcu/STM32G474R(B-C-E)Tx.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32G474R(B-C-E)Tx.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32G474R(B-C-E)Tx.xml",
       "publisher": "STMicroelectronics",
-      "revision": "master",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
       "sha256": "acf8e79cc37cbdc033696c7d4af254b75fb11e2edda3a0e56300d4003a68d427"
     },
     {
       "id": "g474re-modes",
       "title": "STM32G474RE CubeMX modes data",
       "file": "g474re-modes.xml",
-      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/master/mcu/IP/GPIO-STM32G47x_gpio_v1_0_Modes.xml",
-      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/master/mcu/IP/GPIO-STM32G47x_gpio_v1_0_Modes.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32G47x_gpio_v1_0_Modes.xml",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32G47x_gpio_v1_0_Modes.xml",
       "publisher": "STMicroelectronics",
-      "revision": "master",
+      "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
       "sha256": "9e1cb7917a51c1f1dd5b8b143d4f1ca31af1146694e0137064f6e731157c4c0c"
     },
     {
       "id": "feather-rp2040-pinout",
       "title": "Adafruit Feather RP2040 pinout diagram",
       "file": "feather-rp2040-pinout.pdf",
-      "url": "https://raw.githubusercontent.com/adafruit/Adafruit-Feather-RP2040-PCB/main/Adafruit%20Feather%20RP2040%20pinout.pdf",
-      "viewUrl": "https://github.com/adafruit/Adafruit-Feather-RP2040-PCB/blob/main/Adafruit%20Feather%20RP2040%20pinout.pdf",
+      "url": "https://raw.githubusercontent.com/adafruit/Adafruit-Feather-RP2040-PCB/be3f4b3260411d27569d3afe030247dc0e747284/Adafruit%20Feather%20RP2040%20pinout.pdf",
+      "viewUrl": "https://github.com/adafruit/Adafruit-Feather-RP2040-PCB/blob/be3f4b3260411d27569d3afe030247dc0e747284/Adafruit%20Feather%20RP2040%20pinout.pdf",
       "publisher": "Adafruit",
-      "revision": "Rev B · 2021",
+      "revision": "Rev B · 2021 · be3f4b3260411d27569d3afe030247dc0e747284",
       "sha256": "e10a2a8c12d489d76631fa72abbc53914a1e2560ac2c23835b462261baa059ea"
     },
     {
       "id": "arduino-uno-r3-schematic",
       "title": "Arduino UNO Rev3 through-hole schematic",
       "file": "arduino-uno-r3-schematic.pdf",
-      "url": "https://docs.arduino.cc/resources/schematics/A000066-schematics.pdf",
+      "url": "https://raw.githubusercontent.com/arduino/docs-content/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/uno/boards/uno-rev3/downloads/A000066-schematics.pdf",
       "publisher": "Arduino",
-      "revision": "Manufacturer schematic",
-      "sha256": "2c1041200352485393108e03c5117a07d4ea03954654485526c2c56cd01f7a42"
+      "revision": "Manufacturer schematic · arduino/docs-content · cb938e96b391e636011690e4db1348dc38db4deb",
+      "sha256": "2c1041200352485393108e03c5117a07d4ea03954654485526c2c56cd01f7a42",
+      "viewUrl": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/uno/boards/uno-rev3/downloads/A000066-schematics.pdf"
     },
     {
       "id": "arduino-nano-classic-schematic",
       "title": "Arduino Nano V3.3 schematic",
       "file": "arduino-nano-classic-schematic.pdf",
-      "url": "https://docs.arduino.cc/resources/schematics/A000005-schematics.pdf",
+      "url": "https://raw.githubusercontent.com/arduino/docs-content/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/nano/boards/nano/downloads/A000005-schematics.pdf",
       "publisher": "Arduino",
-      "revision": "Manufacturer schematic",
-      "sha256": "e90b0a893ee464169b59638bdfa7d102db5c5360d8589d8f8d62b3a953f9c1aa"
+      "revision": "Manufacturer schematic · arduino/docs-content · cb938e96b391e636011690e4db1348dc38db4deb",
+      "sha256": "e90b0a893ee464169b59638bdfa7d102db5c5360d8589d8f8d62b3a953f9c1aa",
+      "viewUrl": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/nano/boards/nano/downloads/A000005-schematics.pdf"
     },
     {
       "id": "arduino-mega-2560-schematic",
       "title": "Arduino Mega 2560 Rev3 schematic",
       "file": "arduino-mega-2560-schematic.pdf",
-      "url": "https://docs.arduino.cc/resources/schematics/A000067-schematics.pdf",
+      "url": "https://raw.githubusercontent.com/arduino/docs-content/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/mega/boards/mega-2560/downloads/A000067-schematics.pdf",
       "publisher": "Arduino",
-      "revision": "Manufacturer schematic",
-      "sha256": "7d1b66c8822220e38d84540fafdf5e6bc000030e2dc9a72fdc69f0a9d72b1b21"
+      "revision": "Manufacturer schematic · arduino/docs-content · cb938e96b391e636011690e4db1348dc38db4deb",
+      "sha256": "7d1b66c8822220e38d84540fafdf5e6bc000030e2dc9a72fdc69f0a9d72b1b21",
+      "viewUrl": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/mega/boards/mega-2560/downloads/A000067-schematics.pdf"
     },
     {
       "id": "xiao-rp2040-schematic",
@@ -761,10 +773,10 @@
       "id": "microbit-v2-schematic",
       "title": "BBC micro:bit V2 Schematic",
       "file": "microbit-v2-schematic.pdf",
-      "url": "https://raw.githubusercontent.com/microbit-foundation/microbit-v2-hardware/main/V2.00/MicroBit_V2.0.0_S_schematic.PDF",
+      "url": "https://raw.githubusercontent.com/microbit-foundation/microbit-v2-hardware/17aae03003b4fd3686d18aca5ad175c420d29a20/V2.00/MicroBit_V2.0.0_S_schematic.PDF",
       "viewUrl": "https://tech.microbit.org/hardware/schematic/",
       "publisher": "Micro:bit Educational Foundation",
-      "revision": "V2.0.0_S · 2020-09-02",
+      "revision": "V2.0.0_S · 2020-09-02 · 17aae03003b4fd3686d18aca5ad175c420d29a20",
       "sha256": "094e004ece2e2d6e12f77603a7365f4ab310a48a2ce359fb0de3000e497adad0"
     },
     {
@@ -1191,6 +1203,83 @@
       "revision": "7d1f1514ed5583ec5007ad91236b4e1d377295b1",
       "sha256": "962e848cc9ce9682aa74213706ed79583e94f6f6d67dc45e314bc7c83a7fe87d",
       "gpioModesDocument": "f411re-modes"
+    },
+    {
+      "id": "beaglebone-black-cape",
+      "title": "BeagleBone Black System Reference Manual · Chapter 8 Cape Board Support",
+      "publisher": "BeagleBoard.org",
+      "revision": "Chapter 8 · snapshot reviewed 2026-11-14",
+      "file": "beaglebone-black-ch08.html",
+      "url": "https://docs.beagleboard.org/boards/beaglebone/black/ch08.html",
+      "sha256": "c6b955fb0278e0c739eafdd7833c57fe2b13d428f1e60887d6bb1df847ff4bd5"
+    },
+    {
+      "id": "am335x-datasheet",
+      "title": "AM335x Sitara Processors datasheet",
+      "publisher": "Texas Instruments",
+      "revision": "SPRS717L · March 2020",
+      "file": "am335x-sprs717l.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/am3358.pdf",
+      "sha256": "ec145b6b19a7ff35118bb0ec06b5ae9c51aa97ccdf4da935f2176d9168af0205"
+    },
+    {
+      "id": "arduino-nano-esp32-core",
+      "title": "Arduino Nano ESP32 core pin definitions (pins_arduino.h)",
+      "publisher": "Espressif / Arduino",
+      "revision": "6bfcd6d9a9a7ecd07d656a7a88673c93e7d4d537",
+      "file": "arduino-nano-esp32-pins_arduino.h",
+      "url": "https://raw.githubusercontent.com/espressif/arduino-esp32/6bfcd6d9a9a7ecd07d656a7a88673c93e7d4d537/variants/arduino_nano_nora/pins_arduino.h",
+      "viewUrl": "https://github.com/espressif/arduino-esp32/blob/6bfcd6d9a9a7ecd07d656a7a88673c93e7d4d537/variants/arduino_nano_nora/pins_arduino.h",
+      "sha256": "1eca4aa0874410c22f1cc83fac655ec11254a084ab4bbd4f90ebd9d2f7cda7ae"
+    },
+    {
+      "id": "samd21-datasheet",
+      "title": "SAM D21/DA1 Family data sheet",
+      "publisher": "Microchip",
+      "revision": "DS40001882L",
+      "file": "samd21-ds40001882l.pdf",
+      "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/MCU32/ProductDocuments/DataSheets/SAM-D21-DA1-Family-Data-Sheet-DS40001882.pdf",
+      "sha256": "cd6d39e3e5c2f2116cf99224a102f707444e0395f6faa7ddec75093bd249e394"
+    },
+    {
+      "id": "microbit-edge-connector",
+      "title": "micro:bit edge connector and pinout",
+      "publisher": "Micro:bit Educational Foundation",
+      "revision": "microbit-foundation/dev-docs · 469ea5f9faa31989fdb296e726ca24fd558931f4",
+      "file": "microbit-edge-connector.mdx",
+      "url": "https://raw.githubusercontent.com/microbit-foundation/dev-docs/469ea5f9faa31989fdb296e726ca24fd558931f4/hardware/edge-connector.mdx",
+      "viewUrl": "https://tech.microbit.org/hardware/edgeconnector/",
+      "sha256": "eef2c98aaa6b42891c587a2f4e2a9df91e9f2fdbcdb63c7241413296ddd0a717"
+    },
+    {
+      "id": "microbit-power-supply",
+      "title": "micro:bit power supply",
+      "publisher": "Micro:bit Educational Foundation",
+      "revision": "microbit-foundation/dev-docs · 469ea5f9faa31989fdb296e726ca24fd558931f4",
+      "file": "microbit-power-supply.md",
+      "url": "https://raw.githubusercontent.com/microbit-foundation/dev-docs/469ea5f9faa31989fdb296e726ca24fd558931f4/hardware/power-supply.md",
+      "viewUrl": "https://tech.microbit.org/hardware/powersupply/",
+      "sha256": "91bf63e374322593a40ce91e668cbf56c529e3e970d71f3d6f70d76db97903b6"
+    },
+    {
+      "id": "microbit-i2c",
+      "title": "micro:bit I2C bus",
+      "publisher": "Micro:bit Educational Foundation",
+      "revision": "microbit-foundation/dev-docs · 469ea5f9faa31989fdb296e726ca24fd558931f4",
+      "file": "microbit-i2c.mdx",
+      "url": "https://raw.githubusercontent.com/microbit-foundation/dev-docs/469ea5f9faa31989fdb296e726ca24fd558931f4/hardware/i2c.mdx",
+      "viewUrl": "https://tech.microbit.org/hardware/i2c/",
+      "sha256": "807a540042ebbcc5610a1abfb1b0ff4e9dba9c5943dea7ee755938b5be8a0b3a"
+    },
+    {
+      "id": "arduino-nano-every-boards",
+      "title": "ArduinoCore-megaavr boards.txt (Nano Every build settings)",
+      "publisher": "Arduino",
+      "revision": "e8edb4ef2e8ab5c98544c3884a653f0b9c1318dc",
+      "file": "megaavr-boards.txt",
+      "url": "https://raw.githubusercontent.com/arduino/ArduinoCore-megaavr/e8edb4ef2e8ab5c98544c3884a653f0b9c1318dc/boards.txt",
+      "viewUrl": "https://github.com/arduino/ArduinoCore-megaavr/blob/e8edb4ef2e8ab5c98544c3884a653f0b9c1318dc/boards.txt",
+      "sha256": "ad0a8f69fe94a0de1ee4990ec7a4b8b0777b503369833ccdcad13be7cb788f37"
     }
   ],
   "references": {
@@ -1667,42 +1756,42 @@
       "method": "community-source-table"
     },
     "nucleo-mb1136-bridges": {
-      "document": "nucleo-um1724-r14",
+      "document": "nucleo-um1724-r17",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=26",
-      "page": 26,
-      "locator": "Table 10 · solder bridges and alternate connections (pp. 26–27)",
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=27",
+      "page": 27,
+      "locator": "Table 10 · solder bridges and alternate connections (pp. 27–28)",
       "method": "pdf-table"
     },
-    "nucleo-f103rb-arduino-39": {
-      "document": "nucleo-um1724-r14",
+    "nucleo-f103rb-arduino-40": {
+      "document": "nucleo-um1724-r17",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=39",
-      "page": 39,
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=40",
+      "page": 40,
       "locator": "Table 12 · Arduino headers",
       "method": "pdf-table"
     },
-    "nucleo-f103rb-morpho-55": {
-      "document": "nucleo-um1724-r14",
-      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=55",
-      "page": 55,
-      "locator": "Table 27 · ST Morpho headers",
-      "method": "pdf-table"
-    },
     "nucleo-f103rb-morpho-56": {
-      "document": "nucleo-um1724-r14",
+      "document": "nucleo-um1724-r17",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=56",
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=56",
       "page": 56,
       "locator": "Table 27 · ST Morpho headers",
       "method": "pdf-table"
     },
-    "nucleo-f103rb-top-view": {
-      "document": "nucleo-um1724-r14",
+    "nucleo-f103rb-morpho-57": {
+      "document": "nucleo-um1724-r17",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=30",
-      "page": 30,
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=57",
+      "page": 57,
+      "locator": "Table 27 · ST Morpho headers",
+      "method": "pdf-table"
+    },
+    "nucleo-f103rb-top-view": {
+      "document": "nucleo-um1724-r17",
+      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=31",
+      "page": 31,
       "locator": "MB1136 top view · connector positions, rows and numbering",
       "method": "visual-diagram"
     },
@@ -1722,35 +1811,35 @@
       "locator": "GPIO alternate function selectors",
       "method": "manufacturer-xml"
     },
-    "nucleo-f401re-arduino-43": {
-      "document": "nucleo-um1724-r14",
-      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=43",
-      "page": 43,
-      "locator": "Table 16 · Arduino headers",
-      "method": "pdf-table"
-    },
     "nucleo-f401re-arduino-44": {
-      "document": "nucleo-um1724-r14",
+      "document": "nucleo-um1724-r17",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=44",
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=44",
       "page": 44,
       "locator": "Table 16 · Arduino headers",
       "method": "pdf-table"
     },
-    "nucleo-f401re-morpho-58": {
-      "document": "nucleo-um1724-r14",
+    "nucleo-f401re-arduino-45": {
+      "document": "nucleo-um1724-r17",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=58",
-      "page": 58,
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=45",
+      "page": 45,
+      "locator": "Table 16 · Arduino headers",
+      "method": "pdf-table"
+    },
+    "nucleo-f401re-morpho-59": {
+      "document": "nucleo-um1724-r17",
+      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=59",
+      "page": 59,
       "locator": "Table 29 · ST Morpho headers",
       "method": "pdf-table"
     },
     "nucleo-f401re-top-view": {
-      "document": "nucleo-um1724-r14",
+      "document": "nucleo-um1724-r17",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=32",
-      "page": 32,
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=33",
+      "page": 33,
       "locator": "MB1136 top view · connector positions, rows and numbering",
       "method": "visual-diagram"
     },
@@ -1770,42 +1859,42 @@
       "locator": "GPIO alternate function selectors",
       "method": "manufacturer-xml"
     },
-    "nucleo-f411re-arduino-43": {
-      "document": "nucleo-um1724-r14",
-      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=43",
-      "page": 43,
-      "locator": "Table 16 · Arduino headers",
-      "method": "pdf-table"
-    },
     "nucleo-f411re-arduino-44": {
-      "document": "nucleo-um1724-r14",
+      "document": "nucleo-um1724-r17",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=44",
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=44",
       "page": 44,
       "locator": "Table 16 · Arduino headers",
       "method": "pdf-table"
     },
-    "nucleo-f411re-morpho-58": {
-      "document": "nucleo-um1724-r14",
+    "nucleo-f411re-arduino-45": {
+      "document": "nucleo-um1724-r17",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=58",
-      "page": 58,
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=45",
+      "page": 45,
+      "locator": "Table 16 · Arduino headers",
+      "method": "pdf-table"
+    },
+    "nucleo-f411re-morpho-59": {
+      "document": "nucleo-um1724-r17",
+      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=59",
+      "page": 59,
       "locator": "Table 29 · ST Morpho headers",
       "method": "pdf-table"
     },
     "nucleo-f411re-top-view": {
-      "document": "nucleo-um1724-r14",
+      "document": "nucleo-um1724-r17",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=32",
-      "page": 32,
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=33",
+      "page": 33,
       "locator": "MB1136 top view · connector positions, rows and numbering",
       "method": "visual-diagram"
     },
     "g474re-package": {
       "document": "g474re-package",
       "title": "STM32G474RE CubeMX package data",
-      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/master/mcu/STM32G474R(B-C-E)Tx.xml",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32G474R(B-C-E)Tx.xml",
       "page": null,
       "locator": "LQFP64 package pin numbers and signals",
       "method": "manufacturer-xml"
@@ -1813,7 +1902,7 @@
     "g474re-modes": {
       "document": "g474re-modes",
       "title": "STM32G474RE CubeMX modes data",
-      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/master/mcu/IP/GPIO-STM32G47x_gpio_v1_0_Modes.xml",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/IP/GPIO-STM32G47x_gpio_v1_0_Modes.xml",
       "page": null,
       "locator": "GPIO alternate function selectors",
       "method": "manufacturer-xml"
@@ -1821,9 +1910,9 @@
     "nucleo-g474-bridges": {
       "document": "nucleo-g4-um2505",
       "title": "STM32G4 Nucleo-64 boards (MB1367) user manual",
-      "url": "https://www.st.com/resource/en/user_manual/um2505-stm32g4-nucleo64-boards-stmicroelectronics.pdf#page=27",
-      "page": 27,
-      "locator": "Table 13 · Solder bridge control (p. 27)",
+      "url": "https://www.st.com/resource/en/user_manual/um2505-stm32g4-nucleo64-boards-stmicroelectronics.pdf#page=25",
+      "page": 25,
+      "locator": "Table 12 · Solder bridge configuration (pp. 25–27)",
       "method": "pdf-table"
     },
     "nucleo-g474re-arduino-30": {
@@ -1861,9 +1950,9 @@
     "nucleo-g474re-top-view": {
       "document": "nucleo-g4-um2505",
       "title": "STM32G4 Nucleo-64 boards (MB1367) user manual",
-      "url": "https://www.st.com/resource/en/user_manual/um2505-stm32g4-nucleo64-boards-stmicroelectronics.pdf#page=24",
-      "page": 24,
-      "locator": "MB1367 top view · connector positions, rows and numbering",
+      "url": "https://www.st.com/resource/en/user_manual/um2505-stm32g4-nucleo64-boards-stmicroelectronics.pdf#page=30",
+      "page": 30,
+      "locator": "Figure 18 · ARDUINO and ST morpho connectors pinout · positions, rows and numbering",
       "method": "visual-diagram"
     },
     "h723zg-package": {
@@ -2005,7 +2094,7 @@
     "arduino-uno-r3-headers": {
       "document": "arduino-uno-r3-pinout",
       "title": "Arduino UNO R3 full pinout",
-      "url": "https://docs.arduino.cc/resources/pinouts/A000066-full-pinout.pdf#page=1",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/uno/boards/uno-rev3/downloads/A000066-full-pinout.pdf#page=1",
       "page": 1,
       "locator": "Main headers · USB at top · connector order visually checked",
       "method": "visual-diagram"
@@ -2013,7 +2102,7 @@
     "arduino-uno-r3-icsp": {
       "document": "arduino-uno-r3-pinout",
       "title": "Arduino UNO R3 full pinout",
-      "url": "https://docs.arduino.cc/resources/pinouts/A000066-full-pinout.pdf#page=4",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/uno/boards/uno-rev3/downloads/A000066-full-pinout.pdf#page=4",
       "page": 4,
       "locator": "Main MCU ICSP · six numbered contacts, top-view orientation; USB bridge programming header excluded",
       "method": "visual-diagram"
@@ -2021,7 +2110,7 @@
     "arduino-uno-r3-signals": {
       "document": "arduino-uno-r3-pinout",
       "title": "Arduino UNO R3 full pinout",
-      "url": "https://docs.arduino.cc/resources/pinouts/A000066-full-pinout.pdf#page=3",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/uno/boards/uno-rev3/downloads/A000066-full-pinout.pdf#page=3",
       "page": 3,
       "locator": "Arduino pin labels, USART lines, external INT numbers and MCU ports; use AVR core for supported PWM pins",
       "method": "pdf-text"
@@ -2045,7 +2134,7 @@
     "arduino-nano-classic-headers": {
       "document": "arduino-nano-classic-pinout",
       "title": "Arduino Nano (classic) full pinout",
-      "url": "https://docs.arduino.cc/resources/pinouts/A000005-full-pinout.pdf#page=1",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/nano/boards/nano/downloads/A000005-full-pinout.pdf#page=1",
       "page": 1,
       "locator": "Main headers · USB at top · connector order visually checked",
       "method": "visual-diagram"
@@ -2053,7 +2142,7 @@
     "arduino-nano-classic-icsp": {
       "document": "arduino-nano-classic-pinout",
       "title": "Arduino Nano (classic) full pinout",
-      "url": "https://docs.arduino.cc/resources/pinouts/A000005-full-pinout.pdf#page=3",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/nano/boards/nano/downloads/A000005-full-pinout.pdf#page=3",
       "page": 3,
       "locator": "Main MCU ICSP · six numbered contacts, top-view orientation; USB bridge programming header excluded",
       "method": "visual-diagram"
@@ -2061,7 +2150,7 @@
     "arduino-nano-classic-signals": {
       "document": "arduino-nano-classic-pinout",
       "title": "Arduino Nano (classic) full pinout",
-      "url": "https://docs.arduino.cc/resources/pinouts/A000005-full-pinout.pdf#page=2",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/nano/boards/nano/downloads/A000005-full-pinout.pdf#page=2",
       "page": 2,
       "locator": "Arduino pin labels, USART lines, external INT numbers and MCU ports; use AVR core for supported PWM pins",
       "method": "pdf-text"
@@ -2085,7 +2174,7 @@
     "arduino-mega-2560-headers": {
       "document": "arduino-mega-2560-pinout",
       "title": "Arduino Mega 2560 Rev3 full pinout",
-      "url": "https://docs.arduino.cc/resources/pinouts/A000067-full-pinout.pdf#page=1",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/mega/boards/mega-2560/downloads/A000067-full-pinout.pdf#page=1",
       "page": 1,
       "locator": "Main headers · USB at top · connector order visually checked",
       "method": "visual-diagram"
@@ -2093,7 +2182,7 @@
     "arduino-mega-2560-icsp": {
       "document": "arduino-mega-2560-pinout",
       "title": "Arduino Mega 2560 Rev3 full pinout",
-      "url": "https://docs.arduino.cc/resources/pinouts/A000067-full-pinout.pdf#page=4",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/mega/boards/mega-2560/downloads/A000067-full-pinout.pdf#page=4",
       "page": 4,
       "locator": "Main MCU ICSP · six numbered contacts, top-view orientation; USB bridge programming header excluded",
       "method": "visual-diagram"
@@ -2101,7 +2190,7 @@
     "arduino-mega-2560-signals": {
       "document": "arduino-mega-2560-pinout",
       "title": "Arduino Mega 2560 Rev3 full pinout",
-      "url": "https://docs.arduino.cc/resources/pinouts/A000067-full-pinout.pdf#page=2",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/mega/boards/mega-2560/downloads/A000067-full-pinout.pdf#page=2",
       "page": 2,
       "locator": "Arduino pin labels, USART lines, external INT numbers and MCU ports; use AVR core for supported PWM pins",
       "method": "pdf-text"
@@ -2117,7 +2206,7 @@
     "arduino-mega-2560-end-header": {
       "document": "arduino-mega-2560-pinout",
       "title": "Arduino Mega 2560 Rev3 full pinout",
-      "url": "https://docs.arduino.cc/resources/pinouts/A000067-full-pinout.pdf#page=3",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/mega/boards/mega-2560/downloads/A000067-full-pinout.pdf#page=3",
       "page": 3,
       "locator": "D22–D53 end header · near-USB row and outer row, oriented with USB at top",
       "method": "visual-diagram"
@@ -2125,7 +2214,7 @@
     "arduino-leonardo-headers": {
       "document": "arduino-leonardo-pinout",
       "title": "Arduino leonardo full pinout",
-      "url": "https://docs.arduino.cc/resources/pinouts/A000057-full-pinout.pdf#page=1",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/hero/boards/leonardo/downloads/A000057-full-pinout.pdf#page=1",
       "page": 1,
       "locator": "Main headers · USB at top · recorded connector positions, signal labels and optional SPI/ICSP connector",
       "method": "visual-diagram"
@@ -2141,7 +2230,7 @@
     "arduino-leonardo-signals": {
       "document": "arduino-leonardo-pinout",
       "title": "Arduino leonardo full pinout",
-      "url": "https://docs.arduino.cc/resources/pinouts/A000057-full-pinout.pdf#page=2",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/hero/boards/leonardo/downloads/A000057-full-pinout.pdf#page=2",
       "page": 2,
       "locator": "MCU signals and peripheral capabilities; Arduino PWM support comes from the matching core",
       "method": "pdf-text"
@@ -2149,7 +2238,7 @@
     "arduino-micro-headers": {
       "document": "arduino-micro-pinout",
       "title": "Arduino micro full pinout",
-      "url": "https://docs.arduino.cc/resources/pinouts/A000053-full-pinout.pdf#page=1",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/hero/boards/micro/downloads/A000053-full-pinout.pdf#page=1",
       "page": 1,
       "locator": "Main headers · USB at top · recorded connector positions, signal labels and optional SPI/ICSP connector",
       "method": "visual-diagram"
@@ -2165,7 +2254,7 @@
     "arduino-micro-signals": {
       "document": "arduino-micro-pinout",
       "title": "Arduino micro full pinout",
-      "url": "https://docs.arduino.cc/resources/pinouts/A000053-full-pinout.pdf#page=2",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/hero/boards/micro/downloads/A000053-full-pinout.pdf#page=2",
       "page": 2,
       "locator": "MCU signals and peripheral capabilities; Arduino PWM support comes from the matching core",
       "method": "pdf-text"
@@ -2173,7 +2262,7 @@
     "arduino-nano-every-headers": {
       "document": "arduino-nano-every-pinout",
       "title": "Arduino nano-every full pinout",
-      "url": "https://docs.arduino.cc/resources/pinouts/ABX00028-full-pinout.pdf#page=1",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/nano/boards/nano-every/downloads/ABX00028-full-pinout.pdf#page=1",
       "page": 1,
       "locator": "Main headers · USB at top · recorded connector positions, signal labels and optional SPI/ICSP connector",
       "method": "visual-diagram"
@@ -2189,7 +2278,7 @@
     "arduino-nano-every-signals": {
       "document": "arduino-nano-every-pinout",
       "title": "Arduino nano-every full pinout",
-      "url": "https://docs.arduino.cc/resources/pinouts/ABX00028-full-pinout.pdf#page=2",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/nano/boards/nano-every/downloads/ABX00028-full-pinout.pdf#page=2",
       "page": 2,
       "locator": "MCU signals and peripheral capabilities; Arduino PWM support comes from the matching core",
       "method": "pdf-text"
@@ -2197,7 +2286,7 @@
     "arduino-nano-33-ble-sense-rev2-headers": {
       "document": "arduino-nano-33-ble-sense-rev2-pinout",
       "title": "Arduino Nano 33 BLE Sense Rev2 full pinout",
-      "url": "https://docs.arduino.cc/resources/pinouts/ABX00069-full-pinout.pdf#page=1",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/nano/boards/nano-33-ble-sense-rev2/downloads/ABX00069-full-pinout.pdf#page=1",
       "page": 1,
       "locator": "Main headers · USB at top · recorded connector positions, signal labels and optional SPI/ICSP connector",
       "method": "visual-diagram"
@@ -2213,7 +2302,7 @@
     "arduino-nano-33-ble-sense-rev2-signals": {
       "document": "arduino-nano-33-ble-sense-rev2-pinout",
       "title": "Arduino Nano 33 BLE Sense Rev2 full pinout",
-      "url": "https://docs.arduino.cc/resources/pinouts/ABX00069-full-pinout.pdf#page=4",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/nano/boards/nano-33-ble-sense-rev2/downloads/ABX00069-full-pinout.pdf#page=4",
       "page": 4,
       "locator": "MCU signals and peripheral capabilities; Arduino PWM support comes from the matching core",
       "method": "pdf-text"
@@ -2226,10 +2315,18 @@
       "locator": "PinDescription g_APinDescription · nRF52840 port map and sensor interfaces",
       "method": "source-code"
     },
+    "arduino-nano-33-ble-sense-rev2-vusb-jumper": {
+      "document": "arduino-nano-33-ble-sense-rev2-schematic",
+      "title": "Arduino Nano 33 BLE Sense Rev2 schematic",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/nano/boards/nano-33-ble-sense-rev2/downloads/ABX00069-schematics.pdf#page=1",
+      "page": 1,
+      "locator": "Sheet 1 · SJ1/SJ5 between VUSB and the header 5V contact · note \"SJ1 on BOTTOM\"",
+      "method": "visual-diagram"
+    },
     "arduino-uno-r4-minima-headers": {
       "document": "arduino-uno-r4-minima-pinout",
       "title": "Arduino uno-r4-minima full pinout",
-      "url": "https://docs.arduino.cc/resources/pinouts/ABX00080-full-pinout.pdf#page=1",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/uno/boards/uno-r4-minima/downloads/ABX00080-full-pinout.pdf#page=1",
       "page": 1,
       "locator": "Main headers · USB at top · recorded connector positions, signal labels and optional SPI/ICSP connector",
       "method": "visual-diagram"
@@ -2245,7 +2342,7 @@
     "arduino-uno-r4-minima-signals": {
       "document": "arduino-uno-r4-minima-pinout",
       "title": "Arduino uno-r4-minima full pinout",
-      "url": "https://docs.arduino.cc/resources/pinouts/ABX00080-full-pinout.pdf#page=4",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/uno/boards/uno-r4-minima/downloads/ABX00080-full-pinout.pdf#page=4",
       "page": 4,
       "locator": "MCU signals and peripheral capabilities; Arduino PWM support comes from the matching core",
       "method": "pdf-text"
@@ -2258,10 +2355,18 @@
       "locator": "g_pin_cfg · RA4M1 port map; initVariant · six Arduino PWM channels",
       "method": "source-code"
     },
+    "arduino-uno-r4-minima-ioref": {
+      "document": "arduino-uno-r4-minima-datasheet",
+      "title": "Arduino uno-r4-minima datasheet",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/uno/boards/uno-r4-minima/datasheet/en-datasheet.md",
+      "page": null,
+      "locator": "Connector pinouts · IOREF: reference for digital logic V, connected to 5 V",
+      "method": "manufacturer-source-table"
+    },
     "arduino-uno-r4-wifi-headers": {
       "document": "arduino-uno-r4-wifi-pinout",
       "title": "Arduino uno-r4-wifi full pinout",
-      "url": "https://docs.arduino.cc/resources/pinouts/ABX00087-full-pinout.pdf#page=1",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/uno/boards/uno-r4-wifi/downloads/ABX00087-full-pinout.pdf#page=1",
       "page": 1,
       "locator": "Main headers · USB at top · recorded connector positions, signal labels and optional SPI/ICSP connector",
       "method": "visual-diagram"
@@ -2277,7 +2382,7 @@
     "arduino-uno-r4-wifi-signals": {
       "document": "arduino-uno-r4-wifi-pinout",
       "title": "Arduino uno-r4-wifi full pinout",
-      "url": "https://docs.arduino.cc/resources/pinouts/ABX00087-full-pinout.pdf#page=4",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/uno/boards/uno-r4-wifi/downloads/ABX00087-full-pinout.pdf#page=4",
       "page": 4,
       "locator": "MCU signals and peripheral capabilities; Arduino PWM support comes from the matching core",
       "method": "pdf-text"
@@ -2290,10 +2395,18 @@
       "locator": "g_pin_cfg · RA4M1 port map; initVariant · six Arduino PWM channels",
       "method": "source-code"
     },
+    "arduino-uno-r4-wifi-ioref": {
+      "document": "arduino-uno-r4-wifi-datasheet",
+      "title": "Arduino uno-r4-wifi datasheet",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/uno/boards/uno-r4-wifi/datasheet/en-datasheet.md",
+      "page": null,
+      "locator": "Connector pinouts · IOREF: reference for digital logic V, connected to 5 V",
+      "method": "manufacturer-source-table"
+    },
     "arduino-nano-esp32-headers": {
       "document": "arduino-nano-esp32-pinout",
       "title": "Arduino Nano ESP32 full pinout",
-      "url": "https://docs.arduino.cc/resources/pinouts/ABX00083-full-pinout.pdf#page=1",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/nano/boards/nano-esp32/downloads/ABX00083-full-pinout.pdf#page=1",
       "page": 1,
       "locator": "Main headers · USB-C at top · connector positions, digital and analog pinout",
       "method": "visual-diagram"
@@ -2301,7 +2414,7 @@
     "arduino-nano-esp32-signals": {
       "document": "arduino-nano-esp32-pinout",
       "title": "Arduino Nano ESP32 full pinout",
-      "url": "https://docs.arduino.cc/resources/pinouts/ABX00083-full-pinout.pdf#page=3",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/nano/boards/nano-esp32/downloads/ABX00083-full-pinout.pdf#page=3",
       "page": 3,
       "locator": "Advanced Section · ESP32-S3 GPIO mappings, ADC channels, and secondary UART",
       "method": "pdf-text"
@@ -2309,10 +2422,26 @@
     "arduino-nano-esp32-schematic-ref": {
       "document": "arduino-nano-esp32-schematic",
       "title": "Arduino Nano ESP32 schematic",
-      "url": "https://docs.arduino.cc/resources/schematics/ABX00083-schematics.pdf#page=1",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/nano/boards/nano-esp32/downloads/ABX00083-schematics.pdf#page=1",
       "page": 1,
       "locator": "Sheet 1/2 · JP1/JP2 header connections, power rails, and strapping pins",
       "method": "visual-diagram"
+    },
+    "arduino-nano-esp32-core-pins": {
+      "document": "arduino-nano-esp32-core",
+      "title": "Arduino Nano ESP32 core pin definitions (pins_arduino.h)",
+      "url": "https://github.com/espressif/arduino-esp32/blob/6bfcd6d9a9a7ecd07d656a7a88673c93e7d4d537/variants/arduino_nano_nora/pins_arduino.h",
+      "page": null,
+      "locator": "pins_arduino.h · LED_RED = 14 (GPIO46), LED_GREEN = 15 (GPIO0), LED_BLUE = 16 (GPIO45), A2 = 19 (GPIO3)",
+      "method": "source-code"
+    },
+    "arduino-nano-esp32-strapping": {
+      "document": "esp32s3-datasheet",
+      "title": "ESP32S3 series datasheet",
+      "url": "https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf#page=32",
+      "page": 32,
+      "locator": "§3 Boot Configurations · strapping pins GPIO0, GPIO3, GPIO45 and GPIO46",
+      "method": "pdf-text"
     },
     "esp32-devkitc-v4-header": {
       "document": "esp32-devkit-guide",
@@ -2335,7 +2464,7 @@
       "title": "ESP32 series datasheet",
       "url": "https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf#page=16",
       "page": 16,
-      "locator": "I/O pins / IO MUX and GPIO Matrix · routable peripheral capabilities, not a default firmware pin assignment",
+      "locator": "§2.2 · Notes for Table 2-1 Pin Overview · function names and GPIO-matrix routing · routable peripheral capabilities, not a default firmware pin assignment",
       "method": "pdf-text"
     },
     "esp32-devkitc-v4-strapping": {
@@ -2377,6 +2506,14 @@
       "page": 30,
       "locator": "Boot configurations · strapping levels are sampled during reset",
       "method": "pdf-table"
+    },
+    "esp32c3-adc2-note": {
+      "document": "esp32c3-datasheet",
+      "title": "ESP32C3 series datasheet",
+      "url": "https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf#page=49",
+      "page": 49,
+      "locator": "§4.2.2.1 SAR ADC · note: ADC2 of some chip revisions is not operable; ADC2 is not factory-calibrated",
+      "method": "pdf-text"
     },
     "esp32-s3-devkitc-1-header": {
       "document": "esp32s3-devkit-guide",
@@ -2615,7 +2752,7 @@
       "title": "ATmega640/1280/1281/2560/2561 complete datasheet",
       "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/ATmega640-1280-1281-2560-2561-Datasheet-DS40002211A.pdf#page=84",
       "page": 84,
-      "locator": "§13.3.5 · Table 13-22 note 1 · PDO/PDI available at PE1/PE0 for ATmega1281/2561; SPI programming",
+      "locator": "§13.3.5 · Table 13-17 note 1 (alternate functions of PE3:PE0; Table 13-15 lists them on p. 82) · PDO/PDI available at PE1/PE0 for ATmega1281/2561; SPI programming",
       "method": "pdf-table"
     },
     "atmega2561-tqfp64-physical": {
@@ -2674,6 +2811,14 @@
       "locator": "Sheet 1/1 · connectors J2 (D0–D6) and J4 (D7–D10, 3V3, GND, 5V)",
       "method": "visual-diagram"
     },
+    "samd21-port-mux": {
+      "document": "samd21-datasheet",
+      "title": "SAM D21/DA1 Family data sheet",
+      "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/MCU32/ProductDocuments/DataSheets/SAM-D21-DA1-Family-Data-Sheet-DS40001882.pdf#page=28",
+      "page": 28,
+      "locator": "§7.1 · Table 7-1 PORT Function Multiplexing · SAM D21G rows",
+      "method": "pdf-table"
+    },
     "microbit-v2-header": {
       "document": "microbit-v2-schematic",
       "title": "BBC micro:bit V2 Schematic",
@@ -2690,10 +2835,26 @@
       "locator": "Sheet 2/3 · Edge connector pinmux, alternate SPI/I2C/ADC lines and shared circuit matrix",
       "method": "visual-diagram"
     },
+    "microbit-v2-edge-table": {
+      "document": "microbit-edge-connector",
+      "title": "micro:bit edge connector and pinout",
+      "url": "https://tech.microbit.org/hardware/edgeconnector/",
+      "page": null,
+      "locator": "Pins and signals · V2 table · physical strip order, MCU pins and pull resistors",
+      "method": "manufacturer-source-table"
+    },
+    "microbit-v2-i2c-buses": {
+      "document": "microbit-i2c",
+      "title": "micro:bit I2C bus",
+      "url": "https://tech.microbit.org/hardware/i2c/",
+      "page": null,
+      "locator": "I2C bus · V2 separates internal (sensor) and external (edge connector) buses",
+      "method": "manufacturer-source-text"
+    },
     "feather-rp2040-pinout": {
       "document": "feather-rp2040-pinout",
       "title": "Adafruit Feather RP2040 pinout diagram",
-      "url": "https://github.com/adafruit/Adafruit-Feather-RP2040-PCB/blob/main/Adafruit%20Feather%20RP2040%20pinout.pdf#page=1",
+      "url": "https://github.com/adafruit/Adafruit-Feather-RP2040-PCB/blob/be3f4b3260411d27569d3afe030247dc0e747284/Adafruit%20Feather%20RP2040%20pinout.pdf#page=1",
       "page": 1,
       "locator": "Official Adafruit Feather RP2040 pinout diagram",
       "method": "pdf-table"
@@ -2701,7 +2862,7 @@
     "feather-rp2040-top-view": {
       "document": "feather-rp2040-pinout",
       "title": "Adafruit Feather RP2040 pinout diagram",
-      "url": "https://github.com/adafruit/Adafruit-Feather-RP2040-PCB/blob/main/Adafruit%20Feather%20RP2040%20pinout.pdf#page=1",
+      "url": "https://github.com/adafruit/Adafruit-Feather-RP2040-PCB/blob/be3f4b3260411d27569d3afe030247dc0e747284/Adafruit%20Feather%20RP2040%20pinout.pdf#page=1",
       "page": 1,
       "locator": "Adafruit Feather RP2040 top view & dimensions",
       "method": "visual-diagram"
@@ -2730,6 +2891,14 @@
       "locator": "Teensy 4.1 Schematic Rev D · Power, USB, Ethernet and MCU wiring",
       "method": "schematic"
     },
+    "bbb-am335x-pin-attributes": {
+      "document": "am335x-datasheet",
+      "title": "AM335x Sitara Processors datasheet",
+      "url": "https://www.ti.com/lit/ds/symlink/am3358.pdf#page=19",
+      "page": 19,
+      "locator": "§4.2 · Table 4-2 Pin Attributes (ZCZ package) · ball signal names and GPIO numbers (pp. 19–47)",
+      "method": "pdf-table"
+    },
     "bbb-p8-p9-table": {
       "document": "beaglebone-black-p8-p9",
       "title": "BeagleBone Black System Reference Manual · Chapter 7 Expansion Headers P8/P9",
@@ -2754,35 +2923,35 @@
       "locator": "STM32F446_gpio_v1_0 GPIO alternate function selectors",
       "method": "manufacturer-xml"
     },
-    "nucleo-f446re-arduino-47": {
-      "document": "nucleo-um1724-r14",
-      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=47",
-      "page": 47,
-      "locator": "Table 19 · Arduino headers",
-      "method": "pdf-table"
-    },
     "nucleo-f446re-arduino-48": {
-      "document": "nucleo-um1724-r14",
+      "document": "nucleo-um1724-r17",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=48",
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=48",
       "page": 48,
       "locator": "Table 19 · Arduino headers",
       "method": "pdf-table"
     },
-    "nucleo-f446re-morpho-58": {
-      "document": "nucleo-um1724-r14",
+    "nucleo-f446re-arduino-49": {
+      "document": "nucleo-um1724-r17",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=58",
-      "page": 58,
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=49",
+      "page": 49,
+      "locator": "Table 19 · Arduino headers",
+      "method": "pdf-table"
+    },
+    "nucleo-f446re-morpho-59": {
+      "document": "nucleo-um1724-r17",
+      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=59",
+      "page": 59,
       "locator": "Table 29 · ST Morpho headers",
       "method": "pdf-table"
     },
     "nucleo-f446re-top-view": {
-      "document": "nucleo-um1724-r14",
+      "document": "nucleo-um1724-r17",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=32",
-      "page": 32,
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=33",
+      "page": 33,
       "locator": "MB1136 top view · connector positions, rows and numbering",
       "method": "visual-diagram"
     },
@@ -2810,35 +2979,35 @@
       "locator": "digitalPin[0] · Arduino D0; CN9.1 position from the common MB1136 layout",
       "method": "code-variant"
     },
-    "nucleo-f303re-arduino-41": {
-      "document": "nucleo-um1724-r14",
-      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=41",
-      "page": 41,
-      "locator": "Table 14 · Arduino headers",
-      "method": "pdf-table"
-    },
     "nucleo-f303re-arduino-42": {
-      "document": "nucleo-um1724-r14",
+      "document": "nucleo-um1724-r17",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=42",
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=42",
       "page": 42,
       "locator": "Table 14 · Arduino headers",
       "method": "pdf-table"
     },
-    "nucleo-f303re-morpho-55": {
-      "document": "nucleo-um1724-r14",
+    "nucleo-f303re-arduino-43": {
+      "document": "nucleo-um1724-r17",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=55",
-      "page": 55,
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=43",
+      "page": 43,
+      "locator": "Table 14 · Arduino headers",
+      "method": "pdf-table"
+    },
+    "nucleo-f303re-morpho-56": {
+      "document": "nucleo-um1724-r17",
+      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=56",
+      "page": 56,
       "locator": "Table 26 · ST Morpho headers",
       "method": "pdf-table"
     },
     "nucleo-f303re-top-view": {
-      "document": "nucleo-um1724-r14",
+      "document": "nucleo-um1724-r17",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=32",
-      "page": 32,
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=33",
+      "page": 33,
       "locator": "MB1136 top view · connector positions, rows and numbering",
       "method": "visual-diagram"
     },
@@ -2858,35 +3027,35 @@
       "locator": "STM32L47x_gpio_v1_0 GPIO alternate function selectors",
       "method": "manufacturer-xml"
     },
-    "nucleo-l476rg-arduino-52": {
-      "document": "nucleo-um1724-r14",
-      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=52",
-      "page": 52,
-      "locator": "Table 23 · Arduino headers",
-      "method": "pdf-table"
-    },
     "nucleo-l476rg-arduino-53": {
-      "document": "nucleo-um1724-r14",
+      "document": "nucleo-um1724-r17",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=53",
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=53",
       "page": 53,
       "locator": "Table 23 · Arduino headers",
       "method": "pdf-table"
     },
-    "nucleo-l476rg-morpho-61": {
-      "document": "nucleo-um1724-r14",
+    "nucleo-l476rg-arduino-54": {
+      "document": "nucleo-um1724-r17",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=61",
-      "page": 61,
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=54",
+      "page": 54,
+      "locator": "Table 23 · Arduino headers",
+      "method": "pdf-table"
+    },
+    "nucleo-l476rg-morpho-62": {
+      "document": "nucleo-um1724-r17",
+      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=62",
+      "page": 62,
       "locator": "Table 32 · ST Morpho headers",
       "method": "pdf-table"
     },
     "nucleo-l476rg-top-view": {
-      "document": "nucleo-um1724-r14",
+      "document": "nucleo-um1724-r17",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=32",
-      "page": 32,
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=33",
+      "page": 33,
       "locator": "MB1136 top view · connector positions, rows and numbering",
       "method": "visual-diagram"
     },
@@ -2906,35 +3075,35 @@
       "locator": "STM32F052_gpio_v1_0 GPIO alternate function selectors",
       "method": "manufacturer-xml"
     },
-    "nucleo-f072rb-arduino-37": {
-      "document": "nucleo-um1724-r14",
-      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=37",
-      "page": 37,
-      "locator": "Table 11 · Arduino headers",
-      "method": "pdf-table"
-    },
     "nucleo-f072rb-arduino-38": {
-      "document": "nucleo-um1724-r14",
+      "document": "nucleo-um1724-r17",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=38",
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=38",
       "page": 38,
       "locator": "Table 11 · Arduino headers",
       "method": "pdf-table"
     },
-    "nucleo-f072rb-morpho-55": {
-      "document": "nucleo-um1724-r14",
+    "nucleo-f072rb-arduino-39": {
+      "document": "nucleo-um1724-r17",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=55",
-      "page": 55,
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=39",
+      "page": 39,
+      "locator": "Table 11 · Arduino headers",
+      "method": "pdf-table"
+    },
+    "nucleo-f072rb-morpho-56": {
+      "document": "nucleo-um1724-r17",
+      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=56",
+      "page": 56,
       "locator": "Table 26 · ST Morpho headers",
       "method": "pdf-table"
     },
     "nucleo-f072rb-top-view": {
-      "document": "nucleo-um1724-r14",
+      "document": "nucleo-um1724-r17",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=32",
-      "page": 32,
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=33",
+      "page": 33,
       "locator": "MB1136 top view · connector positions, rows and numbering",
       "method": "visual-diagram"
     },
@@ -2954,27 +3123,27 @@
       "locator": "STM32L051_gpio_v1_0 GPIO alternate function selectors",
       "method": "manufacturer-xml"
     },
-    "nucleo-l053r8-arduino-45": {
-      "document": "nucleo-um1724-r14",
+    "nucleo-l053r8-arduino-46": {
+      "document": "nucleo-um1724-r17",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=45",
-      "page": 45,
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=46",
+      "page": 46,
       "locator": "Table 17 · Arduino headers",
       "method": "pdf-table"
     },
-    "nucleo-l053r8-morpho-59": {
-      "document": "nucleo-um1724-r14",
+    "nucleo-l053r8-morpho-60": {
+      "document": "nucleo-um1724-r17",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=59",
-      "page": 59,
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=60",
+      "page": 60,
       "locator": "Table 30 · ST Morpho headers",
       "method": "pdf-table"
     },
     "nucleo-l053r8-top-view": {
-      "document": "nucleo-um1724-r14",
+      "document": "nucleo-um1724-r17",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=32",
-      "page": 32,
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=33",
+      "page": 33,
       "locator": "MB1136 top view · connector positions, rows and numbering",
       "method": "visual-diagram"
     },
@@ -2994,35 +3163,35 @@
       "locator": "STM32L162xE_gpio_v1_0 GPIO alternate function selectors",
       "method": "manufacturer-xml"
     },
-    "nucleo-l152re-arduino-50": {
-      "document": "nucleo-um1724-r14",
-      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=50",
-      "page": 50,
-      "locator": "Table 21 · Arduino headers",
-      "method": "pdf-table"
-    },
     "nucleo-l152re-arduino-51": {
-      "document": "nucleo-um1724-r14",
+      "document": "nucleo-um1724-r17",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=51",
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=51",
       "page": 51,
       "locator": "Table 21 · Arduino headers",
       "method": "pdf-table"
     },
-    "nucleo-l152re-morpho-59": {
-      "document": "nucleo-um1724-r14",
+    "nucleo-l152re-arduino-52": {
+      "document": "nucleo-um1724-r17",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=59",
-      "page": 59,
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=52",
+      "page": 52,
+      "locator": "Table 21 · Arduino headers",
+      "method": "pdf-table"
+    },
+    "nucleo-l152re-morpho-60": {
+      "document": "nucleo-um1724-r17",
+      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=60",
+      "page": 60,
       "locator": "Table 30 · ST Morpho headers",
       "method": "pdf-table"
     },
     "nucleo-l152re-top-view": {
-      "document": "nucleo-um1724-r14",
+      "document": "nucleo-um1724-r17",
       "title": "STM32 Nucleo-64 boards (MB1136) user manual",
-      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=32",
-      "page": 32,
+      "url": "https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf#page=33",
+      "page": 33,
       "locator": "MB1136 top view · connector positions, rows and numbering",
       "method": "visual-diagram"
     },
@@ -3381,7 +3550,7 @@
     "arduino-uno-r3-package-schematic": {
       "document": "arduino-uno-r3-schematic",
       "title": "Arduino UNO Rev3 through-hole schematic",
-      "url": "https://docs.arduino.cc/resources/schematics/A000066-schematics.pdf#page=1",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/uno/boards/uno-rev3/downloads/A000066-schematics.pdf#page=1",
       "page": 1,
       "locator": "ATmega328P-PU · PDIP-28 · main MCU and connector nets",
       "method": "visual-diagram"
@@ -3389,7 +3558,7 @@
     "arduino-nano-classic-package-schematic": {
       "document": "arduino-nano-classic-schematic",
       "title": "Arduino Nano V3.3 schematic",
-      "url": "https://docs.arduino.cc/resources/schematics/A000005-schematics.pdf#page=1",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/nano/boards/nano/downloads/A000005-schematics.pdf#page=1",
       "page": 1,
       "locator": "ATmega328P-MUR · QFN/MLF-32 · main MCU and connector nets",
       "method": "visual-diagram"
@@ -3397,7 +3566,7 @@
     "arduino-mega-2560-package-schematic": {
       "document": "arduino-mega-2560-schematic",
       "title": "Arduino Mega 2560 Rev3 schematic",
-      "url": "https://docs.arduino.cc/resources/schematics/A000067-schematics.pdf#page=1",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/mega/boards/mega-2560/downloads/A000067-schematics.pdf#page=1",
       "page": 1,
       "locator": "ATmega2560-AU · TQFP-100 · main MCU and connector nets",
       "method": "visual-diagram"
@@ -3441,6 +3610,70 @@
       "page": null,
       "locator": "GPIO_Label STLK/STLINK virtual serial nets and USART signals",
       "method": "hardware-spec"
+    },
+    "bbb-header-notes": {
+      "document": "beaglebone-black-p8-p9",
+      "title": "BeagleBone Black System Reference Manual · Chapter 7 Expansion Headers P8/P9",
+      "url": "https://docs.beagleboard.org/boards/beaglebone/black/ch07.html",
+      "page": null,
+      "locator": "Chapter 7 · Expansion Connectors · NOTE paragraphs and Connector P9 notes",
+      "method": "source-text"
+    },
+    "bbb-cape-lcd-pins": {
+      "document": "beaglebone-black-cape",
+      "title": "BeagleBone Black System Reference Manual · Chapter 8 Cape Board Support",
+      "url": "https://docs.beagleboard.org/boards/beaglebone/black/ch08.html",
+      "page": null,
+      "locator": "Chapter 8 · LCD Pins · Table 15 and usage notes",
+      "method": "source-table"
+    },
+    "bbb-cape-emmc-pins": {
+      "document": "beaglebone-black-cape",
+      "title": "BeagleBone Black System Reference Manual · Chapter 8 Cape Board Support",
+      "url": "https://docs.beagleboard.org/boards/beaglebone/black/ch08.html",
+      "page": null,
+      "locator": "Chapter 8 · eMMC Pins · Table 16 and usage notes",
+      "method": "source-table"
+    },
+    "bbb-cape-power": {
+      "document": "beaglebone-black-cape",
+      "title": "BeagleBone Black System Reference Manual · Chapter 8 Cape Board Support",
+      "url": "https://docs.beagleboard.org/boards/beaglebone/black/ch08.html",
+      "page": null,
+      "locator": "Chapter 8 · Expansion Board Power · rail table, current per pin and sequencing rules",
+      "method": "source-table"
+    },
+    "rp2350-e9": {
+      "document": "rp2350",
+      "title": "RP2350 Datasheet",
+      "url": "https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf#page=1359",
+      "page": 1359,
+      "locator": "Appendix D.5.1 · RP2350-E9 · increased leakage on Bank 0 GPIO inputs (A2 stepping; pp. 1359–1360)",
+      "method": "pdf-text"
+    },
+    "pi-gpio-electrical": {
+      "document": "pi-gpio",
+      "title": "Raspberry Pi GPIO documentation",
+      "url": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc",
+      "page": null,
+      "locator": "GPIO pads and voltage · 3.3 V only warning, fixed GP2/GP3 pull-ups, per-pin and total current",
+      "method": "manufacturer-source-text"
+    },
+    "teensy41-voltage": {
+      "document": "teensy41-card11b",
+      "title": "Teensy 4.1 Pinout and Reference Card (Back)",
+      "url": "https://www.pjrc.com/teensy/card11b_rev4_web.pdf#page=1",
+      "page": 1,
+      "locator": "Card 11b · \"Teensy 4.1 pins are not 5 volt tolerant\" and SD pad signals 42–47",
+      "method": "visual-diagram"
+    },
+    "microbit-power-budget": {
+      "document": "microbit-power-supply",
+      "title": "micro:bit power supply",
+      "url": "https://tech.microbit.org/hardware/powersupply/",
+      "page": null,
+      "locator": "Power supply · V2 regulator and current available to the edge connector",
+      "method": "manufacturer-source-text"
     }
   }
 }

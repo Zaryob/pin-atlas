@@ -1301,3 +1301,43 @@
 .pwm-sharing { display: flex; align-items: flex-start; gap: .6rem; margin-top: 1rem; }
 .pwm-sharing input { margin-top: .25rem; flex-shrink: 0; }
 .pwm-notes { margin-block: 1rem; }
+
+.hardware-details{margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--line);min-width:0}
+.research-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:1.5rem;margin-bottom:1.5rem}
+.research-heading h2{font-size:var(--text-h2);line-height:1.5;margin:.4rem 0}
+.research-heading>p,.research-eyebrow{font-size:var(--text-xs);color:var(--muted);line-height:1.9;margin:0}
+.research-heading>p{flex-shrink:0}
+.research-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin:0;border:1px solid var(--line)}
+.research-facts>div{padding:1rem 1.2rem;min-width:0;border-bottom:1px solid var(--line)}
+.research-facts>div:nth-child(odd){border-right:1px solid var(--line)}
+.research-facts>div:last-child:nth-child(odd){grid-column:1/-1;border-right:0}
+.research-facts dt{font-size:var(--text-xs);color:var(--muted);margin-bottom:.5rem}
+.research-facts dd{margin:0;line-height:1.8;overflow-wrap:anywhere}
+.research-citations{white-space:nowrap;font-size:var(--text-xs)}
+.research-citations a{padding:.15rem}
+.hardware-details h3{margin:2rem 0 1rem;font-size:var(--text-h3)}
+.research-memory-note,.research-date-note,.research-connections>p,.research-wiring p{font-size:var(--text-xs);color:var(--muted);line-height:1.9}
+.research-notes li{margin-block:.8rem;line-height:1.9}
+.research-wiring{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.research-wiring>div{padding:1.2rem;border:1px solid var(--line);background:var(--surface)}
+.research-wiring code{display:block;margin:1rem 0;line-height:1.8;font-family:var(--mono)}
+.research-document-links{display:flex;gap:.8rem 1.5rem;flex-wrap:wrap;margin:1.5rem 0;font-size:var(--text-xs)}
+.research-document-links a{overflow-wrap:anywhere}
+.research-pin-group,.research-sources{border-top:1px solid var(--line);padding:1rem 0}
+.hardware-details summary{cursor:pointer;line-height:1.8}
+.research-pin-group summary span{margin-left:.6rem;color:var(--muted);font-size:var(--text-xs)}
+.research-table-scroll{max-height:34rem;overflow:auto;margin-top:1rem;overscroll-behavior:contain}
+.research-table-scroll table{border-collapse:collapse;width:100%;font-size:var(--text-xs);text-align:left;min-width:620px}
+.research-table-scroll caption{text-align:left;padding:.6rem 0;color:var(--muted)}
+.research-table-scroll th,.research-table-scroll td{padding:.6rem .8rem;border:1px solid var(--line);vertical-align:top;line-height:1.8}
+.research-table-scroll thead{position:sticky;top:0;background:var(--paper)}
+.research-table-scroll small,.research-sources small{display:block;color:var(--muted);font-size:var(--text-xs)}
+.research-sources li{padding:.5rem 0;line-height:1.9;overflow-wrap:anywhere;scroll-margin-top:5rem}
+@media(max-width:760px){.research-heading{display:block}.research-heading>p{margin-top:1rem}.research-facts,.research-wiring{grid-template-columns:1fr}.research-facts>div:nth-child(odd){border-right:0}.research-notes ul{padding-left:1.2rem}.hardware-details{margin-top:2rem}.research-facts>div{padding:1rem}.research-wiring{gap:.6rem}}
+.board-cautions { border-left: 3px solid var(--warn, #c2410c); background: var(--surface); padding: 12px 16px; margin: 0 0 20px; max-width: 950px; font-size: var(--text-sm); line-height: 1.7; }
+.board-cautions h3 { margin: 0 0 6px; font-size: var(--text-sm); }
+.board-cautions ul { margin: 0; padding-left: 18px; }
+.board-cautions li + li { margin-top: 6px; }
+.note-sources { display: block; color: var(--muted); font-size: var(--text-xs); overflow-wrap: anywhere; }
+.note-sources a { color: inherit; }
+.trademark-note { flex-basis: 100%; color: var(--muted); font-size: var(--text-xs); }

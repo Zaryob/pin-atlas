@@ -12,6 +12,7 @@ import {configureBoard,normalizeHardware,sameHardware,hardwareSummary} from './h
 import {readPlanRecords,writePlanRecord,planPayload as createPlanPayload,exportPlanPayload,decodePlanPayload} from './plan-records.mjs';
 import {applySuggestion} from './pin-solver.mjs';
 import {pwmResource,pwmNotes} from './pwm-resources.mjs';
+import {renderHardwareDetails} from './hardware-details.mjs';
 const { t, verificationUrl } = window.ZaryobI18n;
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -153,7 +154,7 @@ function focusWorkspace() {
  $('#board-title').focus({preventScroll:true});
 }
 function renderBoard() {
- document.title = `${board.name} Pinout — Pin Atlas`;
+ document.title = t('boardDocumentTitle', {name:board.name});
  $('#board-title').textContent = board.name;
  const entry=buildCatalog(layouts,t).find(item=>item.profile===board.id);
  $('#hardware-kind').textContent=t(entry?.type==='headers'?'catalogHeaders':isChip(board)?'catalogChips':'catalogBoards');
@@ -162,6 +163,7 @@ function renderBoard() {
  const scope = board.scopeKey ? t(board.scopeKey) : layout.scopeKey ? t(layout.scopeKey) : '';
  $('#board-scope').hidden = !scope;
  $('#board-scope').textContent = scope;
+ renderCautions();
  renderCompatibilityIndex();
  renderHardware();
  updateLibraryCount();
@@ -173,6 +175,7 @@ function renderBoard() {
  $('#pin-count').textContent = t('pinCount', { count: board.packagePins });
  $('#specs').innerHTML = `<span>${icon('chip')}<b>${board.uniqueGPIOCount ?? board.gpioCount}</b>GPIO${board.reservedGPIOCount ? ` (${t('reservedCount', { count: board.reservedGPIOCount })})` : ''}</span><span>${icon('bolt')}<b>${esc(board.voltage)}</b></span>`;
  renderNav(); renderReferenceNote(); renderFilters(); renderMap(); renderDetail(); renderPlan();syncPlanLayout();
+ $('#hardware-details').innerHTML=renderHardwareDetails(board,evidence,t,window.ZaryobI18n.language);
 }
 function renderCompatibilityIndex() {
  compatibilityModels=compatibleModels(layout);
@@ -463,22 +466,29 @@ function renderTable() {
 function electricalBadgeHTML(pin) {
  if (pin.type !== 'GPIO' && pin.type !== 'ADC') return '';
  if (pin.inputTolerance) return ` <span class="pin-badge ${pin.inputTolerance.kind==='rp2350-ft'?'badge-ft':'badge-warn'}" title="${esc(t(pin.inputTolerance.kind==='rp2350-ft'?'rp2350FTNote':'rp2350AnalogNote'))}">${esc(t(pin.inputTolerance.kind==='rp2350-ft'?'rp2350FTLabel':'rp2350AnalogLabel'))}</span>`;
- if (pin.fiveVoltTolerant === true) return ` <span class="pin-badge badge-ft" title="${esc(t('stm32FTNote'))}">5V FT</span>`;
- if (pin.fiveVoltTolerant === false) return ` <span class="pin-badge badge-warn" title="${esc(t('stm32NonFTNote'))}">3.3V Only</span>`;
- if (board.voltage?.includes('3.3 V') || board.voltage?.includes('3.6 V')) return ` <span class="pin-badge badge-warn" title="${esc(t('threeVoltOnlyNote'))}">3.3V Only</span>`;
- if (board.voltage?.includes('5 V') || board.voltage?.includes('5.5 V')) return ` <span class="pin-badge badge-info" title="${esc(t('fiveVoltLogicNote'))}">5V Logic</span>`;
+ if (pin.fiveVoltTolerant === true) return ` <span class="pin-badge badge-ft" title="${esc(t('stm32FTNote'))}">${esc(t('badgeFiveVoltFT'))}</span>`;
+ if (pin.fiveVoltTolerant === false) return ` <span class="pin-badge badge-warn" title="${esc(t('stm32NonFTNote'))}">${esc(t('badgeThreeVoltOnly'))}</span>`;
+ if (board.voltage?.includes('3.3 V') || board.voltage?.includes('3.6 V')) return ` <span class="pin-badge badge-warn" title="${esc(t('threeVoltOnlyNote'))}">${esc(t('badgeThreeVoltOnly'))}</span>`;
+ if (board.voltage?.includes('5 V') || board.voltage?.includes('5.5 V')) return ` <span class="pin-badge badge-info" title="${esc(t('fiveVoltLogicNote'))}">${esc(t('badgeFiveVoltLogic'))}</span>`;
  return '';
 }
 const noteText=note=>note.key?t(note.key):note.text;
+// Each sourced warning shows the reference it was read from.
+const noteSources=note=>{const links=(note.evidence||[]).map(key=>referenceLink(key,t('noteSource'),'note-source')).filter(Boolean);return links.length?` <span class="note-sources">${esc(t('noteSource'))}: ${links.join(' · ')}</span>`:'';};
+function renderCautions(){
+ const list=board.cautions||[],target=$('#board-cautions');
+ target.hidden=!list.length;
+ target.innerHTML=list.length?`<h3>${esc(t('boardCautions'))}</h3><ul>${list.map(item=>`<li><span>${esc(t(item.key))}</span>${noteSources(item)}</li>`).join('')}</ul>`:'';
+}
 function pwmNotesHTML(plan){const notes=pwmNotes(plan,board,t);return notes.length?`<section class="pwm-notes"><h4>${esc(t('pwmConstraints'))}</h4>${notes.map(note=>`<p>${esc(note)}</p>`).join('')}</section>`:'';}
 function circuitNotesHTML(pins){
  const notes=circuitNotes(pins);
- return notes.length?`<section class="circuit-notes"><h4>${esc(t('boardConstraints'))}</h4><ul>${notes.map(note=>`<li><strong>${esc(note.pins.map(pin=>physicalLabel(pin)+' · '+pin.name).join(' / '))}</strong><span>${esc(noteText(note))}</span></li>`).join('')}</ul></section>`:'';
+ return notes.length?`<section class="circuit-notes"><h4>${esc(t('boardConstraints'))}</h4><ul>${notes.map(note=>`<li><strong>${esc(note.pins.map(pin=>physicalLabel(pin)+' · '+pin.name).join(' / '))}</strong><span>${esc(noteText(note))}${noteSources(note)}</span></li>`).join('')}</ul></section>`:'';
 }
 function generalNotesHTML(pins){
  const notes=new Map();
  for(const pin of pins)for(const note of pinNotes(pin).general)notes.set(note.key||note.text,note);
- return [...notes.values()].map(note=>`<p>${esc(noteText(note))}</p>`).join('');
+ return [...notes.values()].map(note=>`<p>${esc(noteText(note))}${noteSources(note)}</p>`).join('');
 }
 function renderDetail() {
  const pin=pinByNumber(selected), opts=options(pin);
@@ -504,7 +514,7 @@ function renderDetail() {
  const occupied=pinAssignment(pin,assignments,board,{otherContactOnly:true});
  const occupancy=occupied?`<div class="pin-occupancy"><p>${esc(assignmentMessage(occupied,t))}</p><button type="button" class="button secondary" data-open-assignment="${occupied.pin.number}">${esc(t('openOccupiedPin'))}</button></div>`:'';
  $('#selected-pin-label').textContent = `${pin.name} · ${t('details')}`;
- $('#pin-detail').innerHTML=`<div class="pin-detail-body"><div class="pin-hero"><div class="pin-identity"><h2>${esc(pin.name.replace('_ADC',' / A'))}</h2><span class="physical-pin">${t('physicalPin')} <strong>${esc(physicalLabel(pin))}</strong>${pin.boardLabel && pin.boardLabel!==pin.name ? `<span class="mcu-pin-label"> · ${esc(t('boardLabel',{label:pin.boardLabel}))}</span>` : ''}${pin.mcuPort ? `<span class="mcu-pin-label">${pin.arduinoPin!==undefined?` · Arduino D${pin.arduinoPin}`:''} · ${t('mcuPort', {port:pin.mcuPort})}</span>` : ''}${pin.mcuPin ? `<span class="mcu-pin-label"> · ${t('mcuPin', {pin:pin.mcuPin})}</span>` : ''}</span></div><span class="pin-type" style="color:${colors[pin.type]}">${familyName(pin.type)} · ${esc(pin.type === 'GPIO' ? board.voltage : '')}${electricalBadgeHTML(pin)}</span>${occupancy}${pinHardwareHTML(pin)}${circuitNotesHTML([pin])}${sharedNote}${referenceLink(pin.evidence[0], t('pinSource'), 'pin-source')}</div><fieldset class="function-section"><legend class="small-label">${t(opts.length>1 ? 'chooseFunction' : 'pinFunction')}</legend>${filters.size || query ? `<p class="function-hint">${t('matchingFunctions')}</p>` : ''}<div class="function-list">${primary.map(option).join('')}</div>${more.length ? `<details class="more-functions"><summary>${t('allFunctions', {count:more.length})}</summary><div class="function-list">${more.map(option).join('')}</div></details>` : ''}<div id="function-source"></div></fieldset><div class="label-section"><label class="small-label" for="custom-label">${t('projectLabel')} <span>${t('optional')}</span></label><input id="custom-label" maxlength="40" placeholder="${esc(t('labelExample'))}" value="${esc(assignments[selected]?.label||'')}"></div><div class="pin-guidance"><h3>${esc(t('generalGuidance'))}</h3><p class="pin-description">${esc(description)}${pin.fiveVoltTolerant !== undefined ? ' '+esc(t(pin.fiveVoltTolerant ? 'stm32FTNote' : 'stm32NonFTNote')) : ''}</p></div>${pin.inputTolerance ? `<p class="hardware-note">${esc(t(pin.inputTolerance.kind==='rp2350-ft'?'rp2350FTNote':'rp2350AnalogNote'))}</p>` : ''}${pin.functions.some(fn=>pwmResource(fn,board)) ? `<section id="pwm-settings" ${pwmResource(pin.functions.find(f=>f.name===selectedFn),board)?'':'hidden'}><label class="pwm-sharing"><input id="shared-pwm" type="checkbox" ${assignments[selected]?.sharedPWM?'checked':''}>${esc(t('pwmShareConsent'))}</label><p>${esc(t('pwmFrequencyNote'))}</p></section>` : ''}${renderPinEvidence(pin)}</div><div class="detail-action"><button id="add-plan" class="add-plan" ${pin.reserved || pin.hardwareBlocked || occupied ? 'disabled' : ''}>${icon(hasPlan?'check':'plus')}${t(occupied?'peripheralOccupiedShort':pin.hardwareBlocked ? 'hwUnavailable' : pin.reserved ? (pin.reservedLabel || (pin.name==='NC' ? 'unconnected' : 'reserved')) : hasPlan ? 'updatePin' : 'addPin')}</button><div class="pin-save-feedback"><span id="pin-save-status" role="status"></span><button id="view-saved-plan" hidden>${t('viewPlan')}</button></div></div>`;
+ $('#pin-detail').innerHTML=`<div class="pin-detail-body"><div class="pin-hero"><div class="pin-identity"><h2>${esc(pin.name.replace('_ADC',' / A'))}</h2><span class="physical-pin">${t('physicalPin')} <strong>${esc(physicalLabel(pin))}</strong>${pin.boardLabel && pin.boardLabel!==pin.name ? `<span class="mcu-pin-label"> · ${esc(t('boardLabel',{label:pin.boardLabel}))}</span>` : ''}${pin.mcuPort ? `<span class="mcu-pin-label">${pin.arduinoPin!==undefined?` · Arduino D${pin.arduinoPin}`:''} · ${t('mcuPort', {port:pin.mcuPort})}</span>` : ''}${pin.mcuPin ? `<span class="mcu-pin-label"> · ${t('mcuPin', {pin:pin.mcuPin})}</span>` : ''}</span></div><span class="pin-type" style="color:${colors[pin.type]}">${familyName(pin.type)} · ${esc(pin.type === 'GPIO' ? board.voltage : '')}${electricalBadgeHTML(pin)}</span>${occupancy}${pinHardwareHTML(pin)}${circuitNotesHTML([pin])}${sharedNote}${referenceLink(pin.evidence[0], t('pinSource'), 'pin-source')}</div><fieldset class="function-section"><legend class="small-label">${t(opts.length>1 ? 'chooseFunction' : 'pinFunction')}</legend>${filters.size || query ? `<p class="function-hint">${t('matchingFunctions')}</p>` : ''}<div class="function-list">${primary.map(option).join('')}</div>${more.length ? `<details class="more-functions"><summary>${t('allFunctions', {count:more.length})}</summary><div class="function-list">${more.map(option).join('')}</div></details>` : ''}<div id="function-source"></div></fieldset><div class="label-section"><label class="small-label" for="custom-label">${t('projectLabel')} <span>${t('optional')}</span></label><input id="custom-label" maxlength="40" placeholder="${esc(t('labelExample'))}" value="${esc(assignments[selected]?.label||'')}"></div><div class="pin-guidance"><h3>${esc(t('generalGuidance'))}</h3><p class="pin-description">${esc(description)}${general.length?noteSources(general[0]):''}${pin.fiveVoltTolerant !== undefined ? ' '+esc(t(pin.fiveVoltTolerant ? 'stm32FTNote' : 'stm32NonFTNote')) : ''}</p></div>${pin.inputTolerance ? `<p class="hardware-note">${esc(t(pin.inputTolerance.kind==='rp2350-ft'?'rp2350FTNote':'rp2350AnalogNote'))}</p>` : ''}${pin.functions.some(fn=>pwmResource(fn,board)) ? `<section id="pwm-settings" ${pwmResource(pin.functions.find(f=>f.name===selectedFn),board)?'':'hidden'}><label class="pwm-sharing"><input id="shared-pwm" type="checkbox" ${assignments[selected]?.sharedPWM?'checked':''}>${esc(t('pwmShareConsent'))}</label><p>${esc(t('pwmFrequencyNote'))}</p></section>` : ''}${renderPinEvidence(pin)}</div><div class="detail-action"><button id="add-plan" class="add-plan" ${pin.reserved || pin.hardwareBlocked || occupied ? 'disabled' : ''}>${icon(hasPlan?'check':'plus')}${t(occupied?'peripheralOccupiedShort':pin.hardwareBlocked ? 'hwUnavailable' : pin.reserved ? (pin.reservedLabel || (pin.name==='NC' ? 'unconnected' : 'reserved')) : hasPlan ? 'updatePin' : 'addPin')}</button><div class="pin-save-feedback"><span id="pin-save-status" role="status"></span><button id="view-saved-plan" hidden>${t('viewPlan')}</button></div></div>`;
  renderFunctionSource(pin);
 }
 function referenceLink(key, label, className) {
@@ -855,7 +865,7 @@ function showHomeView() {
   $('#board-family').hidden = true;
   $('#crumb-sep-2').hidden = true;
   $('#crumb').hidden = true;
-  document.title = `Pin Atlas — ${t('homeBadge')}`;
+  document.title = t('pageTitle');
   updateLibraryCount();
   renderHome();
 }

@@ -34,44 +34,78 @@ def build_microbit(cache, docs, observations, ref, verified_on):
         (21, 'EDGE', 20,    'P20', 'P20', 'P1.00', 'GPIO',  [('I2C_SDA', 'I2C'), ('PWM', 'PWM'), ('UART', 'UART')], 'microbitI2cPullupNote', 540, 442, 'right'),
     ]
 
+    # Physical strip order comes from the manufacturer's V2 edge-connector table.
+    edge_doc = (cache / docs['microbit-edge-connector']['file']).read_text()
+    assert 'There are 25 strips/pins including 5 rings' in edge_doc
+    edge_ref = ref('microbit-v2-edge-table', 'microbit-edge-connector', None,
+                   'Pins and signals · V2 table · physical strip order, MCU pins and pull resistors', 'manufacturer-source-table')
+    i2c_doc = (cache / docs['microbit-i2c']['file']).read_text()
+    assert 'separates the I2C signals into Internal and External use' in i2c_doc
+    assert 'The internal signals run to the target Nordic chip and communicate with the motion sensor and interface chip' in i2c_doc
+    i2c_ref = ref('microbit-v2-i2c-buses', 'microbit-i2c', None, 'I2C bus · V2 separates internal (sensor) and external (edge connector) buses', 'manufacturer-source-text')
+    v2 = edge_doc.split('<TabItem value="v2"', 1)[1].split('</TabItem>', 1)[0]
+    rows = [[cell.strip() for cell in line.strip().strip('|').split('|')] for line in v2.splitlines() if line.startswith('|')][2:]
+    strips = []
+    for ring, mod, schem, mcu, sw, functions, direction, pull in rows:
+        grouped = functions.startswith('}')
+        if grouped and strips and strips[-1]['ring'] and strips[-1]['schem'] == schem:
+            strips[-1]['mcu'] = strips[-1]['mcu'] or mcu
+            strips[-1]['pull'] = strips[-1]['pull'] if strips[-1]['pull'] not in ('', '--') else pull
+        else:
+            strips.append({'ring': grouped, 'schem': schem, 'mcu': mcu, 'sw': sw, 'pull': pull})
+    assert len(strips) == 25 and sum(strip['ring'] for strip in strips) == 5
+    by_name = {definition[3]: definition for definition in pin_defs}
+    extra = {'3V': [22, 23], 'GND': [24, 25]}
     pins = []
-    for number, conn, connPin, name, label, net, ptype, fspecs, circuitKey, x, y, side in pin_defs:
-        functions = []
-        ev = [physical_ref]
-        for fname, fgroup in fspecs:
-            functions.append({
-                'name': fname,
-                'group': fgroup,
-                'signal': fname,
-                'evidence': function_ref
-            })
+    for position, strip in enumerate(strips, 1):
+        name = strip['sw'] or {'+V_TGT': '3V', 'GND': 'GND'}[strip['schem']]
+        if name in extra and not strip['ring']:
+            number = extra[name].pop(0)
+            conn, connPin, label, net, ptype, fspecs, circuitKey = 'EDGE', f"{name}.{'A' if number % 2 == 0 else 'B'}", name, name, 'POWER' if name == '3V' else 'GND', [], None
+        else:
+            number, conn, connPin, _, label, net, ptype, fspecs, circuitKey, _, _, _ = by_name[name]
+            assert strip['ring'] == (conn == 'RING'), name
+            if ptype == 'GPIO':
+                assert strip['mcu'].split('/')[0] == net, (name, strip['mcu'])
+        left = position <= 13
+        functions = [{'name': fname, 'group': fgroup, 'signal': fname, 'evidence': function_ref} for fname, fgroup in fspecs]
         pin = {
             'number': number,
             'physicalLabel': f'{conn}.{connPin}',
             'connector': conn,
             'connectorPin': connPin,
+            'edgePosition': position,
             'name': name,
             'boardLabel': label,
             'type': ptype,
             'functions': functions,
-            'evidence': ev,
+            'evidence': [physical_ref, edge_ref],
             'net': net,
-            'position': {'x': x, 'y': y, 'side': side}
+            'position': {'x': 280 if left else 540, 'y': 100 + ((position - 1) if left else (position - 14)) * 30, 'side': 'left' if left else 'right'}
         }
         if circuitKey:
             pin['boardCircuitKey'] = circuitKey
+        if circuitKey == 'microbitI2cPullupNote':
+            assert strip['pull'] == 'e4k7u' and strip['schem'].startswith('I2C EXT')
+            pin['noteEvidence'] = {circuitKey: [edge_ref, i2c_ref]}
+            pin['evidence'].append(i2c_ref)
         pins.append(pin)
+    assert not extra['3V'] and not extra['GND']
+    assert [pin['name'] for pin in pins] == ['P3', 'P0', 'P4', 'P5', 'P6', 'P7', 'P1', 'P8', 'P9', 'P10', 'P11', 'P12', 'P2',
+                                           'P13', 'P14', 'P15', 'P16', '3V', '3V', '3V', 'P19', 'P20', 'GND', 'GND', 'GND']
+    pins.sort(key=lambda pin: pin['number'])
 
     board_microbit = {
         'id': 'microbit-v2',
         'name': 'BBC micro:bit V2',
         'shortName': 'micro:bit V2',
+        'scopeKey': 'microbitV2Scope',
         'subtitle': 'nRF52833 · Cortex-M4F · 64 MHz · 3.3 V I/O',
         'layout': 'custom',
         'category': 'micro:bit',
         'family': 'micro:bit',
-        'packageName': 'Edge Connector (80-way pitch)',
-        'packagePins': 21,
+        'packageName': 'Edge connector · 25 front strips',
+        'packagePins': 25,
         'gpioCount': 19,
         'uniqueGPIOCount': 19,
         'voltage': '3.3 V I/O',

@@ -1,5 +1,5 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
-import {compatibleModels} from './compatibility.mjs';
+import {compatibleModels,normalizeCatalogText} from './compatibility.mjs';
 
 // Catalog models are independent of the geometry shared in layouts.mjs.
 export const boardFamilies = [
@@ -28,8 +28,7 @@ export const homeFilterChips = [{id:'all',labelKey:'catalogAllPlatforms'},
 const seriesNames = {'nucleo-32':'Nucleo-32','nucleo-64':'Nucleo-64','nucleo-144':'Nucleo-144',
   'black-pill':'WeAct Black Pill','pico-family':'Pico','seeed-xiao':'XIAO'};
 const fallback = (key,params,value) => value || key;
-export const normalizeCatalogText = value => String(value).normalize('NFKD').replace(/[\u0300-\u036f]/g,'')
-  .toLowerCase().replace(/ı/g,'i').replace(/[^a-z0-9]+/g,' ').trim();
+export {normalizeCatalogText};
 
 export function buildCatalog(layouts,t=fallback) {
   return boardFamilies.flatMap(family=>family.layouts.flatMap(id=>{

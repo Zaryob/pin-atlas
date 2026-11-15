@@ -37,7 +37,7 @@ def build_espressif(cache,docs,obs,ref,verified_on):
         orientation=ref(id+'-orientation',chip+'-devkit-photo',None,'Official front/pin-layout image · USB at bottom, antenna at top; header numbers start at antenna end','visual-diagram')
         ds=chip+'-datasheet'
         matrix_page={'esp32':16,'esp32c3':19,'esp32s3':20,'esp32c6':19}[chip]
-        matrix=ref(id+'-matrix',ds,matrix_page,'I/O pins / IO MUX and GPIO Matrix · routable peripheral capabilities, not a default firmware pin assignment','pdf-text')
+        matrix=ref(id+'-matrix',ds,matrix_page,('§2.2 · Notes for Table 2-1 Pin Overview · function names and GPIO-matrix routing' if chip=='esp32' else 'I/O pins / IO MUX and GPIO Matrix')+' · routable peripheral capabilities, not a default firmware pin assignment','pdf-text')
         boot_page={'esp32':22,'esp32c3':30,'esp32s3':32,'esp32c6':33}[chip]
         boot=ref(id+'-strapping',ds,boot_page,'Boot configurations · strapping levels are sampled during reset')
         with pdfplumber.open(cache/docs[ds]['file']) as pdf:
@@ -76,7 +76,13 @@ def build_espressif(cache,docs,obs,ref,verified_on):
                         pin['reserved']=True;pin['reservedLabel']='unavailable';pin['noteKey']='espFlashNote';pin['functions']=[]
                     if (chip=='esp32c3' and gp==8) or (chip=='esp32s3' and gp==38) or (chip=='esp32c6' and gp==8):pin['boardCircuitKey']='espRgbLedNote'
                     if any(f['group']=='USB' for f in pin['functions']):pin['boardCircuitKey']='espUsbNote'
-                    if any(f['signal'].startswith('ADC2') for f in pin['functions']):pin['analogCautionKey']='espAdc2Note'
+                    if any(f['signal'].startswith('ADC2') for f in pin['functions']):
+                        pin['analogCautionKey']='espAdc2Note'
+                        if chip=='esp32c3':
+                            # ESP32-C3 has its own, stronger caveat than the classic ESP32 Wi-Fi sharing note.
+                            with pdfplumber.open(cache/docs[ds]['file']) as sheet:assert 'ADC2ofsomechiprevisionsisnotoperable' in ''.join((sheet.pages[48].extract_text() or '').split())
+                            adc2=ref('esp32c3-adc2-note',ds,49,'§4.2.2.1 SAR ADC · note: ADC2 of some chip revisions is not operable; ADC2 is not factory-calibrated','pdf-text')
+                            pin['analogCautionKey']='espC3Adc2Note';pin['noteEvidence']={'espC3Adc2Note':[adc2]};pin['evidence'].append(adc2)
                     if gp in ({1,3} if chip=='esp32' else {20,21} if chip=='esp32c3' else {16,17} if chip=='esp32c6' else {43,44}):pin['boardCircuitKey']='espUartBridgeNote'
                 elif pin['type']=='SYSTEM' and not pin.get('reserved'):pin['noteKey']='espEnableNote'
                 pins.append(pin)

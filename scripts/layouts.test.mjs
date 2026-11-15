@@ -147,11 +147,11 @@ test('Seeed XIAO references share 14 physical positions while changing processor
   assert(xiaoC3.pins.find(p => p.physicalLabel === 'L.1').strapping);
 });
 
-test('micro:bit V2 exposes edge connector with 5 rings and 16 expansion pins', () => {
+test('micro:bit V2 exposes 25 front edge strips: 5 rings, 16 signal strips and 4 supply strips', () => {
   const mb = resolveProfile(layouts, 'microbit-v2').profile;
-  assert.equal(mb.pins.length, 21);
+  assert.equal(mb.pins.length, 25);
   assert.equal(mb.pins.filter(p => p.connector === 'RING').length, 5);
-  assert.equal(mb.pins.filter(p => p.connector === 'EDGE').length, 16);
+  assert.equal(mb.pins.filter(p => p.connector === 'EDGE').length, 20);
   assert.equal(mb.gpioCount, 19);
   assert(mb.pins.find(p => p.name === 'P0').functions.some(f => f.group === 'TOUCH'));
   assert(mb.pins.find(p => p.name === 'P5').functions.some(f => f.signal === 'BUTTON_A'));

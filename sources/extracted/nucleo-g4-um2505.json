@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "document": "nucleo-g4-um2505",
-  "sourceSha256": "d862980338d3b393f5f880790cc7c56105cff0a6931ca89b20b3967542feb685",
+  "sourceSha256": "35549bd8805ed884ce0e0eeceb9ce94097ecba2a7d95560e6d1109fb119fd3d4",
   "pages": {
     "30": {
       "tables": [
@@ -44,7 +44,7 @@
             "3V3",
             "-",
             "-",
-            "3V3 input/output"
+            "3V3 input / output"
           ],
           [
             null,
@@ -115,22 +115,30 @@
             "5",
             "A4",
             "ADC",
-            "PC1/\nPB9",
-            "ADC12_IN7/\nI2C1_SDA"
+            "PC1 /\nPB9",
+            "ADC12_IN7 /\nI2C1_SDA"
           ],
           [
             null,
             "6",
             "A5",
             "ADC",
-            "PC0/\nPA15",
-            "ADC12_IN6/\nI2C1_SCL"
+            "PC0 /\nPA15",
+            "ADC12_IN6 /\nI2C1_SCL"
+          ],
+          [
+            "CN5",
+            "10",
+            "SCL/D15",
+            "ARD_D15",
+            "PB8",
+            "I2C1_SCL"
           ]
         ],
         [
           [
             "",
-            "UM2505 - Rev 2 page 30/43",
+            "UM2505 - Rev 7 page 30/48",
             ""
           ],
           [
@@ -139,7 +147,8 @@
             null
           ]
         ]
-      ]
+      ],
+      "tokens": []
     },
     "31": {
       "tables": [
@@ -154,14 +163,6 @@
           ],
           [
             "CN5",
-            "10",
-            "SCL/D15",
-            "ARD_D15",
-            "PB8",
-            "I2C1_SCL"
-          ],
-          [
-            null,
             "9",
             "SDA/D14",
             "ARD_D14",
@@ -206,7 +207,7 @@
             "PWM/MOSI/D11",
             "ARD_D11",
             "PA7",
-            "TIM3_CH2/SPI1_MOSI"
+            "TIM3_CH2 / SPI1_MOSI"
           ],
           [
             null,
@@ -214,7 +215,7 @@
             "PWM/CS/D10",
             "ARD_D10",
             "PB6",
-            "TIM4_CH1/SPIx_CS"
+            "TIM4_CH1 / SPIx_CS"
           ],
           [
             null,
@@ -230,7 +231,7 @@
             "D8",
             "ARD_D8",
             "PA9",
-            "IO"
+            "I/O"
           ],
           [
             "CN9",
@@ -238,7 +239,7 @@
             "D7",
             "ARD_D7",
             "PA8",
-            "IO"
+            "I/O"
           ],
           [
             null,
@@ -262,7 +263,7 @@
             "D4",
             "ARD_D4",
             "PB5",
-            "IO"
+            "I/O"
           ],
           [
             null,
@@ -278,7 +279,7 @@
             "D2",
             "ARD_D2",
             "PA10",
-            "IO"
+            "I/O"
           ],
           [
             null,
@@ -300,7 +301,7 @@
         [
           [
             "",
-            "UM2505 - Rev 2 page 31/43",
+            "UM2505 - Rev 7 page 31/48",
             ""
           ],
           [
@@ -309,7 +310,8 @@
             null
           ]
         ]
-      ]
+      ],
+      "tokens": []
     },
     "32": {
       "tables": [
@@ -423,12 +425,22 @@
             "PB6",
             "18",
             "PB11"
+          ],
+          [
+            "19",
+            "GND",
+            "20",
+            "GND",
+            "19",
+            "PC7",
+            "20",
+            "GND"
           ]
         ],
         [
           [
             "",
-            "UM2505 - Rev 2 page 32/43",
+            "UM2505 - Rev 7 page 32/48",
             ""
           ],
           [
@@ -437,7 +449,8 @@
             null
           ]
         ]
-      ]
+      ],
+      "tokens": []
     },
     "33": {
       "tables": [
@@ -461,16 +474,6 @@
             "Pin name(1)",
             "Pin nbr",
             "Pin name"
-          ],
-          [
-            "19",
-            "GND",
-            "20",
-            "GND",
-            "19",
-            "PC7",
-            "20",
-            "GND"
           ],
           [
             "21",
@@ -566,7 +569,7 @@
         [
           [
             "",
-            "UM2505 - Rev 2 page 33/43",
+            "UM2505 - Rev 7 page 33/48",
             ""
           ],
           [
@@ -575,7 +578,8 @@
             null
           ]
         ]
-      ]
+      ],
+      "tokens": []
     }
   }
 }

@@ -76,23 +76,23 @@ def read_f4_chip(cache, docs, ref, model, verified_on, category):
 
 
 def build_nucleo(cache, docs, ref, chip, model, use_snapshots=False, table_spec=None, extra_arduino=()):
-    document = 'nucleo-um1724-r14'
+    document = 'nucleo-um1724-r17'
     board_id = f'nucleo-{model}'
     url = docs[document]['viewUrl']
     table_spec = table_spec or {
-        'arduino': [(39, -1)] if model == 'f103rb' else [(43, -1), (44, -1)],
-        'morpho': [(55, -1), (56, -1)] if model == 'f103rb' else [(58, -1)],
+        'arduino': [(40, -1)] if model == 'f103rb' else [(44, -1), (45, -1)],
+        'morpho': [(56, -1), (57, -1)] if model == 'f103rb' else [(59, -1)],
         'tables': (12, 27) if model == 'f103rb' else (16, 29),
     }
     arduino_table, morpho_table = table_spec['tables']
     connectors = {name: {} for name in ('CN7', 'CN6', 'CN8', 'CN10', 'CN5', 'CN9')}
-    bridges_ref = ref('nucleo-mb1136-bridges', document, 26, 'Table 10 · solder bridges and alternate connections (pp. 26–27)')
+    bridges_ref = ref('nucleo-mb1136-bridges', document, 27, 'Table 10 · solder bridges and alternate connections (pp. 27–28)')
     source = SnapshotDocument(verify_snapshot(docs[document], cache.parents[1])) if use_snapshots else pdfplumber.open(cache / docs[document]['file'])
     with source as pdf:
         for page, table_index in table_spec['arduino']:
             evidence = ref(f'{board_id}-arduino-{page}', document, page, f'Table {arduino_table} · Arduino headers')
             tables = pdf.pages[page - 1].extract_tables()
-            # Page 43 has the preceding model’s continuation above this table.
+            # Page 44 has the preceding model’s continuation above this table.
             for heading, number, label, signal, _ in tables[table_index][1:]:
                 if heading and heading.startswith('CN'):
                     connector = heading.split()[0]
@@ -122,7 +122,7 @@ def build_nucleo(cache, docs, ref, chip, model, use_snapshots=False, table_spec=
         'PD0': 'nucleoHse', 'PD1': 'nucleoHse', 'PH0': 'nucleoF4Hse', 'PH1': 'nucleoF4Hse',
         'PF0': 'nucleoF4Hse', 'PF1': 'nucleoF4Hse',
     }
-    drawing_page = 30 if model == 'f103rb' else 32
+    drawing_page = 31 if model == 'f103rb' else 33
     drawing_ref = ref(f'{board_id}-top-view', document, drawing_page,
                       'MB1136 top view · connector positions, rows and numbering', 'visual-diagram')
     pins = []
@@ -258,7 +258,7 @@ def build_nucleo_g474(cache, docs, ref, chip, use_snapshots=False):
     board_id = 'nucleo-g474re'
     url = docs[document]['viewUrl']
     connectors = {name: {} for name in ('CN7', 'CN6', 'CN8', 'CN10', 'CN5', 'CN9')}
-    bridges_ref = ref('nucleo-g474-bridges', document, 27, 'Table 13 · Solder bridge control (p. 27)')
+    bridges_ref = ref('nucleo-g474-bridges', document, 25, 'Table 12 · Solder bridge configuration (pp. 25–27)')
     def open_source():
         if use_snapshots and docs[document].get('tableSnapshot'):
             return SnapshotDocument(verify_snapshot(docs[document], cache.parents[1]))
@@ -309,8 +309,8 @@ def build_nucleo_g474(cache, docs, ref, chip, use_snapshots=False):
     # USART1 PC4/PC5 by default (SB13/SB19 ON); LPUART1 PA2/PA3 serves the ST-LINK
     # virtual COM port (SB17/SB23 ON). A4/A5 list the analog route first.
     default_route = {'PA2 / PC4': 'PC4', 'PA3 / PC5': 'PC5'}
-    drawing_ref = ref(f'{board_id}-top-view', document, 24,
-                      'MB1367 top view · connector positions, rows and numbering', 'visual-diagram')
+    drawing_ref = ref(f'{board_id}-top-view', document, 30,
+                      'Figure 18 · ARDUINO and ST morpho connectors pinout · positions, rows and numbering', 'visual-diagram')
     pins = []
     for header, contacts in connectors.items():
         for number, (label, raw, evidence) in sorted(contacts.items()):

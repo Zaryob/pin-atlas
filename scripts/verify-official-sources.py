@@ -22,6 +22,7 @@ try:
     from feather_sources import build_feather_rp2040
     from teensy_sources import build_teensy_41
     from beaglebone_sources import build_beaglebone
+    from warning_sources import attach_warnings
 except ImportError:
     sys.exit('Install source verification dependencies: python3 -m pip install -r requirements-source-verification.txt')
 ROOT=Path(__file__).resolve().parents[1]
@@ -51,8 +52,15 @@ def acquire(use_snapshots=False):
             try:
                 for url in urls:
                     # ST's global CDN can stall on hosted runners. Only use
-                    # explicitly recorded official mirrors and the same hash.
-                    result=subprocess.run(['curl','--http1.1','-fsSL','--retry','1','--retry-all-errors','--retry-delay','1','--connect-timeout','10','--max-time','45',url,'-o',str(temporary)])
+                    # explicitly recorded official URLs and the same hash.
+                    base=['curl','-fsSL','--retry','1','--retry-all-errors','--retry-delay','1','--connect-timeout','10']
+                    attempts=[base+['--http1.1','--max-time','45']]
+                    if re.match(r'https://www\.st\.com(\.cn)?/',url):
+                        # st.com answers only HTTP/2 requests that negotiate compression and send a Safari-style User-Agent.
+                        attempts.insert(0,base+['--compressed','--max-time','120','-A','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15','-H','Accept-Language: en-US,en;q=0.9'])
+                    for command in attempts:
+                        result=subprocess.run(command+[url,'-o',str(temporary)])
+                        if result.returncode==0:break
                     if result.returncode==0:
                         if hashlib.sha256(temporary.read_bytes()).hexdigest()!=doc['sha256']:
                             sys.exit(f"Source hash mismatch: {doc['id']}. Review the source revision; do not silently update the lock.")
@@ -158,7 +166,7 @@ def pico(bank0):
     physical=ref('pico-header','pico2w-pinout',1,'Manufacturer 40-pin diagram; physical pin names visually checked','visual-diagram')
     details=ref('pico-special','pico2w',9,'§2.1 · special supply / analogue / RUN pins')
     pins=[]
-    notes={30:'RUN düşük seviyeye çekildiğinde RP2350 sıfırlanır.',33:'ADC devresinin analog toprak referansı.',35:'ADC besleme / referans bağlantısı; GPIO değildir.',36:'Kartın regüle 3.3 V çıkışı.',37:'Regülatör etkinleştirme girişidir; genel amaçlı GPIO değildir.',39:'Ana besleme girişi: 1.8–5.5 V.',40:'USB VBUS hattı; USB ile beslenirken nominal 5 V.'}
+    notes={30,33,35,36,37,39,40} # Texts live in public/i18n.js as note.pico2w.<pin>, in both languages.
     for n,name in enumerate(OBS['pico2w']['pins'],1):
         fs=[];ev=[physical]
         if re.fullmatch(r'GP\d+',name):
@@ -166,7 +174,7 @@ def pico(bank0):
             if 26<=gp<=28:fs.append(function('ADC'+str(gp-26),None,ref('pico-adc','pico2w',5,'Figure 2 · GPIO26/27/28 to ADC0/1/2','visual-diagram')))
         if n in notes:ev.append(details)
         pin={'number':n,'name':name,'type':kind(name),'functions':fs,'evidence':ev}
-        if n in notes:pin['note']=notes[n]
+        if n in notes:pin['noteKey']=f'note.pico2w.{n}';pin['noteEvidence']={pin['noteKey']:[details]}
         pins.append(pin)
     # Text independently confirms the seven special header connections in §2.1.
     with pdfplumber.open(CACHE/'pico2w.pdf') as p:
@@ -292,7 +300,7 @@ def parse_pi_row(row,pins):
     evidence=ref('pi-header-doc','pi-gpio',None,'Pin names, types, and typical functions · all 40 header rows','manufacturer-source-table')
     schematic=ref('pi4-j8','pi4-schematic',1,'GPIO EXPANSION · J8 · net labels, power rails and ground','schematic-net-labels+visual-power')
     pins[n]={'number':n,'name':name,'type':kind(name),'functions':[],'evidence':[evidence,schematic]}
-    if n in (27,28):pins[n]['note']='HAT kimlik EEPROM hattına ayrılmıştır; normal proje GPIO’su olarak planlamayın.';pins[n]['reserved']=True
+    if n in (27,28):pins[n]['noteKey']='reservedNote';pins[n]['reserved']=True
 
 def jetson_orin_nano():
     doc='jetson-orin-nano-carrier'
@@ -419,9 +427,9 @@ def link_board_packages(boards):
 def build(use_snapshots=False):
     bank0,packages=rp_tables()
     board_base={'family':'Raspberry Pi','voltage':'3.3 V I/O','verifiedOn':MANIFEST['verifiedOn']}
-    boards=[{**board_base,'id':'pico2w','name':'Raspberry Pi Pico 2 W','shortName':'Pico 2 W','subtitle':'RP2350A · 40-pin geliştirme kartı','layout':'pico','packagePins':40,'gpioCount':26,'mcu':'RP2350A','processor':'Cortex-M33 / Hazard3','clock':'150 MHz','wireless':True,'source':DOCS['pico2w-pinout']['url'],'datasheet':DOCS['pico2w']['url'],'pins':pico(bank0)},
-        {**board_base,'id':'raspberry-pi-4','scopeKey':'pi4Scope','name':'Raspberry Pi 4 Model B','shortName':'Pi 4 Model B','subtitle':'J8 · 40 pin · BCM2711 alternatif işlevleri','layout':'header','packagePins':40,'gpioCount':28,'reservedGPIOCount':2,'mcu':'BCM2711','processor':'BCM2711','clock':'BCM numaralandırma','source':DOCS['pi4-schematic']['url'],'datasheet':DOCS['bcm2711']['url'],'pins':pi4()},
-        {**board_base,'id':'raspberry-pi-5','scopeKey':'pi5Scope','name':'Raspberry Pi 5','shortName':'Pi 5','subtitle':'J8 · 40 pin · RP1 alternatif işlevleri','layout':'header','packagePins':40,'gpioCount':28,'reservedGPIOCount':2,'mcu':'BCM2712 / RP1','processor':'BCM2712 / RP1','clock':'BCM numaralandırma','source':DOCS['rp1-peripherals']['url'],'datasheet':DOCS['rp1-peripherals']['url'],'pins':pi5()}]
+    boards=[{**board_base,'id':'pico2w','name':'Raspberry Pi Pico 2 W','shortName':'Pico 2 W','subtitle':'RP2350A · 40-pin development board','layout':'pico','packagePins':40,'gpioCount':26,'mcu':'RP2350A','processor':'Cortex-M33 / Hazard3','clock':'150 MHz','wireless':True,'source':DOCS['pico2w-pinout']['url'],'datasheet':DOCS['pico2w']['url'],'pins':pico(bank0)},
+        {**board_base,'id':'raspberry-pi-4','scopeKey':'pi4Scope','name':'Raspberry Pi 4 Model B','shortName':'Pi 4 Model B','subtitle':'J8 · 40 pins · BCM2711 alternate functions','layout':'header','packagePins':40,'gpioCount':28,'reservedGPIOCount':2,'mcu':'BCM2711','processor':'4 × Arm Cortex-A72','clock':'1.8 GHz (original: 1.5 GHz)','source':DOCS['pi4-schematic']['url'],'datasheet':DOCS['bcm2711']['url'],'pins':pi4()},
+        {**board_base,'id':'raspberry-pi-5','scopeKey':'pi5Scope','name':'Raspberry Pi 5','shortName':'Pi 5','subtitle':'J8 · 40 pins · RP1 alternate functions','layout':'header','packagePins':40,'gpioCount':28,'reservedGPIOCount':2,'mcu':'BCM2712 / RP1','processor':'4 × Arm Cortex-A76 / RP1 I/O','clock':'2.4 GHz','source':DOCS['rp1-peripherals']['url'],'datasheet':DOCS['rp1-peripherals']['url'],'pins':pi5()}]
     bank2040=rp2040_functions()
     for id,name,mcu,wireless in [('pico','Pico','RP2040',False),('picow','Pico W','RP2040',True),('pico2','Pico 2','RP2350A',False)]:
         boards.append({**board_base,'id':id,'name':'Raspberry Pi '+name,'shortName':name,'subtitle':mcu+' · 40-pin development board','layout':'pico','packagePins':40,'gpioCount':26,'mcu':mcu,'processor':'Cortex-M0+' if mcu=='RP2040' else 'Cortex-M33 / Hazard3','clock':'133 MHz' if mcu=='RP2040' else '150 MHz','wireless':wireless,'source':DOCS[id]['url']+'#page=5','datasheet':DOCS[id]['url'],'pins':pico_variant(id,bank2040 if mcu=='RP2040' else bank0)})
@@ -429,7 +437,6 @@ def build(use_snapshots=False):
     for pin in common_pins:
         pin['functions']=[]
         pin['evidence']=['pi-header-doc']
-        if pin.get('reserved'):pin['note']='Reserved for HAT identification EEPROM.'
     boards.append({**board_base,'id':'raspberry-pi-40','name':'Raspberry Pi · 40-pin GPIO','shortName':'40-pin GPIO (common)','subtitle':'Common physical layout · model-specific alternate functions excluded','layout':'header','scopeKey':'commonHeaderScope','packagePins':40,'gpioCount':28,'reservedGPIOCount':2,'mcu':'Common GPIO','source':DOCS['pi-gpio']['viewUrl'],'datasheet':DOCS['pi-gpio']['viewUrl'],'searchTerms':'Pi B+ A+ Pi 2 Pi 3 Pi 4 Pi 5 Zero Zero W Zero 2 W 400 500','pins':common_pins})
     boards.append(jetson_orin_nano())
     stm32_boards=build_stm32(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn'],use_snapshots)
@@ -466,6 +473,7 @@ def build(use_snapshots=False):
     boards.extend(build_stm32_catalog(CACHE,DOCS,ref,MANIFEST['verifiedOn'],use_snapshots=use_snapshots))
     link_board_packages(boards)
     attach_hardware(boards,ref,CACHE,DOCS)
+    attach_warnings(boards,ref,CACHE,DOCS)
     return boards
 
 def outputs(boards):
@@ -475,7 +483,7 @@ def outputs(boards):
         'Nucleo-32 MB1180, Nucleo-144 MB1137 and MB1364 connector contacts come from UM1956 Rev 6, UM1974 Rev 11 and UM2407 Rev 6. H723 legacy assignment IDs retain the same electrical signals while physical header labels and coverage are corrected; additional contacts use new IDs. MB1364 Morpho PC8/PC9 require SB14/SB15 review, and PF11 analog ADC input is excluded while digital EXTI triggers remain.',
         'WeAct Black Pill v3.x electrical pad names and positions are parsed from the manufacturer\'s pinned KiCad symbol and footprint; circuit notes use the v3.1 schematic. PAD IDs identify CAD contacts, not MCU package numbers or silkscreen labels. F401CC and F411CE retain separate package power/reference names and function selectors.',
         'Nucleo-64 references share connector positions, not MCU function assignments or power nets. Each model keeps its own package links, solder-bridge notes and saved plans. Nucleo-144 remains a separate physical layout.',
-        'UM1724 Rev 14 Table 14 omits the NUCLEO-F303RE D0 row. The common MB1136 layout identifies CN9.1; the pinned official STM32duino variant corroborates D0 as PA3, with separate evidence attached to that contact.',
+        'UM1724 Rev 17 Table 14 omits the NUCLEO-F303RE D0 row. The common MB1136 layout identifies CN9.1; the pinned official STM32duino variant corroborates D0 as PA3, with separate evidence attached to that contact.',
         'Additional STM32 package functions use pinned manufacturer package XML and its explicitly declared GPIO Modes dependency. Only signals present in the selected chip/package XML receive selectors; a shared GPIO table does not add other devices\' signals.'
     ])
     buf=io.StringIO();writer=csv.writer(buf,lineterminator='\n');writer.writerow(['board','physical_pin','pin_name','pin_type','function','selector','manufacturer_signal','physical_evidence','function_evidence'])

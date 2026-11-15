@@ -84,7 +84,7 @@ def build_avr_packages(cache,docs,observations,ref,verified_on):
     assert sum(p['type']=='GPIO' for p in pins)==86
     out.append({'id':'atmega2560-tqfp100','name':'ATmega2560 · TQFP-100','shortName':'ATmega2560 TQFP-100','family':'Microchip AVR','subtitle':'TQFP-100 · bare MCU · up to 16 MHz','layout':'lqfp','packageName':'TQFP-100','packagePins':100,'gpioCount':86,'voltage':'4.5–5.5 V (16 MHz grade)','mcu':'ATmega2560','processor':'8-bit AVR','clock':'Up to 16 MHz','scopeKey':'atmega2560PackageScope','compatibleKey':'atmega2560Compatible','verifiedOn':verified_on,'source':docs[source]['url']+'#page=2','datasheet':docs[source]['url'],'pins':pins})
 
-    pdi_ref=ref('atmega2561-port-pdi',source,84,'§13.3.5 · Table 13-22 note 1 · PDO/PDI available at PE1/PE0 for ATmega1281/2561; SPI programming')
+    pdi_ref=ref('atmega2561-port-pdi',source,84,'§13.3.5 · Table 13-17 note 1 (alternate functions of PE3:PE0; Table 13-15 lists them on p. 82) · PDO/PDI available at PE1/PE0 for ATmega1281/2561; SPI programming')
     physical64=ref('atmega2561-tqfp64-physical',source,4,'Figure 1-3 · TQFP64/QFN64 top view · 64 package pins; ATmega1281/2561','visual-diagram')
     names64=observations['atmega2561-tqfp64']['pins'];assert len(names64)==64
     pins64=[]

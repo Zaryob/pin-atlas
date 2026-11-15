@@ -11,72 +11,72 @@
     "title": "Raspberry Pi Pico 2 W",
     "url": "/pin-atlas/?q=Raspberry%20Pi%20Pico%202%20W&highlight=Raspberry%20Pi%20Pico%202%20W#board=pico&profile=pico2w",
     "type": "pin-atlas/",
+    "description": "RP2350A · 40-pin development board · RP2350A · Raspberry Pi"
+  },
+  {
+    "lang": "tr",
+    "title": "Raspberry Pi 4 Model B",
+    "url": "/pin-atlas/?q=Raspberry%20Pi%204%20Model%20B&highlight=Raspberry%20Pi%204%20Model%20B#board=header&profile=raspberry-pi-4",
+    "type": "pin-atlas/",
+    "description": "J8 · 40 pin · BCM2711 alternatif işlevleri · BCM2711 · Raspberry Pi"
+  },
+  {
+    "lang": "en",
+    "title": "Raspberry Pi 4 Model B",
+    "url": "/pin-atlas/?q=Raspberry%20Pi%204%20Model%20B&highlight=Raspberry%20Pi%204%20Model%20B#board=header&profile=raspberry-pi-4",
+    "type": "pin-atlas/",
+    "description": "J8 · 40 pins · BCM2711 alternate functions · BCM2711 · Raspberry Pi"
+  },
+  {
+    "lang": "tr",
+    "title": "Raspberry Pi 5",
+    "url": "/pin-atlas/?q=Raspberry%20Pi%205&highlight=Raspberry%20Pi%205#board=header&profile=raspberry-pi-5",
+    "type": "pin-atlas/",
+    "description": "J8 · 40 pin · RP1 alternatif işlevleri · BCM2712 / RP1 · Raspberry Pi"
+  },
+  {
+    "lang": "en",
+    "title": "Raspberry Pi 5",
+    "url": "/pin-atlas/?q=Raspberry%20Pi%205&highlight=Raspberry%20Pi%205#board=header&profile=raspberry-pi-5",
+    "type": "pin-atlas/",
+    "description": "J8 · 40 pins · RP1 alternate functions · BCM2712 / RP1 · Raspberry Pi"
+  },
+  {
+    "lang": "tr",
+    "title": "Raspberry Pi Pico",
+    "url": "/pin-atlas/?q=Raspberry%20Pi%20Pico&highlight=Raspberry%20Pi%20Pico#board=pico&profile=pico",
+    "type": "pin-atlas/",
+    "description": "RP2040 · 40-pin geliştirme kartı · RP2040 · Raspberry Pi"
+  },
+  {
+    "lang": "en",
+    "title": "Raspberry Pi Pico",
+    "url": "/pin-atlas/?q=Raspberry%20Pi%20Pico&highlight=Raspberry%20Pi%20Pico#board=pico&profile=pico",
+    "type": "pin-atlas/",
+    "description": "RP2040 · 40-pin development board · RP2040 · Raspberry Pi"
+  },
+  {
+    "lang": "tr",
+    "title": "Raspberry Pi Pico W",
+    "url": "/pin-atlas/?q=Raspberry%20Pi%20Pico%20W&highlight=Raspberry%20Pi%20Pico%20W#board=pico&profile=picow",
+    "type": "pin-atlas/",
+    "description": "RP2040 · Wi-Fi + Bluetooth · RP2040 · Raspberry Pi"
+  },
+  {
+    "lang": "en",
+    "title": "Raspberry Pi Pico W",
+    "url": "/pin-atlas/?q=Raspberry%20Pi%20Pico%20W&highlight=Raspberry%20Pi%20Pico%20W#board=pico&profile=picow",
+    "type": "pin-atlas/",
+    "description": "RP2040 · Wi-Fi + Bluetooth · RP2040 · Raspberry Pi"
+  },
+  {
+    "lang": "tr",
+    "title": "Raspberry Pi Pico 2",
+    "url": "/pin-atlas/?q=Raspberry%20Pi%20Pico%202&highlight=Raspberry%20Pi%20Pico%202#board=pico&profile=pico2",
+    "type": "pin-atlas/",
     "description": "RP2350A · 40-pin geliştirme kartı · RP2350A · Raspberry Pi"
   },
   {
-    "lang": "tr",
-    "title": "Raspberry Pi 4 Model B",
-    "url": "/pin-atlas/?q=Raspberry%20Pi%204%20Model%20B&highlight=Raspberry%20Pi%204%20Model%20B#board=header&profile=raspberry-pi-4",
-    "type": "pin-atlas/",
-    "description": "J8 · 40 pin · BCM2711 alternatif işlevleri · BCM2711 · Raspberry Pi"
-  },
-  {
-    "lang": "en",
-    "title": "Raspberry Pi 4 Model B",
-    "url": "/pin-atlas/?q=Raspberry%20Pi%204%20Model%20B&highlight=Raspberry%20Pi%204%20Model%20B#board=header&profile=raspberry-pi-4",
-    "type": "pin-atlas/",
-    "description": "J8 · 40 pin · BCM2711 alternatif işlevleri · BCM2711 · Raspberry Pi"
-  },
-  {
-    "lang": "tr",
-    "title": "Raspberry Pi 5",
-    "url": "/pin-atlas/?q=Raspberry%20Pi%205&highlight=Raspberry%20Pi%205#board=header&profile=raspberry-pi-5",
-    "type": "pin-atlas/",
-    "description": "J8 · 40 pin · RP1 alternatif işlevleri · BCM2712 / RP1 · Raspberry Pi"
-  },
-  {
-    "lang": "en",
-    "title": "Raspberry Pi 5",
-    "url": "/pin-atlas/?q=Raspberry%20Pi%205&highlight=Raspberry%20Pi%205#board=header&profile=raspberry-pi-5",
-    "type": "pin-atlas/",
-    "description": "J8 · 40 pin · RP1 alternatif işlevleri · BCM2712 / RP1 · Raspberry Pi"
-  },
-  {
-    "lang": "tr",
-    "title": "Raspberry Pi Pico",
-    "url": "/pin-atlas/?q=Raspberry%20Pi%20Pico&highlight=Raspberry%20Pi%20Pico#board=pico&profile=pico",
-    "type": "pin-atlas/",
-    "description": "RP2040 · 40-pin development board · RP2040 · Raspberry Pi"
-  },
-  {
-    "lang": "en",
-    "title": "Raspberry Pi Pico",
-    "url": "/pin-atlas/?q=Raspberry%20Pi%20Pico&highlight=Raspberry%20Pi%20Pico#board=pico&profile=pico",
-    "type": "pin-atlas/",
-    "description": "RP2040 · 40-pin development board · RP2040 · Raspberry Pi"
-  },
-  {
-    "lang": "tr",
-    "title": "Raspberry Pi Pico W",
-    "url": "/pin-atlas/?q=Raspberry%20Pi%20Pico%20W&highlight=Raspberry%20Pi%20Pico%20W#board=pico&profile=picow",
-    "type": "pin-atlas/",
-    "description": "RP2040 · 40-pin development board · RP2040 · Raspberry Pi"
-  },
-  {
-    "lang": "en",
-    "title": "Raspberry Pi Pico W",
-    "url": "/pin-atlas/?q=Raspberry%20Pi%20Pico%20W&highlight=Raspberry%20Pi%20Pico%20W#board=pico&profile=picow",
-    "type": "pin-atlas/",
-    "description": "RP2040 · 40-pin development board · RP2040 · Raspberry Pi"
-  },
-  {
-    "lang": "tr",
-    "title": "Raspberry Pi Pico 2",
-    "url": "/pin-atlas/?q=Raspberry%20Pi%20Pico%202&highlight=Raspberry%20Pi%20Pico%202#board=pico&profile=pico2",
-    "type": "pin-atlas/",
-    "description": "RP2350A · 40-pin development board · RP2350A · Raspberry Pi"
-  },
-  {
     "lang": "en",
     "title": "Raspberry Pi Pico 2",
     "url": "/pin-atlas/?q=Raspberry%20Pi%20Pico%202&highlight=Raspberry%20Pi%20Pico%202#board=pico&profile=pico2",
@@ -88,21 +88,21 @@
     "title": "Raspberry Pi · 40-pin GPIO",
     "url": "/pin-atlas/?q=Raspberry%20Pi%20%C2%B7%2040-pin%20GPIO&highlight=Raspberry%20Pi%20%C2%B7%2040-pin%20GPIO#board=header&profile=raspberry-pi-40",
     "type": "pin-atlas/",
-    "description": "Common physical layout · model-specific alternate functions excluded · Common GPIO · Raspberry Pi"
+    "description": "Ortak 40-pin GPIO · B+ ve sonrası / Zero · Common GPIO · Raspberry Pi"
   },
   {
     "lang": "en",
     "title": "Raspberry Pi · 40-pin GPIO",
     "url": "/pin-atlas/?q=Raspberry%20Pi%20%C2%B7%2040-pin%20GPIO&highlight=Raspberry%20Pi%20%C2%B7%2040-pin%20GPIO#board=header&profile=raspberry-pi-40",
     "type": "pin-atlas/",
-    "description": "Common physical layout · model-specific alternate functions excluded · Common GPIO · Raspberry Pi"
+    "description": "Common 40-pin GPIO · B+ and later / Zero · Common GPIO · Raspberry Pi"
   },
   {
     "lang": "tr",
     "title": "NVIDIA Jetson Orin Nano",
     "url": "/pin-atlas/?q=NVIDIA%20Jetson%20Orin%20Nano&highlight=NVIDIA%20Jetson%20Orin%20Nano#board=header&profile=jetson-orin-nano",
     "type": "pin-atlas/",
-    "description": "J12 · P3768 carrier · 40-pin expansion header · Tegra234 · NVIDIA Jetson"
+    "description": "J12 · P3768 taşıyıcı kart · 40-pin genişleme başlığı · Tegra234 · NVIDIA Jetson"
   },
   {
     "lang": "en",
@@ -116,14 +116,14 @@
     "title": "STM32 Blue Pill",
     "url": "/pin-atlas/?q=STM32%20Blue%20Pill&highlight=STM32%20Blue%20Pill#board=custom&profile=blue-pill",
     "type": "pin-atlas/",
-    "description": "STM32F103C8T6 · 2 × 20 + 4 SWD pins · STM32F103C8T6 · STM32"
+    "description": "STM32F103C8T6 · 2 × 20 başlık + 4 SWD pini · STM32F103C8T6 · STM32"
   },
   {
     "lang": "en",
     "title": "STM32 Blue Pill",
     "url": "/pin-atlas/?q=STM32%20Blue%20Pill&highlight=STM32%20Blue%20Pill#board=custom&profile=blue-pill",
     "type": "pin-atlas/",
-    "description": "STM32F103C8T6 · 2 × 20 + 4 SWD pins · STM32F103C8T6 · STM32"
+    "description": "STM32F103C8T6 · 2 × 20 header + 4 SWD pins · STM32F103C8T6 · STM32"
   },
   {
     "lang": "tr",
@@ -242,42 +242,42 @@
     "title": "Arduino UNO R3",
     "url": "/pin-atlas/?q=Arduino%20UNO%20R3&highlight=Arduino%20UNO%20R3#board=custom&profile=arduino-uno-r3",
     "type": "pin-atlas/",
-    "description": "ATmega328P · 16 MHz · 5 V I/O · ATmega328P · Arduino AVR"
+    "description": "ATmega328P · 20 GPIO · 6 analog giriş · ATmega328P · Arduino AVR"
   },
   {
     "lang": "en",
     "title": "Arduino UNO R3",
     "url": "/pin-atlas/?q=Arduino%20UNO%20R3&highlight=Arduino%20UNO%20R3#board=custom&profile=arduino-uno-r3",
     "type": "pin-atlas/",
-    "description": "ATmega328P · 16 MHz · 5 V I/O · ATmega328P · Arduino AVR"
+    "description": "ATmega328P · 20 GPIO · 6 analog inputs · ATmega328P · Arduino AVR"
   },
   {
     "lang": "tr",
     "title": "Arduino Nano (classic)",
     "url": "/pin-atlas/?q=Arduino%20Nano%20(classic)&highlight=Arduino%20Nano%20(classic)#board=custom&profile=arduino-nano-classic",
     "type": "pin-atlas/",
-    "description": "ATmega328P · 16 MHz · 5 V I/O · ATmega328P · Arduino AVR"
+    "description": "ATmega328P · 20 GPIO · 8 analog giriş · ATmega328P · Arduino AVR"
   },
   {
     "lang": "en",
     "title": "Arduino Nano (classic)",
     "url": "/pin-atlas/?q=Arduino%20Nano%20(classic)&highlight=Arduino%20Nano%20(classic)#board=custom&profile=arduino-nano-classic",
     "type": "pin-atlas/",
-    "description": "ATmega328P · 16 MHz · 5 V I/O · ATmega328P · Arduino AVR"
+    "description": "ATmega328P · 20 GPIO · 8 analog inputs · ATmega328P · Arduino AVR"
   },
   {
     "lang": "tr",
     "title": "Arduino Mega 2560 Rev3",
     "url": "/pin-atlas/?q=Arduino%20Mega%202560%20Rev3&highlight=Arduino%20Mega%202560%20Rev3#board=custom&profile=arduino-mega-2560",
     "type": "pin-atlas/",
-    "description": "ATmega2560 · 16 MHz · 5 V I/O · ATmega2560 · Arduino AVR"
+    "description": "ATmega2560 · 70 GPIO · 16 analog giriş · ATmega2560 · Arduino AVR"
   },
   {
     "lang": "en",
     "title": "Arduino Mega 2560 Rev3",
     "url": "/pin-atlas/?q=Arduino%20Mega%202560%20Rev3&highlight=Arduino%20Mega%202560%20Rev3#board=custom&profile=arduino-mega-2560",
     "type": "pin-atlas/",
-    "description": "ATmega2560 · 16 MHz · 5 V I/O · ATmega2560 · Arduino AVR"
+    "description": "ATmega2560 · 70 GPIO · 16 analog inputs · ATmega2560 · Arduino AVR"
   },
   {
     "lang": "tr",
@@ -312,14 +312,14 @@
     "title": "Arduino Nano Every",
     "url": "/pin-atlas/?q=Arduino%20Nano%20Every&highlight=Arduino%20Nano%20Every#board=custom&profile=arduino-nano-every",
     "type": "pin-atlas/",
-    "description": "ATmega4809 · 20 MHz · 5 V I/O · ATmega4809 · Arduino"
+    "description": "ATmega4809 · 16 MHz · 5 V I/O · ATmega4809 · Arduino"
   },
   {
     "lang": "en",
     "title": "Arduino Nano Every",
     "url": "/pin-atlas/?q=Arduino%20Nano%20Every&highlight=Arduino%20Nano%20Every#board=custom&profile=arduino-nano-every",
     "type": "pin-atlas/",
-    "description": "ATmega4809 · 20 MHz · 5 V I/O · ATmega4809 · Arduino"
+    "description": "ATmega4809 · 16 MHz · 5 V I/O · ATmega4809 · Arduino"
   },
   {
     "lang": "tr",

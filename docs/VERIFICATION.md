@@ -2,7 +2,7 @@
 
 [English](VERIFICATION.md) · [Türkçe](VERIFICATION.tr.md)
 
-Catalog snapshot from the generated data dated **5 November 2026**: **79 board, header, and chip profiles, 5,222 physical pin records, and 24,284 function assignments**. Totals are recorded in [`public/data/verification.json`](../public/data/verification.json); these counts do not certify that every pin was independently reviewed. Shared physical pins are counted once per profile. The count excludes the app’s generic `GPIO` planning option and unnumbered QFN center GND pads. Each placement of a signal on a different pin counts separately.
+Catalog snapshot from the generated data: **79 board, header, and chip profiles, 5,226 physical pin records, and 24,290 function assignments**, taken from **128 hash-locked source records** in [`sources/manifest.json`](../sources/manifest.json). The data's `verifiedOn` date stays **5 November 2026** on purpose: on 14–15 November 2026 only the profiles changed on those days were checked again, not the whole catalog. Totals are recorded in [`public/data/verification.json`](../public/data/verification.json); these counts do not certify that every pin was independently reviewed. Shared physical pins are counted once per profile. The count excludes the app’s generic `GPIO` planning option and unnumbered QFN center GND pads. Each placement of a signal on a different pin counts separately.
 
 ## Sources by pin map
 
@@ -61,14 +61,36 @@ The verified QFN-60 IOVDD list uses **1,11,20,30,38,45** from the two figures. T
 ## Reproduce the verification
 
 1. The [source manifest](../sources/manifest.json) records each source revision, document URL or commit, and SHA-256 hash. It includes the three identified Blue Pill community references.
-2. `scripts/verify-official-sources.py` downloads and checks those sources, then rereads the PDF tables or commit-pinned manufacturer Markdown connector tables. It normalizes whitespace where cells wrap across lines.
-   CI passes `--table-snapshots` to use the recorded ST table extractions in `sources/extracted/`, avoiding ST CDN timeouts. Each extraction is hash-locked and identifies the original locked PDF hash. The same parser rebuilds the STM32 data from either input, and both modes check the remaining sources. The default command rereads the original ST PDFs.
+2. `scripts/verify-official-sources.py` downloads and checks those sources, rebuilds every profile and compares the result with the checked-in data. Where a generator parses a document, it rereads the PDF tables or commit-pinned manufacturer Markdown connector tables and normalizes whitespace where cells wrap across lines.
 3. The physical pin number, name, type, alternate function, manufacturer signal, and F/ALT selector must match the published record.
-4. Figure-only observations are marked separately. Reusing them during an automated run preserves the prior visual review. A changed hash requires a fresh source review.
+4. Figure-only observations are marked separately. Reusing them during an automated run preserves the prior visual review; it is not a new review. A changed hash requires a fresh source review.
 5. [`sources/pin-verification.csv`](../sources/pin-verification.csv) lists each pin and function record. [`public/data/evidence.json`](../public/data/evidence.json) resolves reference IDs to documents, pages, and tables. [`public/data/verification.json`](../public/data/verification.json) holds the verification totals and source summary.
-6. GitHub Actions runs the same comparison against the manufacturer sources before deployment.
+6. GitHub Actions runs the comparison before deployment in the table-snapshot mode described next.
 
-The app uses its own SVG schematics. Manufacturer documents are linked from the evidence records. Software and font licensing notices are maintained separately.
+### The two verification modes
+
+- **`--table-snapshots` (what CI runs).** No ST PDF is opened. The seven ST documents are checked only as the recorded table cells in `sources/extracted/*.json`. The manifest locks the hash of each snapshot file, and each snapshot records the hash of the PDF it came from, but this mode does not compare the snapshot with that PDF. All other sources are still downloaded or read from the cache and checked by hash, and every generated pin and function is compared.
+- **Default mode (no flag).** The original PDFs are reread, including the seven ST PDFs. `python3 scripts/record-st-tables.py` separately checks that every snapshot still matches its PDF. This mode works locally again: on 14 November 2026 all seven ST PDFs downloaded from their recorded URLs and matched their locked hashes, because the downloader now sends the request `www.st.com` accepts (HTTP/2, compressed, with a Safari-style user agent, falling back to HTTP/1.1). Whether hosted CI runners can reach `www.st.com` this way has not been tested.
+- **Mirrors.** Only DS5319 and RM0008 list the `www.st.com.cn` mirror in the manifest, ahead of `www.st.com`. All other ST documents, including UM1724 and UM2505, are downloaded only from `www.st.com`. Both URLs of a document must produce the same locked SHA-256.
+- **Sources the live URL no longer serves.** The ESP32-C3 data sheet is locked at v2.4 while its URL now serves v2.5, and the ESP32-C6 data sheet is locked at v1.5 while its URL serves v1.6. A cold download of either file therefore fails with a hash mismatch until the new revision is reviewed. The weekly cold-download audit shows such a mismatch; the lock is never updated automatically.
+
+### What a hash lock proves
+
+A SHA-256 lock proves that the cited document is the one that was reviewed and that it has not changed. It does not prove that a hand-recorded table matches that document. In [`public/data/verification.json`](../public/data/verification.json), `physicalSourceMethods` shows how each profile's physical pins were obtained:
+
+- **Parsed from the document:** PDF tables, manufacturer XML, KiCad files, Markdown/RST tables or source code read from the locked copy. This covers most STM32, Raspberry Pi, Espressif, Arduino core, Jetson, BeagleBone Black and micro:bit data.
+- **Hand-recorded tables:** the Adafruit Feather RP2040 and Teensy 4.1 generators contain tables typed in from the cited pinout and do not open the locked document. Teensy PWM, ADC and port data were cross-checked against the Teensy core source.
+- **Visual readings:** 53 of the 79 profiles list `visual-diagram` (or `visual-photo`) among their methods. In 482 of the 5,226 pin records (9.2 %), every physical evidence reference is a visual reading. RP2040 (QFN-56), ATmega2560 (TQFP-100), ATmega2561 (TQFP-64) and Seeed Studio XIAO RP2040 rest entirely on visual readings.
+
+### Sourced warnings
+
+Pins can carry `warnings` (extra warning keys) and `noteEvidence` (the reference IDs behind each note or warning); boards can carry `cautions`, each with its own evidence. `scripts/warning_sources.py` attaches them and asserts every number quoted in a warning against the locked document. `scripts/validate-data.py` checks that every warning and caution names an existing reference and that every referenced translation key exists in both English and Turkish. The interface shows the source link next to each warning.
+
+### Pinned URLs
+
+GitHub sources are pinned to full commits, including the NUCLEO-G474RE package and GPIO-mode XML (`STM32_open_pin_data` `7d1f1514…`), the Feather RP2040 pinout (`be3f4b32…`), the micro:bit V2 schematic (`17aae030…`) and the 15 Arduino PDFs and 5 Markdown data sheets from `arduino/docs-content` (`cb938e96…`). Of the Arduino-published sources, only the ATmega328P data sheet still comes from a `docs.arduino.cc` URL, which can be replaced in place; its hash lock detects such a change. Manufacturer PDFs on `st.com`, `espressif.com`, `raspberrypi.com` and similar sites are not commit-pinned; their hash locks detect a change.
+
+The app uses its own SVG schematics. Manufacturer documents are linked from the evidence records and are not bundled. The one exception is `sources/extracted/*.json`: these files redistribute raw table cells extracted from seven ST documents, including some full sentences from ST's tables (see [`THIRD_PARTY_NOTICES.md`](../THIRD_PARTY_NOTICES.md)). Software and font licensing notices are maintained separately.
 
 ## Shared layout catalog
 
@@ -105,11 +127,15 @@ Blue Pill has no single authoritative manufacturer. Its connector positions use 
 - PB2/BOOT1 is on a boot jumper, and PD0/PD1 attach to the 8 MHz crystal; they are absent from the side-header export. PC13 drives an active-low LED; PC14/PC15 share the LSE crystal; PA11/PA12 share USB; PA13/PA14 appear on SWD.
 - The community reference warns that USB VBUS and the 5 V rail are not isolated, so simultaneous USB and external 5 V power is not supported by this map. Clone regulators, USB pull-ups, MCUs and wiring can differ and require board inspection. The map makes no compatibility claim for GD32/CS32 clones.
 
-ST source downloads prefer the official `www.st.com.cn` mirror and fall back to `www.st.com`. Both downloads were checked byte-for-byte against the same locked SHA-256 values. Transfer retries are bounded; no source-hash or pin-data check is skipped when a CDN is unavailable.
+The DS5319 and RM0008 downloads try the official `www.st.com.cn` mirror first and fall back to `www.st.com`; both URLs must match the same locked SHA-256 values. Transfer retries are bounded; no source-hash or pin-data check is skipped when a CDN is unavailable.
 
 ## NUCLEO-F103RB / F401RE / F411RE · MB1136
 
-The connector map uses Tables 12 and 27 of the hash-locked ST UM1724 Rev 14 PDF. MCU pin numbers and functions come from the STM32F103RB LQFP64 profile. The map shows the analog A4/A5 routing and labels the alternate I²C route and configurable clock, serial and LED connections using Table 10. The board drawing follows the connector positions and row numbering in Figures 14, 18 and 19. Selecting a contact on NUCLEO-F103RB highlights the corresponding pad in the separate STM32F103RBT6 LQFP-64 drawing. F401RE and F411RE connector assignments use Tables 16 and 29, with package pin numbers and AF selectors from the locked STM32CubeMX pin data.
+The connector map uses the hash-locked ST **UM1724 Rev 17 (September 2025)**, downloaded from its official `www.st.com` URL. (Until November 2026 the lock was Rev 14, downloaded from a third-party mirror.) NUCLEO-F103RB uses Table 12 (p. 40) and Table 27 (pp. 56–57). MCU pin numbers and functions come from the STM32F103RB LQFP64 profile. The map shows the analog A4/A5 routing and labels the alternate I²C route and configurable clock, serial and LED connections using Table 10 (pp. 27–28). The board drawing follows the connector positions and row numbering in Figure 13 (p. 31) for F103RB and Figures 17/18 (p. 33) for F401RE/F411RE. Selecting a contact on NUCLEO-F103RB highlights the corresponding pad in the separate STM32F103RBT6 LQFP-64 drawing. F401RE and F411RE connector assignments use Table 16 (pp. 44–45) and Table 29 (p. 59), with package pin numbers and AF selectors from the locked STM32CubeMX pin data. Page numbers are PDF pages.
+
+## NUCLEO-G474RE · MB1367
+
+NUCLEO-G474RE uses ST **UM2505 Rev 7 (May 2026)**: Table 15 (pp. 30–31) for the Arduino connectors, Table 16 (pp. 32–33) for the ST Morpho connectors, and Table 12 (pp. 25–27) for the MB1367 solder bridges. Figure 18 (p. 30) is the visual reference for connector positions and rows. D0/D1 and CN10.35/37 follow the UM2505 default, USART1 on PC5/PC4; LPUART1 on PA2/PA3 serves the ST-LINK virtual COM port. The MB1136 solder-bridge notes do not apply to this board. Package pads and AF selectors come from `STM32_open_pin_data` at commit `7d1f1514…`. UM2505 is recorded in `sources/extracted/nucleo-g4-um2505.json` by `scripts/record-st-tables.py`, so it is one of the seven ST documents checked as table cells in CI.
 
 ## Board-to-package mapping
 
@@ -117,9 +143,9 @@ Each link joins an identified board schematic or pinout to its MCU package. Ardu
 
 ## Arduino AVR boards
 
-- **UNO R3:** A000066 full pinout (6 October 2022), pages 1/3/4; the board datasheet connector tables on page 10. The two main header groups contribute 32 contacts; main-MCU ICSP contributes 6. There are 20 distinct GPIO nets. JDIGITAL's A4/SD4 and A5/SD5 typos resolve to SDA/A4 and SCL/A5 using the full pinout and AVR core.
+- **UNO R3:** A000066 full pinout (6 October 2022), pages 1/3/4; the JANALOG/JDIGITAL connector tables in the commit-pinned datasheet Markdown. The two main header groups contribute 32 contacts; main-MCU ICSP contributes 6. There are 20 distinct GPIO nets. JDIGITAL's A4/SD4 and A5/SD5 typos resolve to SDA/A4 and SCL/A5 using the full pinout and AVR core.
 - **Classic Nano:** A000005 full pinout (30 June 2021), pages 1–3. Main-header order and ICSP orientation were visually reviewed; the top-view ICSP rows are 2/4/6 and 1/3/5. There are 30 side contacts, 6 ICSP contacts, 20 independent GPIOs and 8 ADC inputs. The current Nano datasheet has connector numbering errors and misleading A6/A7 GPIO labels, so it is not used as the physical pin source. The official `eightanaloginputs` variant inherits a 20-entry digital port map from `standard`; A6/A7 are ADC-only and have no digital port, pull-up or PWM.
-- **Mega 2560 Rev3:** A000067 full pinout (16 December 2020), pages 1–4; datasheet connector tables on pages 10/11/12/13. Its 86 outer contacts and 6 main-MCU ICSP contacts expose 70 independent GPIOs. With USB at top, the end header's even-GPIO row is nearer USB; its power contacts are at the right and ground contacts at the left. The separately rotated source detail is recorded in `manual-observations.json`. D0/D1 are not Arduino PWM outputs despite the tilde marks in the full pinout. The core confirms 15 PWM outputs on D2–D13 and D44–D46, and SPI on D50–D53.
+- **Mega 2560 Rev3:** A000067 full pinout (16 December 2020), pages 1–4; the connector tables in the commit-pinned datasheet Markdown. Its 86 outer contacts and 6 main-MCU ICSP contacts expose 70 independent GPIOs. With USB at top, the end header's even-GPIO row is nearer USB; its power contacts are at the right and ground contacts at the left. The separately rotated source detail is recorded in `manual-observations.json`. D0/D1 are not Arduino PWM outputs despite the tilde marks in the full pinout. The core confirms 15 PWM outputs on D2–D13 and D44–D46, and SPI on D50–D53.
 
 The official `arduino/ArduinoCore-avr` revision `11b9130371e8447920edb65a75706a6c951e51fc` is locked by commit and per-file hash. The generator parses digital port/bit arrays, timer arrays, analog aliases and SPI/Wire pin constants from `standard` and `mega`, with Nano's `eightanaloginputs` override. UART and hardware INT names are read from the full pinout text and checked against the port map. PWM reflects Arduino's timer mapping, not every possible raw timer output. No invented mux selectors are added. GPIO counts shown in the interface count unique nets; physical-contact match counts still include duplicates.
 
@@ -147,7 +173,7 @@ Native ADC/DAC/touch, UART, JTAG, USB and clock names come from the guide cells.
 
 ## ATmega package views
 
-ATmega328P uses the original Atmel 42735B complete datasheet (November 2016), mirrored by Arduino. Tables 6-1 on PDF pages 19/20 are parsed separately for PDIP-28, TQFP-32, QFN/MLF-28 and QFN/MLF-32. The extracted names are compared with visually recorded Figures 5-1 through 5-4. **PDIP PC0 is pin 23:** Table 6-1 incorrectly prints 13; Figure 5-1 and the full physical sequence resolve the error. ADC6/ADC7 exist only in 32-pin packages and remain analog-only. QFN center pads connect to GND outside the perimeter count. PC6 GPIO requires the RSTDISBL fuse; PB6/PB7 depend on clock/oscillator configuration. The raw MCU function names retain their datasheet signals, independent of Arduino aliases.
+ATmega328P uses the original Atmel 42735B complete datasheet (November 2016), mirrored by Arduino at a `docs.arduino.cc` URL and locked by hash. Tables 6-1 on PDF pages 19/20 are parsed separately for PDIP-28, TQFP-32, QFN/MLF-28 and QFN/MLF-32. The extracted names are compared with visually recorded Figures 5-1 through 5-4. **PDIP PC0 is pin 23:** Table 6-1 incorrectly prints 13; Figure 5-1 and the full physical sequence resolve the error. ADC6/ADC7 exist only in 32-pin packages and remain analog-only. QFN center pads connect to GND outside the perimeter count. PC6 GPIO requires the RSTDISBL fuse; PB6/PB7 depend on clock/oscillator configuration. The raw MCU function names retain their datasheet signals, independent of Arduino aliases.
 
 ATmega2560 uses Microchip DS40002211A, Figure 1-1 (PDF page 2), all 100 TQFP pins and 86 GPIOs. Port A–L alternate-function tables on PDF pages 75–94 are reread. The 64-pin ATmega1281/2561 PDI/PDO footnote is applied, so those functions are not copied onto PE0/PE1. Port E's `CLK0` label is resolved to `CLKO` using the figure and divided-clock description. PF4–PF7 carry JTAG/ADC qualifications; PG3/PG4 depend on asynchronous oscillator use. Mega board D0–D69 and CBGA ball positions are separate numbering systems and are not used as TQFP pin numbers.
 
@@ -157,26 +183,27 @@ The application renders DIP with a pin-1/notch marker, TQFP without an exposed-p
 
 The Seeed Studio XIAO layout groups compact 14-pin development boards sharing the standard 14-contact castellated footprint (seven left pins, seven right pins).
 
-- **Seeed Studio XIAO RP2040:** Verified against official Seeed Studio schematic v1.3 (June 2022). Left pins 1–7 map to D0–D6 (RP2040 GPIO26–29 with 4 ADC channels, GPIO6, GPIO7, GPIO0). Right pins map to 5V, GND, 3V3, and D10–D7 (RP2040 GPIO3, GPIO4, GPIO2, GPIO1). Pin mapping bridges directly to the RP2040 QFN-56 package view.
-- **Seeed Studio XIAO ESP32C3:** Verified against official Seeed Studio schematic v1.3 (January 2026) and official pinout sheet. Left pins 1–7 map to D0–D6 (ESP32-C3 GPIO2–7 and GPIO21). Right pins map to 5V, GND, 3V3, and D10–D7 (ESP32-C3 GPIO10, GPIO9, GPIO8, GPIO20). Strapping pins (GPIO2, GPIO8, GPIO9), ADC1/ADC2 caution notes, and GPIO matrix routable peripherals are verified from Espressif documentation.
+- **Seeed Studio XIAO RP2040:** Read visually from the official Seeed Studio schematic v1.3 (June 2022); this profile has no parsed physical source. Left pins 1–7 map to D0–D6 (RP2040 GPIO26–29 with 4 ADC channels, GPIO6, GPIO7, GPIO0). Right pins map to 5V, GND, 3V3, and D10–D7 (RP2040 GPIO3, GPIO4, GPIO2, GPIO1). Pin mapping bridges directly to the RP2040 QFN-56 package view.
+- **Seeed Studio XIAO ESP32C3:** Verified against official Seeed Studio schematic v1.3 (January 2026) and official pinout sheet. Left pins 1–7 map to D0–D6 (ESP32-C3 GPIO2–7 and GPIO21). Right pins map to 5V, GND, 3V3, and D10–D7 (ESP32-C3 GPIO10, GPIO9, GPIO8, GPIO20). Strapping pins (GPIO2, GPIO8, GPIO9), ADC1/ADC2 caution notes, and GPIO matrix routable peripherals are verified from Espressif documentation. The board has no USB-UART bridge: USB goes directly to the chip's native USB pins (GPIO18/19), and D6/D7 are UART0 (U0TXD/U0RXD) without a bridge on the same line. D9 (GPIO9) is wired to the BOOT button. D3 (GPIO5) carries the ESP32-C3 data sheet's ADC2 caveat, which the ESP32-C3-DevKitM-1 GPIO5 contact also shows.
+- **Seeed Studio XIAO SAMD21:** Seeed Studio schematic v1.0 (November 2019) with Microchip SAM D21/DA1 data sheet DS40001882L. D0–D10 map to ATSAMD21G18A PA02, PA04, PA10, PA11, PA08, PA09, PB08, PB09, PA07, PA05 and PA06. Timer outputs use the data sheet names `TCC0/WO[n]`, `TCC1/WO[n]` and `TC4/WO[n]`; the SAMD21G has no TC0/TC1. D4 (PA08) offers NMI only, not an EXTINT line, and D5 (PA09) and D7 (PB09) share EXTINT[9].
 
 ## Extended Nucleo-64 references
 
 The shared Nucleo-64 catalog groups connector positions only. Each model retains its own package profile, GPIO selectors, power connections and saved plans. New STM32 packages use the official STMicroelectronics `STM32_open_pin_data` package XML and the GPIO Modes XML referenced by that package, both pinned to a full commit and SHA-256. The parser checks the GPIO dependency filename even when cached.
 
-- **NUCLEO-F446RE / STM32F446RET6:** UM1724 Rev 14 Table 19 (pp. 47–48) and Table 29 (p. 58); LQFP-64, 50 GPIO-capable pads, Cortex-M4, up to 180 MHz. Raw STM32 AF selectors come from the F446 GPIO Modes source.
+- **NUCLEO-F446RE / STM32F446RET6:** UM1724 Rev 17 Table 19 (pp. 48–49) and Table 29 (p. 59); LQFP-64, 50 GPIO-capable pads, Cortex-M4, up to 180 MHz. Raw STM32 AF selectors come from the F446 GPIO Modes source.
 
-UM1724 raw table cells are hash-locked in `sources/extracted/nucleo-um1724-r14.json`. CI applies the same parser to those cells and does not require the manual PDF to be cached or downloadable. The original-PDF path remains available for independent comparison.
+UM1724 raw table cells are hash-locked in `sources/extracted/nucleo-um1724-r17.json`. CI applies the same parser to those cells and does not open the manual PDF. The default mode and `scripts/record-st-tables.py` compare against the original PDF.
 
-- **NUCLEO-F303RE / STM32F303RET6:** UM1724 Table 14 (pp. 41–42) and Table 26 (p. 55); Cortex-M4, 72 MHz, LQFP-64 with 51 GPIO-capable pads. Table 14 omits the D0 row: CN9.1 uses the common MB1136 position, and D0 → PA3 is corroborated by the pinned official STM32duino F303RE variant. The supplementary source is attached to that contact.
+- **NUCLEO-F303RE / STM32F303RET6:** UM1724 Rev 17 Table 14 (pp. 42–43) and Table 26 (p. 56); Cortex-M4, 72 MHz, LQFP-64 with 51 GPIO-capable pads. Table 14 omits the D0 row: CN9.1 uses the common MB1136 position, and D0 → PA3 is corroborated by the pinned official STM32duino F303RE variant. The supplementary source is attached to that contact.
 
-- **NUCLEO-L476RG / STM32L476RGT6:** UM1724 Rev 14 tables 23 (pp. 52–53) / 32 (p. 61); Cortex-M4, 80 MHz, LQFP-64 and 51 GPIO-capable pads. Package pins and AF selectors are independently extracted from the pinned manufacturer XML.
+- **NUCLEO-L476RG / STM32L476RGT6:** UM1724 Rev 17 Tables 23 (pp. 53–54) / 32 (p. 62); Cortex-M4, 80 MHz, LQFP-64 and 51 GPIO-capable pads. Package pins and AF selectors are independently extracted from the pinned manufacturer XML.
 
-- **NUCLEO-F072RB / STM32F072RBT6:** UM1724 Rev 14 tables 11 (pp. 37–38) / 26 (p. 55); Cortex-M0, 48 MHz, LQFP-64 and 51 GPIO-capable pads. Package pins and AF selectors are independently extracted from the pinned manufacturer XML.
+- **NUCLEO-F072RB / STM32F072RBT6:** UM1724 Rev 17 Tables 11 (pp. 38–39) / 26 (p. 56); Cortex-M0, 48 MHz, LQFP-64 and 51 GPIO-capable pads. Package pins and AF selectors are independently extracted from the pinned manufacturer XML.
 
-- **NUCLEO-L053R8 / STM32L053R8T6:** UM1724 Rev 14 tables 17 (p. 45) / 30 (p. 59); Cortex-M0+, 32 MHz, LQFP-64 and 51 GPIO-capable pads. Package pins and AF selectors are independently extracted from the pinned manufacturer XML.
+- **NUCLEO-L053R8 / STM32L053R8T6:** UM1724 Rev 17 Tables 17 (p. 46) / 30 (p. 60); Cortex-M0+, 32 MHz, LQFP-64 and 51 GPIO-capable pads. Package pins and AF selectors are independently extracted from the pinned manufacturer XML.
 
-- **NUCLEO-L152RE / STM32L152RET6:** UM1724 Rev 14 tables 21 (pp. 50–51) / 30 (p. 59); Cortex-M3, 32 MHz, LQFP-64 and 51 GPIO-capable pads. Package pins and AF selectors are independently extracted from the pinned manufacturer XML.
+- **NUCLEO-L152RE / STM32L152RET6:** UM1724 Rev 17 Tables 21 (pp. 51–52) / 30 (p. 60); Cortex-M3, 32 MHz, LQFP-64 and 51 GPIO-capable pads. Package pins and AF selectors are independently extracted from the pinned manufacturer XML.
 
 - **STM32F407VGT6:** a separate LQFP-100 package view, 82 GPIO-capable pads and Cortex-M4 up to 168 MHz. The package XML references ST's shared `STM32F417_gpio_v1_0` GPIO table; the parser limits it to signals actually present in this chip/package XML. No Nucleo header numbering is assigned to this standalone MCU view.
 
@@ -209,3 +236,15 @@ The F401CC reference uses STM32F401CCU6 (UFQFPN-48, 36 GPIO-capable pads, up to 
 The pinned v3.1 schematic qualifies PA0's user key (330 Ω), PC13's user LED, PB2/BOOT1, PA11/PA12 USB-C, PA13/PA14 SWD, and optional SPI flash on PA4/PA5/PA6/PA7 (CS/SCK/MISO/MOSI). Package pad numbers and alternate functions use the exact ST XML dependency; the GPIO Modes table is shared with the existing F401 source rather than duplicated.
 
 The F411CE reference uses STM32F411CEU6 (UFQFPN-48, 36 GPIO-capable pads, up to 100 MHz), the same verified 44-contact WeAct layout, and its own pinned package/GPIO selectors. The F401CC and F411CE MCU package views retain the manufacturer's distinct analog supply/reference labels at pads 8/9; board compatibility does not erase those silicon differences.
+
+## Boards added or corrected after v0.8.0
+
+- **Adafruit Feather RP2040:** a hand-recorded table from Adafruit's pinout PDF (`adafruit/Adafruit-Feather-RP2040-PCB` at `be3f4b32…`). The right header runs from the USB end as printed: VBAT, EN, VBUS, D13, D12, D11, D10, D9, D6, D5, SCL, SDA. Pin 3 is the second 3.3 V output; the board has no AREF pin. RP2040 functions come from the RP2040 data sheet.
+- **PJRC Teensy 4.1:** a hand-recorded table from PJRC pinout cards 11a/11b (Rev 4) and the Rev D schematic. PWM, ADC and port data were cross-checked against the Teensy core source (`pwm.c`, `analog.c`, `core_pins.h`), which is not a locked document. The microSD pads 42–47 carry DAT1, DAT0, CLK, CMD, DAT3 and DAT2, and a board caution states that the pins are not 5 V tolerant.
+- **BeagleBone Black:** P8/P9 from the System Reference Manual chapter 7 (Tables 87–88); signal names, modes and balls from TI's AM335x data sheet SPRS717L. P9.41 is `gpio0[20]` and P9.42 is `gpio0[7]`; the second AM3358 ball on each contact (D13 and B12) is modelled separately rather than merged into one function list. Thirteen signal names were corrected against SPRS717L. Board cautions cover power sequencing (no voltage on any I/O before the board is powered and SYS_RESETn is high) and the 30 GPIO-capable contacts used by eMMC (P8.3–6, P8.20–25) and HDMI (P8.27–46); per-pin warnings and notes cover the eMMC and HDMI contacts, PWR_BUT and the power rails, citing chapters 7 and 8.
+- **Arduino Nano 33 BLE Sense Rev2 and Nano ESP32:** full pinouts and schematics from `arduino/docs-content`, with the mbed `variant.cpp` and `espressif/arduino-esp32` `pins_arduino.h`. The Nano 33 BLE VUSB contact is unconnected until solder jumper SJ1 is closed. On the Nano ESP32, B1 is GPIO0 (Arduino pin 15, green LED), and B0, B1 and A2 (GPIO3) are ESP32-S3 strapping pins.
+- **ESP32-C6-DevKitC-1 v1.2:** the `esp-dev-kits` guide and pin-layout image at `5c06bf18…`, with the ESP32-C6 data sheet (locked at v1.5; see the two verification modes above).
+- **BBC micro:bit V2:** the 25 front strips in physical order, from the micro:bit developer documentation edge-connector page (`dev-docs` at `469ea5f9…`) and the V2 schematic (`17aae030…`). Pin IDs 1–21 keep their earlier meaning; the small 3V and GND strips are new IDs 22–25. P19/P20 are the external I²C bus with on-board 4.7 kΩ pull-ups; on V2 the motion sensor is on a separate internal bus. A board caution gives the edge-connector current budget from the power-supply page.
+- **RP2350 erratum E9:** every Bank 0 GPIO of Pico 2, Pico 2 W, RP2350A and RP2350B carries the RP2350-E9 input-leakage warning from the RP2350 data sheet (Appendix D.5.1, pp. 1359–1360). RP2040 profiles do not.
+- **Raspberry Pi 40-pin header:** board cautions state that the pins are not 5 V tolerant and give 16 mA per pin and 50 mA in total; GPIO2/GPIO3 carry the fixed 1.8 kΩ pull-ups.
+- **Evidence locators:** the ATmega2561 PDI/PDO reference now points to the Table 13-17 note on p. 84, and the ESP32 p. 16 reference to the Table 2-1 notes.

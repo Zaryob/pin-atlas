@@ -60,7 +60,11 @@ export function compatibleModels(layout) {
     detail:profile.mcu,referenceKey:layout.references.find(reference => reference.profileIds.includes(profile.id))?.key}));
 }
 
+// Locale-independent search key: a Turkish browser locale must not turn "ZI" into "zı".
+export const normalizeCatalogText = value => String(value).normalize('NFKD').replace(/[\u0300-\u036f]/g,'')
+  .toLowerCase().replace(/ı/g,'i').replace(/[^a-z0-9]+/g,' ').trim();
+
 export function filterCompatibleModels(models, query, text = model => [model.name,model.detail].join(' ')) {
-  const needle=query.trim().toLocaleLowerCase();
-  return models.filter(model => text(model).toLocaleLowerCase().includes(needle));
+  const needle=normalizeCatalogText(query);
+  return models.filter(model => normalizeCatalogText(text(model)).includes(needle));
 }

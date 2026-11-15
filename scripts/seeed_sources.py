@@ -1,5 +1,7 @@
 """Seeed Studio XIAO board headers."""
 import copy
+import re
+import pdfplumber
 
 def build_seeed(cache, docs, observations, ref, verified_on, bank2040, rp2040_physical_ref):
     # 1. Seeed Studio XIAO RP2040
@@ -94,6 +96,15 @@ def build_seeed(cache, docs, observations, ref, verified_on, bank2040, rp2040_ph
     boot_c3 = ref('xiao-esp32c3-strapping', 'esp32c3-datasheet', 30,
                   'Boot configurations · strapping levels sampled during reset')
 
+    with pdfplumber.open(cache / docs['esp32c3-datasheet']['file']) as pdf:
+        adc_text = ''.join((pdf.pages[48].extract_text() or '').split())
+    assert 'ADC2ofsomechiprevisionsisnotoperable' in adc_text and 'isnotfactory-calibrated' in adc_text
+    adc_c3 = ref('esp32c3-adc2-note', 'esp32c3-datasheet', 49, '§4.2.2.1 SAR ADC · note: ADC2 of some chip revisions is not operable; ADC2 is not factory-calibrated', 'pdf-text')
+    with pdfplumber.open(schematic_c3) as pdf:
+        sheet_words = {word['text'] for word in pdf.pages[2].extract_words()}
+    # Sheet 3 routes USB straight to the SoC (ESP_USB_DP/DM) and puts the BOOT0 switch on net D9.
+    assert {'ESP_USB_DP', 'ESP_USB_DM', 'BOOT0', 'D9'} <= sheet_words and not any(re.match(r'CP21|CH34|FT23', word) for word in sheet_words)
+
     pin_defs_c3 = [
         # (number, connector, connPin, name, boardLabel, net, pinType, gpio, dedicated_list, x, y, side)
         (1,  'L', 1, 'D0',  'D0',  'GPIO2',  'GPIO', 2,  [('ADC1_CH2', 'ADC'), ('FSPIQ', 'SPI')], 280, 140, 'left'),
@@ -163,10 +174,19 @@ def build_seeed(cache, docs, observations, ref, verified_on, bank2040, rp2040_ph
             if gpio in c3_straps:
                 pin['strapping'] = True
                 pin['evidence'].append(boot_c3)
+            notes = pin.setdefault('noteEvidence', {})
             if gpio == 5:
-                pin['analogCautionKey'] = 'espAdc2Note'
+                pin['analogCautionKey'] = 'espC3Adc2Note'
+                notes['espC3Adc2Note'] = [adc_c3]; pin['evidence'].append(adc_c3)
             if gpio in {20, 21}:
-                pin['boardCircuitKey'] = 'espUartBridgeNote'
+                # No USB-UART bridge on this board: USB is the SoC's native USB Serial/JTAG.
+                pin['boardCircuitKey'] = 'xiaoC3Uart0Note'
+                notes['xiaoC3Uart0Note'] = [physical_c3]
+            if gpio == 9:
+                pin['boardCircuitKey'] = 'xiaoC3BootNote'
+                notes['xiaoC3BootNote'] = [physical_c3, boot_c3]
+            if not notes:
+                del pin['noteEvidence']
         pins_c3.append(pin)
 
     board_c3 = {
@@ -232,16 +252,52 @@ def build_seeed(cache, docs, observations, ref, verified_on, bank2040, rp2040_ph
          [('UART0 RX', 'UART'), ('ADC_IN3', 'ADC'), ('TC4_WO1', 'PWM'), ('SERCOM4_PAD1', 'UART'), ('GPIO interrupt', 'IRQ')], 540, 350, 'right'),
     ]
 
+    # PWM, interrupt, ADC and SERCOM capabilities come from the SAM D21 multiplexing table (SAMD21G column).
+    mux_ref = ref('samd21-port-mux', 'samd21-datasheet', 28, '§7.1 · Table 7-1 PORT Function Multiplexing · SAM D21G rows', 'pdf-table')
+    mux = {}
+    with pdfplumber.open(cache / docs['samd21-datasheet']['file']) as pdf:
+        for table in pdf.pages[27].extract_tables():
+            for row in table:
+                row = [(cell or '').replace('\n', ' ').replace('/ ', '/') for cell in row]
+                if len(row) == 17 and re.fullmatch(r'P[AB]\d\d', row[3]) and row[1]:
+                    mux[row[3]] = dict(zip(('eic', 'ref', 'adc', 'ac', 'ptc', 'dac', 'sercom', 'sercom_alt', 'tc', 'tcc'), row[5:15]))
     pins_samd21 = []
     for number, conn, connPin, name, label, net, ptype, fns, x, y, side in pin_defs_samd21:
         functions = []
         ev = [physical_samd21]
-        for sig, grp in fns:
+        row = mux.get(net)
+        if ptype == 'GPIO':
+            ev.append(mux_ref)
+            kept = []
+            for sig, grp in fns:
+                if grp == 'PWM' or sig == 'GPIO interrupt':
+                    continue  # regenerated from the table below
+                if grp == 'ADC':
+                    assert row['adc'] == f"AIN[{sig[6:]}]", (net, sig, row['adc'])
+                elif grp == 'DAC':
+                    assert row['dac'] == 'VOUT'
+                elif sig.startswith('SERCOM'):
+                    assert f"{sig.split('_')[0]}/PAD[{sig[-1]}]" in (row['sercom'], row['sercom_alt']), (net, sig)
+                kept.append((sig, grp, physical_samd21 if not re.match(r'ADC_|DAC_|SERCOM', sig) else mux_ref))
+            # TCC3 exists only on other family members; the G18A exposes TCC0–TCC2 and TC3–TC5.
+            for timer in (row['tc'], row['tcc']):
+                if timer and not timer.startswith('TCC3'):
+                    assert re.fullmatch(r'TCC?[0-5]/WO\[\d\]', timer), timer
+                    kept.append((timer, 'PWM', mux_ref))
+            if row['eic'].startswith('EXTINT'):
+                kept.append((row['eic'], 'IRQ', mux_ref))
+            else:
+                assert row['eic'] == 'NMI' and net == 'PA08'
+                kept.append(('NMI', 'SYSTEM', mux_ref))
+            fns = kept
+        else:
+            fns = [(sig, grp, physical_samd21) for sig, grp in fns]
+        for sig, grp, evidence in fns:
             functions.append({
                 'name': sig,
                 'group': grp,
                 'signal': sig,
-                'evidence': physical_samd21
+                'evidence': evidence
             })
         pin = {
             'number': number,
@@ -256,7 +312,12 @@ def build_seeed(cache, docs, observations, ref, verified_on, bank2040, rp2040_ph
             'net': net,
             'position': {'x': x, 'y': y, 'side': side}
         }
+        if net == 'PA08':
+            pin['boardCircuitKey'] = 'xiaoSamdNmiNote'; pin['noteEvidence'] = {'xiaoSamdNmiNote': [mux_ref]}
+        if ptype == 'GPIO' and row['eic'] == 'EXTINT[9]':
+            pin['boardCircuitKey'] = 'xiaoSamdExtint9Note'; pin['noteEvidence'] = {'xiaoSamdExtint9Note': [mux_ref]}
         pins_samd21.append(pin)
+    assert sorted(p['name'] for p in pins_samd21 if p.get('boardCircuitKey') == 'xiaoSamdExtint9Note') == ['D5_A5_SCL', 'D7_A7_RX']
 
     board_samd21 = {
         'id': 'xiao-samd21',

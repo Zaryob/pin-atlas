@@ -6,10 +6,12 @@ const generalKeys=new Set(['stm32CubeGpio','stm32GpioNote','avrGpioNote','espGpi
 
 export function pinNotes(pin) {
  const specific=[],general=[];
- const add=(list,key,text)=>{if(key||text)list.push({key,text});};
+ // noteEvidence maps a note key to the references that support it.
+ const add=(list,key,text)=>{if(key||text)list.push({key,text,evidence:key?pin.noteEvidence?.[key]||[]:[]});};
  add(specific,pin.boardCircuitKey);
  add(specific,pin.analogCautionKey);
  if(pin.strapping)add(specific,'espStrappingNote');
+ for(const key of pin.warnings||[])add(specific,key);
  if(pin.noteKey)add(generalKeys.has(pin.noteKey)?general:specific,pin.noteKey);
  else if(pin.note)add(specific,null,pin.note);
  return {specific:unique(specific),general:unique(general)};

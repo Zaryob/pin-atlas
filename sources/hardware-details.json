@@ -1,0 +1,4309 @@
+{
+  "version": 1,
+  "reviewedOn": "2026-11-14",
+  "sources": {
+    "rp2040": {
+      "title": "RP2040 Datasheet",
+      "url": "https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf",
+      "publisher": "Manufacturer",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "rp2350": {
+      "title": "RP2350 Datasheet",
+      "url": "https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf",
+      "publisher": "Manufacturer",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "pico-series": {
+      "title": "Pico series specifications",
+      "url": "https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html",
+      "publisher": "Raspberry Pi",
+      "locator": "Key features and board variants"
+    },
+    "pico": {
+      "title": "Raspberry Pi Pico Datasheet",
+      "url": "https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf",
+      "publisher": "Manufacturer",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "picow": {
+      "title": "Raspberry Pi Pico W Datasheet",
+      "url": "https://datasheets.raspberrypi.com/picow/pico-w-datasheet.pdf",
+      "publisher": "Manufacturer",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "pico2": {
+      "title": "Raspberry Pi Pico 2 Datasheet",
+      "url": "https://datasheets.raspberrypi.com/pico/pico-2-datasheet.pdf",
+      "publisher": "Manufacturer",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "pico2w": {
+      "title": "Raspberry Pi Pico 2 W Datasheet",
+      "url": "https://pip-assets.raspberrypi.com/categories/1088-raspberry-pi-pico-2-w/documents/RP-008304-DS-3-pico-2-w-datasheet.pdf",
+      "publisher": "Manufacturer",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "pico-launch": {
+      "title": "pico launch announcement",
+      "url": "https://www.raspberrypi.com/news/raspberry-pi-silicon-pico-now-on-sale/",
+      "publisher": "Raspberry Pi",
+      "locator": "Publication date / product announcement"
+    },
+    "picow-launch": {
+      "title": "picow launch announcement",
+      "url": "https://www.raspberrypi.com/news/raspberry-pi-pico-w-your-6-iot-platform/",
+      "publisher": "Raspberry Pi",
+      "locator": "Publication date / product announcement"
+    },
+    "pico2-launch": {
+      "title": "pico2 launch announcement",
+      "url": "https://www.raspberrypi.com/news/raspberry-pi-pico-2-our-new-5-microcontroller-board-on-sale-now/",
+      "publisher": "Raspberry Pi",
+      "locator": "Publication date / product announcement"
+    },
+    "pico2w-launch": {
+      "title": "pico2w launch announcement",
+      "url": "https://www.raspberrypi.com/news/raspberry-pi-pico-2-w-on-sale-now/",
+      "publisher": "Raspberry Pi",
+      "locator": "Publication date / product announcement"
+    },
+    "pi4-product": {
+      "title": "Raspberry Pi 4 product brief",
+      "url": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf",
+      "publisher": "Raspberry Pi",
+      "locator": "Specification · processor, memory, power"
+    },
+    "pi5-product": {
+      "title": "Raspberry Pi 5 specifications",
+      "url": "https://www.raspberrypi.com/products/raspberry-pi-5/",
+      "publisher": "Raspberry Pi",
+      "locator": "Specification"
+    },
+    "pi-gpio": {
+      "title": "Raspberry Pi GPIO documentation",
+      "url": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc",
+      "publisher": "Manufacturer",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "pi4-launch": {
+      "title": "Raspberry Pi 4 launch",
+      "url": "https://www.raspberrypi.com/news/raspberry-pi-4-on-sale-now-from-35/",
+      "publisher": "Raspberry Pi",
+      "locator": "Publication date"
+    },
+    "pi5-launch": {
+      "title": "Introducing Raspberry Pi 5",
+      "url": "https://www.raspberrypi.com/news/introducing-raspberry-pi-5/",
+      "publisher": "Raspberry Pi",
+      "locator": "Announcement date; sales started October 2023"
+    },
+    "f103c8-spec": {
+      "title": "F103C8 specifications",
+      "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32f103c8.html",
+      "publisher": "STMicroelectronics",
+      "locator": "Product overview · exact part; memory and core features"
+    },
+    "f103c8-ds": {
+      "title": "F103C8 datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf",
+      "publisher": "STMicroelectronics",
+      "locator": "Features; device summary / ordering code; memory map; revision history; revision history: initial release 2007-06-01"
+    },
+    "f103rb-spec": {
+      "title": "F103RB specifications",
+      "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32f103rb.html",
+      "publisher": "STMicroelectronics",
+      "locator": "Product overview · exact part; memory and core features"
+    },
+    "f103rb-ds": {
+      "title": "F103RB datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f103rb.pdf",
+      "publisher": "STMicroelectronics",
+      "locator": "Features; device summary / ordering code; memory map; revision history; revision history: initial release 2007-06-01"
+    },
+    "f103vb-spec": {
+      "title": "F103VB specifications",
+      "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32f103vb.html",
+      "publisher": "STMicroelectronics",
+      "locator": "Product overview · exact part; memory and core features"
+    },
+    "f103vb-ds": {
+      "title": "F103VB datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f103vb.pdf",
+      "publisher": "STMicroelectronics",
+      "locator": "Features; device summary / ordering code; memory map; revision history; revision history: initial release 2007-06-01"
+    },
+    "f401re-spec": {
+      "title": "F401RE specifications",
+      "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32f401re.html",
+      "publisher": "STMicroelectronics",
+      "locator": "Product overview · exact part; memory and core features"
+    },
+    "f401re-ds": {
+      "title": "F401RE datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f401re.pdf",
+      "publisher": "STMicroelectronics",
+      "locator": "Features; device summary / ordering code; memory map; revision history; revision history: initial release 2014-01-16"
+    },
+    "f411re-spec": {
+      "title": "F411RE specifications",
+      "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32f411re.html",
+      "publisher": "STMicroelectronics",
+      "locator": "Product overview · exact part; memory and core features"
+    },
+    "f411re-ds": {
+      "title": "F411RE datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f411re.pdf",
+      "publisher": "STMicroelectronics",
+      "locator": "Features; device summary / ordering code; memory map; revision history; revision history: initial release 2014-06-19"
+    },
+    "g474re-spec": {
+      "title": "G474RE specifications",
+      "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32g474re.html",
+      "publisher": "STMicroelectronics",
+      "locator": "Product overview · exact part; memory and core features"
+    },
+    "g474re-ds": {
+      "title": "G474RE datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32g474re.pdf",
+      "publisher": "STMicroelectronics",
+      "locator": "Features; device summary / ordering code; memory map; revision history; revision history: initial release 2019-05-15"
+    },
+    "h723zg-spec": {
+      "title": "H723ZG specifications",
+      "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32h723zg.html",
+      "publisher": "STMicroelectronics",
+      "locator": "Product overview · exact part; memory and core features"
+    },
+    "h723zg-ds": {
+      "title": "H723ZG datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32h723zg.pdf",
+      "publisher": "STMicroelectronics",
+      "locator": "Features; device summary / ordering code; memory map; revision history; revision history: initial release 2020-07-10"
+    },
+    "f446re-spec": {
+      "title": "F446RE specifications",
+      "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32f446re.html",
+      "publisher": "STMicroelectronics",
+      "locator": "Product overview · exact part; memory and core features"
+    },
+    "f446re-ds": {
+      "title": "F446RE datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f446re.pdf",
+      "publisher": "STMicroelectronics",
+      "locator": "Features; device summary / ordering code; memory map; revision history; revision history: initial release 2015-02-17"
+    },
+    "f303re-spec": {
+      "title": "F303RE specifications",
+      "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32f303re.html",
+      "publisher": "STMicroelectronics",
+      "locator": "Product overview · exact part; memory and core features"
+    },
+    "f303re-ds": {
+      "title": "F303RE datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f303re.pdf",
+      "publisher": "STMicroelectronics",
+      "locator": "Features; device summary / ordering code; memory map; revision history; revision history: initial release 2015-01-20"
+    },
+    "l476rg-spec": {
+      "title": "L476RG specifications",
+      "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32l476rg.html",
+      "publisher": "STMicroelectronics",
+      "locator": "Product overview · exact part; memory and core features"
+    },
+    "l476rg-ds": {
+      "title": "L476RG datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32l476rg.pdf",
+      "publisher": "STMicroelectronics",
+      "locator": "Features; device summary / ordering code; memory map; revision history; revision history: initial release 2015-05-29"
+    },
+    "f072rb-spec": {
+      "title": "F072RB specifications",
+      "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32f072rb.html",
+      "publisher": "STMicroelectronics",
+      "locator": "Product overview · exact part; memory and core features"
+    },
+    "f072rb-ds": {
+      "title": "F072RB datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f072rb.pdf",
+      "publisher": "STMicroelectronics",
+      "locator": "Features; device summary / ordering code; memory map; revision history; revision history: initial release 2014-01-13"
+    },
+    "l053r8-spec": {
+      "title": "L053R8 specifications",
+      "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32l053r8.html",
+      "publisher": "STMicroelectronics",
+      "locator": "Product overview · exact part; memory and core features"
+    },
+    "l053r8-ds": {
+      "title": "L053R8 datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32l053r8.pdf",
+      "publisher": "STMicroelectronics",
+      "locator": "Features; device summary / ordering code; memory map; revision history; revision history: initial release 2014-02-07"
+    },
+    "l152re-spec": {
+      "title": "L152RE specifications",
+      "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32l152re.html",
+      "publisher": "STMicroelectronics",
+      "locator": "Product overview · exact part; memory and core features"
+    },
+    "l152re-ds": {
+      "title": "L152RE datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32l152re.pdf",
+      "publisher": "STMicroelectronics",
+      "locator": "Features; device summary / ordering code; memory map; revision history; revision history: initial release 2013-10-31"
+    },
+    "f407vg-spec": {
+      "title": "F407VG specifications",
+      "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32f407vg.html",
+      "publisher": "STMicroelectronics",
+      "locator": "Product overview · exact part; memory and core features"
+    },
+    "f407vg-ds": {
+      "title": "F407VG datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f407vg.pdf",
+      "publisher": "STMicroelectronics",
+      "locator": "Features; device summary / ordering code; memory map; revision history; revision history: initial release 2011-09-15"
+    },
+    "f405rg-spec": {
+      "title": "F405RG specifications",
+      "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32f405rg.html",
+      "publisher": "STMicroelectronics",
+      "locator": "Product overview · exact part; memory and core features"
+    },
+    "f405rg-ds": {
+      "title": "F405RG datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f405rg.pdf",
+      "publisher": "STMicroelectronics",
+      "locator": "Features; device summary / ordering code; memory map; revision history; revision history: initial release 2011-09-15"
+    },
+    "f042k6-spec": {
+      "title": "F042K6 specifications",
+      "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32f042k6.html",
+      "publisher": "STMicroelectronics",
+      "locator": "Product overview · exact part; memory and core features"
+    },
+    "f042k6-ds": {
+      "title": "F042K6 datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f042k6.pdf",
+      "publisher": "STMicroelectronics",
+      "locator": "Features; device summary / ordering code; memory map; revision history; revision history: initial release 2014-02-25"
+    },
+    "l432kc-spec": {
+      "title": "L432KC specifications",
+      "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32l432kc.html",
+      "publisher": "STMicroelectronics",
+      "locator": "Product overview · exact part; memory and core features"
+    },
+    "l432kc-ds": {
+      "title": "L432KC datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32l432kc.pdf",
+      "publisher": "STMicroelectronics",
+      "locator": "Features; device summary / ordering code; memory map; revision history; revision history: initial release 2016-02-08"
+    },
+    "f767zi-spec": {
+      "title": "F767ZI specifications",
+      "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32f767zi.html",
+      "publisher": "STMicroelectronics",
+      "locator": "Product overview · exact part; memory and core features"
+    },
+    "f767zi-ds": {
+      "title": "F767ZI datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f767zi.pdf",
+      "publisher": "STMicroelectronics",
+      "locator": "Features; device summary / ordering code; memory map; revision history; revision history: initial release 2016-03-21"
+    },
+    "h743zi-spec": {
+      "title": "H743ZI specifications",
+      "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32h743zi.html",
+      "publisher": "STMicroelectronics",
+      "locator": "Product overview · exact part; memory and core features"
+    },
+    "h743zi-ds": {
+      "title": "H743ZI datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32h743zi.pdf",
+      "publisher": "STMicroelectronics",
+      "locator": "Features; device summary / ordering code; memory map; revision history; revision history: initial release 2017-06-22"
+    },
+    "f401cc-spec": {
+      "title": "F401CC specifications",
+      "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32f401cc.html",
+      "publisher": "STMicroelectronics",
+      "locator": "Product overview · exact part; memory and core features"
+    },
+    "f401cc-ds": {
+      "title": "F401CC datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f401cc.pdf",
+      "publisher": "STMicroelectronics",
+      "locator": "Features; device summary / ordering code; memory map; revision history; revision history: initial release 2013-07-23"
+    },
+    "f411ce-spec": {
+      "title": "F411CE specifications",
+      "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32f411ce.html",
+      "publisher": "STMicroelectronics",
+      "locator": "Product overview · exact part; memory and core features"
+    },
+    "f411ce-ds": {
+      "title": "F411CE datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f411ce.pdf",
+      "publisher": "STMicroelectronics",
+      "locator": "Features; device summary / ordering code; memory map; revision history; revision history: initial release 2014-06-19"
+    },
+    "stm32f103": {
+      "title": "STM32F103x8 / STM32F103xB datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf",
+      "publisher": "STMicroelectronics",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "nucleo-um1724-r14": {
+      "title": "STM32 Nucleo-64 boards (MB1136) user manual",
+      "url": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf",
+      "publisher": "STMicroelectronics",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "nucleo-g4-um2505": {
+      "title": "STM32G4 Nucleo-64 boards (MB1367) user manual",
+      "url": "https://www.st.com/resource/en/user_manual/um2505-stm32g4-nucleo64-boards-stmicroelectronics.pdf",
+      "publisher": "STMicroelectronics",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "nucleo-um2407-r6": {
+      "title": "STM32 Nucleo-144 · UM2407 Rev 6",
+      "url": "https://www.st.com/resource/en/user_manual/um2407-stm32h7-nucleo144-board-stmicroelectronics.pdf",
+      "publisher": "STMicroelectronics",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "nucleo-um1956-r6": {
+      "title": "STM32 Nucleo-32 boards MB1180 · UM1956 Rev 6",
+      "url": "https://www.st.com/resource/en/user_manual/dm00231744.pdf",
+      "publisher": "STMicroelectronics",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "nucleo-um1974-r11": {
+      "title": "STM32 Nucleo-144 · UM1974 Rev 11",
+      "url": "https://www.st.com/resource/en/user_manual/dm00244518-stm32-nucleo144-boards-stmicroelectronics.pdf",
+      "publisher": "STMicroelectronics",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "weact-blackpill-schematic": {
+      "title": "WeAct MiniF4x1Cx v3.1 schematic",
+      "url": "https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1/blob/6a7f7d434a9d6361f91590d4cdd16b4a70ce7513/Hardware/MiniF4x1Cx_V31%20SchDoc.pdf",
+      "publisher": "WeAct Studio",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "weact-blackpill-revisions": {
+      "title": "WeAct MiniF4x1 hardware release notes",
+      "url": "https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1/blob/6a7f7d434a9d6361f91590d4cdd16b4a70ce7513/Hardware/README.md",
+      "publisher": "WeAct Studio",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "atmega328p-datasheet": {
+      "title": "Atmel ATmega328/P complete datasheet (Arduino mirror)",
+      "url": "https://docs.arduino.cc/resources/datasheets/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf",
+      "publisher": "Microchip / Atmel",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "atmega2560-datasheet": {
+      "title": "ATmega640/1280/1281/2560/2561 complete datasheet",
+      "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/ATmega640-1280-1281-2560-2561-Datasheet-DS40002211A.pdf",
+      "publisher": "Microchip",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "arduino-uno-r3-manual": {
+      "title": "uno-rev3 hardware manual",
+      "url": "https://docs.arduino.cc/hardware/uno-rev3/",
+      "publisher": "Arduino",
+      "locator": "Tech specs; downloadable datasheet and schematic"
+    },
+    "arduino-uno-r3-circuit": {
+      "title": "A000066 circuit schematic",
+      "url": "https://docs.arduino.cc/resources/schematics/A000066-schematics.pdf",
+      "publisher": "Arduino",
+      "locator": "Complete board circuit"
+    },
+    "arduino-nano-classic-manual": {
+      "title": "nano hardware manual",
+      "url": "https://docs.arduino.cc/hardware/nano/",
+      "publisher": "Arduino",
+      "locator": "Tech specs; downloadable datasheet and schematic"
+    },
+    "arduino-nano-classic-circuit": {
+      "title": "A000005 circuit schematic",
+      "url": "https://docs.arduino.cc/resources/schematics/A000005-schematics.pdf",
+      "publisher": "Arduino",
+      "locator": "Complete board circuit"
+    },
+    "arduino-mega-2560-manual": {
+      "title": "mega-2560 hardware manual",
+      "url": "https://docs.arduino.cc/hardware/mega-2560/",
+      "publisher": "Arduino",
+      "locator": "Tech specs; downloadable datasheet and schematic"
+    },
+    "arduino-mega-2560-circuit": {
+      "title": "A000067 circuit schematic",
+      "url": "https://docs.arduino.cc/resources/schematics/A000067-schematics.pdf",
+      "publisher": "Arduino",
+      "locator": "Complete board circuit"
+    },
+    "arduino-leonardo-manual": {
+      "title": "leonardo hardware manual",
+      "url": "https://docs.arduino.cc/hardware/leonardo/",
+      "publisher": "Arduino",
+      "locator": "Tech specs; downloadable datasheet and schematic"
+    },
+    "arduino-leonardo-circuit": {
+      "title": "A000057 circuit schematic",
+      "url": "https://docs.arduino.cc/resources/schematics/A000057-schematics.pdf",
+      "publisher": "Arduino",
+      "locator": "Complete board circuit"
+    },
+    "arduino-micro-manual": {
+      "title": "micro hardware manual",
+      "url": "https://docs.arduino.cc/hardware/micro/",
+      "publisher": "Arduino",
+      "locator": "Tech specs; downloadable datasheet and schematic"
+    },
+    "arduino-micro-circuit": {
+      "title": "A000053 circuit schematic",
+      "url": "https://docs.arduino.cc/resources/schematics/A000053-schematics.pdf",
+      "publisher": "Arduino",
+      "locator": "Complete board circuit"
+    },
+    "arduino-nano-every-manual": {
+      "title": "nano-every hardware manual",
+      "url": "https://docs.arduino.cc/hardware/nano-every/",
+      "publisher": "Arduino",
+      "locator": "Tech specs; downloadable datasheet and schematic"
+    },
+    "arduino-nano-every-circuit": {
+      "title": "ABX00028 circuit schematic",
+      "url": "https://docs.arduino.cc/resources/schematics/ABX00028-schematics.pdf",
+      "publisher": "Arduino",
+      "locator": "Complete board circuit"
+    },
+    "arduino-nano-33-ble-sense-rev2-manual": {
+      "title": "nano-33-ble-sense-rev2 hardware manual",
+      "url": "https://docs.arduino.cc/hardware/nano-33-ble-sense-rev2/",
+      "publisher": "Arduino",
+      "locator": "Tech specs; downloadable datasheet and schematic"
+    },
+    "arduino-nano-33-ble-sense-rev2-circuit": {
+      "title": "ABX00069 circuit schematic",
+      "url": "https://docs.arduino.cc/resources/schematics/ABX00069-schematics.pdf",
+      "publisher": "Arduino",
+      "locator": "Complete board circuit"
+    },
+    "arduino-uno-r4-minima-manual": {
+      "title": "uno-r4-minima hardware manual",
+      "url": "https://docs.arduino.cc/hardware/uno-r4-minima/",
+      "publisher": "Arduino",
+      "locator": "Tech specs; downloadable datasheet and schematic"
+    },
+    "arduino-uno-r4-minima-circuit": {
+      "title": "ABX00080 circuit schematic",
+      "url": "https://docs.arduino.cc/resources/schematics/ABX00080-schematics.pdf",
+      "publisher": "Arduino",
+      "locator": "Complete board circuit"
+    },
+    "arduino-uno-r4-wifi-manual": {
+      "title": "uno-r4-wifi hardware manual",
+      "url": "https://docs.arduino.cc/hardware/uno-r4-wifi/",
+      "publisher": "Arduino",
+      "locator": "Tech specs; downloadable datasheet and schematic"
+    },
+    "arduino-uno-r4-wifi-circuit": {
+      "title": "ABX00087 circuit schematic",
+      "url": "https://docs.arduino.cc/resources/schematics/ABX00087-schematics.pdf",
+      "publisher": "Arduino",
+      "locator": "Complete board circuit"
+    },
+    "arduino-nano-esp32-manual": {
+      "title": "nano-esp32 hardware manual",
+      "url": "https://docs.arduino.cc/hardware/nano-esp32/",
+      "publisher": "Arduino",
+      "locator": "Tech specs; downloadable datasheet and schematic"
+    },
+    "arduino-nano-esp32-circuit": {
+      "title": "ABX00083 circuit schematic",
+      "url": "https://docs.arduino.cc/resources/schematics/ABX00083-schematics.pdf",
+      "publisher": "Arduino",
+      "locator": "Complete board circuit"
+    },
+    "nano-history": {
+      "title": "Original Nano announcement",
+      "url": "https://blog.arduino.cc/2008/05/15/arduino-nano-all-in-one-design-for-breadboard-use/",
+      "publisher": "Arduino",
+      "locator": "ATmega168 family launch; not a 328P revision date"
+    },
+    "arduino-leonardo-pinout": {
+      "title": "Arduino leonardo full pinout",
+      "url": "https://docs.arduino.cc/resources/pinouts/A000057-full-pinout.pdf",
+      "publisher": "Arduino",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "arduino-micro-history": {
+      "title": "arduino-micro announcement",
+      "url": "https://blog.arduino.cc/2012/11/08/new-arduino-micro-available/",
+      "publisher": "Arduino",
+      "locator": "Publication date"
+    },
+    "arduino-leonardo-history": {
+      "title": "arduino-leonardo announcement",
+      "url": "https://blog.arduino.cc/2012/05/22/arduino-1-0-1-release/",
+      "publisher": "Arduino",
+      "locator": "Publication date"
+    },
+    "arduino-nano-every-history": {
+      "title": "arduino-nano-every announcement",
+      "url": "https://blog.arduino.cc/2019/05/17/whats-new-at-maker-faire-bay-area-2019/",
+      "publisher": "Arduino",
+      "locator": "Publication date"
+    },
+    "arduino-nano-esp32-history": {
+      "title": "arduino-nano-esp32 announcement",
+      "url": "https://blog.arduino.cc/2023/07/17/introducing-the-nano-esp32-thats-iot/",
+      "publisher": "Arduino",
+      "locator": "Publication date"
+    },
+    "r4-launch": {
+      "title": "UNO R4 available",
+      "url": "https://blog.arduino.cc/2023/06/26/uno-r4-the-new-dimension-of-making/",
+      "publisher": "Arduino",
+      "locator": "Publication date / availability"
+    },
+    "esp32-datasheet": {
+      "title": "ESP32 series datasheet",
+      "url": "https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf",
+      "publisher": "Espressif",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "esp32c3-datasheet": {
+      "title": "ESP32C3 series datasheet",
+      "url": "https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf",
+      "publisher": "Espressif",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "esp32s3-datasheet": {
+      "title": "ESP32S3 series datasheet",
+      "url": "https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf",
+      "publisher": "Espressif",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "esp32c6-datasheet": {
+      "title": "ESP32C6 series datasheet",
+      "url": "https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf",
+      "publisher": "Espressif",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "esp32-devkit-guide": {
+      "title": "esp32-devkitc official user guide",
+      "url": "https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32/esp32-devkitc/user_guide.html",
+      "publisher": "Espressif",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "esp32c3-devkit-guide": {
+      "title": "esp32-c3-devkitm-1 official user guide",
+      "url": "https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32c3/esp32-c3-devkitm-1/user_guide.html",
+      "publisher": "Espressif",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "esp32s3-devkit-guide": {
+      "title": "esp32-s3-devkitc-1 official user guide",
+      "url": "https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32s3/esp32-s3-devkitc-1/user_guide_v1.1.html",
+      "publisher": "Espressif",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "esp32c6-devkit-guide": {
+      "title": "esp32-c6-devkitc-1 official user guide",
+      "url": "https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32c6/esp32-c6-devkitc-1/user_guide.html",
+      "publisher": "Espressif",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "xiao-rp-spec": {
+      "title": "XIAO RP2040 specifications",
+      "url": "https://wiki.seeedstudio.com/XIAO-RP2040/",
+      "publisher": "Seeed Studio",
+      "locator": "Standard XIAO RP2040 specification (not Plus)"
+    },
+    "xiao-c3-spec": {
+      "title": "XIAO ESP32C3 specifications",
+      "url": "https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/",
+      "publisher": "Seeed Studio",
+      "locator": "Features; specifications; resources"
+    },
+    "xiao-sam-spec": {
+      "title": "XIAO SAMD21 specifications",
+      "url": "https://wiki.seeedstudio.com/Seeeduino-XIAO/",
+      "publisher": "Seeed Studio",
+      "locator": "Standard XIAO SAMD21 specification (not Plus)"
+    },
+    "xiao-rp2040-schematic": {
+      "title": "Seeed Studio XIAO RP2040 Schematic",
+      "url": "https://files.seeedstudio.com/wiki/XIAO-RP2040/res/Seeed-Studio-XIAO-RP2040-v1.3.pdf",
+      "publisher": "Seeed Studio",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "xiao-esp32c3-schematic": {
+      "title": "Seeed Studio XIAO ESP32C3 Schematic",
+      "url": "https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO_ESP32C3_v1.3_SCH_260116.pdf",
+      "publisher": "Seeed Studio",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "xiao-samd21-schematic": {
+      "title": "Seeed Studio XIAO SAMD21 Schematic",
+      "url": "https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-v1.0-SCH-191112.pdf",
+      "publisher": "Seeed Studio",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "microbit-spec": {
+      "title": "micro:bit v2.0 hardware",
+      "url": "https://tech.microbit.org/hardware/2-0-revision/",
+      "publisher": "Micro:bit Educational Foundation",
+      "locator": "nRF52 application processor and hardware description"
+    },
+    "microbit-v2-schematic": {
+      "title": "BBC micro:bit V2 Schematic",
+      "url": "https://tech.microbit.org/hardware/schematic/",
+      "publisher": "Micro:bit Educational Foundation",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "feather-spec": {
+      "title": "Feather RP2040 overview",
+      "url": "https://learn.adafruit.com/adafruit-feather-rp2040-pico/overview",
+      "publisher": "Adafruit",
+      "locator": "Board features and RP2040 chip features; published 2021-03-05"
+    },
+    "teensy-spec": {
+      "title": "Teensy 4.1 specifications",
+      "url": "https://www.pjrc.com/store/teensy41.html",
+      "publisher": "PJRC",
+      "locator": "Features; Program / Flash Memory; RAM; Electrical Specifications"
+    },
+    "teensy41-schematic": {
+      "title": "Teensy 4.1 Schematic",
+      "url": "https://www.pjrc.com/teensy/schematic41.png",
+      "publisher": "PJRC",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "teensy-launch": {
+      "title": "Teensy 4.1 released",
+      "url": "https://www.pjrc.com/teensy-4-1-released/",
+      "publisher": "PJRC",
+      "locator": "Release announcement"
+    },
+    "bbb-spec": {
+      "title": "BeagleBone Black specifications",
+      "url": "https://docs.beagleboard.org/boards/beaglebone/black/ch05.html",
+      "publisher": "BeagleBoard.org",
+      "locator": "High Level Specification · processor, memory and onboard eMMC"
+    },
+    "beaglebone-black-p8-p9": {
+      "title": "BeagleBone Black System Reference Manual · Chapter 7 Expansion Headers P8/P9",
+      "url": "https://docs.beagleboard.org/boards/beaglebone/black/ch07.html",
+      "publisher": "BeagleBoard.org",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "jetson-spec": {
+      "title": "Jetson Orin Nano Super specifications",
+      "url": "https://developer.nvidia.com/blog/nvidia-jetson-orin-nano-developer-kit-gets-a-super-boost/",
+      "publisher": "NVIDIA",
+      "locator": "Comparison table; JetPack upgrade and CPU clock"
+    },
+    "jetson-storage": {
+      "title": "Orin Nano Developer Kit hardware layout",
+      "url": "https://docs.nvidia.com/jetson/orin-nano-devkit/user-guide/latest/hardware_layout.html",
+      "publisher": "NVIDIA",
+      "locator": "Developer kit and storage"
+    },
+    "jetson-orin-nano-carrier": {
+      "title": "Jetson Orin Nano Developer Kit Carrier Board Specification",
+      "url": "https://developer.nvidia.com/downloads/assets/embedded/secure/jetson/orin_nano/docs/jetson_orin_nano_devkit_carrier_board_specification_sp.pdf",
+      "publisher": "NVIDIA",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "pi4-schematic": {
+      "title": "Raspberry Pi 4 Model B Reduced Schematics",
+      "url": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008345-DS-1-raspberry-pi-4-reduced-schematics.pdf",
+      "publisher": "Manufacturer",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "bluepill-schematic": {
+      "title": "Blue Pill reference schematic (community mirror)",
+      "url": "https://stm32-base.org/assets/pdf/boards/original-schematic-STM32F103C8T6-Blue_Pill.pdf",
+      "publisher": "Community design mirrored by STM32-base",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "arduino-uno-r3-schematic": {
+      "title": "Arduino UNO Rev3 through-hole schematic",
+      "url": "https://docs.arduino.cc/resources/schematics/A000066-schematics.pdf",
+      "publisher": "Arduino",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "arduino-nano-classic-schematic": {
+      "title": "Arduino Nano V3.3 schematic",
+      "url": "https://docs.arduino.cc/resources/schematics/A000005-schematics.pdf",
+      "publisher": "Arduino",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "arduino-mega-2560-schematic": {
+      "title": "Arduino Mega 2560 Rev3 schematic",
+      "url": "https://docs.arduino.cc/resources/schematics/A000067-schematics.pdf",
+      "publisher": "Arduino",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "arduino-nano-esp32-schematic": {
+      "title": "Arduino Nano ESP32 schematic",
+      "url": "https://docs.arduino.cc/resources/schematics/ABX00083-schematics.pdf",
+      "publisher": "Arduino",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "xiao-rp-history": {
+      "title": "XIAO RP2040 launch history",
+      "url": "https://www.seeedstudio.com/blog/2021/07/29/new-product-post-xiao-rp2040/",
+      "publisher": "Seeed Studio",
+      "locator": "Manufacturer new-product post; 2021 launch; article has later edits"
+    },
+    "xiao-c3-history": {
+      "title": "XIAO ESP32C3 launch",
+      "url": "https://www.seeedstudio.com/blog/2022/07/11/voice-needed-do-you-know-xiao-esp32c3-can-can/",
+      "publisher": "Seeed Studio",
+      "locator": "Explicit launch date in first paragraph"
+    },
+    "xiao-sam-history": {
+      "title": "Seeeduino XIAO manufacturer project roundup",
+      "url": "https://www.seeedstudio.com/blog/2020/05/08/seeeduino-xiao-community-projects-collection-whats-your-next-project-idea-made-by-seeeeduino-xiao/",
+      "publisher": "Seeed Studio",
+      "locator": "Manufacturer documentation available in 2020; exact first sale not established"
+    },
+    "microbit-history": {
+      "title": "New BBC micro:bit announced",
+      "url": "https://microbit.org/news/2020-10-13/meet-the-new-bbc-microbit/",
+      "publisher": "Micro:bit Educational Foundation",
+      "locator": "Announcement 13 October; availability November 2020"
+    },
+    "bbb-history": {
+      "title": "BeagleBone Black document and board history",
+      "url": "https://docs.beagleboard.org/boards/beaglebone/black/ch02.html",
+      "publisher": "BeagleBoard.org",
+      "locator": "A5.1 production document: April 2013; board family, not every later revision"
+    },
+    "mega-history": {
+      "title": "New Uno and Mega 2560 support",
+      "url": "https://blog.arduino.cc/2010/09/27/arduino-0020-released-for-windows-and-mac-supports-uno-and-mega-2560/",
+      "publisher": "Arduino",
+      "locator": "Manufacturer announcement; exact later R3 revision date not asserted"
+    },
+    "esp32s3-circuit": {
+      "title": "ESP32-S3-DevKitC-1 v1.1 schematic",
+      "url": "https://dl.espressif.com/dl/schematics/SCH_ESP32-S3-DevKitC-1_V1.1_20221130.pdf",
+      "publisher": "Espressif",
+      "locator": "Sheets 1–2; circuit sheet dated 2022-11-30; this is a design date, not first sale"
+    },
+    "esp32-v4-circuit": {
+      "title": "ESP32-DevKitC V4 schematic",
+      "url": "https://dl.espressif.com/dl/schematics/esp32_devkitc_v4_sch.pdf",
+      "publisher": "Espressif",
+      "locator": "Complete circuit from the matching official DevKit guide; design date is not first-sale date"
+    },
+    "esp32c3-circuit": {
+      "title": "ESP32-C3-DevKitM-1 schematic",
+      "url": "https://dl.espressif.com/dl/schematics/SCH_ESP32-C3-DEVKITM-1_V1_20200915A.pdf",
+      "publisher": "Espressif",
+      "locator": "Complete circuit from the matching official DevKit guide; design date is not first-sale date"
+    },
+    "esp32c6-circuit": {
+      "title": "ESP32-C6-DevKitC-1 v1.2 schematic",
+      "url": "https://dl.espressif.com/dl/schematics/esp32-c6-devkitc-1-schematics_v1.2.pdf",
+      "publisher": "Espressif",
+      "locator": "Complete circuit from the matching official DevKit guide; design date is not first-sale date"
+    },
+    "wroom32e-module": {
+      "title": "ESP32-WROOM-32E / 32UE module datasheet",
+      "url": "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf",
+      "publisher": "Espressif",
+      "locator": "Module overview; ordering information: 4 / 8 / 16 MB Flash variants"
+    }
+  },
+  "chips": {
+    "RP2040": {
+      "cpu": "2 × Arm Cortex-M0+",
+      "clock": "133 MHz",
+      "ram": "264 KB SRAM",
+      "flash": {
+        "tr": "Dahili Flash yok; harici QSPI Flash gerekir.",
+        "en": "No internal Flash; external QSPI Flash required."
+      },
+      "sources": [
+        "rp2040"
+      ],
+      "notes": [
+        {
+          "text": {
+            "tr": "8 PIO durum makinesi; 2 UART, 2 SPI, 2 I²C; USB 1.1.",
+            "en": "8 PIO state machines; 2 UART, 2 SPI, 2 I²C; USB 1.1."
+          },
+          "sources": [
+            "rp2040"
+          ]
+        }
+      ],
+      "rom": "16 KB boot ROM"
+    },
+    "RP2350A": {
+      "cpu": "2 × Arm Cortex-M33 / 2 × Hazard3 RISC-V",
+      "clock": "150 MHz",
+      "ram": "520 KB SRAM",
+      "flash": {
+        "tr": "Dahili Flash yok; harici QSPI Flash gerekir.",
+        "en": "No internal Flash; external QSPI Flash required."
+      },
+      "sources": [
+        "rp2350"
+      ],
+      "notes": [
+        {
+          "text": {
+            "tr": "İki çekirdek aynı anda çalışır; dört çekirdeğin tamamı birlikte kullanılamaz. 12 PIO durum makinesi.",
+            "en": "Two cores run concurrently; all four cores cannot run together. 12 PIO state machines."
+          },
+          "sources": [
+            "rp2350"
+          ]
+        }
+      ],
+      "rom": "32 KB boot ROM"
+    },
+    "RP2350B": {
+      "cpu": "2 × Arm Cortex-M33 / 2 × Hazard3 RISC-V",
+      "clock": "150 MHz",
+      "ram": "520 KB SRAM",
+      "flash": {
+        "tr": "Dahili Flash yok; harici QSPI Flash gerekir.",
+        "en": "No internal Flash; external QSPI Flash required."
+      },
+      "sources": [
+        "rp2350"
+      ],
+      "notes": [
+        {
+          "text": {
+            "tr": "İki çekirdek aynı anda çalışır; dört çekirdeğin tamamı birlikte kullanılamaz. 12 PIO durum makinesi.",
+            "en": "Two cores run concurrently; all four cores cannot run together. 12 PIO state machines."
+          },
+          "sources": [
+            "rp2350"
+          ]
+        }
+      ],
+      "rom": "32 KB boot ROM"
+    },
+    "BCM2711": {
+      "cpu": "4 × Arm Cortex-A72 (64-bit)",
+      "clock": {
+        "tr": "1.8 GHz; ilk sürümlerde 1.5 GHz",
+        "en": "1.8 GHz; original boards 1.5 GHz"
+      },
+      "ram": {
+        "tr": "1 / 2 / 3 / 4 / 8 GB LPDDR4; modele bağlı",
+        "en": "1 / 2 / 3 / 4 / 8 GB LPDDR4; model dependent"
+      },
+      "flash": {
+        "tr": "microSD / USB depolama; SPI EEPROM önyükleyici",
+        "en": "microSD / USB storage; SPI EEPROM bootloader"
+      },
+      "sources": [
+        "pi4-product"
+      ],
+      "notes": []
+    },
+    "BCM2712 / RP1": {
+      "cpu": "4 × Arm Cortex-A76 (64-bit); RP1 I/O",
+      "clock": "2.4 GHz",
+      "ram": {
+        "tr": "1 / 2 / 4 / 8 / 16 GB LPDDR4X; modele bağlı",
+        "en": "1 / 2 / 4 / 8 / 16 GB LPDDR4X; model dependent"
+      },
+      "flash": {
+        "tr": "microSD / USB / PCIe depolama; SPI EEPROM önyükleyici",
+        "en": "microSD / USB / PCIe storage; SPI EEPROM bootloader"
+      },
+      "sources": [
+        "pi5-product"
+      ],
+      "notes": []
+    },
+    "STM32F103C8T6": {
+      "cpu": "Arm Cortex-M3",
+      "clock": "72 MHz",
+      "ram": "20 KB",
+      "flash": "64 KB Flash",
+      "sources": [
+        "f103c8-spec",
+        "f103c8-ds"
+      ],
+      "notes": [],
+      "firstDocument": "2007-06-01",
+      "documentSources": [
+        "f103c8-ds"
+      ]
+    },
+    "STM32F103RBT6": {
+      "cpu": "Arm Cortex-M3",
+      "clock": "72 MHz",
+      "ram": "20 KB",
+      "flash": "128 KB Flash",
+      "sources": [
+        "f103rb-spec",
+        "f103rb-ds"
+      ],
+      "notes": [],
+      "firstDocument": "2007-06-01",
+      "documentSources": [
+        "f103rb-ds"
+      ]
+    },
+    "STM32F103VBT6": {
+      "cpu": "Arm Cortex-M3",
+      "clock": "72 MHz",
+      "ram": "20 KB",
+      "flash": "128 KB Flash",
+      "sources": [
+        "f103vb-spec",
+        "f103vb-ds"
+      ],
+      "notes": [],
+      "firstDocument": "2007-06-01",
+      "documentSources": [
+        "f103vb-ds"
+      ]
+    },
+    "STM32F401RET6": {
+      "cpu": "Arm Cortex-M4F",
+      "clock": "84 MHz",
+      "ram": "96 KB",
+      "flash": "512 KB Flash",
+      "sources": [
+        "f401re-spec",
+        "f401re-ds"
+      ],
+      "notes": [],
+      "firstDocument": "2014-01-16",
+      "documentSources": [
+        "f401re-ds"
+      ]
+    },
+    "STM32F411RET6": {
+      "cpu": "Arm Cortex-M4F",
+      "clock": "100 MHz",
+      "ram": "128 KB",
+      "flash": "512 KB Flash",
+      "sources": [
+        "f411re-spec",
+        "f411re-ds"
+      ],
+      "notes": [],
+      "firstDocument": "2014-06-19",
+      "documentSources": [
+        "f411re-ds"
+      ]
+    },
+    "STM32G474RET6": {
+      "cpu": "Arm Cortex-M4F",
+      "clock": "170 MHz",
+      "ram": "128 KB (96 KB SRAM + 32 KB CCM)",
+      "flash": "512 KB Flash",
+      "sources": [
+        "g474re-spec",
+        "g474re-ds"
+      ],
+      "notes": [],
+      "firstDocument": "2019-05-15",
+      "documentSources": [
+        "g474re-ds"
+      ]
+    },
+    "STM32H723ZGT6": {
+      "cpu": "Arm Cortex-M7 (DP-FPU)",
+      "clock": "550 MHz",
+      "ram": "564 KB (TCM + SRAM + 4 KB backup)",
+      "flash": "1024 KB Flash",
+      "sources": [
+        "h723zg-spec",
+        "h723zg-ds"
+      ],
+      "notes": [],
+      "firstDocument": "2020-07-10",
+      "documentSources": [
+        "h723zg-ds"
+      ]
+    },
+    "STM32F446RET6": {
+      "cpu": "Arm Cortex-M4F",
+      "clock": "180 MHz",
+      "ram": "128 KB SRAM + 4 KB backup",
+      "flash": "512 KB Flash",
+      "sources": [
+        "f446re-spec",
+        "f446re-ds"
+      ],
+      "notes": [],
+      "firstDocument": "2015-02-17",
+      "documentSources": [
+        "f446re-ds"
+      ]
+    },
+    "STM32F303RET6": {
+      "cpu": "Arm Cortex-M4F",
+      "clock": "72 MHz",
+      "ram": "80 KB (64 KB SRAM + 16 KB CCM)",
+      "flash": "512 KB Flash",
+      "sources": [
+        "f303re-spec",
+        "f303re-ds"
+      ],
+      "notes": [],
+      "firstDocument": "2015-01-20",
+      "documentSources": [
+        "f303re-ds"
+      ]
+    },
+    "STM32L476RGT6": {
+      "cpu": "Arm Cortex-M4F",
+      "clock": "80 MHz",
+      "ram": "128 KB SRAM",
+      "flash": "1024 KB Flash",
+      "sources": [
+        "l476rg-spec",
+        "l476rg-ds"
+      ],
+      "notes": [],
+      "firstDocument": "2015-05-29",
+      "documentSources": [
+        "l476rg-ds"
+      ]
+    },
+    "STM32F072RBT6": {
+      "cpu": "Arm Cortex-M0",
+      "clock": "48 MHz",
+      "ram": "16 KB SRAM",
+      "flash": "128 KB Flash",
+      "sources": [
+        "f072rb-spec",
+        "f072rb-ds"
+      ],
+      "notes": [],
+      "firstDocument": "2014-01-13",
+      "documentSources": [
+        "f072rb-ds"
+      ]
+    },
+    "STM32L053R8T6": {
+      "cpu": "Arm Cortex-M0+",
+      "clock": "32 MHz",
+      "ram": "8 KB SRAM",
+      "flash": "64 KB Flash",
+      "sources": [
+        "l053r8-spec",
+        "l053r8-ds"
+      ],
+      "notes": [],
+      "eeprom": "2 KB data EEPROM",
+      "firstDocument": "2014-02-07",
+      "documentSources": [
+        "l053r8-ds"
+      ]
+    },
+    "STM32L152RET6": {
+      "cpu": "Arm Cortex-M3",
+      "clock": "32 MHz",
+      "ram": "80 KB SRAM",
+      "flash": "512 KB Flash",
+      "sources": [
+        "l152re-spec",
+        "l152re-ds"
+      ],
+      "notes": [],
+      "eeprom": "16 KB data EEPROM",
+      "firstDocument": "2013-10-31",
+      "documentSources": [
+        "l152re-ds"
+      ]
+    },
+    "STM32F407VGT6": {
+      "cpu": "Arm Cortex-M4F",
+      "clock": "168 MHz",
+      "ram": "192 KB (128 KB SRAM + 64 KB CCM) + 4 KB backup",
+      "flash": "1024 KB Flash",
+      "sources": [
+        "f407vg-spec",
+        "f407vg-ds"
+      ],
+      "notes": [],
+      "firstDocument": "2011-09-15",
+      "documentSources": [
+        "f407vg-ds"
+      ]
+    },
+    "STM32F405RGT6": {
+      "cpu": "Arm Cortex-M4F",
+      "clock": "168 MHz",
+      "ram": "192 KB (128 KB SRAM + 64 KB CCM) + 4 KB backup",
+      "flash": "1024 KB Flash",
+      "sources": [
+        "f405rg-spec",
+        "f405rg-ds"
+      ],
+      "notes": [],
+      "firstDocument": "2011-09-15",
+      "documentSources": [
+        "f405rg-ds"
+      ]
+    },
+    "STM32F042K6T6": {
+      "cpu": "Arm Cortex-M0",
+      "clock": "48 MHz",
+      "ram": "6 KB SRAM",
+      "flash": "32 KB Flash",
+      "sources": [
+        "f042k6-spec",
+        "f042k6-ds"
+      ],
+      "notes": [],
+      "firstDocument": "2014-02-25",
+      "documentSources": [
+        "f042k6-ds"
+      ]
+    },
+    "STM32L432KCU6": {
+      "cpu": "Arm Cortex-M4F",
+      "clock": "80 MHz",
+      "ram": "64 KB SRAM",
+      "flash": "256 KB Flash",
+      "sources": [
+        "l432kc-spec",
+        "l432kc-ds"
+      ],
+      "notes": [],
+      "firstDocument": "2016-02-08",
+      "documentSources": [
+        "l432kc-ds"
+      ]
+    },
+    "STM32F767ZIT6": {
+      "cpu": "Arm Cortex-M7 (DP-FPU)",
+      "clock": "216 MHz",
+      "ram": "512 KB SRAM + 16 KB ITCM + 4 KB backup",
+      "flash": "2048 KB Flash",
+      "sources": [
+        "f767zi-spec",
+        "f767zi-ds"
+      ],
+      "notes": [],
+      "firstDocument": "2016-03-21",
+      "documentSources": [
+        "f767zi-ds"
+      ]
+    },
+    "STM32H743ZIT6": {
+      "cpu": "Arm Cortex-M7 (DP-FPU)",
+      "clock": "480 MHz",
+      "ram": "1056 KB (192 KB TCM + 864 KB SRAM) + 4 KB backup",
+      "flash": "2048 KB Flash",
+      "sources": [
+        "h743zi-spec",
+        "h743zi-ds"
+      ],
+      "notes": [],
+      "firstDocument": "2017-06-22",
+      "documentSources": [
+        "h743zi-ds"
+      ]
+    },
+    "STM32F401CCU6": {
+      "cpu": "Arm Cortex-M4F",
+      "clock": "84 MHz",
+      "ram": "64 KB SRAM",
+      "flash": "256 KB Flash",
+      "sources": [
+        "f401cc-spec",
+        "f401cc-ds"
+      ],
+      "notes": [],
+      "firstDocument": "2013-07-23",
+      "documentSources": [
+        "f401cc-ds"
+      ]
+    },
+    "STM32F411CEU6": {
+      "cpu": "Arm Cortex-M4F",
+      "clock": "100 MHz",
+      "ram": "128 KB SRAM",
+      "flash": "512 KB Flash",
+      "sources": [
+        "f411ce-spec",
+        "f411ce-ds"
+      ],
+      "notes": [],
+      "firstDocument": "2014-06-19",
+      "documentSources": [
+        "f411ce-ds"
+      ]
+    },
+    "ATmega328P": {
+      "cpu": "8-bit AVR",
+      "clock": "20 MHz",
+      "ram": "2 KB SRAM",
+      "flash": "32 KB Flash",
+      "sources": [
+        "atmega328p-datasheet"
+      ],
+      "notes": [
+        {
+          "text": {
+            "tr": "20 MHz için 4.5–5.5 V gerekir; daha düşük beslemede veri sayfasındaki hız sınırlamasını kullanın.",
+            "en": "20 MHz requires 4.5–5.5 V; use the datasheet speed grade at lower voltages."
+          },
+          "sources": [
+            "atmega328p-datasheet"
+          ]
+        }
+      ],
+      "eeprom": "1 KB EEPROM"
+    },
+    "ATmega2560": {
+      "cpu": "8-bit AVR",
+      "clock": "16 MHz",
+      "ram": "8 KB SRAM",
+      "flash": "256 KB Flash",
+      "sources": [
+        "atmega2560-datasheet"
+      ],
+      "notes": [],
+      "eeprom": "4 KB EEPROM"
+    },
+    "ATmega2561": {
+      "cpu": "8-bit AVR",
+      "clock": "16 MHz",
+      "ram": "8 KB SRAM",
+      "flash": "256 KB Flash",
+      "sources": [
+        "atmega2560-datasheet"
+      ],
+      "notes": [],
+      "eeprom": "4 KB EEPROM"
+    },
+    "ATmega32U4": {
+      "cpu": "8-bit AVR",
+      "clock": "16 MHz",
+      "ram": "2.5 KB SRAM",
+      "flash": "32 KB Flash",
+      "sources": [
+        "arduino-leonardo-manual"
+      ],
+      "notes": [],
+      "eeprom": "1 KB EEPROM"
+    },
+    "ATmega4809": {
+      "cpu": "8-bit AVR",
+      "clock": "20 MHz",
+      "ram": "6 KB SRAM",
+      "flash": "48 KB Flash",
+      "sources": [
+        "arduino-nano-every-manual"
+      ],
+      "notes": [],
+      "eeprom": "256 B EEPROM"
+    },
+    "nRF52840": {
+      "cpu": "Arm Cortex-M4F",
+      "clock": "64 MHz",
+      "ram": "256 KB SRAM",
+      "flash": "1 MB Flash",
+      "sources": [
+        "arduino-nano-33-ble-sense-rev2-manual"
+      ],
+      "notes": []
+    },
+    "Renesas RA4M1": {
+      "cpu": "Arm Cortex-M4F",
+      "clock": "48 MHz",
+      "ram": "32 KB SRAM",
+      "flash": "256 KB Flash",
+      "sources": [
+        "arduino-uno-r4-minima-manual"
+      ],
+      "notes": [],
+      "eeprom": "8 KB data Flash (EEPROM emulation)"
+    },
+    "ESP32-S3": {
+      "cpu": "2 × Xtensa LX7",
+      "clock": "240 MHz",
+      "ram": "512 KB SRAM + 16 KB RTC SRAM",
+      "flash": {
+        "tr": "Modüle bağlı harici Flash",
+        "en": "Module-dependent external Flash"
+      },
+      "sources": [
+        "esp32s3-datasheet"
+      ],
+      "notes": [],
+      "rom": "384 KB ROM"
+    },
+    "ESP32": {
+      "cpu": "2 × Xtensa LX6",
+      "clock": "240 MHz",
+      "ram": "520 KB SRAM + 16 KB RTC SRAM",
+      "flash": {
+        "tr": "Modüle bağlı harici Flash",
+        "en": "Module-dependent external Flash"
+      },
+      "sources": [
+        "esp32-datasheet"
+      ],
+      "notes": [],
+      "rom": "448 KB ROM"
+    },
+    "ESP32-C3": {
+      "cpu": "1 × 32-bit RISC-V",
+      "clock": "160 MHz",
+      "ram": "400 KB SRAM (16 KB cache included) + 8 KB RTC SRAM",
+      "flash": {
+        "tr": "Modüle bağlı harici Flash",
+        "en": "Module-dependent external Flash"
+      },
+      "sources": [
+        "esp32c3-datasheet"
+      ],
+      "notes": [],
+      "rom": "384 KB ROM"
+    },
+    "ESP32-C6": {
+      "cpu": "1 × HP RISC-V + LP RISC-V",
+      "clock": "160 MHz HP / 20 MHz LP",
+      "ram": "512 KB HP SRAM + 16 KB LP SRAM",
+      "flash": {
+        "tr": "Modüle bağlı harici Flash",
+        "en": "Module-dependent external Flash"
+      },
+      "sources": [
+        "esp32c6-datasheet"
+      ],
+      "notes": [],
+      "rom": "320 KB ROM"
+    },
+    "SAMD21": {
+      "cpu": "Arm Cortex-M0+",
+      "clock": "48 MHz",
+      "ram": "32 KB SRAM",
+      "flash": "256 KB Flash",
+      "sources": [
+        "xiao-sam-spec"
+      ],
+      "notes": []
+    },
+    "nRF52833": {
+      "cpu": "Arm Cortex-M4F",
+      "clock": "64 MHz",
+      "ram": "128 KB SRAM",
+      "flash": "512 KB Flash",
+      "sources": [
+        "microbit-spec"
+      ],
+      "notes": []
+    },
+    "i.MX RT1062": {
+      "cpu": "Arm Cortex-M7 (DP-FPU)",
+      "clock": "600 MHz",
+      "ram": "1024 KB RAM",
+      "flash": {
+        "tr": "MCU dahili Flash içermez",
+        "en": "MCU has no internal Flash"
+      },
+      "sources": [
+        "teensy-spec"
+      ],
+      "notes": []
+    },
+    "AM3358": {
+      "cpu": "Arm Cortex-A8 + 2 × PRU",
+      "clock": "1 GHz",
+      "ram": "512 MB DDR3L",
+      "flash": {
+        "tr": "Rev C: 4 GB eMMC; eski sürümlerde 2 GB; microSD",
+        "en": "Rev C: 4 GB eMMC; older revisions 2 GB; microSD"
+      },
+      "sources": [
+        "bbb-spec"
+      ],
+      "notes": []
+    },
+    "Tegra234": {
+      "cpu": "6 × Arm Cortex-A78AE",
+      "clock": {
+        "tr": "1.5 GHz; Super modu ile 1.7 GHz",
+        "en": "1.5 GHz; 1.7 GHz with Super mode"
+      },
+      "ram": "8 GB LPDDR5",
+      "flash": {
+        "tr": "microSD / NVMe; geliştirme modülünde eMMC yok",
+        "en": "microSD / NVMe; developer module has no eMMC"
+      },
+      "sources": [
+        "jetson-spec",
+        "jetson-storage"
+      ],
+      "notes": []
+    }
+  },
+  "profiles": {
+    "pico": {
+      "chip": "RP2040",
+      "flash": {
+        "tr": "2 MB kart üstü QSPI Flash",
+        "en": "2 MB on-board QSPI Flash"
+      },
+      "sources": [
+        "pico-series",
+        "pico"
+      ],
+      "power": {
+        "tr": "USB: 5 V; VSYS: 1.8–5.5 V. GPIO mantığı: 3.3 V.",
+        "en": "USB: 5 V; VSYS: 1.8–5.5 V. GPIO logic: 3.3 V."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Kartta 26 GPIO ve 3 harici ADC girişi vardır. GP29 kart içi ölçümlerde kullanılır.",
+            "en": "Board exposes 26 GPIOs and 3 external ADC inputs. GP29 is used for on-board measurements."
+          },
+          "sources": [
+            "pico"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2021-01-21",
+        "kind": "launch",
+        "sources": [
+          "pico-launch"
+        ]
+      },
+      "pinSource": "https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf#page=5",
+      "datasheet": "https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf",
+      "documents": []
+    },
+    "picow": {
+      "chip": "RP2040",
+      "flash": {
+        "tr": "2 MB kart üstü QSPI Flash",
+        "en": "2 MB on-board QSPI Flash"
+      },
+      "sources": [
+        "pico-series",
+        "picow"
+      ],
+      "power": {
+        "tr": "USB: 5 V; VSYS: 1.8–5.5 V. GPIO mantığı: 3.3 V.",
+        "en": "USB: 5 V; VSYS: 1.8–5.5 V. GPIO logic: 3.3 V."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Kartta 26 GPIO ve 3 harici ADC girişi vardır. GP29 kart içi ölçümlerde kullanılır.",
+            "en": "Board exposes 26 GPIOs and 3 external ADC inputs. GP29 is used for on-board measurements."
+          },
+          "sources": [
+            "picow"
+          ]
+        },
+        {
+          "text": {
+            "tr": "CYW43439: 2.4 GHz Wi-Fi ve Bluetooth 5.2. Kablosuz yonga MCU RAM kapasitesini artırmaz.",
+            "en": "CYW43439: 2.4 GHz Wi-Fi and Bluetooth 5.2. Wireless silicon does not increase MCU RAM."
+          },
+          "sources": [
+            "pico-series"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2022-06-30",
+        "kind": "launch",
+        "sources": [
+          "picow-launch"
+        ]
+      },
+      "pinSource": "https://datasheets.raspberrypi.com/picow/pico-w-datasheet.pdf#page=5",
+      "datasheet": "https://datasheets.raspberrypi.com/picow/pico-w-datasheet.pdf",
+      "documents": []
+    },
+    "pico2": {
+      "chip": "RP2350A",
+      "flash": {
+        "tr": "4 MB kart üstü QSPI Flash",
+        "en": "4 MB on-board QSPI Flash"
+      },
+      "sources": [
+        "pico-series",
+        "pico2"
+      ],
+      "power": {
+        "tr": "USB: 5 V; VSYS: 1.8–5.5 V. GPIO mantığı: 3.3 V; 5.5 V giriş toleransı yalnızca veri sayfasındaki koşullarda.",
+        "en": "USB: 5 V; VSYS: 1.8–5.5 V. GPIO logic: 3.3 V; 5.5 V input tolerance only under datasheet conditions."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Kartta 26 GPIO ve 3 harici ADC girişi vardır. GP29 kart içi ölçümlerde kullanılır.",
+            "en": "Board exposes 26 GPIOs and 3 external ADC inputs. GP29 is used for on-board measurements."
+          },
+          "sources": [
+            "pico2"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2024-08-08",
+        "kind": "launch",
+        "sources": [
+          "pico2-launch"
+        ]
+      },
+      "pinSource": "https://datasheets.raspberrypi.com/pico/pico-2-datasheet.pdf#page=5",
+      "datasheet": "https://datasheets.raspberrypi.com/pico/pico-2-datasheet.pdf",
+      "documents": []
+    },
+    "pico2w": {
+      "chip": "RP2350A",
+      "flash": {
+        "tr": "4 MB kart üstü QSPI Flash",
+        "en": "4 MB on-board QSPI Flash"
+      },
+      "sources": [
+        "pico-series",
+        "pico2w"
+      ],
+      "power": {
+        "tr": "USB: 5 V; VSYS: 1.8–5.5 V. GPIO mantığı: 3.3 V; 5.5 V giriş toleransı yalnızca veri sayfasındaki koşullarda.",
+        "en": "USB: 5 V; VSYS: 1.8–5.5 V. GPIO logic: 3.3 V; 5.5 V input tolerance only under datasheet conditions."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Kartta 26 GPIO ve 3 harici ADC girişi vardır. GP29 kart içi ölçümlerde kullanılır.",
+            "en": "Board exposes 26 GPIOs and 3 external ADC inputs. GP29 is used for on-board measurements."
+          },
+          "sources": [
+            "pico2w"
+          ]
+        },
+        {
+          "text": {
+            "tr": "CYW43439: 2.4 GHz Wi-Fi ve Bluetooth 5.2. Kablosuz yonga MCU RAM kapasitesini artırmaz.",
+            "en": "CYW43439: 2.4 GHz Wi-Fi and Bluetooth 5.2. Wireless silicon does not increase MCU RAM."
+          },
+          "sources": [
+            "pico-series"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2024-11-25",
+        "kind": "launch",
+        "sources": [
+          "pico2w-launch"
+        ]
+      },
+      "pinSource": "https://pip-assets.raspberrypi.com/categories/1088-raspberry-pi-pico-2-w/documents/RP-008305-DS-1-pico-2-w-pinout.pdf",
+      "datasheet": "https://pip-assets.raspberrypi.com/categories/1088-raspberry-pi-pico-2-w/documents/RP-008304-DS-3-pico-2-w-datasheet.pdf",
+      "documents": []
+    },
+    "rp2040": {
+      "chip": "RP2040",
+      "sources": [
+        "rp2040"
+      ],
+      "power": {
+        "tr": "Tüm besleme, toprak ve açık pad bağlantıları veri sayfasına göre bağlanmalıdır; kart regülatörü yoktur.",
+        "en": "Connect every supply, ground and exposed pad per datasheet; no board regulator is included."
+      },
+      "date": {
+        "value": "2021-01-21",
+        "kind": "siliconLaunch",
+        "sources": [
+          "pico-launch"
+        ]
+      },
+      "notes": [],
+      "pinSource": "https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf#page=12",
+      "datasheet": "https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf",
+      "documents": []
+    },
+    "rp2350a": {
+      "chip": "RP2350A",
+      "sources": [
+        "rp2350"
+      ],
+      "power": {
+        "tr": "Tüm besleme, toprak ve açık pad bağlantıları veri sayfasına göre bağlanmalıdır; kart regülatörü yoktur.",
+        "en": "Connect every supply, ground and exposed pad per datasheet; no board regulator is included."
+      },
+      "date": {
+        "value": "2024-08-08",
+        "kind": "siliconLaunch",
+        "sources": [
+          "pico2-launch"
+        ]
+      },
+      "notes": [],
+      "pinSource": "https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf#page=16",
+      "datasheet": "https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf",
+      "documents": []
+    },
+    "rp2350b": {
+      "chip": "RP2350B",
+      "sources": [
+        "rp2350"
+      ],
+      "power": {
+        "tr": "Tüm besleme, toprak ve açık pad bağlantıları veri sayfasına göre bağlanmalıdır; kart regülatörü yoktur.",
+        "en": "Connect every supply, ground and exposed pad per datasheet; no board regulator is included."
+      },
+      "date": {
+        "value": "2024-08-08",
+        "kind": "siliconLaunch",
+        "sources": [
+          "pico2-launch"
+        ]
+      },
+      "notes": [],
+      "pinSource": "https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf#page=17",
+      "datasheet": "https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf",
+      "documents": []
+    },
+    "raspberry-pi-4": {
+      "chip": "BCM2711",
+      "sources": [
+        "pi4-product"
+      ],
+      "power": "5 V / 3 A USB-C",
+      "notes": [
+        {
+          "text": {
+            "tr": "40 pin başlıkta 3.3 V GPIO kullanılır. Fiziksel pin numarası BCM GPIO numarasından farklıdır. 27/28 HAT kimlik EEPROM hattıdır.",
+            "en": "40-pin header uses 3.3 V GPIO. Physical pin numbers differ from BCM GPIO numbers. Pins 27/28 are the HAT ID EEPROM bus."
+          },
+          "sources": [
+            "pi-gpio"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2019-06-24",
+        "kind": "launch",
+        "sources": [
+          "pi4-launch"
+        ]
+      },
+      "pinSource": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008345-DS-1-raspberry-pi-4-reduced-schematics.pdf",
+      "datasheet": "https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008248-DS-1-bcm2711-peripherals.pdf",
+      "documents": [
+        "pi4-schematic"
+      ]
+    },
+    "raspberry-pi-5": {
+      "chip": "BCM2712 / RP1",
+      "sources": [
+        "pi5-product"
+      ],
+      "power": "5 V / 5 A USB-C",
+      "notes": [
+        {
+          "text": {
+            "tr": "40 pin başlıkta 3.3 V GPIO kullanılır. Fiziksel pin numarası BCM GPIO numarasından farklıdır. 27/28 HAT kimlik EEPROM hattıdır.",
+            "en": "40-pin header uses 3.3 V GPIO. Physical pin numbers differ from BCM GPIO numbers. Pins 27/28 are the HAT ID EEPROM bus."
+          },
+          "sources": [
+            "pi-gpio"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2023-09-28",
+        "kind": "launch",
+        "sources": [
+          "pi5-launch"
+        ]
+      },
+      "pinSource": "https://datasheets.raspberrypi.com/rp1/rp1-peripherals.pdf",
+      "datasheet": "https://datasheets.raspberrypi.com/rp1/rp1-peripherals.pdf",
+      "documents": [
+        "pi4-schematic"
+      ]
+    },
+    "raspberry-pi-40": {
+      "chip": null,
+      "sources": [
+        "pi-gpio"
+      ],
+      "cpu": {
+        "tr": "Ortak başlık; tek bir işlemci modeli yok",
+        "en": "Common header; no single processor model"
+      },
+      "clock": {
+        "tr": "Seçilen karta bağlı",
+        "en": "Depends on selected board"
+      },
+      "ram": {
+        "tr": "Seçilen karta bağlı",
+        "en": "Depends on selected board"
+      },
+      "flash": {
+        "tr": "Seçilen karta bağlı",
+        "en": "Depends on selected board"
+      },
+      "power": {
+        "tr": "5 V ve 3.3 V güç pinleri; GPIO: 3.3 V",
+        "en": "5 V and 3.3 V power pins; GPIO: 3.3 V"
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Bu profil yalnızca ortak fiziksel pinleri kapsar. Alternatif işlevler için Pi 4 veya Pi 5 profilini açın.",
+            "en": "This profile covers common physical pins only. Open the Pi 4 or Pi 5 profile for alternate functions."
+          },
+          "sources": [
+            "pi-gpio"
+          ]
+        }
+      ],
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "pi-gpio"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "pinSource": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc",
+      "datasheet": "https://github.com/raspberrypi/documentation/blob/0fb416315f8f6c1949c0614989075d3e5805104b/documentation/asciidoc/computers/raspberry-pi/gpio-on-raspberry-pi.adoc",
+      "documents": []
+    },
+    "stm32f103c8t6": {
+      "chip": "STM32F103C8T6",
+      "sources": [
+        "f103c8-spec",
+        "f103c8-ds"
+      ],
+      "power": {
+        "tr": "Besleme aralığı ve 5 V toleransı pin türüne göre değişir; VDD, VDDA, VCAP ve VBAT koşullarını veri sayfasından kontrol edin.",
+        "en": "Supply range and 5 V tolerance depend on pin type; check VDD, VDDA, VCAP and VBAT conditions in the datasheet."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Belirtilen saat, MCU üst sınırıdır. PLL, besleme ve Flash bekleme çevrimleri uygun yapılandırılmalıdır. RAM bankalarının DMA erişimi aynı değildir.",
+            "en": "Clock is the MCU maximum. Configure PLL, supply and Flash wait states accordingly. RAM banks do not have identical DMA accessibility."
+          },
+          "sources": [
+            "f103c8-ds"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2007-06-01",
+        "kind": "documented",
+        "sources": [
+          "f103c8-ds"
+        ]
+      },
+      "pinSource": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf#page=26",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf",
+      "documents": []
+    },
+    "stm32f103rbt6": {
+      "chip": "STM32F103RBT6",
+      "sources": [
+        "f103rb-spec",
+        "f103rb-ds"
+      ],
+      "power": {
+        "tr": "Besleme aralığı ve 5 V toleransı pin türüne göre değişir; VDD, VDDA, VCAP ve VBAT koşullarını veri sayfasından kontrol edin.",
+        "en": "Supply range and 5 V tolerance depend on pin type; check VDD, VDDA, VCAP and VBAT conditions in the datasheet."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Belirtilen saat, MCU üst sınırıdır. PLL, besleme ve Flash bekleme çevrimleri uygun yapılandırılmalıdır. RAM bankalarının DMA erişimi aynı değildir.",
+            "en": "Clock is the MCU maximum. Configure PLL, supply and Flash wait states accordingly. RAM banks do not have identical DMA accessibility."
+          },
+          "sources": [
+            "f103rb-ds"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2007-06-01",
+        "kind": "documented",
+        "sources": [
+          "f103rb-ds"
+        ]
+      },
+      "pinSource": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf#page=25",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf",
+      "documents": []
+    },
+    "stm32f103vbt6": {
+      "chip": "STM32F103VBT6",
+      "sources": [
+        "f103vb-spec",
+        "f103vb-ds"
+      ],
+      "power": {
+        "tr": "Besleme aralığı ve 5 V toleransı pin türüne göre değişir; VDD, VDDA, VCAP ve VBAT koşullarını veri sayfasından kontrol edin.",
+        "en": "Supply range and 5 V tolerance depend on pin type; check VDD, VDDA, VCAP and VBAT conditions in the datasheet."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Belirtilen saat, MCU üst sınırıdır. PLL, besleme ve Flash bekleme çevrimleri uygun yapılandırılmalıdır. RAM bankalarının DMA erişimi aynı değildir.",
+            "en": "Clock is the MCU maximum. Configure PLL, supply and Flash wait states accordingly. RAM banks do not have identical DMA accessibility."
+          },
+          "sources": [
+            "f103vb-ds"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2007-06-01",
+        "kind": "documented",
+        "sources": [
+          "f103vb-ds"
+        ]
+      },
+      "pinSource": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf#page=24",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf",
+      "documents": []
+    },
+    "stm32f401ret6": {
+      "chip": "STM32F401RET6",
+      "sources": [
+        "f401re-spec",
+        "f401re-ds"
+      ],
+      "power": {
+        "tr": "Besleme aralığı ve 5 V toleransı pin türüne göre değişir; VDD, VDDA, VCAP ve VBAT koşullarını veri sayfasından kontrol edin.",
+        "en": "Supply range and 5 V tolerance depend on pin type; check VDD, VDDA, VCAP and VBAT conditions in the datasheet."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Belirtilen saat, MCU üst sınırıdır. PLL, besleme ve Flash bekleme çevrimleri uygun yapılandırılmalıdır. RAM bankalarının DMA erişimi aynı değildir.",
+            "en": "Clock is the MCU maximum. Configure PLL, supply and Flash wait states accordingly. RAM banks do not have identical DMA accessibility."
+          },
+          "sources": [
+            "f401re-ds"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2014-01-16",
+        "kind": "documented",
+        "sources": [
+          "f401re-ds"
+        ]
+      },
+      "pinSource": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F401R(D-E)Tx.xml",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32f401re.pdf",
+      "documents": []
+    },
+    "stm32f411ret6": {
+      "chip": "STM32F411RET6",
+      "sources": [
+        "f411re-spec",
+        "f411re-ds"
+      ],
+      "power": {
+        "tr": "Besleme aralığı ve 5 V toleransı pin türüne göre değişir; VDD, VDDA, VCAP ve VBAT koşullarını veri sayfasından kontrol edin.",
+        "en": "Supply range and 5 V tolerance depend on pin type; check VDD, VDDA, VCAP and VBAT conditions in the datasheet."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Belirtilen saat, MCU üst sınırıdır. PLL, besleme ve Flash bekleme çevrimleri uygun yapılandırılmalıdır. RAM bankalarının DMA erişimi aynı değildir.",
+            "en": "Clock is the MCU maximum. Configure PLL, supply and Flash wait states accordingly. RAM banks do not have identical DMA accessibility."
+          },
+          "sources": [
+            "f411re-ds"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2014-06-19",
+        "kind": "documented",
+        "sources": [
+          "f411re-ds"
+        ]
+      },
+      "pinSource": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F411R(C-E)Tx.xml",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32f411re.pdf",
+      "documents": []
+    },
+    "stm32g474ret6": {
+      "chip": "STM32G474RET6",
+      "sources": [
+        "g474re-spec",
+        "g474re-ds"
+      ],
+      "power": {
+        "tr": "Besleme aralığı ve 5 V toleransı pin türüne göre değişir; VDD, VDDA, VCAP ve VBAT koşullarını veri sayfasından kontrol edin.",
+        "en": "Supply range and 5 V tolerance depend on pin type; check VDD, VDDA, VCAP and VBAT conditions in the datasheet."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Belirtilen saat, MCU üst sınırıdır. PLL, besleme ve Flash bekleme çevrimleri uygun yapılandırılmalıdır. RAM bankalarının DMA erişimi aynı değildir.",
+            "en": "Clock is the MCU maximum. Configure PLL, supply and Flash wait states accordingly. RAM banks do not have identical DMA accessibility."
+          },
+          "sources": [
+            "g474re-ds"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2019-05-15",
+        "kind": "documented",
+        "sources": [
+          "g474re-ds"
+        ]
+      },
+      "pinSource": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/master/mcu/STM32G474R(B-C-E)Tx.xml",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32g474re.pdf",
+      "documents": []
+    },
+    "stm32h723zgt6": {
+      "chip": "STM32H723ZGT6",
+      "sources": [
+        "h723zg-spec",
+        "h723zg-ds"
+      ],
+      "power": {
+        "tr": "Besleme aralığı ve 5 V toleransı pin türüne göre değişir; VDD, VDDA, VCAP ve VBAT koşullarını veri sayfasından kontrol edin.",
+        "en": "Supply range and 5 V tolerance depend on pin type; check VDD, VDDA, VCAP and VBAT conditions in the datasheet."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Belirtilen saat, MCU üst sınırıdır. PLL, besleme ve Flash bekleme çevrimleri uygun yapılandırılmalıdır. RAM bankalarının DMA erişimi aynı değildir.",
+            "en": "Clock is the MCU maximum. Configure PLL, supply and Flash wait states accordingly. RAM banks do not have identical DMA accessibility."
+          },
+          "sources": [
+            "h723zg-ds"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2020-07-10",
+        "kind": "documented",
+        "sources": [
+          "h723zg-ds"
+        ]
+      },
+      "pinSource": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32H723ZGTx.xml",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32h723zg.pdf",
+      "documents": []
+    },
+    "stm32f446ret6": {
+      "chip": "STM32F446RET6",
+      "sources": [
+        "f446re-spec",
+        "f446re-ds"
+      ],
+      "power": {
+        "tr": "Besleme aralığı ve 5 V toleransı pin türüne göre değişir; VDD, VDDA, VCAP ve VBAT koşullarını veri sayfasından kontrol edin.",
+        "en": "Supply range and 5 V tolerance depend on pin type; check VDD, VDDA, VCAP and VBAT conditions in the datasheet."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Belirtilen saat, MCU üst sınırıdır. PLL, besleme ve Flash bekleme çevrimleri uygun yapılandırılmalıdır. RAM bankalarının DMA erişimi aynı değildir.",
+            "en": "Clock is the MCU maximum. Configure PLL, supply and Flash wait states accordingly. RAM banks do not have identical DMA accessibility."
+          },
+          "sources": [
+            "f446re-ds"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2015-02-17",
+        "kind": "documented",
+        "sources": [
+          "f446re-ds"
+        ]
+      },
+      "pinSource": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F446R(C-E)Tx.xml",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32f446re.pdf",
+      "documents": []
+    },
+    "stm32f303ret6": {
+      "chip": "STM32F303RET6",
+      "sources": [
+        "f303re-spec",
+        "f303re-ds"
+      ],
+      "power": {
+        "tr": "Besleme aralığı ve 5 V toleransı pin türüne göre değişir; VDD, VDDA, VCAP ve VBAT koşullarını veri sayfasından kontrol edin.",
+        "en": "Supply range and 5 V tolerance depend on pin type; check VDD, VDDA, VCAP and VBAT conditions in the datasheet."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Belirtilen saat, MCU üst sınırıdır. PLL, besleme ve Flash bekleme çevrimleri uygun yapılandırılmalıdır. RAM bankalarının DMA erişimi aynı değildir.",
+            "en": "Clock is the MCU maximum. Configure PLL, supply and Flash wait states accordingly. RAM banks do not have identical DMA accessibility."
+          },
+          "sources": [
+            "f303re-ds"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2015-01-20",
+        "kind": "documented",
+        "sources": [
+          "f303re-ds"
+        ]
+      },
+      "pinSource": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F303R(D-E)Tx.xml",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32f303re.pdf",
+      "documents": []
+    },
+    "stm32l476rgt6": {
+      "chip": "STM32L476RGT6",
+      "sources": [
+        "l476rg-spec",
+        "l476rg-ds"
+      ],
+      "power": {
+        "tr": "Besleme aralığı ve 5 V toleransı pin türüne göre değişir; VDD, VDDA, VCAP ve VBAT koşullarını veri sayfasından kontrol edin.",
+        "en": "Supply range and 5 V tolerance depend on pin type; check VDD, VDDA, VCAP and VBAT conditions in the datasheet."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Belirtilen saat, MCU üst sınırıdır. PLL, besleme ve Flash bekleme çevrimleri uygun yapılandırılmalıdır. RAM bankalarının DMA erişimi aynı değildir.",
+            "en": "Clock is the MCU maximum. Configure PLL, supply and Flash wait states accordingly. RAM banks do not have identical DMA accessibility."
+          },
+          "sources": [
+            "l476rg-ds"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2015-05-29",
+        "kind": "documented",
+        "sources": [
+          "l476rg-ds"
+        ]
+      },
+      "pinSource": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32L476R(C-E-G)Tx.xml",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32l476rg.pdf",
+      "documents": []
+    },
+    "stm32f072rbt6": {
+      "chip": "STM32F072RBT6",
+      "sources": [
+        "f072rb-spec",
+        "f072rb-ds"
+      ],
+      "power": {
+        "tr": "Besleme aralığı ve 5 V toleransı pin türüne göre değişir; VDD, VDDA, VCAP ve VBAT koşullarını veri sayfasından kontrol edin.",
+        "en": "Supply range and 5 V tolerance depend on pin type; check VDD, VDDA, VCAP and VBAT conditions in the datasheet."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Belirtilen saat, MCU üst sınırıdır. PLL, besleme ve Flash bekleme çevrimleri uygun yapılandırılmalıdır. RAM bankalarının DMA erişimi aynı değildir.",
+            "en": "Clock is the MCU maximum. Configure PLL, supply and Flash wait states accordingly. RAM banks do not have identical DMA accessibility."
+          },
+          "sources": [
+            "f072rb-ds"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2014-01-13",
+        "kind": "documented",
+        "sources": [
+          "f072rb-ds"
+        ]
+      },
+      "pinSource": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F072R(8-B)Tx.xml",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32f072rb.pdf",
+      "documents": []
+    },
+    "stm32l053r8t6": {
+      "chip": "STM32L053R8T6",
+      "sources": [
+        "l053r8-spec",
+        "l053r8-ds"
+      ],
+      "power": {
+        "tr": "Besleme aralığı ve 5 V toleransı pin türüne göre değişir; VDD, VDDA, VCAP ve VBAT koşullarını veri sayfasından kontrol edin.",
+        "en": "Supply range and 5 V tolerance depend on pin type; check VDD, VDDA, VCAP and VBAT conditions in the datasheet."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Belirtilen saat, MCU üst sınırıdır. PLL, besleme ve Flash bekleme çevrimleri uygun yapılandırılmalıdır. RAM bankalarının DMA erişimi aynı değildir.",
+            "en": "Clock is the MCU maximum. Configure PLL, supply and Flash wait states accordingly. RAM banks do not have identical DMA accessibility."
+          },
+          "sources": [
+            "l053r8-ds"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2014-02-07",
+        "kind": "documented",
+        "sources": [
+          "l053r8-ds"
+        ]
+      },
+      "pinSource": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32L053R(6-8)Tx.xml",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32l053r8.pdf",
+      "documents": []
+    },
+    "stm32l152ret6": {
+      "chip": "STM32L152RET6",
+      "sources": [
+        "l152re-spec",
+        "l152re-ds"
+      ],
+      "power": {
+        "tr": "Besleme aralığı ve 5 V toleransı pin türüne göre değişir; VDD, VDDA, VCAP ve VBAT koşullarını veri sayfasından kontrol edin.",
+        "en": "Supply range and 5 V tolerance depend on pin type; check VDD, VDDA, VCAP and VBAT conditions in the datasheet."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Belirtilen saat, MCU üst sınırıdır. PLL, besleme ve Flash bekleme çevrimleri uygun yapılandırılmalıdır. RAM bankalarının DMA erişimi aynı değildir.",
+            "en": "Clock is the MCU maximum. Configure PLL, supply and Flash wait states accordingly. RAM banks do not have identical DMA accessibility."
+          },
+          "sources": [
+            "l152re-ds"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2013-10-31",
+        "kind": "documented",
+        "sources": [
+          "l152re-ds"
+        ]
+      },
+      "pinSource": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32L152RETx.xml",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32l152re.pdf",
+      "documents": []
+    },
+    "stm32f407vgt6": {
+      "chip": "STM32F407VGT6",
+      "sources": [
+        "f407vg-spec",
+        "f407vg-ds"
+      ],
+      "power": {
+        "tr": "Besleme aralığı ve 5 V toleransı pin türüne göre değişir; VDD, VDDA, VCAP ve VBAT koşullarını veri sayfasından kontrol edin.",
+        "en": "Supply range and 5 V tolerance depend on pin type; check VDD, VDDA, VCAP and VBAT conditions in the datasheet."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Belirtilen saat, MCU üst sınırıdır. PLL, besleme ve Flash bekleme çevrimleri uygun yapılandırılmalıdır. RAM bankalarının DMA erişimi aynı değildir.",
+            "en": "Clock is the MCU maximum. Configure PLL, supply and Flash wait states accordingly. RAM banks do not have identical DMA accessibility."
+          },
+          "sources": [
+            "f407vg-ds"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2011-09-15",
+        "kind": "documented",
+        "sources": [
+          "f407vg-ds"
+        ]
+      },
+      "pinSource": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F407V(E-G)Tx.xml",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32f407vg.pdf",
+      "documents": []
+    },
+    "stm32f405rgt6": {
+      "chip": "STM32F405RGT6",
+      "sources": [
+        "f405rg-spec",
+        "f405rg-ds"
+      ],
+      "power": {
+        "tr": "Besleme aralığı ve 5 V toleransı pin türüne göre değişir; VDD, VDDA, VCAP ve VBAT koşullarını veri sayfasından kontrol edin.",
+        "en": "Supply range and 5 V tolerance depend on pin type; check VDD, VDDA, VCAP and VBAT conditions in the datasheet."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Belirtilen saat, MCU üst sınırıdır. PLL, besleme ve Flash bekleme çevrimleri uygun yapılandırılmalıdır. RAM bankalarının DMA erişimi aynı değildir.",
+            "en": "Clock is the MCU maximum. Configure PLL, supply and Flash wait states accordingly. RAM banks do not have identical DMA accessibility."
+          },
+          "sources": [
+            "f405rg-ds"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2011-09-15",
+        "kind": "documented",
+        "sources": [
+          "f405rg-ds"
+        ]
+      },
+      "pinSource": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F405RGTx.xml",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32f405rg.pdf",
+      "documents": []
+    },
+    "stm32f042k6t6": {
+      "chip": "STM32F042K6T6",
+      "sources": [
+        "f042k6-spec",
+        "f042k6-ds"
+      ],
+      "power": {
+        "tr": "Besleme aralığı ve 5 V toleransı pin türüne göre değişir; VDD, VDDA, VCAP ve VBAT koşullarını veri sayfasından kontrol edin.",
+        "en": "Supply range and 5 V tolerance depend on pin type; check VDD, VDDA, VCAP and VBAT conditions in the datasheet."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Belirtilen saat, MCU üst sınırıdır. PLL, besleme ve Flash bekleme çevrimleri uygun yapılandırılmalıdır. RAM bankalarının DMA erişimi aynı değildir.",
+            "en": "Clock is the MCU maximum. Configure PLL, supply and Flash wait states accordingly. RAM banks do not have identical DMA accessibility."
+          },
+          "sources": [
+            "f042k6-ds"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2014-02-25",
+        "kind": "documented",
+        "sources": [
+          "f042k6-ds"
+        ]
+      },
+      "pinSource": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F042K(4-6)Tx.xml",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32f042k6.pdf",
+      "documents": []
+    },
+    "stm32l432kcu6": {
+      "chip": "STM32L432KCU6",
+      "sources": [
+        "l432kc-spec",
+        "l432kc-ds"
+      ],
+      "power": {
+        "tr": "Besleme aralığı ve 5 V toleransı pin türüne göre değişir; VDD, VDDA, VCAP ve VBAT koşullarını veri sayfasından kontrol edin.",
+        "en": "Supply range and 5 V tolerance depend on pin type; check VDD, VDDA, VCAP and VBAT conditions in the datasheet."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Belirtilen saat, MCU üst sınırıdır. PLL, besleme ve Flash bekleme çevrimleri uygun yapılandırılmalıdır. RAM bankalarının DMA erişimi aynı değildir.",
+            "en": "Clock is the MCU maximum. Configure PLL, supply and Flash wait states accordingly. RAM banks do not have identical DMA accessibility."
+          },
+          "sources": [
+            "l432kc-ds"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2016-02-08",
+        "kind": "documented",
+        "sources": [
+          "l432kc-ds"
+        ]
+      },
+      "pinSource": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32L432K(B-C)Ux.xml",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32l432kc.pdf",
+      "documents": []
+    },
+    "stm32f767zit6": {
+      "chip": "STM32F767ZIT6",
+      "sources": [
+        "f767zi-spec",
+        "f767zi-ds"
+      ],
+      "power": {
+        "tr": "Besleme aralığı ve 5 V toleransı pin türüne göre değişir; VDD, VDDA, VCAP ve VBAT koşullarını veri sayfasından kontrol edin.",
+        "en": "Supply range and 5 V tolerance depend on pin type; check VDD, VDDA, VCAP and VBAT conditions in the datasheet."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Belirtilen saat, MCU üst sınırıdır. PLL, besleme ve Flash bekleme çevrimleri uygun yapılandırılmalıdır. RAM bankalarının DMA erişimi aynı değildir.",
+            "en": "Clock is the MCU maximum. Configure PLL, supply and Flash wait states accordingly. RAM banks do not have identical DMA accessibility."
+          },
+          "sources": [
+            "f767zi-ds"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2016-03-21",
+        "kind": "documented",
+        "sources": [
+          "f767zi-ds"
+        ]
+      },
+      "pinSource": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F767ZITx.xml",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32f767zi.pdf",
+      "documents": []
+    },
+    "stm32h743zit6": {
+      "chip": "STM32H743ZIT6",
+      "sources": [
+        "h743zi-spec",
+        "h743zi-ds"
+      ],
+      "power": {
+        "tr": "Besleme aralığı ve 5 V toleransı pin türüne göre değişir; VDD, VDDA, VCAP ve VBAT koşullarını veri sayfasından kontrol edin.",
+        "en": "Supply range and 5 V tolerance depend on pin type; check VDD, VDDA, VCAP and VBAT conditions in the datasheet."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Belirtilen saat, MCU üst sınırıdır. PLL, besleme ve Flash bekleme çevrimleri uygun yapılandırılmalıdır. RAM bankalarının DMA erişimi aynı değildir.",
+            "en": "Clock is the MCU maximum. Configure PLL, supply and Flash wait states accordingly. RAM banks do not have identical DMA accessibility."
+          },
+          "sources": [
+            "h743zi-ds"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2017-06-22",
+        "kind": "documented",
+        "sources": [
+          "h743zi-ds"
+        ]
+      },
+      "pinSource": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32H743ZITx.xml",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32h743zi.pdf",
+      "documents": []
+    },
+    "stm32f401ccu6": {
+      "chip": "STM32F401CCU6",
+      "sources": [
+        "f401cc-spec",
+        "f401cc-ds"
+      ],
+      "power": {
+        "tr": "Besleme aralığı ve 5 V toleransı pin türüne göre değişir; VDD, VDDA, VCAP ve VBAT koşullarını veri sayfasından kontrol edin.",
+        "en": "Supply range and 5 V tolerance depend on pin type; check VDD, VDDA, VCAP and VBAT conditions in the datasheet."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Belirtilen saat, MCU üst sınırıdır. PLL, besleme ve Flash bekleme çevrimleri uygun yapılandırılmalıdır. RAM bankalarının DMA erişimi aynı değildir.",
+            "en": "Clock is the MCU maximum. Configure PLL, supply and Flash wait states accordingly. RAM banks do not have identical DMA accessibility."
+          },
+          "sources": [
+            "f401cc-ds"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2013-07-23",
+        "kind": "documented",
+        "sources": [
+          "f401cc-ds"
+        ]
+      },
+      "pinSource": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F401C(B-C)Ux.xml",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32f401cc.pdf",
+      "documents": []
+    },
+    "stm32f411ceu6": {
+      "chip": "STM32F411CEU6",
+      "sources": [
+        "f411ce-spec",
+        "f411ce-ds"
+      ],
+      "power": {
+        "tr": "Besleme aralığı ve 5 V toleransı pin türüne göre değişir; VDD, VDDA, VCAP ve VBAT koşullarını veri sayfasından kontrol edin.",
+        "en": "Supply range and 5 V tolerance depend on pin type; check VDD, VDDA, VCAP and VBAT conditions in the datasheet."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Belirtilen saat, MCU üst sınırıdır. PLL, besleme ve Flash bekleme çevrimleri uygun yapılandırılmalıdır. RAM bankalarının DMA erişimi aynı değildir.",
+            "en": "Clock is the MCU maximum. Configure PLL, supply and Flash wait states accordingly. RAM banks do not have identical DMA accessibility."
+          },
+          "sources": [
+            "f411ce-ds"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2014-06-19",
+        "kind": "documented",
+        "sources": [
+          "f411ce-ds"
+        ]
+      },
+      "pinSource": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/7d1f1514ed5583ec5007ad91236b4e1d377295b1/mcu/STM32F411C(C-E)Ux.xml",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32f411ce.pdf",
+      "documents": []
+    },
+    "blue-pill": {
+      "chip": "STM32F103C8T6",
+      "sources": [
+        "f103c8-spec",
+        "f103c8-ds",
+        "bluepill-schematic"
+      ],
+      "power": {
+        "tr": "Kart GPIO: 3.3 V. USB / harici güç seçimini kartın kullanıcı kılavuzundaki jumper ve köprü koşullarına göre yapın.",
+        "en": "Board GPIO: 3.3 V. Select USB / external power using the jumper and bridge conditions in the board manual."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "C8 için garantili Flash 64 KB’dir; 128 KB varsaymayın. Blue Pill üreticisi ve ilk üretim yılı doğrulanamıyor. Klonların USB direnci, regülatörü ve MCU’su değişebilir.",
+            "en": "Guaranteed C8 Flash is 64 KB; do not assume 128 KB. Blue Pill manufacturer and first production year are unverified. Clones may differ in USB resistor, regulator and MCU."
+          },
+          "sources": [
+            "stm32f103"
+          ]
+        }
+      ],
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "f103c8-spec",
+          "f103c8-ds"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "pinSource": "https://stm32-base.org/boards/STM32F103C8T6-Blue-Pill.html",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf",
+      "documents": [
+        "bluepill-schematic"
+      ]
+    },
+    "nucleo-f103rb": {
+      "chip": "STM32F103RBT6",
+      "sources": [
+        "f103rb-spec",
+        "f103rb-ds",
+        "nucleo-um1724-r14"
+      ],
+      "power": {
+        "tr": "Kart GPIO: 3.3 V. USB / harici güç seçimini kartın kullanıcı kılavuzundaki jumper ve köprü koşullarına göre yapın.",
+        "en": "Board GPIO: 3.3 V. Select USB / external power using the jumper and bridge conditions in the board manual."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Kartta ST-LINK programlayıcı/hata ayıklayıcı bulunur. Arduino başlığı, Morpho ve MCU pad numaraları ayrı numaralandırmalardır; lehim köprüleri aynı ağın erişimini etkileyebilir.",
+            "en": "On-board ST-LINK provides programming/debugging. Arduino headers, Morpho contacts and MCU pads use separate numbering; solder bridges may affect access to the same net."
+          },
+          "sources": [
+            "nucleo-um1724-r14"
+          ]
+        }
+      ],
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "f103rb-spec",
+          "f103rb-ds"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "pinSource": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=39",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32f103c8.pdf",
+      "documents": [
+        "nucleo-um1724-r14"
+      ]
+    },
+    "nucleo-f401re": {
+      "chip": "STM32F401RET6",
+      "sources": [
+        "f401re-spec",
+        "f401re-ds",
+        "nucleo-um1724-r14"
+      ],
+      "power": {
+        "tr": "Kart GPIO: 3.3 V. USB / harici güç seçimini kartın kullanıcı kılavuzundaki jumper ve köprü koşullarına göre yapın.",
+        "en": "Board GPIO: 3.3 V. Select USB / external power using the jumper and bridge conditions in the board manual."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Kartta ST-LINK programlayıcı/hata ayıklayıcı bulunur. Arduino başlığı, Morpho ve MCU pad numaraları ayrı numaralandırmalardır; lehim köprüleri aynı ağın erişimini etkileyebilir.",
+            "en": "On-board ST-LINK provides programming/debugging. Arduino headers, Morpho contacts and MCU pads use separate numbering; solder bridges may affect access to the same net."
+          },
+          "sources": [
+            "nucleo-um1724-r14"
+          ]
+        }
+      ],
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "f401re-spec",
+          "f401re-ds"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "pinSource": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=43",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32f401re.pdf",
+      "documents": [
+        "nucleo-um1724-r14"
+      ]
+    },
+    "nucleo-f411re": {
+      "chip": "STM32F411RET6",
+      "sources": [
+        "f411re-spec",
+        "f411re-ds",
+        "nucleo-um1724-r14"
+      ],
+      "power": {
+        "tr": "Kart GPIO: 3.3 V. USB / harici güç seçimini kartın kullanıcı kılavuzundaki jumper ve köprü koşullarına göre yapın.",
+        "en": "Board GPIO: 3.3 V. Select USB / external power using the jumper and bridge conditions in the board manual."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Kartta ST-LINK programlayıcı/hata ayıklayıcı bulunur. Arduino başlığı, Morpho ve MCU pad numaraları ayrı numaralandırmalardır; lehim köprüleri aynı ağın erişimini etkileyebilir.",
+            "en": "On-board ST-LINK provides programming/debugging. Arduino headers, Morpho contacts and MCU pads use separate numbering; solder bridges may affect access to the same net."
+          },
+          "sources": [
+            "nucleo-um1724-r14"
+          ]
+        }
+      ],
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "f411re-spec",
+          "f411re-ds"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "pinSource": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=43",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32f411re.pdf",
+      "documents": [
+        "nucleo-um1724-r14"
+      ]
+    },
+    "nucleo-g474re": {
+      "chip": "STM32G474RET6",
+      "sources": [
+        "g474re-spec",
+        "g474re-ds",
+        "nucleo-g4-um2505"
+      ],
+      "power": {
+        "tr": "Kart GPIO: 3.3 V. USB / harici güç seçimini kartın kullanıcı kılavuzundaki jumper ve köprü koşullarına göre yapın.",
+        "en": "Board GPIO: 3.3 V. Select USB / external power using the jumper and bridge conditions in the board manual."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Kartta ST-LINK programlayıcı/hata ayıklayıcı bulunur. Arduino başlığı, Morpho ve MCU pad numaraları ayrı numaralandırmalardır; lehim köprüleri aynı ağın erişimini etkileyebilir.",
+            "en": "On-board ST-LINK provides programming/debugging. Arduino headers, Morpho contacts and MCU pads use separate numbering; solder bridges may affect access to the same net."
+          },
+          "sources": [
+            "nucleo-g4-um2505"
+          ]
+        }
+      ],
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "g474re-spec",
+          "g474re-ds"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "pinSource": "https://www.st.com/resource/en/user_manual/um2505-stm32g4-nucleo64-boards-stmicroelectronics.pdf#page=30",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32g474re.pdf",
+      "documents": [
+        "nucleo-g4-um2505"
+      ]
+    },
+    "nucleo-h723zg": {
+      "chip": "STM32H723ZGT6",
+      "sources": [
+        "h723zg-spec",
+        "h723zg-ds",
+        "nucleo-um2407-r6"
+      ],
+      "power": {
+        "tr": "Kart GPIO: 3.3 V. USB / harici güç seçimini kartın kullanıcı kılavuzundaki jumper ve köprü koşullarına göre yapın.",
+        "en": "Board GPIO: 3.3 V. Select USB / external power using the jumper and bridge conditions in the board manual."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Kartta ST-LINK programlayıcı/hata ayıklayıcı bulunur. Arduino başlığı, Morpho ve MCU pad numaraları ayrı numaralandırmalardır; lehim köprüleri aynı ağın erişimini etkileyebilir.",
+            "en": "On-board ST-LINK provides programming/debugging. Arduino headers, Morpho contacts and MCU pads use separate numbering; solder bridges may affect access to the same net."
+          },
+          "sources": [
+            "nucleo-um2407-r6"
+          ]
+        }
+      ],
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "h723zg-spec",
+          "h723zg-ds"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "pinSource": "https://www.st.com/resource/en/user_manual/um2407-stm32h7-nucleo144-board-stmicroelectronics.pdf",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32h723zg.pdf",
+      "documents": [
+        "nucleo-um2407-r6"
+      ]
+    },
+    "nucleo-f446re": {
+      "chip": "STM32F446RET6",
+      "sources": [
+        "f446re-spec",
+        "f446re-ds",
+        "nucleo-um1724-r14"
+      ],
+      "power": {
+        "tr": "Kart GPIO: 3.3 V. USB / harici güç seçimini kartın kullanıcı kılavuzundaki jumper ve köprü koşullarına göre yapın.",
+        "en": "Board GPIO: 3.3 V. Select USB / external power using the jumper and bridge conditions in the board manual."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Kartta ST-LINK programlayıcı/hata ayıklayıcı bulunur. Arduino başlığı, Morpho ve MCU pad numaraları ayrı numaralandırmalardır; lehim köprüleri aynı ağın erişimini etkileyebilir.",
+            "en": "On-board ST-LINK provides programming/debugging. Arduino headers, Morpho contacts and MCU pads use separate numbering; solder bridges may affect access to the same net."
+          },
+          "sources": [
+            "nucleo-um1724-r14"
+          ]
+        }
+      ],
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "f446re-spec",
+          "f446re-ds"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "pinSource": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=47",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32f446re.pdf",
+      "documents": [
+        "nucleo-um1724-r14"
+      ]
+    },
+    "nucleo-f303re": {
+      "chip": "STM32F303RET6",
+      "sources": [
+        "f303re-spec",
+        "f303re-ds",
+        "nucleo-um1724-r14"
+      ],
+      "power": {
+        "tr": "Kart GPIO: 3.3 V. USB / harici güç seçimini kartın kullanıcı kılavuzundaki jumper ve köprü koşullarına göre yapın.",
+        "en": "Board GPIO: 3.3 V. Select USB / external power using the jumper and bridge conditions in the board manual."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Kartta ST-LINK programlayıcı/hata ayıklayıcı bulunur. Arduino başlığı, Morpho ve MCU pad numaraları ayrı numaralandırmalardır; lehim köprüleri aynı ağın erişimini etkileyebilir.",
+            "en": "On-board ST-LINK provides programming/debugging. Arduino headers, Morpho contacts and MCU pads use separate numbering; solder bridges may affect access to the same net."
+          },
+          "sources": [
+            "nucleo-um1724-r14"
+          ]
+        }
+      ],
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "f303re-spec",
+          "f303re-ds"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "pinSource": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=41",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32f303re.pdf",
+      "documents": [
+        "nucleo-um1724-r14"
+      ]
+    },
+    "nucleo-l476rg": {
+      "chip": "STM32L476RGT6",
+      "sources": [
+        "l476rg-spec",
+        "l476rg-ds",
+        "nucleo-um1724-r14"
+      ],
+      "power": {
+        "tr": "Kart GPIO: 3.3 V. USB / harici güç seçimini kartın kullanıcı kılavuzundaki jumper ve köprü koşullarına göre yapın.",
+        "en": "Board GPIO: 3.3 V. Select USB / external power using the jumper and bridge conditions in the board manual."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Kartta ST-LINK programlayıcı/hata ayıklayıcı bulunur. Arduino başlığı, Morpho ve MCU pad numaraları ayrı numaralandırmalardır; lehim köprüleri aynı ağın erişimini etkileyebilir.",
+            "en": "On-board ST-LINK provides programming/debugging. Arduino headers, Morpho contacts and MCU pads use separate numbering; solder bridges may affect access to the same net."
+          },
+          "sources": [
+            "nucleo-um1724-r14"
+          ]
+        }
+      ],
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "l476rg-spec",
+          "l476rg-ds"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "pinSource": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=52",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32l476rg.pdf",
+      "documents": [
+        "nucleo-um1724-r14"
+      ]
+    },
+    "nucleo-f072rb": {
+      "chip": "STM32F072RBT6",
+      "sources": [
+        "f072rb-spec",
+        "f072rb-ds",
+        "nucleo-um1724-r14"
+      ],
+      "power": {
+        "tr": "Kart GPIO: 3.3 V. USB / harici güç seçimini kartın kullanıcı kılavuzundaki jumper ve köprü koşullarına göre yapın.",
+        "en": "Board GPIO: 3.3 V. Select USB / external power using the jumper and bridge conditions in the board manual."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Kartta ST-LINK programlayıcı/hata ayıklayıcı bulunur. Arduino başlığı, Morpho ve MCU pad numaraları ayrı numaralandırmalardır; lehim köprüleri aynı ağın erişimini etkileyebilir.",
+            "en": "On-board ST-LINK provides programming/debugging. Arduino headers, Morpho contacts and MCU pads use separate numbering; solder bridges may affect access to the same net."
+          },
+          "sources": [
+            "nucleo-um1724-r14"
+          ]
+        }
+      ],
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "f072rb-spec",
+          "f072rb-ds"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "pinSource": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=37",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32f072rb.pdf",
+      "documents": [
+        "nucleo-um1724-r14"
+      ]
+    },
+    "nucleo-l053r8": {
+      "chip": "STM32L053R8T6",
+      "sources": [
+        "l053r8-spec",
+        "l053r8-ds",
+        "nucleo-um1724-r14"
+      ],
+      "power": {
+        "tr": "Kart GPIO: 3.3 V. USB / harici güç seçimini kartın kullanıcı kılavuzundaki jumper ve köprü koşullarına göre yapın.",
+        "en": "Board GPIO: 3.3 V. Select USB / external power using the jumper and bridge conditions in the board manual."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Kartta ST-LINK programlayıcı/hata ayıklayıcı bulunur. Arduino başlığı, Morpho ve MCU pad numaraları ayrı numaralandırmalardır; lehim köprüleri aynı ağın erişimini etkileyebilir.",
+            "en": "On-board ST-LINK provides programming/debugging. Arduino headers, Morpho contacts and MCU pads use separate numbering; solder bridges may affect access to the same net."
+          },
+          "sources": [
+            "nucleo-um1724-r14"
+          ]
+        }
+      ],
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "l053r8-spec",
+          "l053r8-ds"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "pinSource": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=45",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32l053r8.pdf",
+      "documents": [
+        "nucleo-um1724-r14"
+      ]
+    },
+    "nucleo-l152re": {
+      "chip": "STM32L152RET6",
+      "sources": [
+        "l152re-spec",
+        "l152re-ds",
+        "nucleo-um1724-r14"
+      ],
+      "power": {
+        "tr": "Kart GPIO: 3.3 V. USB / harici güç seçimini kartın kullanıcı kılavuzundaki jumper ve köprü koşullarına göre yapın.",
+        "en": "Board GPIO: 3.3 V. Select USB / external power using the jumper and bridge conditions in the board manual."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Kartta ST-LINK programlayıcı/hata ayıklayıcı bulunur. Arduino başlığı, Morpho ve MCU pad numaraları ayrı numaralandırmalardır; lehim köprüleri aynı ağın erişimini etkileyebilir.",
+            "en": "On-board ST-LINK provides programming/debugging. Arduino headers, Morpho contacts and MCU pads use separate numbering; solder bridges may affect access to the same net."
+          },
+          "sources": [
+            "nucleo-um1724-r14"
+          ]
+        }
+      ],
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "l152re-spec",
+          "l152re-ds"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "pinSource": "https://evo.net.ua/content/files/dm00105823-stm32-nucleo-64-boards-mb1136-stmicroelectronics-5104243.pdf#page=50",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32l152re.pdf",
+      "documents": [
+        "nucleo-um1724-r14"
+      ]
+    },
+    "nucleo-f042k6": {
+      "chip": "STM32F042K6T6",
+      "sources": [
+        "f042k6-spec",
+        "f042k6-ds",
+        "nucleo-um1956-r6"
+      ],
+      "power": {
+        "tr": "Kart GPIO: 3.3 V. USB / harici güç seçimini kartın kullanıcı kılavuzundaki jumper ve köprü koşullarına göre yapın.",
+        "en": "Board GPIO: 3.3 V. Select USB / external power using the jumper and bridge conditions in the board manual."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Kartta ST-LINK programlayıcı/hata ayıklayıcı bulunur. Arduino başlığı, Morpho ve MCU pad numaraları ayrı numaralandırmalardır; lehim köprüleri aynı ağın erişimini etkileyebilir.",
+            "en": "On-board ST-LINK provides programming/debugging. Arduino headers, Morpho contacts and MCU pads use separate numbering; solder bridges may affect access to the same net."
+          },
+          "sources": [
+            "nucleo-um1956-r6"
+          ]
+        }
+      ],
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "f042k6-spec",
+          "f042k6-ds"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "pinSource": "https://www.st.com/resource/en/user_manual/dm00231744.pdf#page=24",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32f042k6.pdf",
+      "documents": [
+        "nucleo-um1956-r6"
+      ]
+    },
+    "nucleo-l432kc": {
+      "chip": "STM32L432KCU6",
+      "sources": [
+        "l432kc-spec",
+        "l432kc-ds",
+        "nucleo-um1956-r6"
+      ],
+      "power": {
+        "tr": "Kart GPIO: 3.3 V. USB / harici güç seçimini kartın kullanıcı kılavuzundaki jumper ve köprü koşullarına göre yapın.",
+        "en": "Board GPIO: 3.3 V. Select USB / external power using the jumper and bridge conditions in the board manual."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Kartta ST-LINK programlayıcı/hata ayıklayıcı bulunur. Arduino başlığı, Morpho ve MCU pad numaraları ayrı numaralandırmalardır; lehim köprüleri aynı ağın erişimini etkileyebilir.",
+            "en": "On-board ST-LINK provides programming/debugging. Arduino headers, Morpho contacts and MCU pads use separate numbering; solder bridges may affect access to the same net."
+          },
+          "sources": [
+            "nucleo-um1956-r6"
+          ]
+        }
+      ],
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "l432kc-spec",
+          "l432kc-ds"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "pinSource": "https://www.st.com/resource/en/user_manual/dm00231744.pdf#page=30",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32l432kc.pdf",
+      "documents": [
+        "nucleo-um1956-r6"
+      ]
+    },
+    "nucleo-f767zi": {
+      "chip": "STM32F767ZIT6",
+      "sources": [
+        "f767zi-spec",
+        "f767zi-ds",
+        "nucleo-um1974-r11"
+      ],
+      "power": {
+        "tr": "Kart GPIO: 3.3 V. USB / harici güç seçimini kartın kullanıcı kılavuzundaki jumper ve köprü koşullarına göre yapın.",
+        "en": "Board GPIO: 3.3 V. Select USB / external power using the jumper and bridge conditions in the board manual."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Kartta ST-LINK programlayıcı/hata ayıklayıcı bulunur. Arduino başlığı, Morpho ve MCU pad numaraları ayrı numaralandırmalardır; lehim köprüleri aynı ağın erişimini etkileyebilir.",
+            "en": "On-board ST-LINK provides programming/debugging. Arduino headers, Morpho contacts and MCU pads use separate numbering; solder bridges may affect access to the same net."
+          },
+          "sources": [
+            "nucleo-um1974-r11"
+          ]
+        }
+      ],
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "f767zi-spec",
+          "f767zi-ds"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "pinSource": "https://www.st.com/resource/en/user_manual/dm00244518-stm32-nucleo144-boards-stmicroelectronics.pdf",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32f767zi.pdf",
+      "documents": [
+        "nucleo-um1974-r11"
+      ]
+    },
+    "nucleo-h743zi2": {
+      "chip": "STM32H743ZIT6",
+      "sources": [
+        "h743zi-spec",
+        "h743zi-ds",
+        "nucleo-um2407-r6"
+      ],
+      "power": {
+        "tr": "Kart GPIO: 3.3 V. USB / harici güç seçimini kartın kullanıcı kılavuzundaki jumper ve köprü koşullarına göre yapın.",
+        "en": "Board GPIO: 3.3 V. Select USB / external power using the jumper and bridge conditions in the board manual."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Kartta ST-LINK programlayıcı/hata ayıklayıcı bulunur. Arduino başlığı, Morpho ve MCU pad numaraları ayrı numaralandırmalardır; lehim köprüleri aynı ağın erişimini etkileyebilir.",
+            "en": "On-board ST-LINK provides programming/debugging. Arduino headers, Morpho contacts and MCU pads use separate numbering; solder bridges may affect access to the same net."
+          },
+          "sources": [
+            "nucleo-um2407-r6"
+          ]
+        }
+      ],
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "h743zi-spec",
+          "h743zi-ds"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "pinSource": "https://www.st.com/resource/en/user_manual/um2407-stm32h7-nucleo144-board-stmicroelectronics.pdf",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32h743zi.pdf",
+      "documents": [
+        "nucleo-um2407-r6"
+      ]
+    },
+    "weact-blackpill-f401cc": {
+      "chip": "STM32F401CCU6",
+      "sources": [
+        "f401cc-spec",
+        "f401cc-ds",
+        "weact-blackpill-schematic"
+      ],
+      "power": {
+        "tr": "Kart GPIO: 3.3 V. USB / harici güç seçimini kartın kullanıcı kılavuzundaki jumper ve köprü koşullarına göre yapın.",
+        "en": "Board GPIO: 3.3 V. Select USB / external power using the jumper and bridge conditions in the board manual."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "v3.x kartın PC13 LED’i ve PA0 düğmesi vardır. İsteğe bağlı SPI Flash, MCU içi program Flash’ından ayrıdır ve her kartta takılı değildir.",
+            "en": "v3.x board has a PC13 LED and PA0 button. Optional SPI Flash is separate from internal program Flash and is not fitted on every board."
+          },
+          "sources": [
+            "weact-blackpill-schematic",
+            "weact-blackpill-revisions"
+          ]
+        }
+      ],
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "f401cc-spec",
+          "f401cc-ds"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "pinSource": "https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1/blob/6a7f7d434a9d6361f91590d4cdd16b4a70ce7513/README.md",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32f401cc.pdf",
+      "documents": [
+        "weact-blackpill-schematic"
+      ]
+    },
+    "weact-blackpill-f411ce": {
+      "chip": "STM32F411CEU6",
+      "sources": [
+        "f411ce-spec",
+        "f411ce-ds",
+        "weact-blackpill-schematic"
+      ],
+      "power": {
+        "tr": "Kart GPIO: 3.3 V. USB / harici güç seçimini kartın kullanıcı kılavuzundaki jumper ve köprü koşullarına göre yapın.",
+        "en": "Board GPIO: 3.3 V. Select USB / external power using the jumper and bridge conditions in the board manual."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "v3.x kartın PC13 LED’i ve PA0 düğmesi vardır. İsteğe bağlı SPI Flash, MCU içi program Flash’ından ayrıdır ve her kartta takılı değildir.",
+            "en": "v3.x board has a PC13 LED and PA0 button. Optional SPI Flash is separate from internal program Flash and is not fitted on every board."
+          },
+          "sources": [
+            "weact-blackpill-schematic",
+            "weact-blackpill-revisions"
+          ]
+        }
+      ],
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "f411ce-spec",
+          "f411ce-ds"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "pinSource": "https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1/blob/6a7f7d434a9d6361f91590d4cdd16b4a70ce7513/README.md",
+      "datasheet": "https://www.st.com/resource/en/datasheet/stm32f411ce.pdf",
+      "documents": [
+        "weact-blackpill-schematic"
+      ]
+    },
+    "atmega328p-pdip28": {
+      "chip": "ATmega328P",
+      "sources": [
+        "atmega328p-datasheet"
+      ],
+      "power": {
+        "tr": "VCC, AVCC ve tüm GND pinlerini bağlayın; osilatör/fuse ve RESET koşulları Arduino kartından bağımsızdır.",
+        "en": "Connect VCC, AVCC and every GND pin; oscillator/fuse and RESET conditions are independent of Arduino boards."
+      },
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "atmega328p-datasheet"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "notes": [],
+      "pinSource": "https://docs.arduino.cc/resources/datasheets/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=14",
+      "datasheet": "https://docs.arduino.cc/resources/datasheets/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf",
+      "documents": []
+    },
+    "atmega328p-tqfp32": {
+      "chip": "ATmega328P",
+      "sources": [
+        "atmega328p-datasheet"
+      ],
+      "power": {
+        "tr": "VCC, AVCC ve tüm GND pinlerini bağlayın; osilatör/fuse ve RESET koşulları Arduino kartından bağımsızdır.",
+        "en": "Connect VCC, AVCC and every GND pin; oscillator/fuse and RESET conditions are independent of Arduino boards."
+      },
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "atmega328p-datasheet"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "notes": [],
+      "pinSource": "https://docs.arduino.cc/resources/datasheets/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=16",
+      "datasheet": "https://docs.arduino.cc/resources/datasheets/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf",
+      "documents": []
+    },
+    "atmega328p-qfn32": {
+      "chip": "ATmega328P",
+      "sources": [
+        "atmega328p-datasheet"
+      ],
+      "power": {
+        "tr": "VCC, AVCC ve tüm GND pinlerini bağlayın; osilatör/fuse ve RESET koşulları Arduino kartından bağımsızdır.",
+        "en": "Connect VCC, AVCC and every GND pin; oscillator/fuse and RESET conditions are independent of Arduino boards."
+      },
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "atmega328p-datasheet"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "notes": [],
+      "pinSource": "https://docs.arduino.cc/resources/datasheets/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=17",
+      "datasheet": "https://docs.arduino.cc/resources/datasheets/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf",
+      "documents": []
+    },
+    "atmega328p-qfn28": {
+      "chip": "ATmega328P",
+      "sources": [
+        "atmega328p-datasheet"
+      ],
+      "power": {
+        "tr": "VCC, AVCC ve tüm GND pinlerini bağlayın; osilatör/fuse ve RESET koşulları Arduino kartından bağımsızdır.",
+        "en": "Connect VCC, AVCC and every GND pin; oscillator/fuse and RESET conditions are independent of Arduino boards."
+      },
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "atmega328p-datasheet"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "notes": [],
+      "pinSource": "https://docs.arduino.cc/resources/datasheets/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf#page=15",
+      "datasheet": "https://docs.arduino.cc/resources/datasheets/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf",
+      "documents": []
+    },
+    "atmega2560-tqfp100": {
+      "chip": "ATmega2560",
+      "sources": [
+        "atmega2560-datasheet"
+      ],
+      "power": {
+        "tr": "VCC, AVCC ve tüm GND pinlerini bağlayın; osilatör/fuse ve RESET koşulları Arduino kartından bağımsızdır.",
+        "en": "Connect VCC, AVCC and every GND pin; oscillator/fuse and RESET conditions are independent of Arduino boards."
+      },
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "atmega2560-datasheet"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "notes": [],
+      "pinSource": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/ATmega640-1280-1281-2560-2561-Datasheet-DS40002211A.pdf#page=2",
+      "datasheet": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/ATmega640-1280-1281-2560-2561-Datasheet-DS40002211A.pdf",
+      "documents": []
+    },
+    "atmega2561-tqfp64": {
+      "chip": "ATmega2561",
+      "sources": [
+        "atmega2560-datasheet"
+      ],
+      "power": {
+        "tr": "VCC, AVCC ve tüm GND pinlerini bağlayın; osilatör/fuse ve RESET koşulları Arduino kartından bağımsızdır.",
+        "en": "Connect VCC, AVCC and every GND pin; oscillator/fuse and RESET conditions are independent of Arduino boards."
+      },
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "atmega2560-datasheet"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "notes": [],
+      "pinSource": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/ATmega640-1280-1281-2560-2561-Datasheet-DS40002211A.pdf#page=4",
+      "datasheet": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/ATmega640-1280-1281-2560-2561-Datasheet-DS40002211A.pdf",
+      "documents": []
+    },
+    "arduino-uno-r3": {
+      "chip": "ATmega328P",
+      "clock": "16 MHz",
+      "sources": [
+        "arduino-uno-r3-manual",
+        "arduino-uno-r3-circuit"
+      ],
+      "power": {
+        "tr": "USB: 5 V; başlık GPIO: 5 V. VIN sınırı için kart kılavuzuna bakın.",
+        "en": "USB: 5 V; header GPIO: 5 V. See the board manual for VIN limits."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Flash kapasitesi toplamdır; önyükleyici bir bölümünü kullanır. USB seri arabirimi ile başlıktaki UART aynı bağlantı değildir.",
+            "en": "Flash capacity is the total; the bootloader occupies part of it. USB serial and the header UART are separate interfaces."
+          },
+          "sources": [
+            "arduino-uno-r3-manual"
+          ]
+        }
+      ],
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "arduino-uno-r3-manual",
+          "arduino-uno-r3-circuit"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "pinSource": "https://docs.arduino.cc/resources/pinouts/A000066-full-pinout.pdf",
+      "datasheet": "https://docs.arduino.cc/resources/datasheets/A000066-datasheet.pdf",
+      "documents": [
+        "arduino-uno-r3-schematic"
+      ]
+    },
+    "arduino-nano-classic": {
+      "chip": "ATmega328P",
+      "clock": "16 MHz",
+      "sources": [
+        "arduino-nano-classic-manual",
+        "arduino-nano-classic-circuit"
+      ],
+      "power": {
+        "tr": "USB: 5 V; başlık GPIO: 5 V. VIN sınırı için kart kılavuzuna bakın.",
+        "en": "USB: 5 V; header GPIO: 5 V. See the board manual for VIN limits."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Flash kapasitesi toplamdır; önyükleyici bir bölümünü kullanır. USB seri arabirimi ile başlıktaki UART aynı bağlantı değildir.",
+            "en": "Flash capacity is the total; the bootloader occupies part of it. USB serial and the header UART are separate interfaces."
+          },
+          "sources": [
+            "arduino-nano-classic-manual"
+          ]
+        },
+        {
+          "text": {
+            "tr": "A6/A7 yalnızca analog girişlerdir. Nano ailesi 2008’de ATmega168 ile tanıtıldı; bu profil ATmega328P sürümüdür.",
+            "en": "A6/A7 are analog inputs only. Nano family launched in 2008 with ATmega168; this profile is the ATmega328P version."
+          },
+          "sources": [
+            "nano-history"
+          ]
+        }
+      ],
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "arduino-nano-classic-manual",
+          "arduino-nano-classic-circuit"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "pinSource": "https://docs.arduino.cc/resources/pinouts/A000005-full-pinout.pdf",
+      "datasheet": "https://docs.arduino.cc/resources/pinouts/A000005-full-pinout.pdf",
+      "documents": [
+        "arduino-nano-classic-schematic"
+      ]
+    },
+    "arduino-mega-2560": {
+      "chip": "ATmega2560",
+      "clock": "16 MHz",
+      "sources": [
+        "arduino-mega-2560-manual",
+        "arduino-mega-2560-circuit"
+      ],
+      "power": {
+        "tr": "USB: 5 V; başlık GPIO: 5 V. VIN sınırı için kart kılavuzuna bakın.",
+        "en": "USB: 5 V; header GPIO: 5 V. See the board manual for VIN limits."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Flash kapasitesi toplamdır; önyükleyici bir bölümünü kullanır. USB seri arabirimi ile başlıktaki UART aynı bağlantı değildir.",
+            "en": "Flash capacity is the total; the bootloader occupies part of it. USB serial and the header UART are separate interfaces."
+          },
+          "sources": [
+            "arduino-mega-2560-manual"
+          ]
+        },
+        {
+          "text": {
+            "tr": "4 donanım UART; I²C D20/SDA ve D21/SCL. SPI: D50/MISO, D51/MOSI, D52/SCK, D53/SS ve tekrarlanan ICSP ağları.",
+            "en": "4 hardware UARTs; I²C on D20/SDA and D21/SCL. SPI: D50/MISO, D51/MOSI, D52/SCK, D53/SS and duplicated ICSP nets."
+          },
+          "sources": [
+            "arduino-mega-2560-manual"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2010",
+        "kind": "documented",
+        "sources": [
+          "mega-history"
+        ]
+      },
+      "pinSource": "https://docs.arduino.cc/resources/pinouts/A000067-full-pinout.pdf",
+      "datasheet": "https://docs.arduino.cc/resources/datasheets/A000067-datasheet.pdf",
+      "documents": [
+        "arduino-mega-2560-schematic"
+      ]
+    },
+    "arduino-leonardo": {
+      "chip": "ATmega32U4",
+      "clock": "16 MHz",
+      "sources": [
+        "arduino-leonardo-manual",
+        "arduino-leonardo-circuit"
+      ],
+      "power": {
+        "tr": "USB: 5 V; başlık GPIO: 5 V. VIN sınırı için kart kılavuzuna bakın.",
+        "en": "USB: 5 V; header GPIO: 5 V. See the board manual for VIN limits."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Flash kapasitesi toplamdır; önyükleyici bir bölümünü kullanır. USB seri arabirimi ile başlıktaki UART aynı bağlantı değildir.",
+            "en": "Flash capacity is the total; the bootloader occupies part of it. USB serial and the header UART are separate interfaces."
+          },
+          "sources": [
+            "arduino-leonardo-manual"
+          ]
+        },
+        {
+          "text": {
+            "tr": "I²C: D2/D3; SPI: ICSP başlığı. UNO’nun D11–D13 SPI eşlemesini kullanmayın. USB ATmega32U4 içindedir.",
+            "en": "I²C: D2/D3; SPI: ICSP header. Do not use the UNO D11–D13 SPI mapping. USB is native to ATmega32U4."
+          },
+          "sources": [
+            "arduino-leonardo-pinout"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2012",
+        "kind": "documented",
+        "sources": [
+          "arduino-leonardo-history"
+        ]
+      },
+      "pinSource": "https://docs.arduino.cc/resources/pinouts/A000057-full-pinout.pdf",
+      "datasheet": "https://docs.arduino.cc/resources/pinouts/A000057-full-pinout.pdf",
+      "documents": []
+    },
+    "arduino-micro": {
+      "chip": "ATmega32U4",
+      "clock": "16 MHz",
+      "sources": [
+        "arduino-micro-manual",
+        "arduino-micro-circuit"
+      ],
+      "power": {
+        "tr": "USB: 5 V; başlık GPIO: 5 V. VIN sınırı için kart kılavuzuna bakın.",
+        "en": "USB: 5 V; header GPIO: 5 V. See the board manual for VIN limits."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Flash kapasitesi toplamdır; önyükleyici bir bölümünü kullanır. USB seri arabirimi ile başlıktaki UART aynı bağlantı değildir.",
+            "en": "Flash capacity is the total; the bootloader occupies part of it. USB serial and the header UART are separate interfaces."
+          },
+          "sources": [
+            "arduino-micro-manual"
+          ]
+        },
+        {
+          "text": {
+            "tr": "ATmega32U4 yerel USB desteği sunar. SPI, ICSP temaslarında; I²C, D2/SDA ve D3/SCL üzerindedir.",
+            "en": "ATmega32U4 provides native USB. SPI is on ICSP contacts; I²C uses D2/SDA and D3/SCL."
+          },
+          "sources": [
+            "arduino-micro-manual"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2012-11-08",
+        "kind": "launch",
+        "sources": [
+          "arduino-micro-history"
+        ]
+      },
+      "pinSource": "https://docs.arduino.cc/resources/pinouts/A000053-full-pinout.pdf",
+      "datasheet": "https://docs.arduino.cc/resources/pinouts/A000053-full-pinout.pdf",
+      "documents": []
+    },
+    "arduino-nano-every": {
+      "chip": "ATmega4809",
+      "clock": "20 MHz",
+      "sources": [
+        "arduino-nano-every-manual",
+        "arduino-nano-every-circuit"
+      ],
+      "power": {
+        "tr": "USB: 5 V; başlık GPIO: 5 V. VIN sınırı için kart kılavuzuna bakın.",
+        "en": "USB: 5 V; header GPIO: 5 V. See the board manual for VIN limits."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "ATmega4809: 48 KB Flash, 6 KB SRAM ve 256 B EEPROM. USB köprüsü SAMD11’dir; Nano Classic ile aynı AVR yazmaç haritasını kullanmaz.",
+            "en": "ATmega4809: 48 KB Flash, 6 KB SRAM and 256 B EEPROM. USB bridge is SAMD11; it does not use the Nano Classic AVR register map."
+          },
+          "sources": [
+            "arduino-nano-every-manual"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2019-05-17",
+        "kind": "announcement",
+        "sources": [
+          "arduino-nano-every-history"
+        ]
+      },
+      "pinSource": "https://docs.arduino.cc/resources/pinouts/ABX00028-full-pinout.pdf",
+      "datasheet": "https://docs.arduino.cc/resources/datasheets/ABX00028-datasheet.pdf",
+      "documents": []
+    },
+    "arduino-nano-33-ble-sense-rev2": {
+      "chip": "nRF52840",
+      "clock": "64 MHz",
+      "sources": [
+        "arduino-nano-33-ble-sense-rev2-manual",
+        "arduino-nano-33-ble-sense-rev2-circuit"
+      ],
+      "power": {
+        "tr": "USB: 5 V; başlık GPIO: 3.3 V. VIN sınırı için kart kılavuzuna bakın.",
+        "en": "USB: 5 V; header GPIO: 3.3 V. See the board manual for VIN limits."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "NINA-B306/nRF52840: BLE, yerel USB ve sensörler. Rev2 IMU: BMI270 + BMM150; sıcaklık/nem: HS3003. GPIO 5 V toleranslı değildir.",
+            "en": "NINA-B306/nRF52840: BLE, native USB and sensors. Rev2 IMU: BMI270 + BMM150; temperature/humidity: HS3003. GPIO is not 5 V tolerant."
+          },
+          "sources": [
+            "arduino-nano-33-ble-sense-rev2-manual"
+          ]
+        }
+      ],
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "arduino-nano-33-ble-sense-rev2-manual",
+          "arduino-nano-33-ble-sense-rev2-circuit"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "pinSource": "https://docs.arduino.cc/resources/pinouts/ABX00069-full-pinout.pdf",
+      "datasheet": "https://docs.arduino.cc/resources/pinouts/ABX00069-full-pinout.pdf",
+      "documents": []
+    },
+    "arduino-uno-r4-minima": {
+      "chip": "Renesas RA4M1",
+      "clock": "48 MHz",
+      "sources": [
+        "arduino-uno-r4-minima-manual",
+        "arduino-uno-r4-minima-circuit"
+      ],
+      "power": {
+        "tr": "USB: 5 V; başlık GPIO: 5 V. VIN sınırı için kart kılavuzuna bakın.",
+        "en": "USB: 5 V; header GPIO: 5 V. See the board manual for VIN limits."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "RA4M1: 12 bit DAC, RTC ve CAN denetleyicisi. CAN fiziksel hat bağlantısı için harici alıcı-verici gerekir.",
+            "en": "RA4M1: 12-bit DAC, RTC and CAN controller. A CAN physical bus connection requires an external transceiver."
+          },
+          "sources": [
+            "arduino-uno-r4-minima-manual"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2023-06-26",
+        "kind": "launch",
+        "sources": [
+          "r4-launch"
+        ]
+      },
+      "pinSource": "https://docs.arduino.cc/resources/pinouts/ABX00080-full-pinout.pdf",
+      "datasheet": "https://docs.arduino.cc/resources/datasheets/ABX00080-datasheet.pdf",
+      "documents": []
+    },
+    "arduino-uno-r4-wifi": {
+      "chip": "Renesas RA4M1",
+      "clock": "48 MHz",
+      "sources": [
+        "arduino-uno-r4-wifi-manual",
+        "arduino-uno-r4-wifi-circuit"
+      ],
+      "power": {
+        "tr": "USB: 5 V; başlık GPIO: 5 V. VIN sınırı için kart kılavuzuna bakın.",
+        "en": "USB: 5 V; header GPIO: 5 V. See the board manual for VIN limits."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "RA4M1 ana uygulama MCU’sudur; ESP32-S3 Wi-Fi/BLE ve USB seri köprüsünü sağlar. İki MCU’nun RAM ve Flash kapasitelerini toplamayın.",
+            "en": "RA4M1 is the application MCU; ESP32-S3 provides Wi-Fi/BLE and the USB serial bridge. Do not sum the two MCUs’ RAM and Flash."
+          },
+          "sources": [
+            "arduino-uno-r4-wifi-manual"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2023-06-26",
+        "kind": "launch",
+        "sources": [
+          "r4-launch"
+        ]
+      },
+      "pinSource": "https://docs.arduino.cc/resources/pinouts/ABX00087-full-pinout.pdf",
+      "datasheet": "https://docs.arduino.cc/resources/datasheets/ABX00087-datasheet.pdf",
+      "documents": []
+    },
+    "arduino-nano-esp32": {
+      "chip": "ESP32-S3",
+      "clock": "240 MHz",
+      "sources": [
+        "arduino-nano-esp32-manual",
+        "arduino-nano-esp32-circuit"
+      ],
+      "power": {
+        "tr": "USB: 5 V; başlık GPIO: 3.3 V. VIN sınırı için kart kılavuzuna bakın.",
+        "en": "USB: 5 V; header GPIO: 3.3 V. See the board manual for VIN limits."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "u-blox NORA-W106 / ESP32-S3. Arduino D numarası ve ESP32 GPIO numarası farklıdır; Tools > Pin Numbering seçimini eşleştirin.",
+            "en": "u-blox NORA-W106 / ESP32-S3. Arduino D labels differ from ESP32 GPIO numbers; match Tools > Pin Numbering to your code."
+          },
+          "sources": [
+            "arduino-nano-esp32-manual"
+          ]
+        }
+      ],
+      "flash": "16 MB QSPI Flash",
+      "psram": "8 MB PSRAM",
+      "date": {
+        "value": "2023-07-17",
+        "kind": "announcement",
+        "sources": [
+          "arduino-nano-esp32-history"
+        ]
+      },
+      "pinSource": "https://docs.arduino.cc/resources/pinouts/ABX00083-full-pinout.pdf",
+      "datasheet": "https://docs.arduino.cc/resources/schematics/ABX00083-schematics.pdf",
+      "documents": [
+        "arduino-nano-esp32-schematic"
+      ]
+    },
+    "esp32-devkitc-v4": {
+      "chip": "ESP32",
+      "flash": {
+        "tr": "WROOM-32E: 4 / 8 / 16 MB; sipariş koduna bağlı",
+        "en": "WROOM-32E: 4 / 8 / 16 MB; depends on order code"
+      },
+      "sources": [
+        "esp32-datasheet",
+        "esp32-devkit-guide",
+        "wroom32e-module"
+      ],
+      "power": {
+        "tr": "USB / 5V / 3V3 güç seçeneklerini kılavuzdaki kurallara göre kullanın. GPIO: 3.3 V.",
+        "en": "Use USB / 5V / 3V3 power options according to the guide. GPIO: 3.3 V."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "GPIO matrix satırları yönlendirme yeteneğini gösterir; varsayılan yazılım pinleri değildir. Strapping pinlerini reset sırasında uygun seviyede tutun.",
+            "en": "GPIO matrix rows describe routing capability, not firmware defaults. Maintain correct strapping levels during reset."
+          },
+          "sources": [
+            "esp32-datasheet",
+            "esp32-devkit-guide"
+          ]
+        }
+      ],
+      "psram": {
+        "tr": "Bu profilde takılı PSRAM yok",
+        "en": "No fitted PSRAM in this profile"
+      },
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "esp32-datasheet",
+          "esp32-devkit-guide"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "pinSource": "https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32/esp32-devkitc/user_guide.html",
+      "datasheet": "https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf",
+      "documents": [
+        "esp32-v4-circuit"
+      ]
+    },
+    "esp32-devkitc-v4-wrover": {
+      "chip": "ESP32",
+      "flash": {
+        "tr": "WROVER varyantına bağlı; modül kodunu kontrol edin",
+        "en": "Depends on WROVER variant; check module code"
+      },
+      "sources": [
+        "esp32-datasheet",
+        "esp32-devkit-guide"
+      ],
+      "power": {
+        "tr": "USB / 5V / 3V3 güç seçeneklerini kılavuzdaki kurallara göre kullanın. GPIO: 3.3 V.",
+        "en": "Use USB / 5V / 3V3 power options according to the guide. GPIO: 3.3 V."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "GPIO matrix satırları yönlendirme yeteneğini gösterir; varsayılan yazılım pinleri değildir. Strapping pinlerini reset sırasında uygun seviyede tutun.",
+            "en": "GPIO matrix rows describe routing capability, not firmware defaults. Maintain correct strapping levels during reset."
+          },
+          "sources": [
+            "esp32-datasheet",
+            "esp32-devkit-guide"
+          ]
+        }
+      ],
+      "psram": {
+        "tr": "WROVER modülüne bağlı; B/E sürümlerinde 8 MB",
+        "en": "Depends on WROVER module; B/E variants have 8 MB"
+      },
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "esp32-datasheet",
+          "esp32-devkit-guide"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "pinSource": "https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32/esp32-devkitc/user_guide.html",
+      "datasheet": "https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf",
+      "documents": [
+        "esp32-v4-circuit"
+      ]
+    },
+    "esp32-c3-devkitm-1": {
+      "chip": "ESP32-C3",
+      "flash": "4 MB Flash",
+      "sources": [
+        "esp32c3-datasheet",
+        "esp32c3-devkit-guide"
+      ],
+      "power": {
+        "tr": "USB / 5V / 3V3 güç seçeneklerini kılavuzdaki kurallara göre kullanın. GPIO: 3.3 V.",
+        "en": "Use USB / 5V / 3V3 power options according to the guide. GPIO: 3.3 V."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "GPIO matrix satırları yönlendirme yeteneğini gösterir; varsayılan yazılım pinleri değildir. Strapping pinlerini reset sırasında uygun seviyede tutun.",
+            "en": "GPIO matrix rows describe routing capability, not firmware defaults. Maintain correct strapping levels during reset."
+          },
+          "sources": [
+            "esp32c3-datasheet",
+            "esp32c3-devkit-guide"
+          ]
+        }
+      ],
+      "psram": {
+        "tr": "Bu profilde takılı PSRAM yok",
+        "en": "No fitted PSRAM in this profile"
+      },
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "esp32c3-datasheet",
+          "esp32c3-devkit-guide"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "pinSource": "https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32c3/esp32-c3-devkitm-1/user_guide.html",
+      "datasheet": "https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf",
+      "documents": [
+        "esp32c3-circuit"
+      ]
+    },
+    "esp32-s3-devkitc-1": {
+      "chip": "ESP32-S3",
+      "flash": "8 MB Flash",
+      "sources": [
+        "esp32s3-datasheet",
+        "esp32s3-devkit-guide"
+      ],
+      "power": {
+        "tr": "USB / 5V / 3V3 güç seçeneklerini kılavuzdaki kurallara göre kullanın. GPIO: 3.3 V.",
+        "en": "Use USB / 5V / 3V3 power options according to the guide. GPIO: 3.3 V."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "GPIO matrix satırları yönlendirme yeteneğini gösterir; varsayılan yazılım pinleri değildir. Strapping pinlerini reset sırasında uygun seviyede tutun.",
+            "en": "GPIO matrix rows describe routing capability, not firmware defaults. Maintain correct strapping levels during reset."
+          },
+          "sources": [
+            "esp32s3-datasheet",
+            "esp32s3-devkit-guide"
+          ]
+        },
+        {
+          "text": {
+            "tr": "v1.1 RGB LED: GPIO38; ilk sürümde GPIO48. N8R8 sürümünde GPIO35/36/37 Octal PSRAM için ayrılmıştır.",
+            "en": "v1.1 RGB LED: GPIO38; initial revision uses GPIO48. On N8R8, GPIO35/36/37 are reserved for Octal PSRAM."
+          },
+          "sources": [
+            "esp32s3-devkit-guide"
+          ]
+        }
+      ],
+      "psram": {
+        "tr": "Bu profilde takılı PSRAM yok",
+        "en": "No fitted PSRAM in this profile"
+      },
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "esp32s3-datasheet",
+          "esp32s3-devkit-guide"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "pinSource": "https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32s3/esp32-s3-devkitc-1/user_guide_v1.1.html",
+      "datasheet": "https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf",
+      "documents": [
+        "esp32s3-circuit"
+      ]
+    },
+    "esp32-s3-devkitc-1-octal": {
+      "chip": "ESP32-S3",
+      "flash": "8 MB Flash",
+      "sources": [
+        "esp32s3-datasheet",
+        "esp32s3-devkit-guide"
+      ],
+      "power": {
+        "tr": "USB / 5V / 3V3 güç seçeneklerini kılavuzdaki kurallara göre kullanın. GPIO: 3.3 V.",
+        "en": "Use USB / 5V / 3V3 power options according to the guide. GPIO: 3.3 V."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "GPIO matrix satırları yönlendirme yeteneğini gösterir; varsayılan yazılım pinleri değildir. Strapping pinlerini reset sırasında uygun seviyede tutun.",
+            "en": "GPIO matrix rows describe routing capability, not firmware defaults. Maintain correct strapping levels during reset."
+          },
+          "sources": [
+            "esp32s3-datasheet",
+            "esp32s3-devkit-guide"
+          ]
+        },
+        {
+          "text": {
+            "tr": "v1.1 RGB LED: GPIO38; ilk sürümde GPIO48. N8R8 sürümünde GPIO35/36/37 Octal PSRAM için ayrılmıştır.",
+            "en": "v1.1 RGB LED: GPIO38; initial revision uses GPIO48. On N8R8, GPIO35/36/37 are reserved for Octal PSRAM."
+          },
+          "sources": [
+            "esp32s3-devkit-guide"
+          ]
+        }
+      ],
+      "psram": "8 MB Octal PSRAM",
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "esp32s3-datasheet",
+          "esp32s3-devkit-guide"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "pinSource": "https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32s3/esp32-s3-devkitc-1/user_guide_v1.1.html",
+      "datasheet": "https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf",
+      "documents": [
+        "esp32s3-circuit"
+      ]
+    },
+    "esp32-c6-devkitc-1": {
+      "chip": "ESP32-C6",
+      "flash": "8 MB Flash",
+      "sources": [
+        "esp32c6-datasheet",
+        "esp32c6-devkit-guide"
+      ],
+      "power": {
+        "tr": "USB / 5V / 3V3 güç seçeneklerini kılavuzdaki kurallara göre kullanın. GPIO: 3.3 V.",
+        "en": "Use USB / 5V / 3V3 power options according to the guide. GPIO: 3.3 V."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "GPIO matrix satırları yönlendirme yeteneğini gösterir; varsayılan yazılım pinleri değildir. Strapping pinlerini reset sırasında uygun seviyede tutun.",
+            "en": "GPIO matrix rows describe routing capability, not firmware defaults. Maintain correct strapping levels during reset."
+          },
+          "sources": [
+            "esp32c6-datasheet",
+            "esp32c6-devkit-guide"
+          ]
+        }
+      ],
+      "psram": {
+        "tr": "Bu profilde takılı PSRAM yok",
+        "en": "No fitted PSRAM in this profile"
+      },
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "esp32c6-datasheet",
+          "esp32c6-devkit-guide"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "pinSource": "https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32c6/esp32-c6-devkitc-1/user_guide.html",
+      "datasheet": "https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf",
+      "documents": [
+        "esp32c6-circuit"
+      ]
+    },
+    "xiao-rp2040": {
+      "chip": "RP2040",
+      "flash": "2 MB QSPI Flash",
+      "sources": [
+        "xiao-rp-spec",
+        "xiao-rp2040-schematic"
+      ],
+      "power": {
+        "tr": "USB-C: 5 V; GPIO: 3.3 V. 5 V güç pini GPIO toleransı anlamına gelmez.",
+        "en": "USB-C: 5 V; GPIO: 3.3 V. A 5 V power pin does not imply 5 V GPIO tolerance."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Standart 14 temaslı XIAO sürümü: 11 GPIO + 3 güç/toprak teması. Plus sürümlerinin ek pinlerini bu haritaya uygulamayın.",
+            "en": "Standard 14-contact XIAO: 11 GPIO + 3 power/ground contacts. Do not apply Plus-variant extra pins to this map."
+          },
+          "sources": [
+            "xiao-rp-spec"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2021",
+        "kind": "launch",
+        "sources": [
+          "xiao-rp-history"
+        ]
+      },
+      "pinSource": "https://wiki.seeedstudio.com/XIAO-RP2040/",
+      "datasheet": "https://files.seeedstudio.com/wiki/XIAO-RP2040/res/Seeed-Studio-XIAO-RP2040-v1.3.pdf",
+      "documents": [
+        "xiao-rp2040-schematic"
+      ]
+    },
+    "xiao-esp32c3": {
+      "chip": "ESP32-C3",
+      "flash": "4 MB Flash",
+      "sources": [
+        "xiao-c3-spec",
+        "xiao-esp32c3-schematic"
+      ],
+      "power": {
+        "tr": "USB-C: 5 V; GPIO: 3.3 V. 5 V güç pini GPIO toleransı anlamına gelmez.",
+        "en": "USB-C: 5 V; GPIO: 3.3 V. A 5 V power pin does not imply 5 V GPIO tolerance."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Standart 14 temaslı XIAO sürümü: 11 GPIO + 3 güç/toprak teması. Plus sürümlerinin ek pinlerini bu haritaya uygulamayın.",
+            "en": "Standard 14-contact XIAO: 11 GPIO + 3 power/ground contacts. Do not apply Plus-variant extra pins to this map."
+          },
+          "sources": [
+            "xiao-c3-spec"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2022-07-07",
+        "kind": "launch",
+        "sources": [
+          "xiao-c3-history"
+        ]
+      },
+      "pinSource": "https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/",
+      "datasheet": "https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO_ESP32C3_v1.3_SCH_260116.pdf",
+      "documents": [
+        "xiao-esp32c3-schematic"
+      ]
+    },
+    "xiao-samd21": {
+      "chip": "SAMD21",
+      "flash": "256 KB internal Flash",
+      "sources": [
+        "xiao-sam-spec",
+        "xiao-samd21-schematic"
+      ],
+      "power": {
+        "tr": "USB-C: 5 V; GPIO: 3.3 V. 5 V güç pini GPIO toleransı anlamına gelmez.",
+        "en": "USB-C: 5 V; GPIO: 3.3 V. A 5 V power pin does not imply 5 V GPIO tolerance."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Standart 14 temaslı XIAO sürümü: 11 GPIO + 3 güç/toprak teması. Plus sürümlerinin ek pinlerini bu haritaya uygulamayın.",
+            "en": "Standard 14-contact XIAO: 11 GPIO + 3 power/ground contacts. Do not apply Plus-variant extra pins to this map."
+          },
+          "sources": [
+            "xiao-sam-spec"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2020",
+        "kind": "documented",
+        "sources": [
+          "xiao-sam-history"
+        ]
+      },
+      "pinSource": "https://wiki.seeedstudio.com/Seeeduino-XIAO/",
+      "datasheet": "https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-v1.0-SCH-191112.pdf",
+      "documents": [
+        "xiao-samd21-schematic"
+      ]
+    },
+    "microbit-v2": {
+      "chip": "nRF52833",
+      "sources": [
+        "microbit-spec",
+        "microbit-v2-schematic"
+      ],
+      "power": {
+        "tr": "USB: 5 V veya pil bağlantısı; kenar konektörü mantığı yaklaşık 3 V.",
+        "en": "USB: 5 V or battery connector; edge-connector logic approximately 3 V."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "LED matrisi, düğmeler ve dokunma işlevleri bazı GPIO’ları paylaşır. nRF52833 uygulama MCU’su ile USB arayüz işlemcisini ayırın.",
+            "en": "LED matrix, buttons and touch functions share some GPIOs. Distinguish nRF52833 application MCU from the USB interface processor."
+          },
+          "sources": [
+            "microbit-spec"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2020-10-13",
+        "kind": "announcement",
+        "sources": [
+          "microbit-history"
+        ]
+      },
+      "pinSource": "https://tech.microbit.org/hardware/edgeconnector/",
+      "datasheet": "https://tech.microbit.org/hardware/schematic/",
+      "documents": [
+        "microbit-v2-schematic"
+      ]
+    },
+    "adafruit-feather-rp2040": {
+      "chip": "RP2040",
+      "flash": "8 MB SPI Flash",
+      "sources": [
+        "feather-spec"
+      ],
+      "power": {
+        "tr": "USB: 5 V / tek hücreli LiPo; GPIO: 3.3 V. Kart üstü LiPo şarjı: 200 mA.",
+        "en": "USB: 5 V / single-cell LiPo; GPIO: 3.3 V. On-board LiPo charging: 200 mA."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "STEMMA QT, kartın I²C hattını kullanır. 133 MHz yonganın sınırıdır; ürün rehberi yaklaşık 125 MHz çalışma değerini de belirtir.",
+            "en": "STEMMA QT uses the board I²C bus. 133 MHz is the chip limit; the product guide also lists approximately 125 MHz operation."
+          },
+          "sources": [
+            "feather-spec"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2021-03-05",
+        "kind": "documented",
+        "sources": [
+          "feather-spec"
+        ]
+      },
+      "pinSource": "https://github.com/adafruit/Adafruit-Feather-RP2040-PCB/blob/main/Adafruit%20Feather%20RP2040%20pinout.pdf",
+      "datasheet": "https://learn.adafruit.com/adafruit-feather-rp2040-pico/downloads",
+      "documents": []
+    },
+    "teensy-41": {
+      "chip": "i.MX RT1062",
+      "flash": {
+        "tr": "8 MB kart üstü Flash; 7936 KB program alanı",
+        "en": "8 MB on-board Flash; 7936 KB program space"
+      },
+      "eeprom": {
+        "tr": "4 KB emüle EEPROM",
+        "en": "4 KB emulated EEPROM"
+      },
+      "sources": [
+        "teensy-spec",
+        "teensy41-schematic"
+      ],
+      "power": {
+        "tr": "USB / VIN: 5 V; GPIO: 3.3 V, 5 V toleranslı değil.",
+        "en": "USB / VIN: 5 V; GPIO: 3.3 V, not 5 V tolerant."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Flash’ın üst 256 KB’ı EEPROM emülasyonu ve kurtarma programına ayrılmıştır. Ek RAM/Flash lehim yerleri boş olabilir.",
+            "en": "Top 256 KB of Flash is reserved for EEPROM emulation and restore code. Extra RAM/Flash footprints may be empty."
+          },
+          "sources": [
+            "teensy-spec"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2020",
+        "kind": "launch",
+        "sources": [
+          "teensy-launch"
+        ]
+      },
+      "pinSource": "https://www.pjrc.com/teensy/card11a_rev4_web.pdf",
+      "datasheet": "https://www.pjrc.com/teensy/card11b_rev4_web.pdf",
+      "documents": [
+        "teensy41-schematic"
+      ]
+    },
+    "beaglebone-black": {
+      "chip": "AM3358",
+      "sources": [
+        "bbb-spec",
+        "beaglebone-black-p8-p9"
+      ],
+      "power": {
+        "tr": "5 V DC / USB; dijital GPIO: 3.3 V; analog girişler en fazla 1.8 V.",
+        "en": "5 V DC / USB; digital GPIO: 3.3 V; analog inputs maximum 1.8 V."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "P8/P9 pinleri HDMI ve eMMC ile paylaşılabilir. Device Tree/pinmux ayarları gerekir. Analog pinlere 3.3 V uygulamayın.",
+            "en": "P8/P9 pins may be shared with HDMI and eMMC. Device Tree/pinmux configuration is required. Do not apply 3.3 V to analog inputs."
+          },
+          "sources": [
+            "beaglebone-black-p8-p9"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2013",
+        "kind": "documented",
+        "sources": [
+          "bbb-history"
+        ]
+      },
+      "pinSource": "https://docs.beagleboard.org/boards/beaglebone/black/ch07.html",
+      "datasheet": "https://docs.beagleboard.org/boards/beaglebone/black/ch07.html",
+      "documents": []
+    },
+    "jetson-orin-nano": {
+      "chip": "Tegra234",
+      "sources": [
+        "jetson-spec",
+        "jetson-storage",
+        "jetson-orin-nano-carrier"
+      ],
+      "power": {
+        "tr": "DC jak ile besleme; USB-C veri içindir. J12 GPIO: 3.3 V.",
+        "en": "Power through DC jack; USB-C is for data. J12 GPIO: 3.3 V."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "P3768 taşıyıcı kart başlığıdır. RAM ve saat takılı modüle/JetPack güç moduna bağlıdır; Linux veri yolu numarası taşıyıcı sinyal adıyla aynı olmak zorunda değildir.",
+            "en": "This is the P3768 carrier header. RAM and clock depend on the fitted module/JetPack power mode; Linux bus numbers need not match carrier signal names."
+          },
+          "sources": [
+            "jetson-spec",
+            "jetson-orin-nano-carrier"
+          ]
+        }
+      ],
+      "date": {
+        "value": null,
+        "kind": "unverified",
+        "sources": [
+          "jetson-spec",
+          "jetson-storage",
+          "jetson-orin-nano-carrier"
+        ],
+        "reason": {
+          "tr": "Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil belgelerde doğrulanamadı. Belge revizyon tarihi üretim yılı değildir.",
+          "en": "First production or sale date for this exact model/revision was not established in the reviewed primary documents. A document revision date is not a production year."
+        }
+      },
+      "pinSource": "https://developer.nvidia.com/downloads/assets/embedded/secure/jetson/orin_nano/docs/jetson_orin_nano_devkit_carrier_board_specification_sp.pdf#page=25",
+      "datasheet": "https://developer.nvidia.com/downloads/assets/embedded/secure/jetson/orin_nano/docs/jetson_orin_nano_devkit_carrier_board_specification_sp.pdf",
+      "documents": []
+    }
+  }
+}

@@ -72,6 +72,13 @@
   "My bookshelf": "Kitaplığım",
   "Email": "E-posta",
   "Site source code": "Site kaynak kodu",
+  "Site sections": "Site bölümleri",
+  "projects/": "projeler/",
+  "archive/": "arşiv/",
+  "bookshelf/": "kitaplık/",
+  "tools": "araçlar",
+  "contact": "iletişim",
+  "Back to top": "Başa dön",
   "Post navigation": "Yazı gezinmesi",
   "Original post on Medium": "Medium'daki özgün yazı",
   "← All posts": "← Tüm yazılar",
@@ -333,7 +340,8 @@
   "Main navigation": "Ana menü",
   "Reading routes": "Okuma rotaları",
   "Resources": "Kaynaklar",
-  "Labs": "Laboratuvarlar"
+  "Labs": "Laboratuvarlar",
+  "Search failed. Try again.": "Arama başarısız oldu. Yeniden deneyin."
 };
   const state = window.ZaryobLanguage;
   const { supported } = state;
@@ -397,7 +405,9 @@
   document.addEventListener('DOMContentLoaded', () => {
     apply();
     document.querySelectorAll('[data-console-language]').forEach(select => select.addEventListener('change', () => setLanguage(select.value)));
-    const destination = translationTarget();
+    // Follow the other edition only for an explicit choice (saved selection or ?lang=).
+    // A browser-language guess translates the controls and leaves the reader on the page.
+    const destination = state.explicit ? translationTarget() : null;
     if (destination) location.replace(destination);
   });
 })();

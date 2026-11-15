@@ -126,15 +126,30 @@ def build_expanded_arduino(cache,docs,obs,ref,verified_on,base_boards):
             elif name=='BOOT':pin['noteKey']='arduinoBootNote'
             elif name=='AREF':pin['noteKey']='arduinoArefNote'
             elif name=='VIN':pin['noteKey']='arduinoVinNote'
-            elif name=='5V' and is_ble:pin['noteKey']='arduinoBle5VNote'
+            elif name=='5V' and is_ble:
+                with pdfplumber.open(cache/docs['arduino-nano-33-ble-sense-rev2-schematic']['file']) as sheet:
+                    words={w['text'] for w in sheet.pages[0].extract_words()}
+                # SJ1 and SJ5 are parallel pads between VUSB and this contact; the drawn note "SJ1 on BOTTOM"
+                # is not extractable text and was read from the rendered sheet.
+                assert {'SJ1','VUSB'}<=words
+                jumper=ref(id+'-vusb-jumper','arduino-nano-33-ble-sense-rev2-schematic',1,'Sheet 1 · SJ1/SJ5 between VUSB and the header 5V contact · note "SJ1 on BOTTOM"','visual-diagram')
+                pin['noteKey']='arduinoBle5VNote';pin['noteEvidence']={'arduinoBle5VNote':[jumper]};pin['evidence'].append(jumper)
             elif name=='RESET':pin['noteKey']='arduinoResetNote'
+            elif name=='IOREF' and r4:
+                sheet_id=id+'-datasheet'
+                assert re.search(r'\|\s*IOREF\s*\|\s*IOREF\s*\|\s*Reference for digital logic V - connected to 5 V',(cache/docs[sheet_id]['file']).read_text())
+                ioref=ref(id+'-ioref',sheet_id,None,'Connector pinouts · IOREF: reference for digital logic V, connected to 5 V','manufacturer-source-table')
+                pin['noteKey']='arduinoR4IorefNote';pin['noteEvidence']={'arduinoR4IorefNote':[ioref]};pin['evidence'].append(ioref)
             elif name=='IOREF':pin['noteKey']='arduinoIorefNote'
         mcu='nRF52840' if is_ble else 'ATmega32U4' if is32 else 'Renesas RA4M1' if r4 else 'ATmega4809'
         name={'leonardo':'Arduino Leonardo','micro':'Arduino Micro','nano-every':'Arduino Nano Every','nano-33-ble-sense-rev2':'Arduino Nano 33 BLE Sense Rev2','uno-r4-minima':'Arduino UNO R4 Minima','uno-r4-wifi':'Arduino UNO R4 WiFi'}[model]
-        clock='64 MHz' if is_ble else '48 MHz' if r4 else '20 MHz' if model=='nano-every' else '16 MHz'
+        clock='64 MHz' if is_ble else '48 MHz' if r4 else '16 MHz'
+        if model=='nano-every':
+            # The ATmega4809 allows 20 MHz, but the Arduino core builds the Nano Every for 16 MHz.
+            assert 'nona4809.build.f_cpu=16000000L' in (cache/docs['arduino-nano-every-boards']['file']).read_text()
         voltage='3.3 V I/O' if is_ble else '5 V I/O'
         processor='Arm Cortex-M4F' if is_ble else 'Arm Cortex-M4' if r4 else '8-bit AVR'
-        board.update(id=id,name=name,shortName=name.replace('Arduino ',''),mcu=mcu,processor=processor,clock=clock,voltage=voltage,family='Arduino',subtitle=mcu+' · '+clock+' · '+voltage+(' · BLE + Sensors' if is_ble else ''),scopeKey=id+'Scope',compatibleKey=id+'Compatible',source=docs[docid]['url'],datasheet=docs.get(id+'-datasheet',docs[docid]).get('pdfUrl',docs.get(id+'-datasheet',docs[docid])['url']))
+        board.update(id=id,name=name,shortName=name.replace('Arduino ',''),mcu=mcu,processor=processor,clock=clock,voltage=voltage,family='Arduino',subtitle=mcu+' · '+clock+' · '+voltage+(' · BLE + Sensors' if is_ble else ''),scopeKey=id+'Scope',compatibleKey=id+'Compatible',source=docs[docid].get('viewUrl',docs[docid]['url']),datasheet=docs.get(id+'-datasheet',docs[docid]).get('pdfUrl',(lambda d:d.get('viewUrl',d['url']))(docs.get(id+'-datasheet',docs[docid]))))
         board['diagram']['artwork']='assets/boards/'+id+'.svg'
         result=finish(board,pins)
         assert result['uniqueGPIOCount']==(22 if is_ble else 23 if model=='leonardo' else 24 if model=='micro' else 22 if model=='nano-every' else 20)
@@ -152,8 +167,23 @@ def build_nano_esp32(cache, docs, obs, ref, verified_on, template):
     schematic = ref('arduino-nano-esp32-schematic-ref', schematic_id, 1,
                     'Sheet 1/2 · JP1/JP2 header connections, power rails, and strapping pins', 'visual-diagram')
 
+    core_id = 'arduino-nano-esp32-core'
+    core_text = (cache / docs[core_id]['file']).read_text()
+    # Arduino pin numbers: the first constexpr block of the core header (the second block is the GPIO view).
+    core_pins = {m[1]: int(m[2]) for m in re.finditer(r'static constexpr uint8_t (\w+)\s*=\s*(\d+);', core_text.split('#else', 1)[0])}
+    gpio_pins = {m[1]: int(m[2]) for m in re.finditer(r'static constexpr uint8_t (\w+)\s*=\s*(\d+);', core_text.split('#else', 1)[1])}
+    assert (core_pins['LED_RED'], core_pins['LED_GREEN'], core_pins['LED_BLUE'], core_pins['A2']) == (14, 15, 16, 19)
+    assert (gpio_pins['LED_RED'], gpio_pins['LED_GREEN'], gpio_pins['LED_BLUE'], gpio_pins['A2']) == (46, 0, 45, 3)
+    core_ref = ref('arduino-nano-esp32-core-pins', core_id, None, 'pins_arduino.h · LED_RED = 14 (GPIO46), LED_GREEN = 15 (GPIO0), LED_BLUE = 16 (GPIO45), A2 = 19 (GPIO3)', 'source-code')
+    with pdfplumber.open(cache / docs['esp32s3-datasheet']['file']) as pdf:
+        strap_text = ''.join((pdf.pages[31].extract_text() or '').split())
+    for token in ('Strappingpin:GPIO45', 'Strappingpin:GPIO3', 'GPIO0', 'GPIO46'):
+        assert token in strap_text, token
+    strap_ref = ref('arduino-nano-esp32-strapping', 'esp32s3-datasheet', 32, '§3 Boot Configurations · strapping pins GPIO0, GPIO3, GPIO45 and GPIO46', 'pdf-text')
+
     board = copy.deepcopy(template)
     board.update(
+        cautions=[{'key': 'arduinoNanoEsp32StrapCaution', 'evidence': [strap_ref, core_ref]}],
         id='arduino-nano-esp32',
         name='Arduino Nano ESP32',
         shortName='Nano ESP32',
@@ -168,8 +198,8 @@ def build_nano_esp32(cache, docs, obs, ref, verified_on, template):
         wireless=True,
         scopeKey='arduinoNanoEsp32Scope',
         compatibleKey='arduinoNanoEsp32Compatible',
-        source=docs[docid]['url'],
-        datasheet=docs[schematic_id]['url']
+        source=docs[docid].get('viewUrl',docs[docid]['url']),
+        datasheet=docs[schematic_id].get('viewUrl',docs[schematic_id]['url'])
     )
     board['diagram']['artwork'] = 'assets/boards/arduino-nano-esp32.svg'
 
@@ -180,7 +210,7 @@ def build_nano_esp32(cache, docs, obs, ref, verified_on, template):
          [('SPI SCK', 'SPI', 'SCK'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO48')],
          'arduinoNanoEsp32GpioNote', False),
         ('L', 2, '3V3', '3V3', '+3V3', 'POWER', None, [], None, False),
-        ('L', 3, 'B0', 'B0', 'GPIO46', 'GPIO', 14,
+        ('L', 3, 'B0', 'B0', 'GPIO46', 'GPIO', core_pins['LED_RED'],
          [('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO46')],
          'arduinoNanoEsp32B0Note', True),
         ('L', 4, 'A0', 'A0', 'GPIO1', 'GPIO', 17,
@@ -189,9 +219,9 @@ def build_nano_esp32(cache, docs, obs, ref, verified_on, template):
         ('L', 5, 'A1', 'A1', 'GPIO2', 'GPIO', 18,
          [('ADC1_CH1', 'ADC', 'ADC1_CH1'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO2')],
          'arduinoNanoEsp32GpioNote', False),
-        ('L', 6, 'A2', 'A2', 'GPIO3', 'GPIO', 19,
+        ('L', 6, 'A2', 'A2', 'GPIO3', 'GPIO', core_pins['A2'],
          [('ADC1_CH2', 'ADC', 'ADC1_CH2'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO3')],
-         'arduinoNanoEsp32GpioNote', False),
+         'arduinoNanoEsp32GpioNote', True),
         ('L', 7, 'A3', 'A3', 'GPIO4', 'GPIO', 20,
          [('ADC1_CH3', 'ADC', 'ADC1_CH3'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO4')],
          'arduinoNanoEsp32GpioNote', False),
@@ -208,7 +238,7 @@ def build_nano_esp32(cache, docs, obs, ref, verified_on, template):
          [('ADC2_CH3', 'ADC', 'ADC2_CH3'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO14')],
          'arduinoNanoEsp32GpioNote', False),
         ('L', 12, 'VUSB', 'VUSB', 'VUSB', 'POWER', None, [], 'arduinoVusbNote', False),
-        ('L', 13, 'B1', 'B1', 'GPIO0', 'GPIO', 16,
+        ('L', 13, 'B1', 'B1', 'GPIO0', 'GPIO', core_pins['LED_GREEN'],
          [('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'GPIO0')],
          'arduinoNanoEsp32B1Note', True),
         ('L', 14, 'GND', 'GND', 'GND', 'GND', None, [], None, False),
@@ -290,6 +320,10 @@ def build_nano_esp32(cache, docs, obs, ref, verified_on, template):
             p['noteKey'] = noteKey
         if strapping:
             p['strapping'] = True
+            p['evidence'] = p['evidence'] + [strap_ref, core_ref]
+            p['noteEvidence'] = {'espStrappingNote': [strap_ref]}
+            if noteKey in ('arduinoNanoEsp32B0Note', 'arduinoNanoEsp32B1Note'):
+                p['noteEvidence'][noteKey] = [core_ref, strap_ref]
         pins.append(p)
 
     res = finish(board, pins)

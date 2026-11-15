@@ -2,7 +2,7 @@ import {readFileSync} from 'node:fs';
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {buildLayouts,resolveProfile} from '../public/layouts.mjs';
-import {compatibleModels,filterCompatibleModels} from '../public/compatibility.mjs';
+import {compatibleModels,filterCompatibleModels,normalizeCatalogText} from '../public/compatibility.mjs';
 const boards=JSON.parse(readFileSync(new URL('../public/data/boards.json',import.meta.url)));
 const layouts=buildLayouts(boards);
 
@@ -33,4 +33,19 @@ test('Pico model slots and memory-restricted ESP references remain separately ad
     assert.equal(models.length,2);assert.notEqual(models[0].profileId,models[1].profileId);
   }
   for(const board of boards.filter(board=>board.family==='Espressif'))assert(board.name.startsWith('ESP32'));
+});
+test('model search ignores the browser locale (Turkish dotless i)',()=>{
+  const models=[{id:'nucleo-f767zi',name:'NUCLEO-F767ZI',detail:'STM32F767ZIT6'},
+    {id:'nucleo-f446re',name:'NUCLEO-F446RE',detail:'STM32F446RET6'}];
+  const original=String.prototype.toLocaleLowerCase;
+  // Emulate a tr-TR browser: locale-aware lowercasing maps "I" to dotless "ı".
+  String.prototype.toLocaleLowerCase=function(){return original.call(this,'tr-TR');};
+  try{
+    for(const query of ['f767zi','F767ZI','f767zı','F767Zİ',' nucleo-f767zi ']){
+      assert.deepEqual(filterCompatibleModels(models,query).map(model=>model.id),['nucleo-f767zi'],query);
+    }
+  }finally{String.prototype.toLocaleLowerCase=original;}
+  for(const value of ['F767ZI','f767zi','F767Zİ','f767zı'])assert.equal(normalizeCatalogText(value),'f767zi',value);
+  assert.equal(normalizeCatalogText('İı Iİ'),'ii ii');
+  assert.equal(filterCompatibleModels(models,'').length,2);
 });
