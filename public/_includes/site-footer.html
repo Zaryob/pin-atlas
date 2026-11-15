@@ -1,0 +1,15 @@
+{% assign footer_tr = false %}{% if page.lang == 'tr' %}{% assign footer_tr = true %}{% endif %}
+{% capture footer_columns %}
+  <nav class="suite-footer__col" aria-label="Pin Atlas">
+    <p class="suite-footer__title">~/pin-atlas/</p>
+    <ul>
+      <li><a href="{{ '/' | relative_url }}">Pin Atlas</a></li>
+      <li><a href="{% if footer_tr %}{{ '/tr/boards/' | relative_url }}{% else %}{{ '/boards/' | relative_url }}{% endif %}"><span{% if page.layout != 'board' %} data-i18n="staticBoards"{% endif %}>{% if footer_tr %}Pin haritaları{% else %}Pinouts{% endif %}</span></a></li>
+      <li><a href="https://github.com/Zaryob/pin-atlas"><span{% if page.layout != 'board' %} data-i18n="sourceCode"{% endif %}>{% if footer_tr %}Kaynak kodu ↗{% else %}Source code ↗{% endif %}</span></a></li>
+      <li><a href="https://github.com/Zaryob/pin-atlas/blob/main/THIRD_PARTY_NOTICES.md">THIRD_PARTY_NOTICES <span aria-hidden="true">↗</span></a></li>
+    </ul>
+  </nav>
+{% endcapture %}
+{% capture footer_legal %}<span aria-hidden="true"># </span>© 2026 Süleyman Poyraz · GPLv3{% endcapture %}
+{% capture footer_note %}<span{% if page.layout != 'board' %} data-i18n="trademarkNote"{% endif %}>{% if footer_tr %}Bağımsız bir başvuru kaynağıdır; burada adı geçen hiçbir üreticiyle bağlantılı değildir ve onlar tarafından onaylanmamıştır. Ürün adları ve markalar sahiplerine aittir.{% else %}Independent reference; not affiliated with or endorsed by any manufacturer named here. Product names and trademarks belong to their owners.{% endif %}</span>{% endcapture %}
+{% include console-footer.html cwd="~/pin-atlas" columns=footer_columns legal=footer_legal note=footer_note %}

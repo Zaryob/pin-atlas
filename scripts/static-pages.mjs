@@ -54,9 +54,6 @@ function page({site,language,path,title,description,body,structured,alternates,t
     render_with_liquid:false,generated_by:'scripts/static-pages.mjs'})+body+'\n';
 }
 
-function footer(t, prefix) {
-  return `<footer class="static-footer"><span>© 2026 Süleyman Poyraz · <a href="${prefix}">Pin Atlas</a></span><span><a href="https://github.com/Zaryob/pin-atlas">${esc(t('sourceCode'))}</a> · GPLv3</span><span class="trademark-note">${esc(t('trademarkNote'))}</span></footer>`;
-}
 
 function boardPage({site,language,t,board,profile,entry,related,evidence}) {
   const prefix = language === 'tr' ? '../../../' : '../../';
@@ -145,7 +142,6 @@ ${table}
 ${researchNotes}
 ${sources}
 ${relatedList}
-${footer(t,prefix)}
 </main>`;
   const structured = {'@context':'https://schema.org','@graph':[
     {'@type':'BreadcrumbList',itemListElement:[
@@ -172,7 +168,6 @@ function indexPage({site,language,t,catalog,totals}) {
 <header class="static-heading"><h1>${esc(t('staticIndexHeading'))}</h1><p class="static-lead">${esc(description)}</p></header>
 <p class="static-actions"><a class="button primary" href="${prefix}">${esc(t('staticOpenHome'))} →</a><a class="static-language" href="${prefix}${indexPath(other)}" hreflang="${other}" lang="${other}">${other === 'tr' ? 'Türkçe' : 'English'}</a></p>
 ${groups}
-${footer(t,prefix)}
 </main>`;
   const structured = {'@context':'https://schema.org','@graph':[
     {'@type':'BreadcrumbList',itemListElement:[
