@@ -656,6 +656,18 @@
       "publisher": "Seeed Studio",
       "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
     },
+    "xiao-ble-spec": {
+      "title": "XIAO nRF52840 specifications",
+      "url": "https://wiki.seeedstudio.com/XIAO_BLE/",
+      "publisher": "Seeed Studio",
+      "locator": "Features; specifications; resources"
+    },
+    "xiao-nrf52840-sense-schematic": {
+      "title": "Seeed Studio XIAO nRF52840 Sense Schematic",
+      "url": "https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf",
+      "publisher": "Seeed Studio",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
     "microbit-spec": {
       "title": "micro:bit v2.0 hardware",
       "url": "https://tech.microbit.org/hardware/2-0-revision/",
@@ -775,6 +787,12 @@
       "url": "https://www.seeedstudio.com/blog/2020/05/08/seeeduino-xiao-community-projects-collection-whats-your-next-project-idea-made-by-seeeeduino-xiao/",
       "publisher": "Seeed Studio",
       "locator": "Manufacturer documentation available in 2020; exact first sale not established"
+    },
+    "xiao-ble-history": {
+      "title": "Seeed Studio XIAO nRF52840 launch",
+      "url": "https://www.seeedstudio.com/blog/2021/12/07/seeed-xiao-ble-nrf52840-sense/",
+      "publisher": "Seeed Studio",
+      "locator": "Manufacturer product launch blog post; 7 December 2021"
     },
     "microbit-history": {
       "title": "New BBC micro:bit announced",
@@ -4123,6 +4141,41 @@
       "datasheet": "https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-v1.0-SCH-191112.pdf",
       "documents": [
         "xiao-samd21-schematic"
+      ]
+    },
+    "xiao-nrf52840": {
+      "chip": "nRF52840",
+      "flash": "1 MB internal Flash + 2 MB QSPI Flash",
+      "sources": [
+        "xiao-ble-spec",
+        "xiao-nrf52840-sense-schematic"
+      ],
+      "power": {
+        "tr": "USB-C: 5 V; GPIO: 3.3 V. 5 V güç pini GPIO toleransı anlamına gelmez.",
+        "en": "USB-C: 5 V; GPIO: 3.3 V. A 5 V power pin does not imply 5 V GPIO tolerance."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "Standart 14 temaslı XIAO sürümü: 11 GPIO + 3 güç/toprak teması. nRF52840 BLE ve dahili anten. Sense modelinde ek olarak LSM6DS3TR-C 6-eksen IMU ve PDM mikrofon bulunur.",
+            "en": "Standard 14-contact XIAO: 11 GPIO + 3 power/ground contacts. nRF52840 BLE and internal antenna. The Sense variant adds an onboard LSM6DS3TR-C 6-axis IMU and PDM microphone."
+          },
+          "sources": [
+            "xiao-ble-spec"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2021-12-07",
+        "kind": "launch",
+        "sources": [
+          "xiao-ble-history"
+        ]
+      },
+      "pinSource": "https://wiki.seeedstudio.com/XIAO_BLE/",
+      "datasheet": "https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf",
+      "documents": [
+        "xiao-nrf52840-sense-schematic"
       ]
     },
     "microbit-v2": {

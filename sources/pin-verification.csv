@@ -9131,6 +9131,44 @@ xiao-samd21,14,D7_A7_RX,GPIO,ADC_IN3,,ADC_IN3,xiao-samd21-header | samd21-port-m
 xiao-samd21,14,D7_A7_RX,GPIO,SERCOM4_PAD1,,SERCOM4_PAD1,xiao-samd21-header | samd21-port-mux,samd21-port-mux
 xiao-samd21,14,D7_A7_RX,GPIO,TC4/WO[1],,TC4/WO[1],xiao-samd21-header | samd21-port-mux,samd21-port-mux
 xiao-samd21,14,D7_A7_RX,GPIO,EXTINT[9],,EXTINT[9],xiao-samd21-header | samd21-port-mux,samd21-port-mux
+xiao-nrf52840,1,D0,GPIO,AIN0,,AIN0,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,1,D0,GPIO,PWM,,PWM,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,1,D0,GPIO,GPIO interrupt,,P0.02,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,2,D1,GPIO,AIN1,,AIN1,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,2,D1,GPIO,PWM,,PWM,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,2,D1,GPIO,GPIO interrupt,,P0.03,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,3,D2,GPIO,AIN4,,AIN4,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,3,D2,GPIO,PWM,,PWM,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,3,D2,GPIO,GPIO interrupt,,P0.28,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,4,D3,GPIO,AIN5,,AIN5,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,4,D3,GPIO,PWM,,PWM,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,4,D3,GPIO,GPIO interrupt,,P0.29,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,5,D4,GPIO,AIN2,,AIN2,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,5,D4,GPIO,I2C0 SDA,,SDA,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,5,D4,GPIO,PWM,,PWM,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,5,D4,GPIO,GPIO interrupt,,P0.04,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,6,D5,GPIO,AIN3,,AIN3,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,6,D5,GPIO,I2C0 SCL,,SCL,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,6,D5,GPIO,PWM,,PWM,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,6,D5,GPIO,GPIO interrupt,,P0.05,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,7,D6,GPIO,UART0 TX,,TX,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,7,D6,GPIO,PWM,,PWM,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,7,D6,GPIO,GPIO interrupt,,P1.11,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,8,5V,POWER,,,,xiao-nrf52840-header,
+xiao-nrf52840,9,GND,GND,,,,xiao-nrf52840-header,
+xiao-nrf52840,10,3V3,POWER,,,,xiao-nrf52840-header,
+xiao-nrf52840,11,D10,GPIO,SPI0 MOSI,,MOSI,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,11,D10,GPIO,PWM,,PWM,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,11,D10,GPIO,GPIO interrupt,,P1.15,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,12,D9,GPIO,SPI0 MISO,,MISO,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,12,D9,GPIO,PWM,,PWM,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,12,D9,GPIO,GPIO interrupt,,P1.14,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,13,D8,GPIO,SPI0 SCK,,SCK,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,13,D8,GPIO,PWM,,PWM,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,13,D8,GPIO,GPIO interrupt,,P1.13,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,14,D7,GPIO,UART0 RX,,RX,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,14,D7,GPIO,PWM,,PWM,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
+xiao-nrf52840,14,D7,GPIO,GPIO interrupt,,P1.12,xiao-nrf52840-header | xiao-nrf52840-variant-ref,xiao-nrf52840-variant-ref
 microbit-v2,1,P0,GPIO,AIN0,,AIN0,microbit-v2-header | microbit-v2-edge-table,microbit-v2-functions
 microbit-v2,1,P0,GPIO,TOUCH,,TOUCH,microbit-v2-header | microbit-v2-edge-table,microbit-v2-functions
 microbit-v2,1,P0,GPIO,PWM,,PWM,microbit-v2-header | microbit-v2-edge-table,microbit-v2-functions

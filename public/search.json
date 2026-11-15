@@ -589,6 +589,20 @@
   },
   {
     "lang": "tr",
+    "title": "Seeed Studio XIAO nRF52840",
+    "url": "/pin-atlas/#board=seeed-xiao&profile=xiao-nrf52840",
+    "type": "pin-atlas/",
+    "description": "nRF52840 · Cortex-M4F · 64 MHz · BLE 5.0 · 3.3 V I/O · nRF52840 · Seeed Studio"
+  },
+  {
+    "lang": "en",
+    "title": "Seeed Studio XIAO nRF52840",
+    "url": "/pin-atlas/#board=seeed-xiao&profile=xiao-nrf52840",
+    "type": "pin-atlas/",
+    "description": "nRF52840 · Cortex-M4F · 64 MHz · BLE 5.0 · 3.3 V I/O · nRF52840 · Seeed Studio"
+  },
+  {
+    "lang": "tr",
     "title": "BBC micro:bit V2",
     "url": "/pin-atlas/#board=microbit-v2&profile=microbit-v2",
     "type": "pin-atlas/",

@@ -615,6 +615,20 @@ permalink: /sitemap.xml
     <lastmod>2026-11-14</lastmod>
   </url>
   <url>
+    <loc>https://zaryob.github.io/pin-atlas/boards/xiao-nrf52840/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/xiao-nrf52840/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/xiao-nrf52840/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/xiao-nrf52840/" />
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://zaryob.github.io/pin-atlas/tr/boards/xiao-nrf52840/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/xiao-nrf52840/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/xiao-nrf52840/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/xiao-nrf52840/" />
+    <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
     <loc>https://zaryob.github.io/pin-atlas/boards/microbit-v2/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/microbit-v2/" />
     <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/microbit-v2/" />

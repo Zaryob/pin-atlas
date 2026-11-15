@@ -346,4 +346,108 @@ def build_seeed(cache, docs, observations, ref, verified_on, bank2040, rp2040_ph
         'pins': pins_samd21
     }
 
-    return [board_rp2040, board_c3, board_samd21]
+    # 4. Seeed Studio XIAO nRF52840
+    schematic_nrf52840 = cache / docs['xiao-nrf52840-sense-schematic']['file']
+    assert schematic_nrf52840.exists()
+    variant_file = cache / docs['xiao-nrf52840-variant']['file']
+    assert variant_file.exists()
+    variant_text = variant_file.read_text()
+    assert '2, // D0  is P0.02 (A0)' in variant_text
+    assert '43, // D6  is P1.11 (TX)' in variant_text
+    assert '44, // D7  is P1.12 (RX)' in variant_text
+    assert '45, // D8  is P1.13 (SCK)' in variant_text
+    assert '46, // D9  is P1.14 (MISO)' in variant_text
+    assert '47, // D10 is P1.15 (MOSI)' in variant_text
+
+    physical_nrf52840 = ref('xiao-nrf52840-header', 'xiao-nrf52840-sense-schematic', 1,
+                            'Sheet 1/1 · connectors J2 (D0–D6) and J4 (D7–D10, 3V3, GND, 5V)', 'visual-diagram')
+    variant_nrf52840 = ref('xiao-nrf52840-variant-ref', 'xiao-nrf52840-variant', None,
+                           'g_ADigitalPinMap · nRF52840 port mappings and peripheral assignments', 'source-code')
+
+    pin_defs_nrf52840 = [
+        # (number, connector, connPin, name, boardLabel, net, pinType, functions, x, y, side)
+        (1,  'L', 1, 'D0',  'D0',  'P0.02', 'GPIO',
+         [('AIN0', 'ADC', 'AIN0'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'P0.02')], 280, 140, 'left'),
+        (2,  'L', 2, 'D1',  'D1',  'P0.03', 'GPIO',
+         [('AIN1', 'ADC', 'AIN1'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'P0.03')], 280, 175, 'left'),
+        (3,  'L', 3, 'D2',  'D2',  'P0.28', 'GPIO',
+         [('AIN4', 'ADC', 'AIN4'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'P0.28')], 280, 210, 'left'),
+        (4,  'L', 4, 'D3',  'D3',  'P0.29', 'GPIO',
+         [('AIN5', 'ADC', 'AIN5'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'P0.29')], 280, 245, 'left'),
+        (5,  'L', 5, 'D4',  'D4',  'P0.04', 'GPIO',
+         [('AIN2', 'ADC', 'AIN2'), ('I2C0 SDA', 'I2C', 'SDA'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'P0.04')], 280, 280, 'left'),
+        (6,  'L', 6, 'D5',  'D5',  'P0.05', 'GPIO',
+         [('AIN3', 'ADC', 'AIN3'), ('I2C0 SCL', 'I2C', 'SCL'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'P0.05')], 280, 315, 'left'),
+        (7,  'L', 7, 'D6',  'D6',  'P1.11', 'GPIO',
+         [('UART0 TX', 'UART', 'TX'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'P1.11')], 280, 350, 'left'),
+        (8,  'R', 1, '5V',  '5V',  '5V',    'POWER', [], 540, 140, 'right'),
+        (9,  'R', 2, 'GND', 'GND', 'GND',   'GND',   [], 540, 175, 'right'),
+        (10, 'R', 3, '3V3', '3V3', '3V3',   'POWER', [], 540, 210, 'right'),
+        (11, 'R', 4, 'D10', 'D10', 'P1.15', 'GPIO',
+         [('SPI0 MOSI', 'SPI', 'MOSI'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'P1.15')], 540, 245, 'right'),
+        (12, 'R', 5, 'D9',  'D9',  'P1.14', 'GPIO',
+         [('SPI0 MISO', 'SPI', 'MISO'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'P1.14')], 540, 280, 'right'),
+        (13, 'R', 6, 'D8',  'D8',  'P1.13', 'GPIO',
+         [('SPI0 SCK', 'SPI', 'SCK'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'P1.13')], 540, 315, 'right'),
+        (14, 'R', 7, 'D7',  'D7',  'P1.12', 'GPIO',
+         [('UART0 RX', 'UART', 'RX'), ('PWM', 'PWM', 'PWM'), ('GPIO interrupt', 'IRQ', 'P1.12')], 540, 350, 'right'),
+    ]
+
+    pins_nrf52840 = []
+    for number, conn, connPin, name, label, net, ptype, fns, x, y, side in pin_defs_nrf52840:
+        functions = []
+        ev = [physical_nrf52840]
+        if ptype == 'GPIO':
+            ev.append(variant_nrf52840)
+            for fname, fgroup, fsignal in fns:
+                functions.append({
+                    'name': fname,
+                    'group': fgroup,
+                    'signal': fsignal,
+                    'evidence': variant_nrf52840
+                })
+        pin = {
+            'number': number,
+            'physicalLabel': f'{conn}.{connPin}',
+            'connector': conn,
+            'connectorPin': connPin,
+            'name': name,
+            'boardLabel': label,
+            'type': ptype,
+            'functions': functions,
+            'evidence': ev,
+            'net': net,
+            'position': {'x': x, 'y': y, 'side': side}
+        }
+        if ptype == 'GPIO':
+            pin['noteKey'] = 'xiaoNrf52GpioNote'
+        pins_nrf52840.append(pin)
+
+    board_nrf52840 = {
+        'id': 'xiao-nrf52840',
+        'name': 'Seeed Studio XIAO nRF52840',
+        'shortName': 'XIAO nRF52840',
+        'subtitle': 'nRF52840 · Cortex-M4F · 64 MHz · BLE 5.0 · 3.3 V I/O',
+        'layout': 'custom',
+        'category': 'Seeed Studio',
+        'family': 'Seeed Studio',
+        'packageName': '14-contact header',
+        'packagePins': 14,
+        'gpioCount': 11,
+        'uniqueGPIOCount': 11,
+        'voltage': '3.3 V I/O',
+        'mcu': 'nRF52840',
+        'processor': 'Cortex-M4F',
+        'clock': '64 MHz',
+        'diagram': {
+            'width': 820,
+            'height': 480,
+            'artwork': 'assets/boards/seeed-xiao-nrf52840.svg'
+        },
+        'source': 'https://wiki.seeedstudio.com/XIAO_BLE/',
+        'datasheet': docs['xiao-nrf52840-sense-schematic']['url'],
+        'verifiedOn': verified_on,
+        'pins': pins_nrf52840
+    }
+
+    return [board_rp2040, board_c3, board_samd21, board_nrf52840]

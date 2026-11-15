@@ -1,6 +1,6 @@
 # Donanım araştırması ve teknik referans
 
-İnceleme: 2026-11-14. 79 profil ayrı ayrı kapsanır. 44 profil için nitelendirilmiş tarih bilgisi vardır; 35 profilin kesin ilk üretim/satış tarihi doğrulanmamıştır. MCU veri sayfasının ilk yayını, kartın üretim yılı olarak sunulmaz.
+İnceleme: 2026-11-14. 80 profil ayrı ayrı kapsanır. 45 profil için nitelendirilmiş tarih bilgisi vardır; 35 profilin kesin ilk üretim/satış tarihi doğrulanmamıştır. MCU veri sayfasının ilk yayını, kartın üretim yılı olarak sunulmaz.
 
 Bu dosya `sources/hardware-details.json` kayıtlarından `npm run build:data` ile üretilir. Her özellik ve notun kaynak bağlantısı yanındadır. Canlı üretici sayfalarının içeriği değişebilir; pin kanıtlarının kilitli sürüm ve SHA-256 bilgileri ayrı `sources/manifest.json` kaydında korunur. Yeni teknik bilgi incelemesi, önceki pin doğrulama tarihini değiştirmez.
 
@@ -716,6 +716,21 @@ Devre / kart belgeleri: [Seeed Studio XIAO ESP32C3 Schematic](https://files.seee
 Standart 14 temaslı XIAO sürümü: 11 GPIO + 3 güç/toprak teması. Plus sürümlerinin ek pinlerini bu haritaya uygulamayın. [XIAO SAMD21 specifications](https://wiki.seeedstudio.com/Seeeduino-XIAO/)
 
 Devre / kart belgeleri: [Seeed Studio XIAO SAMD21 Schematic](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-v1.0-SCH-191112.pdf)
+
+### Seeed Studio XIAO nRF52840
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=seeed-xiao&profile=xiao-nrf52840) · [Pin referansı](https://wiki.seeedstudio.com/XIAO_BLE/) · [Datasheet](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf)
+
+- **İlk satış / çıkış:** 2021-12-07. [Seeed Studio XIAO nRF52840 launch](https://www.seeedstudio.com/blog/2021/12/07/seeed-xiao-ble-nrf52840-sense/)
+- **İşlemci:** Arm Cortex-M4F. [nano-33-ble-sense-rev2 hardware manual](https://docs.arduino.cc/hardware/nano-33-ble-sense-rev2/)
+- **Saat hızı / üst sınır:** 64 MHz. [nano-33-ble-sense-rev2 hardware manual](https://docs.arduino.cc/hardware/nano-33-ble-sense-rev2/)
+- **RAM:** 256 KB SRAM. [nano-33-ble-sense-rev2 hardware manual](https://docs.arduino.cc/hardware/nano-33-ble-sense-rev2/)
+- **Program Flash’ı / depolama:** 1 MB internal Flash + 2 MB QSPI Flash. [XIAO nRF52840 specifications](https://wiki.seeedstudio.com/XIAO_BLE/), [Seeed Studio XIAO nRF52840 Sense Schematic](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf)
+- **Besleme / mantık:** USB-C: 5 V; GPIO: 3.3 V. 5 V güç pini GPIO toleransı anlamına gelmez.. [XIAO nRF52840 specifications](https://wiki.seeedstudio.com/XIAO_BLE/), [Seeed Studio XIAO nRF52840 Sense Schematic](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf)
+
+Standart 14 temaslı XIAO sürümü: 11 GPIO + 3 güç/toprak teması. nRF52840 BLE ve dahili anten. Sense modelinde ek olarak LSM6DS3TR-C 6-eksen IMU ve PDM mikrofon bulunur. [XIAO nRF52840 specifications](https://wiki.seeedstudio.com/XIAO_BLE/)
+
+Devre / kart belgeleri: [Seeed Studio XIAO nRF52840 Sense Schematic](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf)
 
 ### BBC micro:bit V2
 

@@ -771,6 +771,25 @@
       "sha256": "f039346edf6ba6144b76900986e9ace912271147532604430e6f47b77f7f2507"
     },
     {
+      "id": "xiao-nrf52840-sense-schematic",
+      "title": "Seeed Studio XIAO nRF52840 Sense Schematic",
+      "file": "xiao-nrf52840-sense-schematic.pdf",
+      "url": "https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf",
+      "publisher": "Seeed Studio",
+      "revision": "v1.1 · 2022-06-24",
+      "sha256": "b109fe7f55e8adf9847760d7a5e23614e6aa10d10d10b189843419c036f19572"
+    },
+    {
+      "id": "xiao-nrf52840-variant",
+      "title": "Seeed Studio nRF52 core · variants/Seeed_XIAO_nRF52840_Sense/variant.cpp",
+      "file": "xiao-nrf52840-variant.cpp",
+      "url": "https://raw.githubusercontent.com/Seeed-Studio/Adafruit_nRF52_Arduino/667f05fdaafd01a05d8027d7dbbf1f4e0b137047/variants/Seeed_XIAO_nRF52840_Sense/variant.cpp",
+      "viewUrl": "https://github.com/Seeed-Studio/Adafruit_nRF52_Arduino/blob/667f05fdaafd01a05d8027d7dbbf1f4e0b137047/variants/Seeed_XIAO_nRF52840_Sense/variant.cpp",
+      "publisher": "Seeed Studio",
+      "revision": "667f05fdaafd01a05d8027d7dbbf1f4e0b137047",
+      "sha256": "808b26ec190cd802861bb0fbfa048623248c4c864c766b83ca8972bdfdade2ac"
+    },
+    {
       "id": "microbit-v2-schematic",
       "title": "BBC micro:bit V2 Schematic",
       "file": "microbit-v2-schematic.pdf",
