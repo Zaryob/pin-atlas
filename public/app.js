@@ -704,7 +704,7 @@ $('#suggest-results').addEventListener('click',event=>{
 });
 function renderPlan() {
  const entries = Object.entries(assignments);
- for (const id of ['plan-count','plan-tab-count','mobile-plan-count']) $(`#${id}`).textContent = entries.length;
+ for (const id of ['plan-tab-count','mobile-plan-count']) $(`#${id}`).textContent = entries.length;
  $('#plan-reference').textContent = planReference(board, t);
  $('#plan-feedback').textContent = '';
  $('#print-plan-button').disabled=!entries.length;$('#export-svg').disabled=!entries.length;
