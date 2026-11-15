@@ -207,6 +207,8 @@
     "Home": ["Ana sayfa", "Home"],
     "home": ["Ana sayfa", "Home"],
     "homeBadge": ["v0.8 · Kaynak Doğrulamalı Pin Rehberi", "v0.8 · Source-Verified Pin Guide"],
+    "heroPinTable": ["pin tablosu →", "pin table →"],
+    "heroMorePins": ["26 pin daha", "26 more pins"],
     "homeTitle": ["Pin Atlas", "Pin Atlas"],
     "homeLead": ["Üretici belgeleri ve açıkça belirtilen kart referanslarıyla karşılaştırılmış etkileşimli pin haritaları ve bağlantı planları.", "Interactive pin maps and wiring plans checked against manufacturer documentation and identified board references."],
     "homeSearchPlaceholder": ["Kart, mikrodenetleyici veya aile ara (ör. RP2040, Nano, ESP32, Nucleo)…", "Search boards, chips, or families (e.g. RP2040, Nano, ESP32, Nucleo)…"],

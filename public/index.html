@@ -33,13 +33,16 @@ title: Pin Atlas — Source-verified pinout guide
 
   <!-- HOME VIEW -->
   <section id="home-view" class="home-view" hidden>
-    <div class="home-hero">
+    <div class="home-hero console-hero console-hero--pins">
+      <div class="console-hero__inner">
+        <p class="console-hero__prompt" aria-hidden="true"><b>zaryob</b><i>:</i>~/pin-atlas <b>$</b><span class="console-hero__cursor"></span></p>
+        <div class="console-hero__copy">
       <div class="home-badge">
         <span class="tiny-dot"></span>
         <span data-i18n="homeBadge">v0.8 · Source-Verified Pin Guide</span>
       </div>
-      <h1 class="home-title">Pin Atlas</h1>
-      <p class="home-lead" data-i18n="homeLead">Interactive pin maps and wiring plans checked against manufacturer documentation and identified board references.</p>
+      <h1 class="home-title console-hero__title">Pin Atlas</h1>
+      <p class="home-lead console-hero__lead" data-i18n="homeLead">Interactive pin maps and wiring plans checked against manufacturer documentation and identified board references.</p>
 
       <div class="home-search-wrap">
         <label class="home-search-box">
@@ -47,6 +50,19 @@ title: Pin Atlas — Source-verified pinout guide
           <input id="home-search" type="search" aria-label="Search the board library" data-i18n-aria-label="catalogSearch" placeholder="Kart, mikrodenetleyici veya aile ara (ör. RP2040, Nano, ESP32, Nucleo)…" data-i18n-placeholder="homeSearchPlaceholder" autocomplete="off">
           <kbd aria-hidden="true">/</kbd>
         </label>
+      </div>
+        </div>
+        <figure class="console-hero__panel">
+          <figcaption class="console-hero__panel-head"><span>Raspberry Pi 4 · 40-pin</span><a href="{{ '/boards/raspberry-pi-4/' | relative_url }}"><span data-i18n="heroPinTable">pin table →</span></a></figcaption>
+<div class="console-hero__screen">      <span class="h-hot">   3V3</span><span class="h-dim">  1 ● ● 2  </span> <span class="h-hot">5V     </span>
+<span class="h-bus">SDA1</span>  <span class="h-ok"> GPIO2</span><span class="h-dim">  3 ● ● 4  </span> <span class="h-hot">5V     </span>
+<span class="h-bus">SCL1</span>  <span class="h-ok"> GPIO3</span><span class="h-dim">  5 ● ● 6  </span> <span class="h-dim">GND    </span>
+      <span class="h-ok"> GPIO4</span><span class="h-dim">  7 ● ● 8  </span> <span class="h-ok">GPIO14 </span> <span class="h-bus">TXD</span>
+      <span class="h-dim">   GND</span><span class="h-dim">  9 ● ● 10 </span> <span class="h-ok">GPIO15 </span> <span class="h-bus">RXD</span>
+      <span class="h-ok">GPIO17</span><span class="h-dim"> 11 ● ● 12 </span> <span class="h-ok">GPIO18 </span> <span class="h-bus">PWM0</span>
+      <span class="h-ok">GPIO27</span><span class="h-dim"> 13 ● ● 14 </span> <span class="h-dim">GND    </span>
+<span class="h-dim">  …                <span data-i18n="heroMorePins">26 more pins</span></span></div>
+        </figure>
       </div>
     </div>
 

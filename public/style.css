@@ -1405,3 +1405,13 @@
   .static-pins tbody td.static-notes { min-width: 0; max-width: none; min-height: 52px; }
   .static-language { margin-left: 0; }
 }
+/* Home hero laid out with the shared console-hero component */
+.home-hero.console-hero { max-width: none; margin: 0 0 8px; padding: 0; text-align: left; }
+.console-hero .home-badge { margin-bottom: 18px; }
+.console-hero .home-title { margin: 0; }
+.console-hero .home-lead { margin: 16px 0 0; max-width: 36rem; }
+.console-hero .home-search-wrap { max-width: 40rem; margin: 26px 0 0; }
+.console-hero__panel-head a { color: var(--accent); }
+.home-view.is-searching .home-hero.console-hero :is(.console-hero__prompt, .console-hero__panel) { display: none; }
+.home-view.is-searching .home-hero.console-hero .console-hero__inner { grid-template-columns: minmax(0, 1fr); padding-block: 12px; }
+.home-hero.console-hero .console-hero__inner { padding-inline: 0; padding-top: 8px; }
