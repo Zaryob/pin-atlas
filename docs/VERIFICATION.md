@@ -280,3 +280,19 @@ The following official primary documents and verification rules govern additions
 ### Arduino Pro and high-density boards (Arduino GIGA R1 WiFi)
 - **Documents:** `Arduino-GIGA-R1-WiFi_schematics.pdf` (Arduino official), and commit-pinned `ArduinoCore-mbed/variants/GIGA/pins_arduino.h`.
 - **Verification criteria:** 76 GPIO contacts on Mega-format headers; STM32H747XI dual-core (Cortex-M7 + Cortex-M4) signal routing; Murata 1DX Wi-Fi/BLE module isolation; USB-A host and USB-C programming port nets; 3.3 V I/O voltage boundary across all header pins.
+
+### Raspberry Pi Compute Module 4 and 5 (CM4 / CM5)
+- **Documents:** `RP-008343-DS-1-raspberry-pi-cm4-datasheet.pdf`, `RP-008350-DS-1-raspberry-pi-cm5-datasheet.pdf`, and the official Raspberry Pi CM4/CM5 reduced schematics.
+- **Verification criteria:** Dual 100-pin Hirose DF40 mezzanine connectors (200 contacts total); separate Connector 1 (power, PCIe, Ethernet, HDMI, USB, DSI, CSI) and Connector 2 (GPIO bank, SDIO, secondary HDMI/CSI/DSI); configurable GPIO_VREF voltage domain (1.8 V versus 3.3 V); PCIe differential pairs and Gigabit Ethernet PHY magnetics versus direct transceiver pads.
+
+### Raspberry Pi RM2 wireless module
+- **Documents:** `RP-008304-DS-3-pico-2-w-datasheet.pdf` (§2.3, §4.2), Infineon CYW43439 datasheet, and Raspberry Pi RM2 Hardware Integration Guide.
+- **Verification criteria:** Castellated edge pad numbering; gSPI bus lines (CLK, MOSI/SDIO, MISO, CS); WL_REG_ON regulator enable; WL_HOST_WAKE interrupt line; 3V3_WL power net; distinction between on-board PCB antenna path and external U.FL connector pad.
+
+### Espressif ESP8266 (AI-Thinker ESP-12F and ESP-01)
+- **Documents:** Espressif `ESP8266EX Datasheet` (v6.9), `ESP8266 Technical Reference Manual`, and AI-Thinker `ESP-12F Module Specification`.
+- **Verification criteria:** 16-pad castellated SMD footprint (ESP-12F) and 2x4 header (ESP-01); strictly 3.3 V I/O levels (no 5 V tolerance); bootstrapping pads (GPIO0 low for UART download, GPIO2 high, GPIO15 low); CH_PD/EN mandatory 10 kΩ pull-up; TOUT / ADC0 0–1.0 V input range versus board-level voltage dividers.
+
+### Seeed Studio XIAO expansion family (XIAO nRF52840 Sense, XIAO ESP32-S3 Sense)
+- **Documents:** Seeed Studio XIAO nRF52840 (Sense) Wiki & Hardware Schematics, `nRF52840_PS_v1.7.pdf`, Seeed Studio XIAO ESP32-S3 (Sense) Schematics, and `esp32-s3_datasheet_en.pdf`.
+- **Verification criteria:** Shared 14-pad XIAO base footprint (D0–D10, 3V3, GND, 5V); internal sensor bus routing (LSM6DS3TR-C IMU on P0.27/P0.07, MSM261D PDM microphone on P0.16/P0.17); battery voltage sensing on P0.31; on the ESP32-S3 Sense, the 24-pin bottom FPC connector for camera/microphone and the microSD SPI bus (GPIO21, 47, 48, 38, 39).

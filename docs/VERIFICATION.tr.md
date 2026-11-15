@@ -280,3 +280,19 @@ Pin Atlas kataloğuna eklenecek yeni modeller için geçerli resmî birincil bel
 ### Arduino Pro ve yüksek yoğunluklu kartlar (Arduino GIGA R1 WiFi)
 - **Belgeler:** `Arduino-GIGA-R1-WiFi_schematics.pdf` (Resmî Arduino) ve commit'e sabitlenmiş `ArduinoCore-mbed/variants/GIGA/pins_arduino.h`.
 - **Doğrulama ölçütleri:** Mega biçimli başlıklarda 76 GPIO kontağı; STM32H747XI çift çekirdekli (Cortex-M7 + Cortex-M4) sinyal yönlendirmesi; Murata 1DX Wi-Fi/BLE modül yalıtımı; USB-A host ve USB-C programlama portu hatları; tüm başlıklarda 3,3 V G/Ç gerilim sınırı.
+
+### Raspberry Pi Compute Module 4 ve 5 (CM4 / CM5)
+- **Belgeler:** `RP-008343-DS-1-raspberry-pi-cm4-datasheet.pdf`, `RP-008350-DS-1-raspberry-pi-cm5-datasheet.pdf` ve resmî Raspberry Pi CM4/CM5 basitleştirilmiş şemaları.
+- **Doğrulama ölçütleri:** Çift 100 pinli Hirose DF40 asma kat (mezzanine) konnektörleri (toplam 200 temas); Konnektör 1 (güç, PCIe, Ethernet, HDMI, USB, DSI, CSI) ve Konnektör 2 (GPIO bloğu, SDIO, ikincil HDMI/CSI/DSI) ayrımı; yapılandırılabilir GPIO_VREF gerilim alanı (1,8 V veya 3,3 V); PCIe diferansiyel çiftleri ve Gigabit Ethernet PHY magnetik hatları.
+
+### Raspberry Pi RM2 kablosuz modülü
+- **Belgeler:** `RP-008304-DS-3-pico-2-w-datasheet.pdf` (§2.3, §4.2), Infineon CYW43439 veri sayfası ve Raspberry Pi RM2 Donanım Entegrasyon Kılavuzu.
+- **Doğrulama ölçütleri:** Kastelasyonlu lehim kenar pedi numaralandırması; gSPI veri yolu hatları (CLK, MOSI/SDIO, MISO, CS); WL_REG_ON regülatör etkinleştirme; WL_HOST_WAKE kesme hattı; 3V3_WL güç hattı; kart üstü PCB anten yolu ile harici U.FL konnektör pedi ayrımı.
+
+### Espressif ESP8266 (AI-Thinker ESP-12F ve ESP-01)
+- **Belgeler:** Espressif `ESP8266EX Datasheet` (v6.9), `ESP8266 Technical Reference Manual` ve AI-Thinker `ESP-12F Module Specification`.
+- **Doğrulama ölçütleri:** 16 pedli kastelasyonlu SMD ayak izi (ESP-12F) ve 2x4 başlık (ESP-01); kesinlikle 3,3 V G/Ç seviyeleri (5 V toleransı yoktur); önyükleme (strapping) pedleri (UART yükleme için GPIO0 düşük, GPIO2 yüksek, GPIO15 düşük); CH_PD/EN için zorunlu 10 kΩ pull-up; TOUT / ADC0 0–1,0 V giriş aralığı.
+
+### Seeed Studio XIAO genişleme ailesi (XIAO nRF52840 Sense, XIAO ESP32-S3 Sense)
+- **Belgeler:** Seeed Studio XIAO nRF52840 (Sense) Wiki ve Donanım Şemaları, `nRF52840_PS_v1.7.pdf`, Seeed Studio XIAO ESP32-S3 (Sense) Şemaları ve `esp32-s3_datasheet_en.pdf`.
+- **Doğrulama ölçütleri:** Paylaşılan 14 pedli standart XIAO taban ayak izi (D0–D10, 3V3, GND, 5V); dâhili sensör veri yolu hatları (P0.27/P0.07 üzerinde LSM6DS3TR-C IMU, P0.16/P0.17 üzerinde MSM261D PDM mikrofon); P0.31 üzerinde batarya gerilim ölçümü; ESP32-S3 Sense üzerinde kamera/mikrofon için 24 pinlik alt FPC konnektörü ve microSD SPI veri yolu (GPIO21, 47, 48, 38, 39).
