@@ -168,7 +168,6 @@ def build_compute_modules(cache, docs, obs, ref, verified_on, pi4_pins, pi5_pins
             'connectorStyle': True,
             'artwork': 'assets/boards/compute-module-4-5.svg'
         },
-        'orientation': 'usb-bottom',
         'source': docs['cm4-datasheet']['viewUrl'],
         'datasheet': docs['cm4-datasheet']['url'],
         'verifiedOn': verified_on,
@@ -205,7 +204,6 @@ def build_compute_modules(cache, docs, obs, ref, verified_on, pi4_pins, pi5_pins
             'connectorStyle': True,
             'artwork': 'assets/boards/compute-module-4-5.svg'
         },
-        'orientation': 'usb-bottom',
         'source': docs['cm5-datasheet']['viewUrl'],
         'datasheet': docs['cm5-datasheet']['url'],
         'verifiedOn': verified_on,

@@ -1,24 +1,75 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1160" height="1380" viewBox="0 0 1160 1380">
-<!-- Raspberry Pi Compute Module 4 / 5: the two 100-way board-to-board connectors.
-     Schematic, not to scale. Odd contacts are drawn in the left column of each
-     connector and labelled to the left; even contacts in the right column, labelled
-     to the right. Contact positions come from scripts/cm_sources.py. -->
+<!-- Raspberry Pi Compute Module 4 / 5. Schematic, not to scale: the module is drawn
+     tall so each 100-way connector can show all 50 rows. The connectors sit on the
+     underside of the real module (dashed outline). Odd contacts are in the left column
+     of each connector and labelled to the left, even contacts in the right column and
+     labelled to the right. Contact positions come from scripts/cm_sources.py. The PCB
+     fill is translucent so pin labels stay readable in light and dark themes. -->
 <g font-family="monospace" text-anchor="middle">
- <text x="290" y="96" font-size="14" font-weight="bold" fill="#cfab5b">CN1</text>
- <text x="290" y="114" font-size="10" fill="#8faab8">contacts 1–100</text>
- <rect x="252" y="124" width="76" height="1200" rx="6" fill="#182723" stroke="#48685e" stroke-width="2"/>
- <rect x="262" y="132" width="56" height="1184" rx="3" fill="#13201c" stroke="#2a453d" stroke-dasharray="4 6"/>
- <text x="270" y="1342" font-size="9" fill="#6d8896">odd</text>
- <text x="310" y="1342" font-size="9" fill="#6d8896">even</text>
+ <text x="580" y="34" font-size="15" font-weight="bold" fill="#5f7d8c">Raspberry Pi Compute Module 4 / 5</text>
+ <text x="580" y="54" font-size="10" fill="#6d8896">top view · connectors on the underside · schematic, not to scale</text>
 
- <text x="870" y="96" font-size="14" font-weight="bold" fill="#cfab5b">CN2</text>
- <text x="870" y="114" font-size="10" fill="#8faab8">contacts 101–200</text>
- <rect x="832" y="124" width="76" height="1200" rx="6" fill="#182723" stroke="#48685e" stroke-width="2"/>
- <rect x="842" y="132" width="56" height="1184" rx="3" fill="#13201c" stroke="#2a453d" stroke-dasharray="4 6"/>
- <text x="850" y="1342" font-size="9" fill="#6d8896">odd</text>
- <text x="890" y="1342" font-size="9" fill="#6d8896">even</text>
+ <!-- Module PCB -->
+ <rect x="226" y="70" width="708" height="1296" rx="18" fill="rgba(46,96,74,.10)" stroke="#48685e" stroke-width="2"/>
+ <rect x="238" y="82" width="684" height="1272" rx="12" fill="none" stroke="rgba(72,104,94,.45)" stroke-dasharray="4 6"/>
+ <!-- M2.5 mounting holes -->
+ <g fill="none" stroke="#cfab5b" stroke-width="2">
+  <circle cx="242" cy="88" r="9"/><circle cx="918" cy="88" r="9"/>
+  <circle cx="242" cy="1350" r="9"/><circle cx="918" cy="1350" r="9"/>
+ </g>
 
- <text x="580" y="40" font-size="15" font-weight="bold" fill="#5f7d8c">Raspberry Pi Compute Module 4 / 5</text>
- <text x="580" y="60" font-size="10" fill="#6d8896">2 × 100-way board-to-board connectors · schematic, not to scale</text>
+ <!-- Board-to-board connectors (underside) -->
+ <text x="290" y="100" font-size="14" font-weight="bold" fill="#cfab5b">CN1</text>
+ <text x="290" y="116" font-size="10" fill="#6d8896">datasheet pins 1–100</text>
+ <rect x="252" y="124" width="76" height="1200" rx="6" fill="#182723" stroke="#48685e" stroke-width="2" stroke-dasharray="6 4"/>
+ <rect x="262" y="132" width="56" height="1184" rx="3" fill="#13201c" stroke="#2a453d"/>
+ <text x="270" y="1340" font-size="9" fill="#6d8896">odd</text>
+ <text x="310" y="1340" font-size="9" fill="#6d8896">even</text>
+
+ <text x="870" y="100" font-size="14" font-weight="bold" fill="#cfab5b">CN2</text>
+ <text x="870" y="116" font-size="10" fill="#6d8896">pins 101–200 · CN2.1 = pin 101</text>
+ <rect x="832" y="124" width="76" height="1200" rx="6" fill="#182723" stroke="#48685e" stroke-width="2" stroke-dasharray="6 4"/>
+ <rect x="842" y="132" width="56" height="1184" rx="3" fill="#13201c" stroke="#2a453d"/>
+ <text x="850" y="1340" font-size="9" fill="#6d8896">odd</text>
+ <text x="890" y="1340" font-size="9" fill="#6d8896">even</text>
+
+ <!-- Main components, between the two label columns -->
+ <!-- Optional wireless with PCB antenna and U.FL connector -->
+ <rect x="488" y="150" width="196" height="150" rx="6" fill="#202e35" stroke="#526b78" stroke-width="2"/>
+ <path d="M506 196 V174 H526 V196 H546 V174 H566 V196 H586 V174 H606 V196 H626 V174 H646 V196 H664" fill="none" stroke="#cfab5b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+ <circle cx="662" cy="272" r="8" fill="#13201c" stroke="#cfab5b" stroke-width="2"/>
+ <text x="586" y="232" font-size="12" font-weight="bold" fill="#f0f6f8">Wi-Fi / Bluetooth</text>
+ <text x="586" y="252" font-size="9" fill="#8faab8">optional · PCB antenna</text>
+ <text x="626" y="276" font-size="8" fill="#8faab8">U.FL</text>
+
+ <!-- SoC -->
+ <rect x="488" y="400" width="196" height="196" rx="6" fill="#202e35" stroke="#526b78" stroke-width="2"/>
+ <circle cx="502" cy="414" r="3.5" fill="#88a1af"/>
+ <text x="586" y="482" font-size="17" font-weight="bold" fill="#f0f6f8">SoC</text>
+ <text x="586" y="512" font-size="11" fill="#cfab5b">BCM2711 · CM4</text>
+ <text x="586" y="532" font-size="11" fill="#cfab5b">BCM2712 · CM5</text>
+ <text x="586" y="560" font-size="9" fill="#6d8896">Arm Cortex-A72 / A76</text>
+
+ <!-- Memory and storage -->
+ <rect x="488" y="650" width="196" height="96" rx="5" fill="#1c2a30" stroke="#476170" stroke-width="1.6"/>
+ <text x="586" y="694" font-size="12" font-weight="bold" fill="#e8eef0">LPDDR4 / LPDDR4X</text>
+ <text x="586" y="716" font-size="9" fill="#8faab8">RAM</text>
+
+ <rect x="488" y="790" width="196" height="96" rx="5" fill="#1c2a30" stroke="#476170" stroke-width="1.6"/>
+ <text x="586" y="834" font-size="12" font-weight="bold" fill="#e8eef0">eMMC</text>
+ <text x="586" y="856" font-size="9" fill="#8faab8">optional · absent on Lite</text>
+
+ <!-- Power and Ethernet -->
+ <rect x="488" y="930" width="92" height="80" rx="4" fill="#1c2a30" stroke="#476170" stroke-width="1.4"/>
+ <text x="534" y="966" font-size="11" font-weight="bold" fill="#e8eef0">PMIC</text>
+ <text x="534" y="986" font-size="8" fill="#8faab8">power</text>
+ <rect x="592" y="930" width="92" height="80" rx="4" fill="#1c2a30" stroke="#476170" stroke-width="1.4"/>
+ <text x="638" y="962" font-size="10" font-weight="bold" fill="#e8eef0">Gigabit</text>
+ <text x="638" y="978" font-size="10" font-weight="bold" fill="#e8eef0">Ethernet</text>
+ <text x="638" y="994" font-size="8" fill="#8faab8">PHY</text>
+
+ <!-- Reading aid -->
+ <text x="586" y="1088" font-size="9" fill="#6d8896">CN1 · GPIO, Ethernet, SD, power</text>
+ <text x="586" y="1106" font-size="9" fill="#6d8896">CN2 · PCIe, USB, HDMI, CSI, DSI</text>
 </g>
 </svg>

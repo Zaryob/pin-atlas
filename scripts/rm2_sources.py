@@ -99,7 +99,6 @@ def build_rm2(cache, docs, obs, ref, verified_on):
             'height': 720,
             'artwork': 'assets/boards/raspberry-pi-rm2.svg'
         },
-        'orientation': 'usb-bottom',
         'source': docs['rm2-datasheet']['viewUrl'],
         'datasheet': docs['rm2-datasheet']['url'],
         'verifiedOn': verified_on,

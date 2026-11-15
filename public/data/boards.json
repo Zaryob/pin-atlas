@@ -103637,7 +103637,6 @@
       "height": 720,
       "artwork": "assets/boards/raspberry-pi-rm2.svg"
     },
-    "orientation": "usb-bottom",
     "source": "https://www.raspberrypi.com/documentation/microcontrollers/radio-modules.html",
     "datasheet": "https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf",
     "verifiedOn": "2026-11-05",
@@ -104162,7 +104161,6 @@
       "connectorStyle": true,
       "artwork": "assets/boards/compute-module-4-5.svg"
     },
-    "orientation": "usb-bottom",
     "source": "https://www.raspberrypi.com/documentation/computers/compute-module.html",
     "datasheet": "https://datasheets.raspberrypi.com/cm4/cm4-datasheet.pdf",
     "verifiedOn": "2026-11-05",
@@ -110118,7 +110116,6 @@
       "connectorStyle": true,
       "artwork": "assets/boards/compute-module-4-5.svg"
     },
-    "orientation": "usb-bottom",
     "source": "https://www.raspberrypi.com/documentation/computers/compute-module.html",
     "datasheet": "https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf",
     "verifiedOn": "2026-11-05",
