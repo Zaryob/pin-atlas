@@ -3,7 +3,7 @@ import {compatibleModels,normalizeCatalogText} from './compatibility.mjs';
 
 // Catalog models are independent of the geometry shared in layouts.mjs.
 export const boardFamilies = [
-  {id:'raspberry-pi',nameKey:'familyRaspberryPi',layouts:['pico-family','raspberry-pi-40','rp2040','rp2350a','rp2350b']},
+  {id:'raspberry-pi',nameKey:'familyRaspberryPi',layouts:['pico-family','raspberry-pi-40','rp2040','rp2350a','rp2350b','raspberry-pi-rm2']},
   {id:'arduino',nameKey:'familyArduino',layouts:['arduino-uno','arduino-nano','arduino-mega-2560','arduino-micro']},
   {id:'espressif',nameKey:'familyEspressif',layouts:['nodemcu-v2','esp32-devkitc-v4','esp32-s3-devkitc-1','esp32-c6-devkitc-1','esp32-c3-devkitm-1']},
   {id:'stm32',nameKey:'familyStm32',layouts:['blue-pill','black-pill','nucleo-32','nucleo-64','nucleo-144',

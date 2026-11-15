@@ -1,6 +1,6 @@
 # Donanım araştırması ve teknik referans
 
-İnceleme: 2026-11-14. 82 profil ayrı ayrı kapsanır. 47 profil için nitelendirilmiş tarih bilgisi vardır; 35 profilin kesin ilk üretim/satış tarihi doğrulanmamıştır. MCU veri sayfasının ilk yayını, kartın üretim yılı olarak sunulmaz.
+İnceleme: 2026-11-14. 83 profil ayrı ayrı kapsanır. 48 profil için nitelendirilmiş tarih bilgisi vardır; 35 profilin kesin ilk üretim/satış tarihi doğrulanmamıştır. MCU veri sayfasının ilk yayını, kartın üretim yılı olarak sunulmaz.
 
 Bu dosya `sources/hardware-details.json` kayıtlarından `npm run build:data` ile üretilir. Her özellik ve notun kaynak bağlantısı yanındadır. Canlı üretici sayfalarının içeriği değişebilir; pin kanıtlarının kilitli sürüm ve SHA-256 bilgileri ayrı `sources/manifest.json` kaydında korunur. Yeni teknik bilgi incelemesi, önceki pin doğrulama tarihini değiştirmez.
 
@@ -578,7 +578,7 @@ Devre / kart belgeleri: [ESP32-C6-DevKitC-1 v1.2 schematic](https://dl.espressif
 
 ### NodeMCU v2
 
-[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=nodemcu-v2&profile=nodemcu-v2) · [Pin referansı](https://github.com/nodemcu/nodemcu-devkit-v1.0/blob/master/NODEMCU_DEVKIT_V1.0.PDF) · [Datasheet](https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf)
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=nodemcu-v2&profile=nodemcu-v2) · [Pin referansı](https://github.com/nodemcu/nodemcu-devkit-v1.0/blob/7cb0a330a25fad85e701c768ef46064c17d54446/NODEMCU_DEVKIT_V1.0.PDF) · [Datasheet](https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf)
 
 - **İlk satış / çıkış:** 2015-01-29. [NodeMCU DevKit release history](https://github.com/nodemcu/nodemcu-devkit-v1.0/releases)
 - **İşlemci:** 1 × Tensilica L106 32-bit. [ESP8266EX Datasheet](https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf)
@@ -590,6 +590,23 @@ Devre / kart belgeleri: [ESP32-C6-DevKitC-1 v1.2 schematic](https://dl.espressif
 ESP-12E/F modülü üzerinde 4 MB dahili SPI Flash barındırır. SDIO pinleri (GPIO6–GPIO11) doğrudan bu flaşa bağlı olduğundan harici kullanım için ayrılmıştır. A0 pini dahili 220 kΩ / 100 kΩ bölücü ile 0–3.3 V giriş aralığına sahiptir. [NodeMCU DEVKIT v1.0 specifications](https://github.com/nodemcu/nodemcu-devkit-v1.0), [NodeMCU DEVKIT v1.0 Schematic](https://raw.githubusercontent.com/nodemcu/nodemcu-devkit-v1.0/master/NODEMCU_DEVKIT_V1.0.PDF)
 
 Devre / kart belgeleri: [NodeMCU DEVKIT v1.0 Schematic](https://raw.githubusercontent.com/nodemcu/nodemcu-devkit-v1.0/master/NODEMCU_DEVKIT_V1.0.PDF)
+
+### Raspberry Pi RM2
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=raspberry-pi-rm2&profile=raspberry-pi-rm2) · [Pin referansı](https://www.raspberrypi.com/documentation/microcontrollers/radio-modules.html) · [Datasheet](https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf)
+
+- **İlk satış / çıkış:** 2024-11-20. [Raspberry Pi Radio Module 2 Product Documentation](https://www.raspberrypi.com/documentation/microcontrollers/radio-modules.html)
+- **İşlemci:** Embedded Arm Cortex-M3 (WLAN/BT subsystem). [Raspberry Pi Radio Module 2 Datasheet](https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf)
+- **Saat hızı / üst sınır:** 37.4 MHz reference. [Raspberry Pi Radio Module 2 Datasheet](https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf)
+- **RAM:** Internal WLAN/BT RAM & ROM. [Raspberry Pi Radio Module 2 Datasheet](https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf)
+- **Program Flash’ı / depolama:** Firmware loaded via gSPI (Pico SDK). [Raspberry Pi Radio Module 2 Product Documentation](https://www.raspberrypi.com/documentation/microcontrollers/radio-modules.html), [Raspberry Pi Radio Module 2 Datasheet](https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf)
+- **Besleme / mantık:** VIN: 3.0–4.8 V (nominal 3.3 V); VDDIO: 1.8 V ±5% veya 3.3 V ±5%. I/O gerilim seviyesi ana mikrodenetleyiciye göre ayarlanmalıdır.. [Raspberry Pi Radio Module 2 Product Documentation](https://www.raspberrypi.com/documentation/microcontrollers/radio-modules.html), [Raspberry Pi Radio Module 2 Datasheet](https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf)
+
+Infineon CYW43439 tek bantlı (2.4 GHz) Wi-Fi 4 (802.11n) ve Bluetooth 5.2 telsiz tümdevresi. gSPI arayüzü ve 3 host kontrollü GPIO expander içerir. [Raspberry Pi Radio Module 2 Datasheet](https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf)
+
+21 kastelasyonlu lehim kenar pedi, paylaşımlı 2.4 GHz dahili PCB anteni, düşük pin sayılı gSPI arayüzü ve 3 GPIO genişletici pini sunar. [Raspberry Pi Radio Module 2 Datasheet](https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf)
+
+Devre / kart belgeleri: [Raspberry Pi Radio Module 2 Datasheet](https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf)
 
 ### ATmega328P · PDIP-28
 

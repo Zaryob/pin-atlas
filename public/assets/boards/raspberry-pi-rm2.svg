@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="580" viewBox="0 0 820 580">
+<g font-family="monospace" text-anchor="middle">
+ <!-- PCB Substrate -->
+ <rect x="270" y="80" width="280" height="380" rx="8" fill="#1b2a26" stroke="#48685e" stroke-width="2"/>
+ <rect x="282" y="92" width="256" height="356" rx="6" fill="none" stroke="#2e4a42" stroke-dasharray="4 6"/>
+
+ <!-- 2.4 GHz Antenna Section at Top -->
+ <rect x="292" y="94" width="236" height="46" rx="4" fill="#14201d" stroke="#364e46"/>
+ <!-- Antenna Meander Traces -->
+ <path d="M 315 128 L 315 106 L 335 106 L 335 128 L 355 128 L 355 106 L 375 106 L 375 128 L 395 128 L 395 106 L 415 106 L 415 128 L 435 128 L 435 106 L 455 106 L 455 128 L 475 128 L 475 106 L 505 106" fill="none" stroke="#cfab5b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+ <text x="410" y="103" font-size="8" fill="#889f96" font-weight="bold">2.4 GHz ON-BOARD ANTENNA</text>
+
+ <!-- Metal RF Shield Can -->
+ <rect x="295" y="150" width="230" height="236" rx="5" fill="#202d33" stroke="#4e6673" stroke-width="1.5"/>
+ <circle cx="304" cy="159" r="2.5" fill="#6d8694"/>
+ <circle cx="516" cy="159" r="2.5" fill="#6d8694"/>
+ <circle cx="304" cy="377" r="2.5" fill="#6d8694"/>
+ <circle cx="516" cy="377" r="2.5" fill="#6d8694"/>
+
+ <!-- Shield Inscriptions -->
+ <text x="410" y="196" font-size="16" font-weight="bold" fill="#f0f6f8">Raspberry Pi</text>
+ <text x="410" y="222" font-size="15" font-weight="bold" fill="#cfab5b">RM2</text>
+ <text x="410" y="248" font-size="12" font-weight="bold" fill="#8faab8">CYW43439KUBG</text>
+ <text x="410" y="272" font-size="10" fill="#6d8896">Wi-Fi 4 (802.11n) · Bluetooth 5.2</text>
+ <text x="410" y="294" font-size="9" fill="#587482">gSPI Host · 3× Host GPIO</text>
+ <text x="410" y="316" font-size="9" fill="#587482">16.5 mm × 14.5 mm · SMT</text>
+ <text x="410" y="338" font-size="8" fill="#445e6b">RP-008943 · RMC20452T</text>
+
+ <!-- Castellated Edge Pads (Gold) -->
+ <!-- Left Edge: Pins 1 to 7 -->
+ <rect x="270" y="150" width="16" height="20" rx="3" fill="#cfab5b" stroke="#796434"/>
+ <text x="250" y="164" font-size="9" fill="#cfab5b" text-anchor="end">1: GND</text>
+
+ <rect x="270" y="190" width="16" height="20" rx="3" fill="#cfab5b" stroke="#796434"/>
+ <text x="250" y="204" font-size="9" fill="#8faab8" text-anchor="end">2: NC</text>
+
+ <rect x="270" y="230" width="16" height="20" rx="3" fill="#cfab5b" stroke="#796434"/>
+ <text x="250" y="244" font-size="9" fill="#7ed4b2" text-anchor="end">3: SCLK</text>
+
+ <rect x="270" y="270" width="16" height="20" rx="3" fill="#cfab5b" stroke="#796434"/>
+ <text x="250" y="284" font-size="9" fill="#cfab5b" text-anchor="end">4: GND</text>
+
+ <rect x="270" y="310" width="16" height="20" rx="3" fill="#cfab5b" stroke="#796434"/>
+ <text x="250" y="324" font-size="9" fill="#7ed4b2" text-anchor="end">5: DIN</text>
+
+ <rect x="270" y="350" width="16" height="20" rx="3" fill="#cfab5b" stroke="#796434"/>
+ <text x="250" y="364" font-size="9" fill="#7ed4b2" text-anchor="end">6: DOUT</text>
+
+ <rect x="270" y="390" width="16" height="20" rx="3" fill="#cfab5b" stroke="#796434"/>
+ <text x="250" y="404" font-size="9" fill="#cfab5b" text-anchor="end">7: GND</text>
+
+ <!-- Bottom Edge: Pins 8 to 14 -->
+ <rect x="295" y="444" width="20" height="16" rx="3" fill="#cfab5b" stroke="#796434"/>
+ <text x="305" y="480" font-size="9" fill="#7fc3ff">8: GP0</text>
+
+ <rect x="335" y="444" width="20" height="16" rx="3" fill="#cfab5b" stroke="#796434"/>
+ <text x="345" y="480" font-size="9" fill="#7ed4b2">9: CS</text>
+
+ <rect x="375" y="444" width="20" height="16" rx="3" fill="#cfab5b" stroke="#796434"/>
+ <text x="385" y="480" font-size="9" fill="#ffb454">10: nIRQ</text>
+
+ <rect x="415" y="444" width="20" height="16" rx="3" fill="#cfab5b" stroke="#796434"/>
+ <text x="425" y="480" font-size="9" fill="#cfab5b">11: GND</text>
+
+ <rect x="455" y="444" width="20" height="16" rx="3" fill="#cfab5b" stroke="#796434"/>
+ <text x="465" y="480" font-size="9" fill="#ff7f7f">12: WL</text>
+
+ <rect x="495" y="444" width="20" height="16" rx="3" fill="#cfab5b" stroke="#796434"/>
+ <text x="505" y="480" font-size="9" fill="#ff7f7f">13: BT</text>
+
+ <rect x="535" y="444" width="20" height="16" rx="3" fill="#cfab5b" stroke="#796434"/>
+ <text x="545" y="480" font-size="9" fill="#e89eef">14: VDD</text>
+
+ <!-- Right Edge: Pins 15 to 21 -->
+ <rect x="534" y="390" width="16" height="20" rx="3" fill="#cfab5b" stroke="#796434"/>
+ <text x="568" y="404" font-size="9" fill="#cfab5b" text-anchor="start">15: GND</text>
+
+ <rect x="534" y="350" width="16" height="20" rx="3" fill="#cfab5b" stroke="#796434"/>
+ <text x="568" y="364" font-size="9" fill="#e89eef" text-anchor="start">16: VIN</text>
+
+ <rect x="534" y="310" width="16" height="20" rx="3" fill="#cfab5b" stroke="#796434"/>
+ <text x="568" y="324" font-size="9" fill="#7fc3ff" text-anchor="start">17: GP2</text>
+
+ <rect x="534" y="270" width="16" height="20" rx="3" fill="#cfab5b" stroke="#796434"/>
+ <text x="568" y="284" font-size="9" fill="#7fc3ff" text-anchor="start">18: GP1</text>
+
+ <rect x="534" y="230" width="16" height="20" rx="3" fill="#cfab5b" stroke="#796434"/>
+ <text x="568" y="244" font-size="9" fill="#8faab8" text-anchor="start">19: NC</text>
+
+ <rect x="534" y="190" width="16" height="20" rx="3" fill="#cfab5b" stroke="#796434"/>
+ <text x="568" y="204" font-size="9" fill="#8faab8" text-anchor="start">20: NC</text>
+
+ <rect x="534" y="150" width="16" height="20" rx="3" fill="#cfab5b" stroke="#796434"/>
+ <text x="568" y="164" font-size="9" fill="#cfab5b" text-anchor="start">21: GND</text>
+</g>
+</svg>

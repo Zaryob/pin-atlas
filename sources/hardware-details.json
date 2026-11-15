@@ -638,6 +638,18 @@
       "publisher": "Espressif Systems",
       "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
     },
+    "rm2-spec": {
+      "title": "Raspberry Pi Radio Module 2 Product Documentation",
+      "url": "https://www.raspberrypi.com/documentation/microcontrollers/radio-modules.html",
+      "publisher": "Raspberry Pi Ltd",
+      "locator": "Official product documentation, hardware integration and pinout"
+    },
+    "rm2-datasheet": {
+      "title": "Raspberry Pi Radio Module 2 Datasheet",
+      "url": "https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf",
+      "publisher": "Raspberry Pi Ltd",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
     "xiao-rp-spec": {
       "title": "XIAO RP2040 specifications",
       "url": "https://wiki.seeedstudio.com/XIAO-RP2040/",
@@ -1408,6 +1420,29 @@
         "esp8266ex-datasheet"
       ],
       "notes": []
+    },
+    "CYW43439": {
+      "cpu": "Embedded Arm Cortex-M3 (WLAN/BT subsystem)",
+      "clock": "37.4 MHz reference",
+      "ram": "Internal WLAN/BT RAM & ROM",
+      "flash": {
+        "tr": "Dahili Flash yok; Pico SDK sürücüsü ile gSPI üzerinden önyükleme sırasında firmware yüklenir.",
+        "en": "No internal Flash; firmware is loaded at boot over gSPI by the Pico SDK driver."
+      },
+      "sources": [
+        "rm2-datasheet"
+      ],
+      "notes": [
+        {
+          "text": {
+            "tr": "Infineon CYW43439 tek bantlı (2.4 GHz) Wi-Fi 4 (802.11n) ve Bluetooth 5.2 telsiz tümdevresi. gSPI arayüzü ve 3 host kontrollü GPIO expander içerir.",
+            "en": "Infineon CYW43439 single-band (2.4 GHz) Wi-Fi 4 (802.11n) and Bluetooth 5.2 radio combo chip. Features a gSPI interface and 3 host-controlled GPIO expanders."
+          },
+          "sources": [
+            "rm2-datasheet"
+          ]
+        }
+      ]
     },
     "ESP32-S3": {
       "cpu": "2 × Xtensa LX7",
@@ -4485,6 +4520,41 @@
       "pinSource": "https://developer.nvidia.com/downloads/assets/embedded/secure/jetson/orin_nano/docs/jetson_orin_nano_devkit_carrier_board_specification_sp.pdf#page=25",
       "datasheet": "https://developer.nvidia.com/downloads/assets/embedded/secure/jetson/orin_nano/docs/jetson_orin_nano_devkit_carrier_board_specification_sp.pdf",
       "documents": []
+    },
+    "raspberry-pi-rm2": {
+      "chip": "CYW43439",
+      "flash": "Firmware loaded via gSPI (Pico SDK)",
+      "sources": [
+        "rm2-spec",
+        "rm2-datasheet"
+      ],
+      "power": {
+        "tr": "VIN: 3.0–4.8 V (nominal 3.3 V); VDDIO: 1.8 V ±5% veya 3.3 V ±5%. I/O gerilim seviyesi ana mikrodenetleyiciye göre ayarlanmalıdır.",
+        "en": "VIN: 3.0 to 4.8 V (nominal 3.3 V); VDDIO: 1.8 V +/-5% or 3.3 V +/-5%. Match VDDIO logic levels to the host microcontroller."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "21 kastelasyonlu lehim kenar pedi, paylaşımlı 2.4 GHz dahili PCB anteni, düşük pin sayılı gSPI arayüzü ve 3 GPIO genişletici pini sunar.",
+            "en": "21 castellated SMT edge pads, shared 2.4 GHz onboard PCB antenna, low pin-count gSPI bus, and 3 GPIO expander pins."
+          },
+          "sources": [
+            "rm2-datasheet"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2024-11-20",
+        "kind": "launch",
+        "sources": [
+          "rm2-spec"
+        ]
+      },
+      "pinSource": "https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf",
+      "datasheet": "https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf",
+      "documents": [
+        "rm2-datasheet"
+      ]
     }
   }
 }

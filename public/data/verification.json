@@ -1,7 +1,7 @@
 {
   "verifiedOn": "2026-11-05",
-  "physicalPins": 5284,
-  "functionAssignments": 24499,
+  "physicalPins": 5305,
+  "functionAssignments": 24509,
   "documents": [
     {
       "id": "rp2350",
@@ -731,8 +731,8 @@
     {
       "id": "nodemcu-v1-schematic",
       "title": "NodeMCU DEVKIT v1.0 Schematic",
-      "url": "https://raw.githubusercontent.com/nodemcu/nodemcu-devkit-v1.0/master/NODEMCU_DEVKIT_V1.0.PDF",
-      "viewUrl": "https://github.com/nodemcu/nodemcu-devkit-v1.0/blob/master/NODEMCU_DEVKIT_V1.0.PDF",
+      "url": "https://raw.githubusercontent.com/nodemcu/nodemcu-devkit-v1.0/7cb0a330a25fad85e701c768ef46064c17d54446/NODEMCU_DEVKIT_V1.0.PDF",
+      "viewUrl": "https://github.com/nodemcu/nodemcu-devkit-v1.0/blob/7cb0a330a25fad85e701c768ef46064c17d54446/NODEMCU_DEVKIT_V1.0.PDF",
       "publisher": "NodeMCU",
       "revision": "DevKit v1.0",
       "sha256": "235393563e2bcd8b75e30b36ed710f66882f240df6aac357afbf2de6e79b3d26"
@@ -1206,6 +1206,15 @@
       "url": "https://raw.githubusercontent.com/arduino/ArduinoCore-megaavr/e8edb4ef2e8ab5c98544c3884a653f0b9c1318dc/boards.txt",
       "viewUrl": "https://github.com/arduino/ArduinoCore-megaavr/blob/e8edb4ef2e8ab5c98544c3884a653f0b9c1318dc/boards.txt",
       "sha256": "ad0a8f69fe94a0de1ee4990ec7a4b8b0777b503369833ccdcad13be7cb788f37"
+    },
+    {
+      "id": "rm2-datasheet",
+      "title": "Raspberry Pi Radio Module 2 Datasheet",
+      "url": "https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf",
+      "viewUrl": "https://www.raspberrypi.com/documentation/microcontrollers/radio-modules.html",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "RP-008943-DS-7",
+      "sha256": "0f611d884ce6cbc3dae5d7eb5f30ffbda5e2ec0632086c338dff4f2e74fc4007"
     }
   ],
   "boards": [
@@ -1533,6 +1542,14 @@
       "physicalSourceMethods": [
         "pdf-text",
         "visual-diagram"
+      ]
+    },
+    {
+      "id": "raspberry-pi-rm2",
+      "physicalPins": 21,
+      "functionAssignments": 10,
+      "physicalSourceMethods": [
+        "table"
       ]
     },
     {

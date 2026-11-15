@@ -1338,6 +1338,16 @@
       "url": "https://raw.githubusercontent.com/arduino/ArduinoCore-megaavr/e8edb4ef2e8ab5c98544c3884a653f0b9c1318dc/boards.txt",
       "viewUrl": "https://github.com/arduino/ArduinoCore-megaavr/blob/e8edb4ef2e8ab5c98544c3884a653f0b9c1318dc/boards.txt",
       "sha256": "ad0a8f69fe94a0de1ee4990ec7a4b8b0777b503369833ccdcad13be7cb788f37"
+    },
+    {
+      "id": "rm2-datasheet",
+      "title": "Raspberry Pi Radio Module 2 Datasheet",
+      "file": "rm2-datasheet.pdf",
+      "url": "https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf",
+      "viewUrl": "https://www.raspberrypi.com/documentation/microcontrollers/radio-modules.html",
+      "publisher": "Raspberry Pi Ltd",
+      "revision": "RP-008943-DS-7",
+      "sha256": "0f611d884ce6cbc3dae5d7eb5f30ffbda5e2ec0632086c338dff4f2e74fc4007"
     }
   ],
   "publishers": [

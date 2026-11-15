@@ -102711,7 +102711,7 @@
       "artwork": "assets/boards/nodemcu-v2.svg"
     },
     "orientation": "usb-bottom",
-    "source": "https://github.com/nodemcu/nodemcu-devkit-v1.0/blob/master/NODEMCU_DEVKIT_V1.0.PDF",
+    "source": "https://github.com/nodemcu/nodemcu-devkit-v1.0/blob/7cb0a330a25fad85e701c768ef46064c17d54446/NODEMCU_DEVKIT_V1.0.PDF",
     "datasheet": "https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf",
     "verifiedOn": "2026-11-05",
     "pins": [
@@ -103609,6 +103609,522 @@
         "position": {
           "x": 540,
           "y": 479,
+          "side": "right"
+        }
+      }
+    ]
+  },
+  {
+    "id": "raspberry-pi-rm2",
+    "name": "Raspberry Pi RM2",
+    "shortName": "RM2",
+    "subtitle": "CYW43439 · Wi-Fi 4 + Bluetooth 5.2 · 21-pad SMT module",
+    "layout": "custom",
+    "scopeKey": "rm2Scope",
+    "category": "Raspberry Pi",
+    "family": "Raspberry Pi",
+    "packageName": "21-pad castellated SMT module",
+    "packagePins": 21,
+    "gpioCount": 3,
+    "uniqueGPIOCount": 3,
+    "voltage": "1.8 V / 3.3 V I/O",
+    "mcu": "CYW43439",
+    "processor": "Infineon CYW43439 (Arm Cortex-M3 WLAN/BT subsystem)",
+    "clock": "37.4 MHz",
+    "wireless": true,
+    "diagram": {
+      "width": 820,
+      "height": 580,
+      "artwork": "assets/boards/raspberry-pi-rm2.svg"
+    },
+    "orientation": "usb-bottom",
+    "source": "https://www.raspberrypi.com/documentation/microcontrollers/radio-modules.html",
+    "datasheet": "https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf",
+    "verifiedOn": "2026-11-05",
+    "pins": [
+      {
+        "number": 1,
+        "physicalLabel": "Pin 1",
+        "connector": "LEFT",
+        "connectorPin": 1,
+        "name": "GND",
+        "boardLabel": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "rm2-pinout"
+        ],
+        "net": "GND",
+        "position": {
+          "x": 270,
+          "y": 160,
+          "side": "left"
+        }
+      },
+      {
+        "number": 2,
+        "physicalLabel": "Pin 2",
+        "connector": "LEFT",
+        "connectorPin": 2,
+        "name": "NC",
+        "boardLabel": "NC",
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "rm2-pinout"
+        ],
+        "net": "NC",
+        "position": {
+          "x": 270,
+          "y": 200,
+          "side": "left"
+        },
+        "noteKey": "rm2NcNote"
+      },
+      {
+        "number": 3,
+        "physicalLabel": "Pin 3",
+        "connector": "LEFT",
+        "connectorPin": 3,
+        "name": "gSPI_SCLK",
+        "boardLabel": "SCLK",
+        "type": "SYSTEM",
+        "functions": [
+          {
+            "name": "gSPI CLK",
+            "group": "SPI",
+            "signal": "SCLK",
+            "evidence": "rm2-pinout"
+          }
+        ],
+        "evidence": [
+          "rm2-pinout"
+        ],
+        "net": "SPI_CLK",
+        "position": {
+          "x": 270,
+          "y": 240,
+          "side": "left"
+        },
+        "noteKey": "rm2SclkNote"
+      },
+      {
+        "number": 4,
+        "physicalLabel": "Pin 4",
+        "connector": "LEFT",
+        "connectorPin": 4,
+        "name": "GND",
+        "boardLabel": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "rm2-pinout"
+        ],
+        "net": "GND",
+        "position": {
+          "x": 270,
+          "y": 280,
+          "side": "left"
+        }
+      },
+      {
+        "number": 5,
+        "physicalLabel": "Pin 5",
+        "connector": "LEFT",
+        "connectorPin": 5,
+        "name": "gSPI_MOSI",
+        "boardLabel": "DIN",
+        "type": "SYSTEM",
+        "functions": [
+          {
+            "name": "gSPI DIN",
+            "group": "SPI",
+            "signal": "MOSI",
+            "evidence": "rm2-pinout"
+          }
+        ],
+        "evidence": [
+          "rm2-pinout"
+        ],
+        "net": "SPI_DIN",
+        "position": {
+          "x": 270,
+          "y": 320,
+          "side": "left"
+        },
+        "noteKey": "rm2DinNote"
+      },
+      {
+        "number": 6,
+        "physicalLabel": "Pin 6",
+        "connector": "LEFT",
+        "connectorPin": 6,
+        "name": "gSPI_MISO",
+        "boardLabel": "DOUT",
+        "type": "SYSTEM",
+        "functions": [
+          {
+            "name": "gSPI DOUT",
+            "group": "SPI",
+            "signal": "MISO",
+            "evidence": "rm2-pinout"
+          }
+        ],
+        "evidence": [
+          "rm2-pinout"
+        ],
+        "net": "SPI_DOUT",
+        "position": {
+          "x": 270,
+          "y": 360,
+          "side": "left"
+        },
+        "noteKey": "rm2DoutNote",
+        "boardCircuitKey": "rm2DoutCircuit"
+      },
+      {
+        "number": 7,
+        "physicalLabel": "Pin 7",
+        "connector": "LEFT",
+        "connectorPin": 7,
+        "name": "GND",
+        "boardLabel": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "rm2-pinout"
+        ],
+        "net": "GND",
+        "position": {
+          "x": 270,
+          "y": 400,
+          "side": "left"
+        }
+      },
+      {
+        "number": 8,
+        "physicalLabel": "Pin 8",
+        "connector": "BOTTOM",
+        "connectorPin": 1,
+        "name": "GPIO0",
+        "boardLabel": "GPIO0",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "GPIO0",
+            "group": "GPIO",
+            "signal": "GPIO0",
+            "evidence": "rm2-pinout"
+          }
+        ],
+        "evidence": [
+          "rm2-pinout"
+        ],
+        "net": "CYW_GPIO0",
+        "position": {
+          "x": 305,
+          "y": 452,
+          "side": "left"
+        },
+        "noteKey": "rm2Gpio0Note"
+      },
+      {
+        "number": 9,
+        "physicalLabel": "Pin 9",
+        "connector": "BOTTOM",
+        "connectorPin": 2,
+        "name": "gSPI_CS",
+        "boardLabel": "CS",
+        "type": "SYSTEM",
+        "functions": [
+          {
+            "name": "gSPI CS",
+            "group": "SPI",
+            "signal": "CS",
+            "evidence": "rm2-pinout"
+          }
+        ],
+        "evidence": [
+          "rm2-pinout"
+        ],
+        "net": "SPI_CS",
+        "position": {
+          "x": 345,
+          "y": 452,
+          "side": "left"
+        },
+        "noteKey": "rm2CsNote"
+      },
+      {
+        "number": 10,
+        "physicalLabel": "Pin 10",
+        "connector": "BOTTOM",
+        "connectorPin": 3,
+        "name": "nIRQ",
+        "boardLabel": "nIRQ",
+        "type": "SYSTEM",
+        "functions": [
+          {
+            "name": "nIRQ",
+            "group": "IRQ",
+            "signal": "nIRQ",
+            "evidence": "rm2-pinout"
+          }
+        ],
+        "evidence": [
+          "rm2-pinout"
+        ],
+        "net": "CYW_nIRQ",
+        "position": {
+          "x": 385,
+          "y": 452,
+          "side": "left"
+        },
+        "noteKey": "rm2IrqNote",
+        "boardCircuitKey": "rm2IrqCircuit"
+      },
+      {
+        "number": 11,
+        "physicalLabel": "Pin 11",
+        "connector": "BOTTOM",
+        "connectorPin": 4,
+        "name": "GND",
+        "boardLabel": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "rm2-pinout"
+        ],
+        "net": "GND",
+        "position": {
+          "x": 425,
+          "y": 452,
+          "side": "right"
+        }
+      },
+      {
+        "number": 12,
+        "physicalLabel": "Pin 12",
+        "connector": "BOTTOM",
+        "connectorPin": 5,
+        "name": "WL_REG_ON",
+        "boardLabel": "WL_ON",
+        "type": "SYSTEM",
+        "functions": [
+          {
+            "name": "WL_REG_ON",
+            "group": "SYSTEM",
+            "signal": "REG_ON",
+            "evidence": "rm2-pinout"
+          }
+        ],
+        "evidence": [
+          "rm2-pinout"
+        ],
+        "net": "WL_REG_ON",
+        "position": {
+          "x": 465,
+          "y": 452,
+          "side": "right"
+        },
+        "noteKey": "rm2WlOnNote"
+      },
+      {
+        "number": 13,
+        "physicalLabel": "Pin 13",
+        "connector": "BOTTOM",
+        "connectorPin": 6,
+        "name": "BT_REG_ON",
+        "boardLabel": "BT_ON",
+        "type": "SYSTEM",
+        "functions": [
+          {
+            "name": "BT_REG_ON",
+            "group": "SYSTEM",
+            "signal": "REG_ON",
+            "evidence": "rm2-pinout"
+          }
+        ],
+        "evidence": [
+          "rm2-pinout"
+        ],
+        "net": "BT_REG_ON",
+        "position": {
+          "x": 505,
+          "y": 452,
+          "side": "right"
+        },
+        "noteKey": "rm2BtOnNote"
+      },
+      {
+        "number": 14,
+        "physicalLabel": "Pin 14",
+        "connector": "BOTTOM",
+        "connectorPin": 7,
+        "name": "VDDIO",
+        "boardLabel": "VDDIO",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "rm2-pinout"
+        ],
+        "net": "VDDIO",
+        "position": {
+          "x": 545,
+          "y": 452,
+          "side": "right"
+        },
+        "noteKey": "rm2VddioNote"
+      },
+      {
+        "number": 15,
+        "physicalLabel": "Pin 15",
+        "connector": "RIGHT",
+        "connectorPin": 1,
+        "name": "GND",
+        "boardLabel": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "rm2-pinout"
+        ],
+        "net": "GND",
+        "position": {
+          "x": 550,
+          "y": 400,
+          "side": "right"
+        }
+      },
+      {
+        "number": 16,
+        "physicalLabel": "Pin 16",
+        "connector": "RIGHT",
+        "connectorPin": 2,
+        "name": "VIN",
+        "boardLabel": "VIN",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "rm2-pinout"
+        ],
+        "net": "VBAT",
+        "position": {
+          "x": 550,
+          "y": 360,
+          "side": "right"
+        },
+        "noteKey": "rm2VinNote"
+      },
+      {
+        "number": 17,
+        "physicalLabel": "Pin 17",
+        "connector": "RIGHT",
+        "connectorPin": 3,
+        "name": "GPIO2",
+        "boardLabel": "GPIO2",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "GPIO2",
+            "group": "GPIO",
+            "signal": "GPIO2",
+            "evidence": "rm2-pinout"
+          }
+        ],
+        "evidence": [
+          "rm2-pinout"
+        ],
+        "net": "CYW_GPIO2",
+        "position": {
+          "x": 550,
+          "y": 320,
+          "side": "right"
+        },
+        "noteKey": "rm2Gpio2Note"
+      },
+      {
+        "number": 18,
+        "physicalLabel": "Pin 18",
+        "connector": "RIGHT",
+        "connectorPin": 4,
+        "name": "GPIO1",
+        "boardLabel": "GPIO1",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "GPIO1",
+            "group": "GPIO",
+            "signal": "GPIO1",
+            "evidence": "rm2-pinout"
+          }
+        ],
+        "evidence": [
+          "rm2-pinout"
+        ],
+        "net": "CYW_GPIO1",
+        "position": {
+          "x": 550,
+          "y": 280,
+          "side": "right"
+        },
+        "noteKey": "rm2Gpio1Note"
+      },
+      {
+        "number": 19,
+        "physicalLabel": "Pin 19",
+        "connector": "RIGHT",
+        "connectorPin": 5,
+        "name": "NC",
+        "boardLabel": "NC",
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "rm2-pinout"
+        ],
+        "net": "NC",
+        "position": {
+          "x": 550,
+          "y": 240,
+          "side": "right"
+        },
+        "noteKey": "rm2NcNote"
+      },
+      {
+        "number": 20,
+        "physicalLabel": "Pin 20",
+        "connector": "RIGHT",
+        "connectorPin": 6,
+        "name": "NC",
+        "boardLabel": "NC",
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "rm2-pinout"
+        ],
+        "net": "NC",
+        "position": {
+          "x": 550,
+          "y": 200,
+          "side": "right"
+        },
+        "noteKey": "rm2NcNote"
+      },
+      {
+        "number": 21,
+        "physicalLabel": "Pin 21",
+        "connector": "RIGHT",
+        "connectorPin": 7,
+        "name": "GND",
+        "boardLabel": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "rm2-pinout"
+        ],
+        "net": "GND",
+        "position": {
+          "x": 550,
+          "y": 160,
           "side": "right"
         }
       }

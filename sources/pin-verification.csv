@@ -8418,6 +8418,27 @@ nodemcu-v2,28,TX,GPIO,PWM,,PWM,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-ma
 nodemcu-v2,28,TX,GPIO,GPIO interrupt,,GPIO1,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
 nodemcu-v2,29,GND,GND,,,,nodemcu-v1-header,
 nodemcu-v2,30,3V3,POWER,,,,nodemcu-v1-header,
+raspberry-pi-rm2,1,GND,GND,,,,rm2-pinout,
+raspberry-pi-rm2,2,NC,SYSTEM,,,,rm2-pinout,
+raspberry-pi-rm2,3,gSPI_SCLK,SYSTEM,gSPI CLK,,SCLK,rm2-pinout,rm2-pinout
+raspberry-pi-rm2,4,GND,GND,,,,rm2-pinout,
+raspberry-pi-rm2,5,gSPI_MOSI,SYSTEM,gSPI DIN,,MOSI,rm2-pinout,rm2-pinout
+raspberry-pi-rm2,6,gSPI_MISO,SYSTEM,gSPI DOUT,,MISO,rm2-pinout,rm2-pinout
+raspberry-pi-rm2,7,GND,GND,,,,rm2-pinout,
+raspberry-pi-rm2,8,GPIO0,GPIO,GPIO0,,GPIO0,rm2-pinout,rm2-pinout
+raspberry-pi-rm2,9,gSPI_CS,SYSTEM,gSPI CS,,CS,rm2-pinout,rm2-pinout
+raspberry-pi-rm2,10,nIRQ,SYSTEM,nIRQ,,nIRQ,rm2-pinout,rm2-pinout
+raspberry-pi-rm2,11,GND,GND,,,,rm2-pinout,
+raspberry-pi-rm2,12,WL_REG_ON,SYSTEM,WL_REG_ON,,REG_ON,rm2-pinout,rm2-pinout
+raspberry-pi-rm2,13,BT_REG_ON,SYSTEM,BT_REG_ON,,REG_ON,rm2-pinout,rm2-pinout
+raspberry-pi-rm2,14,VDDIO,POWER,,,,rm2-pinout,
+raspberry-pi-rm2,15,GND,GND,,,,rm2-pinout,
+raspberry-pi-rm2,16,VIN,POWER,,,,rm2-pinout,
+raspberry-pi-rm2,17,GPIO2,GPIO,GPIO2,,GPIO2,rm2-pinout,rm2-pinout
+raspberry-pi-rm2,18,GPIO1,GPIO,GPIO1,,GPIO1,rm2-pinout,rm2-pinout
+raspberry-pi-rm2,19,NC,SYSTEM,,,,rm2-pinout,
+raspberry-pi-rm2,20,NC,SYSTEM,,,,rm2-pinout,
+raspberry-pi-rm2,21,GND,GND,,,,rm2-pinout,
 atmega328p-pdip28,1,PC6,GPIO,PCINT14,,PCINT14,atmega328p-pdip28-physical | atmega328p-mux-19 | atmega328p-reset-fuse,atmega328p-mux-19
 atmega328p-pdip28,1,PC6,GPIO,GPIO,RSTDISBL programmed,PC6,atmega328p-pdip28-physical | atmega328p-mux-19 | atmega328p-reset-fuse,atmega328p-reset-fuse
 atmega328p-pdip28,2,PD0,GPIO,PCINT16,,PCINT16,atmega328p-pdip28-physical | atmega328p-mux-20,atmega328p-mux-20

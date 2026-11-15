@@ -1,6 +1,6 @@
 # Hardware research and technical reference
 
-Reviewed: 2026-11-14. All 82 profiles are covered individually. 47 have a qualified historical date; exact first production/sale dates remain unverified for 35. An MCU datasheet’s initial publication is not presented as a board’s production year.
+Reviewed: 2026-11-14. All 83 profiles are covered individually. 48 have a qualified historical date; exact first production/sale dates remain unverified for 35. An MCU datasheet’s initial publication is not presented as a board’s production year.
 
 Generated from `sources/hardware-details.json` by `npm run build:data`. Each fact and note carries source links. Live manufacturer pages may change; the locked versions and SHA-256 values for pin evidence remain in `sources/manifest.json`. The technical review does not change the previous pin-verification date.
 
@@ -578,7 +578,7 @@ Circuit / board documents: [ESP32-C6-DevKitC-1 v1.2 schematic](https://dl.espres
 
 ### NodeMCU v2
 
-[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=nodemcu-v2&profile=nodemcu-v2) · [Pin reference](https://github.com/nodemcu/nodemcu-devkit-v1.0/blob/master/NODEMCU_DEVKIT_V1.0.PDF) · [Datasheet](https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf)
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=nodemcu-v2&profile=nodemcu-v2) · [Pin reference](https://github.com/nodemcu/nodemcu-devkit-v1.0/blob/7cb0a330a25fad85e701c768ef46064c17d54446/NODEMCU_DEVKIT_V1.0.PDF) · [Datasheet](https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf)
 
 - **Initial sale / release:** 2015-01-29. [NodeMCU DevKit release history](https://github.com/nodemcu/nodemcu-devkit-v1.0/releases)
 - **Processor:** 1 × Tensilica L106 32-bit. [ESP8266EX Datasheet](https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf)
@@ -590,6 +590,23 @@ Circuit / board documents: [ESP32-C6-DevKitC-1 v1.2 schematic](https://dl.espres
 Houses an ESP-12E/F module with 4 MB internal SPI Flash. SDIO pins (GPIO6–GPIO11) connect directly to this flash and are reserved. Analog pin A0 includes an onboard 220 kΩ / 100 kΩ divider for a 0–3.3 V range. [NodeMCU DEVKIT v1.0 specifications](https://github.com/nodemcu/nodemcu-devkit-v1.0), [NodeMCU DEVKIT v1.0 Schematic](https://raw.githubusercontent.com/nodemcu/nodemcu-devkit-v1.0/master/NODEMCU_DEVKIT_V1.0.PDF)
 
 Circuit / board documents: [NodeMCU DEVKIT v1.0 Schematic](https://raw.githubusercontent.com/nodemcu/nodemcu-devkit-v1.0/master/NODEMCU_DEVKIT_V1.0.PDF)
+
+### Raspberry Pi RM2
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=raspberry-pi-rm2&profile=raspberry-pi-rm2) · [Pin reference](https://www.raspberrypi.com/documentation/microcontrollers/radio-modules.html) · [Datasheet](https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf)
+
+- **Initial sale / release:** 2024-11-20. [Raspberry Pi Radio Module 2 Product Documentation](https://www.raspberrypi.com/documentation/microcontrollers/radio-modules.html)
+- **Processor:** Embedded Arm Cortex-M3 (WLAN/BT subsystem). [Raspberry Pi Radio Module 2 Datasheet](https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf)
+- **Clock / maximum:** 37.4 MHz reference. [Raspberry Pi Radio Module 2 Datasheet](https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf)
+- **RAM:** Internal WLAN/BT RAM & ROM. [Raspberry Pi Radio Module 2 Datasheet](https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf)
+- **Program Flash / storage:** Firmware loaded via gSPI (Pico SDK). [Raspberry Pi Radio Module 2 Product Documentation](https://www.raspberrypi.com/documentation/microcontrollers/radio-modules.html), [Raspberry Pi Radio Module 2 Datasheet](https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf)
+- **Power / logic:** VIN: 3.0 to 4.8 V (nominal 3.3 V); VDDIO: 1.8 V +/-5% or 3.3 V +/-5%. Match VDDIO logic levels to the host microcontroller.. [Raspberry Pi Radio Module 2 Product Documentation](https://www.raspberrypi.com/documentation/microcontrollers/radio-modules.html), [Raspberry Pi Radio Module 2 Datasheet](https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf)
+
+Infineon CYW43439 single-band (2.4 GHz) Wi-Fi 4 (802.11n) and Bluetooth 5.2 radio combo chip. Features a gSPI interface and 3 host-controlled GPIO expanders. [Raspberry Pi Radio Module 2 Datasheet](https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf)
+
+21 castellated SMT edge pads, shared 2.4 GHz onboard PCB antenna, low pin-count gSPI bus, and 3 GPIO expander pins. [Raspberry Pi Radio Module 2 Datasheet](https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf)
+
+Circuit / board documents: [Raspberry Pi Radio Module 2 Datasheet](https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf)
 
 ### ATmega328P · PDIP-28
 

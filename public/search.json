@@ -477,6 +477,20 @@
   },
   {
     "lang": "tr",
+    "title": "Raspberry Pi RM2",
+    "url": "/pin-atlas/#board=raspberry-pi-rm2&profile=raspberry-pi-rm2",
+    "type": "pin-atlas/",
+    "description": "CYW43439 · Wi-Fi 4 + Bluetooth 5.2 · 21-pad SMT module · CYW43439 · Raspberry Pi"
+  },
+  {
+    "lang": "en",
+    "title": "Raspberry Pi RM2",
+    "url": "/pin-atlas/#board=raspberry-pi-rm2&profile=raspberry-pi-rm2",
+    "type": "pin-atlas/",
+    "description": "CYW43439 · Wi-Fi 4 + Bluetooth 5.2 · 21-pad SMT module · CYW43439 · Raspberry Pi"
+  },
+  {
+    "lang": "tr",
     "title": "ATmega328P · PDIP-28",
     "url": "/pin-atlas/#board=atmega328p-pdip28&profile=atmega328p-pdip28",
     "type": "pin-atlas/",

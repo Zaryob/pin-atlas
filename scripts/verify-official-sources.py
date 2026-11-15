@@ -17,6 +17,7 @@ try:
     from expanded_arduino_sources import build_expanded_arduino
     from espressif_sources import build_espressif
     from esp8266_sources import build_esp8266
+    from rm2_sources import build_rm2
     from avr_packages import build_avr_packages
     from seeed_sources import build_seeed
     from microbit_sources import build_microbit
@@ -458,6 +459,7 @@ def build(use_snapshots=False):
     boards.extend(build_expanded_arduino(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn'],boards))
     boards.extend(build_espressif(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn']))
     boards.extend(build_esp8266(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn']))
+    boards.extend(build_rm2(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn']))
     boards.extend(build_avr_packages(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn']))
     rp2040_phys = ref('rp2040-qfn56-physical','rp2040',12,'Figure 3 · QFN-56 top view and exposed GND pad','visual-diagram')
     boards.extend(build_seeed(CACHE,DOCS,OBS,ref,MANIFEST['verifiedOn'],bank2040,rp2040_phys))
