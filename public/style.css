@@ -1313,7 +1313,7 @@
 .hardware-details{margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--line);min-width:0}
 .research-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:1.5rem;margin-bottom:1.5rem}
 .research-heading h2{font-size:var(--text-h2);line-height:1.5;margin:.4rem 0}
-.research-heading>p,.research-eyebrow{font-size:var(--text-xs);color:var(--muted);line-height:1.9;margin:0}
+.research-heading>p{font-size:var(--text-xs);color:var(--muted);line-height:1.9;margin:0}
 .research-heading>p{flex-shrink:0}
 .research-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin:0;border:1px solid var(--line)}
 .research-facts>div{padding:1rem 1.2rem;min-width:0;border-bottom:1px solid var(--line)}

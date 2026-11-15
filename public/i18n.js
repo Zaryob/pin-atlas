@@ -1,7 +1,6 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
 (() => {
   const messages = {
-    "researchEyebrow": ["Donanım referansı", "Hardware reference"],
     "researchTitle": ["{name} — teknik bilgiler", "{name} — technical details"],
     "researchReviewed": ["Teknik bilgi incelemesi: {date}", "Technical review: {date}"],
     "researchPinsReviewed": ["Pin kaynak doğrulaması: {date}", "Pin-source verification: {date}"],
