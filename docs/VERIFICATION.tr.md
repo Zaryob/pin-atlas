@@ -248,3 +248,35 @@ F411CE referansı STM32F411CEU6'yı (UFQFPN-48, GPIO olarak kullanılabilen 36 b
 - **RP2350 errata maddesi E9:** Pico 2, Pico 2 W, RP2350A ve RP2350B'nin her Bank 0 GPIO'su, RP2350 veri sayfasındaki (Ek D.5.1, s. 1359–1360) RP2350-E9 giriş kaçağı uyarısını taşır. RP2040 profilleri taşımaz.
 - **Raspberry Pi 40 pinlik başlık:** kart uyarıları pinlerin 5 V toleranslı olmadığını belirtir ve pin başına 16 mA, toplamda 50 mA sınırını verir; GPIO2/GPIO3 sabit 1,8 kΩ pull-up'ları taşır.
 - **Kanıt konumları:** ATmega2561 PDI/PDO referansı artık s. 84'teki Table 13-17 notunu, ESP32 s. 16 referansı ise Table 2-1 notlarını gösterir.
+
+## Yol haritası eklemeleri için resmî kaynaklar ve doğrulama ölçütleri
+
+Pin Atlas kataloğuna eklenecek yeni modeller için geçerli resmî birincil belgeler ve doğrulama kuralları:
+
+### WCH RISC-V ekosistemi (CH32V003, CH32V203, CH32V307)
+- **Belgeler:** `CH32V003DS0.PDF` (Veri Sayfası, WCH), `CH32V003RM.PDF` (Referans Kılavuzu, WCH), `CH32V203DS0.PDF`, `CH32V307RM.PDF` ve `open-wch/ch32v003` ile `open-wch/ch32v203` resmî şemaları.
+- **Doğrulama ölçütleri:** TSSOP-20, QFN-20, SOP-16 ve SOP-8 fiziksel paket bacakları; USART1, I2C1 ve TIM1/TIM2 için AFIO remap kuralları; PD1 üzerindeki tek hatlı seri hata ayıklama (SDI) pini kimliği; 3,3 V ve 5,0 V çalışma sınırları.
+
+### Espressif Systems yeni nesil silikonları (ESP32-S2, ESP32-H2, ESP32-P4)
+- **Belgeler:** `esp32-s2_datasheet_en.pdf`, `esp32-s2_technical_reference_manual_en.pdf`, `esp32-h2_datasheet_en.pdf`, `esp32-h2_technical_reference_manual_en.pdf`, `esp32-p4_datasheet_en.pdf`, `esp32-p4_technical_reference_manual_en.pdf` ve commit'e sabitlenmiş ESP-IDF `components/soc/*/include/soc/gpio_pins.h`.
+- **Doğrulama ölçütleri:** ESP32-S2 yerel USB OTG pinleri (GPIO19 D-, GPIO20 D+), strapping pinleri (GPIO0, GPIO45, GPIO46); ESP32-H2 IEEE 802.15.4 / BLE 5.3 strapping (GPIO8, GPIO9) ve yalnızca giriş pinleri; ESP32-P4 MIPI CSI/DSI diferansiyel çiftleri, Ethernet RMII arabirimi ve ADC2 çakışması olmayan 50+ GPIO matrisi.
+
+### Nordic Semiconductor BLE portföyü (nRF52840, nRF5340)
+- **Belgeler:** `nRF52840_PS_v1.7.pdf` (Ürün Spesifikasyonu), `nRF5340_PS_v1.3.pdf` ve PCA10056 (DK) ile PCA10059 (Dongle) resmî Nordic şemaları.
+- **Doğrulama ölçütleri:** Standart ve Yüksek Sürüş (E0/E1, H0/H1) elektriksel sınırları, NFC anten pinlerinin (P0.09, P0.10) GPIO yapılandırması, 32,768 kHz kristal pinleri (P0.00, P0.01), USB VBUS algılaması ve nRF5340 çift çekirdekli alan pin yönlendirmesi (Ağ vs. Uygulama çekirdeği).
+
+### STMicroelectronics modern serileri (STM32H5, STM32U5, STM32C0, STM32WL)
+- **Belgeler:** `RM0481` (STM32H5x3 Referans Kılavuzu), `UM3115` (NUCLEO-H563ZI Kullanım Kılavuzu), `RM0456` (STM32U5 Referans Kılavuzu), `UM2861` (NUCLEO-U575ZI-Q), `RM0490` (STM32C0 Referans Kılavuzu), `UM2977` (NUCLEO-C031C6) ve `STMicroelectronics/STM32_open_pin_data` XML kaynakları.
+- **Doğrulama ölçütleri:** Cortex-M33 TrustZone güvenli G/Ç nitelikleri, STM32U5'te LPBAM otonom çevre birimi pin ataması, 5 V toleranslı (FT) bacak sınıflandırması ve MB1404 / MB1549 Zio/Morpho konektör eşlemeleri.
+
+### Microchip / Atmel SAMD ve modern tinyAVR (ATSAMD51, tinyAVR 1/2-Serisi)
+- **Belgeler:** `SAM-D51-E54-Family-Data-Sheet-DS60001507.pdf`, `tinyAVR-1-Series-Data-Sheet-DS40002166.pdf` ve Adafruit Metro M4 ile Grand Central M4 resmî şemaları.
+- **Doğrulama ölçütleri:** ATSAMD51 çift DAC çıkışı (PA02, PA05), çift ADC giriş kanalı, PMUX çevre birimi çoklama matrisi (A'dan N'ye); tinyAVR UPDI özel programlama kontağı, port çoklayıcı (PORTMUX) kayıtçıları ve Core Independent Peripheral pin yolları.
+
+### Texas Instruments MSPM0 ailesi (MSPM0L1306, MSPM0G3507)
+- **Belgeler:** `SLAU846.pdf` (MSPM0 G-Serisi Teknik Referans Kılavuzu), `SLAU847.pdf` (MSPM0 L-Serisi TRM) ve LP-MSPM0L1306 / LP-MSPM0G3507 LaunchPad Kullanım Kılavuzları.
+- **Doğrulama ölçütleri:** 5 V toleranslı G/Ç bacaklarına karşılık yalnızca 3,3 V bacaklar, CAN-FD pin atamaları, donanımsal çarpıcı / matematik hızlandırıcı kanalları ve LaunchPad 20/40 pinli BoosterPack başlık hizalaması.
+
+### Arduino Pro ve yüksek yoğunluklu kartlar (Arduino GIGA R1 WiFi)
+- **Belgeler:** `Arduino-GIGA-R1-WiFi_schematics.pdf` (Resmî Arduino) ve commit'e sabitlenmiş `ArduinoCore-mbed/variants/GIGA/pins_arduino.h`.
+- **Doğrulama ölçütleri:** Mega biçimli başlıklarda 76 GPIO kontağı; STM32H747XI çift çekirdekli (Cortex-M7 + Cortex-M4) sinyal yönlendirmesi; Murata 1DX Wi-Fi/BLE modül yalıtımı; USB-A host ve USB-C programlama portu hatları; tüm başlıklarda 3,3 V G/Ç gerilim sınırı.

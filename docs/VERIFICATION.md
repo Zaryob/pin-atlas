@@ -248,3 +248,35 @@ The F411CE reference uses STM32F411CEU6 (UFQFPN-48, 36 GPIO-capable pads, up to 
 - **RP2350 erratum E9:** every Bank 0 GPIO of Pico 2, Pico 2 W, RP2350A and RP2350B carries the RP2350-E9 input-leakage warning from the RP2350 data sheet (Appendix D.5.1, pp. 1359–1360). RP2040 profiles do not.
 - **Raspberry Pi 40-pin header:** board cautions state that the pins are not 5 V tolerant and give 16 mA per pin and 50 mA in total; GPIO2/GPIO3 carry the fixed 1.8 kΩ pull-ups.
 - **Evidence locators:** the ATmega2561 PDI/PDO reference now points to the Table 13-17 note on p. 84, and the ESP32 p. 16 reference to the Table 2-1 notes.
+
+## Primary sources and verification standards for roadmap additions
+
+The following official primary documents and verification rules govern additions to the Pin Atlas catalog:
+
+### WCH RISC-V ecosystem (CH32V003, CH32V203, CH32V307)
+- **Documents:** `CH32V003DS0.PDF` (Datasheet, WCH), `CH32V003RM.PDF` (Reference Manual, WCH), `CH32V203DS0.PDF`, `CH32V307RM.PDF`, and the official schematics in `open-wch/ch32v003` and `open-wch/ch32v203`.
+- **Verification criteria:** Physical package pins across TSSOP-20, QFN-20, SOP-16 and SOP-8; AFIO remapping rules for USART1, I2C1 and TIM1/TIM2 channels; single-wire serial debug interface (SDI) pin identity on PD1; operating voltage bounds (3.3 V and 5.0 V modes).
+
+### Espressif Systems next-generation silicon (ESP32-S2, ESP32-H2, ESP32-P4)
+- **Documents:** `esp32-s2_datasheet_en.pdf`, `esp32-s2_technical_reference_manual_en.pdf`, `esp32-h2_datasheet_en.pdf`, `esp32-h2_technical_reference_manual_en.pdf`, `esp32-p4_datasheet_en.pdf`, `esp32-p4_technical_reference_manual_en.pdf`, and ESP-IDF commit-pinned `components/soc/*/include/soc/gpio_pins.h`.
+- **Verification criteria:** ESP32-S2 native USB OTG pins (GPIO19 D-, GPIO20 D+), strapping pins (GPIO0, GPIO45, GPIO46); ESP32-H2 IEEE 802.15.4 / BLE 5.3 strapping (GPIO8, GPIO9) and input-only pads; ESP32-P4 MIPI CSI/DSI differential pin pairs, Ethernet RMII interface, and 50+ GPIO pad matrix without analog ADC2 conflict.
+
+### Nordic Semiconductor BLE portfolio (nRF52840, nRF5340)
+- **Documents:** `nRF52840_PS_v1.7.pdf` (Product Specification), `nRF5340_PS_v1.3.pdf`, and Nordic Semiconductor official schematics for PCA10056 (DK) and PCA10059 (Dongle).
+- **Verification criteria:** Standard vs. High Drive (E0/E1, H0/H1) electrical ratings, NFC antenna pins (P0.09, P0.10) configuration, 32.768 kHz crystal pins (P0.00, P0.01), USB VBUS detection, and nRF5340 dual-core domain pin routing (Network vs. Application core).
+
+### STMicroelectronics modern families (STM32H5, STM32U5, STM32C0, STM32WL)
+- **Documents:** `RM0481` (STM32H5x3 Reference Manual), `UM3115` (NUCLEO-H563ZI User Manual), `RM0456` (STM32U5 Reference Manual), `UM2861` (NUCLEO-U575ZI-Q), `RM0490` (STM32C0 Reference Manual), `UM2977` (NUCLEO-C031C6), and `STMicroelectronics/STM32_open_pin_data` XML sources.
+- **Verification criteria:** TrustZone secure I/O attributes for Cortex-M33, LPBAM autonomous peripheral pin allocation on STM32U5, 5 V tolerant (FT) pad classification, and Zio/Morpho connector mappings across MB1404 / MB1549 carrier layouts.
+
+### Microchip / Atmel SAMD and modern tinyAVR (ATSAMD51, tinyAVR 1/2-Series)
+- **Documents:** `SAM-D51-E54-Family-Data-Sheet-DS60001507.pdf`, `tinyAVR-1-Series-Data-Sheet-DS40002166.pdf`, and official board schematics for Adafruit Metro M4 and Grand Central M4.
+- **Verification criteria:** ATSAMD51 dual DAC outputs (PA02, PA05), dual ADC input channels, PMUX peripheral multiplexing matrix (A through N); tinyAVR UPDI dedicated programming contact, port multiplexer (PORTMUX) registers, and Core Independent Peripheral pin routes.
+
+### Texas Instruments MSPM0 family (MSPM0L1306, MSPM0G3507)
+- **Documents:** `SLAU846.pdf` (MSPM0 G-Series Technical Reference Manual), `SLAU847.pdf` (MSPM0 L-Series TRM), and LP-MSPM0L1306 / LP-MSPM0G3507 LaunchPad User Guides.
+- **Verification criteria:** 5 V tolerant I/O pads versus 3.3 V only pads, CAN-FD pin allocations, hardware multiplier / math accelerator dedicated channels, and LaunchPad 20-pin / 40-pin BoosterPack header standard alignment.
+
+### Arduino Pro and high-density boards (Arduino GIGA R1 WiFi)
+- **Documents:** `Arduino-GIGA-R1-WiFi_schematics.pdf` (Arduino official), and commit-pinned `ArduinoCore-mbed/variants/GIGA/pins_arduino.h`.
+- **Verification criteria:** 76 GPIO contacts on Mega-format headers; STM32H747XI dual-core (Cortex-M7 + Cortex-M4) signal routing; Murata 1DX Wi-Fi/BLE module isolation; USB-A host and USB-C programming port nets; 3.3 V I/O voltage boundary across all header pins.
