@@ -132,6 +132,7 @@ test('the index lists every profile and the application links to the static page
   await page.goto('./?lang=en#board=beaglebone-black');
   await expect(page.locator('#board-title')).toHaveText('BeagleBone Black');
   await expect(page.locator('#static-page')).toHaveAttribute('href',/\/pin-atlas\/boards\/beaglebone-black\/$/);
+  if(!await page.locator('#static-page').isVisible()) await page.locator('#board-documents > summary').click();
   await page.locator('#static-page').click();
   await expect(page.locator('h1')).toHaveText('BeagleBone Black pinout');
 });

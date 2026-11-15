@@ -23,11 +23,11 @@
   <title data-i18n="pageTitle">{{ page.title | default: site.title | escape }}</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23171a1f'/%3E%3Cpath d='M10 12h20v16H10z' stroke='%23e2b56f' fill='none' stroke-width='3'/%3E%3C/svg%3E">
   <script src="{{ '/assets/console/language.js' | relative_url }}"></script>
-  <script src="{{ '/i18n.js' | relative_url }}"></script>
+  <script src="{{ '/i18n.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
   <script src="{{ '/assets/console/theme.js' | relative_url }}"></script>
   <link rel="stylesheet" href="{{ '/assets/console/theme.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
-  <script type="module" src="{{ '/app.js' | relative_url }}"></script>
+  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+  <script type="module" src="{{ '/app.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
   <link rel="canonical" href="https://zaryob.github.io/pin-atlas/">
 </head>
 <body class="pin-atlas-site">

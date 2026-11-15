@@ -1348,7 +1348,7 @@
 .link-notice .icon-button { flex-shrink: 0; min-width: 32px; min-height: 32px; }
 
 /* Generated pinout pages (scripts/static-pages.mjs, layout board.html). */
-.static-main { max-width: 1180px; padding-bottom: 0; }
+.static-main { max-width: var(--shell-width); padding-bottom: 0; }
 .static-crumbs { display: flex; flex-wrap: wrap; gap: 8px; color: var(--muted); font-size: var(--text-xs); margin-bottom: 22px; }
 .static-crumbs span[aria-hidden] { color: var(--accent); }
 .static-heading h1 { overflow-wrap: anywhere; }
@@ -1415,3 +1415,41 @@
 .home-view.is-searching .home-hero.console-hero :is(.console-hero__prompt, .console-hero__panel) { display: none; }
 .home-view.is-searching .home-hero.console-hero .console-hero__inner { grid-template-columns: minmax(0, 1fr); padding-block: 12px; }
 .home-hero.console-hero .console-hero__inner { padding-inline: 0; padding-top: 8px; }
+
+/* Explanations use the prose role; identifiers and electrical data stay mono. */
+:is(.board-scope, .pin-description, .hardware-note, .circuit-notes li, .static-lead, .static-general p) { font-family: var(--font-prose); font-size: var(--text-base); line-height: var(--line-prose); }
+@media (max-width: 640px) {
+  .page-heading { display: block; }
+  .heading-actions { flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .heading-actions .button { min-height: 44px; font-size: var(--text-sm); padding: 6px 10px; }
+  .specs { margin-block: 10px 12px; }
+  .compatibility-index > summary { min-height: 44px; padding: 8px 10px; }
+  .compatibility-index:not([open]) .compatibility-current { display: none; }
+  .compatibility-toggle .index-closed, .compatibility-toggle .index-open { display: none; }
+  .home-stats { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px 16px; padding-block: 16px; }
+  .home-stat-item { align-items: baseline; flex-direction: row; gap: 8px; }
+  .home-stat-item .stat-number { font-size: var(--text-h3); }
+  .home-stat-item .stat-label { font-size: var(--text-xs); }
+  .console-hero .home-badge { display: block; padding: 0; border: 0; border-radius: 0; background: transparent; font-size: var(--text-xs); }
+}
+
+.heading-documents > summary { display: none; }
+@media (max-width: 640px) {
+  .heading-documents > summary { display: flex; align-items: center; min-height: 44px; color: var(--accent); cursor: pointer; font-size: var(--text-sm); }
+  .heading-documents > summary::after { content: '⌄'; margin-left: 10px; }
+  .topbar { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 8px 10px; padding-inline: var(--gutter); }
+  .topbar-left, .topbar-right { display: contents; }
+  .topbar .board-picker-btn { grid-row: 1; grid-column: 1; min-width: 0; white-space: normal; min-height: 44px; font-size: var(--text-sm); padding-inline: 8px; }
+  .topbar .help-btn { grid-row: 1; grid-column: 2; width: 44px; min-height: 44px; }
+  .topbar .breadcrumbs { grid-row: 2; grid-column: 1 / -1; flex-wrap: wrap; }
+}
+
+.pin-guidance > summary { min-height: 44px; padding-block: 10px; cursor: pointer; color: var(--accent); font-size: var(--text-sm); }
+
+@media (max-width: 640px) {
+  .topbar .breadcrumbs, .page-heading .board-reference { display: none; }
+  .panel-heading { flex-wrap: nowrap; padding: 8px 10px; }
+  .panel-title { flex-wrap: wrap; gap: 5px; }
+  .view-switch button { min-width: 44px; min-height: 44px; }
+  .view-switch button > span[data-i18n] { display: none; }
+}
