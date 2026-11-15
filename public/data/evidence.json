@@ -808,6 +808,25 @@
       "sha256": "8da0bfde21f829ad1ecf90b20412f4870d5a4261a826fd05b688bc895497e11a"
     },
     {
+      "id": "nodemcu-v1-schematic",
+      "title": "NodeMCU DEVKIT v1.0 Schematic",
+      "file": "nodemcu-v1-schematic.pdf",
+      "url": "https://raw.githubusercontent.com/nodemcu/nodemcu-devkit-v1.0/master/NODEMCU_DEVKIT_V1.0.PDF",
+      "viewUrl": "https://github.com/nodemcu/nodemcu-devkit-v1.0/blob/master/NODEMCU_DEVKIT_V1.0.PDF",
+      "publisher": "NodeMCU",
+      "revision": "DevKit v1.0",
+      "sha256": "235393563e2bcd8b75e30b36ed710f66882f240df6aac357afbf2de6e79b3d26"
+    },
+    {
+      "id": "esp8266ex-datasheet",
+      "title": "ESP8266EX Datasheet",
+      "file": "esp8266ex-datasheet.pdf",
+      "url": "https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf",
+      "publisher": "Espressif Systems",
+      "revision": "v7.1 · 2025-11",
+      "sha256": "3a038e2fd3040ad06d95d41b16afc8292090339e9f8e728ce46a83db439cecf1"
+    },
+    {
       "id": "microbit-v2-schematic",
       "title": "BBC micro:bit V2 Schematic",
       "file": "microbit-v2-schematic.pdf",
@@ -2616,6 +2635,30 @@
       "page": 33,
       "locator": "Boot configurations · strapping levels are sampled during reset",
       "method": "pdf-table"
+    },
+    "nodemcu-v1-header": {
+      "document": "nodemcu-v1-schematic",
+      "title": "NodeMCU DEVKIT v1.0 Schematic",
+      "url": "https://github.com/nodemcu/nodemcu-devkit-v1.0/blob/master/NODEMCU_DEVKIT_V1.0.PDF#page=5",
+      "page": 5,
+      "locator": "Sheet 5/9 · connectors J1 (A0–VIN) and J2 (D0–3V3)",
+      "method": "visual-diagram"
+    },
+    "esp8266ex-matrix": {
+      "document": "esp8266ex-datasheet",
+      "title": "ESP8266EX Datasheet",
+      "url": "https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf#page=10",
+      "page": 10,
+      "locator": "Table 2-1 · ESP8266EX Pin Definitions · pin multiplexing and HSPI/UART assignments",
+      "method": "pdf-text"
+    },
+    "esp8266ex-boot": {
+      "document": "esp8266ex-datasheet",
+      "title": "ESP8266EX Datasheet",
+      "url": "https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf#page=11",
+      "page": 11,
+      "locator": "§2 · Pin Definitions · Note on strapping: GPIO2, GPIO0, MTDO/GPIO15 boot mode selection",
+      "method": "pdf-text"
     },
     "atmega328p-reset-fuse": {
       "document": "atmega328p-datasheet",

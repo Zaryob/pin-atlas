@@ -1,6 +1,6 @@
 # Hardware research and technical reference
 
-Reviewed: 2026-11-14. All 81 profiles are covered individually. 46 have a qualified historical date; exact first production/sale dates remain unverified for 35. An MCU datasheet’s initial publication is not presented as a board’s production year.
+Reviewed: 2026-11-14. All 82 profiles are covered individually. 47 have a qualified historical date; exact first production/sale dates remain unverified for 35. An MCU datasheet’s initial publication is not presented as a board’s production year.
 
 Generated from `sources/hardware-details.json` by `npm run build:data`. Each fact and note carries source links. Live manufacturer pages may change; the locked versions and SHA-256 values for pin evidence remain in `sources/manifest.json`. The technical review does not change the previous pin-verification date.
 
@@ -575,6 +575,21 @@ First production or sale date for this exact model/revision was not established 
 GPIO matrix rows describe routing capability, not firmware defaults. Maintain correct strapping levels during reset. [ESP32C6 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf), [esp32-c6-devkitc-1 official user guide](https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32c6/esp32-c6-devkitc-1/user_guide.html)
 
 Circuit / board documents: [ESP32-C6-DevKitC-1 v1.2 schematic](https://dl.espressif.com/dl/schematics/esp32-c6-devkitc-1-schematics_v1.2.pdf)
+
+### NodeMCU v2
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=nodemcu-v2&profile=nodemcu-v2) · [Pin reference](https://github.com/nodemcu/nodemcu-devkit-v1.0/blob/master/NODEMCU_DEVKIT_V1.0.PDF) · [Datasheet](https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf)
+
+- **Initial sale / release:** 2015-01-29. [NodeMCU DevKit release history](https://github.com/nodemcu/nodemcu-devkit-v1.0/releases)
+- **Processor:** 1 × Tensilica L106 32-bit. [ESP8266EX Datasheet](https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf)
+- **Clock / maximum:** 80 MHz (160 MHz max). [ESP8266EX Datasheet](https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf)
+- **RAM:** 80 KB user data SRAM + 32 KB instruction RAM + 32 KB instruction cache. [ESP8266EX Datasheet](https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf)
+- **Program Flash / storage:** 4 MB Flash. [NodeMCU DEVKIT v1.0 specifications](https://github.com/nodemcu/nodemcu-devkit-v1.0), [NodeMCU DEVKIT v1.0 Schematic](https://raw.githubusercontent.com/nodemcu/nodemcu-devkit-v1.0/master/NODEMCU_DEVKIT_V1.0.PDF), [ESP8266EX Datasheet](https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf)
+- **Power / logic:** Micro-USB: 5 V; VIN: 4.5–9 V; GPIO: 3.3 V. A 5 V power pin does not imply 5 V GPIO tolerance.. [NodeMCU DEVKIT v1.0 specifications](https://github.com/nodemcu/nodemcu-devkit-v1.0), [NodeMCU DEVKIT v1.0 Schematic](https://raw.githubusercontent.com/nodemcu/nodemcu-devkit-v1.0/master/NODEMCU_DEVKIT_V1.0.PDF), [ESP8266EX Datasheet](https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf)
+
+Houses an ESP-12E/F module with 4 MB internal SPI Flash. SDIO pins (GPIO6–GPIO11) connect directly to this flash and are reserved. Analog pin A0 includes an onboard 220 kΩ / 100 kΩ divider for a 0–3.3 V range. [NodeMCU DEVKIT v1.0 specifications](https://github.com/nodemcu/nodemcu-devkit-v1.0), [NodeMCU DEVKIT v1.0 Schematic](https://raw.githubusercontent.com/nodemcu/nodemcu-devkit-v1.0/master/NODEMCU_DEVKIT_V1.0.PDF)
+
+Circuit / board documents: [NodeMCU DEVKIT v1.0 Schematic](https://raw.githubusercontent.com/nodemcu/nodemcu-devkit-v1.0/master/NODEMCU_DEVKIT_V1.0.PDF)
 
 ### ATmega328P · PDIP-28
 

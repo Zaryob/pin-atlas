@@ -463,6 +463,20 @@
   },
   {
     "lang": "tr",
+    "title": "NodeMCU v2",
+    "url": "/pin-atlas/#board=nodemcu-v2&profile=nodemcu-v2",
+    "type": "pin-atlas/",
+    "description": "ESP8266EX · Tensilica L106 · 80 MHz · Wi-Fi · 3.3 V I/O · ESP8266EX · Espressif"
+  },
+  {
+    "lang": "en",
+    "title": "NodeMCU v2",
+    "url": "/pin-atlas/#board=nodemcu-v2&profile=nodemcu-v2",
+    "type": "pin-atlas/",
+    "description": "ESP8266EX · Tensilica L106 · 80 MHz · Wi-Fi · 3.3 V I/O · ESP8266EX · Espressif"
+  },
+  {
+    "lang": "tr",
     "title": "ATmega328P · PDIP-28",
     "url": "/pin-atlas/#board=atmega328p-pdip28&profile=atmega328p-pdip28",
     "type": "pin-atlas/",

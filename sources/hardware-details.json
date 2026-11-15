@@ -620,6 +620,24 @@
       "publisher": "Espressif",
       "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
     },
+    "nodemcu-v2-spec": {
+      "title": "NodeMCU DEVKIT v1.0 specifications",
+      "url": "https://github.com/nodemcu/nodemcu-devkit-v1.0",
+      "publisher": "NodeMCU",
+      "locator": "Repository README, hardware schematic and specifications"
+    },
+    "nodemcu-v1-schematic": {
+      "title": "NodeMCU DEVKIT v1.0 Schematic",
+      "url": "https://raw.githubusercontent.com/nodemcu/nodemcu-devkit-v1.0/master/NODEMCU_DEVKIT_V1.0.PDF",
+      "publisher": "NodeMCU",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "esp8266ex-datasheet": {
+      "title": "ESP8266EX Datasheet",
+      "url": "https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf",
+      "publisher": "Espressif Systems",
+      "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
     "xiao-rp-spec": {
       "title": "XIAO RP2040 specifications",
       "url": "https://wiki.seeedstudio.com/XIAO-RP2040/",
@@ -811,6 +829,12 @@
       "url": "https://www.seeedstudio.com/blog/2023/03/27/seeed-studio-xiao-esp32s3-sense/",
       "publisher": "Seeed Studio",
       "locator": "Manufacturer product launch blog post; 27 March 2023"
+    },
+    "nodemcu-v2-history": {
+      "title": "NodeMCU DevKit release history",
+      "url": "https://github.com/nodemcu/nodemcu-devkit-v1.0/releases",
+      "publisher": "NodeMCU",
+      "locator": "First release tag 2015-01-29"
     },
     "microbit-history": {
       "title": "New BBC micro:bit announced",
@@ -1371,6 +1395,19 @@
       ],
       "notes": [],
       "eeprom": "8 KB data Flash (EEPROM emulation)"
+    },
+    "ESP8266EX": {
+      "cpu": "1 × Tensilica L106 32-bit",
+      "clock": "80 MHz (160 MHz max)",
+      "ram": "80 KB user data SRAM + 32 KB instruction RAM + 32 KB instruction cache",
+      "flash": {
+        "tr": "Modüle bağlı harici Flash (genellikle 4 MB)",
+        "en": "Module-dependent external Flash (typically 4 MB)"
+      },
+      "sources": [
+        "esp8266ex-datasheet"
+      ],
+      "notes": []
     },
     "ESP32-S3": {
       "cpu": "2 × Xtensa LX7",
@@ -4230,6 +4267,43 @@
       "datasheet": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003751_XIAO%20ESP32S3_v1.4_SCH_260226.pdf.pdf",
       "documents": [
         "xiao-esp32s3-schematic"
+      ]
+    },
+    "nodemcu-v2": {
+      "chip": "ESP8266EX",
+      "flash": "4 MB Flash",
+      "sources": [
+        "nodemcu-v2-spec",
+        "nodemcu-v1-schematic",
+        "esp8266ex-datasheet"
+      ],
+      "power": {
+        "tr": "Micro-USB: 5 V; VIN: 4.5–9 V; GPIO: 3.3 V. 5 V güç pini GPIO toleransı anlamına gelmez.",
+        "en": "Micro-USB: 5 V; VIN: 4.5–9 V; GPIO: 3.3 V. A 5 V power pin does not imply 5 V GPIO tolerance."
+      },
+      "notes": [
+        {
+          "text": {
+            "tr": "ESP-12E/F modülü üzerinde 4 MB dahili SPI Flash barındırır. SDIO pinleri (GPIO6–GPIO11) doğrudan bu flaşa bağlı olduğundan harici kullanım için ayrılmıştır. A0 pini dahili 220 kΩ / 100 kΩ bölücü ile 0–3.3 V giriş aralığına sahiptir.",
+            "en": "Houses an ESP-12E/F module with 4 MB internal SPI Flash. SDIO pins (GPIO6–GPIO11) connect directly to this flash and are reserved. Analog pin A0 includes an onboard 220 kΩ / 100 kΩ divider for a 0–3.3 V range."
+          },
+          "sources": [
+            "nodemcu-v2-spec",
+            "nodemcu-v1-schematic"
+          ]
+        }
+      ],
+      "date": {
+        "value": "2015-01-29",
+        "kind": "launch",
+        "sources": [
+          "nodemcu-v2-history"
+        ]
+      },
+      "pinSource": "https://github.com/nodemcu/nodemcu-devkit-v1.0",
+      "datasheet": "https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf",
+      "documents": [
+        "nodemcu-v1-schematic"
       ]
     },
     "microbit-v2": {

@@ -32,7 +32,7 @@ test('Pico model slots and memory-restricted ESP references remain separately ad
     const models=compatibleModels(layouts.find(l=>l.id===id));
     assert.equal(models.length,2);assert.notEqual(models[0].profileId,models[1].profileId);
   }
-  for(const board of boards.filter(board=>board.family==='Espressif'))assert(board.name.startsWith('ESP32'));
+  for(const board of boards.filter(board=>board.family==='Espressif'))assert(board.name.startsWith('ESP32') || board.name.startsWith('NodeMCU'));
 });
 test('model search ignores the browser locale (Turkish dotless i)',()=>{
   const models=[{id:'nucleo-f767zi',name:'NUCLEO-F767ZI',detail:'STM32F767ZIT6'},

@@ -14,3 +14,5 @@ _site/
 .bundle/
 vendor/
 playwright-report/
+.codegraph/
+.omc/

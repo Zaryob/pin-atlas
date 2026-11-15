@@ -8365,6 +8365,59 @@ esp32-c6-devkitc-1,30,GPIO12,GPIO,LEDC PWM (matrix),GPIO matrix,LEDC PWM,esp32-c
 esp32-c6-devkitc-1,30,GPIO12,GPIO,GPIO interrupt,,GPIO12,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,esp32-c6-devkitc-1-matrix
 esp32-c6-devkitc-1,31,GND,GND,,,,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,
 esp32-c6-devkitc-1,32,NC,SYSTEM,,,,esp32-c6-devkitc-1-header | esp32-c6-devkitc-1-orientation,
+nodemcu-v2,1,A0,ADC,ADC0,,ADC0,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,2,RSV,SYSTEM,,,,nodemcu-v1-header,
+nodemcu-v2,3,RSV,SYSTEM,,,,nodemcu-v1-header,
+nodemcu-v2,4,SD3,GPIO,SDIO_D3,,SD3,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,5,SD2,GPIO,SDIO_D2,,SD2,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,6,SD1,GPIO,SDIO_D1,,MOSI,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,7,CMD,GPIO,SDIO_CMD,,CS,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,8,SD0,GPIO,SDIO_D0,,MISO,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,9,CLK,GPIO,SDIO_CLK,,SCLK,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,10,GND,GND,,,,nodemcu-v1-header,
+nodemcu-v2,11,3V3,POWER,,,,nodemcu-v1-header,
+nodemcu-v2,12,EN,SYSTEM,,,,nodemcu-v1-header,
+nodemcu-v2,13,RST,SYSTEM,,,,nodemcu-v1-header,
+nodemcu-v2,14,GND,GND,,,,nodemcu-v1-header,
+nodemcu-v2,15,VIN,POWER,,,,nodemcu-v1-header,
+nodemcu-v2,16,D0,GPIO,WAKE,,WAKE,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,16,D0,GPIO,GPIO interrupt,,GPIO16,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,17,D1,GPIO,I2C SCL,,SCL,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,17,D1,GPIO,PWM,,PWM,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,17,D1,GPIO,GPIO interrupt,,GPIO5,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,18,D2,GPIO,I2C SDA,,SDA,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,18,D2,GPIO,PWM,,PWM,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,18,D2,GPIO,GPIO interrupt,,GPIO4,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,19,D3,GPIO,FLASH button,,FLASH,nodemcu-v1-header | esp8266ex-matrix | esp8266ex-boot,esp8266ex-matrix
+nodemcu-v2,19,D3,GPIO,PWM,,PWM,nodemcu-v1-header | esp8266ex-matrix | esp8266ex-boot,esp8266ex-matrix
+nodemcu-v2,19,D3,GPIO,GPIO interrupt,,GPIO0,nodemcu-v1-header | esp8266ex-matrix | esp8266ex-boot,esp8266ex-matrix
+nodemcu-v2,20,D4,GPIO,UART1 TX,,TXD1,nodemcu-v1-header | esp8266ex-matrix | esp8266ex-boot,esp8266ex-matrix
+nodemcu-v2,20,D4,GPIO,PWM,,PWM,nodemcu-v1-header | esp8266ex-matrix | esp8266ex-boot,esp8266ex-matrix
+nodemcu-v2,20,D4,GPIO,GPIO interrupt,,GPIO2,nodemcu-v1-header | esp8266ex-matrix | esp8266ex-boot,esp8266ex-matrix
+nodemcu-v2,21,3V3,POWER,,,,nodemcu-v1-header,
+nodemcu-v2,22,GND,GND,,,,nodemcu-v1-header,
+nodemcu-v2,23,D5,GPIO,HSPI SCK,,SCK,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,23,D5,GPIO,PWM,,PWM,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,23,D5,GPIO,GPIO interrupt,,GPIO14,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,24,D6,GPIO,HSPI MISO,,MISO,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,24,D6,GPIO,PWM,,PWM,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,24,D6,GPIO,GPIO interrupt,,GPIO12,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,25,D7,GPIO,HSPI MOSI,,MOSI,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,25,D7,GPIO,UART0 CTS,,CTS0,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,25,D7,GPIO,PWM,,PWM,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,25,D7,GPIO,GPIO interrupt,,GPIO13,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,26,D8,GPIO,HSPI CS,,CS,nodemcu-v1-header | esp8266ex-matrix | esp8266ex-boot,esp8266ex-matrix
+nodemcu-v2,26,D8,GPIO,UART0 RTS,,RTS0,nodemcu-v1-header | esp8266ex-matrix | esp8266ex-boot,esp8266ex-matrix
+nodemcu-v2,26,D8,GPIO,PWM,,PWM,nodemcu-v1-header | esp8266ex-matrix | esp8266ex-boot,esp8266ex-matrix
+nodemcu-v2,26,D8,GPIO,GPIO interrupt,,GPIO15,nodemcu-v1-header | esp8266ex-matrix | esp8266ex-boot,esp8266ex-matrix
+nodemcu-v2,27,RX,GPIO,UART0 RX,,RXD0,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,27,RX,GPIO,PWM,,PWM,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,27,RX,GPIO,GPIO interrupt,,GPIO3,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,28,TX,GPIO,UART0 TX,,TXD0,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,28,TX,GPIO,PWM,,PWM,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,28,TX,GPIO,GPIO interrupt,,GPIO1,nodemcu-v1-header | esp8266ex-matrix,esp8266ex-matrix
+nodemcu-v2,29,GND,GND,,,,nodemcu-v1-header,
+nodemcu-v2,30,3V3,POWER,,,,nodemcu-v1-header,
 atmega328p-pdip28,1,PC6,GPIO,PCINT14,,PCINT14,atmega328p-pdip28-physical | atmega328p-mux-19 | atmega328p-reset-fuse,atmega328p-mux-19
 atmega328p-pdip28,1,PC6,GPIO,GPIO,RSTDISBL programmed,PC6,atmega328p-pdip28-physical | atmega328p-mux-19 | atmega328p-reset-fuse,atmega328p-reset-fuse
 atmega328p-pdip28,2,PD0,GPIO,PCINT16,,PCINT16,atmega328p-pdip28-physical | atmega328p-mux-20,atmega328p-mux-20

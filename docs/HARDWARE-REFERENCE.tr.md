@@ -1,6 +1,6 @@
 # Donanım araştırması ve teknik referans
 
-İnceleme: 2026-11-14. 81 profil ayrı ayrı kapsanır. 46 profil için nitelendirilmiş tarih bilgisi vardır; 35 profilin kesin ilk üretim/satış tarihi doğrulanmamıştır. MCU veri sayfasının ilk yayını, kartın üretim yılı olarak sunulmaz.
+İnceleme: 2026-11-14. 82 profil ayrı ayrı kapsanır. 47 profil için nitelendirilmiş tarih bilgisi vardır; 35 profilin kesin ilk üretim/satış tarihi doğrulanmamıştır. MCU veri sayfasının ilk yayını, kartın üretim yılı olarak sunulmaz.
 
 Bu dosya `sources/hardware-details.json` kayıtlarından `npm run build:data` ile üretilir. Her özellik ve notun kaynak bağlantısı yanındadır. Canlı üretici sayfalarının içeriği değişebilir; pin kanıtlarının kilitli sürüm ve SHA-256 bilgileri ayrı `sources/manifest.json` kaydında korunur. Yeni teknik bilgi incelemesi, önceki pin doğrulama tarihini değiştirmez.
 
@@ -575,6 +575,21 @@ Bu kesin model/revizyon için ilk üretim veya satış tarihi incelenen birincil
 GPIO matrix satırları yönlendirme yeteneğini gösterir; varsayılan yazılım pinleri değildir. Strapping pinlerini reset sırasında uygun seviyede tutun. [ESP32C6 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf), [esp32-c6-devkitc-1 official user guide](https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32c6/esp32-c6-devkitc-1/user_guide.html)
 
 Devre / kart belgeleri: [ESP32-C6-DevKitC-1 v1.2 schematic](https://dl.espressif.com/dl/schematics/esp32-c6-devkitc-1-schematics_v1.2.pdf)
+
+### NodeMCU v2
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=nodemcu-v2&profile=nodemcu-v2) · [Pin referansı](https://github.com/nodemcu/nodemcu-devkit-v1.0/blob/master/NODEMCU_DEVKIT_V1.0.PDF) · [Datasheet](https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf)
+
+- **İlk satış / çıkış:** 2015-01-29. [NodeMCU DevKit release history](https://github.com/nodemcu/nodemcu-devkit-v1.0/releases)
+- **İşlemci:** 1 × Tensilica L106 32-bit. [ESP8266EX Datasheet](https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf)
+- **Saat hızı / üst sınır:** 80 MHz (160 MHz max). [ESP8266EX Datasheet](https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf)
+- **RAM:** 80 KB user data SRAM + 32 KB instruction RAM + 32 KB instruction cache. [ESP8266EX Datasheet](https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf)
+- **Program Flash’ı / depolama:** 4 MB Flash. [NodeMCU DEVKIT v1.0 specifications](https://github.com/nodemcu/nodemcu-devkit-v1.0), [NodeMCU DEVKIT v1.0 Schematic](https://raw.githubusercontent.com/nodemcu/nodemcu-devkit-v1.0/master/NODEMCU_DEVKIT_V1.0.PDF), [ESP8266EX Datasheet](https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf)
+- **Besleme / mantık:** Micro-USB: 5 V; VIN: 4.5–9 V; GPIO: 3.3 V. 5 V güç pini GPIO toleransı anlamına gelmez.. [NodeMCU DEVKIT v1.0 specifications](https://github.com/nodemcu/nodemcu-devkit-v1.0), [NodeMCU DEVKIT v1.0 Schematic](https://raw.githubusercontent.com/nodemcu/nodemcu-devkit-v1.0/master/NODEMCU_DEVKIT_V1.0.PDF), [ESP8266EX Datasheet](https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf)
+
+ESP-12E/F modülü üzerinde 4 MB dahili SPI Flash barındırır. SDIO pinleri (GPIO6–GPIO11) doğrudan bu flaşa bağlı olduğundan harici kullanım için ayrılmıştır. A0 pini dahili 220 kΩ / 100 kΩ bölücü ile 0–3.3 V giriş aralığına sahiptir. [NodeMCU DEVKIT v1.0 specifications](https://github.com/nodemcu/nodemcu-devkit-v1.0), [NodeMCU DEVKIT v1.0 Schematic](https://raw.githubusercontent.com/nodemcu/nodemcu-devkit-v1.0/master/NODEMCU_DEVKIT_V1.0.PDF)
+
+Devre / kart belgeleri: [NodeMCU DEVKIT v1.0 Schematic](https://raw.githubusercontent.com/nodemcu/nodemcu-devkit-v1.0/master/NODEMCU_DEVKIT_V1.0.PDF)
 
 ### ATmega328P · PDIP-28
 

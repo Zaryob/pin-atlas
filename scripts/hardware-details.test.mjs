@@ -11,7 +11,7 @@ const fact=(id,key)=>compiled.get(id).facts.find(item=>item.key===key)?.value;
 const t=(key,params={},fallback=key)=>fallback.replace(/\{(\w+)\}/g,(_,key)=>params[key]);
 
 test('every catalog profile has sourced, localized hardware details and a qualified date',()=>{
-  assert.equal(compiled.size,81);
+  assert.equal(compiled.size,82);
   for(const board of boards){
     const research=compiled.get(board.id);
     assert.ok(research.sources && Object.keys(research.sources).length);

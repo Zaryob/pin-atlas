@@ -17,7 +17,7 @@ for r in refs.values():
     assert r['document'] in docids
     host=urlsplit(r['url']).hostname
     assert host in {'www.ti.com','pip-assets.raspberrypi.com','datasheets.raspberrypi.com','developer.nvidia.com','www.st.com','stm32-base.org','github.com','docs.arduino.cc','docs.espressif.com','www.espressif.com','ww1.microchip.com','files.seeedstudio.com','wiki.seeedstudio.com','tech.microbit.org','www.pjrc.com','docs.beagleboard.org'},host
-    if host=='github.com':assert any(repo in r['url'] for repo in ['/raspberrypi/documentation/','/arduino/ArduinoCore-avr/','/arduino/docs-content/','/arduino/ArduinoCore-renesas/','/arduino/ArduinoCore-megaavr/','/arduino/ArduinoCore-mbed/','/espressif/esp-dev-kits/','/STMicroelectronics/STM32_open_pin_data/','/adafruit/','/stm32duino/Arduino_Core_STM32/','/WeActStudio/WeActStudio.MiniSTM32F4x1/','/espressif/arduino-esp32/','/Seeed-Studio/Adafruit_nRF52_Arduino/'])
+    if host=='github.com':assert any(repo in r['url'] for repo in ['/raspberrypi/documentation/','/arduino/ArduinoCore-avr/','/arduino/docs-content/','/arduino/ArduinoCore-renesas/','/arduino/ArduinoCore-megaavr/','/arduino/ArduinoCore-mbed/','/espressif/esp-dev-kits/','/STMicroelectronics/STM32_open_pin_data/','/adafruit/','/stm32duino/Arduino_Core_STM32/','/WeActStudio/WeActStudio.MiniSTM32F4x1/','/espressif/arduino-esp32/','/Seeed-Studio/Adafruit_nRF52_Arduino/','/nodemcu/nodemcu-devkit-v1.0/'])
 for b in boards:
     assert len(b['pins'])==b['packagePins']
     assert {p['number'] for p in b['pins']}==set(range(1,b['packagePins']+1))

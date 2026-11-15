@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="644" viewBox="0 0 820 644"><g font-family="monospace" text-anchor="middle">
+ <rect x="268" y="55" width="284" height="510" rx="9" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+ <rect x="324" y="66" width="172" height="180" rx="3" fill="#cbd5e1" stroke="#94a3b8"/>
+ <rect x="324" y="66" width="172" height="50" fill="#0f172a"/><path d="M338 105V78h20v22h20V78h20v22h20V78h20v22h40" fill="none" stroke="#e2e8f0" stroke-width="3"/>
+ <text x="410" y="150" font-size="20" font-weight="bold" fill="#0f172a">ESP8266</text>
+ <text x="410" y="172" font-size="11" fill="#334155">ESP-12F MODULE</text>
+ <text x="410" y="192" font-size="9" fill="#64748b">AI-THINKER</text>
+ <text x="410" y="280" font-size="16" font-weight="bold" fill="#f8fafc">NodeMCU v2</text>
+ <text x="410" y="302" font-size="11" fill="#94a3b8">Tensilica L106 · 80 MHz</text>
+ <text x="410" y="322" font-size="10" fill="#64748b">3.3 V I/O · 802.11 b/g/n</text>
+ <text x="297" y="95" font-size="10" font-weight="bold" fill="#94a3b8">J1</text>
+ <text x="522" y="95" font-size="10" font-weight="bold" fill="#94a3b8">J2</text>
+ <rect x="382" y="360" width="56" height="56" rx="3" fill="#0f172a" stroke="#475569"/>
+ <text x="410" y="392" font-size="9" fill="#94a3b8">CP2102</text>
+ <rect x="305" y="475" width="55" height="30" rx="4" fill="#94a3b8"/>
+ <rect x="460" y="475" width="55" height="30" rx="4" fill="#94a3b8"/>
+ <text x="332" y="494" font-size="9" font-weight="bold" fill="#0f172a">RST</text>
+ <text x="487" y="494" font-size="9" font-weight="bold" fill="#0f172a">FLASH</text>
+ <rect x="373" y="535" width="74" height="46" rx="4" fill="#cbd5e1" stroke="#64748b"/>
+ <text x="410" y="563" font-size="10" font-weight="bold" fill="#1e293b">USB</text>
+</g></svg>
