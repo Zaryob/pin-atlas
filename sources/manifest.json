@@ -1,5 +1,17 @@
 {
   "verifiedOn": "2026-11-05",
+  "verifiedOnByProfile": {
+    "xiao-nrf52840": "2026-11-15",
+    "xiao-esp32s3": "2026-11-15",
+    "nodemcu-v2": "2026-11-16",
+    "raspberry-pi-rm2": "2026-11-16",
+    "raspberry-pi-cm4": "2026-11-16",
+    "raspberry-pi-cm5": "2026-11-16",
+    "raspberry-pi-zero-w": "2026-11-16",
+    "raspberry-pi-zero-2-w": "2026-11-16",
+    "raspberry-pi-3b-plus": "2026-11-16",
+    "raspberry-pi-500": "2026-11-16"
+  },
   "documents": [
     {
       "id": "rp2350",

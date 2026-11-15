@@ -479,6 +479,14 @@ def build(use_snapshots=False):
     boards.append(h7_chip)
     boards.append(rp2040_chip)
     boards.extend(build_stm32_catalog(CACHE,DOCS,ref,MANIFEST['verifiedOn'],use_snapshots=use_snapshots))
+    # Profiles checked against their sources after the catalog-wide date carry their own date.
+    per_profile=MANIFEST.get('verifiedOnByProfile',{})
+    unknown=set(per_profile)-{b['id'] for b in boards}
+    assert not unknown, f'verifiedOnByProfile names unknown profiles: {sorted(unknown)}'
+    for b in boards:
+        if b['id'] in per_profile:
+            assert per_profile[b['id']]>=MANIFEST['verifiedOn'], b['id']
+            b['verifiedOn']=per_profile[b['id']]
     link_board_packages(boards)
     attach_hardware(boards,ref,CACHE,DOCS)
     attach_warnings(boards,ref,CACHE,DOCS)

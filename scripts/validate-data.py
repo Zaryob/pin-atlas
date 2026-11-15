@@ -22,7 +22,7 @@ for b in boards:
     assert len(b['pins'])==b['packagePins']
     assert {p['number'] for p in b['pins']}==set(range(1,b['packagePins']+1))
     assert sum(p['type']=='GPIO' for p in b['pins'])==b['gpioCount']
-    assert b['verifiedOn']==manifest['verifiedOn']
+    assert b['verifiedOn']==manifest.get('verifiedOnByProfile',{}).get(b['id'],manifest['verifiedOn'])
     for p in b['pins']:
         assert p['name'] and p['type'] in ['GPIO','POWER','GND','SYSTEM','ADC']
         assert p['evidence'] and all(r in refs for r in p['evidence'])

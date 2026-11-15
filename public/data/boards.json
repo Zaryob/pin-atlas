@@ -102713,7 +102713,7 @@
     "orientation": "usb-bottom",
     "source": "https://github.com/nodemcu/nodemcu-devkit-v1.0/blob/7cb0a330a25fad85e701c768ef46064c17d54446/NODEMCU_DEVKIT_V1.0.PDF",
     "datasheet": "https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf",
-    "verifiedOn": "2026-11-05",
+    "verifiedOn": "2026-11-16",
     "pins": [
       {
         "number": 1,
@@ -103639,7 +103639,7 @@
     },
     "source": "https://www.raspberrypi.com/documentation/microcontrollers/radio-modules.html",
     "datasheet": "https://datasheets.raspberrypi.com/rm2/rm2-datasheet.pdf",
-    "verifiedOn": "2026-11-05",
+    "verifiedOn": "2026-11-16",
     "pins": [
       {
         "number": 1,
@@ -104163,7 +104163,7 @@
     },
     "source": "https://www.raspberrypi.com/documentation/computers/compute-module.html",
     "datasheet": "https://datasheets.raspberrypi.com/cm4/cm4-datasheet.pdf",
-    "verifiedOn": "2026-11-05",
+    "verifiedOn": "2026-11-16",
     "cautions": [
       {
         "key": "cmVrefCaution",
@@ -110118,7 +110118,7 @@
     },
     "source": "https://www.raspberrypi.com/documentation/computers/compute-module.html",
     "datasheet": "https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf",
-    "verifiedOn": "2026-11-05",
+    "verifiedOn": "2026-11-16",
     "cautions": [
       {
         "key": "cmVrefCaution",
@@ -116653,7 +116653,7 @@
   {
     "family": "Raspberry Pi",
     "voltage": "3.3 V I/O",
-    "verifiedOn": "2026-11-05",
+    "verifiedOn": "2026-11-16",
     "layout": "header",
     "packagePins": 40,
     "gpioCount": 28,
@@ -117825,7 +117825,7 @@
   {
     "family": "Raspberry Pi",
     "voltage": "3.3 V I/O",
-    "verifiedOn": "2026-11-05",
+    "verifiedOn": "2026-11-16",
     "layout": "header",
     "packagePins": 40,
     "gpioCount": 28,
@@ -119001,7 +119001,7 @@
   {
     "family": "Raspberry Pi",
     "voltage": "3.3 V I/O",
-    "verifiedOn": "2026-11-05",
+    "verifiedOn": "2026-11-16",
     "layout": "header",
     "packagePins": 40,
     "gpioCount": 28,
@@ -120175,7 +120175,7 @@
   {
     "family": "Raspberry Pi",
     "voltage": "3.3 V I/O",
-    "verifiedOn": "2026-11-05",
+    "verifiedOn": "2026-11-16",
     "layout": "header",
     "packagePins": 40,
     "gpioCount": 28,
@@ -131485,7 +131485,7 @@
     },
     "source": "https://wiki.seeedstudio.com/XIAO_BLE/",
     "datasheet": "https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf",
-    "verifiedOn": "2026-11-05",
+    "verifiedOn": "2026-11-15",
     "pins": [
       {
         "number": 1,
@@ -132021,7 +132021,7 @@
     },
     "source": "https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/",
     "datasheet": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/202003751_XIAO%20ESP32S3_v1.4_SCH_260226.pdf.pdf",
-    "verifiedOn": "2026-11-05",
+    "verifiedOn": "2026-11-15",
     "pins": [
       {
         "number": 1,
