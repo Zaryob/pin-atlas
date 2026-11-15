@@ -803,7 +803,7 @@ function renderCatalogCard(entry) {
     <span class="catalog-card-icon" aria-hidden="true">${icon(type==='chips'?'chip':type==='headers'?'grid':'board')}</span>
     <span class="catalog-card-body">
       ${series?`<span class="catalog-card-series">${esc(series)}</span>`:''}
-      <span class="catalog-card-header"><b class="catalog-card-title">${esc(name)}</b><span class="catalog-card-arrow" aria-hidden="true">↗</span></span>
+      <span class="catalog-card-header"><b class="catalog-card-title">${esc(name)}</b><span class="catalog-card-arrow" aria-hidden="true">→</span></span>
       <span class="catalog-card-desc">${esc(type==='headers'?t('catalogHeaderNote'):detail)}</span>
       <span class="catalog-card-specs">${esc(specs)}</span>
       ${entry.matchedAlias?`<span class="catalog-alias-note">${esc(t('catalogPhysicalMatch',{name:entry.matchedAlias}))}</span>`:''}
