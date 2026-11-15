@@ -26,7 +26,7 @@ These SVG icons are licensed under [Creative Commons Attribution 4.0 Internation
 
 The board drawings in `public/assets/boards/` and `public/assets/social-card.png` were made for this project. They are schematic illustrations. They do not contain manufacturer artwork, photographs, embedded images or CAD output.
 
-The site loads the Umami analytics script from `cloud.umami.is` at run time. Pin Atlas does not bundle or redistribute it.
+The site loads the Umami analytics script from `cloud.umami.is` and the Google Analytics 4 tag from `www.googletagmanager.com` at run time. Pin Atlas does not bundle or redistribute either; Google Analytics sets cookies.
 
 ## Hardware sources
 
