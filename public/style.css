@@ -583,6 +583,28 @@
 .board-pin-map .pin-group.selected .pin-node {
   fill: var(--accent);
 }
+.pin-group:hover:not(.selected) .pin-hit,
+.pin-group:focus-visible:not(.selected) .pin-hit {
+  fill: var(--surface);
+  stroke: color-mix(in srgb, var(--accent) 35%, transparent);
+  stroke-width: 1px;
+}
+.pin-group:hover .pin-number,
+.pin-group:focus-visible .pin-number {
+  fill: var(--ink);
+}
+.pin-group.selected .pin-hit {
+  fill: var(--selection);
+  stroke: var(--accent);
+  stroke-width: 1.2px;
+}
+.pin-group.selected .pin-number {
+  fill: var(--accent);
+  font-weight: 600;
+}
+.pin-group.selected .pin-label {
+  font-weight: 600;
+}
 .pin-group.net-contact.selected .pin-hit,
 .pin-group.net-contact:focus-visible .pin-hit {
   stroke-width: 2;
