@@ -312,7 +312,7 @@
     "Copied": ["Kopyalandı", "Copied"],
     "Select code to copy": ["Kodu seçerek kopyalayın", "Select code to copy"],
     "Zaryob / Search": ["Zaryob / Ara", "Zaryob / Search"],
-    "Esc / Close": ["Esc / Kapat", "Esc / Close"],
+    "Close": ["Kapat", "Close"],
     "Close search": ["Aramayı kapat", "Close search"],
     "Docker, C++, write…": ["Docker, C++, write…", "Docker, C++, write…"],
     "Search by title or full text.": ["Başlıkta veya tam metinde arayın.", "Search by title or full text."],
