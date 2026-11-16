@@ -599,7 +599,8 @@ function stripCell({pin,col,row,cols}){
  const more=rest?` +${rest}`:'';
  const fns=shown.join(' · ')+more;
  // Each name stays whole; the line breaks between names, and the count of further functions comes last.
- const fnsHTML=shown.map(name=>`<span class="strip-fn">${hits.has(name)?`<mark>${esc(name.replaceAll(' ','\u00a0'))}</mark>`:esc(name.replaceAll(' ','\u00a0'))}</span>`).join('\u00a0· ')+(rest?` <span class="strip-more">+${rest}</span>`:'');
+ const namesHTML=shown.map(name=>`<span class="strip-fn">${hits.has(name)?`<mark>${esc(name.replaceAll(' ','\u00a0'))}</mark>`:esc(name.replaceAll(' ','\u00a0'))}</span>`).join('\u00a0· ');
+ const fnsHTML=`<span class="strip-fn-list">${namesHTML}</span>`+(rest?` <span class="strip-more">+${rest}</span>`:'');
  const name=stripName(pin);
  const label=[t('stripPin',{pin:physicalLabel(pin),name}),fns,assigned?(assigned.label||assigned.function):'',pin.hardwareBlocked?t('hwUnavailable'):'',mcu].filter(Boolean).join(', ');
  const side=cols===2?(col===1?'left':'right'):'single';
@@ -689,6 +690,30 @@ function applyStrip(diagram){
  svg.removeAttribute('style');svg.removeAttribute('role');svg.removeAttribute('aria-label');svg.setAttribute('aria-hidden','true');
  for(const group of $$('[data-pin]',svg)){group.dataset.ovPin=group.dataset.pin;['data-pin','role','tabindex','aria-label','aria-current'].forEach(name=>group.removeAttribute(name));}
  overview.insertAdjacentHTML('afterend',`<p id="strip-overview-help" class="sr-only">${esc(t('stripOverviewHelp'))}</p>${renderStrip()}`);
+ watchStripFit($('.strip-list',diagram));
+}
+// A function line that does not fit in its three-line cap is clamped instead of clipped: the names end in "…" and the
+// count of further functions takes its own last line, so it always shows. Lines that fit keep the count inline.
+// The check runs again when the strip changes width or the text size changes.
+function fitStripFunctions(){
+ const lines=$$('#diagram .strip-fns');
+ lines.forEach(line=>line.classList.remove('strip-cut'));
+ lines.filter(line=>line.scrollHeight>line.clientHeight+1).forEach(line=>line.classList.add('strip-cut'));
+}
+const stripFitKey=list=>`${Math.round(list.getBoundingClientRect().width)}/${getComputedStyle(document.documentElement).fontSize}`;
+let stripFitDone='';
+const stripFitObserver='ResizeObserver' in window ? new ResizeObserver(entries=>{
+ const key=stripFitKey(entries.at(-1).target);
+ if(key===stripFitDone)return;
+ stripFitDone=key;
+ requestAnimationFrame(fitStripFunctions);
+}) : null;
+function watchStripFit(list){
+ stripFitObserver?.disconnect();
+ if(!list)return;
+ fitStripFunctions();
+ stripFitDone=stripFitKey(list);
+ stripFitObserver?.observe(list);
 }
 function renderStripBar(){
  const on=stripActive();

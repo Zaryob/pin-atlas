@@ -1575,8 +1575,13 @@
 .search-actions { display: flex; align-items: center; gap: inherit; margin-left: auto; }
 /* Strip rows: the function line wraps to two lines between whole names (spaces inside a name do not break), so the
    first two functions stay readable on narrow phones; the row grows with it, up to three lines (the count of further
-   functions may take the third). A name wider than the column, as with large text, still breaks. */
+   functions may take the third). A name wider than the column, as with large text, still breaks. When the line needs
+   more than three lines, the app marks it .strip-cut: the names end in "…" and the count keeps the last line. */
 .strip-fns { white-space: normal; text-overflow: clip; overflow-wrap: anywhere; max-height: calc(3 * 1.35em); }
+.strip-fns.strip-cut { max-height: none; }
+.strip-cut .strip-fn-list { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; overflow: hidden; }
+.strip-cut .strip-fn-list:not(:last-child) { -webkit-line-clamp: 2; line-clamp: 2; }
+.strip-cut .strip-more { display: block; }
 @media (max-width: 640px) { .strip-pin { gap: 4px; padding-inline: 6px; } }
 /* With large text or a very narrow screen the bar is capped and scrolls; a tighter pin line and button padding leave
    room under the last row that fits (Details at 320px with 200% text), so it clears the bottom edge and scroll shadow. */
