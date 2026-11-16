@@ -563,7 +563,9 @@ const compactLayout = matchMedia('(max-width: 970px)');
 // Compact screens show the pin map as a header-style strip of large rows, with the drawing above it as a
 // small overview. A tap only selects; the bar shows the pin and steps to its neighbours; Details or a
 // second tap opens it. The overview is one labelled control, so screen readers hear one list of pins.
-const stripActive=()=>compactLayout.matches;
+// The strip is for phones only; tablets (641–970px) keep the drawn map, where a tap opens the details sheet.
+const phoneLayout = matchMedia('(max-width: 640px)');
+const stripActive=()=>phoneLayout.matches;
 function nearestPin(svg,x,y,attr){
  let best=null,distance=Infinity;
  for(const group of $$(`[${attr}]`,svg)){
@@ -688,7 +690,11 @@ function renderStripBar(){
  const on=stripActive();
  document.documentElement.classList.toggle('map-strip-on',on);
  $('#peek-prev').hidden=$('#peek-next').hidden=!on;
- if(!on)return;
+ if(!on){
+   $('.mobile-hint').innerHTML=`<span data-i18n="tapPin">${esc(t('tapPin'))}</span>`;
+   $('.desktop-hint').innerHTML=`<span data-i18n="clickPin">${esc(t('clickPin'))}</span>`;
+   return;
+ }
  const pin=pinByNumber(selected);
  const {shown,rest}=stripFunctions(pin);
  const assigned=assignments[pin.number];
@@ -791,7 +797,7 @@ $('#pin-search').addEventListener('keydown',e=>{
  e.preventDefault();
  goToPin();
 });
-compactLayout.addEventListener('change',()=>{if(board?.pins && currentView==='workspace')renderMap();});
+phoneLayout.addEventListener('change',()=>{if(board?.pins && currentView==='workspace'){renderMap();renderDetailPreservingDraft();}});
 function setDetailTab(tab) {
  detailTab = tab;
  $('#pin-detail').hidden = tab !== 'pin'; $('#plan-panel').hidden = tab !== 'plan';

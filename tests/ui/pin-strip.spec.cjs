@@ -9,7 +9,7 @@ async function ready(page,hash) {
   await page.goto('./?lang=en'+hash);
   await expect(page.locator('#app-status')).toBeHidden();
 }
-const phone=page=>page.viewportSize().width<=970;
+const phone=page=>page.viewportSize().width<=640;
 const row=(page,number)=>page.locator(`#diagram .strip-pin[data-pin="${number}"]`);
 const fits=page=>page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth);
 
@@ -172,4 +172,24 @@ test('wide screens keep the drawing, its pin buttons and click-to-open details',
   await page.locator('#diagram svg [data-pin="27"] .pin-node').click();
   await expect(page.locator('#details-home .details-panel #pin-detail h2')).toHaveText('GP21');
   await expect(page.locator('#diagram-keyboard-help')).toHaveText(/physical pin order/);
+});
+
+test('tablets keep the drawn map, where a tap opens the details sheet, and switch to the strip at phone width',async({page})=>{
+  await page.setViewportSize({width:800,height:1000});
+  await ready(page,'#board=pico-family&profile=pico');
+  await expect(page.locator('#diagram .strip-pin, #diagram .strip-overview')).toHaveCount(0);
+  await expect(page.locator('html')).not.toHaveClass(/map-strip-on/);
+  await expect(page.locator('.mobile-workbar')).toBeVisible();
+  await expect(page.locator('#peek-prev')).toBeHidden();
+  await expect(page.locator('.mobile-hint')).toHaveText('Scroll sideways for functions; tap a pin.');
+  await page.locator('#diagram svg [data-pin="27"] .pin-node').click();
+  await expect(page.locator('#details-dialog')).toBeVisible();
+  await expect(page.locator('#details-dialog #pin-detail h2')).toHaveText('GP21');
+  await page.keyboard.press('Escape');
+  await page.setViewportSize({width:640,height:900});
+  await expect(page.locator('#diagram .strip-pin')).toHaveCount(40);
+  await expect(page.locator('#peek-prev')).toBeVisible();
+  await page.setViewportSize({width:641,height:900});
+  await expect(page.locator('#diagram .strip-pin')).toHaveCount(0);
+  await expect(page.locator('#peek-prev')).toBeHidden();
 });
