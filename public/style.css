@@ -1608,3 +1608,28 @@
   #diagram-tools .icon-button { flex: 1 1 5rem; flex-direction: column; gap: 4px; padding: 6px 4px; }
   #diagram-tools .tool-label { display: block; font-size: var(--text-xs); line-height: 1.3; text-align: center; overflow-wrap: anywhere; }
 }
+/* Touch targets on compact and touch screens: at least 44px for the sheet's close button, disclosures, source links,
+   filter chips and buttons, catalog shortcuts, the hero's pin table link and the pinout index links. */
+@media (max-width: 970px), (pointer: coarse) {
+  #details-dialog #close-details { min-width: 44px; min-height: 44px; }
+  .more-functions > summary, .pin-evidence > summary { display: flex; align-items: center; min-height: 44px; padding-block: 4px; }
+  .pin-source, .pin-evidence a { display: inline-flex; align-items: center; min-height: 44px; max-width: 100%; }
+  .filter { min-height: 44px; }
+  #reset-filters { min-width: 44px; min-height: 44px; }
+  .view-options > summary { min-width: 44px; min-height: 44px; }
+  .catalog-related .catalog-package-btn, .catalog-related summary { display: flex; align-items: center; min-height: 44px; padding-block: 4px; }
+  .console-hero__panel-head { align-items: center; padding-block: 0; }
+  .console-hero__panel-head a { display: inline-flex; align-items: center; min-height: 44px; }
+  .static-index a { display: inline-block; padding-block: 12px; }
+}
+/* Keyboard shortcut hints only where there is a hover-capable pointer, which usually comes with a keyboard. */
+@media (hover: none) {
+  .pin-search kbd, .home-search-box kbd, .help-steps kbd, .help-steps kbd + [data-i18n="helpShortcut"] { display: none; }
+}
+/* The help dialog keeps its title and Close button at the top while its text scrolls. */
+@media (max-width: 970px) {
+  #help-dialog .modal-header { position: sticky; top: -30px; z-index: 1; margin: -30px -30px 0; padding: 30px 30px 8px; background: var(--paper); border-bottom: 1px solid var(--line); }
+}
+@media (max-width: 640px) {
+  #help-dialog .modal-header { top: -22px; margin: -22px -22px 0; padding: 22px 22px 8px; }
+}
