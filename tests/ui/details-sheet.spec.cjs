@@ -115,3 +115,28 @@ for(const lang of ['en','tr'])test(`${lang}: pin type, bar and plan lines have n
   await open(page,{lang,hash:'#board=pico-family&profile=pico2w&pin=3'});
   await expect(gnd).toHaveText(lang==='tr'?'Toprak':'Ground');
 });
+
+// The references disclosure keeps a visible marker like the guidance one beside it, and a full-size summary target.
+for(const [width,height,scale] of [[390,844,100],[320,568,200]])for(const lang of ['en','tr'])test(`${lang} ${width}×${height} at ${scale}% text: pin references open from a marked summary and list their links`,async({page})=>{
+  test.skip(!phone(page),'the sheet is the compact layout');
+  await open(page,{width,height,scale,lang,hash:'#board=pico-family&profile=pico2w&pin=4'});
+  await page.locator('#open-pin').tap();
+  await expect(page.locator('#details-dialog')).toBeVisible();
+  const evidence=page.locator('#pin-detail details.pin-evidence'),summary=evidence.locator('> summary');
+  await expect(summary).toHaveText(lang==='tr'?'Bu pinin kaynakları':'References for this pin');
+  const look=()=>summary.evaluate(s=>{const guide=document.querySelector('#pin-detail .pin-guidance > summary');
+    return {display:getComputedStyle(s).display,guide:getComputedStyle(guide).display,list:getComputedStyle(s).listStyleType,height:s.getBoundingClientRect().height};});
+  const closed=await look();
+  expect(closed.display).toBe('list-item');
+  expect(closed.display).toBe(closed.guide);
+  expect(closed.list).toBe('disclosure-closed');
+  expect(closed.height).toBeGreaterThanOrEqual(44);
+  await summary.scrollIntoViewIfNeeded();
+  await summary.tap();
+  await expect(evidence).toHaveJSProperty('open',true);
+  expect((await look()).list).toBe('disclosure-open');
+  const links=evidence.locator('ul li a');
+  expect(await links.count()).toBeGreaterThan(0);
+  await expect(links.first()).toBeVisible();
+  await expect(links.first()).toHaveAttribute('href',/^https:\/\//);
+});
