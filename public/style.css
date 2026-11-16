@@ -1460,10 +1460,6 @@
   .view-switch button > span[data-i18n] { display: none; }
 }
 
-/* On the atlas views "/" focuses the board or pin search (app.js), not the site search,
-   so the header search button does not advertise the key there. Ctrl/⌘+K still opens it. */
-.pin-atlas-site:has(#home-search) .console-search-open kbd { display: none; }
-.pin-atlas-site:has(#home-search) .console-search-open { justify-content: flex-start; }
 /* Search scopes: each local search names what it searches with a prompt-style prefix in the field.
    The matching sentence is kept for screen readers through aria-describedby. */
 .scope-prefix { flex: 0 0 auto; color: var(--accent); font-family: var(--mono); font-size: var(--text-sm); white-space: nowrap; }
