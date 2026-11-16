@@ -283,8 +283,8 @@
   .page-heading h1 { font-size: var(--text-h1); }
   .page-heading p { display: none; }
   .heading-actions .button { font-size: var(--text-base); padding: 8px; }
-  .specs { margin: 8px 0 12px; flex-wrap: nowrap; font-size: var(--text-xs); gap: 0; }
-  .specs > span { padding-inline: 6px; white-space: nowrap; }
+  .specs { margin: 8px 0 12px; flex-wrap: wrap; font-size: var(--text-xs); gap: 8px 0; }
+  .specs > span { padding-inline: 6px; white-space: normal; min-width: 0; }
   .specs > span:first-child { padding-left: 0; }
   .search-tools { gap: 6px; }
   .pin-search kbd { display: none; }
