@@ -1568,3 +1568,11 @@
    functions may take the third). A name wider than the column, as with large text, still breaks. */
 .strip-fns { white-space: normal; text-overflow: clip; overflow-wrap: anywhere; max-height: calc(3 * 1.35em); }
 @media (max-width: 640px) { .strip-pin { gap: 4px; padding-inline: 6px; } }
+/* With large text or a very narrow screen the bar is capped and scrolls; a tighter pin line and button padding leave
+   room under the last row that fits (Details at 320px with 200% text), so it clears the bottom edge and scroll shadow. */
+@media (max-width: 970px) {
+  @container workbar (max-width: 18rem) {
+    .map-strip-on #mobile-mcu-label { line-height: 1.35; }
+    .mobile-workbar button { padding-block: 4px; }
+  }
+}
