@@ -1424,9 +1424,10 @@ for (const disclosure of disclosures) {
    $('summary', disclosure).focus();
  });
 }
+// Capture phase, so a tap on the pin strip (which stops its own clicks) also closes an open options panel.
 document.addEventListener('click', e => {
  for (const disclosure of disclosures) if (!e.composedPath().includes(disclosure)) disclosure.open = false;
-});
+}, true);
 $('#reset-filters').addEventListener('click', () => {
  filters.clear(); search = ''; $('#pin-search').value = '';
  renderFilters(); renderMap(); renderDetailPreservingDraft();

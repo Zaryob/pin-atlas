@@ -57,6 +57,9 @@ test.describe('diagram options',()=>{
     await open(page,{});
     await page.locator('#view-options > summary').click();
     const options=page.locator('#view-options');
+    const panel=await page.locator('.view-options-panel').boundingBox();
+    expect(panel.x).toBeGreaterThanOrEqual(0);
+    expect(panel.x+panel.width).toBeLessThanOrEqual(page.viewportSize().width);
     await page.locator('#flip-button').click();
     await expect(options).toHaveJSProperty('open',true);
     await expect(page.locator('#flip-button')).toHaveAttribute('aria-pressed','true');
@@ -71,6 +74,12 @@ test.describe('diagram options',()=>{
       }
       await expect(page.locator('#flip-button .tool-label')).toHaveText('Mirror horizontally');
     } else await expect(page.locator('#flip-button .tool-label')).toBeHidden();
+    if(phone(page)){
+      // A tap elsewhere, here on the pin strip, closes the panel.
+      await page.locator('#diagram .strip-pin').nth(3).click();
+      await expect(options).toHaveJSProperty('open',false);
+      await page.locator('#view-options > summary').click();
+    }
     await page.locator('#reset-view').click();
     await expect(options).toHaveJSProperty('open',false);
     await expect(page.locator('#flip-button')).toHaveAttribute('aria-pressed','false');
