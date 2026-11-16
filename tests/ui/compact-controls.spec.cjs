@@ -17,14 +17,16 @@ async function open(page,{width,height,large=false,lang='en',hash=pico}={}){
 const overlap=(a,b)=>a.x<b.x+b.width-0.5&&b.x<a.x+a.width-0.5&&a.y<b.y+b.height-0.5&&b.y<a.y+a.height-0.5;
 
 test.describe('pin search row',()=>{
-  for(const [width,height] of [[390,844],[320,568]])for(const lang of ['en','tr']){
-    test(`${lang} ${width}×${height} with 200% text: the scope prefix and field never run under Filters`,async({page})=>{
+  for(const [width,height] of [[390,844],[320,568]])for(const large of [false,true])for(const lang of ['en','tr']){
+    test(`${lang} ${width}×${height}${large?' with 200% text':''}: the scope prefix and field never run under Filters`,async({page})=>{
       test.skip(!phone(page),'phone sizes');
-      await open(page,{width,height,large:true,lang});
+      await open(page,{width,height,large,lang});
       const [prefix,input,filters,options]=await Promise.all(['.pin-search .scope-prefix','#pin-search','#filter-options > summary','#view-options > summary']
         .map(selector=>page.locator(selector).boundingBox()));
       for(const control of [filters,options]){expect(overlap(prefix,control)).toBe(false);expect(overlap(input,control)).toBe(false);}
-      expect(input.width).toBeGreaterThan(80);
+      expect(input.width).toBeGreaterThan(large||width===320?80:60);
+      // Filters and the diagram options wrap together and stay side by side.
+      expect(Math.abs(filters.y+filters.height/2-options.y-options.height/2)).toBeLessThan(2);
       expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
     });
   }
