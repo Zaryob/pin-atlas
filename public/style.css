@@ -1563,3 +1563,8 @@
 .search-tools { flex-wrap: wrap; }
 .search-tools > .pin-search { flex: 1 1 12rem; }
 .search-tools > #filter-options { margin-left: auto; }
+/* Strip rows: the function line wraps to two lines between whole names (spaces inside a name do not break), so the
+   first two functions stay readable on narrow phones; the row grows with it, up to three lines (the count of further
+   functions may take the third). A name wider than the column, as with large text, still breaks. */
+.strip-fns { white-space: normal; text-overflow: clip; overflow-wrap: anywhere; max-height: calc(3 * 1.35em); }
+@media (max-width: 640px) { .strip-pin { gap: 4px; padding-inline: 6px; } }

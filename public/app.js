@@ -591,7 +591,8 @@ function stripCell({pin,col,row,cols}){
  const mcu=pin.mcuPin?t('mcuPin',{pin:pin.mcuPin}):'';
  const more=rest?` +${rest}`:'';
  const fns=shown.join(' · ')+more;
- const fnsHTML=shown.map(name=>hits.has(name)?`<mark>${esc(name)}</mark>`:esc(name)).join(' · ')+esc(more);
+ // Each name stays whole; the line breaks between names, and the count of further functions comes last.
+ const fnsHTML=shown.map(name=>`<span class="strip-fn">${hits.has(name)?`<mark>${esc(name.replaceAll(' ','\u00a0'))}</mark>`:esc(name.replaceAll(' ','\u00a0'))}</span>`).join('\u00a0· ')+(rest?` <span class="strip-more">+${rest}</span>`:'');
  const name=stripName(pin);
  const label=[t('stripPin',{pin:physicalLabel(pin),name}),fns,assigned?(assigned.label||assigned.function):'',pin.hardwareBlocked?t('hwUnavailable'):'',mcu].filter(Boolean).join(', ');
  const side=cols===2?(col===1?'left':'right'):'single';
