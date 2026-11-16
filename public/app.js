@@ -1702,3 +1702,25 @@ const mobileWorkbar=$('.mobile-workbar');
 const updateWorkbarHeight=()=>document.documentElement.style.setProperty('--workbar-height',`${Math.ceil(mobileWorkbar.getBoundingClientRect().height)}px`);
 updateWorkbarHeight();
 if('ResizeObserver' in window)new ResizeObserver(updateWorkbarHeight).observe(mobileWorkbar);
+
+// On-screen keyboard: the shared theme publishes --console-keyboard-inset (px of the layout viewport the keyboard
+// covers). Until every page has it, the same value is computed here from visualViewport as --pin-keyboard-inset;
+// the stylesheet prefers the theme's value. While a text field has focus and the keyboard is up, the fixed bottom bar
+// steps aside and the details sheet ends above the keyboard, so the field and "Add to my plan" stay visible.
+const textEntry=element=>element?.matches?.('input:not([type=checkbox]):not([type=radio]):not([type=button]):not([type=submit]):not([type=file]),textarea,select,[contenteditable=""],[contenteditable="true"]');
+function updateKeyboardInset(){
+ const viewport=window.visualViewport;
+ const inset=viewport?Math.max(0,Math.round(innerHeight-viewport.height-viewport.offsetTop)):0;
+ const root=document.documentElement;
+ root.style.setProperty('--pin-keyboard-inset',`${inset}px`);
+ const themed=parseFloat(getComputedStyle(root).getPropertyValue('--console-keyboard-inset'));
+ const covered=(Number.isFinite(themed)?themed:inset)>0;
+ root.classList.toggle('keyboard-open',covered && textEntry(document.activeElement));
+ if(covered && textEntry(document.activeElement) && document.activeElement.closest('#details-dialog'))
+   requestAnimationFrame(()=>document.activeElement?.scrollIntoView?.({block:'nearest'}));
+}
+window.visualViewport?.addEventListener('resize',updateKeyboardInset);
+window.visualViewport?.addEventListener('scroll',updateKeyboardInset);
+document.addEventListener('focusin',updateKeyboardInset);
+document.addEventListener('focusout',()=>setTimeout(updateKeyboardInset));
+updateKeyboardInset();

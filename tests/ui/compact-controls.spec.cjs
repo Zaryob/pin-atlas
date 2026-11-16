@@ -96,3 +96,39 @@ test('the Turkish entry address opens the atlas in Turkish and keeps a board lin
   await expect(page).toHaveURL(/\/pin-atlas\/\?lang=tr#board=pico-family/);
   await expect(page.locator('#board-title')).toHaveText('Raspberry Pi Pico');
 });
+
+test.describe('on-screen keyboard',()=>{
+  // Emulates a 300px keyboard by shrinking the visual viewport (or, for the shared theme, by its published variable).
+  const keyboard=(page,{px,themed=false})=>page.evaluate(({px,themed})=>{
+    const viewport=window.visualViewport;
+    if(themed)document.documentElement.style.setProperty('--console-keyboard-inset',`${px}px`);
+    else Object.defineProperty(viewport,'height',{configurable:true,get:()=>innerHeight-px});
+    viewport.dispatchEvent(new Event('resize'));
+  },{px,themed});
+  for(const themed of [false,true]){
+    test(`${themed?'the theme variable':'the visualViewport fallback'} keeps the label field and Add above the keyboard and hides the bar`,async({page})=>{
+      test.skip(!phone(page),'the sheet and bar are the compact layout');
+      await open(page,{width:390,height:844});
+      await page.locator('#open-pin').click();
+      await expect(page.locator('#details-dialog')).toBeVisible();
+      await page.locator('#custom-label').focus();
+      await keyboard(page,{px:300,themed});
+      const top=844-300;
+      await expect.poll(async()=>(await page.locator('#details-dialog').boundingBox()).y+(await page.locator('#details-dialog').boundingBox()).height).toBeLessThanOrEqual(top+1);
+      const add=await page.locator('#add-plan').boundingBox(),field=await page.locator('#custom-label').boundingBox();
+      expect(add.y+add.height).toBeLessThanOrEqual(top+1);
+      expect(field.y).toBeGreaterThanOrEqual(0);expect(field.y+field.height).toBeLessThanOrEqual(add.y+1);
+      await expect(page.locator('html')).toHaveClass(/keyboard-open/);
+      await expect(page.locator('.mobile-workbar')).toBeHidden();
+      await page.keyboard.press('Escape');
+      await keyboard(page,{px:0,themed});
+      await expect(page.locator('.mobile-workbar')).toBeVisible();
+      // A field on the page itself: the bar steps aside while the keyboard is up.
+      await page.locator('#pin-search').focus();
+      await keyboard(page,{px:300,themed});
+      await expect(page.locator('.mobile-workbar')).toBeHidden();
+      await page.locator('#pin-search').blur();
+      await expect(page.locator('.mobile-workbar')).toBeVisible();
+    });
+  }
+});

@@ -1644,3 +1644,10 @@
 @media (max-width: 970px), (pointer: coarse) {
   .static-pins td:last-child a, .static-pins .note-sources a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 32px; }
 }
+/* On-screen keyboard (see updateKeyboardInset in app.js): the details sheet ends above the keyboard, keeping its sticky
+   Add button and the label field in view, and the fixed bottom bar steps aside while a text field has focus. */
+@media (max-width: 970px) {
+  #details-dialog { --keyboard-inset: var(--console-keyboard-inset, var(--pin-keyboard-inset, 0px));
+    margin-bottom: var(--keyboard-inset); height: min(88dvh, 820px, calc(100dvh - var(--keyboard-inset) - 8px)); max-height: calc(100dvh - var(--keyboard-inset) - 8px); }
+  html.keyboard-open .mobile-workbar { display: none; }
+}
