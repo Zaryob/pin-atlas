@@ -1453,3 +1453,8 @@ const compactDocuments=matchMedia('(max-width: 640px)');
 const updateDocuments=()=>{$('#board-documents').open=!compactDocuments.matches;};
 updateDocuments();
 compactDocuments.addEventListener('change',updateDocuments);
+
+const mobileWorkbar=$('.mobile-workbar');
+const updateWorkbarHeight=()=>document.documentElement.style.setProperty('--workbar-height',`${Math.ceil(mobileWorkbar.getBoundingClientRect().height)}px`);
+updateWorkbarHeight();
+if('ResizeObserver' in window)new ResizeObserver(updateWorkbarHeight).observe(mobileWorkbar);
