@@ -1576,3 +1576,5 @@
     .mobile-workbar button { padding-block: 4px; }
   }
 }
+/* Touch-size peripheral pickers in the plan sheet. */
+@media (max-width: 970px), (pointer: coarse) { #peripheral-form select { min-height: 44px; } }
