@@ -283,8 +283,8 @@
   .page-heading h1 { font-size: var(--text-h1); }
   .page-heading p { display: none; }
   .heading-actions .button { font-size: var(--text-base); padding: 8px; }
-  .specs { margin: 8px 0 12px; flex-wrap: nowrap; font-size: var(--text-xs); gap: 0; }
-  .specs > span { padding-inline: 6px; white-space: nowrap; }
+  .specs { margin: 8px 0 12px; flex-wrap: wrap; font-size: var(--text-xs); gap: 8px 0; }
+  .specs > span { padding-inline: 6px; white-space: normal; min-width: 0; }
   .specs > span:first-child { padding-left: 0; }
   .search-tools { gap: 6px; }
   .pin-search kbd { display: none; }
@@ -360,9 +360,9 @@
  .compatibility-current strong { font-size: var(--text-xs); }
  .compatibility-toggle { font-size: var(--text-xs); }
  .compatibility-content { padding: 0 10px; }
- .compatibility-list a { padding: 12px 4px; gap: 7px; }
- .compatibility-model strong { font-size: var(--text-xs); }
- .compatibility-state { gap: 5px; font-size: var(--text-xs); }
+ .compatibility-list a { grid-template-columns: auto minmax(0,1fr); align-items: start; padding: 12px 4px; gap: 4px 10px; }
+ .compatibility-model strong { font-size: var(--text-xs); overflow-wrap: break-word; }
+ .compatibility-state { grid-column: 2; flex-wrap: wrap; gap: 5px; font-size: var(--text-xs); white-space: normal; }
  .compatibility-search-row { grid-template-columns: minmax(0,1fr) auto; gap: 7px; }
  .compatibility-search-row label { grid-column: 1; }
  .compatibility-search-row input { grid-column: 1 / -1; grid-row: 2; font-size: var(--text-base); }
@@ -717,6 +717,10 @@
 }
 @media (max-width: 970px) {
   body:has(.mobile-workbar[hidden]) .shell { padding-bottom: 0; }
+  /* --workbar-height is kept in sync by app.js so scrolled and focused content stops above the fixed bar. */
+  body:has(.mobile-workbar:not([hidden])) .suite-footer { padding-bottom: var(--workbar-height, 0px); }
+  html { scroll-padding-bottom: var(--workbar-height, 0px); }
+  .compatibility-index > summary, .compatibility-list a { scroll-margin-bottom: 8px; }
 }
 @media (max-width: 640px) {
   .topbar-left { flex-direction: column; align-items: flex-start; gap: 8px; }
