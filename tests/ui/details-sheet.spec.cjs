@@ -97,3 +97,21 @@ test('desktop: Tab onto the details tabs draws the ring inside the tab',async({p
   await expect(page.locator('#detail-tab')).toBeFocused();
   expect(await ring(page)).toMatchObject({focusVisible:true,style:'solid',clipped:false});
 });
+
+// A separator only stands between two non-empty parts.
+const badJoin=text=>{const s=text.replace(/\s+/g,' ').trim();return /^·|·$|· ·/.test(s);};
+for(const lang of ['en','tr'])test(`${lang}: pin type, bar and plan lines have no dangling separators`,async({page})=>{
+  for(const pin of [3,36,40,1,31]){
+    await open(page,{lang,hash:`#board=pico-family&profile=pico2w&pin=${pin}`});
+    const type=await page.locator('#pin-detail .pin-type').textContent();
+    expect(type.trim().length,`pin ${pin}`).toBeGreaterThan(0);
+    expect(badJoin(type),`pin ${pin}: "${type}"`).toBe(false);
+    for(const selector of ['#pin-detail .physical-pin','#mobile-mcu-label']){
+      const text=await page.locator(selector).textContent();
+      expect(badJoin(text),`${selector} pin ${pin}: "${text}"`).toBe(false);
+    }
+  }
+  const gnd=page.locator('#pin-detail .pin-type');
+  await open(page,{lang,hash:'#board=pico-family&profile=pico2w&pin=3'});
+  await expect(gnd).toHaveText(lang==='tr'?'Toprak':'Ground');
+});
