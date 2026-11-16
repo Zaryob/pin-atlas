@@ -82,9 +82,14 @@
 .details-panel { display: block; }
 .detail-top { padding: 0; border-bottom: 1px solid var(--line); }
 .detail-tabs { display: flex; flex: 1; min-width: 0; }
-.detail-tabs button { flex: 1; border: 0; padding: 12px 8px; min-height: 48px; font-size: var(--text-base); color: var(--muted); border-bottom: 2px solid transparent; }
+.detail-tabs button { flex: 1 1 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2px .4em; text-align: center; border: 0; padding: 12px 8px; min-height: 48px; font-size: var(--text-base); color: var(--muted); border-bottom: 2px solid transparent; }
 .detail-tabs button[aria-selected="true"] { border-bottom-color: var(--accent); color: var(--ink); background: var(--surface); }
-#plan-tab-count { display: inline-block; min-width: 20px; border: 1px solid var(--line); margin-left: 4px; }
+/* The tab row and the sheet clip anything outside them, so the focus ring sits inside these controls. */
+.detail-top :is(.detail-tabs button, #close-details):focus-visible { outline-offset: -4px; }
+/* The count stays whole; it moves under the label, centred, only when the two do not fit on one line. */
+#plan-tab-count { display: inline-block; min-width: 20px; border: 1px solid var(--line); white-space: nowrap; }
+/* The sheet takes focus when it opens by touch; Tab then moves to the tabs, which show their ring. */
+#details-dialog:focus { outline: none; }
 #close-details { display: none; }
 .pin-hero { padding: 16px 18px 0; }
 .pin-identity { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 16px; }
@@ -1069,7 +1074,10 @@
 }
 
 .pin-atlas-site .board-picker-btn { max-width: 100%; flex-wrap: wrap; white-space: normal; }
-.pin-atlas-site :is(.home-stat-item,.stat-label,.home-section-desc,.featured-desc) { min-width: 0; overflow-wrap: anywhere; }
+.pin-atlas-site :is(.home-section-desc,.featured-desc) { min-width: 0; overflow-wrap: anywhere; }
+/* Statistics: a number never breaks; a label wraps between words. */
+.pin-atlas-site .home-stat-item, .pin-atlas-site .stat-label { min-width: 0; overflow-wrap: break-word; }
+.pin-atlas-site .stat-number { white-space: nowrap; overflow-wrap: normal; font-variant-numeric: tabular-nums; }
 .pin-atlas-site :is(.topbar-right,.heading-actions,.button) { max-width: 100%; min-width: 0; }
 .pin-atlas-site .page-heading { flex-wrap: wrap; }
 .pin-atlas-site .button { white-space: normal; overflow-wrap: anywhere; }
@@ -1432,11 +1440,17 @@
   .compatibility-index > summary { min-height: 44px; padding: 8px 10px; }
   .compatibility-index:not([open]) .compatibility-current { display: none; }
   .compatibility-toggle .index-closed, .compatibility-toggle .index-open { display: none; }
-  .home-stats { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px 16px; padding-block: 16px; }
-  .home-stat-item { align-items: baseline; flex-direction: row; gap: 8px; }
-  .home-stat-item .stat-number { font-size: var(--text-h3); }
-  .home-stat-item .stat-label { font-size: var(--text-xs); }
+  /* Phones: one list, numbers right-aligned in their own column with the label beside them. */
+  .home-stats { container: home-stats / inline-size; display: grid; grid-template-columns: minmax(0,1fr); gap: 8px; padding: 16px; }
+  .home-stat-item { align-items: baseline; flex-direction: row; gap: 12px; text-align: left; }
+  .home-stat-item .stat-number { flex: none; min-width: 6ch; text-align: right; font-size: var(--text-h3); }
+  .home-stat-item .stat-label { flex: 1 1 0; font-size: var(--text-xs); }
   .console-hero .home-badge { display: block; padding: 0; border: 0; border-radius: 0; background: transparent; font-size: var(--text-xs); }
+}
+/* With large text the label no longer fits beside the number, so it goes under it. */
+@container home-stats (max-width: 11.5em) {
+  .home-stat-item { flex-direction: column; align-items: flex-start; gap: 0; }
+  .home-stat-item .stat-number { min-width: 0; text-align: left; }
 }
 
 .heading-documents > summary { display: none; }
