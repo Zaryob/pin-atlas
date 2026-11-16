@@ -295,6 +295,7 @@
     "Zaryob home": ["Zaryob ana sayfa", "Zaryob home"],
     "Zaryob navigation": ["Zaryob gezinme", "Zaryob navigation"],
     "Search Zaryob content": ["Zaryob içeriklerinde ara", "Search Zaryob content"],
+    "Zaryob content": ["Zaryob içerikleri", "Zaryob content"],
     "Search": ["Ara", "Search"],
     "Theme": ["Tema", "Theme"],
     "Color theme": ["Renk teması", "Color theme"],
