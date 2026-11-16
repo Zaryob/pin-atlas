@@ -1325,7 +1325,7 @@
 .research-citations a{padding:.15rem}
 .hardware-details h3{margin:2rem 0 1rem;font-size:var(--text-h3)}
 .research-memory-note,.research-date-note,.research-connections>p,.research-wiring p{font-size:var(--text-xs);color:var(--muted);line-height:1.9}
-.research-notes li{margin-block:.8rem;line-height:1.9}
+.research-notes li{margin-block:.8rem;line-height:1.9;overflow-wrap:anywhere}
 .research-wiring{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
 .research-wiring>div{padding:1.2rem;border:1px solid var(--line);background:var(--surface)}
 .research-wiring code{display:block;margin:1rem 0;line-height:1.8;font-family:var(--mono)}
@@ -1542,4 +1542,18 @@
   .map-strip-on #open-mcu { order: 5; flex: 1; }
   .map-strip-on #open-plan { order: 6; }
   .map-strip-on .mobile-workbar .peek-step { flex: 0 0 44px; min-width: 44px; padding: 0; }
+}
+/* Compact layouts: the fixed bottom bar never covers more than 30% of the screen and never gets wider than the viewport.
+   The rest scrolls inside the bar; amber shadows at the top and bottom edge show that more controls are there. */
+@media (max-width: 970px) {
+  .mobile-workbar { max-width: 100vw; max-height: 30vh; max-height: 30dvh; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; scroll-padding-block: 14px; container: workbar / inline-size;
+    background: linear-gradient(var(--paper) 30%, transparent) top / 100% 28px no-repeat local, linear-gradient(transparent, var(--paper) 70%) bottom / 100% 28px no-repeat local,
+      radial-gradient(farthest-side at 50% 0, color-mix(in srgb, var(--accent) 55%, transparent), transparent) top / 100% 12px no-repeat scroll,
+      radial-gradient(farthest-side at 50% 100%, color-mix(in srgb, var(--accent) 55%, transparent), transparent) bottom / 100% 12px no-repeat scroll, var(--paper); }
+  .mobile-workbar button { max-width: 100%; overflow-wrap: break-word; }
+  /* Buttons let the bar's background through so the edge shadows also show over them. */
+  .mobile-workbar button:not(:hover):not(:active) { background-color: transparent; }
+  /* With large text or a very narrow screen each button keeps its label on one line where it can and wraps to its own row,
+     so the pin steps, the selected pin and Details stay in the first rows that fit under the cap. */
+  @container workbar (max-width: 18rem) { .mobile-workbar button:not(.peek-step), .map-strip-on #open-mcu { flex: 1 1 auto; } }
 }
