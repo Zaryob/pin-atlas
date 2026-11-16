@@ -1464,3 +1464,12 @@
    so the header search button does not advertise the key there. Ctrl/⌘+K still opens it. */
 .pin-atlas-site:has(#home-search) .console-search-open kbd { display: none; }
 .pin-atlas-site:has(#home-search) .console-search-open { justify-content: flex-start; }
+/* Search scopes: each local search names what it searches with a prompt-style prefix in the field.
+   The matching sentence is kept for screen readers through aria-describedby. */
+.scope-prefix { flex: 0 0 auto; color: var(--accent); font-family: var(--mono); font-size: var(--text-sm); white-space: nowrap; }
+.compatibility-search-row .scoped-input { display: flex; align-items: center; gap: 8px; min-width: 0; padding: 0 12px; border: 1px solid var(--control-border); background: var(--paper); }
+.compatibility-search-row .scoped-input:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
+.compatibility-search-row .scoped-input input { border: 0; padding-inline: 0; outline: 0; background: transparent; }
+@media (max-width: 640px) {
+ .compatibility-search-row .scoped-input { grid-column: 1 / -1; grid-row: 2; }
+}
