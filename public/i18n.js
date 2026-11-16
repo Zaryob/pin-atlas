@@ -271,6 +271,7 @@
     "Switch project": ["Proje değiştir", "Switch project"],
     "Zaryob projects": ["Zaryob projeleri", "Zaryob projects"],
     "projects/": ["projeler/", "projects/"],
+    "sites/": ["siteler/", "sites/"],
     "contact": ["iletişim", "contact"],
     "Social links": ["Sosyal bağlantılar", "Social links"],
     "Email": ["E-posta", "Email"],
