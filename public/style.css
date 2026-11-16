@@ -1558,3 +1558,8 @@
      so the pin steps, the selected pin and Details stay in the first rows that fit under the cap. */
   @container workbar (max-width: 18rem) { .mobile-workbar button:not(.peek-step), .map-strip-on #open-mcu { flex: 1 1 auto; } }
 }
+/* Pin search row: when the field (12rem, so it follows the text size) and the Filters and options buttons do not fit
+   on one line, the buttons move to a second line instead of sliding over the field. */
+.search-tools { flex-wrap: wrap; }
+.search-tools > .pin-search { flex: 1 1 12rem; }
+.search-tools > #filter-options { margin-left: auto; }

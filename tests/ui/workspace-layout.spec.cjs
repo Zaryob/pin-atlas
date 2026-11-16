@@ -8,7 +8,8 @@ for(const width of [320,390]) {
     const pin=page.locator('#diagram [data-pin="1"]');
     await expect(pin).toBeAttached();
     expect(await page.locator('#board-documents').getAttribute('open')).toBeNull();
-    expect((await page.locator('#diagram .strip-overview [data-ov-pin="1"]').boundingBox()).y).toBeLessThan(650);
+    // At 320px the Turkish pin search row wraps its Filters and options buttons to a second line (about 47px).
+    expect((await page.locator('#diagram .strip-overview [data-ov-pin="1"]').boundingBox()).y).toBeLessThan(width===320?700:650);
     await page.locator('#board-documents > summary').click();
     await expect(page.locator('#datasheet')).toBeVisible();
     await expect(page.locator('#static-page')).toBeVisible();
