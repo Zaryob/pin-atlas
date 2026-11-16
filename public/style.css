@@ -1473,3 +1473,12 @@
 @media (max-width: 640px) {
  .compatibility-search-row .scoped-input { grid-column: 1 / -1; grid-row: 2; }
 }
+/* Working context: the board, pin and plan the workspace is acting on. */
+.work-context { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 0; margin: 0 0 14px; padding: 7px 12px; border: 1px solid var(--line); background: var(--surface); color: var(--muted); font-size: var(--text-xs); line-height: 1.6; }
+.work-context::before { content: "$"; margin-right: 10px; color: var(--accent); }
+.work-context > span + span::before { content: "·"; margin: 0 10px; color: var(--muted); }
+.work-context .ctx-key { color: var(--accent); }
+.work-context b { color: var(--ink); font-weight: 400; overflow-wrap: anywhere; }
+/* Phones already carry the pin and plan count in the bottom work bar and the board in the title, and the
+   first pin must stay above that bar, so the separate line starts above phone width. */
+@media (max-width: 640px) { .work-context { display: none !important; } }
