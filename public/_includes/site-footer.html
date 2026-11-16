@@ -3,8 +3,8 @@
   <nav class="suite-footer__col" aria-label="Pin Atlas">
     <p class="suite-footer__title">~/pin-atlas/</p>
     <ul>
-      <li><a href="{{ '/' | relative_url }}" aria-label="Pin Atlas">pin-atlas/</a></li>
-      <li><a href="{% if footer_tr %}{{ '/tr/boards/' | relative_url }}{% else %}{{ '/boards/' | relative_url }}{% endif %}" aria-label="{% if footer_tr %}Pin haritaları{% else %}Pinouts{% endif %}"{% if page.layout != 'board' %} data-i18n-aria-label="staticBoards"{% endif %}>boards/</a></li>
+      <li><a href="{{ '/' | relative_url }}">pin-atlas/</a></li>
+      <li><a href="{% if footer_tr %}{{ '/tr/boards/' | relative_url }}{% else %}{{ '/boards/' | relative_url }}{% endif %}">boards/<span class="console-sr-only"> — <span{% if page.layout != 'board' %} data-i18n="staticBoards"{% endif %}>{% if footer_tr %}Pin haritaları{% else %}Pinouts{% endif %}</span></span></a></li>
       <li><a href="https://github.com/Zaryob/pin-atlas"><span{% if page.layout != 'board' %} data-i18n="sourceCode"{% endif %}>{% if footer_tr %}Kaynak kodu ↗{% else %}Source code ↗{% endif %}</span></a></li>
       <li><a href="https://github.com/Zaryob/pin-atlas/blob/main/THIRD_PARTY_NOTICES.md">THIRD_PARTY_NOTICES.md <span aria-hidden="true">↗</span></a></li>
     </ul>

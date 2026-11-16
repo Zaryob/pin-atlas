@@ -270,6 +270,7 @@
     "Posts, guides, system calls, pinouts and ELF analysis": ["Yazılar, kılavuzlar, sistem çağrıları, pin atlası ve ELF analizi", "Posts, guides, system calls, pinouts and ELF analysis"],
     "Switch project": ["Proje değiştir", "Switch project"],
     "Zaryob projects": ["Zaryob projeleri", "Zaryob projects"],
+    "Zaryob sites": ["Zaryob siteleri", "Zaryob sites"],
     "projects/": ["projeler/", "projects/"],
     "sites/": ["siteler/", "sites/"],
     "contact": ["iletişim", "contact"],
