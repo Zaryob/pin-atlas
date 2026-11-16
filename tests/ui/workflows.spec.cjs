@@ -66,7 +66,7 @@ test('plans expand on desktop and comparison highlights only real route differen
  for(const row of await other.locator('.unchanged-signal').all())await expect(row).toBeHidden();
  await page.locator('[data-apply-suggestion="0"]').click();
  await expect(page.locator('#plan-list .plan-group')).toHaveCount(3);
- await expect(page.locator('#plan-count')).toHaveText('8');
+ await expect(page.locator('#plan-tab-count')).toHaveText('8');
 });
 
 test('physical warnings precede pin choices and generic guidance is deduplicated in suggestions',async({page})=>{
@@ -219,10 +219,10 @@ test('worker suggests and compares one SPI plus two UARTs without replacing a lo
  await expect(page.locator('.suggestion').first()).toContainText('UART1');
  await expect(page.locator('.suggestion').first()).toContainText('7 new pins · 1 assignments kept');
  await page.locator('[data-apply-suggestion="0"]').click();
- await expect(page.locator('#plan-count')).toHaveText('8');
+ await expect(page.locator('#plan-tab-count')).toHaveText('8');
  expect(await page.evaluate(key=>JSON.parse(localStorage.getItem(key)).picow[1],storageKey)).toEqual(saved.picow[1]);
  await page.reload();await expect(page.locator('#app-status')).toBeHidden();await openPlan(page);
- await expect(page.locator('#plan-count')).toHaveText('8');
+ await expect(page.locator('#plan-tab-count')).toHaveText('8');
  await page.locator('#pin-suggestions summary').click();await page.locator('#suggest-run').click();
  await expect(page.locator('.suggestion').first()).toContainText('0 new pins · 8 assignments kept');
 });
@@ -249,11 +249,11 @@ test('suggestions keep working in memory after browser storage reaches its quota
  });
  await page.locator('#pin-suggestions summary').click();await page.locator('#suggest-run').click();
  await expect(page.locator('.suggestion')).toHaveCount(3);await page.locator('[data-apply-suggestion="0"]').click();
- await expect(page.locator('#plan-count')).toHaveText('8');
+ await expect(page.locator('#plan-tab-count')).toHaveText('8');
  await expect(page.locator('#plan-feedback')).toContainText('Browser storage is unavailable');
  await page.locator('#suggest-run').click();await expect(page.locator('.suggestion')).toHaveCount(1);
  await page.locator('[data-apply-suggestion="0"]').click();
- await expect(page.locator('#plan-count')).toHaveText('8');
+ await expect(page.locator('#plan-tab-count')).toHaveText('8');
  await expect(page.locator('#suggest-feedback')).toBeEmpty();
 });
 
@@ -797,7 +797,7 @@ test('PWM servo aliases require consent on both pins and export the shared signa
  if(!await pwm.isVisible())await page.locator('.more-functions summary').click();
  await pwm.check();await page.locator('#shared-pwm').check();await page.locator('#custom-label').fill('same signal');
  await page.locator('#add-plan').click();await openPlan(page);
- await expect(page.locator('#plan-count')).toHaveText('2');
+ await expect(page.locator('#plan-tab-count')).toHaveText('2');
  await expect(page.locator('#plan-validation')).toContainText('without independent control');
  const download=page.waitForEvent('download');await page.locator('#export-button').click();
  const exported=JSON.parse(readFileSync(await (await download).path(),'utf8'));
