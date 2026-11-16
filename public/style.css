@@ -1629,7 +1629,7 @@
    filter chips and buttons, catalog shortcuts, the hero's pin table link and the pinout index links. */
 @media (max-width: 970px), (pointer: coarse) {
   #details-dialog #close-details { min-width: 44px; min-height: 44px; }
-  .more-functions > summary { display: flex; align-items: center; min-height: 44px; padding-block: 4px; }
+  .more-functions > summary { display: list-item; min-height: 44px; padding-block: 10px; }
   /* Keep the references summary a list item, like the guidance one, so WebKit still draws its disclosure marker. */
   .pin-evidence > summary { display: list-item; min-height: 44px; padding-block: 10px; }
   .pin-source, .pin-evidence a { display: inline-flex; align-items: center; min-height: 44px; max-width: 100%; }
