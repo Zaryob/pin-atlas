@@ -1578,3 +1578,21 @@
 }
 /* Touch-size peripheral pickers in the plan sheet. */
 @media (max-width: 970px), (pointer: coarse) { #peripheral-form select { min-height: 44px; } }
+/* Pin table on phones: the page scrolls instead of a box inside it, and each pin is a short card with its number,
+   name and Details on top, then its functions and label, so nothing is cut off at the right edge. */
+@media (max-width: 640px) {
+  .table-content { max-height: none; overflow: visible; }
+  .pin-table thead { display: block; position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+  .pin-table, .pin-table tbody { display: block; }
+  .pin-table tbody tr { display: grid; grid-template-columns: minmax(2.5ch, auto) minmax(0, 1fr) auto; align-items: center; border-bottom: 1px solid var(--line); }
+  .pin-table tbody td { display: block; border: 0; min-width: 0; padding: 6px 10px; overflow-wrap: anywhere; }
+  .pin-table tbody td:nth-child(1) { grid-column: 1; grid-row: 1; }
+  .pin-table tbody td.table-name { grid-column: 2; grid-row: 1; }
+  .pin-table tbody td.table-action { grid-column: 3; grid-row: 1; padding-block: 4px; }
+  .pin-table tbody td:nth-child(3) { grid-column: 2 / -1; grid-row: 2; padding-top: 0; }
+  .pin-table tbody td.table-label { grid-column: 2 / -1; grid-row: 3; padding-top: 0; }
+  .pin-table tbody td.table-label::before { content: attr(data-label) ": "; color: var(--muted); }
+  .pin-table tbody td.table-label[data-empty] { display: none; }
+  .pin-table .table-details { min-height: 44px; }
+  .pin-table td > span { max-width: 100%; white-space: normal; overflow-wrap: anywhere; }
+}

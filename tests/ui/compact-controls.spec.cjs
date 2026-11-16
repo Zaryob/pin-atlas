@@ -29,3 +29,23 @@ test.describe('pin search row',()=>{
     });
   }
 });
+
+test.describe('pin table on phones',()=>{
+  for(const [width,height,large] of [[390,844,false],[320,568,true]]){
+    test(`${width}×${height}${large?' with 200% text':''}: the page scrolls the table and every Details button is in view`,async({page})=>{
+      test.skip(!phone(page),'phone sizes');
+      await open(page,{width,height,large});
+      await page.locator('#table-view').click();
+      const box=page.locator('#table-content');
+      await expect(box).toBeVisible();
+      const geometry=await box.evaluate(el=>({maxHeight:getComputedStyle(el).maxHeight,vertical:el.scrollHeight>el.clientHeight+1,horizontal:el.scrollWidth>el.clientWidth+1}));
+      expect(geometry).toEqual({maxHeight:'none',vertical:false,horizontal:false});
+      const cut=await box.evaluate(el=>{const edge=el.getBoundingClientRect();return [...el.querySelectorAll('.table-details')]
+        .filter(button=>{const r=button.getBoundingClientRect();return r.left<edge.left-0.5||r.right>edge.right+0.5||r.height<44;}).length;});
+      expect(cut).toBe(0);
+      expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+      await page.locator('.table-details[data-pin="5"]').click();
+      await expect(page.locator('#details-dialog')).toBeVisible();
+    });
+  }
+});
