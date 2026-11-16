@@ -49,3 +49,28 @@ test.describe('pin table on phones',()=>{
     });
   }
 });
+
+test.describe('diagram options',()=>{
+  test('mirror and rotate keep the options open; on touch the buttons are named and at least 44px',async({page})=>{
+    await open(page,{});
+    await page.locator('#view-options > summary').click();
+    const options=page.locator('#view-options');
+    await page.locator('#flip-button').click();
+    await expect(options).toHaveJSProperty('open',true);
+    await expect(page.locator('#flip-button')).toHaveAttribute('aria-pressed','true');
+    await page.locator('#rotate-button').click();
+    await expect(options).toHaveJSProperty('open',true);
+    await expect(page.locator('#rotate-button')).toHaveAttribute('aria-pressed','true');
+    if(phone(page)){
+      for(const id of ['flip-button','rotate-button','reset-view']){
+        const button=page.locator(`#${id}`),box=await button.boundingBox();
+        expect(box.width).toBeGreaterThanOrEqual(44);expect(box.height).toBeGreaterThanOrEqual(44);
+        await expect(button.locator('.tool-label')).toBeVisible();
+      }
+      await expect(page.locator('#flip-button .tool-label')).toHaveText('Mirror horizontally');
+    } else await expect(page.locator('#flip-button .tool-label')).toBeHidden();
+    await page.locator('#reset-view').click();
+    await expect(options).toHaveJSProperty('open',false);
+    await expect(page.locator('#flip-button')).toHaveAttribute('aria-pressed','false');
+  });
+});

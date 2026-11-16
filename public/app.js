@@ -458,7 +458,8 @@ function transformMap(action) {
  else if(action==='rotate')rotated=!rotated;
  else {flipped=rotated=false;connectorZoom='';}
  renderMap();
- $('#view-options').open=false;
+ // Mirror and rotate are toggles that are often combined, so the options stay open; Reset is done with them.
+ if(action!=='mirror' && action!=='rotate')$('#view-options').open=false;
  revealMapPin();
 }
 function renderPackageBoards(pad) {

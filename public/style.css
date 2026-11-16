@@ -1596,3 +1596,15 @@
   .pin-table .table-details { min-height: 44px; }
   .pin-table td > span { max-width: 100%; white-space: normal; overflow-wrap: anywhere; }
 }
+/* Diagram options: the icon buttons name themselves under the icon on touch screens, where there is no hover title,
+   and are at least 44px square on compact and touch screens. */
+.tool-label { display: none; }
+@media (max-width: 970px), (pointer: coarse) {
+  #diagram-tools { flex-wrap: wrap; }
+  #diagram-tools .icon-button { min-width: 44px; min-height: 44px; }
+}
+@media (hover: none) {
+  .view-options-panel { width: min(18rem, calc(100vw - 48px)); }
+  #diagram-tools .icon-button { flex: 1 1 5rem; flex-direction: column; gap: 4px; padding: 6px 4px; }
+  #diagram-tools .tool-label { display: block; font-size: var(--text-xs); line-height: 1.3; text-align: center; overflow-wrap: anywhere; }
+}
