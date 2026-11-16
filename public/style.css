@@ -1633,3 +1633,14 @@
 @media (max-width: 640px) {
   #help-dialog .modal-header { top: -22px; margin: -22px -22px 0; padding: 22px 22px 8px; }
 }
+/* Static pinout pages: a closed "Jump to a pin" list above the table (one per package side on chips). */
+.static-pin-jump { display: grid; gap: 6px; margin: 0 0 14px; }
+.static-pin-jump details { border: 1px solid var(--line); background: var(--surface); }
+.static-pin-jump summary { display: flex; align-items: center; min-height: 44px; padding: 4px 12px; color: var(--accent); font-size: var(--text-sm); cursor: pointer; }
+.static-pin-jump ul { list-style: none; margin: 0; padding: 4px 8px 10px; display: grid; grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr)); gap: 2px 8px; }
+.static-pin-jump a { display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 4px; font-size: var(--text-xs); text-decoration: none; overflow-wrap: anywhere; }
+.static-pin-jump a span { color: var(--ink); }
+/* Citation links in the pin cards: 44px tall so each [n] can be tapped on its own. */
+@media (max-width: 970px), (pointer: coarse) {
+  .static-pins td:last-child a, .static-pins .note-sources a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 32px; }
+}
