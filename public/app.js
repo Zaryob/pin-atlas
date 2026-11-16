@@ -458,7 +458,8 @@ function transformMap(action) {
  else if(action==='rotate')rotated=!rotated;
  else {flipped=rotated=false;connectorZoom='';}
  renderMap();
- $('#view-options').open=false;
+ // Mirror and rotate are toggles that are often combined, so the options stay open; Reset is done with them.
+ if(action!=='mirror' && action!=='rotate')$('#view-options').open=false;
  revealMapPin();
 }
 function renderPackageBoards(pad) {
@@ -474,7 +475,7 @@ function renderPackageBoards(pad) {
 function renderTable() {
  const pins=board.pins.filter(pin => inConnectorZoom(pin) && matches(pin));
  const caption=[connectorGroups.find(group => group.id === connectorZoom)?.label, !pins.length ? t('noMatch') : ''].filter(Boolean).join(' · ');
- $('#table-content').innerHTML = `<table class="pin-table">${caption ? `<caption>${esc(caption)}</caption>` : ''}<thead><tr><th>${t('physical')}</th><th>${t('pinName')}</th><th>${t('functions')}</th><th>${t('label')}</th><th><span class="sr-only">${t('details')}</span></th></tr></thead><tbody>${pins.map(p=>`<tr data-pin="${p.number}" class="${p.number===selected?'selected':''} ${p.hardwareBlocked?'hardware-unavailable':''}" aria-current="${p.number===selected?'true':'false'}"><td>${esc(physicalLabel(p))}</td><td class="table-name" style="color:${colors[p.type]}">${esc(p.name)}${p.hardwareBlocked?`<small>${esc(t('hwUnavailable'))}</small>`:''}</td><td>${p.functions.filter(f=>!filters.size||filters.has(f.group)).map(f=>`<span style="--color:${colors[f.group]||colors.SYSTEM}">${esc(f.name)}${f.selector ? ' · '+esc(f.selector) : ''}</span>`).join('')||'—'}</td><td>${esc(assignments[p.number]?.label||'—')}</td><td><button class="table-details" data-pin="${p.number}" aria-label="${esc(t('selectPin', {pin:physicalLabel(p),name:p.name}))}">${t('details')} →</button></td></tr>`).join('')}</tbody></table>`;
+ $('#table-content').innerHTML = `<table class="pin-table">${caption ? `<caption>${esc(caption)}</caption>` : ''}<thead><tr><th>${t('physical')}</th><th>${t('pinName')}</th><th>${t('functions')}</th><th>${t('label')}</th><th><span class="sr-only">${t('details')}</span></th></tr></thead><tbody>${pins.map(p=>`<tr data-pin="${p.number}" class="${p.number===selected?'selected':''} ${p.hardwareBlocked?'hardware-unavailable':''}" aria-current="${p.number===selected?'true':'false'}"><td>${esc(physicalLabel(p))}</td><td class="table-name" style="color:${colors[p.type]}">${esc(p.name)}${p.hardwareBlocked?`<small>${esc(t('hwUnavailable'))}</small>`:''}</td><td>${p.functions.filter(f=>!filters.size||filters.has(f.group)).map(f=>`<span style="--color:${colors[f.group]||colors.SYSTEM}">${esc(f.name)}${f.selector ? ' · '+esc(f.selector) : ''}</span>`).join('')||'—'}</td><td class="table-label" data-label="${esc(t('label'))}"${assignments[p.number]?.label?'':' data-empty'}>${esc(assignments[p.number]?.label||'—')}</td><td class="table-action"><button class="table-details" data-pin="${p.number}" aria-label="${esc(t('selectPin', {pin:physicalLabel(p),name:p.name}))}">${t('details')} →</button></td></tr>`).join('')}</tbody></table>`;
 }
 function electricalBadgeHTML(pin) {
  if (pin.type !== 'GPIO' && pin.type !== 'ADC') return '';
@@ -562,7 +563,9 @@ const compactLayout = matchMedia('(max-width: 970px)');
 // Compact screens show the pin map as a header-style strip of large rows, with the drawing above it as a
 // small overview. A tap only selects; the bar shows the pin and steps to its neighbours; Details or a
 // second tap opens it. The overview is one labelled control, so screen readers hear one list of pins.
-const stripActive=()=>compactLayout.matches;
+// The strip is for phones only; tablets (641–970px) keep the drawn map, where a tap opens the details sheet.
+const phoneLayout = matchMedia('(max-width: 640px)');
+const stripActive=()=>phoneLayout.matches;
 function nearestPin(svg,x,y,attr){
  let best=null,distance=Infinity;
  for(const group of $$(`[${attr}]`,svg)){
@@ -591,16 +594,22 @@ function stripCell({pin,col,row,cols}){
  const mcu=pin.mcuPin?t('mcuPin',{pin:pin.mcuPin}):'';
  const more=rest?` +${rest}`:'';
  const fns=shown.join(' · ')+more;
- const fnsHTML=shown.map(name=>hits.has(name)?`<mark>${esc(name)}</mark>`:esc(name)).join(' · ')+esc(more);
+ // Each name stays whole; the line breaks between names, and the count of further functions comes last.
+ const fnsHTML=shown.map(name=>`<span class="strip-fn">${hits.has(name)?`<mark>${esc(name.replaceAll(' ','\u00a0'))}</mark>`:esc(name.replaceAll(' ','\u00a0'))}</span>`).join('\u00a0· ')+(rest?` <span class="strip-more">+${rest}</span>`:'');
  const name=stripName(pin);
  const label=[t('stripPin',{pin:physicalLabel(pin),name}),fns,assigned?(assigned.label||assigned.function):'',pin.hardwareBlocked?t('hwUnavailable'):'',mcu].filter(Boolean).join(', ');
  const side=cols===2?(col===1?'left':'right'):'single';
  return `<div class="strip-pin strip-${side}${active?' selected':''}${match?'':' dimmed'}${assigned?' assigned':''}${pin.hardwareBlocked?' hardware-unavailable':''}" data-pin="${pin.number}" data-col="${col}" data-row="${row}" role="button" tabindex="${active?'0':'-1'}" aria-label="${esc(label)}"${active?' aria-current="true"':''} style="--color:${color};grid-column:${col};grid-row:${row}"><span class="strip-num" aria-hidden="true">${esc(pin.connectorPin ?? physicalLabel(pin))}</span><span class="strip-node" aria-hidden="true"></span><span class="strip-body" aria-hidden="true"><b class="strip-name">${esc(name)}</b>${fns?`<small class="strip-fns">${fnsHTML}</small>`:''}${assigned?`<small class="strip-plan">✓ ${esc(assigned.label||assigned.function)}</small>`:''}</span></div>`;
 }
 // Lays one connector out as it sits on the board: one or two columns along its long side, after mirror and rotation.
-function connectorCells(list){
+// A pin's position in the top view, after mirror and rotation.
+function viewPoint(pin){
  const {width,height}=board.diagram;
- const points=list.map(pin=>{let {x,y}=pin.position;if(rotated){x=width-x;y=height-y;}if(flipped)x=width-x;return {pin,x:Math.round(x),y:Math.round(y)};});
+ let {x,y}=pin.position;if(rotated){x=width-x;y=height-y;}if(flipped)x=width-x;
+ return {x:Math.round(x),y:Math.round(y)};
+}
+function connectorCells(list){
+ const points=list.map(pin=>({pin,...viewPoint(pin)}));
  const xs=[...new Set(points.map(p=>p.x))].sort((a,b)=>a-b),ys=[...new Set(points.map(p=>p.y))].sort((a,b)=>a-b);
  const vertical=xs.length<=2 && ys.length>=xs.length,across=vertical?xs:ys,along=vertical?ys:xs;
  const cell=p=>({pin:p.pin,col:across.indexOf(vertical?p.x:p.y)+1,row:along.indexOf(vertical?p.y:p.x)+1});
@@ -630,16 +639,20 @@ function stripSections(){
    return names.map((name,i)=>({id:`strip-section-${i}`,label:`${t('stripSide.'+edge(name))} · ${i*n+1}–${(i+1)*n}`,cols:1,
      cells:pins.filter(pin=>Math.floor((pin.number-1)/n)===i).map((pin,j)=>({pin,col:1,row:j+1}))})).filter(section=>section.cells.length);
  }
- const used=new Set(),sections=[];
+ // Connectors follow the board as seen in the top view: left to right by their centre, then top to bottom.
+ const used=new Set(),connectors=[];
  for(const group of connectorGroups){
    for(const connector of group.contacts){
      const list=pins.filter(pin=>pin.connector===connector);
      if(!list.length)continue;
      list.forEach(pin=>used.add(pin.number));
+     const points=list.map(viewPoint),xs=points.map(p=>p.x),ys=points.map(p=>p.y);
      const label=group.contacts.length>1?`${group.label} · ${connector}`:group.label;
-     sections.push({id:`strip-section-${sections.length}`,label,...connectorCells(list)});
+     connectors.push({label,list,x:(Math.min(...xs)+Math.max(...xs))/2,y:Math.min(...ys)});
    }
  }
+ connectors.sort((a,b)=>a.x-b.x||a.y-b.y);
+ const sections=connectors.map(({label,list},index)=>({id:`strip-section-${index}`,label,...connectorCells(list)}));
  const rest=pins.filter(pin=>!used.has(pin.number));
  if(rest.length)sections.push({id:`strip-section-${sections.length}`,label:sections.length?t('stripOther'):'',cols:1,cells:rest.map((pin,i)=>({pin,col:1,row:i+1}))});
  return sections;
@@ -677,7 +690,11 @@ function renderStripBar(){
  const on=stripActive();
  document.documentElement.classList.toggle('map-strip-on',on);
  $('#peek-prev').hidden=$('#peek-next').hidden=!on;
- if(!on)return;
+ if(!on){
+   $('.mobile-hint').innerHTML=`<span data-i18n="tapPin">${esc(t('tapPin'))}</span>`;
+   $('.desktop-hint').innerHTML=`<span data-i18n="clickPin">${esc(t('clickPin'))}</span>`;
+   return;
+ }
  const pin=pinByNumber(selected);
  const {shown,rest}=stripFunctions(pin);
  const assigned=assignments[pin.number];
@@ -780,7 +797,7 @@ $('#pin-search').addEventListener('keydown',e=>{
  e.preventDefault();
  goToPin();
 });
-compactLayout.addEventListener('change',()=>{if(board?.pins && currentView==='workspace')renderMap();});
+phoneLayout.addEventListener('change',()=>{if(board?.pins && currentView==='workspace'){renderMap();renderDetailPreservingDraft();}});
 function setDetailTab(tab) {
  detailTab = tab;
  $('#pin-detail').hidden = tab !== 'pin'; $('#plan-panel').hidden = tab !== 'plan';
@@ -1028,8 +1045,11 @@ function showCatalog() {
   libraryCatalogType='all';libraryFamily='all';
   renderCatalog();
   $('#library-dialog').showModal();
-  $('#catalog-search').focus();
+  // On touch screens focusing the search would open the on-screen keyboard over half the list; the dialog then
+  // starts on its first control (Close), and the search is one tap away.
+  if (!touchScreen.matches) $('#catalog-search').focus();
 }
+const touchScreen = matchMedia('(hover: none), (pointer: coarse)');
 
 function renderCatalogCard(entry) {
   const {id,profile,name,detail,specs,series,type,mcuProfile}=entry;
@@ -1404,9 +1424,10 @@ for (const disclosure of disclosures) {
    $('summary', disclosure).focus();
  });
 }
+// Capture phase, so a tap on the pin strip (which stops its own clicks) also closes an open options panel.
 document.addEventListener('click', e => {
  for (const disclosure of disclosures) if (!e.composedPath().includes(disclosure)) disclosure.open = false;
-});
+}, true);
 $('#reset-filters').addEventListener('click', () => {
  filters.clear(); search = ''; $('#pin-search').value = '';
  renderFilters(); renderMap(); renderDetailPreservingDraft();
@@ -1682,3 +1703,25 @@ const mobileWorkbar=$('.mobile-workbar');
 const updateWorkbarHeight=()=>document.documentElement.style.setProperty('--workbar-height',`${Math.ceil(mobileWorkbar.getBoundingClientRect().height)}px`);
 updateWorkbarHeight();
 if('ResizeObserver' in window)new ResizeObserver(updateWorkbarHeight).observe(mobileWorkbar);
+
+// On-screen keyboard: the shared theme publishes --console-keyboard-inset (px of the layout viewport the keyboard
+// covers). Until every page has it, the same value is computed here from visualViewport as --pin-keyboard-inset;
+// the stylesheet prefers the theme's value. While a text field has focus and the keyboard is up, the fixed bottom bar
+// steps aside and the details sheet ends above the keyboard, so the field and "Add to my plan" stay visible.
+const textEntry=element=>element?.matches?.('input:not([type=checkbox]):not([type=radio]):not([type=button]):not([type=submit]):not([type=file]),textarea,select,[contenteditable=""],[contenteditable="true"]');
+function updateKeyboardInset(){
+ const viewport=window.visualViewport;
+ const inset=viewport?Math.max(0,Math.round(innerHeight-viewport.height-viewport.offsetTop)):0;
+ const root=document.documentElement;
+ root.style.setProperty('--pin-keyboard-inset',`${inset}px`);
+ const themed=parseFloat(getComputedStyle(root).getPropertyValue('--console-keyboard-inset'));
+ const covered=(Number.isFinite(themed)?themed:inset)>0;
+ root.classList.toggle('keyboard-open',covered && textEntry(document.activeElement));
+ if(covered && textEntry(document.activeElement) && document.activeElement.closest('#details-dialog'))
+   requestAnimationFrame(()=>document.activeElement?.scrollIntoView?.({block:'nearest'}));
+}
+window.visualViewport?.addEventListener('resize',updateKeyboardInset);
+window.visualViewport?.addEventListener('scroll',updateKeyboardInset);
+document.addEventListener('focusin',updateKeyboardInset);
+document.addEventListener('focusout',()=>setTimeout(updateKeyboardInset));
+updateKeyboardInset();

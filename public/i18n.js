@@ -656,6 +656,7 @@
     "staticChecked": ["Pin kaynaklarının kontrol tarihi", "Pin sources checked"],
     "staticReviewed": ["Teknik bilgilerin inceleme tarihi", "Technical details reviewed"],
     "staticPinTable": ["Tüm pinler ({count})", "All pins ({count})"],
+    "staticPinJump": ["Pine git", "Jump to a pin"],
     "staticPinCaption": ["{name}: fiziksel sırayla her pin; türü, işlevleri ve uyarıları", "{name}: every pin in physical order with its type, functions and warnings"],
     "staticNotes": ["Notlar ve uyarılar", "Notes and warnings"],
     "staticShared": ["Aynı elektriksel hat: {pins}", "Same electrical signal as {pins}"],

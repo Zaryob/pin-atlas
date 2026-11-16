@@ -9,7 +9,7 @@ async function ready(page,hash) {
   await page.goto('./?lang=en'+hash);
   await expect(page.locator('#app-status')).toBeHidden();
 }
-const phone=page=>page.viewportSize().width<=970;
+const phone=page=>page.viewportSize().width<=640;
 const row=(page,number)=>page.locator(`#diagram .strip-pin[data-pin="${number}"]`);
 const fits=page=>page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth);
 
@@ -45,12 +45,30 @@ test.describe('compact pin strip',()=>{
     const raw=boards.find(board=>board.id==='nucleo-f401re');
     await ready(page,'#board=nucleo-64&profile=nucleo-f401re');
     await expect(page.locator('#diagram .strip-pin')).toHaveCount(raw.pins.length);
-    await expect(page.locator('.strip-section')).toContainText(['Arduino · CN5','ST Morpho · CN7','ST Morpho · CN10']);
+    // Sections follow the board left to right, then top to bottom: Morpho CN7, the Arduino headers, Morpho CN10.
+    await expect(page.locator('.strip-section')).toHaveText(['ST Morpho · CN7','Arduino · CN6','Arduino · CN8','Arduino · CN5','Arduino · CN9','ST Morpho · CN10']);
+    await expect(page.locator('.strip-jumps button')).toHaveText(['ST Morpho · CN7','Arduino · CN6','Arduino · CN8','Arduino · CN5','Arduino · CN9','ST Morpho · CN10']);
     const cn7=raw.pins.filter(pin=>pin.connector==='CN7');
     const [a,b]=await Promise.all([row(page,cn7[0].number).boundingBox(),row(page,cn7[1].number).boundingBox()]);
     expect(Math.abs(a.y-b.y)).toBeLessThan(1);
     expect(b.x).toBeGreaterThan(a.x);
     expect(await fits(page)).toBe(true);
+  });
+
+  test('an Arduino board lists its headers as they sit on the board and each header in top-view order',async({page})=>{
+    const raw=boards.find(board=>board.id==='arduino-uno-r3');
+    await ready(page,'#board=arduino-uno&profile=arduino-uno-r3');
+    await expect(page.locator('#diagram .strip-pin')).toHaveCount(raw.pins.length);
+    await expect(page.locator('.strip-section')).toHaveText(['PWR','ANALOG','ICSP','DIGITAL']);
+    // Within the digital header, rows run from the top of the board to the bottom.
+    const digital=raw.pins.filter(pin=>pin.connector==='DIGITAL');
+    const shown=await page.locator('#strip-section-3 + .pin-strip .strip-pin').evaluateAll(rows=>rows.map(row=>Number(row.dataset.pin)));
+    expect(shown).toEqual([...digital].sort((a,b)=>a.position.y-b.position.y).map(pin=>pin.number));
+    // Rotating the view reverses both the section order and the order down each header.
+    await page.locator('#view-options > summary').click();await page.locator('#rotate-button').click();
+    await expect(page.locator('.strip-section')).toHaveText(['DIGITAL','ICSP','ANALOG','PWR']);
+    expect(await page.locator('#strip-section-0 + .pin-strip .strip-pin').evaluateAll(rows=>rows.map(row=>Number(row.dataset.pin))))
+      .toEqual([...digital].sort((a,b)=>b.position.y-a.position.y).map(pin=>pin.number));
   });
 
   test('a tap selects without opening details; Details or a second tap opens them',async({page})=>{
@@ -154,4 +172,24 @@ test('wide screens keep the drawing, its pin buttons and click-to-open details',
   await page.locator('#diagram svg [data-pin="27"] .pin-node').click();
   await expect(page.locator('#details-home .details-panel #pin-detail h2')).toHaveText('GP21');
   await expect(page.locator('#diagram-keyboard-help')).toHaveText(/physical pin order/);
+});
+
+test('tablets keep the drawn map, where a tap opens the details sheet, and switch to the strip at phone width',async({page})=>{
+  await page.setViewportSize({width:800,height:1000});
+  await ready(page,'#board=pico-family&profile=pico');
+  await expect(page.locator('#diagram .strip-pin, #diagram .strip-overview')).toHaveCount(0);
+  await expect(page.locator('html')).not.toHaveClass(/map-strip-on/);
+  await expect(page.locator('.mobile-workbar')).toBeVisible();
+  await expect(page.locator('#peek-prev')).toBeHidden();
+  await expect(page.locator('.mobile-hint')).toHaveText('Scroll sideways for functions; tap a pin.');
+  await page.locator('#diagram svg [data-pin="27"] .pin-node').click();
+  await expect(page.locator('#details-dialog')).toBeVisible();
+  await expect(page.locator('#details-dialog #pin-detail h2')).toHaveText('GP21');
+  await page.keyboard.press('Escape');
+  await page.setViewportSize({width:640,height:900});
+  await expect(page.locator('#diagram .strip-pin')).toHaveCount(40);
+  await expect(page.locator('#peek-prev')).toBeVisible();
+  await page.setViewportSize({width:641,height:900});
+  await expect(page.locator('#diagram .strip-pin')).toHaveCount(0);
+  await expect(page.locator('#peek-prev')).toBeHidden();
 });

@@ -115,8 +115,16 @@ function boardPage({site,language,t,board,profile,entry,related,evidence}) {
     const functions = pin.functions.map(fn => `<span>${esc(fn.name)}${fn.selector ? ` <small>${esc(fn.selector)}</small>` : ''}${fn.configuration ? ` <small>${esc(fn.configuration.field)}: ${esc(fn.configuration.values.join(' / '))}</small>` : ''}</span>`).join('');
     return `<tr id="pin-${pin.number}"><th scope="row">${esc(physicalLabel(pin))}</th><td><b>${esc(pin.name)}</b>${identity.length ? `<small>${esc(identity.join(' · '))}</small>` : ''}</td><td>${esc(t(typeKeys[pin.type] || pin.type,{},pin.type))}</td><td class="static-functions">${functions || '—'}</td><td class="static-notes">${flags.length ? `<p class="static-flags">${esc(flags.join(' · '))}</p>` : ''}${warnings}${flags.length || warnings ? '' : '—'}</td><td>${cite([...pin.evidence,pin.inputTolerance?.evidence].filter(Boolean)) || '—'}</td></tr>`;
   }).join('\n');
+  // A closed list of links to each pin's row, one per package side on chips, so a long table is one tap from any pin.
+  const sides = board.layout === 'dip' ? ['left','right'] : ['qfn','lqfp'].includes(board.layout) ? ['left','bottom','right','top'] : [];
+  const perSide = sides.length ? board.packagePins/sides.length : 0;
+  const jumpGroups = sides.length ? [...sides.map((side,index) => ({label:`${t('stripSide.'+side)} · ${index*perSide+1}–${(index+1)*perSide}`,
+    pins:board.pins.filter(pin => pin.number > index*perSide && pin.number <= (index+1)*perSide)})),
+    {label:t('stripOther'),pins:board.pins.filter(pin => pin.number > board.packagePins)}].filter(group => group.pins.length) : [{label:'',pins:board.pins}];
+  const jump = `<nav class="static-pin-jump" aria-label="${esc(t('staticPinJump'))}">${jumpGroups.map(group => `<details><summary>${esc(t('staticPinJump'))}${group.label ? ` · ${esc(group.label)}` : ''}</summary><ul>${group.pins.map(pin => `<li><a href="#pin-${pin.number}">${esc(physicalLabel(pin))} <span>${esc(pin.name)}</span></a></li>`).join('')}</ul></details>`).join('')}</nav>`;
   const labels = [t('physical'),t('pinName'),t('staticType'),t('functions'),t('staticNotes'),t('noteSource')];
   const table = `<section class="static-section" aria-labelledby="pins-title"><h2 id="pins-title">${esc(t('staticPinTable',{count:board.pins.length}))}</h2>
+${jump}
 <table class="static-pins" style="${labels.map((label,index) => `--label-${index+1}:${esc(JSON.stringify(label))}`).join(';')}"><caption>${esc(t('staticPinCaption',{name}))}</caption><thead><tr>${labels.map(label => `<th scope="col">${esc(label)}</th>`).join('')}</tr></thead><tbody>
 ${rows}
 </tbody></table>

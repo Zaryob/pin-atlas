@@ -72,6 +72,24 @@ test.describe('compact bottom bar',()=>{
     await expect(page.locator('#details-dialog')).toBeVisible();
   });
 
+  for(const [width,height,large,lang] of [[390,844,false,'en'],[320,568,true,'tr']]){
+    test(`${lang} ${width}×${height}${large?' with 200% text':''}: Tab moves through the bar in the order it is shown`,async({page})=>{
+      await open(page,{board:'pico',width,height,large,lang});
+      // Reading order: top to bottom by row, then left to right.
+      const visual=await page.evaluate(()=>[...document.querySelectorAll('.mobile-workbar button')].filter(el=>el.getClientRects().length)
+        .map(el=>({id:el.id,...el.getBoundingClientRect().toJSON()})).sort((a,b)=>Math.abs(a.y-b.y)>4?a.y-b.y:a.x-b.x).map(el=>el.id));
+      expect(visual).toEqual(['peek-prev','peek-next','open-pin','open-mcu','open-plan']);
+      await page.locator('#peek-prev').focus();
+      const reached=[];
+      for(const _ of visual){
+        reached.push(await page.evaluate(()=>document.activeElement.id));
+        await page.keyboard.press('Tab');
+      }
+      expect(reached).toEqual(visual);
+      expect(await page.locator('.mobile-workbar').evaluate(bar=>[...bar.querySelectorAll('*')].some(el=>getComputedStyle(el).order!=='0'))).toBe(false);
+    });
+  }
+
   test('the cap leaves the bar unchanged when it already fits',async({page})=>{
     await open(page,{board:'pico',width:390,height:844,large:false});
     const bar=page.locator('.mobile-workbar');
