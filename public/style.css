@@ -1505,3 +1505,9 @@
  .plan-workspace .plan-toolbar { max-width: 580px; }
 }
 .tool-group .plan-tools > #pin-suggestions:first-child, .tool-group #hardware-config[hidden] + #pin-suggestions { border-top: 0; padding-top: 4px; }
+/* Specs separators sit in the column gap, so a wrapped line never starts with one. */
+.specs { --spec-pad: 14px; column-gap: calc(2 * var(--spec-pad) + 1px); overflow-x: clip; }
+.specs > span, .specs > span:first-child { position: relative; padding-inline: 0; border-left: 0; }
+.specs > span + span::before { content: ""; position: absolute; top: 0; bottom: 0; left: calc(-1 * var(--spec-pad) - 1px); border-left: 1px solid var(--line); }
+@media (max-width: 1200px) { .specs { --spec-pad: 10px; } }
+@media (max-width: 640px) { .specs { --spec-pad: 6px; } }
