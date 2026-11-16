@@ -136,3 +136,21 @@ test('the index lists every profile and the application links to the static page
   await page.locator('#static-page').click();
   await expect(page.locator('h1')).toHaveText('BeagleBone Black pinout');
 });
+
+// Long words in the generated pages (Turkish compounds, chip lists, source file paths) must never push the page wider
+// than a phone screen, at normal and at 200% text.
+for(const lang of ['en','tr'])for(const width of [320,390])for(const large of [false,true]){
+  test(`${lang} ${width}px${large?' with 200% text':''}: no static board page scrolls sideways`,async({page})=>{
+    test.skip(page.viewportSize().width>640,'phone widths only');
+    test.setTimeout(120000);
+    await page.setViewportSize({width,height:844});
+    const wide=[];
+    for(const path of [...profiles.map(profile=>`boards/${profile.id}/`),'boards/']){
+      await page.goto(`./${lang==='tr'?'tr/':''}${path}`);
+      if(large)await page.addStyleTag({content:'html{font-size:200% !important}'});
+      const size=await page.evaluate(()=>({scroll:document.documentElement.scrollWidth,client:document.documentElement.clientWidth}));
+      if(size.scroll>size.client)wide.push(`${path} ${size.scroll}>${size.client}`);
+    }
+    expect(wide).toEqual([]);
+  });
+}

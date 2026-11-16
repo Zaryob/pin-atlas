@@ -1363,7 +1363,9 @@
 .link-notice .icon-button { flex-shrink: 0; min-width: 32px; min-height: 32px; }
 
 /* Generated pinout pages (scripts/static-pages.mjs, layout board.html). */
-.static-main { max-width: var(--shell-width); padding-bottom: 0; }
+/* Long words (Turkish compounds, chip lists like ATmega640/1280/…, source file paths) break inside the word only when
+   they would not fit the line otherwise, so narrow phones and large text never scroll the page sideways. */
+.static-main { max-width: var(--shell-width); padding-bottom: 0; overflow-wrap: break-word; }
 .static-crumbs { display: flex; flex-wrap: wrap; gap: 8px; color: var(--muted); font-size: var(--text-xs); margin-bottom: 22px; }
 .static-crumbs span[aria-hidden] { color: var(--accent); }
 .static-heading h1 { overflow-wrap: anywhere; }
