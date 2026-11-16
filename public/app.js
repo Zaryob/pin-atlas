@@ -435,6 +435,8 @@ function renderMap() {
    diagram.scrollLeft=viewport?.left ?? (isChip(board)?0:Math.max(0,(diagram.scrollWidth-diagram.clientWidth)/2));
    diagram.scrollTop=viewport?.top ?? 0;
  }
+ applyStrip(diagram);
+ renderStripBar();
  const visiblePins = board.pins.filter(inConnectorZoom);
  const count=visiblePins.filter(matches).length;
  $('#match-count').textContent = (search || filters.size || connectorZoom) ? t('matchCount', { count, total: visiblePins.length }) : '';
@@ -524,7 +526,7 @@ function renderDetail() {
  const hasPlan=!!assignments[selected];
  const occupied=pinAssignment(pin,assignments,board,{otherContactOnly:true});
  const occupancy=occupied?`<div class="pin-occupancy"><p>${esc(assignmentMessage(occupied,t))}</p><button type="button" class="button secondary" data-open-assignment="${occupied.pin.number}">${esc(t('openOccupiedPin'))}</button></div>`:'';
- $('#selected-pin-label').textContent = `${pin.name} · ${t('details')}`;
+ $('#selected-pin-label').textContent = stripActive() ? t('details') : `${pin.name} · ${t('details')}`;
  $('#pin-detail').innerHTML=`<div class="pin-detail-body"><div class="pin-hero"><div class="pin-identity"><h2>${esc(pin.name.replace('_ADC',' / A'))}</h2><span class="physical-pin">${t('physicalPin')} <strong>${esc(physicalLabel(pin))}</strong>${pin.boardLabel && pin.boardLabel!==pin.name ? `<span class="mcu-pin-label"> · ${esc(t('boardLabel',{label:pin.boardLabel}))}</span>` : ''}${pin.mcuPort ? `<span class="mcu-pin-label">${pin.arduinoPin!==undefined?` · Arduino D${pin.arduinoPin}`:''} · ${t('mcuPort', {port:pin.mcuPort})}</span>` : ''}${pin.mcuPin ? `<span class="mcu-pin-label"> · ${t('mcuPin', {pin:pin.mcuPin})}</span>` : ''}</span></div><span class="pin-type" style="color:${colors[pin.type]}">${familyName(pin.type)} · ${esc(pin.type === 'GPIO' ? board.voltage : '')}${electricalBadgeHTML(pin)}</span>${occupancy}${pinHardwareHTML(pin)}${circuitNotesHTML([pin])}${sharedNote}${referenceLink(pin.evidence[0], t('pinSource'), 'pin-source')}</div><fieldset class="function-section"><legend class="small-label">${t(opts.length>1 ? 'chooseFunction' : 'pinFunction')}</legend>${filters.size || query ? `<p class="function-hint">${t('matchingFunctions')}</p>` : ''}<div class="function-list">${primary.map(option).join('')}</div>${more.length ? `<details class="more-functions"><summary>${t('allFunctions', {count:more.length})}</summary><div class="function-list">${more.map(option).join('')}</div></details>` : ''}<div id="function-source"></div></fieldset><div class="label-section"><label class="small-label" for="custom-label">${t('projectLabel')} <span>${t('optional')}</span></label><input id="custom-label" maxlength="40" placeholder="${esc(t('labelExample'))}" value="${esc(assignments[selected]?.label||'')}"></div><details class="pin-guidance"><summary>${esc(t('generalGuidance'))}</summary><p class="pin-description">${esc(description)}${general.length?noteSources(general[0]):''}${pin.fiveVoltTolerant !== undefined ? ' '+esc(t(pin.fiveVoltTolerant ? 'stm32FTNote' : 'stm32NonFTNote')) : ''}</p></details>${pin.inputTolerance ? `<p class="hardware-note">${esc(t(pin.inputTolerance.kind==='rp2350-ft'?'rp2350FTNote':'rp2350AnalogNote'))}</p>` : ''}${pin.functions.some(fn=>pwmResource(fn,board)) ? `<section id="pwm-settings" ${pwmResource(pin.functions.find(f=>f.name===selectedFn),board)?'':'hidden'}><label class="pwm-sharing"><input id="shared-pwm" type="checkbox" ${assignments[selected]?.sharedPWM?'checked':''}>${esc(t('pwmShareConsent'))}</label><p>${esc(t('pwmFrequencyNote'))}</p></section>` : ''}${renderPinEvidence(pin)}</div><div class="detail-action"><button id="add-plan" class="add-plan" ${pin.reserved || pin.hardwareBlocked || occupied ? 'disabled' : ''}>${icon(hasPlan?'check':'plus')}${t(occupied?'peripheralOccupiedShort':pin.hardwareBlocked ? 'hwUnavailable' : pin.reserved ? (pin.reservedLabel || (pin.name==='NC' ? 'unconnected' : 'reserved')) : hasPlan ? 'updatePin' : 'addPin')}</button><div class="pin-save-feedback"><span id="pin-save-status" role="status"></span><button id="view-saved-plan" hidden>${t('viewPlan')}</button></div></div>`;
  renderFunctionSource(pin);
  renderWorkContext();
@@ -557,6 +559,228 @@ function renderPinEvidence(pin) {
 }
 let detailTab = 'pin', detailReturnTarget=null,expandedPlan=true;
 const compactLayout = matchMedia('(max-width: 970px)');
+// Compact screens show the pin map as a header-style strip of large rows, with the drawing above it as a
+// small overview. A tap only selects; the bar shows the pin and steps to its neighbours; Details or a
+// second tap opens it. The overview is one labelled control, so screen readers hear one list of pins.
+const stripActive=()=>compactLayout.matches;
+function nearestPin(svg,x,y,attr){
+ let best=null,distance=Infinity;
+ for(const group of $$(`[${attr}]`,svg)){
+   const node=group.querySelector('.pin-node')||group,r=node.getBoundingClientRect();
+   const d=Math.hypot(r.x+r.width/2-x,r.y+r.height/2-y);
+   if(d<distance){distance=d;best=group;}
+ }
+ return best;
+}
+function stripFunctions(pin){
+ const query=search.trim().toLowerCase();
+ const names=[...new Set(pin.functions.map(fn=>fn.name).filter(name=>name!==pin.name))];
+ const hit=name=>pin.functions.some(fn=>fn.name===name && (filters.has(fn.group) || (query && name.toLowerCase().includes(query))));
+ const preferred=names.filter(hit);
+ const ordered=[...preferred,...names.filter(name=>!preferred.includes(name))];
+ return {shown:ordered.slice(0,2),rest:Math.max(0,ordered.length-2),hits:new Set(preferred)};
+}
+const stripName=pin=>{
+ const label=pin.boardLabel && pin.boardLabel!==pin.name && (board.id.startsWith('nucleo-') || board.diagram?.connectorStyle===true) ? `${pin.boardLabel} · ${pin.name}` : pin.name;
+ return label.replace('_ADC','/A');
+};
+function stripCell({pin,col,row,cols}){
+ const active=pin.number===selected,assigned=assignments[pin.number],match=matches(pin);
+ const {shown,rest,hits}=stripFunctions(pin);
+ const color=colors[pin.type]||colors.SYSTEM;
+ const mcu=pin.mcuPin?t('mcuPin',{pin:pin.mcuPin}):'';
+ const more=rest?` +${rest}`:'';
+ const fns=shown.join(' · ')+more;
+ const fnsHTML=shown.map(name=>hits.has(name)?`<mark>${esc(name)}</mark>`:esc(name)).join(' · ')+esc(more);
+ const name=stripName(pin);
+ const label=[t('stripPin',{pin:physicalLabel(pin),name}),fns,assigned?(assigned.label||assigned.function):'',pin.hardwareBlocked?t('hwUnavailable'):'',mcu].filter(Boolean).join(', ');
+ const side=cols===2?(col===1?'left':'right'):'single';
+ return `<div class="strip-pin strip-${side}${active?' selected':''}${match?'':' dimmed'}${assigned?' assigned':''}${pin.hardwareBlocked?' hardware-unavailable':''}" data-pin="${pin.number}" data-col="${col}" data-row="${row}" role="button" tabindex="${active?'0':'-1'}" aria-label="${esc(label)}"${active?' aria-current="true"':''} style="--color:${color};grid-column:${col};grid-row:${row}"><span class="strip-num" aria-hidden="true">${esc(pin.connectorPin ?? physicalLabel(pin))}</span><span class="strip-node" aria-hidden="true"></span><span class="strip-body" aria-hidden="true"><b class="strip-name">${esc(name)}</b>${fns?`<small class="strip-fns">${fnsHTML}</small>`:''}${assigned?`<small class="strip-plan">✓ ${esc(assigned.label||assigned.function)}</small>`:''}</span></div>`;
+}
+// Lays one connector out as it sits on the board: one or two columns along its long side, after mirror and rotation.
+function connectorCells(list){
+ const {width,height}=board.diagram;
+ const points=list.map(pin=>{let {x,y}=pin.position;if(rotated){x=width-x;y=height-y;}if(flipped)x=width-x;return {pin,x:Math.round(x),y:Math.round(y)};});
+ const xs=[...new Set(points.map(p=>p.x))].sort((a,b)=>a-b),ys=[...new Set(points.map(p=>p.y))].sort((a,b)=>a-b);
+ const vertical=xs.length<=2 && ys.length>=xs.length,across=vertical?xs:ys,along=vertical?ys:xs;
+ const cell=p=>({pin:p.pin,col:across.indexOf(vertical?p.x:p.y)+1,row:along.indexOf(vertical?p.y:p.x)+1});
+ // Facing pairs only when most rows hold two pins; staggered pads read better as one column in board order.
+ if(across.length<=2 && list.length>=1.5*along.length)return {cols:across.length,cells:points.map(cell)};
+ if(across.length<=2)return {cols:1,cells:points.map(cell).sort((a,b)=>a.row-b.row||a.col-b.col).map((c,i)=>({...c,col:1,row:i+1}))};
+ return {cols:1,cells:points.sort((a,b)=>(a.pin.connectorPin??a.pin.number)-(b.pin.connectorPin??b.pin.number)).map((p,i)=>({pin:p.pin,col:1,row:i+1}))};
+}
+function stripSections(){
+ const pins=board.pins.filter(inConnectorZoom);
+ if(['pico','dip','header'].includes(board.layout)){
+   const header=board.layout==='header',total=board.pins.length,half=total/2,rows=header?Math.ceil(total/2):half;
+   const swap=flipped!==rotated;
+   const cells=pins.map(pin=>{
+     let left,row;
+     if(header){left=pin.number%2===1;row=Math.floor((pin.number-1)/2)+1;}
+     else{left=pin.number<=half;row=left?pin.number:total-pin.number+1;}
+     if(rotated)row=rows-row+1;
+     if(swap)left=!left;
+     return {pin,col:left?1:2,row};
+   });
+   return [{id:'strip-section-0',label:'',cols:2,cells}];
+ }
+ if(isChip(board)){
+   const n=board.packagePins/4,names=['left','bottom','right','top'];
+   const edge=name=>{let v=name;if(rotated)v={left:'right',right:'left',top:'bottom',bottom:'top'}[v];if(flipped)v={left:'right',right:'left'}[v]||v;return v;};
+   return names.map((name,i)=>({id:`strip-section-${i}`,label:`${t('stripSide.'+edge(name))} · ${i*n+1}–${(i+1)*n}`,cols:1,
+     cells:pins.filter(pin=>Math.floor((pin.number-1)/n)===i).map((pin,j)=>({pin,col:1,row:j+1}))})).filter(section=>section.cells.length);
+ }
+ const used=new Set(),sections=[];
+ for(const group of connectorGroups){
+   for(const connector of group.contacts){
+     const list=pins.filter(pin=>pin.connector===connector);
+     if(!list.length)continue;
+     list.forEach(pin=>used.add(pin.number));
+     const label=group.contacts.length>1?`${group.label} · ${connector}`:group.label;
+     sections.push({id:`strip-section-${sections.length}`,label,...connectorCells(list)});
+   }
+ }
+ const rest=pins.filter(pin=>!used.has(pin.number));
+ if(rest.length)sections.push({id:`strip-section-${sections.length}`,label:sections.length?t('stripOther'):'',cols:1,cells:rest.map((pin,i)=>({pin,col:1,row:i+1}))});
+ return sections;
+}
+function renderStrip(){
+ const sections=stripSections();
+ const jumps=sections.length>1?`<nav class="strip-jumps" aria-label="${esc(t('stripJump'))}">${sections.map(section=>`<button type="button" data-strip-jump="${section.id}">${esc(section.label)}</button>`).join('')}</nav>`:'';
+ // Reading order is physical pin order across facing columns and board order down a single column.
+ const body=sections.map(section=>{
+   const cells=[...section.cells].sort((a,b)=>section.cols>1?a.pin.number-b.pin.number:a.row-b.row).map(cell=>stripCell({...cell,cols:section.cols})).join('');
+   return `${section.label?`<p class="strip-section" id="${section.id}">${esc(section.label)}</p>`:''}<div class="pin-strip" style="--cols:${section.cols}">${cells}</div>`;
+ }).join('');
+ return `${jumps}<div class="strip-list" role="group" aria-label="${esc(t('diagramLabel',{board:board.name}))}">${body}</div>`;
+}
+function applyStrip(diagram){
+ diagram.classList.toggle('pin-strip-map',stripActive());
+ $('#diagram-keyboard-help').textContent=t(stripActive()?'stripKeyboardHelp':'pinKeyboardHelp');
+ if(!stripActive())return;
+ const holder=$('.board-pin-map',diagram)||diagram;
+ const svg=$(':scope > svg',holder);
+ if(!svg)return;
+ const pins=board.pins.filter(inConnectorZoom),index=Math.max(0,pins.findIndex(pin=>pin.number===selected));
+ const current=pinByNumber(selected);
+ const overview=document.createElement('div');
+ overview.className='strip-overview';
+ Object.entries({role:'slider',tabindex:'0','aria-label':t('stripOverviewLabel',{board:board.name}),'aria-describedby':'strip-overview-help',
+   'aria-valuemin':'1','aria-valuemax':String(pins.length),'aria-valuenow':String(index+1),'aria-valuetext':t('stripPin',{pin:physicalLabel(current),name:stripName(current)})})
+   .forEach(([name,value])=>overview.setAttribute(name,value));
+ svg.replaceWith(overview);overview.append(svg);
+ svg.removeAttribute('style');svg.removeAttribute('role');svg.removeAttribute('aria-label');svg.setAttribute('aria-hidden','true');
+ for(const group of $$('[data-pin]',svg)){group.dataset.ovPin=group.dataset.pin;['data-pin','role','tabindex','aria-label','aria-current'].forEach(name=>group.removeAttribute(name));}
+ overview.insertAdjacentHTML('afterend',`<p id="strip-overview-help" class="sr-only">${esc(t('stripOverviewHelp'))}</p>${renderStrip()}`);
+}
+function renderStripBar(){
+ const on=stripActive();
+ document.documentElement.classList.toggle('map-strip-on',on);
+ $('#peek-prev').hidden=$('#peek-next').hidden=!on;
+ if(!on)return;
+ const pin=pinByNumber(selected);
+ const {shown,rest}=stripFunctions(pin);
+ const assigned=assignments[pin.number];
+ $('#mobile-mcu').hidden=false;
+ $('#mobile-mcu-label').textContent=[`${physicalLabel(pin)} · ${stripName(pin)}`,shown.join(' · ')+(rest?` +${rest}`:''),assigned?`✓ ${assigned.label||assigned.function}`:'',pin.mcuPin?t('mcuPin',{pin:pin.mcuPin}):''].filter(Boolean).join(' · ');
+ $('.mobile-hint').textContent=$('.desktop-hint').textContent=t('stripHint');
+}
+const stripRows=()=>$$('#diagram .strip-pin');
+function selectStripPin(number,{focus=false,block='nearest'}={}){
+ choosePin(number,false);
+ const row=$(`#diagram .strip-pin[data-pin="${selected}"]`);
+ if(focus)row?.focus({preventScroll:true});
+ row?.scrollIntoView({block,inline:'nearest'});
+}
+function stepPin(step){
+ const rows=stripRows();
+ const index=rows.findIndex(node=>Number(node.dataset.pin)===selected);
+ const next=rows[(index+step+rows.length)%rows.length];
+ if(next)selectStripPin(next.dataset.pin);
+}
+function goToPin(){
+ const query=search.trim().toLowerCase();
+ if(!query)return false;
+ const pins=board.pins.filter(inConnectorZoom);
+ const exact=pins.find(pin=>[physicalLabel(pin),String(pin.number),pin.name,pin.boardLabel].filter(Boolean).some(value=>String(value).toLowerCase()===query));
+ const target=exact||pins.find(matches);
+ if(!target)return false;
+ selectStripPin(target.number,{block:'center'});
+ return true;
+}
+// Arrow keys follow the strip as it is drawn: up and down along a column, left and right to the facing pin.
+function stripKeyTarget(row,key){
+ const rows=stripRows(),index=rows.indexOf(row);
+ if(key==='Home')return rows[0];
+ if(key==='End')return rows.at(-1);
+ const step={ArrowDown:1,ArrowRight:1,ArrowUp:-1,ArrowLeft:-1}[key];
+ if(!step)return null;
+ const strip=row.parentElement,cols=Number(strip.style.getPropertyValue('--cols'))||1;
+ if(cols>1){
+   const col=Number(row.dataset.col),line=Number(row.dataset.row),peers=$$(':scope > .strip-pin',strip);
+   const vertical=key==='ArrowDown'||key==='ArrowUp';
+   const found=vertical?peers.find(node=>Number(node.dataset.col)===col && Number(node.dataset.row)===line+step)
+     :peers.find(node=>Number(node.dataset.row)===line && Number(node.dataset.col)===col+step);
+   if(found)return found;
+   if(!vertical)return row;
+ }
+ return rows[(index+step+rows.length)%rows.length];
+}
+$('#peek-prev').addEventListener('click',()=>stepPin(-1));
+$('#peek-next').addEventListener('click',()=>stepPin(1));
+$('#diagram').addEventListener('click',e=>{
+ if(!stripActive())return;
+ const jump=e.target.closest('[data-strip-jump]');
+ if(jump){e.stopPropagation();document.getElementById(jump.dataset.stripJump)?.scrollIntoView({block:'start'});return;}
+ const pad=e.target.closest('[data-mcu-pin]');
+ if(pad){
+   e.stopPropagation();
+   const near=nearestPin(pad.closest('svg'),e.clientX,e.clientY,'data-mcu-pin')||pad;
+   selectPackagePad(near.dataset.mcuPin,near.getAttribute('aria-current')==='true');
+   return;
+ }
+ const overview=e.target.closest('.strip-overview');
+ if(overview){e.stopPropagation();const near=nearestPin($('svg',overview),e.clientX,e.clientY,'data-ov-pin');if(near)selectStripPin(near.dataset.ovPin,{block:'center'});return;}
+ const row=e.target.closest('.strip-pin');
+ if(row){
+   e.stopPropagation();
+   if(Number(row.dataset.pin)===selected)choosePin(row.dataset.pin);
+   else selectStripPin(row.dataset.pin);
+ }
+},true);
+$('#diagram').addEventListener('keydown',e=>{
+ if(!stripActive() || e.altKey || e.ctrlKey || e.metaKey)return;
+ const overview=e.target.closest('.strip-overview'),row=e.target.closest('.strip-pin');
+ if(!overview && !row)return;
+ if(['Enter',' '].includes(e.key)){
+   e.preventDefault();e.stopPropagation();
+   if(overview)showDetails('pin','#diagram .strip-overview');
+   else{choosePin(row.dataset.pin);if(!$('#details-dialog').open)$(`#diagram .strip-pin[data-pin="${selected}"]`)?.focus();}
+   return;
+ }
+ if(e.key==='Escape'){
+   if(!overview)return;
+   e.preventDefault();e.stopPropagation();
+   $(`#diagram .strip-pin[data-pin="${selected}"]`)?.focus();
+   return;
+ }
+ let target;
+ if(overview){
+   const rows=stripRows(),index=rows.findIndex(node=>Number(node.dataset.pin)===selected);
+   const step={ArrowDown:1,ArrowRight:1,ArrowUp:-1,ArrowLeft:-1}[e.key];
+   target=e.key==='Home'?rows[0]:e.key==='End'?rows.at(-1):step?rows[(index+step+rows.length)%rows.length]:null;
+ } else target=stripKeyTarget(row,e.key);
+ if(!target)return;
+ e.preventDefault();e.stopPropagation();
+ if(overview){choosePin(target.dataset.pin,false);$('#diagram .strip-overview')?.focus({preventScroll:true});$(`#diagram .strip-pin[data-pin="${selected}"]`)?.scrollIntoView({block:'nearest'});}
+ else selectStripPin(target.dataset.pin,{focus:true});
+},true);
+$('#pin-search').addEventListener('keydown',e=>{
+ if(e.key!=='Enter' || !stripActive())return;
+ e.preventDefault();
+ goToPin();
+});
+compactLayout.addEventListener('change',()=>{if(board?.pins && currentView==='workspace')renderMap();});
 function setDetailTab(tab) {
  detailTab = tab;
  $('#pin-detail').hidden = tab !== 'pin'; $('#plan-panel').hidden = tab !== 'plan';
