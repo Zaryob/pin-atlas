@@ -1325,7 +1325,7 @@
 .research-citations a{padding:.15rem}
 .hardware-details h3{margin:2rem 0 1rem;font-size:var(--text-h3)}
 .research-memory-note,.research-date-note,.research-connections>p,.research-wiring p{font-size:var(--text-xs);color:var(--muted);line-height:1.9}
-.research-notes li{margin-block:.8rem;line-height:1.9}
+.research-notes li{margin-block:.8rem;line-height:1.9;overflow-wrap:anywhere}
 .research-wiring{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
 .research-wiring>div{padding:1.2rem;border:1px solid var(--line);background:var(--surface)}
 .research-wiring code{display:block;margin:1rem 0;line-height:1.8;font-family:var(--mono)}
