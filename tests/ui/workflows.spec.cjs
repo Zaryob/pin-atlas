@@ -24,6 +24,15 @@ async function openPlan(page) {
   else await page.locator('#plan-tab').click();
 }
 
+// Compact screens select a strip row with a tap and open it from the bar; wide screens open it from the drawing.
+async function openPin(page,number) {
+  if(page.viewportSize().width>970)return page.locator(`#diagram [data-pin="${number}"]`).click();
+  const row=page.locator(`#diagram .strip-pin[data-pin="${number}"]`);
+  await row.click();
+  await expect(row).toHaveAttribute('aria-current','true');
+  await page.locator('#open-pin').click();
+}
+
 async function chooseCompatibleModel(page,id) {
   const index=page.locator('#compatible-boards');
   if(!await index.evaluate(el=>el.open))await index.locator('summary').click();
@@ -40,7 +49,7 @@ test('occupied aliases name the saved contact in both the peripheral picker and 
  await expect(option).toHaveJSProperty('disabled',true);await expect(option).toContainText('CN5.9 for I2C1_SDA');
  if(await page.locator('#details-dialog').isVisible())await page.locator('#close-details').click();
  else await page.locator('#detail-tab').click();
- await page.locator(`#diagram [data-pin="${alias.number}"]`).click();
+ await openPin(page,alias.number);
  await expect(page.locator('.pin-occupancy')).toContainText('PB9 is already used on CN5.9 for I2C1_SDA');
  await expect(page.locator('#add-plan')).toBeDisabled();
  await page.locator('[data-open-assignment]').click();
@@ -576,10 +585,17 @@ for(const id of ['picow','raspberry-pi-5','rp2040','stm32f103vbt6','atmega328p-p
       await page.locator('#'+action).click();
     }
     selected=pins[i%2];
-    await page.locator(`#diagram [data-pin="${selected.number}"] .pin-node`).click();
+    const compact=page.viewportSize().width<=970;
+    const wasSelected=compact && await page.locator(`#diagram [data-pin="${selected.number}"]`).getAttribute('aria-current')==='true';
+    await page.locator(compact?`#diagram .strip-pin[data-pin="${selected.number}"]`:`#diagram [data-pin="${selected.number}"] .pin-node`).click();
     await expect(page.locator(`#diagram [data-pin="${selected.number}"]`)).toHaveAttribute('aria-current','true');
     await expect(page.locator('#pin-detail h2')).toHaveText(selected.name.replace('_ADC',' / A'));
-    if(page.viewportSize().width<=970){
+    if(compact){
+      // A tap selects; tapping the selected row again opens its details.
+      if(!wasSelected){
+        await expect(page.locator('#details-dialog')).toBeHidden();
+        await page.locator(`#diagram .strip-pin[data-pin="${selected.number}"]`).click();
+      }
       await expect(page.locator('#details-dialog')).toBeVisible();
       await page.keyboard.press('Escape');
       await expect(page.locator(`#diagram [data-pin="${selected.number}"]`)).toBeFocused();
@@ -591,7 +607,8 @@ for(const id of ['picow','raspberry-pi-5','rp2040','stm32f103vbt6','atmega328p-p
   await page.locator('#view-options > summary').click();await page.locator('#reset-view').click();
   await expect(page.locator('#flip-button')).toHaveAttribute('aria-pressed','false');
   await expect(page.locator('#rotate-button')).toHaveAttribute('aria-pressed','false');
-  const visible=await page.locator(`#diagram [data-pin="${selected.number}"] .pin-node`).evaluate(node=>{
+  const visible=await page.locator(`#diagram [data-pin="${selected.number}"]`).evaluate(group=>{
+    const node=group.querySelector('.pin-node') || group;
     const scroller=node.closest('.board-pin-map') || document.querySelector('#diagram');
     const pin=node.getBoundingClientRect(),map=scroller.getBoundingClientRect();
     return pin.left>=map.left-1 && pin.right<=map.right+1;
@@ -670,14 +687,17 @@ test('compact details use the full width, scroll above a fixed action and preser
 test('LQFP pin terminals select their own pin on all four package edges',async({page})=>{
   const chip=boards.find(board=>board.id==='stm32f103vbt6');
   await ready(page,'#board='+chip.id+'&pin=1');
+  const compact=page.viewportSize().width<=970;
   for(const [number,dx,dy] of [[2,8,0],[27,0,-8],[52,-8,0],[77,0,8]]){
-    const terminal=page.locator(`#diagram [data-pin="${number}"] .pin-node`);
+    // Compact screens list the same four edges as strip rows; an off-centre tap still selects its own row.
+    const terminal=page.locator(compact?`#diagram .strip-pin[data-pin="${number}"]`:`#diagram [data-pin="${number}"] .pin-node`);
     await terminal.evaluate(el=>el.scrollIntoView({block:'center',inline:'center'}));
-    const box=await terminal.boundingBox(),scale=box.width/8.8;
+    const box=await terminal.boundingBox(),scale=compact?2:box.width/8.8;
     await page.mouse.click(box.x+box.width/2+dx*scale,box.y+box.height/2+dy*scale);
     await expect(page.locator(`#diagram [data-pin="${number}"]`)).toHaveAttribute('aria-current','true');
     await expect(page.locator('#pin-detail h2')).toHaveText(chip.pins.find(pin=>pin.number===number).name);
     expect(new URLSearchParams(new URL(page.url()).hash.slice(1)).get('pin')).toBe(String(number));
+    if(compact)await expect(page.locator('#details-dialog')).toBeHidden();
     if(await page.locator('#details-dialog').isVisible())await page.locator('#close-details').click();
   }
 });
@@ -760,7 +780,8 @@ test('saved plans survive refresh, import previews, share previews and language 
 
 test('CAN peripheral suggestions and electrical tolerance badges render correctly', async({page})=>{
   await ready(page, '#board=nucleo-g474re');
-  await page.locator('#diagram [data-pin="28"] .pin-node').click();
+  if (page.viewportSize().width <= 970) await openPin(page, 28);
+  else await page.locator('#diagram [data-pin="28"] .pin-node').click();
   if (page.viewportSize().width <= 970) {
     await expect(page.locator('#details-dialog')).toBeVisible();
     await expect(page.locator('#details-dialog .pin-badge')).toBeVisible();
@@ -790,10 +811,10 @@ test('PWM servo aliases require consent on both pins and export the shared signa
  await expect(page.locator('#pin-save-status')).toContainText('confirm sharing on both assignments');
  expect(await page.evaluate(key=>Object.keys(JSON.parse(localStorage.getItem(key)).pico).length,storageKey)).toBe(1);
  if(await page.locator('#details-dialog').isVisible())await page.locator('#close-details').click();
- await page.locator('#diagram [data-pin="1"]').click();
+ await openPin(page,1);
  await page.locator('#shared-pwm').check();await page.locator('#add-plan').click();
  if(await page.locator('#details-dialog').isVisible())await page.locator('#close-details').click();
- await page.locator('#diagram [data-pin="21"]').click();
+ await openPin(page,21);
  if(!await pwm.isVisible())await page.locator('.more-functions summary').click();
  await pwm.check();await page.locator('#shared-pwm').check();await page.locator('#custom-label').fill('same signal');
  await page.locator('#add-plan').click();await openPlan(page);

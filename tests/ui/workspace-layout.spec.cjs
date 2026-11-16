@@ -4,10 +4,11 @@ for(const width of [320,390]) {
     await page.setViewportSize({width,height:800});
     await page.goto('./?lang=tr#board=pico-family&profile=pico2&pin=1');
     await expect(page.locator('#board-title')).toHaveText('Raspberry Pi Pico 2');
+    // At these widths the map opens with the board overview, which draws pin 1, followed by the pin strip.
     const pin=page.locator('#diagram [data-pin="1"]');
     await expect(pin).toBeAttached();
     expect(await page.locator('#board-documents').getAttribute('open')).toBeNull();
-    expect((await pin.boundingBox()).y).toBeLessThan(650);
+    expect((await page.locator('#diagram .strip-overview [data-ov-pin="1"]').boundingBox()).y).toBeLessThan(650);
     await page.locator('#board-documents > summary').click();
     await expect(page.locator('#datasheet')).toBeVisible();
     await expect(page.locator('#static-page')).toBeVisible();
