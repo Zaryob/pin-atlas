@@ -55,6 +55,10 @@ const colors = Object.fromEntries(['GPIO','POWER','GND','SYSTEM','SPI','I2C','UA
 const appBase = new URL('./', import.meta.url);
 const familyKeys = { GPIO: 'generalIO', POWER: 'power', GND: 'ground', SYSTEM: 'system', ADC: 'analog' };
 const familyName = type => t(familyKeys[type] || type);
+// Last input kind, so focus moved by script shows a ring only after keyboard use.
+let lastInput='pointer';
+addEventListener('pointerdown',()=>{lastInput='pointer';},true);
+addEventListener('keydown',e=>{if(!['Shift','Control','Alt','Meta'].includes(e.key))lastInput='keyboard';},true);
 const subtitle = item => t(`board.${item.id}`, {}, item.subtitle);
 const groups = ['SPI','I2C','UART','PWM','ADC','HSTX','PIO','PCM','I2S','CLOCK','JTAG','DPI','SDIO','SMI','SWD','CAN','TIMER','USB','IRQ','DAC','TOUCH','ADC_TRIGGER'];
 let evidence = {references:{},documents:[]};
@@ -826,7 +830,10 @@ function showDetails(tab,returnTarget) {
  if(compactLayout.matches && !$('#details-dialog').open){
    detailReturnTarget=returnTarget || (view==='map'?`#diagram [data-pin="${selected}"]`:`#table-content button.table-details[data-pin="${selected}"]`);
    $('#details-dialog').showModal();
-   $(tab==='pin'?'#detail-tab':'#plan-tab').focus({preventScroll:true});
+   // A keyboard user lands on the open tab; a tap focuses the sheet itself, so no focus ring appears
+   // (Safari draws one after programmatic focus when the tapped control never took focus).
+   if(lastInput==='keyboard')$(tab==='pin'?'#detail-tab':'#plan-tab').focus({preventScroll:true});
+   else $('#details-dialog').focus({preventScroll:true});
  }
 }
 compactLayout.addEventListener('change', syncDetailsLayout);
@@ -1530,7 +1537,7 @@ $('#pin-detail').addEventListener('click', e => {
  if (e.target.closest('#add-plan')) addToPlan();
  if (e.target.closest('#view-saved-plan')) {
    showDetails('plan');
-   $('#plan-tab').focus();
+   $('#plan-tab').focus({focusVisible:lastInput==='keyboard'});
  }
 });
 $('#plan-list').addEventListener('click',e=>{const remove=e.target.closest('[data-remove-pin]'),select=e.target.closest('[data-select-pin]');if(remove){delete assignments[remove.dataset.removePin];const stored=persist();renderPlan();renderMap();renderDetail();$('#plan-feedback').textContent=t(stored?'pinRemoved':'storageUnavailable');}else if(select)choosePin(select.dataset.selectPin);});
