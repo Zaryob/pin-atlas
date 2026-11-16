@@ -109,12 +109,18 @@ test('the Turkish entry address opens the atlas in Turkish and keeps a board lin
 });
 
 test.describe('on-screen keyboard',()=>{
-  // Emulates a 300px keyboard by shrinking the visual viewport (or, for the shared theme, by its published variable).
+  // Emulates a 300px keyboard by shrinking the visual viewport, or, for the shared theme, by its published variable.
+  // The theme re-measures the variable on every visualViewport resize, so the variable case announces the change with
+  // focusin (which the page also listens to) instead of a viewport resize that would overwrite it.
   const keyboard=(page,{px,themed=false})=>page.evaluate(({px,themed})=>{
     const viewport=window.visualViewport;
-    if(themed)document.documentElement.style.setProperty('--console-keyboard-inset',`${px}px`);
-    else Object.defineProperty(viewport,'height',{configurable:true,get:()=>innerHeight-px});
-    viewport.dispatchEvent(new Event('resize'));
+    if(themed){
+      document.documentElement.style.setProperty('--console-keyboard-inset',`${px}px`);
+      (document.activeElement||document).dispatchEvent(new FocusEvent('focusin',{bubbles:true}));
+    }else{
+      Object.defineProperty(viewport,'height',{configurable:true,get:()=>innerHeight-px});
+      viewport.dispatchEvent(new Event('resize'));
+    }
   },{px,themed});
   for(const themed of [false,true]){
     test(`${themed?'the theme variable':'the visualViewport fallback'} keeps the label field and Add above the keyboard and hides the bar`,async({page})=>{

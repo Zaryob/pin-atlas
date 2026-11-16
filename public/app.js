@@ -1720,8 +1720,12 @@ function updateKeyboardInset(){
  if(covered && textEntry(document.activeElement) && document.activeElement.closest('#details-dialog'))
    requestAnimationFrame(()=>document.activeElement?.scrollIntoView?.({block:'nearest'}));
 }
-window.visualViewport?.addEventListener('resize',updateKeyboardInset);
-window.visualViewport?.addEventListener('scroll',updateKeyboardInset);
+// The shared theme measures the keyboard in the animation frame after a viewport change, so read its value one
+// frame later; this listener is registered after the theme's, so its frame runs after the theme has measured.
+let keyboardInsetFrame=0;
+const queueKeyboardInset=()=>{keyboardInsetFrame||=requestAnimationFrame(()=>{keyboardInsetFrame=0;updateKeyboardInset();});};
+window.visualViewport?.addEventListener('resize',queueKeyboardInset);
+window.visualViewport?.addEventListener('scroll',queueKeyboardInset);
 document.addEventListener('focusin',updateKeyboardInset);
 document.addEventListener('focusout',()=>setTimeout(updateKeyboardInset));
 updateKeyboardInset();
