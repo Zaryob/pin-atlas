@@ -45,12 +45,30 @@ test.describe('compact pin strip',()=>{
     const raw=boards.find(board=>board.id==='nucleo-f401re');
     await ready(page,'#board=nucleo-64&profile=nucleo-f401re');
     await expect(page.locator('#diagram .strip-pin')).toHaveCount(raw.pins.length);
-    await expect(page.locator('.strip-section')).toContainText(['Arduino · CN5','ST Morpho · CN7','ST Morpho · CN10']);
+    // Sections follow the board left to right, then top to bottom: Morpho CN7, the Arduino headers, Morpho CN10.
+    await expect(page.locator('.strip-section')).toHaveText(['ST Morpho · CN7','Arduino · CN6','Arduino · CN8','Arduino · CN5','Arduino · CN9','ST Morpho · CN10']);
+    await expect(page.locator('.strip-jumps button')).toHaveText(['ST Morpho · CN7','Arduino · CN6','Arduino · CN8','Arduino · CN5','Arduino · CN9','ST Morpho · CN10']);
     const cn7=raw.pins.filter(pin=>pin.connector==='CN7');
     const [a,b]=await Promise.all([row(page,cn7[0].number).boundingBox(),row(page,cn7[1].number).boundingBox()]);
     expect(Math.abs(a.y-b.y)).toBeLessThan(1);
     expect(b.x).toBeGreaterThan(a.x);
     expect(await fits(page)).toBe(true);
+  });
+
+  test('an Arduino board lists its headers as they sit on the board and each header in top-view order',async({page})=>{
+    const raw=boards.find(board=>board.id==='arduino-uno-r3');
+    await ready(page,'#board=arduino-uno&profile=arduino-uno-r3');
+    await expect(page.locator('#diagram .strip-pin')).toHaveCount(raw.pins.length);
+    await expect(page.locator('.strip-section')).toHaveText(['PWR','ANALOG','ICSP','DIGITAL']);
+    // Within the digital header, rows run from the top of the board to the bottom.
+    const digital=raw.pins.filter(pin=>pin.connector==='DIGITAL');
+    const shown=await page.locator('#strip-section-3 + .pin-strip .strip-pin').evaluateAll(rows=>rows.map(row=>Number(row.dataset.pin)));
+    expect(shown).toEqual([...digital].sort((a,b)=>a.position.y-b.position.y).map(pin=>pin.number));
+    // Rotating the view reverses both the section order and the order down each header.
+    await page.locator('#view-options > summary').click();await page.locator('#rotate-button').click();
+    await expect(page.locator('.strip-section')).toHaveText(['DIGITAL','ICSP','ANALOG','PWR']);
+    expect(await page.locator('#strip-section-0 + .pin-strip .strip-pin').evaluateAll(rows=>rows.map(row=>Number(row.dataset.pin))))
+      .toEqual([...digital].sort((a,b)=>b.position.y-a.position.y).map(pin=>pin.number));
   });
 
   test('a tap selects without opening details; Details or a second tap opens them',async({page})=>{

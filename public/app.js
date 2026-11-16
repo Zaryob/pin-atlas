@@ -600,9 +600,14 @@ function stripCell({pin,col,row,cols}){
  return `<div class="strip-pin strip-${side}${active?' selected':''}${match?'':' dimmed'}${assigned?' assigned':''}${pin.hardwareBlocked?' hardware-unavailable':''}" data-pin="${pin.number}" data-col="${col}" data-row="${row}" role="button" tabindex="${active?'0':'-1'}" aria-label="${esc(label)}"${active?' aria-current="true"':''} style="--color:${color};grid-column:${col};grid-row:${row}"><span class="strip-num" aria-hidden="true">${esc(pin.connectorPin ?? physicalLabel(pin))}</span><span class="strip-node" aria-hidden="true"></span><span class="strip-body" aria-hidden="true"><b class="strip-name">${esc(name)}</b>${fns?`<small class="strip-fns">${fnsHTML}</small>`:''}${assigned?`<small class="strip-plan">✓ ${esc(assigned.label||assigned.function)}</small>`:''}</span></div>`;
 }
 // Lays one connector out as it sits on the board: one or two columns along its long side, after mirror and rotation.
-function connectorCells(list){
+// A pin's position in the top view, after mirror and rotation.
+function viewPoint(pin){
  const {width,height}=board.diagram;
- const points=list.map(pin=>{let {x,y}=pin.position;if(rotated){x=width-x;y=height-y;}if(flipped)x=width-x;return {pin,x:Math.round(x),y:Math.round(y)};});
+ let {x,y}=pin.position;if(rotated){x=width-x;y=height-y;}if(flipped)x=width-x;
+ return {x:Math.round(x),y:Math.round(y)};
+}
+function connectorCells(list){
+ const points=list.map(pin=>({pin,...viewPoint(pin)}));
  const xs=[...new Set(points.map(p=>p.x))].sort((a,b)=>a-b),ys=[...new Set(points.map(p=>p.y))].sort((a,b)=>a-b);
  const vertical=xs.length<=2 && ys.length>=xs.length,across=vertical?xs:ys,along=vertical?ys:xs;
  const cell=p=>({pin:p.pin,col:across.indexOf(vertical?p.x:p.y)+1,row:along.indexOf(vertical?p.y:p.x)+1});
@@ -632,16 +637,20 @@ function stripSections(){
    return names.map((name,i)=>({id:`strip-section-${i}`,label:`${t('stripSide.'+edge(name))} · ${i*n+1}–${(i+1)*n}`,cols:1,
      cells:pins.filter(pin=>Math.floor((pin.number-1)/n)===i).map((pin,j)=>({pin,col:1,row:j+1}))})).filter(section=>section.cells.length);
  }
- const used=new Set(),sections=[];
+ // Connectors follow the board as seen in the top view: left to right by their centre, then top to bottom.
+ const used=new Set(),connectors=[];
  for(const group of connectorGroups){
    for(const connector of group.contacts){
      const list=pins.filter(pin=>pin.connector===connector);
      if(!list.length)continue;
      list.forEach(pin=>used.add(pin.number));
+     const points=list.map(viewPoint),xs=points.map(p=>p.x),ys=points.map(p=>p.y);
      const label=group.contacts.length>1?`${group.label} · ${connector}`:group.label;
-     sections.push({id:`strip-section-${sections.length}`,label,...connectorCells(list)});
+     connectors.push({label,list,x:(Math.min(...xs)+Math.max(...xs))/2,y:Math.min(...ys)});
    }
  }
+ connectors.sort((a,b)=>a.x-b.x||a.y-b.y);
+ const sections=connectors.map(({label,list},index)=>({id:`strip-section-${index}`,label,...connectorCells(list)}));
  const rest=pins.filter(pin=>!used.has(pin.number));
  if(rest.length)sections.push({id:`strip-section-${sections.length}`,label:sections.length?t('stripOther'):'',cols:1,cells:rest.map((pin,i)=>({pin,col:1,row:i+1}))});
  return sections;
