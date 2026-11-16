@@ -1482,3 +1482,19 @@
 /* Phones already carry the pin and plan count in the bottom work bar and the board in the title, and the
    first pin must stay above that bar, so the separate line starts above phone width. */
 @media (max-width: 640px) { .work-context { display: none !important; } }
+/* Planner tools: Share first, then the plan, then labelled output and advanced groups that stay open. */
+.plan-toolbar { display: flex; flex-wrap: wrap; align-items: stretch; gap: 8px; margin: 12px 0 4px; }
+.plan-toolbar .plan-share { flex: 1 1 12rem; min-height: 44px; }
+.plan-toolbar #plan-layout-toggle { margin: 0; }
+.tool-group { margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--line); }
+.tool-group-label { margin: 0 0 8px; color: var(--accent); font-size: var(--text-xs); }
+.tool-group-label::before { content: "# "; color: var(--muted); }
+.tool-group-label small { margin-left: 8px; color: var(--muted); font-size: var(--text-xs); }
+.tool-group .plan-actions { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 7px; margin-top: 0; }
+.tool-group .plan-tools > details:first-child { margin-top: 0; }
+@media (min-width: 971px) {
+ .plan-workspace .plan-box > .plan-tools { display: block; }
+ .plan-workspace .tool-group .plan-actions { grid-template-columns: repeat(4,minmax(0,max-content)); }
+ .plan-workspace .plan-toolbar { max-width: 580px; }
+}
+.tool-group .plan-tools > #pin-suggestions:first-child, .tool-group #hardware-config[hidden] + #pin-suggestions { border-top: 0; padding-top: 4px; }
