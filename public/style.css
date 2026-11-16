@@ -1464,3 +1464,37 @@
    so the header search button does not advertise the key there. Ctrl/⌘+K still opens it. */
 .pin-atlas-site:has(#home-search) .console-search-open kbd { display: none; }
 .pin-atlas-site:has(#home-search) .console-search-open { justify-content: flex-start; }
+/* Search scopes: each local search names what it searches with a prompt-style prefix in the field.
+   The matching sentence is kept for screen readers through aria-describedby. */
+.scope-prefix { flex: 0 0 auto; color: var(--accent); font-family: var(--mono); font-size: var(--text-sm); white-space: nowrap; }
+.compatibility-search-row .scoped-input { display: flex; align-items: center; gap: 8px; min-width: 0; padding: 0 12px; border: 1px solid var(--control-border); background: var(--paper); }
+.compatibility-search-row .scoped-input:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
+.compatibility-search-row .scoped-input input { border: 0; padding-inline: 0; outline: 0; background: transparent; }
+@media (max-width: 640px) {
+ .compatibility-search-row .scoped-input { grid-column: 1 / -1; grid-row: 2; }
+}
+/* Working context: the board, pin and plan the workspace is acting on. */
+.work-context { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 0; margin: 0 0 14px; padding: 7px 12px; border: 1px solid var(--line); background: var(--surface); color: var(--muted); font-size: var(--text-xs); line-height: 1.6; }
+.work-context::before { content: "$"; margin-right: 10px; color: var(--accent); }
+.work-context > span + span::before { content: "·"; margin: 0 10px; color: var(--muted); }
+.work-context .ctx-key { color: var(--accent); }
+.work-context b { color: var(--ink); font-weight: 400; overflow-wrap: anywhere; }
+/* Phones already carry the pin and plan count in the bottom work bar and the board in the title, and the
+   first pin must stay above that bar, so the separate line starts above phone width. */
+@media (max-width: 640px) { .work-context { display: none !important; } }
+/* Planner tools: Share first, then the plan, then labelled output and advanced groups that stay open. */
+.plan-toolbar { display: flex; flex-wrap: wrap; align-items: stretch; gap: 8px; margin: 12px 0 4px; }
+.plan-toolbar .plan-share { flex: 1 1 12rem; min-height: 44px; }
+.plan-toolbar #plan-layout-toggle { margin: 0; }
+.tool-group { margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--line); }
+.tool-group-label { margin: 0 0 8px; color: var(--accent); font-size: var(--text-xs); }
+.tool-group-label::before { content: "# "; color: var(--muted); }
+.tool-group-label small { margin-left: 8px; color: var(--muted); font-size: var(--text-xs); }
+.tool-group .plan-actions { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 7px; margin-top: 0; }
+.tool-group .plan-tools > details:first-child { margin-top: 0; }
+@media (min-width: 971px) {
+ .plan-workspace .plan-box > .plan-tools { display: block; }
+ .plan-workspace .tool-group .plan-actions { grid-template-columns: repeat(4,minmax(0,max-content)); }
+ .plan-workspace .plan-toolbar { max-width: 580px; }
+}
+.tool-group .plan-tools > #pin-suggestions:first-child, .tool-group #hardware-config[hidden] + #pin-suggestions { border-top: 0; padding-top: 4px; }

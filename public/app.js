@@ -527,6 +527,16 @@ function renderDetail() {
  $('#selected-pin-label').textContent = `${pin.name} · ${t('details')}`;
  $('#pin-detail').innerHTML=`<div class="pin-detail-body"><div class="pin-hero"><div class="pin-identity"><h2>${esc(pin.name.replace('_ADC',' / A'))}</h2><span class="physical-pin">${t('physicalPin')} <strong>${esc(physicalLabel(pin))}</strong>${pin.boardLabel && pin.boardLabel!==pin.name ? `<span class="mcu-pin-label"> · ${esc(t('boardLabel',{label:pin.boardLabel}))}</span>` : ''}${pin.mcuPort ? `<span class="mcu-pin-label">${pin.arduinoPin!==undefined?` · Arduino D${pin.arduinoPin}`:''} · ${t('mcuPort', {port:pin.mcuPort})}</span>` : ''}${pin.mcuPin ? `<span class="mcu-pin-label"> · ${t('mcuPin', {pin:pin.mcuPin})}</span>` : ''}</span></div><span class="pin-type" style="color:${colors[pin.type]}">${familyName(pin.type)} · ${esc(pin.type === 'GPIO' ? board.voltage : '')}${electricalBadgeHTML(pin)}</span>${occupancy}${pinHardwareHTML(pin)}${circuitNotesHTML([pin])}${sharedNote}${referenceLink(pin.evidence[0], t('pinSource'), 'pin-source')}</div><fieldset class="function-section"><legend class="small-label">${t(opts.length>1 ? 'chooseFunction' : 'pinFunction')}</legend>${filters.size || query ? `<p class="function-hint">${t('matchingFunctions')}</p>` : ''}<div class="function-list">${primary.map(option).join('')}</div>${more.length ? `<details class="more-functions"><summary>${t('allFunctions', {count:more.length})}</summary><div class="function-list">${more.map(option).join('')}</div></details>` : ''}<div id="function-source"></div></fieldset><div class="label-section"><label class="small-label" for="custom-label">${t('projectLabel')} <span>${t('optional')}</span></label><input id="custom-label" maxlength="40" placeholder="${esc(t('labelExample'))}" value="${esc(assignments[selected]?.label||'')}"></div><details class="pin-guidance"><summary>${esc(t('generalGuidance'))}</summary><p class="pin-description">${esc(description)}${general.length?noteSources(general[0]):''}${pin.fiveVoltTolerant !== undefined ? ' '+esc(t(pin.fiveVoltTolerant ? 'stm32FTNote' : 'stm32NonFTNote')) : ''}</p></details>${pin.inputTolerance ? `<p class="hardware-note">${esc(t(pin.inputTolerance.kind==='rp2350-ft'?'rp2350FTNote':'rp2350AnalogNote'))}</p>` : ''}${pin.functions.some(fn=>pwmResource(fn,board)) ? `<section id="pwm-settings" ${pwmResource(pin.functions.find(f=>f.name===selectedFn),board)?'':'hidden'}><label class="pwm-sharing"><input id="shared-pwm" type="checkbox" ${assignments[selected]?.sharedPWM?'checked':''}>${esc(t('pwmShareConsent'))}</label><p>${esc(t('pwmFrequencyNote'))}</p></section>` : ''}${renderPinEvidence(pin)}</div><div class="detail-action"><button id="add-plan" class="add-plan" ${pin.reserved || pin.hardwareBlocked || occupied ? 'disabled' : ''}>${icon(hasPlan?'check':'plus')}${t(occupied?'peripheralOccupiedShort':pin.hardwareBlocked ? 'hwUnavailable' : pin.reserved ? (pin.reservedLabel || (pin.name==='NC' ? 'unconnected' : 'reserved')) : hasPlan ? 'updatePin' : 'addPin')}</button><div class="pin-save-feedback"><span id="pin-save-status" role="status"></span><button id="view-saved-plan" hidden>${t('viewPlan')}</button></div></div>`;
  renderFunctionSource(pin);
+ renderWorkContext();
+}
+function renderWorkContext() {
+ const node = $('#work-context');
+ if (!node || !board?.pins) return;
+ const pin = pinByNumber(selected), count = Object.keys(assignments).length;
+ const part = (key, value) => `<span><span class="ctx-key">${esc(t(key))}:</span> <b>${esc(value)}</b></span>`;
+ node.innerHTML = part('ctxBoard', board.name) + (pin ? part('ctxPin', `${physicalLabel(pin)} ${pin.name}`) : '') +
+  part('ctxPlan', count ? t(count === 1 ? 'ctxPlanOne' : 'ctxPlanCount', { count }) : t('ctxPlanEmpty'));
+ node.hidden = false;
 }
 function referenceLink(key, label, className) {
  const source = evidence.references[key];
@@ -705,6 +715,7 @@ $('#suggest-results').addEventListener('click',event=>{
 function renderPlan() {
  const entries = Object.entries(assignments);
  for (const id of ['plan-tab-count','mobile-plan-count']) $(`#${id}`).textContent = entries.length;
+ renderWorkContext();
  $('#plan-reference').textContent = planReference(board, t);
  $('#plan-feedback').textContent = '';
  $('#print-plan-button').disabled=!entries.length;$('#export-svg').disabled=!entries.length;
