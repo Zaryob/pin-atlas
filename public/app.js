@@ -1030,8 +1030,11 @@ function showCatalog() {
   libraryCatalogType='all';libraryFamily='all';
   renderCatalog();
   $('#library-dialog').showModal();
-  $('#catalog-search').focus();
+  // On touch screens focusing the search would open the on-screen keyboard over half the list; the dialog then
+  // starts on its first control (Close), and the search is one tap away.
+  if (!touchScreen.matches) $('#catalog-search').focus();
 }
+const touchScreen = matchMedia('(hover: none), (pointer: coarse)');
 
 function renderCatalogCard(entry) {
   const {id,profile,name,detail,specs,series,type,mcuProfile}=entry;

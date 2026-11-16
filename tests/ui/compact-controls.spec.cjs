@@ -74,3 +74,14 @@ test.describe('diagram options',()=>{
     await expect(page.locator('#flip-button')).toHaveAttribute('aria-pressed','false');
   });
 });
+
+test('the board library focuses its search only where there is a hover pointer',async({page})=>{
+  await open(page,{hash:''});
+  await page.locator('#menu-button').click();
+  await expect(page.locator('#library-dialog')).toBeVisible();
+  const touch=await page.evaluate(()=>matchMedia('(hover: none), (pointer: coarse)').matches);
+  if(touch){
+    await expect(page.locator('#catalog-search')).not.toBeFocused();
+    await expect(page.locator('#library-dialog [data-close]')).toBeFocused();
+  } else await expect(page.locator('#catalog-search')).toBeFocused();
+});
