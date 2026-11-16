@@ -1539,12 +1539,9 @@
 @media (max-width: 970px) {
   .map-strip-on .mobile-workbar { flex-wrap: wrap; }
   .map-strip-on #mobile-mcu { display: contents; }
-  .map-strip-on #peek-prev { order: 1; }
-  .map-strip-on #mobile-mcu-label { order: 2; flex: 1 1 calc(100% - 104px); min-width: 0; align-self: center; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: var(--text-xs); color: var(--accent); }
-  .map-strip-on #peek-next { order: 3; }
-  .map-strip-on #open-pin { order: 4; }
-  .map-strip-on #open-mcu { order: 5; flex: 1; }
-  .map-strip-on #open-plan { order: 6; }
+  /* The bar's controls follow the document order (step back, pin, step forward, Details, MCU, plan), so Tab matches what is seen. */
+  .map-strip-on #mobile-mcu-label { flex: 1 1 calc(100% - 104px); min-width: 0; align-self: center; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: var(--text-xs); color: var(--accent); }
+  .map-strip-on #open-mcu { flex: 1; }
   .map-strip-on .mobile-workbar .peek-step { flex: 0 0 44px; min-width: 44px; padding: 0; }
 }
 /* Compact layouts: the fixed bottom bar never covers more than 30% of the screen and never gets wider than the viewport.
