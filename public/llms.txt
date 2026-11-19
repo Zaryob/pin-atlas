@@ -1,0 +1,27 @@
+# Pin Atlas — Source-Verified Hardware Pinout Guide
+
+> Comprehensive pinout explorer and alternate function catalog for 89 development boards and microcontrollers.
+
+Pin Atlas documents physical pin positions, alternate function multiplexing (UART, SPI, I2C, PWM, CAN, ADC, DAC), and electrical limits. Every record is verified against manufacturer reference manuals and locked datasheets (5,800+ physical pins, 25,000+ function assignments).
+
+## Core Reference
+
+- [Pin Atlas Explorer](https://zaryob.github.io/pin-atlas/): Interactive board explorer, wiring planner, and pinout diagrams.
+- [Turkish Interface (Türkçe)](https://zaryob.github.io/pin-atlas/tr/): Pin Atlas Türkçe arayüzü ve bacak bağlantı rehberi.
+- [Board Catalog Index](https://zaryob.github.io/pin-atlas/boards/): Static directory of all 89 supported board and microcontroller profiles.
+- [Turkish Board Directory](https://zaryob.github.io/pin-atlas/tr/boards/): Tüm kart profillerinin Türkçe listesi.
+
+## Popular Hardware Families Covered
+
+- **Raspberry Pi**: Raspberry Pi 4 Model B, Raspberry Pi 3, Raspberry Pi Zero / Zero 2 W, Raspberry Pi Pico / Pico W, RP2040, RP2350.
+- **STM32 Nucleo & Discovery**: Nucleo-F401RE, Nucleo-F411RE, Nucleo-F446RE, Nucleo-F103RB, Nucleo-G474RE, Nucleo-H743ZI2, Nucleo-L476RG.
+- **STM32 Minimum Development Boards**: Blue Pill (STM32F103C8T6), WeAct Black Pill (STM32F401CC / STM32F411CE).
+- **ESP32 & Espressif**: ESP32 DevKitC v4, ESP32-S3 DevKitC-1, ESP32-C3 DevKitM-1, ESP32-C6 DevKitC-1, NodeMCU v2.
+- **Seeed Studio XIAO**: XIAO RP2040, XIAO ESP32-C3, XIAO ESP32-S3, XIAO nRF52840, XIAO SAMD21.
+- **Arduino**: Arduino Uno R3, Uno R4 Minima, Uno R4 WiFi, Mega 2560, Nano Classic, Nano Every, Nano ESP32, Leonardo, Micro.
+- **Adafruit**: Feather RP2040, Feather RP2350.
+
+## Machine-Readable Data
+
+- [Catalog JSON](https://zaryob.github.io/pin-atlas/data/catalog.json): Complete machine-readable catalog of boards, pin numbers, labels, and peripheral capabilities.
+- [Boards JSON](https://zaryob.github.io/pin-atlas/data/boards.json): Board metadata, microcontrollers, and vendor references.
