@@ -7,7 +7,7 @@ import { availablePeripherals, assemblePeripheral,peripheralSignal } from './per
 import {pinAssignment,assignmentMessage} from './pin-assignments.mjs';
 import {pinNotes,circuitNotes} from './pin-notes.mjs';
 import {ProfileLibrary} from './profile-library.mjs';
-import {planReport,reportHTML,reportSVG,standaloneDiagram} from './plan-output.mjs';
+import {planReport,reportHTML,reportSVG,standaloneDiagram,exportKiCadNetlist,exportZephyrDts} from './plan-output.mjs';
 import {configureBoard,normalizeHardware,sameHardware,hardwareSummary} from './hardware-config.mjs';
 import {readPlanRecords,writePlanRecord,planPayload as createPlanPayload,exportPlanPayload,decodePlanPayload} from './plan-records.mjs';
 import {applySuggestion} from './pin-solver.mjs';
@@ -991,7 +991,7 @@ function renderPlan() {
  renderWorkContext();
  $('#plan-reference').textContent = planReference(board, t);
  $('#plan-feedback').textContent = '';
- $('#print-plan-button').disabled=!entries.length;$('#export-svg').disabled=!entries.length;
+ $('#print-plan-button').disabled=!entries.length;$('#export-svg').disabled=!entries.length;if($('#export-kicad'))$('#export-kicad').disabled=!entries.length;if($('#export-zephyr'))$('#export-zephyr').disabled=!entries.length;
  try { validatePlan(assignments,board,t);$('#plan-validation').textContent=pwmNotes(assignments,board,t).join(' '); }
  catch(error) { $('#plan-validation').textContent=t('savedPlanConflict',{error:error.message}); }
  renderPeripheral();
@@ -1593,6 +1593,20 @@ $('#export-svg').addEventListener('click',async()=>{
   setTimeout(()=>URL.revokeObjectURL(link.href),1000);
  } catch(error){toast(t('outputFailed'));}
  finally{host.remove();button.disabled=!Object.keys(assignments).length;}
+});
+$('#export-kicad')?.addEventListener('click',()=>{
+ const netlist=exportKiCadNetlist(board,assignments,t);
+ const blob=new Blob([netlist],{type:'application/x-kicad-netlist;charset=utf-8'});
+ const link=document.createElement('a');link.href=URL.createObjectURL(blob);link.download=`pin-atlas-${board.id}.net`;link.click();
+ setTimeout(()=>URL.revokeObjectURL(link.href),1000);
+ toast(t('kicadDownloaded'));
+});
+$('#export-zephyr')?.addEventListener('click',()=>{
+ const dts=exportZephyrDts(board,assignments,t);
+ const blob=new Blob([dts],{type:'text/plain;charset=utf-8'});
+ const link=document.createElement('a');link.href=URL.createObjectURL(blob);link.download=`pin-atlas-${board.id}.overlay`;link.click();
+ setTimeout(()=>URL.revokeObjectURL(link.href),1000);
+ toast(t('zephyrDownloaded'));
 });
 $('#import-button').addEventListener('click',()=>$('#import-file').click());
 $('#import-file').addEventListener('change',async e=>{

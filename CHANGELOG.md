@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.0.0] - 2026-11-20
+
+### Added
+- **KiCad Netlist Export Tool:**
+  - One-click export of planned pinouts into standard KiCad S-expression netlist (`.net`) format.
+  - Generates component definition for the target board or bare MCU with package footprint, physical contact references, pin functions, and sanitized net identifiers for schematic and PCB design.
+- **Zephyr Device Tree Overlay Tool:**
+  - One-click export of planned peripherals and GPIO assignments into Zephyr RTOS device tree overlay (`app.overlay`).
+  - Automatically identifies configured buses (UART/USART, I2C, SPI), creates device tree nodes with `status = "okay"`, standard bus speeds, pin comments, and sets up GPIO aliases for user labels.
+- **UI Integration:**
+  - Added dedicated KiCad and Zephyr export action buttons to the workspace plan toolbar, complete with bilingual notifications (`kicadDownloaded`, `zephyrDownloaded`) and disabled state synchronization.
+
 ## [0.9.0] - 2026-11-20
 
 ### Added
