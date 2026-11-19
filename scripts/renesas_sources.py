@@ -46,6 +46,7 @@ def pin_list_functions(row, evidence):
 def build_ra4m1(cache, docs, ref, verified_on):
     id, document = 'ra4m1-lqfp64', 'ra4m1-datasheet'
     drawing = ref(id + '-drawing', document, 18, 'Figure 1.5 · R7FA4M1AB3CFM · LQFP-64 top view', 'visual-diagram')
+    gpio_direction = ref(id + '-gpio-direction', document, 15, 'Table 1.15 · GPIO input-only ports P200, P214 and P215')
     pins = []
     with pdfplumber.open(cache / docs[document]['file']) as pdf:
         assert 'R7FA4M1AB3CFM' in pdf.pages[17].extract_text()
@@ -60,12 +61,17 @@ def build_ra4m1(cache, docs, ref, verified_on):
                 name = row[8] or ''.join(row[6].split())
                 kind = 'GPIO' if row[8] else 'GND' if 'VSS' in name else 'SYSTEM' if name == 'RES' else 'POWER'
                 functions = pin_list_functions(row, evidence) if kind == 'GPIO' else []
-                pins.append({'number': number, 'name': name, 'type': kind, 'functions': functions,
-                             'evidence': [evidence, drawing]})
+                pin = {'number': number, 'name': name, 'type': kind, 'functions': functions,
+                       'evidence': [evidence, drawing]}
+                if name in ('P200', 'P214', 'P215'):
+                    pin['inputOnly'] = True
+                    pin['evidence'].append(gpio_direction)
+                pins.append(pin)
     assert [p['number'] for p in pins] == list(range(1, 65))
     assert [pins[n-1]['name'] for n in (1, 25, 47, 53, 64)] == ['P400', 'RES', 'P101', 'P014', 'P000']
     url = docs[document]['url']
-    return {'id': id, 'name': 'Renesas RA4M1 · LQFP-64', 'shortName': 'RA4M1', 'mcu': 'R7FA4M1AB3CFM',
+    return {'id': id, 'name': 'Renesas RA4M1 · LQFP-64', 'shortName': 'RA4M1', 'mcu': 'Renesas RA4M1',
+            'searchTerms': 'R7FA4M1AB3CFM',
             'family': 'Renesas', 'processor': 'Arm Cortex-M4F', 'clock': '48 MHz',
             'subtitle': 'R7FA4M1AB3CFM · LQFP-64 · 48 MHz', 'layout': 'lqfp', 'packageName': 'LQFP-64',
             'packagePins': 64, 'gpioCount': 52, 'voltage': '1.6–5.5 V VCC (conditions apply)',
@@ -76,8 +82,8 @@ def build_ra4m1(cache, docs, ref, verified_on):
 def link_arduino_reference_packages(boards, ref, cache, docs):
     profiles = {b['id']: b for b in boards}
     for id, package_id, document in [
-        ('arduino-leonardo', 'atmega32u4-tqfp44', 'arduino-leonardo-pinout'),
-        ('arduino-micro', 'atmega32u4-tqfp44', 'arduino-micro-pinout'),
+        ('arduino-leonardo', 'atmega32u4-tqfp44', 'arduino-leonardo-schematic'),
+        ('arduino-micro', 'atmega32u4-qfn44', 'arduino-micro-schematic'),
         ('arduino-uno-r4-minima', 'ra4m1-lqfp64', 'arduino-uno-r4-minima-datasheet'),
         ('arduino-uno-r4-wifi', 'ra4m1-lqfp64', 'arduino-uno-r4-wifi-datasheet'),
         ('arduino-nano-r4', 'ra4m1-lqfp64', 'nano-r4-datasheet'),
@@ -85,11 +91,13 @@ def link_arduino_reference_packages(boards, ref, cache, docs):
         board = profiles[id]
         board['mcuProfile'] = package_id
         pads = {pin['name']: pin for pin in profiles[package_id]['pins']}
-        package_reference = None
         if package_id == 'ra4m1-lqfp64':
             assert 'R7FA4M1AB3CFM' in (cache / docs[document]['file']).read_text()
             package_reference = ref(id + '-part', document, None,
                                     'Board datasheet · fitted R7FA4M1AB3CFM LQFP-64 MCU', 'source-text')
+        else:
+            locator = 'U2 · ATmega32U4-AU (TQFP-44)' if id == 'arduino-leonardo' else 'U1 · ATmega32U4-MU (QFN-44)'
+            package_reference = ref(id + '-part', document, 1, 'Arduino schematic · ' + locator, 'visual-diagram')
         for pin in board['pins']:
             name = pin.get('mcuPort')
             if not name:

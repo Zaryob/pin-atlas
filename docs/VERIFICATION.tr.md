@@ -2,7 +2,7 @@
 
 [English](VERIFICATION.md) · [Türkçe](VERIFICATION.tr.md)
 
-Üretilmiş veriden katalog özeti: **99 kart, başlık ve yonga profili; 6.546 fiziksel pin kaydı ve 30.045 işlev ataması**. Bunlar [`sources/manifest.json`](../sources/manifest.json) içindeki **hash ile kilitlenmiş 169 kaynak kaydından** alınır. Kataloğun genel `verifiedOn` tarihi bilerek **5 Kasım 2026** olarak bırakıldı: 14–15 Kasım 2026'da kataloğun tamamı değil, yalnızca o günlerde değişen profiller yeniden denetlendi. Bu tarihten sonra pin verisi ya da kart uyarıları düzeltilen profiller ve sonradan eklenen profiller, manifestteki `verifiedOnByProfile` alanından kendi tarihlerini alır: verilerinin son değiştiği gün (14, 15, 16 ya da 19 Kasım 2026). Bir profil doğrulandığında ya da düzeltildiğinde oradaki kaydı ekleyin veya güncelleyin. Toplamlar [`public/data/verification.json`](../public/data/verification.json) içinde kayıtlıdır; bu sayılar her pinin bağımsız olarak incelendiğini belgelemez. Ortak fiziksel pinler profil başına bir kez sayılır. Sayıma uygulamanın genel `GPIO` planlama seçeneği ve numarasız QFN merkez GND pedleri dahil değildir. Bir sinyalin farklı bir pine her yerleşimi ayrı sayılır.
+Üretilmiş veriden katalog özeti: **107 kart, başlık ve yonga profili; 6.946 fiziksel pin kaydı ve 31.756 işlev ataması**. Bunlar [`sources/manifest.json`](../sources/manifest.json) içindeki **hash ile kilitlenmiş 177 kaynak kaydından** alınır. Kataloğun genel `verifiedOn` tarihi bilerek **5 Kasım 2026** olarak bırakıldı: 14–15 Kasım 2026'da kataloğun tamamı değil, yalnızca o günlerde değişen profiller yeniden denetlendi. Bu tarihten sonra pin verisi ya da kart uyarıları düzeltilen profiller ve sonradan eklenen profiller, manifestteki `verifiedOnByProfile` alanından kendi tarihlerini alır: verilerinin son değiştiği gün (14, 15, 16 ya da 19 Kasım 2026). Bir profil doğrulandığında ya da düzeltildiğinde oradaki kaydı ekleyin veya güncelleyin. Toplamlar [`public/data/verification.json`](../public/data/verification.json) içinde kayıtlıdır; bu sayılar her pinin bağımsız olarak incelendiğini belgelemez. Ortak fiziksel pinler profil başına bir kez sayılır. Sayıma uygulamanın genel `GPIO` planlama seçeneği ve numarasız QFN merkez GND pedleri dahil değildir. Bir sinyalin farklı bir pine her yerleşimi ayrı sayılır.
 
 ## Pin haritalarına göre kaynaklar
 
@@ -93,7 +93,7 @@ SHA-256 kilidi, atıf yapılan belgenin incelenen belge olduğunu ve değişmedi
 
 - **Belgeden ayrıştırılmış:** kilitli kopyadan okunan PDF tabloları, üretici XML'i, KiCad dosyaları, Markdown/RST tabloları veya kaynak kod. STM32, Raspberry Pi, Espressif, Arduino çekirdeği, Jetson, BeagleBone Black ve micro:bit verisinin çoğu böyledir.
 - **Elle kaydedilmiş tablolar:** Adafruit Feather RP2040 ve Teensy 4.1 üretici betikleri, atıf yapılan pin şemasından elle girilmiş tablolar içerir ve kilitli belgeyi açmaz. Teensy'nin PWM, ADC ve port verisi Teensy çekirdek kaynak koduyla çapraz denetlendi.
-- **Görsel okumalar.** Bazı temas konumları ve etiketleri çizim veya fotoğraftan aktarıldı. Eski gözlemler `sources/manual-observations.json` dosyasında, yeni profillerin okumaları ise kaynak çıkarıcılarında kayıtlıdır. [Üretilmiş doğrulama kaydında](../public/data/verification.json) 99 profilin 64’ü görsel kanıta başvurur. 6.546 pin kaydının 608’inde (%9,3) fiziksel temas kanıtı görsel okumadan gelir.
+- **Görsel okumalar.** Bazı temas konumları ve etiketleri çizim veya fotoğraftan aktarıldı. Eski gözlemler `sources/manual-observations.json` dosyasında, yeni profillerin okumaları ise kaynak çıkarıcılarında kayıtlıdır. [Üretilmiş doğrulama kaydında](../public/data/verification.json) 107 profilin 68’i görsel kanıta başvurur. 6.946 pin kaydının 700’ünde (%10,1) fiziksel temas kanıtı görsel okumadan gelir.
 
 ### Kaynaklı uyarılar
 
@@ -313,3 +313,7 @@ Pin Atlas kataloğuna eklenecek yeni modeller için geçerli resmî birincil bel
 ## 19 Kasım 2026’da eklenen profiller
 
 UM3115 Rev 3’ün 27 ve 33–36. sayfaları, MB1404 konektörlerini ve A4/A5 ayarını doğrular. STM32H563ZIT6 pinleri ve AF değerleri eşleşen ST XML dosyalarından gelir. Nano R4 pin şeması ile Arduino çekirdeği ayrı ayrı commit’e sabitlenmiştir. Elektriksel eşlemeler XIAO RP2350’de Seeed şemasını ve RP2350 veri sayfasını izler. Arka görünüm çizimi ped konumları için kullanılır. Feather konektör netleri Eagle şemasından ayrıştırılır. TI MSPM0G3507SPT için SLASEX6C Tablo 6-2’nin LQFP-48 sütunu ve PINCM.PF değerleri doğrudan ayrıştırılır.
+
+- **ATmega32U4.** Leonardo, üretici şemasındaki TQFP-44 pakete bağlanır. Arduino Micro, aynı çevre numaralandırmasını kullanan QFN-44 pakete bağlanır.
+- **Renesas RA4M1 LQFP-64.** R7FA4M1AB3CFM paket görünümü Nano R4, UNO R4 Minima ve UNO R4 WiFi’ın kart temaslarına bağlanır.
+- **Texas Instruments genel amaçlı MCU’lar.** MSPM0G3507SPM (VQFN-64), MSPM0L1306 (VQFN-32), MSPM33C321A (LQFP-64) ve MSP430FR2355TPT (LQFP-48). LP-MSPM0G3507’nin 40 BoosterPack teması, MSPM0G3507SPM paketine bağlanır ve varsayılan J14/J15 konumlarını izler.

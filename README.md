@@ -8,7 +8,7 @@ Contributing a profile? Follow the [board and MCU verification workflow](docs/AD
 
 A pin guide in English and Turkish, built from manufacturer documentation and identified board references. View physical pin positions, alternate functions, and wiring plans in one workspace. The interface, schematic drawings, and application code were made for this project. The console theme is shared with my personal site.
 
-The catalog contains 99 board, header and chip profiles. It lists 6,546 physical pin records and 30,045 function assignments from 169 hash-locked source records. The catalog-wide verification date is 5 November 2026. Profiles added or reviewed later carry their own verification dates.
+The catalog contains 107 board, header and chip profiles. It lists 6,946 physical pin records and 31,756 function assignments from 177 hash-locked source records. The catalog-wide verification date is 5 November 2026. Profiles added or reviewed later carry their own verification dates.
 
 ## Pin layouts
 
@@ -52,6 +52,9 @@ The underlying pin layouts include:
 - **Adafruit Feather RP2350 with HSTX.** The map includes the 22-position HSTX connector and STEMMA QT. The 8 MB PSRAM variant reserves GPIO8.
 - **NUCLEO-H563ZI and STM32H563ZIT6.** The MB1404-C01 map connects 240 Zio/Morpho contacts to the LQFP-144 package. The A4/A5 board setting selects the documented analog or I²C route.
 - **Texas Instruments MSPM0G3507SPT.** LQFP-48 with 44 GPIOs, 314 sourced peripheral placements and TI PINCM.PF values.
+- **ATmega32U4.** Leonardo connects to the TQFP-44 package documented in its schematic. Arduino Micro links to QFN-44, which uses the same perimeter numbering.
+- **Renesas RA4M1 LQFP-64.** The R7FA4M1AB3CFM package links to contacts on Nano R4, UNO R4 Minima and UNO R4 WiFi.
+- **Texas Instruments general-purpose MCUs.** MSPM0G3507SPM (VQFN-64), MSPM0L1306 (VQFN-32), MSPM33C321A (LQFP-64) and MSP430FR2355TPT (LQFP-48). The 40 LP-MSPM0G3507 BoosterPack contacts link to the MSPM0G3507SPM package and use the documented J14/J15 defaults.
 
 The Pico drawing represents the common header and does not claim identical wireless, LED or internal board wiring. Processor references change alternate functions, not physical pin positions. Plans are saved per reference; old model links, exported JSON files, and saved plans remain supported. If multiple old model plans exist for the same processor, they remain individually available in Compatible boards without being merged.
 
@@ -132,7 +135,7 @@ GitHub Actions runs `python3 scripts/verify-official-sources.py --table-snapshot
 
 - **Parsed from the document.** The generator reads PDF tables, XML, KiCad or source files from the locked copy. This covers most STM32, Raspberry Pi, Espressif, Arduino core, Jetson, BeagleBone Black and micro:bit data.
 - **Hand-recorded tables.** The generators for Adafruit Feather RP2040 and Teensy 4.1 contain tables typed in from the cited pinout and do not open the locked document. For Teensy, the PWM, ADC and port data were cross-checked against the Teensy core source, which is not a locked document.
-- **Visual reading.** Some contact positions and labels were transcribed from a drawing or photo. Earlier observations are in `sources/manual-observations.json`. The recently added profiles record these readings alongside their source extractors. In [the generated verification report](public/data/verification.json), 64 of 99 profiles list visual evidence, and 608 of 6,546 pin records (9.3%) cite only visual evidence for their physical contacts.
+- **Visual reading.** Some contact positions and labels were transcribed from a drawing or photo. Earlier observations are in `sources/manual-observations.json`. The recently added profiles record these readings alongside their source extractors. In [the generated verification report](public/data/verification.json), 68 of 107 profiles list visual evidence, and 700 of 6,946 pin records (10.1%) cite only visual evidence for their physical contacts.
 
 The same record explains the IOVDD discrepancy in RP2350 Release 8. See the full method in the [verification record](docs/VERIFICATION.md).
 

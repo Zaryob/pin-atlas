@@ -20,7 +20,8 @@ try:
     from rm2_sources import build_rm2
     from cm_sources import build_compute_modules
     from pi_header_sources import build_pi_header_boards
-    from avr_packages import build_avr_packages
+    from avr_packages import build_avr_packages, build_atmega32u4_packages
+    from renesas_sources import build_ra4m1, link_arduino_reference_packages
     from seeed_sources import build_seeed
     from microbit_sources import build_microbit
     from feather_sources import build_feather_rp2040
@@ -28,7 +29,7 @@ try:
     from beaglebone_sources import build_beaglebone
     from warning_sources import attach_warnings
     from additional_board_sources import build_additional_boards
-    from ti_sources import build_mspm0g3507
+    from ti_sources import build_mspm0g3507, build_ti_packages, build_launchpad
 except ImportError:
     sys.exit('Install source verification dependencies: python3 -m pip install -r requirements-source-verification.txt')
 ROOT=Path(__file__).resolve().parents[1]
@@ -483,6 +484,12 @@ def build(use_snapshots=False):
     boards.extend(build_stm32_catalog(CACHE,DOCS,ref,MANIFEST['verifiedOn'],use_snapshots=use_snapshots))
     boards.extend(build_additional_boards(CACHE,DOCS,ref,MANIFEST['verifiedOn'],boards))
     boards.append(build_mspm0g3507(CACHE,DOCS,ref,MANIFEST['verifiedOn']))
+    boards.extend(build_atmega32u4_packages(CACHE,DOCS,ref,MANIFEST['verifiedOn']))
+    boards.append(build_ra4m1(CACHE,DOCS,ref,MANIFEST['verifiedOn']))
+    ti_packages = build_ti_packages(CACHE,DOCS,ref,MANIFEST['verifiedOn'])
+    boards.extend(ti_packages)
+    g3507spm = next(chip for chip in ti_packages if chip['id'] == 'mspm0g3507spm')
+    boards.append(build_launchpad(CACHE,DOCS,ref,MANIFEST['verifiedOn'],g3507spm))
     # Profiles checked against their sources after the catalog-wide date carry their own date.
     per_profile=MANIFEST.get('verifiedOnByProfile',{})
     unknown=set(per_profile)-{b['id'] for b in boards}
@@ -492,6 +499,7 @@ def build(use_snapshots=False):
             assert per_profile[b['id']]>=MANIFEST['verifiedOn'], b['id']
             b['verifiedOn']=per_profile[b['id']]
     link_board_packages(boards)
+    link_arduino_reference_packages(boards,ref,CACHE,DOCS)
     attach_hardware(boards,ref,CACHE,DOCS)
     attach_warnings(boards,ref,CACHE,DOCS)
     return boards

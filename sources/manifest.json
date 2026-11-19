@@ -4,8 +4,8 @@
     "adafruit-feather-rp2040": "2026-11-14",
     "arduino-nano-33-ble-sense-rev2": "2026-11-15",
     "arduino-nano-esp32": "2026-11-15",
-    "arduino-uno-r4-minima": "2026-11-15",
-    "arduino-uno-r4-wifi": "2026-11-15",
+    "arduino-uno-r4-minima": "2026-11-19",
+    "arduino-uno-r4-wifi": "2026-11-19",
     "beaglebone-black": "2026-11-15",
     "esp32-c3-devkitm-1": "2026-11-15",
     "jetson-orin-nano": "2026-11-15",
@@ -52,7 +52,17 @@
     "adafruit-feather-rp2350-psram": "2026-11-19",
     "nucleo-h563zi": "2026-11-19",
     "stm32h563zit6": "2026-11-19",
-    "mspm0g3507spt": "2026-11-19"
+    "mspm0g3507spt": "2026-11-19",
+    "atmega32u4-tqfp44": "2026-11-19",
+    "ra4m1-lqfp64": "2026-11-19",
+    "mspm0g3507spm": "2026-11-19",
+    "mspm0l1306-vqfn32": "2026-11-19",
+    "mspm33c321a-lqfp64": "2026-11-19",
+    "msp430fr2355tpt": "2026-11-19",
+    "lp-mspm0g3507": "2026-11-19",
+    "arduino-leonardo": "2026-11-19",
+    "arduino-micro": "2026-11-19",
+    "atmega32u4-qfn44": "2026-11-19"
   },
   "documents": [
     {
@@ -1737,6 +1747,80 @@
       "file": "d1-mini-v4-pinout.png",
       "url": "https://www.wemos.cc/en/latest/_static/boards/d1_mini_v4.0.0_5_16x9.png",
       "sha256": "6891e979804e941a357a0f8ccb3b6ac2856eeface12375884f789394f263cf99"
+    },
+    {
+      "id": "atmega32u4-datasheet",
+      "title": "ATmega16U4/32U4 Datasheet",
+      "publisher": "Atmel / Microchip",
+      "revision": "7766F · 2010-11",
+      "file": "atmega32u4.pdf",
+      "url": "https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf",
+      "sha256": "69f665867a986c6cdf6f2fbb3b958e14ec36dfce96396bf1dd2fbce51715c2a5"
+    },
+    {
+      "id": "ra4m1-datasheet",
+      "title": "Renesas RA4M1 Group Datasheet",
+      "publisher": "Renesas",
+      "revision": "R01DS0355EJ0110 · Rev.1.10 · 2023-09-29",
+      "file": "ra4m1.pdf",
+      "url": "https://www.renesas.com/en/document/dst/ra4m1-group-datasheet?language=en",
+      "sha256": "b96fe3862d2d91d910b04a662631d41dfd3ce02d026fbb80c09aefb853933dbf"
+    },
+    {
+      "id": "mspm0l1306-datasheet",
+      "title": "MSPM0L130x Mixed-Signal Microcontrollers",
+      "publisher": "Texas Instruments",
+      "revision": "SLASEX0D · 2024-01",
+      "file": "mspm0l1306.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm0l1306.pdf",
+      "sha256": "d79bb920f524c429e1eaf57ddef6103042453971d4975c900bb09071328effbb"
+    },
+    {
+      "id": "mspm33c321a-datasheet",
+      "title": "MSPM33C321x Mixed-Signal Microcontrollers",
+      "publisher": "Texas Instruments",
+      "revision": "SLASFB6A · 2026-09",
+      "file": "mspm33c321a.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf",
+      "sha256": "d0c4ae0b490e21e04f96ebd1f023d3764f09a985f050bbe26a5e7fe536fd2181"
+    },
+    {
+      "id": "msp430fr2355-datasheet",
+      "title": "MSP430FR235x / MSP430FR215x Mixed-Signal Microcontrollers",
+      "publisher": "Texas Instruments",
+      "revision": "SLASEC4D · 2019-12",
+      "file": "msp430fr2355.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/msp430fr2355.pdf",
+      "sha256": "561aca0b9465dcf9f8ef44b81a7320b92bdd14287b89fe028b136cb5b36f9162"
+    },
+    {
+      "id": "lp-mspm0g3507-guide",
+      "title": "LP-MSPM0G3507 LaunchPad Development Kit User’s Guide",
+      "publisher": "Texas Instruments",
+      "revision": "SLAU873E · 2026-09",
+      "file": "lp-mspm0g3507.pdf",
+      "url": "https://www.ti.com/lit/ug/slau873e/slau873e.pdf",
+      "sha256": "1b38137a5e569a2ac608df7f8371f53448cd01cda7914ee25c62f06239424957"
+    },
+    {
+      "id": "arduino-leonardo-schematic",
+      "title": "Arduino Leonardo schematic",
+      "revision": "65d578fc7de843c45c21fc77b31a7a2009c46a5b",
+      "file": "leonardo-schematics.pdf",
+      "url": "https://raw.githubusercontent.com/arduino/docs-content/65d578fc7de843c45c21fc77b31a7a2009c46a5b/content/hardware/hero/boards/leonardo/downloads/A000057-schematics.pdf",
+      "viewUrl": "https://github.com/arduino/docs-content/blob/65d578fc7de843c45c21fc77b31a7a2009c46a5b/content/hardware/hero/boards/leonardo/downloads/A000057-schematics.pdf",
+      "publisher": "Arduino",
+      "sha256": "9c6f651805197aa614d854d81b9bc67aef2819ba9282c44333ad8aec91fcb960"
+    },
+    {
+      "id": "arduino-micro-schematic",
+      "title": "Arduino Micro schematic",
+      "revision": "65d578fc7de843c45c21fc77b31a7a2009c46a5b",
+      "file": "micro-schematics.pdf",
+      "url": "https://raw.githubusercontent.com/arduino/docs-content/65d578fc7de843c45c21fc77b31a7a2009c46a5b/content/hardware/hero/boards/micro/downloads/A000053-schematics.pdf",
+      "viewUrl": "https://github.com/arduino/docs-content/blob/65d578fc7de843c45c21fc77b31a7a2009c46a5b/content/hardware/hero/boards/micro/downloads/A000053-schematics.pdf",
+      "publisher": "Arduino",
+      "sha256": "89fce2120cfdfc27755fded45f9428db96e14d6a378fe5c18426c82385e89a90"
     }
   ],
   "publishers": [

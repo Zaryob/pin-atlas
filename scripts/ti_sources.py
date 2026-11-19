@@ -159,7 +159,7 @@ def build_mspm33(cache, docs, ref, date):
                         function['selector'] = f'{pincm}.PF={mux}'
                     pin['functions'].append(function)
     return package(id, 'MSPM33C321A · LQFP-64', 'MSPM33C321A', 64, 'LQFP-64', 'Arm Cortex-M33', '160 MHz',
-                   '1.62–3.6 V VDD', docs, document, 10, date, pins, 'mspm33PackageScope')
+                   '1.71–3.6 V VDD', docs, document, 10, date, pins, 'mspm33PackageScope')
 
 
 def msp430_function(signal):
@@ -198,7 +198,8 @@ def build_msp430(cache, docs, ref, date):
                     pins[number] = current
                 elif current and signal:
                     name, group = msp430_function(signal)
-                    current['functions'].append({'name': name, 'signal': signal, 'group': group, 'evidence': evidence})
+                    if not any(function['signal'] == signal for function in current['functions']):
+                        current['functions'].append({'name': name, 'signal': signal, 'group': group, 'evidence': evidence})
     return package(id, 'MSP430FR2355TPT · LQFP-48', 'MSP430FR2355TPT', 48, 'LQFP-48', '16-bit MSP430', '24 MHz',
                    '1.8–3.6 V DVCC', docs, document, 10, date, pins, 'msp430PackageScope')
 

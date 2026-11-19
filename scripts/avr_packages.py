@@ -104,7 +104,7 @@ def build_avr_packages(cache,docs,observations,ref,verified_on):
     return out
 
 
-def build_atmega32u4(cache, docs, ref, verified_on):
+def build_atmega32u4_packages(cache, docs, ref, verified_on):
     document = 'atmega32u4-datasheet'
     # Figure 1-1, TQFP top view, counterclockwise from the index corner.
     names = ('PE6 UVCC D- D+ UGND UCAP VBUS PB0 PB1 PB2 PB3 PB7 RESET VCC GND XTAL2 XTAL1 '
@@ -154,8 +154,18 @@ def build_atmega32u4(cache, docs, ref, verified_on):
         pins.append(pin)
     assert len(pins) == 44 and sum(p['type'] == 'GPIO' for p in pins) == 26
     url = docs[document]['url']
-    return {'id': 'atmega32u4-tqfp44', 'name': 'ATmega32U4 · TQFP-44', 'shortName': 'ATmega32U4',
+    tqfp = {'id': 'atmega32u4-tqfp44', 'name': 'ATmega32U4 · TQFP-44', 'shortName': 'ATmega32U4',
             'mcu': 'ATmega32U4', 'family': 'Microchip AVR', 'processor': '8-bit AVR', 'clock': 'Up to 16 MHz',
             'subtitle': 'TQFP-44 · 8-bit AVR', 'layout': 'lqfp', 'packageName': 'TQFP-44', 'packagePins': 44,
             'gpioCount': 26, 'voltage': '2.7–5.5 V (speed dependent)', 'source': url + '#page=3',
             'datasheet': url, 'verifiedOn': verified_on, 'scopeKey': 'atmega32u4Scope', 'pins': pins}
+    qfn = copy.deepcopy(tqfp)
+    qfn.update(id='atmega32u4-qfn44', name='ATmega32U4 · QFN-44', subtitle='QFN-44 · 8-bit AVR',
+               layout='qfn', packageName='QFN-44', scopeKey='atmega32u4QfnScope')
+    qfn_evidence = ref('atmega32u4-qfn44-physical', document, 3, 'Figure 1-1 · 44 numbered QFN perimeter pads', 'visual-diagram')
+    for pin in qfn['pins']:
+        pin['evidence'] = [qfn_evidence]
+        for function in pin['functions']:
+            if function['evidence'] == physical:
+                function['evidence'] = qfn_evidence
+    return [tqfp, qfn]

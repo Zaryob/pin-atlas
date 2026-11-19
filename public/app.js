@@ -207,8 +207,7 @@ function renderCompatibilityList() {
  $('#compatibility-results').textContent=t('matchingModelCount',{count:found.length,total:compatibilityModels.length});
  $('#compatibility-list').innerHTML=found.map(model=>{
    const active=model.kind==='reference' && model.profileId===board.id;
-   const target=new URL(location.href);
-   target.searchParams.set('lang',document.documentElement.lang);
+   const target=window.ZaryobLanguage.routeFor(document.documentElement.lang) ?? new URL(location.href);
    target.hash=new URLSearchParams({board:layout.id,profile:model.profileId}).toString();
    const status=active?t('selectedModel'):model.kind==='physical'?t('sharedPinout'):t('openReference');
    const saved=model.kind==='reference' && Object.keys(savedPlans[model.profileId] || {}).length>0;
@@ -1246,8 +1245,7 @@ function encode(value) { return btoa(Array.from(new TextEncoder().encode(JSON.st
 function decode(value) { if(value.length>16000) throw new Error(t('linkTooLong')); return JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(value),c=>c.charCodeAt(0)))); }
 async function share() {
  const params=new URLSearchParams({board:layout.id,profile:board.id,pin:String(selected),plan:encode(planPayload())});
- const url=new URL(location.href);
- url.searchParams.set('lang', document.documentElement.lang);
+ const url=window.ZaryobLanguage.routeFor(document.documentElement.lang) ?? new URL(location.href);
  url.hash=params.toString();
  $('#share-url').value=url.href;$('#share-dialog').showModal();
  try { await navigator.clipboard.writeText(url.href); toast(t('planLinkCopied')); } catch { $('#share-url').focus();$('#share-url').select(); }

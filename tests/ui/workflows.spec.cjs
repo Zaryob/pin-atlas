@@ -574,6 +574,8 @@ test('new board and MCU profiles open from catalog search on the configured view
   const ids=[
     'xiao-esp32c6','xiao-rp2350','arduino-nano-r4','lolin-d1-mini-v4','ai-thinker-esp32-cam',
     'adafruit-feather-rp2350','adafruit-feather-rp2350-psram','nucleo-h563zi','stm32h563zit6','mspm0g3507spt',
+    'atmega32u4-tqfp44','atmega32u4-qfn44','ra4m1-lqfp64','mspm0g3507spm','lp-mspm0g3507',
+    'mspm0l1306-vqfn32','mspm33c321a-lqfp64','msp430fr2355tpt',
   ];
   for(const id of ids){
     const board=boards.find(item=>item.id===id);
@@ -582,6 +584,17 @@ test('new board and MCU profiles open from catalog search on the configured view
     await page.locator(`#home-catalog-container .catalog-card[data-profile="${id}"]`).click();
     await expect(page.locator('#board-title')).toHaveText(board.name);
     await expect(page.locator('#diagram [data-pin]')).toHaveCount(board.packagePins);
+  }
+});
+
+test('package views return to the fitted Arduino and TI boards',async({page})=>{
+  for(const [packageId, boardId] of [
+    ['atmega32u4-tqfp44','arduino-leonardo'],['atmega32u4-qfn44','arduino-micro'],
+    ['ra4m1-lqfp64','arduino-nano-r4'],['mspm0g3507spm','lp-mspm0g3507'],
+  ]){
+    await ready(page,'#board='+packageId);
+    await page.locator(`#package-boards [data-package-board="${boardId}"]`).click();
+    await expect(page.locator('#board-title')).toHaveText(boards.find(board=>board.id===boardId).name);
   }
 });
 
@@ -788,7 +801,7 @@ test('saved plans survive refresh, import previews, share previews and language 
   if (await page.locator('#details-dialog').isVisible()) await page.locator('#close-details').click();
   if (!await page.locator('#console-language-select').isVisible()) await page.locator('[data-console-menu]').click();
   await page.locator('#console-language-select').selectOption('tr');
-  expect(new URL(page.url()).searchParams.get('lang')).toBe('tr');
+  await expect(page).toHaveURL(/\/pin-atlas\/tr\/#board=pico-family/);
   await expect(page.locator('#board-reference')).toContainText('RP2040');
   expect(await page.evaluate(key=>JSON.parse(localStorage.getItem(key)).picow,storageKey)).toEqual(saved);
 });

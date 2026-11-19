@@ -1,0 +1,240 @@
+{% assign locale = 0 %}{% if page.lang == 'tr' %}{% assign locale = 1 %}{% endif %}
+{% assign labels = site.data.atlas_copy.atlas %}
+{% assign board_index = '/boards/' %}{% if page.lang == 'tr' %}{% assign board_index = '/tr/boards/' %}{% endif %}
+<div class="shell">
+<header class="topbar">
+  <div class="topbar-left">
+    <button id="menu-button" class="button primary board-picker-btn" aria-haspopup="dialog" aria-label='{{ labels["chooseBoard"][locale] | escape }}' data-i18n-aria-label="chooseBoard" disabled>
+      <span data-icon="grid"></span>
+      <span data-i18n="boardLibrary">{{ labels["boardLibrary"][locale] | escape }}</span>
+      <span class="count" id="library-count" hidden></span>
+    </button>
+    <div class="breadcrumbs">
+      <a href="#home" id="home-breadcrumb-link" class="home-crumb" aria-label='{{ labels["home"][locale] | escape }}' data-i18n-aria-label="home"><span data-icon="home"></span><span data-i18n="home">{{ labels["home"][locale] | escape }}</span></a>
+      <span class="crumb-sep" id="crumb-sep-1" hidden>/</span>
+      <span id="board-family" hidden>Raspberry Pi</span>
+      <span class="crumb-sep" id="crumb-sep-2" hidden>/</span>
+      <strong id="crumb" hidden>Raspberry Pi Pico 2 W</strong>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <button id="help-button" class="button secondary help-btn" aria-label='{{ labels["help"][locale] | escape }}' data-i18n-aria-label="help"><span data-icon="book"></span><span data-i18n="help">{{ labels["help"][locale] | escape }}</span></button>
+  </div>
+</header>
+<main id="main" aria-busy="true">
+  <div id="link-notice" class="link-notice" role="alert" hidden><p id="link-notice-text"></p><button type="button" id="dismiss-link-notice" class="icon-button" aria-label='{{ labels["dismissNotice"][locale] | escape }}' data-i18n-aria-label="dismissNotice"><span data-icon="close"></span></button></div>
+  <section id="app-status" class="app-status" role="status" tabindex="-1" aria-labelledby="app-status-title" aria-describedby="app-status-message">
+    <h2 id="app-status-title" data-i18n="libraryLoading">{{ labels["libraryLoading"][locale] | escape }}</h2>
+    <p id="app-status-message" data-i18n="libraryLoadingDetail">{{ labels["libraryLoadingDetail"][locale] | escape }}</p>
+    <button id="retry-data" class="button primary" data-i18n="retryData" hidden>{{ labels["retryData"][locale] | escape }}</button>
+  </section>
+  <noscript>
+    <style>#app-status { display: none; }</style>
+    <section class="app-status">
+      <h1>Pin Atlas</h1>
+      <p>{{ labels.homeLead[locale] | escape }}</p>
+      {% if page.lang == 'tr' %}<p><a href="{{ board_index | relative_url }}">Türkçe kart ve pin dizini</a> · <a href="https://github.com/Zaryob/pin-atlas/blob/main/docs/VERIFICATION.tr.md">Doğrulama kaydı</a> · <a href="{{ '/' | relative_url }}" lang="en">English</a></p>
+      {% else %}<p><a href="{{ board_index | relative_url }}">Board and pinout index</a> · <a href="https://github.com/Zaryob/pin-atlas/blob/main/docs/VERIFICATION.md">Verification record</a> · <a href="{{ '/tr/' | relative_url }}" lang="tr">Türkçe</a></p>{% endif %}
+    </section>
+  </noscript>
+
+  <!-- HOME VIEW -->
+  <section id="home-view" class="home-view" hidden>
+    <div class="home-hero console-hero console-hero--pins">
+      <div class="console-hero__inner">
+        <div class="console-hero__copy">
+      <div class="home-badge">
+        <span class="tiny-dot"></span>
+        <span data-i18n="homeBadge">{{ labels["homeBadge"][locale] | escape }}</span>
+      </div>
+      <h1 class="home-title console-hero__title">Pin Atlas</h1>
+      <p class="home-lead console-hero__lead" data-i18n="homeLead">{{ labels["homeLead"][locale] | escape }}</p>
+
+      <div class="home-search-wrap">
+        <label class="home-search-box">
+          <span data-icon="search"></span>
+          <span class="scope-prefix" aria-hidden="true" data-i18n="scopeBoards">{{ labels["scopeBoards"][locale] | escape }}</span>
+          <input id="home-search" type="search" aria-label='{{ labels["catalogSearch"][locale] | escape }}' data-i18n-aria-label="catalogSearch" aria-describedby="home-search-scope" placeholder="kart, yonga veya aile — ör. RP2040, ESP32" data-i18n-placeholder="homeSearchPlaceholder" autocomplete="off">
+          <kbd aria-hidden="true">/</kbd>
+        </label>
+        <p id="home-search-scope" class="sr-only" data-i18n="scopeBoardsCaption">{{ labels["scopeBoardsCaption"][locale] | escape }}</p>
+      </div>
+        </div>
+        <figure class="console-hero__panel">
+          <figcaption class="console-hero__panel-head"><span>Raspberry Pi 4 · 40-pin</span><a href="{{ board_index | append: 'raspberry-pi-4/' | relative_url }}"><span data-i18n="heroPinTable">{{ labels["heroPinTable"][locale] | escape }}</span></a></figcaption>
+<div class="console-hero__screen">      <span class="h-hot">   3V3</span><span class="h-dim">  1 ● ● 2  </span> <span class="h-hot">5V     </span>
+<span class="h-bus">SDA1</span>  <span class="h-ok"> GPIO2</span><span class="h-dim">  3 ● ● 4  </span> <span class="h-hot">5V     </span>
+<span class="h-bus">SCL1</span>  <span class="h-ok"> GPIO3</span><span class="h-dim">  5 ● ● 6  </span> <span class="h-dim">GND    </span>
+      <span class="h-ok"> GPIO4</span><span class="h-dim">  7 ● ● 8  </span> <span class="h-ok">GPIO14 </span> <span class="h-bus">TXD</span>
+      <span class="h-dim">   GND</span><span class="h-dim">  9 ● ● 10 </span> <span class="h-ok">GPIO15 </span> <span class="h-bus">RXD</span>
+      <span class="h-ok">GPIO17</span><span class="h-dim"> 11 ● ● 12 </span> <span class="h-ok">GPIO18 </span> <span class="h-bus">PWM0</span>
+      <span class="h-ok">GPIO27</span><span class="h-dim"> 13 ● ● 14 </span> <span class="h-dim">GND    </span>
+<span class="h-dim">  …                <span data-i18n="heroMorePins">{{ labels["heroMorePins"][locale] | escape }}</span></span></div>
+        </figure>
+      </div>
+    </div>
+
+    <!-- STATS BAR -->
+    <div class="home-stats" aria-label='{{ labels["libraryStats"][locale] | escape }}' data-i18n-aria-label="libraryStats">
+      <div class="home-stat-item">
+        <strong class="stat-number" id="home-stat-boards">48</strong>
+        <span class="stat-label" data-i18n="catalogBoards">{{ labels["catalogBoards"][locale] | escape }}</span>
+      </div>
+      <div class="home-stat-item">
+        <strong class="stat-number" id="home-stat-families">30</strong>
+        <span class="stat-label" data-i18n="catalogChips">{{ labels["catalogChips"][locale] | escape }}</span>
+      </div>
+      <div class="home-stat-item">
+        <strong class="stat-number" id="home-stat-pins">5,226</strong>
+        <span class="stat-label" data-i18n="statPins">{{ labels["statPins"][locale] | escape }}</span>
+      </div>
+      <div class="home-stat-item">
+        <strong class="stat-number" id="home-stat-functions">24,290</strong>
+        <span class="stat-label" data-i18n="statFunctions">{{ labels["statFunctions"][locale] | escape }}</span>
+      </div>
+      <div class="home-stat-item">
+        <strong class="stat-number" id="home-stat-sources">128</strong>
+        <span class="stat-label" data-i18n="statSources">{{ labels["statSources"][locale] | escape }}</span>
+      </div>
+    </div>
+
+    <!-- FEATURED BOARDS -->
+    <section class="home-section" id="featured-section">
+      <div class="home-section-header">
+        <div>
+          <h2 class="home-section-title"><span data-i18n="featuredBoards">{{ labels["featuredBoards"][locale] | escape }}</span></h2>
+          <p class="home-section-desc" data-i18n="featuredBoardsDesc">{{ labels["featuredBoardsDesc"][locale] | escape }}</p>
+        </div>
+      </div>
+      <div class="featured-grid" id="featured-grid"></div>
+    </section>
+
+    <!-- MODEL CATALOG -->
+    <section class="home-section" id="catalog-section">
+      <div class="home-section-header">
+        <div>
+          <h2 class="home-section-title"><span id="catalog-title" data-i18n="browseAllBoards">{{ labels["browseAllBoards"][locale] | escape }}</span></h2>
+          <p class="home-section-desc" id="browse-all-boards-desc" data-i18n="browseAllBoardsDesc">{{ labels["browseAllBoardsDesc"][locale] | escape }}</p>
+          <p class="home-section-desc"><a id="static-index-link" href="{{ board_index | relative_url }}"><span data-i18n="staticIndexLink">{{ labels["staticIndexLink"][locale] | escape }}</span> →</a></p>
+        </div>
+      </div>
+        <div id="home-catalog-types" class="catalog-types" role="group" aria-label='{{ labels["catalogTypeLabel"][locale] | escape }}' data-i18n-aria-label="catalogTypeLabel"></div>
+        <div class="home-filter-chips" id="home-filter-chips" role="group" aria-label='{{ labels["filterFamilies"][locale] | escape }}' data-i18n-aria-label="filterFamilies"></div>
+      <div class="catalog-status-row"><p id="home-search-status" class="home-search-status" role="status" aria-live="polite" aria-atomic="true"></p><button type="button" id="home-reset-catalog" class="catalog-reset" data-i18n="catalogReset" hidden>{{ labels["catalogReset"][locale] | escape }}</button></div>
+      <div id="home-catalog-container"></div>
+    </section>
+
+    <!-- WHY PIN ATLAS / FEATURES -->
+    <section class="home-section home-features-section">
+      <div class="home-section-header">
+        <div>
+          <h2 class="home-section-title"><span data-i18n="whyPinAtlas">{{ labels["whyPinAtlas"][locale] | escape }}</span></h2>
+          <p class="home-section-desc" data-i18n="whyPinAtlasDesc">{{ labels["whyPinAtlasDesc"][locale] | escape }}</p>
+        </div>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><span data-icon="shield"></span></div>
+          <h3 data-i18n="featureVerifiedTitle">{{ labels["featureVerifiedTitle"][locale] | escape }}</h3>
+          <p data-i18n="featureVerifiedDesc">{{ labels["featureVerifiedDesc"][locale] | escape }}</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><span data-icon="chip"></span></div>
+          <h3 data-i18n="featureBridgeTitle">{{ labels["featureBridgeTitle"][locale] | escape }}</h3>
+          <p data-i18n="featureBridgeDesc">{{ labels["featureBridgeDesc"][locale] | escape }}</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><span data-icon="bookmark"></span></div>
+          <h3 data-i18n="featurePlannerTitle">{{ labels["featurePlannerTitle"][locale] | escape }}</h3>
+          <p data-i18n="featurePlannerDesc">{{ labels["featurePlannerDesc"][locale] | escape }}</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><span data-icon="globe"></span></div>
+          <h3 data-i18n="featureClientTitle">{{ labels["featureClientTitle"][locale] | escape }}</h3>
+          <p data-i18n="featureClientDesc">{{ labels["featureClientDesc"][locale] | escape }}</p>
+        </div>
+      </div>
+    </section>
+
+  </section>
+
+  <!-- WORKSPACE VIEW -->
+  <section id="workspace-view" class="workspace-view" hidden>
+    <div class="page-heading"><div><span id="hardware-kind" class="hardware-kind"></span><h1 id="board-title" tabindex="-1">Raspberry Pi Pico 2 W</h1><p id="board-reference" class="board-reference"></p></div><details id="board-documents" class="heading-documents" open><summary data-i18n="workspaceDocuments">{{ labels["workspaceDocuments"][locale] | escape }}</summary><div class="heading-actions"><a id="static-page" class="button secondary"><span data-icon="list"></span><span data-i18n="staticPageLink">{{ labels["staticPageLink"][locale] | escape }}</span></a><a id="datasheet" class="button secondary" target="_blank" rel="noopener"><span data-icon="file"></span><span data-i18n="datasheet">{{ labels["datasheet"][locale] | escape }}</span> <span>↗</span></a></div></details></div>
+    <div class="specs" id="specs"></div>
+    <p id="work-context" class="work-context" hidden></p>
+    <details id="compatible-boards" class="compatibility-index" hidden>
+      <summary>
+        <span class="compatibility-heading"><span id="compatibility-title" data-i18n="compatibleBoards">{{ labels["compatibleBoards"][locale] | escape }}</span><span id="compatibility-count" class="compatibility-count"></span></span>
+        <span class="compatibility-current"><span data-i18n="activeReference">{{ labels["activeReference"][locale] | escape }}</span><strong id="compatibility-current"></strong></span>
+        <span class="compatibility-toggle"><span class="index-closed" data-i18n="viewModelIndex">{{ labels["viewModelIndex"][locale] | escape }}</span><span class="index-open" data-i18n="hideModelIndex">{{ labels["hideModelIndex"][locale] | escape }}</span><span class="index-chevron" aria-hidden="true">⌄</span></span>
+      </summary>
+      <div class="compatibility-content">
+        <div id="compatibility-search-row" class="compatibility-search-row" hidden><label for="compatibility-search" data-i18n="findCompatibleModel">{{ labels["findCompatibleModel"][locale] | escape }}</label><span class="scoped-input"><span class="scope-prefix" aria-hidden="true" data-i18n="scopeModels">{{ labels["scopeModels"][locale] | escape }}</span><input id="compatibility-search" type="search" autocomplete="off" aria-describedby="compatibility-search-scope" placeholder='{{ labels["compatibleSearchPlaceholder"][locale] | escape }}' data-i18n-placeholder="compatibleSearchPlaceholder"></span><span id="compatibility-results" role="status" aria-live="polite"></span><p id="compatibility-search-scope" class="sr-only" data-i18n="scopeModelsCaption">{{ labels["scopeModelsCaption"][locale] | escape }}</p></div>
+        <ol id="compatibility-list" class="compatibility-list"></ol>
+        <p id="compatibility-empty" class="compatibility-empty" data-i18n="noCompatibleModel" hidden>{{ labels["noCompatibleModel"][locale] | escape }}</p>
+        <p class="compatibility-footnote" data-i18n="compatibilityIndexNote">{{ labels["compatibilityIndexNote"][locale] | escape }}</p>
+      </div>
+    </details>
+    <section class="workspace" aria-label='{{ labels["workspace"][locale] | escape }}' data-i18n-aria-label="workspace">
+      <div class="map-panel">
+        <div class="panel-heading"><div class="panel-title"><span class="live-dot"></span><span data-i18n="pinMap">{{ labels["pinMap"][locale] | escape }}</span> <span id="pin-count">40 pin</span></div><div class="view-switch" aria-label='{{ labels["view"][locale] | escape }}' data-i18n-aria-label="view"><button id="map-view" aria-label='{{ labels["map"][locale] | escape }}' data-i18n-aria-label="map" title='{{ labels["map"][locale] | escape }}' data-i18n-title="map" class="active" aria-pressed="true"><span data-icon="chip"></span><span data-i18n="map">{{ labels["map"][locale] | escape }}</span></button><button id="table-view" aria-label='{{ labels["table"][locale] | escape }}' data-i18n-aria-label="table" title='{{ labels["table"][locale] | escape }}' data-i18n-title="table" aria-pressed="false"><span data-icon="list"></span><span data-i18n="table">{{ labels["table"][locale] | escape }}</span></button></div></div>
+        <div id="package-boards" class="connector-tools" hidden></div>
+        <div class="search-tools"><label class="pin-search"><span data-icon="search"></span><span class="scope-prefix" aria-hidden="true" data-i18n="scopePins">{{ labels["scopePins"][locale] | escape }}</span><input id="pin-search" type="search" placeholder='{{ labels["searchPlaceholder"][locale] | escape }}' data-i18n-placeholder="searchPlaceholder" aria-label='{{ labels["search"][locale] | escape }}' data-i18n-aria-label="search" aria-describedby="pin-search-scope"><kbd>/</kbd></label><div class="search-actions"><details class="view-options" id="filter-options"><summary><span data-i18n="filters">{{ labels["filters"][locale] | escape }}</span> <span id="active-filter-count" hidden></span></summary><div class="filter-bar"><div id="filters"></div><button id="reset-filters" title='{{ labels["clearFilters"][locale] | escape }}' data-i18n-title="clearFilters" aria-label='{{ labels["clearFilters"][locale] | escape }}' data-i18n-aria-label="clearFilters"><span data-icon="reset"></span></button></div></details><details class="view-options" id="view-options"><summary aria-label='{{ labels["diagramOptions"][locale] | escape }}' data-i18n-aria-label="diagramOptions"><span data-icon="fit"></span></summary><div class="view-options-panel"><div id="connector-tools" class="connector-tools" hidden><label for="connector-zoom" data-i18n="connectorZoom">{{ labels["connectorZoom"][locale] | escape }}</label><select id="connector-zoom"></select></div><div class="diagram-tools" id="diagram-tools"><button id="flip-button" class="icon-button" title='{{ labels["mirror"][locale] | escape }}' data-i18n-title="mirror" aria-label='{{ labels["mirror"][locale] | escape }}' data-i18n-aria-label="mirror" aria-pressed="false"><span data-icon="flip"></span><span class="tool-label" aria-hidden="true" data-i18n="mirror">{{ labels["mirror"][locale] | escape }}</span></button><button id="rotate-button" class="icon-button" title='{{ labels["rotate"][locale] | escape }}' data-i18n-title="rotate" aria-label='{{ labels["rotateLabel"][locale] | escape }}' data-i18n-aria-label="rotateLabel" aria-pressed="false"><span data-icon="rotate"></span><span class="tool-label" aria-hidden="true" data-i18n="rotate">{{ labels["rotate"][locale] | escape }}</span></button><button id="reset-view" class="icon-button" title='{{ labels["resetView"][locale] | escape }}' data-i18n-title="resetView" aria-label='{{ labels["resetView"][locale] | escape }}' data-i18n-aria-label="resetView"><span data-icon="fit"></span><span class="tool-label" aria-hidden="true" data-i18n="resetView">{{ labels["resetView"][locale] | escape }}</span></button></div></div></details></div></div>
+        <p id="pin-search-scope" class="sr-only" data-i18n="scopePinsCaption">{{ labels["scopePinsCaption"][locale] | escape }}</p>
+        <div id="map-content" class="map-content">
+          <div class="orientation" id="orientation"><span data-i18n="topView">{{ labels["topView"][locale] | escape }}</span> <span>USB ↑</span></div><p id="diagram-keyboard-help" class="sr-only" data-i18n="pinKeyboardHelp">{{ labels["pinKeyboardHelp"][locale] | escape }}</p><div id="diagram" role="group" aria-label='{{ labels["pinMap"][locale] | escape }}' data-i18n-aria-label="pinMap" aria-describedby="diagram-keyboard-help"></div><div id="no-matches" hidden><span data-i18n="noMatch">{{ labels["noMatch"][locale] | escape }}</span></div><div class="canvas-caption"><span data-icon="cursor"></span><span class="desktop-hint"><span data-i18n="clickPin">{{ labels["clickPin"][locale] | escape }}</span></span><span class="mobile-hint"><span data-i18n="tapPin">{{ labels["tapPin"][locale] | escape }}</span></span><span id="match-count"></span></div>
+        </div>
+        <p id="connector-bridge-note" class="connector-bridge-note map-bridge-note" aria-live="polite" hidden></p>
+        <div id="table-content" class="table-content" hidden></div>
+        <p id="reference-note" class="reference-note"></p>
+        <div class="legend"><span><i class="dot" style="--dot:#5f8a60"></i>GPIO</span><span><i class="dot" style="--dot:#d78759"></i><span data-i18n="power">{{ labels["power"][locale] | escape }}</span></span><span><i class="dot" style="--dot:#8a9194"></i>GND</span><span><i class="dot" style="--dot:#aa84bb"></i><span data-i18n="system">{{ labels["system"][locale] | escape }}</span></span><span class="legend-note"><span data-i18n="physicalNumbers">{{ labels["physicalNumbers"][locale] | escape }}</span></span></div>
+      </div>
+      <div id="details-home">
+        <aside class="details-panel" aria-label='{{ labels["selectedDetails"][locale] | escape }}' data-i18n-aria-label="selectedDetails">
+          <div class="detail-top"><div class="detail-tabs" role="tablist" aria-label='{{ labels["pinAndPlan"][locale] | escape }}' data-i18n-aria-label="pinAndPlan"><button id="detail-tab" role="tab" aria-selected="true" aria-controls="pin-detail" data-i18n="pinDetails">{{ labels["pinDetails"][locale] | escape }}</button><button id="plan-tab" role="tab" aria-selected="false" aria-controls="plan-panel"><span data-i18n="myPlan">{{ labels["myPlan"][locale] | escape }}</span> <span id="plan-tab-count">0</span></button></div><button id="close-details" class="icon-button" aria-label='{{ labels["backToMap"][locale] | escape }}' data-i18n-aria-label="backToMap"><span data-icon="close"></span></button></div>
+          <div id="pin-detail" role="tabpanel" aria-labelledby="detail-tab"></div>
+          <section class="plan-box" id="plan-panel" role="tabpanel" aria-labelledby="plan-tab" hidden>
+            <p id="plan-reference" class="plan-reference"></p>
+            <div class="plan-toolbar"><button id="share-button" class="button primary plan-share"><span data-icon="share"></span><span data-i18n="share">{{ labels["share"][locale] | escape }}</span></button><button id="plan-layout-toggle" type="button" class="button secondary" aria-expanded="false" data-i18n="planExpand">{{ labels["planExpand"][locale] | escape }}</button></div>
+            <p id="plan-validation" role="alert"></p><div id="plan-list"></div>
+            <div class="tool-group" data-tool-group="output" role="group" aria-labelledby="plan-output-label"><p class="tool-group-label" id="plan-output-label"><span data-i18n="toolGroupOutput">{{ labels["toolGroupOutput"][locale] | escape }}</span> <small data-i18n="toolGroupOutputHint">{{ labels["toolGroupOutputHint"][locale] | escape }}</small></p><div class="plan-actions"><button id="export-button"><span data-icon="download"></span><span data-i18n="downloadJson">{{ labels["downloadJson"][locale] | escape }}</span></button><button id="export-svg" type="button" data-i18n="outputSVG">{{ labels["outputSVG"][locale] | escape }}</button><button id="print-plan-button" type="button" data-i18n="outputPrint">{{ labels["outputPrint"][locale] | escape }}</button><button id="import-button"><span data-icon="upload"></span><span data-i18n="import">{{ labels["import"][locale] | escape }}</span></button><input id="import-file" type="file" accept="application/json,.json" hidden></div></div>
+            <p id="plan-feedback" role="status" tabindex="-1"></p>
+            <div class="plan-tools">
+            <details id="peripheral-builder"><summary data-i18n="peripheralAdd">{{ labels["peripheralAdd"][locale] | escape }}</summary><form id="peripheral-form"><label for="peripheral-bus" data-i18n="peripheralBus">{{ labels["peripheralBus"][locale] | escape }}</label><select id="peripheral-bus"></select><div id="peripheral-fields"></div><div id="peripheral-notes"></div><p id="peripheral-feedback" role="alert"></p><button class="button primary" type="submit" data-i18n="peripheralSave">{{ labels["peripheralSave"][locale] | escape }}</button></form></details>
+            </div>
+            <div class="tool-group" data-tool-group="advanced" role="group" aria-labelledby="plan-advanced-label"><p class="tool-group-label" id="plan-advanced-label"><span data-i18n="toolGroupAdvanced">{{ labels["toolGroupAdvanced"][locale] | escape }}</span> <small data-i18n="toolGroupAdvancedHint">{{ labels["toolGroupAdvancedHint"][locale] | escape }}</small></p><div class="plan-tools">
+            <details id="hardware-config" hidden><summary data-i18n="hwTitle">{{ labels["hwTitle"][locale] | escape }}</summary><p data-i18n="hwDescription">{{ labels["hwDescription"][locale] | escape }}</p><form id="hardware-form"><div id="hardware-controls"></div><p id="hardware-impact"></p><p id="hardware-pending" role="status"></p><button id="apply-hardware" type="submit" class="button primary" data-i18n="hwApply">{{ labels["hwApply"][locale] | escape }}</button></form></details>
+            <details id="pin-suggestions"><summary data-i18n="suggestTitle">{{ labels["suggestTitle"][locale] | escape }}</summary><p data-i18n="suggestDescription">{{ labels["suggestDescription"][locale] | escape }}</p><form id="suggest-form"><div class="suggest-counts"><label>SPI<input data-suggest-count="SPI" type="number" min="0" max="4" value="1" required></label><label>I²C<input data-suggest-count="I2C" type="number" min="0" max="4" value="0" required></label><label>UART<input data-suggest-count="UART" type="number" min="0" max="4" value="2" required></label><label>CAN<input data-suggest-count="CAN" type="number" min="0" max="4" value="0" required></label></div><label class="suggest-cs-label"><input id="suggest-cs" type="checkbox" checked><span data-i18n="suggestCs">{{ labels["suggestCs"][locale] | escape }}</span></label><p data-i18n="suggestCsHelp">{{ labels["suggestCsHelp"][locale] | escape }}</p><button id="suggest-run" class="button primary" type="submit" data-i18n="suggestRun">{{ labels["suggestRun"][locale] | escape }}</button><button id="suggest-cancel" type="button" hidden data-i18n="cancel">Cancel</button></form><p id="suggest-feedback" role="status" aria-live="polite"></p><div id="suggest-compare-controls"></div><div id="suggest-results"></div></details>
+            </div></div>
+            <p class="local-note"><span class="tiny-dot"></span><span data-i18n="autosave">{{ labels["autosave"][locale] | escape }}</span></p>
+          </section>
+        </aside>
+      </div>
+    </section>
+    <p id="board-scope" class="board-scope" hidden></p>
+    <section id="board-cautions" class="board-cautions" aria-live="polite" hidden></section>
+    <div class="below-workspace"><div><span data-icon="info"></span><p><strong><span data-i18n="orientationNote">{{ labels["orientationNote"][locale] | escape }}</span></strong><span data-i18n="schematicNote">{{ labels["schematicNote"][locale] | escape }}</span></p></div><a id="reference-link" target="_blank" rel="noopener"><span data-i18n="officialSource">{{ labels["officialSource"][locale] | escape }}</span> <span>↗</span></a></div>
+    <article id="hardware-details" class="hardware-details" aria-labelledby="hardware-details-title"></article>
+  </section>
+</main>
+</div>
+<div class="mobile-workbar" hidden>
+  <div id="mobile-mcu" hidden><button id="peek-prev" class="peek-step" type="button" aria-label='{{ labels["prevPin"][locale] | escape }}' data-i18n-aria-label="prevPin" hidden><span aria-hidden="true">◀</span></button><span id="mobile-mcu-label" aria-live="polite"></span><button id="peek-next" class="peek-step" type="button" aria-label='{{ labels["nextPin"][locale] | escape }}' data-i18n-aria-label="nextPin" hidden><span aria-hidden="true">▶</span></button></div>
+  <button id="open-pin" aria-haspopup="dialog"><span data-icon="crosshair"></span><span id="selected-pin-label"></span></button><button id="open-mcu" type="button" data-i18n="showMcuPad">{{ labels["showMcuPad"][locale] | escape }}</button><button id="open-plan" aria-haspopup="dialog"><span data-icon="bookmark"></span><span data-i18n="myPlan">{{ labels["myPlan"][locale] | escape }}</span> <span id="mobile-plan-count">0</span></button>
+</div>
+<dialog id="details-dialog" tabindex="-1" aria-label='{{ labels["pinAndPlan"][locale] | escape }}' data-i18n-aria-label="pinAndPlan"></dialog>
+<section id="print-plan"></section>
+<dialog id="library-dialog" aria-labelledby="library-title"><div class="modal-header"><div><h2 id="library-title"><span data-i18n="boardLibrary">{{ labels["boardLibrary"][locale] | escape }}</span></h2></div><button class="icon-button" data-close aria-label='{{ labels["closeLibrary"][locale] | escape }}' data-i18n-aria-label="closeLibrary"><span data-icon="close"></span></button></div><label class="catalog-search"><span data-icon="search"></span><span class="scope-prefix" aria-hidden="true" data-i18n="scopeBoards">{{ labels["scopeBoards"][locale] | escape }}</span><input type="search" id="catalog-search" placeholder='{{ labels["catalogPlaceholder"][locale] | escape }}' data-i18n-placeholder="catalogPlaceholder" aria-label='{{ labels["catalogSearch"][locale] | escape }}' data-i18n-aria-label="catalogSearch" aria-describedby="catalog-search-scope"></label><p id="catalog-search-scope" class="sr-only" data-i18n="scopeBoardsCaption">{{ labels["scopeBoardsCaption"][locale] | escape }}</p><div id="library-types" class="catalog-types" role="group" aria-label='{{ labels["catalogTypeLabel"][locale] | escape }}' data-i18n-aria-label="catalogTypeLabel"></div><div class="library-filter-row"><label for="library-platform" data-i18n="catalogPlatformLabel">{{ labels["catalogPlatformLabel"][locale] | escape }}</label><select id="library-platform"></select><span id="library-result-count" role="status" aria-live="polite"></span></div><div id="catalog-grid"></div><p class="catalog-note" data-i18n="catalogScope">{{ labels["catalogScope"][locale] | escape }}</p></dialog>
+<dialog id="help-dialog" aria-labelledby="help-title"><div class="modal-header"><h2 id="help-title"><span data-i18n="helpTitle">{{ labels["helpTitle"][locale] | escape }}</span></h2><button class="icon-button" data-close aria-label='{{ labels["closeHelp"][locale] | escape }}' data-i18n-aria-label="closeHelp"><span data-icon="close"></span></button></div><ol class="help-steps"><li><strong><span data-i18n="helpChoose">{{ labels["helpChoose"][locale] | escape }}</span></strong> <span data-i18n="helpChooseDetail">{{ labels["helpChooseDetail"][locale] | escape }}</span></li><li><strong><span data-i18n="helpFind">{{ labels["helpFind"][locale] | escape }}</span></strong> <span data-i18n="helpFindDetail">{{ labels["helpFindDetail"][locale] | escape }}</span> <kbd>/</kbd> <span data-i18n="helpShortcut">{{ labels["helpShortcut"][locale] | escape }}</span></li><li><strong><span data-i18n="helpPlan">{{ labels["helpPlan"][locale] | escape }}</span></strong> <span data-i18n="helpPlanDetail">{{ labels["helpPlanDetail"][locale] | escape }}</span></li><li><strong><span data-i18n="helpShare">{{ labels["helpShare"][locale] | escape }}</span></strong> <span data-i18n="helpShareDetail">{{ labels["helpShareDetail"][locale] | escape }}</span></li></ol><p><span data-i18n="helpStorage">{{ labels["helpStorage"][locale] | escape }}</span></p><div class="help-sources"><span data-i18n="manufacturerDocs">{{ labels["manufacturerDocs"][locale] | escape }}</span> <a href="https://datasheets.raspberrypi.com/picow/pico-2-w-datasheet.pdf" target="_blank" rel="noopener"><span data-i18n="picoDatasheet">{{ labels["picoDatasheet"][locale] | escape }}</span></a> · <a href="https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf" target="_blank" rel="noopener"><span data-i18n="rpDatasheet">{{ labels["rpDatasheet"][locale] | escape }}</span></a> · <a href="https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-reduced-schematics.pdf" target="_blank" rel="noopener"><span data-i18n="piSchematic">{{ labels["piSchematic"][locale] | escape }}</span></a> · <a href="https://github.com/Zaryob/pin-atlas/blob/main/docs/VERIFICATION.md" data-verification-link target="_blank" rel="noopener"><span data-i18n="verification">{{ labels["verification"][locale] | escape }}</span></a></div></dialog>
+<dialog id="share-dialog" aria-labelledby="share-title"><div class="modal-header"><h2 id="share-title"><span data-i18n="shareTitle">{{ labels["shareTitle"][locale] | escape }}</span></h2><button class="icon-button" data-close aria-label='{{ labels["closeShare"][locale] | escape }}' data-i18n-aria-label="closeShare"><span data-icon="close"></span></button></div><p><span data-i18n="shareDescription">{{ labels["shareDescription"][locale] | escape }}</span></p><input id="share-url" readonly aria-label='{{ labels["shareLink"][locale] | escape }}' data-i18n-aria-label="shareLink"><button id="copy-share" class="button primary"><span data-i18n="copyLink">{{ labels["copyLink"][locale] | escape }}</span></button></dialog>
+<dialog id="incoming-plan-dialog" aria-labelledby="incoming-plan-title" aria-describedby="incoming-plan-message incoming-plan-revision">
+  <div class="modal-header"><h2 id="incoming-plan-title" data-i18n="incomingPlan">{{ labels["incomingPlan"][locale] | escape }}</h2><button class="icon-button" data-close aria-label='{{ labels["closePreview"][locale] | escape }}' data-i18n-aria-label="closePreview"><span data-icon="close"></span></button></div>
+  <p id="incoming-plan-reference" class="plan-reference"></p>
+  <p id="incoming-plan-message" role="status"></p>
+  <div id="incoming-plan-configuration"></div>
+  <p id="incoming-plan-revision" class="hardware-note" hidden></p>
+  <ul id="incoming-plan-list"></ul>
+  <div class="preview-actions"><button class="button secondary" data-close autofocus data-i18n="cancelPlan">{{ labels["cancelPlan"][locale] | escape }}</button><button id="save-incoming-plan" class="button primary"></button></div>
+</dialog>
+<div id="toast" role="status" aria-live="polite"></div>

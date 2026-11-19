@@ -1,6 +1,6 @@
 # Hardware research and technical reference
 
-Reviewed: 2026-11-14. All 99 profiles are covered individually. 58 have a qualified historical date; exact first production/sale dates remain unverified for 41. An MCU datasheet’s initial publication is not presented as a board’s production year.
+Reviewed: 2026-11-14. All 107 profiles are covered individually. 66 have a qualified historical date; exact first production/sale dates remain unverified for 41. An MCU datasheet’s initial publication is not presented as a board’s production year.
 
 Generated from `sources/hardware-details.json` by `npm run build:data`. Each fact and note carries source links. Live manufacturer pages may change; the locked versions and SHA-256 values for pin evidence remain in `sources/manifest.json`. The technical review does not change the previous pin-verification date.
 
@@ -1617,4 +1617,113 @@ Technical review 2026-11-19.
 - **RAM:** 32 KB SRAM. [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
 - **Program Flash / storage:** 128 KB Flash. [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
 - **Power / logic:** 1.62–3.6 V VDD. [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+
+### ATmega32U4 · TQFP-44
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=atmega32u4-tqfp44&profile=atmega32u4-tqfp44) · [Pin reference](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf#page=3) · [Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+
+Technical review 2026-11-19.
+
+- **Documented by:** 2010. [ATmega16U4/32U4 Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+- **Processor:** 8-bit AVR. [ATmega16U4/32U4 Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+- **Clock / maximum:** 16 MHz. [ATmega16U4/32U4 Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+- **RAM:** 2.5 KB SRAM. [ATmega16U4/32U4 Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+- **Program Flash / storage:** 32 KB Flash. [ATmega16U4/32U4 Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+- **EEPROM / persistent data:** 1 KB EEPROM. [ATmega16U4/32U4 Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+- **Power / logic:** 2.7–5.5 V VCC. [ATmega16U4/32U4 Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+
+### ATmega32U4 · QFN-44
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=atmega32u4-qfn44&profile=atmega32u4-qfn44) · [Pin reference](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf#page=3) · [Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+
+Technical review 2026-11-19.
+
+- **Documented by:** 2010. [ATmega16U4/32U4 Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+- **Processor:** 8-bit AVR. [ATmega16U4/32U4 Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+- **Clock / maximum:** 16 MHz. [ATmega16U4/32U4 Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+- **RAM:** 2.5 KB SRAM. [ATmega16U4/32U4 Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+- **Program Flash / storage:** 32 KB Flash. [ATmega16U4/32U4 Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+- **EEPROM / persistent data:** 1 KB EEPROM. [ATmega16U4/32U4 Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+- **Power / logic:** 2.7–5.5 V VCC. [ATmega16U4/32U4 Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+
+### Renesas RA4M1 · LQFP-64
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=ra4m1-lqfp64&profile=ra4m1-lqfp64) · [Pin reference](https://www.renesas.com/en/document/dst/ra4m1-group-datasheet?language=en#page=18) · [Datasheet](https://www.renesas.com/en/document/dst/ra4m1-group-datasheet?language=en)
+
+Technical review 2026-11-19.
+
+- **Documented by:** 2023. [Renesas RA4M1 Group Datasheet](https://www.renesas.com/en/document/dst/ra4m1-group-datasheet?language=en)
+- **Processor:** Arm Cortex-M4F. [Renesas RA4M1 Group Datasheet](https://www.renesas.com/en/document/dst/ra4m1-group-datasheet?language=en)
+- **Clock / maximum:** 48 MHz. [Renesas RA4M1 Group Datasheet](https://www.renesas.com/en/document/dst/ra4m1-group-datasheet?language=en)
+- **RAM:** 32 KB SRAM. [Renesas RA4M1 Group Datasheet](https://www.renesas.com/en/document/dst/ra4m1-group-datasheet?language=en)
+- **Program Flash / storage:** 256 KB Code Flash. [Renesas RA4M1 Group Datasheet](https://www.renesas.com/en/document/dst/ra4m1-group-datasheet?language=en)
+- **EEPROM / persistent data:** 8 KB Data Flash. [Renesas RA4M1 Group Datasheet](https://www.renesas.com/en/document/dst/ra4m1-group-datasheet?language=en)
+- **Power / logic:** 1.6–5.5 V VCC. [Renesas RA4M1 Group Datasheet](https://www.renesas.com/en/document/dst/ra4m1-group-datasheet?language=en)
+
+### MSPM0G3507SPM · VQFN-64
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=mspm0g3507spm&profile=mspm0g3507spm) · [Pin reference](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf#page=7) · [Datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+
+Technical review 2026-11-19.
+
+- **Documented by:** 2025. [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+- **Processor:** Arm Cortex-M0+. [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+- **Clock / maximum:** 80 MHz. [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+- **RAM:** 32 KB SRAM. [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+- **Program Flash / storage:** 128 KB Flash. [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+- **Power / logic:** 1.62–3.6 V VDD. [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+
+### MSPM0L1306 · VQFN-32
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=mspm0l1306-vqfn32&profile=mspm0l1306-vqfn32) · [Pin reference](https://www.ti.com/lit/ds/symlink/mspm0l1306.pdf#page=6) · [Datasheet](https://www.ti.com/lit/ds/symlink/mspm0l1306.pdf)
+
+Technical review 2026-11-19.
+
+- **Documented by:** 2024. [MSPM0L130x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/mspm0l1306.pdf)
+- **Processor:** Arm Cortex-M0+. [MSPM0L130x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/mspm0l1306.pdf)
+- **Clock / maximum:** 32 MHz. [MSPM0L130x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/mspm0l1306.pdf)
+- **RAM:** 4 KB SRAM. [MSPM0L130x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/mspm0l1306.pdf)
+- **Program Flash / storage:** 64 KB Flash. [MSPM0L130x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/mspm0l1306.pdf)
+- **Power / logic:** 1.62–3.6 V VDD. [MSPM0L130x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/mspm0l1306.pdf)
+
+### MSPM33C321A · LQFP-64
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=mspm33c321a-lqfp64&profile=mspm33c321a-lqfp64) · [Pin reference](https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf#page=10) · [Datasheet](https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf)
+
+Technical review 2026-11-19.
+
+- **Documented by:** 2026. [MSPM33C321x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf)
+- **Processor:** Arm Cortex-M33. [MSPM33C321x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf)
+- **Clock / maximum:** 160 MHz. [MSPM33C321x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf)
+- **RAM:** 256 KB SRAM. [MSPM33C321x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf)
+- **Program Flash / storage:** 1 MB Flash. [MSPM33C321x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf)
+- **Power / logic:** 1.71–3.6 V VDD. [MSPM33C321x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf)
+
+### MSP430FR2355TPT · LQFP-48
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=msp430fr2355tpt&profile=msp430fr2355tpt) · [Pin reference](https://www.ti.com/lit/ds/symlink/msp430fr2355.pdf#page=10) · [Datasheet](https://www.ti.com/lit/ds/symlink/msp430fr2355.pdf)
+
+Technical review 2026-11-19.
+
+- **Documented by:** 2019. [MSP430FR235x / MSP430FR215x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/msp430fr2355.pdf)
+- **Processor:** 16-bit MSP430. [MSP430FR235x / MSP430FR215x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/msp430fr2355.pdf)
+- **Clock / maximum:** 24 MHz. [MSP430FR235x / MSP430FR215x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/msp430fr2355.pdf)
+- **RAM:** 4 KB SRAM. [MSP430FR235x / MSP430FR215x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/msp430fr2355.pdf)
+- **Program Flash / storage:** 32 KB program FRAM + 512 B information FRAM. [MSP430FR235x / MSP430FR215x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/msp430fr2355.pdf)
+- **Power / logic:** 1.8–3.6 V DVCC. [MSP430FR235x / MSP430FR215x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/msp430fr2355.pdf)
+
+### TI LP-MSPM0G3507 LaunchPad
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=lp-mspm0g3507&profile=lp-mspm0g3507) · [Pin reference](https://www.ti.com/lit/ug/slau873e/slau873e.pdf#page=16) · [Datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+
+Technical review 2026-11-19.
+
+- **Documented by:** 2026. [LP-MSPM0G3507 LaunchPad Development Kit User’s Guide](https://www.ti.com/lit/ug/slau873e/slau873e.pdf), [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+- **Processor:** Arm Cortex-M0+. [LP-MSPM0G3507 LaunchPad Development Kit User’s Guide](https://www.ti.com/lit/ug/slau873e/slau873e.pdf), [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+- **Clock / maximum:** 80 MHz. [LP-MSPM0G3507 LaunchPad Development Kit User’s Guide](https://www.ti.com/lit/ug/slau873e/slau873e.pdf), [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+- **RAM:** 32 KB SRAM. [LP-MSPM0G3507 LaunchPad Development Kit User’s Guide](https://www.ti.com/lit/ug/slau873e/slau873e.pdf), [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+- **Program Flash / storage:** 128 KB Flash. [LP-MSPM0G3507 LaunchPad Development Kit User’s Guide](https://www.ti.com/lit/ug/slau873e/slau873e.pdf), [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+- **Power / logic:** 3.3 V I/O. [LP-MSPM0G3507 LaunchPad Development Kit User’s Guide](https://www.ti.com/lit/ug/slau873e/slau873e.pdf), [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+
+Circuit / board documents: [LP-MSPM0G3507 LaunchPad Development Kit User’s Guide](https://www.ti.com/lit/ug/slau873e/slau873e.pdf)
 

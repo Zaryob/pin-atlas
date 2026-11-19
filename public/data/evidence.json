@@ -1682,6 +1682,80 @@
       "file": "d1-mini-v4-pinout.png",
       "url": "https://www.wemos.cc/en/latest/_static/boards/d1_mini_v4.0.0_5_16x9.png",
       "sha256": "6891e979804e941a357a0f8ccb3b6ac2856eeface12375884f789394f263cf99"
+    },
+    {
+      "id": "atmega32u4-datasheet",
+      "title": "ATmega16U4/32U4 Datasheet",
+      "publisher": "Atmel / Microchip",
+      "revision": "7766F · 2010-11",
+      "file": "atmega32u4.pdf",
+      "url": "https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf",
+      "sha256": "69f665867a986c6cdf6f2fbb3b958e14ec36dfce96396bf1dd2fbce51715c2a5"
+    },
+    {
+      "id": "ra4m1-datasheet",
+      "title": "Renesas RA4M1 Group Datasheet",
+      "publisher": "Renesas",
+      "revision": "R01DS0355EJ0110 · Rev.1.10 · 2023-09-29",
+      "file": "ra4m1.pdf",
+      "url": "https://www.renesas.com/en/document/dst/ra4m1-group-datasheet?language=en",
+      "sha256": "b96fe3862d2d91d910b04a662631d41dfd3ce02d026fbb80c09aefb853933dbf"
+    },
+    {
+      "id": "mspm0l1306-datasheet",
+      "title": "MSPM0L130x Mixed-Signal Microcontrollers",
+      "publisher": "Texas Instruments",
+      "revision": "SLASEX0D · 2024-01",
+      "file": "mspm0l1306.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm0l1306.pdf",
+      "sha256": "d79bb920f524c429e1eaf57ddef6103042453971d4975c900bb09071328effbb"
+    },
+    {
+      "id": "mspm33c321a-datasheet",
+      "title": "MSPM33C321x Mixed-Signal Microcontrollers",
+      "publisher": "Texas Instruments",
+      "revision": "SLASFB6A · 2026-09",
+      "file": "mspm33c321a.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf",
+      "sha256": "d0c4ae0b490e21e04f96ebd1f023d3764f09a985f050bbe26a5e7fe536fd2181"
+    },
+    {
+      "id": "msp430fr2355-datasheet",
+      "title": "MSP430FR235x / MSP430FR215x Mixed-Signal Microcontrollers",
+      "publisher": "Texas Instruments",
+      "revision": "SLASEC4D · 2019-12",
+      "file": "msp430fr2355.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/msp430fr2355.pdf",
+      "sha256": "561aca0b9465dcf9f8ef44b81a7320b92bdd14287b89fe028b136cb5b36f9162"
+    },
+    {
+      "id": "lp-mspm0g3507-guide",
+      "title": "LP-MSPM0G3507 LaunchPad Development Kit User’s Guide",
+      "publisher": "Texas Instruments",
+      "revision": "SLAU873E · 2026-09",
+      "file": "lp-mspm0g3507.pdf",
+      "url": "https://www.ti.com/lit/ug/slau873e/slau873e.pdf",
+      "sha256": "1b38137a5e569a2ac608df7f8371f53448cd01cda7914ee25c62f06239424957"
+    },
+    {
+      "id": "arduino-leonardo-schematic",
+      "title": "Arduino Leonardo schematic",
+      "revision": "65d578fc7de843c45c21fc77b31a7a2009c46a5b",
+      "file": "leonardo-schematics.pdf",
+      "url": "https://raw.githubusercontent.com/arduino/docs-content/65d578fc7de843c45c21fc77b31a7a2009c46a5b/content/hardware/hero/boards/leonardo/downloads/A000057-schematics.pdf",
+      "viewUrl": "https://github.com/arduino/docs-content/blob/65d578fc7de843c45c21fc77b31a7a2009c46a5b/content/hardware/hero/boards/leonardo/downloads/A000057-schematics.pdf",
+      "publisher": "Arduino",
+      "sha256": "9c6f651805197aa614d854d81b9bc67aef2819ba9282c44333ad8aec91fcb960"
+    },
+    {
+      "id": "arduino-micro-schematic",
+      "title": "Arduino Micro schematic",
+      "revision": "65d578fc7de843c45c21fc77b31a7a2009c46a5b",
+      "file": "micro-schematics.pdf",
+      "url": "https://raw.githubusercontent.com/arduino/docs-content/65d578fc7de843c45c21fc77b31a7a2009c46a5b/content/hardware/hero/boards/micro/downloads/A000053-schematics.pdf",
+      "viewUrl": "https://github.com/arduino/docs-content/blob/65d578fc7de843c45c21fc77b31a7a2009c46a5b/content/hardware/hero/boards/micro/downloads/A000053-schematics.pdf",
+      "publisher": "Arduino",
+      "sha256": "89fce2120cfdfc27755fded45f9428db96e14d6a378fe5c18426c82385e89a90"
     }
   ],
   "references": {
@@ -4445,6 +4519,342 @@
       "locator": "SLASEX6C · Table 6-2 · LQFP-48 pin numbers, analog functions and PINCM.PF selectors",
       "method": "pdf-table"
     },
+    "atmega32u4-tqfp44-physical": {
+      "document": "atmega32u4-datasheet",
+      "title": "ATmega16U4/32U4 Datasheet",
+      "url": "https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf#page=3",
+      "page": 3,
+      "locator": "Figure 1-1 · 44-pin TQFP package",
+      "method": "visual-diagram"
+    },
+    "atmega32u4-port-72": {
+      "document": "atmega32u4-datasheet",
+      "title": "ATmega16U4/32U4 Datasheet",
+      "url": "https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf#page=72",
+      "page": 72,
+      "locator": "§10.3 · Port alternate-function table",
+      "method": "pdf-table"
+    },
+    "atmega32u4-port-75": {
+      "document": "atmega32u4-datasheet",
+      "title": "ATmega16U4/32U4 Datasheet",
+      "url": "https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf#page=75",
+      "page": 75,
+      "locator": "§10.3 · Port alternate-function table",
+      "method": "pdf-table"
+    },
+    "atmega32u4-port-77": {
+      "document": "atmega32u4-datasheet",
+      "title": "ATmega16U4/32U4 Datasheet",
+      "url": "https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf#page=77",
+      "page": 77,
+      "locator": "§10.3 · Port alternate-function table",
+      "method": "pdf-table"
+    },
+    "atmega32u4-port-80": {
+      "document": "atmega32u4-datasheet",
+      "title": "ATmega16U4/32U4 Datasheet",
+      "url": "https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf#page=80",
+      "page": 80,
+      "locator": "§10.3 · Port alternate-function table",
+      "method": "pdf-table"
+    },
+    "atmega32u4-port-81": {
+      "document": "atmega32u4-datasheet",
+      "title": "ATmega16U4/32U4 Datasheet",
+      "url": "https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf#page=81",
+      "page": 81,
+      "locator": "§10.3 · Port alternate-function table",
+      "method": "pdf-table"
+    },
+    "atmega32u4-qfn44-physical": {
+      "document": "atmega32u4-datasheet",
+      "title": "ATmega16U4/32U4 Datasheet",
+      "url": "https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf#page=3",
+      "page": 3,
+      "locator": "Figure 1-1 · 44 numbered QFN perimeter pads",
+      "method": "visual-diagram"
+    },
+    "ra4m1-lqfp64-drawing": {
+      "document": "ra4m1-datasheet",
+      "title": "Renesas RA4M1 Group Datasheet",
+      "url": "https://www.renesas.com/en/document/dst/ra4m1-group-datasheet?language=en#page=18",
+      "page": 18,
+      "locator": "Figure 1.5 · R7FA4M1AB3CFM · LQFP-64 top view",
+      "method": "visual-diagram"
+    },
+    "ra4m1-lqfp64-gpio-direction": {
+      "document": "ra4m1-datasheet",
+      "title": "Renesas RA4M1 Group Datasheet",
+      "url": "https://www.renesas.com/en/document/dst/ra4m1-group-datasheet?language=en#page=15",
+      "page": 15,
+      "locator": "Table 1.15 · GPIO input-only ports P200, P214 and P215",
+      "method": "pdf-table"
+    },
+    "ra4m1-lqfp64-table-23": {
+      "document": "ra4m1-datasheet",
+      "title": "Renesas RA4M1 Group Datasheet",
+      "url": "https://www.renesas.com/en/document/dst/ra4m1-group-datasheet?language=en#page=23",
+      "page": 23,
+      "locator": "§1.7 · Pin Lists · LQFP64 column and peripheral functions",
+      "method": "pdf-table"
+    },
+    "ra4m1-lqfp64-table-24": {
+      "document": "ra4m1-datasheet",
+      "title": "Renesas RA4M1 Group Datasheet",
+      "url": "https://www.renesas.com/en/document/dst/ra4m1-group-datasheet?language=en#page=24",
+      "page": 24,
+      "locator": "§1.7 · Pin Lists · LQFP64 column and peripheral functions",
+      "method": "pdf-table"
+    },
+    "ra4m1-lqfp64-table-25": {
+      "document": "ra4m1-datasheet",
+      "title": "Renesas RA4M1 Group Datasheet",
+      "url": "https://www.renesas.com/en/document/dst/ra4m1-group-datasheet?language=en#page=25",
+      "page": 25,
+      "locator": "§1.7 · Pin Lists · LQFP64 column and peripheral functions",
+      "method": "pdf-table"
+    },
+    "ra4m1-lqfp64-table-26": {
+      "document": "ra4m1-datasheet",
+      "title": "Renesas RA4M1 Group Datasheet",
+      "url": "https://www.renesas.com/en/document/dst/ra4m1-group-datasheet?language=en#page=26",
+      "page": 26,
+      "locator": "§1.7 · Pin Lists · LQFP64 column and peripheral functions",
+      "method": "pdf-table"
+    },
+    "mspm0g3507spm-table-11": {
+      "document": "mspm0g3507-datasheet",
+      "title": "MSPM0G350x Mixed-Signal Microcontrollers With CAN-FD Interface",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf#page=11",
+      "page": 11,
+      "locator": "Pin Attributes · VQFN-64 column, analog routes and PINCM.PF values",
+      "method": "pdf-table"
+    },
+    "mspm0g3507spm-table-12": {
+      "document": "mspm0g3507-datasheet",
+      "title": "MSPM0G350x Mixed-Signal Microcontrollers With CAN-FD Interface",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf#page=12",
+      "page": 12,
+      "locator": "Pin Attributes · VQFN-64 column, analog routes and PINCM.PF values",
+      "method": "pdf-table"
+    },
+    "mspm0g3507spm-table-13": {
+      "document": "mspm0g3507-datasheet",
+      "title": "MSPM0G350x Mixed-Signal Microcontrollers With CAN-FD Interface",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf#page=13",
+      "page": 13,
+      "locator": "Pin Attributes · VQFN-64 column, analog routes and PINCM.PF values",
+      "method": "pdf-table"
+    },
+    "mspm0g3507spm-table-14": {
+      "document": "mspm0g3507-datasheet",
+      "title": "MSPM0G350x Mixed-Signal Microcontrollers With CAN-FD Interface",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf#page=14",
+      "page": 14,
+      "locator": "Pin Attributes · VQFN-64 column, analog routes and PINCM.PF values",
+      "method": "pdf-table"
+    },
+    "mspm0l1306-vqfn32-table-7": {
+      "document": "mspm0l1306-datasheet",
+      "title": "MSPM0L130x Mixed-Signal Microcontrollers",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm0l1306.pdf#page=7",
+      "page": 7,
+      "locator": "Pin Attributes · VQFN-32 column, analog routes and PINCM.PF values",
+      "method": "pdf-table"
+    },
+    "mspm0l1306-vqfn32-table-8": {
+      "document": "mspm0l1306-datasheet",
+      "title": "MSPM0L130x Mixed-Signal Microcontrollers",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm0l1306.pdf#page=8",
+      "page": 8,
+      "locator": "Pin Attributes · VQFN-32 column, analog routes and PINCM.PF values",
+      "method": "pdf-table"
+    },
+    "mspm0l1306-vqfn32-table-9": {
+      "document": "mspm0l1306-datasheet",
+      "title": "MSPM0L130x Mixed-Signal Microcontrollers",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm0l1306.pdf#page=9",
+      "page": 9,
+      "locator": "Pin Attributes · VQFN-32 column, analog routes and PINCM.PF values",
+      "method": "pdf-table"
+    },
+    "mspm33c321a-lqfp64-table-13": {
+      "document": "mspm33c321a-datasheet",
+      "title": "MSPM33C321x Mixed-Signal Microcontrollers",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf#page=13",
+      "page": 13,
+      "locator": "SLASFB6A · Table 6-2 · PM package, IOMUX function and signal",
+      "method": "pdf-table"
+    },
+    "mspm33c321a-lqfp64-table-14": {
+      "document": "mspm33c321a-datasheet",
+      "title": "MSPM33C321x Mixed-Signal Microcontrollers",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf#page=14",
+      "page": 14,
+      "locator": "SLASFB6A · Table 6-2 · PM package, IOMUX function and signal",
+      "method": "pdf-table"
+    },
+    "mspm33c321a-lqfp64-table-15": {
+      "document": "mspm33c321a-datasheet",
+      "title": "MSPM33C321x Mixed-Signal Microcontrollers",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf#page=15",
+      "page": 15,
+      "locator": "SLASFB6A · Table 6-2 · PM package, IOMUX function and signal",
+      "method": "pdf-table"
+    },
+    "mspm33c321a-lqfp64-table-16": {
+      "document": "mspm33c321a-datasheet",
+      "title": "MSPM33C321x Mixed-Signal Microcontrollers",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf#page=16",
+      "page": 16,
+      "locator": "SLASFB6A · Table 6-2 · PM package, IOMUX function and signal",
+      "method": "pdf-table"
+    },
+    "mspm33c321a-lqfp64-table-17": {
+      "document": "mspm33c321a-datasheet",
+      "title": "MSPM33C321x Mixed-Signal Microcontrollers",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf#page=17",
+      "page": 17,
+      "locator": "SLASFB6A · Table 6-2 · PM package, IOMUX function and signal",
+      "method": "pdf-table"
+    },
+    "mspm33c321a-lqfp64-table-18": {
+      "document": "mspm33c321a-datasheet",
+      "title": "MSPM33C321x Mixed-Signal Microcontrollers",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf#page=18",
+      "page": 18,
+      "locator": "SLASFB6A · Table 6-2 · PM package, IOMUX function and signal",
+      "method": "pdf-table"
+    },
+    "mspm33c321a-lqfp64-table-19": {
+      "document": "mspm33c321a-datasheet",
+      "title": "MSPM33C321x Mixed-Signal Microcontrollers",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf#page=19",
+      "page": 19,
+      "locator": "SLASFB6A · Table 6-2 · PM package, IOMUX function and signal",
+      "method": "pdf-table"
+    },
+    "mspm33c321a-lqfp64-table-20": {
+      "document": "mspm33c321a-datasheet",
+      "title": "MSPM33C321x Mixed-Signal Microcontrollers",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf#page=20",
+      "page": 20,
+      "locator": "SLASFB6A · Table 6-2 · PM package, IOMUX function and signal",
+      "method": "pdf-table"
+    },
+    "mspm33c321a-lqfp64-table-21": {
+      "document": "mspm33c321a-datasheet",
+      "title": "MSPM33C321x Mixed-Signal Microcontrollers",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf#page=21",
+      "page": 21,
+      "locator": "SLASFB6A · Table 6-2 · PM package, IOMUX function and signal",
+      "method": "pdf-table"
+    },
+    "mspm33c321a-lqfp64-table-22": {
+      "document": "mspm33c321a-datasheet",
+      "title": "MSPM33C321x Mixed-Signal Microcontrollers",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf#page=22",
+      "page": 22,
+      "locator": "SLASFB6A · Table 6-2 · PM package, IOMUX function and signal",
+      "method": "pdf-table"
+    },
+    "mspm33c321a-lqfp64-table-23": {
+      "document": "mspm33c321a-datasheet",
+      "title": "MSPM33C321x Mixed-Signal Microcontrollers",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf#page=23",
+      "page": 23,
+      "locator": "SLASFB6A · Table 6-2 · PM package, IOMUX function and signal",
+      "method": "pdf-table"
+    },
+    "mspm33c321a-lqfp64-table-24": {
+      "document": "mspm33c321a-datasheet",
+      "title": "MSPM33C321x Mixed-Signal Microcontrollers",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf#page=24",
+      "page": 24,
+      "locator": "SLASFB6A · Table 6-2 · PM package, IOMUX function and signal",
+      "method": "pdf-table"
+    },
+    "mspm33c321a-lqfp64-table-25": {
+      "document": "mspm33c321a-datasheet",
+      "title": "MSPM33C321x Mixed-Signal Microcontrollers",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf#page=25",
+      "page": 25,
+      "locator": "SLASFB6A · Table 6-2 · PM package, IOMUX function and signal",
+      "method": "pdf-table"
+    },
+    "mspm33c321a-lqfp64-table-26": {
+      "document": "mspm33c321a-datasheet",
+      "title": "MSPM33C321x Mixed-Signal Microcontrollers",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf#page=26",
+      "page": 26,
+      "locator": "SLASFB6A · Table 6-2 · PM package, IOMUX function and signal",
+      "method": "pdf-table"
+    },
+    "mspm33c321a-lqfp64-table-27": {
+      "document": "mspm33c321a-datasheet",
+      "title": "MSPM33C321x Mixed-Signal Microcontrollers",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf#page=27",
+      "page": 27,
+      "locator": "SLASFB6A · Table 6-2 · PM package, IOMUX function and signal",
+      "method": "pdf-table"
+    },
+    "msp430fr2355tpt-table-18": {
+      "document": "msp430fr2355-datasheet",
+      "title": "MSP430FR235x / MSP430FR215x Mixed-Signal Microcontrollers",
+      "url": "https://www.ti.com/lit/ds/symlink/msp430fr2355.pdf#page=18",
+      "page": 18,
+      "locator": "SLASEC4D · Table 4-1 · PT package pin attributes",
+      "method": "pdf-table"
+    },
+    "msp430fr2355tpt-table-19": {
+      "document": "msp430fr2355-datasheet",
+      "title": "MSP430FR235x / MSP430FR215x Mixed-Signal Microcontrollers",
+      "url": "https://www.ti.com/lit/ds/symlink/msp430fr2355.pdf#page=19",
+      "page": 19,
+      "locator": "SLASEC4D · Table 4-1 · PT package pin attributes",
+      "method": "pdf-table"
+    },
+    "msp430fr2355tpt-table-20": {
+      "document": "msp430fr2355-datasheet",
+      "title": "MSP430FR235x / MSP430FR215x Mixed-Signal Microcontrollers",
+      "url": "https://www.ti.com/lit/ds/symlink/msp430fr2355.pdf#page=20",
+      "page": 20,
+      "locator": "SLASEC4D · Table 4-1 · PT package pin attributes",
+      "method": "pdf-table"
+    },
+    "msp430fr2355tpt-table-21": {
+      "document": "msp430fr2355-datasheet",
+      "title": "MSP430FR235x / MSP430FR215x Mixed-Signal Microcontrollers",
+      "url": "https://www.ti.com/lit/ds/symlink/msp430fr2355.pdf#page=21",
+      "page": 21,
+      "locator": "SLASEC4D · Table 4-1 · PT package pin attributes",
+      "method": "pdf-table"
+    },
+    "lp-mspm0g3507-boosterpack": {
+      "document": "lp-mspm0g3507-guide",
+      "title": "LP-MSPM0G3507 LaunchPad Development Kit User’s Guide",
+      "url": "https://www.ti.com/lit/ug/slau873e/slau873e.pdf#page=16",
+      "page": 16,
+      "locator": "SLAU873E · Figure 2-10 · 40 BoosterPack contacts",
+      "method": "visual-diagram"
+    },
+    "lp-mspm0g3507-jumpers": {
+      "document": "lp-mspm0g3507-guide",
+      "title": "LP-MSPM0G3507 LaunchPad Development Kit User’s Guide",
+      "url": "https://www.ti.com/lit/ug/slau873e/slau873e.pdf#page=6",
+      "page": 6,
+      "locator": "SLAU873E · Table 2-1 · J14 and J15 jumper defaults",
+      "method": "pdf-table"
+    },
+    "lp-mspm0g3507-schematic": {
+      "document": "lp-mspm0g3507-guide",
+      "title": "LP-MSPM0G3507 LaunchPad Development Kit User’s Guide",
+      "url": "https://www.ti.com/lit/ug/slau873e/slau873e.pdf#page=20",
+      "page": 20,
+      "locator": "SLAU873E · BoosterPack connector schematic and routing jumpers",
+      "method": "visual-diagram"
+    },
     "arduino-uno-r3-package-schematic": {
       "document": "arduino-uno-r3-schematic",
       "title": "Arduino UNO Rev3 through-hole schematic",
@@ -4468,6 +4878,46 @@
       "page": 1,
       "locator": "ATmega2560-AU · TQFP-100 · main MCU and connector nets",
       "method": "visual-diagram"
+    },
+    "arduino-leonardo-part": {
+      "document": "arduino-leonardo-schematic",
+      "title": "Arduino Leonardo schematic",
+      "url": "https://github.com/arduino/docs-content/blob/65d578fc7de843c45c21fc77b31a7a2009c46a5b/content/hardware/hero/boards/leonardo/downloads/A000057-schematics.pdf#page=1",
+      "page": 1,
+      "locator": "Arduino schematic · U2 · ATmega32U4-AU (TQFP-44)",
+      "method": "visual-diagram"
+    },
+    "arduino-micro-part": {
+      "document": "arduino-micro-schematic",
+      "title": "Arduino Micro schematic",
+      "url": "https://github.com/arduino/docs-content/blob/65d578fc7de843c45c21fc77b31a7a2009c46a5b/content/hardware/hero/boards/micro/downloads/A000053-schematics.pdf#page=1",
+      "page": 1,
+      "locator": "Arduino schematic · U1 · ATmega32U4-MU (QFN-44)",
+      "method": "visual-diagram"
+    },
+    "arduino-uno-r4-minima-part": {
+      "document": "arduino-uno-r4-minima-datasheet",
+      "title": "Arduino uno-r4-minima datasheet",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/uno/boards/uno-r4-minima/datasheet/en-datasheet.md",
+      "page": null,
+      "locator": "Board datasheet · fitted R7FA4M1AB3CFM LQFP-64 MCU",
+      "method": "source-text"
+    },
+    "arduino-uno-r4-wifi-part": {
+      "document": "arduino-uno-r4-wifi-datasheet",
+      "title": "Arduino uno-r4-wifi datasheet",
+      "url": "https://github.com/arduino/docs-content/blob/cb938e96b391e636011690e4db1348dc38db4deb/content/hardware/uno/boards/uno-r4-wifi/datasheet/en-datasheet.md",
+      "page": null,
+      "locator": "Board datasheet · fitted R7FA4M1AB3CFM LQFP-64 MCU",
+      "method": "source-text"
+    },
+    "arduino-nano-r4-part": {
+      "document": "nano-r4-datasheet",
+      "title": "Arduino Nano R4 Datasheet",
+      "url": "https://github.com/arduino/docs-content/blob/65d578fc7de843c45c21fc77b31a7a2009c46a5b/content/hardware/nano/boards/nano-r4/datasheet/datasheet.md",
+      "page": null,
+      "locator": "Board datasheet · fitted R7FA4M1AB3CFM LQFP-64 MCU",
+      "method": "source-text"
     },
     "hw-mb1364-bridges": {
       "document": "nucleo-um2407-r6",

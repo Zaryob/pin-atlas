@@ -8,7 +8,7 @@ Yeni profil eklemek için [kart ve MCU doğrulama adımlarını](docs/ADDING-BOA
 
 Üretici belgelerinden ve kimliği belirlenmiş kart referanslarından derlenen, İngilizce ve Türkçe bir pin rehberi. Fiziksel pin konumlarını, alternatif işlevleri ve bağlantı planlarını aynı çalışma alanında gösterir. Arayüz, şematik çizimler ve uygulama kodu bu proje için hazırlanmıştır. Konsol teması kişisel sitemle ortaktır.
 
-Katalogda 99 kart, başlık ve yonga profili var. 169 hash kilitli kaynak, 6.546 fiziksel pin kaydını ve 30.045 işlev atamasını kapsıyor. Katalog genelindeki doğrulama tarihi 5 Kasım 2026. Sonradan eklenen veya yeniden denetlenen profiller kendi doğrulama tarihlerini taşır.
+Katalogda 107 kart, başlık ve yonga profili var. 177 hash kilitli kaynak, 6.946 fiziksel pin kaydını ve 31.756 işlev atamasını kapsıyor. Katalog genelindeki doğrulama tarihi 5 Kasım 2026. Sonradan eklenen veya yeniden denetlenen profiller kendi doğrulama tarihlerini taşır.
 
 ## Pin düzenleri
 
@@ -52,6 +52,9 @@ Altyapıdaki pin düzenleri:
 - **Adafruit Feather RP2350 with HSTX.** Harita 22 temaslı HSTX konektörünü ve STEMMA QT’yi kapsar. 8 MB PSRAM’li varyant GPIO8’i belleğe ayırır.
 - **NUCLEO-H563ZI ve STM32H563ZIT6.** MB1404-C01 haritası 240 Zio/Morpho temasını LQFP-144 pakete bağlar. A4/A5 ayarı belgelenmiş analog veya I²C yolunu seçer.
 - **Texas Instruments MSPM0G3507SPT.** LQFP-48 haritasında 44 GPIO, 314 kaynaklı işlev ataması ve TI PINCM.PF değerleri bulunur.
+- **ATmega32U4.** Leonardo, üretici şemasındaki TQFP-44 pakete bağlanır. Arduino Micro, aynı çevre numaralandırmasını kullanan QFN-44 pakete bağlanır.
+- **Renesas RA4M1 LQFP-64.** R7FA4M1AB3CFM paket görünümü Nano R4, UNO R4 Minima ve UNO R4 WiFi’ın kart temaslarına bağlanır.
+- **Texas Instruments genel amaçlı MCU’lar.** MSPM0G3507SPM (VQFN-64), MSPM0L1306 (VQFN-32), MSPM33C321A (LQFP-64) ve MSP430FR2355TPT (LQFP-48). LP-MSPM0G3507’nin 40 BoosterPack teması, MSPM0G3507SPM paketine bağlanır ve varsayılan J14/J15 konumlarını izler.
 
 Pico çizimi ortak başlığı gösterir; kablosuz bağlantının, LED'in veya kart içi kablolamanın aynı olduğunu iddia etmez. İşlemci referansları fiziksel pin konumlarını değil, alternatif işlevleri değiştirir. Planlar referans başına kaydedilir; eski model bağlantıları, dışa aktarılmış JSON dosyaları ve kayıtlı planlar desteklenmeye devam eder. Aynı işlemci için birden çok eski model planı varsa birleştirilmeden Uyumlu kartlar bölümünde ayrı ayrı erişilebilir kalır.
 
@@ -132,7 +135,7 @@ GitHub Actions, önbelleğe alınmış bir kaynak klasörüyle `python3 scripts/
 
 - **Belgeden ayrıştırılmış.** Üretici betik, kilitli kopyadan PDF tablolarını, XML, KiCad veya kaynak dosyalarını okur. STM32, Raspberry Pi, Espressif, Arduino çekirdeği, Jetson, BeagleBone Black ve micro:bit verisinin çoğu böyledir.
 - **Elle kaydedilmiş tablolar.** Adafruit Feather RP2040 ve Teensy 4.1 üretici betikleri, atıf yapılan pin şemasından elle girilmiş tablolar içerir ve kilitli belgeyi açmaz. Teensy'de PWM, ADC ve port verisi, kilitli bir belge olmayan Teensy çekirdek kaynak koduyla çapraz denetlendi.
-- **Görsel okuma.** Bazı temas konumları ve etiketleri çizim veya fotoğraftan aktarıldı. Eski gözlemler `sources/manual-observations.json` dosyasında, yeni profillerin okumaları ise kaynak çıkarıcılarında kayıtlıdır. [Üretilmiş doğrulama kaydında](public/data/verification.json) 99 profilin 64’ü görsel kanıta başvurur. 6.546 pin kaydının 608’inde (%9,3) fiziksel temas kanıtı görsel okumadan gelir.
+- **Görsel okuma.** Bazı temas konumları ve etiketleri çizim veya fotoğraftan aktarıldı. Eski gözlemler `sources/manual-observations.json` dosyasında, yeni profillerin okumaları ise kaynak çıkarıcılarında kayıtlıdır. [Üretilmiş doğrulama kaydında](public/data/verification.json) 107 profilin 68’i görsel kanıta başvurur. 6.946 pin kaydının 700’ünde (%10,1) fiziksel temas kanıtı görsel okumadan gelir.
 
 Aynı kayıt RP2350 Release 8'deki IOVDD tutarsızlığını da açıklar. Tam yöntem için [doğrulama kaydına](docs/VERIFICATION.tr.md) bakın.
 

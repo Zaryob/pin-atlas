@@ -100,11 +100,12 @@ test('the board library focuses its search only where there is a hover pointer',
 test('the Turkish entry address opens the atlas in Turkish and keeps a board link',async({page})=>{
   const response=await page.goto('./tr/');
   expect(response.status()).toBe(200);
-  await expect(page).toHaveURL(/\/pin-atlas\/\?lang=tr$/);
+  expect(await response.text()).toContain('Türkçe kart ve pin dizini');
+  await expect(page).toHaveURL(/\/pin-atlas\/tr\/$/);
   await expect(page.locator('html')).toHaveAttribute('lang','tr');
   await expect(page.locator('#app-status')).toBeHidden();
-  await page.goto('./tr/#board=pico-family&profile=pico&pin=20');
-  await expect(page).toHaveURL(/\/pin-atlas\/\?lang=tr#board=pico-family/);
+  await page.goto('./?lang=tr#board=pico-family&profile=pico&pin=20');
+  await expect(page).toHaveURL(/\/pin-atlas\/tr\/#board=pico-family/);
   await expect(page.locator('#board-title')).toHaveText('Raspberry Pi Pico');
 });
 

@@ -16,9 +16,10 @@ export const boardFamilies = [
   {id:'teensy',nameKey:'familyTeensy',layouts:['teensy-41']},
   {id:'beagleboard',nameKey:'familyBeagleBoard',layouts:['beaglebone-black']},
   {id:'microbit',nameKey:'familyMicrobit',layouts:['microbit-v2']},
-  {id:'microchip',nameKey:'familyMicrochip',layouts:['atmega328p-pdip28','atmega328p-tqfp32','atmega328p-qfn32','atmega328p-qfn28','atmega2560-tqfp100','atmega2561-tqfp64']},
+  {id:'microchip',nameKey:'familyMicrochip',layouts:['atmega328p-pdip28','atmega328p-tqfp32','atmega328p-qfn32','atmega328p-qfn28','atmega2560-tqfp100','atmega2561-tqfp64','atmega32u4-tqfp44','atmega32u4-qfn44']},
+  {id:'renesas',nameKey:'familyRenesas',layouts:['ra4m1-lqfp64']},
   {id:'nvidia',nameKey:'familyNvidia',layouts:['jetson-orin-nano']},
-  {id:'texas-instruments',nameKey:'familyTexasInstruments',layouts:['mspm0g3507spt']}
+  {id:'texas-instruments',nameKey:'familyTexasInstruments',layouts:['mspm0g3507spt','mspm0g3507spm','lp-mspm0g3507','mspm0l1306-vqfn32','mspm33c321a-lqfp64','msp430fr2355tpt']}
 ];
 export const catalogTypes = [
   {id:'all',labelKey:'catalogAll'}, {id:'boards',labelKey:'catalogBoards',filterKey:'catalogBoardsShort'},

@@ -2,7 +2,7 @@
 
 [English](VERIFICATION.md) · [Türkçe](VERIFICATION.tr.md)
 
-Catalog snapshot from the generated data: **99 board, header, and chip profiles, 6,546 physical pin records, and 30,045 function assignments**, taken from **169 hash-locked source records** in [`sources/manifest.json`](../sources/manifest.json). The catalog-wide `verifiedOn` date stays **5 November 2026** on purpose: on 14–15 November 2026 only the profiles changed on those days were checked again, not the whole catalog. Profiles whose pin data or board cautions were corrected after that date, and profiles added later, carry their own date from `verifiedOnByProfile` in the manifest: the day of their last data change (14, 15, 16 or 19 November 2026). Add or update an entry there whenever a profile is verified or corrected. Totals are recorded in [`public/data/verification.json`](../public/data/verification.json); these counts do not certify that every pin was independently reviewed. Shared physical pins are counted once per profile. The count excludes the app’s generic `GPIO` planning option and unnumbered QFN center GND pads. Each placement of a signal on a different pin counts separately.
+Catalog snapshot from the generated data: **107 board, header, and chip profiles, 6,946 physical pin records, and 31,756 function assignments**, taken from **177 hash-locked source records** in [`sources/manifest.json`](../sources/manifest.json). The catalog-wide `verifiedOn` date stays **5 November 2026** on purpose: on 14–15 November 2026 only the profiles changed on those days were checked again, not the whole catalog. Profiles whose pin data or board cautions were corrected after that date, and profiles added later, carry their own date from `verifiedOnByProfile` in the manifest: the day of their last data change (14, 15, 16 or 19 November 2026). Add or update an entry there whenever a profile is verified or corrected. Totals are recorded in [`public/data/verification.json`](../public/data/verification.json); these counts do not certify that every pin was independently reviewed. Shared physical pins are counted once per profile. The count excludes the app’s generic `GPIO` planning option and unnumbered QFN center GND pads. Each placement of a signal on a different pin counts separately.
 
 ## Sources by pin map
 
@@ -93,7 +93,7 @@ A SHA-256 lock proves that the cited document is the one that was reviewed and t
 
 - **Parsed from the document:** PDF tables, manufacturer XML, KiCad files, Markdown/RST tables or source code read from the locked copy. This covers most STM32, Raspberry Pi, Espressif, Arduino core, Jetson, BeagleBone Black and micro:bit data.
 - **Hand-recorded tables:** the Adafruit Feather RP2040 and Teensy 4.1 generators contain tables typed in from the cited pinout and do not open the locked document. Teensy PWM, ADC and port data were cross-checked against the Teensy core source.
-- **Visual readings.** Some contact positions and labels were transcribed from a drawing or photo. Earlier observations are in `sources/manual-observations.json`. The recently added profiles record these readings alongside their source extractors. In [the generated verification report](../public/data/verification.json), 64 of 99 profiles list visual evidence, and 608 of 6,546 pin records (9.3%) cite only visual evidence for their physical contacts.
+- **Visual readings.** Some contact positions and labels were transcribed from a drawing or photo. Earlier observations are in `sources/manual-observations.json`. The recently added profiles record these readings alongside their source extractors. In [the generated verification report](../public/data/verification.json), 68 of 107 profiles list visual evidence, and 700 of 6,946 pin records (10.1%) cite only visual evidence for their physical contacts.
 
 ### Sourced warnings
 
@@ -313,3 +313,7 @@ The following official primary documents and verification rules govern additions
 ## Profiles added on 19 November 2026
 
 UM3115 Rev 3 pp. 27 and 33–36 document the MB1404 connector contacts and A4/A5 setting. STM32H563ZIT6 package pads and alternate-function selectors come from the matching ST XML files. The Nano R4 pinout and Arduino core are pinned separately. XIAO RP2350 electrical mappings follow the Seeed schematic and RP2350 datasheet. The rear drawing identifies pad positions. Feather connector nets are parsed from Eagle. For MSPM0G3507SPT, the extractor reads the LQFP-48 column and PINCM.PF values from SLASEX6C Table 6-2.
+
+- **ATmega32U4.** Leonardo connects to the TQFP-44 package documented in its schematic. Arduino Micro links to QFN-44, which uses the same perimeter numbering.
+- **Renesas RA4M1 LQFP-64.** The R7FA4M1AB3CFM package links to contacts on Nano R4, UNO R4 Minima and UNO R4 WiFi.
+- **Texas Instruments general-purpose MCUs.** MSPM0G3507SPM (VQFN-64), MSPM0L1306 (VQFN-32), MSPM33C321A (LQFP-64) and MSP430FR2355TPT (LQFP-48). The 40 LP-MSPM0G3507 BoosterPack contacts link to the MSPM0G3507SPM package and use the documented J14/J15 defaults.

@@ -70,7 +70,7 @@ test('each profile has a generated page in both languages with its own title, ca
     assert.ok(description.includes(profile.name) && description.includes(String(board.pins.length)),description);
     assert.equal(html.match(/<tr id="pin-/g).length,board.pins.length,path);
     assert.equal(html.match(/<h1>/g).length,1,path);
-    assert.ok(html.includes(`href="${language==='tr'?'../../../':'../../'}${atlasHash(profile).replace('&','&amp;')}"`),path);
+    assert.ok(html.includes(`href="${language==='tr'?'../../../tr/':'../../'}${atlasHash(profile).replace('&','&amp;')}"`),path);
     for(const caution of board.cautions||[])for(const key of caution.evidence)assert.ok(html.includes(`href="${references[key].url.replaceAll('&','&amp;')}"`),`${path} caution source ${key}`);
     JSON.parse(JSON.parse(html.match(/^json_ld: (.*)$/m)[1]));
   }
@@ -80,7 +80,7 @@ test('the index lists every profile once under its platform and the sitemap cove
   const sitemap=read('public/sitemap.xml');
   const locations=[...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match=>match[1]);
   assert.equal(new Set(locations).size,locations.length);
-  assert.deepEqual(locations,[site,...languages.map(language=>site+indexPath(language)),
+  assert.deepEqual(locations,[site,site+'tr/',...languages.map(language=>site+indexPath(language)),
     ...profiles.flatMap(profile=>languages.map(language=>site+boardPath(profile.id,language)))]);
   for(const location of locations.slice(1))assert.ok(existsSync(new URL('public/'+location.slice(site.length)+'index.html',root)),location);
   for(const language of languages){

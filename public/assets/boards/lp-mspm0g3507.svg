@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 825" width="820" height="825">
+  <rect x="232" y="65" width="356" height="716" rx="12" fill="#742c27" stroke="#a96659" stroke-width="3"/>
+  <path d="M247 409h326" fill="none" stroke="#e2bd9a" stroke-dasharray="8 6"/>
+  <rect x="365" y="42" width="90" height="53" rx="6" fill="#b8c8cb" stroke="#617579" stroke-width="2"/>
+  <rect x="342" y="158" width="136" height="122" rx="7" fill="#403633" stroke="#d19679" stroke-width="2"/>
+  <rect x="342" y="490" width="136" height="120" rx="7" fill="#403633" stroke="#d19679" stroke-width="2"/>
+  <g fill="#f0d3b9" text-anchor="middle" font-family="monospace">
+    <text x="410" y="222" font-size="17">XDS110</text>
+    <text x="410" y="548" font-size="17">MSPM0G3507</text>
+    <text x="410" y="635" font-size="15">LP-MSPM0G3507</text>
+  </g>
+</svg>

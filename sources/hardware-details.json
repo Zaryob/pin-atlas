@@ -1117,6 +1117,42 @@
       "url": "https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf",
       "publisher": "Texas Instruments",
       "locator": "SLASEX6C, Features, Device Comparison, and Pin Configuration"
+    },
+    "atmega32u4-datasheet": {
+      "title": "ATmega16U4/32U4 Datasheet",
+      "publisher": "Atmel / Microchip",
+      "url": "https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf",
+      "locator": "Device features and package pin configuration"
+    },
+    "ra4m1-datasheet": {
+      "title": "Renesas RA4M1 Group Datasheet",
+      "publisher": "Renesas",
+      "url": "https://www.renesas.com/en/document/dst/ra4m1-group-datasheet?language=en",
+      "locator": "Device features and package pin configuration"
+    },
+    "mspm0l1306-datasheet": {
+      "title": "MSPM0L130x Mixed-Signal Microcontrollers",
+      "publisher": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm0l1306.pdf",
+      "locator": "Device features and package pin configuration"
+    },
+    "mspm33c321a-datasheet": {
+      "title": "MSPM33C321x Mixed-Signal Microcontrollers",
+      "publisher": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf",
+      "locator": "Device features and package pin configuration"
+    },
+    "msp430fr2355-datasheet": {
+      "title": "MSP430FR235x / MSP430FR215x Mixed-Signal Microcontrollers",
+      "publisher": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/msp430fr2355.pdf",
+      "locator": "Device features and package pin configuration"
+    },
+    "lp-mspm0g3507-guide": {
+      "title": "LP-MSPM0G3507 LaunchPad Development Kit User’s Guide",
+      "publisher": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ug/slau873e/slau873e.pdf",
+      "locator": "Device features and package pin configuration"
     }
   },
   "chips": {
@@ -5333,6 +5369,164 @@
           "mspm0g3507-datasheet"
         ]
       }
+    },
+    "atmega32u4-tqfp44": {
+      "sources": [
+        "atmega32u4-datasheet"
+      ],
+      "cpu": "8-bit AVR",
+      "clock": "16 MHz",
+      "ram": "2.5 KB SRAM",
+      "flash": "32 KB Flash",
+      "power": "2.7–5.5 V VCC",
+      "date": {
+        "kind": "documented",
+        "value": "2010",
+        "sources": [
+          "atmega32u4-datasheet"
+        ]
+      },
+      "reviewedOn": "2026-11-19",
+      "eeprom": "1 KB EEPROM"
+    },
+    "ra4m1-lqfp64": {
+      "sources": [
+        "ra4m1-datasheet"
+      ],
+      "cpu": "Arm Cortex-M4F",
+      "clock": "48 MHz",
+      "ram": "32 KB SRAM",
+      "flash": "256 KB Code Flash",
+      "power": "1.6–5.5 V VCC",
+      "date": {
+        "kind": "documented",
+        "value": "2023",
+        "sources": [
+          "ra4m1-datasheet"
+        ]
+      },
+      "reviewedOn": "2026-11-19",
+      "eeprom": {
+        "en": "8 KB Data Flash",
+        "tr": "8 KB Veri Flash belleği"
+      }
+    },
+    "mspm0g3507spm": {
+      "sources": [
+        "mspm0g3507-datasheet"
+      ],
+      "cpu": "Arm Cortex-M0+",
+      "clock": "80 MHz",
+      "ram": "32 KB SRAM",
+      "flash": "128 KB Flash",
+      "power": "1.62–3.6 V VDD",
+      "date": {
+        "kind": "documented",
+        "value": "2025",
+        "sources": [
+          "mspm0g3507-datasheet"
+        ]
+      },
+      "reviewedOn": "2026-11-19"
+    },
+    "mspm0l1306-vqfn32": {
+      "sources": [
+        "mspm0l1306-datasheet"
+      ],
+      "cpu": "Arm Cortex-M0+",
+      "clock": "32 MHz",
+      "ram": "4 KB SRAM",
+      "flash": "64 KB Flash",
+      "power": "1.62–3.6 V VDD",
+      "date": {
+        "kind": "documented",
+        "value": "2024",
+        "sources": [
+          "mspm0l1306-datasheet"
+        ]
+      },
+      "reviewedOn": "2026-11-19"
+    },
+    "mspm33c321a-lqfp64": {
+      "sources": [
+        "mspm33c321a-datasheet"
+      ],
+      "cpu": "Arm Cortex-M33",
+      "clock": "160 MHz",
+      "ram": "256 KB SRAM",
+      "flash": "1 MB Flash",
+      "power": "1.71–3.6 V VDD",
+      "date": {
+        "kind": "documented",
+        "value": "2026",
+        "sources": [
+          "mspm33c321a-datasheet"
+        ]
+      },
+      "reviewedOn": "2026-11-19"
+    },
+    "msp430fr2355tpt": {
+      "sources": [
+        "msp430fr2355-datasheet"
+      ],
+      "cpu": "16-bit MSP430",
+      "clock": "24 MHz",
+      "ram": "4 KB SRAM",
+      "flash": {
+        "en": "32 KB program FRAM + 512 B information FRAM",
+        "tr": "32 KB program FRAM + 512 B bilgi FRAM"
+      },
+      "power": "1.8–3.6 V DVCC",
+      "date": {
+        "kind": "documented",
+        "value": "2019",
+        "sources": [
+          "msp430fr2355-datasheet"
+        ]
+      },
+      "reviewedOn": "2026-11-19"
+    },
+    "lp-mspm0g3507": {
+      "sources": [
+        "lp-mspm0g3507-guide",
+        "mspm0g3507-datasheet"
+      ],
+      "cpu": "Arm Cortex-M0+",
+      "clock": "80 MHz",
+      "ram": "32 KB SRAM",
+      "flash": "128 KB Flash",
+      "power": "3.3 V I/O",
+      "date": {
+        "kind": "documented",
+        "value": "2026",
+        "sources": [
+          "lp-mspm0g3507-guide",
+          "mspm0g3507-datasheet"
+        ]
+      },
+      "reviewedOn": "2026-11-19",
+      "documents": [
+        "lp-mspm0g3507-guide"
+      ]
+    },
+    "atmega32u4-qfn44": {
+      "sources": [
+        "atmega32u4-datasheet"
+      ],
+      "cpu": "8-bit AVR",
+      "clock": "16 MHz",
+      "ram": "2.5 KB SRAM",
+      "flash": "32 KB Flash",
+      "power": "2.7–5.5 V VCC",
+      "date": {
+        "kind": "documented",
+        "value": "2010",
+        "sources": [
+          "atmega32u4-datasheet"
+        ]
+      },
+      "reviewedOn": "2026-11-19",
+      "eeprom": "1 KB EEPROM"
     }
   }
 }

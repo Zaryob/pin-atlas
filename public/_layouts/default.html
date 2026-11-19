@@ -1,26 +1,31 @@
 <!doctype html>
 <!-- SPDX-License-Identifier: GPL-3.0-or-later -->
-<html lang="en">
+{% assign atlas_lang = page.lang | default: 'en' %}
+{% assign atlas_path = '/' %}{% if atlas_lang == 'tr' %}{% assign atlas_path = '/tr/' %}{% endif %}
+{% assign atlas_origin = 'https://zaryob.github.io/pin-atlas' %}
+{% assign atlas_description = page.description %}
+<html lang="{{ atlas_lang }}" data-route-language="{{ atlas_lang }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,interactive-widget=resizes-content">
   {% include console-analytics.html %}
   <meta name="theme-color" content="#f5f3ed">
-  <meta name="description" data-i18n-content="description" content="Interactive pinout guide for Raspberry Pi, Pico, Arduino, ESP, and STM32 boards and chips. Explore pins, filter interfaces, and save wiring plans.">
+  <meta name="description" content="{{ atlas_description | escape }}">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Pin Atlas — Pinout explorer">
-  <meta property="og:description" data-i18n-content="description" content="Interactive pinout guide for Raspberry Pi, Pico, Arduino, ESP, and STM32 boards and chips. Explore pins, filter interfaces, and save wiring plans.">
-  <meta property="og:url" content="https://zaryob.github.io/pin-atlas/">
+  <meta property="og:title" content="{{ page.title | escape }}">
+  <meta property="og:description" content="{{ atlas_description | escape }}">
+  <meta property="og:url" content="{{ atlas_origin }}{{ atlas_path }}">
+  <meta property="og:locale" content="{% if atlas_lang == 'tr' %}tr_TR{% else %}en_US{% endif %}">
   <meta property="og:image" content="https://zaryob.github.io/pin-atlas/assets/social-card.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Pin Atlas — Explore pins and plan connections">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Pin Atlas — Pinout explorer">
-  <meta name="twitter:description" data-i18n-content="description" content="Interactive pinout guide for Raspberry Pi, Pico, Arduino, ESP, and STM32 boards and chips. Explore pins, filter interfaces, and save wiring plans.">
+  <meta name="twitter:title" content="{{ page.title | escape }}">
+  <meta name="twitter:description" content="{{ atlas_description | escape }}">
   <meta name="twitter:image" content="https://zaryob.github.io/pin-atlas/assets/social-card.png">
   <meta name="twitter:image:alt" content="Pin Atlas — Explore pins and plan connections">
-  <title data-i18n="pageTitle">{{ page.title | default: site.title | escape }}</title>
+  <title>{{ page.title | escape }}</title>
   <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}">
   <script src="{{ '/assets/console/language.js' | relative_url }}"></script>
   <script src="{{ '/i18n.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
@@ -28,11 +33,14 @@
   <link rel="stylesheet" href="{{ '/assets/console/theme.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
   <script type="module" src="{{ '/app.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
-  <link rel="canonical" href="https://zaryob.github.io/pin-atlas/">
+  <link rel="canonical" href="{{ atlas_origin }}{{ atlas_path }}">
+  <link rel="alternate" hreflang="en" href="{{ atlas_origin }}/" data-language-route="{{ '/' | relative_url }}">
+  <link rel="alternate" hreflang="tr" href="{{ atlas_origin }}/tr/" data-language-route="{{ '/tr/' | relative_url }}">
+  <link rel="alternate" hreflang="x-default" href="{{ atlas_origin }}/">
 </head>
 <body class="pin-atlas-site">
   {% include console-header.html %}
-  <a class="skip" href="#main"><span data-i18n="skip">Skip to content</span></a>
+  <a class="skip" href="#main"><span data-i18n="skip">{% if atlas_lang == 'tr' %}İçeriğe geç{% else %}Skip to content{% endif %}</span></a>
 {{ content }}
 {% include site-footer.html %}
 </body>

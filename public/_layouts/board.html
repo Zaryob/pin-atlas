@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- SPDX-License-Identifier: GPL-3.0-or-later -->
-<html lang="{{ page.lang | default: 'en' }}">
+<html lang="{{ page.lang | default: 'en' }}" data-route-language="{{ page.lang | default: 'en' }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,interactive-widget=resizes-content">
@@ -9,8 +9,9 @@
   <title>{{ page.title | escape }}</title>
   <meta name="description" content="{{ page.description | escape }}">
   <link rel="canonical" href="{{ page.canonical }}">
-  <link rel="alternate" hreflang="en" href="{{ page.alternate_en }}">
-  <link rel="alternate" hreflang="tr" href="{{ page.alternate_tr }}">
+  {% assign en_route = page.url %}{% if page.lang == 'tr' %}{% assign en_route = page.url | remove_first: '/tr' %}{% endif %}
+  <link rel="alternate" hreflang="en" href="{{ page.alternate_en }}" data-language-route="{{ en_route | relative_url }}">
+  <link rel="alternate" hreflang="tr" href="{{ page.alternate_tr }}" data-language-route="{{ en_route | prepend: '/tr' | relative_url }}">
   <link rel="alternate" hreflang="x-default" href="{{ page.alternate_en }}">
   <meta property="og:type" content="{{ page.og_type | default: 'article' }}">
   <meta property="og:site_name" content="Pin Atlas">

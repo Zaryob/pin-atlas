@@ -112,3 +112,21 @@ test('on-board memory and the Nano R4 connector voltage stay profile-specific',(
   assert(contact(nano,'L.8').functions.some(fn=>fn.name==='I2C1 SDA'));
   assert.equal(contact(source('xiao-rp2350'),'TP.16').net,'GPIO21');
 });
+
+test('Arduino and TI board contacts link to their fitted MCU packages',()=>{
+  const cases=[
+    ['arduino-leonardo','DIGITAL.1','atmega32u4-tqfp44',20,'PD2'],
+    ['arduino-micro','R.14','atmega32u4-qfn44',20,'PD2'],
+    ['arduino-nano-r4','QWIIC.3','ra4m1-lqfp64',2,'P401'],
+    ['arduino-uno-r4-minima','DIGITAL.14','ra4m1-lqfp64',36,'P111'],
+    ['arduino-uno-r4-wifi','DIGITAL.14','ra4m1-lqfp64',46,'P102'],
+    ['lp-mspm0g3507','J1.3','mspm0g3507spm',22,'PB23'],
+    ['lp-mspm0g3507','J3.29','mspm0g3507spm',9,'PA16'],
+  ];
+  for(const [id,label,packageId,number,net] of cases){
+    const board=source(id);
+    assert.equal(board.mcuProfile,packageId);
+    assert.equal(contact(board,label).mcuPin,number);
+    assert.equal(source(packageId).pins.find(pin=>pin.number===number).name,net);
+  }
+});

@@ -1384,5 +1384,117 @@
     "url": "/pin-atlas/#board=mspm0g3507spt&profile=mspm0g3507spt",
     "type": "pin-atlas/",
     "description": "LQFP-48 · Arm Cortex-M0+ · 80 MHz · MSPM0G3507SPT · Texas Instruments"
+  },
+  {
+    "lang": "tr",
+    "title": "ATmega32U4 · TQFP-44",
+    "url": "/pin-atlas/#board=atmega32u4-tqfp44&profile=atmega32u4-tqfp44",
+    "type": "pin-atlas/",
+    "description": "TQFP-44 · 8-bit AVR · ATmega32U4 · Microchip AVR"
+  },
+  {
+    "lang": "en",
+    "title": "ATmega32U4 · TQFP-44",
+    "url": "/pin-atlas/#board=atmega32u4-tqfp44&profile=atmega32u4-tqfp44",
+    "type": "pin-atlas/",
+    "description": "TQFP-44 · 8-bit AVR · ATmega32U4 · Microchip AVR"
+  },
+  {
+    "lang": "tr",
+    "title": "ATmega32U4 · QFN-44",
+    "url": "/pin-atlas/#board=atmega32u4-qfn44&profile=atmega32u4-qfn44",
+    "type": "pin-atlas/",
+    "description": "QFN-44 · 8-bit AVR · ATmega32U4 · Microchip AVR"
+  },
+  {
+    "lang": "en",
+    "title": "ATmega32U4 · QFN-44",
+    "url": "/pin-atlas/#board=atmega32u4-qfn44&profile=atmega32u4-qfn44",
+    "type": "pin-atlas/",
+    "description": "QFN-44 · 8-bit AVR · ATmega32U4 · Microchip AVR"
+  },
+  {
+    "lang": "tr",
+    "title": "Renesas RA4M1 · LQFP-64",
+    "url": "/pin-atlas/#board=ra4m1-lqfp64&profile=ra4m1-lqfp64",
+    "type": "pin-atlas/",
+    "description": "R7FA4M1AB3CFM · LQFP-64 · 48 MHz · Renesas RA4M1 · Renesas"
+  },
+  {
+    "lang": "en",
+    "title": "Renesas RA4M1 · LQFP-64",
+    "url": "/pin-atlas/#board=ra4m1-lqfp64&profile=ra4m1-lqfp64",
+    "type": "pin-atlas/",
+    "description": "R7FA4M1AB3CFM · LQFP-64 · 48 MHz · Renesas RA4M1 · Renesas"
+  },
+  {
+    "lang": "tr",
+    "title": "MSPM0G3507SPM · VQFN-64",
+    "url": "/pin-atlas/#board=mspm0g3507spm&profile=mspm0g3507spm",
+    "type": "pin-atlas/",
+    "description": "VQFN-64 · Arm Cortex-M0+ · 80 MHz · MSPM0G3507SPM · Texas Instruments"
+  },
+  {
+    "lang": "en",
+    "title": "MSPM0G3507SPM · VQFN-64",
+    "url": "/pin-atlas/#board=mspm0g3507spm&profile=mspm0g3507spm",
+    "type": "pin-atlas/",
+    "description": "VQFN-64 · Arm Cortex-M0+ · 80 MHz · MSPM0G3507SPM · Texas Instruments"
+  },
+  {
+    "lang": "tr",
+    "title": "MSPM0L1306 · VQFN-32",
+    "url": "/pin-atlas/#board=mspm0l1306-vqfn32&profile=mspm0l1306-vqfn32",
+    "type": "pin-atlas/",
+    "description": "VQFN-32 · Arm Cortex-M0+ · 32 MHz · MSPM0L1306 · Texas Instruments"
+  },
+  {
+    "lang": "en",
+    "title": "MSPM0L1306 · VQFN-32",
+    "url": "/pin-atlas/#board=mspm0l1306-vqfn32&profile=mspm0l1306-vqfn32",
+    "type": "pin-atlas/",
+    "description": "VQFN-32 · Arm Cortex-M0+ · 32 MHz · MSPM0L1306 · Texas Instruments"
+  },
+  {
+    "lang": "tr",
+    "title": "MSPM33C321A · LQFP-64",
+    "url": "/pin-atlas/#board=mspm33c321a-lqfp64&profile=mspm33c321a-lqfp64",
+    "type": "pin-atlas/",
+    "description": "LQFP-64 · Arm Cortex-M33 · 160 MHz · MSPM33C321A · Texas Instruments"
+  },
+  {
+    "lang": "en",
+    "title": "MSPM33C321A · LQFP-64",
+    "url": "/pin-atlas/#board=mspm33c321a-lqfp64&profile=mspm33c321a-lqfp64",
+    "type": "pin-atlas/",
+    "description": "LQFP-64 · Arm Cortex-M33 · 160 MHz · MSPM33C321A · Texas Instruments"
+  },
+  {
+    "lang": "tr",
+    "title": "MSP430FR2355TPT · LQFP-48",
+    "url": "/pin-atlas/#board=msp430fr2355tpt&profile=msp430fr2355tpt",
+    "type": "pin-atlas/",
+    "description": "LQFP-48 · 16-bit MSP430 · 24 MHz · MSP430FR2355TPT · Texas Instruments"
+  },
+  {
+    "lang": "en",
+    "title": "MSP430FR2355TPT · LQFP-48",
+    "url": "/pin-atlas/#board=msp430fr2355tpt&profile=msp430fr2355tpt",
+    "type": "pin-atlas/",
+    "description": "LQFP-48 · 16-bit MSP430 · 24 MHz · MSP430FR2355TPT · Texas Instruments"
+  },
+  {
+    "lang": "tr",
+    "title": "TI LP-MSPM0G3507 LaunchPad",
+    "url": "/pin-atlas/#board=lp-mspm0g3507&profile=lp-mspm0g3507",
+    "type": "pin-atlas/",
+    "description": "MSPM0G3507SPM · 40 BoosterPack teması · MSPM0G3507SPM · Texas Instruments"
+  },
+  {
+    "lang": "en",
+    "title": "TI LP-MSPM0G3507 LaunchPad",
+    "url": "/pin-atlas/#board=lp-mspm0g3507&profile=lp-mspm0g3507",
+    "type": "pin-atlas/",
+    "description": "MSPM0G3507SPM · 40 BoosterPack contacts · MSPM0G3507SPM · Texas Instruments"
   }
 ]

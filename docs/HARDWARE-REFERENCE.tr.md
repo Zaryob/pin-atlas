@@ -1,6 +1,6 @@
 # Donanım araştırması ve teknik referans
 
-İnceleme: 2026-11-14. 99 profil ayrı ayrı kapsanır. 58 profil için nitelendirilmiş tarih bilgisi vardır; 41 profilin kesin ilk üretim/satış tarihi doğrulanmamıştır. MCU veri sayfasının ilk yayını, kartın üretim yılı olarak sunulmaz.
+İnceleme: 2026-11-14. 107 profil ayrı ayrı kapsanır. 66 profil için nitelendirilmiş tarih bilgisi vardır; 41 profilin kesin ilk üretim/satış tarihi doğrulanmamıştır. MCU veri sayfasının ilk yayını, kartın üretim yılı olarak sunulmaz.
 
 Bu dosya `sources/hardware-details.json` kayıtlarından `npm run build:data` ile üretilir. Her özellik ve notun kaynak bağlantısı yanındadır. Canlı üretici sayfalarının içeriği değişebilir; pin kanıtlarının kilitli sürüm ve SHA-256 bilgileri ayrı `sources/manifest.json` kaydında korunur. Yeni teknik bilgi incelemesi, önceki pin doğrulama tarihini değiştirmez.
 
@@ -1617,4 +1617,113 @@ Teknik bilgi incelemesi 2026-11-19.
 - **RAM:** 32 KB SRAM. [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
 - **Program Flash’ı / depolama:** 128 KB Flash. [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
 - **Besleme / mantık:** 1.62–3.6 V VDD. [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+
+### ATmega32U4 · TQFP-44
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=atmega32u4-tqfp44&profile=atmega32u4-tqfp44) · [Pin referansı](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf#page=3) · [Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+
+Teknik bilgi incelemesi 2026-11-19.
+
+- **Belgelenmiş olduğu tarih:** 2010. [ATmega16U4/32U4 Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+- **İşlemci:** 8-bit AVR. [ATmega16U4/32U4 Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+- **Saat hızı / üst sınır:** 16 MHz. [ATmega16U4/32U4 Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+- **RAM:** 2.5 KB SRAM. [ATmega16U4/32U4 Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+- **Program Flash’ı / depolama:** 32 KB Flash. [ATmega16U4/32U4 Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+- **EEPROM / kalıcı veri:** 1 KB EEPROM. [ATmega16U4/32U4 Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+- **Besleme / mantık:** 2.7–5.5 V VCC. [ATmega16U4/32U4 Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+
+### ATmega32U4 · QFN-44
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=atmega32u4-qfn44&profile=atmega32u4-qfn44) · [Pin referansı](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf#page=3) · [Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+
+Teknik bilgi incelemesi 2026-11-19.
+
+- **Belgelenmiş olduğu tarih:** 2010. [ATmega16U4/32U4 Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+- **İşlemci:** 8-bit AVR. [ATmega16U4/32U4 Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+- **Saat hızı / üst sınır:** 16 MHz. [ATmega16U4/32U4 Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+- **RAM:** 2.5 KB SRAM. [ATmega16U4/32U4 Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+- **Program Flash’ı / depolama:** 32 KB Flash. [ATmega16U4/32U4 Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+- **EEPROM / kalıcı veri:** 1 KB EEPROM. [ATmega16U4/32U4 Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+- **Besleme / mantık:** 2.7–5.5 V VCC. [ATmega16U4/32U4 Datasheet](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ATMega32U4.pdf)
+
+### Renesas RA4M1 · LQFP-64
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=ra4m1-lqfp64&profile=ra4m1-lqfp64) · [Pin referansı](https://www.renesas.com/en/document/dst/ra4m1-group-datasheet?language=en#page=18) · [Datasheet](https://www.renesas.com/en/document/dst/ra4m1-group-datasheet?language=en)
+
+Teknik bilgi incelemesi 2026-11-19.
+
+- **Belgelenmiş olduğu tarih:** 2023. [Renesas RA4M1 Group Datasheet](https://www.renesas.com/en/document/dst/ra4m1-group-datasheet?language=en)
+- **İşlemci:** Arm Cortex-M4F. [Renesas RA4M1 Group Datasheet](https://www.renesas.com/en/document/dst/ra4m1-group-datasheet?language=en)
+- **Saat hızı / üst sınır:** 48 MHz. [Renesas RA4M1 Group Datasheet](https://www.renesas.com/en/document/dst/ra4m1-group-datasheet?language=en)
+- **RAM:** 32 KB SRAM. [Renesas RA4M1 Group Datasheet](https://www.renesas.com/en/document/dst/ra4m1-group-datasheet?language=en)
+- **Program Flash’ı / depolama:** 256 KB Code Flash. [Renesas RA4M1 Group Datasheet](https://www.renesas.com/en/document/dst/ra4m1-group-datasheet?language=en)
+- **EEPROM / kalıcı veri:** 8 KB Veri Flash belleği. [Renesas RA4M1 Group Datasheet](https://www.renesas.com/en/document/dst/ra4m1-group-datasheet?language=en)
+- **Besleme / mantık:** 1.6–5.5 V VCC. [Renesas RA4M1 Group Datasheet](https://www.renesas.com/en/document/dst/ra4m1-group-datasheet?language=en)
+
+### MSPM0G3507SPM · VQFN-64
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=mspm0g3507spm&profile=mspm0g3507spm) · [Pin referansı](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf#page=7) · [Datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+
+Teknik bilgi incelemesi 2026-11-19.
+
+- **Belgelenmiş olduğu tarih:** 2025. [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+- **İşlemci:** Arm Cortex-M0+. [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+- **Saat hızı / üst sınır:** 80 MHz. [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+- **RAM:** 32 KB SRAM. [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+- **Program Flash’ı / depolama:** 128 KB Flash. [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+- **Besleme / mantık:** 1.62–3.6 V VDD. [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+
+### MSPM0L1306 · VQFN-32
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=mspm0l1306-vqfn32&profile=mspm0l1306-vqfn32) · [Pin referansı](https://www.ti.com/lit/ds/symlink/mspm0l1306.pdf#page=6) · [Datasheet](https://www.ti.com/lit/ds/symlink/mspm0l1306.pdf)
+
+Teknik bilgi incelemesi 2026-11-19.
+
+- **Belgelenmiş olduğu tarih:** 2024. [MSPM0L130x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/mspm0l1306.pdf)
+- **İşlemci:** Arm Cortex-M0+. [MSPM0L130x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/mspm0l1306.pdf)
+- **Saat hızı / üst sınır:** 32 MHz. [MSPM0L130x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/mspm0l1306.pdf)
+- **RAM:** 4 KB SRAM. [MSPM0L130x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/mspm0l1306.pdf)
+- **Program Flash’ı / depolama:** 64 KB Flash. [MSPM0L130x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/mspm0l1306.pdf)
+- **Besleme / mantık:** 1.62–3.6 V VDD. [MSPM0L130x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/mspm0l1306.pdf)
+
+### MSPM33C321A · LQFP-64
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=mspm33c321a-lqfp64&profile=mspm33c321a-lqfp64) · [Pin referansı](https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf#page=10) · [Datasheet](https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf)
+
+Teknik bilgi incelemesi 2026-11-19.
+
+- **Belgelenmiş olduğu tarih:** 2026. [MSPM33C321x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf)
+- **İşlemci:** Arm Cortex-M33. [MSPM33C321x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf)
+- **Saat hızı / üst sınır:** 160 MHz. [MSPM33C321x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf)
+- **RAM:** 256 KB SRAM. [MSPM33C321x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf)
+- **Program Flash’ı / depolama:** 1 MB Flash. [MSPM33C321x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf)
+- **Besleme / mantık:** 1.71–3.6 V VDD. [MSPM33C321x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/mspm33c321a.pdf)
+
+### MSP430FR2355TPT · LQFP-48
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=msp430fr2355tpt&profile=msp430fr2355tpt) · [Pin referansı](https://www.ti.com/lit/ds/symlink/msp430fr2355.pdf#page=10) · [Datasheet](https://www.ti.com/lit/ds/symlink/msp430fr2355.pdf)
+
+Teknik bilgi incelemesi 2026-11-19.
+
+- **Belgelenmiş olduğu tarih:** 2019. [MSP430FR235x / MSP430FR215x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/msp430fr2355.pdf)
+- **İşlemci:** 16-bit MSP430. [MSP430FR235x / MSP430FR215x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/msp430fr2355.pdf)
+- **Saat hızı / üst sınır:** 24 MHz. [MSP430FR235x / MSP430FR215x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/msp430fr2355.pdf)
+- **RAM:** 4 KB SRAM. [MSP430FR235x / MSP430FR215x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/msp430fr2355.pdf)
+- **Program Flash’ı / depolama:** 32 KB program FRAM + 512 B bilgi FRAM. [MSP430FR235x / MSP430FR215x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/msp430fr2355.pdf)
+- **Besleme / mantık:** 1.8–3.6 V DVCC. [MSP430FR235x / MSP430FR215x Mixed-Signal Microcontrollers](https://www.ti.com/lit/ds/symlink/msp430fr2355.pdf)
+
+### TI LP-MSPM0G3507 LaunchPad
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=lp-mspm0g3507&profile=lp-mspm0g3507) · [Pin referansı](https://www.ti.com/lit/ug/slau873e/slau873e.pdf#page=16) · [Datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+
+Teknik bilgi incelemesi 2026-11-19.
+
+- **Belgelenmiş olduğu tarih:** 2026. [LP-MSPM0G3507 LaunchPad Development Kit User’s Guide](https://www.ti.com/lit/ug/slau873e/slau873e.pdf), [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+- **İşlemci:** Arm Cortex-M0+. [LP-MSPM0G3507 LaunchPad Development Kit User’s Guide](https://www.ti.com/lit/ug/slau873e/slau873e.pdf), [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+- **Saat hızı / üst sınır:** 80 MHz. [LP-MSPM0G3507 LaunchPad Development Kit User’s Guide](https://www.ti.com/lit/ug/slau873e/slau873e.pdf), [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+- **RAM:** 32 KB SRAM. [LP-MSPM0G3507 LaunchPad Development Kit User’s Guide](https://www.ti.com/lit/ug/slau873e/slau873e.pdf), [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+- **Program Flash’ı / depolama:** 128 KB Flash. [LP-MSPM0G3507 LaunchPad Development Kit User’s Guide](https://www.ti.com/lit/ug/slau873e/slau873e.pdf), [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+- **Besleme / mantık:** 3.3 V I/O. [LP-MSPM0G3507 LaunchPad Development Kit User’s Guide](https://www.ti.com/lit/ug/slau873e/slau873e.pdf), [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+
+Devre / kart belgeleri: [LP-MSPM0G3507 LaunchPad Development Kit User’s Guide](https://www.ti.com/lit/ug/slau873e/slau873e.pdf)
 

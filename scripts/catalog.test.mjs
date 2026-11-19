@@ -37,7 +37,7 @@ test('new models resolve to the correct shared geometry or standalone package',(
     assert.equal(resolveProfile(layouts,layout,profile).profile.id,profile);
   }
   assert.deepEqual(filterCatalog(catalog,{query:'MSPM0G3507',type:'chips',family:'texas-instruments'})
-    .map(entry=>entry.profile),['mspm0g3507spt']);
+    .map(entry=>entry.profile).sort(),['mspm0g3507spm','mspm0g3507spt']);
 });
 
 test('search tolerates punctuation and word order and respects series numbers and combined filters',()=>{

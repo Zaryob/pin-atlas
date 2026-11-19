@@ -1,14 +1,14 @@
 # Pin Atlas — Source-Verified Hardware Pinout Guide
 
-> Comprehensive pinout explorer and alternate function catalog for 89 development boards and microcontrollers.
+> Comprehensive pinout explorer and alternate function catalog for 107 development board, MCU package, and header profiles.
 
-Pin Atlas documents physical pin positions, alternate function multiplexing (UART, SPI, I2C, PWM, CAN, ADC, DAC), and electrical limits. Every record is verified against manufacturer reference manuals and locked datasheets (5,800+ physical pins, 25,000+ function assignments).
+Pin Atlas documents physical pin positions, alternate function multiplexing (UART, SPI, I2C, PWM, CAN, ADC, DAC), and electrical limits. Every record is verified against manufacturer reference manuals and locked datasheets (6,946 physical pin records, 31,756 function assignments).
 
 ## Core Reference
 
 - [Pin Atlas Explorer](https://zaryob.github.io/pin-atlas/): Interactive board explorer, wiring planner, and pinout diagrams.
 - [Turkish Interface (Türkçe)](https://zaryob.github.io/pin-atlas/tr/): Pin Atlas Türkçe arayüzü ve bacak bağlantı rehberi.
-- [Board Catalog Index](https://zaryob.github.io/pin-atlas/boards/): Static directory of all 89 supported board and microcontroller profiles.
+- [Board Catalog Index](https://zaryob.github.io/pin-atlas/boards/): Static directory of all 107 supported board and microcontroller profiles.
 - [Turkish Board Directory](https://zaryob.github.io/pin-atlas/tr/boards/): Tüm kart profillerinin Türkçe listesi.
 
 ## Popular Hardware Families Covered
@@ -19,6 +19,8 @@ Pin Atlas documents physical pin positions, alternate function multiplexing (UAR
 - **ESP32 & Espressif**: ESP32 DevKitC v4, ESP32-S3 DevKitC-1, ESP32-C3 DevKitM-1, ESP32-C6 DevKitC-1, NodeMCU v2.
 - **Seeed Studio XIAO**: XIAO RP2040, XIAO ESP32-C3, XIAO ESP32-S3, XIAO nRF52840, XIAO SAMD21.
 - **Arduino**: Arduino Uno R3, Uno R4 Minima, Uno R4 WiFi, Mega 2560, Nano Classic, Nano Every, Nano ESP32, Leonardo, Micro.
+- **Texas Instruments**: LP-MSPM0G3507 LaunchPad, MSPM0G3507, MSPM0L1306, MSPM33C321A, MSP430FR2355.
+- **MCU packages**: ATmega32U4 TQFP-44 and QFN-44, Renesas RA4M1 LQFP-64, STM32, AVR and RP-series packages.
 - **Adafruit**: Feather RP2040, Feather RP2350.
 
 ## Machine-Readable Data

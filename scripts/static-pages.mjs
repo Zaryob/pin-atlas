@@ -142,7 +142,7 @@ ${researchKeys.length ? `<h3>${esc(t('researchSources',{count:researchKeys.lengt
   const body = `<main id="main" class="static-main" lang="${language}">
 <nav class="static-crumbs" aria-label="${esc(t('staticBreadcrumb'))}"><a href="${prefix}">Pin Atlas</a><span aria-hidden="true">/</span><a href="../">${esc(t('staticBoards'))}</a><span aria-hidden="true">/</span><span>${esc(entry.familyName)}</span></nav>
 <header class="static-heading"><p class="hardware-kind">${esc(typeLabel)}</p><h1>${esc(t('staticHeading',{name}))}</h1><p class="static-lead">${esc(t('board.'+board.id,{},board.subtitle))}</p></header>
-<p class="static-actions"><a class="button primary" href="${prefix}${esc(atlasHash(profile))}">${esc(t('staticOpenAtlas'))} →</a><span>${esc(t('staticOpenAtlasNote'))}</span><a class="static-language" href="${prefix}${boardPath(board.id,other)}" hreflang="${other}" lang="${other}">${other === 'tr' ? 'Türkçe' : 'English'}</a></p>
+<p class="static-actions"><a class="button primary" href="${prefix}${language === 'tr' ? 'tr/' : ''}${esc(atlasHash(profile))}">${esc(t('staticOpenAtlas'))} →</a><span>${esc(t('staticOpenAtlasNote'))}</span><a class="static-language" href="${prefix}${boardPath(board.id,other)}" hreflang="${other}" lang="${other}">${other === 'tr' ? 'Türkçe' : 'English'}</a></p>
 ${scope ? `<p class="board-scope">${esc(scope)}</p>` : ''}
 <section class="static-section" aria-labelledby="facts-title"><h2 id="facts-title">${esc(t('staticFacts'))}</h2><dl class="static-facts">${facts}</dl></section>
 ${cautions}
@@ -174,7 +174,7 @@ function indexPage({site,language,t,catalog,totals}) {
   const body = `<main id="main" class="static-main" lang="${language}">
 <nav class="static-crumbs" aria-label="${esc(t('staticBreadcrumb'))}"><a href="${prefix}">Pin Atlas</a><span aria-hidden="true">/</span><span>${esc(t('staticBoards'))}</span></nav>
 <header class="static-heading"><h1>${esc(t('staticIndexHeading'))}</h1><p class="static-lead">${esc(description)}</p></header>
-<p class="static-actions"><a class="button primary" href="${prefix}">${esc(t('staticOpenHome'))} →</a><a class="static-language" href="${prefix}${indexPath(other)}" hreflang="${other}" lang="${other}">${other === 'tr' ? 'Türkçe' : 'English'}</a></p>
+<p class="static-actions"><a class="button primary" href="${prefix}${language === 'tr' ? 'tr/' : ''}">${esc(t('staticOpenHome'))} →</a><a class="static-language" href="${prefix}${indexPath(other)}" hreflang="${other}" lang="${other}">${other === 'tr' ? 'Türkçe' : 'English'}</a></p>
 ${groups}
 </main>`;
   const structured = {'@context':'https://schema.org','@graph':[
@@ -193,16 +193,11 @@ function sitemap(site, bundles, profiles) {
   const url = (path,paths,lastmod) => `  <url>\n    <loc>${site}${path}</loc>\n${alternates(paths)}${lastmod ? `\n    <lastmod>${lastmod}</lastmod>` : ''}\n  </url>`;
   const dates = profiles.map(profile => lastReviewed(profile,bundles.get(profile.id).profile.research));
   const index = Object.fromEntries(languages.map(language => [language,indexPath(language)]));
+  const home = {en:'',tr:'tr/'};
   return `---\nlayout: null\npermalink: /sitemap.xml\n---\n<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>${site}</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="${site}?lang=en" />
-    <xhtml:link rel="alternate" hreflang="tr" href="${site}?lang=tr" />
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+${languages.map(language => url(home[language],home)).join('\n')}
 ${languages.map(language => url(index[language],index,[...dates].sort().at(-1))).join('\n')}
 ${profiles.flatMap((profile,position) => {
     const paths = Object.fromEntries(languages.map(language => [language,boardPath(profile.id,language)]));

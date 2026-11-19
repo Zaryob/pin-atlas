@@ -1,6 +1,17 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
 (() => {
   const messages = {
+    "familyRenesas": ["Renesas", "Renesas"],
+    "atmega32u4Scope": ["TQFP-44. Port ve çevre birimi adları ATmega32U4 veri sayfasındaki ham işlevlerdir.", "TQFP-44. Port and peripheral names follow the raw ATmega32U4 datasheet functions."],
+    "atmega32u4QfnScope": ["QFN-44. Çizim 44 çevre pedini numaralandırır. Arduino Micro şemasında merkez ped GND’ye bağlıdır.", "QFN-44. The view numbers the 44 perimeter pads. The Arduino Micro schematic connects the center pad to GND."],
+    "ra4m1PackageScope": ["R7FA4M1AB3CFM, LQFP-64. İşlevler Renesas pin listesindendir. Arduino kart profilleri kendi başlık ve çekirdek eşlemelerini kullanır.", "R7FA4M1AB3CFM, LQFP-64. Functions come from the Renesas pin list. Arduino board profiles use their own header and core mappings."],
+    "mspm0PackageScope": ["TI pin tablosundaki analog hatlar ve PINCM.PF dijital seçimleri gösterilir. Merkez termal ped çevre pin sayısına dahil değildir.", "The map shows the TI pin table’s analog routes and PINCM.PF selections. The center thermal pad is outside the peripheral pin count."],
+    "mspm33PackageScope": ["PM LQFP-64. Birleşik UC sinyal adları, seçilen UART veya I²C çalışma kipine göre yorumlanır.", "PM LQFP-64. Combined UC signal names depend on the selected UART or I²C operating mode."],
+    "msp430PackageScope": ["PT LQFP-48. Pin tablosu mevcut işlevleri listeler. PxSEL ve çevre birimi kipi ilgili işlevi belirler.", "PT LQFP-48. The pin table lists available functions. PxSEL and peripheral mode select the active function."],
+    "tiLaunchpadScope": ["40 BoosterPack teması, TI’nin belgelediği varsayılan J14 ve J15 bağlantılarıyla gösterilir.", "The 40 BoosterPack contacts use the documented default J14 and J15 routes."],
+    "tiLaunchpadJ14": ["J14 varsayılanı PB23. Köprü 2–3 konumuna taşınırsa bu başlık teması PA9’a gider.", "J14 defaults to PB23. Installing the jumper at 2–3 connects this header contact to PA9."],
+    "tiLaunchpadJ15": ["J15 varsayılanı PA16. Köprü 2–3 konumuna taşınırsa bu başlık teması PA18’e gider.", "J15 defaults to PA16. Installing the jumper at 2–3 connects this header contact to PA18."],
+    "board.lp-mspm0g3507": ["MSPM0G3507SPM · 40 BoosterPack teması", "MSPM0G3507SPM · 40 BoosterPack contacts"],
     "familyTexasInstruments": ["Texas Instruments", "Texas Instruments"],
     "mspm0g3507Scope": ["MSPM0G3507SPT, LQFP-48. Dijital alternatifler için PINCM.PF değerleri, analog hatlar için veri sayfasındaki sinyal adları gösterilir.", "MSPM0G3507SPT, LQFP-48. Digital alternatives show PINCM.PF values. Analog routes use the datasheet signal names."],
     "mspm0OpenDrain": ["Bu çıkış açık drençlidir. Yüksek seviye için harici pull-up gerekir.", "This is an open-drain output. A pull-up is required for a high level."],
@@ -989,7 +1000,9 @@
   }
   function setLanguage(next, updateUrl = true) {
     if (!supported.includes(next)) return;
-    state.set(next, { updateUrl });
+    const route = updateUrl && state.routeFor(next);
+    state.set(next, { updateUrl: updateUrl && !route });
+    if (route) state.followRoute(next, true);
   }
   state.subscribe(next => { language = next; renderLanguage(); });
   window.ZaryobI18n = { t, apply, verificationUrl, setLanguage, get language() { return language; } };

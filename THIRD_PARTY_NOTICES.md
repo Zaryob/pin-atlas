@@ -30,29 +30,30 @@ The site loads the Umami analytics script from `cloud.umami.is` and the Google A
 
 ## Hardware sources
 
-The pin data uses facts from the 169 records in [the source manifest](sources/manifest.json). The manifest retains the publisher, source URL, revision and SHA-256 hash for each input.
+The pin data uses facts from the 177 records in [the source manifest](sources/manifest.json). The manifest retains the publisher, source URL, revision and SHA-256 hash for each input.
 
 | Source family | Records | What is used |
 | --- | ---: | --- |
 | STMicroelectronics | 49 | Eight ST data sheets and manuals, STM32 open package and GPIO-mode files, and STM32duino variant files |
-| Arduino | 38 | Board pinouts, schematics and data sheets, plus pin-definition and board files from the Arduino cores |
+| Arduino | 40 | Board pinouts, schematics and data sheets, plus pin-definition and board files from the Arduino cores |
 | Espressif | 14 | DevKit manuals and drawings, and ESP32/ESP8266 source data sheets |
 | Espressif / Arduino | 1 | Arduino Nano ESP32 variant from `espressif/arduino-esp32` |
 | Raspberry Pi Ltd | 28 | Pico, Compute Module, RP silicon, BCM peripherals, Raspberry Pi board and radio module documentation |
 | WeAct Studio | 5 | Black Pill v3.x KiCad symbol, footprint, schematic and documentation |
 | Micro:bit Educational Foundation | 4 | micro:bit V2 schematic and three hardware pages |
-| Microchip / Atmel | 3 | ATmega and SAM D21 data sheets |
+| Microchip / Atmel | 4 | ATmega and SAM D21 data sheets |
 | PJRC | 3 | Teensy 4.1 pinout cards and schematic |
 | Seeed Studio | 9 | XIAO schematics, core variant files and rear-view pinout |
 | STM32-base community | 3 | Blue Pill board page, reference schematic and photo |
 | BeagleBoard.org | 2 | BeagleBone Black System Reference Manual, chapters 7 and 8 |
-| Texas Instruments | 2 | AM335x and MSPM0G350x data sheets |
+| Texas Instruments | 6 | AM335x, MSPM0G350x, MSPM0L130x, MSPM33C321x and MSP430FR235x data sheets and the LP-MSPM0G3507 user guide |
 | NVIDIA | 1 | Jetson Orin Nano Developer Kit carrier board specification |
 | Adafruit | 3 | Feather RP2040 pinout and Feather RP2350 pinout and CAD schematic |
 | NodeMCU | 1 | NodeMCU DevKit schematic |
 | WEMOS | 2 | LOLIN D1 mini v4.0.0 schematic and pinout |
 | Ai-Thinker | 1 | ESP32-CAM Rev 1.6 schematic archived by Seeed Studio |
-| **Total** | **169** | |
+| Renesas | 1 | RA4M1 Group data sheet |
+| **Total** | **177** | |
 
 ### What is redistributed
 
