@@ -1021,6 +1021,102 @@
       "url": "https://datasheets.raspberrypi.com/rp1/rp1-peripherals.pdf",
       "publisher": "Raspberry Pi Ltd",
       "locator": "Locked pin-source document; see sources/manifest.json for revision and SHA-256"
+    },
+    "xiao-esp32c6-sch": {
+      "title": "Seeed Studio XIAO ESP32-C6 schematic",
+      "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO_ESP32_C6_v1.0_SCH_260114.pdf",
+      "publisher": "Seeed Studio",
+      "locator": "Locked schematic or pin-source document"
+    },
+    "xiao-rp2350-sch": {
+      "title": "Seeed Studio XIAO RP2350 schematic",
+      "url": "https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2350-v1.0.pdf",
+      "publisher": "Seeed Studio",
+      "locator": "Locked schematic or pin-source document"
+    },
+    "nano-r4-schematic": {
+      "title": "Arduino Nano R4 Schematic",
+      "url": "https://github.com/arduino/docs-content/blob/65d578fc7de843c45c21fc77b31a7a2009c46a5b/content/hardware/nano/boards/nano-r4/downloads/ABX00142-schematics.pdf",
+      "publisher": "Arduino",
+      "locator": "Locked schematic or pin-source document"
+    },
+    "d1-mini-v4-schematic": {
+      "title": "LOLIN D1 mini v4.0.0 schematic",
+      "url": "https://www.wemos.cc/en/latest/_static/files/sch_d1_mini_v4.0.0.pdf",
+      "publisher": "WEMOS",
+      "locator": "Locked schematic or pin-source document"
+    },
+    "esp32-cam-schematic": {
+      "title": "Ai-Thinker ESP32-CAM schematic",
+      "url": "https://github.com/SeeedDocument/forum_doc/blob/efa7ea6c0598b9584afa8d8d4f6ab846cc7ede91/reg/ESP32_CAM_V1.6.pdf",
+      "publisher": "Ai-Thinker",
+      "locator": "Locked schematic or pin-source document"
+    },
+    "feather-rp2350-cad": {
+      "title": "Adafruit Feather RP2350 Eagle schematic",
+      "url": "https://github.com/adafruit/Adafruit-Feather-RP2350-PCB/blob/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit%20Feather%20RP2350.sch",
+      "publisher": "Adafruit",
+      "locator": "Locked schematic or pin-source document"
+    },
+    "nucleo-um3115-r3": {
+      "title": "UM3115 STM32H5 Nucleo-144 board (MB1404)",
+      "url": "https://www.st.com/resource/en/user_manual/um3115-stm32h5-nucleo144-board-mb1404-stmicroelectronics.pdf",
+      "publisher": "STMicroelectronics",
+      "locator": "Locked schematic or pin-source document"
+    },
+    "h563zi-package": {
+      "title": "STM32H563ZI LQFP144 package XML",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/45c04599e2e0a788c5ed9b6218dc5a28a36041f7/mcu/STM32H563ZITx.xml",
+      "publisher": "STMicroelectronics",
+      "locator": "Locked schematic or pin-source document"
+    },
+    "nano-r4-manual": {
+      "title": "Arduino Nano R4 hardware reference",
+      "url": "https://docs.arduino.cc/hardware/nano-r4/",
+      "publisher": "Arduino",
+      "locator": "Features, downloadable documents and technical specifications"
+    },
+    "d1-mini-v4-manual": {
+      "title": "LOLIN D1 mini v4.0.0",
+      "url": "https://www.wemos.cc/en/latest/d1/d1_mini.html",
+      "publisher": "WEMOS",
+      "locator": "Technical specifications, schematic and revision"
+    },
+    "feather-rp2350-guide": {
+      "title": "Feather RP2350 with HSTX pinouts",
+      "url": "https://learn.adafruit.com/adafruit-feather-rp2350/pinouts",
+      "publisher": "Adafruit",
+      "locator": "Memory and expansion connectors"
+    },
+    "feather-rp2350-psram-guide": {
+      "title": "Feather RP2350 with HSTX and 8 MB PSRAM",
+      "url": "https://www.adafruit.com/product/6130",
+      "publisher": "Adafruit",
+      "locator": "PSRAM variant"
+    },
+    "h563zi-datasheet": {
+      "title": "STM32H562xx/563xx datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32h563zi.pdf",
+      "publisher": "STMicroelectronics",
+      "locator": "DS14258 Rev 6, device summary and features"
+    },
+    "xiao-esp32c6-guide": {
+      "title": "XIAO ESP32C6 hardware guide",
+      "url": "https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/",
+      "publisher": "Seeed Studio",
+      "locator": "Specifications and pin map"
+    },
+    "xiao-rp2350-guide": {
+      "title": "XIAO RP2350 hardware guide",
+      "url": "https://wiki.seeedstudio.com/xiao_rp2350_arduino/",
+      "publisher": "Seeed Studio",
+      "locator": "Specifications, pin map and battery connection"
+    },
+    "mspm0g3507-datasheet": {
+      "title": "MSPM0G350x datasheet",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf",
+      "publisher": "Texas Instruments",
+      "locator": "SLASEX6C, Features, Device Comparison, and Pin Configuration"
     }
   },
   "chips": {
@@ -1737,6 +1833,17 @@
       "sources": [
         "pi-processor-bcm2837b0",
         "pi-3b-plus-brief"
+      ],
+      "notes": []
+    },
+    "STM32H563ZIT6": {
+      "cpu": "Arm Cortex-M33",
+      "clock": "250 MHz",
+      "ram": "640 KB SRAM",
+      "flash": "2 MB Flash",
+      "power": "1.62–3.6 V VDD",
+      "sources": [
+        "h563zi-datasheet"
       ],
       "notes": []
     }
@@ -4954,6 +5061,278 @@
         "pi-500-brief",
         "rp1-peripherals"
       ]
+    },
+    "xiao-esp32c6": {
+      "chip": "ESP32-C6",
+      "sources": [
+        "xiao-esp32c6-guide",
+        "xiao-esp32c6-sch"
+      ],
+      "date": {
+        "kind": "unverified",
+        "value": null,
+        "sources": [
+          "xiao-esp32c6-guide",
+          "xiao-esp32c6-sch"
+        ],
+        "reason": {
+          "en": "The sources identify the board or part. Its exact first production or sale date is unverified.",
+          "tr": "Kaynaklar kartı veya parçayı tanımlar. Kesin ilk üretim veya satış tarihi doğrulanamadı."
+        }
+      },
+      "documents": [
+        "xiao-esp32c6-sch"
+      ],
+      "reviewedOn": "2026-11-19",
+      "flash": {
+        "en": "4 MB in-package Flash (ESP32-C6FH4)",
+        "tr": "4 MB paket içi Flash (ESP32-C6FH4)"
+      },
+      "power": {
+        "en": "USB-C or battery supply; 3.3 V I/O",
+        "tr": "USB-C veya pil beslemesi, 3,3 V G/Ç"
+      }
+    },
+    "xiao-rp2350": {
+      "chip": "RP2350A",
+      "sources": [
+        "xiao-rp2350-guide",
+        "xiao-rp2350-sch"
+      ],
+      "date": {
+        "kind": "unverified",
+        "value": null,
+        "sources": [
+          "xiao-rp2350-guide",
+          "xiao-rp2350-sch"
+        ],
+        "reason": {
+          "en": "The sources identify the board or part. Its exact first production or sale date is unverified.",
+          "tr": "Kaynaklar kartı veya parçayı tanımlar. Kesin ilk üretim veya satış tarihi doğrulanamadı."
+        }
+      },
+      "documents": [
+        "xiao-rp2350-sch"
+      ],
+      "reviewedOn": "2026-11-19",
+      "flash": {
+        "en": "2 MB on-board QSPI Flash",
+        "tr": "2 MB kart üstü QSPI Flash"
+      },
+      "power": {
+        "en": "USB-C or battery supply; 3.3 V I/O",
+        "tr": "USB-C veya pil beslemesi, 3,3 V G/Ç"
+      }
+    },
+    "arduino-nano-r4": {
+      "chip": "Renesas RA4M1",
+      "sources": [
+        "nano-r4-manual"
+      ],
+      "date": {
+        "kind": "documented",
+        "value": "2025-11-25",
+        "sources": [
+          "nano-r4-manual"
+        ]
+      },
+      "documents": [
+        "nano-r4-schematic"
+      ],
+      "reviewedOn": "2026-11-19",
+      "power": {
+        "en": "5 V USB-C or 6–21 V VIN; 5 V side-header I/O and 3.3 V Qwiic",
+        "tr": "5 V USB-C veya 6–21 V VIN, 5 V yan başlık G/Ç ve 3,3 V Qwiic"
+      }
+    },
+    "lolin-d1-mini-v4": {
+      "chip": "ESP8266EX",
+      "sources": [
+        "d1-mini-v4-manual",
+        "d1-mini-v4-schematic"
+      ],
+      "date": {
+        "kind": "unverified",
+        "value": null,
+        "sources": [
+          "d1-mini-v4-manual",
+          "d1-mini-v4-schematic"
+        ],
+        "reason": {
+          "en": "The sources identify the board or part. Its exact first production or sale date is unverified.",
+          "tr": "Kaynaklar kartı veya parçayı tanımlar. Kesin ilk üretim veya satış tarihi doğrulanamadı."
+        }
+      },
+      "documents": [
+        "d1-mini-v4-schematic"
+      ],
+      "reviewedOn": "2026-11-19",
+      "flash": {
+        "en": "4 MB on-board Flash",
+        "tr": "4 MB kart üstü Flash"
+      },
+      "power": {
+        "en": "USB-C; 3.3 V I/O. A0 board input up to 3.2 V.",
+        "tr": "USB-C, 3,3 V G/Ç. Kartın A0 girişi en fazla 3,2 V."
+      }
+    },
+    "ai-thinker-esp32-cam": {
+      "chip": "ESP32",
+      "sources": [
+        "esp32-cam-schematic",
+        "esp32-datasheet"
+      ],
+      "date": {
+        "kind": "documented",
+        "value": "2018-01-30",
+        "sources": [
+          "esp32-cam-schematic",
+          "esp32-datasheet"
+        ]
+      },
+      "documents": [
+        "esp32-cam-schematic"
+      ],
+      "reviewedOn": "2026-11-19",
+      "power": {
+        "en": "5 V input through the on-board regulator; 3.3 V I/O",
+        "tr": "Kart üzerindeki regülatöre 5 V giriş, 3,3 V G/Ç"
+      },
+      "psram": {
+        "en": "On-board SPI PSRAM; GPIO16 is its chip select",
+        "tr": "Kart üstü SPI PSRAM, seçme hattı GPIO16"
+      }
+    },
+    "adafruit-feather-rp2350": {
+      "chip": "RP2350A",
+      "sources": [
+        "feather-rp2350-guide",
+        "feather-rp2350-cad"
+      ],
+      "date": {
+        "kind": "unverified",
+        "value": null,
+        "sources": [
+          "feather-rp2350-guide",
+          "feather-rp2350-cad"
+        ],
+        "reason": {
+          "en": "The sources identify the board or part. Its exact first production or sale date is unverified.",
+          "tr": "Kaynaklar kartı veya parçayı tanımlar. Kesin ilk üretim veya satış tarihi doğrulanamadı."
+        }
+      },
+      "documents": [
+        "feather-rp2350-cad"
+      ],
+      "reviewedOn": "2026-11-19",
+      "flash": {
+        "en": "8 MB on-board QSPI Flash",
+        "tr": "8 MB kart üstü QSPI Flash"
+      },
+      "power": {
+        "en": "USB-C or single-cell LiPo; 3.3 V I/O",
+        "tr": "USB-C veya tek hücreli LiPo, 3,3 V G/Ç"
+      },
+      "psram": {
+        "en": "Unpopulated on this variant",
+        "tr": "Bu varyantta takılı değil"
+      }
+    },
+    "adafruit-feather-rp2350-psram": {
+      "chip": "RP2350A",
+      "sources": [
+        "feather-rp2350-guide",
+        "feather-rp2350-cad",
+        "feather-rp2350-psram-guide"
+      ],
+      "date": {
+        "kind": "unverified",
+        "value": null,
+        "sources": [
+          "feather-rp2350-guide",
+          "feather-rp2350-cad"
+        ],
+        "reason": {
+          "en": "The sources identify the board or part. Its exact first production or sale date is unverified.",
+          "tr": "Kaynaklar kartı veya parçayı tanımlar. Kesin ilk üretim veya satış tarihi doğrulanamadı."
+        }
+      },
+      "documents": [
+        "feather-rp2350-cad"
+      ],
+      "reviewedOn": "2026-11-19",
+      "flash": {
+        "en": "8 MB on-board QSPI Flash",
+        "tr": "8 MB kart üstü QSPI Flash"
+      },
+      "power": {
+        "en": "USB-C or single-cell LiPo; 3.3 V I/O",
+        "tr": "USB-C veya tek hücreli LiPo, 3,3 V G/Ç"
+      },
+      "psram": {
+        "en": "8 MB on-board SPI PSRAM",
+        "tr": "8 MB kart üstü SPI PSRAM"
+      }
+    },
+    "stm32h563zit6": {
+      "chip": "STM32H563ZIT6",
+      "sources": [
+        "h563zi-datasheet",
+        "h563zi-package"
+      ],
+      "date": {
+        "kind": "unverified",
+        "value": null,
+        "sources": [
+          "h563zi-datasheet",
+          "h563zi-package"
+        ],
+        "reason": {
+          "en": "The sources identify the board or part. Its exact first production or sale date is unverified.",
+          "tr": "Kaynaklar kartı veya parçayı tanımlar. Kesin ilk üretim veya satış tarihi doğrulanamadı."
+        }
+      },
+      "documents": [],
+      "reviewedOn": "2026-11-19"
+    },
+    "nucleo-h563zi": {
+      "chip": "STM32H563ZIT6",
+      "sources": [
+        "nucleo-um3115-r3"
+      ],
+      "date": {
+        "kind": "documented",
+        "value": "2025-04-09",
+        "sources": [
+          "nucleo-um3115-r3"
+        ]
+      },
+      "documents": [
+        "nucleo-um3115-r3"
+      ],
+      "reviewedOn": "2026-11-19",
+      "power": {
+        "en": "3.3 V logic; see UM3115 for USB and external supply selections",
+        "tr": "3,3 V mantık, USB ve harici besleme seçenekleri için UM3115’e bakın"
+      }
+    },
+    "mspm0g3507spt": {
+      "cpu": "Arm Cortex-M0+",
+      "clock": "80 MHz",
+      "ram": "32 KB SRAM",
+      "flash": "128 KB Flash",
+      "power": "1.62–3.6 V VDD",
+      "sources": [
+        "mspm0g3507-datasheet"
+      ],
+      "reviewedOn": "2026-11-19",
+      "date": {
+        "kind": "documented",
+        "value": "2025",
+        "sources": [
+          "mspm0g3507-datasheet"
+        ]
+      }
     }
   }
 }

@@ -1,6 +1,6 @@
 # Hardware research and technical reference
 
-Reviewed: 2026-11-14. All 89 profiles are covered individually. 54 have a qualified historical date; exact first production/sale dates remain unverified for 35. An MCU datasheet’s initial publication is not presented as a board’s production year.
+Reviewed: 2026-11-14. All 99 profiles are covered individually. 58 have a qualified historical date; exact first production/sale dates remain unverified for 41. An MCU datasheet’s initial publication is not presented as a board’s production year.
 
 Generated from `sources/hardware-details.json` by `npm run build:data`. Each fact and note carries source links. Live manufacturer pages may change; the locked versions and SHA-256 values for pin evidence remain in `sources/manifest.json`. The technical review does not change the previous pin-verification date.
 
@@ -1381,6 +1381,36 @@ Circuit / board documents: [STM32 Nucleo-144 · UM2407 Rev 6](https://www.st.com
 
 Clock is the MCU maximum. Configure PLL, supply and Flash wait states accordingly. RAM banks do not have identical DMA accessibility. [H743ZI datasheet](https://www.st.com/resource/en/datasheet/stm32h743zi.pdf)
 
+### NUCLEO-H563ZI
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=nucleo-h563zi&profile=nucleo-h563zi) · [Pin reference](https://www.st.com/resource/en/user_manual/um3115-stm32h5-nucleo144-board-mb1404-stmicroelectronics.pdf) · [Datasheet](https://www.st.com/resource/en/datasheet/stm32h563zi.pdf)
+
+Technical review 2026-11-19.
+
+- **Documented by:** 2025-04-09. [UM3115 STM32H5 Nucleo-144 board (MB1404)](https://www.st.com/resource/en/user_manual/um3115-stm32h5-nucleo144-board-mb1404-stmicroelectronics.pdf)
+- **Processor:** Arm Cortex-M33. [STM32H562xx/563xx datasheet](https://www.st.com/resource/en/datasheet/stm32h563zi.pdf)
+- **Clock / maximum:** 250 MHz. [STM32H562xx/563xx datasheet](https://www.st.com/resource/en/datasheet/stm32h563zi.pdf)
+- **RAM:** 640 KB SRAM. [STM32H562xx/563xx datasheet](https://www.st.com/resource/en/datasheet/stm32h563zi.pdf)
+- **Program Flash / storage:** 2 MB Flash. [STM32H562xx/563xx datasheet](https://www.st.com/resource/en/datasheet/stm32h563zi.pdf)
+- **Power / logic:** 3.3 V logic; see UM3115 for USB and external supply selections. [UM3115 STM32H5 Nucleo-144 board (MB1404)](https://www.st.com/resource/en/user_manual/um3115-stm32h5-nucleo144-board-mb1404-stmicroelectronics.pdf)
+
+Circuit / board documents: [UM3115 STM32H5 Nucleo-144 board (MB1404)](https://www.st.com/resource/en/user_manual/um3115-stm32h5-nucleo144-board-mb1404-stmicroelectronics.pdf)
+
+### STM32H563ZIT6
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=stm32h563zit6&profile=stm32h563zit6) · [Pin reference](https://github.com/STMicroelectronics/STM32_open_pin_data/blob/45c04599e2e0a788c5ed9b6218dc5a28a36041f7/mcu/STM32H563ZITx.xml) · [Datasheet](https://www.st.com/resource/en/datasheet/stm32h563zi.pdf)
+
+Technical review 2026-11-19.
+
+- **First production / release:** Unverified. [STM32H562xx/563xx datasheet](https://www.st.com/resource/en/datasheet/stm32h563zi.pdf), [STM32H563ZI LQFP144 package XML](https://github.com/STMicroelectronics/STM32_open_pin_data/blob/45c04599e2e0a788c5ed9b6218dc5a28a36041f7/mcu/STM32H563ZITx.xml)
+- **Processor:** Arm Cortex-M33. [STM32H562xx/563xx datasheet](https://www.st.com/resource/en/datasheet/stm32h563zi.pdf)
+- **Clock / maximum:** 250 MHz. [STM32H562xx/563xx datasheet](https://www.st.com/resource/en/datasheet/stm32h563zi.pdf)
+- **RAM:** 640 KB SRAM. [STM32H562xx/563xx datasheet](https://www.st.com/resource/en/datasheet/stm32h563zi.pdf)
+- **Program Flash / storage:** 2 MB Flash. [STM32H562xx/563xx datasheet](https://www.st.com/resource/en/datasheet/stm32h563zi.pdf)
+- **Power / logic:** 1.62–3.6 V VDD. [STM32H562xx/563xx datasheet](https://www.st.com/resource/en/datasheet/stm32h563zi.pdf)
+
+The sources identify the board or part. Its exact first production or sale date is unverified.
+
 ### WeAct Black Pill F401CC v3.x
 
 [Pin Atlas](https://zaryob.github.io/pin-atlas/#board=black-pill&profile=weact-blackpill-f401cc) · [Pin reference](https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1/blob/6a7f7d434a9d6361f91590d4cdd16b4a70ce7513/README.md) · [Datasheet](https://www.st.com/resource/en/datasheet/stm32f401cc.pdf)
@@ -1444,4 +1474,147 @@ Circuit / board documents: [WeAct MiniF4x1Cx v3.1 schematic](https://github.com/
 - **MCU datasheet initial publication:** 2014-06-19. [F411CE datasheet](https://www.st.com/resource/en/datasheet/stm32f411ce.pdf)
 
 Clock is the MCU maximum. Configure PLL, supply and Flash wait states accordingly. RAM banks do not have identical DMA accessibility. [F411CE datasheet](https://www.st.com/resource/en/datasheet/stm32f411ce.pdf)
+
+### Seeed Studio XIAO ESP32C6
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=seeed-xiao&profile=xiao-esp32c6) · [Pin reference](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO_ESP32_C6_v1.0_SCH_260114.pdf) · [Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)
+
+Technical review 2026-11-19.
+
+- **First production / release:** Unverified. [XIAO ESP32C6 hardware guide](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/), [Seeed Studio XIAO ESP32-C6 schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO_ESP32_C6_v1.0_SCH_260114.pdf)
+- **Processor:** 1 × HP RISC-V + LP RISC-V. [ESP32C6 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)
+- **Clock / maximum:** 160 MHz HP / 20 MHz LP. [ESP32C6 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)
+- **RAM:** 512 KB HP SRAM + 16 KB LP SRAM. [ESP32C6 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)
+- **Program Flash / storage:** 4 MB in-package Flash (ESP32-C6FH4). [XIAO ESP32C6 hardware guide](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/), [Seeed Studio XIAO ESP32-C6 schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO_ESP32_C6_v1.0_SCH_260114.pdf)
+- **Fixed ROM:** 320 KB ROM. [ESP32C6 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)
+- **Power / logic:** USB-C or battery supply; 3.3 V I/O. [XIAO ESP32C6 hardware guide](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/), [Seeed Studio XIAO ESP32-C6 schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO_ESP32_C6_v1.0_SCH_260114.pdf)
+
+The sources identify the board or part. Its exact first production or sale date is unverified.
+
+Circuit / board documents: [Seeed Studio XIAO ESP32-C6 schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO_ESP32_C6_v1.0_SCH_260114.pdf)
+
+### Seeed Studio XIAO RP2350
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=seeed-xiao&profile=xiao-rp2350) · [Pin reference](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2350-v1.0.pdf) · [Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+
+Technical review 2026-11-19.
+
+- **First production / release:** Unverified. [XIAO RP2350 hardware guide](https://wiki.seeedstudio.com/xiao_rp2350_arduino/), [Seeed Studio XIAO RP2350 schematic](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2350-v1.0.pdf)
+- **Processor:** 2 × Arm Cortex-M33 / 2 × Hazard3 RISC-V. [RP2350 Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+- **Clock / maximum:** 150 MHz. [RP2350 Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+- **RAM:** 520 KB SRAM. [RP2350 Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+- **Program Flash / storage:** 2 MB on-board QSPI Flash. [XIAO RP2350 hardware guide](https://wiki.seeedstudio.com/xiao_rp2350_arduino/), [Seeed Studio XIAO RP2350 schematic](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2350-v1.0.pdf)
+- **Fixed ROM:** 32 KB boot ROM. [RP2350 Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+- **Power / logic:** USB-C or battery supply; 3.3 V I/O. [XIAO RP2350 hardware guide](https://wiki.seeedstudio.com/xiao_rp2350_arduino/), [Seeed Studio XIAO RP2350 schematic](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2350-v1.0.pdf)
+
+The sources identify the board or part. Its exact first production or sale date is unverified.
+
+Two cores run concurrently; all four cores cannot run together. 12 PIO state machines. [RP2350 Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+
+Circuit / board documents: [Seeed Studio XIAO RP2350 schematic](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2350-v1.0.pdf)
+
+### Adafruit Feather RP2350 with HSTX
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=adafruit-feather-rp2350&profile=adafruit-feather-rp2350) · [Pin reference](https://github.com/adafruit/Adafruit-Feather-RP2350-PCB/blob/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit_Feather_RP2350_prettypins%202.pdf) · [Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+
+Technical review 2026-11-19.
+
+- **First production / release:** Unverified. [Feather RP2350 with HSTX pinouts](https://learn.adafruit.com/adafruit-feather-rp2350/pinouts), [Adafruit Feather RP2350 Eagle schematic](https://github.com/adafruit/Adafruit-Feather-RP2350-PCB/blob/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit%20Feather%20RP2350.sch)
+- **Processor:** 2 × Arm Cortex-M33 / 2 × Hazard3 RISC-V. [RP2350 Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+- **Clock / maximum:** 150 MHz. [RP2350 Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+- **RAM:** 520 KB SRAM. [RP2350 Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+- **Program Flash / storage:** 8 MB on-board QSPI Flash. [Feather RP2350 with HSTX pinouts](https://learn.adafruit.com/adafruit-feather-rp2350/pinouts), [Adafruit Feather RP2350 Eagle schematic](https://github.com/adafruit/Adafruit-Feather-RP2350-PCB/blob/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit%20Feather%20RP2350.sch)
+- **Fixed ROM:** 32 KB boot ROM. [RP2350 Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+- **External PSRAM:** Unpopulated on this variant. [Feather RP2350 with HSTX pinouts](https://learn.adafruit.com/adafruit-feather-rp2350/pinouts), [Adafruit Feather RP2350 Eagle schematic](https://github.com/adafruit/Adafruit-Feather-RP2350-PCB/blob/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit%20Feather%20RP2350.sch)
+- **Power / logic:** USB-C or single-cell LiPo; 3.3 V I/O. [Feather RP2350 with HSTX pinouts](https://learn.adafruit.com/adafruit-feather-rp2350/pinouts), [Adafruit Feather RP2350 Eagle schematic](https://github.com/adafruit/Adafruit-Feather-RP2350-PCB/blob/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit%20Feather%20RP2350.sch)
+
+The sources identify the board or part. Its exact first production or sale date is unverified.
+
+Two cores run concurrently; all four cores cannot run together. 12 PIO state machines. [RP2350 Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+
+Circuit / board documents: [Adafruit Feather RP2350 Eagle schematic](https://github.com/adafruit/Adafruit-Feather-RP2350-PCB/blob/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit%20Feather%20RP2350.sch)
+
+### Adafruit Feather RP2350 with HSTX + PSRAM
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=adafruit-feather-rp2350&profile=adafruit-feather-rp2350-psram) · [Pin reference](https://github.com/adafruit/Adafruit-Feather-RP2350-PCB/blob/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit_Feather_RP2350_prettypins%202.pdf) · [Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+
+Technical review 2026-11-19.
+
+- **First production / release:** Unverified. [Feather RP2350 with HSTX pinouts](https://learn.adafruit.com/adafruit-feather-rp2350/pinouts), [Adafruit Feather RP2350 Eagle schematic](https://github.com/adafruit/Adafruit-Feather-RP2350-PCB/blob/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit%20Feather%20RP2350.sch)
+- **Processor:** 2 × Arm Cortex-M33 / 2 × Hazard3 RISC-V. [RP2350 Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+- **Clock / maximum:** 150 MHz. [RP2350 Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+- **RAM:** 520 KB SRAM. [RP2350 Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+- **Program Flash / storage:** 8 MB on-board QSPI Flash. [Feather RP2350 with HSTX pinouts](https://learn.adafruit.com/adafruit-feather-rp2350/pinouts), [Adafruit Feather RP2350 Eagle schematic](https://github.com/adafruit/Adafruit-Feather-RP2350-PCB/blob/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit%20Feather%20RP2350.sch), [Feather RP2350 with HSTX and 8 MB PSRAM](https://www.adafruit.com/product/6130)
+- **Fixed ROM:** 32 KB boot ROM. [RP2350 Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+- **External PSRAM:** 8 MB on-board SPI PSRAM. [Feather RP2350 with HSTX pinouts](https://learn.adafruit.com/adafruit-feather-rp2350/pinouts), [Adafruit Feather RP2350 Eagle schematic](https://github.com/adafruit/Adafruit-Feather-RP2350-PCB/blob/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit%20Feather%20RP2350.sch), [Feather RP2350 with HSTX and 8 MB PSRAM](https://www.adafruit.com/product/6130)
+- **Power / logic:** USB-C or single-cell LiPo; 3.3 V I/O. [Feather RP2350 with HSTX pinouts](https://learn.adafruit.com/adafruit-feather-rp2350/pinouts), [Adafruit Feather RP2350 Eagle schematic](https://github.com/adafruit/Adafruit-Feather-RP2350-PCB/blob/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit%20Feather%20RP2350.sch), [Feather RP2350 with HSTX and 8 MB PSRAM](https://www.adafruit.com/product/6130)
+
+The sources identify the board or part. Its exact first production or sale date is unverified.
+
+Two cores run concurrently; all four cores cannot run together. 12 PIO state machines. [RP2350 Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+
+Circuit / board documents: [Adafruit Feather RP2350 Eagle schematic](https://github.com/adafruit/Adafruit-Feather-RP2350-PCB/blob/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit%20Feather%20RP2350.sch)
+
+### Arduino Nano R4
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=arduino-nano&profile=arduino-nano-r4) · [Pin reference](https://github.com/arduino/docs-content/blob/65d578fc7de843c45c21fc77b31a7a2009c46a5b/content/hardware/nano/boards/nano-r4/downloads/ABX00142-full-pinout.pdf) · [Datasheet](https://docs.arduino.cc/hardware/nano-r4/)
+
+Technical review 2026-11-19.
+
+- **Documented by:** 2025-11-25. [Arduino Nano R4 hardware reference](https://docs.arduino.cc/hardware/nano-r4/)
+- **Processor:** Arm Cortex-M4F. [uno-r4-minima hardware manual](https://docs.arduino.cc/hardware/uno-r4-minima/)
+- **Clock / maximum:** 48 MHz. [uno-r4-minima hardware manual](https://docs.arduino.cc/hardware/uno-r4-minima/)
+- **RAM:** 32 KB SRAM. [uno-r4-minima hardware manual](https://docs.arduino.cc/hardware/uno-r4-minima/)
+- **Program Flash / storage:** 256 KB Flash. [uno-r4-minima hardware manual](https://docs.arduino.cc/hardware/uno-r4-minima/)
+- **EEPROM / persistent data:** 8 KB data Flash (EEPROM emulation). [uno-r4-minima hardware manual](https://docs.arduino.cc/hardware/uno-r4-minima/)
+- **Power / logic:** 5 V USB-C or 6–21 V VIN; 5 V side-header I/O and 3.3 V Qwiic. [Arduino Nano R4 hardware reference](https://docs.arduino.cc/hardware/nano-r4/)
+
+Circuit / board documents: [Arduino Nano R4 Schematic](https://github.com/arduino/docs-content/blob/65d578fc7de843c45c21fc77b31a7a2009c46a5b/content/hardware/nano/boards/nano-r4/downloads/ABX00142-schematics.pdf)
+
+### LOLIN D1 mini v4.0.0
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=lolin-d1-mini-v4&profile=lolin-d1-mini-v4) · [Pin reference](https://www.wemos.cc/en/latest/_static/files/sch_d1_mini_v4.0.0.pdf) · [Datasheet](https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf)
+
+Technical review 2026-11-19.
+
+- **First production / release:** Unverified. [LOLIN D1 mini v4.0.0](https://www.wemos.cc/en/latest/d1/d1_mini.html), [LOLIN D1 mini v4.0.0 schematic](https://www.wemos.cc/en/latest/_static/files/sch_d1_mini_v4.0.0.pdf)
+- **Processor:** 1 × Tensilica L106 32-bit. [ESP8266EX Datasheet](https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf)
+- **Clock / maximum:** 80 MHz (160 MHz max). [ESP8266EX Datasheet](https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf)
+- **RAM:** 80 KB user data SRAM + 32 KB instruction RAM + 32 KB instruction cache. [ESP8266EX Datasheet](https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf)
+- **Program Flash / storage:** 4 MB on-board Flash. [LOLIN D1 mini v4.0.0](https://www.wemos.cc/en/latest/d1/d1_mini.html), [LOLIN D1 mini v4.0.0 schematic](https://www.wemos.cc/en/latest/_static/files/sch_d1_mini_v4.0.0.pdf)
+- **Power / logic:** USB-C; 3.3 V I/O. A0 board input up to 3.2 V.. [LOLIN D1 mini v4.0.0](https://www.wemos.cc/en/latest/d1/d1_mini.html), [LOLIN D1 mini v4.0.0 schematic](https://www.wemos.cc/en/latest/_static/files/sch_d1_mini_v4.0.0.pdf)
+
+The sources identify the board or part. Its exact first production or sale date is unverified.
+
+Circuit / board documents: [LOLIN D1 mini v4.0.0 schematic](https://www.wemos.cc/en/latest/_static/files/sch_d1_mini_v4.0.0.pdf)
+
+### Ai-Thinker ESP32-CAM
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=ai-thinker-esp32-cam&profile=ai-thinker-esp32-cam) · [Pin reference](https://github.com/SeeedDocument/forum_doc/blob/efa7ea6c0598b9584afa8d8d4f6ab846cc7ede91/reg/ESP32_CAM_V1.6.pdf) · [Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf)
+
+Technical review 2026-11-19.
+
+- **Documented by:** 2018-01-30. [Ai-Thinker ESP32-CAM schematic](https://github.com/SeeedDocument/forum_doc/blob/efa7ea6c0598b9584afa8d8d4f6ab846cc7ede91/reg/ESP32_CAM_V1.6.pdf), [ESP32 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf)
+- **Processor:** 2 × Xtensa LX6. [ESP32 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf)
+- **Clock / maximum:** 240 MHz. [ESP32 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf)
+- **RAM:** 520 KB SRAM + 16 KB RTC SRAM. [ESP32 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf)
+- **Program Flash / storage:** Module-dependent external Flash. [ESP32 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf)
+- **Fixed ROM:** 448 KB ROM. [ESP32 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf)
+- **External PSRAM:** On-board SPI PSRAM; GPIO16 is its chip select. [Ai-Thinker ESP32-CAM schematic](https://github.com/SeeedDocument/forum_doc/blob/efa7ea6c0598b9584afa8d8d4f6ab846cc7ede91/reg/ESP32_CAM_V1.6.pdf), [ESP32 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf)
+- **Power / logic:** 5 V input through the on-board regulator; 3.3 V I/O. [Ai-Thinker ESP32-CAM schematic](https://github.com/SeeedDocument/forum_doc/blob/efa7ea6c0598b9584afa8d8d4f6ab846cc7ede91/reg/ESP32_CAM_V1.6.pdf), [ESP32 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf)
+
+Circuit / board documents: [Ai-Thinker ESP32-CAM schematic](https://github.com/SeeedDocument/forum_doc/blob/efa7ea6c0598b9584afa8d8d4f6ab846cc7ede91/reg/ESP32_CAM_V1.6.pdf)
+
+### MSPM0G3507SPT
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=mspm0g3507spt&profile=mspm0g3507spt) · [Pin reference](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf#page=8) · [Datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+
+Technical review 2026-11-19.
+
+- **Documented by:** 2025. [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+- **Processor:** Arm Cortex-M0+. [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+- **Clock / maximum:** 80 MHz. [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+- **RAM:** 32 KB SRAM. [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+- **Program Flash / storage:** 128 KB Flash. [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+- **Power / logic:** 1.62–3.6 V VDD. [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
 

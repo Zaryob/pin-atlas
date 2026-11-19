@@ -7,6 +7,8 @@ const pico=boards.find(b=>b.id==='picow');
 test('peripheral roles retain manufacturer functions and exact bus instances',()=>{
  assert.deepEqual(peripheralSignal({name:'SPI0 RX',group:'SPI'}),{id:'SPI0',group:'SPI',role:'MISO'});
  assert.equal(peripheralSignal({name:'SPI CIPO / MISO',group:'SPI'}).role,'MISO');
+ assert.equal(peripheralSignal({name:'SPI0_POCI',group:'SPI'}).role,'MISO');
+ assert.equal(peripheralSignal({name:'SPI0_PICO',group:'SPI'}).role,'MOSI');
  assert.equal(peripheralSignal({name:'USART1_TX',group:'UART'}).id,'USART1');
  assert.equal(peripheralSignal({name:'U0RXD',group:'UART'}).role,'RX');
  assert.equal(peripheralSignal({name:'USART1_CTS',group:'UART'}),null);
@@ -20,6 +22,18 @@ test('peripheral roles retain manufacturer functions and exact bus instances',()
    assert.equal(peripheralSignal(candidate.fn).id,bus.id);
   }
  }
+});
+
+test('TI package keeps package pads, PINCM.PF selectors and controller roles together',()=>{
+ const board=boards.find(item=>item.id==='mspm0g3507spt');
+ const pa0=board.pins.find(pin=>pin.number===1);
+ assert.equal(pa0.name,'PA0');
+ assert(pa0.warnings.includes('mspm0OpenDrain'));
+ assert.equal(pa0.functions.find(fn=>fn.name==='I2C0_SDA').selector,'PINCM1.PF=3');
+ assert.equal(board.pins.find(pin=>pin.number===48).name,'VCORE');
+ const spi=availablePeripherals(board,{includeSPIChipSelect:true}).find(bus=>bus.id==='SPI0');
+ assert(spi.candidates.some(item=>item.role==='MISO'&&item.fn.signal==='SPI0_POCI'));
+ assert(spi.candidates.some(item=>item.role==='MOSI'&&item.fn.signal==='SPI0_PICO'));
 });
 test('guided connections preserve labels and refuse occupied pins or mixed buses',()=>{
  const bus=availablePeripherals(pico).find(b=>b.id==='I2C0');

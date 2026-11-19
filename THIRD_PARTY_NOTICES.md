@@ -30,31 +30,34 @@ The site loads the Umami analytics script from `cloud.umami.is` and the Google A
 
 ## Hardware sources
 
-The pin data uses facts from the documents and files listed in `sources/manifest.json`: 128 records, each with its URL, revision and SHA-256 hash. By publisher:
+The pin data uses facts from the 169 records in [the source manifest](sources/manifest.json). The manifest retains the publisher, source URL, revision and SHA-256 hash for each input.
 
 | Source family | Records | What is used |
 | --- | ---: | --- |
-| STMicroelectronics | 46 | 7 PDF data sheets and manuals (DS5319, RM0008, UM1724, UM2505, UM1956, UM1974, UM2407); 36 package, GPIO-mode and board-configuration files from `STMicroelectronics/STM32_open_pin_data`; 3 board variant files from `stm32duino/Arduino_Core_STM32` |
-| Arduino | 32 | 20 pinouts, schematics and data sheets from `arduino/docs-content`; 12 pin-definition and board files from ArduinoCore-avr, -megaavr, -renesas and -mbed |
-| Espressif | 12 | 8 DevKit user guides and pin-layout images from `espressif/esp-dev-kits`; 4 chip data sheets |
-| Espressif / Arduino | 1 | Arduino Nano ESP32 `pins_arduino.h` from `espressif/arduino-esp32` |
-| Raspberry Pi Ltd | 11 | Pico-family, RP2040, RP2350, BCM2711 and RP1 data sheets and pinouts, the Pi 4 reduced schematic and the GPIO page of `raspberrypi/documentation` |
-| WeAct Studio | 5 | Black Pill v3.x KiCad symbol, footprint, schematic and READMEs from `WeActStudio/WeActStudio.MiniSTM32F4x1` |
-| Micro:bit Educational Foundation | 4 | micro:bit V2 schematic and three hardware pages from `microbit-foundation/dev-docs` |
-| Microchip / Atmel | 3 | ATmega328P, ATmega640/1280/1281/2560/2561 and SAM D21/DA1 data sheets |
-| PJRC | 3 | Teensy 4.1 pinout cards 11a/11b and schematic |
-| Seeed Studio | 3 | XIAO RP2040, XIAO ESP32C3 and XIAO SAMD21 schematics |
-| STM32-base community | 3 | Blue Pill board page, mirrored reference schematic and photo. STM32-base is not affiliated with ST. |
+| STMicroelectronics | 49 | Eight ST data sheets and manuals, STM32 open package and GPIO-mode files, and STM32duino variant files |
+| Arduino | 38 | Board pinouts, schematics and data sheets, plus pin-definition and board files from the Arduino cores |
+| Espressif | 14 | DevKit manuals and drawings, and ESP32/ESP8266 source data sheets |
+| Espressif / Arduino | 1 | Arduino Nano ESP32 variant from `espressif/arduino-esp32` |
+| Raspberry Pi Ltd | 28 | Pico, Compute Module, RP silicon, BCM peripherals, Raspberry Pi board and radio module documentation |
+| WeAct Studio | 5 | Black Pill v3.x KiCad symbol, footprint, schematic and documentation |
+| Micro:bit Educational Foundation | 4 | micro:bit V2 schematic and three hardware pages |
+| Microchip / Atmel | 3 | ATmega and SAM D21 data sheets |
+| PJRC | 3 | Teensy 4.1 pinout cards and schematic |
+| Seeed Studio | 9 | XIAO schematics, core variant files and rear-view pinout |
+| STM32-base community | 3 | Blue Pill board page, reference schematic and photo |
 | BeagleBoard.org | 2 | BeagleBone Black System Reference Manual, chapters 7 and 8 |
-| Texas Instruments | 1 | AM335x data sheet SPRS717L |
+| Texas Instruments | 2 | AM335x and MSPM0G350x data sheets |
 | NVIDIA | 1 | Jetson Orin Nano Developer Kit carrier board specification |
-| Adafruit | 1 | Feather RP2040 pinout PDF from `adafruit/Adafruit-Feather-RP2040-PCB` |
-| **Total** | **128** | |
+| Adafruit | 3 | Feather RP2040 pinout and Feather RP2350 pinout and CAD schematic |
+| NodeMCU | 1 | NodeMCU DevKit schematic |
+| WEMOS | 2 | LOLIN D1 mini v4.0.0 schematic and pinout |
+| Ai-Thinker | 1 | ESP32-CAM Rev 1.6 schematic archived by Seeed Studio |
+| **Total** | **169** | |
 
 ### What is redistributed
 
 - **No manufacturer document is bundled.** The PDFs, images, HTML pages and source files above are downloaded into the git-ignored `.cache/primary-sources/` folder for hash checks only. They are not part of the repository or the published site.
-- **`sources/extracted/*.json` is redistributed.** These seven files hold raw table cells that `pdfplumber` extracted from seven ST documents (DS5319, RM0008, UM1724 Rev 17, UM2505 Rev 7, UM1956, UM1974 and UM2407): about 261 KB and 8,526 cells. Most cells are pin names and signal labels, but some hold whole sentences from ST's tables. They are copied text, not facts restated by this project. They are kept so CI can check the ST data without downloading the PDFs. Copyright in that text stays with STMicroelectronics.
+- **`sources/extracted/*.json` is redistributed.** These eight files hold raw table cells that `pdfplumber` extracted from eight ST documents (DS5319, RM0008, UM1724 Rev 17, UM2505 Rev 7, UM1956, UM1974, UM2407 and UM3115). Most cells are pin names and signal labels, but some hold whole sentences from ST's tables. They are copied text, not facts restated by this project. They are kept so CI can check the ST data without downloading the PDFs. Copyright in that text stays with STMicroelectronics.
 - **The generated pin tables are derived facts.** `public/data/`, `public/search.json` and `sources/pin-verification.csv` record pin numbers, signal names, alternate functions and short notes taken from the sources. Each record links to its document, page and table. Pin Atlas wrote the notes and descriptions itself.
 - Manufacturer and board names are used only to identify the hardware.
 

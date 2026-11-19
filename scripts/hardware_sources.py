@@ -46,6 +46,14 @@ def attach_hardware(boards,ref,cache,docs):
             for id,label in [('SB14','CN12.2'),('SB15','CN12.1')]:
                 control(id,'hw'+id+'Morpho','hwMorphoHelp',['unknown','off','on'],
                         [block([physical[label]],['unknown','off'],'contact')],[evidence])
+        if board['id'] == 'nucleo-h563zi':
+            physical = {p['physicalLabel']: p for p in pins}
+            sinks = [physical['CN9.9'], physical['CN9.11']]
+            routes = [{'pin': pin['number'], 'via': physical[via]['number'], 'floating': []}
+                      for pin, via in zip(sinks, ('CN12.5', 'CN12.3'))]
+            control('analogHeader','hwAnalogHeader','hwH563AnalogHeaderHelp',['unknown','analog','i2c'],
+                    [block(sinks,['unknown'],'contact'), {'when':['i2c'],'routes':routes}],
+                    ['nucleo-h563zi-bridges'])
         if board.get('layoutFamily')=='black-pill':
             items=[p for p in pins if p.get('boardCircuitKey')=='blackPillFlash']
             control('flash','hwFlash','hwFlashHelp',['unknown','fitted','absent'],[block(items,['unknown','fitted'])],evidence_for(items))

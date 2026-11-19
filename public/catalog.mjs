@@ -5,19 +5,20 @@ import {compatibleModels,normalizeCatalogText} from './compatibility.mjs';
 export const boardFamilies = [
   {id:'raspberry-pi',nameKey:'familyRaspberryPi',layouts:['pico-family','raspberry-pi-40','compute-module','raspberry-pi-rm2','rp2040','rp2350a','rp2350b']},
   {id:'arduino',nameKey:'familyArduino',layouts:['arduino-uno','arduino-nano','arduino-mega-2560','arduino-micro']},
-  {id:'espressif',nameKey:'familyEspressif',layouts:['nodemcu-v2','esp32-devkitc-v4','esp32-s3-devkitc-1','esp32-c6-devkitc-1','esp32-c3-devkitm-1']},
-  {id:'stm32',nameKey:'familyStm32',layouts:['blue-pill','black-pill','nucleo-32','nucleo-64','nucleo-144',
+  {id:'espressif',nameKey:'familyEspressif',layouts:['nodemcu-v2','lolin-d1-mini-v4','ai-thinker-esp32-cam','esp32-devkitc-v4','esp32-s3-devkitc-1','esp32-c6-devkitc-1','esp32-c3-devkitm-1']},
+  {id:'stm32',nameKey:'familyStm32',layouts:['blue-pill','black-pill','nucleo-32','nucleo-64','nucleo-144','nucleo-h563zi','stm32h563zit6',
     'stm32f401ccu6','stm32f411ceu6','stm32h743zit6','stm32f767zit6','stm32f042k6t6','stm32l432kcu6',
     'stm32f103c8t6','stm32f103rbt6','stm32f103vbt6','stm32f401ret6','stm32f411ret6','stm32g474ret6',
     'stm32h723zgt6','stm32f446ret6','stm32l476rgt6','stm32f072rbt6','stm32l053r8t6','stm32l152ret6',
     'stm32f407vgt6','stm32f405rgt6','stm32f303ret6']},
   {id:'seeed',nameKey:'familySeeed',layouts:['seeed-xiao']},
-  {id:'adafruit',nameKey:'familyAdafruit',layouts:['adafruit-feather-rp2040']},
+  {id:'adafruit',nameKey:'familyAdafruit',layouts:['adafruit-feather-rp2040','adafruit-feather-rp2350']},
   {id:'teensy',nameKey:'familyTeensy',layouts:['teensy-41']},
   {id:'beagleboard',nameKey:'familyBeagleBoard',layouts:['beaglebone-black']},
   {id:'microbit',nameKey:'familyMicrobit',layouts:['microbit-v2']},
   {id:'microchip',nameKey:'familyMicrochip',layouts:['atmega328p-pdip28','atmega328p-tqfp32','atmega328p-qfn32','atmega328p-qfn28','atmega2560-tqfp100','atmega2561-tqfp64']},
-  {id:'nvidia',nameKey:'familyNvidia',layouts:['jetson-orin-nano']}
+  {id:'nvidia',nameKey:'familyNvidia',layouts:['jetson-orin-nano']},
+  {id:'texas-instruments',nameKey:'familyTexasInstruments',layouts:['mspm0g3507spt']}
 ];
 export const catalogTypes = [
   {id:'all',labelKey:'catalogAll'}, {id:'boards',labelKey:'catalogBoards',filterKey:'catalogBoardsShort'},

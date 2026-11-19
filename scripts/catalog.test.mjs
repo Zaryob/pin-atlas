@@ -24,6 +24,22 @@ test('shared layouts expose exact models with board and MCU categories separated
   assert.equal(filterCatalog(catalog,{query:'ATmega328P',type:'chips'}).length,4);
 });
 
+test('new models resolve to the correct shared geometry or standalone package',()=>{
+  const expected = {
+    'arduino-nano-r4':'arduino-nano', 'xiao-esp32c6':'seeed-xiao', 'xiao-rp2350':'seeed-xiao',
+    'adafruit-feather-rp2350':'adafruit-feather-rp2350', 'adafruit-feather-rp2350-psram':'adafruit-feather-rp2350',
+    'nucleo-h563zi':'nucleo-h563zi', 'stm32h563zit6':'stm32h563zit6', 'lolin-d1-mini-v4':'lolin-d1-mini-v4',
+    'ai-thinker-esp32-cam':'ai-thinker-esp32-cam', 'mspm0g3507spt':'mspm0g3507spt',
+  };
+  for (const [profile, layout] of Object.entries(expected)) {
+    const entry=catalog.find(item=>item.profile===profile);
+    assert.equal(entry.id,layout);
+    assert.equal(resolveProfile(layouts,layout,profile).profile.id,profile);
+  }
+  assert.deepEqual(filterCatalog(catalog,{query:'MSPM0G3507',type:'chips',family:'texas-instruments'})
+    .map(entry=>entry.profile),['mspm0g3507spt']);
+});
+
 test('search tolerates punctuation and word order and respects series numbers and combined filters',()=>{
   assert.deepEqual(filterCatalog(catalog,{query:'L432KC nucleo'}).map(e=>e.profile),['nucleo-l432kc']);
   assert.deepEqual(filterCatalog(catalog,{query:'nucleo 32'}).map(e=>e.profile),['nucleo-f042k6','nucleo-l432kc']);

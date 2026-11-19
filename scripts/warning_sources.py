@@ -103,6 +103,12 @@ def attach_warnings(boards, ref, cache, docs):
                 warn(pin, 'rp2350E9Note', e9_ref); count += 1
         assert count == {'pico2': 26, 'pico2w': 26, 'rp2350a': 30, 'rp2350b': 48}[board_id]
         caution(by_id[board_id], 'rp2350E9Note', e9_ref)
+    for board_id in ('xiao-rp2350', 'adafruit-feather-rp2350', 'adafruit-feather-rp2350-psram'):
+        board = by_id[board_id]
+        for pin in board['pins']:
+            if pin['type'] == 'GPIO' and not pin.get('reserved'):
+                warn(pin, 'rp2350E9Note', e9_ref)
+        caution(board, 'rp2350E9Note', e9_ref)
 
     # --- Raspberry Pi 40-pin header ---------------------------------------
     adoc = (cache / docs['pi-gpio']['file']).read_text()

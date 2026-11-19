@@ -17,14 +17,14 @@ permalink: /sitemap.xml
     <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/" />
     <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/" />
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-19</lastmod>
   </url>
   <url>
     <loc>https://zaryob.github.io/pin-atlas/tr/boards/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/" />
     <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/" />
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-19</lastmod>
   </url>
   <url>
     <loc>https://zaryob.github.io/pin-atlas/boards/pico2w/</loc>
@@ -1217,6 +1217,34 @@ permalink: /sitemap.xml
     <lastmod>2026-11-14</lastmod>
   </url>
   <url>
+    <loc>https://zaryob.github.io/pin-atlas/boards/nucleo-h563zi/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/nucleo-h563zi/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/nucleo-h563zi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/nucleo-h563zi/" />
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://zaryob.github.io/pin-atlas/tr/boards/nucleo-h563zi/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/nucleo-h563zi/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/nucleo-h563zi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/nucleo-h563zi/" />
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://zaryob.github.io/pin-atlas/boards/stm32h563zit6/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/stm32h563zit6/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/stm32h563zit6/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/stm32h563zit6/" />
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://zaryob.github.io/pin-atlas/tr/boards/stm32h563zit6/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/stm32h563zit6/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/stm32h563zit6/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/stm32h563zit6/" />
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
     <loc>https://zaryob.github.io/pin-atlas/boards/weact-blackpill-f401cc/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/weact-blackpill-f401cc/" />
     <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/weact-blackpill-f401cc/" />
@@ -1271,5 +1299,117 @@ permalink: /sitemap.xml
     <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/stm32f411ceu6/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/stm32f411ceu6/" />
     <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://zaryob.github.io/pin-atlas/boards/xiao-esp32c6/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/xiao-esp32c6/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/xiao-esp32c6/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/xiao-esp32c6/" />
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://zaryob.github.io/pin-atlas/tr/boards/xiao-esp32c6/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/xiao-esp32c6/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/xiao-esp32c6/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/xiao-esp32c6/" />
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://zaryob.github.io/pin-atlas/boards/xiao-rp2350/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/xiao-rp2350/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/xiao-rp2350/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/xiao-rp2350/" />
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://zaryob.github.io/pin-atlas/tr/boards/xiao-rp2350/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/xiao-rp2350/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/xiao-rp2350/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/xiao-rp2350/" />
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://zaryob.github.io/pin-atlas/boards/adafruit-feather-rp2350/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/adafruit-feather-rp2350/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/adafruit-feather-rp2350/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/adafruit-feather-rp2350/" />
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://zaryob.github.io/pin-atlas/tr/boards/adafruit-feather-rp2350/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/adafruit-feather-rp2350/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/adafruit-feather-rp2350/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/adafruit-feather-rp2350/" />
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://zaryob.github.io/pin-atlas/boards/adafruit-feather-rp2350-psram/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/adafruit-feather-rp2350-psram/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/adafruit-feather-rp2350-psram/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/adafruit-feather-rp2350-psram/" />
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://zaryob.github.io/pin-atlas/tr/boards/adafruit-feather-rp2350-psram/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/adafruit-feather-rp2350-psram/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/adafruit-feather-rp2350-psram/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/adafruit-feather-rp2350-psram/" />
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://zaryob.github.io/pin-atlas/boards/arduino-nano-r4/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/arduino-nano-r4/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/arduino-nano-r4/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/arduino-nano-r4/" />
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://zaryob.github.io/pin-atlas/tr/boards/arduino-nano-r4/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/arduino-nano-r4/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/arduino-nano-r4/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/arduino-nano-r4/" />
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://zaryob.github.io/pin-atlas/boards/lolin-d1-mini-v4/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/lolin-d1-mini-v4/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/lolin-d1-mini-v4/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/lolin-d1-mini-v4/" />
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://zaryob.github.io/pin-atlas/tr/boards/lolin-d1-mini-v4/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/lolin-d1-mini-v4/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/lolin-d1-mini-v4/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/lolin-d1-mini-v4/" />
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://zaryob.github.io/pin-atlas/boards/ai-thinker-esp32-cam/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/ai-thinker-esp32-cam/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/ai-thinker-esp32-cam/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/ai-thinker-esp32-cam/" />
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://zaryob.github.io/pin-atlas/tr/boards/ai-thinker-esp32-cam/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/ai-thinker-esp32-cam/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/ai-thinker-esp32-cam/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/ai-thinker-esp32-cam/" />
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://zaryob.github.io/pin-atlas/boards/mspm0g3507spt/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/mspm0g3507spt/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/mspm0g3507spt/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/mspm0g3507spt/" />
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://zaryob.github.io/pin-atlas/tr/boards/mspm0g3507spt/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zaryob.github.io/pin-atlas/boards/mspm0g3507spt/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://zaryob.github.io/pin-atlas/tr/boards/mspm0g3507spt/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zaryob.github.io/pin-atlas/boards/mspm0g3507spt/" />
+    <lastmod>2026-11-19</lastmod>
   </url>
 </urlset>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="1040" viewBox="0 0 1100 1040">
+<g font-family="monospace" text-anchor="middle">
+  <rect x="105" y="62" width="900" height="886" rx="14" fill="#1b322d" stroke="#557b70" stroke-width="2"/>
+  <rect x="666" y="46" width="68" height="42" rx="6" fill="#a8bcbf" stroke="#687e83" stroke-width="2"/>
+  <rect x="307" y="932" width="68" height="42" rx="6" fill="#a8bcbf" stroke="#687e83" stroke-width="2"/>
+  <rect x="582" y="914" width="171" height="70" rx="8" fill="#a8bcbf" stroke="#687e83" stroke-width="2"/>
+  <text x="550" y="182" fill="#d7e8da" font-size="20">NUCLEO-H563ZI</text>
+  <rect x="446" y="414" width="206" height="147" rx="5" fill="#27322f" stroke="#647c72" stroke-width="2"/>
+  <text x="549" y="485" fill="#d7e8da" font-size="15">STM32H563ZIT6</text>
+  <text x="549" y="516" fill="#d7e8da" font-size="12">MB1404</text>
+  <text x="138" y="204" fill="#d7e8da" font-size="12">CN11</text>
+  <text x="987" y="204" fill="#d7e8da" font-size="12">CN12</text>
+  <text x="758" y="204" fill="#d7e8da" font-size="12">CN7</text>
+  <text x="366" y="277" fill="#d7e8da" font-size="12">CN8</text>
+  <text x="366" y="450" fill="#d7e8da" font-size="12">CN9</text>
+  <text x="758" y="413" fill="#d7e8da" font-size="12">CN10</text>
+</g>
+</svg>

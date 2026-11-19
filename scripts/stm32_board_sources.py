@@ -85,7 +85,8 @@ def build_nucleo144(cache,docs,ref,chip,model,spec,use_snapshots=False):
                     put(header,int(row[1]),row[2],row[4],evidence)
         else:
             for header,page,index in spec['zio']:
-                evidence=ref(id+f'-zio-{header}-{page}',document,page,f'UM2407 Rev 6 · {header} ST Zio pinout')
+                manual = 'UM3115 Rev 3' if model == 'h563zi' else 'UM2407 Rev 6'
+                evidence=ref(id+f'-zio-{header}-{page}',document,page,f'{manual} · {header} ST Zio pinout')
                 for row in pdf.pages[page-1].extract_tables()[index][1:]:
                     for offset in (0,5):
                         if (row[offset] or '').isdigit():put(header,int(row[offset]),row[offset+1],row[offset+3],evidence)
@@ -101,10 +102,16 @@ def build_nucleo144(cache,docs,ref,chip,model,spec,use_snapshots=False):
         for index in range(1,count+1):
             label,signal,evidence=contacts[header,index]
             x,y={'CN7':(746,230),'CN8':(354,230),'CN9':(354,435),'CN10':(746,475),'CN11':(126,230),'CN12':(974,230)}[header]
+            if model == 'h563zi':
+                x,y={'CN7':(746,230),'CN8':(354,302),'CN9':(354,475),'CN10':(746,435),'CN11':(126,230),'CN12':(974,230)}[header]
             pin=contact(chip,signal,len(pins)+1,header,index,label,[evidence,drawing],
                         {'x':x+26*((index-1)%2),'y':y+20*((index-1)//2),'side':'left' if index%2 else 'right'})
-            if pin['type']=='POWER':assert signal in {'IOREF','3V3','+3.3V','5V','+5V','VIN','VREFP','AVDD','VDD','E5V','U5V','VBAT','3V3_VDD','5V_EXT','5V_USB_STLK'},signal
-            if header=='CN9' and index in (9,11):pin['boardCircuitKey']='nucleo144AnalogBridge'
+            if pin['type']=='POWER':assert signal in {'IOREF','3V3','+3.3V','5V','+5V','VIN','VREFP','AVDD','VDD','E5V','U5V','VBAT','3V3_VDD','5V_EXT','5V_USB_STLK','5V_STLK'},signal
+            if header=='CN9' and index in (9,11):
+                pin['boardCircuitKey']='nucleoH563AnalogBridge' if model == 'h563zi' else 'nucleo144AnalogBridge'
+                if model == 'h563zi':
+                    pin['evidence'].append(ref('nucleo-h563zi-bridges',document,27,
+                        'UM3115 Rev 3 · Solder bridges · A4/A5 analog or I²C selection'))
             pins.append(pin)
     ioc_id='nucleo-'+model+'-ioc'
     if document=='nucleo-um2407-r6':
@@ -122,10 +129,15 @@ def build_nucleo144(cache,docs,ref,chip,model,spec,use_snapshots=False):
             signal=configuration.get(pin['name']+'.Signal','');label=configuration.get(pin['name']+'.GPIO_Label','').upper()
             note='nucleoH7Rmii' if signal.startswith('ETH_') else 'nucleoH7Usb' if signal.startswith('USB_') else 'nucleo144Led' if 'LED' in label or re.match(r'LD\d',label) else 'nucleo144Button' if 'BUTTON' in label or 'BTN' in label else None
             if note:pin['boardCircuitKey']=note;pin['evidence'].append(source)
-    return board_profile(chip,id,id.upper(),'nucleo-144',pins,
-                         {'width':1100,'height':1040,'minWidth':1000,'artwork':'assets/boards/nucleo-144.svg',
+    profile = board_profile(chip,id,id.upper(),'nucleo-144',pins,
+                         {'width':1100,'height':1040,'minWidth':1000,
+                          'artwork':'assets/boards/nucleo-h563zi.svg' if model == 'h563zi' else 'assets/boards/nucleo-144.svg',
                           'connectorGroups':[{'id':h,'label':('ST Zio' if h in ('CN7','CN8','CN9','CN10') else 'ST Morpho')+' · '+h,'contacts':[h]} for h in expected]},
-                         docs[document]['viewUrl'],'nucleo144SourceScope')
+                         docs[document]['viewUrl'],'nucleoH563Scope' if model == 'h563zi' else 'nucleo144SourceScope')
+    if model == 'h563zi':
+        # MB1404 places CN8/CN9 at different heights than the common Nucleo-144 drawing.
+        del profile['layoutFamily']
+    return profile
 
 def preserve_h723_assignments(board,legacy):
     """Retain v0.6 electrical assignment IDs while correcting physical labels."""

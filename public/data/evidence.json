@@ -1500,6 +1500,188 @@
       "publisher": "Raspberry Pi Ltd",
       "revision": "0fb416315f8f6c1949c0614989075d3e5805104b",
       "sha256": "194955580149e9b55fb757801b9ce00b04f4aec2a640a42313c5f66b3968f816"
+    },
+    {
+      "id": "xiao-esp32c6-sch",
+      "title": "Seeed Studio XIAO ESP32-C6 schematic",
+      "publisher": "Seeed Studio",
+      "revision": "v1.0 · 2026-01-14",
+      "file": "xiao-esp32c6.pdf",
+      "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO_ESP32_C6_v1.0_SCH_260114.pdf",
+      "sha256": "510f3f917bcded1201ca5c63374409183457c1ef83a836988517d6802180dad7"
+    },
+    {
+      "id": "xiao-rp2350-sch",
+      "title": "Seeed Studio XIAO RP2350 schematic",
+      "publisher": "Seeed Studio",
+      "revision": "v1.0",
+      "file": "xiao-rp2350.pdf",
+      "url": "https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2350-v1.0.pdf",
+      "sha256": "bd1c16ac32eb65bc1c389afbfea3ee90e321ba4b7e1804a6505d646774490bdd"
+    },
+    {
+      "id": "nano-r4-pinout",
+      "title": "Arduino Nano R4 Pinout",
+      "publisher": "Arduino",
+      "revision": "65d578fc7de843c45c21fc77b31a7a2009c46a5b",
+      "file": "nano-r4-pinout.pdf",
+      "url": "https://raw.githubusercontent.com/arduino/docs-content/65d578fc7de843c45c21fc77b31a7a2009c46a5b/content/hardware/nano/boards/nano-r4/downloads/ABX00142-full-pinout.pdf",
+      "sha256": "7c38033b330807ff95c7eb79078538498e9b01b3c5acf5efde89a0d108391384",
+      "viewUrl": "https://github.com/arduino/docs-content/blob/65d578fc7de843c45c21fc77b31a7a2009c46a5b/content/hardware/nano/boards/nano-r4/downloads/ABX00142-full-pinout.pdf"
+    },
+    {
+      "id": "nano-r4-schematic",
+      "title": "Arduino Nano R4 Schematic",
+      "publisher": "Arduino",
+      "revision": "65d578fc7de843c45c21fc77b31a7a2009c46a5b",
+      "file": "nano-r4-schematic.pdf",
+      "url": "https://raw.githubusercontent.com/arduino/docs-content/65d578fc7de843c45c21fc77b31a7a2009c46a5b/content/hardware/nano/boards/nano-r4/downloads/ABX00142-schematics.pdf",
+      "sha256": "708c17a295846f6c22ff489c29b694f99189f904b542c432435121c846303094",
+      "viewUrl": "https://github.com/arduino/docs-content/blob/65d578fc7de843c45c21fc77b31a7a2009c46a5b/content/hardware/nano/boards/nano-r4/downloads/ABX00142-schematics.pdf"
+    },
+    {
+      "id": "nano-r4-datasheet",
+      "title": "Arduino Nano R4 Datasheet",
+      "publisher": "Arduino",
+      "revision": "65d578fc7de843c45c21fc77b31a7a2009c46a5b",
+      "file": "nano-r4-datasheet.md",
+      "url": "https://raw.githubusercontent.com/arduino/docs-content/65d578fc7de843c45c21fc77b31a7a2009c46a5b/content/hardware/nano/boards/nano-r4/datasheet/datasheet.md",
+      "sha256": "a514aaf8efc61b680648e877c8ec68e5aa81fc5d24be042e33341d12c637fce8",
+      "viewUrl": "https://github.com/arduino/docs-content/blob/65d578fc7de843c45c21fc77b31a7a2009c46a5b/content/hardware/nano/boards/nano-r4/datasheet/datasheet.md"
+    },
+    {
+      "id": "nano-r4-variant",
+      "title": "Arduino Nano R4 core variant.cpp",
+      "publisher": "Arduino",
+      "revision": "ba2cb9383709e193e8edea9b6bb37b03799d8cd1",
+      "file": "nano-r4-variant.cpp",
+      "url": "https://raw.githubusercontent.com/arduino/ArduinoCore-renesas/ba2cb9383709e193e8edea9b6bb37b03799d8cd1/variants/NANOR4/variant.cpp",
+      "sha256": "c31e3a244671fb0809134d9ea5b19f2b0dec915c76f232e74529eb5d333a7179",
+      "viewUrl": "https://github.com/arduino/ArduinoCore-renesas/blob/ba2cb9383709e193e8edea9b6bb37b03799d8cd1/variants/NANOR4/variant.cpp"
+    },
+    {
+      "id": "nano-r4-variant-h",
+      "title": "Arduino Nano R4 core pins_arduino.h",
+      "publisher": "Arduino",
+      "revision": "ba2cb9383709e193e8edea9b6bb37b03799d8cd1",
+      "file": "nano-r4-variant.h",
+      "url": "https://raw.githubusercontent.com/arduino/ArduinoCore-renesas/ba2cb9383709e193e8edea9b6bb37b03799d8cd1/variants/NANOR4/pins_arduino.h",
+      "sha256": "a715133d43f9e395513423e6d052304eae6468e8b805f522d2b7931972b3cce4",
+      "viewUrl": "https://github.com/arduino/ArduinoCore-renesas/blob/ba2cb9383709e193e8edea9b6bb37b03799d8cd1/variants/NANOR4/pins_arduino.h"
+    },
+    {
+      "id": "nano-r4-pinmux",
+      "title": "Arduino Nano R4 core pinmux.inc",
+      "publisher": "Arduino",
+      "revision": "ba2cb9383709e193e8edea9b6bb37b03799d8cd1",
+      "file": "nano-r4-pinmux.inc",
+      "url": "https://raw.githubusercontent.com/arduino/ArduinoCore-renesas/ba2cb9383709e193e8edea9b6bb37b03799d8cd1/variants/NANOR4/pinmux.inc",
+      "sha256": "fb8679b5f37c1bde0428a41dd321434c544900470c15dbacd931f4ecbe0047c0",
+      "viewUrl": "https://github.com/arduino/ArduinoCore-renesas/blob/ba2cb9383709e193e8edea9b6bb37b03799d8cd1/variants/NANOR4/pinmux.inc"
+    },
+    {
+      "id": "d1-mini-v4-schematic",
+      "title": "LOLIN D1 mini v4.0.0 schematic",
+      "publisher": "WEMOS",
+      "revision": "4.0.0",
+      "file": "d1-mini-v4-schematic.pdf",
+      "url": "https://www.wemos.cc/en/latest/_static/files/sch_d1_mini_v4.0.0.pdf",
+      "sha256": "831c53db151995272787cae8bd8e01532b626314627920df88541be44e2364b4"
+    },
+    {
+      "id": "esp32-cam-schematic",
+      "title": "Ai-Thinker ESP32-CAM schematic",
+      "publisher": "Ai-Thinker",
+      "revision": "1.6 · 2018-01-30",
+      "file": "esp32-cam-schematic.pdf",
+      "url": "https://raw.githubusercontent.com/SeeedDocument/forum_doc/efa7ea6c0598b9584afa8d8d4f6ab846cc7ede91/reg/ESP32_CAM_V1.6.pdf",
+      "sha256": "ae6785fa28346b27e260802e519e05aacf54674f21fd1b106156003f95b682d9",
+      "viewUrl": "https://github.com/SeeedDocument/forum_doc/blob/efa7ea6c0598b9584afa8d8d4f6ab846cc7ede91/reg/ESP32_CAM_V1.6.pdf"
+    },
+    {
+      "id": "feather-rp2350-pinout",
+      "title": "Adafruit Feather RP2350 PrettyPins",
+      "publisher": "Adafruit",
+      "revision": "d7bc5cb6c16f071e01ae1cf790ee2142d376ee41",
+      "file": "feather-rp2350-pinout.pdf",
+      "url": "https://raw.githubusercontent.com/adafruit/Adafruit-Feather-RP2350-PCB/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit_Feather_RP2350_prettypins%202.pdf",
+      "sha256": "0c70fd8672c312c728c21869b5f72da8ea36a0146c4cb09ff668143429c0e29b",
+      "viewUrl": "https://github.com/adafruit/Adafruit-Feather-RP2350-PCB/blob/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit_Feather_RP2350_prettypins%202.pdf"
+    },
+    {
+      "id": "feather-rp2350-cad",
+      "title": "Adafruit Feather RP2350 Eagle schematic",
+      "publisher": "Adafruit",
+      "revision": "d7bc5cb6c16f071e01ae1cf790ee2142d376ee41",
+      "file": "feather-rp2350.sch",
+      "url": "https://raw.githubusercontent.com/adafruit/Adafruit-Feather-RP2350-PCB/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit%20Feather%20RP2350.sch",
+      "sha256": "457c42c30fbdf3cab59c757cf3bc42a03ef838c455438c5ad684d24ee2019788",
+      "viewUrl": "https://github.com/adafruit/Adafruit-Feather-RP2350-PCB/blob/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit%20Feather%20RP2350.sch"
+    },
+    {
+      "id": "h563zi-package",
+      "title": "STM32H563ZI LQFP144 package XML",
+      "publisher": "STMicroelectronics",
+      "revision": "45c04599e2e0a788c5ed9b6218dc5a28a36041f7",
+      "file": "h563zi-package.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/45c04599e2e0a788c5ed9b6218dc5a28a36041f7/mcu/STM32H563ZITx.xml",
+      "sha256": "ae05cd73463d96df790ae2e6252dc4d3298255fe7f4fd646e50571b72cd6e4ac",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/45c04599e2e0a788c5ed9b6218dc5a28a36041f7/mcu/STM32H563ZITx.xml"
+    },
+    {
+      "id": "h563zi-modes",
+      "title": "STM32H56x GPIO modes XML",
+      "publisher": "STMicroelectronics",
+      "revision": "45c04599e2e0a788c5ed9b6218dc5a28a36041f7",
+      "file": "h563zi-modes.xml",
+      "url": "https://raw.githubusercontent.com/STMicroelectronics/STM32_open_pin_data/45c04599e2e0a788c5ed9b6218dc5a28a36041f7/mcu/IP/GPIO-STM32H56x_gpio_v1_0_Modes.xml",
+      "sha256": "fb35dd3476759d219c91ae94e2acdd3bc507ccc66f22d960ceeeae880e698bd0",
+      "viewUrl": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/45c04599e2e0a788c5ed9b6218dc5a28a36041f7/mcu/IP/GPIO-STM32H56x_gpio_v1_0_Modes.xml"
+    },
+    {
+      "id": "nucleo-um3115-r3",
+      "title": "UM3115 STM32H5 Nucleo-144 board (MB1404)",
+      "publisher": "STMicroelectronics",
+      "revision": "Rev 3 · 2025-04",
+      "file": "nucleo-um3115-r3.pdf",
+      "url": "https://www.st.com/resource/en/user_manual/um3115-stm32h5-nucleo144-board-mb1404-stmicroelectronics.pdf",
+      "sha256": "f9e04bfe32b5dde17b06b043552bb37fef52591c4f6753dc3833193a724cdec9",
+      "viewUrl": "https://www.st.com/resource/en/user_manual/um3115-stm32h5-nucleo144-board-mb1404-stmicroelectronics.pdf",
+      "downloadUrls": [
+        "https://www.st.com/resource/en/user_manual/um3115-stm32h5-nucleo144-board-mb1404-stmicroelectronics.pdf",
+        "https://www.st.com.cn/resource/en/user_manual/um3115-stm32h5-nucleo144-board-mb1404-stmicroelectronics.pdf"
+      ],
+      "tableSnapshot": {
+        "file": "sources/extracted/nucleo-um3115-r3.json",
+        "sha256": "8a358c4f6d873a90dc89b85aa0dd71f6ea0534574ed60f08d72030bc07732254"
+      }
+    },
+    {
+      "id": "mspm0g3507-datasheet",
+      "title": "MSPM0G350x Mixed-Signal Microcontrollers With CAN-FD Interface",
+      "publisher": "Texas Instruments",
+      "revision": "SLASEX6C · October 2025",
+      "file": "mspm0g3507-datasheet.pdf",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf",
+      "sha256": "0cba2418fd28709c77829d98168988d3577628aa7dbb26f16587545a64a6b636"
+    },
+    {
+      "id": "xiao-rp2350-back",
+      "title": "Seeed Studio XIAO RP2350 back view",
+      "publisher": "Seeed Studio",
+      "revision": "v1.0 drawing",
+      "file": "xiao-rp2350-back.png",
+      "url": "https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO_RP2350_back_pinout.png",
+      "sha256": "72cc615fd60b9992768d97ef0de46a3dfb13ab4d5c25542d8b524deb595c448b"
+    },
+    {
+      "id": "d1-mini-v4-pinout",
+      "title": "LOLIN D1 mini v4.0.0 top-view pinout",
+      "publisher": "WEMOS",
+      "revision": "4.0.0",
+      "file": "d1-mini-v4-pinout.png",
+      "url": "https://www.wemos.cc/en/latest/_static/boards/d1_mini_v4.0.0_5_16x9.png",
+      "sha256": "6891e979804e941a357a0f8ccb3b6ac2856eeface12375884f789394f263cf99"
     }
   ],
   "references": {
@@ -3991,6 +4173,86 @@
       "locator": "Official board configuration · fitted peripheral and GPIO labels",
       "method": "hardware-spec"
     },
+    "h563zi-package": {
+      "document": "h563zi-package",
+      "title": "STM32H563ZI LQFP144 package XML",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/45c04599e2e0a788c5ed9b6218dc5a28a36041f7/mcu/STM32H563ZITx.xml",
+      "page": null,
+      "locator": "LQFP144 numbered package pins and physical signals",
+      "method": "manufacturer-xml"
+    },
+    "h563zi-modes": {
+      "document": "h563zi-modes",
+      "title": "STM32H56x GPIO modes XML",
+      "url": "https://github.com/STMicroelectronics/STM32_open_pin_data/blob/45c04599e2e0a788c5ed9b6218dc5a28a36041f7/mcu/IP/GPIO-STM32H56x_gpio_v1_0_Modes.xml",
+      "page": null,
+      "locator": "STM32H56x_gpio_v1_0 GPIO alternate function selectors",
+      "method": "manufacturer-xml"
+    },
+    "nucleo-h563zi-drawing": {
+      "document": "nucleo-um3115-r3",
+      "title": "UM3115 STM32H5 Nucleo-144 board (MB1404)",
+      "url": "https://www.st.com/resource/en/user_manual/um3115-stm32h5-nucleo144-board-mb1404-stmicroelectronics.pdf#page=11",
+      "page": 11,
+      "locator": "Mechanical drawing · CN7/CN8/CN9/CN10 ST Zio and CN11/CN12 ST Morpho",
+      "method": "visual-diagram"
+    },
+    "nucleo-h563zi-zio-CN7-33": {
+      "document": "nucleo-um3115-r3",
+      "title": "UM3115 STM32H5 Nucleo-144 board (MB1404)",
+      "url": "https://www.st.com/resource/en/user_manual/um3115-stm32h5-nucleo144-board-mb1404-stmicroelectronics.pdf#page=33",
+      "page": 33,
+      "locator": "UM3115 Rev 3 · CN7 ST Zio pinout",
+      "method": "pdf-table"
+    },
+    "nucleo-h563zi-zio-CN8-33": {
+      "document": "nucleo-um3115-r3",
+      "title": "UM3115 STM32H5 Nucleo-144 board (MB1404)",
+      "url": "https://www.st.com/resource/en/user_manual/um3115-stm32h5-nucleo144-board-mb1404-stmicroelectronics.pdf#page=33",
+      "page": 33,
+      "locator": "UM3115 Rev 3 · CN8 ST Zio pinout",
+      "method": "pdf-table"
+    },
+    "nucleo-h563zi-zio-CN9-34": {
+      "document": "nucleo-um3115-r3",
+      "title": "UM3115 STM32H5 Nucleo-144 board (MB1404)",
+      "url": "https://www.st.com/resource/en/user_manual/um3115-stm32h5-nucleo144-board-mb1404-stmicroelectronics.pdf#page=34",
+      "page": 34,
+      "locator": "UM3115 Rev 3 · CN9 ST Zio pinout",
+      "method": "pdf-table"
+    },
+    "nucleo-h563zi-zio-CN10-34": {
+      "document": "nucleo-um3115-r3",
+      "title": "UM3115 STM32H5 Nucleo-144 board (MB1404)",
+      "url": "https://www.st.com/resource/en/user_manual/um3115-stm32h5-nucleo144-board-mb1404-stmicroelectronics.pdf#page=34",
+      "page": 34,
+      "locator": "UM3115 Rev 3 · CN10 ST Zio pinout",
+      "method": "pdf-table"
+    },
+    "nucleo-h563zi-morpho-35": {
+      "document": "nucleo-um3115-r3",
+      "title": "UM3115 STM32H5 Nucleo-144 board (MB1404)",
+      "url": "https://www.st.com/resource/en/user_manual/um3115-stm32h5-nucleo144-board-mb1404-stmicroelectronics.pdf#page=35",
+      "page": 35,
+      "locator": "ST Morpho · CN11/CN12 numbered contacts",
+      "method": "pdf-table"
+    },
+    "nucleo-h563zi-morpho-36": {
+      "document": "nucleo-um3115-r3",
+      "title": "UM3115 STM32H5 Nucleo-144 board (MB1404)",
+      "url": "https://www.st.com/resource/en/user_manual/um3115-stm32h5-nucleo144-board-mb1404-stmicroelectronics.pdf#page=36",
+      "page": 36,
+      "locator": "ST Morpho · CN11/CN12 numbered contacts",
+      "method": "pdf-table"
+    },
+    "nucleo-h563zi-bridges": {
+      "document": "nucleo-um3115-r3",
+      "title": "UM3115 STM32H5 Nucleo-144 board (MB1404)",
+      "url": "https://www.st.com/resource/en/user_manual/um3115-stm32h5-nucleo144-board-mb1404-stmicroelectronics.pdf#page=27",
+      "page": 27,
+      "locator": "UM3115 Rev 3 · Solder bridges · A4/A5 analog or I²C selection",
+      "method": "pdf-table"
+    },
     "f401cc-package": {
       "document": "f401cc-package",
       "title": "F401CC CubeMX package data",
@@ -4046,6 +4308,142 @@
       "page": null,
       "locator": "STM32F411_gpio_v1_0 GPIO alternate function selectors",
       "method": "manufacturer-xml"
+    },
+    "xiao-esp32c6-headers": {
+      "document": "xiao-esp32c6-sch",
+      "title": "Seeed Studio XIAO ESP32-C6 schematic",
+      "url": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO_ESP32_C6_v1.0_SCH_260114.pdf#page=5",
+      "page": 5,
+      "locator": "ESP32-C6FH4 and XIAO side-header nets (also see connector sheet on p. 4)",
+      "method": "visual-diagram"
+    },
+    "xiao-rp2350-headers": {
+      "document": "xiao-rp2350-sch",
+      "title": "Seeed Studio XIAO RP2350 schematic",
+      "url": "https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2350-v1.0.pdf#page=5",
+      "page": 5,
+      "locator": "XIAO side headers · D0–D10 and power · RP2350 expansion pads when fitted to this design",
+      "method": "visual-diagram"
+    },
+    "xiao-rp2350-back": {
+      "document": "xiao-rp2350-back",
+      "title": "Seeed Studio XIAO RP2350 back view",
+      "url": "https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO_RP2350_back_pinout.png",
+      "page": null,
+      "locator": "Rear view · D11–D18 pad positions",
+      "method": "visual-diagram"
+    },
+    "feather-rp2350-connectors": {
+      "document": "feather-rp2350-cad",
+      "title": "Adafruit Feather RP2350 Eagle schematic",
+      "url": "https://github.com/adafruit/Adafruit-Feather-RP2350-PCB/blob/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit%20Feather%20RP2350.sch",
+      "page": null,
+      "locator": "Eagle schematic · JP1, JP3, CN2 and CONN1 nets",
+      "method": "manufacturer-xml"
+    },
+    "feather-rp2350-top": {
+      "document": "feather-rp2350-pinout",
+      "title": "Adafruit Feather RP2350 PrettyPins",
+      "url": "https://github.com/adafruit/Adafruit-Feather-RP2350-PCB/blob/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit_Feather_RP2350_prettypins%202.pdf#page=1",
+      "page": 1,
+      "locator": "Top-view header orientation and factory silkscreen",
+      "method": "visual-diagram"
+    },
+    "arduino-nano-r4-headers": {
+      "document": "nano-r4-pinout",
+      "title": "Arduino Nano R4 Pinout",
+      "url": "https://github.com/arduino/docs-content/blob/65d578fc7de843c45c21fc77b31a7a2009c46a5b/content/hardware/nano/boards/nano-r4/downloads/ABX00142-full-pinout.pdf#page=1",
+      "page": 1,
+      "locator": "ABX00142 top view · side headers, Qwiic and VBATT",
+      "method": "visual-diagram"
+    },
+    "arduino-nano-r4-circuit": {
+      "document": "nano-r4-schematic",
+      "title": "Arduino Nano R4 Schematic",
+      "url": "https://github.com/arduino/docs-content/blob/65d578fc7de843c45c21fc77b31a7a2009c46a5b/content/hardware/nano/boards/nano-r4/downloads/ABX00142-schematics.pdf#page=1",
+      "page": 1,
+      "locator": "ABX00142 electrical design and RA4M1 signal names",
+      "method": "visual-diagram"
+    },
+    "arduino-nano-r4-variant": {
+      "document": "nano-r4-variant",
+      "title": "Arduino Nano R4 core variant.cpp",
+      "url": "https://github.com/arduino/ArduinoCore-renesas/blob/ba2cb9383709e193e8edea9b6bb37b03799d8cd1/variants/NANOR4/variant.cpp",
+      "page": null,
+      "locator": "g_pin_cfg · Arduino labels and RA4M1 port indices",
+      "method": "source-code"
+    },
+    "arduino-nano-r4-defaults": {
+      "document": "nano-r4-variant-h",
+      "title": "Arduino Nano R4 core pins_arduino.h",
+      "url": "https://github.com/arduino/ArduinoCore-renesas/blob/ba2cb9383709e193e8edea9b6bb37b03799d8cd1/variants/NANOR4/pins_arduino.h",
+      "page": null,
+      "locator": "UART, Wire, SPI and CAN Arduino default pin constants",
+      "method": "source-code"
+    },
+    "arduino-nano-r4-pinmux": {
+      "document": "nano-r4-pinmux",
+      "title": "Arduino Nano R4 core pinmux.inc",
+      "url": "https://github.com/arduino/ArduinoCore-renesas/blob/ba2cb9383709e193e8edea9b6bb37b03799d8cd1/variants/NANOR4/pinmux.inc",
+      "page": null,
+      "locator": "RA4M1 ADC channel and native SPI/I²C instance declarations",
+      "method": "source-code"
+    },
+    "lolin-d1-mini-v4-pinout": {
+      "document": "d1-mini-v4-pinout",
+      "title": "LOLIN D1 mini v4.0.0 top-view pinout",
+      "url": "https://www.wemos.cc/en/latest/_static/boards/d1_mini_v4.0.0_5_16x9.png",
+      "page": null,
+      "locator": "WEMOS v4.0.0 top view · USB at the bottom and P1 at right",
+      "method": "visual-diagram"
+    },
+    "lolin-d1-mini-v4-connectors": {
+      "document": "d1-mini-v4-schematic",
+      "title": "LOLIN D1 mini v4.0.0 schematic",
+      "url": "https://www.wemos.cc/en/latest/_static/files/sch_d1_mini_v4.0.0.pdf#page=1",
+      "page": 1,
+      "locator": "LOLIN D1 mini v4.0.0 · J2/J3/P1, A0 divider, LED and boot resistors",
+      "method": "visual-diagram"
+    },
+    "ai-thinker-esp32-cam-connectors": {
+      "document": "esp32-cam-schematic",
+      "title": "Ai-Thinker ESP32-CAM schematic",
+      "url": "https://github.com/SeeedDocument/forum_doc/blob/efa7ea6c0598b9584afa8d8d4f6ab846cc7ede91/reg/ESP32_CAM_V1.6.pdf#page=1",
+      "page": 1,
+      "locator": "Ai-Thinker ESP32_CAM Rev 1.6 · P1/P2, camera socket Cam1, microSD SD1 and on-board PSRAM",
+      "method": "visual-diagram"
+    },
+    "mspm0g3507spt-table-11": {
+      "document": "mspm0g3507-datasheet",
+      "title": "MSPM0G350x Mixed-Signal Microcontrollers With CAN-FD Interface",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf#page=11",
+      "page": 11,
+      "locator": "SLASEX6C · Table 6-2 · LQFP-48 pin numbers, analog functions and PINCM.PF selectors",
+      "method": "pdf-table"
+    },
+    "mspm0g3507spt-table-12": {
+      "document": "mspm0g3507-datasheet",
+      "title": "MSPM0G350x Mixed-Signal Microcontrollers With CAN-FD Interface",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf#page=12",
+      "page": 12,
+      "locator": "SLASEX6C · Table 6-2 · LQFP-48 pin numbers, analog functions and PINCM.PF selectors",
+      "method": "pdf-table"
+    },
+    "mspm0g3507spt-table-13": {
+      "document": "mspm0g3507-datasheet",
+      "title": "MSPM0G350x Mixed-Signal Microcontrollers With CAN-FD Interface",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf#page=13",
+      "page": 13,
+      "locator": "SLASEX6C · Table 6-2 · LQFP-48 pin numbers, analog functions and PINCM.PF selectors",
+      "method": "pdf-table"
+    },
+    "mspm0g3507spt-table-14": {
+      "document": "mspm0g3507-datasheet",
+      "title": "MSPM0G350x Mixed-Signal Microcontrollers With CAN-FD Interface",
+      "url": "https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf#page=14",
+      "page": 14,
+      "locator": "SLASEX6C · Table 6-2 · LQFP-48 pin numbers, analog functions and PINCM.PF selectors",
+      "method": "pdf-table"
     },
     "arduino-uno-r3-package-schematic": {
       "document": "arduino-uno-r3-schematic",

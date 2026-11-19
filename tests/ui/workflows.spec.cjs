@@ -570,6 +570,21 @@ test('Nucleo catalog exposes every model and links to its exact MCU package',asy
   }
 });
 
+test('new board and MCU profiles open from catalog search on the configured viewport',async({page})=>{
+  const ids=[
+    'xiao-esp32c6','xiao-rp2350','arduino-nano-r4','lolin-d1-mini-v4','ai-thinker-esp32-cam',
+    'adafruit-feather-rp2350','adafruit-feather-rp2350-psram','nucleo-h563zi','stm32h563zit6','mspm0g3507spt',
+  ];
+  for(const id of ids){
+    const board=boards.find(item=>item.id===id);
+    await ready(page);
+    await page.locator('#home-search').fill(board.name);
+    await page.locator(`#home-catalog-container .catalog-card[data-profile="${id}"]`).click();
+    await expect(page.locator('#board-title')).toHaveText(board.name);
+    await expect(page.locator('#diagram [data-pin]')).toHaveCount(board.packagePins);
+  }
+});
+
 // Each renderer uses the same selection, transform and detail-panel contract.
 for(const id of ['picow','raspberry-pi-5','rp2040','stm32f103vbt6','atmega328p-pdip28','arduino-nano-33-ble-sense-rev2','nucleo-h723zg']){
  test(`${id} keeps pin selection consistent through mirror, rotation and table views`,async({page})=>{

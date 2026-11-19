@@ -27,6 +27,8 @@ try:
     from teensy_sources import build_teensy_41
     from beaglebone_sources import build_beaglebone
     from warning_sources import attach_warnings
+    from additional_board_sources import build_additional_boards
+    from ti_sources import build_mspm0g3507
 except ImportError:
     sys.exit('Install source verification dependencies: python3 -m pip install -r requirements-source-verification.txt')
 ROOT=Path(__file__).resolve().parents[1]
@@ -479,6 +481,8 @@ def build(use_snapshots=False):
     boards.append(h7_chip)
     boards.append(rp2040_chip)
     boards.extend(build_stm32_catalog(CACHE,DOCS,ref,MANIFEST['verifiedOn'],use_snapshots=use_snapshots))
+    boards.extend(build_additional_boards(CACHE,DOCS,ref,MANIFEST['verifiedOn'],boards))
+    boards.append(build_mspm0g3507(CACHE,DOCS,ref,MANIFEST['verifiedOn']))
     # Profiles checked against their sources after the catalog-wide date carry their own date.
     per_profile=MANIFEST.get('verifiedOnByProfile',{})
     unknown=set(per_profile)-{b['id'] for b in boards}

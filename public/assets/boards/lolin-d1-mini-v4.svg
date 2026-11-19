@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="620" viewBox="0 0 820 620">
+<g font-family="monospace" text-anchor="middle">
+  <rect x="270" y="88" width="280" height="300" rx="14" fill="#1b322d" stroke="#557b70" stroke-width="2"/>
+  <rect x="376" y="370" width="68" height="42" rx="6" fill="#a8bcbf" stroke="#687e83" stroke-width="2"/>
+  <text x="410" y="166" fill="#d7e8da" font-size="14">LOLIN D1 mini</text>
+  <rect x="345" y="201" width="130" height="100" rx="5" fill="#27322f" stroke="#647c72" stroke-width="2"/>
+  <text x="410" y="258" fill="#d7e8da" font-size="14">ESP8266EX</text>
+  <text x="410" y="340" fill="#d7e8da" font-size="12">v4.0.0</text>
+  <rect x="391" y="426" width="158" height="172" rx="12" fill="#293d35" stroke="#5d7b70" stroke-width="2"/>
+  <text x="468" y="456" fill="#d7e8da" font-size="12">P1 · I²C</text>
+</g>
+</svg>

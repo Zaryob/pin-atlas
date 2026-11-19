@@ -47,13 +47,14 @@ export function buildLayouts(boards) {
     {
       id: 'arduino-nano', nameKey: 'nanoLayout', subtitleKey: 'nanoLayoutSubtitle',
       compatibleKey: 'nanoCompatible',
-      profileIds: ['arduino-nano-classic', 'arduino-nano-every', 'arduino-nano-33-ble-sense-rev2', 'arduino-nano-esp32'], defaultProfile: 'arduino-nano-classic',
+      profileIds: ['arduino-nano-classic', 'arduino-nano-every', 'arduino-nano-33-ble-sense-rev2', 'arduino-nano-esp32', 'arduino-nano-r4'], defaultProfile: 'arduino-nano-classic',
       geometryConnectors: ['L', 'R'], sharedContactCount: 30,
       references: [
         {key: 'nanoClassicReference', profileIds: ['arduino-nano-classic']},
         {key: 'nanoEveryReference', profileIds: ['arduino-nano-every']},
         {key: 'nano33BleSenseRev2Reference', profileIds: ['arduino-nano-33-ble-sense-rev2']},
-        {key: 'nanoEsp32Reference', profileIds: ['arduino-nano-esp32']}
+        {key: 'nanoEsp32Reference', profileIds: ['arduino-nano-esp32']},
+        {label: 'Arduino Nano R4 · RA4M1', profileIds: ['arduino-nano-r4']}
       ]
     },
     {
@@ -77,14 +78,26 @@ export function buildLayouts(boards) {
     {
       id: 'seeed-xiao', nameKey: 'xiaoLayout', subtitleKey: 'xiaoLayoutSubtitle',
       compatibleKey: 'xiaoCompatible',
-      profileIds: ['xiao-rp2040', 'xiao-esp32c3', 'xiao-samd21', 'xiao-nrf52840', 'xiao-esp32s3'], defaultProfile: 'xiao-rp2040',
+      profileIds: ['xiao-rp2040', 'xiao-esp32c3', 'xiao-samd21', 'xiao-nrf52840', 'xiao-esp32s3', 'xiao-esp32c6', 'xiao-rp2350'], defaultProfile: 'xiao-rp2040',
       geometryConnectors: ['L', 'R'], sharedContactCount: 14,
       references: [
         {key: 'xiaoRp2040Reference', profileIds: ['xiao-rp2040']},
         {key: 'xiaoEsp32c3Reference', profileIds: ['xiao-esp32c3']},
         {key: 'xiaoSamd21Reference', profileIds: ['xiao-samd21']},
         {key: 'xiaoNrf52840Reference', profileIds: ['xiao-nrf52840']},
-        {key: 'xiaoEsp32s3Reference', profileIds: ['xiao-esp32s3']}
+        {key: 'xiaoEsp32s3Reference', profileIds: ['xiao-esp32s3']},
+        {label: 'XIAO ESP32C6', profileIds: ['xiao-esp32c6']},
+        {label: 'XIAO RP2350', profileIds: ['xiao-rp2350']}
+      ]
+    },
+    {
+      id: 'adafruit-feather-rp2350', defaultProfile: 'adafruit-feather-rp2350',
+      nameKey: 'featherRp2350Layout', subtitleKey: 'featherRp2350Subtitle', compatibleKey: 'featherRp2350Compatible',
+      profileIds: ['adafruit-feather-rp2350', 'adafruit-feather-rp2350-psram'],
+      geometryConnectors: ['JP1', 'JP3', 'CN2', 'CONN1'], sharedContactCount: 54,
+      references: [
+        {label: 'Feather RP2350', profileIds: ['adafruit-feather-rp2350']},
+        {label: 'Feather RP2350 · 8 MB PSRAM', profileIds: ['adafruit-feather-rp2350-psram']}
       ]
     },
     {

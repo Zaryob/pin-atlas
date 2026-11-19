@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="670" viewBox="0 0 820 670">
+<g font-family="monospace" text-anchor="middle">
+  <rect x="270" y="55" width="280" height="370" rx="14" fill="#1b322d" stroke="#557b70" stroke-width="2"/>
+  <rect x="376" y="32" width="68" height="42" rx="6" fill="#a8bcbf" stroke="#687e83" stroke-width="2"/>
+  <rect x="350" y="180" width="120" height="94" rx="5" fill="#27322f" stroke="#647c72" stroke-width="2"/>
+  <text x="410" y="147" fill="#d7e8da" font-size="14">SEEED XIAO</text>
+  <text x="410" y="235" fill="#d7e8da" font-size="14">RP2350</text>
+  <rect x="270" y="454" width="280" height="166" rx="12" fill="#293d35" stroke="#5d7b70" stroke-width="2"/>
+  <text x="410" y="484" fill="#d7e8da" font-size="12">D11–D18</text>
+</g>
+</svg>

@@ -102,3 +102,60 @@ def build_avr_packages(cache,docs,observations,ref,verified_on):
     assert sum(p['type']=='GPIO' for p in pins64)==54
     out.append({'id':'atmega2561-tqfp64','name':'ATmega2561 · TQFP-64','shortName':'ATmega2561 TQFP-64','family':'Microchip AVR','subtitle':'TQFP-64 · bare MCU · up to 16 MHz','layout':'lqfp','packageName':'TQFP-64','packagePins':64,'gpioCount':54,'voltage':'4.5–5.5 V (16 MHz grade)','mcu':'ATmega2561','processor':'8-bit AVR','clock':'Up to 16 MHz','scopeKey':'atmega2561PackageScope','compatibleKey':'atmega2561Compatible','verifiedOn':verified_on,'source':docs[source]['url']+'#page=4','datasheet':docs[source]['url'],'pins':pins64})
     return out
+
+
+def build_atmega32u4(cache, docs, ref, verified_on):
+    document = 'atmega32u4-datasheet'
+    # Figure 1-1, TQFP top view, counterclockwise from the index corner.
+    names = ('PE6 UVCC D- D+ UGND UCAP VBUS PB0 PB1 PB2 PB3 PB7 RESET VCC GND XTAL2 XTAL1 '
+             'PD0 PD1 PD2 PD3 PD5 GND AVCC PD4 PD6 PD7 PB4 PB5 PB6 PC6 PC7 PE2 VCC GND '
+             'PF7 PF6 PF5 PF4 PF1 PF0 AREF GND AVCC').split()
+    physical = ref('atmega32u4-tqfp44-physical', document, 3, 'Figure 1-1 · 44-pin TQFP package', 'visual-diagram')
+    functions = {}
+    with pdfplumber.open(cache / docs[document]['file']) as pdf:
+        for page in (72, 75, 77, 80, 81):
+            evidence = ref(f'atmega32u4-port-{page}', document, page, '§10.3 · Port alternate-function table')
+            table, = [t for t in pdf.pages[page - 1].extract_tables() if t[0][0] == 'Port Pin']
+            for name, cell in table[1:]:
+                if name not in names or not cell:
+                    continue
+                # The PDF text stream drops overbars on complementary timer outputs.
+                raw = cell.split('(')[0].strip()
+                signals = [s.strip().replace('OC.', 'OC') for s in raw.split('/')]
+                assert all(re.fullmatch('[A-Z0-9]+', signal) for signal in signals), (name, signals)
+                complementary = {'PB5': 'OC4B', 'PC6': 'OC4A', 'PD6': 'OC4D'}
+                functions[name] = []
+                for signal in signals:
+                    label, family = signal, group(signal)
+                    if complementary.get(name) == signal:
+                        label += ' (complementary)'
+                    elif signal in ('PDI', 'PDO'):
+                        family = 'SPI'
+                    elif signal in ('CTS', 'RTS'):
+                        family = 'UART'
+                    functions[name].append({'name': label, 'signal': signal, 'group': family, 'evidence': evidence})
+    pins = []
+    for number, name in enumerate(names, 1):
+        pin = make_pin(number, name, functions.get(name, []), physical)
+        if name in ('UVCC', 'UCAP', 'VBUS'):
+            pin['type'] = 'POWER'
+        elif name == 'UGND':
+            pin['type'] = 'GND'
+        elif name in ('D-', 'D+'):
+            pin['functions'] = [{'name': 'USB ' + name, 'signal': name, 'group': 'USB', 'evidence': physical}]
+        elif name.startswith('XTAL'):
+            pin['functions'] = [{'name': name, 'signal': name, 'group': 'CLOCK', 'evidence': physical}]
+        elif name == 'AREF':
+            pin['noteKey'] = 'avrArefNote'
+        elif name == 'RESET':
+            pin['noteKey'] = 'avrResetNote'
+        if pin['type'] == 'GPIO':
+            pin['noteKey'] = 'avrJtagNote' if name in ('PF4','PF5','PF6','PF7') else 'avrGpioNote'
+        pins.append(pin)
+    assert len(pins) == 44 and sum(p['type'] == 'GPIO' for p in pins) == 26
+    url = docs[document]['url']
+    return {'id': 'atmega32u4-tqfp44', 'name': 'ATmega32U4 · TQFP-44', 'shortName': 'ATmega32U4',
+            'mcu': 'ATmega32U4', 'family': 'Microchip AVR', 'processor': '8-bit AVR', 'clock': 'Up to 16 MHz',
+            'subtitle': 'TQFP-44 · 8-bit AVR', 'layout': 'lqfp', 'packageName': 'TQFP-44', 'packagePins': 44,
+            'gpioCount': 26, 'voltage': '2.7–5.5 V (speed dependent)', 'source': url + '#page=3',
+            'datasheet': url, 'verifiedOn': verified_on, 'scopeKey': 'atmega32u4Scope', 'pins': pins}

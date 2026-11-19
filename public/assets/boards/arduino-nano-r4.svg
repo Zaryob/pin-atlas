@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="780" viewBox="0 0 820 780">
+<g font-family="monospace" text-anchor="middle">
+  <rect x="268" y="65" width="284" height="472" rx="14" fill="#1b322d" stroke="#557b70" stroke-width="2"/>
+  <rect x="376" y="38" width="68" height="42" rx="6" fill="#a8bcbf" stroke="#687e83" stroke-width="2"/>
+  <text x="410" y="147" fill="#d7e8da" font-size="18">NANO R4</text>
+  <rect x="350" y="225" width="120" height="112" rx="5" fill="#27322f" stroke="#647c72" stroke-width="2"/>
+  <text x="410" y="287" fill="#d7e8da" font-size="14">RA4M1</text>
+  <rect x="270" y="552" width="280" height="154" rx="12" fill="#293d35" stroke="#5d7b70" stroke-width="2"/>
+  <text x="361" y="582" fill="#d7e8da" font-size="12">VBATT</text>
+  <text x="469" y="582" fill="#d7e8da" font-size="12">QWIIC</text>
+</g>
+</svg>

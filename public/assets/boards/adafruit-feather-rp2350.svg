@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="1170" viewBox="0 0 820 1170">
+<g font-family="monospace" text-anchor="middle">
+  <rect x="267" y="75" width="286" height="490" rx="14" fill="#1b322d" stroke="#557b70" stroke-width="2"/>
+  <rect x="376" y="51" width="68" height="42" rx="6" fill="#a8bcbf" stroke="#687e83" stroke-width="2"/>
+  <text x="410" y="145" fill="#d7e8da" font-size="14">FEATHER RP2350</text>
+  <rect x="346" y="234" width="128" height="110" rx="5" fill="#27322f" stroke="#647c72" stroke-width="2"/>
+  <text x="410" y="297" fill="#d7e8da" font-size="14">RP2350A</text>
+  <rect x="269" y="595" width="283" height="365" rx="12" fill="#293d35" stroke="#5d7b70" stroke-width="2"/>
+  <text x="410" y="631" fill="#d7e8da" font-size="12">HSTX · CN2</text>
+  <rect x="369" y="986" width="183" height="147" rx="12" fill="#293d35" stroke="#5d7b70" stroke-width="2"/>
+  <text x="465" y="1015" fill="#d7e8da" font-size="12">STEMMA QT</text>
+</g>
+</svg>

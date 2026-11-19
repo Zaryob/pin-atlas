@@ -1,6 +1,6 @@
 # Recorded ST table cells
 
-These seven JSON files contain raw `pdfplumber` table cells from seven ST documents. `scripts/record-st-tables.py` records these PDF pages (one-based):
+These eight JSON files contain raw `pdfplumber` table cells from eight ST documents. `scripts/record-st-tables.py` records these PDF pages (one-based):
 
 | File | Document | PDF pages |
 | --- | --- | --- |
@@ -11,6 +11,7 @@ These seven JSON files contain raw `pdfplumber` table cells from seven ST docume
 | `nucleo-um1956-r6.json` | UM1956 Rev 6 | 12, 13, 21, 22, 24, 30–32 |
 | `nucleo-um1974-r11.json` | UM1974 Rev 11 | 14, 15, 31–35, 37, 61–65, 70, 71 |
 | `nucleo-um2407-r6.json` | UM2407 Rev 6 | 15, 16, 31–34, 38–44 |
+| `nucleo-um3115-r3.json` | UM3115 Rev 3 | 27, 33–36 |
 
 They also record the `PD01_REMAP` token needed by the parser. They hold extracted source text, not generated Pin Atlas pin assignments. The manifest locks each JSON file's SHA-256, and each snapshot records the SHA-256 of the original PDF it was extracted from.
 
@@ -18,7 +19,7 @@ They also record the `PD01_REMAP` token needed by the parser. They hold extracte
 
 CI runs `verify-official-sources.py --table-snapshots`. In that mode no ST PDF is opened: the ST data is rebuilt from these cells with the same parsing and package restrictions as the original-PDF mode, and all generated outputs are still compared. The mode checks each snapshot's own hash, but does not compare a snapshot with its PDF.
 
-With the locked PDFs in `.cache/primary-sources/` and the pinned source-verification dependencies installed, compare all seven recorded snapshots against their original PDFs:
+With the locked PDFs in `.cache/primary-sources/` and the pinned source-verification dependencies installed, compare all eight recorded snapshots against their original PDFs:
 
 ```sh
 python3 scripts/record-st-tables.py

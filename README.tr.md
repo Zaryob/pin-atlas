@@ -8,7 +8,7 @@ Yeni profil eklemek için [kart ve MCU doğrulama adımlarını](docs/ADDING-BOA
 
 Üretici belgelerinden ve kimliği belirlenmiş kart referanslarından derlenen, İngilizce ve Türkçe bir pin rehberi. Fiziksel pin konumlarını, alternatif işlevleri ve bağlantı planlarını aynı çalışma alanında gösterir. Arayüz, şematik çizimler ve uygulama kodu bu proje için hazırlanmıştır. Konsol teması kişisel sitemle ortaktır.
 
-Katalogda 79 kart, başlık ve yonga profili vardır: 128 hash ile kilitlenmiş kaynak belgeden alınan 5.226 fiziksel pin kaydı ve 24.290 işlev ataması. Veri kümesinin doğrulama tarihi hâlâ 5 Kasım 2026'dır: 14–15 Kasım 2026'da kataloğun tamamı değil, yalnızca değişen profiller yeniden denetlendi.
+Katalogda 99 kart, başlık ve yonga profili var. 169 hash kilitli kaynak, 6.546 fiziksel pin kaydını ve 30.045 işlev atamasını kapsıyor. Katalog genelindeki doğrulama tarihi 5 Kasım 2026. Sonradan eklenen veya yeniden denetlenen profiller kendi doğrulama tarihlerini taşır.
 
 ## Pin düzenleri
 
@@ -46,6 +46,12 @@ Altyapıdaki pin düzenleri:
 - **ATmega2560 ve ATmega2561 paketleri:** ham MCU işlevleriyle ayrı TQFP-100 (86 GPIO'lu ATmega2560 / ATmega1280) ve TQFP-64 (54 GPIO'lu ATmega2561 / ATmega1281) görünümleri; Mega kartının başlıkları paket numaralandırmasından farklıdır.
 - **RP2350A:** QFN-60, 30 Bank 0 GPIO.
 - **RP2350B:** QFN-80, 48 Bank 0 GPIO.
+- **Seeed Studio XIAO ESP32C6 ve XIAO RP2350.** İkisi de XIAO yan başlık düzenini paylaşır. RP2350, arka yüzdeki sekiz D11–D18 pedini gösterir ve RP2350A paketine bağlanır.
+- **Arduino Nano R4 (ABX00142).** Harita 5 V yan başlıkları, 3,3 V Qwiic konektörünü ve VBATT temasını kapsar. Arduino çekirdeği, takılı RA4M1 portlarını ve çevre birimi yollarını tanımlar.
+- **LOLIN D1 mini v4.0.0 ve Ai-Thinker ESP32-CAM Rev 1.6.** D1 mini, J2/J3, P1 ve A0 gerilim bölücüsünü gösterir. ESP32-CAM, yan başlıklar, kamera konektörü ve microSD temaslarının paylaştığı hatları işaretler.
+- **Adafruit Feather RP2350 with HSTX.** Harita 22 temaslı HSTX konektörünü ve STEMMA QT’yi kapsar. 8 MB PSRAM’li varyant GPIO8’i belleğe ayırır.
+- **NUCLEO-H563ZI ve STM32H563ZIT6.** MB1404-C01 haritası 240 Zio/Morpho temasını LQFP-144 pakete bağlar. A4/A5 ayarı belgelenmiş analog veya I²C yolunu seçer.
+- **Texas Instruments MSPM0G3507SPT.** LQFP-48 haritasında 44 GPIO, 314 kaynaklı işlev ataması ve TI PINCM.PF değerleri bulunur.
 
 Pico çizimi ortak başlığı gösterir; kablosuz bağlantının, LED'in veya kart içi kablolamanın aynı olduğunu iddia etmez. İşlemci referansları fiziksel pin konumlarını değil, alternatif işlevleri değiştirir. Planlar referans başına kaydedilir; eski model bağlantıları, dışa aktarılmış JSON dosyaları ve kayıtlı planlar desteklenmeye devam eder. Aynı işlemci için birden çok eski model planı varsa birleştirilmeden Uyumlu kartlar bölümünde ayrı ayrı erişilebilir kalır.
 
@@ -126,7 +132,7 @@ GitHub Actions, önbelleğe alınmış bir kaynak klasörüyle `python3 scripts/
 
 - **Belgeden ayrıştırılmış.** Üretici betik, kilitli kopyadan PDF tablolarını, XML, KiCad veya kaynak dosyalarını okur. STM32, Raspberry Pi, Espressif, Arduino çekirdeği, Jetson, BeagleBone Black ve micro:bit verisinin çoğu böyledir.
 - **Elle kaydedilmiş tablolar.** Adafruit Feather RP2040 ve Teensy 4.1 üretici betikleri, atıf yapılan pin şemasından elle girilmiş tablolar içerir ve kilitli belgeyi açmaz. Teensy'de PWM, ADC ve port verisi, kilitli bir belge olmayan Teensy çekirdek kaynak koduyla çapraz denetlendi.
-- **Görsel okuma.** Bazı temas konumları ve etiketleri bir çizimden veya fotoğraftan gözle okunup `sources/manual-observations.json` içine kaydedildi. [`public/data/verification.json`](public/data/verification.json) içinde 79 profilden 53'ü `physicalSourceMethods` arasında `visual-diagram` (veya `visual-photo`) listeler. 5.226 pin kaydından 482'sinde (%9,2) bütün fiziksel kanıt başvuruları görsel okumadır. Dört profil tümüyle görsel okumaya dayanır: RP2040 (QFN-56), ATmega2560 (TQFP-100), ATmega2561 (TQFP-64) ve Seeed Studio XIAO RP2040.
+- **Görsel okuma.** Bazı temas konumları ve etiketleri çizim veya fotoğraftan aktarıldı. Eski gözlemler `sources/manual-observations.json` dosyasında, yeni profillerin okumaları ise kaynak çıkarıcılarında kayıtlıdır. [Üretilmiş doğrulama kaydında](public/data/verification.json) 99 profilin 64’ü görsel kanıta başvurur. 6.546 pin kaydının 608’inde (%9,3) fiziksel temas kanıtı görsel okumadan gelir.
 
 Aynı kayıt RP2350 Release 8'deki IOVDD tutarsızlığını da açıklar. Tam yöntem için [doğrulama kaydına](docs/VERIFICATION.tr.md) bakın.
 

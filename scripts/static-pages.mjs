@@ -104,7 +104,7 @@ function boardPage({site,language,t,board,profile,entry,related,evidence}) {
     const notes = pinNotes(pin);
     for (const note of notes.general) general.set(note.key||note.text,note);
     const identity = [pin.boardLabel && pin.boardLabel !== pin.name ? t('boardLabel',{label:pin.boardLabel}) : '',
-      pin.arduinoPin !== undefined ? `Arduino D${pin.arduinoPin}` : '',pin.mcuPort ? t('mcuPort',{port:pin.mcuPort}) : '',
+      pin.arduinoPin !== undefined ? `Arduino D${pin.arduinoPin}` : '',pin.mcuPort ? t('mcuPort',{port:pin.mcuPort}) : '',pin.voltage || '',
       pin.mcuPin ? t('mcuPin',{pin:pin.mcuPin}) : ''].filter(Boolean);
     const flags = [pin.reserved ? (key => t(key,{},key))(pin.reservedLabel || (pin.name === 'NC' ? 'unconnected' : 'reserved')) : '',
       pin.inputOnly ? t('researchInputOnly') : '',

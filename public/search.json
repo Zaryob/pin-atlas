@@ -1191,6 +1191,34 @@
   },
   {
     "lang": "tr",
+    "title": "NUCLEO-H563ZI",
+    "url": "/pin-atlas/#board=nucleo-h563zi&profile=nucleo-h563zi",
+    "type": "pin-atlas/",
+    "description": "Nucleo-144 MB1404 · STM32H563ZIT6 · STM32H563ZIT6 · STM32"
+  },
+  {
+    "lang": "en",
+    "title": "NUCLEO-H563ZI",
+    "url": "/pin-atlas/#board=nucleo-h563zi&profile=nucleo-h563zi",
+    "type": "pin-atlas/",
+    "description": "Nucleo-144 MB1404 · STM32H563ZIT6 · STM32H563ZIT6 · STM32"
+  },
+  {
+    "lang": "tr",
+    "title": "STM32H563ZIT6",
+    "url": "/pin-atlas/#board=stm32h563zit6&profile=stm32h563zit6",
+    "type": "pin-atlas/",
+    "description": "LQFP-144 · ARM Cortex-M33 · 250 MHz · STM32H563ZIT6 · STMicroelectronics"
+  },
+  {
+    "lang": "en",
+    "title": "STM32H563ZIT6",
+    "url": "/pin-atlas/#board=stm32h563zit6&profile=stm32h563zit6",
+    "type": "pin-atlas/",
+    "description": "LQFP-144 · ARM Cortex-M33 · 250 MHz · STM32H563ZIT6 · STMicroelectronics"
+  },
+  {
+    "lang": "tr",
     "title": "WeAct Black Pill F401CC v3.x",
     "url": "/pin-atlas/#board=black-pill&profile=weact-blackpill-f401cc",
     "type": "pin-atlas/",
@@ -1244,5 +1272,117 @@
     "url": "/pin-atlas/#board=stm32f411ceu6&profile=stm32f411ceu6",
     "type": "pin-atlas/",
     "description": "UFQFPN-48 · Arm Cortex-M4 · 100 MHz · STM32F411CEU6 · STMicroelectronics"
+  },
+  {
+    "lang": "tr",
+    "title": "Seeed Studio XIAO ESP32C6",
+    "url": "/pin-atlas/#board=seeed-xiao&profile=xiao-esp32c6",
+    "type": "pin-atlas/",
+    "description": "ESP32-C6 · 14 yan temas · ESP32-C6 · Seeed Studio"
+  },
+  {
+    "lang": "en",
+    "title": "Seeed Studio XIAO ESP32C6",
+    "url": "/pin-atlas/#board=seeed-xiao&profile=xiao-esp32c6",
+    "type": "pin-atlas/",
+    "description": "ESP32-C6 · 14 side contacts · ESP32-C6 · Seeed Studio"
+  },
+  {
+    "lang": "tr",
+    "title": "Seeed Studio XIAO RP2350",
+    "url": "/pin-atlas/#board=seeed-xiao&profile=xiao-rp2350",
+    "type": "pin-atlas/",
+    "description": "RP2350A · yan başlıklar ve arka pedler · RP2350A · Seeed Studio"
+  },
+  {
+    "lang": "en",
+    "title": "Seeed Studio XIAO RP2350",
+    "url": "/pin-atlas/#board=seeed-xiao&profile=xiao-rp2350",
+    "type": "pin-atlas/",
+    "description": "RP2350A · side headers and back pads · RP2350A · Seeed Studio"
+  },
+  {
+    "lang": "tr",
+    "title": "Adafruit Feather RP2350 with HSTX",
+    "url": "/pin-atlas/#board=adafruit-feather-rp2350&profile=adafruit-feather-rp2350",
+    "type": "pin-atlas/",
+    "description": "RP2350A · HSTX ve STEMMA QT · RP2350A · Adafruit"
+  },
+  {
+    "lang": "en",
+    "title": "Adafruit Feather RP2350 with HSTX",
+    "url": "/pin-atlas/#board=adafruit-feather-rp2350&profile=adafruit-feather-rp2350",
+    "type": "pin-atlas/",
+    "description": "RP2350A · HSTX and STEMMA QT · RP2350A · Adafruit"
+  },
+  {
+    "lang": "tr",
+    "title": "Adafruit Feather RP2350 with HSTX + PSRAM",
+    "url": "/pin-atlas/#board=adafruit-feather-rp2350&profile=adafruit-feather-rp2350-psram",
+    "type": "pin-atlas/",
+    "description": "RP2350A · HSTX · 8 MB PSRAM · RP2350A · Adafruit"
+  },
+  {
+    "lang": "en",
+    "title": "Adafruit Feather RP2350 with HSTX + PSRAM",
+    "url": "/pin-atlas/#board=adafruit-feather-rp2350&profile=adafruit-feather-rp2350-psram",
+    "type": "pin-atlas/",
+    "description": "RP2350A · HSTX · 8 MB PSRAM · RP2350A · Adafruit"
+  },
+  {
+    "lang": "tr",
+    "title": "Arduino Nano R4",
+    "url": "/pin-atlas/#board=arduino-nano&profile=arduino-nano-r4",
+    "type": "pin-atlas/",
+    "description": "Renesas RA4M1 · 5 V · Qwiic · Renesas RA4M1 · Arduino"
+  },
+  {
+    "lang": "en",
+    "title": "Arduino Nano R4",
+    "url": "/pin-atlas/#board=arduino-nano&profile=arduino-nano-r4",
+    "type": "pin-atlas/",
+    "description": "Renesas RA4M1 · 5 V · Qwiic · Renesas RA4M1 · Arduino"
+  },
+  {
+    "lang": "tr",
+    "title": "LOLIN D1 mini v4.0.0",
+    "url": "/pin-atlas/#board=lolin-d1-mini-v4&profile=lolin-d1-mini-v4",
+    "type": "pin-atlas/",
+    "description": "ESP8266EX · USB-C · I²C başlığı · ESP8266EX · WEMOS"
+  },
+  {
+    "lang": "en",
+    "title": "LOLIN D1 mini v4.0.0",
+    "url": "/pin-atlas/#board=lolin-d1-mini-v4&profile=lolin-d1-mini-v4",
+    "type": "pin-atlas/",
+    "description": "ESP8266EX · USB-C · I²C connector · ESP8266EX · WEMOS"
+  },
+  {
+    "lang": "tr",
+    "title": "Ai-Thinker ESP32-CAM",
+    "url": "/pin-atlas/#board=ai-thinker-esp32-cam&profile=ai-thinker-esp32-cam",
+    "type": "pin-atlas/",
+    "description": "ESP32 · kamera ve microSD · Rev 1.6 · ESP32 · Ai-Thinker"
+  },
+  {
+    "lang": "en",
+    "title": "Ai-Thinker ESP32-CAM",
+    "url": "/pin-atlas/#board=ai-thinker-esp32-cam&profile=ai-thinker-esp32-cam",
+    "type": "pin-atlas/",
+    "description": "ESP32 · camera and microSD · Rev 1.6 · ESP32 · Ai-Thinker"
+  },
+  {
+    "lang": "tr",
+    "title": "MSPM0G3507SPT",
+    "url": "/pin-atlas/#board=mspm0g3507spt&profile=mspm0g3507spt",
+    "type": "pin-atlas/",
+    "description": "LQFP-48 · Arm Cortex-M0+ · 80 MHz · MSPM0G3507SPT · Texas Instruments"
+  },
+  {
+    "lang": "en",
+    "title": "MSPM0G3507SPT",
+    "url": "/pin-atlas/#board=mspm0g3507spt&profile=mspm0g3507spt",
+    "type": "pin-atlas/",
+    "description": "LQFP-48 · Arm Cortex-M0+ · 80 MHz · MSPM0G3507SPT · Texas Instruments"
   }
 ]

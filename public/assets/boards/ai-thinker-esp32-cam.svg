@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="1140" viewBox="0 0 820 1140">
+<g font-family="monospace" text-anchor="middle">
+  <rect x="270" y="82" width="280" height="318" rx="14" fill="#1b322d" stroke="#557b70" stroke-width="2"/>
+  <rect x="324" y="101" width="172" height="32" rx="8" fill="#25382f" stroke="#547168" stroke-width="2"/>
+  <rect x="340" y="216" width="140" height="104" rx="5" fill="#27322f" stroke="#647c72" stroke-width="2"/>
+  <text x="410" y="180" fill="#d7e8da" font-size="14">ESP32-CAM</text>
+  <text x="410" y="274" fill="#d7e8da" font-size="14">ESP32</text>
+  <rect x="270" y="420" width="280" height="402" rx="12" fill="#293d35" stroke="#5d7b70" stroke-width="2"/>
+  <text x="410" y="451" fill="#d7e8da" font-size="12">Cam1 · FPC</text>
+  <rect x="270" y="855" width="195" height="245" rx="12" fill="#293d35" stroke="#5d7b70" stroke-width="2"/>
+  <text x="386" y="884" fill="#d7e8da" font-size="12">SD1 · microSD</text>
+</g>
+</svg>

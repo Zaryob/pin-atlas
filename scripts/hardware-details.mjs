@@ -11,6 +11,8 @@ export function compileHardwareDetails(data, boards) {
   }
   return new Map(boards.map(board => {
     const record = data.profiles[board.id], chip = record.chip ? data.chips[record.chip] : {};
+    const reviewedOn = record.reviewedOn ?? data.reviewedOn;
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(reviewedOn)) throw new Error(`Invalid hardware review date: ${board.id}`);
     if (!chip) throw new Error(`Unknown research chip: ${board.id}`);
     const keys = new Set();
     const sources = list => {
@@ -34,7 +36,7 @@ export function compileHardwareDetails(data, boards) {
       return {...note, sources: sources(note.sources)};
     });
     (record.documents || []).forEach(key => sources([key]));
-    return [board.id, {reviewedOn: data.reviewedOn, chip: record.chip, date, facts, notes,
+    return [board.id, {reviewedOn, chip: record.chip, date, facts, notes,
       documents: record.documents || [], sources: Object.fromEntries([...keys].map(key => [key, data.sources[key]]))}];
   }));
 }
@@ -58,6 +60,8 @@ export function hardwareResearchReport(details, boards, layouts, language) {
     const r=details.get(board.id),layout=layouts.find(l=>l.profileIds.includes(board.id));
     const citation=keys=>keys.map(key=>`[${r.sources[key].title}](${r.sources[key].url})`).join(', ');
     text+=`### ${board.name}\n\n[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=${layout.id}&profile=${board.id}) · [${tr?'Pin referansı':'Pin reference'}](${board.source}) · [Datasheet](${board.datasheet})\n\n`;
+    if (r.reviewedOn !== details.values().next().value.reviewedOn)
+      text += tr ? `Teknik bilgi incelemesi ${r.reviewedOn}.\n\n` : `Technical review ${r.reviewedOn}.\n\n`;
     text+=`- **${dateLabels[r.date.kind]}:** ${r.date.value || (tr?'Doğrulanamadı':'Unverified')}. ${citation(r.date.sources)}\n`;
     for(const fact of r.facts)text+=`- **${labels[fact.key]}:** ${local(fact.value)}. ${citation(fact.sources)}\n`;
     if(r.date.reason)text+=`\n${local(r.date.reason)}\n`;

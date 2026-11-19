@@ -77,3 +77,38 @@ test('a corrupt configured-plan record does not discard readable legacy plans',(
  const storage={getItem:key=>key===legacyStorageKey?JSON.stringify({picow:pins}):'{bad json'};
  assert.deepEqual(readPlanRecords(storage).picow,{version:1,pins});
 });
+
+test('the MB1404 A4/A5 preset selects the matching MCU pads without changing contact IDs',()=>{
+  const raw=source('nucleo-h563zi');
+  const unknown=configureBoard(raw);
+  const analog=configureBoard(raw,{analogHeader:'analog'});
+  const i2c=configureBoard(raw,{analogHeader:'i2c'});
+  for (const [label, analogNet, i2cNet] of [['CN9.9','PC2','PB9'],['CN9.11','PF11','PB8']]){
+    assert(contact(unknown,label).hardwareBlocked);
+    assert.equal(contact(analog,label).net,analogNet);
+    assert(contact(analog,label).functions.some(fn=>fn.group==='ADC'));
+    assert.equal(contact(i2c,label).net,i2cNet);
+    assert(contact(i2c,label).functions.some(fn=>fn.group==='I2C'));
+    assert.equal(contact(analog,label).number,contact(i2c,label).number);
+  }
+});
+
+test('on-board memory and the Nano R4 connector voltage stay profile-specific',()=>{
+  const standard=source('adafruit-feather-rp2350'),psram=source('adafruit-feather-rp2350-psram');
+  const pcs=contact(standard,'JP1.1');
+  assert.equal(pcs.net,'GPIO8');
+  assert.deepEqual(validatePlan({[pcs.number]:entry('GPIO')},standard,t),{[pcs.number]:entry('GPIO')});
+  assert.throws(()=>validatePlan({[pcs.number]:entry('GPIO')},psram,t),/invalidAssignment/);
+  assert.equal(contact(psram,'CN2.11').net,'GPIO12');
+  assert.equal(contact(psram,'CN2.21').net,'GPIO19');
+  const cam=source('ai-thinker-esp32-cam');
+  assert(contact(cam,'P1.7').reserved);
+  assert.equal(contact(cam,'Cam1.12').net,'GPIO0');
+  assert.equal(contact(cam,'SD1.8').net,contact(cam,'P2.1').net);
+  const nano=source('arduino-nano-r4');
+  assert.equal(nano.voltage,'5 V I/O');
+  assert.equal(contact(nano,'QWIIC.3').voltage,'3.3 V I/O');
+  assert(contact(nano,'QWIIC.3').functions.some(fn=>fn.name==='I2C0 SDA'));
+  assert(contact(nano,'L.8').functions.some(fn=>fn.name==='I2C1 SDA'));
+  assert.equal(contact(source('xiao-rp2350'),'TP.16').net,'GPIO21');
+});

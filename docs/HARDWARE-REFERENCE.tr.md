@@ -1,6 +1,6 @@
 # Donanım araştırması ve teknik referans
 
-İnceleme: 2026-11-14. 89 profil ayrı ayrı kapsanır. 54 profil için nitelendirilmiş tarih bilgisi vardır; 35 profilin kesin ilk üretim/satış tarihi doğrulanmamıştır. MCU veri sayfasının ilk yayını, kartın üretim yılı olarak sunulmaz.
+İnceleme: 2026-11-14. 99 profil ayrı ayrı kapsanır. 58 profil için nitelendirilmiş tarih bilgisi vardır; 41 profilin kesin ilk üretim/satış tarihi doğrulanmamıştır. MCU veri sayfasının ilk yayını, kartın üretim yılı olarak sunulmaz.
 
 Bu dosya `sources/hardware-details.json` kayıtlarından `npm run build:data` ile üretilir. Her özellik ve notun kaynak bağlantısı yanındadır. Canlı üretici sayfalarının içeriği değişebilir; pin kanıtlarının kilitli sürüm ve SHA-256 bilgileri ayrı `sources/manifest.json` kaydında korunur. Yeni teknik bilgi incelemesi, önceki pin doğrulama tarihini değiştirmez.
 
@@ -1381,6 +1381,36 @@ Devre / kart belgeleri: [STM32 Nucleo-144 · UM2407 Rev 6](https://www.st.com/re
 
 Belirtilen saat, MCU üst sınırıdır. PLL, besleme ve Flash bekleme çevrimleri uygun yapılandırılmalıdır. RAM bankalarının DMA erişimi aynı değildir. [H743ZI datasheet](https://www.st.com/resource/en/datasheet/stm32h743zi.pdf)
 
+### NUCLEO-H563ZI
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=nucleo-h563zi&profile=nucleo-h563zi) · [Pin referansı](https://www.st.com/resource/en/user_manual/um3115-stm32h5-nucleo144-board-mb1404-stmicroelectronics.pdf) · [Datasheet](https://www.st.com/resource/en/datasheet/stm32h563zi.pdf)
+
+Teknik bilgi incelemesi 2026-11-19.
+
+- **Belgelenmiş olduğu tarih:** 2025-04-09. [UM3115 STM32H5 Nucleo-144 board (MB1404)](https://www.st.com/resource/en/user_manual/um3115-stm32h5-nucleo144-board-mb1404-stmicroelectronics.pdf)
+- **İşlemci:** Arm Cortex-M33. [STM32H562xx/563xx datasheet](https://www.st.com/resource/en/datasheet/stm32h563zi.pdf)
+- **Saat hızı / üst sınır:** 250 MHz. [STM32H562xx/563xx datasheet](https://www.st.com/resource/en/datasheet/stm32h563zi.pdf)
+- **RAM:** 640 KB SRAM. [STM32H562xx/563xx datasheet](https://www.st.com/resource/en/datasheet/stm32h563zi.pdf)
+- **Program Flash’ı / depolama:** 2 MB Flash. [STM32H562xx/563xx datasheet](https://www.st.com/resource/en/datasheet/stm32h563zi.pdf)
+- **Besleme / mantık:** 3,3 V mantık, USB ve harici besleme seçenekleri için UM3115’e bakın. [UM3115 STM32H5 Nucleo-144 board (MB1404)](https://www.st.com/resource/en/user_manual/um3115-stm32h5-nucleo144-board-mb1404-stmicroelectronics.pdf)
+
+Devre / kart belgeleri: [UM3115 STM32H5 Nucleo-144 board (MB1404)](https://www.st.com/resource/en/user_manual/um3115-stm32h5-nucleo144-board-mb1404-stmicroelectronics.pdf)
+
+### STM32H563ZIT6
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=stm32h563zit6&profile=stm32h563zit6) · [Pin referansı](https://github.com/STMicroelectronics/STM32_open_pin_data/blob/45c04599e2e0a788c5ed9b6218dc5a28a36041f7/mcu/STM32H563ZITx.xml) · [Datasheet](https://www.st.com/resource/en/datasheet/stm32h563zi.pdf)
+
+Teknik bilgi incelemesi 2026-11-19.
+
+- **İlk üretim / çıkış:** Doğrulanamadı. [STM32H562xx/563xx datasheet](https://www.st.com/resource/en/datasheet/stm32h563zi.pdf), [STM32H563ZI LQFP144 package XML](https://github.com/STMicroelectronics/STM32_open_pin_data/blob/45c04599e2e0a788c5ed9b6218dc5a28a36041f7/mcu/STM32H563ZITx.xml)
+- **İşlemci:** Arm Cortex-M33. [STM32H562xx/563xx datasheet](https://www.st.com/resource/en/datasheet/stm32h563zi.pdf)
+- **Saat hızı / üst sınır:** 250 MHz. [STM32H562xx/563xx datasheet](https://www.st.com/resource/en/datasheet/stm32h563zi.pdf)
+- **RAM:** 640 KB SRAM. [STM32H562xx/563xx datasheet](https://www.st.com/resource/en/datasheet/stm32h563zi.pdf)
+- **Program Flash’ı / depolama:** 2 MB Flash. [STM32H562xx/563xx datasheet](https://www.st.com/resource/en/datasheet/stm32h563zi.pdf)
+- **Besleme / mantık:** 1.62–3.6 V VDD. [STM32H562xx/563xx datasheet](https://www.st.com/resource/en/datasheet/stm32h563zi.pdf)
+
+Kaynaklar kartı veya parçayı tanımlar. Kesin ilk üretim veya satış tarihi doğrulanamadı.
+
 ### WeAct Black Pill F401CC v3.x
 
 [Pin Atlas](https://zaryob.github.io/pin-atlas/#board=black-pill&profile=weact-blackpill-f401cc) · [Pin referansı](https://github.com/WeActStudio/WeActStudio.MiniSTM32F4x1/blob/6a7f7d434a9d6361f91590d4cdd16b4a70ce7513/README.md) · [Datasheet](https://www.st.com/resource/en/datasheet/stm32f401cc.pdf)
@@ -1444,4 +1474,147 @@ Devre / kart belgeleri: [WeAct MiniF4x1Cx v3.1 schematic](https://github.com/WeA
 - **MCU veri sayfasının ilk yayını:** 2014-06-19. [F411CE datasheet](https://www.st.com/resource/en/datasheet/stm32f411ce.pdf)
 
 Belirtilen saat, MCU üst sınırıdır. PLL, besleme ve Flash bekleme çevrimleri uygun yapılandırılmalıdır. RAM bankalarının DMA erişimi aynı değildir. [F411CE datasheet](https://www.st.com/resource/en/datasheet/stm32f411ce.pdf)
+
+### Seeed Studio XIAO ESP32C6
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=seeed-xiao&profile=xiao-esp32c6) · [Pin referansı](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO_ESP32_C6_v1.0_SCH_260114.pdf) · [Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)
+
+Teknik bilgi incelemesi 2026-11-19.
+
+- **İlk üretim / çıkış:** Doğrulanamadı. [XIAO ESP32C6 hardware guide](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/), [Seeed Studio XIAO ESP32-C6 schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO_ESP32_C6_v1.0_SCH_260114.pdf)
+- **İşlemci:** 1 × HP RISC-V + LP RISC-V. [ESP32C6 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)
+- **Saat hızı / üst sınır:** 160 MHz HP / 20 MHz LP. [ESP32C6 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)
+- **RAM:** 512 KB HP SRAM + 16 KB LP SRAM. [ESP32C6 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)
+- **Program Flash’ı / depolama:** 4 MB paket içi Flash (ESP32-C6FH4). [XIAO ESP32C6 hardware guide](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/), [Seeed Studio XIAO ESP32-C6 schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO_ESP32_C6_v1.0_SCH_260114.pdf)
+- **Sabit ROM:** 320 KB ROM. [ESP32C6 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)
+- **Besleme / mantık:** USB-C veya pil beslemesi, 3,3 V G/Ç. [XIAO ESP32C6 hardware guide](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/), [Seeed Studio XIAO ESP32-C6 schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO_ESP32_C6_v1.0_SCH_260114.pdf)
+
+Kaynaklar kartı veya parçayı tanımlar. Kesin ilk üretim veya satış tarihi doğrulanamadı.
+
+Devre / kart belgeleri: [Seeed Studio XIAO ESP32-C6 schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO_ESP32_C6_v1.0_SCH_260114.pdf)
+
+### Seeed Studio XIAO RP2350
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=seeed-xiao&profile=xiao-rp2350) · [Pin referansı](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2350-v1.0.pdf) · [Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+
+Teknik bilgi incelemesi 2026-11-19.
+
+- **İlk üretim / çıkış:** Doğrulanamadı. [XIAO RP2350 hardware guide](https://wiki.seeedstudio.com/xiao_rp2350_arduino/), [Seeed Studio XIAO RP2350 schematic](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2350-v1.0.pdf)
+- **İşlemci:** 2 × Arm Cortex-M33 / 2 × Hazard3 RISC-V. [RP2350 Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+- **Saat hızı / üst sınır:** 150 MHz. [RP2350 Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+- **RAM:** 520 KB SRAM. [RP2350 Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+- **Program Flash’ı / depolama:** 2 MB kart üstü QSPI Flash. [XIAO RP2350 hardware guide](https://wiki.seeedstudio.com/xiao_rp2350_arduino/), [Seeed Studio XIAO RP2350 schematic](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2350-v1.0.pdf)
+- **Sabit ROM:** 32 KB boot ROM. [RP2350 Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+- **Besleme / mantık:** USB-C veya pil beslemesi, 3,3 V G/Ç. [XIAO RP2350 hardware guide](https://wiki.seeedstudio.com/xiao_rp2350_arduino/), [Seeed Studio XIAO RP2350 schematic](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2350-v1.0.pdf)
+
+Kaynaklar kartı veya parçayı tanımlar. Kesin ilk üretim veya satış tarihi doğrulanamadı.
+
+İki çekirdek aynı anda çalışır; dört çekirdeğin tamamı birlikte kullanılamaz. 12 PIO durum makinesi. [RP2350 Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+
+Devre / kart belgeleri: [Seeed Studio XIAO RP2350 schematic](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2350-v1.0.pdf)
+
+### Adafruit Feather RP2350 with HSTX
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=adafruit-feather-rp2350&profile=adafruit-feather-rp2350) · [Pin referansı](https://github.com/adafruit/Adafruit-Feather-RP2350-PCB/blob/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit_Feather_RP2350_prettypins%202.pdf) · [Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+
+Teknik bilgi incelemesi 2026-11-19.
+
+- **İlk üretim / çıkış:** Doğrulanamadı. [Feather RP2350 with HSTX pinouts](https://learn.adafruit.com/adafruit-feather-rp2350/pinouts), [Adafruit Feather RP2350 Eagle schematic](https://github.com/adafruit/Adafruit-Feather-RP2350-PCB/blob/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit%20Feather%20RP2350.sch)
+- **İşlemci:** 2 × Arm Cortex-M33 / 2 × Hazard3 RISC-V. [RP2350 Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+- **Saat hızı / üst sınır:** 150 MHz. [RP2350 Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+- **RAM:** 520 KB SRAM. [RP2350 Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+- **Program Flash’ı / depolama:** 8 MB kart üstü QSPI Flash. [Feather RP2350 with HSTX pinouts](https://learn.adafruit.com/adafruit-feather-rp2350/pinouts), [Adafruit Feather RP2350 Eagle schematic](https://github.com/adafruit/Adafruit-Feather-RP2350-PCB/blob/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit%20Feather%20RP2350.sch)
+- **Sabit ROM:** 32 KB boot ROM. [RP2350 Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+- **Harici PSRAM:** Bu varyantta takılı değil. [Feather RP2350 with HSTX pinouts](https://learn.adafruit.com/adafruit-feather-rp2350/pinouts), [Adafruit Feather RP2350 Eagle schematic](https://github.com/adafruit/Adafruit-Feather-RP2350-PCB/blob/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit%20Feather%20RP2350.sch)
+- **Besleme / mantık:** USB-C veya tek hücreli LiPo, 3,3 V G/Ç. [Feather RP2350 with HSTX pinouts](https://learn.adafruit.com/adafruit-feather-rp2350/pinouts), [Adafruit Feather RP2350 Eagle schematic](https://github.com/adafruit/Adafruit-Feather-RP2350-PCB/blob/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit%20Feather%20RP2350.sch)
+
+Kaynaklar kartı veya parçayı tanımlar. Kesin ilk üretim veya satış tarihi doğrulanamadı.
+
+İki çekirdek aynı anda çalışır; dört çekirdeğin tamamı birlikte kullanılamaz. 12 PIO durum makinesi. [RP2350 Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+
+Devre / kart belgeleri: [Adafruit Feather RP2350 Eagle schematic](https://github.com/adafruit/Adafruit-Feather-RP2350-PCB/blob/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit%20Feather%20RP2350.sch)
+
+### Adafruit Feather RP2350 with HSTX + PSRAM
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=adafruit-feather-rp2350&profile=adafruit-feather-rp2350-psram) · [Pin referansı](https://github.com/adafruit/Adafruit-Feather-RP2350-PCB/blob/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit_Feather_RP2350_prettypins%202.pdf) · [Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+
+Teknik bilgi incelemesi 2026-11-19.
+
+- **İlk üretim / çıkış:** Doğrulanamadı. [Feather RP2350 with HSTX pinouts](https://learn.adafruit.com/adafruit-feather-rp2350/pinouts), [Adafruit Feather RP2350 Eagle schematic](https://github.com/adafruit/Adafruit-Feather-RP2350-PCB/blob/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit%20Feather%20RP2350.sch)
+- **İşlemci:** 2 × Arm Cortex-M33 / 2 × Hazard3 RISC-V. [RP2350 Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+- **Saat hızı / üst sınır:** 150 MHz. [RP2350 Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+- **RAM:** 520 KB SRAM. [RP2350 Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+- **Program Flash’ı / depolama:** 8 MB kart üstü QSPI Flash. [Feather RP2350 with HSTX pinouts](https://learn.adafruit.com/adafruit-feather-rp2350/pinouts), [Adafruit Feather RP2350 Eagle schematic](https://github.com/adafruit/Adafruit-Feather-RP2350-PCB/blob/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit%20Feather%20RP2350.sch), [Feather RP2350 with HSTX and 8 MB PSRAM](https://www.adafruit.com/product/6130)
+- **Sabit ROM:** 32 KB boot ROM. [RP2350 Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+- **Harici PSRAM:** 8 MB kart üstü SPI PSRAM. [Feather RP2350 with HSTX pinouts](https://learn.adafruit.com/adafruit-feather-rp2350/pinouts), [Adafruit Feather RP2350 Eagle schematic](https://github.com/adafruit/Adafruit-Feather-RP2350-PCB/blob/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit%20Feather%20RP2350.sch), [Feather RP2350 with HSTX and 8 MB PSRAM](https://www.adafruit.com/product/6130)
+- **Besleme / mantık:** USB-C veya tek hücreli LiPo, 3,3 V G/Ç. [Feather RP2350 with HSTX pinouts](https://learn.adafruit.com/adafruit-feather-rp2350/pinouts), [Adafruit Feather RP2350 Eagle schematic](https://github.com/adafruit/Adafruit-Feather-RP2350-PCB/blob/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit%20Feather%20RP2350.sch), [Feather RP2350 with HSTX and 8 MB PSRAM](https://www.adafruit.com/product/6130)
+
+Kaynaklar kartı veya parçayı tanımlar. Kesin ilk üretim veya satış tarihi doğrulanamadı.
+
+İki çekirdek aynı anda çalışır; dört çekirdeğin tamamı birlikte kullanılamaz. 12 PIO durum makinesi. [RP2350 Datasheet](https://pip-assets.raspberrypi.com/categories/1214-rp2350/documents/RP-008373-DS-3-rp2350-datasheet.pdf)
+
+Devre / kart belgeleri: [Adafruit Feather RP2350 Eagle schematic](https://github.com/adafruit/Adafruit-Feather-RP2350-PCB/blob/d7bc5cb6c16f071e01ae1cf790ee2142d376ee41/Adafruit%20Feather%20RP2350.sch)
+
+### Arduino Nano R4
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=arduino-nano&profile=arduino-nano-r4) · [Pin referansı](https://github.com/arduino/docs-content/blob/65d578fc7de843c45c21fc77b31a7a2009c46a5b/content/hardware/nano/boards/nano-r4/downloads/ABX00142-full-pinout.pdf) · [Datasheet](https://docs.arduino.cc/hardware/nano-r4/)
+
+Teknik bilgi incelemesi 2026-11-19.
+
+- **Belgelenmiş olduğu tarih:** 2025-11-25. [Arduino Nano R4 hardware reference](https://docs.arduino.cc/hardware/nano-r4/)
+- **İşlemci:** Arm Cortex-M4F. [uno-r4-minima hardware manual](https://docs.arduino.cc/hardware/uno-r4-minima/)
+- **Saat hızı / üst sınır:** 48 MHz. [uno-r4-minima hardware manual](https://docs.arduino.cc/hardware/uno-r4-minima/)
+- **RAM:** 32 KB SRAM. [uno-r4-minima hardware manual](https://docs.arduino.cc/hardware/uno-r4-minima/)
+- **Program Flash’ı / depolama:** 256 KB Flash. [uno-r4-minima hardware manual](https://docs.arduino.cc/hardware/uno-r4-minima/)
+- **EEPROM / kalıcı veri:** 8 KB data Flash (EEPROM emulation). [uno-r4-minima hardware manual](https://docs.arduino.cc/hardware/uno-r4-minima/)
+- **Besleme / mantık:** 5 V USB-C veya 6–21 V VIN, 5 V yan başlık G/Ç ve 3,3 V Qwiic. [Arduino Nano R4 hardware reference](https://docs.arduino.cc/hardware/nano-r4/)
+
+Devre / kart belgeleri: [Arduino Nano R4 Schematic](https://github.com/arduino/docs-content/blob/65d578fc7de843c45c21fc77b31a7a2009c46a5b/content/hardware/nano/boards/nano-r4/downloads/ABX00142-schematics.pdf)
+
+### LOLIN D1 mini v4.0.0
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=lolin-d1-mini-v4&profile=lolin-d1-mini-v4) · [Pin referansı](https://www.wemos.cc/en/latest/_static/files/sch_d1_mini_v4.0.0.pdf) · [Datasheet](https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf)
+
+Teknik bilgi incelemesi 2026-11-19.
+
+- **İlk üretim / çıkış:** Doğrulanamadı. [LOLIN D1 mini v4.0.0](https://www.wemos.cc/en/latest/d1/d1_mini.html), [LOLIN D1 mini v4.0.0 schematic](https://www.wemos.cc/en/latest/_static/files/sch_d1_mini_v4.0.0.pdf)
+- **İşlemci:** 1 × Tensilica L106 32-bit. [ESP8266EX Datasheet](https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf)
+- **Saat hızı / üst sınır:** 80 MHz (160 MHz max). [ESP8266EX Datasheet](https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf)
+- **RAM:** 80 KB user data SRAM + 32 KB instruction RAM + 32 KB instruction cache. [ESP8266EX Datasheet](https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf)
+- **Program Flash’ı / depolama:** 4 MB kart üstü Flash. [LOLIN D1 mini v4.0.0](https://www.wemos.cc/en/latest/d1/d1_mini.html), [LOLIN D1 mini v4.0.0 schematic](https://www.wemos.cc/en/latest/_static/files/sch_d1_mini_v4.0.0.pdf)
+- **Besleme / mantık:** USB-C, 3,3 V G/Ç. Kartın A0 girişi en fazla 3,2 V.. [LOLIN D1 mini v4.0.0](https://www.wemos.cc/en/latest/d1/d1_mini.html), [LOLIN D1 mini v4.0.0 schematic](https://www.wemos.cc/en/latest/_static/files/sch_d1_mini_v4.0.0.pdf)
+
+Kaynaklar kartı veya parçayı tanımlar. Kesin ilk üretim veya satış tarihi doğrulanamadı.
+
+Devre / kart belgeleri: [LOLIN D1 mini v4.0.0 schematic](https://www.wemos.cc/en/latest/_static/files/sch_d1_mini_v4.0.0.pdf)
+
+### Ai-Thinker ESP32-CAM
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=ai-thinker-esp32-cam&profile=ai-thinker-esp32-cam) · [Pin referansı](https://github.com/SeeedDocument/forum_doc/blob/efa7ea6c0598b9584afa8d8d4f6ab846cc7ede91/reg/ESP32_CAM_V1.6.pdf) · [Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf)
+
+Teknik bilgi incelemesi 2026-11-19.
+
+- **Belgelenmiş olduğu tarih:** 2018-01-30. [Ai-Thinker ESP32-CAM schematic](https://github.com/SeeedDocument/forum_doc/blob/efa7ea6c0598b9584afa8d8d4f6ab846cc7ede91/reg/ESP32_CAM_V1.6.pdf), [ESP32 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf)
+- **İşlemci:** 2 × Xtensa LX6. [ESP32 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf)
+- **Saat hızı / üst sınır:** 240 MHz. [ESP32 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf)
+- **RAM:** 520 KB SRAM + 16 KB RTC SRAM. [ESP32 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf)
+- **Program Flash’ı / depolama:** Modüle bağlı harici Flash. [ESP32 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf)
+- **Sabit ROM:** 448 KB ROM. [ESP32 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf)
+- **Harici PSRAM:** Kart üstü SPI PSRAM, seçme hattı GPIO16. [Ai-Thinker ESP32-CAM schematic](https://github.com/SeeedDocument/forum_doc/blob/efa7ea6c0598b9584afa8d8d4f6ab846cc7ede91/reg/ESP32_CAM_V1.6.pdf), [ESP32 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf)
+- **Besleme / mantık:** Kart üzerindeki regülatöre 5 V giriş, 3,3 V G/Ç. [Ai-Thinker ESP32-CAM schematic](https://github.com/SeeedDocument/forum_doc/blob/efa7ea6c0598b9584afa8d8d4f6ab846cc7ede91/reg/ESP32_CAM_V1.6.pdf), [ESP32 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf)
+
+Devre / kart belgeleri: [Ai-Thinker ESP32-CAM schematic](https://github.com/SeeedDocument/forum_doc/blob/efa7ea6c0598b9584afa8d8d4f6ab846cc7ede91/reg/ESP32_CAM_V1.6.pdf)
+
+### MSPM0G3507SPT
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=mspm0g3507spt&profile=mspm0g3507spt) · [Pin referansı](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf#page=8) · [Datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+
+Teknik bilgi incelemesi 2026-11-19.
+
+- **Belgelenmiş olduğu tarih:** 2025. [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+- **İşlemci:** Arm Cortex-M0+. [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+- **Saat hızı / üst sınır:** 80 MHz. [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+- **RAM:** 32 KB SRAM. [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+- **Program Flash’ı / depolama:** 128 KB Flash. [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
+- **Besleme / mantık:** 1.62–3.6 V VDD. [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
 

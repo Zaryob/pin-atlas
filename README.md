@@ -8,7 +8,7 @@ Contributing a profile? Follow the [board and MCU verification workflow](docs/AD
 
 A pin guide in English and Turkish, built from manufacturer documentation and identified board references. View physical pin positions, alternate functions, and wiring plans in one workspace. The interface, schematic drawings, and application code were made for this project. The console theme is shared with my personal site.
 
-The catalog has 89 board, header, and chip profiles with 5,865 physical pin records and 25,613 function assignments, taken from 151 hash-locked source documents. The dataset's verification date is still 5 November 2026: on 14–15 November 2026 only the changed profiles were checked again, not the whole catalog.
+The catalog contains 99 board, header and chip profiles. It lists 6,546 physical pin records and 30,045 function assignments from 169 hash-locked source records. The catalog-wide verification date is 5 November 2026. Profiles added or reviewed later carry their own verification dates.
 
 ## Pin layouts
 
@@ -46,6 +46,12 @@ The underlying pin layouts include:
 - **ATmega2560 and ATmega2561 packages:** separate TQFP-100 (ATmega2560 / ATmega1280 with 86 GPIOs) and TQFP-64 (ATmega2561 / ATmega1281 with 54 GPIOs) views with raw MCU functions; Mega board headers differ from package numbering.
 - **RP2350A:** QFN-60, 30 Bank 0 GPIOs.
 - **RP2350B:** QFN-80, 48 Bank 0 GPIOs.
+- **Seeed Studio XIAO ESP32C6 and XIAO RP2350.** Both share the XIAO side-header footprint. The RP2350 model adds the eight rear D11–D18 pads and links to the RP2350A package.
+- **Arduino Nano R4 (ABX00142).** The map includes the 5 V side headers, 3.3 V Qwiic connector and VBATT. The Nano R4 core identifies the fitted RA4M1 ports and Arduino peripheral routes.
+- **LOLIN D1 mini v4.0.0 and Ai-Thinker ESP32-CAM Rev 1.6.** The D1 mini shows J2/J3, P1 and the A0 divider. ESP32-CAM shows the side headers, the camera connector and microSD contacts, with warnings for shared lines.
+- **Adafruit Feather RP2350 with HSTX.** The map includes the 22-position HSTX connector and STEMMA QT. The 8 MB PSRAM variant reserves GPIO8.
+- **NUCLEO-H563ZI and STM32H563ZIT6.** The MB1404-C01 map connects 240 Zio/Morpho contacts to the LQFP-144 package. The A4/A5 board setting selects the documented analog or I²C route.
+- **Texas Instruments MSPM0G3507SPT.** LQFP-48 with 44 GPIOs, 314 sourced peripheral placements and TI PINCM.PF values.
 
 The Pico drawing represents the common header and does not claim identical wireless, LED or internal board wiring. Processor references change alternate functions, not physical pin positions. Plans are saved per reference; old model links, exported JSON files, and saved plans remain supported. If multiple old model plans exist for the same processor, they remain individually available in Compatible boards without being merged.
 
@@ -126,7 +132,7 @@ GitHub Actions runs `python3 scripts/verify-official-sources.py --table-snapshot
 
 - **Parsed from the document.** The generator reads PDF tables, XML, KiCad or source files from the locked copy. This covers most STM32, Raspberry Pi, Espressif, Arduino core, Jetson, BeagleBone Black and micro:bit data.
 - **Hand-recorded tables.** The generators for Adafruit Feather RP2040 and Teensy 4.1 contain tables typed in from the cited pinout and do not open the locked document. For Teensy, the PWM, ADC and port data were cross-checked against the Teensy core source, which is not a locked document.
-- **Visual reading.** Some contact positions and labels were read by eye from a drawing or photo and recorded in `sources/manual-observations.json`. In [`public/data/verification.json`](public/data/verification.json), 56 of the 89 profiles list `visual-diagram` (or `visual-photo`) among their `physicalSourceMethods`. In 510 of the 5,865 pin records (8.7 %), every physical evidence reference is a visual reading. Four profiles rest entirely on visual reading: RP2040 (QFN-56), ATmega2560 (TQFP-100), ATmega2561 (TQFP-64) and Seeed Studio XIAO RP2040.
+- **Visual reading.** Some contact positions and labels were transcribed from a drawing or photo. Earlier observations are in `sources/manual-observations.json`. The recently added profiles record these readings alongside their source extractors. In [the generated verification report](public/data/verification.json), 64 of 99 profiles list visual evidence, and 608 of 6,546 pin records (9.3%) cite only visual evidence for their physical contacts.
 
 The same record explains the IOVDD discrepancy in RP2350 Release 8. See the full method in the [verification record](docs/VERIFICATION.md).
 

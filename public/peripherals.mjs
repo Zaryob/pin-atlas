@@ -30,7 +30,7 @@ export function peripheralSignal(fn) {
   let role = match[2].split(/[ _(]/)[0];
   if (fn.mode === 'spi-controller-single' && /^SIO\[[01]\]$/.test(role)) role = role === 'SIO[0]' ? 'MOSI' : 'MISO';
   if (fn.group === 'UART') role = ({TXD:'TX',RXD:'RX'})[role] || role;
-  if (fn.group === 'SPI') role = ({RX:'MISO', TX:'MOSI', CIPO:'MISO', COPI:'MOSI', SCLK:'SCK', CLK:'SCK'})[role] || role;
+  if (fn.group === 'SPI') role = ({RX:'MISO', TX:'MOSI', CIPO:'MISO', COPI:'MOSI', POCI:'MISO', PICO:'MOSI', SCLK:'SCK', CLK:'SCK'})[role] || role;
   const channel=fn.group==='SPI' && /^(?:(?:NSS|SS|CS|CE)\d*|CSN(?:\[\d+\])?)$/.test(role)?role:null;
   if(channel)role='CS';
   if (!roles[fn.group].includes(role) && !channel) return null;
