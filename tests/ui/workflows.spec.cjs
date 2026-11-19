@@ -283,7 +283,7 @@ test('Nucleo144 model changes retain the physical contact and old H723 wiring pl
  expect(await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),storageKey)).toEqual(saved);
 });
 
-for(const board of boards.filter(b=>['nucleo32Scope','nucleo144SourceScope','blackPillScope'].includes(b.scopeKey))) {
+for(const board of boards.filter(b=>['nucleo32Scope','nucleo144SourceScope','blackPillScope','tiLaunchpadScope','arduino-leonardoScope','arduino-microScope','nanoR4Scope','arduino-uno-r4-minimaScope','arduino-uno-r4-wifiScope'].includes(b.scopeKey))) {
  test(`${board.id} opens its exact reference and verified package`,async({page})=>{
   await ready(page);await page.locator('#home-search').fill(board.name);
   await page.locator(`#home-catalog-container [data-profile="${board.id}"]`).first().click();

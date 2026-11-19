@@ -57,15 +57,9 @@ jobs:
             playwright-report/
           if-no-files-found: ignore
 
-  build-and-deploy:
+  build:
     needs: validate
     runs-on: ubuntu-24.04
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v6
       - uses: ruby/setup-ruby@v1
@@ -81,9 +75,20 @@ jobs:
         run: bundle exec jekyll build --baseurl "$PAGES_BASE_PATH"
       - name: Check compiled asset paths
         run: python3 scripts/check-static-paths.py --require-built
-      - uses: actions/upload-pages-artifact@v4
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: Deploy
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
