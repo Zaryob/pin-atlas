@@ -1756,6 +1756,30 @@
       "viewUrl": "https://github.com/arduino/docs-content/blob/65d578fc7de843c45c21fc77b31a7a2009c46a5b/content/hardware/hero/boards/micro/downloads/A000053-schematics.pdf",
       "publisher": "Arduino",
       "sha256": "89fce2120cfdfc27755fded45f9428db96e14d6a378fe5c18426c82385e89a90"
+    },
+    {
+      "id": "ch32v003-datasheet",
+      "title": "WCH CH32V003 series datasheet",
+      "publisher": "WCH",
+      "revision": "Version 1.4",
+      "file": "ch32v003-datasheet.pdf",
+      "url": "https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html"
+    },
+    {
+      "id": "ch32v00x-eval-ref",
+      "title": "WCH CH32V00x Evaluation Board Reference",
+      "publisher": "WCH",
+      "revision": "Version 1.3",
+      "file": "ch32v00x-eval-ref.pdf",
+      "url": "https://raw.githubusercontent.com/openwch/ch32v003/4e1b7437ada5d3ae8831a6f4b811a6320e4e23c7/EVT/PUB/CH32V00x%20Evaluation%20Board%20Reference-EN.pdf"
+    },
+    {
+      "id": "nrf52840-dk-ug",
+      "title": "Nordic nRF52840 DK Hardware User Guide",
+      "publisher": "Nordic Semiconductor",
+      "revision": "PCA10056 Hardware v1.3.0+",
+      "file": "nrf52840-dk-user-guide.pdf",
+      "url": "https://docs.nordicsemi.com/bundle/ug_nrf52840_dk/page/UG/dk/intro.html"
     }
   ],
   "references": {
@@ -5022,6 +5046,62 @@
       "page": null,
       "locator": "Power supply · V2 regulator and current available to the edge connector",
       "method": "manufacturer-source-text"
+    },
+    "esp32c6-qfn32-pinout": {
+      "document": "esp32c6-datasheet",
+      "page": 17,
+      "title": "Table 2-2 · QFN32 Pin Overview and pin functions",
+      "url": "https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf#page=17",
+      "method": "pdf-text"
+    },
+    "esp32c6-qfn32-drawing": {
+      "document": "esp32c6-datasheet",
+      "page": 15,
+      "title": "Figure 2-2 · ESP32-C6 Pin Layout (QFN32, Top View)",
+      "url": "https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf#page=15",
+      "method": "visual-diagram"
+    },
+    "ch32v003-pin-table": {
+      "document": "ch32v003-datasheet",
+      "page": 1,
+      "title": "Pin Definition · TSSOP-20 pin table and alternate functions",
+      "url": "https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html",
+      "method": "pdf-text"
+    },
+    "ch32v003-tssop20-drawing": {
+      "document": "ch32v003-datasheet",
+      "page": 1,
+      "title": "TSSOP-20 pin layout and package outline",
+      "url": "https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html",
+      "method": "visual-diagram"
+    },
+    "ch32v003-evt-board": {
+      "document": "ch32v00x-eval-ref",
+      "page": 2,
+      "title": "Motherboard CH32V003EVT resource overview",
+      "url": "https://raw.githubusercontent.com/openwch/ch32v003/4e1b7437ada5d3ae8831a6f4b811a6320e4e23c7/EVT/PUB/CH32V00x%20Evaluation%20Board%20Reference-EN.pdf",
+      "method": "pdf-text"
+    },
+    "ch32v003-evt-headers": {
+      "document": "ch32v00x-eval-ref",
+      "page": 2,
+      "title": "MCU I/O port pinout headers",
+      "url": "https://raw.githubusercontent.com/openwch/ch32v003/4e1b7437ada5d3ae8831a6f4b811a6320e4e23c7/EVT/PUB/CH32V00x%20Evaluation%20Board%20Reference-EN.pdf",
+      "method": "visual-diagram"
+    },
+    "nrf52840-dk-headers": {
+      "document": "nrf52840-dk-ug",
+      "page": 1,
+      "title": "Arduino Uno Rev3 compatible headers P3, P4, P5, P6",
+      "url": "https://docs.nordicsemi.com/bundle/ug_nrf52840_dk/page/UG/dk/intro.html",
+      "method": "source-table"
+    },
+    "nrf52840-dk-layout": {
+      "document": "nrf52840-dk-ug",
+      "page": 1,
+      "title": "Development kit pin layout and connector mapping",
+      "url": "https://docs.nordicsemi.com/bundle/ug_nrf52840_dk/page/UG/dk/intro.html",
+      "method": "visual-diagram"
     }
   }
 }

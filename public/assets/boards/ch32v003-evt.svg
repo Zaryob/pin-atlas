@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="600" viewBox="0 0 820 600">
+<g font-family="monospace" text-anchor="middle">
+  <rect x="250" y="60" width="320" height="480" rx="14" fill="#1b2a4a" stroke="#415d8a" stroke-width="2"/>
+  <rect x="262" y="72" width="296" height="456" rx="10" fill="none" stroke="#2e4266" stroke-dasharray="4 6"/>
+  <rect x="375" y="38" width="70" height="44" rx="6" fill="#9eaeb8" stroke="#586973" stroke-width="2"/>
+  <text x="410" y="65" fill="#2d3748" font-size="11">TYPE-C</text>
+  <rect x="275" y="98" width="38" height="24" rx="3" fill="#2b3952" stroke="#607699"/>
+  <text x="294" y="114" fill="#94a3b8" font-size="9">PWR</text>
+  <circle cx="525" cy="110" r="10" fill="#3b4d6b" stroke="#829abf"/>
+  <circle cx="525" cy="110" r="5" fill="#e2e8f0"/>
+  <text x="525" y="132" fill="#94a3b8" font-size="9">RESET</text>
+  <rect x="355" y="210" width="110" height="170" rx="5" fill="#141c2b" stroke="#5a739c" stroke-width="1.5"/>
+  <circle cx="368" cy="226" r="3" fill="#e2e8f0"/>
+  <text x="410" y="270" fill="#e2e8f0" font-size="13">CH32V003</text>
+  <text x="410" y="292" fill="#94a3b8" font-size="10">F4P6</text>
+  <text x="410" y="318" fill="#64748b" font-size="9">RISC-V2A</text>
+  <text x="410" y="340" fill="#64748b" font-size="9">48 MHz</text>
+  <text x="410" y="180" fill="#cbd5e1" font-size="14">CH32V003-EVT</text>
+  <text x="410" y="450" fill="#94a3b8" font-size="11">WCH · TSSOP-20</text>
+</g>
+</svg>

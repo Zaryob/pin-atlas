@@ -5,7 +5,9 @@ import {compatibleModels,normalizeCatalogText} from './compatibility.mjs';
 export const boardFamilies = [
   {id:'raspberry-pi',nameKey:'familyRaspberryPi',layouts:['pico-family','raspberry-pi-40','compute-module','raspberry-pi-rm2','rp2040','rp2350a','rp2350b']},
   {id:'arduino',nameKey:'familyArduino',layouts:['arduino-uno','arduino-nano','arduino-mega-2560','arduino-micro']},
-  {id:'espressif',nameKey:'familyEspressif',layouts:['nodemcu-v2','lolin-d1-mini-v4','ai-thinker-esp32-cam','esp32-devkitc-v4','esp32-s3-devkitc-1','esp32-c6-devkitc-1','esp32-c3-devkitm-1']},
+  {id:'espressif',nameKey:'familyEspressif',layouts:['nodemcu-v2','lolin-d1-mini-v4','ai-thinker-esp32-cam','esp32-devkitc-v4','esp32-s3-devkitc-1','esp32-c6-devkitc-1','esp32-c3-devkitm-1','esp32-c6-qfn32']},
+  {id:'wch',nameKey:'familyWch',layouts:['ch32v003f4p6-tssop20','ch32v003-evt']},
+  {id:'nordic',nameKey:'familyNordic',layouts:['nrf52840-dk']},
   {id:'stm32',nameKey:'familyStm32',layouts:['blue-pill','black-pill','nucleo-32','nucleo-64','nucleo-144','nucleo-h563zi','stm32h563zit6',
     'stm32f401ccu6','stm32f411ceu6','stm32h743zit6','stm32f767zit6','stm32f042k6t6','stm32l432kcu6',
     'stm32f103c8t6','stm32f103rbt6','stm32f103vbt6','stm32f401ret6','stm32f411ret6','stm32g474ret6',

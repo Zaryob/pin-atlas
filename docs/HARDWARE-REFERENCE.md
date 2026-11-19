@@ -1,6 +1,6 @@
 # Hardware research and technical reference
 
-Reviewed: 2026-11-14. All 107 profiles are covered individually. 66 have a qualified historical date; exact first production/sale dates remain unverified for 41. An MCU datasheet’s initial publication is not presented as a board’s production year.
+Reviewed: 2026-11-14. All 111 profiles are covered individually. 70 have a qualified historical date; exact first production/sale dates remain unverified for 41. An MCU datasheet’s initial publication is not presented as a board’s production year.
 
 Generated from `sources/hardware-details.json` by `npm run build:data`. Each fact and note carries source links. Live manufacturer pages may change; the locked versions and SHA-256 values for pin evidence remain in `sources/manifest.json`. The technical review does not change the previous pin-verification date.
 
@@ -1726,4 +1726,56 @@ Technical review 2026-11-19.
 - **Power / logic:** 3.3 V I/O. [LP-MSPM0G3507 LaunchPad Development Kit User’s Guide](https://www.ti.com/lit/ug/slau873e/slau873e.pdf), [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
 
 Circuit / board documents: [LP-MSPM0G3507 LaunchPad Development Kit User’s Guide](https://www.ti.com/lit/ug/slau873e/slau873e.pdf)
+
+### ESP32-C6 · QFN-32
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=esp32-c6-qfn32&profile=esp32-c6-qfn32) · [Pin reference](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf#page=17) · [Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)
+
+Technical review 2026-11-19.
+
+- **Documented by:** 2023. [ESP32C6 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)
+- **Processor:** 1 × HP RISC-V + LP RISC-V. [ESP32C6 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)
+- **Clock / maximum:** 160 MHz HP / 20 MHz LP. [ESP32C6 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)
+- **RAM:** 512 KB HP SRAM + 16 KB LP SRAM. [ESP32C6 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)
+- **Program Flash / storage:** Module-dependent external Flash. [ESP32C6 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)
+- **Power / logic:** 3.0–3.6 V VDD. [ESP32C6 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)
+
+### CH32V003F4P6 · TSSOP-20
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=ch32v003f4p6-tssop20&profile=ch32v003f4p6-tssop20) · [Pin reference](https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html) · [Datasheet](https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html)
+
+Technical review 2026-11-19.
+
+- **Documented by:** 2022. [WCH CH32V003 series datasheet](https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html)
+- **Processor:** QingKe 32-bit RISC-V2A. [WCH CH32V003 series datasheet](https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html)
+- **Clock / maximum:** 48 MHz. [WCH CH32V003 series datasheet](https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html)
+- **RAM:** 2 KB SRAM. [WCH CH32V003 series datasheet](https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html)
+- **Program Flash / storage:** 16 KB Flash. [WCH CH32V003 series datasheet](https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html)
+- **Power / logic:** 2.7–5.5 V VDD. [WCH CH32V003 series datasheet](https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html)
+
+### WCH CH32V003-EVT
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=ch32v003-evt&profile=ch32v003-evt) · [Pin reference](https://raw.githubusercontent.com/openwch/ch32v003/4e1b7437ada5d3ae8831a6f4b811a6320e4e23c7/EVT/PUB/CH32V00x%20Evaluation%20Board%20Reference-EN.pdf) · [Datasheet](https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html)
+
+Technical review 2026-11-19.
+
+- **Documented by:** 2022. [WCH CH32V00x Evaluation Board Reference](https://raw.githubusercontent.com/openwch/ch32v003/4e1b7437ada5d3ae8831a6f4b811a6320e4e23c7/EVT/PUB/CH32V00x%20Evaluation%20Board%20Reference-EN.pdf)
+- **Processor:** QingKe 32-bit RISC-V2A. [WCH CH32V003 series datasheet](https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html)
+- **Clock / maximum:** 48 MHz. [WCH CH32V003 series datasheet](https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html)
+- **RAM:** 2 KB SRAM. [WCH CH32V003 series datasheet](https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html)
+- **Program Flash / storage:** 16 KB Flash. [WCH CH32V00x Evaluation Board Reference](https://raw.githubusercontent.com/openwch/ch32v003/4e1b7437ada5d3ae8831a6f4b811a6320e4e23c7/EVT/PUB/CH32V00x%20Evaluation%20Board%20Reference-EN.pdf), [WCH CH32V003 series datasheet](https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html)
+- **Power / logic:** USB Type-C or external 5V / 3.3V supply. MCU: 2.7–5.5 V.. [WCH CH32V00x Evaluation Board Reference](https://raw.githubusercontent.com/openwch/ch32v003/4e1b7437ada5d3ae8831a6f4b811a6320e4e23c7/EVT/PUB/CH32V00x%20Evaluation%20Board%20Reference-EN.pdf), [WCH CH32V003 series datasheet](https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html)
+
+### Nordic nRF52840 DK
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=nrf52840-dk&profile=nrf52840-dk) · [Pin reference](https://docs.nordicsemi.com/bundle/ug_nrf52840_dk/page/UG/dk/intro.html) · [Datasheet](https://docs.nordicsemi.com/bundle/ps_nrf52840/page/intro_front.html)
+
+Technical review 2026-11-19.
+
+- **Documented by:** 2018. [Nordic nRF52840 DK Hardware User Guide](https://docs.nordicsemi.com/bundle/ug_nrf52840_dk/page/UG/dk/intro.html)
+- **Processor:** Arm Cortex-M4F. [nano-33-ble-sense-rev2 hardware manual](https://docs.arduino.cc/hardware/nano-33-ble-sense-rev2/)
+- **Clock / maximum:** 64 MHz. [nano-33-ble-sense-rev2 hardware manual](https://docs.arduino.cc/hardware/nano-33-ble-sense-rev2/)
+- **RAM:** 256 KB SRAM. [nano-33-ble-sense-rev2 hardware manual](https://docs.arduino.cc/hardware/nano-33-ble-sense-rev2/)
+- **Program Flash / storage:** 1 MB Flash + onboard QSPI Flash. [Nordic nRF52840 DK Hardware User Guide](https://docs.nordicsemi.com/bundle/ug_nrf52840_dk/page/UG/dk/intro.html)
+- **Power / logic:** USB or external power. Arduino shield-compatible 3.3 V I/O.. [Nordic nRF52840 DK Hardware User Guide](https://docs.nordicsemi.com/bundle/ug_nrf52840_dk/page/UG/dk/intro.html)
 

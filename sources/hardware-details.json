@@ -1153,6 +1153,24 @@
       "publisher": "Texas Instruments",
       "url": "https://www.ti.com/lit/ug/slau873e/slau873e.pdf",
       "locator": "Device features and package pin configuration"
+    },
+    "ch32v003-datasheet": {
+      "title": "WCH CH32V003 series datasheet",
+      "url": "https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html",
+      "publisher": "WCH",
+      "locator": "Locked pin-source document; see sources/manifest.json"
+    },
+    "ch32v00x-eval-ref": {
+      "title": "WCH CH32V00x Evaluation Board Reference",
+      "url": "https://raw.githubusercontent.com/openwch/ch32v003/4e1b7437ada5d3ae8831a6f4b811a6320e4e23c7/EVT/PUB/CH32V00x%20Evaluation%20Board%20Reference-EN.pdf",
+      "publisher": "WCH",
+      "locator": "Locked pin-source document; see sources/manifest.json"
+    },
+    "nrf52840-dk-ug": {
+      "title": "Nordic nRF52840 DK Hardware User Guide",
+      "url": "https://docs.nordicsemi.com/bundle/ug_nrf52840_dk/page/UG/dk/intro.html",
+      "publisher": "Nordic Semiconductor",
+      "locator": "Locked pin-source document; see sources/manifest.json"
     }
   },
   "chips": {
@@ -1880,6 +1898,16 @@
       "power": "1.62–3.6 V VDD",
       "sources": [
         "h563zi-datasheet"
+      ],
+      "notes": []
+    },
+    "CH32V003": {
+      "cpu": "QingKe 32-bit RISC-V2A",
+      "clock": "48 MHz",
+      "ram": "2 KB SRAM",
+      "flash": "16 KB Flash",
+      "sources": [
+        "ch32v003-datasheet"
       ],
       "notes": []
     }
@@ -5527,6 +5555,81 @@
       },
       "reviewedOn": "2026-11-19",
       "eeprom": "1 KB EEPROM"
+    },
+    "esp32-c6-qfn32": {
+      "sources": [
+        "esp32c6-datasheet"
+      ],
+      "cpu": "1 × HP RISC-V + LP RISC-V",
+      "clock": "160 MHz HP / 20 MHz LP",
+      "ram": "512 KB HP SRAM + 16 KB LP SRAM",
+      "flash": "Module-dependent external Flash",
+      "power": "3.0–3.6 V VDD",
+      "date": {
+        "kind": "documented",
+        "value": "2023",
+        "sources": [
+          "esp32c6-datasheet"
+        ]
+      },
+      "reviewedOn": "2026-11-19"
+    },
+    "ch32v003f4p6-tssop20": {
+      "sources": [
+        "ch32v003-datasheet"
+      ],
+      "cpu": "QingKe 32-bit RISC-V2A",
+      "clock": "48 MHz",
+      "ram": "2 KB SRAM",
+      "flash": "16 KB Flash",
+      "power": "2.7–5.5 V VDD",
+      "date": {
+        "kind": "documented",
+        "value": "2022",
+        "sources": [
+          "ch32v003-datasheet"
+        ]
+      },
+      "reviewedOn": "2026-11-19"
+    },
+    "ch32v003-evt": {
+      "chip": "CH32V003",
+      "flash": "16 KB Flash",
+      "sources": [
+        "ch32v00x-eval-ref",
+        "ch32v003-datasheet"
+      ],
+      "power": {
+        "tr": "USB Type-C veya harici 5V / 3.3V besleme. MCU: 2.7–5.5 V.",
+        "en": "USB Type-C or external 5V / 3.3V supply. MCU: 2.7–5.5 V."
+      },
+      "date": {
+        "kind": "documented",
+        "value": "2022",
+        "sources": [
+          "ch32v00x-eval-ref"
+        ]
+      },
+      "reviewedOn": "2026-11-19"
+    },
+    "nrf52840-dk": {
+      "chip": "nRF52840",
+      "flash": "1 MB Flash + onboard QSPI Flash",
+      "sources": [
+        "nrf52840-dk-ug"
+      ],
+      "power": {
+        "tr": "USB veya harici besleme. Arduino kalkan uyumlu 3.3 V I/O.",
+        "en": "USB or external power. Arduino shield-compatible 3.3 V I/O."
+      },
+      "date": {
+        "kind": "documented",
+        "value": "2018",
+        "sources": [
+          "nrf52840-dk-ug"
+        ]
+      },
+      "reviewedOn": "2026-11-19"
     }
   }
 }

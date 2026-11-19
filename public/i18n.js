@@ -2,6 +2,16 @@
 (() => {
   const messages = {
     "familyRenesas": ["Renesas", "Renesas"],
+    "familyWch": ["WCH", "WCH"],
+    "familyNordic": ["Nordic Semiconductor", "Nordic Semiconductor"],
+    "esp32c6PackageScope": ["ESP32-C6 yalın yonga QFN-32 pin çıkışı ve çevre birimleri eşleşmesi.", "ESP32-C6 bare chip QFN-32 pinout and peripheral mappings."],
+    "ch32v003PackageScope": ["CH32V003F4P6 yalın yonga TSSOP-20 pin çıkışı ve alternatif işlevleri.", "CH32V003F4P6 bare chip TSSOP-20 pinout and alternate functions."],
+    "ch32v003EvtScope": ["WCH CH32V003-EVT değerlendirme kartı başlıkları ve pin çıkışı.", "WCH CH32V003-EVT evaluation board headers and pinout."],
+    "nrf52840DkScope": ["Nordic nRF52840 DK (PCA10056) geliştirme kiti Arduino Uno Rev3 kalkan pin çıkışı.", "Nordic nRF52840 DK (PCA10056) development kit Arduino Uno Rev3 shield pinout."],
+    "board.esp32-c6-qfn32": ["QFN-32 · yalın MCU · 160 MHz", "QFN-32 · bare MCU · 160 MHz"],
+    "board.ch32v003f4p6-tssop20": ["TSSOP-20 · yalın MCU · 48 MHz", "TSSOP-20 · bare MCU · 48 MHz"],
+    "board.ch32v003-evt": ["CH32V003F4P6 · TSSOP-20 · RISC-V · 48 MHz", "CH32V003F4P6 · TSSOP-20 · RISC-V · 48 MHz"],
+    "board.nrf52840-dk": ["PCA10056 · nRF52840 · Cortex-M4F · 64 MHz · 32 temas", "PCA10056 · nRF52840 · Cortex-M4F · 64 MHz · 32 contacts"],
     "atmega32u4Scope": ["TQFP-44. Port ve çevre birimi adları ATmega32U4 veri sayfasındaki ham işlevlerdir.", "TQFP-44. Port and peripheral names follow the raw ATmega32U4 datasheet functions."],
     "atmega32u4QfnScope": ["QFN-44. Çizim 44 çevre pedini numaralandırır. Arduino Micro şemasında merkez ped GND’ye bağlıdır.", "QFN-44. The view numbers the 44 perimeter pads. The Arduino Micro schematic connects the center pad to GND."],
     "ra4m1PackageScope": ["R7FA4M1AB3CFM, LQFP-64. İşlevler Renesas pin listesindendir. Arduino kart profilleri kendi başlık ve çekirdek eşlemelerini kullanır.", "R7FA4M1AB3CFM, LQFP-64. Functions come from the Renesas pin list. Arduino board profiles use their own header and core mappings."],

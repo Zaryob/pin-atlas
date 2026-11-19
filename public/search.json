@@ -1496,5 +1496,61 @@
     "url": "/pin-atlas/#board=lp-mspm0g3507&profile=lp-mspm0g3507",
     "type": "pin-atlas/",
     "description": "MSPM0G3507SPM · 40 BoosterPack contacts · MSPM0G3507SPM · Texas Instruments"
+  },
+  {
+    "lang": "tr",
+    "title": "ESP32-C6 · QFN-32",
+    "url": "/pin-atlas/#board=esp32-c6-qfn32&profile=esp32-c6-qfn32",
+    "type": "pin-atlas/",
+    "description": "QFN-32 · yalın MCU · 160 MHz · ESP32-C6 · Espressif"
+  },
+  {
+    "lang": "en",
+    "title": "ESP32-C6 · QFN-32",
+    "url": "/pin-atlas/#board=esp32-c6-qfn32&profile=esp32-c6-qfn32",
+    "type": "pin-atlas/",
+    "description": "QFN-32 · bare MCU · 160 MHz · ESP32-C6 · Espressif"
+  },
+  {
+    "lang": "tr",
+    "title": "CH32V003F4P6 · TSSOP-20",
+    "url": "/pin-atlas/#board=ch32v003f4p6-tssop20&profile=ch32v003f4p6-tssop20",
+    "type": "pin-atlas/",
+    "description": "TSSOP-20 · yalın MCU · 48 MHz · CH32V003F4P6 · WCH"
+  },
+  {
+    "lang": "en",
+    "title": "CH32V003F4P6 · TSSOP-20",
+    "url": "/pin-atlas/#board=ch32v003f4p6-tssop20&profile=ch32v003f4p6-tssop20",
+    "type": "pin-atlas/",
+    "description": "TSSOP-20 · bare MCU · 48 MHz · CH32V003F4P6 · WCH"
+  },
+  {
+    "lang": "tr",
+    "title": "WCH CH32V003-EVT",
+    "url": "/pin-atlas/#board=ch32v003-evt&profile=ch32v003-evt",
+    "type": "pin-atlas/",
+    "description": "CH32V003F4P6 · TSSOP-20 · RISC-V · 48 MHz · CH32V003F4P6 · WCH"
+  },
+  {
+    "lang": "en",
+    "title": "WCH CH32V003-EVT",
+    "url": "/pin-atlas/#board=ch32v003-evt&profile=ch32v003-evt",
+    "type": "pin-atlas/",
+    "description": "CH32V003F4P6 · TSSOP-20 · RISC-V · 48 MHz · CH32V003F4P6 · WCH"
+  },
+  {
+    "lang": "tr",
+    "title": "Nordic nRF52840 DK",
+    "url": "/pin-atlas/#board=nrf52840-dk&profile=nrf52840-dk",
+    "type": "pin-atlas/",
+    "description": "PCA10056 · nRF52840 · Cortex-M4F · 64 MHz · 32 temas · nRF52840 · Nordic Semiconductor"
+  },
+  {
+    "lang": "en",
+    "title": "Nordic nRF52840 DK",
+    "url": "/pin-atlas/#board=nrf52840-dk&profile=nrf52840-dk",
+    "type": "pin-atlas/",
+    "description": "PCA10056 · nRF52840 · Cortex-M4F · 64 MHz · 32 contacts · nRF52840 · Nordic Semiconductor"
   }
 ]

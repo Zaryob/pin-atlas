@@ -62,7 +62,11 @@
     "lp-mspm0g3507": "2026-11-19",
     "arduino-leonardo": "2026-11-19",
     "arduino-micro": "2026-11-19",
-    "atmega32u4-qfn44": "2026-11-19"
+    "atmega32u4-qfn44": "2026-11-19",
+    "esp32-c6-qfn32": "2026-11-19",
+    "ch32v003f4p6-tssop20": "2026-11-19",
+    "ch32v003-evt": "2026-11-19",
+    "nrf52840-dk": "2026-11-19"
   },
   "documents": [
     {
@@ -1821,6 +1825,30 @@
       "viewUrl": "https://github.com/arduino/docs-content/blob/65d578fc7de843c45c21fc77b31a7a2009c46a5b/content/hardware/hero/boards/micro/downloads/A000053-schematics.pdf",
       "publisher": "Arduino",
       "sha256": "89fce2120cfdfc27755fded45f9428db96e14d6a378fe5c18426c82385e89a90"
+    },
+    {
+      "id": "ch32v003-datasheet",
+      "title": "WCH CH32V003 series datasheet",
+      "publisher": "WCH",
+      "revision": "Version 1.4",
+      "file": "ch32v003-datasheet.pdf",
+      "url": "https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html"
+    },
+    {
+      "id": "ch32v00x-eval-ref",
+      "title": "WCH CH32V00x Evaluation Board Reference",
+      "publisher": "WCH",
+      "revision": "Version 1.3",
+      "file": "ch32v00x-eval-ref.pdf",
+      "url": "https://raw.githubusercontent.com/openwch/ch32v003/4e1b7437ada5d3ae8831a6f4b811a6320e4e23c7/EVT/PUB/CH32V00x%20Evaluation%20Board%20Reference-EN.pdf"
+    },
+    {
+      "id": "nrf52840-dk-ug",
+      "title": "Nordic nRF52840 DK Hardware User Guide",
+      "publisher": "Nordic Semiconductor",
+      "revision": "PCA10056 Hardware v1.3.0+",
+      "file": "nrf52840-dk-user-guide.pdf",
+      "url": "https://docs.nordicsemi.com/bundle/ug_nrf52840_dk/page/UG/dk/intro.html"
     }
   ],
   "publishers": [

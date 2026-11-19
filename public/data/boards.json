@@ -100632,7 +100632,8 @@
         },
         "inputOnly": false,
         "noteKey": "espGpioNote",
-        "strapping": true
+        "strapping": true,
+        "mcuPin": 10
       },
       {
         "number": 4,
@@ -100750,7 +100751,8 @@
         },
         "inputOnly": false,
         "noteKey": "espGpioNote",
-        "strapping": true
+        "strapping": true,
+        "mcuPin": 11
       },
       {
         "number": 5,
@@ -100866,7 +100868,8 @@
           "side": "left"
         },
         "inputOnly": false,
-        "noteKey": "espGpioNote"
+        "noteKey": "espGpioNote",
+        "mcuPin": 12
       },
       {
         "number": 6,
@@ -100976,7 +100979,8 @@
           "side": "left"
         },
         "inputOnly": false,
-        "noteKey": "espGpioNote"
+        "noteKey": "espGpioNote",
+        "mcuPin": 13
       },
       {
         "number": 7,
@@ -101086,7 +101090,8 @@
           "side": "left"
         },
         "inputOnly": false,
-        "noteKey": "espGpioNote"
+        "noteKey": "espGpioNote",
+        "mcuPin": 6
       },
       {
         "number": 8,
@@ -101196,7 +101201,8 @@
           "side": "left"
         },
         "inputOnly": false,
-        "noteKey": "espGpioNote"
+        "noteKey": "espGpioNote",
+        "mcuPin": 7
       },
       {
         "number": 9,
@@ -101291,7 +101297,8 @@
         "inputOnly": false,
         "noteKey": "espGpioNote",
         "strapping": true,
-        "boardCircuitKey": "espRgbLedNote"
+        "boardCircuitKey": "espRgbLedNote",
+        "mcuPin": 14
       },
       {
         "number": 10,
@@ -101585,7 +101592,8 @@
           "side": "left"
         },
         "inputOnly": false,
-        "noteKey": "espGpioNote"
+        "noteKey": "espGpioNote",
+        "mcuPin": 8
       },
       {
         "number": 13,
@@ -101689,7 +101697,8 @@
           "side": "left"
         },
         "inputOnly": false,
-        "noteKey": "espGpioNote"
+        "noteKey": "espGpioNote",
+        "mcuPin": 9
       },
       {
         "number": 14,
@@ -101877,7 +101886,8 @@
         },
         "inputOnly": false,
         "noteKey": "espGpioNote",
-        "boardCircuitKey": "espUartBridgeNote"
+        "boardCircuitKey": "espUartBridgeNote",
+        "mcuPin": 21
       },
       {
         "number": 19,
@@ -101982,7 +101992,8 @@
         },
         "inputOnly": false,
         "noteKey": "espGpioNote",
-        "boardCircuitKey": "espUartBridgeNote"
+        "boardCircuitKey": "espUartBridgeNote",
+        "mcuPin": 22
       },
       {
         "number": 20,
@@ -102076,7 +102087,8 @@
         },
         "inputOnly": false,
         "noteKey": "espGpioNote",
-        "strapping": true
+        "strapping": true,
+        "mcuPin": 19
       },
       {
         "number": 21,
@@ -102174,7 +102186,8 @@
           "side": "right"
         },
         "inputOnly": false,
-        "noteKey": "espGpioNote"
+        "noteKey": "espGpioNote",
+        "mcuPin": 28
       },
       {
         "number": 22,
@@ -102272,7 +102285,8 @@
           "side": "right"
         },
         "inputOnly": false,
-        "noteKey": "espGpioNote"
+        "noteKey": "espGpioNote",
+        "mcuPin": 27
       },
       {
         "number": 23,
@@ -102376,7 +102390,8 @@
           "side": "right"
         },
         "inputOnly": false,
-        "noteKey": "espGpioNote"
+        "noteKey": "espGpioNote",
+        "mcuPin": 26
       },
       {
         "number": 24,
@@ -102480,7 +102495,8 @@
           "side": "right"
         },
         "inputOnly": false,
-        "noteKey": "espGpioNote"
+        "noteKey": "espGpioNote",
+        "mcuPin": 25
       },
       {
         "number": 25,
@@ -102584,7 +102600,8 @@
           "side": "right"
         },
         "inputOnly": false,
-        "noteKey": "espGpioNote"
+        "noteKey": "espGpioNote",
+        "mcuPin": 24
       },
       {
         "number": 26,
@@ -102688,7 +102705,8 @@
           "side": "right"
         },
         "inputOnly": false,
-        "noteKey": "espGpioNote"
+        "noteKey": "espGpioNote",
+        "mcuPin": 23
       },
       {
         "number": 27,
@@ -102782,7 +102800,8 @@
         },
         "inputOnly": false,
         "noteKey": "espGpioNote",
-        "strapping": true
+        "strapping": true,
+        "mcuPin": 15
       },
       {
         "number": 28,
@@ -102901,7 +102920,8 @@
         },
         "inputOnly": false,
         "noteKey": "espGpioNote",
-        "boardCircuitKey": "espUsbNote"
+        "boardCircuitKey": "espUsbNote",
+        "mcuPin": 17
       },
       {
         "number": 30,
@@ -103000,7 +103020,8 @@
         },
         "inputOnly": false,
         "noteKey": "espGpioNote",
-        "boardCircuitKey": "espUsbNote"
+        "boardCircuitKey": "espUsbNote",
+        "mcuPin": 16
       },
       {
         "number": 31,
@@ -103046,7 +103067,8 @@
         "noteKey": "espNcNote"
       }
     ],
-    "reservedGPIOCount": 2
+    "reservedGPIOCount": 2,
+    "mcuProfile": "esp32-c6-qfn32"
   },
   {
     "id": "nodemcu-v2",
@@ -345026,7 +345048,9 @@
         "evidence": [
           "xiao-esp32c6-headers"
         ],
-        "number": 1
+        "number": 1,
+        "mcuPin": 6,
+        "mcuPort": "GPIO0"
       },
       {
         "connector": "L",
@@ -345133,7 +345157,9 @@
         "evidence": [
           "xiao-esp32c6-headers"
         ],
-        "number": 2
+        "number": 2,
+        "mcuPin": 7,
+        "mcuPort": "GPIO1"
       },
       {
         "connector": "L",
@@ -345240,7 +345266,9 @@
         "evidence": [
           "xiao-esp32c6-headers"
         ],
-        "number": 3
+        "number": 3,
+        "mcuPin": 8,
+        "mcuPort": "GPIO2"
       },
       {
         "connector": "L",
@@ -345341,7 +345369,9 @@
         "evidence": [
           "xiao-esp32c6-headers"
         ],
-        "number": 4
+        "number": 4,
+        "mcuPin": 26,
+        "mcuPort": "GPIO21"
       },
       {
         "connector": "L",
@@ -345436,7 +345466,9 @@
         "evidence": [
           "xiao-esp32c6-headers"
         ],
-        "number": 5
+        "number": 5,
+        "mcuPin": 27,
+        "mcuPort": "GPIO22"
       },
       {
         "connector": "L",
@@ -345531,7 +345563,9 @@
         "evidence": [
           "xiao-esp32c6-headers"
         ],
-        "number": 6
+        "number": 6,
+        "mcuPin": 28,
+        "mcuPort": "GPIO23"
       },
       {
         "connector": "L",
@@ -345632,7 +345666,9 @@
         "evidence": [
           "xiao-esp32c6-headers"
         ],
-        "number": 7
+        "number": 7,
+        "mcuPin": 21,
+        "mcuPort": "GPIO16"
       },
       {
         "connector": "R",
@@ -345790,7 +345826,9 @@
         "evidence": [
           "xiao-esp32c6-headers"
         ],
-        "number": 11
+        "number": 11,
+        "mcuPin": 23,
+        "mcuPort": "GPIO18"
       },
       {
         "connector": "R",
@@ -345891,7 +345929,9 @@
         "evidence": [
           "xiao-esp32c6-headers"
         ],
-        "number": 12
+        "number": 12,
+        "mcuPin": 25,
+        "mcuPort": "GPIO20"
       },
       {
         "connector": "R",
@@ -345992,7 +346032,9 @@
         "evidence": [
           "xiao-esp32c6-headers"
         ],
-        "number": 13
+        "number": 13,
+        "mcuPin": 24,
+        "mcuPort": "GPIO19"
       },
       {
         "connector": "R",
@@ -346093,12 +346135,15 @@
         "evidence": [
           "xiao-esp32c6-headers"
         ],
-        "number": 14
+        "number": 14,
+        "mcuPin": 22,
+        "mcuPort": "GPIO17"
       }
     ],
     "packagePins": 14,
     "gpioCount": 11,
-    "uniqueGPIOCount": 11
+    "uniqueGPIOCount": 11,
+    "mcuProfile": "esp32-c6-qfn32"
   },
   {
     "id": "xiao-rp2350",
@@ -380619,5 +380664,4667 @@
     "packagePins": 40,
     "gpioCount": 35,
     "uniqueGPIOCount": 35
+  },
+  {
+    "id": "esp32-c6-qfn32",
+    "name": "ESP32-C6 · QFN-32",
+    "shortName": "ESP32-C6",
+    "mcu": "ESP32-C6",
+    "family": "Espressif",
+    "processor": "RISC-V",
+    "clock": "160 MHz",
+    "subtitle": "QFN-32 · bare MCU · 160 MHz",
+    "layout": "qfn",
+    "packageName": "QFN-32",
+    "packagePins": 32,
+    "gpioCount": 22,
+    "uniqueGPIOCount": 22,
+    "voltage": "3.0–3.6 V VDD",
+    "source": "https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf#page=17",
+    "datasheet": "https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf",
+    "verifiedOn": "2026-11-19",
+    "scopeKey": "esp32c6PackageScope",
+    "pins": [
+      {
+        "number": 1,
+        "name": "ANT",
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ]
+      },
+      {
+        "number": 2,
+        "name": "VDDA",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ]
+      },
+      {
+        "number": 3,
+        "name": "VDDA",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ]
+      },
+      {
+        "number": 4,
+        "name": "CHIP_EN",
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ]
+      },
+      {
+        "number": 5,
+        "name": "VDDPST1",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ]
+      },
+      {
+        "number": 6,
+        "name": "GPIO0",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "XTAL_32K_P",
+            "signal": "XTAL_32K_P",
+            "group": "CLOCK",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "LP_UART_DTRN",
+            "signal": "LP_UART_DTRN",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "ADC1_CH0",
+            "signal": "ADC1_CH0",
+            "group": "ADC",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "signal": "UART1 RX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "signal": "SPI2 MISO",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "signal": "UART1 TX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "signal": "SPI2 MOSI",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "signal": "SPI2 SCK",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "signal": "SPI2 CS",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "signal": "I2C0 SDA",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "signal": "I2C0 SCL",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "signal": "LEDC PWM",
+            "group": "PWM",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "GPIO interrupt",
+            "signal": "GPIO0",
+            "group": "IRQ",
+            "evidence": "esp32c6-qfn32-pinout"
+          }
+        ],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ],
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 7,
+        "name": "GPIO1",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "XTAL_32K_N",
+            "signal": "XTAL_32K_N",
+            "group": "CLOCK",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "LP_UART_DSRN",
+            "signal": "LP_UART_DSRN",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "ADC1_CH1",
+            "signal": "ADC1_CH1",
+            "group": "ADC",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "signal": "UART1 RX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "signal": "SPI2 MISO",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "signal": "UART1 TX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "signal": "SPI2 MOSI",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "signal": "SPI2 SCK",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "signal": "SPI2 CS",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "signal": "I2C0 SDA",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "signal": "I2C0 SCL",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "signal": "LEDC PWM",
+            "group": "PWM",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "GPIO interrupt",
+            "signal": "GPIO1",
+            "group": "IRQ",
+            "evidence": "esp32c6-qfn32-pinout"
+          }
+        ],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ],
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 8,
+        "name": "GPIO2",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "LP_UART_RTSN",
+            "signal": "LP_UART_RTSN",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "ADC1_CH2",
+            "signal": "ADC1_CH2",
+            "group": "ADC",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "FSPIQ",
+            "signal": "FSPIQ",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "signal": "UART1 RX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "signal": "SPI2 MISO",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "signal": "UART1 TX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "signal": "SPI2 MOSI",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "signal": "SPI2 SCK",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "signal": "SPI2 CS",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "signal": "I2C0 SDA",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "signal": "I2C0 SCL",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "signal": "LEDC PWM",
+            "group": "PWM",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "GPIO interrupt",
+            "signal": "GPIO2",
+            "group": "IRQ",
+            "evidence": "esp32c6-qfn32-pinout"
+          }
+        ],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ],
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 9,
+        "name": "GPIO3",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "LP_UART_CTSN",
+            "signal": "LP_UART_CTSN",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "ADC1_CH3",
+            "signal": "ADC1_CH3",
+            "group": "ADC",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "signal": "UART1 RX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "signal": "SPI2 MISO",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "signal": "UART1 TX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "signal": "SPI2 MOSI",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "signal": "SPI2 SCK",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "signal": "SPI2 CS",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "signal": "I2C0 SDA",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "signal": "I2C0 SCL",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "signal": "LEDC PWM",
+            "group": "PWM",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "GPIO interrupt",
+            "signal": "GPIO3",
+            "group": "IRQ",
+            "evidence": "esp32c6-qfn32-pinout"
+          }
+        ],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ],
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 10,
+        "name": "GPIO4",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "MTMS",
+            "signal": "MTMS",
+            "group": "JTAG",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "LP_UART_RXD",
+            "signal": "LP_UART_RXD",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "ADC1_CH4",
+            "signal": "ADC1_CH4",
+            "group": "ADC",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "FSPIHD",
+            "signal": "FSPIHD",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "signal": "UART1 RX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "signal": "SPI2 MISO",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "signal": "UART1 TX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "signal": "SPI2 MOSI",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "signal": "SPI2 SCK",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "signal": "SPI2 CS",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "signal": "I2C0 SDA",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "signal": "I2C0 SCL",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "signal": "LEDC PWM",
+            "group": "PWM",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "GPIO interrupt",
+            "signal": "GPIO4",
+            "group": "IRQ",
+            "evidence": "esp32c6-qfn32-pinout"
+          }
+        ],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ],
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 11,
+        "name": "GPIO5",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "MTDI",
+            "signal": "MTDI",
+            "group": "JTAG",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "LP_UART_TXD",
+            "signal": "LP_UART_TXD",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "ADC1_CH5",
+            "signal": "ADC1_CH5",
+            "group": "ADC",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "FSPIWP",
+            "signal": "FSPIWP",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "signal": "UART1 RX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "signal": "SPI2 MISO",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "signal": "UART1 TX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "signal": "SPI2 MOSI",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "signal": "SPI2 SCK",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "signal": "SPI2 CS",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "signal": "I2C0 SDA",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "signal": "I2C0 SCL",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "signal": "LEDC PWM",
+            "group": "PWM",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "GPIO interrupt",
+            "signal": "GPIO5",
+            "group": "IRQ",
+            "evidence": "esp32c6-qfn32-pinout"
+          }
+        ],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ],
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 12,
+        "name": "GPIO6",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "MTCK",
+            "signal": "MTCK",
+            "group": "JTAG",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "LP_I2C_SDA",
+            "signal": "LP_I2C_SDA",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "ADC1_CH6",
+            "signal": "ADC1_CH6",
+            "group": "ADC",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "FSPICLK",
+            "signal": "FSPICLK",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "signal": "UART1 RX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "signal": "SPI2 MISO",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "signal": "UART1 TX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "signal": "SPI2 MOSI",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "signal": "SPI2 SCK",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "signal": "SPI2 CS",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "signal": "I2C0 SDA",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "signal": "I2C0 SCL",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "signal": "LEDC PWM",
+            "group": "PWM",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "GPIO interrupt",
+            "signal": "GPIO6",
+            "group": "IRQ",
+            "evidence": "esp32c6-qfn32-pinout"
+          }
+        ],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ],
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 13,
+        "name": "GPIO7",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "MTDO",
+            "signal": "MTDO",
+            "group": "JTAG",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "LP_I2C_SCL",
+            "signal": "LP_I2C_SCL",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "FSPID",
+            "signal": "FSPID",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "signal": "UART1 RX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "signal": "SPI2 MISO",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "signal": "UART1 TX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "signal": "SPI2 MOSI",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "signal": "SPI2 SCK",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "signal": "SPI2 CS",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "signal": "I2C0 SDA",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "signal": "I2C0 SCL",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "signal": "LEDC PWM",
+            "group": "PWM",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "GPIO interrupt",
+            "signal": "GPIO7",
+            "group": "IRQ",
+            "evidence": "esp32c6-qfn32-pinout"
+          }
+        ],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ],
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 14,
+        "name": "GPIO8",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "UART1 RX (matrix)",
+            "signal": "UART1 RX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "signal": "SPI2 MISO",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "signal": "UART1 TX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "signal": "SPI2 MOSI",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "signal": "SPI2 SCK",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "signal": "SPI2 CS",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "signal": "I2C0 SDA",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "signal": "I2C0 SCL",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "signal": "LEDC PWM",
+            "group": "PWM",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "GPIO interrupt",
+            "signal": "GPIO8",
+            "group": "IRQ",
+            "evidence": "esp32c6-qfn32-pinout"
+          }
+        ],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ],
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 15,
+        "name": "GPIO9",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "UART1 RX (matrix)",
+            "signal": "UART1 RX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "signal": "SPI2 MISO",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "signal": "UART1 TX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "signal": "SPI2 MOSI",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "signal": "SPI2 SCK",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "signal": "SPI2 CS",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "signal": "I2C0 SDA",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "signal": "I2C0 SCL",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "signal": "LEDC PWM",
+            "group": "PWM",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "GPIO interrupt",
+            "signal": "GPIO9",
+            "group": "IRQ",
+            "evidence": "esp32c6-qfn32-pinout"
+          }
+        ],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ],
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 16,
+        "name": "GPIO12",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "USB_D-",
+            "signal": "USB_D-",
+            "group": "USB",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "signal": "UART1 RX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "signal": "SPI2 MISO",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "signal": "UART1 TX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "signal": "SPI2 MOSI",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "signal": "SPI2 SCK",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "signal": "SPI2 CS",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "signal": "I2C0 SDA",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "signal": "I2C0 SCL",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "signal": "LEDC PWM",
+            "group": "PWM",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "GPIO interrupt",
+            "signal": "GPIO12",
+            "group": "IRQ",
+            "evidence": "esp32c6-qfn32-pinout"
+          }
+        ],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ],
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 17,
+        "name": "GPIO13",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "USB_D+",
+            "signal": "USB_D+",
+            "group": "USB",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "signal": "UART1 RX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "signal": "SPI2 MISO",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "signal": "UART1 TX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "signal": "SPI2 MOSI",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "signal": "SPI2 SCK",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "signal": "SPI2 CS",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "signal": "I2C0 SDA",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "signal": "I2C0 SCL",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "signal": "LEDC PWM",
+            "group": "PWM",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "GPIO interrupt",
+            "signal": "GPIO13",
+            "group": "IRQ",
+            "evidence": "esp32c6-qfn32-pinout"
+          }
+        ],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ],
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 18,
+        "name": "GPIO14",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "UART1 RX (matrix)",
+            "signal": "UART1 RX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "signal": "SPI2 MISO",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "signal": "UART1 TX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "signal": "SPI2 MOSI",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "signal": "SPI2 SCK",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "signal": "SPI2 CS",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "signal": "I2C0 SDA",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "signal": "I2C0 SCL",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "signal": "LEDC PWM",
+            "group": "PWM",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "GPIO interrupt",
+            "signal": "GPIO15",
+            "group": "IRQ",
+            "evidence": "esp32c6-qfn32-pinout"
+          }
+        ],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ],
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 19,
+        "name": "GPIO15",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "UART1 RX (matrix)",
+            "signal": "UART1 RX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "signal": "SPI2 MISO",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "signal": "UART1 TX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "signal": "SPI2 MOSI",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "signal": "SPI2 SCK",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "signal": "SPI2 CS",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "signal": "I2C0 SDA",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "signal": "I2C0 SCL",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "signal": "LEDC PWM",
+            "group": "PWM",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "GPIO interrupt",
+            "signal": "GPIO15",
+            "group": "IRQ",
+            "evidence": "esp32c6-qfn32-pinout"
+          }
+        ],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ],
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 20,
+        "name": "VDDPST2",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ]
+      },
+      {
+        "number": 21,
+        "name": "GPIO16",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "U0TXD",
+            "signal": "U0TXD",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "FSPICS0",
+            "signal": "FSPICS0",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "signal": "UART1 RX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "signal": "SPI2 MISO",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "signal": "UART1 TX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "signal": "SPI2 MOSI",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "signal": "SPI2 SCK",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "signal": "SPI2 CS",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "signal": "I2C0 SDA",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "signal": "I2C0 SCL",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "signal": "LEDC PWM",
+            "group": "PWM",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "GPIO interrupt",
+            "signal": "GPIO16",
+            "group": "IRQ",
+            "evidence": "esp32c6-qfn32-pinout"
+          }
+        ],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ],
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 22,
+        "name": "GPIO17",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "U0RXD",
+            "signal": "U0RXD",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "FSPICS1",
+            "signal": "FSPICS1",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "signal": "UART1 RX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "signal": "SPI2 MISO",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "signal": "UART1 TX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "signal": "SPI2 MOSI",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "signal": "SPI2 SCK",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "signal": "SPI2 CS",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "signal": "I2C0 SDA",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "signal": "I2C0 SCL",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "signal": "LEDC PWM",
+            "group": "PWM",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "GPIO interrupt",
+            "signal": "GPIO17",
+            "group": "IRQ",
+            "evidence": "esp32c6-qfn32-pinout"
+          }
+        ],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ],
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 23,
+        "name": "GPIO18",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SDIO_CMD",
+            "signal": "SDIO_CMD",
+            "group": "SDIO",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "FSPICS2",
+            "signal": "FSPICS2",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "signal": "UART1 RX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "signal": "SPI2 MISO",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "signal": "UART1 TX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "signal": "SPI2 MOSI",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "signal": "SPI2 SCK",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "signal": "SPI2 CS",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "signal": "I2C0 SDA",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "signal": "I2C0 SCL",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "signal": "LEDC PWM",
+            "group": "PWM",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "GPIO interrupt",
+            "signal": "GPIO18",
+            "group": "IRQ",
+            "evidence": "esp32c6-qfn32-pinout"
+          }
+        ],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ],
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 24,
+        "name": "GPIO19",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SDIO_CLK",
+            "signal": "SDIO_CLK",
+            "group": "SDIO",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "FSPICS3",
+            "signal": "FSPICS3",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "signal": "UART1 RX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "signal": "SPI2 MISO",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "signal": "UART1 TX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "signal": "SPI2 MOSI",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "signal": "SPI2 SCK",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "signal": "SPI2 CS",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "signal": "I2C0 SDA",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "signal": "I2C0 SCL",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "signal": "LEDC PWM",
+            "group": "PWM",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "GPIO interrupt",
+            "signal": "GPIO19",
+            "group": "IRQ",
+            "evidence": "esp32c6-qfn32-pinout"
+          }
+        ],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ],
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 25,
+        "name": "GPIO20",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SDIO_DATA0",
+            "signal": "SDIO_DATA0",
+            "group": "SDIO",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "FSPICS4",
+            "signal": "FSPICS4",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "signal": "UART1 RX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "signal": "SPI2 MISO",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "signal": "UART1 TX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "signal": "SPI2 MOSI",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "signal": "SPI2 SCK",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "signal": "SPI2 CS",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "signal": "I2C0 SDA",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "signal": "I2C0 SCL",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "signal": "LEDC PWM",
+            "group": "PWM",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "GPIO interrupt",
+            "signal": "GPIO20",
+            "group": "IRQ",
+            "evidence": "esp32c6-qfn32-pinout"
+          }
+        ],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ],
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 26,
+        "name": "GPIO21",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SDIO_DATA1",
+            "signal": "SDIO_DATA1",
+            "group": "SDIO",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "FSPICS5",
+            "signal": "FSPICS5",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "signal": "UART1 RX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "signal": "SPI2 MISO",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "signal": "UART1 TX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "signal": "SPI2 MOSI",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "signal": "SPI2 SCK",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "signal": "SPI2 CS",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "signal": "I2C0 SDA",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "signal": "I2C0 SCL",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "signal": "LEDC PWM",
+            "group": "PWM",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "GPIO interrupt",
+            "signal": "GPIO21",
+            "group": "IRQ",
+            "evidence": "esp32c6-qfn32-pinout"
+          }
+        ],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ],
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 27,
+        "name": "GPIO22",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SDIO_DATA2",
+            "signal": "SDIO_DATA2",
+            "group": "SDIO",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "signal": "UART1 RX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "signal": "SPI2 MISO",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "signal": "UART1 TX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "signal": "SPI2 MOSI",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "signal": "SPI2 SCK",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "signal": "SPI2 CS",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "signal": "I2C0 SDA",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "signal": "I2C0 SCL",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "signal": "LEDC PWM",
+            "group": "PWM",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "GPIO interrupt",
+            "signal": "GPIO22",
+            "group": "IRQ",
+            "evidence": "esp32c6-qfn32-pinout"
+          }
+        ],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ],
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 28,
+        "name": "GPIO23",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SDIO_DATA3",
+            "signal": "SDIO_DATA3",
+            "group": "SDIO",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 RX (matrix)",
+            "signal": "UART1 RX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MISO (matrix)",
+            "signal": "SPI2 MISO",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "UART1 TX (matrix)",
+            "signal": "UART1 TX",
+            "group": "UART",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 MOSI (matrix)",
+            "signal": "SPI2 MOSI",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 SCK (matrix)",
+            "signal": "SPI2 SCK",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "SPI2 CS (matrix)",
+            "signal": "SPI2 CS",
+            "group": "SPI",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SDA (matrix)",
+            "signal": "I2C0 SDA",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "I2C0 SCL (matrix)",
+            "signal": "I2C0 SCL",
+            "group": "I2C",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "LEDC PWM (matrix)",
+            "signal": "LEDC PWM",
+            "group": "PWM",
+            "evidence": "esp32c6-qfn32-pinout"
+          },
+          {
+            "name": "GPIO interrupt",
+            "signal": "GPIO23",
+            "group": "IRQ",
+            "evidence": "esp32c6-qfn32-pinout"
+          }
+        ],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ],
+        "noteKey": "espGpioNote"
+      },
+      {
+        "number": 29,
+        "name": "VDDA1",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ]
+      },
+      {
+        "number": 30,
+        "name": "XTAL_N",
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ]
+      },
+      {
+        "number": 31,
+        "name": "XTAL_P",
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ]
+      },
+      {
+        "number": 32,
+        "name": "VDDA2",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "esp32c6-qfn32-drawing",
+          "esp32c6-qfn32-pinout"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ch32v003f4p6-tssop20",
+    "name": "CH32V003F4P6 · TSSOP-20",
+    "shortName": "CH32V003F4P6",
+    "mcu": "CH32V003F4P6",
+    "family": "WCH",
+    "processor": "QingKe 32-bit RISC-V2A",
+    "clock": "48 MHz",
+    "subtitle": "TSSOP-20 · bare MCU · 48 MHz",
+    "layout": "dip",
+    "packageName": "TSSOP-20",
+    "packagePins": 20,
+    "gpioCount": 18,
+    "uniqueGPIOCount": 18,
+    "voltage": "2.7–5.5 V VDD",
+    "source": "https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html",
+    "datasheet": "https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html",
+    "verifiedOn": "2026-11-19",
+    "scopeKey": "ch32v003PackageScope",
+    "pins": [
+      {
+        "number": 1,
+        "name": "PD4",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "A7",
+            "signal": "A7",
+            "group": "ADC",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "UCK",
+            "signal": "UCK",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T2CH1ETR",
+            "signal": "T2CH1ETR",
+            "group": "TIMER",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "OPO",
+            "signal": "OPO",
+            "group": "SYSTEM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH4ETR",
+            "signal": "T1CH4ETR",
+            "group": "TIMER",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-tssop20-drawing",
+          "ch32v003-pin-table"
+        ]
+      },
+      {
+        "number": 2,
+        "name": "PD5",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "UTX",
+            "signal": "UTX",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "A5",
+            "signal": "A5",
+            "group": "ADC",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T2CH4",
+            "signal": "T2CH4",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "URX",
+            "signal": "URX",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-tssop20-drawing",
+          "ch32v003-pin-table"
+        ]
+      },
+      {
+        "number": 3,
+        "name": "PD6",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "URX",
+            "signal": "URX",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "A6",
+            "signal": "A6",
+            "group": "ADC",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T2CH3",
+            "signal": "T2CH3",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "UTX",
+            "signal": "UTX",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-tssop20-drawing",
+          "ch32v003-pin-table"
+        ]
+      },
+      {
+        "number": 4,
+        "name": "PD7",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "NRST",
+            "signal": "NRST",
+            "group": "SYSTEM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T2CH4",
+            "signal": "T2CH4",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "OPP1",
+            "signal": "OPP1",
+            "group": "ANALOG",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "UCK",
+            "signal": "UCK",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-tssop20-drawing",
+          "ch32v003-pin-table"
+        ]
+      },
+      {
+        "number": 5,
+        "name": "PA1",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "OSCI",
+            "signal": "OSCI",
+            "group": "CLOCK",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "A1",
+            "signal": "A1",
+            "group": "ADC",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH2",
+            "signal": "T1CH2",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "OPN0",
+            "signal": "OPN0",
+            "group": "ANALOG",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-tssop20-drawing",
+          "ch32v003-pin-table"
+        ]
+      },
+      {
+        "number": 6,
+        "name": "PA2",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "OSCO",
+            "signal": "OSCO",
+            "group": "CLOCK",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "A0",
+            "signal": "A0",
+            "group": "ADC",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH2N",
+            "signal": "T1CH2N",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "OPP0",
+            "signal": "OPP0",
+            "group": "ANALOG",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "AETR2",
+            "signal": "AETR2",
+            "group": "TIMER",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-tssop20-drawing",
+          "ch32v003-pin-table"
+        ]
+      },
+      {
+        "number": 7,
+        "name": "VSS",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "ch32v003-tssop20-drawing",
+          "ch32v003-pin-table"
+        ]
+      },
+      {
+        "number": 8,
+        "name": "PD0",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "T1CH1N",
+            "signal": "T1CH1N",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "OPN1",
+            "signal": "OPN1",
+            "group": "ANALOG",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "SDA",
+            "signal": "SDA",
+            "group": "I2C",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "UTX",
+            "signal": "UTX",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-tssop20-drawing",
+          "ch32v003-pin-table"
+        ]
+      },
+      {
+        "number": 9,
+        "name": "VDD",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "ch32v003-tssop20-drawing",
+          "ch32v003-pin-table"
+        ]
+      },
+      {
+        "number": 10,
+        "name": "PC0",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "T2CH3",
+            "signal": "T2CH3",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "UTX",
+            "signal": "UTX",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "NSS",
+            "signal": "NSS",
+            "group": "SPI",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH3",
+            "signal": "T1CH3",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-tssop20-drawing",
+          "ch32v003-pin-table"
+        ]
+      },
+      {
+        "number": 11,
+        "name": "PC1",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SDA",
+            "signal": "SDA",
+            "group": "I2C",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "NSS",
+            "signal": "NSS",
+            "group": "SPI",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T2CH4",
+            "signal": "T2CH4",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T2CH1ETR",
+            "signal": "T2CH1ETR",
+            "group": "TIMER",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1BKIN",
+            "signal": "T1BKIN",
+            "group": "TIMER",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "URX",
+            "signal": "URX",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-tssop20-drawing",
+          "ch32v003-pin-table"
+        ]
+      },
+      {
+        "number": 12,
+        "name": "PC2",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SCL",
+            "signal": "SCL",
+            "group": "I2C",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "URTS",
+            "signal": "URTS",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1BKIN",
+            "signal": "T1BKIN",
+            "group": "TIMER",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "AETR",
+            "signal": "AETR",
+            "group": "TIMER",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T2CH2",
+            "signal": "T2CH2",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1ETR",
+            "signal": "T1ETR",
+            "group": "TIMER",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-tssop20-drawing",
+          "ch32v003-pin-table"
+        ]
+      },
+      {
+        "number": 13,
+        "name": "PC3",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "T1CH3",
+            "signal": "T1CH3",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH1N",
+            "signal": "T1CH1N",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "UCTS",
+            "signal": "UCTS",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-tssop20-drawing",
+          "ch32v003-pin-table"
+        ]
+      },
+      {
+        "number": 14,
+        "name": "PC4",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "A2",
+            "signal": "A2",
+            "group": "ADC",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH4",
+            "signal": "T1CH4",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "MCO",
+            "signal": "MCO",
+            "group": "CLOCK",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH1CH2N",
+            "signal": "T1CH1CH2N",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-tssop20-drawing",
+          "ch32v003-pin-table"
+        ]
+      },
+      {
+        "number": 15,
+        "name": "PC5",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SCK",
+            "signal": "SCK",
+            "group": "SPI",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1ETR",
+            "signal": "T1ETR",
+            "group": "TIMER",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T2CH1ETR",
+            "signal": "T2CH1ETR",
+            "group": "TIMER",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "SCL",
+            "signal": "SCL",
+            "group": "I2C",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "UCK",
+            "signal": "UCK",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH3",
+            "signal": "T1CH3",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-tssop20-drawing",
+          "ch32v003-pin-table"
+        ]
+      },
+      {
+        "number": 16,
+        "name": "PC6",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "MOSI",
+            "signal": "MOSI",
+            "group": "SPI",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH1CH3N",
+            "signal": "T1CH1CH3N",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "UCTS",
+            "signal": "UCTS",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "SDA",
+            "signal": "SDA",
+            "group": "I2C",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-tssop20-drawing",
+          "ch32v003-pin-table"
+        ]
+      },
+      {
+        "number": 17,
+        "name": "PC7",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "MISO",
+            "signal": "MISO",
+            "group": "SPI",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH2",
+            "signal": "T1CH2",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T2CH2",
+            "signal": "T2CH2",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "URTS",
+            "signal": "URTS",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-tssop20-drawing",
+          "ch32v003-pin-table"
+        ]
+      },
+      {
+        "number": 18,
+        "name": "PD1",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SWIO",
+            "signal": "SWIO",
+            "group": "SWD",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "AETR2",
+            "signal": "AETR2",
+            "group": "TIMER",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH3N",
+            "signal": "T1CH3N",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "SCL",
+            "signal": "SCL",
+            "group": "I2C",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "URX",
+            "signal": "URX",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-tssop20-drawing",
+          "ch32v003-pin-table"
+        ]
+      },
+      {
+        "number": 19,
+        "name": "PD2",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "A3",
+            "signal": "A3",
+            "group": "ADC",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH1",
+            "signal": "T1CH1",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T2CH3",
+            "signal": "T2CH3",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH2N",
+            "signal": "T1CH2N",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-tssop20-drawing",
+          "ch32v003-pin-table"
+        ]
+      },
+      {
+        "number": 20,
+        "name": "PD3",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "A4",
+            "signal": "A4",
+            "group": "ADC",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T2CH2",
+            "signal": "T2CH2",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "AETR",
+            "signal": "AETR",
+            "group": "TIMER",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "UCTS",
+            "signal": "UCTS",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH4",
+            "signal": "T1CH4",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-tssop20-drawing",
+          "ch32v003-pin-table"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ch32v003-evt",
+    "name": "WCH CH32V003-EVT",
+    "shortName": "CH32V003-EVT",
+    "subtitle": "CH32V003F4P6 · TSSOP-20 · RISC-V · 48 MHz",
+    "layout": "custom",
+    "family": "WCH",
+    "packagePins": 20,
+    "gpioCount": 18,
+    "uniqueGPIOCount": 18,
+    "voltage": "3.3 V / 5 V VDD",
+    "mcu": "CH32V003F4P6",
+    "processor": "QingKe 32-bit RISC-V2A",
+    "clock": "48 MHz",
+    "diagram": {
+      "width": 820,
+      "height": 600,
+      "artwork": "assets/boards/ch32v003-evt.svg"
+    },
+    "orientation": "usb",
+    "mcuProfile": "ch32v003f4p6-tssop20",
+    "scopeKey": "ch32v003EvtScope",
+    "source": "https://raw.githubusercontent.com/openwch/ch32v003/4e1b7437ada5d3ae8831a6f4b811a6320e4e23c7/EVT/PUB/CH32V00x%20Evaluation%20Board%20Reference-EN.pdf",
+    "datasheet": "https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html",
+    "verifiedOn": "2026-11-19",
+    "pins": [
+      {
+        "number": 1,
+        "physicalLabel": "P1.1",
+        "connector": "P1",
+        "connectorPin": 1,
+        "name": "PD4",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "A7",
+            "signal": "A7",
+            "group": "ADC",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "UCK",
+            "signal": "UCK",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T2CH1ETR",
+            "signal": "T2CH1ETR",
+            "group": "TIMER",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "OPO",
+            "signal": "OPO",
+            "group": "SYSTEM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH4ETR",
+            "signal": "T1CH4ETR",
+            "group": "TIMER",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-evt-board",
+          "ch32v003-evt-headers",
+          "ch32v003-pin-table"
+        ],
+        "position": {
+          "x": 280,
+          "y": 140,
+          "side": "left"
+        },
+        "mcuPin": 1
+      },
+      {
+        "number": 2,
+        "physicalLabel": "P1.2",
+        "connector": "P1",
+        "connectorPin": 2,
+        "name": "PD5",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "UTX",
+            "signal": "UTX",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "A5",
+            "signal": "A5",
+            "group": "ADC",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T2CH4",
+            "signal": "T2CH4",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "URX",
+            "signal": "URX",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-evt-board",
+          "ch32v003-evt-headers",
+          "ch32v003-pin-table"
+        ],
+        "position": {
+          "x": 280,
+          "y": 175,
+          "side": "left"
+        },
+        "mcuPin": 2
+      },
+      {
+        "number": 3,
+        "physicalLabel": "P1.3",
+        "connector": "P1",
+        "connectorPin": 3,
+        "name": "PD6",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "URX",
+            "signal": "URX",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "A6",
+            "signal": "A6",
+            "group": "ADC",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T2CH3",
+            "signal": "T2CH3",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "UTX",
+            "signal": "UTX",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-evt-board",
+          "ch32v003-evt-headers",
+          "ch32v003-pin-table"
+        ],
+        "position": {
+          "x": 280,
+          "y": 210,
+          "side": "left"
+        },
+        "mcuPin": 3
+      },
+      {
+        "number": 4,
+        "physicalLabel": "P1.4",
+        "connector": "P1",
+        "connectorPin": 4,
+        "name": "PD7",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "NRST",
+            "signal": "NRST",
+            "group": "SYSTEM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T2CH4",
+            "signal": "T2CH4",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "OPP1",
+            "signal": "OPP1",
+            "group": "ANALOG",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "UCK",
+            "signal": "UCK",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-evt-board",
+          "ch32v003-evt-headers",
+          "ch32v003-pin-table"
+        ],
+        "position": {
+          "x": 280,
+          "y": 245,
+          "side": "left"
+        },
+        "mcuPin": 4
+      },
+      {
+        "number": 5,
+        "physicalLabel": "P1.5",
+        "connector": "P1",
+        "connectorPin": 5,
+        "name": "PA1",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "OSCI",
+            "signal": "OSCI",
+            "group": "CLOCK",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "A1",
+            "signal": "A1",
+            "group": "ADC",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH2",
+            "signal": "T1CH2",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "OPN0",
+            "signal": "OPN0",
+            "group": "ANALOG",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-evt-board",
+          "ch32v003-evt-headers",
+          "ch32v003-pin-table"
+        ],
+        "position": {
+          "x": 280,
+          "y": 280,
+          "side": "left"
+        },
+        "mcuPin": 5
+      },
+      {
+        "number": 6,
+        "physicalLabel": "P1.6",
+        "connector": "P1",
+        "connectorPin": 6,
+        "name": "PA2",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "OSCO",
+            "signal": "OSCO",
+            "group": "CLOCK",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "A0",
+            "signal": "A0",
+            "group": "ADC",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH2N",
+            "signal": "T1CH2N",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "OPP0",
+            "signal": "OPP0",
+            "group": "ANALOG",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "AETR2",
+            "signal": "AETR2",
+            "group": "TIMER",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-evt-board",
+          "ch32v003-evt-headers",
+          "ch32v003-pin-table"
+        ],
+        "position": {
+          "x": 280,
+          "y": 315,
+          "side": "left"
+        },
+        "mcuPin": 6
+      },
+      {
+        "number": 7,
+        "physicalLabel": "P1.7",
+        "connector": "P1",
+        "connectorPin": 7,
+        "name": "VSS",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "ch32v003-evt-board",
+          "ch32v003-evt-headers",
+          "ch32v003-pin-table"
+        ],
+        "position": {
+          "x": 280,
+          "y": 350,
+          "side": "left"
+        },
+        "mcuPin": 7
+      },
+      {
+        "number": 8,
+        "physicalLabel": "P1.8",
+        "connector": "P1",
+        "connectorPin": 8,
+        "name": "PD0",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "T1CH1N",
+            "signal": "T1CH1N",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "OPN1",
+            "signal": "OPN1",
+            "group": "ANALOG",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "SDA",
+            "signal": "SDA",
+            "group": "I2C",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "UTX",
+            "signal": "UTX",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-evt-board",
+          "ch32v003-evt-headers",
+          "ch32v003-pin-table"
+        ],
+        "position": {
+          "x": 280,
+          "y": 385,
+          "side": "left"
+        },
+        "mcuPin": 8
+      },
+      {
+        "number": 9,
+        "physicalLabel": "P1.9",
+        "connector": "P1",
+        "connectorPin": 9,
+        "name": "VDD",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "ch32v003-evt-board",
+          "ch32v003-evt-headers",
+          "ch32v003-pin-table"
+        ],
+        "position": {
+          "x": 280,
+          "y": 420,
+          "side": "left"
+        },
+        "mcuPin": 9
+      },
+      {
+        "number": 10,
+        "physicalLabel": "P1.10",
+        "connector": "P1",
+        "connectorPin": 10,
+        "name": "PC0",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "T2CH3",
+            "signal": "T2CH3",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "UTX",
+            "signal": "UTX",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "NSS",
+            "signal": "NSS",
+            "group": "SPI",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH3",
+            "signal": "T1CH3",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-evt-board",
+          "ch32v003-evt-headers",
+          "ch32v003-pin-table"
+        ],
+        "position": {
+          "x": 280,
+          "y": 455,
+          "side": "left"
+        },
+        "mcuPin": 10
+      },
+      {
+        "number": 11,
+        "physicalLabel": "P2.1",
+        "connector": "P2",
+        "connectorPin": 1,
+        "name": "PC1",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SDA",
+            "signal": "SDA",
+            "group": "I2C",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "NSS",
+            "signal": "NSS",
+            "group": "SPI",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T2CH4",
+            "signal": "T2CH4",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T2CH1ETR",
+            "signal": "T2CH1ETR",
+            "group": "TIMER",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1BKIN",
+            "signal": "T1BKIN",
+            "group": "TIMER",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "URX",
+            "signal": "URX",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-evt-board",
+          "ch32v003-evt-headers",
+          "ch32v003-pin-table"
+        ],
+        "position": {
+          "x": 540,
+          "y": 140,
+          "side": "right"
+        },
+        "mcuPin": 11
+      },
+      {
+        "number": 12,
+        "physicalLabel": "P2.2",
+        "connector": "P2",
+        "connectorPin": 2,
+        "name": "PC2",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SCL",
+            "signal": "SCL",
+            "group": "I2C",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "URTS",
+            "signal": "URTS",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1BKIN",
+            "signal": "T1BKIN",
+            "group": "TIMER",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "AETR",
+            "signal": "AETR",
+            "group": "TIMER",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T2CH2",
+            "signal": "T2CH2",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1ETR",
+            "signal": "T1ETR",
+            "group": "TIMER",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-evt-board",
+          "ch32v003-evt-headers",
+          "ch32v003-pin-table"
+        ],
+        "position": {
+          "x": 540,
+          "y": 175,
+          "side": "right"
+        },
+        "mcuPin": 12
+      },
+      {
+        "number": 13,
+        "physicalLabel": "P2.3",
+        "connector": "P2",
+        "connectorPin": 3,
+        "name": "PC3",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "T1CH3",
+            "signal": "T1CH3",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH1N",
+            "signal": "T1CH1N",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "UCTS",
+            "signal": "UCTS",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-evt-board",
+          "ch32v003-evt-headers",
+          "ch32v003-pin-table"
+        ],
+        "position": {
+          "x": 540,
+          "y": 210,
+          "side": "right"
+        },
+        "mcuPin": 13
+      },
+      {
+        "number": 14,
+        "physicalLabel": "P2.4",
+        "connector": "P2",
+        "connectorPin": 4,
+        "name": "PC4",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "A2",
+            "signal": "A2",
+            "group": "ADC",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH4",
+            "signal": "T1CH4",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "MCO",
+            "signal": "MCO",
+            "group": "CLOCK",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH1CH2N",
+            "signal": "T1CH1CH2N",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-evt-board",
+          "ch32v003-evt-headers",
+          "ch32v003-pin-table"
+        ],
+        "position": {
+          "x": 540,
+          "y": 245,
+          "side": "right"
+        },
+        "mcuPin": 14
+      },
+      {
+        "number": 15,
+        "physicalLabel": "P2.5",
+        "connector": "P2",
+        "connectorPin": 5,
+        "name": "PC5",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SCK",
+            "signal": "SCK",
+            "group": "SPI",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1ETR",
+            "signal": "T1ETR",
+            "group": "TIMER",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T2CH1ETR",
+            "signal": "T2CH1ETR",
+            "group": "TIMER",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "SCL",
+            "signal": "SCL",
+            "group": "I2C",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "UCK",
+            "signal": "UCK",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH3",
+            "signal": "T1CH3",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-evt-board",
+          "ch32v003-evt-headers",
+          "ch32v003-pin-table"
+        ],
+        "position": {
+          "x": 540,
+          "y": 280,
+          "side": "right"
+        },
+        "mcuPin": 15
+      },
+      {
+        "number": 16,
+        "physicalLabel": "P2.6",
+        "connector": "P2",
+        "connectorPin": 6,
+        "name": "PC6",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "MOSI",
+            "signal": "MOSI",
+            "group": "SPI",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH1CH3N",
+            "signal": "T1CH1CH3N",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "UCTS",
+            "signal": "UCTS",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "SDA",
+            "signal": "SDA",
+            "group": "I2C",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-evt-board",
+          "ch32v003-evt-headers",
+          "ch32v003-pin-table"
+        ],
+        "position": {
+          "x": 540,
+          "y": 315,
+          "side": "right"
+        },
+        "mcuPin": 16
+      },
+      {
+        "number": 17,
+        "physicalLabel": "P2.7",
+        "connector": "P2",
+        "connectorPin": 7,
+        "name": "PC7",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "MISO",
+            "signal": "MISO",
+            "group": "SPI",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH2",
+            "signal": "T1CH2",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T2CH2",
+            "signal": "T2CH2",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "URTS",
+            "signal": "URTS",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-evt-board",
+          "ch32v003-evt-headers",
+          "ch32v003-pin-table"
+        ],
+        "position": {
+          "x": 540,
+          "y": 350,
+          "side": "right"
+        },
+        "mcuPin": 17
+      },
+      {
+        "number": 18,
+        "physicalLabel": "P2.8",
+        "connector": "P2",
+        "connectorPin": 8,
+        "name": "PD1",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SWIO",
+            "signal": "SWIO",
+            "group": "SWD",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "AETR2",
+            "signal": "AETR2",
+            "group": "TIMER",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH3N",
+            "signal": "T1CH3N",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "SCL",
+            "signal": "SCL",
+            "group": "I2C",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "URX",
+            "signal": "URX",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-evt-board",
+          "ch32v003-evt-headers",
+          "ch32v003-pin-table"
+        ],
+        "position": {
+          "x": 540,
+          "y": 385,
+          "side": "right"
+        },
+        "mcuPin": 18
+      },
+      {
+        "number": 19,
+        "physicalLabel": "P2.9",
+        "connector": "P2",
+        "connectorPin": 9,
+        "name": "PD2",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "A3",
+            "signal": "A3",
+            "group": "ADC",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH1",
+            "signal": "T1CH1",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T2CH3",
+            "signal": "T2CH3",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH2N",
+            "signal": "T1CH2N",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-evt-board",
+          "ch32v003-evt-headers",
+          "ch32v003-pin-table"
+        ],
+        "position": {
+          "x": 540,
+          "y": 420,
+          "side": "right"
+        },
+        "mcuPin": 19
+      },
+      {
+        "number": 20,
+        "physicalLabel": "P2.10",
+        "connector": "P2",
+        "connectorPin": 10,
+        "name": "PD3",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "A4",
+            "signal": "A4",
+            "group": "ADC",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T2CH2",
+            "signal": "T2CH2",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "AETR",
+            "signal": "AETR",
+            "group": "TIMER",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "UCTS",
+            "signal": "UCTS",
+            "group": "USART",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH4",
+            "signal": "T1CH4",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          }
+        ],
+        "evidence": [
+          "ch32v003-evt-board",
+          "ch32v003-evt-headers",
+          "ch32v003-pin-table"
+        ],
+        "position": {
+          "x": 540,
+          "y": 455,
+          "side": "right"
+        },
+        "mcuPin": 20
+      }
+    ]
+  },
+  {
+    "id": "nrf52840-dk",
+    "name": "Nordic nRF52840 DK",
+    "shortName": "nRF52840 DK",
+    "subtitle": "PCA10056 · nRF52840 · Cortex-M4F · 64 MHz · 32 contacts",
+    "layout": "custom",
+    "family": "Nordic Semiconductor",
+    "packageName": "32-contact Arduino Uno Rev3 shield",
+    "packagePins": 32,
+    "gpioCount": 22,
+    "uniqueGPIOCount": 22,
+    "voltage": "1.8–3.6 V VDD",
+    "mcu": "nRF52840",
+    "processor": "Arm Cortex-M4F",
+    "clock": "64 MHz",
+    "diagram": {
+      "width": 900,
+      "height": 860,
+      "artwork": "assets/boards/nrf52840-dk.svg"
+    },
+    "orientation": "usb",
+    "wireless": true,
+    "scopeKey": "nrf52840DkScope",
+    "source": "https://docs.nordicsemi.com/bundle/ug_nrf52840_dk/page/UG/dk/intro.html",
+    "datasheet": "https://docs.nordicsemi.com/bundle/ps_nrf52840/page/intro_front.html",
+    "verifiedOn": "2026-11-19",
+    "pins": [
+      {
+        "number": 1,
+        "physicalLabel": "PWR.1",
+        "connector": "PWR",
+        "connectorPin": 1,
+        "name": "NC",
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 300,
+          "y": 220,
+          "side": "left"
+        }
+      },
+      {
+        "number": 2,
+        "physicalLabel": "PWR.2",
+        "connector": "PWR",
+        "connectorPin": 2,
+        "name": "IOREF",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 300,
+          "y": 246,
+          "side": "left"
+        }
+      },
+      {
+        "number": 3,
+        "physicalLabel": "PWR.3",
+        "connector": "PWR",
+        "connectorPin": 3,
+        "name": "RESET",
+        "type": "SYSTEM",
+        "functions": [
+          {
+            "name": "RESET",
+            "signal": "RESET",
+            "group": "SYSTEM",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "P0.18",
+            "signal": "P0.18",
+            "group": "GPIO",
+            "evidence": "nrf52840-dk-headers"
+          }
+        ],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 300,
+          "y": 272,
+          "side": "left"
+        },
+        "net": "P0.18",
+        "mcuPort": "P0.18"
+      },
+      {
+        "number": 4,
+        "physicalLabel": "PWR.4",
+        "connector": "PWR",
+        "connectorPin": 4,
+        "name": "3V3",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 300,
+          "y": 298,
+          "side": "left"
+        }
+      },
+      {
+        "number": 5,
+        "physicalLabel": "PWR.5",
+        "connector": "PWR",
+        "connectorPin": 5,
+        "name": "5V",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 300,
+          "y": 324,
+          "side": "left"
+        }
+      },
+      {
+        "number": 6,
+        "physicalLabel": "PWR.6",
+        "connector": "PWR",
+        "connectorPin": 6,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 300,
+          "y": 350,
+          "side": "left"
+        }
+      },
+      {
+        "number": 7,
+        "physicalLabel": "PWR.7",
+        "connector": "PWR",
+        "connectorPin": 7,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 300,
+          "y": 376,
+          "side": "left"
+        }
+      },
+      {
+        "number": 8,
+        "physicalLabel": "PWR.8",
+        "connector": "PWR",
+        "connectorPin": 8,
+        "name": "VIN",
+        "type": "POWER",
+        "functions": [],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 300,
+          "y": 402,
+          "side": "left"
+        }
+      },
+      {
+        "number": 9,
+        "physicalLabel": "ANALOG.1",
+        "connector": "ANALOG",
+        "connectorPin": 1,
+        "name": "A0",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "AIN1",
+            "signal": "AIN1",
+            "group": "ADC",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "PWM",
+            "signal": "PWM",
+            "group": "PWM",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "P0.03",
+            "signal": "P0.03",
+            "group": "GPIO",
+            "evidence": "nrf52840-dk-headers"
+          }
+        ],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 300,
+          "y": 480,
+          "side": "left"
+        },
+        "net": "P0.03",
+        "mcuPort": "P0.03"
+      },
+      {
+        "number": 10,
+        "physicalLabel": "ANALOG.2",
+        "connector": "ANALOG",
+        "connectorPin": 2,
+        "name": "A1",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "AIN2",
+            "signal": "AIN2",
+            "group": "ADC",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "PWM",
+            "signal": "PWM",
+            "group": "PWM",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "P0.04",
+            "signal": "P0.04",
+            "group": "GPIO",
+            "evidence": "nrf52840-dk-headers"
+          }
+        ],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 300,
+          "y": 506,
+          "side": "left"
+        },
+        "net": "P0.04",
+        "mcuPort": "P0.04"
+      },
+      {
+        "number": 11,
+        "physicalLabel": "ANALOG.3",
+        "connector": "ANALOG",
+        "connectorPin": 3,
+        "name": "A2",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "AIN4",
+            "signal": "AIN4",
+            "group": "ADC",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "PWM",
+            "signal": "PWM",
+            "group": "PWM",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "P0.28",
+            "signal": "P0.28",
+            "group": "GPIO",
+            "evidence": "nrf52840-dk-headers"
+          }
+        ],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 300,
+          "y": 532,
+          "side": "left"
+        },
+        "net": "P0.28",
+        "mcuPort": "P0.28"
+      },
+      {
+        "number": 12,
+        "physicalLabel": "ANALOG.4",
+        "connector": "ANALOG",
+        "connectorPin": 4,
+        "name": "A3",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "AIN5",
+            "signal": "AIN5",
+            "group": "ADC",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "PWM",
+            "signal": "PWM",
+            "group": "PWM",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "P0.29",
+            "signal": "P0.29",
+            "group": "GPIO",
+            "evidence": "nrf52840-dk-headers"
+          }
+        ],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 300,
+          "y": 558,
+          "side": "left"
+        },
+        "net": "P0.29",
+        "mcuPort": "P0.29"
+      },
+      {
+        "number": 13,
+        "physicalLabel": "ANALOG.5",
+        "connector": "ANALOG",
+        "connectorPin": 5,
+        "name": "A4",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "AIN6",
+            "signal": "AIN6",
+            "group": "ADC",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "PWM",
+            "signal": "PWM",
+            "group": "PWM",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "P0.30",
+            "signal": "P0.30",
+            "group": "GPIO",
+            "evidence": "nrf52840-dk-headers"
+          }
+        ],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 300,
+          "y": 584,
+          "side": "left"
+        },
+        "net": "P0.30",
+        "mcuPort": "P0.30"
+      },
+      {
+        "number": 14,
+        "physicalLabel": "ANALOG.6",
+        "connector": "ANALOG",
+        "connectorPin": 6,
+        "name": "A5",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "AIN7",
+            "signal": "AIN7",
+            "group": "ADC",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "PWM",
+            "signal": "PWM",
+            "group": "PWM",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "P0.31",
+            "signal": "P0.31",
+            "group": "GPIO",
+            "evidence": "nrf52840-dk-headers"
+          }
+        ],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 300,
+          "y": 610,
+          "side": "left"
+        },
+        "net": "P0.31",
+        "mcuPort": "P0.31"
+      },
+      {
+        "number": 15,
+        "physicalLabel": "DIGITAL.1",
+        "connector": "DIGITAL",
+        "connectorPin": 1,
+        "name": "D0",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "RX",
+            "signal": "RX",
+            "group": "UART",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "PWM",
+            "signal": "PWM",
+            "group": "PWM",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "P0.13",
+            "signal": "P0.13",
+            "group": "GPIO",
+            "evidence": "nrf52840-dk-headers"
+          }
+        ],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 600,
+          "y": 612,
+          "side": "right"
+        },
+        "net": "P0.13",
+        "mcuPort": "P0.13"
+      },
+      {
+        "number": 16,
+        "physicalLabel": "DIGITAL.2",
+        "connector": "DIGITAL",
+        "connectorPin": 2,
+        "name": "D1",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "TX",
+            "signal": "TX",
+            "group": "UART",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "PWM",
+            "signal": "PWM",
+            "group": "PWM",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "P0.14",
+            "signal": "P0.14",
+            "group": "GPIO",
+            "evidence": "nrf52840-dk-headers"
+          }
+        ],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 600,
+          "y": 586,
+          "side": "right"
+        },
+        "net": "P0.14",
+        "mcuPort": "P0.14"
+      },
+      {
+        "number": 17,
+        "physicalLabel": "DIGITAL.3",
+        "connector": "DIGITAL",
+        "connectorPin": 3,
+        "name": "D2",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "PWM",
+            "signal": "PWM",
+            "group": "PWM",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "P0.25",
+            "signal": "P0.25",
+            "group": "GPIO",
+            "evidence": "nrf52840-dk-headers"
+          }
+        ],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 600,
+          "y": 560,
+          "side": "right"
+        },
+        "net": "P0.25",
+        "mcuPort": "P0.25"
+      },
+      {
+        "number": 18,
+        "physicalLabel": "DIGITAL.4",
+        "connector": "DIGITAL",
+        "connectorPin": 4,
+        "name": "D3",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "NFC1",
+            "signal": "NFC1",
+            "group": "SYSTEM",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "PWM",
+            "signal": "PWM",
+            "group": "PWM",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "P0.09",
+            "signal": "P0.09",
+            "group": "GPIO",
+            "evidence": "nrf52840-dk-headers"
+          }
+        ],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 600,
+          "y": 534,
+          "side": "right"
+        },
+        "net": "P0.09",
+        "mcuPort": "P0.09"
+      },
+      {
+        "number": 19,
+        "physicalLabel": "DIGITAL.5",
+        "connector": "DIGITAL",
+        "connectorPin": 5,
+        "name": "D4",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "NFC2",
+            "signal": "NFC2",
+            "group": "SYSTEM",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "PWM",
+            "signal": "PWM",
+            "group": "PWM",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "P0.10",
+            "signal": "P0.10",
+            "group": "GPIO",
+            "evidence": "nrf52840-dk-headers"
+          }
+        ],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 600,
+          "y": 508,
+          "side": "right"
+        },
+        "net": "P0.10",
+        "mcuPort": "P0.10"
+      },
+      {
+        "number": 20,
+        "physicalLabel": "DIGITAL.6",
+        "connector": "DIGITAL",
+        "connectorPin": 6,
+        "name": "D5",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "PWM",
+            "signal": "PWM",
+            "group": "PWM",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "P1.06",
+            "signal": "P1.06",
+            "group": "GPIO",
+            "evidence": "nrf52840-dk-headers"
+          }
+        ],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 600,
+          "y": 482,
+          "side": "right"
+        },
+        "net": "P1.06",
+        "mcuPort": "P1.06"
+      },
+      {
+        "number": 21,
+        "physicalLabel": "DIGITAL.7",
+        "connector": "DIGITAL",
+        "connectorPin": 7,
+        "name": "D6",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "PWM",
+            "signal": "PWM",
+            "group": "PWM",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "P1.07",
+            "signal": "P1.07",
+            "group": "GPIO",
+            "evidence": "nrf52840-dk-headers"
+          }
+        ],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 600,
+          "y": 456,
+          "side": "right"
+        },
+        "net": "P1.07",
+        "mcuPort": "P1.07"
+      },
+      {
+        "number": 22,
+        "physicalLabel": "DIGITAL.8",
+        "connector": "DIGITAL",
+        "connectorPin": 8,
+        "name": "D7",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "PWM",
+            "signal": "PWM",
+            "group": "PWM",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "P1.02",
+            "signal": "P1.02",
+            "group": "GPIO",
+            "evidence": "nrf52840-dk-headers"
+          }
+        ],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 600,
+          "y": 430,
+          "side": "right"
+        },
+        "net": "P1.02",
+        "mcuPort": "P1.02"
+      },
+      {
+        "number": 23,
+        "physicalLabel": "DIGITAL.9",
+        "connector": "DIGITAL",
+        "connectorPin": 9,
+        "name": "D8",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "PWM",
+            "signal": "PWM",
+            "group": "PWM",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "P1.08",
+            "signal": "P1.08",
+            "group": "GPIO",
+            "evidence": "nrf52840-dk-headers"
+          }
+        ],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 600,
+          "y": 384,
+          "side": "right"
+        },
+        "net": "P1.08",
+        "mcuPort": "P1.08"
+      },
+      {
+        "number": 24,
+        "physicalLabel": "DIGITAL.10",
+        "connector": "DIGITAL",
+        "connectorPin": 10,
+        "name": "D9",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "PWM",
+            "signal": "PWM",
+            "group": "PWM",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "P1.09",
+            "signal": "P1.09",
+            "group": "GPIO",
+            "evidence": "nrf52840-dk-headers"
+          }
+        ],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 600,
+          "y": 358,
+          "side": "right"
+        },
+        "net": "P1.09",
+        "mcuPort": "P1.09"
+      },
+      {
+        "number": 25,
+        "physicalLabel": "DIGITAL.11",
+        "connector": "DIGITAL",
+        "connectorPin": 11,
+        "name": "D10",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "CS",
+            "signal": "CS",
+            "group": "SPI",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "PWM",
+            "signal": "PWM",
+            "group": "PWM",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "P1.10",
+            "signal": "P1.10",
+            "group": "GPIO",
+            "evidence": "nrf52840-dk-headers"
+          }
+        ],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 600,
+          "y": 332,
+          "side": "right"
+        },
+        "net": "P1.10",
+        "mcuPort": "P1.10"
+      },
+      {
+        "number": 26,
+        "physicalLabel": "DIGITAL.12",
+        "connector": "DIGITAL",
+        "connectorPin": 12,
+        "name": "D11",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "MOSI",
+            "signal": "MOSI",
+            "group": "SPI",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "PWM",
+            "signal": "PWM",
+            "group": "PWM",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "P1.12",
+            "signal": "P1.12",
+            "group": "GPIO",
+            "evidence": "nrf52840-dk-headers"
+          }
+        ],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 600,
+          "y": 306,
+          "side": "right"
+        },
+        "net": "P1.12",
+        "mcuPort": "P1.12"
+      },
+      {
+        "number": 27,
+        "physicalLabel": "DIGITAL.13",
+        "connector": "DIGITAL",
+        "connectorPin": 13,
+        "name": "D12",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "MISO",
+            "signal": "MISO",
+            "group": "SPI",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "PWM",
+            "signal": "PWM",
+            "group": "PWM",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "P1.13",
+            "signal": "P1.13",
+            "group": "GPIO",
+            "evidence": "nrf52840-dk-headers"
+          }
+        ],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 600,
+          "y": 280,
+          "side": "right"
+        },
+        "net": "P1.13",
+        "mcuPort": "P1.13"
+      },
+      {
+        "number": 28,
+        "physicalLabel": "DIGITAL.14",
+        "connector": "DIGITAL",
+        "connectorPin": 14,
+        "name": "D13",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SCK",
+            "signal": "SCK",
+            "group": "SPI",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "PWM",
+            "signal": "PWM",
+            "group": "PWM",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "P1.15",
+            "signal": "P1.15",
+            "group": "GPIO",
+            "evidence": "nrf52840-dk-headers"
+          }
+        ],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 600,
+          "y": 254,
+          "side": "right"
+        },
+        "net": "P1.15",
+        "mcuPort": "P1.15"
+      },
+      {
+        "number": 29,
+        "physicalLabel": "DIGITAL.15",
+        "connector": "DIGITAL",
+        "connectorPin": 15,
+        "name": "GND",
+        "type": "GND",
+        "functions": [],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 600,
+          "y": 228,
+          "side": "right"
+        }
+      },
+      {
+        "number": 30,
+        "physicalLabel": "DIGITAL.16",
+        "connector": "DIGITAL",
+        "connectorPin": 16,
+        "name": "AREF",
+        "type": "SYSTEM",
+        "functions": [],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 600,
+          "y": 202,
+          "side": "right"
+        }
+      },
+      {
+        "number": 31,
+        "physicalLabel": "DIGITAL.17",
+        "connector": "DIGITAL",
+        "connectorPin": 17,
+        "name": "SDA",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SDA",
+            "signal": "SDA",
+            "group": "I2C",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "PWM",
+            "signal": "PWM",
+            "group": "PWM",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "P0.26",
+            "signal": "P0.26",
+            "group": "GPIO",
+            "evidence": "nrf52840-dk-headers"
+          }
+        ],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 600,
+          "y": 176,
+          "side": "right"
+        },
+        "net": "P0.26",
+        "mcuPort": "P0.26"
+      },
+      {
+        "number": 32,
+        "physicalLabel": "DIGITAL.18",
+        "connector": "DIGITAL",
+        "connectorPin": 18,
+        "name": "SCL",
+        "type": "GPIO",
+        "functions": [
+          {
+            "name": "SCL",
+            "signal": "SCL",
+            "group": "I2C",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "PWM",
+            "signal": "PWM",
+            "group": "PWM",
+            "evidence": "nrf52840-dk-headers"
+          },
+          {
+            "name": "P0.27",
+            "signal": "P0.27",
+            "group": "GPIO",
+            "evidence": "nrf52840-dk-headers"
+          }
+        ],
+        "evidence": [
+          "nrf52840-dk-layout",
+          "nrf52840-dk-headers"
+        ],
+        "position": {
+          "x": 600,
+          "y": 150,
+          "side": "right"
+        },
+        "net": "P0.27",
+        "mcuPort": "P0.27"
+      }
+    ]
   }
 ]

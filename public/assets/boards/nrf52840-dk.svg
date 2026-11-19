@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="860" viewBox="0 0 900 860">
+<g font-family="monospace" text-anchor="middle">
+  <rect x="250" y="60" width="400" height="760" rx="16" fill="#144a2a" stroke="#2f7d4b" stroke-width="2"/>
+  <rect x="265" y="75" width="370" height="730" rx="10" fill="none" stroke="#236e40" stroke-dasharray="4 6"/>
+  <rect x="330" y="34" width="60" height="42" rx="4" fill="#9db0a8" stroke="#526b60" stroke-width="2"/>
+  <text x="360" y="60" font-size="9" fill="#1c2f25">USB</text>
+  <rect x="510" y="34" width="60" height="42" rx="4" fill="#9db0a8" stroke="#526b60" stroke-width="2"/>
+  <text x="540" y="60" font-size="9" fill="#1c2f25">DEBUG</text>
+  <rect x="380" y="100" width="140" height="110" rx="5" fill="#1c3826" stroke="#487858" stroke-width="1.5"/>
+  <text x="450" y="150" font-size="12" fill="#b0d4bd">SEGGER J-Link</text>
+  <text x="450" y="172" font-size="10" fill="#759e81">INTERFACE MCU</text>
+  <rect x="390" y="360" width="120" height="120" rx="6" fill="#182e21" stroke="#508560" stroke-width="2"/>
+  <circle cx="405" cy="375" r="4" fill="#c4dbcc"/>
+  <text x="450" y="420" font-size="15" fill="#d9ede0">nRF52840</text>
+  <text x="450" y="442" font-size="11" fill="#8cb898">ARM CORTEX-M4F</text>
+  <text x="450" y="462" font-size="9" fill="#699675">64 MHz · BLE 5.4</text>
+  <text x="450" y="270" font-size="19" fill="#e8f5ec">nRF52840 DK</text>
+  <text x="450" y="295" font-size="11" fill="#9dc7a9">PCA10056 · NORDIC SEMICONDUCTOR</text>
+  <rect x="330" y="700" width="40" height="25" rx="3" fill="#203d2b" stroke="#527d5f"/>
+  <text x="350" y="717" font-size="9" fill="#a4c9b0">BTN1</text>
+  <rect x="390" y="700" width="40" height="25" rx="3" fill="#203d2b" stroke="#527d5f"/>
+  <text x="410" y="717" font-size="9" fill="#a4c9b0">BTN2</text>
+  <rect x="470" y="700" width="40" height="25" rx="3" fill="#203d2b" stroke="#527d5f"/>
+  <text x="490" y="717" font-size="9" fill="#a4c9b0">BTN3</text>
+  <rect x="530" y="700" width="40" height="25" rx="3" fill="#203d2b" stroke="#527d5f"/>
+  <text x="550" y="717" font-size="9" fill="#a4c9b0">BTN4</text>
+  <text x="335" y="210" font-size="10" fill="#a3c7af">P6 PWR</text>
+  <text x="340" y="468" font-size="10" fill="#a3c7af">P5 ANALOG</text>
+  <text x="565" y="138" font-size="10" fill="#a3c7af">P4 DIGITAL</text>
+  <text x="565" y="415" font-size="10" fill="#a3c7af">P3 DIGITAL</text>
+</g>
+</svg>

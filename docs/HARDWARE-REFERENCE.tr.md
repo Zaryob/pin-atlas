@@ -1,6 +1,6 @@
 # Donanım araştırması ve teknik referans
 
-İnceleme: 2026-11-14. 107 profil ayrı ayrı kapsanır. 66 profil için nitelendirilmiş tarih bilgisi vardır; 41 profilin kesin ilk üretim/satış tarihi doğrulanmamıştır. MCU veri sayfasının ilk yayını, kartın üretim yılı olarak sunulmaz.
+İnceleme: 2026-11-14. 111 profil ayrı ayrı kapsanır. 70 profil için nitelendirilmiş tarih bilgisi vardır; 41 profilin kesin ilk üretim/satış tarihi doğrulanmamıştır. MCU veri sayfasının ilk yayını, kartın üretim yılı olarak sunulmaz.
 
 Bu dosya `sources/hardware-details.json` kayıtlarından `npm run build:data` ile üretilir. Her özellik ve notun kaynak bağlantısı yanındadır. Canlı üretici sayfalarının içeriği değişebilir; pin kanıtlarının kilitli sürüm ve SHA-256 bilgileri ayrı `sources/manifest.json` kaydında korunur. Yeni teknik bilgi incelemesi, önceki pin doğrulama tarihini değiştirmez.
 
@@ -1726,4 +1726,56 @@ Teknik bilgi incelemesi 2026-11-19.
 - **Besleme / mantık:** 3.3 V I/O. [LP-MSPM0G3507 LaunchPad Development Kit User’s Guide](https://www.ti.com/lit/ug/slau873e/slau873e.pdf), [MSPM0G350x datasheet](https://www.ti.com/lit/ds/symlink/mspm0g3507.pdf)
 
 Devre / kart belgeleri: [LP-MSPM0G3507 LaunchPad Development Kit User’s Guide](https://www.ti.com/lit/ug/slau873e/slau873e.pdf)
+
+### ESP32-C6 · QFN-32
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=esp32-c6-qfn32&profile=esp32-c6-qfn32) · [Pin referansı](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf#page=17) · [Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)
+
+Teknik bilgi incelemesi 2026-11-19.
+
+- **Belgelenmiş olduğu tarih:** 2023. [ESP32C6 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)
+- **İşlemci:** 1 × HP RISC-V + LP RISC-V. [ESP32C6 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)
+- **Saat hızı / üst sınır:** 160 MHz HP / 20 MHz LP. [ESP32C6 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)
+- **RAM:** 512 KB HP SRAM + 16 KB LP SRAM. [ESP32C6 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)
+- **Program Flash’ı / depolama:** Module-dependent external Flash. [ESP32C6 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)
+- **Besleme / mantık:** 3.0–3.6 V VDD. [ESP32C6 series datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf)
+
+### CH32V003F4P6 · TSSOP-20
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=ch32v003f4p6-tssop20&profile=ch32v003f4p6-tssop20) · [Pin referansı](https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html) · [Datasheet](https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html)
+
+Teknik bilgi incelemesi 2026-11-19.
+
+- **Belgelenmiş olduğu tarih:** 2022. [WCH CH32V003 series datasheet](https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html)
+- **İşlemci:** QingKe 32-bit RISC-V2A. [WCH CH32V003 series datasheet](https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html)
+- **Saat hızı / üst sınır:** 48 MHz. [WCH CH32V003 series datasheet](https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html)
+- **RAM:** 2 KB SRAM. [WCH CH32V003 series datasheet](https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html)
+- **Program Flash’ı / depolama:** 16 KB Flash. [WCH CH32V003 series datasheet](https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html)
+- **Besleme / mantık:** 2.7–5.5 V VDD. [WCH CH32V003 series datasheet](https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html)
+
+### WCH CH32V003-EVT
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=ch32v003-evt&profile=ch32v003-evt) · [Pin referansı](https://raw.githubusercontent.com/openwch/ch32v003/4e1b7437ada5d3ae8831a6f4b811a6320e4e23c7/EVT/PUB/CH32V00x%20Evaluation%20Board%20Reference-EN.pdf) · [Datasheet](https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html)
+
+Teknik bilgi incelemesi 2026-11-19.
+
+- **Belgelenmiş olduğu tarih:** 2022. [WCH CH32V00x Evaluation Board Reference](https://raw.githubusercontent.com/openwch/ch32v003/4e1b7437ada5d3ae8831a6f4b811a6320e4e23c7/EVT/PUB/CH32V00x%20Evaluation%20Board%20Reference-EN.pdf)
+- **İşlemci:** QingKe 32-bit RISC-V2A. [WCH CH32V003 series datasheet](https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html)
+- **Saat hızı / üst sınır:** 48 MHz. [WCH CH32V003 series datasheet](https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html)
+- **RAM:** 2 KB SRAM. [WCH CH32V003 series datasheet](https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html)
+- **Program Flash’ı / depolama:** 16 KB Flash. [WCH CH32V00x Evaluation Board Reference](https://raw.githubusercontent.com/openwch/ch32v003/4e1b7437ada5d3ae8831a6f4b811a6320e4e23c7/EVT/PUB/CH32V00x%20Evaluation%20Board%20Reference-EN.pdf), [WCH CH32V003 series datasheet](https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html)
+- **Besleme / mantık:** USB Type-C veya harici 5V / 3.3V besleme. MCU: 2.7–5.5 V.. [WCH CH32V00x Evaluation Board Reference](https://raw.githubusercontent.com/openwch/ch32v003/4e1b7437ada5d3ae8831a6f4b811a6320e4e23c7/EVT/PUB/CH32V00x%20Evaluation%20Board%20Reference-EN.pdf), [WCH CH32V003 series datasheet](https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html)
+
+### Nordic nRF52840 DK
+
+[Pin Atlas](https://zaryob.github.io/pin-atlas/#board=nrf52840-dk&profile=nrf52840-dk) · [Pin referansı](https://docs.nordicsemi.com/bundle/ug_nrf52840_dk/page/UG/dk/intro.html) · [Datasheet](https://docs.nordicsemi.com/bundle/ps_nrf52840/page/intro_front.html)
+
+Teknik bilgi incelemesi 2026-11-19.
+
+- **Belgelenmiş olduğu tarih:** 2018. [Nordic nRF52840 DK Hardware User Guide](https://docs.nordicsemi.com/bundle/ug_nrf52840_dk/page/UG/dk/intro.html)
+- **İşlemci:** Arm Cortex-M4F. [nano-33-ble-sense-rev2 hardware manual](https://docs.arduino.cc/hardware/nano-33-ble-sense-rev2/)
+- **Saat hızı / üst sınır:** 64 MHz. [nano-33-ble-sense-rev2 hardware manual](https://docs.arduino.cc/hardware/nano-33-ble-sense-rev2/)
+- **RAM:** 256 KB SRAM. [nano-33-ble-sense-rev2 hardware manual](https://docs.arduino.cc/hardware/nano-33-ble-sense-rev2/)
+- **Program Flash’ı / depolama:** 1 MB Flash + onboard QSPI Flash. [Nordic nRF52840 DK Hardware User Guide](https://docs.nordicsemi.com/bundle/ug_nrf52840_dk/page/UG/dk/intro.html)
+- **Besleme / mantık:** USB veya harici besleme. Arduino kalkan uyumlu 3.3 V I/O.. [Nordic nRF52840 DK Hardware User Guide](https://docs.nordicsemi.com/bundle/ug_nrf52840_dk/page/UG/dk/intro.html)
 

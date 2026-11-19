@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.9.0] - 2026-11-20
+
+### Added
+- **RISC-V Microcontrollers and Evaluation Boards:**
+  - Added WCH CH32V003F4P6 bare chip package (`ch32v003f4p6-tssop20`) with 20 pins, 18 GPIOs, and complete alternate function mappings for QingKe 32-bit RISC-V2A @ 48 MHz.
+  - Added WCH CH32V003-EVT evaluation board profile (`ch32v003-evt`) with custom vector artwork, P1/P2 headers, and MCU package linking.
+  - Added Espressif ESP32-C6 bare silicon QFN-32 package profile (`esp32-c6-qfn32`) from Table 2-2 of the official datasheet, linking both `esp32-c6-devkitc-1` and `xiao-esp32c6` to the QFN-32 package with bidirectional `mcuPin` navigation.
+- **Nordic Semiconductor:**
+  - Added Nordic nRF52840 DK (`nrf52840-dk`, PCA10056) development kit profile with 32 shield-compatible contacts across P3, P4, P5, and P6 headers, customized SVG board artwork, and hardware specifications.
+- **Catalog & Platform Expansion:**
+  - Introduced `WCH` and `Nordic Semiconductor` catalog platforms (`wch` and `nordic` families) with complete bilingual Turkish and English localization.
+  - Added test coverage in UI and contract test suites verifying exact MCU package links and header navigation.
+
 ## Unreleased
 
 ### Committed since v0.8.0
