@@ -137,6 +137,7 @@ ${cited.length ? `<h3>${esc(t('staticPinReferences'))}</h3><ol>${cited.map(key =
 ${researchKeys.length ? `<h3>${esc(t('researchSources',{count:researchKeys.length}))}</h3><ol type="a">${researchKeys.map(key => { const source = research.sources[key]; return `<li><a href="${esc(source.url)}" rel="noopener">${esc(source.title)}</a><small>${esc(source.publisher)} · ${esc(source.locator)}</small></li>`; }).join('')}</ol>` : ''}
 <h3>${esc(t('staticDocuments'))}</h3><ul>${evidence.documents.map(doc => `<li><a href="${esc(doc.viewUrl || doc.url)}" rel="noopener">${esc(doc.title)}</a><small>${esc([doc.publisher,doc.revision].filter(Boolean).join(' · '))}</small></li>`).join('')}</ul>
 <p><a href="${esc(board.source)}" rel="noopener">${esc(t('officialSource'))}</a> · <a href="${esc(board.datasheet)}" rel="noopener">${esc(t('datasheet'))}</a></p></section>`;
+  const wireLab = board.id === 'raspberry-pi-4' ? `<p class="static-related-lab"><a href="https://zaryob.github.io/wire/${language === 'tr' ? 'tr/' : ''}buses/can/labs/#raspberry-pi-mcp2515">${language === 'tr' ? 'Wire’da Raspberry Pi 4 ve MCP2515 CAN deneyi' : 'Raspberry Pi 4 and MCP2515 CAN lab on Wire'}</a></p>` : '';
   const relatedList = related.length ? `<section class="static-section" aria-labelledby="related-title"><h2 id="related-title">${esc(t('staticRelated',{family:entry.familyName}))}</h2><ul class="static-links">${related.map(item => `<li><a href="../${esc(item.profile)}/">${esc(item.name)}</a></li>`).join('')}</ul></section>` : '';
   const other = language === 'tr' ? 'en' : 'tr';
   const body = `<main id="main" class="static-main" lang="${language}">
@@ -145,7 +146,7 @@ ${researchKeys.length ? `<h3>${esc(t('researchSources',{count:researchKeys.lengt
 <p class="static-actions"><a class="button primary" href="${prefix}${language === 'tr' ? 'tr/' : ''}${esc(atlasHash(profile))}">${esc(t('staticOpenAtlas'))} →</a><span>${esc(t('staticOpenAtlasNote'))}</span><a class="static-language" href="${prefix}${boardPath(board.id,other)}" hreflang="${other}" lang="${other}">${other === 'tr' ? 'Türkçe' : 'English'}</a></p>
 ${scope ? `<p class="board-scope">${esc(scope)}</p>` : ''}
 <section class="static-section" aria-labelledby="facts-title"><h2 id="facts-title">${esc(t('staticFacts'))}</h2><dl class="static-facts">${facts}</dl></section>
-${cautions}
+${cautions}${wireLab ? '\n' + wireLab : ''}
 ${table}
 ${researchNotes}
 ${sources}
