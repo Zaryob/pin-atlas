@@ -29,7 +29,7 @@ for(const board of boards){
   functionAssignments:pins.reduce((n,p)=>n+p.functions.length,0)});
 }
 files.set('catalog.json',JSON.stringify({version:1,verifiedOn:boards[0].verifiedOn,
- totals:{pins:boards.reduce((n,b)=>n+b.pins.length,0),functions:profiles.reduce((n,b)=>n+b.functionAssignments,0),sources:evidence.documents.length},profiles})+'\n');
+ totals:{pins:boards.reduce((n,b)=>n+b.pins.length,0),functions:profiles.reduce((n,b)=>n+b.functionAssignments,0),sources:evidence.documents.filter(document=>document.sha256).length},profiles})+'\n');
 const write=process.argv.includes('--write'),directory=root+'public/data/';
 if(write)mkdirSync(directory+'profiles',{recursive:true});
 for(const [name,content] of files){

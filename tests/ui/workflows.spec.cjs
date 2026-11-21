@@ -126,8 +126,11 @@ test('catalog types fit a narrow screen with enlarged Turkish and English text',
     await page.goto('about:blank');
     await page.goto('./?lang='+language);
     await expect(page.locator('#app-status')).toBeHidden();
-    await page.addStyleTag({content:`html { font-size: ${100*scale}% !important; }`});
+    // Without transitions the enlarged text is at its final size at once; a width read mid-transition is too narrow.
+    await page.addStyleTag({content:`html { font-size: ${100*scale}% !important; } *,*::before,*::after { transition: none !important; }`});
     await page.evaluate(()=>document.fonts.ready);
+    // The family chips arrive with the catalog; measure only once the longest one is on the page.
+    await expect(page.locator('#home-filter-chips .home-chip',{hasText:'Nordic Semiconductor'})).toBeVisible();
     await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(1);
     const buttons=page.locator('#home-catalog-types .catalog-type-button');
     await expect(buttons).toHaveCount(4);

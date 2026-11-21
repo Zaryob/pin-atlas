@@ -1188,7 +1188,8 @@
 
 /* Model catalog: type → platform → exact documented hardware. */
 .home-filter-chips { justify-content: flex-start; gap: 6px; margin: 12px 0; }
-.home-chip { flex-shrink: 0; min-height: 36px; padding: 5px 8px; font-size: var(--text-xs); }
+/* A long family name wraps inside its chip instead of widening the page. */
+.home-chip { flex-shrink: 0; max-width: 100%; min-height: 36px; padding: 5px 8px; font-size: var(--text-xs); }
 .home-search-status { margin: 0; }
 .catalog-status-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 14px; min-height: 32px; }
 .catalog-reset { border: 0; background: none; color: var(--accent); font-size: var(--text-xs); padding: 6px 0; min-height: 32px; text-decoration: underline; text-underline-offset: 3px; }
