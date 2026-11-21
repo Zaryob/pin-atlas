@@ -380697,7 +380697,7 @@
       },
       {
         "number": 2,
-        "name": "VDDA",
+        "name": "VDDA3P3",
         "type": "POWER",
         "functions": [],
         "evidence": [
@@ -380707,7 +380707,7 @@
       },
       {
         "number": 3,
-        "name": "VDDA",
+        "name": "VDDA3P3",
         "type": "POWER",
         "functions": [],
         "evidence": [
@@ -380717,7 +380717,7 @@
       },
       {
         "number": 4,
-        "name": "CHIP_EN",
+        "name": "CHIP_PU",
         "type": "SYSTEM",
         "functions": [],
         "evidence": [
@@ -381828,7 +381828,7 @@
           },
           {
             "name": "GPIO interrupt",
-            "signal": "GPIO15",
+            "signal": "GPIO14",
             "group": "IRQ",
             "evidence": "esp32c6-qfn32-pinout"
           }
@@ -382673,9 +382673,15 @@
             "evidence": "ch32v003-pin-table"
           },
           {
-            "name": "T1CH4ETR",
-            "signal": "T1CH4ETR",
+            "name": "T1ETR",
+            "signal": "T1ETR",
             "group": "TIMER",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH4",
+            "signal": "T1CH4",
+            "group": "PWM",
             "evidence": "ch32v003-pin-table"
           }
         ],
@@ -383102,8 +383108,14 @@
             "evidence": "ch32v003-pin-table"
           },
           {
-            "name": "T1CH1CH2N",
-            "signal": "T1CH1CH2N",
+            "name": "T1CH2N",
+            "signal": "T1CH2N",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH1",
+            "signal": "T1CH1",
             "group": "PWM",
             "evidence": "ch32v003-pin-table"
           }
@@ -383172,8 +383184,14 @@
             "evidence": "ch32v003-pin-table"
           },
           {
-            "name": "T1CH1CH3N",
-            "signal": "T1CH1CH3N",
+            "name": "T1CH1",
+            "signal": "T1CH1",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH3N",
+            "signal": "T1CH3N",
             "group": "PWM",
             "evidence": "ch32v003-pin-table"
           },
@@ -383408,9 +383426,15 @@
             "evidence": "ch32v003-pin-table"
           },
           {
-            "name": "T1CH4ETR",
-            "signal": "T1CH4ETR",
+            "name": "T1ETR",
+            "signal": "T1ETR",
             "group": "TIMER",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH4",
+            "signal": "T1CH4",
+            "group": "PWM",
             "evidence": "ch32v003-pin-table"
           }
         ],
@@ -383967,8 +383991,14 @@
             "evidence": "ch32v003-pin-table"
           },
           {
-            "name": "T1CH1CH2N",
-            "signal": "T1CH1CH2N",
+            "name": "T1CH2N",
+            "signal": "T1CH2N",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH1",
+            "signal": "T1CH1",
             "group": "PWM",
             "evidence": "ch32v003-pin-table"
           }
@@ -384057,8 +384087,14 @@
             "evidence": "ch32v003-pin-table"
           },
           {
-            "name": "T1CH1CH3N",
-            "signal": "T1CH1CH3N",
+            "name": "T1CH1",
+            "signal": "T1CH1",
+            "group": "PWM",
+            "evidence": "ch32v003-pin-table"
+          },
+          {
+            "name": "T1CH3N",
+            "signal": "T1CH3N",
             "group": "PWM",
             "evidence": "ch32v003-pin-table"
           },

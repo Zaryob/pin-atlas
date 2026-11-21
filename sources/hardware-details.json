@@ -1170,7 +1170,7 @@
       "title": "Nordic nRF52840 DK Hardware User Guide",
       "url": "https://docs.nordicsemi.com/bundle/ug_nrf52840_dk/page/UG/dk/intro.html",
       "publisher": "Nordic Semiconductor",
-      "locator": "Locked pin-source document; see sources/manifest.json"
+      "locator": "Pin-source document without a locked copy; see sources/manifest.json for the reason"
     }
   },
   "chips": {

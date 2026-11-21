@@ -11,6 +11,10 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def audit(document):
     result = {'id':document['id'], 'status':'failed', 'attempts':[]}
+    if document.get('unlocked'):
+        # Recorded without a hash because no stable copy can be downloaded.
+        result.update(status='unlocked', reason=document['unlocked'])
+        return result
     for url in document.get('downloadUrls', [document['url']]):
         try:
             request = urllib.request.Request(url, headers={'User-Agent':'Pin-Atlas-source-audit'})
@@ -43,8 +47,11 @@ def main():
     path = ROOT/args.output
     path.parent.mkdir(parents=True,exist_ok=True)
     path.write_text(json.dumps(results,indent=2)+'\n')
-    failed = [r['id'] for r in results if r['status']!='passed']
-    print(f'Cold source audit: {len(results)-len(failed)}/{len(results)} passed. Report: {args.output}')
+    failed = [r['id'] for r in results if r['status']=='failed']
+    unlocked = [r['id'] for r in results if r['status']=='unlocked']
+    print(f'Cold source audit: {len(results)-len(failed)-len(unlocked)}/{len(results)} passed. Report: {args.output}')
+    if unlocked:
+        print('Not hash-locked, skipped: '+', '.join(unlocked))
     if failed:
         raise SystemExit('Review source availability or revision: '+', '.join(failed))
 

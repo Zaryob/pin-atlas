@@ -30,6 +30,7 @@ try:
     from warning_sources import attach_warnings
     from additional_board_sources import build_additional_boards
     from ti_sources import build_mspm0g3507, build_ti_packages, build_launchpad
+    from riscv_nordic_sources import build_riscv_nordic, link_esp32_c6_boards
 except ImportError:
     sys.exit('Install source verification dependencies: python3 -m pip install -r requirements-source-verification.txt')
 ROOT=Path(__file__).resolve().parents[1]
@@ -49,6 +50,10 @@ def ref(key,doc,page,locator,method='pdf-table'):
 def acquire(use_snapshots=False):
     CACHE.mkdir(parents=True,exist_ok=True)
     for doc in DOCS.values():
+        if doc.get('unlocked'):
+            # No stable copy exists to hash; the manifest records why. Named on every run so it is never silent.
+            print(f"Not hash-locked: {doc['id']}. {doc['unlocked']}",flush=True)
+            continue
         if use_snapshots and doc.get('tableSnapshot'):
             verify_snapshot(doc,ROOT)
             continue
@@ -490,6 +495,7 @@ def build(use_snapshots=False):
     boards.extend(ti_packages)
     g3507spm = next(chip for chip in ti_packages if chip['id'] == 'mspm0g3507spm')
     boards.append(build_launchpad(CACHE,DOCS,ref,MANIFEST['verifiedOn'],g3507spm))
+    boards.extend(build_riscv_nordic(CACHE,DOCS,ref,MANIFEST['verifiedOn']))
     # Profiles checked against their sources after the catalog-wide date carry their own date.
     per_profile=MANIFEST.get('verifiedOnByProfile',{})
     unknown=set(per_profile)-{b['id'] for b in boards}
@@ -499,6 +505,7 @@ def build(use_snapshots=False):
             assert per_profile[b['id']]>=MANIFEST['verifiedOn'], b['id']
             b['verifiedOn']=per_profile[b['id']]
     link_board_packages(boards)
+    link_esp32_c6_boards(boards)
     link_arduino_reference_packages(boards,ref,CACHE,DOCS)
     attach_hardware(boards,ref,CACHE,DOCS)
     attach_warnings(boards,ref,CACHE,DOCS)
@@ -528,5 +535,5 @@ def main():
         p=ROOT/name
         if args.write:p.parent.mkdir(parents=True,exist_ok=True);p.write_text(content)
         elif not p.exists() or p.read_text()!=content:sys.exit(f'Official source verification failed: {name} differs. Review and run --write deliberately.')
-    print(f"Source verification passed: {sum(len(b['pins']) for b in boards)} physical pins; {sum(len(p['functions']) for b in boards for p in b['pins'])} function assignments; {len(DOCS)} hash-locked source documents.")
+    print(f"Source verification passed: {sum(len(b['pins']) for b in boards)} physical pins; {sum(len(p['functions']) for b in boards for p in b['pins'])} function assignments; {sum('sha256' in d for d in DOCS.values())} hash-locked source documents; {sum('unlocked' in d for d in DOCS.values())} recorded without a lock.")
 if __name__=='__main__':main()

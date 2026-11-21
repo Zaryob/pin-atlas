@@ -33684,3 +33684,518 @@ lp-mspm0g3507,40,PA13,GPIO,UART3_RX,PINCM35.PF=4,UART3_RX,lp-mspm0g3507-boosterp
 lp-mspm0g3507,40,PA13,GPIO,TIMG0_C1,PINCM35.PF=5,TIMG0_C1,lp-mspm0g3507-boosterpack | lp-mspm0g3507-schematic | mspm0g3507spm-table-12,mspm0g3507spm-table-12
 lp-mspm0g3507,40,PA13,GPIO,CAN_RX,PINCM35.PF=6,CAN_RX,lp-mspm0g3507-boosterpack | lp-mspm0g3507-schematic | mspm0g3507spm-table-12,mspm0g3507spm-table-12
 lp-mspm0g3507,40,PA13,GPIO,TIMA0_C3N,PINCM35.PF=7,TIMA0_C3N,lp-mspm0g3507-boosterpack | lp-mspm0g3507-schematic | mspm0g3507spm-table-12,mspm0g3507spm-table-12
+esp32-c6-qfn32,1,ANT,SYSTEM,,,,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,
+esp32-c6-qfn32,2,VDDA3P3,POWER,,,,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,
+esp32-c6-qfn32,3,VDDA3P3,POWER,,,,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,
+esp32-c6-qfn32,4,CHIP_PU,SYSTEM,,,,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,
+esp32-c6-qfn32,5,VDDPST1,POWER,,,,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,
+esp32-c6-qfn32,6,GPIO0,GPIO,XTAL_32K_P,,XTAL_32K_P,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,6,GPIO0,GPIO,LP_UART_DTRN,,LP_UART_DTRN,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,6,GPIO0,GPIO,ADC1_CH0,,ADC1_CH0,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,6,GPIO0,GPIO,UART1 RX (matrix),,UART1 RX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,6,GPIO0,GPIO,SPI2 MISO (matrix),,SPI2 MISO,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,6,GPIO0,GPIO,UART1 TX (matrix),,UART1 TX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,6,GPIO0,GPIO,SPI2 MOSI (matrix),,SPI2 MOSI,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,6,GPIO0,GPIO,SPI2 SCK (matrix),,SPI2 SCK,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,6,GPIO0,GPIO,SPI2 CS (matrix),,SPI2 CS,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,6,GPIO0,GPIO,I2C0 SDA (matrix),,I2C0 SDA,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,6,GPIO0,GPIO,I2C0 SCL (matrix),,I2C0 SCL,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,6,GPIO0,GPIO,LEDC PWM (matrix),,LEDC PWM,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,6,GPIO0,GPIO,GPIO interrupt,,GPIO0,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,7,GPIO1,GPIO,XTAL_32K_N,,XTAL_32K_N,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,7,GPIO1,GPIO,LP_UART_DSRN,,LP_UART_DSRN,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,7,GPIO1,GPIO,ADC1_CH1,,ADC1_CH1,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,7,GPIO1,GPIO,UART1 RX (matrix),,UART1 RX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,7,GPIO1,GPIO,SPI2 MISO (matrix),,SPI2 MISO,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,7,GPIO1,GPIO,UART1 TX (matrix),,UART1 TX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,7,GPIO1,GPIO,SPI2 MOSI (matrix),,SPI2 MOSI,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,7,GPIO1,GPIO,SPI2 SCK (matrix),,SPI2 SCK,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,7,GPIO1,GPIO,SPI2 CS (matrix),,SPI2 CS,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,7,GPIO1,GPIO,I2C0 SDA (matrix),,I2C0 SDA,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,7,GPIO1,GPIO,I2C0 SCL (matrix),,I2C0 SCL,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,7,GPIO1,GPIO,LEDC PWM (matrix),,LEDC PWM,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,7,GPIO1,GPIO,GPIO interrupt,,GPIO1,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,8,GPIO2,GPIO,LP_UART_RTSN,,LP_UART_RTSN,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,8,GPIO2,GPIO,ADC1_CH2,,ADC1_CH2,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,8,GPIO2,GPIO,FSPIQ,,FSPIQ,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,8,GPIO2,GPIO,UART1 RX (matrix),,UART1 RX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,8,GPIO2,GPIO,SPI2 MISO (matrix),,SPI2 MISO,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,8,GPIO2,GPIO,UART1 TX (matrix),,UART1 TX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,8,GPIO2,GPIO,SPI2 MOSI (matrix),,SPI2 MOSI,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,8,GPIO2,GPIO,SPI2 SCK (matrix),,SPI2 SCK,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,8,GPIO2,GPIO,SPI2 CS (matrix),,SPI2 CS,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,8,GPIO2,GPIO,I2C0 SDA (matrix),,I2C0 SDA,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,8,GPIO2,GPIO,I2C0 SCL (matrix),,I2C0 SCL,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,8,GPIO2,GPIO,LEDC PWM (matrix),,LEDC PWM,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,8,GPIO2,GPIO,GPIO interrupt,,GPIO2,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,9,GPIO3,GPIO,LP_UART_CTSN,,LP_UART_CTSN,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,9,GPIO3,GPIO,ADC1_CH3,,ADC1_CH3,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,9,GPIO3,GPIO,UART1 RX (matrix),,UART1 RX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,9,GPIO3,GPIO,SPI2 MISO (matrix),,SPI2 MISO,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,9,GPIO3,GPIO,UART1 TX (matrix),,UART1 TX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,9,GPIO3,GPIO,SPI2 MOSI (matrix),,SPI2 MOSI,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,9,GPIO3,GPIO,SPI2 SCK (matrix),,SPI2 SCK,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,9,GPIO3,GPIO,SPI2 CS (matrix),,SPI2 CS,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,9,GPIO3,GPIO,I2C0 SDA (matrix),,I2C0 SDA,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,9,GPIO3,GPIO,I2C0 SCL (matrix),,I2C0 SCL,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,9,GPIO3,GPIO,LEDC PWM (matrix),,LEDC PWM,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,9,GPIO3,GPIO,GPIO interrupt,,GPIO3,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,10,GPIO4,GPIO,MTMS,,MTMS,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,10,GPIO4,GPIO,LP_UART_RXD,,LP_UART_RXD,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,10,GPIO4,GPIO,ADC1_CH4,,ADC1_CH4,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,10,GPIO4,GPIO,FSPIHD,,FSPIHD,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,10,GPIO4,GPIO,UART1 RX (matrix),,UART1 RX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,10,GPIO4,GPIO,SPI2 MISO (matrix),,SPI2 MISO,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,10,GPIO4,GPIO,UART1 TX (matrix),,UART1 TX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,10,GPIO4,GPIO,SPI2 MOSI (matrix),,SPI2 MOSI,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,10,GPIO4,GPIO,SPI2 SCK (matrix),,SPI2 SCK,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,10,GPIO4,GPIO,SPI2 CS (matrix),,SPI2 CS,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,10,GPIO4,GPIO,I2C0 SDA (matrix),,I2C0 SDA,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,10,GPIO4,GPIO,I2C0 SCL (matrix),,I2C0 SCL,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,10,GPIO4,GPIO,LEDC PWM (matrix),,LEDC PWM,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,10,GPIO4,GPIO,GPIO interrupt,,GPIO4,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,11,GPIO5,GPIO,MTDI,,MTDI,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,11,GPIO5,GPIO,LP_UART_TXD,,LP_UART_TXD,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,11,GPIO5,GPIO,ADC1_CH5,,ADC1_CH5,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,11,GPIO5,GPIO,FSPIWP,,FSPIWP,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,11,GPIO5,GPIO,UART1 RX (matrix),,UART1 RX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,11,GPIO5,GPIO,SPI2 MISO (matrix),,SPI2 MISO,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,11,GPIO5,GPIO,UART1 TX (matrix),,UART1 TX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,11,GPIO5,GPIO,SPI2 MOSI (matrix),,SPI2 MOSI,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,11,GPIO5,GPIO,SPI2 SCK (matrix),,SPI2 SCK,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,11,GPIO5,GPIO,SPI2 CS (matrix),,SPI2 CS,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,11,GPIO5,GPIO,I2C0 SDA (matrix),,I2C0 SDA,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,11,GPIO5,GPIO,I2C0 SCL (matrix),,I2C0 SCL,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,11,GPIO5,GPIO,LEDC PWM (matrix),,LEDC PWM,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,11,GPIO5,GPIO,GPIO interrupt,,GPIO5,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,12,GPIO6,GPIO,MTCK,,MTCK,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,12,GPIO6,GPIO,LP_I2C_SDA,,LP_I2C_SDA,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,12,GPIO6,GPIO,ADC1_CH6,,ADC1_CH6,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,12,GPIO6,GPIO,FSPICLK,,FSPICLK,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,12,GPIO6,GPIO,UART1 RX (matrix),,UART1 RX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,12,GPIO6,GPIO,SPI2 MISO (matrix),,SPI2 MISO,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,12,GPIO6,GPIO,UART1 TX (matrix),,UART1 TX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,12,GPIO6,GPIO,SPI2 MOSI (matrix),,SPI2 MOSI,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,12,GPIO6,GPIO,SPI2 SCK (matrix),,SPI2 SCK,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,12,GPIO6,GPIO,SPI2 CS (matrix),,SPI2 CS,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,12,GPIO6,GPIO,I2C0 SDA (matrix),,I2C0 SDA,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,12,GPIO6,GPIO,I2C0 SCL (matrix),,I2C0 SCL,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,12,GPIO6,GPIO,LEDC PWM (matrix),,LEDC PWM,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,12,GPIO6,GPIO,GPIO interrupt,,GPIO6,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,13,GPIO7,GPIO,MTDO,,MTDO,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,13,GPIO7,GPIO,LP_I2C_SCL,,LP_I2C_SCL,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,13,GPIO7,GPIO,FSPID,,FSPID,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,13,GPIO7,GPIO,UART1 RX (matrix),,UART1 RX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,13,GPIO7,GPIO,SPI2 MISO (matrix),,SPI2 MISO,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,13,GPIO7,GPIO,UART1 TX (matrix),,UART1 TX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,13,GPIO7,GPIO,SPI2 MOSI (matrix),,SPI2 MOSI,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,13,GPIO7,GPIO,SPI2 SCK (matrix),,SPI2 SCK,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,13,GPIO7,GPIO,SPI2 CS (matrix),,SPI2 CS,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,13,GPIO7,GPIO,I2C0 SDA (matrix),,I2C0 SDA,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,13,GPIO7,GPIO,I2C0 SCL (matrix),,I2C0 SCL,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,13,GPIO7,GPIO,LEDC PWM (matrix),,LEDC PWM,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,13,GPIO7,GPIO,GPIO interrupt,,GPIO7,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,14,GPIO8,GPIO,UART1 RX (matrix),,UART1 RX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,14,GPIO8,GPIO,SPI2 MISO (matrix),,SPI2 MISO,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,14,GPIO8,GPIO,UART1 TX (matrix),,UART1 TX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,14,GPIO8,GPIO,SPI2 MOSI (matrix),,SPI2 MOSI,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,14,GPIO8,GPIO,SPI2 SCK (matrix),,SPI2 SCK,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,14,GPIO8,GPIO,SPI2 CS (matrix),,SPI2 CS,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,14,GPIO8,GPIO,I2C0 SDA (matrix),,I2C0 SDA,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,14,GPIO8,GPIO,I2C0 SCL (matrix),,I2C0 SCL,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,14,GPIO8,GPIO,LEDC PWM (matrix),,LEDC PWM,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,14,GPIO8,GPIO,GPIO interrupt,,GPIO8,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,15,GPIO9,GPIO,UART1 RX (matrix),,UART1 RX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,15,GPIO9,GPIO,SPI2 MISO (matrix),,SPI2 MISO,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,15,GPIO9,GPIO,UART1 TX (matrix),,UART1 TX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,15,GPIO9,GPIO,SPI2 MOSI (matrix),,SPI2 MOSI,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,15,GPIO9,GPIO,SPI2 SCK (matrix),,SPI2 SCK,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,15,GPIO9,GPIO,SPI2 CS (matrix),,SPI2 CS,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,15,GPIO9,GPIO,I2C0 SDA (matrix),,I2C0 SDA,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,15,GPIO9,GPIO,I2C0 SCL (matrix),,I2C0 SCL,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,15,GPIO9,GPIO,LEDC PWM (matrix),,LEDC PWM,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,15,GPIO9,GPIO,GPIO interrupt,,GPIO9,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,16,GPIO12,GPIO,USB_D-,,USB_D-,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,16,GPIO12,GPIO,UART1 RX (matrix),,UART1 RX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,16,GPIO12,GPIO,SPI2 MISO (matrix),,SPI2 MISO,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,16,GPIO12,GPIO,UART1 TX (matrix),,UART1 TX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,16,GPIO12,GPIO,SPI2 MOSI (matrix),,SPI2 MOSI,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,16,GPIO12,GPIO,SPI2 SCK (matrix),,SPI2 SCK,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,16,GPIO12,GPIO,SPI2 CS (matrix),,SPI2 CS,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,16,GPIO12,GPIO,I2C0 SDA (matrix),,I2C0 SDA,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,16,GPIO12,GPIO,I2C0 SCL (matrix),,I2C0 SCL,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,16,GPIO12,GPIO,LEDC PWM (matrix),,LEDC PWM,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,16,GPIO12,GPIO,GPIO interrupt,,GPIO12,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,17,GPIO13,GPIO,USB_D+,,USB_D+,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,17,GPIO13,GPIO,UART1 RX (matrix),,UART1 RX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,17,GPIO13,GPIO,SPI2 MISO (matrix),,SPI2 MISO,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,17,GPIO13,GPIO,UART1 TX (matrix),,UART1 TX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,17,GPIO13,GPIO,SPI2 MOSI (matrix),,SPI2 MOSI,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,17,GPIO13,GPIO,SPI2 SCK (matrix),,SPI2 SCK,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,17,GPIO13,GPIO,SPI2 CS (matrix),,SPI2 CS,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,17,GPIO13,GPIO,I2C0 SDA (matrix),,I2C0 SDA,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,17,GPIO13,GPIO,I2C0 SCL (matrix),,I2C0 SCL,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,17,GPIO13,GPIO,LEDC PWM (matrix),,LEDC PWM,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,17,GPIO13,GPIO,GPIO interrupt,,GPIO13,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,18,GPIO14,GPIO,UART1 RX (matrix),,UART1 RX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,18,GPIO14,GPIO,SPI2 MISO (matrix),,SPI2 MISO,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,18,GPIO14,GPIO,UART1 TX (matrix),,UART1 TX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,18,GPIO14,GPIO,SPI2 MOSI (matrix),,SPI2 MOSI,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,18,GPIO14,GPIO,SPI2 SCK (matrix),,SPI2 SCK,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,18,GPIO14,GPIO,SPI2 CS (matrix),,SPI2 CS,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,18,GPIO14,GPIO,I2C0 SDA (matrix),,I2C0 SDA,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,18,GPIO14,GPIO,I2C0 SCL (matrix),,I2C0 SCL,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,18,GPIO14,GPIO,LEDC PWM (matrix),,LEDC PWM,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,18,GPIO14,GPIO,GPIO interrupt,,GPIO14,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,19,GPIO15,GPIO,UART1 RX (matrix),,UART1 RX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,19,GPIO15,GPIO,SPI2 MISO (matrix),,SPI2 MISO,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,19,GPIO15,GPIO,UART1 TX (matrix),,UART1 TX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,19,GPIO15,GPIO,SPI2 MOSI (matrix),,SPI2 MOSI,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,19,GPIO15,GPIO,SPI2 SCK (matrix),,SPI2 SCK,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,19,GPIO15,GPIO,SPI2 CS (matrix),,SPI2 CS,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,19,GPIO15,GPIO,I2C0 SDA (matrix),,I2C0 SDA,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,19,GPIO15,GPIO,I2C0 SCL (matrix),,I2C0 SCL,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,19,GPIO15,GPIO,LEDC PWM (matrix),,LEDC PWM,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,19,GPIO15,GPIO,GPIO interrupt,,GPIO15,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,20,VDDPST2,POWER,,,,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,
+esp32-c6-qfn32,21,GPIO16,GPIO,U0TXD,,U0TXD,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,21,GPIO16,GPIO,FSPICS0,,FSPICS0,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,21,GPIO16,GPIO,UART1 RX (matrix),,UART1 RX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,21,GPIO16,GPIO,SPI2 MISO (matrix),,SPI2 MISO,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,21,GPIO16,GPIO,UART1 TX (matrix),,UART1 TX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,21,GPIO16,GPIO,SPI2 MOSI (matrix),,SPI2 MOSI,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,21,GPIO16,GPIO,SPI2 SCK (matrix),,SPI2 SCK,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,21,GPIO16,GPIO,SPI2 CS (matrix),,SPI2 CS,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,21,GPIO16,GPIO,I2C0 SDA (matrix),,I2C0 SDA,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,21,GPIO16,GPIO,I2C0 SCL (matrix),,I2C0 SCL,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,21,GPIO16,GPIO,LEDC PWM (matrix),,LEDC PWM,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,21,GPIO16,GPIO,GPIO interrupt,,GPIO16,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,22,GPIO17,GPIO,U0RXD,,U0RXD,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,22,GPIO17,GPIO,FSPICS1,,FSPICS1,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,22,GPIO17,GPIO,UART1 RX (matrix),,UART1 RX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,22,GPIO17,GPIO,SPI2 MISO (matrix),,SPI2 MISO,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,22,GPIO17,GPIO,UART1 TX (matrix),,UART1 TX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,22,GPIO17,GPIO,SPI2 MOSI (matrix),,SPI2 MOSI,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,22,GPIO17,GPIO,SPI2 SCK (matrix),,SPI2 SCK,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,22,GPIO17,GPIO,SPI2 CS (matrix),,SPI2 CS,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,22,GPIO17,GPIO,I2C0 SDA (matrix),,I2C0 SDA,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,22,GPIO17,GPIO,I2C0 SCL (matrix),,I2C0 SCL,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,22,GPIO17,GPIO,LEDC PWM (matrix),,LEDC PWM,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,22,GPIO17,GPIO,GPIO interrupt,,GPIO17,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,23,GPIO18,GPIO,SDIO_CMD,,SDIO_CMD,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,23,GPIO18,GPIO,FSPICS2,,FSPICS2,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,23,GPIO18,GPIO,UART1 RX (matrix),,UART1 RX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,23,GPIO18,GPIO,SPI2 MISO (matrix),,SPI2 MISO,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,23,GPIO18,GPIO,UART1 TX (matrix),,UART1 TX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,23,GPIO18,GPIO,SPI2 MOSI (matrix),,SPI2 MOSI,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,23,GPIO18,GPIO,SPI2 SCK (matrix),,SPI2 SCK,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,23,GPIO18,GPIO,SPI2 CS (matrix),,SPI2 CS,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,23,GPIO18,GPIO,I2C0 SDA (matrix),,I2C0 SDA,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,23,GPIO18,GPIO,I2C0 SCL (matrix),,I2C0 SCL,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,23,GPIO18,GPIO,LEDC PWM (matrix),,LEDC PWM,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,23,GPIO18,GPIO,GPIO interrupt,,GPIO18,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,24,GPIO19,GPIO,SDIO_CLK,,SDIO_CLK,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,24,GPIO19,GPIO,FSPICS3,,FSPICS3,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,24,GPIO19,GPIO,UART1 RX (matrix),,UART1 RX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,24,GPIO19,GPIO,SPI2 MISO (matrix),,SPI2 MISO,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,24,GPIO19,GPIO,UART1 TX (matrix),,UART1 TX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,24,GPIO19,GPIO,SPI2 MOSI (matrix),,SPI2 MOSI,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,24,GPIO19,GPIO,SPI2 SCK (matrix),,SPI2 SCK,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,24,GPIO19,GPIO,SPI2 CS (matrix),,SPI2 CS,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,24,GPIO19,GPIO,I2C0 SDA (matrix),,I2C0 SDA,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,24,GPIO19,GPIO,I2C0 SCL (matrix),,I2C0 SCL,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,24,GPIO19,GPIO,LEDC PWM (matrix),,LEDC PWM,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,24,GPIO19,GPIO,GPIO interrupt,,GPIO19,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,25,GPIO20,GPIO,SDIO_DATA0,,SDIO_DATA0,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,25,GPIO20,GPIO,FSPICS4,,FSPICS4,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,25,GPIO20,GPIO,UART1 RX (matrix),,UART1 RX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,25,GPIO20,GPIO,SPI2 MISO (matrix),,SPI2 MISO,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,25,GPIO20,GPIO,UART1 TX (matrix),,UART1 TX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,25,GPIO20,GPIO,SPI2 MOSI (matrix),,SPI2 MOSI,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,25,GPIO20,GPIO,SPI2 SCK (matrix),,SPI2 SCK,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,25,GPIO20,GPIO,SPI2 CS (matrix),,SPI2 CS,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,25,GPIO20,GPIO,I2C0 SDA (matrix),,I2C0 SDA,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,25,GPIO20,GPIO,I2C0 SCL (matrix),,I2C0 SCL,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,25,GPIO20,GPIO,LEDC PWM (matrix),,LEDC PWM,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,25,GPIO20,GPIO,GPIO interrupt,,GPIO20,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,26,GPIO21,GPIO,SDIO_DATA1,,SDIO_DATA1,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,26,GPIO21,GPIO,FSPICS5,,FSPICS5,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,26,GPIO21,GPIO,UART1 RX (matrix),,UART1 RX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,26,GPIO21,GPIO,SPI2 MISO (matrix),,SPI2 MISO,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,26,GPIO21,GPIO,UART1 TX (matrix),,UART1 TX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,26,GPIO21,GPIO,SPI2 MOSI (matrix),,SPI2 MOSI,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,26,GPIO21,GPIO,SPI2 SCK (matrix),,SPI2 SCK,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,26,GPIO21,GPIO,SPI2 CS (matrix),,SPI2 CS,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,26,GPIO21,GPIO,I2C0 SDA (matrix),,I2C0 SDA,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,26,GPIO21,GPIO,I2C0 SCL (matrix),,I2C0 SCL,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,26,GPIO21,GPIO,LEDC PWM (matrix),,LEDC PWM,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,26,GPIO21,GPIO,GPIO interrupt,,GPIO21,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,27,GPIO22,GPIO,SDIO_DATA2,,SDIO_DATA2,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,27,GPIO22,GPIO,UART1 RX (matrix),,UART1 RX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,27,GPIO22,GPIO,SPI2 MISO (matrix),,SPI2 MISO,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,27,GPIO22,GPIO,UART1 TX (matrix),,UART1 TX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,27,GPIO22,GPIO,SPI2 MOSI (matrix),,SPI2 MOSI,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,27,GPIO22,GPIO,SPI2 SCK (matrix),,SPI2 SCK,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,27,GPIO22,GPIO,SPI2 CS (matrix),,SPI2 CS,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,27,GPIO22,GPIO,I2C0 SDA (matrix),,I2C0 SDA,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,27,GPIO22,GPIO,I2C0 SCL (matrix),,I2C0 SCL,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,27,GPIO22,GPIO,LEDC PWM (matrix),,LEDC PWM,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,27,GPIO22,GPIO,GPIO interrupt,,GPIO22,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,28,GPIO23,GPIO,SDIO_DATA3,,SDIO_DATA3,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,28,GPIO23,GPIO,UART1 RX (matrix),,UART1 RX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,28,GPIO23,GPIO,SPI2 MISO (matrix),,SPI2 MISO,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,28,GPIO23,GPIO,UART1 TX (matrix),,UART1 TX,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,28,GPIO23,GPIO,SPI2 MOSI (matrix),,SPI2 MOSI,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,28,GPIO23,GPIO,SPI2 SCK (matrix),,SPI2 SCK,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,28,GPIO23,GPIO,SPI2 CS (matrix),,SPI2 CS,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,28,GPIO23,GPIO,I2C0 SDA (matrix),,I2C0 SDA,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,28,GPIO23,GPIO,I2C0 SCL (matrix),,I2C0 SCL,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,28,GPIO23,GPIO,LEDC PWM (matrix),,LEDC PWM,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,28,GPIO23,GPIO,GPIO interrupt,,GPIO23,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,esp32c6-qfn32-pinout
+esp32-c6-qfn32,29,VDDA1,POWER,,,,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,
+esp32-c6-qfn32,30,XTAL_N,SYSTEM,,,,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,
+esp32-c6-qfn32,31,XTAL_P,SYSTEM,,,,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,
+esp32-c6-qfn32,32,VDDA2,POWER,,,,esp32c6-qfn32-drawing | esp32c6-qfn32-pinout,
+ch32v003f4p6-tssop20,1,PD4,GPIO,A7,,A7,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,1,PD4,GPIO,UCK,,UCK,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,1,PD4,GPIO,T2CH1ETR,,T2CH1ETR,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,1,PD4,GPIO,OPO,,OPO,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,1,PD4,GPIO,T1ETR,,T1ETR,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,1,PD4,GPIO,T1CH4,,T1CH4,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,2,PD5,GPIO,UTX,,UTX,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,2,PD5,GPIO,A5,,A5,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,2,PD5,GPIO,T2CH4,,T2CH4,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,2,PD5,GPIO,URX,,URX,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,3,PD6,GPIO,URX,,URX,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,3,PD6,GPIO,A6,,A6,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,3,PD6,GPIO,T2CH3,,T2CH3,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,3,PD6,GPIO,UTX,,UTX,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,4,PD7,GPIO,NRST,,NRST,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,4,PD7,GPIO,T2CH4,,T2CH4,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,4,PD7,GPIO,OPP1,,OPP1,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,4,PD7,GPIO,UCK,,UCK,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,5,PA1,GPIO,OSCI,,OSCI,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,5,PA1,GPIO,A1,,A1,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,5,PA1,GPIO,T1CH2,,T1CH2,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,5,PA1,GPIO,OPN0,,OPN0,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,6,PA2,GPIO,OSCO,,OSCO,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,6,PA2,GPIO,A0,,A0,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,6,PA2,GPIO,T1CH2N,,T1CH2N,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,6,PA2,GPIO,OPP0,,OPP0,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,6,PA2,GPIO,AETR2,,AETR2,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,7,VSS,GND,,,,ch32v003-tssop20-drawing | ch32v003-pin-table,
+ch32v003f4p6-tssop20,8,PD0,GPIO,T1CH1N,,T1CH1N,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,8,PD0,GPIO,OPN1,,OPN1,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,8,PD0,GPIO,SDA,,SDA,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,8,PD0,GPIO,UTX,,UTX,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,9,VDD,POWER,,,,ch32v003-tssop20-drawing | ch32v003-pin-table,
+ch32v003f4p6-tssop20,10,PC0,GPIO,T2CH3,,T2CH3,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,10,PC0,GPIO,UTX,,UTX,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,10,PC0,GPIO,NSS,,NSS,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,10,PC0,GPIO,T1CH3,,T1CH3,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,11,PC1,GPIO,SDA,,SDA,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,11,PC1,GPIO,NSS,,NSS,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,11,PC1,GPIO,T2CH4,,T2CH4,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,11,PC1,GPIO,T2CH1ETR,,T2CH1ETR,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,11,PC1,GPIO,T1BKIN,,T1BKIN,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,11,PC1,GPIO,URX,,URX,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,12,PC2,GPIO,SCL,,SCL,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,12,PC2,GPIO,URTS,,URTS,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,12,PC2,GPIO,T1BKIN,,T1BKIN,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,12,PC2,GPIO,AETR,,AETR,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,12,PC2,GPIO,T2CH2,,T2CH2,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,12,PC2,GPIO,T1ETR,,T1ETR,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,13,PC3,GPIO,T1CH3,,T1CH3,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,13,PC3,GPIO,T1CH1N,,T1CH1N,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,13,PC3,GPIO,UCTS,,UCTS,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,14,PC4,GPIO,A2,,A2,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,14,PC4,GPIO,T1CH4,,T1CH4,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,14,PC4,GPIO,MCO,,MCO,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,14,PC4,GPIO,T1CH2N,,T1CH2N,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,14,PC4,GPIO,T1CH1,,T1CH1,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,15,PC5,GPIO,SCK,,SCK,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,15,PC5,GPIO,T1ETR,,T1ETR,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,15,PC5,GPIO,T2CH1ETR,,T2CH1ETR,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,15,PC5,GPIO,SCL,,SCL,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,15,PC5,GPIO,UCK,,UCK,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,15,PC5,GPIO,T1CH3,,T1CH3,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,16,PC6,GPIO,MOSI,,MOSI,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,16,PC6,GPIO,T1CH1,,T1CH1,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,16,PC6,GPIO,T1CH3N,,T1CH3N,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,16,PC6,GPIO,UCTS,,UCTS,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,16,PC6,GPIO,SDA,,SDA,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,17,PC7,GPIO,MISO,,MISO,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,17,PC7,GPIO,T1CH2,,T1CH2,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,17,PC7,GPIO,T2CH2,,T2CH2,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,17,PC7,GPIO,URTS,,URTS,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,18,PD1,GPIO,SWIO,,SWIO,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,18,PD1,GPIO,AETR2,,AETR2,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,18,PD1,GPIO,T1CH3N,,T1CH3N,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,18,PD1,GPIO,SCL,,SCL,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,18,PD1,GPIO,URX,,URX,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,19,PD2,GPIO,A3,,A3,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,19,PD2,GPIO,T1CH1,,T1CH1,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,19,PD2,GPIO,T2CH3,,T2CH3,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,19,PD2,GPIO,T1CH2N,,T1CH2N,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,20,PD3,GPIO,A4,,A4,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,20,PD3,GPIO,T2CH2,,T2CH2,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,20,PD3,GPIO,AETR,,AETR,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,20,PD3,GPIO,UCTS,,UCTS,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003f4p6-tssop20,20,PD3,GPIO,T1CH4,,T1CH4,ch32v003-tssop20-drawing | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,1,PD4,GPIO,A7,,A7,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,1,PD4,GPIO,UCK,,UCK,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,1,PD4,GPIO,T2CH1ETR,,T2CH1ETR,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,1,PD4,GPIO,OPO,,OPO,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,1,PD4,GPIO,T1ETR,,T1ETR,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,1,PD4,GPIO,T1CH4,,T1CH4,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,2,PD5,GPIO,UTX,,UTX,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,2,PD5,GPIO,A5,,A5,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,2,PD5,GPIO,T2CH4,,T2CH4,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,2,PD5,GPIO,URX,,URX,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,3,PD6,GPIO,URX,,URX,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,3,PD6,GPIO,A6,,A6,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,3,PD6,GPIO,T2CH3,,T2CH3,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,3,PD6,GPIO,UTX,,UTX,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,4,PD7,GPIO,NRST,,NRST,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,4,PD7,GPIO,T2CH4,,T2CH4,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,4,PD7,GPIO,OPP1,,OPP1,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,4,PD7,GPIO,UCK,,UCK,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,5,PA1,GPIO,OSCI,,OSCI,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,5,PA1,GPIO,A1,,A1,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,5,PA1,GPIO,T1CH2,,T1CH2,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,5,PA1,GPIO,OPN0,,OPN0,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,6,PA2,GPIO,OSCO,,OSCO,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,6,PA2,GPIO,A0,,A0,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,6,PA2,GPIO,T1CH2N,,T1CH2N,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,6,PA2,GPIO,OPP0,,OPP0,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,6,PA2,GPIO,AETR2,,AETR2,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,7,VSS,GND,,,,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,
+ch32v003-evt,8,PD0,GPIO,T1CH1N,,T1CH1N,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,8,PD0,GPIO,OPN1,,OPN1,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,8,PD0,GPIO,SDA,,SDA,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,8,PD0,GPIO,UTX,,UTX,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,9,VDD,POWER,,,,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,
+ch32v003-evt,10,PC0,GPIO,T2CH3,,T2CH3,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,10,PC0,GPIO,UTX,,UTX,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,10,PC0,GPIO,NSS,,NSS,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,10,PC0,GPIO,T1CH3,,T1CH3,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,11,PC1,GPIO,SDA,,SDA,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,11,PC1,GPIO,NSS,,NSS,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,11,PC1,GPIO,T2CH4,,T2CH4,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,11,PC1,GPIO,T2CH1ETR,,T2CH1ETR,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,11,PC1,GPIO,T1BKIN,,T1BKIN,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,11,PC1,GPIO,URX,,URX,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,12,PC2,GPIO,SCL,,SCL,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,12,PC2,GPIO,URTS,,URTS,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,12,PC2,GPIO,T1BKIN,,T1BKIN,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,12,PC2,GPIO,AETR,,AETR,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,12,PC2,GPIO,T2CH2,,T2CH2,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,12,PC2,GPIO,T1ETR,,T1ETR,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,13,PC3,GPIO,T1CH3,,T1CH3,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,13,PC3,GPIO,T1CH1N,,T1CH1N,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,13,PC3,GPIO,UCTS,,UCTS,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,14,PC4,GPIO,A2,,A2,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,14,PC4,GPIO,T1CH4,,T1CH4,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,14,PC4,GPIO,MCO,,MCO,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,14,PC4,GPIO,T1CH2N,,T1CH2N,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,14,PC4,GPIO,T1CH1,,T1CH1,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,15,PC5,GPIO,SCK,,SCK,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,15,PC5,GPIO,T1ETR,,T1ETR,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,15,PC5,GPIO,T2CH1ETR,,T2CH1ETR,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,15,PC5,GPIO,SCL,,SCL,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,15,PC5,GPIO,UCK,,UCK,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,15,PC5,GPIO,T1CH3,,T1CH3,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,16,PC6,GPIO,MOSI,,MOSI,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,16,PC6,GPIO,T1CH1,,T1CH1,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,16,PC6,GPIO,T1CH3N,,T1CH3N,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,16,PC6,GPIO,UCTS,,UCTS,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,16,PC6,GPIO,SDA,,SDA,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,17,PC7,GPIO,MISO,,MISO,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,17,PC7,GPIO,T1CH2,,T1CH2,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,17,PC7,GPIO,T2CH2,,T2CH2,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,17,PC7,GPIO,URTS,,URTS,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,18,PD1,GPIO,SWIO,,SWIO,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,18,PD1,GPIO,AETR2,,AETR2,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,18,PD1,GPIO,T1CH3N,,T1CH3N,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,18,PD1,GPIO,SCL,,SCL,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,18,PD1,GPIO,URX,,URX,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,19,PD2,GPIO,A3,,A3,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,19,PD2,GPIO,T1CH1,,T1CH1,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,19,PD2,GPIO,T2CH3,,T2CH3,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,19,PD2,GPIO,T1CH2N,,T1CH2N,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,20,PD3,GPIO,A4,,A4,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,20,PD3,GPIO,T2CH2,,T2CH2,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,20,PD3,GPIO,AETR,,AETR,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,20,PD3,GPIO,UCTS,,UCTS,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+ch32v003-evt,20,PD3,GPIO,T1CH4,,T1CH4,ch32v003-evt-board | ch32v003-evt-headers | ch32v003-pin-table,ch32v003-pin-table
+nrf52840-dk,1,NC,SYSTEM,,,,nrf52840-dk-layout | nrf52840-dk-headers,
+nrf52840-dk,2,IOREF,POWER,,,,nrf52840-dk-layout | nrf52840-dk-headers,
+nrf52840-dk,3,RESET,SYSTEM,RESET,,RESET,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,3,RESET,SYSTEM,P0.18,,P0.18,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,4,3V3,POWER,,,,nrf52840-dk-layout | nrf52840-dk-headers,
+nrf52840-dk,5,5V,POWER,,,,nrf52840-dk-layout | nrf52840-dk-headers,
+nrf52840-dk,6,GND,GND,,,,nrf52840-dk-layout | nrf52840-dk-headers,
+nrf52840-dk,7,GND,GND,,,,nrf52840-dk-layout | nrf52840-dk-headers,
+nrf52840-dk,8,VIN,POWER,,,,nrf52840-dk-layout | nrf52840-dk-headers,
+nrf52840-dk,9,A0,GPIO,AIN1,,AIN1,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,9,A0,GPIO,PWM,,PWM,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,9,A0,GPIO,P0.03,,P0.03,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,10,A1,GPIO,AIN2,,AIN2,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,10,A1,GPIO,PWM,,PWM,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,10,A1,GPIO,P0.04,,P0.04,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,11,A2,GPIO,AIN4,,AIN4,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,11,A2,GPIO,PWM,,PWM,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,11,A2,GPIO,P0.28,,P0.28,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,12,A3,GPIO,AIN5,,AIN5,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,12,A3,GPIO,PWM,,PWM,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,12,A3,GPIO,P0.29,,P0.29,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,13,A4,GPIO,AIN6,,AIN6,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,13,A4,GPIO,PWM,,PWM,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,13,A4,GPIO,P0.30,,P0.30,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,14,A5,GPIO,AIN7,,AIN7,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,14,A5,GPIO,PWM,,PWM,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,14,A5,GPIO,P0.31,,P0.31,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,15,D0,GPIO,RX,,RX,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,15,D0,GPIO,PWM,,PWM,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,15,D0,GPIO,P0.13,,P0.13,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,16,D1,GPIO,TX,,TX,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,16,D1,GPIO,PWM,,PWM,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,16,D1,GPIO,P0.14,,P0.14,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,17,D2,GPIO,PWM,,PWM,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,17,D2,GPIO,P0.25,,P0.25,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,18,D3,GPIO,NFC1,,NFC1,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,18,D3,GPIO,PWM,,PWM,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,18,D3,GPIO,P0.09,,P0.09,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,19,D4,GPIO,NFC2,,NFC2,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,19,D4,GPIO,PWM,,PWM,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,19,D4,GPIO,P0.10,,P0.10,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,20,D5,GPIO,PWM,,PWM,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,20,D5,GPIO,P1.06,,P1.06,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,21,D6,GPIO,PWM,,PWM,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,21,D6,GPIO,P1.07,,P1.07,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,22,D7,GPIO,PWM,,PWM,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,22,D7,GPIO,P1.02,,P1.02,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,23,D8,GPIO,PWM,,PWM,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,23,D8,GPIO,P1.08,,P1.08,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,24,D9,GPIO,PWM,,PWM,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,24,D9,GPIO,P1.09,,P1.09,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,25,D10,GPIO,CS,,CS,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,25,D10,GPIO,PWM,,PWM,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,25,D10,GPIO,P1.10,,P1.10,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,26,D11,GPIO,MOSI,,MOSI,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,26,D11,GPIO,PWM,,PWM,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,26,D11,GPIO,P1.12,,P1.12,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,27,D12,GPIO,MISO,,MISO,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,27,D12,GPIO,PWM,,PWM,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,27,D12,GPIO,P1.13,,P1.13,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,28,D13,GPIO,SCK,,SCK,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,28,D13,GPIO,PWM,,PWM,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,28,D13,GPIO,P1.15,,P1.15,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,29,GND,GND,,,,nrf52840-dk-layout | nrf52840-dk-headers,
+nrf52840-dk,30,AREF,SYSTEM,,,,nrf52840-dk-layout | nrf52840-dk-headers,
+nrf52840-dk,31,SDA,GPIO,SDA,,SDA,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,31,SDA,GPIO,PWM,,PWM,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,31,SDA,GPIO,P0.26,,P0.26,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,32,SCL,GPIO,SCL,,SCL,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,32,SCL,GPIO,PWM,,PWM,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers
+nrf52840-dk,32,SCL,GPIO,P0.27,,P0.27,nrf52840-dk-layout | nrf52840-dk-headers,nrf52840-dk-headers

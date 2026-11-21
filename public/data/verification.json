@@ -1,7 +1,7 @@
 {
   "verifiedOn": "2026-11-05",
   "physicalPins": 7050,
-  "functionAssignments": 32242,
+  "functionAssignments": 32248,
   "documents": [
     {
       "id": "rp2350",
@@ -1587,22 +1587,26 @@
       "id": "ch32v003-datasheet",
       "title": "WCH CH32V003 series datasheet",
       "publisher": "WCH",
-      "revision": "Version 1.4",
-      "url": "https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html"
+      "revision": "V1.8",
+      "url": "https://www.wch-ic.com/download/file?id=359",
+      "viewUrl": "https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html",
+      "sha256": "186210d35123325ea49305e3a0152cbfa6e377d8e6efc2e610e3497daabe17f8"
     },
     {
       "id": "ch32v00x-eval-ref",
       "title": "WCH CH32V00x Evaluation Board Reference",
       "publisher": "WCH",
       "revision": "Version 1.3",
-      "url": "https://raw.githubusercontent.com/openwch/ch32v003/4e1b7437ada5d3ae8831a6f4b811a6320e4e23c7/EVT/PUB/CH32V00x%20Evaluation%20Board%20Reference-EN.pdf"
+      "url": "https://raw.githubusercontent.com/openwch/ch32v003/4e1b7437ada5d3ae8831a6f4b811a6320e4e23c7/EVT/PUB/CH32V00x%20Evaluation%20Board%20Reference-EN.pdf",
+      "sha256": "c565840f62a98b79c34726c2a02b2a88b2202983faef184713fbbc5876606d6d"
     },
     {
       "id": "nrf52840-dk-ug",
       "title": "Nordic nRF52840 DK Hardware User Guide",
       "publisher": "Nordic Semiconductor",
       "revision": "PCA10056 Hardware v1.3.0+",
-      "url": "https://docs.nordicsemi.com/bundle/ug_nrf52840_dk/page/UG/dk/intro.html"
+      "url": "https://docs.nordicsemi.com/bundle/ug_nrf52840_dk/page/UG/dk/intro.html",
+      "unlocked": "docs.nordicsemi.com publishes this guide as HTML for its latest revision only and answers scripted downloads with HTTP 403, so no stable copy can be hashed."
     }
   ],
   "boards": [
@@ -2598,24 +2602,25 @@
       "physicalPins": 32,
       "functionAssignments": 262,
       "physicalSourceMethods": [
-        "pdf-text",
+        "pdf-table",
         "visual-diagram"
       ]
     },
     {
       "id": "ch32v003f4p6-tssop20",
       "physicalPins": 20,
-      "functionAssignments": 81,
+      "functionAssignments": 84,
       "physicalSourceMethods": [
-        "pdf-text",
+        "pdf-table",
         "visual-diagram"
       ]
     },
     {
       "id": "ch32v003-evt",
       "physicalPins": 20,
-      "functionAssignments": 81,
+      "functionAssignments": 84,
       "physicalSourceMethods": [
+        "pdf-table",
         "pdf-text",
         "visual-diagram"
       ]

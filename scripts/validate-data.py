@@ -371,6 +371,10 @@ assert board_by_id['teensy-41']['cautions'][0]['key']=='teensyNot5vCaution'
 assert sorted(p['name'] for p in board_by_id['teensy-41']['pins'] if 'teensySdPadNote' in p.get('warnings',[]))==['42','43','44','45','46','47']
 # Provenance: no mutable-branch or mirror URLs; ST manuals come from st.com at the locked revisions.
 for d in manifest['documents']:
+    # Every document is either hash-locked or says why it cannot be; a missing hash stops the source verification in CI.
+    assert ('unlocked' in d)!=('sha256' in d),d['id']
+    if 'sha256' in d:assert re.fullmatch(r'[0-9a-f]{64}',d['sha256']) and d.get('file'),d['id']
+    else:assert len(d['unlocked'])>40 and 'file' not in d and 'tableSnapshot' not in d,d['id']
     assert not re.search(r'/(main|master)/',d['url']) and 'evo.net.ua' not in json.dumps(d),d['id']
     if 'raw.githubusercontent.com' in d['url']:assert re.search(r'/[0-9a-f]{40}/',d['url']),d['id']
 docs_by_id={d['id']:d for d in manifest['documents']}
